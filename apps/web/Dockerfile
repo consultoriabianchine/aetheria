@@ -4,9 +4,10 @@ WORKDIR /app
 COPY package.json package-lock.json* ./
 COPY apps/web/package.json apps/web/
 COPY apps/game-server/package.json apps/game-server/
-COPY packages/*/package.json packages/
+COPY packages ./packages
 RUN npm install
 COPY . .
+RUN npx prisma generate --schema packages/database/prisma/schema.prisma
 RUN npm run build:packages && npm run build:web
 
 # Runtime: nginx servindo o SPA.

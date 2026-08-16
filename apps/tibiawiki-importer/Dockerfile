@@ -5,7 +5,7 @@ COPY package.json package-lock.json* ./
 COPY apps/tibiawiki-importer/package.json apps/tibiawiki-importer/
 COPY apps/game-server/package.json apps/game-server/
 COPY apps/web/package.json apps/web/
-COPY packages/*/package.json packages/
+COPY packages ./packages
 RUN npm install
 
 # Build: packages + importer.

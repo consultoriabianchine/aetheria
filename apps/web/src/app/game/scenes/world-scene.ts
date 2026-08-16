@@ -6,7 +6,8 @@ import { WsService } from '../../core/ws.service';
 import { GameState } from '../game-state';
 import type { CreatureCatalogService } from '../creature-catalog.service';
 
-const TILE_SIZE = 48;
+const TILE_SIZE = 32;
+const CREATURE_SIZE = 64;
 const MOVE_DURATION_MS = 235;
 
 interface EntityInfo {
@@ -236,9 +237,9 @@ export class WorldScene extends Phaser.Scene {
     const x = position.x * TILE_SIZE + TILE_SIZE / 2;
     const y = position.y * TILE_SIZE + TILE_SIZE / 2;
     const color = kind === 'monster' ? 0xe04d4d : kind === 'npc' ? 0xf0c14b : 0x4d86ff;
-    const image = this.add.image(x, y, 'circle').setTint(color).setOrigin(0.5);
+    const image = this.add.image(x, y, 'circle').setTint(color).setOrigin(0.5).setDisplaySize(CREATURE_SIZE, CREATURE_SIZE);
     const label = this.add
-      .text(x, y - 28, name, {
+      .text(x, y - CREATURE_SIZE / 2 - 18, name, {
         fontFamily: 'Arial',
         fontSize: '11px',
         color: '#ffffff',
@@ -254,8 +255,8 @@ export class WorldScene extends Phaser.Scene {
 
   private attachHealthBar(rendered: RenderedEntity, health: number, maxHealth: number) {
     const depth = rendered.image.depth;
-    const back = this.add.image(rendered.image.x, rendered.image.y - 20, 'barBack').setOrigin(0.5).setDepth(depth + 0.02);
-    const front = this.add.image(rendered.image.x, rendered.image.y - 20, 'barFront').setOrigin(0.5).setDepth(depth + 0.03);
+    const back = this.add.image(rendered.image.x, rendered.image.y - CREATURE_SIZE / 2 - 10, 'barBack').setOrigin(0.5).setDepth(depth + 0.02);
+    const front = this.add.image(rendered.image.x, rendered.image.y - CREATURE_SIZE / 2 - 10, 'barFront').setOrigin(0.5).setDepth(depth + 0.03);
     rendered.healthBack = back;
     rendered.healthFront = front;
     this.setBar(front, health, maxHealth);
@@ -303,7 +304,7 @@ export class WorldScene extends Phaser.Scene {
 
   private applyCreatureSprite(rendered: RenderedEntity | undefined, textureKey: string) {
     if (!rendered) return;
-    const size = TILE_SIZE * 0.9;
+    const size = CREATURE_SIZE;
     rendered.image.setTexture(textureKey).setTint(0xffffff).setDisplaySize(size, size);
     this.updateDebugOverlay();
   }
@@ -367,7 +368,7 @@ export class WorldScene extends Phaser.Scene {
 
   private setBar(front: Phaser.GameObjects.Image, health: number, maxHealth: number) {
     const ratio = Math.max(0, Math.min(1, health / Math.max(1, maxHealth)));
-    front.setDisplaySize(Math.max(1, ratio * 28), 5);
+    front.setDisplaySize(Math.max(1, ratio * CREATURE_SIZE * 0.75), 5);
   }
 
   // ------------------------------------------------------------------ input
@@ -482,7 +483,7 @@ export class WorldScene extends Phaser.Scene {
 
   private showDamage(x: number, y: number, amount: number, critical: boolean) {
     const text = this.add
-      .text(x, y - 22, String(amount), {
+      .text(x, y - CREATURE_SIZE / 2 - 8, String(amount), {
         fontFamily: 'Arial',
         fontSize: critical ? '20px' : '15px',
         color: critical ? '#ffcf3f' : '#ff6b6b',
@@ -493,7 +494,7 @@ export class WorldScene extends Phaser.Scene {
       .setDepth(100);
     this.tweens.add({
       targets: text,
-      y: y - 48,
+      y: y - CREATURE_SIZE / 2 - 24,
       alpha: 0,
       duration: 700,
       onComplete: () => text.destroy(),
@@ -521,6 +522,7 @@ export class WorldScene extends Phaser.Scene {
     const tex = this.textures.createCanvas(`tile_${type}`, TILE_SIZE, TILE_SIZE);
     if (!tex) return;
     const ctx = tex.getContext();
+    const k = TILE_SIZE / 48;
     ctx.fillStyle = base;
     ctx.fillRect(0, 0, TILE_SIZE, TILE_SIZE);
     for (let i = 0; i < 60; i++) {
@@ -530,38 +532,38 @@ export class WorldScene extends Phaser.Scene {
     if (type === TILE.TREE) {
       ctx.fillStyle = '#2f6b2f';
       ctx.beginPath();
-      ctx.arc(TILE_SIZE / 2, TILE_SIZE / 2, 16, 0, Math.PI * 2);
+      ctx.arc(TILE_SIZE / 2, TILE_SIZE / 2, 16 * k, 0, Math.PI * 2);
       ctx.fill();
       ctx.fillStyle = '#3f8a3f';
       ctx.beginPath();
-      ctx.arc(TILE_SIZE / 2 - 5, TILE_SIZE / 2 - 5, 8, 0, Math.PI * 2);
+      ctx.arc(TILE_SIZE / 2 - 5 * k, TILE_SIZE / 2 - 5 * k, 8 * k, 0, Math.PI * 2);
       ctx.fill();
     } else if (type === TILE.ROCK) {
       ctx.fillStyle = '#6f7278';
       ctx.beginPath();
-      ctx.arc(TILE_SIZE / 2, TILE_SIZE / 2, 14, 0, Math.PI * 2);
+      ctx.arc(TILE_SIZE / 2, TILE_SIZE / 2, 14 * k, 0, Math.PI * 2);
       ctx.fill();
       ctx.fillStyle = '#8a8d92';
       ctx.beginPath();
-      ctx.arc(TILE_SIZE / 2 - 3, TILE_SIZE / 2 - 3, 8, 0, Math.PI * 2);
+      ctx.arc(TILE_SIZE / 2 - 3 * k, TILE_SIZE / 2 - 3 * k, 8 * k, 0, Math.PI * 2);
       ctx.fill();
     } else if (type === TILE.WATER) {
       ctx.strokeStyle = 'rgba(255,255,255,0.3)';
-      ctx.lineWidth = 2;
+      ctx.lineWidth = 2 * k;
       ctx.beginPath();
-      ctx.moveTo(6, 20);
-      ctx.quadraticCurveTo(12, 16, 18, 20);
+      ctx.moveTo(6 * k, 20 * k);
+      ctx.quadraticCurveTo(12 * k, 16 * k, 18 * k, 20 * k);
       ctx.stroke();
       ctx.beginPath();
-      ctx.moveTo(24, 32);
-      ctx.quadraticCurveTo(30, 28, 36, 32);
+      ctx.moveTo(24 * k, 32 * k);
+      ctx.quadraticCurveTo(30 * k, 28 * k, 36 * k, 32 * k);
       ctx.stroke();
     } else if (type === TILE.WALL) {
       ctx.strokeStyle = 'rgba(0,0,0,0.35)';
-      ctx.lineWidth = 2;
-      ctx.strokeRect(4, 4, TILE_SIZE - 8, TILE_SIZE - 8);
+      ctx.lineWidth = 2 * k;
+      ctx.strokeRect(4 * k, 4 * k, TILE_SIZE - 8 * k, TILE_SIZE - 8 * k);
       ctx.fillStyle = 'rgba(255,255,255,0.06)';
-      ctx.fillRect(4, 4, TILE_SIZE - 8, 4);
+      ctx.fillRect(4 * k, 4 * k, TILE_SIZE - 8 * k, 4 * k);
     }
     tex.refresh();
   }
