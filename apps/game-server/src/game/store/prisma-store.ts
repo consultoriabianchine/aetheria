@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { Prisma } from '@prisma/client';
+import { Prisma } from '@aetheria/database';
 import { PrismaService } from '../../prisma/prisma.service';
 import type { CharacterEquipment, ItemStack } from '@aetheria/types';
 import type { AccountRecord, StoredCharacter, Store } from './store';

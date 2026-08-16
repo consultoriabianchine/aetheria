@@ -133,28 +133,57 @@ export interface CharacterSummary {
   skills: CharacterSkills;
 }
 
-export interface LootItem {
-  itemId: string;
-  quantity: number;
-  weight: number;
-}
-
 export type MonsterState = 'IDLE' | 'WANDER' | 'CHASE' | 'ATTACK' | 'RETURN' | 'DEAD';
 
-export interface MonsterTemplate {
+/** Estados da máquina de estados das criaturas. */
+export type CreatureState = 'IDLE' | 'WANDER' | 'CHASE' | 'ATTACK' | 'FLEE' | 'RETURN' | 'DEAD';
+
+/** Categoria de criatura (ex.: humanoid). */
+export type CreatureType = 'humanoid' | 'beast' | 'demon' | 'undead' | 'animal';
+
+/** Definição de loot de uma criatura (chance em % por kill). */
+export interface CreatureLootDefinition {
+  itemId: string;
+  chance: number;
+  minQuantity: number;
+  maxQuantity: number;
+}
+
+/** Definição estática de uma criatura (persistida em creature_definitions). */
+export interface CreatureDefinition {
   id: string;
   name: string;
+  slug: string;
+  description: string;
+  type: CreatureType;
   level: number;
+  health: number;
   maxHealth: number;
   attack: number;
   defense: number;
-  speed: number;
-  attackRange: number;
-  attackInterval: number;
   experience: number;
-  aggroRadius: number;
-  leashRadius: number;
-  loot: LootItem[];
+  movementSpeed: number;
+  attackSpeed: number;
+  attackRange: number;
+  viewRange: number;
+  chaseRange: number;
+  fleeHealthPercent: number;
+  canWander: boolean;
+  canChase: boolean;
+  canFlee: boolean;
+  returnToSpawn: boolean;
+  loot: CreatureLootDefinition[];
+}
+
+/** Ponto de spawn de uma criatura (persistido em creature_spawns). */
+export interface CreatureSpawnDefinition {
+  creatureDefinitionId: string;
+  mapId: string;
+  x: number;
+  y: number;
+  z: number;
+  respawnTime: number;
+  maxInstances: number;
 }
 
 export interface NpcDialogue {

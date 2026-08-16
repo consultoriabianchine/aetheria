@@ -151,6 +151,16 @@ export class GameState {
         this.target.update((t) => (t && t.id === h.id ? { ...t, health: h.health, maxHealth: h.maxHealth } : t));
         break;
       }
+      case SERVER_EVENTS.CREATURE_DAMAGE: {
+        const d = data as { creatureId: string; health: number; maxHealth: number };
+        this.target.update((t) => (t && t.id === d.creatureId ? { ...t, health: d.health, maxHealth: d.maxHealth } : t));
+        break;
+      }
+      case SERVER_EVENTS.CREATURE_DEATH: {
+        const de = data as { creatureId: string; experience: number };
+        this.target.update((t) => (t && t.id === de.creatureId ? null : t));
+        break;
+      }
     }
   }
 

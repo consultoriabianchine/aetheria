@@ -1,0 +1,29 @@
+{
+  "name": "tibiawiki-importer",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Scraper/importador da TibiaWiki para o MMORPG Aetheria (criaturas, loot, itens e assets)",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "start": "node dist/main.js",
+    "import": "node dist/main.js",
+    "importer": "node dist/main.js",
+    "importer:dry": "node dist/main.js --dry-run",
+    "importer:test": "node dist/main.js --dry-run --limit=3",
+    "importer:inspect": "node dist/main.js --inspect",
+    "importer:integration": "node dist/main.js --dry-run --limit=1 --verbose",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@aetheria/database": "*",
+    "axios": "^1.7.9",
+    "cheerio": "^1.0.0",
+    "dotenv": "^16.4.7",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.8"
+  }
+}

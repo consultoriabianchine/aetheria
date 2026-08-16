@@ -1,5 +1,5 @@
 import { createHmac } from 'node:crypto';
-import { Inject, Injectable, Logger, OnModuleDestroy } from '@nestjs/common';
+import { Inject, Injectable, Logger, OnModuleDestroy, Optional } from '@nestjs/common';
 import * as bcrypt from 'bcryptjs';
 import {
   BASE_PLAYER,
@@ -8,9 +8,6 @@ import {
   CHAT_MIN_INTERVAL_MS,
   INVENTORY_SIZE,
   LOOT_LIFETIME_MS,
-  MONSTER_RESPAWN_MS,
-  MONSTER_SPAWNS,
-  MONSTER_TEMPLATES,
   MOVE_INTERVAL_MS,
   NPC_INTERACT_RANGE,
   NPC_TEMPLATES,
@@ -21,7 +18,7 @@ import {
   VIEW_DISTANCE_Y,
   xpForLevel,
 } from '@aetheria/config';
-import { DIRECTION_DELTAS, samePosition, tileDistance, tileKey, uid } from '@aetheria/shared';
+import { samePosition, tileDistance, tileKey, uid } from '@aetheria/shared';
 import type {
   CharacterEquipment,
   CharacterInventory,
@@ -32,8 +29,15 @@ import type {
 } from '@aetheria/types';
 import { getItemDef } from './item-catalog';
 import { generateWorldMap } from './world-map';
-import { GamePlayer, GroundItem, MonsterEntity, NpcEntity } from './world';
+import { GamePlayer, GroundItem, NpcEntity } from './world';
 import { STORE, Store, StoredCharacter } from '../store/store';
+import { PrismaService } from '../../prisma/prisma.service';
+import { CreatureAIHooks, CreatureAIService, CreatureTarget } from '../creature/creature-ai.service';
+import { CreatureDataService } from '../creature/creature-data.service';
+import { CreatureEntity } from '../creature/creature.entity';
+import { CreatureManager } from '../creature/creature-manager.service';
+import { GameLoop } from '../creature/game-loop';
+import { MovementService } from '../creature/movement.service';
 
 export type EmitFn = (socketId: string, event: string, data: unknown) => void;
 
@@ -56,16 +60,37 @@ export class GameEngine implements OnModuleDestroy {
   private world = generateWorldMap();
   private players = new Map<string, GamePlayer>();
   private playerBySocket = new Map<string, string>();
-  private monsters = new Map<string, MonsterEntity>();
   private npcs = new Map<string, NpcEntity>();
   private groundItems = new Map<string, GroundItem>();
   private tokens = new Map<string, { accountId: string; username: string; exp: number }>();
-  private tickTimer: NodeJS.Timeout | null = null;
   private lastSaveAt = Date.now();
 
-  constructor(@Inject(STORE) private readonly store: Store) {}
+  private movement: MovementService;
+  private creatures: CreatureManager;
+  private ai: CreatureAIService;
+  private loop: GameLoop;
+  private creatureData: CreatureDataService;
 
-  start() {
+  constructor(
+    @Inject(STORE) private readonly store: Store,
+    @Optional() prisma?: PrismaService,
+  ) {
+    this.creatureData = new CreatureDataService(prisma ?? null);
+    this.movement = new MovementService(this.world, (position, exceptIds) => this.isOccupied(position, exceptIds));
+    this.creatures = new CreatureManager(this.movement);
+    const hooks: CreatureAIHooks = {
+      movement: this.movement,
+      getPlayers: () => this.playerSnapshots(),
+      getPlayerById: (id) => this.playerSnapshot(id),
+      broadcast: (event, data) => this.emitAll(event, data),
+      onAttackPlayer: (creature, target, amount, critical, now) =>
+        this.creatureAttackPlayer(creature, target.id, amount, critical, now),
+    };
+    this.ai = new CreatureAIService(hooks);
+    this.loop = new GameLoop(TICK_MS, (_delta, now) => this.tick(now));
+  }
+
+  async start() {
     for (const npcId of Object.keys(NPC_TEMPLATES)) {
       const t = NPC_TEMPLATES[npcId];
       this.npcs.set(t.id, {
@@ -75,15 +100,17 @@ export class GameEngine implements OnModuleDestroy {
         dialogue: t.dialogue,
       });
     }
-    for (const spawn of MONSTER_SPAWNS) {
-      this.spawnMonster(spawn.templateId, { x: spawn.x, y: spawn.y, z: spawn.z });
-    }
-    this.tickTimer = setInterval(() => this.tick(), TICK_MS);
-    this.logger.log(`Mundo ${this.world.width}x${this.world.height} criado (${this.world.tiles.length} tiles).`);
+    const data = await this.creatureData.load();
+    const spawned = this.creatures.seed(data.definitions, data.spawns);
+    for (const creature of spawned) this.emitAll('creature.spawn', this.creatureSpawnPayload(creature));
+    this.loop.start();
+    this.logger.log(
+      `Mundo ${this.world.width}x${this.world.height} criado (${this.world.tiles.length} tiles) com ${this.creatures.size} criaturas.`,
+    );
   }
 
   onModuleDestroy() {
-    if (this.tickTimer) clearInterval(this.tickTimer);
+    this.loop.stop();
     for (const player of this.players.values()) {
       void this.persistPlayer(player).catch(() => undefined);
     }
@@ -231,9 +258,9 @@ export class GameEngine implements OnModuleDestroy {
       level: player.level,
     });
 
-    for (const monster of this.monsters.values()) {
-      if (monster.state === 'DEAD' || !this.inView(player.position, monster.position)) continue;
-      this.emitTo(socketId, 'entity.spawned', this.monsterSpawnPayload(monster));
+    for (const creature of this.creatures.getAll()) {
+      if (creature.state === 'DEAD' || !this.inView(player.position, creature.position)) continue;
+      this.emitTo(socketId, 'creature.spawn', this.creatureSpawnPayload(creature));
     }
     for (const npc of this.npcs.values()) {
       if (!this.inView(player.position, npc.position)) continue;
@@ -255,7 +282,7 @@ export class GameEngine implements OnModuleDestroy {
   // ---------------------------------------------------------------- actions
 
   handleDisconnect(socketId: string) {
-    this.removePlayerFromWorld(socketId);
+    void this.removePlayerFromWorld(socketId);
   }
 
   private async removePlayerFromWorld(socketId: string) {
@@ -369,6 +396,28 @@ export class GameEngine implements OnModuleDestroy {
     return characterId ? this.players.get(characterId) ?? null : null;
   }
 
+  private playerSnapshots(): CreatureTarget[] {
+    const out: CreatureTarget[] = [];
+    for (const player of this.players.values()) {
+      if (!player.socketId) continue;
+      const snap = this.playerSnapshot(player.id);
+      if (snap) out.push(snap);
+    }
+    return out;
+  }
+
+  private playerSnapshot(id: string) {
+    const player = this.players.get(id);
+    if (!player || !player.socketId) return null;
+    return {
+      id: player.id,
+      position: { ...player.position },
+      socketId: player.socketId,
+      health: player.health,
+      defense: this.defenseValue(player),
+    };
+  }
+
   private toSummary(c: StoredCharacter | GamePlayer): CharacterSummary {
     const accountId = 'accountId' in c ? c.accountId : (c as StoredCharacter).accountId;
     return {
@@ -390,45 +439,44 @@ export class GameEngine implements OnModuleDestroy {
     return a.z === b.z && Math.abs(a.x - b.x) <= VIEW_DISTANCE_X && Math.abs(a.y - b.y) <= VIEW_DISTANCE_Y;
   }
 
-  private isWalkable(p: Position): boolean {
-    const tile = this.world.byKey.get(tileKey(p.x, p.y, p.z));
-    return !!tile && tile.walkable;
-  }
-
-  private isOccupied(p: Position, exceptId?: string): boolean {
+  private isOccupied(position: Position, exceptIds?: Iterable<string>): boolean {
+    const except = new Set(exceptIds ?? []);
     for (const player of this.players.values()) {
-      if (player.id === exceptId) continue;
-      if (samePosition(player.position, p)) return true;
+      if (except.has(player.id)) continue;
+      if (samePosition(player.position, position)) return true;
     }
-    for (const monster of this.monsters.values()) {
-      if (monster.state === 'DEAD') continue;
-      if (samePosition(monster.position, p)) return true;
+    for (const creature of this.creatures.getAll()) {
+      if (creature.state === 'DEAD') continue;
+      if (except.has(creature.id)) continue;
+      if (samePosition(creature.position, position)) return true;
     }
     return false;
   }
 
-  private tryStep(entity: GamePlayer | MonsterEntity, direction: Direction, exceptId?: string): boolean {
-    const delta = DIRECTION_DELTAS[direction];
-    const next: Position = {
-      x: entity.position.x + delta.dx,
-      y: entity.position.y + delta.dy,
-      z: entity.position.z,
-    };
-    if (!this.isWalkable(next)) return false;
-    if (this.isOccupied(next, exceptId)) return false;
-    entity.position = next;
-    return true;
+  private tryStep(entity: GamePlayer, direction: Direction): boolean {
+    if (this.movement.canMove(entity.position, direction, [entity.id])) {
+      entity.position = this.movement.step(entity.position, direction);
+      return true;
+    }
+    return false;
   }
 
-  private monsterSpawnPayload(monster: MonsterEntity) {
+  private creatureSpawnPayload(creature: CreatureEntity) {
     return {
-      id: monster.id,
-      kind: 'monster' as const,
-      name: monster.template.name,
-      position: monster.position,
-      health: monster.health,
-      maxHealth: monster.maxHealth,
-      level: monster.template.level,
+      creatureId: creature.id,
+      definitionId: creature.definitionId,
+      slug: creature.definition.slug,
+      name: creature.name,
+      position: { ...creature.position },
+      facing: creature.facing,
+      state: creature.state,
+      health: creature.health,
+      maxHealth: creature.maxHealth,
+      level: creature.definition.level,
+      viewRange: creature.definition.viewRange,
+      chaseRange: creature.definition.chaseRange,
+      attackRange: creature.definition.attackRange,
+      description: creature.definition.description,
     };
   }
 
@@ -473,8 +521,8 @@ export class GameEngine implements OnModuleDestroy {
     return player.attackBase + (weapon?.attack ?? 0);
   }
 
-  private defenseValue(target: GamePlayer | MonsterEntity): number {
-    if (target instanceof MonsterEntity) return target.template.defense;
+  private defenseValue(target: GamePlayer | CreatureEntity): number {
+    if (target instanceof CreatureEntity) return target.definition.defense;
     let def = target.defenseBase;
     for (const slot of ['head', 'armor', 'legs', 'boots', 'shield', 'ring', 'amulet'] as const) {
       const item = target.equipment[slot];
@@ -485,7 +533,11 @@ export class GameEngine implements OnModuleDestroy {
 
   // ---------------------------------------------------------------- combat
 
-  private dealDamage(attacker: { id: string; attackValue: () => number }, target: GamePlayer | MonsterEntity, now: number) {
+  private dealDamage(
+    attacker: { id: string; attackValue: () => number },
+    target: GamePlayer | CreatureEntity,
+    _now: number,
+  ) {
     const atk = attacker.attackValue();
     const def = this.defenseValue(target);
     const critical = Math.random() < 0.06;
@@ -500,25 +552,39 @@ export class GameEngine implements OnModuleDestroy {
       targetHealth: target.health,
     });
     this.emitAll('entity.health', { id: target.id, health: target.health, maxHealth: target.maxHealth });
-    void now;
+  }
+
+  private creatureAttackPlayer(creature: CreatureEntity, playerId: string, amount: number, critical: boolean, now: number) {
+    const player = this.players.get(playerId);
+    if (!player) return;
+    player.health = Math.max(0, player.health - amount);
+    this.emitAll('combat.damage', {
+      attackerId: creature.id,
+      targetId: player.id,
+      amount,
+      critical,
+      targetHealth: player.health,
+    });
+    this.emitAll('entity.health', { id: player.id, health: player.health, maxHealth: player.maxHealth });
+    if (player.health <= 0) this.playerKilled(player, now);
   }
 
   // ---------------------------------------------------------------- tick
 
-  private tick() {
+  private tick(now: number) {
     try {
-      const now = Date.now();
       for (const player of this.players.values()) {
         if (!player.socketId) continue;
         this.processPlayerMove(player, now);
         this.processPlayerAttack(player, now);
       }
-      for (const monster of this.monsters.values()) {
-        if (monster.state === 'DEAD') continue;
-        this.processMonster(monster, now);
-      }
+      this.creatures.updateCreatures(this.ai, now);
       this.processGroundItems(now);
-      this.processRespawns(now);
+      this.creatures.processRespawns(
+        now,
+        (id) => this.emitAll('creature.remove', { creatureId: id }),
+        (entity) => this.emitAll('creature.spawn', this.creatureSpawnPayload(entity)),
+      );
       if (now - this.lastSaveAt > 10_000) {
         this.lastSaveAt = now;
         for (const player of this.players.values()) void this.persistPlayer(player).catch(() => undefined);
@@ -531,7 +597,7 @@ export class GameEngine implements OnModuleDestroy {
   private processPlayerMove(player: GamePlayer, now: number) {
     if (!player.moveDir) return;
     if (now < player.nextMoveAt) return;
-    if (this.tryStep(player, player.moveDir, player.id)) {
+    if (this.tryStep(player, player.moveDir)) {
       player.nextMoveAt = now + MOVE_INTERVAL_MS;
       this.emitTo(player.socketId ?? '', 'player.moved', { position: { ...player.position } });
       this.emitOthers(player.socketId ?? '', 'entity.moved', { id: player.id, position: { ...player.position } });
@@ -542,7 +608,8 @@ export class GameEngine implements OnModuleDestroy {
 
   private processPlayerAttack(player: GamePlayer, now: number) {
     if (!player.targetId) return;
-    const target = this.monsters.get(player.targetId) ?? (this.players.get(player.targetId) as GamePlayer | MonsterEntity | undefined);
+    const target: CreatureEntity | GamePlayer | null =
+      this.creatures.getCreature(player.targetId) ?? this.players.get(player.targetId) ?? null;
     if (!target || target.health <= 0 || target.position.z !== player.position.z) {
       player.targetId = null;
       return;
@@ -552,134 +619,20 @@ export class GameEngine implements OnModuleDestroy {
     player.attackCooldownUntil = now + 700;
     this.dealDamage({ id: player.id, attackValue: () => this.attackValue(player) }, target, now);
     if (target.health <= 0) {
-      if (target instanceof MonsterEntity) this.monsterKilled(player, target, now);
+      if (target instanceof CreatureEntity) this.creatureKilled(player, target, now);
       else this.playerKilled(target as GamePlayer, now);
     }
   }
 
-  private processMonster(monster: MonsterEntity, now: number) {
-    const nearest = this.nearestPlayerInRange(monster);
-    if (nearest) {
-      monster.targetId = nearest.id;
-      if (monster.state === 'IDLE' || monster.state === 'WANDER') monster.state = 'CHASE';
-    }
-
-    switch (monster.state) {
-      case 'IDLE': {
-        if (!nearest && now >= monster.nextMoveAt && Math.random() < 0.2) {
-          this.monsterWander(monster, now);
-        }
-        break;
-      }
-      case 'WANDER': {
-        monster.state = 'IDLE';
-        break;
-      }
-      case 'CHASE': {
-        if (!nearest) {
-          if (tileDistance(monster.position, monster.spawn) > 1) monster.state = 'RETURN';
-          else monster.state = 'IDLE';
-          break;
-        }
-        if (tileDistance(monster.position, nearest.position) <= monster.template.attackRange) {
-          monster.state = 'ATTACK';
-          break;
-        }
-        if (tileDistance(monster.position, monster.spawn) > monster.template.leashRadius) {
-          monster.state = 'RETURN';
-          break;
-        }
-        this.monsterStepToward(monster, nearest.position, now);
-        break;
-      }
-      case 'ATTACK': {
-        if (!nearest) {
-          monster.state = 'CHASE';
-          break;
-        }
-        if (tileDistance(monster.position, nearest.position) > monster.template.attackRange) {
-          monster.state = 'CHASE';
-          break;
-        }
-        if (now < monster.attackCooldownUntil) break;
-        monster.attackCooldownUntil = now + monster.template.attackInterval;
-        this.dealDamage(
-          { id: monster.id, attackValue: () => monster.template.attack },
-          nearest,
-          now,
-        );
-        if (nearest.health <= 0) this.playerKilled(nearest, now);
-        break;
-      }
-      case 'RETURN': {
-        if (tileDistance(monster.position, monster.spawn) <= 1) {
-          monster.state = 'IDLE';
-          break;
-        }
-        this.monsterStepToward(monster, monster.spawn, now);
-        break;
-      }
-      case 'DEAD':
-        break;
-    }
-  }
-
-  private nearestPlayerInRange(monster: MonsterEntity): GamePlayer | null {
-    let best: GamePlayer | null = null;
-    let bestDist = monster.template.aggroRadius;
-    for (const player of this.players.values()) {
-      if (player.position.z !== monster.position.z) continue;
-      const d = tileDistance(monster.position, player.position);
-      if (d <= bestDist) {
-        bestDist = d;
-        best = player;
-      }
-    }
-    return best;
-  }
-
-  private monsterWander(monster: MonsterEntity, now: number) {
-    monster.state = 'WANDER';
-    const dirs: Direction[] = ['north', 'east', 'south', 'west'];
-    const dir = dirs[Math.floor(Math.random() * dirs.length)];
-    if (this.tryStep(monster, dir)) {
-      monster.nextMoveAt = now + MOVE_INTERVAL_MS;
-      this.emitAll('entity.moved', { id: monster.id, position: { ...monster.position } });
-    }
-  }
-
-  private monsterStepToward(monster: MonsterEntity, target: Position, now: number) {
-    if (now < monster.nextMoveAt) return;
-    const dx = Math.sign(target.x - monster.position.x);
-    const dy = Math.sign(target.y - monster.position.y);
-    const candidates: Direction[] = [];
-    if (dx !== 0) candidates.push(dx > 0 ? 'east' : 'west');
-    if (dy !== 0) candidates.push(dy > 0 ? 'south' : 'north');
-    if (dx !== 0 && dy !== 0) candidates.push(this.diagonal(dx, dy));
-    for (const dir of candidates) {
-      if (this.tryStep(monster, dir)) {
-        monster.nextMoveAt = now + MOVE_INTERVAL_MS;
-        this.emitAll('entity.moved', { id: monster.id, position: { ...monster.position } });
-        return;
-      }
-    }
-  }
-
-  private diagonal(dx: number, dy: number): Direction {
-    if (dx > 0 && dy < 0) return 'northeast';
-    if (dx > 0 && dy > 0) return 'southeast';
-    if (dx < 0 && dy < 0) return 'northwest';
-    return 'southwest';
-  }
-
-  private monsterKilled(player: GamePlayer, monster: MonsterEntity, now: number) {
-    monster.state = 'DEAD';
-    monster.health = 0;
-    monster.respawnAt = now + MONSTER_RESPAWN_MS;
-    this.emitAll('entity.removed', { id: monster.id });
-    this.emitAll('combat.death', { entityId: monster.id, experience: monster.template.experience });
-    this.grantExperience(player, monster.template.experience);
-    this.spawnLoot(monster);
+  private creatureKilled(player: GamePlayer, creature: CreatureEntity, now: number) {
+    creature.state = 'DEAD';
+    creature.health = 0;
+    creature.respawnAt = now + creature.respawnTimeMs;
+    creature.targetId = null;
+    creature.path = [];
+    this.emitAll('creature.death', { creatureId: creature.id, experience: creature.definition.experience });
+    this.grantExperience(player, creature.definition.experience);
+    this.spawnLoot(creature);
   }
 
   private playerKilled(player: GamePlayer, now: number) {
@@ -728,17 +681,17 @@ export class GameEngine implements OnModuleDestroy {
     this.emitStats(player);
   }
 
-  private spawnLoot(monster: MonsterEntity) {
-    for (const entry of monster.template.loot) {
-      if (Math.random() * 100 >= entry.weight) continue;
+  private spawnLoot(creature: CreatureEntity) {
+    for (const entry of creature.definition.loot) {
+      if (Math.random() * 100 >= entry.chance) continue;
       const def = getItemDef(entry.itemId);
-      const quantity = def?.stackable ? 1 + Math.floor(Math.random() * 3) : 1;
+      const quantity = entry.minQuantity + Math.floor(Math.random() * (entry.maxQuantity - entry.minQuantity + 1));
       const item: GroundItem = {
         id: uid('loot'),
         itemId: entry.itemId,
         name: def?.name ?? entry.itemId,
         quantity,
-        position: { ...monster.position },
+        position: { ...creature.position },
         expiresAt: Date.now() + LOOT_LIFETIME_MS,
       };
       this.groundItems.set(item.id, item);
@@ -759,24 +712,6 @@ export class GameEngine implements OnModuleDestroy {
         this.emitAll('loot.removed', { entityId: id });
       }
     }
-  }
-
-  private processRespawns(now: number) {
-    for (const monster of this.monsters.values()) {
-      if (monster.state !== 'DEAD' || !monster.respawnAt || monster.respawnAt > now) continue;
-      monster.state = 'IDLE';
-      monster.health = monster.maxHealth;
-      monster.position = { ...monster.spawn };
-      monster.respawnAt = null;
-      this.emitAll('entity.spawned', this.monsterSpawnPayload(monster));
-    }
-  }
-
-  private spawnMonster(templateId: string, position: Position) {
-    const template = MONSTER_TEMPLATES[templateId];
-    if (!template) return;
-    const id = uid('m');
-    this.monsters.set(id, new MonsterEntity(id, template, position));
   }
 
   private async persistPlayer(player: GamePlayer) {

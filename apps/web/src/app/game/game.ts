@@ -6,6 +6,7 @@ import type { CharacterEquipment, ItemStack } from '@aetheria/types';
 import { WsService } from '../core/ws.service';
 import { GameState } from './game-state';
 import { ItemCatalogService } from './item-catalog.service';
+import { CreatureCatalogService } from './creature-catalog.service';
 import { WorldScene } from './scenes/world-scene';
 
 interface InvEntry {
@@ -33,6 +34,7 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   private readonly el = inject(ElementRef);
   private readonly ws = inject(WsService);
   private readonly itemCatalog = inject(ItemCatalogService);
+  private readonly creatureCatalog = inject(CreatureCatalogService);
   private readonly router = inject(Router);
   private phaser: Phaser.Game | null = null;
 
@@ -43,6 +45,7 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
     }
     if (!this.ws.connected) this.ws.connect();
     void this.itemCatalog.ensureLoaded();
+    void this.creatureCatalog.ensureLoaded();
     if (!this.state.inGame()) {
       void this.router.navigate(['/characters']);
     }
@@ -61,7 +64,7 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
       scene: [],
     });
     this.phaser.scene.add('World', WorldScene, false);
-    this.phaser.scene.start('World', { ws: this.ws, state: this.state });
+    this.phaser.scene.start('World', { ws: this.ws, state: this.state, catalog: this.creatureCatalog });
   }
 
   ngOnDestroy() {

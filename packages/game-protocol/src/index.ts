@@ -2,9 +2,9 @@ import type {
   CharacterInventory,
   CharacterSkills,
   CharacterSummary,
+  CreatureState,
   Direction,
   MapTile,
-  MonsterState,
   Position,
 } from '@aetheria/types';
 
@@ -26,11 +26,17 @@ export type ServerMessage =
   | { type: 'auth.characterCreated'; ok: boolean; error?: string; character?: CharacterSummary }
   | { type: 'auth.selectResult'; ok: boolean; error?: string }
   | { type: 'game.enterWorld'; character: CharacterSummary; map: MapTile[]; width: number; height: number }
-  | { type: 'entity.spawned'; id: string; kind: 'player' | 'monster' | 'npc'; name: string; position: Position; health?: number; maxHealth?: number; level?: number }
+  | { type: 'entity.spawned'; id: string; kind: 'player' | 'npc'; name: string; position: Position; health?: number; maxHealth?: number; level?: number }
   | { type: 'entity.moved'; id: string; position: Position }
   | { type: 'entity.removed'; id: string }
   | { type: 'entity.health'; id: string; health: number; maxHealth: number }
   | { type: 'player.moved'; position: Position }
+  | { type: 'creature.spawn'; creatureId: string; definitionId: string; slug: string; name: string; position: Position; facing: Direction; state: CreatureState; health: number; maxHealth: number; level: number; viewRange?: number; chaseRange?: number; attackRange?: number; description?: string }
+  | { type: 'creature.move'; creatureId: string; from: Position; to: Position; facing: Direction; state: CreatureState; timestamp: number; path?: Position[] }
+  | { type: 'creature.attack'; creatureId: string; targetId: string; position: Position; timestamp: number }
+  | { type: 'creature.damage'; creatureId: string; attackerId: string; amount: number; critical: boolean; health: number; maxHealth: number }
+  | { type: 'creature.death'; creatureId: string; experience: number }
+  | { type: 'creature.remove'; creatureId: string }
   | { type: 'combat.damage'; attackerId: string; targetId: string; amount: number; critical: boolean; targetHealth: number }
   | { type: 'combat.death'; entityId: string; experience?: number }
   | { type: 'stats.update'; health: number; maxHealth: number; mana: number; maxMana: number; level: number; experience: number; skills: CharacterSkills }
@@ -63,6 +69,12 @@ export const SERVER_EVENTS = {
   ENTITY_REMOVED: 'entity.removed',
   ENTITY_HEALTH: 'entity.health',
   PLAYER_MOVED: 'player.moved',
+  CREATURE_SPAWN: 'creature.spawn',
+  CREATURE_MOVE: 'creature.move',
+  CREATURE_ATTACK: 'creature.attack',
+  CREATURE_DAMAGE: 'creature.damage',
+  CREATURE_DEATH: 'creature.death',
+  CREATURE_REMOVE: 'creature.remove',
   COMBAT_DAMAGE: 'combat.damage',
   COMBAT_DEATH: 'combat.death',
   STATS_UPDATE: 'stats.update',
@@ -88,4 +100,4 @@ export const CLIENT_EVENTS = {
   NPC_INTERACT: 'npc.interact',
 } as const;
 
-export type { Direction, MonsterState, Position };
+export type { CreatureState, Direction, Position };

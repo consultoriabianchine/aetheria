@@ -3,35 +3,10 @@ import type {
   CharacterSkills,
   Direction,
   ItemStack,
-  MonsterTemplate,
-  MonsterState,
   NpcDialogue,
   Position,
 } from '@aetheria/types';
 import type { StoredCharacter } from '../store/store';
-
-export class MonsterEntity {
-  id: string;
-  template: MonsterTemplate;
-  position: Position;
-  spawn: Position;
-  state: MonsterState = 'IDLE';
-  health: number;
-  maxHealth: number;
-  nextMoveAt = 0;
-  attackCooldownUntil = 0;
-  targetId: string | null = null;
-  respawnAt: number | null = null;
-
-  constructor(id: string, template: MonsterTemplate, position: Position) {
-    this.id = id;
-    this.template = template;
-    this.position = { ...position };
-    this.spawn = { ...position };
-    this.health = template.maxHealth;
-    this.maxHealth = template.maxHealth;
-  }
-}
 
 export interface NpcEntity {
   id: string;

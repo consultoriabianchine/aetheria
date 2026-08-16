@@ -1,0 +1,352 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ---------------------------------------------------------------------------
+// Contas e personagens (jogo)
+// ---------------------------------------------------------------------------
+
+model Account {
+  id           String      @id @default(cuid())
+  username     String      @unique
+  passwordHash String
+  createdAt    DateTime    @default(now())
+  characters   Character[]
+}
+
+model Character {
+  id             String             @id @default(cuid())
+  accountId      String
+  name           String             @unique
+  position       CharacterPosition?
+  stats          CharacterStats?
+  skills         CharacterSkills?
+  inventory      CharacterInventory?
+  equipment      CharacterEquipment?
+  quests         CharacterQuest[]
+  account        Account            @relation(fields: [accountId], references: [id], onDelete: Cascade)
+  createdAt      DateTime           @default(now())
+}
+
+model CharacterPosition {
+  id          String    @id @default(cuid())
+  characterId String    @unique
+  x           Int
+  y           Int
+  z           Int
+  character   Character @relation(fields: [characterId], references: [id], onDelete: Cascade)
+}
+
+model CharacterStats {
+  id           String    @id @default(cuid())
+  characterId  String    @unique
+  level        Int       @default(1)
+  experience   Int       @default(0)
+  health       Int
+  maxHealth    Int
+  mana         Int
+  maxMana     Int
+  attack       Int
+  defense      Int
+  character    Character @relation(fields: [characterId], references: [id], onDelete: Cascade)
+}
+
+model CharacterSkills {
+  id          String    @id @default(cuid())
+  characterId String    @unique
+  sword       Int       @default(10)
+  axe         Int       @default(10)
+  club        Int       @default(10)
+  distance    Int       @default(10)
+  magic       Int       @default(10)
+  defense     Int       @default(10)
+  character   Character @relation(fields: [characterId], references: [id], onDelete: Cascade)
+}
+
+// Itens do jogo (catálogo local em data/items.json). Tabela renomeada para
+// `game_items` para não conflitar com a tabela `items` do importador.
+model Item {
+  id        String @id
+  name      String
+  type      String
+  weight    Float  @default(0)
+  stackable Boolean @default(false)
+  attack    Int    @default(0)
+  defense   Int    @default(0)
+  image     String?
+  category  String @default("outros")
+  slot      String?
+
+  @@map("game_items")
+}
+
+model CharacterInventory {
+  id          String     @id @default(cuid())
+  characterId String     @unique
+  slots       Json
+  character   Character  @relation(fields: [characterId], references: [id], onDelete: Cascade)
+}
+
+model CharacterEquipment {
+  id          String    @id @default(cuid())
+  characterId String    @unique
+  head        Json?
+  armor       Json?
+  legs        Json?
+  boots       Json?
+  weapon      Json?
+  shield      Json?
+  ring        Json?
+  amulet      Json?
+  character   Character @relation(fields: [characterId], references: [id], onDelete: Cascade)
+}
+
+// ---------------------------------------------------------------------------
+// Criaturas
+//
+// Colunas `source_*` são preenchidas pelo importador da TibiaWiki.
+// Colunas `game_*` são definidas pelo nosso jogo (podem ficar NULL até serem
+// balanceadas). O game-server coalesce: game_* ?? source_* ?? default.
+// ---------------------------------------------------------------------------
+
+model CreatureDefinition {
+  id                        String          @id @default(cuid())
+  name                      String
+  slug                      String          @unique
+  description               String          @default("")
+  type                      String          @default("humanoid")
+
+  // Dados importados da TibiaWiki.
+  source_url                String?         @unique @map("source_url")
+  source_name               String?         @map("source_name")
+  source_hp                 Int?            @map("source_hp")
+  source_experience         Int?            @map("source_experience")
+  charms                    Int?
+  difficulty                String?
+  difficulty_raw            String?         @map("difficulty_raw")
+  category                  String?
+  image_url                 String?         @map("image_url")
+  image_path                String?         @map("image_path")
+  gif_url                   String?         @map("gif_url")
+  gif_path                  String?         @map("gif_path")
+
+  // Dados do nosso jogo (balanceamento).
+  game_level                Int?            @map("game_level")
+  game_max_health           Int?            @map("game_max_health")
+  game_attack               Int?            @map("game_attack")
+  game_defense              Int?            @map("game_defense")
+  game_experience           Int?            @map("game_experience")
+  game_speed                Int?            @map("game_speed")
+  game_attack_speed         Int?            @map("game_attack_speed")
+  game_attack_range         Int?            @map("game_attack_range")
+  game_view_range           Int?            @map("game_view_range")
+  game_chase_range          Int?            @map("game_chase_range")
+  game_flee_health_percent  Int?            @default(0) @map("game_flee_health_percent")
+  game_can_wander           Boolean?        @default(true) @map("game_can_wander")
+  game_can_chase            Boolean?        @default(true) @map("game_can_chase")
+  game_can_flee             Boolean?        @default(false) @map("game_can_flee")
+  game_return_to_spawn      Boolean?        @default(true) @map("game_return_to_spawn")
+
+  loots                     CreatureLoot[]
+  sources                   CreatureSource[]
+  spawns                    CreatureSpawn[]
+  created_at                DateTime        @default(now()) @map("created_at")
+  updated_at                DateTime        @updatedAt @map("updated_at")
+
+  @@index([type])
+  @@index([category])
+  @@map("creature_definitions")
+}
+
+model CreatureSpawn {
+  id                     String             @id @default(cuid())
+  creature_definition_id String             @map("creature_definition_id")
+  map_id                 String             @map("map_id")
+  x                      Int
+  y                      Int
+  z                      Int
+  respawn_time           Int                @default(8000) @map("respawn_time")
+  max_instances          Int                @default(1) @map("max_instances")
+  creature               CreatureDefinition @relation(fields: [creature_definition_id], references: [id], onDelete: Cascade)
+  map                    Map                @relation(fields: [map_id], references: [id], onDelete: Cascade)
+
+  @@index([creature_definition_id])
+  @@index([map_id, x, y, z])
+  @@map("creature_spawns")
+}
+
+// Loot de uma criatura. `item_name` vem da Wiki; `item_id` (opcional) liga ao
+// catálogo de itens do jogo (game_items) para o drop funcionar em runtime.
+model CreatureLoot {
+  id          String             @id @default(cuid())
+  creature_id String             @map("creature_id")
+  item_id     String?            @map("item_id")
+  item_name   String             @map("item_name")
+  item_slug   String?            @map("item_slug")
+  item_url    String?            @map("item_url")
+  rarity      String             @default("UNKNOWN")
+  min_quantity Int?              @map("min_quantity")
+  max_quantity Int?              @map("max_quantity")
+  chance      Float?
+  raw_text    String?            @map("raw_text")
+  creature    CreatureDefinition @relation(fields: [creature_id], references: [id], onDelete: Cascade)
+  created_at  DateTime           @default(now()) @map("created_at")
+  updated_at  DateTime           @updatedAt @map("updated_at")
+
+  @@unique([creature_id, item_name])
+  @@index([creature_id])
+  @@index([item_id])
+  @@map("creature_loot")
+}
+
+// Estado de cada fonte (URL da página) escaneada: permite saber se o conteúdo
+// mudou (source_hash) e evitar reprocessamento desnecessário.
+model CreatureSource {
+  id             String   @id @default(cuid())
+  creature_id    String   @map("creature_id")
+  source_name    String   @map("source_name")
+  source_url     String   @map("source_url")
+  source_hash    String   @map("source_hash")
+  last_scraped_at DateTime @default(now()) @map("last_scraped_at")
+  creature       CreatureDefinition @relation(fields: [creature_id], references: [id], onDelete: Cascade)
+  created_at     DateTime @default(now()) @map("created_at")
+  updated_at     DateTime @updatedAt @map("updated_at")
+
+  @@unique([creature_id, source_url])
+  @@index([creature_id])
+  @@map("creature_sources")
+}
+
+// ---------------------------------------------------------------------------
+// Itens importados da TibiaWiki (páginas de itens do loot).
+// ---------------------------------------------------------------------------
+
+model WikiItem {
+  id          String   @id @default(cuid())
+  name        String
+  slug        String   @unique
+  source_url  String?  @unique @map("source_url")
+  image_url   String?  @map("image_url")
+  image_path  String?  @map("image_path")
+  description String?  @default("")
+  created_at  DateTime @default(now()) @map("created_at")
+  updated_at  DateTime @updatedAt @map("updated_at")
+
+  @@map("items")
+}
+
+// ---------------------------------------------------------------------------
+// Importação da TibiaWiki (histórico, erros e snapshots).
+// ---------------------------------------------------------------------------
+
+model ImportRun {
+  id              String   @id @default(cuid())
+  category_url    String   @map("category_url")
+  started_at      DateTime @default(now()) @map("started_at")
+  finished_at     DateTime? @map("finished_at")
+  status          String   @default("RUNNING")
+  total_found     Int      @default(0) @map("total_found")
+  total_processed Int      @default(0) @map("total_processed")
+  total_inserted  Int      @default(0) @map("total_inserted")
+  total_updated   Int      @default(0) @map("total_updated")
+  total_failed    Int      @default(0) @map("total_failed")
+  total_skipped   Int      @default(0) @map("total_skipped")
+
+  @@index([category_url])
+  @@map("import_runs")
+}
+
+model ImportError {
+  id          String   @id @default(cuid())
+  source_url  String   @map("source_url")
+  entity_name String?  @map("entity_name")
+  error       String
+  stack       String?
+  created_at  DateTime @default(now()) @map("created_at")
+
+  @@index([source_url])
+  @@map("import_errors")
+}
+
+// Snapshot do HTML bruto por URL — permite corrigir o parser sem rebaixar
+// todas as páginas novamente.
+model ImportSnapshot {
+  id           String   @id @default(cuid())
+  source_url   String   @unique @map("source_url")
+  content_hash String   @map("content_hash")
+  html_path    String   @map("html_path")
+  scraped_at   DateTime @default(now()) @map("scraped_at")
+
+  @@index([content_hash])
+  @@map("import_snapshots")
+}
+
+// ---------------------------------------------------------------------------
+// Mundo, NPCs, quests e logs (jogo).
+// ---------------------------------------------------------------------------
+
+model Npc {
+  id      String @id
+  name    String
+  title   String
+  lines   Json
+}
+
+model Map {
+  id        String            @id @default(cuid())
+  name      String
+  width     Int
+  height    Int
+  tiles     MapTile[]
+  spawns    CreatureSpawn[]
+}
+
+model MapTile {
+  id           String @id @default(cuid())
+  mapId        String
+  x            Int
+  y            Int
+  z            Int
+  type         Int
+  walkable     Boolean
+  blocksVision Boolean
+  map          Map    @relation(fields: [mapId], references: [id], onDelete: Cascade)
+
+  @@unique([mapId, x, y, z])
+}
+
+model Quest {
+  id          String          @id @default(cuid())
+  name        String
+  description String
+  objectives  Json
+  rewards     Json
+  experience  Int
+  characters  CharacterQuest[]
+}
+
+model CharacterQuest {
+  id           String    @id @default(cuid())
+  characterId  String
+  questId      String
+  status       String    @default("NOT_STARTED")
+  progress     Json      @default("{}")
+  character    Character @relation(fields: [characterId], references: [id], onDelete: Cascade)
+  quest        Quest     @relation(fields: [questId], references: [id], onDelete: Cascade)
+
+  @@unique([characterId, questId])
+}
+
+model Log {
+  id          String   @id @default(cuid())
+  characterId String?
+  type        String
+  message     String
+  createdAt   DateTime @default(now())
+}

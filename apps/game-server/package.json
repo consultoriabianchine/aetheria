@@ -4,16 +4,19 @@
   "private": true,
   "scripts": {
     "build": "nest build",
-    "start": "node dist/main.js",
+    "start": "node dist/src/main.js",
     "start:dev": "nest start --watch",
-    "prisma:generate": "prisma generate",
-    "prisma:migrate": "prisma migrate dev",
-    "prisma:deploy": "prisma migrate deploy",
+    "prisma:generate": "npm run generate -w @aetheria/database",
+    "prisma:migrate": "prisma migrate dev --schema ../packages/database/prisma/schema.prisma",
+    "prisma:deploy": "prisma migrate deploy --schema ../packages/database/prisma/schema.prisma",
     "prisma:seed": "ts-node prisma/seed.ts",
-    "items:generate": "node scripts/generate-items.mjs"
+    "items:generate": "node scripts/generate-items.mjs",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "dependencies": {
     "@aetheria/config": "*",
+    "@aetheria/database": "*",
     "@aetheria/protocol": "*",
     "@aetheria/shared": "*",
     "@aetheria/types": "*",
@@ -22,7 +25,6 @@
     "@nestjs/platform-express": "^11.2.1",
     "@nestjs/platform-socket.io": "^11.0.0",
     "@nestjs/websockets": "^11.0.0",
-    "@prisma/client": "^6.2.0",
     "bcryptjs": "^2.4.3",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.1",
@@ -32,11 +34,8 @@
     "@nestjs/cli": "^11.0.0",
     "@nestjs/schematics": "^11.0.0",
     "@types/bcryptjs": "^2.4.6",
-    "prisma": "^6.2.0",
     "ts-node": "^10.9.2",
-    "typescript": "^5.6.0"
-  },
-  "prisma": {
-    "seed": "ts-node prisma/seed.ts"
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.8"
   }
 }

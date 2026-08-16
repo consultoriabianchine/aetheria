@@ -1,4 +1,4 @@
-import type { MonsterTemplate, NpcTemplate } from '@aetheria/types';
+import type { NpcTemplate } from '@aetheria/types';
 
 /** Dimensões e andar inicial do mundo. */
 export const MAP_WIDTH = 64;
@@ -51,59 +51,6 @@ export const MAP_SEED = 0xA3E7;
 
 export const SPAWN_POINT = { x: 32, y: 32, z: MAP_Z };
 
-/** Templates de monstros do MVP (nomes e atributos originais). */
-export const MONSTER_TEMPLATES: Record<string, MonsterTemplate> = {
-  goblin: {
-    id: 'goblin',
-    name: 'Goblin Rastejador',
-    level: 1,
-    maxHealth: 40,
-    attack: 5,
-    defense: 2,
-    speed: 1,
-    attackRange: 1,
-    attackInterval: 1200,
-    experience: 12,
-    aggroRadius: 6,
-    leashRadius: 12,
-    loot: [
-      { itemId: 'gold', quantity: 1, weight: 40 },
-      { itemId: 'i-tear-of-forest', quantity: 1, weight: 15 },
-      { itemId: 'short-sword', quantity: 1, weight: 8 },
-    ],
-  },
-  wolf: {
-    id: 'wolf',
-    name: 'Lobo da Névoa',
-    level: 2,
-    maxHealth: 55,
-    attack: 8,
-    defense: 3,
-    speed: 1,
-    attackRange: 1,
-    attackInterval: 1000,
-    experience: 20,
-    aggroRadius: 7,
-    leashRadius: 14,
-    loot: [
-      { itemId: 'gold', quantity: 1, weight: 45 },
-      { itemId: 'i-wolf-pelt', quantity: 1, weight: 20 },
-      { itemId: 'dagger', quantity: 1, weight: 10 },
-    ],
-  },
-};
-
-/** Pontos de spawn de monstros (áreas). */
-export const MONSTER_SPAWNS = [
-  { templateId: 'goblin', x: 24, y: 26, z: MAP_Z },
-  { templateId: 'goblin', x: 27, y: 23, z: MAP_Z },
-  { templateId: 'goblin', x: 26, y: 30, z: MAP_Z },
-  { templateId: 'goblin', x: 20, y: 28, z: MAP_Z },
-  { templateId: 'wolf', x: 40, y: 38, z: MAP_Z },
-  { templateId: 'wolf', x: 44, y: 42, z: MAP_Z },
-  { templateId: 'wolf', x: 41, y: 46, z: MAP_Z },
-];
-
 /** NPCs do MVP. */
 export const NPC_TEMPLATES: Record<string, NpcTemplate> = {
   guardian: {
@@ -121,8 +68,41 @@ export const NPC_TEMPLATES: Record<string, NpcTemplate> = {
   },
 };
 
-/** Tempo de respawn de monstros (ms). */
+/** Tempo de respawn padrão de criaturas (ms). */
 export const MONSTER_RESPAWN_MS = 8000;
+
+// ---------------------------------------------------------------------------
+// IA de criaturas
+
+/** Intervalo mínimo entre recálculos de pathfinding na perseguição (ms). */
+export const PATH_RECALCULATION_INTERVAL = 500;
+
+/** Chance por tick de uma criatura IDLE iniciar WANDER. */
+export const WANDER_CHANCE_PER_TICK = 0.12;
+
+/** Distância mínima/máxima (Chebyshev) para escolher um ponto de WANDER. */
+export const WANDER_MIN_DIST = 2;
+export const WANDER_MAX_DIST = 5;
+
+/** Nº máximo de passos de um WANDER (impede vagar indefinidamente). */
+export const WANDER_MAX_STEPS = 5;
+
+/** Distância preferida ao fugir do alvo (tiles). */
+export const FLEE_PREFERRED_DIST = 6;
+
+/** Limite de passos presos consecutivos antes de forçar recálculo do caminho. */
+export const CREATURE_STUCK_LIMIT = 2;
+
+/** Quantos tiles o alvo precisa se mover para forçar recálculo do caminho. */
+export const PATH_RECALC_TARGET_DELTA = 3;
+
+/** Regeneração de HP por tick enquanto a criatura está IDLE (fração do maxHealth). */
+export const CREATURE_REGENERATION_PER_TICK = 0.02;
+
+/** Quando true, eventos de criatura incluem dados de debug (path). */
+export function debugCreatures(): boolean {
+  return process.env.DEBUG_CREATURES === 'true';
+}
 
 /** Tempo que o loot fica no chão (ms). */
 export const LOOT_LIFETIME_MS = 60000;

@@ -50,5 +50,27 @@ services:
     ports:
       - "4200:80"
 
+  tibiawiki-importer:
+    profiles: ["importer"]
+    build:
+      context: .
+      dockerfile: apps/tibiawiki-importer/Dockerfile
+    container_name: aetheria-importer
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: ${DATABASE_URL:-postgresql://aetheria:aetheria_dev@postgres:5432/aetheria?schema=public}
+      TIBIAWIKI_CATEGORY_URL: ${TIBIAWIKI_CATEGORY_URL:-https://www.tibiawiki.com.br/wiki/Human%C3%B3ides}
+      SCRAPER_CONCURRENCY: ${SCRAPER_CONCURRENCY:-2}
+      SCRAPER_DELAY_MS: ${SCRAPER_DELAY_MS:-1000}
+      SCRAPER_TIMEOUT_MS: ${SCRAPER_TIMEOUT_MS:-15000}
+      SCRAPER_MAX_RETRIES: ${SCRAPER_MAX_RETRIES:-3}
+    volumes:
+      - importer-assets:/app/assets
+      - importer-exports:/app/exports
+
 volumes:
   pgdata:
+  importer-assets:
+  importer-exports:

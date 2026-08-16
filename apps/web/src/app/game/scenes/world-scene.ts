@@ -4,6 +4,7 @@ import { TILE } from '@aetheria/config';
 import type { Direction, MapTile, Position } from '@aetheria/types';
 import { WsService } from '../../core/ws.service';
 import { GameState } from '../game-state';
+import type { CreatureCatalogService } from '../creature-catalog.service';
 
 const TILE_SIZE = 48;
 const MOVE_DURATION_MS = 235;
@@ -25,6 +26,7 @@ interface RenderedEntity {
 export class WorldScene extends Phaser.Scene {
   private ws!: WsService;
   private state!: GameState;
+  private catalog!: CreatureCatalogService;
   private tileImages: Phaser.GameObjects.Image[] = [];
   private entities = new Map<string, RenderedEntity>();
   private entityInfo = new Map<string, EntityInfo>();
@@ -34,14 +36,20 @@ export class WorldScene extends Phaser.Scene {
   private lastSeq = -1;
   private moveDir: Direction | null = null;
   private keys!: Record<string, Phaser.Input.Keyboard.Key>;
+  private creatureSprites = new Map<string, boolean>();
+  private spriteLoadInFlight = false;
+  private debugVisible = false;
+  private debugOverlay!: Phaser.GameObjects.Text;
 
   constructor() {
     super('World');
   }
 
-  create(data: { ws: WsService; state: GameState }) {
+  create(data: { ws: WsService; state: GameState; catalog: CreatureCatalogService }) {
     this.ws = data.ws;
     this.state = data.state;
+    this.catalog = data.catalog;
+    void this.catalog.ensureLoaded();
     this.buildTextures();
 
     this.state.sceneEvents$.subscribe((e) => {
@@ -58,6 +66,7 @@ export class WorldScene extends Phaser.Scene {
     this.cameras.main.setBackgroundColor('#17202a');
     this.cameras.main.setZoom(1.5);
     this.setupKeyboard();
+    this.setupDebug();
     this.input.on('pointerdown', (pointer: Phaser.Input.Pointer) => this.onPointerDown(pointer));
   }
 
@@ -95,6 +104,61 @@ export class WorldScene extends Phaser.Scene {
       case SERVER_EVENTS.ENTITY_HEALTH: {
         const h = data as { id: string; health: number; maxHealth: number };
         this.updateHealth(h.id, h.health, h.maxHealth);
+        break;
+      }
+      case SERVER_EVENTS.CREATURE_SPAWN: {
+        const c = data as {
+          creatureId: string;
+          definitionId: string;
+          slug: string;
+          name: string;
+          position: Position;
+          health: number;
+          maxHealth: number;
+        };
+        this.addCreature(c.creatureId, c.slug, c.name, c.position, c.health, c.maxHealth);
+        break;
+      }
+      case SERVER_EVENTS.CREATURE_MOVE: {
+        const m = data as { creatureId: string; from: Position; to: Position; timestamp: number };
+        this.moveEntity(m.creatureId, m.to);
+        break;
+      }
+      case SERVER_EVENTS.CREATURE_ATTACK: {
+        const a = data as { creatureId: string; targetId: string; position: Position };
+        const rendered = this.entities.get(a.creatureId);
+        if (rendered) this.flashEntity(rendered);
+        break;
+      }
+      case SERVER_EVENTS.CREATURE_DAMAGE: {
+        const d = data as { creatureId: string; attackerId: string; amount: number; critical: boolean; health: number; maxHealth: number };
+        this.updateHealth(d.creatureId, d.health, d.maxHealth);
+        const rendered = this.entities.get(d.creatureId);
+        const x = rendered?.image.x ?? 0;
+        const y = rendered?.image.y ?? 0;
+        this.showDamage(x, y, d.amount, d.critical);
+        break;
+      }
+      case SERVER_EVENTS.CREATURE_DEATH: {
+        const de = data as { creatureId: string; experience: number };
+        if (this.state.target()?.id === de.creatureId) this.state.clearTarget();
+        if (de.experience) this.state.addSystemMessage(`+${de.experience} XP`);
+        const rendered = this.entities.get(de.creatureId);
+        if (rendered) {
+          this.tweens.add({
+            targets: [rendered.image, rendered.label],
+            alpha: 0.25,
+            duration: 500,
+            onComplete: () => {
+              if (rendered.healthBack) rendered.healthBack.alpha = 0.25;
+              if (rendered.healthFront) rendered.healthFront.alpha = 0.25;
+            },
+          });
+        }
+        break;
+      }
+      case SERVER_EVENTS.CREATURE_REMOVE: {
+        this.removeEntity((data as { creatureId: string }).creatureId);
         break;
       }
       case SERVER_EVENTS.COMBAT_DAMAGE: {
@@ -197,6 +261,63 @@ export class WorldScene extends Phaser.Scene {
     this.setBar(front, health, maxHealth);
   }
 
+  private addCreature(id: string, slug: string, name: string, position: Position, health: number, maxHealth: number) {
+    const rendered = this.createRendered('monster', name, position);
+    this.attachHealthBar(rendered, health, maxHealth);
+    this.entities.set(id, rendered);
+    this.entityInfo.set(id, { name, health, maxHealth });
+    const sprite = this.catalog.spriteFor(slug);
+    if (sprite) this.loadCreatureSprite(id, slug, sprite, rendered);
+    this.updateDebugOverlay();
+  }
+
+  private loadCreatureSprite(id: string, slug: string, sprite: string, rendered: RenderedEntity) {
+    const textureKey = `creature_${slug}`;
+    if (this.textures.exists(textureKey)) {
+      this.applyCreatureSprite(rendered, textureKey);
+      return;
+    }
+    if (this.creatureSprites.has(textureKey)) return;
+    this.creatureSprites.set(textureKey, true);
+    this.load.image(textureKey, `assets/${sprite}`);
+    const onComplete = () => {
+      this.spriteLoadInFlight = false;
+      if (this.textures.exists(textureKey)) {
+        this.applyCreatureSprite(this.entities.get(id), textureKey);
+      }
+      this.load.off(Phaser.Loader.Events.COMPLETE, onComplete);
+      this.load.off(Phaser.Loader.Events.FILE_LOAD_ERROR, onError);
+    };
+    const onError = () => {
+      this.spriteLoadInFlight = false;
+      this.load.off(Phaser.Loader.Events.COMPLETE, onComplete);
+      this.load.off(Phaser.Loader.Events.FILE_LOAD_ERROR, onError);
+    };
+    this.load.once(Phaser.Loader.Events.COMPLETE, onComplete);
+    this.load.on(Phaser.Loader.Events.FILE_LOAD_ERROR, onError);
+    if (!this.spriteLoadInFlight) {
+      this.spriteLoadInFlight = true;
+      this.load.start();
+    }
+  }
+
+  private applyCreatureSprite(rendered: RenderedEntity | undefined, textureKey: string) {
+    if (!rendered) return;
+    const size = TILE_SIZE * 0.9;
+    rendered.image.setTexture(textureKey).setTint(0xffffff).setDisplaySize(size, size);
+    this.updateDebugOverlay();
+  }
+
+  private flashEntity(rendered: RenderedEntity) {
+    this.tweens.add({
+      targets: rendered.image,
+      scale: 1.25,
+      duration: 90,
+      yoyo: true,
+      ease: 'Linear',
+    });
+  }
+
   private moveEntity(id: string, position: Position) {
     const rendered = this.entities.get(id);
     if (rendered) this.moveRendered(rendered, position);
@@ -275,6 +396,49 @@ export class WorldScene extends Phaser.Scene {
     };
     this.input.keyboard!.on('keydown', check);
     this.input.keyboard!.on('keyup', check);
+  }
+
+  private setupDebug() {
+    this.debugOverlay = this.add
+      .text(10, 10, '', {
+        fontFamily: 'monospace',
+        fontSize: '12px',
+        color: '#9be0ff',
+        backgroundColor: 'rgba(0,0,0,0.55)',
+        padding: { x: 6, y: 4 },
+      })
+      .setDepth(500)
+      .setScrollFactor(0)
+      .setOrigin(0)
+      .setVisible(false);
+    this.input.keyboard!.on('keydown', (event: KeyboardEvent) => {
+      if (event.key === 'F3') {
+        this.debugVisible = !this.debugVisible;
+        this.debugOverlay.setVisible(this.debugVisible);
+        this.updateDebugOverlay();
+      }
+    });
+    this.time.addEvent({
+      delay: 500,
+      loop: true,
+      callback: () => {
+        if (this.debugVisible) this.updateDebugOverlay();
+      },
+    });
+  }
+
+  private updateDebugOverlay() {
+    if (!this.debugVisible) return;
+    const creatures = [...this.entities.values()].filter((e) => e.kind === 'monster').length;
+    this.debugOverlay.setText(
+      [
+        `FPS: ${Math.round(this.game.loop.actualFps)}`,
+        `Entidades: ${this.entities.size}`,
+        `Criaturas: ${creatures}`,
+        `Sprites: ${this.creatureSprites.size}`,
+        `Zoom: ${this.cameras.main.zoom.toFixed(2)}`,
+      ].join('\n'),
+    );
   }
 
   private onPointerDown(pointer: Phaser.Input.Pointer) {
