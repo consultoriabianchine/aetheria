@@ -1,0 +1,2 @@
+-- Scripts de inicialização opcionais do PostgreSQL.
+-- O schema é gerenciado pelo Prisma (db push / migrate).

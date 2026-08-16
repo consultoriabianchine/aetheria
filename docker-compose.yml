@@ -1,0 +1,54 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: aetheria-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-aetheria}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-aetheria_dev}
+      POSTGRES_DB: ${POSTGRES_DB:-aetheria}
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./docker/postgres/init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-aetheria} -d ${POSTGRES_DB:-aetheria}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  game-server:
+    build:
+      context: .
+      dockerfile: apps/game-server/Dockerfile
+    container_name: aetheria-server
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: ${DATABASE_URL:-postgresql://aetheria:aetheria_dev@postgres:5432/aetheria?schema=public}
+      PORT: "4000"
+      JWT_SECRET: ${JWT_SECRET:-change_me_in_production}
+    ports:
+      - "4000:4000"
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('net').connect(4000,'localhost').on('connect',()=>process.exit(0)).on('error',()=>process.exit(1))"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  web:
+    build:
+      context: .
+      dockerfile: apps/web/Dockerfile
+    container_name: aetheria-web
+    restart: unless-stopped
+    depends_on:
+      - game-server
+    ports:
+      - "4200:80"
+
+volumes:
+  pgdata:

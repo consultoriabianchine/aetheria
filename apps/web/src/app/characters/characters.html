@@ -1,0 +1,34 @@
+<div class="auth-screen">
+  <div class="auth-card wide">
+    <div class="head">
+      <h1>Personagens</h1>
+      <button class="btn-ghost" (click)="back()">Sair</button>
+    </div>
+
+    <p class="sub">Escolha um personagem para entrar no mundo de Aetheria.</p>
+
+    <div class="char-list">
+      @for (c of state.characters(); track c.id) {
+        <div class="char-row" (click)="enter(c)">
+          <div class="char-avatar">{{ c.name.charAt(0) }}</div>
+          <div class="char-info">
+            <div class="char-name">{{ c.name }}</div>
+            <div class="char-meta">Nível {{ c.level }} · {{ c.experience }} XP</div>
+          </div>
+          <button class="btn-primary small">Entrar</button>
+        </div>
+      } @empty {
+        <div class="empty">Nenhum personagem ainda. Crie o seu abaixo.</div>
+      }
+    </div>
+
+    <div class="create">
+      <input [(ngModel)]="newName" (keydown.enter)="create()" placeholder="Nome do novo personagem (3-16)" maxlength="16" />
+      <button class="btn-primary" (click)="create()">Criar</button>
+    </div>
+
+    @if (state.createError(); as err) {
+      <div class="error">{{ err }}</div>
+    }
+  </div>
+</div>

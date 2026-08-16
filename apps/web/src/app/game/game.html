@@ -1,0 +1,107 @@
+<div class="game-root">
+  <div id="game-canvas" class="game-canvas"></div>
+
+  <!-- stats -->
+  <div class="hud hud-stats">
+    <div class="player-name">{{ state.self()?.name }}</div>
+    <div class="bar">
+      <span class="bar-label">HP</span>
+      <div class="bar-track"><div class="bar-fill hp" [style.width.%]="hpPct()"></div></div>
+      <span class="bar-num">{{ state.stats().health }}/{{ state.stats().maxHealth }}</span>
+    </div>
+    <div class="bar">
+      <span class="bar-label">MP</span>
+      <div class="bar-track"><div class="bar-fill mp" [style.width.%]="mpPct()"></div></div>
+      <span class="bar-num">{{ state.stats().mana }}/{{ state.stats().maxMana }}</span>
+    </div>
+    <div class="bar xp">
+      <div class="bar-track"><div class="bar-fill xp" [style.width.%]="xpPct()"></div></div>
+      <span class="bar-num">Nv {{ state.stats().level }} · {{ state.stats().experience }}/{{ state.stats().level * 100 }} XP</span>
+    </div>
+  </div>
+
+  <!-- alvo -->
+  @if (state.target(); as t) {
+    <div class="hud hud-target">
+      <div class="target-name">{{ t.name }}</div>
+      <div class="bar">
+        <div class="bar-track"><div class="bar-fill hp" [style.width.%]="t.maxHealth > 0 ? (t.health / t.maxHealth) * 100 : 0"></div></div>
+        <span class="bar-num">{{ t.health }}/{{ t.maxHealth }}</span>
+      </div>
+    </div>
+  }
+
+  <!-- chat -->
+  <div class="hud hud-chat">
+    <div class="chat-log">
+      @for (line of state.chat(); track $index) {
+        <div class="chat-line">
+          <b>{{ line.from }}</b>
+          <span>{{ line.text }}</span>
+        </div>
+      }
+    </div>
+    <input class="chat-input" [(ngModel)]="chatInput" (keydown.enter)="sendChat()" placeholder="Falar (Enter)…" maxlength="120" />
+  </div>
+
+  <!-- controles -->
+  <div class="hud hud-controls">
+    <button class="btn" (click)="invOpen.set(!invOpen())">{{ invOpen() ? 'Fechar' : 'Inventário' }}</button>
+    <button class="btn" (click)="exit()">Sair</button>
+  </div>
+
+  <!-- inventário -->
+  @if (invOpen()) {
+    <div class="hud hud-inventory">
+      <h3>Inventário</h3>
+      <div class="inv-grid">
+        @for (entry of inventory(); track entry.index) {
+          <div class="inv-slot" [title]="entry.stack ? nameFor(entry.stack.itemId) : ''" (click)="entry.stack ? onEquip(entry.index) : null">
+            @if (entry.stack; as st) {
+              @if (iconFor(st.itemId); as src) {
+                <img [src]="src" alt="" />
+              } @else {
+                <div class="inv-ph">{{ nameFor(st.itemId).charAt(0) }}</div>
+              }
+              @if (st.quantity > 1) {
+                <span class="qty">{{ st.quantity }}</span>
+              }
+            }
+          </div>
+        }
+      </div>
+
+      <h3>Equipamento</h3>
+      <div class="eq-grid">
+        @for (entry of equipment(); track entry.slot) {
+          <div class="eq-row" (click)="entry.stack ? onUnequip(entry.slot) : null">
+            <span class="eq-slot">{{ entry.label }}</span>
+            @if (entry.stack; as st) {
+              @if (iconFor(st.itemId); as src) {
+                <img [src]="src" alt="" />
+              } @else {
+                <div class="inv-ph">{{ nameFor(st.itemId).charAt(0) }}</div>
+              }
+              <span class="eq-name">{{ nameFor(st.itemId) }}</span>
+            } @else {
+              <span class="eq-empty">—</span>
+            }
+          </div>
+        }
+      </div>
+    </div>
+  }
+
+  <!-- diálogo NPC -->
+  @if (state.dialog(); as d) {
+    <div class="hud hud-dialog">
+      <h3>{{ d.title }}</h3>
+      @for (line of d.lines; track $index) {
+        <p>{{ line }}</p>
+      }
+      <button class="btn" (click)="closeDialog()">Fechar</button>
+    </div>
+  }
+
+  <div class="hud hud-hint">WASD / Setas: mover · Clique em um monstro para atacar · Clique em um NPC para conversar</div>
+</div>

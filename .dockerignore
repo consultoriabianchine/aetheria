@@ -1,0 +1,10 @@
+node_modules
+**/node_modules
+**/dist
+**/.angular
+.git
+**/*.log
+.env
+server.log
+server.err.log
+apps/web/.angular

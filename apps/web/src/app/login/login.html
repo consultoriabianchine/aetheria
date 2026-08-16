@@ -1,0 +1,20 @@
+<div class="auth-screen">
+  <div class="auth-card">
+    <h1>Aetheria <span>Online</span></h1>
+    <p class="sub">MMORPG 2D multiplayer — entre ou crie uma conta (automático).</p>
+
+    <label>Usuário</label>
+    <input [(ngModel)]="username" (keydown.enter)="submit()" placeholder="seu nome de conta" autocomplete="username" />
+
+    <label>Senha</label>
+    <input type="password" [(ngModel)]="password" (keydown.enter)="submit()" placeholder="••••••••" autocomplete="current-password" />
+
+    @if (state.loginError(); as err) {
+      <div class="error">{{ err }}</div>
+    }
+
+    <button class="btn-primary" (click)="submit()">Entrar</button>
+
+    <p class="hint">Contas são criadas automaticamente no primeiro acesso.</p>
+  </div>
+</div>
