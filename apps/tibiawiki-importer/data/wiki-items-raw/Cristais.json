@@ -1,0 +1,1110 @@
+{
+ "query": {
+  "pages": [
+   {
+    "pageid": 8626,
+    "ns": 0,
+    "title": "Crystal of Balance",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Crystal of Balance\n| flavortext     = It is said to to make your calmer and less afflicted by anger and anxiety.\n| itemclass      = Outros Itens\n| primarytype    = Cristais\n| attrib         = \n| stackable      = sim\n| weight         = 8.50\n| value          = 1000 - 5 000\n| npcvalue       = 1 000\n| droppedby      = [[Cliff Strider]], [[Ironblight]], [[Nightstalker]].\n\n| buyfrom        = Jogadores.\n| sellto         = Telas\n| implemented    = 8.4\n| notes          = Nenhuma.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8627,
+    "ns": 0,
+    "title": "Crystal of Focus",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Crystal of Focus\n| flavortext     = It is said to increase your ability to concentrate and make the right decisions.\n| itemclass      = Outros Itens\n| primarytype    = Cristais\n| attrib         = \n| weight         = 8.00\n| stackable      = sim\n| value          = 2 000 - 4 000\n| npcvalue       = 2 000\n| droppedby      = [[Mad Mage]], [[Nightmare Scion]], [[Twisted Pooka]].\n| buyfrom        = Jogadores.\n| sellto         = Telas\n| implemented    = 8.4\n| notes          = Usado como [[Decorações|decoração]].<noinclude><p><spoiler>Obtido na [[The Hidden City of Beregar Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8628,
+    "ns": 0,
+    "title": "Crystal of Power",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Crystal of Power\n| flavortext     = It is said to make you more resistant to weaknesses and to supply you with energy.\n| itemclass      = Outros Itens\n| primarytype    = Cristais\n| attrib         = \n| stackable      = sim\n| weight         = 8.50\n| value          = 3 000 - 7 000\n| droppedby      = [[Boogy]], [[Cliff Strider]], [[Infernalist]], [[Ironblight]], [[Raging Mage]], [[Soul of Dragonking Zyrtarch]], [[War Golem]].\n| npcvalue       = 3 000\n| npcprice       = 0\n| buyfrom        = Jogadores.\n| sellto         = Telas\n| implemented    = 8.4\n| notes          = Nenhuma.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8850,
+    "ns": 0,
+    "title": "Crystal Ball",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Crystal Ball\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Cristais\n| secondarytype  = \n| attrib         = \n| weight         = 34.00\n| stackable      = sim\n| value          = 190-530\n| npcvalue       = 190\n| npcprice       = 530\n| droppedby      = [[Golgordan]], [[Latrivan]], [[Priestess]].\n| droppedRaidby  = [[Ghazbaran]], [[Morgaroth]], [[Orshabaal]].\n| buyfrom        = Khanna:650, Alexander\n| sellto         = Alexander\n| notes          = \n<noinclude><p><spoiler>\n* Recompensa da [[Shadowthorn Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8858,
+    "ns": 0,
+    "title": "Life Crystal",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Life Crystal\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Cristais\n| attrib         =\n| weight         = 2.63\n| stackable      = sim\n| value          = \n| npcvalue       = 85\n| droppedby      = [[Albino Dragon]], [[Animated Feather]], [[Banshee]], [[Burster Spectre]], [[Crazed Winter Rearguard]], [[Dark Monk]], [[Diamond Servant]], [[Diamond Servant Replica]], [[Dragon]], [[Dragon Lord]], [[Elf Arcanist]], [[Frost Dragon]], [[Hydra]], [[Lizard Snakecharmer]], [[Mad Scientist]], [[Monk]], [[Quara Pincher Scout]], [[Serpent Spawn]], [[Undead Dragon]], [[Ushuriel]], [[War Golem]], [[Worker Golem]], [[Young Sea Serpent]].\n| droppedRaidby  = [[Dracola]], [[Fernfang]], [[Ghazbaran]], [[Morgaroth]], [[Orshabaal]].\n| droppedEventby = [[Haunted Dragon]], [[Ice Dragon]].\n| buyfrom        = Jogadores.\n| sellto         = Alexander, Khanna:75, Haroun:50\n| notes          = Produz um pequena quantidade de [[Light Sources|Luz]]. Tem a mesma aparência que: [[Food Matrix Crystal]], [[Weapon Matrix Crystal]], [[Memory Crystal]], [[Spectral Stone]] e [[Resonance Crystal]].\n<noinclude><p><spoiler>\n* Utilizado em uma das possíveis trocas que constituem as [[Exchange Quests]]:\n** Pode ser trocado por 01 [[Life Ring]] com o NPC [[Chester Kahs]] na [[Gamel Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9149,
+    "ns": 0,
+    "title": "Blood Crystal",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Blood Crystal\n| flavortext     = It has the power to store magic energy.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Cristais\n| attrib         = Nenhum.\n| weight         = 8.90\n| value          = 50 000\n| npcprice       = 50 000\n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Black Bert\n| sellto         = Jogadores.\n| implemented    = 8.4\n| notes          = <noinclude><p><spoiler>* Obtido e usado na [[Blood Brothers Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9208,
+    "ns": 0,
+    "title": "Deep Crystal",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Deep Crystal\n| flavortext     = It is pulsating with spectral energy.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Cristais\n| attrib         = Nenhum.\n| weight         = 3.10\n| value          = \n| npcprice       = 13 000\n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Black Bert\n| sellto         = Jogadores.\n| implemented    = 8.5\n| notes          = Tem o mesmo sprite que um [[Life Crystal]], um [[Food Matrix Crystal]], um [[Memory Crystal]], um [[Resonance Crystal]] e um [[Spectral Stone]].\n<noinclude><p><spoiler>\n* Obtido e usado durante a [[Shadows of Yalahar Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9229,
+    "ns": 0,
+    "title": "Elemental Crystal",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Elemental Crystal\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Cristais\n| attrib         = \n| stackable      = sim\n| weight         = 3.20\n| value          = 8 000\n| npcprice       = 8 000\n| droppedby      = Ninguém.\n\n| buyfrom        = Black Bert\n| sellto         = Jogadores.\n| implemented    = 8.5\n| notes          = Para obter esse item, você precisa usar uma [[pick]] em um [[Earth Elemental]] morto.<br /> Mesmo sprite de um [[Icicle (Item)|Icicle]].\n<noinclude><p><spoiler>\n10 são necessários para a [[Shadows of Yalahar Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9388,
+    "ns": 0,
+    "title": "Flawless Ice Crystal",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Flawless Ice Crystal\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Produtos de Criaturas\n| secondarytype  = Cristais\n| attrib         = \n| weight         = 2.50\n| stackable      = sim\n| value          = \n| npcvalue       = 5 000\n| droppedby      = [[Ice Overlord]].\n| buyfrom        = Jogadores.\n| sellto         = Arkulius\n| implemented    = 8.2\n| notes          = \n<noinclude><p><spoiler>\n* Obtido e usado na [[The Elemental Spheres Quest]].\n* Você '''não''' pode comprar um [[Flawless Ice Crystal]] de outro jogador para completar a primeira missão. Você precisa pegar a maior quantidade de experiência do [[Ice Overlord]] que dropa o [[Flawless Ice Crystal]] para entregar ao NPC.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9390,
+    "ns": 0,
+    "title": "Frost Charm",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Frost Charm\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Cristais\n| attrib         = Nenhum.\n| weight         = 19.00\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| droppedby      = Ninguém.\n| npcprice       = 10000\n| buyfrom        = Black Bert\n| sellto         = Jogadores.\n| implemented    = 8.0\n| notes          = Esse é um dos itens mágicos que os shamans de [[Nibelor]] acharam para marcar certos lugares para concentrar uma ponte espiritual e livrar seus poderes mais frios. Parece ter um lugar em [[Hrodmir]] onde você pode marcar algum tipo de ponto.\n<noinclude><p><spoiler>* Obtido e usado durante a [[The Ice Islands Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9543,
+    "ns": 0,
+    "title": "Magic Crystal",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Magic Crystal\n| flavortext     = It is able to store memories and thoughts.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Cristais\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = 1.40\n| droppedby      = Ninguém.\n| buyfrom        = Black Bert\n| trade          = sim\n| npcprice       = 4 000\n| sellto         = Jogadores.\n| implemented    = 8.6\n| notes          = Tem a mesma aparência de um [[Life Crystal]] mas este brilha.<br />\n<noinclude><p><spoiler>* Obtido e usado na [[A Father's Burden Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9560,
+    "ns": 0,
+    "title": "Memory Crystal",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Memory Crystal\n| flavortext     = It is able to store memories and thoughts.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Cristais\n| attrib         = Nenhum.\n| weight         = 2.50\n| value          = Negociável\n| stackable      = não\n| droppedby      = Ninguém.\n| npcprice       = 500\n| buyfrom        = Black Bert\n| sellto         = Jogadores.\n| implemented    = 8.0\n| notes          = Parecido com um [[Life Crystal]], [[Food Matrix Crystal]], [[Weapon Matrix Crystal]], [[Spectral Stone]] e com um [[Resonance Crystal]].\n<noinclude><p><spoiler>* Obtido e usado na [[The Ice Islands Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9563,
+    "ns": 0,
+    "title": "Midnight Shard",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Midnight Shard\n| flavortext     = Lucius might be interested in those shards.\n| itemclass      = Outros Itens\n| primarytype    = Cristais\n| stackable      = sim\n| attrib         = Nenhum.\n| weight         = 3.00\n| value          = \n| npcprice       = 0\n| npcvalue       = 1 000\n| droppedby      =[[Acolyte of Darkness]], [[Bane of Light]], [[Bride of Night]], [[Doomsday Cultist]], [[Duskbringer]], [[Eclipse Knight]], [[Herald of Gloom]], [[Midnight Spawn]], [[Midnight Warrior]], [[Nightslayer]], [[Shadow Hound]].\n| buyfrom        = Jogadores.\n| sellto         = Lucius\n| implemented    = 8.5\n| notes          = Você pode trocar seus shards por experiência com [[Lucius]]. Cada Midnight Shard lhe dará [[Arquivo:83a1194ce381d3c28d82535d257be1.png]] pontos de experiência, em que L representa o seu level.<br />\n'''Cada jogador poderá trocar até 80 Shards'''.\n<noinclude><p><spoiler>* Pode ser obtido durante o evento [[Lightbearer]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 14795,
+    "ns": 0,
+    "title": "Crystal",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Object|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Crystal\n| objectclass    = Cristais\n| attrib         = Nenhum.\n| walkable       = não\n| mover          = não\n| pegar          = não\n| location       = [[Isle of Destiny]], [[Kazordoon]], [[Beregar]].\n| notes          = Versão pequena de um [[Large Crystal]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 14817,
+    "ns": 0,
+    "title": "Large Crystal (Blue)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se este não é o item que você procura, veja a página [[Large Crystal|Large Crystal (Desambiguação)]].}}\n{{Infobox_Object|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name        = Large Crystal (Blue)\n| objectclass = Cristais\n| attrib      = Nenhum.\n| walkable    = não\n| mover       = não\n| pegar       = não\n| location    = [[Isle of Destiny]], [[Kazordoon]], [[Gnomebase]] e em outros locais.\n| notes       = Pode ser visto em outra versão.<br />\n[[Arquivo:Large Crystal (Blue) 01.gif]]\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 23940,
+    "ns": 0,
+    "title": "Large Black Crystal",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Object|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Large Black Crystal\n| objectclass   = Cristais\n| secondarytype = Objetos de Quests\n| mover         = não\n| pegar         = não\n| walkable      = não\n| attrib        = Você pode usar uma [[Replica of the Sceptre]] nele.\n| location      = [[Edron]], ({{mapa|33118,31701,7:5|aqui}}). [[Nargor]] e [[Razachai]].\n| notes         = Um cristal raro encontrado em Edron, Nargor e Razachai.\n<noinclude><p><spoiler>\n* Faz parte da [[Wrath of the Emperor Quest]].\n* Faz parte da [[The Cursed Crystal Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 24581,
+    "ns": 0,
+    "title": "Food Matrix Crystal",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Food Matrix Crystal\n| flavortext    = It contains patterns to create food.\n| itemclass     = Outros Itens\n| primarytype   = Itens de Quest\n| secondarytype = Cristais\n| attrib        = Nenhum.\n| weight        = 2.50\n| stackable     = não\n| npcvalue      = \n| implemented   = 8.4\n| droppedby     = Ninguém.\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| notes         = \n<noinclude><p><spoiler>\n* Obtido e usado na [[In Service of Yalahar Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25361,
+    "ns": 0,
+    "title": "Crystal Lamp",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Crystal Lamp\n| itemclass      = Ferramentas e Outros Equipamentos\n| tertiarytype   = Extra Slot\n| primarytype    = Fontes de Luz\n| secondarytype  = Cristais\n| stackable      = não\n| attrib         = Fornece uma pequena quantidade de luz azulada.\n| weight         = 10.00\n| npcvalue       = 0\n| npcprice       = 15 [[Minor Crystalline Token]]\n| droppedby      = Ninguém.\n| buyfrom        = Gnomally\n| sellto         = Jogadores.\n| implemented    = 9.6\n| notes          = Quando acesa, seu nome é '''Lit Crystal Lamp'''. Faz parte do [[Blue Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25492,
+    "ns": 0,
+    "title": "Gnomish Repair Crystal",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Gnomish Repair Crystal\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Cristais\n| attrib         = Nenhum.\n| weight         = 4.50\n| mercado        = não\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 0\n| npcprice       = 50\n| droppedby      = Ninguém.\n| buyfrom        = Gnomally\n| sellto         = Jogadores.\n| implemented    = 9.6\n| notes          = <noinclude><p><spoiler>Pode ser obtido e usado na [[Bigfoot's Burden Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25493,
+    "ns": 0,
+    "title": "Gnomish Extraction Crystal",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Gnomish Extraction Crystal\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Cristais\n| attrib         = Nenhum.\n| weight         = 4.50\n| stackable      = não\n| mercado        = não\n| value          = \n| npcvalue       = 0\n| npcprice       = 50\n| droppedby      = Ninguém.\n| buyfrom        = Gnomally\n| sellto         = Jogadores.\n| implemented    = 9.6\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[Bigfoot's Burden Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25578,
+    "ns": 0,
+    "title": "Cluster of Blue Crystals",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Object|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Cluster of Blue Crystals\n| objectclass    = Cristais\n| attrib         = Nenhum.\n| walkable       = não\n| mover          = não\n| pegar          = não\n| location       = [[Gnomebase]] e na [[Lost Cavern]].\n| implemented    = 9.6\n| notes          = Ele pode ser visto em outra versão:<br />\n[[Arquivo:Cluster of Blue Crystals1.gif]]\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25581,
+    "ns": 0,
+    "title": "Green Crystal Rods",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Object|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Green Crystal Rods\n| objectclass    = Cristais\n| attrib         = Nenhum.\n| walkable       = não\n| mover          = não\n| pegar          = não\n| location       = [[Gnomebase]] e [[Thais]].\n| implemented    = 9.6\n| notes          = Pode ser visto em outras versões:<br />\n[[Arquivo:Green Crystal Rods1.gif]] [[Arquivo:Green Crystal Rods2.gif]] [[Arquivo:Green Crystal Rods3.gif]]\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25584,
+    "ns": 0,
+    "title": "Green Crystal Stalagmite",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Object|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Green Crystal Stalagmite\n| objectclass    = Cristais\n| attrib         = Nenhum.\n| walkable       = não\n| mover          = não\n| pegar          = não\n| location       = [[Gnomebase]] e [[Thais]].\n| implemented    = 9.6\n| notes          = Nenhuma.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25585,
+    "ns": 0,
+    "title": "Blue Crystal Rods",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Object|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Blue Crystal Rods\n| objectclass    = Cristais\n| attrib         = Nenhum.\n| walkable       = não\n| mover          = não\n| pegar          = não\n| location       = [[Gnomebase]] e na [[Lost Cavern]].\n| implemented    = 9.6\n| notes          = Pode ser visto em outras versões:<br />\n[[Arquivo:Blue Crystal Rods1.gif]] [[Arquivo:Blue Crystal Rods2.gif]] [[Arquivo:Blue Crystal Rods3.gif]]\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25590,
+    "ns": 0,
+    "title": "Large Blue Crystal",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Object|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Large Blue Crystal\n| objectclass    = Cristais\n| attrib         = Nenhum.\n| walkable       = não\n| mover          = não\n| pegar          = não\n| location       = [[Gnomebase]] e na [[Lost Cavern]].\n| implemented    = 9.6\n| notes          = Pode ser visto em outras versões:<br />\n[[Arquivo:Large Blue Crystal1.gif]] [[Arquivo:Large Blue Crystal2.gif]]\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25591,
+    "ns": 0,
+    "title": "Large Fallen Crystal",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Object|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Large Fallen Crystal\n| objectclass    = Cristais\n| attrib         = Nenhum.\n| walkable       = não\n| mover          = não\n| pegar          = não\n| location       = [[Gnomebase]].\n| implemented    = 9.6\n| notes          = Nenhuma.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25610,
+    "ns": 0,
+    "title": "Lonely Crystal",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Lonely Crystal\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Cristais\n| attrib         = Nenhum.\n| weight         = 2.80\n| stackable      = não\n| mercado        = não\n| value          = Negociável\n| npcvalue       = 0\n| npcprice       = 1 000\n| droppedby      = Ninguém\n| buyfrom        = Gnomally\n| sellto         = Jogadores.\n| implemented    = 9.6\n| notes          = <noinclude><p><spoiler>Necessário para a [[Bigfoot's Burden Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25626,
+    "ns": 0,
+    "title": "Huge Red Crystal",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Object|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name         = Huge Red Crystal\n| objectclass  = Cristais\n| attrib       = Nenhum.\n| walkable     = não\n| mover        = não\n| pegar        = não\n| location     = [[Gnomebase]].\n| implemented  = 9.6\n| notes        = Pode ser visto outras versões e tamanhos:<br />\n[[Arquivo:Huge Red Crystal01.gif]][[Arquivo:Huge Red Crystal02.gif]][[Arquivo:Huge Red Crystal03.gif]][[Arquivo:Huge Red Crystal04.gif]][[Arquivo:Huge Red Crystal05.gif]][[Arquivo:Huge Red Crystal06.gif]][[Arquivo:Huge Red Crystal07.gif]][[Arquivo:Huge Red Crystal08.gif]][[Arquivo:Huge Red Crystal09.gif]][[Arquivo:Huge Red Crystal10.gif]]\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25628,
+    "ns": 0,
+    "title": "Crystal Geode",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Object|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name            = Crystal Geode\n| objectclass     = Cristais\n| walkable        = não\n| attrib          = Nenhum.\n| mover           = não\n| pegar           = não\n| location        = [[Gnomebase]].\n| implemented     = 9.6\n| notes           = Nenhuma.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25700,
+    "ns": 0,
+    "title": "Cluster of Red Crystals",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Object|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Cluster of Red Crystals\n| objectclass    = Cristais\n| attrib         = Nenhum.\n| walkable       = não\n| mover          = não\n| pegar          = não\n| location       = [[Gnomebase]].\n| implemented    = 9.6\n| notes          = Ele pode ser visto em outra versão:<br />\n[[Arquivo:Cluster of Red Crystals01.gif]]\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25709,
+    "ns": 0,
+    "title": "Cluster of Green Crystals",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Object|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Cluster of Green Crystals\n| objectclass    = Cristais\n| attrib         = Nenhum.\n| walkable       = não\n| mover          = não\n| pegar          = não\n| location       = [[Gnomebase]].\n| implemented    = 9.6\n| notes          = Ele pode ser visto em outra versão:<br />\n[[Arquivo:Cluster of Green Crystals01.gif]]\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25729,
+    "ns": 0,
+    "title": "Damaged Crystal",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Object|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name         = Damaged Crystal\n| objectclass  = Cristais\n| secondarytype= Objetos de Quests\n| mover        = não\n| pegar        = não\n| walkable     = não\n| attrib       = Fornece um pequena quantidade de luz, quando não está danificado. Você pode usar um [[Gnomish Repair Crystal]] nele. \n| location     = [[Gnomebase]].\n| implemented  = 9.6\n| notes        = Um cristal que se danifica e perde a luz de tempos em tempos, encontrado na [[Gnomegate Crystal Grounds]] em Gnomebase.\n<noinclude><p><spoiler>\n* Faz parte da [[Bigfoot's Burden Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25756,
+    "ns": 0,
+    "title": "Crystal Wall (Red)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Object|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Crystal Wall (Red)\n| objectclass    = Cristais\n| attrib         = Nenhum.\n| walkable       = não\n| mover          = não\n| pegar          = não\n| location       = [[Gnomebase]].\n| implemented    = 9.6\n| notes          = Pode ser visto em outras versões:<br />\n[[Arquivo:Crystal Wall (Red).gif]][[Arquivo:Crystal Wall (Red2).gif]][[Arquivo:Crystal Wall (Red3).gif]]\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25902,
+    "ns": 0,
+    "title": "Large Crystal (Red)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se este não é o item que você procura, veja a página [[Large Crystal|Large Crystal (Desambiguação)]].}}\n{{Infobox_Object|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name        = Large Crystal (Red)\n| objectclass = Cristais\n| attrib      = Nenhum.\n| walkable    = não\n| mover       = não\n| pegar       = não\n| location    = [[Isle of Destiny]], [[Kazordoon]], [[Gnomebase]] e em outros locais.\n| notes       = Pode ser visto em outra versão.<br />\n[[Arquivo:Large Crystal (Red) 01.gif]]\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25932,
+    "ns": 0,
+    "title": "Large Crystal (Green)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se este não é o item que você procura, veja a página [[Large Crystal|Large Crystal (Desambiguação)]].}}\n{{Infobox_Object|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name        = Large Crystal (Green)\n| objectclass = Cristais\n| attrib      = Nenhum.\n| walkable    = não\n| mover       = não\n| pegar       = não\n| location    = [[Isle of Destiny]], [[Kazordoon]], [[Gnomebase]] e em outros locais.\n| notes       = Pode ser visto em outra versão.<br />\n[[Arquivo:Large Crystal (Green) 01.gif]]\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25938,
+    "ns": 0,
+    "title": "Large Crystal (Cyan)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se este não é o item que você procura, veja a página [[Large Crystal|Large Crystal (Desambiguação)]].}}\n{{Infobox_Object|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name        = Large Crystal (Cyan)\n| objectclass = Cristais\n| flavortext  = \n| attrib      = Nenhum.\n| walkable    = não\n| mover       = não\n| pegar       = não\n| location    = [[Isle of Destiny]], [[Kazordoon]], [[Gnomebase]] e em outros locais.\n| notes       = Pode ser visto em outra versão.<br />\n[[Arquivo:Large Crystal (Cyan) 01.gif]]\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 31102,
+    "ns": 0,
+    "title": "Large Crystal (Berg)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Object|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name         = Large Crystal (Berg)\n| objectclass  = Cristais\n| attrib       = Fornece uma pequena quantidade de luz branca.\n| walkable     = não\n| mover        = não\n| pegar        = não\n| location     = Encontrado com facilidade na [[The Spike]].\n| implemented  = 10.20\n| notes        = Nenhuma.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 39497,
+    "ns": 0,
+    "title": "Imbuing Crystal",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Imbuing Crystal \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Cristais\n| attrib         = Fornece uma pequena quantidade de luz vermelha.\n| weight         = 2.50\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| mercado        = não\n| notes          = <noinclude><p><spoiler>* Pode ser obtido e usado na [[Forgotten Knowledge Quest]].</spoiler></p></noinclude>\n| implemented    = 11.02\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 39840,
+    "ns": 0,
+    "title": "Broken Azure Crystal",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Object|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Broken Azure Crystal\n| objectclass    = Cristais\n| attrib         = Nenhum.\n| mover          = não\n| pegar          = não\n| walkable       = não\n| location       = [[Astral Shaper Ruins]].\n| implemented    = 11.02\n| notes          = Pode ser visto em outras versões:<br />\n[[Arquivo:Broken Azure Crystal1.gif]] [[Arquivo:Broken Azure Crystal2.gif]] [[Arquivo:Broken Azure Crystal3.gif]]\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 40468,
+    "ns": 0,
+    "title": "Green Crystals",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Object|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Green Crystals\n| objectclass    = Cristais\n| attrib         = Nenhum.\n| walkable       = não\n| mover          = não\n| pegar          = não\n| location       = [[Gnomebase]].\n| implemented    = 9.6\n| notes          = Nenhuma.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 40549,
+    "ns": 0,
+    "title": "Blue Crystals",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Object|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Blue Crystals\n| objectclass    = Cristais\n| attrib         = Nenhum.\n| walkable       = não\n| mover          = não\n| pegar          = não\n| location       = [[Gnomebase]].\n| implemented    = 9.6\n| notes          = Pode ser visto em outra versão:<br />\n[[Arquivo:Blue Crystals2.gif]]\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42004,
+    "ns": 0,
+    "title": "Glowing White Crystals",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Object|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Glowing White Crystals\n| flavortext     = They are gleaming in the moonlight.\n| objectclass    = Cristais\n| walkable       = sim\n| mover          = não\n| pegar          = não\n| location       = Espalhados em [[Feyrist]].\n| implemented    = 11.40\n| notes          = Pode ser visto em outras versões:<br />\n[[Arquivo:Glowing White Crystals 01.gif]] [[Arquivo:Glowing White Crystals 02.gif]]\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42866,
+    "ns": 0,
+    "title": "Heavy Crystal Fragment",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Heavy Crystal Fragment\n| flavortext     = A heavy fragment harvested from a large tree of crystals. It's fragile but should last about a day.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Cristais\n| weight         = 10.00\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| mercado        = não\n| droppedby      = [[The Baron from Below]], [[The Count Of The Core]], [[The Duke Of The Depths]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.50\n| notes          = \n<noinclude><p><spoiler>\n* Podem ser obtidos através de [[Large Harvestable Crystals]], [[Harvestable Crystals]] e [[Small Harvestable Crystals]] que ficam nas [[Warzone 4|4]], [[Warzone 5|5]] e [[Warzone 6|6]]. São necessários 30 deles para abrir o teleport que leva aos bosses das warzones.\n* Cada [[Heavy Crystal Fragment]], dura 24 horas.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 43031,
+    "ns": 0,
+    "title": "Large Harvestable Crystals",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Object|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name         = Large Harvestable Crystal\n| flavortext   = These crystals are ripe with energy.\n| attrib       = Ao clicar existe a chance de coletar 01 [[Heavy Crystal Fragment]] ou 01 [[Crystal Rubbish]].\n| objectclass  = Cristais\n| mover        = não\n| pegar        = não\n| walkable     = não\n| implemented  = 11.50\n| location     = [[Deep Hub Crystal Dungeon]], [[Deep Hub Fungus Dungeon]] e [[Deep Hub Magma Dungeon]].\n| notes        = <noinclude><p><spoiler>* Faz parte da [[Dangerous Depths Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 43033,
+    "ns": 0,
+    "title": "Harvestable Crystals",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Object|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name         = Harvestable Crystals\n| flavortext   = These crystals are ripe with energy.\n| attrib       = Pode obter cristais.\n| objectclass  = Cristais\n| mover        = não\n| pegar        = não\n| walkable     = não\n| implemented  = 11.50\n| location     = [[Deep Hub Crystal Dungeon]], [[Deep Hub Fungus Dungeon]] e [[Deep Hub Magma Dungeon]].\n| notes        = Ao clicar existe 5 chances em 10 de coletar 1 [[Heavy Crystal Fragment]] e outras 5 em 10 de pegar um [[Crystal Rubbish]].\n<noinclude><p><spoiler>* Faz parte da [[Dangerous Depths Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 43037,
+    "ns": 0,
+    "title": "Hollow Geode",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Object|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name            = Hollow Geode\n| flavortext      = This geode is hollow, it seems somehow connected to the platform next to it.\n| objectclass     = Cristais\n| walkable        = não\n| attrib          = Nenhum.\n| mover           = não\n| pegar           = não\n| location        = [[Deep Hub Crystal Dungeon]], [[Deep Hub Fungus Dungeon]] e [[Deep Hub Magma Dungeon]].\n| implemented     = 11.50\n| notes           = <noinclude><p><spoiler>* Faz parte da [[Dangerous Depths Quest]]. \n* Ao usar nele 30 [[Heavy Crystal Fragment]] coletados nos [[Harvestable Crystals]], um teleport se abre dando acesso a sala do boss.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 43059,
+    "ns": 0,
+    "title": "Crystal-Resonator",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Object|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name         = Crystal-Resonator\n| objectclass  = Paredes\n| secondarytype = Cristais\n| attrib       = Nenhum.\n| mover        = não\n| pegar        = não\n| walkable     = não\n| implemented  = 11.50\n| location     = [[Gnome Deep Hub]].\n| notes        = Nenhum.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 43105,
+    "ns": 0,
+    "title": "Fragile Lava Funnel",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Object|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name         = Fragile Lava Funnel\n| flavortext   = \n| attrib       = Nenhum.\n| objectclass  = Cristais\n| mover        = não\n| pegar        = não\n| walkable     = não\n| implemented  = 11.50\n| location     = [[Deep Hub Crystal Dungeon]], [[Deep Hub Fungus Dungeon]] e [[Deep Hub Magma Dungeon]].\n| notes        = É necessário destruir pelo menos uma delas para ter acesso as [[Deep Hub Crystal Dungeon]], [[Deep Hub Fungus Dungeon]] e [[Deep Hub Magma Dungeon]].\n<noinclude><p><spoiler>* Faz parte da [[Dangerous Depths Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 43106,
+    "ns": 0,
+    "title": "Crude Lava Pump",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Object|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name         = Crude Lava Pump\n| flavortext   = \n| attrib       = Nenhum.\n| objectclass  = Cristais\n| mover        = não\n| pegar        = não\n| walkable     = não\n| implemented  = 11.50\n| location     = [[Deep Hub Crystal Dungeon]], [[Deep Hub Fungus Dungeon]] e [[Deep Hub Magma Dungeon]].\n| notes        = É necessário destruir pelo menos uma delas para ter acesso as [[Deep Hub Crystal Dungeon]], [[Deep Hub Fungus Dungeon]] e [[Deep Hub Magma Dungeon]].\n<noinclude><p><spoiler>* Faz parte da [[Dangerous Depths Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 43527,
+    "ns": 0,
+    "title": "Destroyed Pillar",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Object|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name         = Destroyed Pillar\n| objectclass  = Cristais\n| secondarytype= Objetos de Quests\n| mover        = não\n| pegar        = não\n| walkable     = não\n| attrib       = Versão destrúida dos pilares: [[Pillar Of Death]], [[Pillar Of Draining]], [[Pillar Of Healing]], [[Pillar Of Protection]] e [[Pillar Of Summoning]]. \n| location     = [[Cults of Tibia (The Humans)]].\n| notes        = Esse pilar e o seu guardião são responsáveis por summonar até 05 [[Dread Minion]]s.<br />\n<noinclude><spoiler>* Faz parte da [[Cults of Tibia Quest]].</spoiler></noinclude>\n| implemented  = 11.40\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9340,
+    "ns": 0,
+    "title": "Spectral Stone",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Spectral Stone\n| flavortext     = It is pulsating with spectral energy.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Cristais\n| attrib         = Nenhum.\n| weight         = 2.50\n| value          = Negociável\n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.6\n| notes          = Mesmo sprite de um [[Life Crystal]], [[Food Matrix Crystal]], [[Weapon Matrix Crystal]], [[Memory Crystal]] e um [[Resonance Crystal]].\n<noinclude><p><spoiler>Item obtido na [[The Explorer Society Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9561,
+    "ns": 0,
+    "title": "Resonance Crystal",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Resonance Crystal \n| flavortext     =  \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Cristais\n| attrib         = Nenhum. \n| weight         = 2.50 \n| stackable      = não\n \n| npcvalue       = 0 \n| droppedby      = Ninguém. \n| buyfrom        = Jogadores. \n| sellto         = Jogadores. \n| implemented    = 7.6\n| notes          = Mesmo sprite de um [[Life Crystal]], [[Food Matrix Crystal]], [[Weapon Matrix Crystal]], [[Memory Crystal]] e uma [[Spectral Stone]]. <noinclude><p><spoiler>Item temporariamente obtido na [[The Explorer Society Quest]].<br />Após você usá-lo no gelo, a sua descrição do item muda para:<br /><span style=\"color:green;\">'''''You have recorded beautiful ice music on it for the Explorer Society.'''''</span></spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9645,
+    "ns": 0,
+    "title": "Rare Crystal",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Rare Crystal\n| flavortext     = An extremely rare crystal you recovered from the Lost Mines.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Cristais\n| attrib         = Nenhum.\n| weight         = 3.10\n| npcvalue       = \n| value          = Negociável\n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Black Bert\n| sellto         = Jogadores.\n\n| npcprice       = 1 000\n| implemented    = 8.54\n| notes          = \n<noinclude><p><spoiler>Item temporariamente obtido na [[Sea of Light Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 20604,
+    "ns": 0,
+    "title": "Rough Red Gem",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Rough Red Gem\n| flavortext     = This blood red gem is still rough.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Cristais\n| attrib         = Nenhum.\n| weight         = 3.90\n| stackable      = não\n| mercado        = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.4\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[Liquid Black Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 24583,
+    "ns": 0,
+    "title": "Weapon Matrix Crystal",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Weapon Matrix Crystal\n| flavortext    = It contains patterns to create weapons.\n| itemclass     = Outros Itens\n| primarytype   = Itens de Quest\n| secondarytype = Cristais\n| attrib        = Nenhum.\n| weight        = 2.50\n| stackable     = não\n| value         =\n| npcvalue      = \n| droppedby     = Ninguém.\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| implemented   = 8.4\n| notes         = Se parece com um [[Life Crystal]], um [[Memory Crystal]], um [[Spectral Stone]] e um [[Resonance Crystal]].\n<noinclude><p><spoiler>* Obtido e usado durante a [[In Service of Yalahar Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25490,
+    "ns": 0,
+    "title": "Teleport Crystal",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Teleport Crystal\n| flavortext     = Such crystals are used to charge the long range teleporters to the cities.\n| itemclass      = Outros Itens\n| primarytype    = Cristais\n| secondarytype  = \n| attrib         = \n| weight         = 0.45\n| stackable      = sim\n| value          = 150 - 300\n| npcvalue       = 0\n| npcprice       = 150\n| droppedby      = Ninguém\n| buyfrom        = Xelvar, Gnomette, Gnomincia\n| sellto         = Jogadores.\n| implemented    = 9.6\n| notes          = Você precisará de um desse para viajar entre algumas cidades através do [[Large Crystal Teleporter]].\n<noinclude><p><spoiler>* Possibilidade de ser obtido ao usar um [[Gnomish Supply Package]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25542,
+    "ns": 0,
+    "title": "Red Teleport Crystal",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Red Teleport Crystal\n| flavortext     = Such crystals are used to charge the teleporters to the warzones.\n| itemclass      = Outros Itens\n| primarytype    = Cristais\n| secondarytype  = \n| attrib         = \n| weight         = 0.45\n| stackable      = sim\n| value          = 10 000 - 40 000\n| npcvalue       = 0\n| npcprice       = 10 [[Minor Crystalline Token]]s\n| droppedby      = Ninguém\n| buyfrom        = Gnomally\n| sellto         = Jogadores.\n| implemented    = 9.6\n| notes          = Você precisará de um desse para entrar nas warzones na [[Bigfoot's Burden Quest]].\n\n<noinclude><p><spoiler>*Não será mais necessário utilizá-lo para entrar nas respectivas warzones, se tiver entregue o [[Deathstrike's Snippet]] (Warzone I), o [[Gnomevil's Hat]] (Warzone II) e o [[Abyssador's Lash]] (Warzone III) para [[Gnomission]].\n*Possibilidade de ser obtido ao usar um [[Gnomish Supply Package]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25786,
+    "ns": 0,
+    "title": "Scattered Crystals",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Object|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Scattered Crystals\n| objectclass    = Cristais\n| mover          = não\n| pegar          = não\n| walkable       = sim\n| location       = [[Gnomebase Alpha]].\n| implemented    = 9.6\n| notes          = Pequenos cristais sobre o piso.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 28846,
+    "ns": 0,
+    "title": "Small Red Crystals",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Object|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Small Red Crystals\n| objectclass    = Cristais\n| attrib         = Nenhum.\n| walkable       = não\n| mover          = não\n| pegar          = não\n| location       = [[Gnomebase]], [[Lost Cavern]] e em outro locais do [[Tibia]].\n| implemented    = 9.6\n| notes          = Pode ser visto em outra versão.<br />\n[[Arquivo:Small Red Crystals01.gif]]\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 28847,
+    "ns": 0,
+    "title": "Red Crystals",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Object|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Red Crystals\n| objectclass    = Cristais\n| attrib         = Nenhum.\n| walkable       = não\n| mover          = não\n| pegar          = não\n| location       = [[Gnomebase]].\n| implemented    = 9.6\n| notes          = Nenhuma.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 28882,
+    "ns": 0,
+    "title": "Red Crystal Rods",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Object|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Red Crystal Rods\n| objectclass    = Cristais\n| attrib         = Nenhum.\n| walkable       = não\n| mover          = não\n| pegar          = não\n| location       = [[Gnomebase]] e dentro da casa [[Lost Cavern]].\n| implemented    = 9.6\n| notes          = Pode ser visto em outras versões:<br />\n[[Arquivo:Red Crystal Rods1.gif]] [[Arquivo:Red Crystal Rods2.gif]] [[Arquivo:Red Crystal Rods3.gif]] [[Arquivo:Red Crystal Rods4.gif]] [[Arquivo:Red Crystal Rods5.gif]]\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 31058,
+    "ns": 0,
+    "title": "The Spike of a Crystal Drill",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Object|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = The Spike of a Crystal Drill\n| objectclass    = Cristais\n| attrib         = Nenhum.\n| mover          = não\n| pegar          = não\n| walkable       = não\n| location       = [[The Spike]].\n| implemented    = 10.20\n| notes          = Esta é a ponta da gigantesca broca de cristal.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 32307,
+    "ns": 0,
+    "title": "Traces of an Ancient Dream",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Object|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Traces of an Ancient Dream\n| flavortext     = It is embedded in stone and must be carefully removed.\n| objectclass    = Cristais\n| secondarytype  = Objetos de Quests\n| attrib         = Nenhum.\n| walkable       = não\n| mover          = não\n| pegar          = não\n| location       = [[Roshamuul Mines]], {{mapa|33691,32348,7:5|aqui}}.\n| implemented    = 10.30\n| notes          = Também encontrado com a descrição: '''It grows new crystal spikes at a slow pace.'''. <noinclude><p><spoiler>Faz parte da [[Roshamuul Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 37644,
+    "ns": 0,
+    "title": "Purified Soul (Quest)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Purified Soul (Quest)\n| flavortext     = This pure soul is powerful enough to destroy Sin Devourers. The soul is fading away quickly though.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Cristais\n| stackable      = não\n| attrib         = Nenhum.\n| weight         = 2.50\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.90\n| mercado        = não\n| notes          = Mesmo sprite de um [[Life Crystal]]. Aparecem após derrotar um [[Damned Soul]] e duram 5 segundos. Devem ser usados nos [[Sin Devourer]]s para que eles desapareçam.\n<noinclude><p><spoiler>* Obtido e usado na [[Ferumbras' Ascendant Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 39845,
+    "ns": 0,
+    "title": "Milky Azure Crystal",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Object|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Milky Azure Crystal\n| objectclass    = Cristais\n| attrib         = Nenhum.\n| mover          = não\n| pegar          = não\n| walkable       = não\n| location       = [[Astral Shaper Ruins]] (quando voltar no tempo).\n| implemented    = 11.02\n| notes          = Pode ser visto em outras versões:<br />\n[[Arquivo:Milky Azure Crystal1.gif]] [[Arquivo:Milky Azure Crystal2.gif]] [[Arquivo:Milky Azure Crystal3.gif]]\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 41398,
+    "ns": 0,
+    "title": "Twilight Candles",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Object|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Twilight Candles\n| objectclass    = Cristais\n| attrib         = Nenhum.\n| walkable       = não\n| mover          = não\n| pegar          = não\n| location       = Espalhados por [[Feyrist]].\n| implemented     = 11.40\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 43035,
+    "ns": 0,
+    "title": "Small Harvestable Crystals",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Object|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name         = Small Harvestable Crystals\n| flavortext   = These crystals are ripe with energy.\n| attrib       = Possibilidade de obter cristais.\n| objectclass  = Cristais\n| mover        = não\n| pegar        = não\n| walkable     = não\n| implemented  = 11.50\n| location     = [[Deep Hub Crystal Dungeon]], [[Deep Hub Fungus Dungeon]] e [[Deep Hub Magma Dungeon]].\n| notes        = Ao clicar existe 3 chances em 10 de coletar 1 [[Heavy Crystal Fragment]] e outras 7 em 10 de pegar um [[Crystal Rubbish]].\n<noinclude><p><spoiler>* Faz parte da [[Dangerous Depths Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45939,
+    "ns": 0,
+    "title": "Obsidian Pipes",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Object|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name         = Obsidian Pipes\n| flavortext   = \n| attrib       = Após brilhar, lança waves mortais.\n| objectclass  = Cristais\n| mover        = não\n| pegar        = não\n| walkable     = não\n| implemented  = 11.50\n| location     = [[Gnome Deep Hub]].\n| notes        = Causa danos altos de [[Fire Damage|fogo]] em quem estiver em sua frente.\n<noinclude><p><spoiler>* Pode ser visto na sala do boss da [[Warzone V]] e no combate com o boss [[Ancient Spawn of Morgathla]].\n* Faz parte da [[Dangerous Depths Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 48225,
+    "ns": 0,
+    "title": "Raw Crystal Deposit",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Object|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Raw Crystal Deposit\n| objectclass    = Cristais\n| primarytype    = Itens de Quest\n| attrib         = Nenhum.\n| walkable       = não\n| mover          = não\n| pegar          = não\n| location       = [[Barren Drift]].\n| implemented    = 12.30\n| notes          = Nenhuma.<noinclude><p><spoiler>* Faz parte da missão ''The Thaian'' da [[Feaster of Souls Quest]].</spoiler></p></noinclude>\n\n}}"
+       }
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

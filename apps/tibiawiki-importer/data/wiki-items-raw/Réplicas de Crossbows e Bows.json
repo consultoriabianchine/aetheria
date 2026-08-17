@@ -1,0 +1,294 @@
+{
+ "query": {
+  "pages": [
+   {
+    "pageid": 42310,
+    "ns": 0,
+    "title": "Ornate Carving Bow",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ornate Carving Bow\n| flavortext     = This replica looks overcharged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas\n| hands          = Duas\n| type           = Réplicas de Crossbows e Bows\n| range          = 6\n| attack         = \n| defense        = \n| weight         = 55.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Mana_Leech|+1% mana leech para Lesser Ethereal Spear}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Mana_Leech|+1% mana leech para Lesser Ethereal Spear}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Mana_Leech|+3% mana leech para Lesser Ethereal Spear}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Mana_Leech|+4% mana leech para Lesser Ethereal Spear}}\n| perk5          = {{Weapon Perk|Type_Skill_Distance||+1 Distance Fighting}}\n| notes          = É uma réplica da [[Bow of Carving (Overcharged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42314,
+    "ns": 0,
+    "title": "Ornate Carving Crossbow",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ornate Carving Crossbow\n| flavortext     = This replica looks overcharged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas\n| hands          = Duas\n| type           = Réplicas de Crossbows e Bows\n| range          = 5\n| attack         = \n| defense        = \n| weight         = 65.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Mana_Leech|+1% mana leech para Lesser Ethereal Spear}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Mana_Leech|+1% mana leech para Lesser Ethereal Spear}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Mana_Leech|+3% mana leech para Lesser Ethereal Spear}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Mana_Leech|+4% mana leech para Lesser Ethereal Spear}}\n| perk5          = {{Weapon Perk|Type_Skill_Distance||+1 Distance Fighting}}\n| notes          = É uma réplica da [[Crossbow of Carving (Overcharged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42330,
+    "ns": 0,
+    "title": "Valuable Carving Bow",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Valuable Carving Bow\n| flavortext     = This replica looks heavily charged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas\n| hands          = Duas\n| type           = Réplicas de Crossbows e Bows\n| range          = 6\n| attack         = \n| defense        = \n| weight         = 55.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Mana_Leech|+1% mana leech para Lesser Ethereal Spear}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Mana_Leech|+1% mana leech para Lesser Ethereal Spear}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Mana_Leech|+3% mana leech para Lesser Ethereal Spear}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Mana_Leech|+4% mana leech para Lesser Ethereal Spear}}\n| perk5          = {{Weapon Perk|Type_Skill_Distance||+1 Distance Fighting}}\n| notes          = É uma réplica da [[Bow of Carving (Heavily Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42332,
+    "ns": 0,
+    "title": "Valuable Carving Crossbow",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Valuable Carving Crossbow\n| flavortext     = This replica looks heavily charged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas\n| hands          = Duas\n| type           = Réplicas de Crossbows e Bows\n| range          = 5\n| attack         = \n| defense        = \n| weight         = 65.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Mana_Leech|+1% mana leech para Lesser Ethereal Spear}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Mana_Leech|+1% mana leech para Lesser Ethereal Spear}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Mana_Leech|+3% mana leech para Lesser Ethereal Spear}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Mana_Leech|+4% mana leech para Lesser Ethereal Spear}}\n| perk5          = {{Weapon Perk|Type_Skill_Distance||+1 Distance Fighting}}\n| notes          = É uma réplica da [[Crossbow of Carving (Heavily Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42350,
+    "ns": 0,
+    "title": "Plain Carving Bow",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Plain Carving Bow\n| flavortext     = This replica looks charged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas\n| hands          = Duas\n| type           = Réplicas de Crossbows e Bows\n| range          = 6\n| attack         = \n| defense        = \n| weight         = 55.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Mana_Leech|+1% mana leech para Lesser Ethereal Spear}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Mana_Leech|+1% mana leech para Lesser Ethereal Spear}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Mana_Leech|+3% mana leech para Lesser Ethereal Spear}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Mana_Leech|+4% mana leech para Lesser Ethereal Spear}}\n| perk5          = {{Weapon Perk|Type_Skill_Distance||+1 Distance Fighting}}\n| notes          = É uma réplica da [[Bow of Carving (Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42352,
+    "ns": 0,
+    "title": "Plain Carving Crossbow",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Plain Carving Crossbow\n| flavortext     = This replica looks charged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas\n| hands          = Duas\n| type           = Réplicas de Crossbows e Bows\n| range          = 5\n| attack         = \n| defense        = \n| weight         = 65.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Mana_Leech|+1% mana leech para Lesser Ethereal Spear}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Mana_Leech|+1% mana leech para Lesser Ethereal Spear}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Mana_Leech|+3% mana leech para Lesser Ethereal Spear}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Mana_Leech|+4% mana leech para Lesser Ethereal Spear}}\n| perk5          = {{Weapon Perk|Type_Skill_Distance||+1 Distance Fighting}}\n| notes          = É uma réplica da [[Crossbow of Carving (Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42371,
+    "ns": 0,
+    "title": "Ornate Mayhem Bow",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ornate Mayhem Bow\n| flavortext     = This replica looks overcharged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas\n| hands          = Duas\n| type           = Réplicas de Crossbows e Bows\n| range          = 6\n| attack         = \n| defense        = \n| weight         = 55.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Critical_Dmg|+10% critical extra damage para Lesser Ethereal Spear}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Critical_Dmg|+20% critical extra damage para Lesser Ethereal Spear}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Critical_Dmg|+30% critical extra damage para Lesser Ethereal Spear}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Critical_Chance|+5% critical hit chance para Lesser Ethereal Spear}}\n| perk5          = {{Weapon Perk|Type_Skill_Distance||+1 Distance Fighting}}\n| notes          = É uma réplica da [[Bow of Mayhem (Overcharged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42373,
+    "ns": 0,
+    "title": "Ornate Mayhem Crossbow",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ornate Mayhem Crossbow\n| flavortext     = This replica looks overcharged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas\n| hands          = Duas\n| type           = Réplicas de Crossbows e Bows\n| range          = 5\n| attack         = \n| defense        = \n| weight         = 65.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Critical_Dmg|+10% critical extra damage para Lesser Ethereal Spear}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Critical_Dmg|+20% critical extra damage para Lesser Ethereal Spear}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Critical_Dmg|+30% critical extra damage para Lesser Ethereal Spear}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Critical_Chance|+5% critical hit chance para Lesser Ethereal Spear}}\n| perk5          = {{Weapon Perk|Type_Skill_Distance||+1 Distance Fighting}}\n| notes          = É uma réplica da [[Crossbow of Mayhem (Overcharged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42391,
+    "ns": 0,
+    "title": "Ornate Remedy Bow",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ornate Remedy Bow\n| flavortext     = This replica looks overcharged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas\n| hands          = Duas\n| type           = Réplicas de Crossbows e Bows\n| range          = 6\n| attack         = \n| defense        = \n| weight         = 55.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Life_Leech|+1% life leech para Lesser Ethereal Spear}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Life_Leech|+1% life leech para Lesser Ethereal Spear}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Life_Leech|+3% life leech para Lesser Ethereal Spear}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Life_Leech|+4% life leech para Lesser Ethereal Spear}}\n| perk5          = {{Weapon Perk|Type_Skill_Distance||+1 Distance Fighting}}\n| notes          = É uma réplica da [[Bow of Remedy (Overcharged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42393,
+    "ns": 0,
+    "title": "Ornate Remedy Crossbow",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ornate Remedy Crossbow\n| flavortext     = This replica looks overcharged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas\n| hands          = Duas\n| type           = Réplicas de Crossbows e Bows\n| range          = 5\n| attack         = \n| defense        = \n| weight         = 65.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Life_Leech|+1% life leech para Lesser Ethereal Spear}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Life_Leech|+1% life leech para Lesser Ethereal Spear}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Life_Leech|+3% life leech para Lesser Ethereal Spear}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Life_Leech|+4% life leech para Lesser Ethereal Spear}}\n| perk5          = {{Weapon Perk|Type_Skill_Distance||+1 Distance Fighting}}\n| notes          = É uma réplica da [[Crossbow of Remedy (Overcharged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42411,
+    "ns": 0,
+    "title": "Valuable Remedy Bow",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Valuable Remedy Bow\n| flavortext     = This replica looks heavily charged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas\n| hands          = Duas\n| type           = Réplicas de Crossbows e Bows\n| range          = 6\n| attack         = \n| defense        = \n| weight         = 55.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Life_Leech|+1% life leech para Lesser Ethereal Spear}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Life_Leech|+1% life leech para Lesser Ethereal Spear}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Life_Leech|+3% life leech para Lesser Ethereal Spear}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Life_Leech|+4% life leech para Lesser Ethereal Spear}}\n| perk5          = {{Weapon Perk|Type_Skill_Distance||+1 Distance Fighting}}\n| notes          = É uma réplica da [[Bow of Remedy (Heavily Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42413,
+    "ns": 0,
+    "title": "Valuable Remedy Crossbow",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Valuable Remedy Crossbow \n| flavortext     = This replica looks heavily charged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas\n| hands          = Duas\n| type           = Réplicas de Crossbows e Bows\n| range          = 5\n| attack         = \n| defense        = \n| weight         = 65.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Life_Leech|+1% life leech para Lesser Ethereal Spear}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Life_Leech|+1% life leech para Lesser Ethereal Spear}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Life_Leech|+3% life leech para Lesser Ethereal Spear}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Life_Leech|+4% life leech para Lesser Ethereal Spear}}\n| perk5          = {{Weapon Perk|Type_Skill_Distance||+1 Distance Fighting}}\n| notes          = É uma réplica da [[Crossbow of Remedy (Heavily Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42431,
+    "ns": 0,
+    "title": "Plain Remedy Bow",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Plain Remedy Bow\n| flavortext     = This replica looks charged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas\n| hands          = Duas\n| type           = Réplicas de Crossbows e Bows\n| range          = 6\n| attack         = \n| defense        = \n| weight         = 55.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Life_Leech|+1% life leech para Lesser Ethereal Spear}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Life_Leech|+1% life leech para Lesser Ethereal Spear}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Life_Leech|+3% life leech para Lesser Ethereal Spear}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Life_Leech|+4% life leech para Lesser Ethereal Spear}}\n| perk5          = {{Weapon Perk|Type_Skill_Distance||+1 Distance Fighting}}\n| notes          = É uma réplica da [[Bow of Remedy (Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42433,
+    "ns": 0,
+    "title": "Plain Remedy Crossbow",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Plain Remedy Crossbow\n| flavortext     = This replica looks charged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas\n| hands          = Duas\n| type           = Réplicas de Crossbows e Bows\n| range          = 5\n| attack         = \n| defense        = \n| weight         = 65.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Life_Leech|+1% life leech para Lesser Ethereal Spear}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Life_Leech|+1% life leech para Lesser Ethereal Spear}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Life_Leech|+3% life leech para Lesser Ethereal Spear}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Life_Leech|+4% life leech para Lesser Ethereal Spear}}\n| perk5          = {{Weapon Perk|Type_Skill_Distance||+1 Distance Fighting}}\n| notes          = É uma réplica da [[Crossbow of Remedy (Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42451,
+    "ns": 0,
+    "title": "Plain Mayhem Bow",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Plain Mayhem Bow\n| flavortext     = This replica looks charged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas\n| hands          = Duas\n| type           = Réplicas de Crossbows e Bows\n| range          = 6\n| attack         = \n| defense        = \n| weight         = 55.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Critical_Dmg|+10% critical extra damage para Lesser Ethereal Spear}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Critical_Dmg|+20% critical extra damage para Lesser Ethereal Spear}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Critical_Dmg|+30% critical extra damage para Lesser Ethereal Spear}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Critical_Chance|+5% critical hit chance para Lesser Ethereal Spear}}\n| perk5          = {{Weapon Perk|Type_Skill_Distance||+1 Distance Fighting}}\n| notes          = É uma réplica da [[Bow of Mayhem (Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42453,
+    "ns": 0,
+    "title": "Plain Mayhem Crossbow",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Plain Mayhem Crossbow\n| flavortext     = This replica looks charged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas\n| hands          = Duas\n| type           = Réplicas de Crossbows e Bows\n| range          = 5\n| attack         = \n| defense        = \n| weight         = 65.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Critical_Dmg|+10% critical extra damage para Lesser Ethereal Spear}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Critical_Dmg|+20% critical extra damage para Lesser Ethereal Spear}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Critical_Dmg|+30% critical extra damage para Lesser Ethereal Spear}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Critical_Chance|+5% critical hit chance para Lesser Ethereal Spear}}\n| perk5          = {{Weapon Perk|Type_Skill_Distance||+1 Distance Fighting}}\n| notes          = É uma réplica da [[Crossbow of Mayhem (Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42471,
+    "ns": 0,
+    "title": "Valuable Mayhem Bow",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Valuable Mayhem Bow\n| flavortext     = This replica looks heavily charged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas\n| hands          = Duas\n| type           = Réplicas de Crossbows e Bows\n| range          = 6\n| attack         = \n| defense        = \n| weight         = 55.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Critical_Dmg|+10% critical extra damage para Lesser Ethereal Spear}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Critical_Dmg|+20% critical extra damage para Lesser Ethereal Spear}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Critical_Dmg|+30% critical extra damage para Lesser Ethereal Spear}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Critical_Chance|+5% critical hit chance para Lesser Ethereal Spear}}\n| perk5          = {{Weapon Perk|Type_Skill_Distance||+1 Distance Fighting}}\n| notes          = É uma réplica da [[Bow of Mayhem (Heavily Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42473,
+    "ns": 0,
+    "title": "Valuable Mayhem Crossbow",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Valuable Mayhem Crossbow \n| flavortext     = This replica looks heavily charged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas\n| hands          = Duas\n| type           = Réplicas de Crossbows e Bows\n| range          = 5\n| attack         = \n| defense        = \n| weight         = 65.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Critical_Dmg|+10% critical extra damage para Lesser Ethereal Spear}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Critical_Dmg|+20% critical extra damage para Lesser Ethereal Spear}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Critical_Dmg|+30% critical extra damage para Lesser Ethereal Spear}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Ethereal_Spear|Critical_Chance|+5% critical hit chance para Lesser Ethereal Spear}}\n| perk5          = {{Weapon Perk|Type_Skill_Distance||+1 Distance Fighting}}\n| notes          = É uma réplica da [[Crossbow of Mayhem (Heavily Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

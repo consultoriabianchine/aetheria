@@ -1,0 +1,454 @@
+{
+ "query": {
+  "pages": [
+   {
+    "pageid": 6343,
+    "ns": 0,
+    "title": "Arrow",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Arrow\n| levelrequired  = 0\n| itemclass      = Armas\n| primarytype    = Munição\n| implemented    = 3.0\n| secondarytype  = \n| attack         = 25\n| weight         = 0.70\n| value          = 1 - 3\n| npcvalue       = 0\n| npcprice       = 3\n| stackable      = sim\n| droppedby      = [[Dawnfly]], [[Elf]], [[Elf Arcanist]], [[Elf Scout]], [[Emerald Damselfly]], [[Hero]], [[Hunter]], [[Omruc]], [[Pirate Navigator]], [[Poacher]], [[Salamander]], [[Troll Champion]], [[Troll Marauder]], [[Woodling]], [[Infernoid Hound]], [[Lizard Henchman]], [[Lizard Swordmaster]].\n| droppedRaidby  = [[Arthom the Hunter]].\n| buyfrom        = Aurelia, Asnarus, Blind Orc, Brengus, Cedrik, Coltrayne, Dario, Edoch, Eliyas, Galuna, Gnomerrow, Hector the Mentor, Hireling (Trader), Irea, Isika, Kiru, Maun, Mugruu, Perac, Perod, Pompan, Rock In A Hard Place, Raffael, Robert, Silas, Taegen, Timur, Uzgod, Vincent, Willard, Xed\n| sellto         = Jogadores.\n| notes          = Arrows são lançadas com [[Distance Weapons|armas de distância]] do tipo Bows, normalmente por [[Paladin]]s. Paladins podem fazer 10 usando a magia [[Conjure Arrow]]. Faz parte do [[Rook Set]] e do [[Isle of Destiny Paladin Set]].\n<noinclude><p><spoiler>* Recompensa da [[Minotaur Hell Quest]] e da [[Bear Room Quest]] em [[Rookgaard]].\n* Para poder comprar esse item no NPC [[Pompan]], você precisa ter entregado 1 tomo na [[Tomes of Knowledge Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6345,
+    "ns": 0,
+    "title": "Bolt",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bolt\n| levelrequired  = 0\n| itemclass      = Armas\n| primarytype    = Munição\n| secondarytype  = \n| attack         = 30\n| weight         = 0.80\n| npcvalue       = 0\n| npcprice       = 4\n| value          = 1-2\n| stackable      = sim\n| droppedby      = [[Dwarf Soldier]], [[Elder Forest Fury]], [[Forest Fury]], [[Minotaur Archer]], [[Minotaur Poacher]], [[Vicious Squire]].\n| buyfrom        = Irea, Dario, Perac, Hireling (Trader), Edoch, Coltrayne, Willard, Taegen, Pompan, Timur, Gnomerrow, Rock In A Hard Place, Eliyas, Talphion, Uzgod, Mugruu, Cedrik, Brengus, Perod, Silas, Asnarus, Maun, Robert, Galuna, Hector the Mentor, Xed, Vincent\n| sellto         = Jogadores.\n| notes          = Bolts são lançados com [[Distance Weapons|armas de distância]] do tipo Crossbows, normalmente por [[Paladin]]s. Paladins podem fazer 5 usando a magia [[Conjure Bolt]]. Faz parte do [[Unrestricted Set]].\n<noinclude><p><spoiler>* Para poder comprar esse item no NPC [[Pompan]], você precisa ter entregado 1 tomo na [[Tomes of Knowledge Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6383,
+    "ns": 0,
+    "title": "Burst Arrow",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Burst Arrow\n| levelrequired  = 0\n| itemclass      = Armas\n| primarytype    = Munição\n| attack         = 27 [[Physical Damage|Physical]]\n| stackable      = sim\n| weight         = 0.90\n| npcvalue       = 0\n| value          = 10 - 15\n| droppedby      = [[Destroyer]], [[Dragon]], [[Elf Scout]], [[Hunter]], [[Omruc]], [[Wyrm]], [[Infernoid Soul]], [[Infernoid Spiritual]].\n| droppedRaidby  = [[Arthom the Hunter]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Burst arrows explodem no alvo a 3x3 [[sqm]] causando [[Physical Damage|dano físico]]. [[Paladin]]s podem criar usando a magia [[Explosive Arrow]]. Faz parte do [[Unrestricted Set]].\n<noinclude><p><spoiler>\n* Recompensa das quests:\n** [[Power Bolts Quest]].\n** [[Shadowthorn Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6386,
+    "ns": 0,
+    "title": "Earth Arrow",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Earth Arrow\n| flavortext     = \n| levelrequired  = 20\n| itemclass      = Armas\n| primarytype    = Munição\n| secondarytype  = \n| attack         = 14 [[Physical Damage|Physical]]\n| elementattack  = 14 [[Earth Damage|Earth]]\n| weight         = 0.70\n| value          = 5\n| npcvalue       = 0\n| npcprice       = 5\n| stackable      = sim\n| droppedby      = [[Adult Goanna]], [[Cobra Scout]], [[Clay Guardian]], [[Earth Elemental]], [[Hawk Hopper]].\n| buyfrom        = Dario, Hireling (Trader), Edoch, Willard, Taegen, Pompan, Rock In A Hard Place, Eliyas, Mugruu, Cedrik, Brengus, Perod, Silas, Asnarus, Maun, Robert, Vincent\n| sellto         = Jogadores.\n| implemented    = 8.1\n| notes          = Da mesma forma que uma arma encantada, simultaneamente, causa dano físico e mágico.\n<noinclude><p><spoiler>\n* Recompensa da [[Tower Defence Quest]] parte dos [[Tibia Tales Quest|Tibia Tales]].\n* Para poder comprar esse item no NPC [[Pompan]], você precisa ter entregue 01 tomo na [[Tomes of Knowledge Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6387,
+    "ns": 0,
+    "title": "Flaming Arrow",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Flaming Arrow\n| flavortext     = \n| levelrequired  = 20\n| itemclass      = Armas\n| primarytype    = Munição\n| secondarytype  = \n| attack         = 14 [[Physical Damage|Physical]]\n| elementattack  = 14 [[Fire Damage|Fire]]\n| weight         = 0.70\n| value          = 5\n| npcvalue       = 0\n| npcprice       = 5\n| stackable      = sim\n| droppedby      = [[Annihilon]], [[Blazing Fire Elemental]], [[Firestarter]], [[Manticore]], [[Ogre Rowdy]], [[Thornfire Wolf]].\n| buyfrom        = Dario, Hireling (Trader), Edoch, Willard, Taegen, Pompan, Rock In A Hard Place, Eliyas, Mugruu, Cedrik, Brengus, Perod, Silas, Asnarus, Maun, Robert, Vincent\n| sellto         = Jogadores.\n| implemented    = 8.1\n| notes          = Da mesma forma que uma arma encantada, simultaneamente, causa dano físico e mágico.\n<noinclude><p><spoiler>\n* Recompensa da [[Tower Defence Quest]] parte dos [[Tibia Tales Quest|Tibia Tales]].\n* Para poder comprar esse item no NPC [[Pompan]], você precisa ter entregue 01 tomo na [[Tomes of Knowledge Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6388,
+    "ns": 0,
+    "title": "Flash Arrow",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Flash Arrow\n| flavortext     = \n| levelrequired  = 20\n| itemclass      = Armas\n| primarytype    = Munição\n| secondarytype  = \n| attack         = 14 [[Physical Damage|Physical]]\n| elementattack  = 14 [[Energy Damage|Energy]]\n| weight         = 0.70\n| value          = 5\n| npcvalue       = 0\n| npcprice       = 5\n| stackable      = sim\n| droppedby      = [[Charged Energy Elemental]], [[Cursed Prospector]], [[Energuardian Of Tales]], [[Energy Elemental]], [[Ghazbaran]], [[High Voltage Elemental]], [[Knowledge Elemental]], [[Massive Energy Elemental]].\n| buyfrom        = Dario, Hireling (Trader), Edoch, Willard, Taegen, Pompan, Rock In A Hard Place, Eliyas, Mugruu, Cedrik, Brengus, Perod, Silas, Asnarus, Maun, Robert, Vincent\n| sellto         = Jogadores.\n| implemented    = 8.1\n| notes          = Da mesma forma que uma arma encantada, simultaneamente, causa dano físico e mágico.\n<noinclude><p><spoiler>\n* Recompensa da [[Tower Defence Quest]] parte dos [[Tibia Tales Quest|Tibia Tales]].\n* Para poder comprar esse item no NPC [[Pompan]], você precisa ter entregue 01 tomo na [[Tomes of Knowledge Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6389,
+    "ns": 0,
+    "title": "Onyx Arrow",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Onyx Arrow\n| levelrequired  = 40\n| itemclass      = Armas\n| primarytype    = Munição\n| attack         = 38\n| weight         = 0.70\n| value          = 5\n| npcvalue       = 0\n| npcprice       = 7\n| stackable      = sim\n| droppedby      = [[Demodras]], [[Falcon Knight]], [[Falcon Paladin]], [[Golgordan]], [[Grand Chaplain Gaunder]], [[Grand Commander Soeren]], [[Juggernaut]], [[Latrivan]], [[Omruc]], [[Plaguesmith]].\n| droppedRaidby  = [[Ghazbaran]].\n| droppedEventby = [[Kalyassa]].\n| buyfrom        = Dario, Hireling (Trader), Edoch, Willard, Taegen, Pompan, Rock In A Hard Place, Eliyas, Mugruu, Cedrik, Brengus, Perod, Silas, Asnarus, Maun, Robert, Vincent\n| sellto         = Jogadores.\n| implemented    = 8.0\n| notes          = Terceira flecha mais poderosa do jogo e mais leves que os bolts. Faz parte do [[Paladin Set]].\n<noinclude><p><spoiler>* Recompensa da [[Barbarian Arena Quest|Barbarian Arena - Greenhorn Mode]] e [[Barbarian Arena Quest|Barbarian Arena - Scrapper Mode]].\n* Para poder comprar esse item no NPC [[Pompan]], você precisa ter entregado 1 tomo na [[Tomes of Knowledge Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6390,
+    "ns": 0,
+    "title": "Shiver Arrow",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Shiver Arrow\n| flavortext     = \n| levelrequired  = 20\n| itemclass      = Armas\n| primarytype    = Munição\n| secondarytype  = \n| attack         = 14 [[Physical Damage|Physical]]\n| elementattack  = 14 [[Ice Damage|Ice]]\n| weight         = 0.70\n| value          = 5\n| npcvalue       = 0\n| npcprice       = 5\n| stackable      = sim\n| droppedby      = [[Crazed Winter Rearguard]], [[Crystal Wolf]], [[Seacrest Serpent]], [[Slick Water Elemental]].\n| droppedEventby = [[Animated Snowman]], [[Ice Dragon]].\n| buyfrom        = Dario, Hireling (Trader), Edoch, Willard, Taegen, Pompan, Rock In A Hard Place, Eliyas, Mugruu, Cedrik, Brengus, Perod, Silas, Asnarus, Maun, Robert, Vincent\n| sellto         = Jogadores.\n| implemented    = 8.1\n| notes          = Da mesma forma que uma arma encantada, simultaneamente, causa dano físico e mágico.\n<noinclude><p><spoiler>\n* Recompensa da [[Tower Defence Quest]] parte dos [[Tibia Tales Quest|Tibia Tales]].\n* Para poder comprar esse item no NPC [[Pompan]], você precisa ter entregue 01 tomo na [[Tomes of Knowledge Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6391,
+    "ns": 0,
+    "title": "Poison Arrow",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Poison Arrow\n| flavortext     = \n| levelrequired  = 0\n| itemclass      = Armas\n| primarytype    = Munição\n| secondarytype  = \n| attack         = 23\n| weight         = 0.80\n| value          = 1\n| npcvalue       = 0\n| npcprice       = 0\n| stackable      = sim\n| droppedby      = [[Cave Spider]], [[Dawnfly]], [[Dworc Venomsniper]], [[Elf Scout]], [[Exotic Cave Spider]], [[Giant Spider]], [[Hunter]], [[Necromancer]], [[Necromancer Servant]], [[Omruc]], [[Poacher]], [[Troll-Trained Salamander]].\n| droppedRaidby  = [[Arthom the Hunter]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Causa [[Physical Damage|dano físico]]. Um alvo ferido por esta flecha será também [[Poisoned|envenenado]] por 33 turnos (''4 segundos por turno''). O [[Poison Damage|veneno]] começa em 3 [[hp]] por 4 turnos, seguido de 2 [[hp]] por 9 turnos e 1 [[hp]] por 20 turnos, o que causa uma perda de 50 [[hp]] ao longo de 2 minutos e 12 segundos.\n<noinclude><p><spoiler>\n* Recompensa da [[Against the Spider Cult Quest]].\n* Recompensa da [[Minotaur Hell Quest]].\n* Recompensa da [[Shadowthorn Quest]].\n* Recompensa da [[Thais Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6392,
+    "ns": 0,
+    "title": "Sniper Arrow",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Sniper Arrow\n| levelrequired  = 20\n| itemclass      = Armas\n| primarytype    = Munição\n| secondarytype  = \n| attack         = 28\n| weight         = 0.70\n| npcvalue       = 0\n| npcprice       = 5\n| value          = 5\n| stackable      = sim\n| droppedby      = [[Braindeath]], [[Elder Bonelord]], [[Crystal Spider]], [[Gralvalon]], [[Hero]], [[Renegade Knight]], [[Vile Grandmaster]].\n| droppedRaidby  = [[Arthom the Hunter]].\n| buyfrom        = Dario, Hireling (Trader), Edoch, Willard, Taegen, Pompan, Rock In A Hard Place, Eliyas, Mugruu, Cedrik, Brengus, Perod, Silas, Asnarus, Maun, Robert, Vincent\n| sellto         = Jogadores.\n| implemented    = 8.0\n| notes          = Paladins podem fazer 5 usando a magia [[Conjure Sniper Arrow]]. Faz parte do [[Hero Set]].\n<noinclude><p><spoiler>* Recompensa da [[Barbarian Arena Quest|Barbarian Arena - Greenhorn Mode]].\n* Para poder comprar esse item no NPC [[Pompan]], você precisa ter entregado 1 tomo na [[Tomes of Knowledge Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6393,
+    "ns": 0,
+    "title": "Piercing Bolt",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Piercing Bolt\n| flavortext     =\n| levelrequired  = 30\n| itemclass      = Armas\n| primarytype    = Munição\n| secondarytype  = \n| attack         = 33\n| weight         = 0.80\n| npcvalue       = 0\n| npcprice       = 5\n| value          = Negociável\n| stackable      = sim\n| droppedby      = [[Dwarf Soldier]], [[Elder Forest Fury]], [[Forest Fury]], [[Minotaur Archer]], [[Minotaur Poacher]], [[The Horned Fox]].\n| droppedRaidby  = [[General Murius]].\n| buyfrom        = Dario, Hireling (Trader), Edoch, Willard, Taegen, Pompan, Rock In A Hard Place, Eliyas, Mugruu, Cedrik, Brengus, Perod, Silas, Asnarus, Maun, Robert, Vincent\n| sellto         = Jogadores.\n| implemented    = 8.0\n| notes          = [[Paladin]]s podem criar 5 deles usando a magia [[Conjure Piercing Bolt]]. Piercing Bolts são lançados com [[Distance Weapons|armas de distância]] do tipo Crossbows, normalmente por paladins.\n<noinclude><p><spoiler>* Para poder comprar esse item no NPC [[Pompan]], você precisa ter entregado 1 tomo na [[Tomes of Knowledge Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6394,
+    "ns": 0,
+    "title": "Power Bolt",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Power Bolt\n| flavortext     =\n| levelrequired  = 55\n| itemclass      = Armas\n| primarytype    = Munição\n| secondarytype  = \n| attack         = 40\n| stackable      = sim\n| weight         = 0.90\n| npcvalue       = 0\n| npcprice       = 7\n| value          = \n| droppedby      = [[Albino Dragon]], [[Annihilon]], [[Betrayed Wraith]], [[Demodras]], [[Dragon Lord]], [[Elder Wyrm]], [[Frost Dragon]], [[Nightmare]], [[Omruc]], [[Serpent Spawn]], [[Undead Dragon]], [[Wyvern]].\n| droppedRaidby  = [[General Murius]].\n| droppedEventby = [[Kalyassa]].\n| buyfrom        = Dario, Hireling (Trader), Edoch, Willard, Taegen, Pompan, Rock In A Hard Place, Eliyas, Mugruu, Cedrik, Brengus, Perod, Silas, Asnarus, Maun, Robert, Vincent\n| sellto         = Jogadores.\n| implemented    = 6.6\n| notes          = Um [[Royal Paladin]] pode conjurar '''Power Bolts''' usando a magia \"[[Conjure Power Bolt]]\".<br />\nAs Power Bolts tornam-se verdadeiramente letais nas mãos de um habilidoso paladino e seu diferencial frente as [[Enchanted Spear]]s se deve a possibilidade de potencializar seu ataque com outras armas como, por exemplo, o [[Arbalest]] e uma maior distância para desferir danos. Uma vez utilizando-o, o paladino não poderá se equipar com um escudo. Foi magicamente otimizada frente aos outros dardos para poder de penetração e letalidade. Somente o sábio [[Eremo]] conhece os segredos das Power Bolts, mas ele irá compartilhar seus conhecimentos com todos os paladinos que estejam dispostos a pagar um certa quantia em dinheiro. Era o dardo mais forte, mas no update de Natal de 2006 foi adicionado o [[Infernal Bolt]].\n<noinclude><p><spoiler>* Recompensa da: [[Power Bolts Quest]] e [[The Ice Islands Quest]].\n* Possibilidade de ser obtida como recompensa da [[Barbarian Arena Quest|Barbarian Arena - Scrapper Mode]].\n* Para comprar esse item no NPC [[Pompan]], você precisa ter entregue 1 tomo na [[Tomes of Knowledge Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6395,
+    "ns": 0,
+    "title": "Infernal Bolt",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Infernal Bolt\n| levelrequired  = 110\n| itemclass      = Armas\n| primarytype    = Munição\n| attack         = 72\n| weight         = 0.90\n| value          = 10 - 50\n| npcprice       = 3 por 1 [[Soul Orb]]\n| stackable      = sim\n| droppedby      = [[Annihilon]].\n| droppedRaidby  = [[Gaz'Haragoth]].\n| buyfrom        = A Sweaty Cyclops\n| sellto         = Jogadores.\n| implemented    = 7.9\n| notes          = Usados por paladinos como munição de bestas, eram os bolts mais poderosos do jogo até o summer update de 2017 (Versão [[Update de Verão 2017|11.40]]), onde foi introduzido o [[Spectral Bolt]] e passou a ser a segunda munição mais poderosa. Faz parte do [[Paladin Set]] e [[Rare Set]].\n\n<noinclude><p><spoiler>* 3 Infernal Bolts podem ser obtidas na troca por um [[Soul Orb]] na [[The Sweaty Cyclops Quest]].<br /> '''Nota:''' Em alguns casos podem vir 6 Infernal Bolts na troca por um [[Soul Orb]].\n*Possibilidade de ser obtida como recompensa da [[Barbarian Arena Quest|Barbarian Arena - Warlord Mode]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6645,
+    "ns": 0,
+    "title": "Power Arrow",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{deprecated}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name = Power Arrow\n| flavortext =\n| itemclass = Armas\n| primarytype = Munição\n| secondarytype = \n| attrib =\n| weight = 0.20\n| trade = não\n| mercado        = não\n\n| droppedby = Ninguém.\n| buyfrom = Ninguém.\n| sellto = Ninguém.\n| notes = Esse [[item]] foi substituído pelos [[Power Bolt]]s alguns dias antes da versão 7.0. Ele podia ser dropado por [[Dragon Lord]] e [[Hunter]]s.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 20413,
+    "ns": 0,
+    "title": "Vortex Bolt",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Vortex Bolt\n| levelrequired  = 40\n| itemclass      = Armas\n| primarytype    = Munição\n| attack         = 36\n| weight         = 0.80\n| npcvalue       = 0\n| npcprice       = 6\n| value          = Negociável\n| stackable      = sim\n| droppedby      = [[Crazed Summer Rearguard]], [[Deathling Scout]], [[Deathling Spellsinger]], [[Deepling Warrior]], [[Deepling Elite]], [[Renegade Quara Constrictor]], [[Renegade Quara Pincher]], [[Twisted Shaper]].\n| buyfrom        = Dario, Hireling (Trader), Edoch, Willard, Taegen, Pompan, Rock In A Hard Place, Eliyas, Mugruu, Cedrik, Brengus, Perod, Silas, Asnarus, Maun, Robert, Vincent\n| sellto         = Jogadores.\n| implemented    = 9.4\n| notes          = Bolts são lançados com [[Distance Weapons|armas de distância]] do tipo [[Crossbow]]s, normalmente por [[paladin]]s. Faz parte do [[Ornate Set]].\n<noinclude><p><spoiler>* Para poder comprar esse item no NPC [[Pompan]], você precisa ter entregado 1 tomo na [[Tomes of Knowledge Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 20414,
+    "ns": 0,
+    "title": "Tarsal Arrow",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Tarsal Arrow\n| levelrequired  = 30\n| itemclass      = Armas\n| primarytype    = Munição\n| attack         = 33\n| weight         = 0.70\n| npcvalue       = 0\n| npcprice       = 6\n| value          = Negociável\n| stackable      = sim\n| droppedby      = [[Kollos]].\n| buyfrom        = Dario, Hireling (Trader), Edoch, Willard, Taegen, Pompan, Rock In A Hard Place, Eliyas, Mugruu, Cedrik, Brengus, Perod, Silas, Asnarus, Maun, Robert, Vincent\n| sellto         = Jogadores.\n| implemented    = 9.4\n| notes          = Arrows são lançados com [[Distance Weapons|armas de distância]] do tipo [[Bow]]s, normalmente por [[paladin]]s. Faz parte do [[Hive Set]].\n<noinclude><p><spoiler>* Para poder comprar esse item no NPC [[Pompan]], você precisa ter entregado 1 tomo na [[Tomes of Knowledge Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25298,
+    "ns": 0,
+    "title": "Crystalline Arrow",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Crystalline Arrow\n| itemclass      = Armas\n| primarytype    = Munição\n| levelrequired  = 90\n| attack         = 65\n| weight         = 0.75\n| npcvalue       = 0\n| npcprice       = 20\n| stackable      = sim\n| droppedby      = [[Crystalcrusher]], [[Cave Devourer]], [[Deathling Scout]], [[Deathling Spellsinger]], [[Enraged Crystal Golem]], [[Magma Crawler]], [[Melting Frozen Horror]], [[Raubritter Marksman]], [[Stone Devourer]], [[Wiggler]].\n| buyfrom        = Dario, Hireling (Trader), Edoch, Willard, Taegen, Pompan, Rock In A Hard Place, Eliyas, Mugruu, Cedrik, Brengus, Perod, Silas, Asnarus, Maun, Robert, Vincent\n| sellto         = Jogadores.\n| implemented    = 9.6\n| notes          = Faz parte do [[Paladin Set]], [[Prismatic Set]] e [[Crystal Set]].\n<noinclude><p><spoiler>* Para comprá-lo do NPC [[Pompan]], é necessário ter entregue 1 tomo da [[Tomes of Knowledge Quest]].\n* Possibilidade de ser obtido ao usar um [[Gnomish Supply Package]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25306,
+    "ns": 0,
+    "title": "Drill Bolt",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Drill Bolt\n| itemclass      = Armas\n| primarytype    = Munição\n| levelrequired  = 70\n| attack         = 56\n| weight         = 0.80\n| npcvalue       = 0\n| npcprice       = 12\n| value          = Negociável\n| stackable      = sim\n| droppedby      = [[Armadile]], [[Drillworm]], [[Enslaved Dwarf]], [[Humongous Fungus]], [[Lost Berserker]], [[Wiggler]].\n| buyfrom        = Dario, Hireling (Trader), Edoch, Willard, Taegen, Pompan, Rock In A Hard Place, Eliyas, Mugruu, Cedrik, Brengus, Perod, Silas, Asnarus, Maun, Robert, Vincent\n| sellto         = Jogadores.\n| implemented    = 9.6\n| notes          = Faz parte do [[Paladin Set]].\n<noinclude><p><spoiler>* Para poder comprar esse item no NPC [[Pompan]], você precisa ter entregado 1 tomo na [[Tomes of Knowledge Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25307,
+    "ns": 0,
+    "title": "Envenomed Arrow",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Envenomed Arrow\n| flavortext     = \n| itemclass      = Armas\n| primarytype    = Munição\n| secondarytype  = \n| levelrequired  = 70\n| attack         = 27 [[Physical Damage|Physical]]\n| elementattack  = 27 [[Earth Damage|Earth]]\n| weight         = 0.70\n| npcvalue       = 0\n| npcprice       = 12\n| value          = Negociável\n| stackable      = sim\n| droppedby      = [[Adult Goanna]], [[Armadile]], [[Hideous Fungus]], [[Ink Blob]], [[Young Goanna]].\n| buyfrom        = Dario, Hireling (Trader), Edoch, Willard, Taegen, Pompan, Rock In A Hard Place, Eliyas, Mugruu, Cedrik, Brengus, Perod, Silas, Asnarus, Maun, Robert, Vincent\n| sellto         = Jogadores.\n| implemented    = 9.6\n| notes          = \n<noinclude><p><spoiler>\n* Para comprá-lo do NPC [[Pompan]], é necessário ter entregue 01 tomo da [[Tomes of Knowledge Quest]].\n* Possibilidade de ser obtido ao usar um [[Gnomish Supply Package]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25330,
+    "ns": 0,
+    "title": "Prismatic Bolt",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Prismatic Bolt\n| itemclass      = Armas\n| primarytype    = Munição\n| levelrequired  = 90\n| attack         = 66\n| weight         = 0.85\n| npcvalue       = 0\n| npcprice       = 20\n| value          = Negociável\n| stackable      = sim\n| droppedby      = [[Adlerauge]], [[Cliff Strider]], [[Lava Golem]], [[Orewalker]], [[Weeper]].\n| buyfrom        = Dario, Hireling (Trader), Edoch, Willard, Taegen, Pompan, Rock In A Hard Place, Eliyas, Mugruu, Cedrik, Brengus, Perod, Silas, Asnarus, Maun, Robert, Vincent\n| sellto         = Jogadores.\n| implemented    = 9.6\n| notes          = Faz parte do [[Prismatic Set]] e [[Paladin Set]].\n<noinclude><p><spoiler>* Para poder comprar esse item no NPC [[Pompan]], você precisa ter entregado 1 tomo na [[Tomes of Knowledge Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 34417,
+    "ns": 0,
+    "title": "Simple Arrow",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Simple Arrow\n| levelrequired  = 0\n| itemclass      = Armas\n| primarytype    = Munição\n| secondarytype  = \n| attack         = 20\n| weight         = 0.60\n| value          = \n| npcvalue       = 0\n| npcprice       = 2\n| stackable      = sim\n| droppedby      = [[Dawnfly]], [[Troll-Trained Salamander]].\n| buyfrom        = Coltrayne\n| sellto         = Jogadores.\n| mercado        = \n| implemented    = 10.55\n| notes          = Faz parte do [[Set Inicial]]. [[Paladin]]s podem criar usando a magia [[Arrow Call]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 40769,
+    "ns": 0,
+    "title": "Diamond Arrow",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Diamond Arrow\n| flavortext     =\n| levelrequired  = 150\n| itemclass      = Armas\n| primarytype    = Munição\n| secondarytype  = \n| attack         = 37\n| weight         = 0.80\n| npcvalue       = 0\n| npcprice       = 130\n| stackable      = sim\n| droppedby      = Ninguém.\n| buyfrom        = Dario, Hireling (Trader), Edoch, Willard, Taegen, Pompan, Rock In A Hard Place, Eliyas, Mugruu, Cedrik, Brengus, Perod, Silas, Asnarus, Maun, Robert, Vincent\n| sellto         = Jogadores.\n| implemented    = 11.40\n| mercado        = sim\n| notes          = Ataca uma área de 21 sqms com ataque físico.\n<gallery>\nArquivo:Diamond arrow .png |Área atingida pela Diamond Arrow\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 40771,
+    "ns": 0,
+    "title": "Spectral Bolt",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Spectral Bolt\n| flavortext     =\n| levelrequired  = 150\n| itemclass      = Armas\n| primarytype    = Munição\n| secondarytype  = \n| attack         = 78\n| weight         = 0.90\n| npcvalue       = 0\n| npcprice       = 70\n| value          = \n| implemented    = 11.40\n| stackable      = sim\n| droppedby      = Ninguém.\n| buyfrom        = Dario, Hireling (Trader), Edoch, Willard, Taegen, Pompan, Rock In A Hard Place, Eliyas, Mugruu, Cedrik, Brengus, Perod, Silas, Asnarus, Maun, Robert, Vincent\n| sellto         = Jogadores.\n| mercado        = sim\n| notes          = Atualmente é a munição mais forte do jogo.\n<gallery>\nArquivo:Spectral Bolt .png|Combinadas com imbuement crítico tornam seu ataque inigualável.\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 66937,
+    "ns": 0,
+    "title": "Shatterstorm Arrow",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Shatterstorm Arrow\n| flavortext     =\n| levelrequired  = 50\n| itemclass      = Armas\n| primarytype    = Munição\n| secondarytype  = \n| attack         = 27\n| weight         = 0.80\n| npcvalue       = 0\n| npcprice       = 45\n| stackable      = sim\n| droppedby      = Ninguém.\n| buyfrom        = Asnarus, Brengus, Cedrik, Dario, Edoch, Eliyas, Hireling (Trader), Isika, Kiru, Maun, Mugruu, Perod, Pompan, Robert, Rock In A Hard Place, Silas, Taegen, Vincent, Willard\n| sellto         = Jogadores.\n| implemented    = 15.25.3a4a52\n| mercado        = sim\n| notes          = Causa [[Physical Damage|dano fisico]]\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 66938,
+    "ns": 0,
+    "title": "Firestorm Arrow",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Firestorm Arrow\n| flavortext     =\n| levelrequired  = 125\n| itemclass      = Armas\n| primarytype    = Munição\n| secondarytype  = \n| attack         = 21\n| elementattack  = \n| weight         = 0.80\n| npcvalue       = 0\n| npcprice       = 75\n| stackable      = sim\n| droppedby      = Ninguém.\n| buyfrom        = Asnarus, Brengus, Cedrik, Dario, Edoch, Eliyas, Hireling (Trader), Isika, Kiru, Maun, Mugruu, Perod, Pompan, Robert, Rock In A Hard Place, Silas, Taegen, Vincent, Willard\n| sellto         = Jogadores.\n| implemented    = 15.25.3a4a52\n| mercado        = sim\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 66939,
+    "ns": 0,
+    "title": "Terrastorm Arrow",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Terrastorm Arrow\n| flavortext     =\n| levelrequired  = 125\n| itemclass      = Armas\n| primarytype    = Munição\n| attack         = 21\n| elementattack  = \n| secondarytype  = \n| weight         = 0.80\n| npcvalue       = 0\n| npcprice       = 75\n| stackable      = sim\n| droppedby      = Ninguém.\n| buyfrom        = Asnarus, Brengus, Cedrik, Dario, Edoch, Eliyas, Hireling (Trader), Isika, Kiru, Maun, Mugruu, Perod, Pompan, Robert, Rock In A Hard Place, Silas, Taegen, Vincent, Willard\n| sellto         = Jogadores.\n| implemented    = 15.25.3a4a52\n| mercado        = sim\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 66940,
+    "ns": 0,
+    "title": "Froststorm Arrow",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Froststorm Arrow\n| flavortext     =\n| levelrequired  = 125\n| itemclass      = Armas\n| primarytype    = Munição\n| secondarytype  = \n| attack         = 21\n| elementattack  = \n| weight         = 0.80\n| npcvalue       = 0\n| npcprice       = 75\n| stackable      = sim\n| droppedby      = Ninguém.\n| buyfrom        = Asnarus, Brengus, Cedrik, Dario, Edoch, Eliyas, Hireling (Trader), Isika, Kiru, Maun, Mugruu, Perod, Pompan, Robert, Rock In A Hard Place, Silas, Taegen, Vincent, Willard\n| sellto         = Jogadores.\n| implemented    = 15.25.3a4a52\n| mercado        = sim\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 66941,
+    "ns": 0,
+    "title": "Thunderstorm Arrow",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Thunderstorm Arrow\n| flavortext     =\n| levelrequired  = 125\n| itemclass      = Armas\n| primarytype    = Munição\n| secondarytype  = \n| attack         = 21\n| elementattack  = \n| weight         = 0.80\n| npcvalue       = 0\n| npcprice       = 75\n| stackable      = sim\n| droppedby      = Ninguém.\n| buyfrom        = Asnarus, Brengus, Cedrik, Dario, Edoch, Eliyas, Hireling (Trader), Isika, Kiru, Maun, Mugruu, Perod, Pompan, Robert, Rock In A Hard Place, Silas, Taegen, Vincent, Willard\n| sellto         = Jogadores.\n| implemented    = 15.25.3a4a52\n| mercado        = sim\n| notes          = Causa [[Energy|dano de energia]]\n}}"
+       }
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

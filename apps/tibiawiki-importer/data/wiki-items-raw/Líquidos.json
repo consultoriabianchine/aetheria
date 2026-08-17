@@ -1,0 +1,2134 @@
+{
+ "query": {
+  "pages": [
+   {
+    "pageid": 8353,
+    "ns": 0,
+    "title": "Antidote Potion",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Antidote Potion\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| attrib         = Cura poison.\n| weight         = 2.65\n\n| stackable      = sim\n| value          = 50\n| droppedby      = Ninguém.\n| buyfrom        = Hector the Mentor, Lily\n| sellto         = Jogadores.\n| implemented    = 8.2\n| npcprice       = 50\n| notes          = Substituiu as antidote runes em [[Rookgaard]]\n<noinclude><p><spoiler>Recompensas da [[The Rookie Guard Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8357,
+    "ns": 0,
+    "title": "Beer",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Beer\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| secondarytype  = \n| stackable      = não\n| mercado        = não\n| attrib         = Te deixa bêbado.\n| weight         = 1.80\n| droppedby      = Ninguém.\n| npcprice       = 2\n| buyfrom        = Arito, Bolfona, Karl:20, Mirabell, Swolt, Jimbin, Satsu:52, Snake Eye:5, Clyde, Norma:3, Boozer, Maria, Urkalio, Armenius:3, Pugwah:3\n| sellto         = Jogadores.\n| notes          = Cerveja é uma bebida alcoólica produzida a partir da fermentação da cevada maltada e outros cereais. Uma das bebidas alcoólicas mais populares do Tibia, empatado com o [[Wine]]. Pode ser encontrado em barris em casas, castelos, torres ou dungeons do continente, e também ser comprada nas tavernas.<noinclude><p><spoiler>Dois [[vial]]s contendo beer são necessários para [[Hot Cuisine Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8358,
+    "ns": 0,
+    "title": "Berserk Potion",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name            = Berserk Potion\n| flavortext      = Drinking this potion as a knight temporarily increases your fighting skill while decreasing your defense.\n| itemclass       = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype     = Líquidos\n| attrib          = Concede um bônus de '''+5''' em todos os [[Melee]] skills e uma penalidade de '''−10''' em [[Shielding]] por '''10 minutos'''.\n| weight          = 2.90\n| stackable       = sim\n| value           = 500 - 1 000\n| npcvalue        = 500\n| droppedby       = [[Adventurer Group]], [[Alptramun]], [[Annihilon]], [[Boogy]], [[Chagorz]], [[Darkfang]], [[Drume]], [[Duke Krule]], [[Flameborn]], [[Gorzindel]], [[Hellspawn]], [[Hemming]], [[Izcandar the Banished]], [[Lokathmor]], [[Madareth]], [[Malofur Mangrinder]], [[Maxxenius]], [[Mazzinor]], [[Megasylvan Yselda]], [[Murcion]], [[Ogre Savage]], [[Orc Cult Inquisitor]], [[Orc Cult Minion]], [[Orc Cult Priest]], [[Orc Cultist]], [[Orclops Bloodbreaker]], [[Orclops Doomhauler]], [[Orclops Ravager]], [[Overcharged Energy Elemental]], [[Plagueroot]], [[Razzagorn]], [[Scarlett Etzel]], [[Tentugly's Head]], [[The Dread Maiden]], [[The Enraged Thorn Knight]], [[The Monster]], [[The Nightmare Beast]], [[The Time Guardian]], [[War Golem]], [[Werebear]], [[Wereboar]], [[Werewolf]], [[Worker Golem]], [[Timira the Many-Headed]].\n| droppedRaidby  = [[Ghazbaran]], [[Owin (Criatura)]], [[Zushuka (Mortal)]], [[Yakchal]].\n| buyfrom         = Jogadores.\n| sellto          = Fiona\n| implemented     = 8.0\n| notes           = A partir do [[Update de Newhaven]] todas as vocações podem consumir, porém apenas os [[Knight]]s recebem o efeito bônus.\n<noinclude><p><spoiler>\n* Recompensa das quests:\n** [[Shards of Ancient Winters Quest]].\n** [[The Ice Islands Quest]].\n** [[The New Frontier Quest]].\n* Recompensa das [[World Quests]]:\n** [[Rise of Devovorga]].\n* Possibilidade de ser obtido ao usar um [[Gnomish Supply Package]], um [[Surprise Cube]] ou como presente do NPC [[Santa Claus]].\n* [[Arquivo:achievement.gif|link=]] Após beber 100 potions você receberá o achievement '''\"{{Achievement|Berserker}}\"'''.</spoiler></p>\n</noinclude>\n<noinclude>\n[[Categoria:Club Fighting Booster]]\n[[Categoria:Sword Fighting Booster]]\n[[Categoria:Axe Fighting Booster]]\n</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8359,
+    "ns": 0,
+    "title": "Blood",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Blood\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| secondarytype  = \n| attrib         = Nenhum.\n| weight         = 1.80\n| stackable      = não\n| mercado        = não\n| npcprice       = 15\n| droppedby      = Ninguém.\n| buyfrom        = Sandra\n| sellto         = Jogadores.\n| notes          = Blood nada mais é do que sangue. Normalmente é inútil, mas possui uso em algumas [[quests]]. Você pode obter 'usando' um [[Vial|receptáculo líquido]] no corpo de qualquer criatura que não seja do tipo morto-vivo ou invertebrado (exemplo: [[Ghoul]]s).\n<noinclude><p><spoiler>Item usado na [[The Pits of Inferno Quest]], [[The Queen of the Banshees Quest]], [[Blood Brothers Quest]] e [[Unnatural Selection Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8360,
+    "ns": 0,
+    "title": "Bottle of Bug Milk",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bottle of Bug Milk\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| stackable      = não\n| attrib         = Nenhum.\n| weight         = 2.80\n| npcprice       = 200\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Brasith\n| sellto         = Jogadores.\n| implemented    = 8.4\n| notes          = É o item especial de Ab'Dendriel.\n<noinclude><p><spoiler>\n* 01 é necessário para a missão ''Searoutes around Yalahar'' da [[In Service of Yalahar Quest]].\n* 01 é necessário para [[Hot Cuisine Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8361,
+    "ns": 0,
+    "title": "Bullseye Potion",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bullseye Potion\n| flavortext     = Drinking this potion as a paladin temporarily increases your distance skill while decreasing your defense.\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| attrib         = Dá +5 de [[distance]] skill e -10 [[shielding]] por 10 minutos.\n| weight         = 2.90\n| stackable      = sim\n| value          = 500 - 3 000\n| npcvalue       = 500\n| droppedby      = [[Adventurer Group]], [[Alptramun]], [[Crazed Summer Vanguard]], [[Chagorz]], [[Count Vlarkorth]], [[Drume]], [[Duke Krule]], [[Elder Forest Fury]], [[Ghulosh]], [[Gorzindel]], [[Haunted Treeling]], [[Ichgahal]], [[Izcandar the Banished]], [[Madareth]], [[Mad Mage]], [[Maior Domus]], [[Malofur Mangrinder]], [[Maxxenius]], [[Minotaur Amazon]], [[Naga Archer]], [[Plagueroot]], [[Raging Mage]], [[Razzagorn]], [[Scarlett Etzel]], [[Shaburak Demon]], [[Shaburak Lord]], [[Shaburak Prince]], [[Tentugly's Head]], [[The Brainstealer]], [[The Dread Maiden]], [[The Enraged Thorn Knight]], [[The Monster]], [[The Nightmare Beast]], [[The Scourge of Oblivion]], [[Timira the Many-Headed]].\n| droppedRaidby  = [[Ghazbaran]], [[Zushuka (Mortal)]], [[Yakchal]].\n| buyfrom        = Jogadores.\n| sellto         = Fiona\n| implemented    = 8.0\n| notes          = Bebendo essa poção, seu skill de [[distance]] vai aumentar em +5 e seu skill de [[shielding]] vai diminuir em -10 durante 10 minutos.\n\nSomente [[Paladin]]s recebem o efeito ao beber esta poção, embora todas as vocações possam consumi-la desde o [[Update de Newhaven]].\n<noinclude><p><spoiler>\n* Recompensa das quests:\n** [[The Ultimate Challenges Quest|Barbarian Arena - Warlord Mode]].\n** [[The Ice Islands Quest]].\n** [[Shards of Ancient Winters Quest]].\n** [[The New Frontier Quest]]. \n* Recompensa das [[World Quests]]:\n** [[Lightbearer]].\n** [[Rise of Devovorga]].\n* Possibilidade de ser obtido ao usar um [[Gnomish Supply Package]], um [[Surprise Cube]] ou como presente do NPC [[Santa Claus]]. \n* [[Arquivo:Achievement.gif]] Após beber 100 potions, você receberá o achievement '''\"{{Achievement|Sharpshooter}}\"'''.</spoiler></p></noinclude>\n}}\n<noinclude>\n[[Categoria:Distance Fighting Booster]]\n</noinclude>"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8362,
+    "ns": 0,
+    "title": "Coconut Milk",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Coconut Milk\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| secondarytype  = \n| attrib         = Nenhum.\n| weight         = 1.80\n| stackable      = não\n| sounds         = Mmmh.\n| mercado        = não\n| droppedby      = Ninguém.\n| npcprice       = 6\n| buyfrom        = Relaxed Bartender\n| sellto         = Jogadores.\n| implemented    = 7.8\n| notes          = \n<div class=\"toccolours mw-collapsible mw-collapsed\" style=\"width:70%; margin: 4px 0px;\">'''Como fazer Coconut Milk'''<div class=\"mw-collapsible-content\">\n<table><tr><td align=left>\n'''Ingredientes e itens:'''\n* [[Juice Squeezer]].\n* [[Vial]]s vazios (dependendo de quanto de leite deseja).\n* [[Coconut]]s (dependendo de quanto de suco deseja).\n\n'''Modo de preparo:'''\n#Tenha todos os itens dentro da [[backpack]].\n#Use o Juice Squeezer no Coconut.\n\n'''Nota''':Mesmo processo para fazer [[Fruit Juice]] a partir de alguma fruta.\n</td></tr></table></div></div>\n<noinclude><p><spoiler>* 07 são necessários para [[Hot Cuisine Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9130,
+    "ns": 0,
+    "title": "Animal Cure",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Animal Cure\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| stackable = não\n| attrib         = Nenhum.\n| weight         = 1.80\n| npcvalue       = 400\n| npcprice       = 400\n| droppedby      = Ninguém.\n| buyfrom        = Siflind\n| sellto         = Jogadores.\n| implemented    = 8.4\n| notes          = Mesmo sprite de um [[Flask with Paint]] e um [[Slime (Líquido)|Vial of Slime]].\n<noinclude><p><spoiler>Item necessário para quinta missão da [[In Service of Yalahar Quest]].\nSó pode ser comprado por quem está fazendo a quest, após terminar a [[In Service of Yalahar Quest]] você não poderá mais comprar o item.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9142,
+    "ns": 0,
+    "title": "Barrel of Beer",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Barrel of Beer\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| stackable      = não\n| attrib         = Você não pode tomar o líquido.\n| weight         = 85.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.1\n| notes          = Mesmo sprite de um [[Barrel (Brown)|brown barrel]].\n<noinclude><p><spoiler>* Obtido e usado durante a [[Secret Service Quest]] (AVIN).</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9143,
+    "ns": 0,
+    "title": "Beer Bottle",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Beer Bottle\n| flavortext     = It is filled with the legendary dwarvish brown ale.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| attrib         = Você não poder beber o líquido.\n| stackable      = não\n| weight         = 2.50\n| npcprice       = 600\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Black Bert\n| implemented    = 8.1\n| notes          = Mesmo sprite de um [[Empty Beer Bottle]] e [[Bottle]].\n<noinclude><p><spoiler>* Obtido e usado na [[The Ultimate Booze Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9183,
+    "ns": 0,
+    "title": "Flask of Cough Syrup",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Flask of Cough Syrup\n| flavortext     = It smells like herbs.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| attrib         = Nenhum.\n| weight         = 3.00\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| npcprice       = 50\n| droppedby      = Ninguém.\n| buyfrom        = Padreia\n| sellto         = Jogadores.\n| implemented    = 7.6\n| notes          = Mesmo sprite de um [[Brown Flask]] e [[Warrior's Sweat]].\n<noinclude><p><spoiler>\n* Obtido e usado durante a [[The Ape City Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9268,
+    "ns": 0,
+    "title": "Bottle of Whisper Beer",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bottle of Whisper Beer\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| attrib         = Não pode ser bebida.\n| weight         = 3.00\n| stackable      = não\n| value          = \n| npcprice       = 80\n| droppedby      = Ninguém.\n| buyfrom        = Karl\n| sellto         = Jogadores.\n| implemented    = 7.8\n| notes          = Uma bebida especial fabricada somente em Carlin, e só podem ser adquiridos por aqueles que são enviados para comprá-lo.<noinclude><p><spoiler>* Obtido e usado durante a [[The Shattered Isles Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 20440,
+    "ns": 0,
+    "title": "Flask of Chitin Dissolver",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Flask of Chitin Dissolver\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| attrib         = \n| stackable      = sim\n| weight         = 1.55\n| value          = 150\n| npcprice       = 150\n| droppedby      = Ninguém.\n| buyfrom        = Orockle\n| sellto         = Jogadores.\n| implemented    = 9.4\n| notes          = Tem a mesma aparência de um [[Water_(Líquido)]].\n<noinclude><p><spoiler>\n* Obtido e usado durante a [[War Against The Hive Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 20571,
+    "ns": 0,
+    "title": "Aggressive Fluid",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Aggressive Fluid\n| flavortext     = It is unstable and will lose its aggressive.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| attrib         = Corrosivo.\n| stackable      = não\n| weight         = 1.50\n| npcprice       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.4\n| mercado        = não\n| notes          = Tem a mesma aparência de um [[Fruit Juice]], [[Urine]], [[Lemonade]] e [[Bottle with Rat Urine]].\n<noinclude><p><spoiler>* Pode ser obtido usando um [[Reagent Flask]] na corpo de uma [[Spidris]] durante a [[War Against The Hive Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 27856,
+    "ns": 0,
+    "title": "Bottle with Rat Urine",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Bottle with Rat Urine\n| flavortext    = \n| itemclass     = Outros Itens\n| primarytype   = Itens de Quest\n| secondarytype = Líquidos\n| weight        = 1.00 \n| stackable     = não\n| mercado       = não\n| npcprice      = 150\n| droppedby     = Ninguém.\n| buyfrom       = Rafzan\n| sellto        = Jogadores.\n| implemented   = 9.8\n| notes         = Tem a mesma aparência de [[Urine]], [[Aggressive Fluid]], [[Lemonade]] e [[Fruit Juice]].\n<noinclude><p><spoiler>* Obtido e usado na [[Goblin Merchant Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 30116,
+    "ns": 0,
+    "title": "Empty Storage Flask",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Empty Storage Flask\n| flavortext     = Omrabas gave you this flask to stuff intestines in.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| mercado        = não\n| stackable      = não\n| weight         = 1.80\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.1\n| notes          = <noinclude><p><spoiler>* Obtido e usado na [[The Gravedigger of Drefia Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 30173,
+    "ns": 0,
+    "title": "Empty Receptacle",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Empty Receptacle\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| stackable      = não\n| weight         = 1.00\n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.1\n| notes          = <noinclude><p><spoiler>* Obtido e usado na [[The Repenters Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 30239,
+    "ns": 0,
+    "title": "Filled Elven Vial",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Filled Elven Vial\n| flavortext     = The water in this vial is sacred to some. It will not stay in this vessel forever, however.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| stackable      = não\n| weight         = 1.00\n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.1\n| notes          = Este é um [[Elven Vial]] cheio de uma água sagrada. Você deve ter muito cuidado, pois o líquido dentro do recipiente pode sumir depois de um certo tempo.\n<noinclude><p><spoiler>\n* Obtido e usado durante a [[The Repenters Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 30244,
+    "ns": 0,
+    "title": "Filled Receptacle",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Filled Receptacle\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| stackable      = não\n| mercado        = não\n| weight         = 1.20\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.1\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[The Repenters Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 30998,
+    "ns": 0,
+    "title": "Flask Mushroom Fertilizer",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Flask Mushroom Fertilizer\n| itemclass     = Outros Itens\n| flavortext    = It holds a liquid concentrate developed by the gnomes to fertilise mushrooms.\n| primarytype   = Itens de Quest\n| secondarytype = Líquidos\n| attrib        = Pode ser usado para fertilizar.\n| weight        = 1.80\n| stackable     = não\n| mercado       = não\n| buyfrom       = Gnomux\n| value         = 250\n| npcprice      = 250\n| sellto        = Jogadores.\n| implemented   = 10.20\n| droppedby     = Ninguém.\n| notes         = Mesma aparência de um [[Slime (Líquido)]].<noinclude><p><spoiler>* Pode ser obtido e usado na [[Spike Tasks]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 31938,
+    "ns": 0,
+    "title": "Essence of Dread",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Essence of Dread\n| flavortext     = You don't like holding it. Really don't. As if something bad was just waiting to happen.\n| itemclass      = Outros Itens\n| primarytype    = Valiosos\n| secondarytype  = Líquidos\n| attrib         = Pode ser trocada ({{mapa|33635,32344,6:2|aqui}}).\n| stackable      = não\n| weight         = 0.30\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.30\n| mercado        = não\n| notes          = <noinclude><p><spoiler>\n* Pode ser obtido na [[Roshamuul Quest]]. \n* 03 podem ser trocadas por 01 [[Cluster of Solace]] com [[Morax]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 31939,
+    "ns": 0,
+    "title": "Essence of Wishful Thinking",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Essence of Wishful Thinking\n| flavortext     = Just looking at it makes you feel better. What could possibly go wrong?\n| itemclass      = Outros Itens\n| primarytype    = Valiosos\n| secondarytype  = Líquidos\n| attrib         = Pode ser trocada ({{mapa|33635,32344,6:2|aqui}}).\n| stackable      = não\n| weight         = 0.30\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.30\n| mercado        = não\n| notes          = \n<noinclude><p><spoiler>\n* Pode ser obtido na [[Roshamuul Quest]]. \n* 02 podem ser trocados por 01 [[Cluster of Solace]] com [[Morax]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 33704,
+    "ns": 0,
+    "title": "Cool Gloothy Mixture",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Cool Gloothy Mixture\n| flavortext     = It feels cool and oily.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| attrib         = \n| weight         = 4.00\n| stackable      = não\n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.50\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[Oramond Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 34940,
+    "ns": 0,
+    "title": "Distilled Water",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Distilled Water\n| flavortext     = Gloothworms don't like ordinary water, but distilled water is fine.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| weight         = 1.80\n| attrib         = \n| mercado        = não\n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.70\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a task '''Tending Gloothworms''' da [[Oramond Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 35024,
+    "ns": 0,
+    "title": "Ewer with Holy Water",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ewer with Holy Water\n| flavortext     = The water in the ewer shimmers faintly. In the desert's heat it will evaporate soon, however.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| attrib         = \n| weight         = 17.50\n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.70\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[Lion's Rock Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45205,
+    "ns": 0,
+    "title": "Bottle of Sun Fruit Juice",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bottle of Sun Fruit Juice\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| attrib         = Nenhum\n| weight         = 4.00\n| stackable      = \n| npcvalue       = \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.00\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[The Dream Courts Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45206,
+    "ns": 0,
+    "title": "Bottle of Sun Fruit Juice (Sapphire)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bottle of Sun Fruit Juice (Sapphire)\n| flavortext     = Tiny sapphire particles are floating in it.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| attrib         = Nenhum\n| weight         = 4.00\n| stackable      = \n| npcvalue       = \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.00\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[The Dream Courts Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 46782,
+    "ns": 0,
+    "title": "Box with Balm",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Box with Balm\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| stackable      = não\n| weight         = 2.40\n| value          = \n| npcvalue       = 0\n| droppedby      = Ninguém.\n| droppedRaidby  = \n| mercado        = não\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.20\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[Kilmaresh Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 46911,
+    "ns": 0,
+    "title": "Empty Ritual Flask",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Empty Ritual Flask\n| flavortext     = This small ritual flask is used to gather potent snake poison.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| attrib         = Nenhum.\n| weight         = 1.80\n| value          = \n| npcprice       = \n| npcvalue       = \n| stackable      = não\n| droppedby      = Ninguém.\n| mercado        = não\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.20\n| notes          =\n<noinclude><p><spoiler>\n* Esse item da respawn diário na cozinha do Cobra Bastion, no canto inferior esquerdo ({{mapa|33395,32666,5:2|aqui}}).\n\n<gallery>\nArquivo:Localização Empty Ritual Flask.png\n</gallery>\n\n* O uso desse vial consiste em enchê-lo de poison, coletado de uma cobra morta, criando assim o [[Flask with Snake Poison]], e depois usá-lo no caldeirão da cozinha do local, onde ele foi achado, com isso os Cobras do local irão dar respawn com um pouco menos de vida.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 47206,
+    "ns": 0,
+    "title": "Box with Waterproof Balm",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Box with Waterproof Balm\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| stackable      = não\n| weight         = 2.40\n| value          = 0\n| npcvalue       = 0\n| mercado        = não\n| droppedby      = Ninguém.\n| droppedRaidby  = \n| buyfrom        = Jogadores.\n| sellto         = \n| implemented    = 12.20\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[Kilmaresh Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 47959,
+    "ns": 0,
+    "title": "Beer Mug",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Beer Mug\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| secondarytype  = Itens de Festa\n| attrib         = Use para beber.\n| weight         = 8.00\n| stackable      = não\n| mercado        = sim\n| npcprice       = \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.20.9066\n| notes          = \n<noinclude><p><spoiler>\n* Obtida ao usar uma [[Empty Beer Mug]] [[Arquivo:Empty Beer Mug.gif]] em um [[Super Cask]] [[Arquivo:Super Cask.gif]], durante a [[Orcsoberfest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 49472,
+    "ns": 0,
+    "title": "Fitzwilliam's Special Reserve",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Fitzwilliam's Special Reserve\n| flavortext     = A fine but practically ancient wine. It's absolutely not advised to actually drink it.\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| stackable      = sim\n| attrib         = \n| edible         = não\n| weight         = 1.00\n| value          = \n| mercado        = não\n| droppedby      = Ninguém\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.40\n| notes          = <noinclude><p><spoiler>* Item obtido ao clicar várias vezes no \"NPC\" Fitzgerald do [[Cobra Bastion]].\n<gallery mode=\"nolines\">\nArquivo:Lion Bastion-Piscina.png|Localização do NPC na piscina dos Cobras, ({{mapa|33383,32675,3:2|aqui}})\n</gallery></spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53007,
+    "ns": 0,
+    "title": "Charm Upgrade",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Charm Upgrade\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| attrib         = Aumenta as chances de acionar um charm ofensivo em 5% (exceto Cripple) por uma hora.\n| weight         = 2.10\n| stackable      = sim\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.70\n| notes          = Reward do [[Tibiadrome]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53009,
+    "ns": 0,
+    "title": "Bestiary Betterment",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bestiary Betterment\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| attrib         = Faz com que as mortes para o Bestiário contem duas vezes, por uma hora.\n| weight         = 2.10\n| stackable      = sim\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.70\n| notes          = Reward do [[Tibiadrome]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53010,
+    "ns": 0,
+    "title": "Fire Resilience",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Fire Resilience\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| attrib         = Aumenta a proteção em 8% por uma hora.\n| weight         = 2.50\n| stackable      = sim\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.70\n| notes          = Reward do [[Tibiadrome]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53012,
+    "ns": 0,
+    "title": "Earth Resilience",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Earth Resilience\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| attrib         = Aumenta a proteção em 8% por uma hora.\n| weight         = 2.50\n| stackable      = sim\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.70\n| notes          = Reward do [[Tibiadrome]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53013,
+    "ns": 0,
+    "title": "Energy Resilience",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Energy Resilience\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| attrib         = Aumenta a proteção em 8% por uma hora.\n| weight         = 2.50\n| stackable      = sim\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.70\n| notes          = Reward do [[Tibiadrome]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53015,
+    "ns": 0,
+    "title": "Death Resilience",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Death Resilience\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| attrib         = Aumenta a proteção em 8% por uma hora.\n| weight         = 2.50\n| stackable      = sim\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.70\n| notes          = Reward do [[Tibiadrome]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53017,
+    "ns": 0,
+    "title": "Fire Amplification",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Fire Amplification\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| attrib         = Aumenta o dano, fazendo com que seus ataques e magias tratem as sensibilidades do alvo como se fossem 8% maiores, por uma hora.\n| weight         = 2.30\n| stackable      = sim\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.70\n| notes          = Reward do [[Tibiadrome]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53019,
+    "ns": 0,
+    "title": "Earth Amplification",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Earth Amplification\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| attrib         = Aumenta o dano, fazendo com que seus ataques e magias tratem as sensibilidades do alvo como se fossem 8% maiores, por uma hora.\n| weight         = 2.30\n| stackable      = sim\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.70\n| notes          = Reward do [[Tibiadrome]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53020,
+    "ns": 0,
+    "title": "Energy Amplification",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Energy Amplification\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| attrib         = Aumenta o dano, fazendo com que seus ataques e magias tratem as sensibilidades do alvo como se fossem 8% maiores, por uma hora.\n| weight         = 2.30\n| stackable      = sim\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.70\n| notes          = Reward do [[Tibiadrome]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53022,
+    "ns": 0,
+    "title": "Death Amplification",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Death Amplification\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| attrib         = Aumenta o dano, fazendo com que seus ataques e magias tratem as sensibilidades do alvo como se fossem 8% maiores, por uma hora.\n| weight         = 2.30\n| stackable      = sim\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.70\n| notes          = Reward do [[Tibiadrome]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55994,
+    "ns": 0,
+    "title": "Blessed Water",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Blessed Water\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| attrib         = Nenhum.\n| weight         = 1.80\n| stackable      = não\n| value          = \n| npcvalue       = \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.90\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[Within the Tides Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 56347,
+    "ns": 0,
+    "title": "Cure for Sick Beavers",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Cure for Sick Beavers\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| attrib         = Nenhum.\n| weight         = 0.40\n| stackable      = não\n| mercado        = não\n| npcprice       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.90\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[Within the Tides Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 58383,
+    "ns": 0,
+    "title": "Bottled Yolk",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bottled Yolk\n| flavortext     = It is fresh now. But according to the laboratory assistant it will decay soon.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| stackable      = não\n| weight         = 1.50\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Ninguém.\n| sellto         = Jogadores.\n| implemented    = 13.10\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[The Cradle of Monsters Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 66272,
+    "ns": 0,
+    "title": "Bottle of Raubritter Lager",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bottle of Raubritter Lager\n| flavortext     = A sealed bottle of \"Raubritter Lager\". Bottled by brewmaster Bhaan of the Order of the Stag on the Isle of Ada\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| attrib         = Nenhum. Quando combinada com [[Meal from the Beak of a Night Harpy]] concede um '''bônus de defesa contra [[Night Harpy]]''' por '''4 horas'''.\n| weight         = 5.00\n| stackable      = não\n| value          = \n| npcprice       = \n| buysell        = não\n| droppedby      = [[Raubritter Chastener]] e pode ser obtida em [[Brass-Shod Chest]]s [[Arquivo:Brass-Shod Chest.gif]] espalhadas pela [[Isle of Ada]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.20.7a5cc9\n| notes          =\n* Ao misturá-la com um [[Meal from the Beak of a Night Harpy]] [[Arquivo:Meal from the Beak of a Night Harpy.gif]], transforma-se em um [[Bottle of Enhanced Raubritter Lager]] [[Arquivo:Bottle of Enhanced Raubritter Lager.gif]].\n* '''Ao usar''': ''A delightful brew, extra spicy and with an invigorating aftertaste! The night harpies should have a harder time with you for the next four hours.''\n* '''Quando acaba o tempo''':  ''The effects of the Night Harpy Lager fade.''\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 66274,
+    "ns": 0,
+    "title": "Bottle of Enhanced Raubritter Lager",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bottle of Enhanced Raubritter Lager\n| flavortext     = A bottle of \"Raubritter Lager\", refined with the meal of grinded night harpy beaks. Additionally, it comes without any of the side effects from a regular lager. For better or worse\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| attrib         = Concede um '''bônus de defesa contra [[Night Harpy]]''' por '''4 horas'''. Consumível.\n| edible         = não\n| weight         = 5.00\n| stackable      = não\n| value          = \n| npcprice       = \n| buysell        = não\n| mercado        = sim\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.20.7a5cc9\n| notes          =\n* Pode ser criada ao misturar um [[Meal from the Beak of a Night Harpy]] [[Arquivo:Meal from the Beak of a Night Harpy.gif]] com uma [[Bottle of Raubritter Lager]] [[Arquivo:Bottle of Raubritter Lager.gif]].\n* '''Ao usar''': ''A delightful brew, extra spicy and with an invigorating aftertaste! The night harpies should have a harder time with you for the next four hours.''\n* '''Quando acaba o tempo''':  ''The effects of the Night Harpy Lager fade.''\n<spoiler>{{DASH|[[Arquivo:Achievement.gif|link=]] Ao beber 20 unidades deste item, você conquista o achievement '''{{Achievement|Stagmeister}}'''.}}</spoiler>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 66276,
+    "ns": 0,
+    "title": "Cool Bottle of Raubritter Lager",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Cool Bottle of Raubritter Lager\n| flavortext     = A sealed bottle of \"Raubritter Lager\". Cool and fresh. Bottled by brewmaster Bhaan of the Order of the Stag on the Isle of Ada\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| attrib         = \n| weight         = 5.00\n| stackable      = não\n| edible         = sim\n| value          = \n| npcprice       = \n| buysell        = não\n| mercado        = sim\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.20.7a5cc9\n| notes          = Até o momento, não se sabe como obtê-lo.\n{{Veja|Bottle of Raubritter Lager}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 66948,
+    "ns": 0,
+    "title": "Distilled Superior Mana Potion",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Distilled Superior Mana Potion\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| levelrequired  = 130\n| vocrequired    = [[Knight]]s, [[Monk]]s, [[Paladin]]s, [[Sorcerer]]s and [[Druid]]s\n| attrib         = Regenera [[mana]] quando usado.\n| weight         = 3.10\n| stackable      = sim\n| npcprice       = 381\n| npcvalue       = 29\n| storevalue     = 26\n| droppedby      = Ninguém.\n| droppedEventby = \n| buyfrom        = Alaistar, Asima, Asnarus, Chartan, Chuckles, Faloriel, Frederik, Ghorza, Hireling (Trader), Maun, Mehkesh, Minzy, Nelly, Nipuna, Onfroi, Rabaz, Rock In A Hard Place, Romir, Sandra, Siflind, Sundara, Talila, Tandros, Tarun, Valindara, Yerga\n| sellto         = Jogadores.\n| implemented    = 15.25.3a4a52\n| notes          = Regenera entre 240–360 [[Mana Points]]. Pode ser consumido por todas as vocações, level 130 ou mais. Você pode retornar o [[vial]] para lojas mágicas por 5 [[gp]].\n<spoiler>\n*[[Arquivo:Achievement.gif]] Ao beber 100 000 [[Poções]] de Health, Mana e Spirit, você receberá o achievement \"'''{{Achievement|Potion Addict}}'''\"</spoiler></p>\n{{Veja|Dinheiro Gasto Por Mana}}</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 66949,
+    "ns": 0,
+    "title": "Distilled Ultimate Mana Potion",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Distilled Ultimate Mana Potion\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| levelrequired  = 200\n| vocrequired    = [[Knight]]s, [[Monk]]s, [[Paladin]]s, [[Sorcerer]]s and [[Druid]]s\n| attrib         = Regenera [[mana]] quando usado.\n| weight         = 3.10\n| stackable      = sim\n| npcprice       = 732\n| npcvalue       = 56\n| storevalue     = 49\n| droppedby      = Ninguém\n| droppedEventby = \n| buyfrom        = Alaistar, Asima, Asnarus, Chartan, Chuckles, Faloriel, Frederik, Ghorza, Hireling (Trader), Maun, Mehkesh, Minzy, Nelly, Nipuna, Onfroi, Rabaz, Rock In A Hard Place, Romir, Sandra, Siflind, Sundara, Talila, Tandros, Tarun, Valindara, Yerga\n| sellto         = Jogadores.\n| implemented    = 15.25.3a4a52\n| notes          = Regenera, em média, 500 [[Mana Points]]. Pode ser consumido por todas as vocações, level 200 ou mais. Você pode retornar o [[vial]] para lojas mágicas por 5 [[gp]].\n<spoiler>\n*[[Arquivo:Achievement.gif]] Ao beber 100 000 [[Poções]] de Health, Mana e Spirit, você receberá o achievement \"'''{{Achievement|Potion Addict}}'''\"</spoiler></p>\n{{Veja|Dinheiro Gasto Por Mana}}</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8363,
+    "ns": 0,
+    "title": "Flask of Demonic Blood",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Flask of Demonic Blood\n| flavortext     = Shake it to create a potion.\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| attrib         = Pode se dar \"use\" neste item.\n| weight         = 2.90\n| stackable      = sim\n| npcprice       = 0\n| droppedby      = [[Betrayed Wraith]], [[Burning Book]], [[Dark Torturer]], [[Dawnfire Asura]], [[Diabolic Imp]], [[Falcon Knight]], [[Floating Savant]], [[Fury]], [[Grand Chaplain Gaunder]], [[Grim Reaper]], [[Grimeleech]], [[Hand of Cursed Fate]], [[Hellflayer]], [[Hellhound]], [[Juggernaut]], [[Kerberos]], [[Midnight Asura]], [[Nightmare]], [[Preceptor Lazare]], [[Ragiaz]], [[Razzagorn]], [[Shulgrax]], [[Tarbaz]], [[The Blazing Rose]], [[The Diamond Blossom]], [[Tormentor]], [[True Dawnfire Asura]], [[True Midnight Asura]].\n| droppedRaidby  = [[Furyosa]].\n| droppedEventby = [[Fluffy]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.9\n| notes          = Ao usá-lo, pode ser transformado em uma [[Strong Mana Potion]] ou em uma [[Strong Health Potion]]. Ele costumava ser chamado de ''Concentraded Demonic Blood'' até que foi renomeado para ''Flask of Demonic Blood'' no '''''Update 12.62.10592''''', por razões desconhecidas.\n\nNo '''''Update 12.72.11389''''', o peso do frasco foi alterado de 2.00 oz. para 2.90 oz.\n\nNo [[Winter Update 2024]] passaram a ser utilizadas na [[Doomforging]].\n<noinclude><p><spoiler>\n* 01 é necessário para [[Hot Cuisine Quest]].\n* [[Arquivo:Achievement.gif|link=]] Após usar 250 Flask of Demonic Blood, você receberá o achievement '''\"{{Achievement|Demonic Barkeeper}}\"'''\n* 250 ou 750 são necessárias para a [[Doomforging]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8364,
+    "ns": 0,
+    "title": "Flask with Beaver Bait",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Flask with Beaver Bait\n| flavortext     = It smells like a mixture of wood and fish. Phew.\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| attrib         = Nenhum.\n| weight         = 1.80\n| stackable      = não\n| value          = \n| npcprice       = 100\n| droppedby      = [[Thieving Squirrel]].\n| buyfrom        = Melfar\n| sellto         = Jogadores.\n| implemented    = 8.54\n| notes          = Tem a mesma aparência de um [[Slime (Líquido)|Vial of Slime]], [[Animal Cure]] e [[Flask with Paint]].<noinclude><p><spoiler>* Obtido e usado durante a [[The New Frontier Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8365,
+    "ns": 0,
+    "title": "Fruit Juice",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Fruit Juice\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| attrib         = Nenhum.\n| weight         = 1.80\n| stackable      = não\n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Relaxed Bartender, Ramina\n| npcprice       = 10\n| sellto         = Jogadores.\n| implemented    = 7.8\n| notes          = Tem a mesma aparência de [[Urine]], [[Aggressive Fluid]], [[Lemonade]] e [[Bottle with Rat Urine]].\n\n<div class=\"toccolours mw-collapsible mw-collapsed\" style=\"width:70%; margin: 4px 0px;\">'''Como fazer Fruit Juice'''<div class=\"mw-collapsible-content\">\n<table><tr><td align=left>\n'''Ingredientes e itens:'''\n*[[Juice Squeezer]].\n*[[Vial]]s vazios (dependendo de quanto de suco deseja).\n*Frutas da sua preferência (dependendo de quanto de suco deseja).\n\n'''Modo de preparo:'''\n#Tenha todos os itens dentro da [[backpack]].\n#Use o Juice Squeezer na fruta.\n\n'''Nota''':Mesmo processo para fazer [[Coconut Milk]] a partir de [[Coconut]]s.\n</td></tr></table></div></div>\n\n<noinclude><p><spoiler>* O '''Fruit Juice''' de [[Prickly Pear]] é necessário na [[Krailos Quest]].</spoiler></p></noinclude>\n\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8366,
+    "ns": 0,
+    "title": "Great Health Potion",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Great Health Potion\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| levelrequired  = 80\n| vocrequired    = [[Knight]]s\n| attrib         = Regenera [[Hp|HP]] quando usado.\n| weight         = 3.10\n| stackable      = sim\n| npcprice       = 225\n| storevalue     = 18\n| droppedby      = [[Ahau]], [[Annihilon]], [[Arctic Faun]], [[Armadile]], [[Behemoth]], [[Bloodback]], [[Boar Man]], [[Bog Raider]], [[Breach Brood]], [[Bretzecutioner]], [[Broken Shaper]], [[Brutus Bloodbeard]], [[Bullwark]], [[Chopper]], [[Control Tower]], [[Crape Man]], [[Crawler]], [[Crusader]], [[Cult Believer]], [[Cult Enforcer]], [[Cult Scholar]], [[Dark Faun]], [[Dark Torturer]], [[Deadeye Devious]], [[Deathling Scout]], [[Deathling Spellsinger]], [[Death Priest Shargon]], [[Deep Terror]], [[Deepling Elite]], [[Deepling Guard]], [[Deepling Tyrant]], [[Deepling Warrior]], [[Demodras]], [[Destroyer]], [[Draken Warmaster]], [[Enslaved Dwarf]], [[Ethershreck]], [[Execowtioner]], [[Exotic Cave Spider]], [[Falcon Knight]], [[Fazzrah]], [[Flameborn]], [[Frazzlemaw]], [[Fury]], [[Glooth Bandit]], [[Glooth Battery]], [[Glooth Bomb]], [[Glooth Fairy]], [[Golgordan]], [[Grand Canon Dominus]], [[Grand Commander Soeren]], [[Grimeleech]], [[Guzzlemaw]], [[Headwalker]], [[Hellgorak]], [[Hellhound]], [[Hellspawn]], [[Hero]], [[Hideous Fungus]], [[Horestis]], [[Hulking Carnisylvan]], [[Humongous Fungus]], [[Iks Yapunac]], [[Infernalist]], [[Instable Sparkion]], [[Juggernaut]], [[Kroazur]], [[Latrivan]], [[Lisa]], [[Lizard Chosen]], [[Lizard High Guard]], [[Lizard Noble]], [[Lizard Zaogun]], [[Lost Berserker]], [[Lost Soul]], [[Lost Thrower]], [[Madareth]], [[Magma Crawler]], [[Mahrdis]], [[Massive Water Elemental]], [[Midnight Asura]], [[Mindmasher]], [[Minotaur Amazon]], [[Minotaur Cult Follower]], [[Minotaur Cult Prophet]], [[Minotaur Cult Zealot]], [[Moohtant Wallbreaker]], [[Morguthis]], [[Orc Cult Fanatic]], [[Omruc]], [[Overcharged Energy Elemental]], [[Paiz the Pauperizer]], [[Pirat Cutthroat]], [[Plaguesmith]], [[Quara Pincher]], [[Quara Predator]], [[Ragiaz]], [[Raging Mage]], [[Ratmiral Blackwhiskers]], [[Reality Reaver]], [[Renegade Knight]], [[Renegade Quara Hydromancer]], [[Renegade Quara Pincher]], [[Renegade Quara Predator]], [[Retching Horror]], [[Ron The Ripper]], [[Shadowpelt]], [[Silencer]], [[Spitter]], [[Shadowstalker]], [[Sparkion]], [[Stabilizing Reality Reaver]], [[Thalas]], [[The Old Widow]], [[The Ravager]], [[Tremor Worm]], [[True Midnight Asura]], [[Twisted Shaper]], [[Two-Headed Turtle]], [[Undead Elite Gladiator]], [[Undead Dragon]], [[Ungreez]], [[Ushuriel]], [[Vicious Squire]], [[Vile Grandmaster]], [[Walker]], [[Warlock]], [[Weakened Frazzlemaw]], [[Werebear]], [[Worker Golem]], [[Zanakeph]], [[Zugurosh]].\n| droppedRaidby  = [[Dracola]], [[Dreadful Disruptor]], [[Feroxa (Mortal)]], [[Gaz'Haragoth]], [[Ghazbaran]], [[Mamma Longlegs]], [[Massacre]], [[Morgaroth]], [[Mr. Punish]], [[Orshabaal]], [[Zulazza the Corruptor]], [[Zushuka (Mortal)]].\n| droppedEventby = [[Haunted Dragon]], [[Kalyassa]], [[Zorvorax]].\n| buyfrom        = Shiriel, Agostina:300, Brutus:300, Mehkesh, Rachel, Hireling (Trader), Asima, Emilio:300, Sandra, Shadowpunch:300, Talila, Valindara, Rabaz, Rock In A Hard Place, Faloriel, Gnomegica, Alberto:300, Brom:300, Sigurd, Frederik, Maun, Siflind, Ghorza, Tandros, Tarun, Alaistar, Fabiana:300, Roughington:300, Asnarus, Chartan, Nelly, Romir, Dino:300, Lorenzo:300, Topsy, Victor:300, Xodet, Digger, Chuckles\n| sellto         = Jogadores.\n| implemented    = 8.1\n| notes          = Regenera, em média, 500 [[hit points]]. Só pode ser consumido por [[Knight]]s level 80 ou mais. Você pode retornar o [[vial]] para lojas mágicas por 5 [[gp]]s.\n<noinclude><p><spoiler>*Possibilidade de ser obtido ao usar um [[Gooey Mass]].\n*Possibilidade de ser obtido ao usar um [[Gnomish Supply Package]].\n*Possibilidade de ser obtido durante a [[World Quests]] [[Bewitched]].\n*[[Arquivo:Achievement.gif]] Ao beber 100 000 [[Poções]] de Health, Mana e Spirit,  você receberá o achievement \"'''{{Achievement|Potion Addict}}'''\"</spoiler></p>\n{{Veja|Dinheiro Gasto Por Hitpoint}}</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8367,
+    "ns": 0,
+    "title": "Great Mana Potion",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Great Mana Potion\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| levelrequired  = 80\n| vocrequired    = [[knight]]s, [[Monk]]s, [[Paladin]]s, [[Sorcerer]]s and [[Druid]]s\n| attrib         = Regenera [[mana]] quando usado.\n| weight         = 3.10\n| stackable      = sim\n| npcprice       = 158\n| storevalue     = 11\n| droppedby      = [[Adventurer Group]], [[Ahau]], [[Ancient Spawn of Morgathla]], [[Angry Demon]], [[Animated Guzzlemaw]], [[Annihilon]], [[Anomaly]], [[Arbaziloth]], [[Armadile]], [[Ashmunrah]], [[Betrayed Wraith]], [[Black Vixen]], [[Blightwalker]], [[Bone Overlord]], [[Breach Brood]], [[Bretzecutioner]], [[Bullwark]], [[Choking Fear]], [[Chopper]], [[Cliff Strider]], [[Control Tower]], [[Court Warlock]], [[Crawler]], [[Dark Carnisylvan]], [[Dark Torturer]], [[Dawnfire Asura]], [[Deathling Scout]], [[Deathling Spellsinger]], [[Death Priest Shargon]], [[Deepling Elite]], [[Deepling Guard]], [[Deepling Tyrant]], [[Deepling Warrior]], [[Demon]], [[Demon Outcast]], [[Dipthrah]], [[Draken Abomination]], [[Draken Elite]], [[Draken Spellweaver]], [[Dread Intruder]], [[Eldritch Dragon Lord]], [[Enslaved Dwarf]], [[Eradicator]], [[Essence Of Malice]], [[Ethershreck]], [[Execowtioner]], [[Exotic Bat]], [[Falcon Knight]], [[Feversleep]], [[Fleshslicer]], [[Frazzlemaw]], [[Ghastly Dragon]], [[Ghost Of A Planegazer]], [[Glooth Bandit]], [[Glooth Bomb]], [[Glooth Brigand]], [[Glooth Fairy]], [[Glooth Golem]], [[Goggle Cake]], [[Gorgo]], [[Grim Reaper]], [[Grimeleech]], [[Guzzlemaw]], [[Hand of Cursed Fate]], [[Hellflayer]], [[Hellgorak]], [[Hellhound]], [[Hideous Fungus]], [[Hive Overseer]], [[Horestis]], [[Humongous Fungus]], [[Infernalist]], [[Instable Breach Brood]], [[Instable Sparkion]], [[Ironblight]], [[Juggernaut]], [[Kerberos]], [[Kollos]], [[Lady Tenebris]], [[Lava Golem]], [[Lisa]], [[Lizard Dragon Priest]], [[Lizard Magistratus]], [[Lloyd]], [[Lokathmor]], [[Lost Basher]], [[Lost Berserker]], [[Lost Exile]], [[Lost Husher]], [[Lost Soul]], [[Lost Thrower]], [[Madareth]], [[Magma Crawler]], [[Massive Energy Elemental]], [[Massive Water Elemental]], [[Maw]], [[Mazoran]], [[Medusa]], [[Melting Frozen Horror]], [[Minotaur Amazon]], [[Minotaur Cult Prophet]], [[Mindmasher]], [[Moohtant]], [[Moohtant Wallbreaker]], [[Nymph]], [[Night Harpy]], [[Orewalker]], [[Outburst]], [[Paiz the Pauperizer]], [[Phantasm]], [[Pirat Bombardier]], [[Pixie]], [[Plagirath]], [[Preceptor Lazare]], [[Prince Drazzak]], [[Quara Hydromancer]], [[Rage Squid]], [[Ragiaz]], [[Raging Mage]], [[Rahemos]], [[Ratmiral Blackwhiskers]], [[Ravenous Hunger]], [[Razzagorn]], [[Reality Reaver]], [[Realityquake]], [[Reflection Of A Mage]], [[Renegade Quara Constrictor]], [[Renegade Quara Hydromancer]], [[Renegade Quara Pincher]], [[Retching Horror]], [[Rhindeer]], [[Rotspit]], [[Rupture]], [[Soul of Dragonking Zyrtarch]], [[Sparkion]], [[Stabilizing Reality Reaver]], [[Sea Serpent]], [[Serpent Spawn]], [[Shadowstalker]], [[Sharpclaw]], [[Shulgrax]], [[Shiversleep]], [[Souleater]], [[Spectre]], [[Spidris Elite]], [[Spidris]], [[Spitter]], [[Stabilizing Dread Intruder]], [[Stone Devourer]], [[Swan Maiden]], [[Tarbaz]], [[Terofar]], [[Terrorsleep]], [[The Baron from Below]], [[The Count Of The Core]], [[The Duke Of The Depths]], [[The Enraged Thorn Knight]], [[The Gravedigger]], [[The Last Lore Keeper]], [[The Lord of the Lice]], [[The Noxious Spawn]], [[The Ravager]], [[The Rootkraken]], [[The Sandking]], [[The Shatterer]], [[The Souldespoiler]], [[The Source Of Corruption]], [[The Time Guardian]], [[The Unarmored Voidborn]], [[Thul]], [[Tremor Worm]], [[True Dawnfire Asura]], [[Undead Dragon]], [[Ungreez]], [[Ushuriel]], [[Usurper Knight]], [[Vashresamun]], [[Vexclaw]], [[War Golem]], [[Warlock]], [[Weakened Frazzlemaw]], [[Weeper]], [[Werebadger]], [[Werebear]], [[Werefox]], [[Werehyaena Shaman]], [[Worker Golem]], [[World Devourer]], [[Wrathful Archivist]], [[Zamulosh]], [[Zanakeph]], [[Zavarash]], [[Zugurosh]].\n| droppedRaidby  = [[Crustacea Gigantica]], [[Dharalion]], [[Dracola]], [[Feroxa (Mortal)]], [[Flamecaller Zazrak]], [[Furyosa]], [[Gaz'Haragoth]], [[Ghazbaran]], [[Massacre]], [[Moohtant Wallbreaker]], [[Morgaroth]], [[Mr. Punish]], [[Omrafir]], [[Orshabaal]], [[Sight of Surrender]], [[The Evil Eye]], [[Weakened Shlorg]], [[Yakchal]], [[Zulazza the Corruptor]].\n| droppedEventby = [[Haunted Dragon]], [[Ice Dragon]], [[Kalyassa]], [[Zorvorax]].\n| buyfrom        = Shiriel, Mehkesh, Rachel, Hireling (Trader), Asima, Sandra, Talila, Valindara, Rabaz, Rock In A Hard Place, Faloriel, Gnomegica, Sigurd, Frederik, Maun, Siflind, Ghorza, Tandros, Tarun, Alaistar, Asnarus, Chartan, Nelly, Romir, Topsy, Xodet, Digger, Chuckles\n| sellto         = Jogadores.\n| implemented    = 8.1\n| notes          = Regenera, em média, 200 [[Mana Points]]. Pode ser consumido por todas as vocações level 80 ou mais. Você pode retornar o [[vial]] para lojas mágicas por 5 [[gp]].\n<noinclude><p><spoiler>*Possibilidade de ser obtido ao usar um [[Gnomish Supply Package]].\n*Possibilidade de ser obtido ao usar um [[Gooey Mass]].\n*Possibilidade de ser obtido durante a [[World Quests|World Quest]] [[Bewitched]].\n*[[Arquivo:Achievement.gif]] Ao beber 100 000 [[Poções]] de Health, Mana e Spirit, você receberá o achievement \"'''{{Achievement|Potion Addict}}'''\"</spoiler></p>\n{{Veja|Dinheiro Gasto Por Mana}}</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8368,
+    "ns": 0,
+    "title": "Great Spirit Potion",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Great Spirit Potion\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| vocrequired    = [[Monk]]s e [[Paladin]]s\n| levelrequired  = 80\n| attrib         = Regenera [[Hit Points|vida]] e [[mana]] quando usado.\n| weight         = 3.10\n| stackable      = sim\n| npcprice       = 254\n| storevalue     = 18\n| droppedby      = [[Adventurer Group]], [[Ahau]], [[Ancient Spawn of Morgathla]], [[Angry Demon]], [[Annihilon]], [[Anomaly]], [[Arachnophobica]], [[Arbaziloth]], [[Bashmu]], [[Black Vixen]], [[Bog Raider]], [[Bone Overlord]], [[Breach Brood]], [[Bretzecutioner]], [[Bullwark]], [[Burster]], [[Burster Spectre]], [[Cave Chimera]], [[Choking Fear]], [[Court Warlock]], [[Crazed Winter Rearguard]], [[Cursed Prospector]], [[Demon]], [[Draken Abomination]], [[Eldritch Dragon Lord]], [[Emerald Tortoise]], [[Eradicator]], [[Essence Of Malice]], [[Ethershreck]], [[Falcon Paladin]], [[Ghastly Dragon]], [[Ghulosh]], [[Glooth Bandit]], [[Glooth Brigand]], [[Glooth Bomb]], [[Glooth Fairy]], [[Gorzindel]], [[Grimeleech]], [[Harpy]], [[Hatebreeder]], [[Hellflayer]], [[Hellgorak]], [[Hellhound]], [[Ice Horror]], [[Instable Sparkion]], [[Juvenile Bashmu]], [[Lady Tenebris]], [[Liodile]], [[Lisa]], [[Lokathmor]], [[Madareth]], [[Malvaroth]], [[Mazoran]], [[Melting Frozen Horror]], [[Monk's Apparition]], [[Night Harpy]], [[Outburst]], [[Paiz the Pauperizer]], [[Plagirath]], [[Poisonous Carnisylvan]], [[Prince Drazzak]], [[Rage Squid]], [[Ragiaz]], [[Ravenous Hunger]], [[Razzagorn]], [[Reality Reaver]], [[Realityquake]], [[Ripper Spectre]], [[Rotten Golem]], [[Rupture]], [[Shrieking Cry-Stal]], [[Shulgrax]], [[Soul of Dragonking Zyrtarch]], [[Sparkion]], [[Spirit Overlord]], [[Stabilizing Dread Intruder]], [[Tarbaz]], [[Terofar]], [[Thanatursus]], [[The Baron from Below]], [[The Count Of The Core]], [[The Diamond Blossom]], [[The Duke Of The Depths]], [[The Enraged Thorn Knight]], [[The False God]], [[The Flaming Orchid]], [[The Last Lore Keeper]], [[The Lord of the Lice]], [[The Sandking]], [[The Shatterer]], [[The Souldespoiler]], [[The Source Of Corruption]], [[The Time Guardian]], [[The Unarmored Voidborn]], [[Undertaker]], [[Ushuriel]], [[Vexclaw]], [[Walker]], [[Worker Golem]], [[World Devourer]], [[Zamulosh]], [[Zanakeph]], [[Zavarash]], [[Zugurosh]].\n| droppedRaidby  = [[Feroxa (Mortal)]], [[Furyosa]], [[Gaz'Haragoth]], [[Ghazbaran]], [[Morgaroth]], [[Orshabaal]], [[Sight of Surrender]], [[Weakened Shlorg]], [[Zushuka (Mortal)]], [[Zulazza the Corruptor]].\n| droppedEventby = [[Zorvorax]].\n| buyfrom        = Shiriel, Mehkesh, Rachel, Hireling (Trader), Asima, Sandra, Talila, Valindara, Rabaz, Rock In A Hard Place, Faloriel, Gnomegica, Sigurd, Frederik, Maun, Siflind, Ghorza, Tandros, Tarun, Alaistar, Asnarus, Chartan, Nelly, Romir, Topsy, Xodet, Digger, Chuckles\n| sellto         = Jogadores.\n| implemented    = 8.11\n| notes          = Regenera, em média, 300 [[Hit Points]] e 150 [[Mana Points]]. Só pode ser consumido por [[Monk]]s e [[Paladins]] level 80 ou mais. Você pode retornar o [[vial]] para lojas mágicas por 5 [[gp]]s.\n<noinclude><p><spoiler>*Possibilidade de ser obtido durante a [[World Quests|World Quest]] [[Bewitched]].\n*[[Arquivo:Achievement.gif]] Ao beber 100 000 [[Poções]] de Health, Mana e Spirit, você receberá o achievement \"'''{{Achievement|Potion Addict}}'''\"</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8369,
+    "ns": 0,
+    "title": "Health Potion",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Health Potion\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| secondarytype  = \n| attrib         = Regenera [[Hp|HP]] quando usado.\n| weight         = 2.70\n| stackable      = sim\n| npcprice       = 50\n| storevalue     = 6\n| implemented    = 8.1\n| droppedby      = [[Barbarian Bloodwalker]], [[Barbarian Headsplitter]], [[Barbarian Skullhunter]], [[Bibby Bloodbath]], [[Bonebeast]], [[Cyclops]], [[Cursed Ape]], [[Dawnfly]], [[Dark Apprentice]], [[Dark Magician]], [[Death Priest]], [[Demon Skeleton]], [[Dragon Hatchling]], [[Dwarf Guard]], [[Dworc Voodoomaster]], [[Elf Arcanist]], [[Elf Overseer]], [[Emerald Damselfly]], [[Frost Dragon Hatchling]], [[Frost Giant]], [[Frost Giantess]], [[Ghoulish Hyaena]], [[Golden Servant]], [[Golden Servant Replica]], [[Grave Guard]], [[Haunted Treeling]], [[Herald of Fire]], [[Insectoid Scout]], [[Insectoid Worker]], [[Iron Servant]], [[Kongra]], [[Lizard Sentinel]], [[Lizard Templar]], [[Mad Scientist]], [[Minotaur Guard]], [[Mutated Rat]], [[Orc Leader]], [[Orc Warlord]], [[Pirate Cook]], [[Pirate Gunner]], [[Renegade Orc]], [[Salamander]], [[Sea Captain]], [[Terror Bird]], [[The Snapper]], [[Thornback Tortoise]], [[Troll-Trained Salamander]], [[Undead Gladiator]], [[Valkyrie]], [[Wailing Widow]], [[Infernoid Hound]], [[Infernoid Spiritual]], [[Lizard Executioner]], [[Lizard Commander]], [[Lizard Henchman]], [[Lizard Swordmaster]].\n| droppedRaidby  = [[Oodok Witchmaster]], [[Undead Cavebear]].\n| buyfrom        = Shiriel, Agostina:75, Brutus:75, Mehkesh, Rachel, Hireling (Trader), Asima, Hamish, Emilio:75, Sandra, Shadowpunch:75, Talila, Valindara, Rabaz, Rock In A Hard Place, Raffael, Faloriel, Gnomegica, Alberto:75, Brom:75, Sigurd, Frederik, Maun, Siflind, Ghorza, Tandros, Tarun, Alaistar, Fabiana:75, Roughington:75, Asnarus, Chartan, Nelly, Romir, Dino:75, Lorenzo:75, Topsy, Victor:75, Xodet, Digger, Chuckles\n| sellto         = Jogadores.\n| notes          = Regenera, em média, '''150~200 HP'''. Você pode retornar o [[vial]] para lojas mágicas por 5 [[gp]].\n<noinclude><p><spoiler>\n* Recompensa da [[Rest in Hallowed Ground Quest]].\n* Recompensa da [[Thais Quest]]. \n* Possibilidade de ser obtido durante a [[World Quests|World Quest]] [[Bewitched]].\n* Possibilidade de ser obtido ao usar um [[Gnomish Supply Package]].\n* [[Arquivo:Achievement.gif|link=]] Ao beber 100 000 [[Poções]] de Health, Mana e Spirit,  você receberá o achievement \"'''{{Achievement|Potion Addict}}'''\"</spoiler>\n{{Veja|Dinheiro Gasto Por Hitpoint}}</p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8370,
+    "ns": 0,
+    "title": "Lemonade",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Lemonade\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| secondarytype  = \n| stackable      = não\n| mercado        = não\n| attrib         = Nenhum.\n| weight         = 1.80\n| npcprice       = 2\n| droppedby      = Ninguém.\n| buyfrom        = Arito, Mirabell, Clyde, Norma, Boozer, Pugwah, Miraia:3, Dane:5, Satsu:52, Urkalio, Maria\n| sellto         = Jogadores.\n| notes          = Limonada pode ser obtida em vários respawns no Tibia ou comprada nas melhores tavernas do continente. Geralmente vendida em [[mug]]s. Tem a mesma aparência de [[Urine]], [[Aggressive Fluid]], [[Fruit Juice]] e [[Bottle with Rat Urine]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8371,
+    "ns": 0,
+    "title": "Lifefluid",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Lifefluid\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| secondarytype  = \n| attrib         = Recupera [[HP]].\n| weight         = 1.80\n| stackable      = não\n| mercado        = não\n| npcvalue       = 5\n| npcprice       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.4\n| notes          = Sua aparência era como a de [[blood]]. Podiam ser obtidas comprando em Magic Shops.<br />Era usada primeiramente em [[Rookgaard]]. Não era muito usada em [[Tibia (Continente)]] porque [[Ultimate Healing Rune|UHs]] eram mais úteis. Embora seu uso seja muito limitado em [[Tibia (Continente)]], elas poderiam ser usadas efetivamente em um knight low level em troca da [[Intense Healing Rune|IH]] porque eram mais baratas.<br />\nLifefluids raramente são utilizados, desde que foram substituídos pelos [[Health Potion]]s, [[Strong Health Potion]]s e [[Great Health Potion]]s que foram introduzidos no Update de Natal de 2007.\n\n<noinclude><spoiler><p>Há um [[Respawn Diário|respawn diário]] de Mug of Lifefluid no [[Green Claw Swamp]] ({{mapa|32762,32019,7:6|aqui}}).<br />\nPara chegar nessa área basta entrar pela entrada secreta que há atrás de uma árvore ({{mapa|32771,32028,7:4|aqui}}).\n</p></spoiler><gallery>\nArquivo:rs06.png|Mug de Lifefluid em cima da mesa.\n</gallery></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8372,
+    "ns": 0,
+    "title": "Flask with Magical Oil",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Flask with Magical Oil\n| flavortext     = Eclesius made it for you to oil the door of the demon cage.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| stackable      = não\n| attrib         = Nenhum.\n| weight         = 1.80\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.5\n| notes          = [[Eclesius]] vai fazer uma amostra se você dar-lhe os ingredientes corretos. Ele desaparece depois de ser utilizado.\n<noinclude><p><spoiler>\n* Obtido e usado durante a [[The Scatterbrained Sorcerer Quest]]. \n* Você precisa de Vial of [[Oil]], uma [[Skull]], uma [[Red Apple]] e uma [[Wolf Paw]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8373,
+    "ns": 0,
+    "title": "Mana Potion",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Mana Potion\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| secondarytype  = \n| attrib         = Regenera [[mana]] quando usado.\n| weight         = 2.70\n| stackable      = sim\n| npcprice       = 56\n| storevalue     = 6\n| droppedby      = [[Armadile]], [[Barbarian Brutetamer]], [[Bibby Bloodbath]], [[Blue Djinn]], [[Bonelord]], [[Crystal Spider]], [[Dawnfly]], [[Dark Apprentice]], [[Dark Magician]], [[Dark Monk]], [[Death Priest]], [[Demon Skeleton]], [[Dragon Lord Hatchling]], [[Elf Overseer]], [[Emerald Damselfly]], [[Energy Elemental]], [[Frost Giantess]], [[Golden Servant]], [[Golden Servant Replica]], [[Grave Guard]], [[Green Djinn]], [[Herald of Fire]], [[Hideous Fungus]], [[High Voltage Elemental]], [[Humongous Fungus]], [[Knowledge Elemental]], [[Lava Golem]], [[Lizard Snakecharmer]], [[Mad Scientist]], [[Merlkin]], [[Minotaur Mage]], [[Orewalker]], [[Pirate Navigator]], [[Pirate Quartermaster]], [[Priestess]], [[Sea Captain]], [[Stone Devourer]], [[Wailing Widow]], [[Werebadger]], [[Werefox]], [[Wrathful Archivist]], [[Zombie]], [[Infernoid Blob]], [[Infernoid Soul]], [[Infernoid Spiritual]], [[Lizard Commander]], [[Lizard Magician]].\n| droppedRaidby  = [[Oodok Witchmaster]].\n| buyfrom        = Shiriel, Mehkesh, Rachel, Hireling (Trader), Asima, Hamish, Sandra, Talila, Valindara, Rabaz, Rock In A Hard Place, Raffael, Faloriel, Gnomegica, Sigurd, Frederik, Maun, Siflind, Ghorza, Tandros, Tarun, Alaistar, Asnarus, Chartan, Nelly, Romir, Topsy, Xodet, Digger, Chuckles\n| sellto         = Jogadores.\n| implemented    = 8.1\n| notes          = Regenera em média de '''70~130 MP'''. Você pode retornar o [[flask]] para lojas magicas por 5 [[gp]]s.\n<noinclude><p><spoiler>\n* Recompensa da [[Mintwallin Quest]].\n* Recompensa da [[Rest in Hallowed Ground Quest]].\n* Recompensa da [[Thais Quest]].\n* Possibilidade de ser obtido durante a [[World Quests|World Quest]] [[Bewitched]].\n* Possibilidade de ser obtido ao usar um [[Gnomish Supply Package]].\n* [[Arquivo:Achievement.gif|link=]] Ao beber 100 000 [[Poções]] de Health, Mana e Spirit, você receberá o achievement \"'''{{Achievement|Potion Addict}}'''\".</spoiler>\n{{Veja|Dinheiro Gasto Por Mana}}</p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8375,
+    "ns": 0,
+    "title": "Manafluid",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Manafluid\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| secondarytype  = \n| attrib         = Restaura de 50 a 150 de mana por [[vial]].\n| weight         = 1.80\n| stackable      = não\n| mercado        = não\n| value          =\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores. \n| implemented    = 7.4\n| notes          = Sua aparência lembra a de um [[Wine]]. Este item ainda pode ser obtido, mesmo após o [[Update#Update 8.1 December 11, 2007|Update 8.1]]. Podem ser obtidos ao se usar um [[Vial]] em um recipiente contendo o líquido, geralmente em ambientes semelhantes a laboratórios espalhados pelo jogo como: '''Yalahar Magician Quarter''', '''Temporal Tides''' e '''Marapur'''.</br></br>\n\nAntes do [[Update#Update 8.1 December 11, 2007|Update 8.1]] podiam ser comprados em lojas de artigos mágicos ou obtidos ao se usar um [[Flask of Demonic Blood]], foi loot de muitas criaturas da [[Pits of Inferno]]. Todos os jogadores usam agora [[Mana Potion]]s, [[Strong Mana Potion]]s e [[Great Mana Potion]]s que foram introduzidas no jogo no Update de Natal de 2007.</br></br>\n\nVocê pode retornar o [[vial]] vazio em lojas de artigos mágicos por 5 [[gp]]s.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8376,
+    "ns": 0,
+    "title": "Mastermind Potion",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Mastermind Potion\n| flavortext     = Drinking this potion as a sorcerer or druid temporarily increases your magic skill.\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| attrib         = Concede [[Magic Level]] +3 por 10 minutos.\n| weight         = 2.90\n| sounds         = \"You feel smarter.\"\n| stackable      = sim\n| npcvalue       = 500\n| droppedby      = [[Alptramun]], [[Amenef The Burning]], [[Ancient Spawn of Morgathla]], [[Annihilon]], [[Askarak Demon]], [[Askarak Lord]], [[Askarak Prince]], [[Chagorz]], [[Count Vlarkorth]], [[Diamond Servant]], [[Diamond Servant Replica]], [[Drume]], [[Duke Krule]], [[Ghulosh]], [[Gorzindel]], [[Goshnar's Malice]], [[Ichgahal]], [[Izcandar the Banished]], [[King Zelos]], [[Lady Tenebris]], [[Lloyd]], [[Lokathmor]], [[Mad Scientist]], [[Madareth]], [[Malofur Mangrinder]], [[Maxxenius]], [[Mazzinor]], [[Murcion]], [[Plagueroot]], [[Ratmiral Blackwhiskers]], [[Razzagorn]], [[Scarlett Etzel]], [[Spitter]], [[Srezz Yellow Eyes]], [[The Baron from Below]], [[The Brainstealer]], [[The Count Of The Core]], [[The Duke Of The Depths]], [[The Monster]], [[The Nightmare Beast]], [[The Pale Worm]], [[The Sandking]], [[The Time Guardian]], [[Yielothax]], [[Timira the Many-Headed]], [[Vemiath]].\n| droppedRaidby  = [[Zushuka (Mortal)]], [[Yakchal]], [[Zulazza the Corruptor]].\n| buyfrom        = Jogadores.\n| sellto         = Fiona\n| implemented    = 8.0\n| notes          = Acreditava-se que causava diminuição da resistência mágica como efeito colateral (por conta da antiga descrição do item \"Drinking this potion increases temporarily your magic skill while decreasing your magic defense\"). Não pode ser usada junto com outros buffs temporários de magic level, como o [[Enchant Party]] (o último usado sempre prevalecerá, anulando o outro).\n\nSomente [[Druid]]s e [[Sorcerer]]s recebem o efeito ao beber esta poção, embora todas as vocações possam consumi-la desde o [[Update de Newhaven]].\n<noinclude><p><spoiler>\n* Recompensa da [[Barbarian Arena Quest|Barbarian Arena - Warlord Mode]], [[The Ice Islands Quest]], [[The New Frontier Quest]] e da [[World Quests|World Quest]] [[Rise of Devovorga]].\n* Possibilidade de ser obtido ao usar um [[Gnomish Supply Package]], um [[Surprise Cube]] ou como presente do NPC [[Santa Claus]].\n* [[Arquivo:Achievement.gif]] Após beber 100 potions, você receberá o achievement '''\"{{Achievement|Mastermind}}\"'''.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8377,
+    "ns": 0,
+    "title": "Mead",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Mead\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| secondarytype  = \n| stackable      = não\n| attrib         = Te deixa bêbado.\n| weight         = 1.80\n| mercado        = não\n| value          = 5\n| npcprice       = 5\n| droppedby      = Ninguém.\n| buyfrom        = Dankwart, Satsu:52\n| sellto         = Jogadores.\n| implemented    = 8.0\n| notes          = Mead é uma bebida alcoólica feita de mel, água e leveduras, parecida com o Hidromel, e muito famosa na era medieval. Faz você ficar bêbado e não se mover corretamente. Quando você compra isso, geralmente vem num [[mug]]. É uma bebida muito apreciada em áreas frias como [[Svargrond]], mas cuidado para não exagerar na dose e desmaiar no meio da neve.<noinclude><p><spoiler>Um [[vial]] de mead é necessário para [[Hot Cuisine Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8378,
+    "ns": 0,
+    "title": "Milk",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Milk\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| stackable      = não\n| attrib         = Nenhum.\n| weight         = 1.80\n| npcprice       = 2\n| droppedby      = Ninguém.\n| mercado        = não\n| buyfrom        = Brasith:15, Dane:4, Miraia:5, Satsu:52, Norma\n| sellto         = Jogadores.\n| notes          = É usado no preparo de algumas receitas, tais como [[cake]]s e [[Gingerbreadman]]. Pode ser encontrado em spawns ou comprado nas tavernas.\n<noinclude><p><spoiler>* Pode ser encontrado em spawns diários em [[Mintwallin]], [[Fibula Dungeon]] e na [[Bear Room Quest]]. Pode ser adquirido também por meio da [[Goblin Temple Quest]].<br />\n* Três [[vial]]s com milk são necessários para a [[Hot Cuisine Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8382,
+    "ns": 0,
+    "title": "Flask of Rust Remover",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Flask of Rust Remover\n| flavortext     = It can be used to clean and polish old and rusty armors.\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| secondarytype   = Ferramentas\n| attrib         = Pode ser usado para remover a ferrugem de equipamentos.\n| stackable      = sim\n| weight         = 0.90\n| value          = 50\n| npcprice       = 50\n| npcvalue       = 50\n| droppedby      = [[Control Tower]], [[Deepling Scout]], [[Rustheap Golem]].\n| buyfrom        = Harog\n| sellto         = Jogadores.\n| implemented    = 8.4\n| notes          = Pode ser usado para remover a ferrugem da [[Rusty Armor]], [[Rusty Helmet]], [[Rusty Legs]] e [[Rusty Shield]].\n\n<noinclude><p><spoiler>\n*Completar a parte '''Justice for All''' da [[The Hidden City of Beregar Quest]] permite ao personagem comprar este item.\n*[[Arquivo:Achievement.gif]] Após você [[Flask of Rust Remover|polir]] 1000 [[Rusty Armor]]s, [[Rusty Helmet]]s, [[Rusty Legs]] ou [[Rusty Shield]]s, você receberá o achievement \"'''{{Achievement|Polisher}}'''\".\n*[[Arquivo:Achievement.gif]] Ao pescar um [[Leviathan's Amulet]] de um [[Massive Water Elemental]] ou de um [[Water Elemental]] e [[Flask of Rust Remover|polir]] uma [[Golden Armor]] de uma [[Slightly Rusted Armor]], você ganhará o achievement \"'''{{Achievement|Lucky Devil}}'''\".\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9383,
+    "ns": 0,
+    "title": "Flask of Crown Polisher",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Flask of Crown Polisher\n| flavortext     = Ideal to polish crowns.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| attrib         = Nenhum.\n| weight         = 1.10\n| stackable      = não\n| value          = \n| npcprice       = 700\n| droppedby      = Ninguém.\n| buyfrom        = Black Bert\n| sellto         = Jogadores.\n| implemented    = 8.54\n| notes          = <noinclude><p><spoiler>* Usado na [[The New Frontier Quest]]. </spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9384,
+    "ns": 0,
+    "title": "Flask of Extra Greasy Oil",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Flask of Extra Greasy Oil\n| flavortext     = Extra greasy oil from Zalamon's storage.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| attrib         = Nenhum.\n| weight         = 1.80\n| stackable      = não\n| npcprice       = 1 000\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Black Bert\n| sellto         = Jogadores.\n| implemented    = 8.54\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[Children of the Revolution Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9385,
+    "ns": 0,
+    "title": "Flask of Plant Poison",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Flask of Plant Poison\n| flavortext     = This plant poison is meant to destroy the growths near the Keeper's lair deep beneath the gardens.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = 1.80\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.6\n| notes          = \n<noinclude><p><spoiler>* Obtido e usado durante na [[Wrath of the Emperor Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9386,
+    "ns": 0,
+    "title": "Flask of Poison",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Flask of Poison\n| flavortext     = This poison is meant to weaken the enemy and should be used on the rice fields near Chaochai.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| attrib         = Nenhum.\n| weight         = 1.80\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| npcprice       = 1 000\n| npcvalue       = 0\n| buyfrom        = Black Bert\n| sellto         = Jogadores.\n| implemented    = 8.54\n| notes          = Nenhuma.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9387,
+    "ns": 0,
+    "title": "Flask with Paint",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Flask with Paint\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| attrib         = Nenhum.\n| weight         = 1.80\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.0\n| notes          = Mesmo sprite de um [[Animal Cure]] e [[Slime (Líquido)|Vial of Slime]].\n<noinclude><p><spoiler>\n* Obtido e usado durante a [[The Ice Islands Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9419,
+    "ns": 0,
+    "title": "Interdimensional Potion",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Interdimensional Potion\n| flavortext     = This potion will help you enter the dreams of any lifeform.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| attrib         = Use para beber.\n| stackable      = não\n| weight         = 1.80\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.6\n| notes          = <noinclude><p><spoiler>Usado durante a [[Wrath of the Emperor Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9523,
+    "ns": 0,
+    "title": "Jug of Embalming Fluid",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Jug of Embalming Fluid\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| attrib         = Nenhum.\n| weight         = 7.50\n| value          = \n| npcvalue       = 0\n| npcprice       = 200\n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Mehkesh\n| sellto         = Jogadores.\n| implemented    = 8.4\n| notes          = É o item especial de Ankrahmun. Mesmo sprite de um [[Fine Vase]].\n<noinclude><p><spoiler>\n* 01 é necessário para a missão ''Searoutes around Yalahar'' da [[In Service of Yalahar Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 17223,
+    "ns": 0,
+    "title": "Flask of Wasp Poison",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Flask of Wasp Poison\n| flavortext     = It's very toxic. Do not ever drink green liquids.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| attrib         = Envenena quem beber.\n| stackable      = não\n| weight         = 1.80\n| mercado        = não\n| npcvalue       = 0\n| buyfrom        = Jogadores.\n| droppedby      = Ninguém.\n| sellto         = Jogadores.\n| implemented    = 9.1\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[The Rookie Guard Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 20446,
+    "ns": 0,
+    "title": "Flask of Dissolved Chitin",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Flask of Dissolved Chitin\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| attrib         = \n| stackable      = sim\n| weight         = 1.55\n| value          =\n| npcprice       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.4\n| notes          = Tem a mesma aparência de um [[Slime (Líquido)]] e [[Flask with Beaver Bait]].\n<noinclude><p><spoiler>\n* Pode ser obtido usando um [[Flask of Chitin Dissolver]] no corpo de um [[Crawler]] durante a [[War Against The Hive Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25353,
+    "ns": 0,
+    "title": "Muck Remover",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Muck Remover\n| flavortext     = The gmonish slime remover works wonders on mucky objects.\n| itemclass      = Outros Itens\n| stackable      = sim\n| attrib         = Remove muco.\n| primarytype    = Líquidos\n| weight         = 0.90\n| value          = 28 000 ~ 48 000\n| npcprice       = 8 [[Minor Crystalline Token]]s\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Gnomally\n| sellto         = Jogadores.\n| implemented    = 9.6\n| notes          = Pode ser usado para remover o muco de um [[Mucus Plug]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25488,
+    "ns": 0,
+    "title": "Fresh Mushroom Beer",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Fresh Mushroom Beer\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| secondarytype  = \n| attrib         = Nenhum.\n| weight         = 2.00\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 0\n| npcprice       = 10\n| sounds         = Gulp!\n| droppedby      = Ninguém\n| buyfrom        = Gnominus\n| sellto         = Jogadores.\n| implemented    = 9.6\n| notes          = É a bebida de [[cogumelos]] favorita dos Gnomos. Ela dura apenas 20 segundos, após isso ela virará uma [[Stale Mushroom Beer]].\n<noinclude><p><spoiler>* É necessário usar este item para repetir o teste da missão Recruitment Office na [[Bigfoot's Burden Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 33700,
+    "ns": 0,
+    "title": "Glooth Potion",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Glooth Potion\n| flavortext     = It vibrates visibly and emits a sharp, unpleasant smell.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| attrib         = \n| weight         = 4.00\n| stackable      = não\n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.50\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[Oramond Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 34840,
+    "ns": 0,
+    "title": "Flask with Oil and Blood",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Flask with Oil and Blood\n| flavortext     = It contains a strange mixture of embalming fluid and medusa blood.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| attrib         = \n| weight         = 1.80\n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.70\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[The Cursed Crystal Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 34933,
+    "ns": 0,
+    "title": "Gloo",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Gloo\n| flavortext     = It smells a bit like rotten fish.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| weight         = 2.00\n| attrib         = \n| mercado        = não\n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.70\n| notes          = \n<noinclude><p><spoiler>\n* Obtido e usado durante a task ''The Gloud Ship'' da [[Oramond Quest]].\n* Pode ser usado para reverter a [[World Change]] da [[Twenty Miles Beneath the Sea Quest]]. Você pode pedir outro ao NPC [[Yeo]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 34942,
+    "ns": 0,
+    "title": "Glooth Plasma",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Glooth Plasma\n| flavortext     = It looks half gas, half liquid.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| weight         = 1.80\n| attrib         = \n| mercado        = não\n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.70\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a task ''The Gloud Ship'' da [[Oramond Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 34949,
+    "ns": 0,
+    "title": "Glooth Vinegar",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Glooth Vinegar\n| flavortext     = It smells very astringent, so don't inhale too deeply.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| weight         = 3.00\n| attrib         = \n| mercado        = não\n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.70\n| notes          = \n<noinclude><p><spoiler>\n* Obtido e usado durante a task ''The Gloud Ship'' da [[Oramond Quest]].\n* 01 pode ser obtido em um bookcase em [[Rathleton]] ({{mapa|33616,31939,5:2|aqui}}).\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 37863,
+    "ns": 0,
+    "title": "Flask of Greasy Red Oil",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Flask of Greasy Red Oil\n| flavortext     = It smells strange.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| weight         = 1.80\n| stackable      = não\n| value          = \n| npcvalue       = \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.90\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[Krailos Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 46909,
+    "ns": 0,
+    "title": "Flask with Snake Poison",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Flask with Snake Poison\n| flavortext     = The cobra poison in this flask is very potent. Even inhaling it would be dangerous. It leaks a bit and will evaporate shortly. \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| attrib         = Nenhum.\n| weight         = 1.80\n| value          = \n| npcprice       = \n| npcvalue       = \n| mercado        = não\n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.20\n| notes          = \n<noinclude><p><spoiler>\n* Obtido ao usar o [[Empty Ritual Flask]] no corpo fresco de uma [[Cobra]].\n* Pode ser utilizado para envenenar o caldeirão de sopa na cozinha do [[Cobra Bastion]], assim as criaturas no local [[Respawn|aparecerão]] com a vida um pouco mais baixa pelos próximos 30 minutos.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 46914,
+    "ns": 0,
+    "title": "Flask of Hallucinogen",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Flask of Hallucinogen\n| flavortext     = It smells sickly sweet.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| attrib         = Nenhum.\n| weight         = 1.65\n| value          = \n| npcprice       = 5\n| npcvalue       = 5\n| mercado        = não\n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Faloriel\n| sellto         = Jogadores.\n| implemented    = 12.20\n| notes          = \n<noinclude><p><spoiler>\n* Obtido e usado durante a [[Kilmaresh Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 47133,
+    "ns": 0,
+    "title": "Flask with Lamp Oil",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Flask with Lamp Oil\n| flavortext     = This lamp oil is highly flammable and evaporates quickly.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| attrib         = Nenhum.\n| weight         = 1.60\n| stackable      = não\n| mercado        = não\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| droppedby      = Ninguém.\n| implemented    = 12.20\n| notes          = Quando pego ele ficará por 10 minutos em sua backpack, após isso ele irá sumir.</br>\n<noinclude><p><spoiler>* Usado para queimar as raízes da entrada principal do [[Cobra Bastion]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 50832,
+    "ns": 0,
+    "title": "Magic Shield Potion",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Magic Shield Potion\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 14\n| attrib         = Ativa ou renova o [[Magic Shield]] de seu usuário ao ser consumido.\n| weight         = 3.20\n| stackable      = sim\n| npcprice       = 01 [[Silver Token]]\n| buyfrom        = Cledwyn\n| sellto         = Jogadores.\n| implemented    = 12.55.10451\n| notes          = Só pode ser consumido por [[Sorcerer]]s e [[Druid]]s de level 14 ou mais.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53004,
+    "ns": 0,
+    "title": "Kooldown-Aid",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Kooldown-Aid\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| attrib         = Reseta temporariamente o cooldown de todas as magias, uma única vez. (não reduz o cooldown da Gift of Life)\n| weight         = 2.10\n| stackable      = sim\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.70\n| notes          = Reward do [[Tibiadrome]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53011,
+    "ns": 0,
+    "title": "Ice Resilience",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ice Resilience\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| attrib         = Aumenta a proteção em 8% por uma hora.\n| weight         = 2.50\n| stackable      = sim\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.70\n| notes          = Reward do [[Tibiadrome]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53014,
+    "ns": 0,
+    "title": "Holy Resilience",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Holy Resilience\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| attrib         = Aumenta a proteção em 8% por uma hora.\n| weight         = 2.50\n| stackable      = sim\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.70\n| notes          = Reward do [[Tibiadrome]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53018,
+    "ns": 0,
+    "title": "Ice Amplification",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ice Amplification\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| attrib         = Aumenta o dano, fazendo com que seus ataques e magias tratem as sensibilidades do alvo como se fossem 8% maiores, por uma hora.\n| weight         = 2.30\n| stackable      = sim\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.70\n| notes          = Reward do [[Tibiadrome]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53021,
+    "ns": 0,
+    "title": "Holy Amplification",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Holy Amplification\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| attrib         = Aumenta o dano, fazendo com que seus ataques e magias tratem as sensibilidades do alvo como se fossem 8% maiores, por uma hora.\n| weight         = 2.30\n| stackable      = sim\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.70\n| notes          = Reward do [[Tibiadrome]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55910,
+    "ns": 0,
+    "title": "Foam Stalker Spume",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Foam Stalker Spume\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| attrib         = \n| weight         = 2.40\n| stackable      = não\n| value          = \n| npcvalue       = \n| mercado        = não\n| droppedby      = [[Venerable Foam Stalker]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.90\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[Within the Tides Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 56348,
+    "ns": 0,
+    "title": "Flask of Mango Honey Juice",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Flask of Mango Honey Juice\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| attrib         = Nenhum.\n| weight         = 0.80\n| stackable      = não\n| mercado        = não\n| npcprice       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.90\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[Within the Tides Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 56349,
+    "ns": 0,
+    "title": "Flask of Mango Juice",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Flask of Mango Juice\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| attrib         = Nenhum.\n| weight         = 0.80\n| stackable      = não\n| mercado        = não\n| npcprice       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.90\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[Within the Tides Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 58385,
+    "ns": 0,
+    "title": "Flask with Anti-Mutagen",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Flask with Anti-Mutagen\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| writable       = não\n| stackable      = não\n| weight         = 1.50\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Ninguém.\n| sellto         = Jogadores.\n| implemented    = 13.10\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[The Cradle of Monsters Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 62587,
+    "ns": 0,
+    "title": "Flask with Lemon Sirup",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Flask with Lemon Sirup\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| attrib         = Nenhum.\n| weight         = 1.00\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| mercado        = não\n| npcprice       = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 13.40.54ea79\n| notes          = \n<noinclude><p><spoiler>\n* Criado e usado durante a [[Threatened Dreams Quest#Sweet_Dreams_Quest|Sweet Dreams Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 62588,
+    "ns": 0,
+    "title": "Flask with Moon Melon Sirup",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Flask with Moon Melon Sirup\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| attrib         = Nenhum.\n| weight         = 1.00\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| mercado        = não\n| npcprice       = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 13.40.54ea79\n| notes          = \n<noinclude><p><spoiler>\n* Criado e usado durante a [[Threatened Dreams Quest#Sweet_Dreams_Quest|Sweet Dreams Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 62589,
+    "ns": 0,
+    "title": "Flask with Raspberry Sirup",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Flask with Raspberry Sirup\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| attrib         = Nenhum.\n| weight         = 1.00\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| mercado        = não\n| npcprice       = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 13.40.54ea79\n| notes          = \n<noinclude><p><spoiler>\n* Criado e usado durante a [[Threatened Dreams Quest#Sweet_Dreams_Quest|Sweet Dreams Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 65617,
+    "ns": 0,
+    "title": "Flask of Lump Oil",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Flask of Lump Oil\n| flavortext     = This lamp oil is highly flammable and evaporates quickly.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| weight         = 1.60\n| attrib         = \n| stackable      = não\n| mercado        = não\n| value          = Negociável\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.20\n| notes          =\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8379,
+    "ns": 0,
+    "title": "Mud",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Mud\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| secondarytype  = \n| stackable      = não\n| mercado        = não\n| attrib         = Nenhum.\n| weight         = 1.80\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = É lama e pode ser obtido usando um recipiente para líquidos num chão onde tenha barro, tais como o de cavernas. \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8380,
+    "ns": 0,
+    "title": "Oil",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Oil\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| secondarytype  = \n| stackable      = não\n| attrib         = Você pode usar para recarregar [[lamp]]s.\n| weight         = 1.80\n| mercado        = não\n| value          = 20\n| npcvalue       = 0\n| npcprice       = 20\n| droppedby      = Ninguém.\n| buyfrom        = Ahmet, Bashira, Bezil, Nezil, Gree Dee, Halif, Sandra, Sarina, Shiantis, Red Lilly\n| sellto         = Jogadores.\n| notes          = Usado para recarregar [[lamp]]s (funciona somente se o óleo estiver em um [[vial]]). É possível obter um frasco desse jeito.\n <noinclude><p><spoiler>É necessário para entrar na [[The Pits of Inferno Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8381,
+    "ns": 0,
+    "title": "Rum",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Rum\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| secondarytype  = \n| attrib         = Te deixa [[drunk|bêbado]].\n| weight         = 1.80\n| mercado        = não\n| stackable      = não\n| droppedby      = Ninguém.\n| npcvalue       = 0\n| npcprice       = 10\n| buyfrom        = Armenius, Satsu:52\n| sellto         = Jogadores.\n| implemented    = 7.8\n| notes          = Faz você ficar [[drunk|bêbado]]. Há um barril de rum em [[Sabrehaven]] e em [[Liberty Bay]].<div class=\"toccolours mw-collapsible mw-collapsed\" style=\"width:70%; margin: 4px 0px;\">'''Como fazer um Rum'''<div class=\"mw-collapsible-content\">\n<table><tr><td align=left>Para fazer um ''rum'', você precisa de:\n\n[[Fire Bug]]<br />\n[[Sickle]]<br />\n[[Distilling Machine]]<br />\nQualquer recipiente de liquido como [[vial]]s ou [[mug]]s.<br />\n\n# Use o [[Fire Bug]] em um [[Sugar Cane]] para queimar as folhas inúteis.<br />\n# Use o [[Sickle]] para cortá-lo e recolher o [[Bunch of Sugar Cane]].<br />\n# Use o [[Bunch of Sugar Cane]] em uma [[Distilling Machine]].<br />\n# Use o recipiente de líquido na [[Distilling Machine]] para obter o rum.\n\nNota: Cada [[Bunch of Sugar Cane]] fornece 10 segundos de produção de rum.</td></tr></table></div></div>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8384,
+    "ns": 0,
+    "title": "Small Health Potion",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Small Health Potion\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| attrib         = Recupera [[HP]] quando usado.\n| weight         = 2.65\n| stackable      = sim\n| value          = Negociável\n| droppedby      = Ninguém.\n| npcprice       = 20\n| buyfrom        = Hamish, Hyacinth (NPC), Lily,\n| sellto         = Jogadores.\n| implemented    = 8.2\n| notes          = Cura uma quantia entre 50 e 100 pontos de vida.\n<noinclude><p><spoiler>*Obtido na [[Small Health Potion Quest]] e [[The Rookie Guard Quest]].\n*[[Arquivo:Achievement.gif]] Ao beber 100 000 [[Poções]] de Health, Mana e Spirit,  você receberá o achievement \"'''{{Achievement|Potion Addict}}'''\".</spoiler></p>\n{{Veja|Dinheiro Gasto Por Hitpoint}}</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8385,
+    "ns": 0,
+    "title": "Strong Health Potion",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Strong Health Potion\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| secondarytype  = \n| vocrequired    = [[Knight]]s, [[Monk]]s and [[Paladin]]s\n| levelrequired  = 50\n| attrib         = Regenera [[Hp|HP]] quando usado.\n| weight         = 2.90\n| stackable      = sim\n| npcprice       = 115\n| storevalue     = 10\n| droppedby      = [[Albino Dragon]], [[Ancient Scarab]], [[Animated Ogre Brute]], [[Animated Ogre Savage]], [[Arctic Faun]], [[Armadile]], [[Arthei]], [[Askarak Demon]], [[Askarak Lord]], [[Askarak Prince]], [[Blood Beast]], [[Boogy]], [[Boreth]], [[Brimstone Bug]], [[Cave Spider]], [[Cyclops Drone]], [[Cyclops Smith]], [[Dark Faun]], [[Dark Magician]], [[Diamond Servant]], [[Diamond Servant Replica]], [[Dragon Lord]], [[Dragon]], [[Draptor]], [[Elder Wyrm]], [[Enraged Crystal Golem]], [[Fazzrah]], [[Fleshcrawler]], [[Glooth Anemone]], [[Giant Spider]], [[Gravedigger]], [[Haunted Treeling]], [[Humongous Fungus]], [[Ice Golem]], [[Inkwing]], [[Iks Aucar]], [[Kroazur]], [[Lava Golem]], [[Lersatio]], [[Lizard High Guard]], [[Lizard Legionnaire]], [[Lizard Noble]], [[Lizard Zaogun]], [[Lost Exile]], [[Lost Husher]], [[Mad Mage]], [[Marziel]], [[Metal Gargoyle]], [[Minotaur Hunter]], [[Misguided Shadow]], [[Misguided Thief]], [[Mooh'Tah Warrior]], [[Mutated Tiger]], [[Naga Warrior]], [[Nightfiend]], [[Ogre Brute]], [[Ogre Savage]], [[Orc Cult Inquisitor]], [[Orc Cultist]], [[Orc Cult Minion]], [[Orc Cult Priest]], [[Orclops Doomhauler]], [[Orclops Ravager]], [[Orewalker]], [[Parder]], [[Pirate Buccaneer]], [[Pirate Corsair]], [[Pooka]], [[Raxias]], [[Rot Elemental]], [[Rustheap Golem]], [[Sea Serpent]], [[Seacrest Serpent]], [[Shaburak Demon]], [[Shaburak Lord]], [[Shaburak Prince]], [[Shardhead]], [[Stampor]], [[Stone Devourer]], [[Sulphur Scuttler]], [[The Horned Fox]], [[Tromphonyte]], [[Twisted Pooka]], [[Vampire Bride]], [[Vampire Viscount]], [[Vampire]], [[Vulcongra]], [[Water Elemental]], [[Wereboar]], [[Werewolf]], [[Wiggler]], [[Wyrm]], [[Wyvern]], [[Yielothax]], [[Young Sea Serpent]].\n| droppedRaidby  = [[Arachir the Ancient One]], [[Crustacea Gigantica]], [[Diblis the Fair]], [[Dragonling]], [[Draptor]], [[General Murius]], [[Ghazbaran]], [[Hirintror]], [[Midnight Panther]], [[Owin (Criatura)]], [[Sir Valorcrest]], [[The Pale Count]], [[The Welter]], [[Tyrn]], [[Vicious Manbat]], [[Zevelon Duskbringer]].\n| buyfrom        = Shiriel, Agostina:150, Brutus:150, Mehkesh, Rachel, Hireling (Trader), Asima, Emilio:150, Sandra, Shadowpunch:150, Talila, Valindara, Rabaz, Rock In A Hard Place, Faloriel, Gnomegica, Alberto:150, Brom:150, Sigurd, Frederik, Maun, Siflind, Ghorza, Tandros, Tarun, Alaistar, Fabiana:150, Roughington:150, Asnarus, Chartan, Nelly, Romir, Dino:150, Lorenzo:150, Topsy, Victor:150, Xodet, Digger, Chuckles\n| sellto         = Jogadores.\n| implemented    = 8.1\n| notes          = Regenera, em média, 300 [[hit points]]. Só pode ser consumido por [[Knight]]s, [[Monk]]s e [[Paladin]]s de level 50 ou mais. Você poderá retornar o [[vial]] para lojas mágicas por 5 [[gp]]s.\n<noinclude><p><spoiler>\n* Recompensa da [[Mintwallin Quest]]. \n* Possibilidade de ser obtido durante a [[World Quests|World Quest]] [[Bewitched]].\n* Possibilidade de ser obtido ao usar um [[Gnomish Supply Package]].\n* [[Arquivo:Achievement.gif|link=]] Ao beber 100 000 [[Poções]] de Health, Mana e Spirit, você receberá o achievement \"'''{{Achievement|Potion Addict}}'''\".</spoiler>\n{{Veja|Dinheiro Gasto Por Mana}}\n</p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8386,
+    "ns": 0,
+    "title": "Strong Mana Potion",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Strong Mana Potion\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| levelrequired  = 50\n| attrib         = Regenera [[mana]] quando usado.\n| weight         = 2.90\n| stackable      = sim\n| npcprice       = 108\n| storevalue     = 7\n| droppedby      = [[Adventurer Group]], [[Animated Ogre Shaman]], [[Arbaziloth]], [[Armadile]], [[Askarak Demon]], [[Askarak Lord]], [[Askarak Prince]], [[Banshee]], [[Brimstone Bug]], [[Blood Hand]], [[Blood Priest]], [[Carnivostrich]], [[Court Warlock]], [[Crystal Spider]], [[Dark Magician]], [[Depowered Minotaur]], [[Diamond Servant Replica]], [[Draken Abomination]], [[Draptor]], [[Diamond Servant]], [[Earth Elemental]], [[Efreet]], [[Elder Bonelord]], [[Elder Wyrm]], [[Eldritch Dragon Lord]], [[Elf Arcanist]], [[Energy Elemental]], [[Enlightened of the Cult]], [[Enraged Crystal Golem]], [[Fahim the Wise]], [[Foam Stalker]], [[Ghost Of A Planegazer]], [[Glooth Anemone]], [[Gravedigger]], [[High Voltage Elemental]], [[Hydra]], [[Humongous Fungus]], [[Ice Golem]], [[Ice Horror]], [[Ice Witch]], [[Inkwing]], [[Iks Ahpututu]], [[Iks Pututu]], [[Jungle Moa]], [[Leviathan]], [[Lich]], [[Lava Golem]], [[Lizard Dragon Priest]], [[Lizard Magistratus]], [[Mad Mage]], [[Marid]], [[Massive Energy Elemental]], [[Merikh the Slaughterer]], [[Metal Gargoyle]], [[Minotaur Cult Prophet]], [[Minotaur Cult Zealot]], [[Minotaur Hunter]], [[Misguided Thief]], [[Mooh'Tah Warrior]], [[Necromancer]], [[Nightfiend]], [[Nightstalker]], [[Night Harpy]], [[Norcferatu Nightweaver]], [[Nymph]], [[Ogre Shaman]], [[Orewalker]], [[Pixie]], [[Rot Elemental]], [[Rustheap Golem]], [[Sea Serpent]], [[Seacrest Serpent]], [[Shaburak Demon]], [[Shaburak Lord]], [[Shaburak Prince]], [[Shadow Pupil]], [[Shaper Matriarch]], [[Stampor]], [[Stone Devourer]], [[Sulphur Scuttler]], [[Swan Maiden]], [[The Bloodweb]], [[The Gravedigger]], [[The Many]], [[Tromphonyte]], [[Two-Headed Turtle]], [[Vampire Bride]], [[Vampire Viscount]], [[Vulcongra]], [[Water Elemental]], [[Werebadger]], [[Werefox]], [[Wiggler]], [[Worm Priestess]], [[Wrathful Archivist]], [[Wyrm]], [[Yielothax]], [[Young Sea Serpent]].\n| droppedRaidby  = [[Crustacea Gigantica]], [[Dragonling]], [[Draptor]], [[Gravelord Oshuran]], [[Grandfather Tridian]], [[Hirintror]], [[The Pale Count]], [[The Welter]], [[Tyrn]], [[Vicious Manbat]].\n| buyfrom        = Shiriel, Mehkesh, Rachel, Hireling (Trader), Asima, Sandra, Talila, Valindara, Rabaz, Rock In A Hard Place, Faloriel, Gnomegica, Sigurd, Frederik, Maun, Siflind, Ghorza, Tandros, Tarun, Alaistar, Asnarus, Chartan, Nelly, Romir, Topsy, Xodet, Digger, Chuckles\n| sellto         = Jogadores.\n| implemented    = 8.1\n| notes          = Regenera, em média, 150 [[Mana Points]]. Pode ser utilizada por jogadores de level 50 ou maior. Você pode retornar o [[vial]] para lojas mágicas por 5 [[gp]].\n<noinclude><p><spoiler>\n* Recompensa da [[To Blind the Enemy Quest]].\n* Recompensa da [[The Hero Cave Quest]].\n* Possibilidade de ser obtido durante a [[World Quests|World Quest]] [[Bewitched]].\n* Possibilidade de ser obtido ao usar um [[Gnomish Supply Package]].\n* [[Arquivo:Achievement.gif]] Ao beber 100 000 [[Poções]] de Health, Mana e Spirit, você receberá o achievement \"'''{{Achievement|Potion Addict}}'''\".</spoiler></p>\n{{Veja|Dinheiro Gasto Por Mana}}</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8387,
+    "ns": 0,
+    "title": "Tea",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Tea\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| secondarytype  = \n| stackable      = não\n| attrib         = Nenhum.\n| weight         = 1.80\n| mercado        = não\n| value          = 5\n| npcprice       = 5\n| sounds          = Gulp. Aaah\n| droppedby      = Ninguém.\n| buyfrom        = Dankwart, Satsu:52\n| sellto         = Jogadores.\n| implemented    = 8.0\n| notes          = É um Chá. É uma bebida boa para climas frios, mas não possui nenhum efeito especial. Pode ser comprado em [[Svargrond]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8388,
+    "ns": 0,
+    "title": "Ultimate Health Potion",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ultimate Health Potion\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| vocrequired    = [[Knight]]s\n| levelrequired  = 130\n| attrib         = Regenera [[Hp|HP]] quando usado.\n| weight         = 3.10\n| stackable      = sim\n| npcprice       = 379\n| storevalue     = 29\n| droppedby      = [[Adventurer Group]], [[Ancient Spawn of Morgathla]], [[Angry Demon]], [[Annihilon]], [[Anomaly]], [[Arbaziloth]], [[Betrayed Wraith]], [[Blightwalker]], [[Bloodback]], [[Bog Raider]], [[Cave Chimera]], [[Choking Fear]], [[Cliff Strider]], [[Converter]], [[Court Warlock]], [[Crazed Winter Rearguard]], [[Crazed Winter Vanguard]], [[Darkfang]], [[Darklight Matter]], [[Demon]], [[Demon Outcast]], [[Draken Abomination]], [[Draken Elite]], [[Draken Warmaster]], [[Dread Intruder]], [[Eldritch Dragon Lord]], [[Energetic Book]], [[Energuardian Of Tales]], [[Eradicator]], [[Essence Of Malice]], [[Ethershreck]], [[Eyeless Devourer]], [[Feversleep]], [[Flameborn]], [[Fleshslicer]], [[Ghastly Dragon]], [[Girtablilu Warrior]], [[Gorgo]], [[Glooth Anemone]], [[Glooth Bandit]], [[Glooth Bomb]], [[Glooth Brigand]], [[Glooth Golem]], [[Gorzindel]], [[Grim Reaper]], [[Hand of Cursed Fate]], [[Hatebreeder]], [[Hellflayer]], [[Hellgorak]], [[Hellhound]], [[Hellspawn]], [[Hemming]], [[Hive Overseer]], [[Hulking Prehemoth]], [[Ice Horror]], [[Icecold Book]], [[Infernal Phantom]], [[Insane Siren]], [[Ironblight]], [[Juvenile Bashmu]], [[Katex Blood Tongue]], [[Knowledge Elemental]], [[Kollos]], [[Kusuma]], [[Lava Golem]], [[Lizard Gate Guardian]], [[Lloyd]], [[Lokathmor]], [[Lost Basher]], [[Madareth]], [[Maior Domus]], [[Maw]], [[Mazoran]], [[Medusa]], [[Melting Frozen Horror]], [[Nighthunter]], [[Noxious Ripptor]], [[Orewalker]], [[Outburst]], [[Phantasm]], [[Plagirath]], [[Prince Drazzak]], [[Rage Squid]], [[Ragiaz]], [[Ravenous Hunger]], [[Razzagorn]], [[Realityquake]], [[Rupture]], [[Shadowpelt]], [[Shiversleep]], [[Shulgrax]], [[Sopping Corpus]], [[Souleater]], [[Soul of Dragonking Zyrtarch]], [[Spidris Elite]], [[Spidris]], [[Squid Warden]], [[Srezz Yellow Eyes]], [[Stabilizing Dread Intruder]], [[Stone Devourer]], [[Tarbaz]], [[Tentugly's Head]], [[Terrorsleep]], [[Terofar]], [[Thanatursus]], [[The Baron from Below]], [[The Count Of The Core]], [[The Duke Of The Depths]], [[The Enraged Thorn Knight]], [[The False God]], [[The Flaming Orchid]], [[The Gravedigger]], [[The Last Lore Keeper]], [[The Lord of the Lice]], [[The Monster]], [[The Rootkraken]], [[The Sandking]], [[The Shatterer]], [[The Souldespoiler]], [[The Source Of Corruption]], [[The Time Guardian]], [[The Unarmored Voidborn]], [[Tremor Worm]], [[Turbulent Elemental]], [[Undead Elite Gladiator]], [[Ushuriel]], [[Utua Stone Sting]], [[Vexclaw]], [[Usurper Archer]], [[War Golem]], [[Weeper]], [[Werebear]], [[Wereboar]], [[Werewolf]], [[World Devourer]], [[Yirkas Blue Scales]], [[Zamulosh]], [[Zavarash]], [[Zugurosh]], [[Timira the Many-Headed]].\n| droppedRaidby  = [[Feroxa (Mortal)]], [[Furyosa]], [[Gaz'Haragoth]], [[Ghazbaran]], [[Morgaroth]], [[Morshabaal]], [[Omrafir]], [[Orshabaal]], [[Owin (Criatura)]], [[Sight of Surrender]], [[Weakened Shlorg]], [[Zulazza the Corruptor]].\n| buyfrom        = Shiriel, Agostina:500, Brutus:500, Mehkesh, Rachel, Hireling (Trader), Asima, Emilio:500, Sandra, Shadowpunch:500, Talila, Valindara, Rabaz, Rock In A Hard Place, Faloriel, Gnomegica, Alberto:500, Brom:500, Sigurd, Frederik, Maun, Siflind, Ghorza, Tandros, Tarun, Alaistar, Fabiana:500, Roughington:500, Asnarus, Chartan, Nelly, Romir, Dino:500, Lorenzo:500, Topsy, Victor:500, Xodet, Digger, Chuckles\n| sellto         = Jogadores.\n| implemented    = 8.11\n| notes          = Regenera, em média, 750 [[hit points]]. Só pode ser consumido por [[Knights]] level 130 ou mais. Você poderá retornar o [[vial]] para lojas mágicas por 5 [[gp]]s.\n<noinclude><p><spoiler>*Possibilidade de ser obtido durante a [[World Quests|World Quest]] [[Bewitched]].\n*[[Arquivo:Achievement.gif]] Ao beber 100 000 [[Poções]] de Health, Mana e Spirit, você receberá o achievement \"'''{{Achievement|Potion Addict}}'''\"</spoiler></p>\n{{Veja|Dinheiro Gasto Por Hitpoint}}</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8389,
+    "ns": 0,
+    "title": "Urine",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Urine\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| secondarytype  = \n| stackable      = não\n| attrib         = Nenhum.\n| weight         = 1.80\n| mercado        = não\n| npcprice       = 10\n| droppedby      = Ninguém.\n| buyfrom        = Sandra\n| sellto         = Jogadores.\n| notes          = É urina e pode ser encontrada em cochos ([[trough]]), geralmente em banheiros e sanitários. Pode ser bebida, mas o gosto parece não ser muito agradável. Tem a mesma aparência de [[Aggressive Fluid]], [[Lemonade]], [[Fruit Juice]] e [[Bottle with Rat Urine]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8390,
+    "ns": 0,
+    "title": "Water (Líquido)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Water (Líquido)\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| secondarytype  = \n| stackable      = não\n| mercado        = não\n| attrib         = Nenhum.\n| weight         = 1.80\n| value          = 8\n| npcprice       = 1\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Ahmet:40, Arito, Mirabell, Swolt, Jimbin, Clyde, Urkalio, Miraia:2, Dane:2, Halif:40, Tanaro:2, Pugwah:2, Sandra:8, Satsu:52, Red Lilly:10, Gree Dee:10, Bezil:10, Nezil:10, Bashira:10, Ramina:2\n| sellto         = Jogadores.\n| notes          = Água dos rios e lagos tibianos. Você pode consegui-la usando um recipiente para líquidos em um lago, rio, barril de água ou qualquer outro recipiente que tenha água. Também pode ser comprada dentro de vários [[Recipientes#Recipientes Líquidos|recipientes]] e assim mudando o valor dependendo do recipiente.\n<noinclude><p><spoiler>\n* 01 é necessário para a [[Dreamer's Challenge Quest]].\n* 01 é necessário para a [[Arito's Task Quest]].\n* 02 são necessários para [[Hot Cuisine Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8391,
+    "ns": 0,
+    "title": "Wine",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Wine\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| secondarytype  = \n| stackable      = não\n| attrib         = Te deixa bêbado.\n| weight         = 1.80\n| mercado        = não\n| npcprice       = 3\n| droppedby      = Ninguém.\n| buyfrom        = Arito, Mirabell, Tanaro, Clyde, Norma, Boozer, Maria, Urkalio, Ramina:15, Armenius:4, Pugwah:4, Snake Eye:6, Satsu:52\n| sellto         = Jogadores.\n| notes          = O vinho é uma bebida alcoólica produzida a partir da fermentação do sumo da uva. No Tibia temos apenas o vinho tinto. É uma das bebidas mais populares, empatado com a cerveja. Por ser fácil de se encontrar, é comum ver jogadores tomando verdadeiros porres de wine ao lado de um barril. Foi muito popular tempos atrás o \"Golpe do Manafluid\", onde o jogador mal-intencionado enchia uma Backpack com vials de wine e vendia como se fosse Manafluid. O comprador, ao ver a cor arroxeada idêntica à da poção, comprava, e quando descobria que na verdade comprara um bom estoque de vinho, o vendedor já estava com o dinheiro e bem longe.\n<noinclude><p><spoiler>Um [[vial]] com wine é necessário para [[Hot Cuisine Quest]] e 18 para a [[What a Foolish Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 10060,
+    "ns": 0,
+    "title": "Slime (Líquido)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|''Este artigo é sobre a '''poção''' Slime. Para a criatura, veja: [[Slime (Criatura)]].''}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Slime (Líquido)\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| secondarytype  = \n| stackable = não\n| attrib         = Envenena quem beber.\n| weight         = 1.80\n| value          = 12\n| npcprice       = 12\n| buyfrom        = Sandra\n| droppedby      = Ninguém.\n| sellto         = Jogadores.\n| notes          = Uma gosma venenosa, obtida em aranhas e outros seres venenosos. Quando você bebe slime, você fica envenenado. O dano é equivalente a de um [[Poison Field]]. Você pode coletar slime em qualquer recipiente líquidos usando o recipiente em um corpo de qualquer criatura que tenha veneno (a maioria criaturas venenosas), ou você pode obter nos pântanos. \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 20442,
+    "ns": 0,
+    "title": "Reagent Flask",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Reagent Flask\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| attrib         = Reage quando misturado com fluidos de um [[Spidris]] morto.\n| stackable      = sim\n| weight         = 1.50\n| value          = 200\n| npcprice       = 200\n| droppedby      = Ninguém.\n| buyfrom        = Orockle\n| sellto         = Jogadores.\n| implemented    = 9.4\n| notes          = Tem a mesma aparência de um [[Milk]] e [[Coconut Milk]]. Ao ser misturado, se torna um [[Aggressive Fluid]].\n<noinclude><p><spoiler>* Obtido e usado na [[War Against The Hive Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25486,
+    "ns": 0,
+    "title": "Stale Mushroom Beer",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Stale Mushroom Beer\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| secondarytype  = \n| weight         = 2.00\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 0\n| npcprice       = 0\n| sounds         = Phew!\n| droppedby      = Ninguém\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.6\n| notes          = É uma [[Fresh Mushroom Beer]] velha.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 33567,
+    "ns": 0,
+    "title": "Vial of Coloured Glooth",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Vial of Coloured Glooth\n| flavortext     = This vial holds a sample of coloured glooth.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| weight         = 5.00\n| attrib         = \n| stackable      = não\n| mercado        = não\n| value          = \n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.50\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante uma task da [[Oramond Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 34828,
+    "ns": 0,
+    "title": "Vial of Mushroom Distillate",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Vial of Mushroom Distillate\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| weight         = 2.00\n| attrib         = \n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.70\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a task ''The Mutated Glooth Plague'' da [[Oramond Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 36322,
+    "ns": 0,
+    "title": "Vial of Liquid Silver",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Vial of Liquid Silver\n| flavortext     = It shimmers faintly, like the full moon.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| weight         = 2.40\n| stackable      = não\n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.80\n| notes          = \n<noinclude><p><spoiler>\n* Obtido e usado durante a [[Grimvale Quest]].\n* Desaparece 24 horas depois de ser coletado.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 37297,
+    "ns": 0,
+    "title": "Vial of Milk",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Vial of Milk\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| attrib         = Use para beber.\n| weight         = 1.80\n| stackable      = não\n| mercado        = não\n| npcprice       = 50\n| droppedby      = Ninguém.\n| buyfrom        = Larek\n| sellto         = Jogadores.\n| implemented    = 10.90\n| notes          = <noinclude><p><spoiler>* Necessário para a [[Krailos Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 38041,
+    "ns": 0,
+    "title": "Supreme Health Potion",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Supreme Health Potion\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| vocrequired    = [[Knight]]s\n| levelrequired  = 200\n| attrib         = Regenera [[Hp|HP]] quando usado.\n| weight         = 3.50\n| stackable      = sim\n| npcprice       = 650\n| storevalue     = 47\n| droppedby      = [[Adventurer Group]], [[Alptramun]], [[Arbaziloth]], [[Bone Overlord]], [[Chagorz]], [[Count Vlarkorth]], [[Court Warlock]], [[Drume]], [[Duke Krule]], [[Eldritch Dragon Lord]], [[Ghulosh]], [[Gorzindel]], [[Goshnar's Malice]], [[Izcandar the Banished]], [[Malofur Mangrinder]], [[Maxxenius]], [[Mazzinor]], [[Megasylvan Yselda]], [[Murcion]], [[Plagueroot]], [[Scarlett Etzel]], [[The Brainstealer]], [[The Dread Maiden]], [[The Last Lore Keeper]], [[The Nightmare Beast]], [[The Pale Worm]].\n| droppedEventby = [[The Percht Queen]].\n| buyfrom        = Shiriel, Hireling (Trader), Asima, Sandra, Talila, Valindara, Rabaz, Rock In A Hard Place, Faloriel, Frederik, Maun, Siflind, Ghorza, Tandros, Tarun, Alaistar, Asnarus, Chartan, Nelly, Romir, Chuckles, Nipuna\n| sellto         = Jogadores.\n| implemented    = 10.92\n| notes          = Regenera, em média, 900 [[hit points]]. Só pode ser consumido por [[Knight]]s de level 200 ou mais. Você poderá retornar o [[vial]] para lojas mágicas por 5 [[gp]]s.<br>\nEssa poção pode ser comprada pela [[Store]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 38043,
+    "ns": 0,
+    "title": "Ultimate Mana Potion",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ultimate Mana Potion\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 130\n| attrib         = Regenera [[mana]] quando usado.\n| weight         = 3.10\n| stackable      = sim\n| npcprice       = 488\n| storevalue     = 33\n| droppedby      = [[Adventurer Group]], [[Alptramun]], [[Animated Feather]], [[Arbaziloth]], [[Black Vixen]], [[Bone Overlord]], [[Brain Squid]], [[Chagorz]], [[Converter]], [[Count Vlarkorth]], [[Court Warlock]], [[Drume]], [[Duke Krule]], [[Eldritch Dragon Lord]], [[Energetic Book]], [[Energuardian Of Tales]], [[Ghulosh]], [[Gorerilla]], [[Gorzindel]], [[Goshnar's Malice]], [[Ice Horror]], [[Icecold Book]], [[Ichgahal]], [[Izcandar the Banished]], [[Knowledge Elemental]], [[Lokathmor]], [[Malofur Mangrinder]], [[Mantosaurus]], [[Maxxenius]], [[Mazzinor]], [[Megasylvan Yselda]], [[Menacing Carnivor]], [[Murcion]], [[Plagueroot]], [[Ratmiral Blackwhiskers]], [[Scarlett Etzel]], [[Sopping Corpus]], [[Sharpclaw]], [[Squid Warden]], [[Sulphider]], [[Tentugly's Head]], [[The Brainstealer]], [[The Dread Maiden]], [[The Gravedigger]], [[The Monster]], [[The Nightmare Beast]], [[The Scourge of Oblivion]], [[Timira the Many-Headed]].\n| droppedEventby = [[Morshabaal]], [[The Percht Queen]].\n| buyfrom        = Mehkesh, Hireling (Trader), Asima, Sandra, Talila, Valindara, Rabaz, Rock In A Hard Place, Faloriel, Frederik, Maun, Siflind, Ghorza, Tandros, Tarun, Alaistar, Asnarus, Chartan, Nelly, Romir, Chuckles\n| sellto         = Jogadores.\n| implemented    = 10.92\n| notes          = Regenera, em média, 500 [[Mana Points]]. Só pode ser consumido por [[Sorcerer]]s e [[Druid]]s de level 130 ou mais. Você poderá retornar o [[vial]] para lojas mágicas por 5 [[gp]]s.<br> \nEssa poção pode ser comprada pela [[Store]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 38045,
+    "ns": 0,
+    "title": "Ultimate Spirit Potion",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ultimate Spirit Potion\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| vocrequired    = [[Monk]]s e [[Paladin]]s\n| levelrequired  = 130\n| attrib         = Regenera [[Hit Points|vida]] e [[mana]] quando usado.\n| weight         = 3.10\n| stackable      = sim\n| npcprice       = 488\n| storevalue     = 33\n| droppedby      = [[Adventurer Group]], [[Alptramun]], [[Arbaziloth]], [[Black Vixen]], [[Bone Overlord]], [[Chagorz]], [[Count Vlarkorth]], [[Court Warlock]], [[Drume]], [[Duke Krule]], [[Eldritch Dragon Lord]], [[Ghulosh]], [[Gorzindel]], [[Ice Horror]], [[Ichgahal]], [[Izcandar the Banished]], [[King Zelos]], [[Malofur Mangrinder]], [[Maxxenius]], [[Mazzinor]], [[Megasylvan Yselda]], [[Morshabaal]], [[Murcion]], [[Plagueroot]], [[Scarlett Etzel]], [[Tentugly's Head]], [[The Abomination]], [[The Brainstealer]], [[The Dread Maiden]], [[The Gravedigger]], [[The Monster]], [[The Nightmare Beast]], [[The Pale Worm]], [[The Rootkraken]], [[The Scourge of Oblivion]], [[The Unwelcome]], [[Vemiath]].\n| droppedEventby = [[The Percht Queen]].\n| buyfrom        = Mehkesh, Hireling (Trader), Asima, Sandra, Talila, Valindara, Rabaz, Rock In A Hard Place, Faloriel, Frederik, Maun, Siflind, Ghorza, Tandros, Tarun, Alaistar, Asnarus, Chartan, Nelly, Romir, Chuckles\n| sellto         = Jogadores.\n| implemented    = 10.92\n| notes          = Regenera, em média, 500 [[Hit Points]] e 200 [[Mana Points]]. Só pode ser consumido por [[Monk]]s e [[Paladin]]s de level 130 ou mais. Você poderá retornar o vial para lojas mágicas por 5 [[gp]]s.<br>\nEssa poção pode ser comprada pela [[Store]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 39515,
+    "ns": 0,
+    "title": "Phial of Fresh Water",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Phial of Fresh Water\n| flavortext     = The phial contains fresh, clean water. It also looks like it sparkles. The flask is so thin and finely crated that the water seems to pour out little by little.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| weight         = 3.00\n| stackable      = não\n| mercado        = não\n| value          = \n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.02\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[Forgotten Knowledge Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 46856,
+    "ns": 0,
+    "title": "Vial of Potent Holy Water",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Vial of Potent Holy Water\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| weight         = 2.00\n| attrib         = \n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Jack Springer\n| value          = \n| npcvalue       = \n| mercado        = não\n| npcprice       = 100\n| sellto         = Jogadores.\n| implemented    = 12.20\n| notes          = <noinclude><p><spoiler>* Faz parte da [[Grave Danger Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 47006,
+    "ns": 0,
+    "title": "Vial of Cactus Milk",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Vial of Cactus Milk\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| weight         = 2.40\n| attrib         = \n| stackable      = sim\n| mercado        = não\n| value          = \n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.20\n| notes          = \n<noinclude><p><spoiler>\n* 10 são necessários para a missão ''Midnight Rituals'' da [[Kilmaresh Quest]].\n* Para obtê-lo, use um [[Hand Auger]] em um [[Flowering Cactus]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 47175,
+    "ns": 0,
+    "title": "Vial of Ink",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Vial of Ink\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| weight         = 1.80\n| attrib         = \n| stackable      = não\n| mercado        = não\n| value          = Negociável\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.20\n| notes          = <p>Este item pode ser obtido ao utilizar um vial vazio em um corpo de: Biting Book, Ink Splash, Shell Drake, Cinder Wyrmling, Bramble Wyrmling, Hawk Hooper, Lion Hydra, Bluebeak, Crusader ou Headwalker.</p><noinclude><p><spoiler>* Faz parte da [[Kilmaresh Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53005,
+    "ns": 0,
+    "title": "Strike Enhancement",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Strike Enhancement\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| attrib         = Aumenta a chance de causar dano crítico em 5% por uma hora.\n| weight         = 2.10\n| stackable      = sim\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.70\n| notes          = Reward do [[Tibiadrome]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53006,
+    "ns": 0,
+    "title": "Stamina Extension",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Stamina Extension\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| attrib         = Enche uma hora de stamina, mas não ultrapassa o limite máximo.\n| weight         = 2.10\n| stackable      = sim\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.70\n| notes          = Reward do [[Tibiadrome]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53008,
+    "ns": 0,
+    "title": "Wealth Duplex",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Wealth Duplex\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| attrib         = Dobra o loot de todos os monstros normais mortos, por uma hora.\n| weight         = 2.10\n| stackable      = sim\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.70\n| notes          = Reward do [[Tibiadrome]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53016,
+    "ns": 0,
+    "title": "Physical Resilience",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Physical Resilience\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| attrib         = Aumenta a proteção [[Physical Damage| Física]] em 8% por uma hora.\n| weight         = 2.50\n| stackable      = sim\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.70\n| notes          = Reward do [[Tibiadrome]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53023,
+    "ns": 0,
+    "title": "Physical Amplification",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Physical Amplification\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| attrib         = Aumenta o dano, fazendo com que seus ataques e magias tratem as sensibilidades do alvo como se fossem 8% maiores, por uma hora.\n| weight         = 2.30\n| stackable      = sim\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.70\n| notes          = Reward do [[Tibiadrome]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 62594,
+    "ns": 0,
+    "title": "Rose Milk Cake",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Rose Milk Cake\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Líquidos\n| attrib         = Nenhum.\n| weight         = 0.50\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| mercado        = não\n| npcprice       = \n| droppedby      = [[The Flaming Orchid]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 13.40.54ea79\n| notes          = \n<noinclude><p><spoiler>\n* Obtido e usado durante a missão Sweet Dreams da [[Threatened Dreams Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 63935,
+    "ns": 0,
+    "title": "Transcendence Potion",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Transcendence Potion\n| flavortext     = Drinking this potion temporarily increases your fist skill\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| attrib         = Concede um bônus de '''+4''' em [[Fist Fighting]] por '''10 minutos''' após o uso.\n| weight         = 2.90\n| sounds         = \n| stackable      = sim\n| npcvalue       = 500\n| droppedby      = [[Adventurer Group]], [[Chagorz]], [[Count Vlarkorth]], [[Drume]], [[Earl Osam]], [[Ghulosh]], [[Goshnar's Greed]], [[Goshnar's Malice]], [[Ichgahal]], [[King Zelos]], [[Magma Bubble]], [[Maxxenius]], [[Megasylvan Yselda]], [[Murcion]], [[Ratmiral Blackwhiskers]], [[Scarlett Etzel]], [[Tentugly's Head]], [[The Abomination]], [[The Brainstealer]], [[The Dread Maiden]], [[The Fear Feaster]], [[The Monster]], [[The Nightmare Beast]], [[The Pale Worm]], [[The Unwelcome]], [[Timira the Many-Headed]], [[Vemiath]], [[Zushuka (Mortal)]].\n| droppedRaidby  = \n| buyfrom        = \n| sellto         = Fiona\n| implemented    = 15.00.249ccc\n| notes          =\n<noinclude><p><spoiler>* [[Arquivo:achievement.gif|link=]] Após beber 100 potions você receberá o achievement '''\"{{Achievement|Inner Peace}}\"'''.\n* Pode ser obtido através de uma [[Gnomish Supply Package]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 66947,
+    "ns": 0,
+    "title": "Superior Mana Potion",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Superior Mana Potion\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| levelrequired  = 100\n| vocrequired    = [[Monk]]s, [[Paladin]]s, [[Sorcerer]]s and [[Druid]]s\n| attrib         = Regenera [[mana]] quando usado.\n| weight         = 3.10\n| stackable      = sim\n| npcprice       = 254\n| npcvalue       = 19\n| storevalue     = 17\n| droppedby      = Ninguém\n| droppedEventby = \n| buyfrom        = Alaistar, Asima, Asnarus, Chartan, Chuckles, Digger, Faloriel, Frederik, Ghorza, Gnomegica, Hireling (Trader), Maun, Mehkesh, Minzy, Nelly, Nipuna, Onfroi, Rabaz, Rachel, Rock In A Hard Place, Romir, Sandra, Shiriel, Siflind, Sigurd, Sundara, Talila, Tandros, Tarun, Topsy, Valindara, Xodet, Yerga\n| sellto         = Minzy\n| implemented    = 15.25.3a4a52\n| notes          = Regenera, em média, 240–360 [[Mana Points]]. Só pode ser consumido por [[Monk]]s, [[Mage]]s ou  [[Paladin]]s level 100 ou mais. Você pode retornar o [[vial]] para lojas mágicas por 5 [[gp]].\n<spoiler>\n*[[Arquivo:Achievement.gif]] (CONFIRMAR) Ao beber 100 000 [[Poções]] de Health, Mana e Spirit, você receberá o achievement \"'''{{Achievement|Potion Addict}}'''\"</spoiler></p>\n{{Veja|Dinheiro Gasto Por Mana}}</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

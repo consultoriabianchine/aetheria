@@ -1,0 +1,966 @@
+{
+ "query": {
+  "pages": [
+   {
+    "pageid": 8411,
+    "ns": 0,
+    "title": "Blood Herb",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Blood Herb\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Plantas e Ervas\n| secondarytype  = \n| weight         = 1.20\n| stackable      = sim\n| value          = \n| npcvalue       = 500\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Chondur\n| implemented    = 6.0\n| notes          = Considerado absolutamente precioso e frequentemente utilizado em casas como decoração. Perdeu seu valor com o tempo. É uma erva rara, por sua propriedade botânica. Entre as bruxas, é extensamente conhecido que a blood herb suga toda a força vital de uma árvore, matando-a.\n<noinclude><p><spoiler>\n* Pode ser pego nos pântanos de [[Venore]] através da [[Blood Herb Quest]].\n* Ao entregar uma blood herb para a [[Wyda]] durante a Mini World Change [[Mini_World_Changes#Bored_Witch|Bored Witch]], você tem a chance de ganhar um [[Torn Teddy]].\n* [[Arquivo:achievement.gif|link=]] Após conseguir o doll, você receberá o achievement '''\"{{achievement|Torn Treasures}}\"'''.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8416,
+    "ns": 0,
+    "title": "Bloodkiss Flower",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Bloodkiss Flower \n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas \n| primarytype    = Plantas e Ervas \n| secondarytype  = Itens de Quest\n| attrib         = Nenhum. \n| weight         = 0.95\n| npcprice       = 10 000\n| stackable      = não\n| droppedby      = Ninguém. \n| buyfrom        = Black Bert\n| sellto         = Jogadores.\n| implemented    = 8.5\n| notes          = Parece o mesmo que um [[Royal Blossom|Red Royal Blossom]].\n<noinclude><p><spoiler>\n* Obtido e usado durante a [[Shadows of Yalahar Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8418,
+    "ns": 0,
+    "title": "Blue Rose",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Blue Rose \n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Plantas e Ervas \n| secondarytype  =  \n| attrib         =  \n| stackable      = sim\n| npcvalue       = 250 \n| weight         = 0.80 \n| value          = \n| droppedby      = [[Blue Djinn]], [[Nymph]].\n| buyfrom        = Jogadores. \n| sellto         = Gnomission, Valindara:200, Talila:200\n| implemented    = 6.0\n| notes          = \n<noinclude><p><spoiler>* Possibilidade de ser obtido ao usar um [[Unrealized Dream]] próximo ao [[The Dreamcatcher Device]].\n*Recompensa da [[Chayenne's Realm Quest]].\n*Pode ser encontrada como respawn diário em: [[Ab'Dendriel]], [[Venore]] e [[Fibula Dungeon]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8419,
+    "ns": 0,
+    "title": "Bowl of Evergreen Flowers",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Bowl of Evergreen Flowers \n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas \n| primarytype    = Plantas e Ervas \n| secondarytype  = Itens de Quest\n| attrib         = Nenhum.\n| weight         = 11.00\n| stackable      = não\n| npcprice       = 150 \n| npcvalue       = 0 \n| droppedby      = Ninguém. \n| buyfrom        = Florentine\n| sellto         = Jogadores.\n| implemented    = 8.4\n| notes          = É o item especial de [[Carlin]].\n<noinclude><p><spoiler>* 01 é necessário para uma missão ''Searoutes around Yalahar'' da [[In Service of Yalahar Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8421,
+    "ns": 0,
+    "title": "Exotic Flowers",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Exotic Flowers \n| flavortext     =  \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Plantas e Ervas \n| secondarytype  =  \n| attrib         = Nenhum. \n| weight         = 11.00\n| stackable      = não\n| value          = 300 \n| npcvalue       = 0\n| npcprice       = 300\n| droppedby      = Ninguém. \n| buyfrom        = Nienna:310, Azalea, Rose\n| sellto         = Jogadores. \n| notes          = Pode ser vista em [[Port Hope]] na [[Tibian Explorer Society]] e na casa de [[Rosemarie]] (Sudoeste de Port Hope). \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8422,
+    "ns": 0,
+    "title": "Fern",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Fern \n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Plantas e Ervas\n| secondarytype  =  \n| stackable      = sim\n| attrib         =\n| weight         = 0.30\n| value          =  \n| npcvalue       = 20\n| npcprice       = 24\n| droppedby      = [[Mutated Human]], [[Pooka]]. \n| buyfrom        = Luna\n| sellto         = Talila, Valindara, Yasir\n| implemented    = 6.0\n| notes          = Tem a mesma aparência de um [[Trousers of the Ancients]].\n<noinclude><p><spoiler>\n* Spawms diário em [[Fibula]] e no bar em [[Meriana]].\n* 01 é necessário para a [[Hot Cuisine Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8424,
+    "ns": 0,
+    "title": "Flower Bouquet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Flower Bouquet \n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Plantas e Ervas\n| secondarytype  =  \n| attrib         =  \n| stackable      = sim\n| weight         = 0.80\n| npcprice       = 20 \n| value          = Negociável \n| droppedby      = [[Vampire Bride]]. \n| buyfrom        = Valentina, Nienna:500\n| sellto         = Jogadores. \n| notes          = Um buque de flores, perfeito para o Dia dos Namorados.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8425,
+    "ns": 0,
+    "title": "Flower Bowl",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Flower Bowl\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Plantas e Ervas\n| secondarytype  = \n| attrib         = Nenhum.\n| weight         = 11.00\n| stackable      = não\n| npcvalue       = 0\n| npcprice       = 6\n| droppedEventby = [[Grynch Clan Goblin]].\n| buyfrom        = Ukea, Feizuhl, Florentine, Nydala, Hireling (Apprentice), Yoem, Hofech, Edvard, Eddy, Inkaef, Iwar, Peggy, Nienna, Azalea, Vera, Janz, Gamon, Rose, Dorbin\n| sellto         = Jogadores.\n| notes          = Mesmo sprite do [[Helmet of Nature]]. Algumas [[criaturas]] e jogadores usando andar automático (clicando no mapa) não irão andar sobre a Flower Bowl, fazendo ela um bom item para levar com você quando quiser realizar traps, pois ela é mais leve que um [[parcel]]. Pode ser achada em vários lugares diferentes no [[Tibia]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8426,
+    "ns": 0,
+    "title": "Flower Pot",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Flower Pot\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Plantas e Ervas\n| stackable      = não\n| weight         = 1.50\n| npcvalue       = 0\n| npcprice       = 5 [[Seeds]]\n| droppedby      = Ninguém.\n| buyfrom        = Rosemarie\n| sellto         = Jogadores.\n| notes          = Ao usar um [[Watering Can]] no vaso, o crescimento da planta começará:<br />\n<div class=\"toccolours mw-collapsible mw-collapsed\" style=\"width:70%; margin: 4px 0px;\">'''Tipos de plantas e cuidados necessários!'''<div class=\"mw-collapsible-content\">\n<table><tr><td align=left>\n'''Tipos de Plantas'''\n\n1) Nos estágios 1 e 2 ainda não é possível identificar qual tipo de planta crescerá:<br />\n[[Arquivo:Flower Pot.gif]] [[Arquivo:Unused_flower_03.gif]]\n\n2) Nos estágios 3 e 4 já poderemos identificar qual planta crescerá:\n\n[[Arquivo:Unused_flower_04.gif]] [[Arquivo:Unused_flower_09.gif]] ''[[Flower Pot (Dryad's Heart Flower)|Dryad's Heart]]''\n\n[[Arquivo:Unused_flower_02.gif]] [[Arquivo:Unused_flower_07.gif]] ''[[Flower Pot (Lizard Tongue Plant)|Lizard Tongue]]''\n\n[[Arquivo:Unused_flower_08.gif]] [[Arquivo:Unused_flower_10.gif]] ''[[Flower Pot (Midnight Bloom Flower)|Midnight Bloom Flower]]''\n\n[[Arquivo:Unused_flower_06.gif]] [[Arquivo:Unused_flower_11.gif]] ''[[Flower Pot (Ember Queen Flower)|Ember Queen Flower]]''\n\n[[Arquivo:Fairy_Dancer2.gif]] [[Arquivo:Fairy_Dancer.gif]] ''[[Flower Pot (Fairy Dancer Flower)|Fairy Dancer Flower]]''\n\n[[Arquivo:Finger_Snapper1.gif]] [[Arquivo:Finger_Snapper2.gif]] ''[[Flower Pot (Finger Snapper Plant)|Finger Snapper Plant]]''\n\n3) Caso a planta não receba água por um certo tempo (3-5 dias) ela começará a murchar e necessitará ser regada com urgência:\n[[Arquivo:Unused_flower_01.gif]]\n\n4) Você pode plantar [[Ice Flower Seeds]] em um [[Empty Flower Pot]] para obter uma [[Flower Pot (Winterblossom)]]. Ao atingir o último estágio, essa flor não precisa mais receber água:<br />\n[[Arquivo:Ice Flower 01.gif]] [[Arquivo:Ice Flower 02.gif]] ''[[Flower Pot (Winterblossom)|Winterblossom]]''\n\n'''Cuidados'''\n\n1) É preciso regar a planta a cada 20 horas com um [[Watering Can]], mas isso não significa que ela crescerá a cada vez que for molhada. Quando ela crescer aparecerá a mensagem: <font color=#D14703>'''Your plant has grown to the next stage!'''</font>, caso contrário, será mostrado apenas: <font color=#D14703>'''You watered your plant.'''</font>. Se você tentar regar antes das 20 horas se passarem desde a última vez que foi molhada: <font color=#D14703>'''Your plant doesn't need water.'''</font>\n\n2) Depois de florescer totalmente, a planta não precisará ser regada todos os dias, no entanto se não receber água por muito tempo (3-5 dias), ela vai se transformar em uma [[Withered Plant]] e somente uma regada urgente evitará que ela desapareça: <font color=#D14703>'''You finally remembered to water your plant and it recovered.'''</font>. Regando a tempo, a planta será restaurada ao terceiro estágio. Entretanto, se uma [[Withered Plant]] não receber água por alguns dias (2-3) ela morrerá, restando apenas o [[Empty Flower Pot|vaso vazio]].\n\n'''ATENÇÃO:''' Se você deixar a planta em seu [[Depot Chest|depot]], exceto enquanto estiver com ele aberto, ou na sua [[backpack]] enquanto estiver offline, ela não vai crescer.\n</td></tr></table></div></div>\n\n<noinclude><p><spoiler>*Obtido durante o evento [[Flower Month]].\n*Você pode usar [[Ice Flower Seeds]] em uma planta totalmente florescida para criar uma planta eterna que não precisará mais receber água e poderá ser vendida a outros jogadores.\n*[[Arquivo:Achievement.gif]] Ao regar 100 plantas para o último estágio, você ganhará o achievement '''\"{{Achievement|Green Thumb}}\"'''. </spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8439,
+    "ns": 0,
+    "title": "Frostbite Herb",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Frostbite Herb\n| flavortext     = It has been cut from a plant which grows only in very cold regions.\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Quest\n| secondarytype  = Plantas e Ervas\n| attrib         = Nenhum.\n| weight         = 1.00\n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.0\n| notes          = É uma erva rara que pode ser cortada da [[Frostbite Herb (Object)|Frostbite Herb]] nas montanhas à oeste de [[Svargrond]], uma pode ser achada no cume da montanha de [[Tyrsung]].<noinclude><p><spoiler>* Obtida e usada durante a [[The Ice Islands Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8441,
+    "ns": 0,
+    "title": "Goat Grass",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Goat Grass\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Plantas e Ervas\n| secondarytype  = \n| attrib         = Nenhum.\n| weight         = 0.80\n| stackable      = não\n| npcvalue       = 50\n| value          = 50\n| droppedby      = [[Arctic Faun]], [[Dark Faun]], [[Faun]], [[Priestess]], [[Raxias]].\n| buyfrom        = Jogadores.\n| sellto         = Luna, Talila, Valindara\n| notes          = Ela aparece em respawns diários em certos lugares de Tibia como por exemplo: [[Eremo's Island]] e em Zao.\n<noinclude><p><spoiler>\n* 01 é necessário para uma task da [[Unnatural Selection Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8442,
+    "ns": 0,
+    "title": "God Flowers",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = God Flowers\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Plantas e Ervas\n| secondarytype  = \n| attrib         = Nenhum.\n| stackable      = não\n| weight         = 11.00\n| npcvalue       = 0\n| npcprice       = 5\n| droppedby      = Nenhum.\n| buyfrom        = Ukea, Feizuhl, Florentine, Nydala, Hireling (Apprentice), Yoem, Hofech, Edvard, Eddy, Inkaef, Iwar, Peggy, Nienna, Azalea, Vera, Janz, Gamon, Rose, Dorbin\n| sellto         = Jogadores.\n| notes          = Alguns monstros e os jogadores que usam o cheat de andar sozinho não poderão passar por cima da God Flower, o que torna ela um bom item para ter com você em caçadas, já que é mais leve que uma [[parcel]]. Pode ser encontrado em vários lugares em [[Tibia]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8446,
+    "ns": 0,
+    "title": "Grave Flower",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Grave Flower\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Plantas e Ervas\n| secondarytype  = \n| attrib         = \n| stackable      = sim\n| weight         = 0.60\n| npcvalue       = 25\n| value          = 25\n| droppedby      = [[Elf Arcanist]], [[Grave Guard]], [[Green Djinn]], [[Spit Nettle]], [[Vampire]].\n| droppedRaidby  = [[Fernfang]].\n| buyfrom        = Jogadores.\n| sellto         = Luna\n| notes          = Comumente encontrada em cemitérios e criptas. Algumas estão em locais mais obscuros, geralmente perto de um caixão. A flor pode ser carregada, mas não impede monstros como [[Parcel]]s. <noinclude><p><spoiler>Uma é necessária para a [[The Scatterbrained Sorcerer Quest]] e [[Feaster of Souls Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8464,
+    "ns": 0,
+    "title": "Honey Flower",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Honey Flower\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Plantas e Ervas\n| secondarytype  = \n| attrib         = Nenhum.\n| stackable      = não\n| weight         = 10.00\n| npcvalue       = 0\n| npcprice       = 5\n| droppedby      = Ninguém.\n| buyfrom        = Ukea, Feizuhl, Florentine, Nydala, Hireling (Apprentice), Yoem, Hofech, Edvard, Eddy, Inkaef, Iwar, Peggy, Nienna, Azalea, Vera, Janz, Gamon, Rose, Dorbin\n| sellto         = Jogadores.\n| notes          = Pode ser achado em vários lugares de Tibia mas é raro em [[Rookgaard]]. Monstros fracos não podem andar sobre ela, então pode ser usada para blockar ou trapar eles.\nMesmo sprite de um [[Honeyflower Patch]].\n<noinclude><p><spoiler>Pode ser trocado com [[Lee'Delle]] (na parte premium de [[Rookgaard]]) por uma [[Studded Legs]]. Veja [[Studded Legs Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8466,
+    "ns": 0,
+    "title": "Hydra Tongue",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Hydra Tongue\n| flavortext     = It is a common pest plant in warmer regions.\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Plantas e Ervas\n| stackable      = sim\n| weight         = 1.00\n| value          = Negociável\n| npcvalue       = 0\n| npcprice       = 100\n| droppedby      = Ninguém.\n| buyfrom        = Rose\n| sellto         = Jogadores.\n| implemented    = 8.0\n| notes          = Uma planta que só pode ser obtida comprando em Venore. Para isso você deve falar '''hydra tongue''' para [[Rose]], você não pode comprar através da janela de trade.\n<noinclude><p><spoiler>\nNecessário para uma missão da [[The Ice Islands Quest]].<br />Duas são necessárias para [[Hot Cuisine Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8467,
+    "ns": 0,
+    "title": "Indoor Plant",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Indoor Plant\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Plantas e Ervas\n| secondarytype  = \n| stackable      = não\n| value          = 8\n| npcvalue       = 0\n| npcprice       = 8\n| droppedby      = Ninguém.\n| buyfrom        = Ukea, Feizuhl, Nydala, Florentine, Hireling (Apprentice), Yoem, Hofech, Edvard, Eddy, Iwar, Peggy, Vera, Janz, Gamon, Rose\n| sellto         = Jogadores.\n| notes          = Veja [[Furniture Kit]] para informações de como desembrulhá-lo.\nIndoor plants também podem ser vistas em vários espaços públicos (como no [[depot]] de [[Thais]]).\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8469,
+    "ns": 0,
+    "title": "Moon Flower",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Moon Flower\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Plantas e Ervas\n| secondarytype  = \n| attrib         = \n| stackable      = sim\n| weight         = 0.10\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Uma flor comum que pode ser encontrada pelo chão em todo Tibia. É uma versão única da [[Moon Flowers]], que, diferente destas, podem ser movidas e pegas.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8470,
+    "ns": 0,
+    "title": "Orange Star",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Orange Star\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Plantas e Ervas\n| secondarytype  = \n| attrib         = Nenhum.\n| stackable      = não\n| weight         = 0.70\n| droppedby      = Ninguém.\n| npcprice       = 50\n| buyfrom        = Nienna\n| sellto         = Jogadores.\n| notes          = Pode ser encontrada em vários lugares de Tibia, por exemplo na guilda dos [[Druid|druidas]] em [[Thais]], no [[Green Claw Swamp]] e na [[Zao Steppe]].<noinclude><p><spoiler>* 01 é necessário para uma task da [[Unnatural Selection Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8471,
+    "ns": 0,
+    "title": "Piece of Cactus",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Piece of Cactus\n| flavortext     = It has been cut from the sun adorer cactus which is said to have curing abilities.\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Quest\n| secondarytype  = Plantas e Ervas\n| attrib         = Nenhum.\n| weight         = 1.00\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.0\n| notes          = Uma parte cortada de um [[Sun Adorer Cactus]].\n<noinclude><p><spoiler>\n* Obtido e usado durante a [[The Ice Islands Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8472,
+    "ns": 0,
+    "title": "Potted Flower",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Potted Flower\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Plantas e Ervas\n| secondarytype  = \n| stackable      = não\n| attrib         = Nenhum.\n| weight         = 23.00\n| npcvalue       = 0\n| npcprice       = 5\n| droppedby      = Ninguém\n| buyfrom        = Ukea, Feizuhl, Florentine, Nydala, Hireling (Apprentice), Yoem, Hofech, Edvard, Eddy, Inkaef, Iwar, Peggy, Nienna, Azalea, Vera, Janz, Gamon, Rose, Dorbin\n| sellto         = Jogadores.\n| notes          = Usado como decoração. Não é raro encontrar alguns exemplares decorando lugares públicos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8473,
+    "ns": 0,
+    "title": "Powder Herb",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Powder Herb\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Plantas e Ervas\n| secondarytype  = \n| attrib         = \n| stackable      = sim\n| weight         = 0.50\n| npcvalue       = 10\n| value          = \n| droppedby      = [[Priestess]], [[Mad Scientist]]s, [[Swan Maiden]].\n| buyfrom        = Jogadores.\n| sellto         = Luna, Talila, Valindara, Yasir\n| implemented    = 6.0\n| notes          = Também pode ser encontrado nos pântanos de [[Venore]].<noinclude><p><spoiler>Uma powder herb é necessária para [[Hot Cuisine Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8474,
+    "ns": 0,
+    "title": "Purple Kiss Blossom",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Purple Kiss Blossom\n| flavortext     = It has been cut from an exotic jungle flower.\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Quest\n| secondarytype  = Plantas e Ervas\n| stackable      = não\n| attrib         = Nenhum.\n| weight         = 0.20\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.0\n| notes          = É uma rara planta que pode ser obtida a partir de um [[Purple Kiss Bush]] em [[Tiquanda]].\n<noinclude><p><spoiler>\n* Obtido e usado durante a [[The Ice Islands Quest]].\n* Pode ser coletado usando uma [[Kitchen Knife]] em um [[Purple Kiss Bush]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8476,
+    "ns": 0,
+    "title": "Red Rose",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Red Rose\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Plantas e Ervas\n| secondarytype  = \n| attrib         = \n| stackable      = sim\n| weight         = 0.80\n| value          = \n| droppedby      = [[Crazed Beggar]], [[Hero]], [[Pixie]], [[Renegade Knight]], [[Vile Grandmaster]].\n| npcvalue       = 10\n| npcprice       = 11\n| buyfrom        = Luna, Nienna\n| sellto         = Talila, Valindara\n| implemented    = 6.0\n| notes          = Um item barato e bom para decorar. Compre ela, algumas [[Cherry|cherries]], um [[Heart Pillow]] e consiga alguns [[Candy Cane]]s, e você terá um perfeito presente do Dia dos Namorados.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8477,
+    "ns": 0,
+    "title": "Seeds",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Seeds\n| flavortext     = They might be worth keeping, who knows what will happen to them.\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Plantas e Ervas\n| secondarytype  = Produtos de Criaturas\n| stackable      = sim\n| weight         = 0.50\n| npcvalue       = 150\n| npcprice       = 0\n| droppedby      = [[Blightwalker]], [[Carniphila]], [[Crazed Summer Vanguard]], [[Deathbine]], [[Dryad]], [[Dworc Venomsniper]], [[Fahim the Wise]], [[Jagged Earth Elemental]], [[Marid]], [[Marsh Stalker]], [[Spit Nettle]], [[Terror Bird]], [[Tiquandas Revenge]].\n| buyfrom        = Jogadores.\n| sellto         = Luna, Yasir\n| implemented    = 8.1\n| notes          = <noinclude><p><spoiler>* Você pode trocar 05 seeds por um [[Flower Pot]] com [[Rosemarie]] no [[Flower Month]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8478,
+    "ns": 0,
+    "title": "Shadow Herb",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Shadow Herb\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Plantas e Ervas\n| secondarytype  = \n| attrib         = \n| stackable      = sim\n| weight         = 0.20\n| npcvalue       = 20\n| value          = 20\n| droppedby      = [[Carniphila]], [[Deathbine]], [[Enraged Soul]], [[Ghost]], [[Nightstalker]], [[Phantasm]], [[Spit Nettle]], [[Tarnished Spirit]].\n| buyfrom        = Jogadores.\n| sellto         = Luna\n| notes          = Pode ser encontrado em vários lugares, como em uma caverna de [[Bear|ursos]] no sul de [[Thais]], próxima ao [[White Flower Temple]].<noinclude><p><spoiler>Uma é necessária para [[Hot Cuisine Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9541,
+    "ns": 0,
+    "title": "Rotten Heart of a Tree",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Rotten Heart of a Tree\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Quest\n| secondarytype  = Plantas e Ervas\n| attrib         = Nenhum.\n| weight         = 45.00\n| stackable      = não\n| value          = Negociável\n| npcprice       = 1 000\n| droppedby      = Ninguém.\n| buyfrom        = Black Bert\n| sellto         = Jogadores.\n| implemented    = 8.1\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[Secret Service Quest]] (CGB).</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 20341,
+    "ns": 0,
+    "title": "Ice Flower Seeds",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ice Flower Seeds\n| flavortext     = They seem to have strange effects on other plants and can also be grown into its own plant.\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Plantas e Ervas\n| secondarytype  = \n| attrib         = \n| stackable      = sim\n| weight         = 0.50\n| value          = Negociável\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.4\n| notes          = Você pode plantá-las em [[Empty Flower Pot]] para obter novas flores. Além disso, as sementes podem ter também outros benefícios.\n<noinclude><p><spoiler>\n* Você terá a chance de obter uma dessas usando uma [[Ice Flower (Objeto)]] durante a [[Mini_World_Changes#Thawing|Thawing Mini World Change]].\n* [[Arquivo:Achievement.gif|link=]] Após coletar 10 Ice Flower Seeds, você receberá o achievement '''\"{{Achievement|Ice Harvester}}\"'''.\n* [[Arquivo:Achievement.gif|link=]] Ao usar 01 Ice Flower Seeds em uma [[Flower Pot|planta]] florescida, você a tornará imortal e receberá o achievement '''\"{{Achievement|Preservationist}}\"'''.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 31233,
+    "ns": 0,
+    "title": "Flower Pot (Finger Snapper Plant)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Flower Pot (Finger Snapper Plant)\n| flavortext     = There is a fully grown finger snapper plant in it. This plant can't wither anymore.\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Plantas e Ervas\n| stackable      = não\n| weight         = 1.50\n| value          = 1 000 - 30 000\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = <br />''Veja Também: [[Flower Pot]]''\n<noinclude><p><spoiler>*Você pode usar [[Ice Flower Seeds]] nesta planta totalmente florescida. Ela se tornará um item decorativo que não precisará mais de cuidados.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 31234,
+    "ns": 0,
+    "title": "Flower Pot (Fairy Dancer Flower)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Flower Pot (Fairy Dancer Flower)\n| flavortext     = There is a fully grown fairy dancer flower in it. This plant can't wither anymore.\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Plantas e Ervas\n| stackable      = não\n| weight         = 1.50\n| value          = 1 000 - 30 000\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = <br />''Veja Também: [[Flower Pot]]''\n<noinclude><p><spoiler>*Você pode usar [[Ice Flower Seeds]] nesta planta totalmente florescida. Ela se tornará um item decorativo que não precisará mais de cuidados.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 31235,
+    "ns": 0,
+    "title": "Flower Pot (Midnight Bloom Flower)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Flower Pot (Midnight Bloom Flower)\n| flavortext     = There is a fully grown midnight bloom flower in it. This plant can't wither anymore.\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Plantas e Ervas\n| stackable      = não\n| weight         = 1.50\n| value          = 1 000 - 30 000\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = <br />''Veja Também: [[Flower Pot]]''\n<noinclude><p><spoiler>*Você pode usar [[Ice Flower Seeds]] nesta planta totalmente florescida. Ela se tornará um item decorativo que não precisará mais de cuidados.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 31236,
+    "ns": 0,
+    "title": "Flower Pot (Ember Queen Flower)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Flower Pot (Ember Queen Flower)\n| flavortext     = There is a fully grown ember queen flower in it. This plant can't wither anymore.\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Plantas e Ervas\n| stackable      = não\n| weight         = 1.50\n| value          = 1 000 - 30 000\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = <br />''Veja Também: [[Flower Pot]]''\n<noinclude><p><spoiler>*Você pode usar [[Ice Flower Seeds]] nesta planta totalmente florescida. Ela se tornará um item decorativo que não precisará mais de cuidados.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 31237,
+    "ns": 0,
+    "title": "Flower Pot (Lizard Tongue Plant)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Flower Pot (Lizard Tongue Plant)\n| flavortext     = There is a fully grown lizard tongue plant in it. This plant can't wither anymore.\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Plantas e Ervas\n| stackable      = não\n| weight         = 1.50\n| value          = 1 000 - 30 000\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = <br />''Veja Também: [[Flower Pot]]''\n<noinclude><p><spoiler>*Você pode usar [[Ice Flower Seeds]] nesta planta totalmente florescida. Ela se tornará um item decorativo que não precisará mais de cuidados.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 31238,
+    "ns": 0,
+    "title": "Flower Pot (Winterblossom)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Flower Pot (Winterblossom)\n| flavortext     = There is a fully grown winterblossom in it. This plant can't wither anymore.\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Plantas e Ervas\n| stackable      = não\n| weight         = 1.50\n| value          = 1 000 - 30 000\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Ao atingir o último estágio de florescimento, ela não precisa mais ser regada.<br />''Veja Também: [[Flower Pot]]''\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 31239,
+    "ns": 0,
+    "title": "Flower Pot (Dryad's Heart Flower)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Flower Pot (Dryad's Heart Flower)\n| flavortext     = There is a fully grown dryad's heart flower in it. This plant can't wither anymore.\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Plantas e Ervas\n| stackable      = não\n| weight         = 1.50\n| value          = 1 000 - 30 000\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = <br />''Veja Também: [[Flower Pot]]''\n<noinclude><p><spoiler>*Você pode usar [[Ice Flower Seeds]] nesta planta totalmente florescida. Ela se tornará um item decorativo que não precisará mais de cuidados.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 34906,
+    "ns": 0,
+    "title": "Lion's Mane Flower",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Lion's Mane Flower\n| flavortext     = It is an orange-red flower with fringed petals. But in the desert's heat it will wither soon.\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Quest\n| secondarytype  = Plantas e Ervas\n| weight         = 1.00\n| attrib         = \n| mercado        = não\n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.70\n| notes          = \n<noinclude><p><spoiler>\n* Obtido e usado durante a [[Lion's Rock Quest]].\n* 01 é necessária para a [[Grimvale Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 34918,
+    "ns": 0,
+    "title": "Crimson Crest Mushroom",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Crimson Crest Mushroom\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Quest\n| secondarytype  = Plantas e Ervas\n| attrib         = Pode-se dar \"Use\".\n| weight         = 0.30\n| mercado        = não\n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.70\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a task ''The Mutated Glooth Plague'' da [[Oramond Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 35427,
+    "ns": 0,
+    "title": "Crimson Rose",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Crimson Rose\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Plantas e Ervas\n| secondarytype  = \n| attrib         = Nenhum.\n| stackable      = sim\n| weight         = 0.80\n| value          = \n| droppedby      = Ninguém.\n| npcvalue       = \n| npcprice       = 15\n| buyfrom        = Valentina\n| sellto         = Jogadores.\n| implemented    = 10.73\n| notes          = Vendida durante o [[Valentine's Day]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 36264,
+    "ns": 0,
+    "title": "Purple Nightshade Blossoms",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Purple Nightshade Blossoms\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Quest\n| secondarytype  = Plantas e Ervas\n| weight         = 2.00\n| stackable      = sim\n| mercado        = sim\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.80\n| notes          = \n<noinclude><p><spoiler>\n* Obtido e usado na [[Grimvale Quest]].\n* Pode ser encontrada na mini world change [[Mini_World_Changes#Grimvale_Moon|Grimvale Moon]] (entre os dias 12 a 14 de cada mês). \n* O cooldown para pegar outra flor é de 30 minutos. \n* Cuidado para não perder suas flores, já que ao falar '''Nightshade''' para a Maeryn, ela pegará todas que estiverem em sua backpack.\n* '''IMPORTANTE:''' Após o Update de Verão 2023, elas podem ser encontradas em Oskayaat ({{Mapa|33017,32907,7:3|aqui}}) e ({{Mapa|32968,32939,7:2|aqui}}) e podem ser coletadas em qualquer dia do mês.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42973,
+    "ns": 0,
+    "title": "Crimson Nightshade Blossoms",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Crimson Nightshade Blossoms\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Quest\n| secondarytype  = Plantas e Ervas\n| stackable      = não\n| weight         = 1.00\n| value          = \n| npcvalue       = 0\n| npcprice       = 7 000\n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Black Bert\n| sellto         = Jogadores.\n| implemented    = 11.50\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[Grimvale Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45080,
+    "ns": 0,
+    "title": "Colourful Mushroom",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Colourful Mushroom\n| flavortext     = It smells of liquorice, raspberries, pepper and fish.\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Quest\n| secondarytype  = Plantas e Ervas\n| attrib         = Nenhum\n| weight         = 0.10\n| stackable      = não\n| npcvalue       = \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.00\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[The Dream Courts Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45203,
+    "ns": 0,
+    "title": "Rosebush (Item)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Rosebush (Item)\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Quest\n| secondarytype  = Plantas e Ervas\n| attrib         = \n| weight         = 13.00\n| stackable      = não\n| npcvalue       = \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.00\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[The Dream Courts Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 46907,
+    "ns": 0,
+    "title": "Honey Palm Bark",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Honey Palm Bark\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Quest\n| secondarytype  = Plantas e Ervas\n| attrib         = Nenhum.\n| weight         = 3.00\n| value          = \n| npcprice       = \n| npcvalue       = \n| stackable      = não\n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.20\n| notes          = <noinclude><p><spoiler>* Faz parte da [[Kilmaresh Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 52085,
+    "ns": 0,
+    "title": "Megasylvan Sapling",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Megasylvan Sapling\n| flavortext     = A sapling from the megasylvan form of Yselda of Bounac. The prime \"Seed of Life\".\n| itemclass      = Artefatos Primordiais\n| primarytype    = Itens de Quest\n| secondarytype  = Plantas e Ervas\n| attrib         = Pode ser usado em um [[Empty Flower Pot]].\n| mercado        = não\n| stackable      = não\n| weight         = 5.00\n| npcvalue       = 0\n| droppedby      = [[Megasylvan Yselda]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.70\n| notes          = Pode ser usado em um [[Empty Flower Pot]] para obter um [[Pot with Sylvan Earth]]. Isso pode ser feito apenas uma vez por personagem.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55778,
+    "ns": 0,
+    "title": "Beautiful Ice Flowers",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Beautiful Ice Flowers\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Quest\n| secondarytype  = Plantas e Ervas\n| attrib         = \n| weight         = 2.50\n| stackable      = não\n| value          = \n| npcvalue       = \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.90\n| notes          = \n<noinclude><p><spoiler>\n* Pode ser obtido ao se usar um [[Icicle Chisel]] em um [[Ice Cube]].\n:'''Mensagem:''' ''You are carving a beautiful flower sculpture out of the ice.''\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55780,
+    "ns": 0,
+    "title": "Puny Ice Flower",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Puny Ice Flower\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Quest\n| secondarytype  = Plantas e Ervas\n| attrib         = \n| weight         = 0.50\n| stackable      = não\n| value          = \n| npcvalue       = \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.90\n| notes          = <noinclude><p><spoiler>\n* Pode ser obtido ao se usar um [[Icicle Chisel]] em um [[Ice Cube]]. \n: '''Mensagem:''' ''You are carving a tiny flower sculpture out of the ice. It looks a bit puny, though.''</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55781,
+    "ns": 0,
+    "title": "Pretty Ice Flower",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Pretty Ice Flower\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Quest\n| secondarytype  = Plantas e Ervas\n| attrib         = \n| weight         = 1.50\n| stackable      = não\n| value          = \n| npcvalue       = \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.90\n| notes          = <noinclude><p><spoiler>\n* Pode ser obtido ao se usar um [[Icicle Chisel]] em um [[Ice Cube]].\n:'''Mensagem:''' ''You are carving a pretty flower sculpture out of the ice.''\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55782,
+    "ns": 0,
+    "title": "Marvelous Ice Flowers",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Marvelous Ice Flowers\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Quest\n| secondarytype  = Plantas e Ervas\n| attrib         = \n| weight         = 3.20\n| stackable      = não\n| value          = \n| npcvalue       = \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.90\n| notes          = \n<noinclude><p><spoiler>\n* Pode ser obtido ao se usar um [[Icicle Chisel]] em um [[Ice Cube]].\n:'''Mensagem:''' ''You are carving a marvelous flower sculpture out of the ice.''\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55995,
+    "ns": 0,
+    "title": "Moon Mint",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Moon Mint\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Quest\n| secondarytype  = Plantas e Ervas\n| attrib         = Nenhum.\n| weight         = 0.50\n| stackable      = não\n| value          = \n| npcvalue       = \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.90\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[Within the Tides Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 58387,
+    "ns": 0,
+    "title": "Fresh Hydra Herbs",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Fresh Hydra Herbs\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Quest\n| secondarytype  = Plantas e Ervas\n| writable       = não\n| stackable      = não\n| weight         = 0.50\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Ninguém.\n| sellto         = Jogadores.\n| implemented    = 13.10\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[The Cradle of Monsters Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 60170,
+    "ns": 0,
+    "title": "Moonlight Ipomea's Stamen",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Moonlight Ipomea's Stamen\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| tertiarytype   = Extra Slot\n| primarytype    = Plantas e Ervas\n| secondarytype  = Outros Itens\n| attrib         = Nenhum.\n| mercado        = não\n| stackable      = não\n| weight         = 0.50\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 13.20.13560\n| notes          = \n<noinclude><p><spoiler>\n* Sempre que a Mini World Change estiver ativa é possível obter 01 Moonlight Ipomea's Stamen por personagem, clicando em uma [[Moonlight Ipomea]], que por sua vez só aparece no topo do vulcão de [[Oskayaat]] ({{mapa|33089,32943,5:2|aqui}}) durante a Mini World Change [[Mini_World_Changes#Grimvale_Moon|Grimvale Moon]].\n* Permite ao jogador acessar uma sala com um baú de recompensa diária em uma caverna localizada ({{mapa|33014,32983,7:2|aqui}}), que por sua vez só se torna acessível após completar a missão ''Paradise Lost'' da [[Grimvale Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8479,
+    "ns": 0,
+    "title": "Sling Herb",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Sling Herb\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Plantas e Ervas\n| secondarytype  = \n| attrib         = \n| stackable      = sim\n| weight         = 0.90\n| npcvalue       = 10\n| value          = 10\n| droppedby      = [[Boogy]], [[Carniphila]], [[Crazed Beggar]], [[Elf Arcanist]], [[Priestess]], [[Spit Nettle]].\n| droppedRaidby  = [[Fernfang]].\n| buyfrom        = Jogadores.\n| sellto         = Luna, Talila, Valindara\n| implemented    = 6.0\n| notes          = Um item comum e sem valor. Além de ser dropado por algumas criaturas, ela cresce em alguns lugares como na fazenda em [[Thais]] e em [[Greenshore]].<noinclude><p><spoiler>Um é necessário para [[Hot Cuisine Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8480,
+    "ns": 0,
+    "title": "Star Herb",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Star Herb\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Plantas e Ervas\n| secondarytype  = \n| attrib         = \n| weight         = 0.30\n| stackable      = sim\n| droppedby      = [[Bruise Payne]], [[Ekatrix]], [[Mutated Bat]], [[Pixie]], [[Witch]].\n| droppedRaidby  = [[Fernfang]], [[Yaga the Crone]].\n| npcvalue       = 15\n| npcprice       = 21\n| buyfrom        = Luna\n| sellto         = Yasir, Talila, Valindara\n| implemented    = 6.0\n| notes          = Também pode ser encontrado nos pântanos de Venore.\n<noinclude><p><spoiler>\n* 01 é necessário para a [[Hot Cuisine Quest]].\n* 01 é necessário para a [[The Tainted Souls Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8481,
+    "ns": 0,
+    "title": "Stone Herb",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Stone Herb\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Plantas e Ervas\n| secondarytype  = \n| attrib         = \n| weight         = 0.20\n| stackable      = sim\n| droppedby      = [[Esmeralda]], [[Mutated Rat]], [[Twisted Pooka]].\n| npcvalue       = 20\n| npcprice       = 28\n| buyfrom        = Luna\n| sellto         = Yasir, Talila, Valindara\n| notes          = Pode ser encontrado no chão em vários lugares do Tibia.<br />Mesmo sprite de uma [[Whisper Moss]].<noinclude><p><spoiler>* Uma stone herb é necessária para [[Hot Cuisine Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8482,
+    "ns": 0,
+    "title": "Troll Green",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Troll Green\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Plantas e Ervas\n| secondarytype  = \n| attrib         = \n| weight         = 1.00\n| stackable      = sim\n| value          = 25\n| droppedby      = [[Black Vixen]], [[Darkfang]], [[Hemming]], [[Sharpclaw]], [[Swamp Troll]], [[Werebadger]], [[Werewolf]], [[Werefox]].\n| npcvalue       = 25\n| npcprice       = 0\n| buyfrom        = Jogadores.\n| sellto         = Luna, Yasir\n| notes          = Troll Greens são uma rara classe de ervas. Podem ser achadas em uma [[Kazordoon Troll Den|caverna]] de [[Troll]]s localizada no [[Green Claw Swamp]] e no nordeste da maior caverna [[Necromancer]] em [[Drefia]], localizada perto da [[Black Sheep]]. Você pode ver uma em [[Meriana]] na casa de [[Chondur]].\n<noinclude><p><spoiler>2 são necessárias para diferentes receitas na [[Hot Cuisine Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8483,
+    "ns": 0,
+    "title": "Tulip",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Tulip\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Plantas e Ervas\n| secondarytype  = \n| stackable      = sim\n| attrib         = \n| weight         = 0.50\n| value          = 5\n| droppedby      = Ninguém.\n| npcvalue       = 0\n| npcprice       = 9\n| buyfrom        = Luna\n| sellto         = Jogadores.\n| notes          = Também pode ser encontrada em alguns pontos de [[Ab'Dendriel]]. Ela é barata, mas é boa para decorar.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8484,
+    "ns": 0,
+    "title": "Withered Plant",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Withered Plant\n| flavortext     = This plant urgently needs some water, else it will wither away and disappear completely.\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Plantas e Ervas\n| secondarytype  = \n| attrib         = Nenhum.\n| stackable      = não\n| weight         = 1.50\n| value          = Negociável\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Se você não regar sua [[Flower Pot|planta]] com um [[Watering Can]] por muito tempo (3-5 dias), ela vai ficar desse jeito e será restaurada somente após uma regada de emergência: <font color=#D14703>'''You finally remembered to water your plant and it recovered.'''</font> Após regar, a planta vai voltar ao terceiro estágio.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8485,
+    "ns": 0,
+    "title": "Yellow Rose",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Yellow Rose\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Plantas e Ervas \n| secondarytype  = \n| attrib         = \n| stackable      = sim\n| weight         = 0.80\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| value          = 40 000 000 - 70 000 000\n| implemented    = 6.0\n| notes          = Um item raríssimo e bom para decorar. Houve boatos de que ela poderia ser obtida através de um bug em [[Venore]], também sem nada comprovado. Pode ser vista em cima de uma mesa próxima as lojas dos NPCs [[Rodney]], [[Rose]] e [[Livielle]], no norte de [[Venore]]. Antigamente esta rosa dava respawn próximo da [[Deeper Fibula Quest]].<br />\nPor ser um item extremamente raro, as vezes é usada como recompensa de concursos feitos por fansites.\n<noinclude><p><gallery>\nArquivo:Yellow_rose.png|Yellow Rose em uma exposição de [[Rubera]].\nArquivo:Yellow Rose Kalibra.png|Yellow Rose em [[Kalibra]] em posse do jogador {{Character|Genosz}}.\n</gallery></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9263,
+    "ns": 0,
+    "title": "Witches' Cap Spot",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Witches' Cap Spot\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Quest\n| secondarytype  = Plantas e Ervas\n| attrib         = Nenhum.\n| weight         = 1.00\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.6\n| notes          = Não pode ser comido, mas você pode carregá-lo.\n<noinclude><p><spoiler>\n* Obtido e usado durante a [[The Ape City Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 46924,
+    "ns": 0,
+    "title": "Wild Desert Rose",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Wild Desert Rose\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Quest\n| secondarytype  = Plantas e Ervas\n| weight         = 0.70\n| stackable      = sim\n| value          = \n| npcvalue       = 500\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.20\n| notes          = <noinclude><p><spoiler>* Faz parte da [[Kilmaresh Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 46947,
+    "ns": 0,
+    "title": "Veldt Flowers",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Veldt Flowers\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Quest\n| secondarytype  = Plantas e Ervas\n| weight         = 0.80\n| stackable      = sim\n| value          = \n| npcvalue       = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.20\n| notes          = <noinclude><p><spoiler>* Faz parte da [[Kilmaresh Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

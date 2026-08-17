@@ -1,0 +1,1126 @@
+{
+ "query": {
+  "pages": [
+   {
+    "pageid": 9055,
+    "ns": 0,
+    "title": "Carrot on a Stick",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Carrot on a Stick\n| flavortext     = A hermit near Carlin might be able to tell you more about it.\n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| secondarytype  =\n| weight         = 2.00\n| stackable      = não\n| value          = 25 000 - 70 000\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = [[Carniphila]], [[Dryad]], [[Flameborn]], [[Omnivora]], [[Pooka]], [[Tiquandas Revenge]], [[Twisted Pooka]].  \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.7\n| notes          = Há chances do item quebrar (sumir) ao usá-lo na criatura. \n<noinclude><p><spoiler>* 01 é necessário para tentar domar um [[Terror Bird]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9057,
+    "ns": 0,
+    "title": "Giant Shrimp",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Giant Shrimp\n| flavortext     = A hermit near Carlin might be able to tell you more about it.\n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| secondarytype  =\n| weight         = 2.00\n| stackable      = não\n| value          = 20 000 - 200 000\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = [[Quara Pincher]], [[Quara Predator]], [[Renegade Quara Predator]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.7\n| notes          = Há chances do item quebrar (sumir) ao usá-lo na criatura. \n<noinclude><p><spoiler>* 01 é necessário para tentar domar um [[Crustacea Gigantica]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9058,
+    "ns": 0,
+    "title": "Harness",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Harness\n| flavortext     = A hermit near Carlin might be able to tell you more about it.\n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| secondarytype  =\n| weight         = 2.00\n| stackable      = não\n| value          = 70 000 - 130 000\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = [[Draken Spellweaver]], [[Paiz the Pauperizer]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.7\n| notes          = Há chances do item quebrar (sumir) ao usá-lo na criatura. \n<noinclude><p><spoiler>* 01 é necessário para tentar domar um [[Draptor]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9059,
+    "ns": 0,
+    "title": "Hunting Horn",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Hunting Horn\n| flavortext     = A hermit near Carlin might be able to tell you more about it.\n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| secondarytype  =\n| weight         = 2.00\n| stackable      = não\n| value          = 500 000 - 2 000 000\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.7\n| notes          = Há chances do item quebrar (sumir) ao usá-lo na criatura. \n<noinclude><p><spoiler>* 01 é necessário para tentar domar um [[Boar]].\n* Possibilidade de ser obtido como recompensa da task diária Lucky Charms da [[Rottin Wood and the Married Men Quest]].</spoiler></p></noinclude>\n<gallery>\nArquivo:Hunting_Horn_Rapid_Boar.PNG|'''Hunting Horn''' em Justera.\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9060,
+    "ns": 0,
+    "title": "Leather Whip",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Leather Whip\n| flavortext     = A hermit near Carlin might be able to tell you more about it.\n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| secondarytype  =\n| weight         = 2.00\n| stackable      = não\n| value          = 40 000 - 130 000\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = [[The Time Guardian]], [[Vampire Bride]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.7\n| notes          = Há chances do item quebrar (sumir) ao usá-lo na criatura. \n<noinclude><p><spoiler>* 01 é necessário para tentar domar uma [[Midnight Panther]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9061,
+    "ns": 0,
+    "title": "Maxilla Maximus",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Maxilla Maximus\n| flavortext     = A hermit near Carlin might be able to tell you more about it.\n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| secondarytype  =\n| weight         = 2.00\n| stackable      = não\n| value          = 300 000 - 1 000 000\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = [[Ancient Spawn of Morgathla]], [[Lich]], [[Ribstride]], [[Zanakeph]].\n| droppedEventby  = [[Zorvorax]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.7\n| notes          = Há chances do item quebrar (sumir) ao usá-lo na criatura. \n<noinclude><p><spoiler>* 01 é necessário para tentar domar um  [[Undead Cavebear]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 17018,
+    "ns": 0,
+    "title": "Bag of Apple Slices",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bag of Apple Slices\n| flavortext     = A hermit near Carlin might be able to tell you more about it.\n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| secondarytype  =\n| weight         = 2.00\n| stackable      = não\n| value          = 3 000 - 7 000\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = [[Bane Lord]], [[Ekatrix]], [[Witch]].\n| droppedRaidby  = [[Yaga the Crone]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.1\n| notes          = Há chances do item quebrar (sumir) ao usá-lo na criatura.\n<noinclude><p><spoiler>* 01 é necessário para tentar domar um [[Donkey]]. \n*Possibilidade de ser obtido ao usar um [[Unrealized Dream]] próximo ao [[The Dreamcatcher Device]].\n*Possibilidade de ser obtido ao usar um [[Mysterious Remains]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 17019,
+    "ns": 0,
+    "title": "Diapason",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Diapason\n| flavortext     = A hermit near Carlin might be able to tell you more about it.\n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| secondarytype  =\n| weight         = 2.00\n| stackable      = não\n| value          = 10 000 - 30 000\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.1\n| notes          = Há chances do item quebrar (sumir) ao usá-lo na criatura.\n<noinclude><p><spoiler>* 01 é necessário para tentar domar um [[Crystal Wolf]].\n* É possível conseguir esse item quando se toca durante 7 dias uma [[Lyre]] para o NPC [[Edala]] (Cada pessoa pode obter somente 01 Diapason por personagem).<br>\n:Obs: Ele somente lhe dará o Diapason se você tocar diariamente a Lyre e depois falar '''Hi''' próximo a ele durante 7 dias. Todos os dias o NPC irá reagir de uma forma diferente, até ficar cansado e lhe dar o item. Para isso, você deve respeitar o '''intervalo mínimo de 24 horas''' para tocar a [[Lyre]] ou não receberá a recompensa.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 17020,
+    "ns": 0,
+    "title": "Fist on a Stick",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Fist on a Stick\n| flavortext     = A hermit near Carlin might be able to tell you more about it.\n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| secondarytype  =\n| weight         = 2.00\n| stackable      = não\n| value          = 80 000 - 300 000\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = [[Furious Scorpion]], [[Sandstone Scorpion]], [[Tomb Servant]], [[Utua Stone Sting]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.1\n| notes          = Há chances do item quebrar (sumir) ao usá-lo na criatura. \n<noinclude><p><spoiler>* 01 é necessário para tentar domar um [[Dromedary]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 17021,
+    "ns": 0,
+    "title": "Golden Fir Cone",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Golden Fir Cone\n| flavortext     = A hermit near Carlin might be able to tell you more about it.\n| attrib         = [[Montaria|Doma]] uma criatura específica.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| weight         = 2.00\n| stackable      = não\n\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = [[Bane Lord]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.1\n| notes          = Há chances do item quebrar (sumir) ao usá-lo na criatura. Este item pode ser feito.\n\n<noinclude><div class=\"toccolours mw-collapsible mw-collapsed\" style=\"margin: 4px 0px;\">'''Como fazer um Golden Fir Cone'''<div class=\"mw-collapsible-content\"><table><tr><td align=left> Há duas formas de se obter o ''Golden Fir Cone'', mas primeiro você precisará de um [[Gold Ingot]] (pode ser obtido dropando de monstros ou em algumas quests como recompensa)<br />\n\n*Entregue o [[Gold Ingot]] para o [[A Sweaty Cyclops]] (falando hi/melt/yes/yes), ele irá lhe entregar um [[Cup of Molten Gold]].<br />\n** Obs.: Não é necessário ter feito a [[The Sweaty Cyclops Quest]] para trocar o [[Gold Ingot]] com o [[NPC]].\n\n'''Modo 01:''' \n* Use o [[Cup of Molten Gold]] em uma [[Fir Tree]]. Você fez seu '''Golden Fir Cone'''.<br />\n'''Nota:''' Na maior parte das vezes que você usar o [[Cup of Molten Gold]] em uma [[Fir Tree]], você irá obter um [[Cup]]. Existe uma pequena chance de virar um ''Golden Fir Cone'' e você deve usar o Cup of Molten Gold em um tempo determinado.\n\n\n'''Modo 02:''' (adicionado no update 10.1)\n* Use o [[Cup of Molten Gold]] em uma [[Fir Cone]]. Existe a chance de falhar.\n</td></tr></table></div></div></noinclude>\n\n<noinclude><p><spoiler>* 01 é necessário para tentar domar um [[Enraged White Deer]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 17023,
+    "ns": 0,
+    "title": "Golden Can of Oil",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Golden Can of Oil\n| flavortext     = A hermit near Carlin might be able to tell you more about it.\n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| secondarytype  =\n| weight         = 2.00\n| stackable      = não\n| value          = 250 000 - 1 500 000\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = [[Ethershreck]], [[Golden Servant]], [[Golden Servant Replica]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.1\n| notes          = Há chances do item quebrar (sumir) ao usá-lo na criatura. <noinclude><p><spoiler>* 01 é necessário para tentar domar um  [[Uniwheel]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 17116,
+    "ns": 0,
+    "title": "Bamboo Leaves",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bamboo Leaves\n| flavortext     = A hermit near Carlin might be able to tell you more about it.\n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| secondarytype  =\n| weight         = 2.00\n| stackable      = não\n| value          = 25 000 - 70 000\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = [[Draken Abomination]], [[Draken Spellweaver]], [[Bane Lord]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.1\n| notes          = Há chances do item quebrar (sumir) ao usá-lo na criatura. <noinclude><p><spoiler>* 01 é necessário para tentar domar um [[Panda]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 20184,
+    "ns": 0,
+    "title": "Four-Leaf Clover",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Four-Leaf Clover\n| flavortext     = A hermit near Carlin might be able to tell you more about it.\n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| secondarytype  =\n| weight         = 2.00\n| stackable      = sim\n| value          = 3 000 000 - 8 000 000\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.4\n| notes          = Há chances do item quebrar (sumir) ao usá-lo na criatura.\n<noinclude><p><spoiler>* 01 é necessário para tentar domar um [[Ladybug]].\n*Possibilidade de ser obtido ao usar um [[Gooey Mass]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 20185,
+    "ns": 0,
+    "title": "Foxtail",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Foxtail\n| flavortext     = A hermit near Carlin might be able to tell you more about it.\n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| secondarytype  =\n| weight         = 2.00\n| stackable      = sim\n| value          = 2 000 000 - 6 500 000\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = [[Black Vixen]], [[Deepling Guard]] , [[Deepling Tyrant]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.4\n| notes          = Há chances do item quebrar (sumir) ao usá-lo na criatura. Com a implementação do boss [[Black Vixen]] no update 11.50, o valor médio deste item caiu consideravelmente. Hoje em dia pode ser conseguido através de tentativas diárias.\n<noinclude><p><spoiler>* 01 é necessário para tentar domar um [[Manta Ray]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25305,
+    "ns": 0,
+    "title": "Decorative Ribbon",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Decorative Ribbon\n| flavortext     = A hermit near Carlin might be able to tell you more about it.\n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| secondarytype  =\n| weight         = 2.00\n| stackable      = não\n| value          = 350 000 - 2 500 000\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = [[Abyssador]], [[Deathstrike]], [[Gnomevil]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.6\n| notes          = Há chances do item quebrar (sumir) ao usá-lo na criatura. \n<noinclude><p><spoiler>* 01 é necessário para tentar domar um [[Dragonling]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25498,
+    "ns": 0,
+    "title": "Glow Wine",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Glow Wine\n| flavortext     = A hermit near Carlin might be able to tell you more about it.\n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| secondarytype  =\n| weight         = 2.00\n| stackable      = não\n| value          = 10 000 - 60 000\n| npcvalue       = 0\n| npcprice       = 20 [[Major Crystalline Token]]s\n| droppedby      = Ninguém.\n| buyfrom        = Gnomally\n| sellto         = Jogadores.\n| implemented    = 9.6\n| notes          = Há chances do item quebrar (sumir) ao usá-lo na criatura.  <br />\n{{DASH|'''Dica:''' Dependendo do valor do [[Major Crystalline Token]] no mundo, pode ser mais barato comprar o token e trocar pelo item na [[NPC]] do que comprá-lo diretamente de algum jogador.}}\n<noinclude><p><spoiler>* 01 é necessário para tentar domar um [[Magma Crawler]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25532,
+    "ns": 0,
+    "title": "Golem Wrench",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Golem Wrench\n| flavortext     = A hermit near Carlin might be able to tell you more about it.\n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| secondarytype  =\n| weight         = 2.00\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.6\n| notes          = <noinclude><p><spoiler>* 01 é necessário para domar um [[Modified Gnarlhound]].\n* Recompensa da [[Shadows of Yalahar Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25612,
+    "ns": 0,
+    "title": "Iron Loadstone",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Iron Loadstone\n| flavortext     = A hermit near Carlin might be able to tell you more about it.\n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| secondarytype  = \n| weight         = 2.00\n| stackable      = não\n| value          = 10 000 - 60 000\n| npcvalue       = 0\n| npcprice       = 20 [[Major Crystalline Token]]\n| droppedby      = Ninguém.\n| buyfrom        = Gnomally\n| sellto         = Jogadores.\n| implemented    = 9.6\n| notes          = Há chances do item quebrar (sumir) ao usá-lo na criatura.  <br />\n{{DASH|'''Dica:''' Dependendo do valor do [[Major Crystalline Token]] no mundo, pode ser mais barato comprar o token e trocar pelo item na [[NPC]] do que comprá-lo diretamente de algum jogador.}}\n<noinclude><p><spoiler>* 01 é necessário para tentar domar um [[Ironblight]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25622,
+    "ns": 0,
+    "title": "Music Box",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre o '''item de domar''' Music Box. Para o fansite item, veja [[Music Box (Tibia Space)]].''}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Music Box\n| flavortext     = It may have some charming effects when played to certain creatures, but disappears in the process.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| attrib         = [[Montarias|Doma]] criaturas específicas.\n| stackable      = não\n| weight         = 2.00\n| value          = 200 000 - 1 000 000\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.6\n| notes          =  Some quando usado e não há possibilidade de falhas.\n<noinclude><p><spoiler>* Pode ser usada para domar um [[Dragonling]], [[Draptor]], [[Ironblight]], [[Enraged White Deer]], [[Magma Crawler]], [[Midnight Panther]], [[Panda]], [[Wailing Widow]] ou [[Wild Horse]].\n* Recompensa da [[Chayenne's Realm Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 27600,
+    "ns": 0,
+    "title": "Leech",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Leech\n| flavortext     = A hermit near Carlin might be able to tell you more about it.\n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| droppedby      = Ninguém.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| weight         = 2.00\n| stackable      = não\n| value          = 3 000 - 15 000\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.8\n| notes          = Há chances do item quebrar (sumir) ao usá-lo na criatura.\n<noinclude><p><spoiler>* 01 é necessário para tentar domar um  [[Water Buffalo]].\n*Pode ser obtido usando uma [[shovel]] em determinados [[Swamp (Diggable Tile)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 30052,
+    "ns": 0,
+    "title": "Nail Case",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Nail Case\n| flavortext     = A hermit near Carlin might be able to tell you more about it.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| stackable      = não\n| weight         = 2.00\n| value          = \n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.1\n| notes          = \n<noinclude><p><spoiler>\n* 01 é necessário para domar um [[Gravedigger]].\n* Recompensa da [[The Gravedigger of Drefia Quest]].\n* '''Nota:''' Mesmo com o item adquirido pelo mercado, só é possível domar a criatura se tiver completado a quest.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 31770,
+    "ns": 0,
+    "title": "Nightmare Horn",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Nightmare Horn\n| flavortext     = A hermit near Carlin might be able to tell you more about it.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| secondarytype  = \n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| weight         = 2.00\n| stackable      = não\n| value          = 10 000 000 - 15 000 000\n| npcvalue       = 0\n| droppedby      = [[Prince Drazzak]].\n| droppedRaidby  = [[Gaz'Haragoth]], [[Omrafir]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.30\n| notes          = Há chances do item quebrar (sumir) ao usá-lo na criatura. \n<noinclude><p><spoiler>* 01 é necessário para tentar domar um [[Shock Head]].</spoiler></p></noinclude>\n<gallery>\narquivo:Nightmarehorn.png| Um \"Nightmare Horn\" em Luminera.\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 32845,
+    "ns": 0,
+    "title": "Melting Horn",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Melting Horn\n| flavortext     = A hermit near Carlin might be able to tell you more about it.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Domar\n| implemented    = 10.38\n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| weight         = 2.00\n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Há chances do item quebrar (sumir) ao usá-lo na criatura. \n<noinclude><p><spoiler>* 01 é necessário para tentar para derreter o gelo e domar um [[Ursagrodon]].\n* Obtido ao se usar um [[Tinder Box]] em um [[Fireproof Horn]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 33148,
+    "ns": 0,
+    "title": "Control Unit",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Control Unit\n| flavortext     = A hermit near Carlin might be able to tell you more about it.\n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| weight         = 2.00\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.50\n| notes          = Há chances do item quebrar (sumir) ao usá-lo na criatura.\n<noinclude><p><spoiler>* 01 é necessário para tentar domar um [[Walker]].\n*Possibilidade de ser obtido ao usar um [[Glooth Bag]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 37529,
+    "ns": 0,
+    "title": "Mysterious Scroll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Mysterious Scroll\n| flavortext     = Strange symbols hard to decrypt. You wonder if one of the symbols looks like a foreign and mysterious creature.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| weight         = 8.50\n| stackable      = não\n| value          = 800 000 000 - 1 000 000 000\n| npcvalue       = 0\n| mercado        = sim\n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| droppedby      = [[Ferumbras Mortal Shell]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.90\n| notes          = <noinclude><p><spoiler>* Ao usar esse item você ganhará a montaria [[Rift Runner]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 38908,
+    "ns": 0,
+    "title": "Menacing Egg",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Menacing Egg\n| flavortext     = It is of foreboding, reddish colour and pulses steadily. You have the feeling that something dangerous is moving inside.\n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| weight         = 8.50\n| stackable      = não\n| value          = 1 600 000 000 - 1 800 000 000\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = [[World Devourer]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.94\n| notes          = <noinclude><p><spoiler>* Ao usar este item aparecerá a seguinte mensagem \"You receive the permission to ride a vortexion\" e automaticamente você ganhará a montaria [[Vortexion]].</spoiler></p></noinclude>\n<gallery>\nArquivo:Menacing_Egg_Drop.png|Drop do Boss pelo time de Ferobra do jogador {{Character|Yuuki Len}}.\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 38913,
+    "ns": 0,
+    "title": "Crackling Egg",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Crackling Egg\n| flavortext     = It is of unnerving, greenish colour and pulses steadily. It seems that something is moving inside.\n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| weight         = 8.50\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = [[World Devourer]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.94\n| notes          = <noinclude><p><spoiler>* Ao usar este item aparecerá a seguinte mensagem: \"You receive the permission to ride a neon sparkid\" e, automaticamente, você ganhará a montaria [[Neon Sparkid]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 39336,
+    "ns": 0,
+    "title": "Astral Shaper Rune",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Astral Shaper Rune\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| weight         = 8.50\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.02\n| notes          = Há chances do item se transformar em uma [[Inert Astral Shaper Rune]] ao usá-lo na criatura. \n<noinclude><p><spoiler>* 01 é necessário para tentar domar um [[Stone Rhino]]. \n* Obtido ao entregar as 6 [[Part of a Rune]]s para [[Albinius]] dizendo '''Hi - Astral Shaper Rune - Yes'''.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 39353,
+    "ns": 0,
+    "title": "Inert Astral Shaper Rune",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Inert Astral Shaper Rune\n| flavortext     = The rune has become inert and will need some hours to regain full strength.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| weight         = 8.50\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.02\n| notes          = Versão inerte da [[Astral Shaper Rune]]. \n<noinclude><p><spoiler>\n* Volta a ficar ativa depois de 20 horas dentro de uma casa ou  backpack. \n* '''Nota:''' Dentro da backpack ela só se recarregará nos períodos em que o personagem estiver online.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42783,
+    "ns": 0,
+    "title": "Candle Stump",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Candle Stump\n| flavortext     = It is attached to a long leather strap with a tinged tin clasp.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| stackable      = não\n| weight         = 8.50\n| value          = 1 000 000 - 2 800 000+\n| droppedby      = [[Ancient Spawn of Morgathla]], [[The Baron from Below]], [[The Count Of The Core]], [[The Duke Of The Depths]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.50\n| notes          = Há chances do item quebrar (sumir) ao usá-lo na criatura.\n<noinclude><p><spoiler>* 01 é necessário para tentar domar um [[Mole]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 44224,
+    "ns": 0,
+    "title": "Library Ticket",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Library Ticket\n| flavortext     = The initials are beautifully decorated and it is sealed with red wax.\n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| weight         = 8.50\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = [[The Scourge of Oblivion]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.80\n| notes          = Não há chances do item quebrar (sumir) ao usá-lo na criatura.  <br>\n<noinclude><p><spoiler>* 01 é necessário para tentar domar um [[Flying Book]].</spoiler></p></noinclude>\n\n<gallery>\nArquivo:Library-Ticket.jpg|Library Ticket em [[Gentebra]].\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45088,
+    "ns": 0,
+    "title": "Purple Tendril Lantern",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Purple Tendril Lantern\n| flavortext     = It is made of leaves and seems to be irresistible to moths and other insects.\n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| secondarytype  =\n| weight         = 9.20\n| stackable      = não\n| value          = Negociável\n| droppedby      = [[Alptramun]], [[Izcandar the Banished]], [[Maxxenius]], [[The Nightmare Beast]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.00\n| notes          = Há chances do item quebrar (sumir) ao usá-lo na criatura.\n<noinclude><p><spoiler>* 01 é necessário para tentar domar uma [[Hibernal Moth]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45464,
+    "ns": 0,
+    "title": "Percht Skull",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Percht Skull\n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| secondarytype  = Produtos de Criaturas\n| weight         = 8.70\n| stackable      = não\n| droppedEventby = [[The Percht Queen]].\n| sellto         = Jogadores.\n| buyfrom        = Jogadores.\n| implemented    = 12.02.7746\n| notes          = <noinclude><p><spoiler>* Ao entregar a Percht Skull para o NPC [[Frosty]], você poderá escolher uma das 3 montarias: [[Bright Percht Sleigh]], [[Cold Percht Sleigh]] ou [[Dark Percht Sleigh]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 47773,
+    "ns": 0,
+    "title": "Beer Tap",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Beer Tap\n| flavortext     = Can be used to tap a barrel of beer.\n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| weight         = 5.00\n| stackable      = não\n| value          = \n| npcvalue       = 50\n| npcprice       = 0\n| mercado        = não\n| droppedby      = [[Roast Pork]].\n| buyfrom        = Jogadores.\n| sellto         = Yasir\n| implemented    = 12.20.9066\n| notes          = <noinclude><p><spoiler>* 01 é necessário para domar cada uma das montarias ([[Blue Rolling Barrel]], [[Green Rolling Barrel]] e [[Red Rolling Barrel]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 47833,
+    "ns": 0,
+    "title": "Decorative Green Sheet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Decorative Green Sheet\n| flavortext     = A traditional Orcsoberfest sheet to decorate large beer barrels during the traditional tapping ceremony.\n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| weight         = 2.50\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = [[Bellicose Orger]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.20.9066\n| mercado        = não\n| notes          = <noinclude><p><spoiler>* 01 é necessário para domar um [[Green Rolling Barrel]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 47834,
+    "ns": 0,
+    "title": "Decorative Red Sheet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Decorative Red Sheet\n| flavortext     = A traditional Orcsoberfest sheet to decorate large beer barrels during the traditional tapping ceremony.\n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| weight         = 2.50\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = [[Bellicose Orger]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.20.9066\n| mercado        = não\n| notes          = <noinclude><p><spoiler>* 01 é necessário para domar um [[Red Rolling Barrel]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 47835,
+    "ns": 0,
+    "title": "Decorative Blue Sheet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Decorative Blue Sheet\n| flavortext     = A traditional Orcsoberfest sheet to decorate large beer barrels during the traditional tapping ceremony.\n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| weight         = 2.50\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = [[Bellicose Orger]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.20.9066\n| mercado        = não\n| notes          = <noinclude><p><spoiler>* 01 é necessário para domar um [[Blue Rolling Barrel]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 49480,
+    "ns": 0,
+    "title": "Red Silk Flower",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Red Silk Flower\n| flavortext     = The petals are made of silk, the buds and pistil of rubies. The werelions of the Darama Desert often use such flowers as love pledges.\n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| weight         = 3.00\n| stackable      = não\n| value          = Negociável\n| npcvalue       = \n| npcprice       = \n| droppedby      = [[Katex Blood Tongue]], [[Srezz Yellow Eyes]], [[Utua Stone Sting]], [[Yirkas Blue Scales]].\n| droppedEventby = \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.40\n| notes          = <noinclude><p><spoiler>* 01 é necessário para domar um [[White Lion]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 52001,
+    "ns": 0,
+    "title": "Fiery Horseshoe",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Fiery Horseshoe\n| flavortext     = \n| itemclass      = Itens de Domar\n| primarytype    = Valiosos\n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| weight         = 1.20\n| stackable      = não\n| value          = \n| droppedby      = [[The Abomination]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.70\n| notes          = <noinclude><p><spoiler>* 04 destes são necessários para obter a montaria [[Singeing Steed]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 52078,
+    "ns": 0,
+    "title": "Eldritch Crystal",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Eldritch Crystal\n| flavortext     = \n| itemclass      = Itens de Domar\n| primarytype    = Valiosos\n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| weight         = 1.75\n| stackable      = não\n| value          = \n| droppedby      = [[The Brainstealer]].\n| buyfrom        = Jogadores.\n| implemented    = 12.70\n| npcvalue       = 48 000\n| sellto         = Augustin, Briasol, Tesha, Ishina, Iwan, Talila, Valindara, Yonan, Tezila, Chantalle, Gail, Edmund, Jessica, Hanna, Odemara, Oiriz, Giri\n| notes          = \n<noinclude><p><spoiler>\n* Pode ser obtido ao usar um [[Eldritch Casket]].\n* 01 é necessário para domar um [[Shellodon]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55769,
+    "ns": 0,
+    "title": "Colourful Water Lily",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Colourful Water Lily\n| flavortext     = \n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| secondarytype  =\n| weight         = 1.00\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.90\n| notes          = \n<noinclude><p><spoiler>* 01 é necessário para domar um [[Giant Beaver]].\n* Obtido como recompensa da missão ''Coastal Concerns'' durante a [[Within the Tides Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 61458,
+    "ns": 0,
+    "title": "Polished Idol of Tukh",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Polished Idol of Tukh\n| flavortext     = This idol has been polished to shine with a cold golden glow. In ancient Iks lore only the god Tukh has power over the mystic spirit animals of the Iks.\n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| secondarytype  =\n| weight         = 2.50\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 13.30.14423\n| mercado        = não\n| notes          = \n<noinclude><p><spoiler>\n* 01 é necessário para domar um [[Mystic Jaguar]].\n* Pode ser obtido ao usar um [[Jug of Gold Lye]] em um [[Idol of Tukh]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 61461,
+    "ns": 0,
+    "title": "Idol of Tukh",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Idol of Tukh\n| flavortext     = \n| attrib         = Nenhum.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| secondarytype  =\n| weight         = \n| stackable      = não\n| value          = \n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = [[Atab]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 13.30.14423\n| mercado        = não\n| notes          = \n<noinclude><p><spoiler>\n* Pode se usar um [[Jug of Gold Lye]] nele para obter um [[Polished Idol of Tukh]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 62204,
+    "ns": 0,
+    "title": "Pegasus Feather",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Pegasus Feather\n| flavortext     = \n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| secondarytype  =\n| weight         = 0.10\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 13.40.54ea79\n| notes          = \n<noinclude><p><spoiler>\n* 01 é necessário para tentar domar um [[Pegasus]].\n* Recompensa da [[Threatened Dreams Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 63519,
+    "ns": 0,
+    "title": "Demon In A Green Box",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Demon In A Green Box\n| flavortext     = A primal demonic mount is imprisoned in this box.\n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| weight         = 2.00\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = [[Arbaziloth]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 14.10.4e0c16\n| notes          = Não há chances do item quebrar (sumir).  <br>\n<noinclude><p><spoiler>* 01 é necessário para domar um [[Primal Demonosaur]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 63836,
+    "ns": 0,
+    "title": "Demon in a Golden Box",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Demon in a Golden Box\n| flavortext     = .\n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| weight         = 2.00\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = [[Rotrender]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 14.12.95abf3\n| notes          = Não há chances do item quebrar (sumir).  <br>\n<noinclude><p><spoiler>* 01 é necessário para domar um [[Alpha Demonosaur]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 63837,
+    "ns": 0,
+    "title": "Demon in a Red Box",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Demon in a Red Box\n| flavortext     = \n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| weight         = 2.00\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = [[Rotrender]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 14.12.95abf3\n| notes          = Não há chances do item quebrar (sumir).  <br>\n<noinclude><p><spoiler>* 01 é necessário para domar um [[Hell Demonosaur]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 66345,
+    "ns": 0,
+    "title": "Marinated Sturgeon",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Marinated Sturgeon\n| flavortext     = This sturgeon has been prepared in a tasty marinade and a special and rare delicacy\n| itemclass      = Outros Equipamentos\n| primarytype    = Itens de Domar\n| secondarytype  = \n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| mercado        = sim\n| stackable      = não\n| weight         = 10.00\n| droppedby      = [[Raubritter Skirmisher]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.20.7a5cc9\n| notes          = Há chances do item quebrar (sumir) ao usá-lo na criatura.\n<spoiler>* 01 é necessário para tentar domar um [[Battlefrazzle]]. [[Arquivo:Battlefrazzle.gif]]\n* Apesar de ser obtido do [[Raubritter Skirmisher]], o item só pode ser dropado dentro da \"cozinha\" (piso amarelo), neste local: {{Mapa|33863,32111,3:2|aqui}}.\n* Caso '''quebre''': ''The tamed frazzlemaw devours the rare fish but otherwise takes no notice of your advancement.''\n* Em caso de '''sucesso''': ''The tamed frazzlemaw hungers for fish and this one is a particular rare treat. You command this one now, take good care of it!''</spoiler>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 66760,
+    "ns": 0,
+    "title": "Bunch of Turnips",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bunch of Turnips\n| flavortext     = \n| itemclass      = Outros Equipamentos\n| primarytype    = Itens de Domar\n| secondarytype  = \n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| mercado        = não\n| stackable      = não\n| weight         = 2.00\n| droppedby      = Ninguém.\n| npcprice       = 1000\n| buyfrom        = Emiliana\n| sellto         = Jogadores.\n| implemented    = 15.24.95dcf3\n| notes          = Não há chances do item quebrar (sumir) ao usá-lo na criatura.\n<spoiler>* 01 é necessário para tentar domar um [[Reliable Ram]]. [[Arquivo:Reliable Ram.gif]]\n* Obtido como recompensa da [[Targuna Quest]] na missão Burning Heart \n* Em caso de perda do item você pode comprar outro com o NPC falando '''Hi - lose - yes'''</spoiler>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 67515,
+    "ns": 0,
+    "title": "Cloud in a Bottle",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Cloud in a Bottle\n| flavortext     = \n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| weight         = 0.45\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = [[Maior Domus]], [[Mimar Haffar]], [[Phosphorus]] (A partir da dificuldade 10).\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.30.a30dad\n| notes          = \n<noinclude><p><spoiler>\n* É necessário para domar um [[Radiant Nimbus]].\n* Não é necessário ter completado a [[Make Believe Quest]] para utilizá-lo.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9062,
+    "ns": 0,
+    "title": "Reins",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Reins\n| flavortext     = A hermit near Carlin might be able to tell you more about it.\n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| secondarytype  =\n| weight         = 2.00\n| stackable      = não\n| value          = 60 000 - 450 000\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = [[Dark Apprentice]], [[Dark Magician]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.7\n| notes          = Há chances do item quebrar (sumir) ao usá-lo na criatura.\n<noinclude><p><spoiler>* 01 é necessário para tentar domar uma [[Black Sheep]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9063,
+    "ns": 0,
+    "title": "Slingshot",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Slingshot\n| flavortext     = A hermit near Carlin might be able to tell you more about it.\n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| secondarytype  =\n| weight         = 2.00\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| npcprice       = 34 000\n| droppedby      = [[Hunter]].\n| buyfrom        = Grizzly Adams\n| sellto         = Jogadores.\n| implemented    = 8.2\n| notes          = Há chances do item quebrar (sumir) ao usá-lo na criatura. Pode ser visto na caverna da guilda dos paladinos, na [[Isle of Destiny]]. Inicialmente implementado como um item de cenário, apenas com a versão 8.7 passou a ter utilidade real jogo.  Há rumores de que, originalmente, fora criado para atirar [[Small Stone]]s. \n<noinclude><p><spoiler>\n* 01 é necessário para tentar domar um [[Bear]]. \n* Para comprá-lo é necessário o rank Huntsman na [[Paw and Fur Society]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9064,
+    "ns": 0,
+    "title": "Sweet Smelling Bait",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Sweet Smelling Bait\n| flavortext     = A hermit near Carlin might be able to tell you more about it.\n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| secondarytype  =\n| weight         = 2.00\n| stackable      = não\n| value          = 100 000 - 200 000\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = [[Banshee]], [[Deathbine]], [[The Old Widow]].\n| droppedRaidby  = \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.7\n| notes          = Há chances do item quebrar (sumir) ao usá-lo na criatura.\n\n<noinclude><p><spoiler>* 01 é necessário para tentar domar um [[Wailing Widow]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9066,
+    "ns": 0,
+    "title": "Tin Key",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Tin Key\n| flavortext     = A hermit near Carlin might be able to tell you more about it.\n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| secondarytype  =\n| weight         = 2.00\n| stackable      = não\n| value          = 1 000 000 - 3 000 000\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = [[War Golem]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.7\n| notes          = Há chances do item quebrar (sumir) ao usá-lo na criatura.\n<noinclude><p><spoiler>* 01 é necessário para tentar domar um [[Tin Lizzard]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 17015,
+    "ns": 0,
+    "title": "Slug Drug",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Slug Drug\n| flavortext     = A hermit near Carlin might be able to tell you more about it.\n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| secondarytype  =\n| weight         = 2.00\n| stackable      = não\n| value          = 200 000 - 500 000\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = [[Bane Lord]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.1\n| notes          = Há chances do item quebrar (sumir) ao usá-lo na criatura.\n<noinclude><p><spoiler>\n* 01 é necessário para tentar domar um  [[Slug]].\n* Possibilidade de ser obtido ao usar um [[Belongings of a Deceased (Ottokar)|Belongings of a Deceased]], obtido durante a [[Swamp Fever World Change]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 17016,
+    "ns": 0,
+    "title": "Scorpion Sceptre",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Scorpion Sceptre\n| flavortext     = A hermit near Carlin might be able to tell you more about it.\n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| secondarytype  =\n| weight         = 2.00\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = [[Horestis]], [[Ancient Spawn of Morgathla]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.1\n| notes          = Há chances do item quebrar (sumir) ao usá-lo na criatura. \n<noinclude><p><spoiler>* 01 é necessário para tentar domar um [[Sandstone Scorpion]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 17022,
+    "ns": 0,
+    "title": "Sugar Oat",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Sugar Oat\n| flavortext     = A hermit near Carlin might be able to tell you more about it.\n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| secondarytype  =\n| weight         = 2.00\n| stackable      = sim\n| value          = Negociável\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = [[Bane Lord]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.1\n| notes          = Há chances do item sumir ao usá-lo na criatura. Este item pode ser feito.\n\n<noinclude><div class=\"toccolours mw-collapsible mw-collapsed\" style=\"margin: 4px 0px;\">'''Como fazer um Sugar Oat'''<div class=\"mw-collapsible-content\"><table><tr><td align=left>Para fazer o ''Sugar Oat'' você precisará de:\n* [[Fire Bug]] (compre no NPC [[Evan]], em [[Liberty Bay]], por 100 gp);\n* [[Sickle]] (compre no NPC [[Cedrik]], em Liberty Bay, por 7 gp);\n* [[Bunch of Wheat]] (pode ser obtido colhendo em vários lugares ou comprando no NPC [[Donald McRonald]] em [[Thais]]);\n* [[Sugar Cane]] (pode ser obtido nas plantações em Liberty Bay);\n'''Modo de fazer:'''\n# Use o Fire Bug em um Sugar Cane para queimar as folhas inúteis.\n# Use o Sickle para cortá-lo e produzir o [[Bunch of Sugar Cane]].\n# Use o Bunch of Sugar Cane em um Bunch of Wheat. Você fez seu '''Sugar Oat'''.\n\n'''Nota:''' para cada Sugar Oat, você precisará de um item de cada.</td></tr></table></div>\n</div></noinclude>\n\n<noinclude><p><spoiler>* 01 é necessário para tentar domar um [[Wild Horse]] durante a [[Horse Station World Change]].\n{{DASH|'''Nota:''' Normalmente é necessário usar muitos desses itens antes da criatura ser domada ou fugir.}}</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 34837,
+    "ns": 0,
+    "title": "The Lion's Heart",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = The Lion's Heart\n| flavortext     = The amulet looks like a golden lion's head. A hermit in Carlin might tell you more about it.\n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| secondarytype  = Amuletos e Colares\n| weight         = 2.00\n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.70\n| notes          = Pode ser utilizado no slot de colares do inventário.\n\n<noinclude><p><spoiler>* 01 é necessário para tentar domar um [[Noble Lion]]\n*Pode ser obtido como recompensa da [[Lion's Rock Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 38530,
+    "ns": 0,
+    "title": "Vibrant Egg",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Vibrant Egg\n| flavortext     = It is of dark blue and turquoise colour and pulses steadily. It seems that something is moving inside.\n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| weight         = 8.50\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.94\n| notes          = <noinclude><p><spoiler>* Ao usar este item aparecerá a seguinte mensagem \"You receive the permission to ride a sparkion\" e automaticamente você ganhará a montaria [[Sparkion (Mount)|Sparkion]].\n* Recompensa da [[Heart of Destruction Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45087,
+    "ns": 0,
+    "title": "Turquoise Tendril Lantern",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Turquoise Tendril Lantern\n| flavortext     = It is made of leaves and seems to be irresistible to moths and other insects.\n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| secondarytype  =\n| weight         = 9.20\n| stackable      = não\n| value          = Negociável\n| droppedby      = [[Izcandar the Banished]], [[Malofur Mangrinder]], [[Plagueroot]], [[The Nightmare Beast]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.00\n| notes          = Há chances do item quebrar (sumir) ao usá-lo na criatura.\n<noinclude><p><spoiler>* 01 é necessário para tentar domar uma [[Lacewing Moth]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 46836,
+    "ns": 0,
+    "title": "The Regalia of Suon",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = The Regalia of Suon\n| flavortext     = A golden sun medal is attached to a silken cordon and soldered on a sunray emblem with a bijou.\n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| secondarytype  =\n| weight         = 34.00\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.20\n| notes          = \n<noinclude><p><spoiler>\n* 01 é necessário para tentar domar um [[Gryphon]], juntamente com a [[Arquivo:Gryphon Mask.gif|link=]] equipada em sua cabeça.\n* Esse item é dividido em 4 partes:\n:[[Arquivo:Blue and Golden Cordon.gif|link=Blue and Golden Cordon]] [[Arquivo:Golden Bijou.gif|link=Golden Bijou]] [[Arquivo:Sun Medal.gif|link=Sun Medal]] [[Arquivo:Sunray Emblem.gif|link=Sunray Emblem]]\n\n:Cada parte é ganha em uma missão da [[Kilmaresh Quest]], com os 4 itens em mãos fale com o NPC [[Yonan]] para que ele monte o The Regalia of Suon para você.\n</p></spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 48075,
+    "ns": 0,
+    "title": "Spectral Scrap of Cloth",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Spectral Scrap of Cloth\n| flavortext     = Its tattered fringes seem to move by themselves.\n| itemclass      = Itens de Domar\n| primarytype    = Valiosos\n| weight         = 3.50\n| stackable      = não\n| value          = \n| npcvalue       = \n| npcprice       = \n| droppedby      = [[The Pale Worm]].\n| droppedEventby = \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.30\n| notes          = <noinclude><p><spoiler>* 01 é necessário para domar um [[Haze]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 49210,
+    "ns": 0,
+    "title": "Spectral Horseshoe",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Spectral Horseshoe\n| flavortext     = \n| itemclass      = Itens de Domar\n| primarytype    = Valiosos\n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| weight         = 1.20\n| stackable      = não\n| value          = \n| droppedby      = [[Goshnar's Cruelty]], [[Goshnar's Greed]], [[Goshnar's Hatred]], [[Goshnar's Malice]], [[Goshnar's Megalomania]], [[Goshnar's Spite]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.40\n| notes          = <noinclude><p><spoiler>* Além de 01 [[Spectral Saddle]] e 01 [[Spectral Horse Tack]], 04 destes são necessários para obter a montaria [[Phantasmal Jade]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 49211,
+    "ns": 0,
+    "title": "Spectral Horse Tack",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Spectral Horse Tack\n| flavortext     = \n| itemclass      = Itens de Domar\n| primarytype    = Valiosos\n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| weight         = 0.80\n| stackable      = não\n| value          = \n| droppedby      = [[Goshnar's Cruelty]], [[Goshnar's Greed]], [[Goshnar's Hatred]], [[Goshnar's Malice]], [[Goshnar's Megalomania]], [[Goshnar's Spite]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.40\n| notes          = <noinclude><p><spoiler>* Além de 01 [[Spectral Saddle]] e 04 [[Spectral Horseshoe]]s, 01 deste é necessário para obter a montaria [[Phantasmal Jade]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 49240,
+    "ns": 0,
+    "title": "Spectral Saddle",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Spectral Saddle\n| flavortext     = \n| itemclass      = Itens de Domar\n| primarytype    = Valiosos\n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| weight         = 2.70\n| stackable      = não\n| value          = \n| droppedby      = [[Goshnar's Cruelty]], [[Goshnar's Greed]], [[Goshnar's Hatred]], [[Goshnar's Malice]], [[Goshnar's Megalomania]], [[Goshnar's Spite]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.40\n| notes          = \n<noinclude><p><spoiler>\n* Além de 01 [[Spectral Horse Tack]] e 04 [[Spectral Horseshoe]]s, 01 deste é necessário para obter a montaria [[Phantasmal Jade]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53526,
+    "ns": 0,
+    "title": "Wind-Up Loco",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Wind-Up Loco\n| flavortext     = \n| itemclass      = Itens de Domar\n| primarytype    = Valiosos\n| weight         = 2.00\n| stackable      = não\n| value          = \n| npcvalue       = \n| npcprice       = \n| droppedby      = Ninguém.\n| droppedEventby = \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = \n<noinclude><p><spoiler>\n* Recompensa da [[25 Years of Tibia Quest]].\n* 01 é necessário para domar uma [[Gloothomotive]] em conjunto com uma [[Wind-Up Key]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53531,
+    "ns": 0,
+    "title": "Wind-Up Key",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Wind-Up Key\n| flavortext     = \n| itemclass      = Itens de Domar\n| primarytype    = Valiosos\n| weight         = 2.00\n| stackable      = não\n| value          = \n| npcvalue       = \n| npcprice       = \n| droppedby      = [[Retros Treasure]].\n| droppedEventby = \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = <noinclude><p><spoiler>* 01 é necessária para domar uma [[Gloothomotive]] em conjunto com uma [[Wind-Up Loco]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59930,
+    "ns": 0,
+    "title": "Toy Ball",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Toy Ball\n| flavortext     = \n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| secondarytype  =\n| weight         = 1.00\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 13.20.13560\n| notes          =  \n<noinclude><p><spoiler>\n* 01 é necessário para domar um [[Foxmouse]].\n* Obtido como recompensa da missão ''Paradise Lost'' da [[Grimvale Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 60207,
+    "ns": 0,
+    "title": "Spiritual Horseshoe",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Spiritual Horseshoe\n| flavortext     = \n| itemclass      = Itens de Domar\n| primarytype    = Valiosos\n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| weight         = 1.20\n| stackable      = não\n| value          = \n| droppedby      = [[Bakragore]], [[Chagorz]], [[Ichgahal]], [[Murcion]], [[Vemiath]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 13.20.13560\n| notes          = <noinclude><p><spoiler>* 04 destes são necessários para obter a montaria [[Spirit of Purity]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 67543,
+    "ns": 0,
+    "title": "Skewered Fish",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Skewered Fish\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Domar\n| secondarytype  = Valiosos\n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| weight         = 2.00\n| stackable      = não\n| value          = \n| npcvalue       = \n| npcprice       = 0\n| mercado        = sim\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.30.a30dad\n| notes          = <noinclude><p><spoiler>\n* Recompensa da [[Shards of a Broken Moon Quest]].\n* 01 é necessário para domar o [[Jaracal (Montaria)]].</noinclude><p></spoiler>\n}}"
+       }
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

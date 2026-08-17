@@ -1,0 +1,774 @@
+{
+ "query": {
+  "pages": [
+   {
+    "pageid": 8017,
+    "ns": 0,
+    "title": "Golden Rune Emblem (Animate Dead)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Golden Rune Emblem (Animate Dead)\n| flavortext     = It's an adorned animate dead rune.\n| itemclass      = Itens de Decoração\n| primarytype    = Runas de Decoração\n| secondarytype  = \n| attrib         = Brilha no escuro.\n| weight         = 1.20\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.6\n| notes          = É uma runa de [[Animate Dead]] em forma de enfeite. \n{{Veja|Runas de Decoração}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8046,
+    "ns": 0,
+    "title": "Golden Rune Emblem (Avalanche)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Golden Rune Emblem (Avalanche)\n| flavortext     = It's an adorned avalanche rune.\n| itemclass      = Itens de Decoração\n| primarytype    = Runas de Decoração\n| secondarytype  = \n| attrib         = Brilha no escuro.\n| weight         = 1.20\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.6\n| notes          = É uma runa de [[Avalanche Rune|Avalanche]] em forma de enfeite.\n{{Veja|Runas de Decoração}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8047,
+    "ns": 0,
+    "title": "Golden Rune Emblem (Chameleon)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Golden Rune Emblem (Chameleon)\n| flavortext     = It's an adorned chameleon rune.\n| itemclass      = Itens de Decoração\n| primarytype    = Runas de Decoração\n| secondarytype  = \n| attrib         = Brilha no escuro.\n| weight         = 1.20\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.6\n| notes          = É uma [[Chameleon Rune]] em forma de enfeite.\n<noinclude><p><spoiler>* 01 pode ser obtido clicando no [[Anniversary Remains]]  de [[Denson Larika (Criatura)|Denson Larika]] durante as festividades de 15 anos do Tibia.</spoiler></p></noinclude>\n{{Veja|Runas de Decoração}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8048,
+    "ns": 0,
+    "title": "Golden Rune Emblem (Desintegrate)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Golden Rune Emblem (Desintegrate)\n| flavortext     = It's an adorned desintegrate rune.\n| itemclass      = Itens de Decoração\n| primarytype    = Runas de Decoração\n| secondarytype  = \n| attrib         = Brilha no escuro.\n| weight         = 1.20\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.6\n| notes          = É uma runa de [[Desintegrate]] em forma de enfeite.\n{{Veja|Runas de Decoração}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8049,
+    "ns": 0,
+    "title": "Golden Rune Emblem (Destroy Field)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Golden Rune Emblem (Destroy Field)\n| flavortext     = It's an adorned destroy field rune.\n| itemclass      = Itens de Decoração\n| primarytype    = Runas de Decoração\n| secondarytype  = \n| attrib         = Brilha no escuro.\n| weight         = 1.20\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.6\n| notes          = É uma runa de [[Destroy Field]] em forma de enfeite.\n{{Veja|Runas de Decoração}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8050,
+    "ns": 0,
+    "title": "Golden Rune Emblem (Energy Bomb)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Golden Rune Emblem (Energy Bomb)\n| flavortext     = It's an adorned energy bomb rune.\n| itemclass      = Itens de Decoração\n| primarytype    = Runas de Decoração\n| secondarytype  = \n| attrib         = Brilha no escuro.\n| weight         = 1.20\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.6\n| notes          = É uma runa de [[Energy Bomb]] em forma de enfeite.\n{{Veja|Runas de Decoração}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8051,
+    "ns": 0,
+    "title": "Golden Rune Emblem (Energy Wall)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Golden Rune Emblem (Energy Wall)\n| flavortext     = It's an adorned energy wall rune.\n| itemclass      = Itens de Decoração\n| primarytype    = Runas de Decoração\n| secondarytype  = \n| attrib         = Brilha no escuro.\n| weight         = 1.20\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.6\n| notes          = É uma runa de [[Energy Wall]] em forma de enfeite.\n{{Veja|Runas de Decoração}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8052,
+    "ns": 0,
+    "title": "Golden Rune Emblem (Explosion)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Golden Rune Emblem (Explosion)\n| flavortext     = It's an adorned explosion rune.\n| itemclass      = Itens de Decoração\n| primarytype    = Runas de Decoração\n| secondarytype  = \n| attrib         = Brilha no escuro.\n| weight         = 1.20\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.6\n| notes          = É uma runa de [[Explosion]] em forma de enfeite. \n{{Veja|Runas de Decoração}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8053,
+    "ns": 0,
+    "title": "Golden Rune Emblem (Fire Bomb)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Golden Rune Emblem (Fire Bomb)\n| flavortext     = It's an adorned fire bomb rune.\n| itemclass      = Itens de Decoração\n| primarytype    = Runas de Decoração\n| secondarytype  = \n| attrib         = Brilha no escuro.\n| weight         = 1.20\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.6\n| notes          = É uma runa de [[Fire Bomb]] em forma de enfeite.\n{{Veja|Runas de Decoração}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8054,
+    "ns": 0,
+    "title": "Golden Rune Emblem (Fire Field)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Golden Rune Emblem (Fire Field)\n| flavortext     = It's an adorned fire field rune.\n| itemclass      = Itens de Decoração\n| primarytype    = Runas de Decoração\n| secondarytype  = \n| attrib         = Brilha no escuro.\n| weight         = 1.20\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.6\n| notes          = É uma runa de [[Fire Field]] em forma de enfeite. \n{{Veja|Runas de Decoração}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8055,
+    "ns": 0,
+    "title": "Golden Rune Emblem (Fireball)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Golden Rune Emblem (Fireball)\n| flavortext     = It's an adorned fireball rune.\n| itemclass      = Itens de Decoração\n| primarytype    = Runas de Decoração\n| secondarytype  = \n| attrib         = Brilha no escuro.\n| weight         = 1.20\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.6\n| notes          = É uma runa de [[Fireball]] em forma de enfeite. \n{{Veja|Runas de Decoração}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8056,
+    "ns": 0,
+    "title": "Golden Rune Emblem (Great Fireball)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Golden Rune Emblem (Great Fireball)\n| flavortext     = It's an adorned great fireball rune.\n| itemclass      = Itens de Decoração\n| primarytype    = Runas de Decoração\n| secondarytype  = \n| attrib         = Brilha no escuro.\n| weight         = 1.20\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.6\n| notes          = É uma runa de [[Great Fireball]] em forma de enfeite. \n{{Veja|Runas de Decoração}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8057,
+    "ns": 0,
+    "title": "Golden Rune Emblem (HMM)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Golden Rune Emblem (HMM)\n| flavortext     = It's an adorned heavy magic missile rune.\n| itemclass      = Itens de Decoração\n| primarytype    = Runas de Decoração\n| secondarytype  = \n| attrib         = Brilha no escuro.\n| weight         = 1.20\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.6\n| notes          = É uma runa de [[Heavy Magic Missile|HMM]] em forma de enfeite. \n{{Veja|Runas de Decoração}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8058,
+    "ns": 0,
+    "title": "Golden Rune Emblem (Holy Missile)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Golden Rune Emblem (Holy Missile)\n| flavortext     = It's an adorned holy missile rune.\n| itemclass      = Itens de Decoração\n| primarytype    = Runas de Decoração\n| secondarytype  = \n| attrib         = Brilha no escuro.\n| weight         = 1.20\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.6\n| notes          = É uma runa de [[Holy Missile]] em forma de enfeite. \n{{Veja|Runas de Decoração}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8059,
+    "ns": 0,
+    "title": "Golden Rune Emblem (Icicle)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Golden Rune Emblem (Icicle)\n| flavortext     = It's an adorned icicle rune.\n| itemclass      = Itens de Decoração\n| primarytype    = Runas de Decoração\n| secondarytype  = \n| attrib         = Brilha no escuro.\n| weight         = 1.20\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.6\n| notes          = É uma runa de [[Icicle (Rune)|Icicle]] em forma de enfeite. \n{{Veja|Runas de Decoração}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8060,
+    "ns": 0,
+    "title": "Golden Rune Emblem (LMM)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Golden Rune Emblem (LMM)\n| flavortext     = It's an adorned light magic missile rune.\n| itemclass      = Itens de Decoração\n| primarytype    = Runas de Decoração\n| secondarytype  = \n| attrib         = Brilha no escuro.\n| weight         = 1.20\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.6\n| notes          = É uma runa de [[Light Magic Missile|LMM]] em forma de enfeite. \n{{Veja|Runas de Decoração}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8061,
+    "ns": 0,
+    "title": "Golden Rune Emblem (Magic Wall)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Golden Rune Emblem (Magic Wall)\n| flavortext     = It's an adorned magic wall rune.\n| itemclass      = Itens de Decoração\n| primarytype    = Runas de Decoração\n| secondarytype  = \n| attrib         = Brilha no escuro.\n| weight         = 1.20\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.6\n| notes          = É uma runa de [[Magic Wall]] em forma de enfeite. \n{{Veja|Runas de Decoração}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8062,
+    "ns": 0,
+    "title": "Golden Rune Emblem (Paralyze)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Golden Rune Emblem (Paralyze)\n| flavortext     = It's an adorned paralyze rune.\n| itemclass      = Itens de Decoração\n| primarytype    = Runas de Decoração\n| secondarytype  = \n| attrib         = Brilha no escuro.\n| weight         = 1.20\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.6\n| notes          = É uma runa de [[Paralyze]] em forma de enfeite. \n{{Veja|Runas de Decoração}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8063,
+    "ns": 0,
+    "title": "Golden Rune Emblem (Poison Bomb)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Golden Rune Emblem (Poison Bomb)\n| flavortext     = It's an adorned poison bomb rune.\n| itemclass      = Itens de Decoração\n| primarytype    = Runas de Decoração\n| secondarytype  = \n| attrib         = Brilha no escuro.\n| weight         = 1.20\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.6\n| notes          = É uma runa de [[Poison Bomb]] em forma de enfeite. \n{{Veja|Runas de Decoração}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8064,
+    "ns": 0,
+    "title": "Golden Rune Emblem (Soulfire)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Golden Rune Emblem (Soulfire)\n| flavortext     = It's an adorned soulfire rune.\n| itemclass      = Itens de Decoração\n| primarytype    = Runas de Decoração\n| secondarytype  = \n| attrib         = Brilha no escuro.\n| weight         = 1.20\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.6\n| notes          = É uma runa de [[Soulfire]] em forma de enfeite. \n{{Veja|Runas de Decoração}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8065,
+    "ns": 0,
+    "title": "Golden Rune Emblem (Sudden Death)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Golden Rune Emblem (Sudden Death)\n| flavortext     = It's an adorned sudden death rune.\n| itemclass      = Itens de Decoração\n| primarytype    = Runas de Decoração\n| secondarytype  = \n| attrib         = Brilha no escuro.\n| weight         = 1.20\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.6\n| notes          = É uma runa de [[Sudden Death]] em forma de enfeite. \n{{Veja|Runas de Decoração}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8066,
+    "ns": 0,
+    "title": "Golden Rune Emblem (Thunderstorm)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Golden Rune Emblem (Thunderstorm)\n| flavortext     = It's an adorned thunderstorm rune.\n| itemclass      = Itens de Decoração\n| primarytype    = Runas de Decoração\n| secondarytype  = \n| attrib         = Brilha no escuro.\n| weight         = 1.20\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.6\n| notes          = É uma runa de [[Thunderstorm]] em forma de enfeite. \n{{Veja|Runas de Decoração}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8067,
+    "ns": 0,
+    "title": "Golden Rune Emblem (UH)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Golden Rune Emblem (UH)\n| flavortext     = It's an adorned ultimate healing rune.\n| itemclass      = Itens de Decoração\n| primarytype    = Runas de Decoração\n| secondarytype  = \n| attrib         = Brilha no escuro.\n| weight         = 1.20\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.6\n| notes          = É uma runa de [[Ultimate Healing Rune|UH]] em forma de enfeite. \n{{Veja|Runas de Decoração}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8068,
+    "ns": 0,
+    "title": "Golden Rune Emblem (Wild Growth)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Golden Rune Emblem (Wild Growth)\n| flavortext     = It's an adorned wild growth rune.\n| itemclass      = Itens de Decoração\n| primarytype    = Runas de Decoração\n| secondarytype  = \n| attrib         = Brilha no escuro.\n| weight         = 1.20\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.6\n| notes          = É uma runa de [[Wild Growth]] em forma de enfeite. \n{{Veja|Runas de Decoração}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8069,
+    "ns": 0,
+    "title": "Silver Rune Emblem (Animate Dead)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Silver Rune Emblem (Animate Dead)\n| flavortext     = It's an adorned animate dead rune.\n| itemclass      = Itens de Decoração\n| primarytype    = Runas de Decoração\n| secondarytype  = \n| attrib         = Brilha no escuro.\n| weight         = 1.20\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.6\n| notes          = É uma runa de [[Animate Dead]] em forma de enfeite. Para mais informações, visite a página sobre [[Rune Emblems|runas de decoração]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8092,
+    "ns": 0,
+    "title": "Silver Rune Emblem (Avalanche)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Silver Rune Emblem (Avalanche)\n| flavortext     = It's an adorned avalanche rune.\n| itemclass      = Itens de Decoração\n| primarytype    = Runas de Decoração\n| secondarytype  = \n| attrib         = Brilha no escuro.\n| weight         = 1.20\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.6\n| notes          = É uma runa de [[Avalanche Rune|Avalanche]] em forma de enfeite. Para mais informações, visite a página sobre [[Rune Emblems|runas de decoração]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8093,
+    "ns": 0,
+    "title": "Silver Rune Emblem (Chameleon)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Silver Rune Emblem (Chameleon)\n| flavortext     = It's an adorned chameleon rune.\n| itemclass      = Itens de Decoração\n| primarytype    = Runas de Decoração\n| secondarytype  = \n| attrib         = Brilha no escuro.\n| weight         = 1.20\n| stackable       = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.6\n| notes          = É uma [[Chameleon Rune]] em forma de enfeite. Para mais informações, visite a página sobre [[Rune Emblems|runas de decoração]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8094,
+    "ns": 0,
+    "title": "Silver Rune Emblem (Desintegrate)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Silver Rune Emblem (Desintegrate)\n| flavortext     = It's an adorned desintegrate rune.\n| itemclass      = Itens de Decoração\n| primarytype    = Runas de Decoração\n| secondarytype  = \n| attrib         = Brilha no escuro.\n| weight         = 1.20\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.6\n| notes          = É uma runa de [[Desintegrate]] em forma de enfeite. Para mais informações, visite a página sobre [[Rune Emblems|runas de decoração]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8095,
+    "ns": 0,
+    "title": "Silver Rune Emblem (Destroy Field)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Silver Rune Emblem (Destroy Field)\n| flavortext     = It's an adorned destroy field rune.\n| itemclass      = Itens de Decoração\n| primarytype    = Runas de Decoração\n| secondarytype  = \n| attrib         = Brilha no escuro.\n| weight         = 1.20\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.6\n| notes          = É uma runa de [[Destroy Field]] em forma de enfeite. Para mais informações, visite a página sobre [[Rune Emblems|runas de decoração]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8096,
+    "ns": 0,
+    "title": "Silver Rune Emblem (Energy Bomb)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Silver Rune Emblem (Energy Bomb)\n| flavortext     = It's an adorned energy bomb rune.\n| itemclass      = Itens de Decoração\n| primarytype    = Runas de Decoração\n| secondarytype  = \n| attrib         = Brilha no escuro.\n| weight         = 1.20\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.6\n| notes          = É uma runa de [[Energy Bomb]] em forma de enfeite. Para mais informações, visite a página sobre [[Rune Emblems|runas de decoração]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8097,
+    "ns": 0,
+    "title": "Silver Rune Emblem (Energy Wall)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Silver Rune Emblem (Energy Wall)\n| flavortext     = It's an adorned energy wall rune.\n| itemclass      = Itens de Decoração\n| primarytype    = Runas de Decoração\n| secondarytype  = \n| attrib         = Brilha no escuro.\n| weight         = 1.20\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.6\n| notes          = É uma runa de [[Energy Wall]] em forma de enfeite. Para mais informações, visite a página sobre [[Rune Emblems|runas de decoração]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8098,
+    "ns": 0,
+    "title": "Silver Rune Emblem (Explosion)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Silver Rune Emblem (Explosion)\n| flavortext     = It's an adorned explosion rune.\n| itemclass      = Itens de Decoração\n| primarytype    = Runas de Decoração\n| secondarytype  = \n| attrib         = Brilha no escuro.\n| weight         = 1.20\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 5 000\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Gnomission\n| implemented    = 8.6\n| notes          = É uma runa de [[Explosion]] em forma de enfeite. Para mais informações, visite a página sobre [[Rune Emblems|runas de decoração]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8099,
+    "ns": 0,
+    "title": "Silver Rune Emblem (Fire Bomb)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Silver Rune Emblem (Fire Bomb)\n| flavortext     = It's an adorned fire bomb rune.\n| itemclass      = Itens de Decoração\n| primarytype    = Runas de Decoração\n| secondarytype  = \n| attrib         = Brilha no escuro.\n| weight         = 1.20\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.6\n| notes          = É uma runa de [[Fire Bomb]] em forma de enfeite. Para mais informações, visite a página sobre [[Rune Emblems|runas de decoração]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8100,
+    "ns": 0,
+    "title": "Silver Rune Emblem (Fire Field)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Silver Rune Emblem (Fire Field)\n| flavortext     = It's an adorned fire field rune.\n| itemclass      = Itens de Decoração\n| primarytype    = Runas de Decoração\n| secondarytype  = \n| attrib         = Brilha no escuro.\n| weight         = 1.20\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.6\n| notes          = É uma runa de [[Fire Field]] em forma de enfeite. Para mais informações, visite a página sobre [[Rune Emblems|runas de decoração]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8101,
+    "ns": 0,
+    "title": "Silver Rune Emblem (Fireball)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Silver Rune Emblem (Fireball)\n| flavortext     = It's an adorned fireball rune.\n| itemclass      = Itens de Decoração\n| primarytype    = Runas de Decoração\n| secondarytype  = \n| attrib         = Brilha no escuro.\n| weight         = 1.20\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.6\n| notes          = É uma runa de [[Fireball]] em forma de enfeite. Para mais informações, visite a página sobre [[Rune Emblems|runas de decoração]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8102,
+    "ns": 0,
+    "title": "Silver Rune Emblem (Great Fireball)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Silver Rune Emblem (Great Fireball)\n| flavortext     = It's an adorned great fireball rune.\n| itemclass      = Itens de Decoração\n| primarytype    = Runas de Decoração\n| secondarytype  = \n| attrib         = Brilha no escuro.\n| weight         = 1.20\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.6\n| notes          = É uma runa de [[Great Fireball]] em forma de enfeite. Para mais informações, visite a página sobre [[Rune Emblems|runas de decoração]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8103,
+    "ns": 0,
+    "title": "Silver Rune Emblem (HMM)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Silver Rune Emblem (HMM)\n| flavortext     = It's an adorned heavy magic missile rune.\n| itemclass      = Itens de Decoração\n| primarytype    = Runas de Decoração\n| secondarytype  = \n| attrib         = Brilha no escuro.\n| weight         = 1.20\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 5 000\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Gnomission\n| implemented    = 8.6\n| notes          = É uma runa de [[Heavy Magic Missile|HMM]] em forma de enfeite. Para mais informações, visite a página sobre [[Rune Emblems|runas de decoração]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8104,
+    "ns": 0,
+    "title": "Silver Rune Emblem (Holy Missile)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Silver Rune Emblem (Holy Missile)\n| flavortext     = It's an adorned holy missile rune.\n| itemclass      = Itens de Decoração\n| primarytype    = Runas de Decoração\n| secondarytype  = \n| attrib         = Brilha no escuro.\n| weight         = 1.20\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.6\n| notes          = É uma runa de [[Holy Missile]] em forma de enfeite. Para mais informações, visite a página sobre [[Rune Emblems|runas de decoração]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8105,
+    "ns": 0,
+    "title": "Silver Rune Emblem (Icicle)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Silver Rune Emblem (Icicle)\n| flavortext     = It's an adorned icicle rune.\n| itemclass      = Itens de Decoração\n| primarytype    = Runas de Decoração\n| secondarytype  = \n| attrib         = Brilha no escuro.\n| weight         = 1.20\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.6\n| notes          = É uma runa de [[Icicle (Rune)|Icicle]] em forma de enfeite. Para mais informações, visite a página sobre [[Rune Emblems|runas de decoração]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8106,
+    "ns": 0,
+    "title": "Silver Rune Emblem (LMM)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Silver Rune Emblem (LMM)\n| flavortext     = It's an adorned light magic missile rune.\n| itemclass      = Itens de Decoração\n| primarytype    = Runas de Decoração\n| secondarytype  = \n| attrib         = Brilha no escuro.\n| weight         = 1.20\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.6\n| notes          = É uma runa de [[Light Magic Missile|LMM]] em forma de enfeite. Para mais informações, visite a página sobre [[Rune Emblems|runas de decoração]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8107,
+    "ns": 0,
+    "title": "Silver Rune Emblem (Magic Wall)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Silver Rune Emblem (Magic Wall)\n| flavortext     = It's an adorned magic wall rune.\n| itemclass      = Itens de Decoração\n| primarytype    = Runas de Decoração\n| secondarytype  = \n| attrib         = Brilha no escuro.\n| weight         = 1.20\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.6\n| notes          = É uma runa de [[Magic Wall]] em forma de enfeite. Para mais informações, visite a página sobre [[Rune Emblems|runas de decoração]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8108,
+    "ns": 0,
+    "title": "Silver Rune Emblem (Paralyze)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Silver Rune Emblem (Paralyze)\n| flavortext     = It's an adorned paralyze rune.\n| itemclass      = Itens de Decoração\n| primarytype    = Runas de Decoração\n| secondarytype  = \n| attrib         = Brilha no escuro.\n| weight         = 1.20\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.6\n| notes          = É uma runa de [[Paralyze]] em forma de enfeite. Para mais informações, visite a página sobre [[Rune Emblems|runas de decoração]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8109,
+    "ns": 0,
+    "title": "Silver Rune Emblem (Poison Bomb)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Silver Rune Emblem (Poison Bomb)\n| flavortext     = It's an adorned poison bomb rune.\n| itemclass      = Itens de Decoração\n| primarytype    = Runas de Decoração\n| secondarytype  = \n| attrib         = Brilha no escuro.\n| weight         = 1.20\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.6\n| notes          = É uma runa de [[Poison Bomb]] em forma de enfeite. Para mais informações, visite a página sobre [[Rune Emblems|runas de decoração]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8110,
+    "ns": 0,
+    "title": "Silver Rune Emblem (Soulfire)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Silver Rune Emblem (Soulfire)\n| flavortext     = It's an adorned soulfire rune.\n| itemclass      = Itens de Decoração\n| primarytype    = Runas de Decoração\n| secondarytype  = \n| attrib         = Brilha no escuro.\n| weight         = 1.20\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.6\n| notes          = É uma runa de [[Soulfire]] em forma de enfeite. Para mais informações, visite a página sobre [[Rune Emblems|runas de decoração]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8111,
+    "ns": 0,
+    "title": "Silver Rune Emblem (Sudden Death)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Silver Rune Emblem (Sudden Death)\n| flavortext     = It's an adorned sudden death rune.\n| itemclass      = Itens de Decoração\n| primarytype    = Runas de Decoração\n| secondarytype  = \n| attrib         = Brilha no escuro.\n| weight         = 1.20\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 5 000\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Gnomission\n| implemented    = 8.6\n| notes          = É uma runa de [[Sudden Death]] em forma de enfeite. Para mais informações, visite a página sobre [[Rune Emblems|runas de decoração]].\n<noinclude><p><spoiler>\n* Recompensa das quests:\n** [[Demona Quest]].\n** [[The Pits of Inferno Quest]].\n* 01 pode ser obtido como recompensa da [[The Ultimate Challenges Quest|Barbarian Arena - Warlord Mode]].\n* 01 podia ser obtido clicando no [[Anniversary Remains]] de [[Craban (Criatura)|Craban]] durante as festividades de 15 anos do Tibia.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8112,
+    "ns": 0,
+    "title": "Silver Rune Emblem (Thunderstorm)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Silver Rune Emblem (Thunderstorm)\n| flavortext     = It's an adorned thunderstorm rune.\n| itemclass      = Itens de Decoração\n| primarytype    = Runas de Decoração\n| secondarytype  = \n| attrib         = Brilha no escuro.\n| weight         = 1.20\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.6\n| notes          = É uma runa de [[Thunderstorm]] em forma de enfeite. Para mais informações, visite a página sobre [[Rune Emblems|runas de decoração]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8113,
+    "ns": 0,
+    "title": "Silver Rune Emblem (UH)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Silver Rune Emblem (UH)\n| flavortext     = It's an adorned ultimate healing rune.\n| itemclass      = Itens de Decoração\n| primarytype    = Runas de Decoração\n| secondarytype  = \n| attrib         = Brilha no escuro.\n| weight         = 1.20\n| stackable       = não\n| value          = Negociável\n| npcvalue       = 5 000\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Gnomission\n| implemented    = 8.6\n| notes          = É uma runa de [[Ultimate Healing Rune|UH]] em forma de enfeite. Para mais informações, visite a página sobre [[Rune Emblems|runas de decoração]].\n<noinclude><p><spoiler>\n* Recompensa da [[The Hero Cave Quest]].\n* Recompensa da [[The Pits of Inferno Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8114,
+    "ns": 0,
+    "title": "Silver Rune Emblem (Wild Growth)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Silver Rune Emblem (Wild Growth)\n| flavortext     = It's an adorned wild growth rune.\n| itemclass      = Itens de Decoração\n| primarytype    = Runas de Decoração\n| secondarytype  = \n| attrib         = Brilha no escuro.\n| weight         = 1.20\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.6\n| notes          = É uma runa de [[Wild Growth]] em forma de enfeite. Para mais informações, visite a página sobre [[Rune Emblems|runas de decoração]].\n}}"
+       }
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

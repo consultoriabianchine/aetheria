@@ -1,0 +1,1958 @@
+{
+ "query": {
+  "pages": [
+   {
+    "pageid": 6092,
+    "ns": 0,
+    "title": "Banana Staff",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Banana Staff\n| levelrequired  = 0\n| enchantable    = não\n| itemclass      = Armas\n| primarytype    = Clavas\n| secondarytype  = Itens de Addons\n| hands          = Uma\n| type           = Clava\n| attack         = 25\n| defense        = 15\n| defensemod     = +2\n| weight         = 50.00\n| classificacao  = 2\n| max_tier       = 2\n| value          = \n| npcvalue       = 1 000\n| stackable      = não\n| droppedby      = [[Merlkin]].\n| buyfrom        = Jogadores.\n| sellto         = Brengus\n| implemented    = 7.5\n| perk1          = {{Weapon Perk|Type_Shield_Mod||+1 defence modifier}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Fist||+8.00% do seu Fist Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Fist||+8.00% do seu Fist Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Attack||+2 attack}}<br/>{{Weapon Perk|Type_Perc_Spell_Dmg_Fist||+8.00% do seu Fist Fighting como extra damage para suas spells}}\n| notes          = Faz parte do [[Unrestricted Set]].\n<noinclude><p><spoiler>* 05 são necessário para o [[Shaman Outfits|Shaman Outfit]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6442,
+    "ns": 0,
+    "title": "Ferumbras' Hat",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ferumbras' Hat\n| flavortext     = It is the proof that Ferumbras has fallen. For now. The Edron Academy should be interested in this.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Addons\n| secondarytype  = Capacetes\n| tertiarytype   = Produtos de Criaturas\n| armor          = 1\n| weight         = 8.50\n| classificacao  = 4\n| max_tier       = 10\n| stackable      = não\n| value          = 1 750 000 000 - 1 820 000 000\n| npcvalue       = 0\n| droppedby      = [[Ferumbras Mortal Shell]].\n| droppedRaidby  = [[Ferumbras]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.8\n| notes          = Item raro, um dos mais difíceis de se obter, e muito cobiçado pelos jogadores.\n<noinclude><p><spoiler>* 01 é necessário para o addon do [[Mage Outfits]] (male) / [[Summoner Outfits]] (female).\n*Possibilidade de ser obtido na [[Ferumbras' Ascendant Quest]]. </spoiler></p></noinclude>\n<gallery>\narquivo:Ferumbrashat.png|Ferumbras'Hat em [[Luminera]].\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6890,
+    "ns": 0,
+    "title": "Bat Wing",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bat Wing\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Addons\n| secondarytype  = Produtos de Criaturas\n| attrib         =\n| stackable      = sim\n| weight         = 1.00\n| value          = \n| npcvalue       = 50\n| npcprice       = 0\n| droppedby      = [[Bat]], [[Bruise Payne]], [[Exotic Bat]], [[Gloom Maw]], [[Mutated Bat]].\n| droppedEventby = [[Grynch Clan Goblin]].\n| droppedRaidby  = [[Vicious Manbat]].\n| buyfrom        = Jogadores.\n| sellto         = Inigo, Fiona, Yasir\n| implemented    = 7.8\n| notes          = \n<noinclude><p><spoiler>\n* Necessário para o evento [[Bewitched]].\n* 02 são necessários para a [[The Scatterbrained Sorcerer Quest]].\n* 05 são necessários para a [[The Ice Islands Quest]].\n* 10 são necessários para o [[Beggar Outfits|Beggar Outfit]].\n* 70 são necessários para um addon do [[Mage Outfits|Mage Outfit]] e do [[Summoner Outfits|Summoner Outfit]].\n* Possibilidade de ser obtido ao usar uma [[Belongings of a Deceased (Ottokar)]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6909,
+    "ns": 0,
+    "title": "Bear Paw",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bear Paw\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Addons\n| secondarytype  = Produtos de Criaturas\n| attrib         = \n| weight         = 1.20\n| stackable      = sim\n| value          = \n| npcvalue       = 100\n| npcprice       = 0\n| droppedby      = [[Bear]], [[Shadowpelt]], [[Werebear]].\n| buyfrom        = Jogadores.\n| sellto         = Inigo, Ustan, Tom:10, Yasir\n| implemented    = 7.8\n| notes          = \n<noinclude><p><spoiler>\n* 04 são necessárias para a [[The Ice Islands Quest]].\n* 50 são necessárias para o primeiro addon do [[Druid Outfits|Druid Outfit]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6911,
+    "ns": 0,
+    "title": "Behemoth Claw",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Behemoth Claw\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Addons\n| secondarytype  = Produtos de Criaturas\n| attrib         = \n| weight         = 12.50\n| stackable      = sim\n| value          = \n| npcvalue       = 2 000\n| droppedby      = [[Behemoth]], [[Stonecracker]].\n| buyfrom        = Jogadores.\n| sellto         = Fiona, Yasir\n| implemented    = 7.8\n| notes          = \n<noinclude><p><spoiler>\n* 01 é necessária para o addon 02 do [[Assassin Outfits]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6919,
+    "ns": 0,
+    "title": "Bonelord Eye",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bonelord Eye\n| flavortext     = You could swear it just winked at you.\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Addons\n| secondarytype  = Produtos de Criaturas\n| weight         = 5.00\n| value          = \n| npcvalue       = 80\n| npcprice       = 0\n| attrib         =\n| stackable      = sim\n| droppedby      = [[Bonelord]], [[Bone Overlord]], [[Braindeath]], [[Elder Bonelord]].\n| droppedRaidby  = [[The Evil Eye]].\n| buyfrom        = Jogadores.\n| sellto         = Fiona, Yasir\n| implemented    = 7.8\n| notes          = \n<noinclude><p><spoiler>\n* 03 são necessários para a [[The Ice Islands Quest]].\n* 30 são necessários para o [[Assassin Outfits|Assassin Outfit]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6940,
+    "ns": 0,
+    "title": "Chicken Feather",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Chicken Feather\n| flavortext     = Some thousands of these would probably make an extremely comfortable pillow.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Addons\n| secondarytype  = Produtos de Criaturas\n| attrib         =\n| stackable      = sim\n| weight         = 0.10\n| value          = \n| npcvalue       = 30\n| npcprice       = 0\n| droppedby      = [[Chicken]], [[Agrestic Chicken]].\n| droppedEventby = [[Grynch Clan Goblin]].\n| buyfrom        = Jogadores.\n| sellto         = Fiona, Yasir\n| implemented    = 7.8\n| notes          = Desde o [[Updates/8.4|Update de Natal 2008]], o preço aumentou porque muitas galinhas foram removidas de Rookgaard.\n<noinclude><p><spoiler>\n* 100 são necessários para o [[Citizen Outfits|Citizen Outfit]].\n* Possibilidade de ser obtido ao usar uma [[Belongings of a Deceased (Ottokar)]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6956,
+    "ns": 0,
+    "title": "Demon Dust",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Demon Dust\n| flavortext     = It reeks of hatred and malice.\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Addons\n| secondarytype  = Produtos de Criaturas\n| attrib         = \n| weight         = 1.00\n| stackable      = sim\n| value          = \n| npcvalue       = 300\n| droppedby      = [[Demon Outcast]], [[The Source Of Corruption]].\n| buyfrom        = Jogadores.\n| sellto         = Fiona, Yasir\n| implemented    = 7.8\n| notes          = Pode ser obtida se você usar um [[Blessed Wooden Stake]] em um corpo de [[Demon]]. \n<noinclude><p><spoiler>\n* 10 são necessários para o [[Assassin Outfits|Assassin Outfit]].\n* 100 são necessários para o addon do [[Druid Outfits|Druid Outfit]].\n* 50 são utilizados na [[Doomforging]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6967,
+    "ns": 0,
+    "title": "Dragon Claw",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Dragon Claw\n| flavortext     = It is the claw of Demodras.\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Addons\n| secondarytype  = Produtos de Criaturas\n| attrib         = \n| weight         = 12.50\n| stackable      = sim\n| value          = 100 000 - 500 000\n| npcvalue       = 8 000\n| droppedby      = [[Demodras]].\n| buyfrom        = Jogadores.\n| sellto         = Yasir\n| implemented    = 7.8\n| notes          = Há somente duas maneiras para conseguir este item. A primeira maneira é matando um [[Demodras]] e a outra é obtendo como presente de natal do NPC [[Santa Claus]].\n<noinclude><p><spoiler>*Necessário para um addon do [[Warrior Outfits]].\n*Possibilidade de ser obtido como presente do NPC [[Santa Claus]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7001,
+    "ns": 0,
+    "title": "Fish Fin",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Fish Fin\n| flavortext     = It once belonged to a mighty creature of the deep. \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Addons\n| secondarytype  = Produtos de Criaturas\n| attrib         =\n| weight         = 1.20\n| stackable      = sim\n| value          = 150 - 3 000\n| npcvalue       = 150\n| droppedby      = [[Deathling Scout]], [[Deathling Spellsinger]], [[Deepling Brawler]], [[Deepling Elite]], [[Deepling Master Librarian]],  [[Deepling Scout]], [[Deepling Spellsinger]], [[Deepling Warrior]], [[Deepling Worker]], [[Frazzlemaw]], [[Guzzlemaw]], [[Quara Constrictor]], [[Quara Constrictor Scout]], [[Quara Hydromancer]], [[Quara Hydromancer Scout]], [[Quara Mantassin]], [[Quara Mantassin Scout]], [[Quara Pincher]], [[Quara Pincher Scout]], [[Quara Predator]], [[Quara Predator Scout]], [[Renegade Quara Constrictor]], [[Renegade Quara Hydromancer]], [[Renegade Quara Mantassin]], [[Renegade Quara Predator]], [[Shark]], [[Thul]], [[Weakened Frazzlemaw]].\n| droppedRaidby  = [[Groam]], [[Mawhawk]].\n| buyfrom        = Jogadores.\n| sellto         = Fiona, Yasir\n| implemented    = 7.8\n| notes          = É muito similar à nadadeira de um [[Quara Predator]], mas esse é virado para a direita.\n<noinclude><p><spoiler>*100 são necessários para o [[Oriental Outfits]].\n*20 são necessários para o [[Assassin Outfits]].\n*02 são necessários para a [[The Ice Islands Quest]].\n*Possibilidade de ser obtido ao usar uma [[Belongings of a Deceased (Ottokar)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7466,
+    "ns": 0,
+    "title": "Ape Fur",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ape Fur\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Addons\n| secondarytype  = Produtos de Criaturas\n| weight         = 1.20\n| attrib         = \n| stackable      = sim\n| value          = \n| npcvalue       = 120\n| droppedby      = [[Cursed Ape]], [[Kongra]], [[Merlkin]], [[Sibang]].\n| buyfrom        = Jogadores.\n| sellto         = Irmana, Yasir\n| implemented    = 7.8\n| notes          = Podem ser encontrados em primatas mortos, mas não é possível usar [[Obsidian Knife]] nos corpos de primatas.\n<noinclude><p><spoiler>\n* 40 deles são necessários para um addon do [[Mage Outfits|Mage Outfit]] e do [[Summoner Outfits|Summoner Outfit]].\n* 100 deles são necessários para um addon do [[Beggar Outfits|Beggar Outfit]].\n* 100 deles são necessários para um addon do [[Oriental Outfits|Oriental Outfit]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8756,
+    "ns": 0,
+    "title": "Blue Piece of Cloth",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Blue Piece of Cloth\n| itemclass      = Outros Itens\n| primarytype    = Itens de Addons\n| secondarytype  = Produtos de Criaturas\n| weight         = 5.00\n| stackable      = sim\n| value          = \n| npcvalue       = 200\n| droppedby      = [[Blue Djinn]], [[Broken Shaper]], [[Fahim the Wise]], [[Hideous Fungus]], [[Humongous Fungus]], [[Marid]], [[Minotaur Hunter]], [[Minotaur Invader]], [[Wiggler]], [[Worm Priestess]] , [[Zugurosh]].\n| droppedRaidby  = [[Hirintror]], [[The Pale Count]], [[Yakchal]], [[Zushuka (Mortal)]].\n| droppedEventby = [[Undead Jester]].\n| buyfrom        = Jogadores.\n| sellto         = Irmana, Yasir\n| implemented    = 7.8\n| notes          = \n<noinclude><p><spoiler>\n* 01 é necessário para o [[Jester Outfits|Jester Outfit]].\n* 50 são necessários para o [[Assassin Outfits|Assassin Outfit]].\n* 100 são necessários para o [[Oriental Outfits|Oriental Outfit]].\n* Pode ser obtido através da [[Exchange Quests]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8757,
+    "ns": 0,
+    "title": "Brown Piece of Cloth",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Brown Piece of Cloth\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Itens de Addons\n| secondarytype  = Produtos de Criaturas\n| weight         = 5.00\n| stackable      = sim\n| value          = \n| npcvalue       = 100\n| droppedby      = [[Barbarian Headsplitter]], [[Barbarian Skullhunter]], [[Broken Shaper]], [[Choking Fear]], [[Ghoul]], [[Humongous Fungus]], [[Undead Prospector]], [[Zugurosh]].\n| droppedRaidby  = [[Man In The Cave]].\n| droppedEventby = [[Undead Jester]].\n| buyfrom        = Jogadores.\n| sellto         = Irmana, Yasir\n| implemented    = 7.8\n| notes          = \n<noinclude><p><spoiler>\n* 20 são necessários para o [[Beggar Outfits|Beggar Outfit]].\n* 50 são necessários para o [[Assassin Outfits|Assassin Outfit]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8759,
+    "ns": 0,
+    "title": "Eye Patch",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Eye Patch\n| flavortext     = It once belonged to a pirate\n| itemclass      = Outros Itens\n| primarytype    = Itens de Addons\n| secondarytype  = Produtos de Criaturas\n| weight         = 1.50\n| stackable      = sim\n| attrib         = \n| value          = 450 - 1 000\n| npcvalue       = 0\n| droppedby      = [[Pirate Buccaneer]], [[Pirate Cook]], [[Pirate Corsair]], [[Pirate Cutthroat]], [[Pirate Gunner]], [[Pirate Marauder]], [[Pirate Navigator]], [[Pirate Quartermaster]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.8\n| notes          = <noinclude><p><spoiler>100 são necessários para o primeiro addon do [[Pirate Outfits]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8771,
+    "ns": 0,
+    "title": "Enchanted Chicken Wing",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Enchanted Chicken Wing\n| flavortext     = It is said to make your feet fly.\n| itemclass      = Outros Itens\n| primarytype    = Itens Encantados\n| secondarytype  = Itens de Addons\n| tertiarytype   = Produtos de Criaturas\n| weight         = 10.00\n| stackable      = sim\n| attrib         = Nenhum.\n| value          = 20 000 - 35 000\n| npcprice       = 1 [[Boots of Haste]]\n| npcvalue       = 20 000\n| droppedby      = [[Ancient Spawn of Morgathla]], [[Lloyd]], [[The Source Of Corruption]], [[Ushuriel]].\n| buyfrom        = Haroun, Yaman\n| sellto         = Fiona, Yasir\n| implemented    = 7.8\n| notes          = <noinclude><p><spoiler>*02 são necessários para o [[Oriental Outfits Quest]].\n*05 são necessários para os [[Hunter Outfits Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8775,
+    "ns": 0,
+    "title": "Flask of Warrior's Sweat",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Flask of Warrior's Sweat\n| flavortext     = It contains the sweat spilled in many battles and is said to be used for certain perfumes too.\n| itemclass      = Outros Itens\n| primarytype    = Itens Encantados\n| secondarytype  = Itens de Addons\n| tertiarytype   = Produtos de Criaturas\n| weight         = 3.00\n| attrib         = \n| stackable      = sim\n| value          = \n| npcprice       = 4 [[Warrior Helmet]]s\n| npcvalue       = 10 000\n| droppedby      = [[Undead Elite Gladiator]], [[Undead Gladiator]], [[Ushuriel]].\n| buyfrom        = Haroun, Yaman\n| sellto         = Fiona, Yasir\n| implemented    = 7.8\n| notes          = Parece com um [[Brown Flask]] ou [[Flask of Cough Syrup]]. Mesmo sendo um líquido, ele não pode ser bebido ou jogado no chão.\n<noinclude><p><spoiler>*Necessário para a [[Assassin Outfits Quest]], [[Barbarian Outfits Quest]] e [[Knight Outfits Quest]].\n*Possibilidade de ser obtido ao usar uma [[Belongings of a Deceased (Ottokar)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8845,
+    "ns": 0,
+    "title": "Ankh",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ankh\n| flavortext     =\n| itemclass      = Decorações\n| primarytype    = Itens de Addons\n| secondarytype  = \n| attrib         = \n| weight         = 4.20\n| stackable      = sim\n| value          = \n| npcvalue       = 100\n| droppedby      = [[Dark Monk]], [[Dipthrah]], [[Monk]], [[Roaring Lion]], [[Werelioness]].\n| droppedRaidby  = [[Fernfang]].\n| buyfrom        = Jogadores.\n| sellto         = Yaman\n| implemented    = 7.4\n| notes          = Decoração. Sua aparência é igual a de um [[Blessed Ankh]].\n<noinclude><p><spoiler>\n* 20 são necessários para o [[Mage Outfits Quest]] (Masculino) e para o [[Summoner Outfits Quest]] (Feminino). \n* Ela pode ser obtida na [[The Desert Dungeon Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8851,
+    "ns": 0,
+    "title": "Demonic Essence",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Demonic Essence\n| flavortext     = Someone might be interested in trading this.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Addons\n| secondarytype  = Produtos de Criaturas\n| weight         = 1.00\n| stackable      = sim\n| value          = \n| npcvalue       = 1 000\n| npcprice       = 0\n| droppedby      = [[Angry Demon]], [[Betrayed Wraith]], [[Blightwalker]], [[Bretzecutioner]], [[Burning Book]], [[Dark Torturer]], [[Dawnfire Asura]], [[Defiler]], [[Demon]], [[Destroyer]], [[Diabolic Imp]], [[Ethershreck]], [[Flameborn]], [[Floating Savant]], [[Fury]], [[Ghastly Dragon]], [[Golgordan]], [[Grim Reaper]], [[Grimeleech]], [[Hand of Cursed Fate]], [[Hatebreeder]], [[Hellfire Fighter]], [[Hellflayer]], [[Hellgorak]], [[Hellhound]], [[Hellspawn]], [[Horadron]], [[Juggernaut]], [[Kerberos]], [[Kusuma]], [[Latrivan]], [[Lokathmor]], [[Lost Soul]], [[Madareth]], [[Mazoran]], [[Midnight Asura]], [[Nightmare]], [[Phantasm]], [[Plagirath]], [[Plaguesmith]], [[Preceptor Lazare]], [[Prince Drazzak]], [[Rage Squid]], [[Ragiaz]], [[Razzagorn]], [[Shulgrax]], [[Spectre]], [[Tarbaz]], [[Terofar]], [[The Abomination]], [[The Enraged Thorn Knight]], [[The Flaming Orchid]], [[The Plasmother]], [[Tormentor]], [[True Dawnfire Asura]], [[True Midnight Asura]], [[Undead Dragon]], [[Ushuriel]], [[Vexclaw]], [[Zamulosh]], [[Zanakeph]], [[Zavarash]], [[Zugurosh]].\n| droppedRaidby  = [[Countess Sorrow]], [[Dracola]], [[Furyosa]], [[Gaz'Haragoth]], [[Ghazbaran]], [[Massacre]], [[Morgaroth]], [[Mr. Punish]], [[Omrafir]], [[Orshabaal]], [[The Handmaiden]], [[The Imperor]].\n| droppedEventby = [[Bones]], [[Fluffy]], [[Haunted Dragon]], [[Zorvorax]].\n| buyfrom        = Jogadores.\n| sellto         = Augustin, The Bone Master, The Dream Master\n| implemented    = 7.9\n| notes          = \n<noinclude><p><spoiler>\n* 20 são necessárias para a [[The Inquisition Quest]].\n* 30 são necessárias para a [[Ferumbras' Ascendant Quest]].\n* 3000 são necessárias para completar a [[Dreamer's Challenge Quest]].\n* 03 podem ser obtidas na [[Shards of Ancient Winters Quest]].\n* 50 podem ser obtidas no evento [[Lightbearer]].\n* 350 ou 750 são necessárias para a [[Doomforging]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9160,
+    "ns": 0,
+    "title": "Brutus Bloodbeard's Hat",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Brutus Bloodbeard's Hat\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Itens de Addons\n| secondarytype  = Produtos de Criaturas\n| attrib         = \n| weight         = 12.50\n| value          = \n| npcvalue       = 0\n| stackable      = sim\n| droppedby      = [[Brutus Bloodbeard]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.8\n| notes          = Parece com um [[Pirate Hat]]. Note que este item '''NÃO''' pode ser usado.\n<noinclude><p><spoiler>\n* Faz parte da [[Pirate Outfits Quest]].\n* É um dos itens dropados por bosses em invasões em Liberty Bay.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9181,
+    "ns": 0,
+    "title": "Coral Comb",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Coral Comb\n| flavortext     = It once belonged to a mermaid.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Addons\n| secondarytype  = Itens não Dropáveis\n| attrib         = Nenhum.\n| weight         = 4.50\n| stackable      = não\n| value          = 20 000 - 80 000\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.8\n| notes          = De acordo com [[Ishina]] esse pente é o auge do cuidado de cabelos Tibianos.<noinclude><p><spoiler>Pode ser obtido e usado na [[Oriental Outfits Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9206,
+    "ns": 0,
+    "title": "Deadeye Devious' Eye Patch",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Deadeye Devious' Eye Patch\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Itens de Addons\n| secondarytype  = Produtos de Criaturas\n| attrib         = \n| weight         = 1.50\n| stackable      = sim\n| value          = \n| npcvalue       = 0\n| droppedby      = [[Deadeye Devious]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.8\n| notes          =\n<noinclude><p><spoiler>\n* Faz parte da [[Pirate Outfits Quest]].\n* É um dos itens dropados por bosses em invasões em Liberty Bay.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9211,
+    "ns": 0,
+    "title": "Document of the Follower",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Document of the Follower\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Itens de Addons\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = 2.00\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.1\n| notes          = Tem a mesma aparência de um [[Document of the Leader]] e [[Document of the Officer]].<br />\n<noinclude><p><spoiler>\n* Após a conclusão da missão 05 da [[Dreamer's Challenge Quest]] e conversar o líder da facção escolhida, este documento pode ser \"usado\" para obter o [[Brotherhood of Bones Outfits|Brotherhood of Bones Outfit]] ou [[Nightmare Outfits|Nightmare Knights Outfit]], dependendo de qual facção o jogador escolheu.\n* Pelo preço de 01 [[Small Diamond]], Lord Protectors e Dread Lords podem fazer este documento nas salas oficiais dentro do [[Dream Realm]].</spoiler></p></noinclude>\n}}\n<noinclude>[[Categoria:Itens não Dropáveis]]</noinclude>"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9212,
+    "ns": 0,
+    "title": "Document of the Leader",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Document of the Leader\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Itens de Addons\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = 2.00\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.1\n| notes          = Tem a mesma aparência de um [[Document of the Follower]] e [[Document of the Officer]].<br />\n<noinclude><p><spoiler>\n* Após a conclusão da missão 07 (Entregar 1000 [[Demonic Essence]]s) da [[Dreamer's Challenge Quest]] este documento pode ser \"usado\" para obter o Addon 02 do [[Brotherhood of Bones Outfits|Brotherhood of Bones Outfit]] ou Addon 01 do [[Nightmare Outfits|Nightmare Knights Outfit]], dependendo de qual facção o jogador escolheu. \n* Pelo preço de 01 [[Small Diamond]], Lord Protectors e Dread Lords podem fazer este documento nas salas oficiais dentro do [[Dream Realm]].\n</spoiler></p></noinclude>\n}}\n<noinclude>[[Categoria:Itens não Dropáveis]]</noinclude>"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9213,
+    "ns": 0,
+    "title": "Document of the Officer",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Document of the Officer\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Itens de Addons\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = 2.00\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.1\n| notes          = Tem a mesma aparência de um [[Document of the Follower]] e [[Document of the Leader]].<br />\n<noinclude><p><spoiler>\n* Após a conclusão da missão 06 (Entregar 500 [[Demonic Essence]]s) da [[Dreamer's Challenge Quest]] este documento pode ser \"usado\" para obter o Addon 01 do [[Brotherhood of Bones Outfits|Brotherhood of Bones Outfit]] ou Addon 02 do [[Nightmare Outfits|Nightmare Knights Outfit]], dependendo de qual facção o jogador escolheu. \n* Pelo preço de 01 [[Small Diamond]], Lord Protectors e Dread Lords podem fazer este documento nas salas oficiais dentro do [[Dream Realm]].\n</spoiler></p></noinclude>\n}}\n<noinclude>[[Categoria:Itens não Dropáveis]]</noinclude>"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9228,
+    "ns": 0,
+    "title": "Elane's Crossbow",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Elane's Crossbow\n| flavortext     = 'For Elane, with Love' is engraved on it.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Itens de Addons\n| weight         = 40.00\n| attrib         = Nenhum.\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.8\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[Hunter Outfits Quest]].</spoiler></p></noinclude>\n}}\n<noinclude>[[Categoria:Itens não Dropáveis]]</noinclude>"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 17100,
+    "ns": 0,
+    "title": "Dubious Piece of Cloth",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name         = Dubious Piece of Cloth\n| flavortext   = It seems to be a part of an outfit. Find all six parts to complete the outfit.\n| itemclass    = Outros Itens\n| primarytype  = Itens de Addons\n| attrib       = \n| stackable    = sim\n| weight       = 5.00\n| value        = \n| npcvalue     = 0\n| droppedby    = [[Feverish Citizen]].\n| buyfrom      = Jogadores.\n| sellto       = Jogadores.\n| implemented  = 9.1\n| notes        = <noinclude><p><spoiler>* 01 é necessária para a [[Afflicted Outfits Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 17310,
+    "ns": 0,
+    "title": "Elemental Spikes",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Elemental Spikes\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Addons\n| attrib         = Nenhum.\n| weight         = 12.00\n| stackable      = não\n| value          = 30 000 000 - 80 000 000\n| droppedby      = [[Raging Mage]].\n| sellto         = Jogadores.\n| implemented    = 9.1\n| buyfrom        = Jogadores.\n| notes          = \n<noinclude><p><spoiler>* 01 é necessário para a [[Elementalist Outfits Quest]].</spoiler></p></noinclude>\n<gallery>\narquivo:Elemental_spike_Lord_Fonseca.png| Um \"Elemental Spikes\" na casa do jogador {{character|Lord Fonseca}}\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25501,
+    "ns": 0,
+    "title": "Gnomish Voucher Type CA1",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Gnomish Voucher Type CA1\n| flavortext    = It is a voucher for the first addon of the crystal warlord outfit.\n| itemclass     = Outros Itens\n| primarytype   = Itens de Addons\n| secondarytype = Itens não Dropáveis\n| attrib        = Nenhum.\n| weight        = 0.80\n| value         = \n| stackable     = não\n| npcvalue      = 0\n| npcprice      = 70 [[Minor Crystalline Token]]s\n| droppedby     = Ninguém.\n| buyfrom       = Gnomally\n| sellto        = Jogadores.\n| implemented   = 9.6\n| notes         = <noinclude><p><spoiler>* 01 é necessário para o Addon 01 do [[Crystal Warlord Outfits]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25505,
+    "ns": 0,
+    "title": "Gnomish Voucher Type CB",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Gnomish Voucher Type CB\n| flavortext     = It is a voucher for a basic crystal warlord outfit.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Addons\n| secondarytype  = Itens não Dropáveis\n| attrib         = Nenhum.\n| weight         = 0.80\n| value          = \n| stackable      = não\n| npcvalue       = 0\n| npcprice       = 20 [[Major Crystalline Token]]s\n| droppedby      = Ninguém.\n| buyfrom        = Gnomally\n| sellto         = Jogadores.\n| implemented    = 9.6\n| notes          = <noinclude><p><spoiler>* Ao usar esse item, você ganhará o [[Crystal Warlord Outfits]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25740,
+    "ns": 0,
+    "title": "Gnomish Voucher Type CA2",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Gnomish Voucher Type CA2\n| flavortext     = It is a voucher for the second addon of the crystal warlord outfit.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Addons\n| secondarytype  = Itens não Dropáveis\n| attrib         = Nenhum.\n| weight         = 0.80\n| value          = \n| stackable      = não\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.6\n| notes          = \n<noinclude><p><spoiler>\n* 01 é necessário para o Addon 02 do [[Crystal Warlord Outfits]].\n* Possibilidade de ser obtido ao usar um [[Gnomish Supply Package]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 31771,
+    "ns": 0,
+    "title": "Dream Warden Claw",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Dream Warden Claw\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Addons\n| secondarytype  = \n| weight         = 31.00\n| stackable      = não\n| value          = 200 000 - 1 000 000\n| npcvalue       = 0\n| droppedRaidby  = [[Gaz'Haragoth]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.30\n| notes          = <noinclude><p><spoiler>* 01 é necessário para o addon do [[Dream Warden Outfits]].\n*Possibilidade de ser obtido ao usar um [[Unrealized Dream]] próximo ao [[The Dreamcatcher Device]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 31772,
+    "ns": 0,
+    "title": "Dream Warden Mask",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Dream Warden Mask\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Addons\n| secondarytype  =  \n| weight         = 34.00\n| stackable      = sim\n| value          = 200 000 - 1 000 000\n| npcvalue       = 0\n| droppedby      = [[Horadron]], [[Prince Drazzak]], [[Terofar]], [[Zavarash]].\n| droppedRaidby  = [[Gaz'Haragoth]], [[Omrafir]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.30\n| notes          = <noinclude><p><spoiler>Você pode trocar esse item com [[Eruaran]] pelo primeiro addon do [[Dream Warden Outfits]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 40103,
+    "ns": 0,
+    "title": "Colourful Feathers",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Essa página é sobre o item de addon. Para o produto de criatura, veja [[Colourful Feather]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Colourful Feathers\n| itemclass      = Outros Itens\n| primarytype    = Itens de Addons\n| weight         = 4.50\n| stackable      = sim\n| npcvalue       = 400\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Yasir\n| implemented    = 11.02\n| notes          = \n<noinclude><p><spoiler>\n* 03 podem ser obtidos na [[The First Dragon Quest]].\n* 50 são necessários para o Addon 2 do [[Festive Outfits|Festive Outfit]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 44580,
+    "ns": 0,
+    "title": "Epaulette",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Epaulette\n| flavortext     = It looks like you could combine it with a robe.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Addons\n| attrib         = Nenhum.\n| weight         = 35.00\n| stackable      = sim\n| value          = \n| droppedby      = [[Ghulosh]], [[Mazzinor]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.80\n| notes          = <noinclude><p><spoiler>* 20 são necessários para o addon 02 do [[Battle Mage Outfits]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 47066,
+    "ns": 0,
+    "title": "Final Judgement",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name        = Final Judgement\n| itemclass   = Valiosos\n| primarytype = Itens de Addons\n| weight      = 3.70\n| stackable   = não\n| value       = Negociável\n| droppedby   = [[Count Vlarkorth]], [[Duke Krule]], [[Earl Osam]], [[Lord Azaram]], [[Sir Baeloc]].\n| buyfrom     = Jogadores.\n| sellto      = Jogadores.\n| implemented = 12.20\n| notes       = <noinclude><p><spoiler>* '''01''' é necessário para o Addon 01 do [[Hand of the Inquisition Outfits]], basta usá-la se tiver o outfit.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 48072,
+    "ns": 0,
+    "title": "Ghost Claw",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ghost Claw\n| flavortext     = It is glowing in an unhealthy light.\n| itemclass      = Valiosos\n| primarytype    = Itens de Addons\n| weight         = 7.30\n| stackable      = \n| value          = \n| npcvalue       = \n| npcprice       = \n| droppedby      = [[Brain Head]], [[The Dread Maiden]], [[The Fear Feaster]], [[The Unwelcome]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.30\n| notes          = <noinclude><p><spoiler>* 01 é necessário para o Addon 02 do [[Poltergeist Outfits|Poltergeist Outfit]].</noinclude><p></spoiler>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 52328,
+    "ns": 0,
+    "title": "Eye-Embroidered Veil",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Eye-Embroidered Veil\n| itemclass      = Valiosos\n| primarytype    = Itens de Addons\n| weight         = 25.00\n| stackable      = não\n| value          = \n| droppedby      = [[Amenef The Burning]], [[Neferi The Spy]], [[Sister Hetai]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.70\n| notes          = <noinclude><p><spoiler>* 01 é necessário para o Addon 01 do [[Citizen of Issavi Outfits]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53553,
+    "ns": 0,
+    "title": "Brass Button",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Brass Button\n| itemclass      = Valiosos\n| primarytype    = Itens de Addons\n| flavortext     = \n| weight         = 12.50\n| stackable      = não\n| attrib         = Nenhum.\n| value          = \n| npcvalue       = \n| npcprice       = \n| droppedby      = [[Retros Treasure]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = <noinclude><p><spoiler>* Faz parte da [[Formal Dress Outfits Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53554,
+    "ns": 0,
+    "title": "Decorative Plume",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Decorative Plume\n| itemclass      = Valiosos\n| primarytype    = Itens de Addons\n| flavortext     = \n| weight         = 7.30\n| stackable      = não\n| attrib         = Nenhum.\n| value          =\n| npcvalue       = \n| npcprice       = \n| droppedby      = [[Retros Treasure]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = <noinclude><p><spoiler>* Faz parte da [[Formal Dress Outfits Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 56015,
+    "ns": 0,
+    "title": "Firefighting Axe",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name        = Firefighting Axe\n| itemclass   = Valiosos\n| primarytype = Itens de Addons\n| weight      = 16.00\n| stackable   = não\n| value       = \n| droppedby   = [[Magma Bubble]].\n| buyfrom     = Jogadores.\n| sellto      = Jogadores.\n| implemented = 12.90\n| notes       = <noinclude><p><spoiler>* 01 é necessário para o Addon 01 do [[Fire-Fighter Outfits|Fire-Fighter Outfit]], basta usá-lo se tiver o outfit.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 58179,
+    "ns": 0,
+    "title": "Broken Iks Cuirass",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Broken Iks Cuirass\n| flavortext     = This cuirass once kept a brave warrior of the ancient Iks from harm.\n| stackable      = sim\n| levelrequired  = 0\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| secondarytype  = Produtos de Criaturas\n| skillboost     = \n| imbuement      = \n| classificacao  = \n| max_tier       = \n| armor          = 1\n| resist         = \n| weight         = 19.00\n| value          = \n| npcvalue       = \n| droppedby      = [[Ahau]], [[Iks Aucar]].\n| buyfrom        = Jogadores.\n| sellto         = Yasir\n| implemented    = 13.10\n| notes          = \n<noinclude><p><spoiler>\n* 01 é necessária para a [[Ancient Aucar Outfits Quest]].\n</spoiler></p></noinclude>\n}}\n<noinclude>[[Categoria:Itens de Addons]]</noinclude>"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 58180,
+    "ns": 0,
+    "title": "Broken Iks Faulds",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Broken Iks Faulds\n| flavortext     = These faulds were once worn by a proud warrior of the ancient Iks.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| secondarytype  = Produtos de Criaturas\n| armor          = 1\n| weight         = 15.00\n| stackable      = sim\n| value          = \n| npcvalue       = 530\n| droppedby      = [[Ahau]], [[Iks Aucar]], [[Iks Pututu]].\n| droppedRaidby  = \n| buyfrom        = Jogadores.\n| sellto         = Yasir\n| mercado        = não\n| implemented    = 13.10\n| notes          = \n<noinclude><p><spoiler>\n* 01 é necessária para a [[Ancient Aucar Outfits Quest]].\n</spoiler></p></noinclude>\n}}\n<noinclude>[[Categoria:Itens de Addons]]</noinclude>"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 58181,
+    "ns": 0,
+    "title": "Broken Iks Headpiece",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Broken Iks Headpiece\n| flavortext     = This headpiece once protected a fierce warrior of the ancient Iks.\n| stackable      = sim\n| levelrequired  = \n| vocrequired    = \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| secondarytype  = Produtos de Criaturas\n| skillboost     = \n| imbuement      = \n| classificacao  = \n| max_tier       = \n| armor          = 1\n| resist         = \n| weight         = 9.00\n| value          = \n| npcvalue       = 560\n| droppedby      = [[Ahau]], [[Iks Chuka]], [[Iks Pututu]].\n| buyfrom        = Jogadores.\n| sellto         = Yasir\n| implemented    = 13.10\n| notes          = \n<noinclude><p><spoiler>\n* 01 é necessária para a [[Ancient Aucar Outfits Quest]].\n</spoiler></p></noinclude>\n}}\n<noinclude>[[Categoria:Itens de Addons]]</noinclude>"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 58182,
+    "ns": 0,
+    "title": "Broken Iks Sandals",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Broken Iks Sandals\n| flavortext     = These sandals once belonged to a warrior of the ancient Iks.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| secondarytype  = Produtos de Criaturas\n| imbuement      = \n| levelrequired  = \n| vocrequired    = \n| skillboost     = \n| armor          = 1\n| resist         = \n| weight         = 3.80\n| stackable      = sim\n| value          =\n| droppedby      = [[Ahau]], [[Iks Ahpututu]], [[Iks Aucar]], [[Iks Pututu]].\n| buyfrom        = Jogadores.\n| sellto         = Yasir\n| implemented    = 13.10\n| notes          = \n<noinclude><p><spoiler>\n* 01 é necessária para a [[Ancient Aucar Outfits Quest]].\n</spoiler></p></noinclude>\n}}\n<noinclude>[[Categoria:Itens de Addons]]</noinclude>"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59905,
+    "ns": 0,
+    "title": "Darklight Geode",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Darklight Geode\n| flavortext     = This geode contains some of the rarerest darklight sediments that can be found.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Addons\n| secondarytype  = Valiosos\n| attrib         = \n| weight         = 4.50\n| stackable      = não\n| value          = \n| npcvalue       = \n| npcprice       = 0\n| mercado        = sim\n| droppedby      = [[Chagorz]], [[Vemiath]]\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 13.20.13560\n| notes          = <noinclude><p><spoiler>* 01 é necessário para o Addon 02 do [[Decaying Defender Outfits]].</noinclude><p></spoiler>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 60579,
+    "ns": 0,
+    "title": "Cursed Wood",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Cursed Wood\n| flavortext     = This wood has an otherworldly strength and sturdiness.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Addons\n| secondarytype  = Valiosos\n| attrib         = \n| weight         = 4.50\n| stackable      = não\n| value          = \n| npcvalue       = \n| npcprice       = 0\n| mercado        = sim\n| droppedby      = [[Ichgahal]], [[Murcion]]\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 13.20.13560\n| notes          = <noinclude><p><spoiler>* 01 é necessário para o Addon 01 do [[Decaying Defender Outfits]].</noinclude><p></spoiler>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 61016,
+    "ns": 0,
+    "title": "Albino Dragon Leather",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Albino Dragon Leather\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Addons\n| secondarytype  = Produtos de Criaturas\n| weight         = 0.60\n| value          = \n| npcvalue       = \n| stackable      = sim\n| attrib         = \n| droppedby      = [[Albino Dragon]].\n| droppedEventby =\n| buyfrom        = Jogadores.\n| sellto         = \n| implemented    = 13.21.14040 (2)\n| notes          = <noinclude><p><spoiler>\n* 15 são necessários para o addon 1 do [[Dragon Slayer Outfits]].\n* 25 são necessários para o addon 2 do [[Dragon Slayer Outfits]]. \n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 61022,
+    "ns": 0,
+    "title": "Bottled Dragon Breath",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bottled Dragon Breath\n| flavortext     = Bring it to the sweaty cyclops Big Ben in Ab'dendriel and talk to him about the \"dragon slayer attire\".\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Addons\n| secondarytype  = Produtos de Criaturas\n| attrib         = \n| weight         = 0.60\n| stackable      = sim\n| value          = \n| npcvalue       = \n| droppedby      = \n| buyfrom        = Jogadores.\n| sellto         = \n| implemented    = 13.21.14040 (2)\n| notes          = \n<noinclude><p><spoiler>*01 é necessário para o basic outfit do [[Dragon Slayer Outfits]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 63501,
+    "ns": 0,
+    "title": "Demon Claws",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Demon Claws\n| flavortext     = \n| itemclass      = Valiosos\n| primarytype    = Itens de Addons\n| secondarytype  = \n| attrib         =\n| stackable      =\n| weight         = 2.40\n| value          = \n| npcvalue       = \n| npcprice       =\n| droppedby      = [[Arbaziloth]]\n| droppedEventby = \n| buyfrom        = Jogadores.\n| sellto         = \n| implemented    = 14.10.4e0c16\n| notes          =\n<noinclude><p><spoiler>\n*01 é necessário para o Addon 01 do [[Fiend Slayer Outfits]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 63513,
+    "ns": 0,
+    "title": "Demon Skull Addon",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Demon Skull (Addon)\n| flavortext     = \n| itemclass      = Valiosos\n| primarytype    = Itens de Addons\n| secondarytype  = \n| attrib         =\n| stackable      =\n| weight         = 3.20\n| value          = \n| npcvalue       = \n| npcprice       =\n| droppedby      = [[Arbaziloth]]\n| droppedEventby = \n| buyfrom        = Jogadores.\n| sellto         = \n| implemented    = 14.10.4e0c16\n| notes          =\n<noinclude><p><spoiler>\n*01 é necessário para o Addon 02 do [[Fiend Slayer Outfits]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6270,
+    "ns": 0,
+    "title": "Ron the Ripper's Sabre",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ron the Ripper's Sabre\n| flavortext     = \n| levelrequired  = 0\n| enchantable    = não\n| itemclass      = Armas\n| primarytype    = Espadas\n| secondarytype  = Itens de Addons \n| hands          = Uma\n| type           = Espada\n| attack         = 12\n| defense        = 10\n| weight         = 25.00\n| classificacao  = 3\n| max_tier       = 3\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| droppedby      = [[Ron The Ripper]].\n| sellto         = Jogadores.\n| buyfrom        = Jogadores.\n| implemented    = 7.8\n| perk1          = {{Weapon Perk|Type_Shield_Mod||+2 defence modifier}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+35.00% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Auto_Atk_Critical_Dmg||+40.00% critical extra damage para auto-attacks}}<br/>{{Weapon Perk|Type_Life_On_Kill||+15 hit points on kill}}\n| notes          = Tem o mesmo sprite de um [[Sabre]], porém, com marcas de sangue.\n<noinclude><p><spoiler>\n* Faz parte da [[Pirate Outfits Quest]].\n* É um dos itens dropados por bosses em invasões em Liberty Bay.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6475,
+    "ns": 0,
+    "title": "Legion Helmet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Legion Helmet\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| secondarytype  = Itens de Addons\n| armor          = 4\n| weight         = 31.00\n| classificacao  = 2\n| max_tier       = 2\n| value          = 22 - 20 000\n| npcvalue       = 22\n| stackable      = não\n| droppedRaidby  = [[Rottie the Rotworm]], [[Rotworm Queen]].\n| buyfrom        = Jogadores.\n| sellto         = Shanar, Memech, Cornelia, Hireling (Trader), Azil, Willard, Esrik, Rock In A Hard Place, Ulrik, Raffael, Kroox, Cedrik, H.L.:8, Brengus, Flint, Dixi, Lee'Delle, Robert, Gamel, Sam, Turvy, Hardek, Baltim, Aldo, Yanni, Morpel\n| implemented    = 7.4\n| notes          = Melhor opção para os iniciantes em [[Rookgaard]], tem a mesma defesa do [[Viking Helmet]], porém é mais leve. Faz parte do [[Rook Set]] e [[Isle of Destiny Paladin Set]].\n<noinclude><p><spoiler>\n* Em '''Rookgaard''':\n** Recompensa da [[Dragon Corpse Quest]].\n** Recompensa da [[Present Box Quest]].\n** 01 é requerido para um addon do [[Citizen Outfits Quest on Rook]].\n* No '''continente principal''':\n** 01 é requerido para um addon do [[Citizen Outfits Quest]].\n** Antes do [[Update de Newhaven]], podia ser obtido durante a [[Sanctuary of the Lizard God Quest]].\n** Pode ser obtido na [[Newhaven Quest]].\n{{Veja|Onde conseguir um Legion Helmet}}\n</spoiler></p></noinclude>\n| history       = Historia\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7036,
+    "ns": 0,
+    "title": "Hardened Bone",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Hardened Bone\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Addons\n| secondarytype  = Produtos de Criaturas\n| weight         = 6.00\n| attrib         =\n| stackable      = sim\n| value          = 70 - 2 000\n| npcvalue       = 70\n| droppedby      = [[Animated Guzzlemaw]], [[Bonebeast]], [[Clomp]], [[Dreadbeast]], [[Frazzlemaw]], [[Gravedigger]], [[Guzzlemaw]], [[Hellhound]], [[Museum Stone Rhino]], [[Ribstride]], [[Stone Rhino]], [[Undead Dragon]], [[Ushuriel]], [[Zanakeph]].\n| droppedRaidby  = [[Dracola]], [[Mawhawk]].\n| droppedEventby = [[Haunted Dragon]], [[Zorvorax]].\n| buyfrom        = Jogadores.\n| sellto         = Fiona, Yasir\n| implemented    = 7.8\n| notes          = Pode ser obtido [[Skinning|tirando]] a pele de um [[Bonebeast]].\n<noinclude><p><spoiler>* 100 deles são necessários para um addon do [[Warrior Outfits]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7046,
+    "ns": 0,
+    "title": "Honeycomb",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Honeycomb\n| flavortext     = Some people swear it makes an excellent glue.\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Addons\n| secondarytype  = Produtos de Criaturas\n| attrib         = \n| weight         = 0.80\n| value          = 40 - 500\n| npcvalue       = 40\n| stackable      = sim\n| droppedby      = [[Bear]], [[Cyclursus]], [[Honey Elemental]], [[Shadowpelt]], [[Wasp]], [[Werebear]].\n| droppedRaidby  = [[Willi Wasp]].\n| droppedEventby = [[Grynch Clan Goblin]].\n| buyfrom        = Jogadores.\n| sellto         = Inigo, Fiona, Yasir\n| implemented    = 7.8\n| notes          = <noinclude><p><spoiler>*01 é necessário para a [[Barbarian Test Quest]].\n*01 é necessário para a [[The Cursed Crystal Quest]].\n*01 é necessário para a [[The Scatterbrained Sorcerer Quest]].\n*10 são necessários para a [[Hot Cuisine Quest]].\n*50 são necessários para um addon do [[Citizen Outfits]].\n*50 devem ser doados para [[Marina]] para negociar [[Spool of Yarn]]s.\n*Possibilidade de ser obtido ao usar um [[Belongings of a Deceased (Ottokar)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7059,
+    "ns": 0,
+    "title": "Lizard Leather",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Lizard Leather\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Addons\n| secondarytype  = Produtos de Criaturas\n| attrib         = \n| weight         = 0.50\n| stackable      = sim\n| value          = 150 - 400\n| npcvalue       = 150\n| droppedby      = [[Fazzrah]], [[High Templar Cobrass]], [[Lizard Chosen]], [[Lizard Dragon Priest]], [[Lizard High Guard]], [[Lizard Legionnaire]], [[Lizard Magistratus]], [[Lizard Noble]], [[Lizard Sentinel]], [[Lizard Snakecharmer]], [[Lizard Templar]], [[Lizard Zaogun]], [[Lizard Executioner]], [[Lizard Henchman]], [[Lizard Magician]].\n| buyfrom        = Jogadores.\n| sellto         = Irmana, Yasir\n| implemented    = 7.8\n| notes          = Pode ser obtido também tirando a pele de Lizards.\n<noinclude><p><spoiler>*05 são necessários para a [[Unnatural Selection Quest]].\n*50 são necessários para um addon do [[Barbarian Outfits]].\n*100 são necessários para um addon do [[Hunter Outfits]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7060,
+    "ns": 0,
+    "title": "Lizard Scale",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Lizard Scale\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Addons\n| secondarytype  = Produtos de Criaturas\n| attrib         = \n| weight         = 0.80\n| stackable      = sim\n| value          = 120 - 1 000\n| npcvalue       = 120\n| droppedby      = [[Fazzrah]], [[High Templar Cobrass]], [[Lizard Chosen]], [[Lizard Dragon Priest]], [[Lizard Gate Guardian]], [[Lizard High Guard]], [[Lizard Legionnaire]], [[Lizard Magistratus]], [[Lizard Noble]], [[Lizard Sentinel]], [[Lizard Snakecharmer]], [[Lizard Templar]], [[Lizard Zaogun]], [[Paiz the Pauperizer]], [[Lizard Commander]], [[Lizard Henchman]], [[Lizard Magician]].\n| droppedRaidby  = [[Chizzoron the Distorter]].\n| buyfrom        = Jogadores.\n| sellto         = Fiona, Yasir\n| implemented    = 7.8\n| notes          = <noinclude><p><spoiler>30 deles são necessários para adquirir o [[Assassin Outfits Quest]]. <br />\n60 deles são necessários para um addon feminino do [[Mage Outfits]] e masculino do [[Summoner Outfits Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7424,
+    "ns": 0,
+    "title": "Minotaur Leather",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Minotaur Leather\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Addons\n| secondarytype  = Produtos de Criaturas\n| attrib         =\n| weight         = 0.40\n| value          = 80 - 500\n| npcvalue       = 80\n| stackable      = sim\n| droppedby      = [[Bullwark]], [[Depowered Minotaur]], [[Execowtioner]], [[Minotaur]], [[Minotaur Amazon]], [[Minotaur Archer]], [[Minotaur Bruiser]], [[Minotaur Cult Follower]], [[Minotaur Cult Prophet]], [[Minotaur Cult Zealot]], [[Minotaur Guard]], [[Minotaur Hunter]], [[Minotaur Invader]], [[Minotaur Mage]], [[Minotaur Poacher]], [[Mooh'Tah Warrior]], [[Moohtant]], [[The Horned Fox]], [[Worm Priestess]].\n| droppedRaidby  = [[Apprentice Sheng]], [[General Murius]].\n| buyfrom        = Jogadores.\n| sellto         = Inigo, Irmana, Tom:12, Yasir\n| implemented    = 7.8\n| notes          = Pode ser obtido retirando a pele de Minotauros através de uma [[Obsidian Knife]].\n<noinclude><p><spoiler>\n* 01 é necessário para a [[The Scatterbrained Sorcerer Quest]].\n* 01 pode ser obtido no sul de Thais, em um baú na jangada dos [[Minotaur]]s, localizado ({{mapa|32302,32415,7:3|aqui}}).\n* 04 são necessários para a [[Jester Outfits Quest]].\n* 05 são necessários para a [[Unnatural Selection Quest]].\n* 50 são necessários para a [[Beggar Outfits Quest]].\n* 100 são necessários para a [[Citizen Outfits Quest]].\n* 100 são necessários para a [[Citizen Outfits Quest on Rook]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7450,
+    "ns": 0,
+    "title": "Perfect Behemoth Fang",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Perfect Behemoth Fang\n| flavortext     = Collectors all around the world crave for this item.\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Addons\n| secondarytype  = Produtos de Criaturas\n| attrib         = \n| weight         = 5.00\n| stackable      = sim\n| value          = 500 - 2 500\n| npcvalue       = 250\n| droppedby      = [[Behemoth]], [[Stonecracker]].\n| buyfrom        = Jogadores.\n| sellto         = Fiona, Yasir\n| implemented    = 7.8\n| notes          = Pode ser obtido também tirando pele de [[Behemoth]] com uma [[Obsidian Knife]].<noinclude><p><spoiler>*50 são necessários para o [[Barbarian Outfits Quest]].\n*100 são necessários para o [[Knight Outfits Quest]].\n*1 é necessário para a [[Threatened Dreams Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7482,
+    "ns": 0,
+    "title": "Red Dragon Leather",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Red Dragon Leather\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Addons\n| secondarytype  = Produtos de Criaturas\n| weight         = 0.60\n| value          = \n| npcvalue       = 200\n| stackable      = sim\n| attrib         = \n| droppedby      = [[Dragon Lord]], [[Demodras]], [[Soul of Dragonking Zyrtarch]].\n| droppedEventby = [[Kalyassa]].\n| buyfrom        = Jogadores.\n| sellto         = Irmana, Yasir\n| implemented    = 7.8\n| notes          = Também pode ser obtido [[Skinning|tirando a pele]] de um [[Dragon Lord]] ou do boss [[Demodras]].\n<noinclude><p><spoiler>\n* 100 são necessários para um addon do [[Hunter Outfits]].\n* 100 são necessários para o outfit básico do [[Dragon Slayer Outfits]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7483,
+    "ns": 0,
+    "title": "Red Dragon Scale",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Red Dragon Scale\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Addons\n| secondarytype  = Produtos de Criaturas\n| weight         = 0.90\n| stackable      = sim\n| attrib         =\n| value          = \n| npcvalue       = 200\n| droppedby      = [[Dragon Lord]], [[Soul of Dragonking Zyrtarch]].\n| buyfrom        = Jogadores.\n| sellto         = Fiona, Yasir\n| implemented    = 7.8\n| notes          = Possui a mesma aparência que uma [[Scale from a Frozen Dragon]].\n<noinclude><p><spoiler>\n* 01 pode ser obtida na [[Chayenne's Realm Quest]] e 10 na [[Wrath of the Emperor Quest]].\n* 40 são necessárias para o [[Summoner Outfits Quest]] masculino.\n* 40 são necessárias para o [[Mage Outfits Quest]] feminino.\n* 10 são necessárias para o [[Assassin Outfits Quest]].\n* 500 são necessárias para o outfit básico do [[Dragon Slayer Outfits]].\n* Possibilidade de ser obtida ao usar um [[Mysterious Remains]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7509,
+    "ns": 0,
+    "title": "Shard",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Shard\n| flavortext     = It is a shattered part of the [[Frostheart Spire]].\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Addons\n| secondarytype  = Produtos de Criaturas\n| attrib         = \n| weight         = 19.00\n| stackable      = sim\n| value          = 2 000 - 4 000\n| npcvalue       = 2 000\n| droppedby      = [[Barbarian Bloodwalker]], [[Crystal Spider]], [[Frost Dragon]], [[Frost Giant]], [[Frost Giantess]], [[Ice Golem]], [[Ice Witch]], [[Melting Frozen Horror]], [[Shardhead]], [[The Bloodweb]].\n| droppedRaidby  = [[Hirintror]], [[Man In The Cave]], [[Zushuka (Mortal)]], [[Yakchal]].\n| droppedEventby = [[Gelidrazah the Frozen]], [[Ice Dragon]].\n| buyfrom        = Jogadores.\n| sellto         = Hjaern\n| implemented    = 8.0\n| notes          = Acredita que esse caco tenha poderes mágicos, ou seja usado para grandes poderes de gelo. Você só pode vender os Shards no NPC depois de ter obtido os dois addons do [[Norseman Outfits|Norseman Outfit]].\n<noinclude><p><spoiler>\n* 15 são necessários para ambos addons do [[Norseman Outfits Quest]].\n* Pode ser obtido nas seguintes quests: \n** 05 podem ser obtidos na [[Shards of Ancient Winters Quest]].\n** 01 pode ser obtido na [[The Ice Islands Quest]].\n* Após entregar uma mistura de 99 peixes (ex: 49 [[Green Perch]]es e 50 [[Rainbow Trout]]s) para a NPC [[Sinatuki]] e em seguida entregar mais 1 [[Green Perch]] ou [[Rainbow Trout]] você receberá 5 Shards.\n*Para vender Shards ao NPC [[Hjaern]] diga: '''Hi - Frostheart Shard - Yes'''.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8448,
+    "ns": 0,
+    "title": "Heaven Blossom",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Essa página é sobre o '''item''' Heaven Blossom. Para o objeto, veja [[Heaven Blossoms]].''}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Heaven Blossom\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Itens de Addons\n| secondarytype  = Produtos de Criaturas\n| stackable      = sim\n| weight         = 2.10\n| value          = 250 - 500\n| npcvalue       = 50\n| droppedby      = [[Crazed Summer Rearguard]], [[Elf]], [[Elf Scout]], [[Firestarter]].\n| buyfrom        = Jogadores.\n| sellto         = Fiona, Yasir\n| implemented    = 7.8\n| notes          = \n<noinclude><p><spoiler>\n* 10 são recompensas da [[Top of the City Quest]].\n* 30 são necessários para [[Beggar Outfits Quest]].\n* 01 pode ser obtida em um barril no sub-solo de [[Shadowthorn]], ({{mapa|33103,32155,8:2|aqui}}).\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8450,
+    "ns": 0,
+    "title": "Holy Orchid",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Holy Orchid\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Itens de Addons\n| secondarytype  = Produtos de Criaturas\n| weight         = 2.50\n| stackable      = sim\n| value          = 2 000 - 12 000\n| npcvalue       = 90\n| droppedby      = [[Elf Arcanist]], [[Elf Overseer]], [[Insane Siren]], [[Spirit Overlord]].\n| droppedRaidby  = [[Dharalion]].\n| buyfrom        = Jogadores.\n| sellto         = Fiona, Yasir\n| implemented    = 7.8\n| notes          = <noinclude><p><spoiler>*35 são necessários para o [[Mage Outfits Quest]] (feminino).\n*35 são necessários para o [[Summoner Outfits Quest]] (masculino).\n*50 são necessários para o [[Wizard Outfits Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8468,
+    "ns": 0,
+    "title": "Mandrake",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Mandrake\n| flavortext     = This rare root is often used for shamanic medicines.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Addons\n| secondarytype  = \n| attrib         = \n| weight         = 1.80\n| stackable      = sim\n| value          = 4 000 - 10 000\n| npcvalue       = 5 000\n| droppedby      = [[Boogy]], [[Dark Faun]], [[Deathbine]], [[Raxias]], [[The Enraged Thorn Knight]], [[Tiquandas Revenge]].\n| buyfrom        = Jogadores.\n| sellto         = Talila, Valindara\n| implemented    = 7.8\n| notes          = Hoje em dia não é muito raro, pois você consegue este item fazendo uma [[Paw and Fur - Hunting Elite Quest#Sistema de Ranks|tarefa especial]] na [[Paw and Fur - Hunting Elite Quest]].\n<noinclude><p><spoiler>Necessário para obter o [[Shaman_Outfits_Quest#Addon_2|Addon 2]] do [[Shaman Outfits]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8760,
+    "ns": 0,
+    "title": "Green Piece of Cloth",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Green Piece of Cloth\n| itemclass      = Outros Itens\n| primarytype    = Itens de Addons\n| secondarytype  = Produtos de Criaturas\n| weight         = 5.00\n| stackable      = sim\n| value          = 200 - 5 000\n| npcvalue       = 200\n| droppedby      = [[Broken Shaper]], [[Efreet]], [[Green Djinn]], [[Hideous Fungus]], [[Hellhound]], [[Merikh the Slaughterer]], [[Minotaur Hunter]], [[Orc Cultist]], [[Orc Cult Priest]], [[Renegade Quara Hydromancer]], [[The Enraged Thorn Knight]], [[Worm Priestess]], [[Zugurosh]].\n| droppedRaidby  = [[Oodok Witchmaster]], [[Weakened Shlorg]].\n| droppedEventby = [[Undead Jester]].\n| buyfrom        = Jogadores.\n| sellto         = Irmana, Yasir\n| implemented    = 7.8\n| notes          = <noinclude><p><spoiler>\n*50 são necessários para a [[Assassin Outfits Quest]].\n*50 são necessários para a [[Barbarian Outfits Quest]].\n*1 é necessário para a [[Jester Outfits Quest]].\n*Pode ser obtido através da [[Cloth Exchange Quest]].\n*5 podiam ser obtidos clicando no [[Anniversary Remains]]  de [[Denson Larika (Criatura)|Denson Larika]] durante as festividades de 15 anos do Tibia.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8761,
+    "ns": 0,
+    "title": "Hook",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Hook\n| flavortext     = It belonged once to a pirate.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Addons\n| secondarytype  = Produtos de Criaturas\n| weight         = 5.00\n| stackable      = sim\n| attrib         = \n| value          = 600 - 1 000\n| npcvalue       = 0\n| droppedby      = [[Pirate Buccaneer]], [[Pirate Cook]], [[Pirate Corsair]], [[Pirate Cutthroat]], [[Pirate Gunner]], [[Pirate Marauder]], [[Pirate Navigator]], [[Pirate Quartermaster]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.8\n| notes          = <noinclude><p><spoiler>100 são necessários para o primeiro addon do [[Pirate Outfits]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8762,
+    "ns": 0,
+    "title": "Nose Ring",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Nose Ring\n| flavortext     = It was the favorite trinket of the famous Horned Fox.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Addons\n| secondarytype  = Produtos de Criaturas\n| weight         = 5.00\n| stackable      = sim\n| value          = \n| npcvalue       = 2 000\n| droppedby      = [[The Horned Fox]].\n| buyfrom        = Jogadores.\n| sellto         = Yasir\n| implemented    = 7.8\n| notes          = Este item é loot apenas do [[The Horned Fox]], um boss dos minotauros. Quando uma nova missão foi introduzida, ficou mais fácil de conseguir esse item, tornando-o menos valioso.\n<noinclude><p><spoiler>\n* 01 é necessário para o addon 02 do [[Assassin Outfits]].\n* Recompensa da [[Turmoil of War Quest]].\n* Possibilidade de ser obtido como presente do NPC [[Santa Claus]]. \n* Possibilidade de ser obtido ao usar uma [[Belongings of a Deceased (Ottokar)]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8763,
+    "ns": 0,
+    "title": "Peg Leg",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Peg Leg\n| flavortext     = It belonged once to a pirate.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Addons\n| secondarytype  = Produtos de Criaturas\n| weight         = 5.00\n| stackable      = sim\n| attrib         = \n| value          = 600 - 1 000\n| npcvalue       = 0\n| droppedby      = [[Pirate Buccaneer]], [[Pirate Cook]], [[Pirate Corsair]], [[Pirate Cutthroat]], [[Pirate Gunner]], [[Pirate Marauder]], [[Pirate Navigator]], [[Pirate Quartermaster]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.8\n| notes          = <noinclude><p><spoiler>\n100 são necessários para o primeiro addon do [[Pirate Outfits]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8764,
+    "ns": 0,
+    "title": "Red Piece of Cloth",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Red Piece of Cloth\n| itemclass      = Outros Itens\n| primarytype    = Itens de Addons\n| secondarytype  = Produtos de Criaturas\n| weight         = 5.00\n| stackable      = sim\n| value          = 300 - 30 000\n| npcvalue       = 300\n| droppedby      = [[Barbarian Bloodwalker]], [[Blood Hand]], [[Blood Priest]], [[Broken Shaper]], [[Bullwark]], [[Choking Fear]], [[Dawnfire Asura]], [[Demon Outcast]], [[Execowtioner]], [[Floating Savant]], [[Fury]], [[Glooth Bomb]], [[Hellhound]], [[Hero]], [[Hideous Fungus]], [[Humongous Fungus]], [[Infernalist]], [[Lava Golem]], [[Mad Mage]], [[Magma Crawler]], [[Minotaur Amazon]], [[Minotaur Cult Follower]], [[Minotaur Cult Prophet]], [[Minotaur Cult Zealot]], [[Minotaur Hunter]], [[Minotaur Invader]], [[Moohtant]], [[Mooh'Tah Warrior]], [[Raging Mage]], [[Renegade Knight]], [[The Bloodtusk]], [[Terrorsleep]], [[The False God]], [[True Dawnfire Asura]], [[Vampire Viscount]], [[Vile Grandmaster]], [[Worm Priestess]], [[Zugurosh]].\n| droppedRaidby  = [[Furyosa]], [[Gaz'Haragoth]], [[Mawhawk]], [[Oodok Witchmaster]], [[The Pale Count]], [[Tyrn]], [[Weakened Shlorg]], [[Zushuka (Mortal)]].\n| droppedEventby = [[Undead Jester]].\n| buyfrom        = Jogadores.\n| sellto         = Irmana, Yasir\n| implemented    = 7.8\n| notes          = Antes do update 8.6, tinha a mesma aparência de um [[Piece of Royal Satin]].\n<noinclude><p><spoiler>*01 é necessário para a [[What a Foolish Quest]].\n*20 são necessários para um addon masculino na [[Summoner Outfits Quest]].\n*20 são necessários para um addon feminino na [[Mage Outfits Quest]].\n*50 são necessários para a [[Assassin Outfits Quest]].\n*50 são necessários para a [[Barbarian Outfits Quest]].\n*Pode ser trocado por um [[Dragon Throne]].\n*Pode ser obtido por meio da [[Exchange Quests]].\n*Possibilidade de ser obtido ao usar um [[Gnomish Supply Package]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8776,
+    "ns": 0,
+    "title": "Magic Sulphur",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Magic Sulphur\n| flavortext     = It smells rather badly but is said to be an important catalyst for magical rituals.\n| itemclass      = Outros Itens\n| primarytype    = Itens Encantados\n| secondarytype  = Itens de Addons\n| tertiarytype   = Produtos de Criaturas \n| weight         = 1.00\n| stackable      = sim\n| attrib         = Nenhum.\n| value          = 8 000 - 15 000\n| npcprice       = 3 [[Fire Sword]]s\n| npcvalue       = 8 000\n| droppedby      = [[Alptramun]], [[Ancient Spawn of Morgathla]], [[Askarak Demon]], [[Askarak Lord]], [[Askarak Prince]], [[Brimstone Bug]], [[Cliff Strider]], [[Count Vlarkorth]], [[Draken Elite]], [[Ghulosh]], [[Gorzindel]], [[Infernalist]], [[Izcandar the Banished]], [[Ironblight]], [[King Zelos]], [[Lloyd]], [[Lokathmor]], [[Lost Berserker]], [[Orewalker]], [[Paiz the Pauperizer]], [[Plagueroot]], [[Ravenous Hunger]], [[Soul of Dragonking Zyrtarch]], [[Sulphur Scuttler]], [[Shaburak Demon]], [[Shaburak Lord]], [[Shaburak Prince]], [[The Baron from Below]], [[The Count Of The Core]], [[The Duke Of The Depths]], [[The False God]], [[The Sandking]], [[The Source Of Corruption]], [[The Time Guardian]], [[The Unarmored Voidborn]]. \n| droppedEventby = [[The Percht Queen]].\n| buyfrom        = Haroun, Yaman\n| sellto         = Fiona, Yasir\n| implemented    = 7.8\n| notes          = Mesma aparência de um [[Fine Sulphur]], [[Easily Inflammable Sulphur]] e um dead [[Wisp]].\n<noinclude><p><spoiler>* 15 são necessários para os [[Summoner Outfits Quest]] (para homens).<br />\n* 15 são necessários para os [[Mage Outfits Quest]] (para mulheres).<br />\n* 10 são necessários para os [[Mage Outfits Quest]] (para homens).<br />\n* 10 são necessários para os [[Summoner Outfits Quest]] (para mulheres).\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8887,
+    "ns": 0,
+    "title": "Huge Chunk of Crude Iron",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Huge Chunk of Crude Iron\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Itens de Addons\n| secondarytype  = Produtos de Criaturas\n| attrib         = \n| weight         = 50.00\n| stackable      = sim\n| value          = 15 000 - 17 000\n| npcprice       = 1 [[Giant Sword]]\n| npcvalue       = 15 000\n| buyfrom        = A Sweaty Cyclops\n| sellto         = Telas\n| implemented    = 7.8\n| droppedby      = [[Alptramun]], [[Ancient Spawn of Morgathla]], [[Izcandar the Banished]], [[Malofur Mangrinder]], [[Maxxenius]], [[Melting Frozen Horror]], [[Plagueroot]], [[The Baron from Below]], [[The Count Of The Core]], [[The Duke Of The Depths]], [[The False God]], [[The Nightmare Beast]], [[The Sandking]], [[The Scourge of Oblivion]], [[Ushuriel]].\n| droppedEventby = [[The Percht Queen]].\n| notes          = <noinclude><p><spoiler>*Pode ser obtido na [[The Sweaty Cyclops Quest]].\n*Necessário para a [[Knight Outfits Quest]].\n*Necessário para a [[Barbarian Outfits Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8888,
+    "ns": 0,
+    "title": "Iron Ore",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Iron Ore\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Itens de Addons\n| secondarytype  = Produtos de Criaturas\n| attrib         =\n| weight         = 2.00\n| stackable      = sim\n| value          = 500 - 2 000\n| npcvalue       = 500\n| droppedby      = [[Animated Guzzlemaw]], [[Cliff Strider]], [[Crazed Dwarf]], [[Damaged Worker Golem]], [[Drillworm]], [[Dwarf]], [[Dwarf Soldier]], [[Dwarf Guard]], [[Dwarf Geomancer]], [[Dwarf Miner]], [[Enslaved Dwarf]], [[Eternal Guardian]], [[Foreman Kneebiter]], [[Frazzlemaw]], [[Glooth Fairy]], [[Glooth Golem]],  [[Guzzlemaw]], [[Jagged Earth Elemental]], [[Lava Golem]], [[Lost Basher]], [[Lost Berserker]], [[Lost Thrower]], [[Magma Crawler]], [[Metal Gargoyle]], [[Museum Stone Golem]], [[Orewalker]], [[Rustheap Golem]], [[Stone Golem]], [[The False God]], [[The Last Lore Keeper]], [[Ushuriel]], [[War Golem]], [[Weakened Frazzlemaw]], [[Worker Golem]].\n| droppedRaidby  = [[Grorlam]], [[Mawhawk]].\n| buyfrom        = Jogadores.\n| sellto         = Yasir\n| implemented    = 7.8\n| notes          = \n<noinclude><p><spoiler>\n* 100 são necessários para cada uma dos outifits: [[Knight Outfits Quest]], [[Warrior Outfits Quest]] e [[Barbarian Outfits Quest]].\n* 01 pode ser obtido em um baú na [[Old Ore Mine]] ({{mapa|32532,31873,8:2|aqui}}).\n* 03 são necessários para a [[The Travelling Trader Quest]].\n* Possibilidade de ser obtido ao usar uma [[Belongings of a Deceased (Ottokar)]].\n* Possibilidade de ser obtido ao usar um [[Mysterious Remains]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8891,
+    "ns": 0,
+    "title": "Piece of Draconian Steel",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Piece of Draconian Steel\n| flavortext     = An armour made of this steel is said to protect against firy dragon breath.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Addons\n| secondarytype  = Produtos de Criaturas\n| attrib         = \n| weight         = 5.00\n| stackable      = sim\n| value          = 4 000+\n| npcprice       = 1 [[Dragon Shield]]\n| npcvalue       = 3 000\n| droppedby      = [[Plaguesmith]], [[Soul of Dragonking Zyrtarch]], [[The False God]].\n| buyfrom        = A Sweaty Cyclops\n| sellto         = Telas\n| implemented    = 7.8\n| notes          = <noinclude><p><spoiler>*Necessário para fazer [[Obsidian Knife]].\n*Necessário para [[Hunter Outfits Quest]]\n*Você deve ter feito a [[The Sweaty Cyclops Quest]] para ser capaz de negociar com [[A Sweaty Cyclops]].\n* 25 são necessários para o addon 1 do [[Dragon Slayer Outfits]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8892,
+    "ns": 0,
+    "title": "Piece of Hell Steel",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Piece of Hell Steel\n| flavortext     = This rare metal must have been refined in the depths of Tibia.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Addons\n| secondarytype  = Produtos de Criaturas\n| attrib         = \n| weight         = 5.00\n\n| stackable      = sim\n| value          = 1 000\n| npcprice       = 1 [[Devil Helmet]]\n| npcvalue       = 500\n| droppedby      = [[Duke Krule]], [[Lloyd]], [[Maior Domus]], [[Plaguesmith]], [[The False God]], [[The Source Of Corruption]].\n| buyfrom        = A Sweaty Cyclops\n| sellto         = Telas\n| implemented    = 7.8\n| notes          = <noinclude><p><spoiler>*Pode ser obtido através da [[The Sweaty Cyclops Quest]].\n*Necessário para [[Hunter Outfits Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8896,
+    "ns": 0,
+    "title": "Piece of Royal Steel",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Piece of Royal Steel\n| flavortext     = Even the king would be proud to wear an armour made of this refined steel.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Addons\n| secondarytype  = Produtos de Criaturas\n| attrib         = \n| weight         = 5.00\n\n| stackable      = sim\n| value          = 10 000 - 20 000\n| npcprice       = 1 [[Crown Armor]]\n| npcvalue       = 10 000\n| droppedby      = [[Lloyd]], [[Plaguesmith]], [[Soul of Dragonking Zyrtarch]], [[The Enraged Thorn Knight]], [[The False God]], [[The Last Lore Keeper]], [[The Unarmored Voidborn]].\n| buyfrom        = A Sweaty Cyclops\n| sellto         = Telas\n| implemented    = 7.8\n| notes          = <noinclude><p><spoiler>*Pode ser obtido através da [[The Sweaty Cyclops Quest]].\n*Necessário para a [[Hunter Outfits Quest]].\n*Necessário para a [[Knight Outfits Quest]].\n*Necessário para a [[Warrior Outfits Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 17097,
+    "ns": 0,
+    "title": "Luminous Piece of Cloth",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name         = Luminous Piece of Cloth\n| flavortext   = It seems to be a part of an outfit. Find all six parts to complete the outfit.\n| itemclass    = Outros Itens\n| primarytype  = Itens de Addons\n| attrib       = \n| stackable    = sim\n| weight       = 5.00\n| value        = \n| npcvalue     = 0\n| droppedby    = [[Feverish Citizen]].\n| buyfrom      = Jogadores.\n| sellto       = Jogadores.\n| implemented  = 9.1\n| notes        = <noinclude><p><spoiler>* 01 é necessária para a [[Afflicted Outfits Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 17099,
+    "ns": 0,
+    "title": "Obvious Piece of Cloth",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name         = Obvious Piece of Cloth\n| flavortext   = It seems to be a part of an outfit. Find all six parts to complete the outfit.\n| itemclass    = Outros Itens\n| primarytype  = Itens de Addons\n| attrib       = \n| stackable    = sim\n| weight       = 5.00\n| value        = \n| npcvalue     = 0\n| droppedby    = [[Feverish Citizen]].\n| buyfrom      = Jogadores.\n| sellto       = Jogadores.\n| implemented  = 9.1\n| notes        = <noinclude><p><spoiler>* 01 é necessária para a [[Afflicted Outfits Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 17141,
+    "ns": 0,
+    "title": "Slime Mould",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Slime Mould\n| flavortext    =\n| itemclass     = Outros Itens\n| primarytype   = Itens de Addons\n| secondarytype = Produtos de Criaturas\n| attrib        = \n| stackable     = sim\n| weight        = 3.00 \n| value         = 5 000 - 50 000 \n| npcvalue      = 175 \n| droppedby     = [[Iron Servant]], [[Golden Servant]], [[Golden Servant Replica]], [[Diamond Servant]], [[Diamond Servant Replica]].\n| buyfrom       = Jogadores. \n| sellto        = Malunga\n| trade         = sim\n| implemented   = 9.1\n| notes         = \n<noinclude><p><spoiler>\n20 são necessários para a [[Elementalist Outfits Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 17210,
+    "ns": 0,
+    "title": "Ominous Piece of Cloth",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name         = Ominous Piece of Cloth\n| flavortext   = It seems to be a part of an outfit. Find all six parts to complete the outfit.\n| itemclass    = Outros Itens\n| primarytype  = Itens de Addons\n| attrib       = \n| stackable    = sim\n| weight       = 5.00\n| value        = \n| npcvalue     = 0\n| droppedby    = [[Feverish Citizen]].\n| buyfrom      = Jogadores.\n| sellto       = Jogadores.\n| implemented  = 9.1\n| notes        = <noinclude><p><spoiler>* 01 é necessária para a [[Afflicted Outfits Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 17211,
+    "ns": 0,
+    "title": "Ludicrous Piece of Cloth",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name         = Ludicrous Piece of Cloth\n| flavortext   = It seems to be a part of an outfit. Find all six parts to complete the outfit.\n| itemclass    = Outros Itens\n| primarytype  = Itens de Addons\n| attrib       = \n| stackable    = sim\n| weight       = 5.00\n| value        = \n| npcvalue     = 0\n| droppedby    = [[Feverish Citizen]].\n| buyfrom      = Jogadores.\n| sellto       = Jogadores.\n| implemented  = 9.1\n| notes        = <noinclude><p><spoiler>* 01 é necessária para a [[Afflicted Outfits Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 17274,
+    "ns": 0,
+    "title": "Plague Mask",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Plague Mask  \n| flavortext     = It seems to be a part of an outfit. If you own the outfit you might refine it by using the item.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Addons\n| secondarytype  = \n| attrib         = Nenhum.\n| weight         = 0.70  \n| value          = \n| npcvalue       = 0  \n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.  \n| sellto         = Jogadores.  \n| implemented    = 9.1  \n| notes          = \n<noinclude><p><spoiler>\n* 01 é necessário para obter o addon 02 do [[Afflicted Outfits]].\n* Possibilidade de ser obtido ao usar uma [[Belongings of a Deceased (Ottokar)]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 17314,
+    "ns": 0,
+    "title": "Mage's Cap",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Mage's Cap\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| secondarytype  = Itens de Addons\n| stackable      = não\n| armor          = 3\n| weight         = 10.00\n| classificacao  = 4\n| max_tier       = 10\n| resist         = [[Fire Damage|Fire]] +4%\n| value          = 35 000 000 - 75 000 000\n| droppedby      = [[Mad Mage]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.1\n| notes          = Apesar da proteção contra [[Fire]] é pouco utilizado, pois existem opções mais baratas e que oferecem uma melhor proteção como é o caso do [[Magma Monocle]]. \n<noinclude><p><spoiler>* 01 é necessário para a [[Elementalist Outfits Quest]].</spoiler></p></noinclude>\n<gallery>arquivo:Mage's_cape.png| Mage's Cap vista em [[Menera]].</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 17402,
+    "ns": 0,
+    "title": "Plague Bell",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Plague Bell\n| flavortext    = It seems to be a part of an outfit. If you own the outfit you might refine it by using the item.\n| itemclass     = Outros Itens\n| primarytype   = Itens de Addons\n| secondarytype = \n| attrib        = Nenhum.\n| weight        = 1.20\n| value         = \n| npcvalue      = 0 \n| stackable     = não\n| droppedby     = Ninguém.\n| buyfrom       = Jogadores. \n| sellto        = Jogadores. \n| implemented   = 9.1 \n| notes         = \n<noinclude><p><spoiler>\n* 01 é necessário para obter o addon 01 do [[Afflicted Outfits]].\n* Possibilidade de ser obtido ao usar uma [[Belongings of a Deceased (Ottokar)]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 20277,
+    "ns": 0,
+    "title": "Obujos' Shell",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Obujos' Shell\n| flavortext     = The identity of some deepling is written there.\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Addons\n| secondarytype  = \n| attrib         = \n| stackable      = sim\n| weight         = 2.80\n| value          = \n| npcvalue       = 0\n| droppedby      = [[Reflection Of Obujos]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.4\n| notes          = \n<noinclude><p><spoiler>\n* Pode ser obtido em um baú durante a [[Deepling Outfits Quest]] após derrotar o boss [[Obujos]]. \n* É usado para conseguir o primeiro addon do [[Deepling Outfits|Deepling Outfit]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 20361,
+    "ns": 0,
+    "title": "Jaul's Pearl",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Jaul's Pearl\n| flavortext     = The identity of some deepling is written there.\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Addons\n| secondarytype  = \n| attrib         = \n| stackable      = sim\n| weight         = 3.10\n| value          = \n| npcvalue       = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.4\n| notes          = \n<noinclude><p><spoiler>\n* Pode ser obtido em um baú durante a [[Deepling Outfits Quest]] após derrotar o boss [[Jaul]].\n* É usado para conseguir o primeiro addon do [[Deepling Outfits|Deepling Outfit]].\n</spoiler></p></noinclude>\n}}\n<noinclude>[[Categoria:Itens não Dropáveis]]</noinclude>"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25503,
+    "ns": 0,
+    "title": "Gnomish Voucher Type MB",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Gnomish Voucher Type MB\n| flavortext     = It is a voucher for a basic soil guardian outfit.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Addons\n| secondarytype  = Itens não Dropáveis\n| attrib         = Nenhum.\n| weight         = 0.80\n| value          = \n| stackable      = não\n| npcvalue       = 0\n| npcprice       = 20 [[Major Crystalline Token]]s\n| droppedby      = Ninguém.\n| buyfrom        = Gnomally\n| sellto         = Jogadores.\n| implemented    = 9.6\n| notes          = <noinclude><p><spoiler>* Ao usar esse item, você ganhará o [[Soil Guardian Outfits]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25562,
+    "ns": 0,
+    "title": "Gnomish Voucher Type MA1",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Gnomish Voucher Type MA1\n| flavortext     = It is a voucher for the first addon of the soil guardian outfit.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Addons\n| secondarytype  = Itens não Dropáveis\n| attrib         = Nenhum.\n| weight         = 0.80\n| value          = \n| stackable      = não\n| npcvalue       = 0\n| npcprice       = 70 [[Minor Crystalline Token]]s\n| droppedby      = Ninguém.\n| buyfrom        = Gnomally\n| sellto         = Jogadores.\n| implemented    = 9.6\n| notes          = <noinclude><p><spoiler>* 01 é necessário para o Addon 01 do [[Soil Guardian Outfits]].\n* Para comprar fale com o NPC [[Gnomally]] '''hi - equipment - minor - Addition to the soil guardian - yes'''\n{{Transcrições|npc=Gnomally|texto=\n''Jogador:'' '''Hi'''<br/>\n'''Gnomally:''' Oh, hello! I'm the gnome-human relations assistant. I am here for you to trade your tokens for equipment, resupply you with mission items and talk to you about your relations to us gnomes! ...<br/>\n''Jogador:'' '''Equipment'''<br/>\n'''Gnomally:''' You can buy different equipment for minor or for major tokens. So, which is the equipment you are interested in, the one for minor or major tokens? ...<br/>\n'''Gnomally:''' By the way, if you want to have a look on the prismatic and gill items first, just head over to the depot and check the market.<br/>\n''Jogador:'' '''Minor'''<br/>\n'''Gnomally:''' For two minor tokens, you can buy one gnomish supply package! For eight tokens, you can buy a muck remover! For ten tokens, you can buy a mission crystal. For fifteen tokens, you can buy a crystal lamp or a mushroom backpack. ...<br/>\n'''Gnomally:''' For seventy tokens, I can offer you a voucher for an addition to the soil guardian outfit, or a voucher for an addition to the crystal warlord armor outfit.<br/>\n''Jogador:'' '''Addition to the soil guardian'''<br/>\n'''Gnomally:''' Do you want to trade a voucher for an addition to the soil guardian outfit for seventy tokens?<br/>\n''Jogador:'' '''Yes'''<br/>\n'''Gnomally:''' Here it is.<br/>\n}}</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25726,
+    "ns": 0,
+    "title": "Gnomish Voucher Type MA2",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Gnomish Voucher Type MA2\n| flavortext     = It is a voucher for the second addon of the soil guardian outfit.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Addons\n| secondarytype  = Itens não Dropáveis\n| attrib         = Nenhum.\n| weight         = 0.80\n| value          = \n| stackable      = não\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.6\n| notes          = \n<noinclude><p><spoiler>\n* 01 é necessário para o Addon 02 do [[Soil Guardian Outfits]].\n* Possibilidade de ser obtido ao usar um [[Gnomish Supply Package]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 40104,
+    "ns": 0,
+    "title": "Porcelain Mask",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Porcelain Mask\n| itemclass      = Outros Itens\n| primarytype    = Itens de Addons\n| secondarytype  = Capacetes\n| resist         = [[Mana Drain]] +10%\n| armor          = 1\n| weight         = 4.50\n| classificacao  = 2\n| max_tier       = 2\n| stackable      = não\n| value          = \n| buyfrom        = Jogadores.\n| sellto         = Yasir\n| npcvalue       = 2 000\n| implemented    = 11.02\n| notes          = \n<noinclude><p><spoiler>\n* 01 pode ser obtida na [[The First Dragon Quest]].\n* 03 são necessárias para o Addon 1 da [[Festive Outfits Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45270,
+    "ns": 0,
+    "title": "Pomegranate",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Pomegranate\n| flavortext     = It looks like you could adorn a staff with it.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Addons\n| secondarytype  = Valiosos\n| weight         = 1.00\n| stackable      = não\n| value          = \n| npcvalue       = \n| droppedby      = [[Alptramun]], [[Izcandar the Banished]], [[Maxxenius]], [[Malofur Mangrinder]], [[Plagueroot]].\n| sellto         = Jogadores.\n| buyfrom        = Jogadores.\n| implemented    = 12.00\n| notes          = <noinclude><p><spoiler>* 05 desses itens são necessários para o Addon 1 do [[Dream Warrior Outfits]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45374,
+    "ns": 0,
+    "title": "Ice Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ice Shield\n| flavortext     = It looks like you could combine it with a robe.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Addons\n| secondarytype  = Valiosos\n| weight         = 35.00\n| stackable      = não\n| value          = \n| npcvalue       = \n| droppedby      = [[Izcandar the Banished]], [[The Nightmare Beast]].\n| sellto         = Jogadores.\n| buyfrom        = Jogadores.\n| implemented    = 12.00\n| notes          = \n<noinclude><p><spoiler>* 01 desse item é necessário para o Addon 2 do [[Dream Warrior Outfits]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 47529,
+    "ns": 0,
+    "title": "Shadow Cowl",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Shadow Cowl\n| itemclass      = Valiosos\n| primarytype    = Itens de Addons\n| weight         = 3.70\n| stackable      = não\n| value          = Negociável\n| droppedby      = [[King Zelos]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.20\n| notes          = <noinclude><p><spoiler>*'''01''' é necessário para o Addon 02 do [[Hand of the Inquisition Outfits]], basta usá-lo se tiver o outfit.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 56024,
+    "ns": 0,
+    "title": "Portable Flame",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name        = Portable Flame\n| itemclass   = Valiosos\n| primarytype = Itens de Addons\n| weight      = 0.15\n| stackable   = não\n| value       = \n| droppedby   = [[Magma Bubble]].\n| buyfrom     = Jogadores.\n| sellto      = Jogadores.\n| implemented = 12.90\n| notes       = <noinclude><p><spoiler>* '''01''' é necessário para o Addon 02 do [[Fire-Fighter Outfits]], basta usá-lo se tiver o outfit.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 62529,
+    "ns": 0,
+    "title": "Petrified Leaf",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Petrified Leaf\n| flavortext     = Rootwalkers can use this to enhance their attire.\n| attrib         = Nenhum.\n| itemclass      = Valiosos\n| primarytype    = Itens de Addons\n| weight         = 0.50\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 13.40.54ea79\n| notes          = Para se ter a chance de obter esse item é necessário fazer uma mecânica nos andares inferiores de [[Podzilla Maw]], a mecânica esta descrita dentro da [[Rootwalker Outfits Quest]].\n<noinclude><p><spoiler>* 01 é necessário para o Addon 02 do [[Rootwalker Outfits|Rootwalker Outfit]], basta usá-lo se tiver o outfit.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 63838,
+    "ns": 0,
+    "title": "Rotrender Claw",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Rotrender Claw\n| flavortext     = \n| itemclass      = Valiosos\n| primarytype    = Itens de Addons\n| secondarytype  = \n| attrib         =\n| stackable      =\n| weight         = 0.25\n| value          = \n| npcvalue       = 1 800 000\n| npcprice       =\n| droppedby      = [[Rotrender]]\n| droppedEventby = \n| buyfrom        = Jogadores.\n| sellto         = Yasir\n| implemented    = 14.12.95abf3\n| notes          =\n<noinclude><p><spoiler>\n*.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 63839,
+    "ns": 0,
+    "title": "Rotrender Scalp",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Rotrender Scalp\n| flavortext     = \n| itemclass      = Valiosos\n| primarytype    = Itens de Addons\n| secondarytype  = \n| attrib         =\n| stackable      =\n| weight         = 0.25\n| value          = \n| npcvalue       = 2 500 000\n| npcprice       =\n| droppedby      = [[Rotrender]]\n| droppedEventby = \n| buyfrom        = Jogadores.\n| sellto         = Yasir\n| implemented    = 14.12.95abf3\n| notes          =\n<noinclude><p><spoiler>\n*.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 63840,
+    "ns": 0,
+    "title": "Rotrender's Sceptre",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Rotrender's Sceptre\n| flavortext     = Growth is this wicked sceptre's gift, coins are the tribute it demands\n| itemclass      = Valiosos\n| primarytype    = Itens de Addons\n| secondarytype  = \n| attrib         =\n| stackable      =\n| weight         = 12.00\n| value          = \n| npcvalue       = \n| npcprice       =\n| droppedby      = [[Rotrender]]\n| droppedEventby = \n| buyfrom        = Jogadores.\n| sellto         = \n| implemented    = 14.12.95abf3\n| notes          =\n'''Comprovado em 08/09/2025:'''\n* Ao ser utilizado, transforma o jogador em um '''[[Demon Throne]]''' [[Arquivo:Demon Throne.gif]] por 1 minuto. Após isso, entra em '''cooldown''' de no máximo 2 meses (possivelmente menos).\n* Existe um título chamado '''Usurper of the Demon Throne''', cuja descrição informa que o jogador o recebe ao alcançar '''500 ovações''' enquanto permanece no controle do '''[[Demon Throne]]'''.\n* No mesmo update em que este item foi introduzido (versão '''14.12.95abf3'''), as moedas '''[[Gold Coin]]''', '''[[Platinum Coin]]''' e '''[[Crystal Coin]]''' passaram a ter a propriedade '''use with'''.\n* Quando um jogador utiliza uma moeda em alguém transformado em '''[[Demon Throne]]''' [[Arquivo:Demon Throne.gif]], ele recebe '''5% de experiência''' para o próximo nível, enquanto o jogador transformado recebe '''10%'''.\n** Ao usar uma moeda, o jogador entra em '''cooldown''' antes de poder utilizar outra novamente. (Ainda não descoberto, mas maior que 1 minuto, que é o tempo de duração do '''Demon Throne''')\n* Também existem as '''[[Blood Coin]]s''' [[Arquivo:Blood Coin.gif]], entregues ao jogador que permanece montado no '''[[Demon Throne]]''' [[Arquivo:Demon Throne.gif]] e recebe ovações.\n\n{{clear}}\n* Veja também: {{#Widget:YouTube|id=4dZkEpuZxz0|height=216|width=384}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 65008,
+    "ns": 0,
+    "title": "Scallop Shell",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Scallop Shell\n| flavortext     = It has been used as a colour palette\n| itemclass      = Valiosos\n| primarytype    = Itens de Addons\n| secondarytype  = \n| attrib         =\n| stackable      =\n| weight         = 1.20\n| value          = \n| npcvalue       = \n| npcprice       =\n| droppedby      = [[Tropical Desolator]].\n| droppedEventby = \n| buyfrom        = Jogadores.\n| sellto         = \n| implemented    = 15.10.46b862\n| notes          =\n<noinclude><p><spoiler>\n*01 é necessário para o Addon 01 do [[Illuminator Outfits]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 65010,
+    "ns": 0,
+    "title": "Sand-Filled Horn",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Sand-Filled Horn\n| flavortext     = The fine, white sand is trickling out\n| itemclass      = Valiosos\n| primarytype    = Itens de Addons\n| secondarytype  = \n| attrib         =\n| stackable      =\n| weight         = 1.20\n| value          = \n| npcvalue       = \n| npcprice       =\n| droppedby      = [[Wrathful Archivist]].\n| droppedEventby = \n| buyfrom        = Jogadores.\n| sellto         = \n| implemented    = 15.10.46b862\n| notes          =\n<noinclude><p><spoiler>\n*01 é necessário para o Addon 02 do [[Illuminator Outfits]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 67547,
+    "ns": 0,
+    "title": "Scraps of a Radiant Attire",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Scraps of a Radiant Attire\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Addons\n| secondarytype  = Valiosos\n| attrib         = \n| weight         = 0.30\n| stackable      = não\n| value          = \n| npcvalue       = \n| npcprice       = \n| mercado        = não\n| droppedby      = [[Maior Domus]], [[Mimar Haffar]], [[Phosphorus]] (Todos, a partir da dificuldade 5).\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.30.a30dad\n| notes          = <noinclude><p><spoiler>* 5.000 são necessários para completar a [[Illuminated Warrior Outfits Quest]].</noinclude><p></spoiler>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6497,
+    "ns": 0,
+    "title": "Tribal Mask",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Tribal Mask\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| secondarytype  = Itens de Addons\n| armor          = 2\n| weight         = 25.00\n| classificacao  = 1\n| max_tier       = 1\n| stackable      = não\n| npcvalue       = 250\n| value          = \n| droppedby      = [[Dworc Fleshhunter]], [[Dworc Shadowstalker]], [[Dworc Venomsniper]], [[Dworc Voodoomaster]], [[Midnight Asura]], [[True Midnight Asura]].\n| buyfrom        = Jogadores.\n| sellto         = Brengus\n| implemented    = 7.5\n| notes          = \n<noinclude><p><spoiler>\n* 05 são necessários para um addon do [[Shaman Outfits]].\n* Pode ser obtido utilizando uma [[Shaggy Ogre Bag]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7140,
+    "ns": 0,
+    "title": "Wolf Paw",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Wolf Paw\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Addons\n| secondarytype  = Produtos de Criaturas\n| attrib         = \n| weight         = 0.80\n| stackable      = sim\n| value          = 70 - 250\n| npcvalue       = 70\n| droppedby      = [[Crystal Wolf]], [[Darkfang]], [[Gloom Wolf]], [[Hemming]], [[Infernoid Hound]], [[Rabid Wolf]], [[Ragged Rabid Wolf]], [[Starving Wolf]], [[Thornfire Wolf]], [[War Wolf]], [[Werewolf]], [[Wolf]].\n| droppedRaidby  = [[The Big Bad One]].\n| buyfrom        = Jogadores.\n| sellto         = Inigo, Ustan, Tom:7, Yasir\n| implemented    = 7.8\n| notes          = Não as venda em Rookgaard para o NPC [[Tom]] por causa do baixo valor que você irá obter se vender. Em Main se você vender para o NPC [[Ustan]], em [[Port Hope]] irá ganhar dez vezes mais do que se vendesse para o [[Tom]] em [[Rookgaard]].\n<noinclude><p><spoiler>50 deles são necessários para o primeiro addon do [[Druid Outfits]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7382,
+    "ns": 0,
+    "title": "Vampire Dust",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Vampire Dust\n| flavortext     = Sun can be a merciless killer, but so can you.\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Addons\n| secondarytype  = Produtos de Criaturas\n| weight         = 1.00\n| stackable      = sim\n| value          = \n| npcvalue       = 100\n| npcprice       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Fiona, Yasir\n| implemented    = 7.8\n| notes          = Pode ser obtido se você usar uma [[Blessed Wooden Stake]] em um [[Vampire]], [[Vampire Bride]], Vampire Lords ([[Arachir the Ancient One]], [[Diblis the Fair]], [[Sir Valorcrest]], [[The Pale Count]] e [[Zevelon Duskbringer]]) ou [[Vampire Viscount]] recentemente mortos.\n<noinclude><p><spoiler>\n* 20 são necessários para adquirir o [[Assassin Outfits]].\n* 20 são necessários para [[The Inquisition Quest]].\n* 30 são necessários para um addon feminino do [[Mage Outfits]].\n* 30 são necessários para um addon masculino do [[Summoner Outfits]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7386,
+    "ns": 0,
+    "title": "Turtle Shell",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Turtle Shell\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Addons\n| secondarytype  = Produtos de Criaturas\n| weight         = 5.00\n| attrib         = \n| stackable      = sim\n| npcvalue       = 90\n| value          = 200 - 2 000\n| droppedby      = [[Tortoise]], [[Thornback Tortoise]], [[Two-Headed Turtle]].\n| buyfrom        = Jogadores.\n| sellto         = Fiona, Yasir\n| implemented    = 7.8\n| notes          = \n<noinclude><p><spoiler>*100 são necessários para um addon do [[Warrior Outfits]].\n*Possibilidade de ser obtido ao usar uma [[Belongings of a Deceased (Ottokar)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7522,
+    "ns": 0,
+    "title": "Spider Silk",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Spider Silk\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Addons\n| secondarytype  = Produtos de Criaturas\n| attrib         =\n| weight         = 0.10\n| stackable      = sim\n| value          = \n| npcvalue       = 100\n| droppedby      = [[Arachnophobica]], [[Cave Spider]], [[Crystal Spider]], [[Exotic Cave Spider]], [[Giant Spider]], [[Hide]], [[The Bloodweb]], [[The Old Widow]], [[Undertaker]].\n| droppedRaidby  = [[Mamma Longlegs]].\n| buyfrom        = Jogadores.\n| sellto         = Fiona, Tarun, Yasir\n| implemented    = 7.8\n| notes          = Depois do [[Summer Update 2009]] foi renomeado de ''\"Giant Spider Silk\"'' para ''\"Spider Silk\"''.\n<noinclude><p><spoiler>\n* 01 é necessário para a [[What a Foolish Quest]].\n* 100 são necessários para o [[Assassin Outfits Quest]].\n* 100 são necessários para o [[Barbarian Outfits Quest]].\n* 100 são necessários para o [[Mage Outfits Quest]]. (Feminino)\n* 100 são necessários para o [[Summoner Outfits Quest]]. (Masculino)\n* Utilizado em uma das possíveis trocas que constituem as [[Exchange Quests]]:\n** 10 podem ser trocados por 01 [[Spool of Yarn]] com a NPC [[Marina]].\n* Possibilidade de ser obtido ao usar uma [[Belongings of a Deceased (Ottokar)]].\n* Possibilidade de ser obtido ao usar um [[Mysterious Remains]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7668,
+    "ns": 0,
+    "title": "Winning Lottery Ticket",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Winning Lottery Ticket\n| flavortext     = You were lucky! Go claim your prize at the potion store in Edron\n| itemclass      = Outros Itens\n| primarytype    = Itens de Addons\n| secondarytype  = Itens não Dropáveis\n| attrib         = Nenhum.\n| weight         = 1.20\n| stackable      = não\n| value          =\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.8\n| notes          = \n<noinclude><p><spoiler>\n* Pode ser obtido através da [[Lottery Ticket Quest]] e é necessário para fazer um addon do [[Mage_Outfits_Quest#Addon_1_(Mulheres)|Mage Outfits (Feminino)]] / [[Summoner_Outfits_Quest#Addon_1_(Homens)|Summoner Outfits (Masculino)]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7883,
+    "ns": 0,
+    "title": "Voodoo Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Voodoo Doll\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| secondarytype  = Itens de Addons\n| attrib         = Nenhum\n| weight         = 6.50\n| stackable      = não\n| value          = 60 000 - 400 000\n| npcvalue       = 400\n| droppedby      = [[Death Priest Shargon]], [[Dworc Voodoomaster]], [[Latrivan]], [[Ogre Shaman]].\n| droppedRaidby  = [[Orshabaal]].\n| buyfrom        = Jogadores.\n| sellto         = Rashid\n| notes          = Usando este boneco em qualquer jogador ou NPC irá mostrar um dos seguintes textos: ''\"You concentrate on your victim, hit the needle in the doll.......but nothing happens.\"'', ou: ''\"You concentrate on your victim and hit the needle in the doll.\"'', nesse caso um pequeno hit de [[blood]] aparecerá no alvo, porém não fará nenhum tipo de dano.''<br />\nExiste outros dois tipos de voodoo dolls: [[Pirate Voodoo Doll]] e [[Voodoo Doll (King)]].\nTem a mesma aparência de um [[Treasure Island Voodoo Doll]] por isso tenha atenção quando comprar um.\n<noinclude><p><spoiler>\n*05 são necessários para a [[Shaman Outfits Quest]].\n*01 é necessário para a [[Treasure Hunt Quest]].\n*[[Arquivo:Achievement.gif]] Após acertar um jogador com um Voodoo Doll, você receberá o achievement \"'''{{Achievement|Dark Voodoo Priest}}'''\".\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8765,
+    "ns": 0,
+    "title": "Sniper Gloves",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Sniper Gloves\n| flavortext     = They are the pride of the paladin guild.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Addons\n| secondarytype  = Produtos de Criaturas\n| attrib         = \n| stackable      = sim\n| weight         = 4.00\n| value          = 2 000 - 7 000\n| npcvalue       = 2 000\n| droppedby      = [[Hunter]], [[The Enraged Thorn Knight]].\n| droppedRaidby  = [[Arthom the Hunter]].\n| buyfrom        = Jogadores.\n| sellto         = Elane, Yasir\n| implemented    = 7.8\n| notes          = Para vendê-las a [[Elane]], você precisa ter o addon para o qual elas são necessárias ou ser free account.Durante as festividades de 15 anos do Tibia, um podia ser obtido clicando nos [[Anniversary Remains]] de [[Denson Larika (Criatura)|Denson Larika]]\n<noinclude><p><spoiler>*01 é necessário para o addon dos [[Hunter Outfits]].\n*Possibilidade de ser obtido ao usar uma [[Belongings of a Deceased (Ottokar)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8766,
+    "ns": 0,
+    "title": "White Piece of Cloth",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = White Piece of Cloth\n| itemclass      = Outros Itens\n| primarytype    = Itens de Addons\n| secondarytype  = Produtos de Criaturas\n| weight         = 5.00\n| value          = 500 - 5 000\n| npcvalue       = 100\n| stackable      = sim\n| droppedby      = [[Blood Hand]], [[Blood Priest]], [[Broken Shaper]], [[Ghost]], [[Hideous Fungus]], [[Humongous Fungus]], [[Lava Golem]], [[Lloyd]], [[Magma Crawler]], [[Spectre]], [[Tarnished Spirit]], [[Terrorsleep]], [[The Last Lore Keeper]], [[The Source Of Corruption]], [[White Shade]], [[Zugurosh]].\n| droppedRaidby  = [[Furyosa]], [[Ocyakao]], [[The Pale Count]], [[Zushuka (Mortal)]].\n| droppedEventby = [[Undead Jester]].\n| buyfrom        = Jogadores.\n| sellto         = Irmana, Yasir\n| implemented    = 7.8\n| notes          = <noinclude><p><spoiler>*5 são necessários para  a [[What a Foolish Quest]].\n*50 são necessários para um addon do [[Assassin Outfits]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8767,
+    "ns": 0,
+    "title": "Yellow Piece of Cloth",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Yellow Piece of Cloth\n| itemclass      = Outros Itens\n| primarytype    = Itens de Addons\n| secondarytype  = Produtos de Criaturas\n| weight         = 5.00\n| stackable      = sim\n| value          = 150 - 1 000\n| npcvalue       = 150\n| droppedby      = [[Broken Shaper]], [[Choking Fear]], [[Hellhound]], [[Lava Golem]], [[Magma Crawler]], [[Mummy]], [[Renegade Quara Hydromancer]], [[Wiggler]], [[Zugurosh]].\n| droppedRaidby  = [[Furyosa]], [[Gaz'Haragoth]], [[Weakened Shlorg]].\n| droppedEventby = [[Undead Jester]].\n| buyfrom        = Jogadores.\n| sellto         = Irmana, Yasir\n| implemented    = 7.8\n| notes          = <noinclude><p><spoiler>*1 é necessário para o [[Jester Outfits Quest]].\n*50 são necessários para o [[Assassin Outfits Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8778,
+    "ns": 0,
+    "title": "Spirit Container (Fighting Spirit)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Spirit Container (Fighting Spirit)\n| flavortext     = It contains pure fighting spirit.\n| itemclass      = Outros Itens\n| primarytype    = Itens Encantados\n| secondarytype  = Itens de Addons\n| tertiarytype   = Produtos de Criaturas \n| weight         = 6.00\n| attrib         = \n| stackable      = sim\n| value          =\n| npcprice       = 2 [[Royal Helmet]]s\n| npcvalue       = 40 000\n| droppedby      = [[King Zelos]], [[Souleater]], [[The Enraged Thorn Knight]], [[Ushuriel]].\n| buyfrom        = Haroun, Yaman\n| sellto         = Fiona, Yasir\n| implemented    = 7.8\n| notes          = Tem a mesma aparência de um [[Ectoplasm Container]] cheio. Você pode trocar 02 [[Royal Helmet]]s com os NPCs [[Haroun]] ou [[Yaman]] dizendo '''\"Fighting Spirit\"'''.\n<noinclude><p><spoiler>\n* 01 é necessário para o [[Warrior Outfits]].\n* 01 é necessário para o [[Barbarian Outfits]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8864,
+    "ns": 0,
+    "title": "Soul Stone",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Soul Stone\n| flavortext     = It contains the essence of countless tormented souls.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Addons\n| secondarytype  = Produtos de Criaturas\n| attrib         = \n| weight         = 0.30\n| stackable      = sim\n| value          = 6 000 - 10 000\n| npcvalue       = 6 000\n| droppedby      = [[Alptramun]], [[Izcandar the Banished]], [[Malofur Mangrinder]], [[Necropharus]], [[Plagueroot]], [[The Nightmare Beast]], [[The Sandking]], [[The Time Guardian]].\n| droppedEventby = [[The Percht Queen]].\n| buyfrom        = Jogadores.\n| sellto         = Yasir\n| implemented    = 7.8\n| notes          = Pode ser visto em [[Yalahar]], um andar abaixo do NPC [[Tamoril]].\n<noinclude><p><spoiler>* Necessária para um addon da [[Mage Outfits]] (Masculino) / [[Summoner Outfits]] (Feminino).</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9301,
+    "ns": 0,
+    "title": "The Lethal Lissy's Shirt",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = The Lethal Lissy's Shirt\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Addons\n| secondarytype  = Produtos de Criaturas\n| weight         = 20.00\n| stackable      = sim\n| attrib         = \n| value          = \n| npcvalue       = 0\n| droppedby      = [[Lethal Lissy]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.8\n| notes          = Não é possível usar como equipamento. Tem o mesmo sprite de uma [[Pirate Shirt]], porém, com marcas de sangue.\n<noinclude><p><spoiler>\n* Faz parte da [[Pirate Outfits Quest]].\n* É um dos itens dropados por bosses em invasões em Liberty Bay.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9337,
+    "ns": 0,
+    "title": "Spool of Yarn",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Spool of Yarn\n| flavortext     = It is made from fine spider silk.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Addons\n| secondarytype  = Produtos de Criaturas\n| attrib         =\n| weight         = 1.00\n| stackable      = sim\n| value          = 50 000 - 150 000\n| npcvalue       = 1 000\n| droppedby      = [[The Old Widow]].\n| droppedRaidby  = [[Mamma Longlegs]].\n| npcprice       = 1 000\n| buyfrom        = Jogadores.\n| sellto         = Irmana\n| implemented    = 7.8\n| notes          = \n<noinclude><p><spoiler>\n* [[Marina]] pode confeccionar um Yarn com 10 [[Spider Silk]]s, se você fizer um favor para ela. Antes de ela te atender, será necessário que você doe 50 [[Honeycomb]]s como parte da [[The Mermaid Marina Quest]].\n* 10 são necessários para o addon do [[Barbarian Outfits]].\n* 10 são necessários para o addon do [[Summoner Outfits]]/[[Mage Outfits]].\n* 10 são necessários para o addon do [[Assassin Outfits]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9353,
+    "ns": 0,
+    "title": "Staff (Simon)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Staff (Simon)\n| flavortext     = It must be the one which Simon the Beggar talked about.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Addons\n| secondarytype  = \n| attrib         = Nenhum.\n| weight         = 38.00\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.8\n| notes          = Parece um [[Staff]] normal mas não tem ataque nem defesa.\n<noinclude><p><spoiler>\n* 01 é necessário para o addon 02 (Masculino) / addon 01 (Feminino) do [[Beggar Outfits]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 17157,
+    "ns": 0,
+    "title": "Voluminous Piece of Cloth",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name         = Voluminous Piece of Cloth\n| flavortext   = It seems to be a part of an outfit. Find all six parts to complete the outfit.\n| itemclass    = Outros Itens\n| primarytype  = Itens de Addons\n| attrib       = \n| stackable    = sim\n| weight       = 5.00\n| value        = \n| npcvalue     = 0\n| droppedby    = [[Feverish Citizen]].\n| buyfrom      = Jogadores.\n| sellto       = Jogadores.\n| implemented  = 9.1\n| notes        = <noinclude><p><spoiler>* 01 é necessária para a [[Afflicted Outfits Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 20283,
+    "ns": 0,
+    "title": "Tanjis' Sight",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Tanjis' Sight\n| flavortext     = The identity of some deepling is written there.\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Addons\n| secondarytype  = Itens de Quest\n| attrib         = \n| stackable      = sim\n| weight         = 2.20\n| value          = \n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.4\n| notes          = \n<noinclude><p><spoiler>\n* Pode ser obtido em um baú durante a [[Deepling Outfits Quest]] após derrotar o boss [[Tanjis]].\n* É usado para conseguir o primeiro addon do [[Deepling Outfits|Deepling Outfit]].\n</spoiler></p></noinclude>\n}}\n<noinclude>[[Categoria:Itens não Dropáveis]]</noinclude>"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 44082,
+    "ns": 0,
+    "title": "Sturdy Book",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Sturdy Book\n| flavortext     = It looks like you could use it as a kind of protection\n| itemclass      = Outros Itens\n| primarytype    = Itens de Addons\n| attrib         = \n| weight         = 35.00\n| stackable      = sim\n| value          = \n| droppedby      = [[Lokathmor]], [[Gorzindel]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.80\n| notes          = <noinclude><p><spoiler>* 05 desses são necessários para o addon 01 do [[Battle Mage Outfits|Battle Mage Outfit]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 48050,
+    "ns": 0,
+    "title": "Spooky Hood",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Spooky Hood\n| flavortext     = Every time you look away you have a strange feeling, as if something watches you from its depths.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| secondarytype  = Itens de Addons\n| weight         = 12.50\n| value          = \n| npcvalue       = \n| npcprice       = \n| droppedby      = [[Unaz the Mean]], [[Brain Head]], [[The Dread Maiden]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.30\n| notes          = <noinclude><p><spoiler>* 01 é necessário para o Addon 01 do [[Poltergeist Outfits|Poltergeist Outfit]].</noinclude><p></spoiler>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 50768,
+    "ns": 0,
+    "title": "Soap",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Soap\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Valiosos\n| secondarytype  = Itens de Addons\n| weight         = 1.80\n| stackable      = não\n| attrib         = Nenhum.\n| value          = \n| npcvalue       = \n| npcprice       = \n| droppedby      = [[Ratmiral Blackwhiskers]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.60\n| notes          = <noinclude><p><spoiler>* 01 é necessário para o Addon 01 do [[Rascoohan Outfits|Rascoohan Outfit]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 52326,
+    "ns": 0,
+    "title": "Tagralt-Inlaid Scabbard",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Tagralt-Inlaid Scabbard\n| itemclass      = Valiosos\n| primarytype    = Itens de Addons\n| weight         = 1.00\n| stackable      = não\n| value          = \n| droppedby      = [[Amenef The Burning]], [[Neferi The Spy]], [[Sister Hetai]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.70\n| notes          = <noinclude><p><spoiler>* 01 é necessário para o Addon 02 do [[Citizen of Issavi Outfits]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 62531,
+    "ns": 0,
+    "title": "Strange Inedible Fruit",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Strange Inedible Fruit\n| flavortext     = \n| attrib         = Nenhum.\n| itemclass      = Valiosos\n| primarytype    = Itens de Addons\n| weight         = 0.25\n| stackable      = não\n| value          = \n| droppedby      = [[The Rootkraken]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 13.40.54ea79\n| notes          = <noinclude><p><spoiler>* 01 é necessário para o Addon 01 do [[Rootwalker Outfits|Rootwalker Outfit]], basta usá-lo se tiver o outfit.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

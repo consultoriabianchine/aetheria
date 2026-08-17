@@ -1,13 +1,18 @@
 import { Injectable } from '@nestjs/common';
 import { Prisma } from '@aetheria/database';
 import { PrismaService } from '../../prisma/prisma.service';
-import type { CharacterEquipment, ItemStack } from '@aetheria/types';
-import type { AccountRecord, StoredCharacter, Store } from './store';
+import type { CharacterEquipment, HuntProgress, ItemStack, VocationId } from '@aetheria/types';
+import type { AccountRecord, PromotionError, StoredCharacter, Store } from './store';
+import { validatePromotion, applyPromotion } from '../vocations/promotion.service';
 
 interface CharacterRow {
   id: string;
   accountId: string;
   name: string;
+  vocation: string;
+  promoted: boolean;
+  promotedAt: Date | null;
+  gold: number;
   position: { x: number; y: number; z: number } | null;
   stats: {
     level: number;
@@ -23,7 +28,7 @@ interface CharacterRow {
     club: number;
     distance: number;
     magic: number;
-    defense: number;
+    shielding: number;
   } | null;
   inventory: { slots: unknown } | null;
   equipment: {
@@ -80,6 +85,10 @@ export class PrismaStore implements Store {
       data: {
         accountId,
         name: data.name,
+        vocation: data.vocation,
+        promoted: data.promoted,
+        promotedAt: data.promotedAt ? new Date(data.promotedAt) : null,
+        gold: data.gold,
         position: { create: { x: data.position.x, y: data.position.y, z: data.position.z } },
         stats: {
           create: {
@@ -90,10 +99,17 @@ export class PrismaStore implements Store {
             mana: data.mana,
             maxMana: data.maxMana,
             attack: data.skills.sword,
-            defense: data.skills.defense,
+            defense: data.skills.shielding,
           },
         },
         skills: { create: { ...data.skills } },
+        skillProgress: {
+          create: (Object.keys(data.skills) as (keyof typeof data.skills)[]).map((skillType) => ({
+            skillType,
+            level: data.skills[skillType],
+            experience: 0,
+          })),
+        },
         inventory: { create: { slots: data.inventory as unknown as Prisma.InputJsonValue } },
         equipment: { create: this.toEquipmentData(data.equipment) as unknown as Prisma.CharacterEquipmentCreateWithoutCharacterInput },
       },
@@ -114,6 +130,9 @@ export class PrismaStore implements Store {
     await this.prisma.character.update({
       where: { id: character.id },
       data: {
+        gold: character.gold,
+        promoted: character.promoted,
+        promotedAt: character.promotedAt ? new Date(character.promotedAt) : null,
         position: { update: { x: character.position.x, y: character.position.y, z: character.position.z } },
         stats: {
           update: {
@@ -124,7 +143,7 @@ export class PrismaStore implements Store {
             mana: character.mana,
             maxMana: character.maxMana,
             attack: character.skills.sword,
-            defense: character.skills.defense,
+            defense: character.skills.shielding,
           },
         },
         skills: { update: { ...character.skills } },
@@ -132,6 +151,93 @@ export class PrismaStore implements Store {
         equipment: { update: this.toEquipmentData(character.equipment) as unknown as Prisma.CharacterEquipmentUpdateWithoutCharacterInput },
       },
     });
+  }
+
+  async promoteCharacter(
+    accountId: string,
+    characterId: string,
+  ): Promise<{ ok: true; character: StoredCharacter } | { ok: false; error: PromotionError }> {
+    return this.prisma.$transaction(async (tx) => {
+      const locked = await tx.character.findFirst({
+        where: { id: characterId },
+        include: INCLUDE,
+      });
+      if (!locked) return { ok: false, error: 'CHARACTER_NOT_FOUND' };
+      if (locked.accountId !== accountId) return { ok: false, error: 'CHARACTER_NOT_OWNED' };
+      const stored = this.toStored(locked as unknown as CharacterRow);
+      const error = validatePromotion(stored);
+      if (error) return { ok: false, error };
+      const promoted = applyPromotion(stored);
+      await tx.character.update({
+        where: { id: characterId },
+        data: { gold: promoted.gold, promoted: true, promotedAt: new Date() },
+      });
+      return { ok: true, character: promoted };
+    });
+  }
+
+  async getHuntProgress(characterId: string, huntId: string): Promise<HuntProgress | null> {
+    const row = await this.prisma.huntProgress.findUnique({
+      where: { characterId_huntId: { characterId, huntId } },
+    });
+    return row ? this.toHuntProgress(row) : null;
+  }
+
+  async listHuntProgress(characterId: string): Promise<HuntProgress[]> {
+    const rows = await this.prisma.huntProgress.findMany({ where: { characterId } });
+    return rows.map((r) => this.toHuntProgress(r));
+  }
+
+  async recordHuntCompletion(characterId: string, huntId: string, clearTimeMs: number): Promise<HuntProgress> {
+    return this.prisma.$transaction(async (tx) => {
+      const existing = await tx.huntProgress.findUnique({
+        where: { characterId_huntId: { characterId, huntId } },
+      });
+      const now = new Date();
+      const bestClearTimeMs =
+        existing?.bestClearTimeMs == null || clearTimeMs < existing.bestClearTimeMs
+          ? clearTimeMs
+          : existing.bestClearTimeMs;
+      const isBest = bestClearTimeMs === clearTimeMs;
+      const row = await tx.huntProgress.upsert({
+        where: { characterId_huntId: { characterId, huntId } },
+        create: {
+          characterId,
+          huntId,
+          completionCount: 1,
+          firstClearAt: now,
+          firstClearTimeMs: clearTimeMs,
+          bestClearTimeMs,
+          bestClearAt: now,
+        },
+        update: {
+          completionCount: (existing?.completionCount ?? 0) + 1,
+          firstClearAt: existing?.firstClearAt ?? now,
+          firstClearTimeMs: existing?.firstClearTimeMs ?? clearTimeMs,
+          bestClearTimeMs,
+          bestClearAt: isBest ? now : existing?.bestClearAt ?? now,
+        },
+      });
+      return this.toHuntProgress(row);
+    });
+  }
+
+  private toHuntProgress(row: {
+    huntId: string;
+    completionCount: number;
+    firstClearAt: Date | null;
+    firstClearTimeMs: number | null;
+    bestClearTimeMs: number | null;
+    bestClearAt: Date | null;
+  }): HuntProgress {
+    return {
+      huntId: row.huntId,
+      completionCount: row.completionCount,
+      firstClearAt: row.firstClearAt ? row.firstClearAt.getTime() : null,
+      firstClearTimeMs: row.firstClearTimeMs,
+      bestClearTimeMs: row.bestClearTimeMs,
+      bestClearAt: row.bestClearAt ? row.bestClearAt.getTime() : null,
+    };
   }
 
   private toEquipmentData(equipment: CharacterEquipment): Record<string, Prisma.InputJsonValue | undefined> {
@@ -149,6 +255,10 @@ export class PrismaStore implements Store {
       id: row.id,
       accountId: row.accountId,
       name: row.name,
+      vocation: (row.vocation ?? 'knight') as VocationId,
+      promoted: row.promoted ?? false,
+      promotedAt: row.promotedAt ? row.promotedAt.getTime() : null,
+      gold: clampInt(row.gold, 0),
       level: clampInt(row.stats?.level, 1),
       experience: clampInt(row.stats?.experience, 0),
       health: clampInt(row.stats?.health, 150),
@@ -166,7 +276,7 @@ export class PrismaStore implements Store {
         club: clampInt(row.skills?.club, 10),
         distance: clampInt(row.skills?.distance, 10),
         magic: clampInt(row.skills?.magic, 10),
-        defense: clampInt(row.skills?.defense, 10),
+        shielding: clampInt(row.skills?.shielding, 10),
       },
       inventory: Array.isArray(row.inventory?.slots)
         ? ((row.inventory.slots as (ItemStack | null)[]).map((s) => (s ? { itemId: s.itemId, quantity: s.quantity } : null)) as (ItemStack | null)[])

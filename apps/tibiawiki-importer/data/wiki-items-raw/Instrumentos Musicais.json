@@ -1,0 +1,518 @@
+{
+ "query": {
+  "pages": [
+   {
+    "pageid": 7354,
+    "ns": 0,
+    "title": "Music Box (Tibia Space)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre o '''fansite item''' Music Box. Para o item de domar, veja [[Music Box]] e para à réplica do fansite item, veja [[Music Box (Réplica)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Music Box (Tibia Space)\n| flavortext       = The song inside is made of love. It was rewarded by TibiaSpace.com\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Instrumentos Musicais\n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\". Emite notas musicais azuis.\n| stackable        = não\n| weight           = 27.00\n| mercado          = não\n| sounds           = \n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 8.7\n| notes            = \n* Item oficial do ex-fansite '''TibiaSpace'''.\n* O personagem {{Character|Frozen Crowley}} recebeu um por ter sido o criador do item. \n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n<noinclude><gallery>\narquivo:Musicbox.png|'''Music Box''' na casa do personagem {{character|Raven Hayes}} no servidor [[Luminera]].\n</gallery></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7914,
+    "ns": 0,
+    "title": "Cornucopia",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Cornucopia\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Instrumentos Musicais\n| secondarytype  = \n| attrib         = Cria 10 cachos de uvas e emite notas musicais amarelas.\n| weight         = 14.00\n| stackable      = não\n| value          = 2 000 000 - 4 000 000\n| npcvalue       = 0\n| droppedRaidby  = [[Dharalion]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Quando utilizado, cria 10 cachos de uvas e emite notas musicais amarelas. Só pode ser usado um número limitado de vezes antes que ela desapareça. Ele pode ser visto na tumba de Vashresamun.\n<gallery>arquivo:Cornucopia.png|Uma \"Cornucopia\" pode ser vista em Luminera.</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7918,
+    "ns": 0,
+    "title": "Didgeridoo",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Didgeridoo\n| itemclass      = Itens de Decoração\n| primarytype    = Instrumentos Musicais\n| stackable      = não\n| attrib         = Aparecem notas musicais quando usado.\n| weight         = 42.00\n| value          = 5 000\n| droppedby      = [[Madareth]], [[Ogre Shaman]].\n| npcprice       = 5 000\n| npcvalue       = 0\n| buyfrom        = Cael\n| sellto         = Jogadores.\n| notes          = Ele pode ser visto em [[Port Hope]] na [[Tibian Explorer Society]].\n<noinclude><p><spoiler>* Para comprá-lo do [[Cael]] é necessário entregar 6 [[Tome of Knowledge|tomes]] na [[Tomes of Knowledge Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7919,
+    "ns": 0,
+    "title": "Drum",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Drum\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Instrumentos Musicais\n| secondarytype  = \n| stackable      = não\n| attrib         = Aparecem notas musicais quando usado.\n| weight         = 32.00\n| value          = 140\n| npcprice       = 140\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Elvith, Fayla, Relaxed Bartender, Quero, Julian\n| sellto         = Jogadores.\n| notes          = <noinclude><p><spoiler>Spawn diário em vários lugares; na torre antes de [[Ulderek's Rock]] ou várias cavernas de [[Orc]]s de [[Edron]], também na cabana de [[Chondur]] em [[Meriana]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7920,
+    "ns": 0,
+    "title": "Fanfare",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Fanfare\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Instrumentos Musicais\n| secondarytype  = \n| stackable      = não\n| attrib         = Aparecem notas musicais quando usado.\n| weight         = 23.00\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Clique em usar, que ele mostra notas musicais na tela.\n<noinclude><p><spoiler>* Recompensa da [[Fanfare Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7921,
+    "ns": 0,
+    "title": "Harp",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Harp\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Instrumentos Musicais\n| secondarytype  = \n| stackable      = não\n| attrib         = Solta notas musicas quando usado.\n| value          = 50\n| npcvalue       = 0\n| npcprice       = 50\n| droppedby      = Ninguém.\n| buyfrom        = Ukea, Feizuhl, Nydala, Hireling (Apprentice), Yoem, Hofech, Edvard, Eddy, Iwar, Peggy, Vera, Gamon, Julian\n| sellto         = Jogadores.\n| notes          = Clique \"Use\" e ele vai mostrar algumas notas musicais na tela. Veja [[Furniture Kit]] para informações de como desembrulhá-lo.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7922,
+    "ns": 0,
+    "title": "Horn of Sundering",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Horn of Sundering\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Instrumentos Musicais\n| secondarytype  = \n| attrib         = \n| weight         = ?\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Pode ser visto abaixo da [[Serpentine Tower]] e na [[Treasure_Rooms#Sala_de_Tesouros_de_Morguthis|sala do tesouro de Morguthis]].<br />Mesmo sprite de um [[Waldo's Post Horn]] e [[Post Horn]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7924,
+    "ns": 0,
+    "title": "Lute",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Lute\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Instrumentos Musicais\n| secondarytype  = \n| stackable      = não\n| attrib         = Aparecem notas musicais quando usado.\n| weight         = 34.00\n| value          = 195\n| npcprice       = 195\n| npcvalue       = 0\n| droppedby      = [[Crazed Beggar]], [[Madareth]], [[Vashresamun]].\n| droppedEventby = [[Fan]], [[Grynch Clan Goblin]].\n| buyfrom        = Elvith, Fayla, Quero, Julian\n| sellto         = Jogadores.\n| notes          = Pode ser usado para simular que está tocando.\n<noinclude><p><spoiler>* Possibilidade de ser obtido ao usar um [[Unrealized Dream]] próximo ao [[The Dreamcatcher Device]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7925,
+    "ns": 0,
+    "title": "Lyre",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Lyre\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Instrumentos Musicais\n| secondarytype  = \n| stackable      = não\n| attrib         = Aparecem notas musicais quando usado.\n| weight         = 12.50\n| npcvalue       = 0\n| value          = 120\n| npcprice       = 120\n| droppedby      = [[Banshee]], [[Hero]], [[Madareth]], [[Spectre]].\n| droppedEventby = [[Fan]].\n| buyfrom        = Elvith, Nienna, Fayla, Quero, Julian\n| sellto         = Jogadores.\n| notes          = Notas aparecerão quando você usar esse instrumento.\n<noinclude><p><spoiler>* 01 é necessária em uma quest envolvendo a NPC [[Edala]] que lhe dá como recompensa um [[Diapason]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7927,
+    "ns": 0,
+    "title": "Panpipes",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Panpipes\n| itemclass      = Itens de Decoração\n| primarytype    = Instrumentos Musicais\n| stackable      = não\n| attrib         = Produz notas quando usado.\n| weight         = 8.20\n| value          = 150\n| npcvalue       = 150\n| droppedby      = [[Arctic Faun]], [[Dark Faun]], [[Faun]], [[Vashresamun]].\n| buyfrom        = Jogadores.\n| sellto         = Talila, Valindara\n| notes          = \n<noinclude><p><spoiler>\n* Recompensa da [[Panpipe Quest]].\n* 01 é necessário para a [[Threatened Dreams Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7928,
+    "ns": 0,
+    "title": "Party Trumpet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Party Trumpet\n| itemclass      = Outros Itens\n| primarytype    = Itens de Festa\n| secondarytype  = Instrumentos Musicais\n| attrib         = Produz notas musicais verdes quando usado.\n| stackable      = não\n| weight         = 0.50\n| npcprice       = 80\n| sounds         = \"TOOOOOOT\"\n| droppedEventby = [[Azure Frog]], [[Badger]], [[Bat]], [[Bolfrim (Criatura)]], [[Bonelord]], [[Crystal Spider]], [[Deepling Guard]], [[Deepling Scout]], [[Deepling Spellsinger]], [[Deepling Worker]], [[Dire Penguin]], [[Dragon]], [[Dragon Lord]], [[Dragon Lord Hatchling]], [[Elder Bonelord]], [[Frost Dragon]], [[Frost Dragon Hatchling]], [[Frost Giant]], [[Frost Giantess]], [[Frost Troll]], [[Killer Caiman]], [[Lancer Beetle]], [[Lizard Chosen]], [[Lizard High Guard]], [[Lizard Legionnaire]], [[Mutated Bat]], [[Orchid Frog]], [[Penguin]], [[Polar Bear]], [[Quara Constrictor]], [[Quara Constrictor Scout]], [[Quara Mantassin]], [[Quara Mantassin Scout]], [[Sandcrawler]], [[Squirrel]], [[Terror Bird]], [[Tortoise]], [[Winter Wolf]], [[Yeti]].\n| buyfrom        = Hireling (Apprentice):500, Stan\n| sellto         = Jogadores.\n| implemented    = 7.92\n| notes          = Pode ser obtido usando a [[Surprise Bag (Blue)]].<noinclude><p><spoiler>*[[Arquivo:Achievement.gif]] Ao usar 200 vezes este item ou um [[Party Hat]] vocé receberá o achievement '''\"{{Achievement|Party Animal}}\"'''.<br />\n*Pode ser obtido durante o evento [[The Colours of Magic]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7956,
+    "ns": 0,
+    "title": "Piano",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Piano\n| itemclass      = Itens de Decoração\n| primarytype    = Instrumentos Musicais\n| stackable      = não\n| attrib         = Produz notas musicais quando usado.\n| value          = 200\n| npcvalue       = 0\n| npcprice       = 200\n| droppedby      = Ninguém.\n| buyfrom        = Ukea, Feizuhl, Nydala, Hireling (Apprentice), Yoem, Hofech, Edvard, Eddy, Iwar, Peggy, Vera, Janz, Gamon, Julian, Dorbin\n| sellto         = Jogadores.\n| notes          = Veja [[Furniture Kit]] para informações de como desembrulhá-lo. Ao usar, ele solta notas musicais.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7957,
+    "ns": 0,
+    "title": "Post Horn",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Post Horn\n| flavortext     = It's property of the Postmaster's Guild and only rewarded to loyal members.\n| itemclass      = Itens de Decoração\n| primarytype    = Instrumentos Musicais\n| secondarytype  = \n| stackable      = não\n| attrib         = Aparecem notas musicais quando usado.\n| weight         = 15.00\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Mesmo sprite de um [[Waldo's Post Horn]] e [[Horn of Sundering]].\n<noinclude><p><spoiler>* Obtido na [[Postman Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7958,
+    "ns": 0,
+    "title": "Royal Fanfare",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Royal Fanfare\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Instrumentos Musicais\n| secondarytype  = \n| stackable      = não\n| attrib         = Aparecem notas musicais quando usado.\n| weight         = 25.00\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Pode ser vista no [[mercado]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7961,
+    "ns": 0,
+    "title": "Simple Fanfare",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Simple Fanfare\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Instrumentos Musicais\n| secondarytype  = \n| stackable = não\n| attrib         = Aparecem notas musicais quando usado.\n| weight         = 22.00\n| value          = 150\n| npcprice       = 150\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Elvith, Fayla, Quero, Julian\n| sellto         = Jogadores.\n| notes          = Usando este item irá aparecer notas musicais.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7963,
+    "ns": 0,
+    "title": "Waldo's Post Horn",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Waldo's Post Horn\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Instrumentos Musicais\n| attrib         = \n| stackable      = não\n| weight         = 22.00\n| value          = \n| npcprice       = 2 000\n| droppedby      = Ninguém.\n| buyfrom        = Black Bert\n| sellto         = Jogadores.\n| implemented    = 7.24\n| notes          = Tem a mesma aparência de um [[Post Horn]] e de um [[Horn of Sundering]].\n<noinclude><p><spoiler>* Obtido e usado durante a [[The Postman Missions Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7965,
+    "ns": 0,
+    "title": "War Drum",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = War Drum\n| itemclass      = Itens de Decoração\n| primarytype    = Instrumentos Musicais\n| stackable      = não\n| attrib         = Aparecem notas musicais quando usado.\n| weight         = 30.00\n\n| droppedby      = [[Madareth]], [[Orclops Bloodbreaker]], [[Orclops Ravager]], [[Orclops Doomhauler]].\n| npcprice       = 1 000\n| npcvalue       = 0\n| buyfrom        = Cael\n| sellto         = Jogadores.\n| notes          = <noinclude><p><spoiler>Para comprá-lo do [[Cael]] é necessário entregar 6 [[Tome of Knowledge|tomes]] na [[Tomes of Knowledge Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7967,
+    "ns": 0,
+    "title": "War Horn",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = War Horn\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Instrumentos Musicais\n| secondarytype  = \n| attrib         = Aparecem notas musicais quando usado.\n| weight         = 15.00\n| stackable      = não\n| value          = 8 000 - 20 000\n| npcvalue       = 8 000\n| droppedby      = [[Madareth]], [[Plaguesmith]], [[The Last Lore Keeper]].\n| buyfrom        = Jogadores.\n| sellto         = Rashid\n| notes          = Tem a mesma aparência de um [[Horn]].\n\n<noinclude><p><spoiler>Possibilidade de ser obtido ao usar um [[Mysterious Remains]].</spoiler></p></noinclude>\n\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7968,
+    "ns": 0,
+    "title": "Wooden Flute",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Wooden Flute\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Instrumentos Musicais\n| secondarytype  = \n| stackable      = não\n| attrib         = Aparecem notas musicais quando usado.\n| npcvalue       = 0\n| weight         = 2.00\n| value          = \n| droppedby      = [[Fahim the Wise]], [[Madareth]], [[Marid]], [[Priestess]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Nenhuma.\n<noinclude><p><spoiler>* 01 é necessária para a task diária '''Foul Spirits''' da [[An Uneasy Alliance Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7969,
+    "ns": 0,
+    "title": "Wooden Whistle",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Wooden Whistle\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Instrumentos Musicais\n| secondarytype  = Prêmios de Eventos\n| attrib         = Sumona um [[wolf]] e toca notais musicais quando usado.\n| weight         = 1.00\n| stackable      = não\n| value          = 500 000 - 10 000 000\n| droppedRaidby  = [[Fernfang]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Ao usá-lo irá sumonar um [[wolf]] mas, como um [[Piggy Bank|piggy bank]], ele pode quebrar quando usado.Pode ser dado como Prêmio em concursos Promoted e Supported Tibia Fansites\n<gallery>\narquivo:Wooden_whistle.png| Um \"Wooden Whistle\" pode ser visto em Guardia.\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 20363,
+    "ns": 0,
+    "title": "Small Whistle",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Small Whistle\n| flavortext     = This small whistle seems used. It seems to make absolutely no sound at all when it is blown.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Instrumentos Musicais\n| stackable      = não\n| attrib         = Nenhum.\n| weight         = 50.00\n| value          = \n| droppedby      = Desconhecido.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.1\n| notes          = Nenhuma.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 20436,
+    "ns": 0,
+    "title": "Swarmer Drum",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Swarmer Drum\n| flavortext     = This makeshift drums will not last for long.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Instrumentos Musicais\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = 32.00\n| value          = \n| npcprice       = 200\n| droppedby      = Ninguém.\n| buyfrom        = Orockle\n| sellto         = Jogadores.\n| implemented    = 9.4\n| notes          = Quando usado, sumona um [[Swarmer Hatchling]], você só pode usá-lo na [[The Hive]]. Tem a mesma aparência de um [[Drum]].\n<noinclude><p><spoiler>\n* Obtido e usado durante a [[War Against The Hive Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 20716,
+    "ns": 0,
+    "title": "Bongo Drum",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bongo Drum\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Instrumentos Musicais\n| attrib         = Aparecem notas musicais quando usado.\n| weight         = 29.00\n| droppedby      = Desconhecido.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = <noinclude><p><spoiler>\n* Acreditava-se ser impossível de obter, até final de 2023 com a adição do [[Bulltaur Lair]], pode ser encontrado um exemplar deste item ({{mapa|32856,32383,8:1|aqui}}). Respawn diário.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 30123,
+    "ns": 0,
+    "title": "Flute Made of a Single Bone",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Flute Made of a Single Bone\n| flavortext     = It is polished smooth and gleams ghastly.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Instrumentos Musicais\n| mercado        = não\n| stackable      = não\n| weight         = 0.30\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.1\n| notes          = <noinclude><p><spoiler>* Obtido e usado na [[The Gravedigger of Drefia Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 31778,
+    "ns": 0,
+    "title": "Santa Music Box",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Santa Music Box\n| itemclass      = Itens de Decoração\n| primarytype    = Instrumentos Musicais\n| weight         = 7.50\n| stackable      = não\n| npcprice       = 250 [[Christmas Token]]s\n| droppedby      = Ninguém.\n| buyfrom        = Ruprecht\n| sellto         = Jogadores.\n| implemented    = 10.30\n| notes          = Reage ao dar \"Use\".\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 37597,
+    "ns": 0,
+    "title": "Bone Flute",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bone Flute\n| flavortext     = Crude pictures of animals are carved into it.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Instrumentos Musicais\n| weight         = 0.30\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.90\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[Ferumbras' Ascendant Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 44087,
+    "ns": 0,
+    "title": "Bone Fiddle",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Bone Fiddle\n| flavortext    = \n| itemclass     = Equipamentos de Corpo\n| tertiarytype   = Extra Slot\n| primarytype   = Itens de Quest\n| secondarytype = Instrumentos Musicais\n| attrib        = Aparecem notas musicais quando usado.\n| armor         = 0\n| weight        = 38.00\n| resist        = [[Life Drain]] +5%\n| stackable     = não\n| value         = \n| npcvalue      = 0\n| mercado       = sim\n| droppedby     = Ninguém.\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| implemented   = 11.80\n| notes         = \n<noinclude><p><spoiler>\n* Recompensa da [[The Secret Library Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 44804,
+    "ns": 0,
+    "title": "Bone Fiddle Without Strings",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bone Fiddle Without Strings\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Instrumentos Musicais\n| attrib         = Nenhum.\n| weight         = 37.00\n| stackable      = não\n| npcvalue       = 0\n| value          = \n| droppedby      = Ninguém.\n| mercado        = não\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.80\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[The Secret Library Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 46895,
+    "ns": 0,
+    "title": "Ivory Lyre",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ivory Lyre\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Instrumentos Musicais\n| attrib         = Nenhum.\n| weight         = 4.90\n| npcprice       = 50 000\n| stackable      = não\n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Black Bert\n| sellto         = Jogadores.\n| implemented    = 12.20\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[Kilmaresh Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59948,
+    "ns": 0,
+    "title": "Conch Shell Horn",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Conch Shell Horn\n| flavortext    = It was made from a conch shell and shimmers in the colour of the moon.\n| itemclass     = Equipamentos de Corpo\n| tertiarytype   = Extra Slot\n| primarytype   = Itens de Quest\n| secondarytype = Instrumentos Musicais\n| attrib        = Aparecem notas musicais quando usado.\n| armor         = 0\n| weight        = 1.50\n| resist        = [[Ice Damage|Ice]] +2%\n| stackable     = não\n| value         = \n| npcvalue      = 0\n| mercado       = sim\n| droppedby     = Ninguém.\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| implemented   = 13.20.13560\n| notes         = \n<noinclude><p><spoiler>\n* Recompensa da [[Grimvale Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59949,
+    "ns": 0,
+    "title": "Scarab Ocarina",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Scarab Ocarina\n| flavortext    = It has a turquoise shimmer and was made from a real scarab shell.\n| itemclass     = Equipamentos de Corpo\n| tertiarytype   = Extra Slot\n| primarytype   = Itens de Quest\n| secondarytype = Instrumentos Musicais\n| attrib        = Aparecem notas musicais quando usado.\n| armor         = 0\n| weight        = 1.20\n| resist        = [[Earth Damage|Earth]] +2%\n| stackable     = não\n| value         = \n| npcprice      = \n| mercado       = sim\n| droppedby     = Ninguém.\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| implemented   = 13.20.13560\n| notes         = \n<noinclude><p><spoiler>\n* Recompensa da [[Grimvale Quest]]. \n* Você pode obter outra Scarab Ocarina ao entregar outro corpo de scarab falando '''Lost Ocarina''' para o NPC Tonar.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59950,
+    "ns": 0,
+    "title": "Ocarina",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ocarina\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Instrumentos Musicais\n| attrib         = Aparecem notas musicais quando usado.\n| weight         = 1.20\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 13.20.13560\n| notes          = \n<noinclude><p><spoiler>\n* Obtido e usado na missão ''Paradise Lost'' da [[Grimvale Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

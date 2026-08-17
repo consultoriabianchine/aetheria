@@ -37,6 +37,16 @@ export interface CreatureAIHooks {
   onAttackPlayer(creature: CreatureEntity, target: CreatureTarget, amount: number, critical: boolean, now: number): void;
 }
 
+/** Opções de comportamento da IA. */
+export interface CreatureAIOptions {
+  /**
+   * Modo arena (hunts): criaturas sempre perseguem o jogador — detectam-no a
+   * qualquer distância, ignoram canWander/canChase/canFlee e nunca desistem
+   * da perseguição por distância ao spawn.
+   */
+  aggressive?: boolean;
+}
+
 const WANDER_TIMEOUT_MS = 8000;
 const FLEE_RECALC_INTERVAL_MS = 900;
 
@@ -54,7 +64,14 @@ function clamp(v: number, min: number, max: number): number {
  * Movimento em tiles, pathfinding A*, detecção por Chebyshev + mesmo andar.
  */
 export class CreatureAIService {
-  constructor(private readonly hooks: CreatureAIHooks) {}
+  constructor(
+    private readonly hooks: CreatureAIHooks,
+    private readonly options: CreatureAIOptions = {},
+  ) {}
+
+  private get aggressive(): boolean {
+    return this.options.aggressive ?? false;
+  }
 
   private get movement(): MovementService {
     return this.hooks.movement;
@@ -92,6 +109,7 @@ export class CreatureAIService {
     const target = this.resolveTarget(creature, now);
 
     const shouldFlee =
+      !this.aggressive &&
       creature.definition.canFlee &&
       target !== null &&
       creature.healthPercent <= creature.definition.fleeHealthPercent;
@@ -155,6 +173,22 @@ export class CreatureAIService {
     return best;
   }
 
+  /** Jogador mais próximo no mesmo andar, sem limite de alcance (modo agressivo). */
+  private nearestPlayer(creature: CreatureEntity): CreatureTarget | null {
+    let best: CreatureTarget | null = null;
+    let bestDist = Infinity;
+    for (const p of this.hooks.getPlayers()) {
+      if (p.health <= 0) continue;
+      if (p.position.z !== creature.position.z) continue;
+      const d = tileDistance(creature.position, p.position);
+      if (d < bestDist) {
+        bestDist = d;
+        best = p;
+      }
+    }
+    return best;
+  }
+
   private resolveTarget(creature: CreatureEntity, now: number): CreatureTarget | null {
     let target: CreatureTarget | null = null;
     if (creature.targetId) {
@@ -165,8 +199,12 @@ export class CreatureAIService {
       target = null;
       creature.targetId = null;
     }
-    if (!target && creature.definition.canChase) {
-      const detected = this.nearestPlayerInView(creature, creature.definition.viewRange);
+    if (!target) {
+      const detected = this.aggressive
+        ? this.nearestPlayer(creature)
+        : creature.definition.canChase
+          ? this.nearestPlayerInView(creature, creature.definition.viewRange)
+          : null;
       if (detected) {
         creature.targetId = detected.id;
         return detected;
@@ -178,7 +216,7 @@ export class CreatureAIService {
   // ------------------------------------------------------------ IDLE
 
   updateIdle(creature: CreatureEntity, target: CreatureTarget | null, now: number) {
-    if (target && creature.definition.canChase) {
+    if (target && (creature.definition.canChase || this.aggressive)) {
       this.switchState(creature, 'CHASE', now);
       return;
     }
@@ -219,7 +257,7 @@ export class CreatureAIService {
   // ------------------------------------------------------------ WANDER
 
   updateWander(creature: CreatureEntity, target: CreatureTarget | null, now: number) {
-    if (target && creature.definition.canChase) {
+    if (target && (creature.definition.canChase || this.aggressive)) {
       this.switchState(creature, 'CHASE', now);
       return;
     }
@@ -253,15 +291,17 @@ export class CreatureAIService {
       return;
     }
 
-    const distToSpawn = tileDistance(creature.position, creature.spawnPosition);
-    if (distToSpawn > creature.definition.chaseRange) {
-      creature.targetId = null;
-      if (creature.definition.returnToSpawn) {
-        this.switchState(creature, 'RETURN', now);
-      } else {
-        this.switchState(creature, 'IDLE', now);
+    if (!this.aggressive) {
+      const distToSpawn = tileDistance(creature.position, creature.spawnPosition);
+      if (distToSpawn > creature.definition.chaseRange) {
+        creature.targetId = null;
+        if (creature.definition.returnToSpawn) {
+          this.switchState(creature, 'RETURN', now);
+        } else {
+          this.switchState(creature, 'IDLE', now);
+        }
+        return;
       }
-      return;
     }
 
     this.ensurePath(creature, target.position, now, this.exceptIds(creature, target));
@@ -285,7 +325,7 @@ export class CreatureAIService {
       start: creature.position,
       goal,
       exceptIds,
-      maxCost: creature.definition.chaseRange + creature.definition.viewRange,
+      maxCost: this.aggressive ? 1000 : creature.definition.chaseRange + creature.definition.viewRange,
     });
     creature.path = path ?? [];
     creature.pathIndex = 0;

@@ -1,0 +1,2086 @@
+{
+ "query": {
+  "pages": [
+   {
+    "pageid": 7304,
+    "ns": 0,
+    "title": "Abacus",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre o '''fansite item''' Abacus. Para à réplica, veja [[Abacus (Réplica)]].}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Abacus\n| flavortext       = If you use it wisely, you may write yourself into the history books. It was awarded by Erig\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = \n| tertiarytype     = \n| attrib           = Pode ser escrito.\n| stackable        = não\n| weight           = 12.00\n| mercado          = não\n| sounds           = \n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 8.2\n| notes            = \n* Item oficial do ex-fansite '''Erig.net'''.\n* Você pode ler o texto em até 2 SQMs de distância.\n* Erig possui dois Abacus, se você der look neles, eles vão mostrar:\n** <font color = \"green\">'''If you possess this abacus, you are a thief. Please return it to Erig at once!'''</font>\n** <font color = \"green\">'''Last Abacus, created in memory of erig.net, supported fansite of Tibia till March 2009.'''</font>\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n\n<noinclude><gallery>\nArquivo:abacuserig21.png|Um dos Abacus na antiga casa do Erig no servidor [[Pacera]].\n</gallery></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7306,
+    "ns": 0,
+    "title": "Bag of Oriental Spices",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre o '''fansite item''' Bag of Oriental Spices. Para à réplica, veja [[Bag of Oriental Spices (Réplica)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Bag of Oriental Spices\n| flavortext       = Those spices were gathered all around the Tibian world\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = \n| tertiarytype     = \n| attrib           = \n| stackable        = não\n| weight           = 15.08\n| mercado          = não\n| sounds           = \"According to tibia-wiki.net, Jalapeño Peppers are as hot and famous as the place they come from - Ankrahmun.\"; \"According to tibia-wiki.net, a Bulb of Garlic is a great spice AND protection against vampires.\"; \"According to tibia-wiki.net, star and sling herbs taste like cinnamon and vanilla.\"\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 8.55\n| notes            = \n* Item oficial do ex-fansite '''Tibia-Wiki.net'''.\n* O personagem {{Character|Diantris}} recebeu um por ter sido o criador do item. \n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7307,
+    "ns": 0,
+    "title": "Bronze Cup of Honour",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bronze Cup of Honour\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Troféus\n| attrib         = Pode ser escrito.\n| stackable      = não\n| weight         = 16.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.4\n| mercado        = não\n| notes          = Esse item pode ser obtido em um campeonato de futebol.<br />\nO primeiro foi dado para o time do ex-fansite TibiaCz no primeiro [[Fansite Soccer Cup]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7309,
+    "ns": 0,
+    "title": "Bronze Trophy of Excellence",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bronze Trophy of Excellence\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Troféus\n| attrib         = Pode ser escrito\n| stackable      = não\n| weight         = 13.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.4\n| mercado        = não\n| notes          = Você só pode ler o texto se você estiver a dois quadrados ou menos de distância.\nExistem 3 tipos de trophies of excellence: [[Bronze Trophy of Excellence|bronze]], [[Silver Trophy of Excellence|silver]] e [[Golden Trophy of Excellence|golden]].<br />\nO trophy of excellence de bronze simboliza o terceiro lugar em uma competição.<br />\n\n<gallery>\narquivo:Bronzetrophyofexcellence.png|Um exemplar do Troféu pode ser visto na House do jogador {{character|Raven Hayes}}.\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7315,
+    "ns": 0,
+    "title": "Bronze Warrior Trophy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bronze Warrior Trophy\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Troféus\n| attrib         = Pode ser escrito.\n| stackable      = não\n| weight         = 18.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.4\n| mercado        = não\n| notes          = Pode ser obtido em concursos realizados por [[Fansites]]. O warrior trophy de bronze simboliza o terceiro lugar em uma competição.<br />\nExistem 3 tipos de warrior trophies: [[Bronze Warrior Trophy|bronze]], [[Silver Warrior Trophy|silver]] e [[Golden Warrior Trophy|golden]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7322,
+    "ns": 0,
+    "title": "Champion's Cup",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Champion's Cup\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Troféus\n| attrib         = Pode ser escrito.\n| stackable      = não\n| weight         = 18.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.4\n| mercado        = não\n| notes          = Este item só pode ser obtido em um torneio de futebol.<br />\nO primeiro foi dado para o time do ex-fansite TibiaMx na primeira [[Fansite Soccer Cup]].\n<gallery>\narquivo:Champion's_cup.png|Um pode ser visto na casa do jogador {{character|Solgeris}}\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7324,
+    "ns": 0,
+    "title": "CM Token",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = CM Token\n| flavortext     = It was a gift from a community manager.\n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| writable       = sim\n| attrib         = Pode ser pendurado em paredes.\n| weight         = 10.00\n| stackable      = não\n| value          = 8 000 000 - 20 000 000\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| mercado        = não\n| notes          = Este item pode ser dado apenas por [[Community Manager]]s em ocasiões especiais. Um pode ser visto na exibição de prêmios de [[Thais]] ao domingos.<br />\nVocê só pode ler o texto se estiver à 2 [[sqm]]s dele ou menos.\n<gallery>\nArquivo:Cmtoken.png|CM Token em Luminera.\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7327,
+    "ns": 0,
+    "title": "Dragon Goblet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre o '''fansite item''' Dragon Goblet. Para à réplica, veja [[Dragon Goblet (Réplica)]].}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Dragon Goblet\n| flavortext       = A goblet forged by the dragon Khax that represents all the knowledge and wisdom of TibiaVenezuela\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = \n| tertiarytype     = \n| attrib           = \n| stackable        = não\n| weight           = 18.00\n| mercado          = não\n| sounds           = \"MAY MY ETERNAL FLAME BE YOUR SHIELD AND PATH OF SUCCESS, <jogador>\", \"I WILL PROTECT YOUR KNOWLEDGEZZZ\", \"I SENSE...WISDOM...HUMILITY...AND...PERSEVERANCE!!\"\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 8.54\n| notes            = \n* Item oficial do ex-fansite '''TibiaVenezuela'''. \n* A partir do [[Updates/9.0|Update 9.0]] o item passou a emitir sons.<br />\n* O personagem {{Character|Dragondorf}} recebeu um por ter sido o criador do item. \n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7328,
+    "ns": 0,
+    "title": "Draken Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre o '''fansite item''' Draken Doll. Para à réplica, veja [[Draken Doll (Réplica)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Draken Doll\n| flavortext       = This doll seems to be the favourite doll of the emperor. It was awarded by TibiaJourney.com\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Dolls e Bears\n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 15.00\n| mercado          = não\n| sounds           = \"For zze emperor!\"; \"Hail TibiaJourney.com!\"; \"Hail <Player>!!\".\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 8.7\n| notes            = \n* Item oficial do ex-fansite '''TibiaJourney'''. \n* O personagem {{Character|Demolition Loover}} recebeu um por ter sido o criador do item. \n* Um pode ser visto na exibição de prêmios de [[Thais]] aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7330,
+    "ns": 0,
+    "title": "Epaminondas Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Epaminondas Doll\n| flavortext       = He talks, moves and sings just like a real person. It is awarded only by PortalTibia.com.br\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Dolls e Bears\n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 7.77\n| mercado          = não\n| sounds           = \"Hail <nome do personagem>!\"; \"Hail Portal Tibia!\"; \"Hauopa!\"; \"WHERE IS MY HYDROMEL?!\"; \"Yala Boom\".\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 8.41\n| notes            = \nEpaminondas é o Taverneiro da ''Vila Scapula'', cidade do [[Portal Tibia]]. É conhecido por seu famoso Hidromel, uma bebida quente cuja receita é um mistério até hoje. Ao cantar \"Yala Boom\" ele produz notas vermelhas. No [[Patches/13.16.0000|Patch 13.16.13209]], teve sua aparência atualizada: [[Arquivo:Epaminondas Doll (Old).gif|link=]] [[Arquivo:Seta_icon.gif|link=]] [[Arquivo:Epaminondas Doll.gif|link=]].\n\n* Item oficial do fansite '''Portal Tibia'''.\n* O personagem {{Character|Joao Matheus}} recebeu um por ter sido o criador do item.\n* Pode ser visto na exibição de prêmios de Thais aos domingos.\n\n[[Epaminondas Doll/Donos|Clique aqui para conferir uma lista com donos do Epaminondas Doll]].\n\n<noinclude><gallery>\narquivo:Hail_phooenix.png|'''Epaminondas Doll''' no servidor [[Luminera]].\n</gallery></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8606,
+    "ns": 0,
+    "title": "Dread Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Dread Doll\n| flavortext       = It is shining with positive energy and was awarded by FunTibia.com\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Dolls e Bears\n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\". Fornece uma pequena quantidade de luz vermelha.\n| stackable        = não\n| weight           = 11.00\n| mercado          = não\n| sounds           = \"Mhausheausheu! What a FAIL! Mwahaha!\"; \"Hail <nome do personagem>! You are wearing old socks!\"; \"You are so unpopular even your own shadow refuses to follow you.\"; \"Have fun with FunTibia.com!\".\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 8.72\n| notes            = \n* Item oficial do fansite '''FunTibia'''.\n* O personagem {{character|Geeviz}} recebeu um por ter sido o criador do item.\n* O personagem {{character|Romano The Knight}} recebeu um por ser o administrador do site.  \n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n\n<gallery>\nArquivo:DreadDoll.jpg|'''Dread Doll''' em exibição no servidor Rubera.\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 18954,
+    "ns": 0,
+    "title": "Badge of Glory",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Badge of Glory\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = \n| writable       = sim\n| stackable      = não\n| weight         = 15.50 \n| npcvalue       = 0 \n| npcprice       = 0 \n| droppedby      = Ninguém. \n| buyfrom        = Jogadores. \n| sellto         = Jogadores. \n| implemented    = 9.2 \n| mercado        = não\n| notes          = Você pode ler o texto em até 2 SQMs de distancia.<br />\nEsse item pode ser obtido em concursos feito pelos [[fansites|Promoteds e Supporteds Fansites]]. \n<gallery>\narquivo:Badge_of_glory.png| Uma \"Badge Of Glory\" na casa do jogador {{character|Dark Black Magician}} por vencer um Concurso do Tibia Space.\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 18956,
+    "ns": 0,
+    "title": "Elven Trophy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Elven Trophy\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Troféus\n| attrib         = Pode ser escrito. \n| stackable      = não\n| weight         = 9.00 \n \n| npcvalue       = 0 \n| npcprice       = 0 \n| droppedby      = Ninguém. \n| buyfrom        = Jogadores. \n| sellto         = Jogadores. \n| implemented    = 9.2 \n| mercado        = não\n| notes          = Você pode ler o texto em até 2 SQMs de distancia.<br />\nEsse item pode ser obtido em concursos feito pelos [[fansites|Promoteds e Supporteds Fansites]]. \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 20347,
+    "ns": 0,
+    "title": "Bronze Medal",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bronze Medal\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| weight         = 12.00 \n| stackable      = não\n \n| npcvalue       = 0 \n| npcprice       = 0 \n| droppedby      = Ninguém. \n| buyfrom        = Jogadores. \n| sellto         = Jogadores. \n| implemented    = 8.4\n| notes          = Esse item pode ser obtido em concursos feito pela [[CipSoft]]. \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 20890,
+    "ns": 0,
+    "title": "Durin The Almighty",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre o '''fansite item''' Durin The Almighty. Para à réplica, veja [[Doll of Durin The Almighty]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Durin The Almighty\n| flavortext       = The mightiest. The only. God of all dwarfs. Awarded by Tibia Bariloche\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Dolls e Bears\n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\". Fornece uma pequena quantidade de luz azul.\n| stackable        = não\n| weight           = 40.00\n| mercado          = não\n| sounds           = \"Hahaha! <nome do personagem>, what about a few demons in Thais?\"; \"My powers are limitless!\"; \"Hail Tibia Bariloche!\".\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 9.5\n| notes            = \n* Item oficial do ex-fansite '''TibiaBariloche'''. \n* O personagem {{Character|El Padrino}} recebeu um por ter sido o criador do item. \n* Um pode ser visto na exibição de prêmios de [[Thais]] aos domingos.\n<gallery>arquivo:Durindoll.png|Um '''Doll of Durin The Almighty''' visto em uma casa de [[Guardia]].</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 21342,
+    "ns": 0,
+    "title": "Chayenne's Magical Key",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Chayenne's Magical Key\n| flavortext     = No one really knows where it leads to, but the dragon graveyard might reveal the secret - or not.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Prêmios de Eventos\n| attrib         = Nenhum.\n| weight         = 1.00 \n| value          = 15 000 000 - 40 000 000\n| droppedby      = [[Chayenne (Criatura)|Chayenne]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.44\n| notes          = Uma chave muito rara atualmente, já que ela só podia ser obtida da criatura \"[[Chayenne (Criatura)|Chayenne]]\" durante as festividades de [[Aniversário do Tibia|15 anos]] do Tibia. Em uma [http://forum.tibia.com/forum/?action=thread&postid=33444086#post33444086 declaração oficial] a [[Chayenne]] confirmou que existe um uso para ela, e de fato foi descoberto por alguns jogadores que ela é utilizada para obter acesso ao [[Chayenne's Realm]].<noinclude><p><spoiler>* 01 é necessária para fazer a [[Chayenne's Realm Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 22589,
+    "ns": 0,
+    "title": "Dragon Eye",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre o '''fansite item''' Dragon Eye. Para à réplica, veja [[Dragon Eye (Réplica)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Dragon Eye\n| flavortext       = It belonged to the first dragon to roam the world and was adorned with Tibia-Market's purest gold\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = \n| tertiarytype     = \n| attrib           = Nenhum.\n| stackable        = não\n| weight           = 28.00\n| mercado          = não\n| sounds           = \n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 9.6\n| notes            = \n* Item oficial do ex-fansite '''Tibia-Market'''. \n* O personagem {{Character|Mondlanze}} recebeu um por ter sido o criador do item. \n* Um pode ser visto na exibição de prêmios de [[Thais]] aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 23820,
+    "ns": 0,
+    "title": "Arcane Insignia",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Arcane Insignia\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| weight         = 13.50\n| stackable      = não\n| npcvalue       = 0  \n| npcprice       = 0 \n| droppedby      = Ninguém. \n| buyfrom        = Jogadores. \n| sellto         = Jogadores.\n| implemented    = 9.5\n| mercado        = não\n| notes          = Elas só podem ser obtidas em concursos feitos pela [[CipSoft]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 29061,
+    "ns": 0,
+    "title": "Bookworm Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre o '''fansite item''' Bookworm Doll. Para à réplica, veja [[Bookworm Doll (Réplica)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Bookworm Doll\n| flavortext       = It does not wish to be disturbed. Awarded by TibiaLibrary.org\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Dolls e Bears\n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 19.00\n| mercado          = não\n| sounds           = \"Shhhhhh, please be quiet!\"; \"Books are great!! Aren't they?\"; \"Hail Tibia Library!\".\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 9.85\n| notes            = \n* Item oficial do ex-fansite '''TibiaLibrary'''. \n* O personagem {{Character|Jaegaren}} recebeu um por ter sido o criador do item.\n* O personagem {{Character|Gorak}} recebeu um por ser o administrador do fansite. \n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 31749,
+    "ns": 0,
+    "title": "Dream Matter",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Dream Matter\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Valiosos\n| secondarytype  = Produtos de Criaturas\n| tertiarytype   = Prêmios de Eventos\n| weight         = 3.90\n| stackable      = sim\n| npcvalue       = 0\n| value          = \n| implemented    = 10.30\n| droppedby      = [[Horadron]], [[Prince Drazzak]], [[Terofar]], [[Zavarash]].\n| droppedRaidby  = [[Gaz'Haragoth]], [[Omrafir]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = <noinclude><p><spoiler>* Necessário para criar [[Umbral Itens]] com [[Eruaran]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 31766,
+    "ns": 0,
+    "title": "Copper Prison Key",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Copper Prison Key\n| flavortext     = You dreamt that this key unlocks the prison of a powerful horror that you had to face on your own.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Prêmios de Eventos\n| weight         = 2.00\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 0\n| droppedby      = Ninguém\n| location       = [[Roshamuul]]\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.30\n| notes          = É necessária para acessar uma cela da [[Roshamuul Prison]].\n<noinclude><p><spoiler>\n* 01 é necessária para acesso a cela de [[Horadron]].\n* Possibilidade de ser obtido ao usar um [[Unrealized Dream]] próximo ao [[The Dreamcatcher Device]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 31767,
+    "ns": 0,
+    "title": "Bronze Prison Key",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bronze Prison Key\n| flavortext     = You dreamt that this key unlocks the prison of a powerful horror that you had to face on your own.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Prêmios de Eventos\n| weight         = 2.00\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 0\n| droppedby      = Ninguém\n| location       = [[Roshamuul]]\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.30\n| notes          = É necessária para acessar uma cela da [[Roshamuul Prison]].\n<noinclude><p><spoiler>\n* 01 é necessária para acesso a cela de [[Zavarash]].\n* Possibilidade de ser obtido ao usar um [[Unrealized Dream]] próximo ao [[The Dreamcatcher Device]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 34415,
+    "ns": 0,
+    "title": "Black Knight Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Black Knight Doll\n| flavortext       = Awarded by TibiaLatina.Fandom.com. My sad story is told by few living humans but many dead warriors\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = \n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 18.00\n| mercado          = não\n| sounds           = \n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 10.53\n| notes            = \n* Item oficial do fansite '''TibiaLatina Wiki'''.\n* O personagem {{Character|Lupus Aurelius}} recebeu um por ter sido o criador do item.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 35388,
+    "ns": 0,
+    "title": "Assassin Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre o '''fansite item''' Assassin Doll. Para à réplica, veja [[Assassin Doll (Réplica)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Assassin Doll\n| flavortext       = Only the real killers can touch me! This item was awarded by TibiaBrasileiros.com\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Dolls e Bears\n| tertiarytype     = \n| attrib           = Fornece uma pequena quantidade de luz rosa.\n| stackable        = não\n| weight           = 25.04\n| mercado          = não\n| sounds           = \"<FART...> Ahhh... silent and deadly...\"; \"Hail Tibia Brasileiros! (União&Força)\"; \"Hail <Player>! (União&Força)\"; \"Only the real killers can touch me!\"; \"The path of assassin is found in death, DIE!\".\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 10.75\n| notes            = \n* Item oficial do ex-fansite '''TibiaBrasileiros'''. \n* O personagem {{Character|Lupus Aurelius}} recebeu um por ter sido o criador do item. \n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 36967,
+    "ns": 0,
+    "title": "Cateroide's Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre o '''fansite item''' Cateroide's Doll. Para à réplica, veja [[Crimson Doll]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Cateroide's Doll\n| flavortext       = A rare doll that only worthy warriors can touch! Awarded by Cateroide.com.br\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Dolls e Bears\n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\". Fornece uma pequena quantidade de luz vermelha.\n| stackable        = não\n| weight           = 15.00\n| mercado          = não\n| sounds           = \"Hail Cateroide!\"; \"Oops, have BOH!\"; \"Hail tibians you have the right to remain silent!\"; \"I am Cateroide and I always have BOH\".\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 10.82\n| notes            = \n* Item oficial do ex-fansite '''Cateroide'''. \n* O personagem {{Character|Gordo Warlike}} recebeu um por ter sido o criador do item.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n\n<noinclude><gallery>\nArquivo:Cateroide_doll.png|Cateroide's Doll com a personagem {{Character|Meninna Malvada}}.\n</gallery></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 36993,
+    "ns": 0,
+    "title": "Dark Wizard's Crown",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Dark Wizard's Crown\n| flavortext       = It grants infinite power and knowledge to the one who wears it. Awarded by TibiaMisterios.com.br\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = \n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\". Fornece uma pequena quantidade de luz verde.\n| stackable        = não\n| weight           = 6.66\n| mercado          = não\n| sounds           = \"Be careful <nome do personagem>, the beared of this crown will be cursed by the sporits of darkness!Getshhh ...\"; \"The truth? Getshhh... Often the truth is hidden in the lies! You're dumb.\"; \"Getshhh...\"; \"Getshhh... I can tell you all the secrets. Maybe...\"; \"You should take a quick look over your shoulder now and then ... Getshhh ... just in case ...\".\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 10.82\n| notes            = \n* Item oficial do fansite '''TibiaMisterios'''.\n* O personagem {{Character|Lupus Aurelius}} recebeu um por ter sido o criador do item.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n \n<noinclude><gallery>\nArquivo:Dark Wizard's Crown.png|Item em exibição na exposição de Thais.\n</gallery></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 38298,
+    "ns": 0,
+    "title": "Blue Sphere",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Blue Sphere\n| itemclass      = Itens de Decoração\n| tertiarytype   = Extra Slot\n| primarytype    = Decorações\n| secondarytype  = Prêmios de Eventos \n| stackable      = sim\n| weight         = 10.00\n| value          = Negociável\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.94\n| notes          = Este item pode ser dado apenas por [[Community Manager]]s em ocasiões especiais.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 43687,
+    "ns": 0,
+    "title": "Citizen Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre o '''fansite item''' Citizen Doll. Para à réplica, veja [[Citizen Doll (Réplica)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Citizen Doll\n| flavortext       = This doll carries the story of all Tibians in their legendary citizen outfit. Awarded by TibiaTV.com.br\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Dolls e Bears\n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 22.00\n| mercado          = não\n| sounds           = \"Thais is the oldest city in Tibia, did you know that?\"; \"Looking for the great histories and adventures? Take a look at TibiaTV.com.br!\"; \"Have you heard about the Sword of Fury in Rookgaard? It's been a long time since I have seen it...\"\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 11.65.6492\n| notes            = \n* Item oficial do ex-fansite '''TibiaTV'''.\n* O personagem {{Character|Tywolf}} recebeu um por ter sido o criador do item.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 44799,
+    "ns": 0,
+    "title": "Adamant Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Adamant Shield\n| flavortext       = It was forged with magical diamonds collected during the journey of a true Tibian. Awarded by TibiaLife.com.br\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = \n| tertiarytype     = \n| attrib           = \n| stackable        = não\n| weight           = 91.00\n| mercado          = não\n| sounds           = \n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 11.90.7293\n| notes            = \n* Item oficial do fansite '''TibiaLife'''. \n* O personagem {{Character|Makadamia}} recebeu um por ter sido o criador do item.\n* O personagem {{Character|Mirhadrael}} recebeu um como prêmio por ter vencido o concurso [https://tibialife.com.br/resultado-concurso-o-shield-lendario O shield Lendário] elaborado pelos fansites '''TibiaLife''' e '''BomDiaTibia''' em fevereiro de 2019.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}\n<noinclude>[[Categoria:Escudos]]</noinclude>"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45324,
+    "ns": 0,
+    "title": "Crunor's Heart",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Crunor's Heart\n| flavortext       = It was frozen deep in the caverns of Folda. A certain warmth and pulse emit from inside. Awarded by TibiaBosses.com\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = \n| tertiarytype     = \n| attrib           = \n| stackable        = não\n| weight           = 7.00\n| mercado          = não\n| sounds           = \n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 12.00\n| notes            = \n* Item oficial do '''TibiaBosses.com'''.\n* O personagem {{Character|Licad}} recebeu um por ter a ideia do item.\n* O personagem {{Character|Lupus Aurelius}} recebeu um pela execução do sprite do item.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n\n[[Crunor's Heart/Donos|Confira a lista de donos clicando aqui]].\n\n<noinclude><gallery>\nArquivo:Crunor's Heart.png|Crunor's Heart no servidor Celebra.\n</gallery></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 50038,
+    "ns": 0,
+    "title": "Baby Munster",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Baby Munster\n| flavortext       = Legends say that when he grew up, he accidentally swallowed his favourite toy. Awarded by Rookie.com.pl\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Extra Slot\n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 0.45\n| mercado          = não\n| sounds           = \"Hail Rookie.com.pl!\"; \"Stay on Rookgaard, it’s so funny here!\"; \"Let’s play with me, <player>!\"; \"Meeeeep!\"; \"I wanna be a big boss when I grow up!\"; \"Hail to the Rookgaard!\".\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 12.50.10135\n| notes            = \n* Item oficial do fansite '''Rookie.com.pl'''.\n* O personagem {{Character|Makadamia}} recebeu um por ter sido o criador do item.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 50055,
+    "ns": 0,
+    "title": "Bard Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Bard Doll\n| flavortext       = A mythical bard rumoured to magically appear in Tibian taverns with a lute and a mug to tell amazing and funny stories. Granted by Tibiaria.com\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Dolls e Bears\n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 8.50\n| mercado          = não\n| sounds           = \"That Avar Tar stole my sword once, people now call it Excalibug. Can you belive it?! <Jogador>!\"; \"If I could share all the stories I heard in the Tibiaria Tavern!\"; \"HAHAHA Who can marry a necromancer? His GHOUL-FRIEND!\"; \"...and then I realised it was a hunter and not a PK. HAHAHA\"; \"Let me tell you a story from my last adventure. Have a seat and grab your mug of hydromel!\".\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 12.31.9540\n| notes            = \n* Item oficial do fansite '''TibiaRia'''.\n* O personagem {{Character|Elfo Fantasma}} recebeu um por ter sido o criador do item.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 51238,
+    "ns": 0,
+    "title": "Chaos Critical Dice",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Chaos Critical Dice\n| flavortext       = The one prepared to handle this mortal instrument has the power to alter the equilibrium established by the Gods. Choose a target and roll the dice. Awarded by ManjaTibia.com.br\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = \n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 0.40\n| mercado          = não\n| sounds           = \"Hail Manjatibia!\"; \"Would you sacrifice your soul for a critical hit?\"; \"Roll the dice and challenge the God's equilibrium, if you dare to pay the price.\"; \"Wow... You got a critical!\"; \"When touching Tibiasula's hearth, the power of the dagger was broken. A fraction was absorbed by this object\"; \"In Honour of Tibiasula!\"\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 12.63.10611\n| notes            = \n* Item oficial do fansite '''ManjaTibia''' (saiu do Programa de Fansites em 17 de Abril de 2023).\n* O personagem {{Character|Makadamia}} recebeu um por ter sido o criador do item.\n* O personagem {{Character|Faelar Mcgonagall}} recebeu um por ser administrador do fansite.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 51584,
+    "ns": 0,
+    "title": "Banor Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Banor Doll\n| flavortext       = Imbued with the undying soul of the first human, it bestows the might of the gods to its owner. Awarded by TibiArt.net\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Dolls e Bears\n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 38.00\n| mercado          = não\n| sounds           = \"The might of the gods lies in Tibiart.net.\"; \"We are to triumph the forces of evil, the gods will do so.\"; \"I wield the power of my creators, I see their spark in you.\"; \"The gods made it my mission to save this world.\"; \"I was the first human, I am the pinnacle of creation.\".\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 12.66.10771 (1)\n| notes            = \n* Item oficial do fansite '''TibiaArt'''.\n* O personagem {{Character|Titan of Tsunami}} recebeu um por ter sido o criador do item.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 52966,
+    "ns": 0,
+    "title": "Bella Bonecrusher's Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Bella Bonecrusher's Doll\n| flavortext       = In this doll lives the courage and legacy of Bella Bonecrusher. Awarded by Tibiagallery.com\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Dolls e Bears\n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\". Fornece uma pequena quantidade de luz rosa.\n| stackable        = não\n| weight           = 4.20\n| mercado          = não\n| sounds           = \"Another head for me!\"; \"I will defend what's ours!\"; \"My memories will live forever in Tibiagallery.com\"\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 12.71.11017\n| notes            = \n* Item oficial do fansite '''Tibiagallery'''.\n* O personagem {{Character|Lupus Aurelius}} recebeu um por ter sido o criador do item.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 52967,
+    "ns": 0,
+    "title": "Bonelord Tome",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Bonelord Tome\n| flavortext       = Eons of wisdom are looking upon thee. Granted by TibiaSecrets.com\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = \n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\". Fornece uma pequena quantidade de luz verde.\n| stackable        = não\n| weight           = 46.90\n| mercado          = não\n| sounds           = \"3478 67 90871 97664 3466 0 345!\"; \"486486 holds the answers to some of your questions. But what have you done to justify the attention of our ancient race?\"; \"Hail TibiaSecrets.com! They are very close to the truth...\"; \"Oculi plus vident, quam oculus.\"; \"Oh...It is you again, &lt;Player&gt;. Get out of my sight, two-eyed creature.\"; \"The price for that knowledge is your mind, body and soul. Still want to proceed?\"\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 12.71.11017\n| notes            = \n* Item oficial do fansite '''TibiaSecrets'''.\n* O personagem {{Character|Lupus Aurelius}} recebeu um por ter sido o criador do item.\n* O personagem {{Character|Bosst}} recebeu um por ser membro do time.\n* O personagem {{Character|Mogh}} recebeu um por ser membro do time.\n* O personagem {{Character|Haishen}} recebeu um por ser membro do time.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53057,
+    "ns": 0,
+    "title": "Armillary Sphere",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Armillary Sphere\n| flavortext       = It's a sphere with models of the celestial bodies in the sky, used when navigating. TibiaMaps.io have used this sphere on their adventures to explore the Tibian lands\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Extra Slot\n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 80.00\n| mercado          = não\n| sounds           = \n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 12.72.11206\n| notes            = \n* Item oficial do fansite '''TibiaMaps.io'''.\n* O personagem {{Character|Robin Kint}} recebeu um por ter sido o criador do item.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53060,
+    "ns": 0,
+    "title": "Evora",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Evora\n| flavortext       = Omnipotent energies inhabit this place. It is my mission to protect our home. Awarded by TibiaHome.com\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = \n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\". Fornece uma pequena quantidade de luz laranja.\n| stackable        = não\n| weight           = 66.60\n| mercado          = não\n| sounds           = \n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 12.72.11206\n| notes            = \n* Item oficial do fansite '''TibiaHome'''.\n* O personagem {{Character|Daniel Sake}} recebeu um por ter sido o criador do item.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53108,
+    "ns": 0,
+    "title": "Draptor Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Draptor Doll\n| flavortext       = Only the chosen ones have witnessed this extremely rare phenomenon of draptor transformation. Awarded by TibiaDraptor.com\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = \n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 9.00\n| mercado          = não\n| sounds           = \n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 12.86.11580\n| notes            = \n* Item oficial do fansite '''TibiaDraptor'''.\n* O personagem {{Character|Makadamia}} recebeu um por ter sido o criador do item.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 54901,
+    "ns": 0,
+    "title": "Dark Oracle",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Dark Oracle\n| flavortext       = Rumours say that someone took the skull of Goshnar from his grave to create this scary magical device. Awarded by TibiaVip.app\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = \n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\". Fornece uma pequena quantidade de luz roxa.\n| stackable        = não\n| weight           = 19.90\n| mercado          = não\n| sounds           = \"<Player>, you have to... DIE!\", \"<Player>, you have to... KILL!\", \"<Player>, you have to... LIVE!\", \"<Player>, you have to... LOSE!\", \"<Player>, you have to... WIN!\".\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 12.86.11580\n| notes            = \n* Item oficial do fansite '''TibiaVIP'''.\n* O personagem {{Character|Lupus Aurelius}} recebeu um por ter sido o criador do item.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55289,
+    "ns": 0,
+    "title": "Beaver of Wisdom",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Beaver of Wisdom\n| flavortext       = This wise beaver will happily solve all your math problems! Awarded by TibiaPal.com\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = \n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 6.00\n| mercado          = não\n| sounds           = \n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 12.87.11992\n| notes            = \n* Item oficial do fansite '''TibiaPal'''.\n* O personagem {{Character|Tirano Flamel}} recebeu um por ter sido o criador do item.\n* O personagem {{Character|Junin Psicodelico}} de Inabra recebeu um no Evento fansite item lottery \n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59067,
+    "ns": 0,
+    "title": "Bronze Cup (Triumph)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bronze Cup (Triumph)\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Troféus\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.31.9658\n| mercado        = não\n| notes          = Este é um dos prêmios para os personagens que ficaram em terceiro no ranking do torneio [[Torneio Triumph|Triumph]]. Este trófeu contêm o nome do personagem criado para o torneio, o ranking, o nome do torneio e é assinado pela Cipsoft.</br>\nExistem três variações deste trófeu: [[Bronze Cup (Triumph)|Bronze]], [[Silver Cup (Triumph)|Silver]] e [[Gold Cup (Triumph)|Golden]]. {{Veja|Torneios|Torneio Triumph}}\n<noinclude>[[Categoria:Prêmios de Torneios]]</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59070,
+    "ns": 0,
+    "title": "Bronze Cup (Valour)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bronze Cup (Valour)\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Troféus\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.40.10061\n| mercado        = não\n| notes          = Este é um dos prêmios para os personagens que ficaram em terceiro no ranking do torneio [[Torneio Valour|Valour]]. Este trófeu contêm o nome do personagem criado para o torneio, o ranking, o nome do torneio e é assinado pela Cipsoft.</br>\nExistem três variações deste trófeu: [[Bronze Cup (Valour)|Bronze]], [[Silver Cup (Valour)|Silver]] e [[Gold Cup (Valour)|Golden]]. {{Veja|Torneios|Torneio Valour}}\n<noinclude>[[Categoria:Prêmios de Torneios]]</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59075,
+    "ns": 0,
+    "title": "Bronze Cup (Honour)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bronze Cup (Honour)\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Troféus\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.67.10918\n| mercado        = não\n| notes          = Este é um dos prêmios para os personagens que ficaram em terceiro no ranking do torneio [[Torneio Honour|Honour]]. Este trófeu contêm o nome do personagem criado para o torneio, o ranking, o nome do torneio e é assinado pela Cipsoft.</br>\nExistem três variações deste trófeu: [[Bronze Cup (Honour)|Bronze]], [[Silver Cup (Honour)|Silver]] e [[Gold Cup (Honour)|Golden]]. {{Veja|Torneios|Torneio Honour}}\n<noinclude>[[Categoria:Prêmios de Torneios]]</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59078,
+    "ns": 0,
+    "title": "Bronze Cup (Radiance)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bronze Cup (Radiance)\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Troféus\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.72.11206\n| mercado        = não\n| notes          = Este é um dos prêmios para os personagens que ficaram em terceiro no ranking do torneio [[Torneio Radiance|Radiance]]. Este trófeu contêm o nome do personagem criado para o torneio, o ranking, o nome do torneio e é assinado pela Cipsoft.</br>\nExistem três variações deste trófeu: [[Bronze Cup (Radiance)|Bronze]], [[Silver Cup (Radiance)|Silver]] e [[Gold Cup (Radiance)|Golden]]. {{Veja|Torneios|Torneio Radiance}}\n<noinclude>[[Categoria:Prêmios de Torneios]]</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59081,
+    "ns": 0,
+    "title": "Bronze Cup (Ascension)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bronze Cup (Ascension)\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Troféus\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.86.11809\n| mercado        = não\n| notes          = Este é um dos prêmios para os personagens que ficaram em terceiro no ranking do torneio [[Torneio Ascension|Ascension]]. Este trófeu contêm o nome do personagem criado para o torneio, o ranking, o nome do torneio e é assinado pela Cipsoft.</br>\nExistem três variações deste trófeu: [[Bronze Cup (Ascension)|Bronze]], [[Silver Cup (Ascension)|Silver]] e [[Gold Cup (Ascension)|Golden]]. {{Veja|Torneios|Torneio Ascension}}\n<noinclude>[[Categoria:Prêmios de Torneios]]</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59097,
+    "ns": 0,
+    "title": "Bronze Deed",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bronze Deed\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Documentos e Papéis\n| attrib         = Pode ser pendurado em paredes.\n| stackable      = não\n| weight         = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.31.9658\n| mercado        = não\n| notes          = Este é um dos prêmios para os personagens classificados entre as posições 51º e 100º no ranking do torneio [[Torneio Triumph|Triumph]]. Esta escritura contêm o nome do personagem criado para o torneio, o ranking, o nome do torneio e é assinado pela Cipsoft.\n{{Veja|Torneios|Torneio Triumph}}\n<noinclude>[[Categoria:Prêmios de Torneios]]</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 60801,
+    "ns": 0,
+    "title": "Aylie",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Aylie\n| flavortext       = She fights injustice with kindness in any kingdom, glowing with her light and knowledge throughout all of Tibia. Awarded by TibiaTales.com\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Escudos\n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 12.06\n| mercado          = não\n| sounds           = \n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 13.21.13810\n| notes            = \n* Item oficial do fansite '''Tibia Tales'''.\n* O personagem {{Character|}} recebeu um por ter sido o criador do item.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 60802,
+    "ns": 0,
+    "title": "Duality Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Duality Doll\n| flavortext       = It represents two different dimensions of Tibia. Are you a Charlover? Or a killer? Anything is possible. Entrusted by TibiaDuality.com\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = \n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 21.05\n| mercado          = não\n| sounds           = \n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 13.21.13810\n| notes            = \n* Item oficial do fansite '''Tibia Duality'''.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64573,
+    "ns": 0,
+    "title": "Aurora's Collection",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Aurora's Collection\n| flavortext       = Equipped with a magical backpack that never runs out of space, Aurora carries her endless collection on every adventure, eager to show it to everyone along the way. Awarded by TibiaCollection.com\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = \n| tertiarytype     = \n| implemented      = 13.22.14366\n| attrib           = Nenhum.\n| stackable        = não\n| weight           = 7.09\n| mercado          = não\n| sounds           = \n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| notes            = \n* Item oficial do fansite '''TibiaCollection.com'''. \n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}\n<noinclude>[[Categoria:Escudos]]</noinclude>"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7086,
+    "ns": 0,
+    "title": "Heavily Bound Book",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Heavily Bound Book\n| flavortext       = It contains the scribings of many knowledgeable Tibians. It was awarded by Tibia.Fandom.com\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Livros\n| tertiarytype     = \n| attrib           = Pode ser escrito.\n| stackable        = não\n| weight           = 78.00\n| mercado          = não\n| sounds           = \n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 8.2\n| notes            = \n* Item oficial do fansite '''Tibia.Fandom.com'''.\n* O personagem {{Character|Shinner}} recebeu um por ter sido o criador do item.\n* Pode ser visto na exibição de prêmios de Thais aos domingos.\n\n<noinclude><gallery>\nArquivo:ErigHBB1.PNG|'''Heavily Bound Book''' na casa do personagem {{character|Erig}} no servidor [[Pacera]].\n</gallery></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7311,
+    "ns": 0,
+    "title": "Golden Trophy of Excellence",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Golden Trophy of Excellence\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Troféus\n| attrib         = Pode ser escrito.\n| stackable      = não\n| weight         = 13.00\n\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.4\n| mercado        = não\n| notes          = Você só pode ler o texto se você ficar a dois quadrados do troféu ou menos.\nExistem 3 tipos de trophies of excellence: [[Bronze Trophy of Excellence|bronze]], [[Silver Trophy of Excellence|silver]] e '''golden'''.<br />\nO trophy of excellence de ouro simboliza o primeiro lugar em uma competição.\n<gallery>\narquivo:Goldentrophyofexcellence.png|Um exemplar do Troféu pode ser vista na House do jogador {{character|Raven haves}}.\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7317,
+    "ns": 0,
+    "title": "Golden Warrior Trophy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Golden Warrior Trophy\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Troféus\n| attrib         = Pode ser escrito.\n| stackable      = não\n| weight         = 19.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.4\n| mercado        = não\n| notes          = Pode ser obtido em concursos realizados por [[Fansites]]. O warrior trophy de ouro simboliza o primeiro lugar em uma competição.<br />\nExistem 3 tipos de warrior trophies: [[Bronze Warrior Trophy|bronze]], [[Silver Warrior Trophy|silver]] e [[Golden Warrior Trophy|golden]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7332,
+    "ns": 0,
+    "title": "Ferumbras Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Ferumbras Doll\n| flavortext       = It was awarded by Tibiopedia.pl\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Dolls e Bears\n| tertiarytype     = \n| attrib           = Nenhum.\n| stackable        = não\n| weight           = 17.00\n| mercado          = não\n| sounds           = \"NO ONE WILL STOP ME THIS TIME!\"; \"THE POWER IS MINE!\"; \"THE POWER IN TIBIOPEDIA!\"; \"Mwahaha!\".\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 8.55\n| notes            = \n* Item oficial do fansite '''Tibiopedia.pl'''.\n* O personagem {{Character|Oxyven}} recebeu um por ter sido o criador do item.\n* Pode ser visto na exibição de prêmios de Thais aos domingos.\n\n<gallery>\nArquivo:Ferumbras_doll_contest.png|'''Ferumbras Doll''' na casa da personagem {{character|Kat Woman}}\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7333,
+    "ns": 0,
+    "title": "Friendship Amulet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre o '''fansite item''' Friendship Amulet. Para à réplica, veja [[Friendship Amulet (Réplica)]].}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Friendship Amulet\n| flavortext       = It shines as beautifully as a good friendship. This amulet was rewarded by Tibiafriends\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = \n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 5.20\n| mercado          = não\n| sounds           = \"Hail <player>, my friend!\"; \"Friends forever!\"; \"Look, how our friendship shines!\"; \"Hail Tibiafriends!\".\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 8.53\n| notes            = \n* Item oficial do ex-fansite '''TibiaFriends'''.\n* O personagem {{character|Sir Ruffuzz}} recebeu um por ter sido o criador do item. \n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n\n<noinclude><gallery>\nArquivo:Friendshipamulet.png|'''Friendship Amulet''' em [[Luminera]].\n</gallery></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7335,
+    "ns": 0,
+    "title": "Frozen Heart",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre o '''fansite item''' Frozen Heart. Para à réplica, veja [[Frozen Heart (Réplica)]].}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Frozen Heart\n| flavortext       = The eternal love is awarded by TibiaTR.net\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = \n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 20.00\n| mercado          = não\n| sounds           = \"Hail TibiaTr s2\", \"The world was born from Tibiasula's love\", \"Look after TibiaTR frozen heart. I've left it with you\", \"Could a dead, frozen heart beat again? It felt like mine was about to.\"\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 8.7\n| notes            = \n* Item oficial do ex-fansite '''TibiaTr'''. \n* O personagem {{Character|Kyward}} recebeu um por ter sido o criador do item.<br />\n* Ao ser usado, ele fica derretendo por 15 segundos: [[Arquivo:Frozen_Heart_(Melting).gif|link=]].<br />\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7341,
+    "ns": 0,
+    "title": "Golden Falcon",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre o '''fansite item''' Golden Falcon. Para à réplica, veja [[Golden Falcon (Réplica)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Golden Falcon\n| flavortext       = It is a token of honour granted only by TibiaBR\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = \n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 20.00\n| mercado          = não\n| sounds           = \"Hail TibiaBR.com! Flap Flap!\"; \"Let's hunt <nome do personagem>!\"; \"Oh, when I get my claws on you...\".\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 8.2\n| notes            = \n* Item oficial do ex-fansite '''TibiaBR'''.\n* O personagem {{Character|Drigos}} recebeu um por ter sido o criador do item. \n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n<noinclude><gallery>\narquivo:Golden_falcon.png|Um '''Golden Falcon''' nas mãos do personagem {{character|Raven Hayes}} pelas suas contribuições ao TibiaBR.\n</gallery></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7342,
+    "ns": 0,
+    "title": "Golden Newspaper",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre o '''fansite item''' Golden Newspaper. Para à réplica, veja [[Golden Newspaper (Réplica)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Golden Newspaper\n| flavortext       = Tibia's most amazing news can be read in it. It was awarded for winning a TibiaNews contest\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Documentos e Papéis\n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 24.00\n| mercado          = não\n| sounds           = \"It's news to me!\"; \"News, updated as infrequently as possible!\"; \"Extra!  Extra!  Read all about it!\"; \"Fresh off the press!\".\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 8.2\n| notes            = \n* Item oficial do ex-fansite '''TibiaNews'''.\n* Ao usá-lo, o personagem verá algumas notícias sobre o Tibia. \n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n\n<noinclude><gallery perrow=\"3\">\nArquivo:Golden_newspaper_1.JPG|'''Golden Newspaper''' na casa do personagem {{character|Lord Mijeman}} no servidor [[Calmera]].\nArquivo:Golden_newspaper_2.jpg|'''Golden Newspaper''' na casa da personagem {{character|Cantinelle}} no servidor [[Calmera]].\n</gallery></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7346,
+    "ns": 0,
+    "title": "Hand Puppets",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre o '''fansite item''' Hand Puppets. Para à réplica, veja [[Hand Puppets (Réplica)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Hand Puppets\n| flavortext       = They were awarded by Tibia RP\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = \n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 0.05\n| mercado          = não\n| sounds           = \"Why so serious?\"; \"These are not the puppets you are looking for\"; \"May the roleplay be with you\"; \"An age of roleplay, and all will know, that three hundred puppets gave their last breath to defend it!\"; \"They stole it! Sneaky little puppetses!\".\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 8.41\n| notes            = \n* Item oficial do ex-fansite '''TibiaRP'''.\n* O personagem {{character|Falco Montague}} recebeu um por ter sido o criador do item.\n* O personagem {{character|Ren of Heaven}} recebeu um por ter sido o administrador do site.\n* O personagem {{character|Zanko}} recebeu um por ter sido o administrador do site. \n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n<noinclude><gallery>\nArquivo:Hand_puppets.png|Um Hand Puppets no servidor [[Luminera]].\n</gallery></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7349,
+    "ns": 0,
+    "title": "Key of Numerous Locks",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre o '''fansite item''' Key of Numerous Locks. Para à réplica, veja [[Key of Numerous Locks (Réplica)]].}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Key of Numerous Locks\n| flavortext       = It opens every locked forum thread\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = \n| tertiarytype     = \n| attrib           = Pode ser escrito.\n| stackable        = não\n| weight           = 1.50\n| mercado          = não\n| sounds           = \n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 8.2\n| notes            = \n* Item oficial do ex-fansite '''TibiaCz'''. \n* O personagem {{Character|Dariux Drake}} recebeu um por ter sido o criador do item.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n\n<noinclude><gallery>\nArquivo:Key of numerous locks.png\n</gallery></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7351,
+    "ns": 0,
+    "title": "Lucky Clover Amulet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Lucky Clover Amulet\n| flavortext       = It is rumoured to bring you good luck! Luck sponsored by TibiaLottery\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = \n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 1.50\n| mercado          = não\n| sounds           = \n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 8.54\n| notes            = \n* Item oficial do ex-fansite '''TibiaLottery'''.\n* O personagem {{Character|Satan}} recebeu um por ter sido o criador do item.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n<noinclude><gallery>\nArquivo:Lucky_Clover_Amulet.png|'''Lucky Clover Amulet''' na casa da personagem {{character|Arechion}} no servidor [[Luminera]].\n</gallery></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7352,
+    "ns": 0,
+    "title": "Medal of Honour",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Medal of Honour\n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| writable       = sim\n| weight         = 10.00\n| stackable      = não\n| mercado        = não\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Pode ser visto na sala do tesouro do [[Treasure Rooms#Amazon Camp Treasure Room|Amazon Camp]] de [[Venore]], [[Adventurers' Guild]] e  na exibição de prêmios de [[Thais]] ao domingos.<br />\nSó pode ser obtido ganhando concursos [[Fansites]].\n<gallery>\nArquivo:Medal_of_honour.png|Medal of Honour em [[Guardia]].\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7354,
+    "ns": 0,
+    "title": "Music Box (Tibia Space)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre o '''fansite item''' Music Box. Para o item de domar, veja [[Music Box]] e para à réplica do fansite item, veja [[Music Box (Réplica)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Music Box (Tibia Space)\n| flavortext       = The song inside is made of love. It was rewarded by TibiaSpace.com\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Instrumentos Musicais\n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\". Emite notas musicais azuis.\n| stackable        = não\n| weight           = 27.00\n| mercado          = não\n| sounds           = \n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 8.7\n| notes            = \n* Item oficial do ex-fansite '''TibiaSpace'''.\n* O personagem {{Character|Frozen Crowley}} recebeu um por ter sido o criador do item. \n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n<noinclude><gallery>\narquivo:Musicbox.png|'''Music Box''' na casa do personagem {{character|Raven Hayes}} no servidor [[Luminera]].\n</gallery></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7355,
+    "ns": 0,
+    "title": "Nightmare Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Nightmare Doll\n| flavortext       = \n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Dolls e Bears\n| tertiarytype     = \n| attrib           = Nenhum.\n| stackable        = não\n| weight           = 18.00\n| mercado          = não\n| sounds           = \n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 8.54\n| notes            = \nEste item foi originalmente criado pelo jogador {{Character|Li Dao}} para a competição de itens do [[Tibiafriends]]. Ele não venceu a competição (ficou em segundo lugar), mas a equipe de conteúdo do Tibia gostou tanto que pediu ao jogador {{Character|Li Dao}} permissão para adicioná-lo ao jogo. Este item só pode ser obtido através de um prêmio em competições da Cipsoft ou de fansites. Faz parte do [[Demon Set]].\n<gallery>\narquivo:Nightmare_Doll.png|Um \"Nightmare Doll\" na casa do personagem {{character|Cimerian}}.\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7356,
+    "ns": 0,
+    "title": "Norseman Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre o '''fansite item''' Norseman Doll. Para à réplica, veja [[Norseman Doll (Réplica)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Norseman Doll\n| flavortext       = It is given to the winners of TibiaNordic competitions\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Dolls e Bears\n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 10.00\n| mercado          = não\n| sounds           = \"Hail TibiaNordic!\"; \"So cold...\"; \"Run, mammoth!\".\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 8.2\n| notes            = \n* Item oficial do ex-fansite '''TibiaNordic'''.\n* O personagem {{Character|Myst'Sharion}} recebeu um por ter sido o criador do item.\n* Um pode ser visto na exibição de prêmios de Thais ao domingos.\n\n<noinclude><gallery>\nArquivo:Norsemandoll.jpg|'''Norseman Doll''' no servidor [[Refugia]].\n</gallery></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7358,
+    "ns": 0,
+    "title": "Orc's Jaw Shredder",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre o '''fansite item''' Orc's Jaw Shredder. Para à réplica, veja [[Orc's Jaw Shredder (Réplica)]].}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Orc's Jaw Shredder\n| flavortext       = There is no better way to get rid of top secret data. Awarded by TibiaSpy.com\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = \n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 25.00\n| mercado          = não\n| sounds           = \"Hail <character name>! \", \"Hail TibiaSpy !\", \"Wrrrzzzgggrrzzzz...\", \"Yummy...\".\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 8.55\n| notes            = \n* Item oficial do ex-fansite '''TibiaSpy'''. \n* O personagem {{character|Li Dao}} recebeu um por ter sido o criador do item. \n* Um pode ser visto na exibição de prêmios de [[Thais]] aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7359,
+    "ns": 0,
+    "title": "Phoenix Statue",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre o '''fansite item''' Phoenix Statue. Para à réplica, veja [[Phoenix Statue (Réplica)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Phoenix Statue\n| flavortext       = This mighty statue contains a true phoenix feather inside. Awarded by Tibiafans.se\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Troféus\n| tertiarytype     = \n| attrib           = Fornece uma pequena quantidade de luz vermelha.\n| stackable        = não\n| weight           = 20.00\n| mercado          = não\n| sounds           = \"Come closer, I will show some of Tibian mysteries to you!\", \"Feel the eternity of Tibiafans!\", \"<player name> you are worth to feel power of Tibiafans! HAIL TIBIAFANS!\"\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 8.61\n| notes            = \n* Item oficial do ex-fansite [[TibiaFans]]. \n* O personagem {{Character|Van Lyves}} recebeu um por ter sido o criador do item. \n* Um pode ser visto na exibição de prêmios de [[Thais]] aos domingos.\n<gallery>arquivo:Phoenix_statue.png| Uma '''Phoenix Statue''' visto na house da personagem {{character|Arechion}} em [[Luminera]].</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7360,
+    "ns": 0,
+    "title": "Pigeon Trophy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre o '''fansite item''' Pigeon Trophy. Para à réplica, veja [[Pigeon Trophy (Réplica)]].}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Pigeon Trophy\n| flavortext       = It's a symbol of peace handed out by Tibia ML\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Troféus\n| tertiarytype     = \n| attrib           = Pode ser pendurado na parede.\n| stackable        = não\n| weight           = 4.00\n| mercado          = não\n| sounds           = \n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 8.5\n| notes            = \n* Item oficial do ex-fansite '''TibiaML'''. \n* O personagem {{character|Goldstorm}} recebeu um por ter sido o criador do item. \n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n<noinclude><gallery>\nArquivo:Pigeontrophy.png|'''Pigeon Trophy''' no servidor [[Guardia]].\n</gallery></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7806,
+    "ns": 0,
+    "title": "Mini Mummy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Mini Mummy \n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears \n| secondarytype  = Prêmios de Eventos\n| attrib         = Nenhum. \n| weight         = 4.50 \n| stackable      = não\n| value          = 250 000+\n| sounds         = \n| droppedby      = [[Ashmunrah]], [[Dipthrah]], [[Elder Mummy]], [[Horestis]], [[Mahrdis]], [[Morguthis]], [[Mummy]], [[Omruc]], [[Putrid Mummy]], [[Rahemos]], [[Thalas]], [[Vashresamun]].\n| buyfrom        = Jogadores. \n| sellto         = Jogadores. \n| implemented    = 8.54 \n| notes          = <noinclude><gallery> Imagem:Mini mummy.jpg|Mini Mummy em [[Secura]].</gallery></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 11211,
+    "ns": 0,
+    "title": "Old Radio",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre o '''fansite item''' Old Radio. Para à réplica, veja [[Old Radio (Réplica)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Old Radio\n| flavortext       = Granted by RadioTibia.com.br to hear the sounds of Tibia\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = \n| tertiarytype     = \n| attrib           = Brilha no escuro em azul.\n| stackable        = não\n| weight           = 40.15\n| mercado          = não\n| sounds           = \"Hello bffff...\"; \"Hail bffff... RadioTibia!\"; \"Now Tibia bffff... has sound\"; \"The sounds of Tibia\".\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 9.1\n| notes            = \n* Item oficial do ex-fansite '''RadioTibia'''.\n* O personagem {{Character|Mounthrize}} recebeu um por ter sido o criador do item. \n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 12460,
+    "ns": 0,
+    "title": "Imortus",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre o '''fansite item''' Imortus. Para à réplica, veja [[Imortus (Réplica)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Imortus\n| flavortext       = It knows all secrets of all numbers. It was awarded by the Exhiti.com\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = \n| tertiarytype     = \n| attrib           = Brilha no escuro em verde.\n| stackable        = não\n| weight           = 46.09\n| mercado          = não\n| sounds           = \"I see youuu !!!\"; \"Now you will see <nome do jogador>!\"; \"Numbers for Exhiti...\"; \"More eyes for many numbers!\"; \"469!? so easy...\".\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 9.1\n| notes            = \n* Item oficial do ex-fansite '''Exhiti'''. \n* O personagem {{Character|Dnacrons}} recebeu um por ter sido o criador do item. \n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 18952,
+    "ns": 0,
+    "title": "Royal Medal",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Royal Medal \n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = \n| writable       = sim\n| stackable      = não\n| weight         = 16.00 \n \n| npcvalue       = 0 \n| npcprice       = 0 \n| droppedby      = Ninguém. \n| buyfrom        = Jogadores. \n| sellto         = Jogadores. \n| implemented    = 9.2 \n| mercado        = não\n| notes          = Você pode ler o texto em até 2 SQMs de distancia.<br />\nEsse item pode ser obtido em concursos feito pelos [[fansites|Promoteds e Supporteds Fansites]]. \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 18958,
+    "ns": 0,
+    "title": "Heavy Medal",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Heavy Medal\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = \n| writable       = sim\n| stackable      = não\n| weight         = 55.00 \n \n| npcvalue       = 0 \n| npcprice       = 0 \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores. \n| sellto         = Jogadores. \n| implemented    = 9.2 \n| mercado        = não\n| notes          = Você pode ler o texto em até 2 SQMs de distancia.<br />\nEsse item pode ser obtido em concursos feito pelos [[fansites|Promoteds e Supporteds Fansites]]. \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 18960,
+    "ns": 0,
+    "title": "Hero's Medal",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Hero's Medal\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = \n| stackable      = não\n| writable         = sim\n| weight         = 16.70 \n \n| npcvalue       = 0 \n| npcprice       = 0 \n| droppedby      = Ninguém. \n| buyfrom        = Jogadores. \n| sellto         = Jogadores. \n| implemented    = 9.2 \n| notes          = Você pode ler o texto em até 2 SQMs de distancia.<br />\nEsse item pode ser obtido em concursos feito pelos [[fansites|Promoteds e Supporteds Fansites]]. \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 19126,
+    "ns": 0,
+    "title": "Majestic Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Majestic Shield\n| flavortext       = This wonderful shield was designed for GuildStats.eu, to honour all guilds in Tibia\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = \n| tertiarytype     = \n| attrib           = Pode ser pendurado na parede.\n| stackable        = não\n| weight           = 150.00\n| mercado          = não\n| sounds           = \n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 9.5\n| notes            = \n* Item oficial do fansite '''GuildStats.eu'''.\n* O personagem {{Character|Oxyven}} recebeu um por ter sido o criador do item.\n* Pode ser visto na exibição de prêmios de Thais aos domingos.\n* A história da criação do item pode ser lida no [https://guildstats.eu/creation Guildstats]\n\n<noinclude><gallery>\nArquivo:Rlonde majestic shield.png|'''Majestic Shield''' visto no servidor [[Amera]] na casa do personagem {{character|Druid Drudz}}.\n</gallery></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 20348,
+    "ns": 0,
+    "title": "Gold Medal",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Gold Medal\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| weight         = 12.40 \n| stackable      = não\n \n| npcvalue       = 0 \n| npcprice       = 0 \n| droppedby      = Ninguém. \n| buyfrom        = Jogadores. \n| sellto         = Jogadores. \n| implemented    = 8.4\n| notes          = Esse item pode ser obtido em concursos feito pela [[CipSoft]]. \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 20906,
+    "ns": 0,
+    "title": "Medusa Skull",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre o '''fansite item''' Medusa Skull. Para à réplica, veja [[Medusa Skull (Réplica)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Medusa Skull\n| flavortext       = You see a medusa skull. Her hair's snakes are still alive. Awarded only on TibiaPic.com\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = \n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 10.00\n| mercado          = não\n| sounds           = \"Where isss my body !? I'll kill you!!!\"; \"Hail mighty \"nome do jogador\"! Hail TibiaPic!\"; \"I will petrify thiss moment! Ssstones are forever!\".\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 9.5\n| notes            = \n* Item oficial do ex-fansite '''TibiaPic'''. \n* O personagem {{Character|Don Maximus Meridius}} recebeu um por ter sido o criador do item. \n* Pode ser visto na exibição de prêmios de Thais aos domingos.\n\n<noinclude><gallery>\nArquivo:Medusa-Skull.png|O personagem {{Character|Don Maximus Meridius}} mostrando o item em sua casa.\nArquivo:Medusaskullilustration.jpg|Artwork do item feita pelo personagem {{Character|Don Maximus Meridius}}.\n</gallery></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 22224,
+    "ns": 0,
+    "title": "Mathmaster Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre o '''fansite item''' Mathmaster Shield. Para à réplica, veja [[Mathmaster Shield (Réplica)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Mathmaster Shield\n| flavortext       = This is an emblem of wisdom. It was awarded by TibiaStat.com\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = \n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\". Brilha com uma luz azul.\n| stackable        = não\n| weight           = 3.14\n| mercado          = não\n| sounds           = \n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 9.5\n| notes            = \n* Item oficial do ex-fansite '''TibiaStat'''. \n* O personagem {{Character|Lupus Aurelius}} recebeu um por ter sido o criador do item.  \n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}\n<noinclude>[[Categoria:Escudos]]</noinclude>"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25983,
+    "ns": 0,
+    "title": "Noble Sword",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre o '''fansite item''' Noble Sword. Para à réplica, veja [[Noble Sword (Réplica)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Noble Sword\n| flavortext       = This sword was forged with the enthusiasm and dreams of the Rookgaardians. Awarded by Rookie.pl\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = \n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 50.00\n| mercado          = não\n| sounds           = \n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 9.7\n| notes            = \n* Item oficial do ex-fansite '''Rookie.pl'''. \n* O personagem {{Character|Lupus Aurelius}} recebeu um por ter sido o criador do item. \n* Ao usá-la, pequenos brilhos aparecem ao redor da espada. \n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n<noinclude><gallery>\nArquivo:Noble_sword.png|'''Noble Sword''' na casa da personagem {{character|Arechion}} no servidor [[Luminera]].\n</gallery></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 27591,
+    "ns": 0,
+    "title": "Rat God Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Rat God Doll\n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| secondarytype  = Prêmios de Eventos\n| attrib         = Nenhum. \n| weight         = 7.50\n| stackable      = não\n| droppedby      = [[Corym Charlatan]], [[Corym Skirmisher]], [[Corym Vanguard]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.8\n| notes          = Foi dado como recompensa ao ganhador do concurso \"[http://portaltibia.com.br/home/?p=12364 Um rato é um rato é um ...]\" em outubro de 2012. O jogador {{Character|Bunny Luv}} recebeu por ter sido o vencedor do concurso.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 30787,
+    "ns": 0,
+    "title": "Memory Box",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Memory Box\n| flavortext       = It is said to freeze time itself to capture your fondest memories. Awarded by TibiaEvents.com\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = \n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 20.00\n| mercado          = não\n| sounds           = \"Say \"Rat CHeese!\"\"; \"Hold still...got it!\"; \"I got the perfect shot!\"; \"Uploading to TibiaEvents.... processing...\"; \"Look at this one! Wasn't this your first battle with a dragon?\"; \"Oh my this is an old one one, this must have been 7.5!!\".\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 10.20\n| notes            = \n* Item oficial do fansite '''TibiaEvents'''.\n* O personagem {{Character|Honourable Knight of Honera}} recebeu um por ter sido o criador do item.\n* Pode ser visto na exibição de prêmios de Thais aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 31768,
+    "ns": 0,
+    "title": "Golden Prison Key",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Golden Prison Key\n| flavortext     = You dreamt that this key unlocks the prison of a powerful horror that you had to face on your own.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Prêmios de Eventos\n| weight         = 2.00\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 0\n| droppedby      = Ninguém\n| location       = [[Roshamuul]]\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.30\n| notes          = É necessária para acessar uma cela da [[Roshamuul Prison]].\n<noinclude><p><spoiler>\n* 01 é necessária para acesso a cela de [[Prince Drazzak]].\n* Possibilidade de ser obtido ao usar um [[Unrealized Dream]] próximo ao [[The Dreamcatcher Device]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 32455,
+    "ns": 0,
+    "title": "Jade Amulet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre o '''fansite item''' Jade Amulet. Para à réplica, veja [[Jade Amulet (Réplica)]].}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Jade Amulet\n| flavortext       = Golden lines are embedded in the amulet and show mysterious symbols. It was awarded by TibiaHoF\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = \n| tertiarytype     = \n| attrib           = \n| stackable        = não\n| weight           = 4.00\n| mercado          = não\n| sounds           = \n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 10.32\n| notes            = \n* Item oficial do ex-fansite '''TibiaHof'''.\n* O personagem {{Character|Andraax}} recebeu um por ter sido o criador do item. \n* No [[Patches/10.34|Patch 10.34]] o item passou a pesar 4.00 oz.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 34742,
+    "ns": 0,
+    "title": "Midnight Panther Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Midnight Panther Doll\n| flavortext       = It is said to be a symbol of perseverance and luck. Awarded by TibiaMagazine.net\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Dolls e Bears\n| tertiarytype     = Extra Slot\n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 17.00\n| mercado          = não\n| sounds           = \"Hail TibiaMagazine.net!\"; \"Don't be afraid of the darkness!\"; \"Purrrrrrr!\"; \"Feel lucky, <Jogador>!\"\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 10.70\n| notes            = \n* Item oficial do fansite '''TibiaMagazine'''.\n* O personagem {{Character|Makadamia}} recebeu um por ter sido o criador do item.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 36182,
+    "ns": 0,
+    "title": "Little Adventurer Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Little Adventurer Doll\n| flavortext       = This little fellow has faced many dangers. He will follow you anywhere. Awarded by TibiaGuias\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Dolls e Bears\n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 26.13\n| mercado          = não\n| sounds           = \"Silence! I smell something!\", \"Watch your steps - we found the pit latrine.\", \"For concrete information visit TibiaGuias.com.br.\", \"I have a bad feeling about this.\", \"Let me guide you, <nome do personagem>!\", \"Hello, TibiaGuias!\"\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 10.79\n| notes            = \n* Item oficial do ex-fansite '''TibiaGuias'''. \n* O personagem {{Character|Mister Smithson}} recebeu um por ter sido o criador do item.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 40612,
+    "ns": 0,
+    "title": "Loremaster Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre o '''fansite item''' Loremaster Doll. Para à réplica, veja [[Loremaster Doll (Réplica)]].}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Loremaster Doll\n| flavortext       = This doll possesses an infinite knowledge within. It was rewarded by TibiaTome.com\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Dolls e Bears\n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 77.00\n| mercado          = não\n| sounds           = \"Let me enlighten you!\".\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 11.30.4868\n| notes            = \n* Item oficial do ex-fansite '''TibiaTome'''.\n* O personagem {{Character|Xaarcus}} recebeu um por ter sido o criador do item.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n\n<noinclude><gallery>\nArquivo:Loremaster_Doll_Serdebra_2021.png|'''Loremaster Doll''' na casa de jogadores no servidor Serdebra. \n</gallery></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 41991,
+    "ns": 0,
+    "title": "Goromaphone",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre o '''fansite item''' Goromaphone. Para à réplica, veja [[Goromaphone (Réplica)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Goromaphone\n| flavortext       = There's a small record that seemingly has an endless aura of sweet tunes playing through its crude speaker, however, something about it seems off. It's the official audio device of RadioGoroma.com.br\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = \n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 66.60\n| mercado          = não\n| sounds           = \"It's the Eye of the Panter!\", \"You are now listening too 66.6 RadioGoroma FM! Your Tibian Radio!\", \"~ Keep spending most of our lives, Living in E.K's paradise~\", \"~ And Iiiiii-eeee-iii Will always Heal youuuuuu-hooooo!~\", \"~ I'm hungry Like the Warwolf ~\", \"~ I Love Loot 'N Gold! Put a Crystal Coin in my Backpack, Baby! ~\"\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 11.40\n| notes            = \n* Item oficial do ex-fansite '''RadioGoroma'''.\n* O personagem {{Character|Dariux Drake}} recebeu um por ter sido o criador do item.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n<noinclude><gallery>\narquivo:Goromaphone Jess.png|'''Goromaphone''' no servidor [[Umera]].\n</gallery></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42510,
+    "ns": 0,
+    "title": "Journal Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Journal Shield\n| flavortext       = Tibia's very first headline is written on it. Awarded by BomDiaTibia.com\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = \n| tertiarytype     = \n| attrib           = Brilha constantemente no canto superior esquerdo. Fornece uma pequena quantidade de luz amarela.\n| stackable        = não\n| weight           = 27.00\n| mercado          = não\n| sounds           = \"Read these ancient news to get protected, <nome do personagem>\"; \"Well, I have one very old report for you. Old but gold!; \"Hail BomDiaTibia.com!\"; \"Can I tell you some gossip, <nome do personagem>?\".\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 11.48.5712\n| notes            = \nEste item pode ser equipado em seu inventário como um escudo, porém não oferece nenhuma proteção ao personagem.\n* Item oficial do fansite '''BomDiaTibia'''.\n* O personagem {{Character|Didi Hadid}} recebeu um por ter sido o criador do item.\n* Pode ser visto na exibição de prêmios de Thais aos domingos.\n\n[[Journal Shield/Donos|Confira a lista de donos clicando aqui]].\n\n<noinclude><gallery>\nArquivo:Foto Journal Shield.png|'''Journal Shield''' na casa do personagem {{Character|Wachusett}}, administrador do BomDiaTibia.\n</gallery></noinclude>\n}}\n<noinclude>[[Categoria:Escudos]]</noinclude>"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 46820,
+    "ns": 0,
+    "title": "Omniscient Owl",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Omniscient Owl\n| flavortext       = This inconspicuous owl will answer every question. Awarded by TibiaQA.com\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Dolls e Bears\n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 9.10\n| mercado          = não\n| sounds           = \"I know the answer!\".\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 12.20\n| notes            = \n* Item oficial do fansite '''TibiaQA'''.\n* O personagem {{Character|Makadamia}} recebeu um por ter sido o criador do item.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 48099,
+    "ns": 0,
+    "title": "Mini NabBot",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Mini NabBot\n| flavortext       = It is the first NabBot prototype of service. Awarded by NabBot.xyz\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = \n| tertiarytype     = \n| attrib           = \n| stackable        = não\n| weight           = 60.00\n| mercado          = não\n| sounds           = \"I am the first mini NabBot prototype, at least the first one that works properly.\"; \"Too many questions, too many answers.\"; \"Congrats <Player> on getting that level! Maybe you can solo rats now?\"; \"That's what you get <Player>, for messing with that monster!\"; \"<Player> got a level? Here, have a cookie!\"\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 12.30\n| notes            = \n* Item oficial do fansite '''NabBot.xyz'''.\n* O personagem {{Character|Juh Mong}} recebeu um por ter sido o criador do item.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 49140,
+    "ns": 0,
+    "title": "Love Elixir",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Love Elixir\n| flavortext       = Anyone who drinks this sweet and slightly fizzy drink will fall in love with you immediately. Awarded by CasalTibiano.com.br\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = \n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 13.50\n| mercado          = não\n| sounds           = \"All you need is a small drop and the heart of your chosen one will belong to you.\"; \"Feel the power of love! fizz\"; \"Hail CasalTibiano.com.br!\"; \"Pollen from a jungle rose, mermaid scales, lots of sugar, magic and love - oh, and three petals of a bloodkiss flower!\".\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 12.31.9810\n| notes            = \n* Item oficial do fansite '''CasalTibiano.com.br''' (saiu do Programa de Fansites em 21 de Outubro de 2022).\n* O personagem {{Character|Makadamia}} recebeu um por ter sido o criador do item.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 52616,
+    "ns": 0,
+    "title": "Magic Hat",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Magic Hat\n| flavortext       = This hat represents the spirit of magic and fun. Awarded by VivaTibia.com\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = \n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 6.30\n| mercado          = não\n| sounds           = \"BOOM!\"; \"Confetti attack!\"; \"Let's get this party started!\"; \"Let me guess your vocation, ''Jogador''...\"; \"The night is still young, ''Jogador''!\"; \"Viva Tibia!\"\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 12.67.10918\n| notes            = \n* Item oficial do fansite '''VivaTibia'''.\n* O personagem {{Character|Makadamia}} recebeu um por ter sido o criador do item.\n* Pode ser visto na exibição de prêmios de Thais aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 52968,
+    "ns": 0,
+    "title": "Luna (Tibia Goals)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Luna (Tibia Goals)\n| flavortext       = Gently shrouded in clouds, her dreams are about to come true. As she awakens something magical is about to happen. Granted by TibiaGoals.com\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Dolls e Bears\n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\". Fornece uma pequena quantidade de luz.\n| stackable        = não\n| weight           = 27.07\n| mercado          = não\n| sounds           = \"A horse with a shiny horn doesn't make a unicorn!\"; \"Oh my! Is this <player>! I've read about you on TibiaGoals.com!\"; \"I had a dream I was a queen! I woke up... still a QUEEN!\"; \"So divine!\"; \"There will never be another one after you, <Player>!\"; \"They say the sky is the limit but there are my hoof prints on the moon!\"\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 12.71.11017\n| notes            = \n* Item oficial do fansite '''Tibia Goals'''.\n* O personagem {{Character|Makadamia}} recebeu um por ter sido o criador do item.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59065,
+    "ns": 0,
+    "title": "Gold Cup (Triumph)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Gold Cup (Triumph)\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Troféus\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.31.9658\n| mercado        = não\n| notes          = Este é um dos prêmios para os personagens que ficaram em primeiro no ranking do torneio [[Torneio Triumph|Triumph]]. Este trófeu contêm o nome do personagem criado para o torneio, o ranking, o nome do torneio e é assinado pela Cipsoft.</br>\nExistem três variações deste trófeu: [[Bronze Cup (Triumph)|Bronze]], [[Silver Cup (Triumph)|Silver]] e [[Gold Cup (Triumph)|Golden]]. {{Veja|Torneios|Torneio Triumph}}\n<noinclude>[[Categoria:Prêmios de Torneios]]</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59068,
+    "ns": 0,
+    "title": "Gold Cup (Valour)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Gold Cup (Valour)\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Troféus\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.40.10061\n| mercado        = não\n| notes          = Este é um dos prêmios para os personagens que ficaram em primeiro no ranking do torneio [[Torneio Valour|Valour]]. Este trófeu contêm o nome do personagem criado para o torneio, o ranking, o nome do torneio e é assinado pela Cipsoft.</br>\nExistem três variações deste trófeu: [[Bronze Cup (Valour)|Bronze]], [[Silver Cup (Valour)|Silver]] e [[Gold Cup (Valour)|Golden]]. {{Veja|Torneios|Torneio Valour}}\n<noinclude>[[Categoria:Prêmios de Torneios]]</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59073,
+    "ns": 0,
+    "title": "Gold Cup (Honour)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Gold Cup (Honour)\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Troféus\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.67.10918\n| mercado        = não\n| notes          = Este é um dos prêmios para os personagens que ficaram em primeiro no ranking do torneio [[Torneio Honour|Honour]]. Este trófeu contêm o nome do personagem criado para o torneio, o ranking, o nome do torneio e é assinado pela Cipsoft.</br>\nExistem três variações deste trófeu: [[Bronze Cup (Honour)|Bronze]], [[Silver Cup (Honour)|Silver]] e [[Gold Cup (Honour)|Golden]]. {{Veja|Torneios|Torneio Honour}}\n<noinclude>[[Categoria:Prêmios de Torneios]]</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59076,
+    "ns": 0,
+    "title": "Gold Cup (Radiance)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Gold Cup (Radiance)\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Troféus\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.72.11206\n| mercado        = não\n| notes          = Este é um dos prêmios para os personagens que ficaram em primeiro no ranking do torneio [[Torneio Radiance|Radiance]]. Este trófeu contêm o nome do personagem criado para o torneio, o ranking, o nome do torneio e é assinado pela Cipsoft.</br>\nExistem três variações deste trófeu: [[Bronze Cup (Radiance)|Bronze]], [[Silver Cup (Radiance)|Silver]] e [[Gold Cup (Radiance)|Golden]]. {{Veja|Torneios|Torneio Radiance}}\n<noinclude>[[Categoria:Prêmios de Torneios]]</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59079,
+    "ns": 0,
+    "title": "Gold Cup (Ascension)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Gold Cup (Ascension)\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Troféus\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.86.11809\n| mercado        = não\n| notes          = Este é um dos prêmios para os personagens que ficaram em primeiro no ranking do torneio [[Torneio Ascension|Ascension]]. Este trófeu contêm o nome do personagem criado para o torneio, o ranking, o nome do torneio e é assinado pela Cipsoft.</br>\nExistem três variações deste trófeu: [[Bronze Cup (Ascension)|Bronze]], [[Silver Cup (Ascension)|Silver]] e [[Gold Cup (Ascension)|Golden]]. {{Veja|Torneios|Torneio Ascension}}\n<noinclude>[[Categoria:Prêmios de Torneios]]</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59099,
+    "ns": 0,
+    "title": "Gold Deed",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Gold Deed\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Documentos e Papéis\n| attrib         = Pode ser pendurado em paredes.\n| stackable      = não\n| weight         = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.31.9658\n| mercado        = não\n| notes          = Este é um dos prêmios para os personagens classificados entre as posições 1º e 10º no ranking do torneio [[Torneio Triumph|Triumph]]. Esta escritura contêm o nome do personagem criado para o torneio, o ranking, o nome do torneio e é assinado pela Cipsoft.\n{{Veja|Torneios|Torneio Triumph}}\n<noinclude>[[Categoria:Prêmios de Torneios]]</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59100,
+    "ns": 0,
+    "title": "Papyrus Deed",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Papyrus Deed\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Documentos e Papéis\n| attrib         = Pode ser pendurado em paredes.\n| stackable      = não\n| weight         = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.31.9658\n| mercado        = não\n| notes          = Este é um dos prêmios para os personagens classificados entre as posições 101º e 9999º no ranking do torneio [[Torneio Triumph|Triumph]]. Esta escritura contêm o nome do personagem criado para o torneio, o ranking, o nome do torneio e é assinado pela Cipsoft.\n{{Veja|Torneios|Torneio Triumph}}\n<noinclude>[[Categoria:Prêmios de Torneios]]</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7069,
+    "ns": 0,
+    "title": "Tibiacity Encyclopedia",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre o '''fansite item''' Tibiacity Encyclopedia. Para à réplica, veja [[Encyclopedia]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Tibiacity Encyclopedia\n| flavortext       = It contains all the knowledge of Tibia\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Livros\n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 13.37\n| mercado          = não\n| sounds           = \"Weirdo, you're a weirdo! Actually all of you are!\"; \"Pie for breakfast, pie for lunch and pie for dinner!\"; \"All hail the control panel!\"; \"I own, Tibiacity owns, perfect match!\"; \"Hug me! Feed me! Hail me!\".\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 8.2\n| notes            = \n* Item oficial do ex-fansite '''TibiaCity'''.\n* O personagem {{character|Mage of the Fall}} recebeu um por ter sido o criador do item. \n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n<noinclude><gallery>\nArquivo:tomenardi.png|'''Tibiacity Encyclopedia''' no servidor [[Luminera]].\n</gallery></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7310,
+    "ns": 0,
+    "title": "Silver Trophy of Excellence",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Silver Trophy of Excellence\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Troféus\n| attrib         = Pode ser escrito.\n| stackable      = não\n| weight         = 13.00\n\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| mercado        = não\n| notes          = Você só pode ler o texto se você ficar a dois sqms ou menos do item.<br />\nExistem 3 tipos de trophies of excellence: [[Bronze Trophy of Excellence|bronze]], '''silver''' e [[Golden Trophy of Excellence|golden]].<br />\nO trophy of excellence de prata simboliza o segundo lugar em uma competição ou concurso.\n<gallery>\narquivo:Silvertrophyofexcellence.png|Um exemplar do Troféu pode ser visto na House do jogador {{character|Raven Hayes}}.\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7316,
+    "ns": 0,
+    "title": "Silver Warrior Trophy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Silver Warrior Trophy\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Troféus\n| attrib         = Pode ser escrito.\n| stackable      = não\n| weight         = 18.50\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.4\n| mercado        = não\n| notes          = Pode ser obtido em concursos realizados por [[Fansites]]. O warrior trophy de prata simboliza o segundo lugar em uma competição.<br />\nExistem 3 tipos de warrior trophies: [[Bronze Warrior Trophy|bronze]], [[Silver Warrior Trophy|silver]] e [[Golden Warrior Trophy|golden]].\n<gallery>\narquivo:Silverwariortrophy.png|Um exemplar do Troféu na casa do jogador {{character|Dark Black Magician}}.\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7321,
+    "ns": 0,
+    "title": "Silver Cup of Honour",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Silver Cup of Honour\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Troféus\n| attrib         = Pode ser escrito.\n| stackable      = não\n| weight         = 16.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.4\n| mercado        = não\n| notes          = Este item só pode ser obtido ganhando um torneio de futebol.<br />\nO primeiro foi dado para o time do TibiaNews na primeira [[Fansite Soccer Cup]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7364,
+    "ns": 0,
+    "title": "The Mexcalibur",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre o '''fansite item''' The Mexcalibur. Para à réplica, veja [[The Mexcalibur (Réplica)]].}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = The Mexcalibur\n| flavortext       = Your name is carved on this mighty sword\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = \n| tertiarytype     = \n| attrib           = Pode ser escrito.\n| stackable        = não\n| weight           = 12.00\n| mercado          = não\n| sounds           = \n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 8.2\n| notes            = \n* Item oficial do ex-fansite '''TibiaMx'''. \n* O personagem {{Character|Sonoroman}} recebeu um por ter sido o criador do item.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7365,
+    "ns": 0,
+    "title": "TibiaHispano Emblem",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre o '''fansite item''' TibiaHispano Emblem. Para à réplica, veja [[Emblem (Réplica)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = TibiaHispano Emblem\n| flavortext       = Only a brave and true hero of TibiaHispano can possess it\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = \n| tertiarytype     = \n| attrib           = Pode ser escrito.\n| stackable        = não\n| weight           = 5.00\n| mercado          = não\n| sounds           = \n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 8.2\n| notes            = \n* Item oficial do ex-fansite '''TibiaHispano'''.\n* O personagem {{Character|Machetron}} recebeu um por ter sido o criador do item.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n\n<noinclude><gallery>\nArquivo:A111.jpg|'''TibiaHispano Emblem''' no servidor [[Balera]] com o personagem {{character|Machetron}}.\nArquivo:Emblem.jpg|Texto no '''TibiaHispano Emblem''' do personagem {{character|Machetron}}.\n</gallery></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7366,
+    "ns": 0,
+    "title": "Tibiora's Box",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre o '''fansite item''' Tibiora's Box. Para à réplica, veja [[Tibiora's Box (Réplica)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Tibiora's Box\n| flavortext       = It contains all the knowledge of the Tibian lands gathered arduously by Tibia-Stats.com\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = \n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 42.00\n| mercado          = não\n| sounds           = \"Click!\"; \"You don't seem experienced enough to open this properly.\"; \"The box won't open for you.\"; \"This item is too precious for a newbie. You are unable to open it.\".\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 8.6\n| notes            = \n* Item oficial do ex-fansite '''Tibia-Stats'''.\n* O personagem {{Character|Mondlanze}} recebeu um por ter sido o criador do item.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n\n<noinclude><gallery>\nArquivo:Tibiorabox.png|'''Tibiora's Box''' na casa da personagem {{character|Arechion}}.\n</gallery></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7882,
+    "ns": 0,
+    "title": "Vampire Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Vampire Doll\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| secondarytype  = Prêmios de Eventos\n| attrib         = Nenhum. \n| weight         = 9.40\n| stackable      = não\n| npcvalue       = 0\n| value          = 3 000 000 - 30 000 000\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Ele é extremamente raro pois ele só pode ser obtido em uma quest em que é necessário matar uma imensa quantidade de [[Vampire Lords]] e as vezes é usado como prêmio em eventos de [[fansites]]. <br />{{character|Voogelitt Vanu}} foi o primeiro jogador de todo o tibia a conquistá-lo.\n<noinclude><p><spoiler>* Pode ser obtido depois de entregar 100 [[Vampire Lord Token]]s para [[Storkus]] na [[Vampire Hunter Quest]].</spoiler></p></noinclude>\n<gallery>arquivo:Vampire_Doll.png| Uma \"Vampire Doll\" pode ser vista na House da personagem {{character|Aninka Ninka}}.</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7969,
+    "ns": 0,
+    "title": "Wooden Whistle",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Wooden Whistle\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Instrumentos Musicais\n| secondarytype  = Prêmios de Eventos\n| attrib         = Sumona um [[wolf]] e toca notais musicais quando usado.\n| weight         = 1.00\n| stackable      = não\n| value          = 500 000 - 10 000 000\n| droppedRaidby  = [[Fernfang]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Ao usá-lo irá sumonar um [[wolf]] mas, como um [[Piggy Bank|piggy bank]], ele pode quebrar quando usado.Pode ser dado como Prêmio em concursos Promoted e Supported Tibia Fansites\n<gallery>\narquivo:Wooden_whistle.png| Um \"Wooden Whistle\" pode ser visto em Guardia.\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 15912,
+    "ns": 0,
+    "title": "The Epic Wisdom",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = The Epic Wisdom\n| flavortext       = This hat was handcrafted by Uman the Wise and cursed by Zathroth the Destroyer. It is awarded by TibiaWiki.com.br\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = \n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 8.05\n| mercado          = não\n| sounds           = \"MY BRAIN... TOO MUCH... KNOWLEDGE! AAAAH!\"; \"Excalibug is lying at the heart of every true fighter.\"; \"Fire is fascinating. But whether it is going to light your path or burning you till death, you can never tell\".\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 9.1\n| notes            = \nEste item pode ser equipado como um capacete, porém não oferece nenhuma proteção ao personagem.\n* Item oficial do fansite '''TibiaWiki.com.br'''.\n* O personagem {{Character|Insane Jack}} recebeu um por ter sido o criador do item.\n* Pode ser visto na exibição de prêmios de Thais aos domingos.\n\n[[The Epic Wisdom/Donos|Confira a lista de donos clicando aqui]].\n\n<gallery>\nArquivo:Hat.jpg|Galera do Portal Tibia e do TibiaWiki.com.br reunida durante um test server para conhecer o item oficial do Tibia Wiki.</gallery>\n}}\n<noinclude>[[Categoria:Capacetes]]</noinclude>"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 19019,
+    "ns": 0,
+    "title": "Snake God Trophy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Snake God Trophy\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Troféus\n| weight         = 5.00 \n| stackable      = não\n| npcvalue       = 0 \n| npcprice       = 0 \n| droppedby      = Ninguém. \n| buyfrom        = Jogadores. \n| sellto         = Jogadores. \n| implemented    = 9.2 \n| notes          = Esse item pode ser obtido em concursos feito pelos [[fansites|Promoteds e Supporteds Fansites]]. \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 20349,
+    "ns": 0,
+    "title": "Silver Medal",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Silver Medal\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| weight         = 12.20 \n| stackable      = não\n \n| npcvalue       = 0 \n| npcprice       = 0 \n| droppedby      = Ninguém. \n| buyfrom        = Jogadores. \n| sellto         = Jogadores. \n| implemented    = 8.4\n| notes          = Esse item pode ser obtido em concursos feito pela [[CipSoft]]. \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 31765,
+    "ns": 0,
+    "title": "Silver Prison Key",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Silver Prison Key\n| flavortext     = You dreamt that this key unlocks the prison of a powerful horror that you had to face on your own.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Prêmios de Eventos\n| weight         = 2.00\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 0\n| droppedby      = Ninguém\n| location       = [[Roshamuul]]\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.30\n| notes          = É necessária para acessar uma cela da [[Roshamuul Prison]].\n<noinclude><p><spoiler>\n* 01 é necessária para acesso a cela de [[Terofar]].\n* Possibilidade de ser obtido ao usar um [[Unrealized Dream]] próximo ao [[The Dreamcatcher Device]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 34458,
+    "ns": 0,
+    "title": "War Backpack",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = War Backpack\n| flavortext       = Carry all you need for battle in it. Sponsored by TibiaWars.com\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = \n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 18.00\n| mercado          = não\n| sounds           = \n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 10.50\n| notes            = \n* Item oficial do fansite '''TibiaWars'''.\n* O personagem {{Character|Kamikaze Pixels}} recebeu um por ter sido o criador do item.\n* O personagem {{Character|Pablo Rka}} recebeu um por ganhar no evento realizado na Twitch pelo fansite '''Tibiaria'''.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 37909,
+    "ns": 0,
+    "title": "Shield of Destiny",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre o '''fansite item''' Shield of Destiny. Para à réplica, veja [[Shield of Destiny (Réplica)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Shield of Destiny\n| flavortext       = Holding the divine intellect of Uman and the merciless destruction instinct of Zathroth, the eternal balance remains on the hands of its owner. Granted by TibiaRoyal.com\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = \n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\". Fornece uma pequena quantidade de luz vermelha e verde.\n| stackable        = não\n| weight           = 68.00\n| mercado          = não\n| sounds           = \n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 10.90\n| notes            = \n* Item oficial do ex-fansite '''TibiaRoyal'''. \n* O personagem {{Character|Lupus Aurelius}} recebeu um por ter sido o criador do item. \n* Um pode ser visto na exibição de prêmios de Thais aos domingos. \n* Ao ser usado, muda de aparência: [[Arquivo:Shield of Destiny 2.gif|link=]].\n}}\n<noinclude>[[Categoria:Escudos]]</noinclude>"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45325,
+    "ns": 0,
+    "title": "Shield of Endless Search",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Shield of Endless Search\n| flavortext       = This is a tribute to every lost soul in the Tibia land. Awarded by OrcSearch.com\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = \n| tertiarytype     = \n| attrib           = \n| stackable        = não\n| weight           = 11.00\n| mercado          = não\n| sounds           = \n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 12.00\n| notes            = \n* Item oficial do ex-fansite '''OrcSearch'''.\n* O personagem {{Character|Dev Zimm}} recebeu um por ter sido o criador do item.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}\n<noinclude>[[Categoria:Escudos]]</noinclude>"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 50037,
+    "ns": 0,
+    "title": "Tibiapedia",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Tibiapedia\n| flavortext       = It will guide you through the adventures in Tibia. Awarded by Tibiapedia.com\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = \n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 2.50\n| mercado          = não\n| sounds           = \n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 12.50.10135\n| notes            = \n* Item oficial do fansite '''Tibiapedia.com'''.\n* O personagem {{Character|Makadamia}} recebeu um por ter sido o criador do item.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 50039,
+    "ns": 0,
+    "title": "Wicked Witch",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Wicked Witch\n| flavortext       = She was one of Ferumbras' former students at the Noodles Academy. Awarded by TibiaLabs.com\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = \n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\". Fornece uma pequena quantidade de luz roxa.\n| stackable        = não\n| weight           = 19.90\n| mercado          = não\n| sounds           = \"Hail TibiaLabs.com!\"; \"A pinch of voodoo lily pollen, a drop of frozen tear and swirl to combine.\"; \"Trouble, trouble, cauldron bubble!\"; \"Do you want to learn forbidden magic?\"; \"I’ve put a spell on you, <player>.\"\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 12.50.10135\n| notes            = \n* Item oficial do fansite '''TibiaLabs'''.\n* O personagem {{Character|Aynnah}} recebeu um por ter sido o criador do item.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 50056,
+    "ns": 0,
+    "title": "Scroll of the Stolen Moment",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{deprecated}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Scroll of the Stolen Moment\n| flavortext       = One wizard stole someone's moment and put it into this scroll long time ago. It was rewarded by Fototibia\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = \n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 3.33\n| mercado          = não\n| sounds           = \"Let me out! What is going on?! I got so many years and I am still young...\"; \"Hail Fototibia!\"; \"I can swear this picture is moving!\".\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = \n| notes            = * Era para ser o item oficial do ex-fansite '''FotoTibia''' criado por {{Character|Insane Jack}}, porém o FotoTibia foi removido do programa de fansites antes de o item ser implementado dentro do jogo.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 50278,
+    "ns": 0,
+    "title": "Seal of Quality",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Seal of Quality\n| flavortext     = It was awarded by a CM as a token of gratitude for valuable feedback.\n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Prêmios de Eventos\n| writable       =\n| attrib         = Nenhum.\n| weight         = 10.00\n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| mercado        = não\n| implemented    = 12.40\n| notes          = Este item pode ser dado apenas por [[Community Manager]]s em ocasiões especiais.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 51583,
+    "ns": 0,
+    "title": "White Lion Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = White Lion Doll\n| flavortext       = Its serene presence encourages bravery. Awarded by ElPodcastibiano.com\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Dolls e Bears\n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 17.00\n| mercado          = não\n| sounds           = \"Hear me roar!\"; \"The sun guides our hearts.\"; \"The moon guards our dreams.\".\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 12.66.10771 (1)\n| notes            = \n* Item oficial do fansite '''El Podcast Tibiano'''.\n* O personagem {{Character|Madakamia}} recebeu um por ter sido o criador do item.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 57769,
+    "ns": 0,
+    "title": "The Gods' Twilight Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = The Gods' Twilight Doll\n| flavortext       = It represents Valiant on behalf of Fardos and Ragna on behalf of Variphor. It symbolizes the fight between light and darkness, wisdom and ignorance, freedom and domination. Granted by TibiaLight.com\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Dolls e Bears\n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\" alternando entre Valiant e Ragna. Ambos possuem animação própria.\n| stackable        = não\n| weight           = 253.21\n| mercado          = não\n| sounds           = \"The path of light or darkness, it's your choice <playername>... You've always been free to choose your side.\";</br>\"<Playername>, the moment has come... Make your decision, would you follow Fardos or Variphor?\";</br>\"Look by your side, you're not alone, you've never been...\";</br>\"You read on the back: forged in the flames of the Temple of Light.\";</br>\"Azerus, Prince Drazzak, Mazarius, World Devourer, Source of Corruption, Scourge of Oblivion - harbingers of things to come.\"\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 12.91.12329\n| notes            = \n* Item oficial do fansite '''Tibia Light'''.\n* O personagem {{Character|Brighid Grand Explorateur}} recebeu um por ter sido o criador do item.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 57771,
+    "ns": 0,
+    "title": "Yeti Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Yeti Doll\n| flavortext       = It may be a little too cool to handle. It is entrusted by TibiaFanart.com\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Dolls e Bears\n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 20.21\n| mercado          = não\n| sounds           = \"Me wanna build snowman!\"; \"Evil Santa stole my slippers!\"; \"Let it go, let it go!\"; \"Yooodelaaahooohooo!\"; \"<Playername>, paint me a snowman or a happy tree or the almighty Lord Ferumbras!\"; \"Hail TibiaFanart.com!\"\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 12.91.12329\n| notes            = \n* Item oficial do fansite '''TibiaFanart.com!'''.\n* O personagem {{Character|Makadamia}} recebeu um por ter sido o criador do item.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59066,
+    "ns": 0,
+    "title": "Silver Cup (Triumph)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Silver Cup (Triumph)\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Troféus\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.31.9658\n| mercado        = não\n| notes          = Este é um dos prêmios para os personagens que ficaram em segundo no ranking do torneio [[Torneio Triumph|Triumph]]. Este trófeu contêm o nome do personagem criado para o torneio, o ranking, o nome do torneio e é assinado pela Cipsoft.</br>\nExistem três variações deste trófeu: [[Bronze Cup (Triumph)|Bronze]], [[Silver Cup (Triumph)|Silver]] e [[Gold Cup (Triumph)|Golden]]. {{Veja|Torneios|Torneio Triumph}}\n<noinclude>[[Categoria:Prêmios de Torneios]]</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59069,
+    "ns": 0,
+    "title": "Silver Cup (Valour)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Silver Cup (Valour)\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Troféus\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.40.10061\n| mercado        = não\n| notes          = Este é um dos prêmios para os personagens que ficaram em segundo no ranking do torneio [[Torneio Valour|Valour]]. Este trófeu contêm o nome do personagem criado para o torneio, o ranking, o nome do torneio e é assinado pela Cipsoft.</br>\nExistem três variações deste trófeu: [[Bronze Cup (Valour)|Bronze]], [[Silver Cup (Valour)|Silver]] e [[Gold Cup (Valour)|Golden]]. {{Veja|Torneios|Torneio Valour}}\n<noinclude>[[Categoria:Prêmios de Torneios]]</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59074,
+    "ns": 0,
+    "title": "Silver Cup (Honour)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Silver Cup (Honour)\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Troféus\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.67.10918\n| mercado        = não\n| notes          = Este é um dos prêmios para os personagens que ficaram em segundo no ranking do torneio [[Torneio Honour|Honour]]. Este trófeu contêm o nome do personagem criado para o torneio, o ranking, o nome do torneio e é assinado pela Cipsoft.</br>\nExistem três variações deste trófeu: [[Bronze Cup (Honour)|Bronze]], [[Silver Cup (Honour)|Silver]] e [[Gold Cup (Honour)|Golden]]. {{Veja|Torneios|Torneio Honour}}\n<noinclude>[[Categoria:Prêmios de Torneios]]</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59077,
+    "ns": 0,
+    "title": "Silver Cup (Radiance)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Silver Cup (Radiance)\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Troféus\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.72.11206\n| mercado        = não\n| notes          = Este é um dos prêmios para os personagens que ficaram em segundo no ranking do torneio [[Torneio Radiance|Radiance]]. Este trófeu contêm o nome do personagem criado para o torneio, o ranking, o nome do torneio e é assinado pela Cipsoft.</br>\nExistem três variações deste trófeu: [[Bronze Cup (Radiance)|Bronze]], [[Silver Cup (Radiance)|Silver]] e [[Gold Cup (Radiance)|Golden]]. {{Veja|Torneios|Torneio Radiance}}\n<noinclude>[[Categoria:Prêmios de Torneios]]</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59080,
+    "ns": 0,
+    "title": "Silver Cup (Ascension)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Silver Cup (Ascension)\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Troféus\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.86.11809\n| mercado        = não\n| notes          = Este é um dos prêmios para os personagens que ficaram em segundo no ranking do torneio [[Torneio Ascension|Ascension]]. Este trófeu contêm o nome do personagem criado para o torneio, o ranking, o nome do torneio e é assinado pela Cipsoft.</br>\nExistem três variações deste trófeu: [[Bronze Cup (Ascension)|Bronze]], [[Silver Cup (Ascension)|Silver]] e [[Gold Cup (Ascension)|Golden]]. {{Veja|Torneios|Torneio Ascension}}\n<noinclude>[[Categoria:Prêmios de Torneios]]</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59098,
+    "ns": 0,
+    "title": "Silver Deed",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Silver Deed\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Documentos e Papéis\n| attrib         = Pode ser pendurado em paredes.\n| stackable      = não\n| weight         = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.31.9658\n| mercado        = não\n| notes          = Este é um dos prêmios para os personagens classificados entre as posições 11º e 50º no ranking do torneio [[Torneio Triumph|Triumph]]. Esta escritura contêm o nome do personagem criado para o torneio, o ranking, o nome do torneio e é assinado pela Cipsoft.\n{{Veja|Torneios|Torneio Triumph}}\n<noinclude>[[Categoria:Prêmios de Torneios]]</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 60799,
+    "ns": 0,
+    "title": "The Dragon Spirit",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = The Dragon Spirit\n| flavortext       = It represents the spirit of your first dragon. Granted by Intibia.com\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Escudos\n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 26.02\n| mercado          = não\n| sounds           = \n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 13.21.13810\n| notes            = \n* Item oficial do fansite '''Intibia'''.\n* O personagem {{Character|}} recebeu um por ter sido o criador do item.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

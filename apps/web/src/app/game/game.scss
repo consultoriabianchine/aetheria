@@ -39,6 +39,12 @@
   font-size: 14px;
 }
 
+.gold {
+  color: #f0c14b;
+  font-weight: 600;
+  font-size: 12px;
+}
+
 .bar {
   display: flex;
   align-items: center;
@@ -169,6 +175,127 @@
 
 .btn:hover {
   border-color: #4d86c9;
+}
+
+.btn.danger {
+  border-color: #7a3a3f;
+  color: #ff9b9b;
+}
+
+.btn.danger:hover {
+  border-color: #d9483c;
+}
+
+/* seleção de hunts */
+.hud-hunts {
+  left: 50%;
+  top: 56px;
+  transform: translateX(-50%);
+  width: 420px;
+  max-height: 72vh;
+  overflow-y: auto;
+  padding: 12px;
+  background: rgba(16, 22, 30, 0.94);
+  border: 1px solid #2b3a4e;
+  border-radius: 8px;
+  pointer-events: auto;
+}
+
+.hud-hunts h3 {
+  font-size: 14px;
+  color: #eaf2fb;
+  margin-bottom: 8px;
+}
+
+.hud-hunts h3 .sub {
+  font-size: 11px;
+  color: #7d8ea1;
+  font-weight: 400;
+}
+
+.hunt-card {
+  padding: 8px 10px;
+  background: #1b2532;
+  border: 1px solid #2c3b4f;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.hunt-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #eaf2fb;
+  font-size: 13px;
+}
+
+.hunt-lvl {
+  font-size: 11px;
+  color: #f0c14b;
+}
+
+.hunt-monsters {
+  font-size: 11px;
+  color: #9fb2c4;
+  margin: 4px 0;
+}
+
+.hunt-meta {
+  display: flex;
+  gap: 10px;
+  font-size: 11px;
+  color: #7d8ea1;
+  margin-bottom: 6px;
+}
+
+.hunt-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.hunt-actions .btn {
+  padding: 5px 12px;
+  font-size: 12px;
+}
+
+/* run em andamento */
+.hud-run {
+  top: 56px;
+  left: 12px;
+  padding: 10px 12px;
+  background: rgba(10, 14, 20, 0.78);
+  border: 1px solid #4a3a5f;
+  border-radius: 8px;
+  min-width: 220px;
+}
+
+.run-top {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 8px;
+  color: #eaf2fb;
+  font-size: 14px;
+}
+
+.run-wave {
+  font-size: 13px;
+  color: #d6c06a;
+}
+
+.run-wave.boss {
+  color: #ff6b6b;
+  font-weight: 700;
+}
+
+.run-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.run-actions .btn {
+  padding: 6px 12px;
+  font-size: 12px;
 }
 
 /* inventário */

@@ -6,6 +6,8 @@ import {
   CHAT_CHANNELS,
   CHAT_MAX_LENGTH,
   CHAT_MIN_INTERVAL_MS,
+  HUNT_CATALOG,
+  HUNT_CONFIG,
   INVENTORY_SIZE,
   LOOT_LIFETIME_MS,
   MOVE_INTERVAL_MS,
@@ -16,6 +18,8 @@ import {
   TICK_MS,
   VIEW_DISTANCE_X,
   VIEW_DISTANCE_Y,
+  VOCATIONS,
+  getVocationDisplayName,
   xpForLevel,
 } from '@aetheria/config';
 import { samePosition, tileDistance, tileKey, uid } from '@aetheria/shared';
@@ -26,6 +30,7 @@ import type {
   CharacterSummary,
   Direction,
   Position,
+  VocationId,
 } from '@aetheria/types';
 import { getItemDef } from './item-catalog';
 import { generateWorldMap } from './world-map';
@@ -38,6 +43,12 @@ import { CreatureEntity } from '../creature/creature.entity';
 import { CreatureManager } from '../creature/creature-manager.service';
 import { GameLoop } from '../creature/game-loop';
 import { MovementService } from '../creature/movement.service';
+import { HuntEngine, HuntRun } from '../hunts/hunt-engine';
+import { MapRegistry } from '../map/map-registry.service';
+import { HuntRegistry } from '../hunts/hunt-registry.service';
+import { calculateMaxHp, calculateMaxMana, applyVocationDamageReduction, computeCoreStats } from '../stats/stat-engine';
+import { calculateRegeneration } from '../regeneration/regeneration-engine';
+import { trainSkill } from '../skills/skill-engine';
 
 export type EmitFn = (socketId: string, event: string, data: unknown) => void;
 
@@ -47,7 +58,7 @@ const BASE_SKILLS: CharacterSkills = {
   club: BASE_PLAYER.skill,
   distance: BASE_PLAYER.skill,
   magic: BASE_PLAYER.skill,
-  defense: BASE_PLAYER.skill,
+  shielding: BASE_PLAYER.skill,
 };
 
 const TOKEN_TTL_MS = 24 * 60 * 60 * 1000;
@@ -70,10 +81,14 @@ export class GameEngine implements OnModuleDestroy {
   private ai: CreatureAIService;
   private loop: GameLoop;
   private creatureData: CreatureDataService;
+  private creatureDefinitions = new Map<string, import('@aetheria/types').CreatureDefinition>();
+  private hunts: HuntEngine;
 
   constructor(
     @Inject(STORE) private readonly store: Store,
     @Optional() prisma?: PrismaService,
+    @Optional() mapRegistry?: MapRegistry,
+    @Optional() huntRegistry?: HuntRegistry,
   ) {
     this.creatureData = new CreatureDataService(prisma ?? null);
     this.movement = new MovementService(this.world, (position, exceptIds) => this.isOccupied(position, exceptIds));
@@ -88,6 +103,25 @@ export class GameEngine implements OnModuleDestroy {
     };
     this.ai = new CreatureAIService(hooks);
     this.loop = new GameLoop(TICK_MS, (_delta, now) => this.tick(now));
+    this.hunts = new HuntEngine({
+      getPlayer: (id) => this.players.get(id) ?? null,
+      playerSnapshot: (id) => this.playerSnapshot(id),
+      summarize: (player) => this.toSummary(player),
+      getCreatureDefinition: (id) => this.creatureDefinitions.get(id) ?? null,
+      getMap: (id) => mapRegistry?.getMap(id) ?? null,
+      getHunts: () => huntRegistry?.getAll() ?? HUNT_CATALOG,
+      emitTo: (socketId, event, data) => this.emitTo(socketId, event, data),
+      onCreatureAttackPlayer: (creature, playerId, amount, critical, now) =>
+        this.creatureAttackPlayer(creature, playerId, amount, critical, now),
+      onRunFinished: (characterId, reason) => this.handleRunFinished(characterId, reason),
+      onHuntCompleted: (characterId, huntId, suggestedLevel) => this.handleHuntCompleted(characterId, huntId, suggestedLevel),
+      recordCompletion: (characterId, huntId, clearTimeMs) =>
+        this.store.recordHuntCompletion(characterId, huntId, clearTimeMs),
+      getProgress: async (characterId) => {
+        const list = await this.store.listHuntProgress(characterId);
+        return new Map(list.map((p) => [p.huntId, p]));
+      },
+    });
   }
 
   async start() {
@@ -101,11 +135,11 @@ export class GameEngine implements OnModuleDestroy {
       });
     }
     const data = await this.creatureData.load();
-    const spawned = this.creatures.seed(data.definitions, data.spawns);
-    for (const creature of spawned) this.emitAll('creature.spawn', this.creatureSpawnPayload(creature));
+    this.creatureDefinitions = data.definitions;
+    // O hub (cidade) não possui criaturas — Hunts acontecem em arenas instanciadas.
     this.loop.start();
     this.logger.log(
-      `Mundo ${this.world.width}x${this.world.height} criado (${this.world.tiles.length} tiles) com ${this.creatures.size} criaturas.`,
+      `Hub ${this.world.width}x${this.world.height} criado (${this.world.tiles.length} tiles) com ${this.creatureDefinitions.size} definições de criaturas.`,
     );
   }
 
@@ -180,7 +214,7 @@ export class GameEngine implements OnModuleDestroy {
     this.emitTo(socketId, 'auth.loginResult', { ok: true, token, accountId: account.id, characters });
   }
 
-  async handleCreateCharacter(socketId: string, token: string, name: string) {
+  async handleCreateCharacter(socketId: string, token: string, name: string, vocationId: VocationId) {
     const session = this.verifyToken(token);
     if (!session) {
       this.emitTo(socketId, 'auth.characterCreated', { ok: false, error: 'Sessão inválida.' });
@@ -194,6 +228,11 @@ export class GameEngine implements OnModuleDestroy {
       });
       return;
     }
+    const vocation = VOCATIONS[vocationId];
+    if (!vocation) {
+      this.emitTo(socketId, 'auth.characterCreated', { ok: false, error: 'Vocação inválida.' });
+      return;
+    }
     const existing = await this.store.listCharacters(session.accountId);
     if (existing.length >= 3) {
       this.emitTo(socketId, 'auth.characterCreated', { ok: false, error: 'Máximo de 3 personagens por conta.' });
@@ -204,18 +243,27 @@ export class GameEngine implements OnModuleDestroy {
       this.emitTo(socketId, 'auth.characterCreated', { ok: false, error: 'Este nome já está em uso.' });
       return;
     }
+    const maxHp = calculateMaxHp(1, vocation);
+    const maxMana = calculateMaxMana(1, vocation);
+    const initialWeapon = vocation.initialWeapon;
+    const equipment: CharacterEquipment = { weapon: { itemId: initialWeapon, quantity: 1 } };
+    if (vocation.initialOffhand) equipment.shield = { itemId: vocation.initialOffhand, quantity: 1 };
     const character = await this.store.createCharacter(session.accountId, {
       name: trimmed,
+      vocation: vocationId,
+      promoted: false,
+      promotedAt: null,
+      gold: 0,
       level: 1,
       experience: 0,
-      health: BASE_PLAYER.health,
-      maxHealth: BASE_PLAYER.health,
-      mana: BASE_PLAYER.mana,
-      maxMana: BASE_PLAYER.mana,
+      health: maxHp,
+      maxHealth: maxHp,
+      mana: maxMana,
+      maxMana,
       position: { ...SPAWN_POINT },
       skills: { ...BASE_SKILLS },
       inventory: new Array(INVENTORY_SIZE).fill(null),
-      equipment: {},
+      equipment,
     });
     this.emitTo(socketId, 'auth.characterCreated', { ok: true, character: this.toSummary(character) });
   }
@@ -279,6 +327,140 @@ export class GameEngine implements OnModuleDestroy {
     this.logger.log(`Jogador ${player.name} entrou no mundo.`);
   }
 
+  async handlePromote(socketId: string, token: string) {
+    const session = this.verifyToken(token);
+    if (!session) {
+      this.emitTo(socketId, 'promotion.error', { error: 'Sessão inválida.' });
+      return;
+    }
+    const characterId = this.playerBySocket.get(socketId);
+    if (!characterId) {
+      this.emitTo(socketId, 'promotion.error', { error: 'Nenhum personagem selecionado.' });
+      return;
+    }
+    const result = await this.store.promoteCharacter(session.accountId, characterId);
+    if (!result.ok) {
+      this.emitTo(socketId, 'promotion.error', { error: result.error });
+      return;
+    }
+    const player = this.players.get(characterId);
+    if (player) {
+      player.promoted = true;
+      player.promotedAt = result.character.promotedAt;
+      player.gold = result.character.gold;
+    }
+    this.emitTo(socketId, 'character.promoted', { character: this.toSummary(result.character) });
+    this.logger.log(`Personagem ${result.character.name} promovido.`);
+  }
+
+  // ---------------------------------------------------------------- hunts
+
+  private async verifySession(socketId: string, token: string): Promise<{ player: GamePlayer } | null> {
+    const session = this.verifyToken(token);
+    const player = this.playerForSocket(socketId);
+    if (!session || !player || player.accountId !== session.accountId) return null;
+    return { player };
+  }
+
+  async handleHuntList(socketId: string, token: string) {
+    const session = await this.verifySession(socketId, token);
+    if (!session) return;
+    const hunts = await Promise.all(this.hunts.listHunts().map((h) => this.hunts.toListEntry(h, session.player.id)));
+    this.emitTo(socketId, 'hunt.list', { hunts });
+  }
+
+  async handleHuntStart(socketId: string, token: string, huntId: string, loopEnabled: boolean) {
+    const session = await this.verifySession(socketId, token);
+    if (!session) return;
+    const player = session.player;
+    const result = this.hunts.startHunt(player.id, huntId, loopEnabled, Date.now());
+    if (!result.ok) {
+      this.emitTo(socketId, 'error', { message: this.huntErrorLabel(result.error) });
+      return;
+    }
+    this.emitOthers(socketId, 'entity.removed', { id: player.id });
+    this.logger.log(`Jogador ${player.name} entrou na hunt ${huntId}.`);
+  }
+
+  handleHuntStop(socketId: string, token: string) {
+    void this.verifySession(socketId, token).then((session) => {
+      if (!session) return;
+      if (this.hunts.stopHunt(session.player.id)) {
+        this.logger.log(`Jogador ${session.player.name} abandonou a hunt.`);
+      }
+    });
+  }
+
+  handleHuntSetLoop(socketId: string, token: string, enabled: boolean) {
+    void this.verifySession(socketId, token).then((session) => {
+      if (!session) return;
+      this.hunts.setLoop(session.player.id, enabled);
+    });
+  }
+
+  private huntErrorLabel(error: string): string {
+    switch (error) {
+      case 'HUNT_NOT_FOUND':
+        return 'Hunt não encontrada.';
+      case 'HUNT_DISABLED':
+        return 'Hunt desabilitada.';
+      case 'CHARACTER_ALREADY_IN_HUNT':
+        return 'Você já está em uma hunt.';
+      default:
+        return 'Não foi possível iniciar a hunt.';
+    }
+  }
+
+  /** Bônus de ouro por concluir uma Hunt (bônus de clear). */
+  private handleHuntCompleted(characterId: string, huntId: string, suggestedLevel: number) {
+    const player = this.players.get(characterId);
+    if (!player) return;
+    const bonus = HUNT_CONFIG.gold.clearBonus(suggestedLevel);
+    if (bonus <= 0) return;
+    player.gold += bonus;
+    this.emitTo(player.socketId ?? '', 'gold.update', { gold: player.gold });
+    this.emitTo(player.socketId ?? '', 'chat.message', {
+      channel: 'local',
+      from: 'Sistema',
+      text: `Bônus de conclusão: +${bonus} gold.`,
+    });
+    void huntId;
+  }
+
+  /** Finaliza a run no motor e devolve o jogador ao hub. */
+  private handleRunFinished(characterId: string, reason: 'completed' | 'wiped' | 'stopped') {
+    const run = this.hunts.getRun(characterId);
+    this.hunts.removeRun(characterId);
+    const player = this.players.get(characterId);
+    if (!player) return;
+    player.position = { ...SPAWN_POINT };
+    player.health = player.maxHealth;
+    player.mana = player.maxMana;
+    player.targetId = null;
+    player.moveDir = null;
+    const socketId = player.socketId ?? '';
+    this.emitTo(socketId, 'game.enterWorld', {
+      character: this.toSummary(player),
+      map: this.world.tiles,
+      width: this.world.width,
+      height: this.world.height,
+    });
+    this.emitStats(player);
+    this.emitInventory(player);
+    this.emitTo(socketId, 'hunt.returnedToCity', {});
+    this.emitOthers(socketId, 'entity.spawned', {
+      id: player.id,
+      kind: 'player',
+      name: player.name,
+      position: player.position,
+      health: player.health,
+      maxHealth: player.maxHealth,
+      level: player.level,
+    });
+    this.logger.log(`Jogador ${player.name} retornou ao hub (${reason}).`);
+    void run;
+  }
+
   // ---------------------------------------------------------------- actions
 
   handleDisconnect(socketId: string) {
@@ -292,6 +474,7 @@ export class GameEngine implements OnModuleDestroy {
     this.playerBySocket.delete(socketId);
     if (player) {
       this.players.delete(characterId);
+      this.hunts.removeRun(characterId);
       this.emitAll('entity.removed', { id: characterId });
       await this.persistPlayer(player);
       this.logger.log(`Jogador ${player.name} saiu.`);
@@ -301,6 +484,10 @@ export class GameEngine implements OnModuleDestroy {
   handleInput(socketId: string, direction: Direction | null | undefined) {
     const player = this.playerForSocket(socketId);
     if (!player) return;
+    if (this.hunts.getRun(player.id)) {
+      player.moveDir = null;
+      return;
+    }
     player.moveDir = direction ?? null;
   }
 
@@ -424,6 +611,10 @@ export class GameEngine implements OnModuleDestroy {
       id: c.id,
       accountId,
       name: c.name,
+      vocation: c.vocation,
+      promoted: c.promoted,
+      promotedName: getVocationDisplayName(c.vocation, c.promoted),
+      gold: c.gold,
       level: c.level,
       experience: c.experience,
       health: c.health,
@@ -465,6 +656,7 @@ export class GameEngine implements OnModuleDestroy {
     return {
       creatureId: creature.id,
       definitionId: creature.definitionId,
+      definitionCreatureId: creature.definition.creatureId,
       slug: creature.definition.slug,
       name: creature.name,
       position: { ...creature.position },
@@ -476,6 +668,7 @@ export class GameEngine implements OnModuleDestroy {
       viewRange: creature.definition.viewRange,
       chaseRange: creature.definition.chaseRange,
       attackRange: creature.definition.attackRange,
+      movementSpeed: creature.definition.movementSpeed,
       description: creature.definition.description,
     };
   }
@@ -533,6 +726,26 @@ export class GameEngine implements OnModuleDestroy {
 
   // ---------------------------------------------------------------- combat
 
+  /** Roteia eventos de combate: para a run da arena se houver, senão global. */
+  private emitCombatEvent(target: GamePlayer | CreatureEntity, event: string, data: unknown) {
+    if (target instanceof GamePlayer) {
+      const run = this.hunts.getRun(target.id);
+      if (run) {
+        this.emitTo(target.socketId ?? '', event, data);
+        return;
+      }
+      this.emitAll(event, data);
+      return;
+    }
+    const run = this.hunts.findRunByCreature(target.id);
+    if (run) {
+      const p = this.players.get(run.characterId);
+      this.emitTo(p?.socketId ?? '', event, data);
+      return;
+    }
+    this.emitAll(event, data);
+  }
+
   private dealDamage(
     attacker: { id: string; attackValue: () => number },
     target: GamePlayer | CreatureEntity,
@@ -543,30 +756,53 @@ export class GameEngine implements OnModuleDestroy {
     const critical = Math.random() < 0.06;
     let amount = Math.max(1, Math.round((atk - def) * (0.9 + Math.random() * 0.2)));
     if (critical) amount = Math.round(amount * 1.5);
+    if (target instanceof GamePlayer) amount = applyVocationDamageReduction(amount, VOCATIONS[target.vocation]);
     target.health = Math.max(0, target.health - amount);
-    this.emitAll('combat.damage', {
+    this.emitCombatEvent(target, 'combat.damage', {
       attackerId: attacker.id,
       targetId: target.id,
       amount,
       critical,
       targetHealth: target.health,
     });
-    this.emitAll('entity.health', { id: target.id, health: target.health, maxHealth: target.maxHealth });
+    this.emitCombatEvent(target, 'entity.health', { id: target.id, health: target.health, maxHealth: target.maxHealth });
   }
 
   private creatureAttackPlayer(creature: CreatureEntity, playerId: string, amount: number, critical: boolean, now: number) {
     const player = this.players.get(playerId);
     if (!player) return;
-    player.health = Math.max(0, player.health - amount);
-    this.emitAll('combat.damage', {
+    const reduced = applyVocationDamageReduction(amount, VOCATIONS[player.vocation]);
+    player.health = Math.max(0, player.health - reduced);
+    this.trainShielding(player, reduced);
+    this.emitCombatEvent(player, 'combat.damage', {
       attackerId: creature.id,
       targetId: player.id,
-      amount,
+      amount: reduced,
       critical,
       targetHealth: player.health,
     });
-    this.emitAll('entity.health', { id: player.id, health: player.health, maxHealth: player.maxHealth });
+    this.emitCombatEvent(player, 'entity.health', { id: player.id, health: player.health, maxHealth: player.maxHealth });
     if (player.health <= 0) this.playerKilled(player, now);
+  }
+
+  private trainShielding(player: GamePlayer, damageTaken: number) {
+    if (damageTaken <= 0) return;
+    const result = trainSkill(player.skills, player.skillProgress, 'shielding', player.vocation, damageTaken * 0.5);
+    player.skills = result.skills;
+    player.skillProgress = result.progress;
+    this.emitSkillEvents(player, result.events);
+  }
+
+  private emitSkillEvents(player: GamePlayer, events: { skill: keyof CharacterSkills; oldLevel: number; newLevel: number }[]) {
+    if (events.length === 0) return;
+    for (const e of events) {
+      this.emitTo(player.socketId ?? '', 'chat.message', {
+        channel: 'local',
+        from: 'Sistema',
+        text: `Sua habilidade ${e.skill} avançou para o nível ${e.newLevel}!`,
+      });
+    }
+    this.emitTo(player.socketId ?? '', 'skills.update', { skills: player.skills });
   }
 
   // ---------------------------------------------------------------- tick
@@ -575,10 +811,12 @@ export class GameEngine implements OnModuleDestroy {
     try {
       for (const player of this.players.values()) {
         if (!player.socketId) continue;
+        this.regeneratePlayer(player, now);
         this.processPlayerMove(player, now);
         this.processPlayerAttack(player, now);
       }
       this.creatures.updateCreatures(this.ai, now);
+      this.hunts.update(now);
       this.processGroundItems(now);
       this.creatures.processRespawns(
         now,
@@ -594,8 +832,29 @@ export class GameEngine implements OnModuleDestroy {
     }
   }
 
+  private regeneratePlayer(player: GamePlayer, now: number) {
+    if (!player.lastRegenAt) player.lastRegenAt = now;
+    const elapsedMs = now - player.lastRegenAt;
+    if (elapsedMs < 1000) return;
+    player.lastRegenAt = now;
+    const result = calculateRegeneration(elapsedMs / 1000, {
+      vocationId: player.vocation,
+      promoted: player.promoted,
+      currentHp: player.health,
+      currentMana: player.mana,
+      maxHp: player.maxHealth,
+      maxMana: player.maxMana,
+    });
+    if (result.finalHp !== player.health || result.finalMana !== player.mana) {
+      player.health = result.finalHp;
+      player.mana = result.finalMana;
+      this.emitStats(player);
+    }
+  }
+
   private processPlayerMove(player: GamePlayer, now: number) {
     if (!player.moveDir) return;
+    if (this.hunts.getRun(player.id)) return;
     if (now < player.nextMoveAt) return;
     if (this.tryStep(player, player.moveDir)) {
       player.nextMoveAt = now + MOVE_INTERVAL_MS;
@@ -607,9 +866,18 @@ export class GameEngine implements OnModuleDestroy {
   }
 
   private processPlayerAttack(player: GamePlayer, now: number) {
+    const run = this.hunts.getRun(player.id);
+    if (run) {
+      if (!player.targetId) {
+        player.targetId = this.nearestArenaCreature(run, player);
+      }
+      if (!player.targetId) return;
+    }
     if (!player.targetId) return;
     const target: CreatureEntity | GamePlayer | null =
-      this.creatures.getCreature(player.targetId) ?? this.players.get(player.targetId) ?? null;
+      (run ? run.creatures.getCreature(player.targetId) : this.creatures.getCreature(player.targetId)) ??
+      this.players.get(player.targetId) ??
+      null;
     if (!target || target.health <= 0 || target.position.z !== player.position.z) {
       player.targetId = null;
       return;
@@ -618,24 +886,74 @@ export class GameEngine implements OnModuleDestroy {
     if (now < player.attackCooldownUntil) return;
     player.attackCooldownUntil = now + 700;
     this.dealDamage({ id: player.id, attackValue: () => this.attackValue(player) }, target, now);
+    this.trainAttackSkill(player);
     if (target.health <= 0) {
       if (target instanceof CreatureEntity) this.creatureKilled(player, target, now);
       else this.playerKilled(target as GamePlayer, now);
     }
   }
 
+  private nearestArenaCreature(run: HuntRun, player: GamePlayer): string | null {
+    let bestId: string | null = null;
+    let bestDist = Infinity;
+    for (const c of run.creatures.getAll()) {
+      if (c.state === 'DEAD') continue;
+      if (c.position.z !== player.position.z) continue;
+      const d = tileDistance(player.position, c.position);
+      if (d < bestDist) {
+        bestDist = d;
+        bestId = c.id;
+      }
+    }
+    return bestId;
+  }
+
+  private trainAttackSkill(player: GamePlayer) {
+    const weapon = player.equipment.weapon ? getItemDef(player.equipment.weapon.itemId) : undefined;
+    const skill: keyof CharacterSkills = weapon?.category === 'Distância' ? 'distance' : 'sword';
+    const result = trainSkill(player.skills, player.skillProgress, skill, player.vocation, 4);
+    player.skills = result.skills;
+    player.skillProgress = result.progress;
+    this.emitSkillEvents(player, result.events);
+  }
+
   private creatureKilled(player: GamePlayer, creature: CreatureEntity, now: number) {
-    creature.state = 'DEAD';
-    creature.health = 0;
-    creature.respawnAt = now + creature.respawnTimeMs;
-    creature.targetId = null;
-    creature.path = [];
-    this.emitAll('creature.death', { creatureId: creature.id, experience: creature.definition.experience });
+    const run = this.hunts.findRunByCreature(creature.id);
+    const isBoss = !!run && run.isBossWave && creature.id === run.bossCreatureId;
+    if (run) {
+      run.creatures.removeCreature(creature.id);
+      const socketId = player.socketId ?? '';
+      this.emitTo(socketId, 'creature.death', { creatureId: creature.id, experience: creature.definition.experience });
+      this.emitTo(socketId, 'creature.remove', { creatureId: creature.id });
+    } else {
+      creature.state = 'DEAD';
+      creature.health = 0;
+      creature.respawnAt = now + creature.respawnTimeMs;
+      creature.targetId = null;
+      creature.path = [];
+      this.emitAll('creature.death', { creatureId: creature.id, experience: creature.definition.experience });
+    }
     this.grantExperience(player, creature.definition.experience);
-    this.spawnLoot(creature);
+    this.grantKillGold(player, creature, isBoss);
+    this.spawnLoot(creature, run);
+  }
+
+  private grantKillGold(player: GamePlayer, creature: CreatureEntity, isBoss: boolean) {
+    const amount = isBoss
+      ? HUNT_CONFIG.gold.boss(creature.definition.level)
+      : HUNT_CONFIG.gold.perKill(creature.definition.level);
+    if (amount <= 0) return;
+    player.gold += amount;
+    this.emitTo(player.socketId ?? '', 'gold.update', { gold: player.gold });
   }
 
   private playerKilled(player: GamePlayer, now: number) {
+    const run = this.hunts.getRun(player.id);
+    if (run) {
+      this.emitTo(player.socketId ?? '', 'combat.death', { entityId: player.id });
+      this.hunts.onPlayerDied(player.id, now);
+      return;
+    }
     this.emitAll('combat.death', { entityId: player.id });
     this.emitAll('entity.removed', { id: player.id });
     player.health = player.maxHealth;
@@ -667,13 +985,14 @@ export class GameEngine implements OnModuleDestroy {
 
   private grantExperience(player: GamePlayer, amount: number) {
     player.experience += amount;
+    const vocation = VOCATIONS[player.vocation];
     while (player.experience >= xpForLevel(player.level)) {
       player.experience -= xpForLevel(player.level);
       player.level++;
-      player.maxHealth += 15;
-      player.maxMana += 5;
-      player.attackBase += 1;
-      player.defenseBase += Math.ceil(player.level / 3);
+      player.maxHealth = calculateMaxHp(player.level, vocation);
+      player.maxMana = calculateMaxMana(player.level, vocation);
+      player.attackBase = player.level + 8;
+      player.defenseBase = 5 + Math.floor(player.level / 2);
       player.health = player.maxHealth;
       player.mana = player.maxMana;
       this.emitTo(player.socketId ?? '', 'chat.message', { channel: 'local', from: 'Sistema', text: `Você subiu para o nível ${player.level}!` });
@@ -681,7 +1000,7 @@ export class GameEngine implements OnModuleDestroy {
     this.emitStats(player);
   }
 
-  private spawnLoot(creature: CreatureEntity) {
+  private spawnLoot(creature: CreatureEntity, run?: HuntRun | null) {
     for (const entry of creature.definition.loot) {
       if (Math.random() * 100 >= entry.chance) continue;
       const def = getItemDef(entry.itemId);
@@ -695,13 +1014,19 @@ export class GameEngine implements OnModuleDestroy {
         expiresAt: Date.now() + LOOT_LIFETIME_MS,
       };
       this.groundItems.set(item.id, item);
-      this.emitAll('loot.spawned', {
+      const payload = {
         entityId: item.id,
         itemId: item.itemId,
         name: item.name,
         quantity: item.quantity,
         position: item.position,
-      });
+      };
+      if (run) {
+        const player = this.players.get(run.characterId);
+        this.emitTo(player?.socketId ?? '', 'loot.spawned', payload);
+      } else {
+        this.emitAll('loot.spawned', payload);
+      }
     }
   }
 

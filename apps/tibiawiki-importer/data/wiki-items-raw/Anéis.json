@@ -1,0 +1,934 @@
+{
+ "query": {
+  "pages": [
+   {
+    "pageid": 6941,
+    "ns": 0,
+    "title": "Claw of 'The Noxious Spawn'",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Claw of 'The Noxious Spawn'\n| flavortext     = It's like a glove and you can't wear a ring on it. You are not sure if you should really put it on.\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Anéis\n| armor          = 0\n| levelrequired  = 100\n| attrib         = Tira [[Poison|veneno]] ao usá-lo.\n| weight         = 5.00\n| stackable      = não\n| value          = 15 000 -  100 000\n| npcvalue       = 15 000\n| droppedby      = [[The Noxious Spawn]].\n| buyfrom        = Jogadores.\n| sellto         = Gnomission\n| implemented    = 8.5\n| notes          = Cura seu [[Poisoned|envenenamento]] ao clicar sobre ela enquanto no slot do anel, você pode usá-la a cada 10 segundos. <noinclude>Quando você equipá-lo, você irá receber 200 de dano (menos se estiver usando itens), a menos que você esteja em uma protection zone. Entretanto, é recomendado tirar e colocar novamente após usar por cerca de 60 vezes ou ela ficará inutilizável por 1 dia e quando isso acontece você fica [[Poisoned|envenenado]] ou [[Cursed]]. Se isso acontecer, você irá receber por volta de 15 turnos de dano, aumentando de 1 para mais de 460 (remova o poison ou o cursed comendo uma [[Hydra Tongue Salad]] ou pedindo por \"healing\" em um templo). Quando isso acontecer, a mensagem dizendo que a claw só pode ser usada por jogadores de level 100+ irá desaparecer e ela não poderá ser equipada (irá virar um objeto de decoração por algum tempo). Faz parte do [[Paladin Set]].<br />\nQuando você usá-la, irá aparecer \"<span style=\"color:green;\">'''It tightens around your wrist as you take it on.'''</span>\" e também \"<span style=\"color:green;\">'''Ouch! The serpent claw stabbed you.'''</span>\"\n<p><spoiler>* [[Arquivo:Achievement.gif]] Ao ser amaldiçoado por uma [[Claw of 'The Noxious Spawn']], você receberá o achievement '''\"{{Achievement|Cursed!}}\"'''.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9076,
+    "ns": 0,
+    "title": "Axe Ring",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Axe Ring\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Anéis\n| armor          = 0\n| skillboost     = [[Axe Fighting]] +4\n| duration       = 30\n| attrib         = \n| weight         = 0.90\n| levelrequired  = 0\n| value          = 100 - 500\n| npcvalue       = 100\n| npcprice       = 500\n| droppedby      = [[Arachnophobica]], [[Dwarf Guard]], [[Dwarf Soldier]], [[Enslaved Dwarf]], [[Madareth]], [[Plaguesmith]], [[Sir Leonard]], [[Sir Leopold]].\n| buyfrom        = Haroun\n| sellto         = Haroun\n| implemented    = 7.1\n| notes          = Faz parte do [[High Level Knight Basic Set]].\n<noinclude><p><spoiler>* Recompensa da [[Orc Shaman Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9078,
+    "ns": 0,
+    "title": "Broken Wedding Ring",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Broken Wedding Ring\n| flavortext     = It is a memory of a lost love.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Anéis\n| armor          = 0\n| secondarytype  = \n| attrib         = Nenhum.\n| weight         = 0.40\n| levelrequired  = 0\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.5\n| notes          = Decoração. Um [[Engraved Wedding Ring]] fica quebrado quando um jogador se divorcia.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9079,
+    "ns": 0,
+    "title": "Club Ring",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Club Ring\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Anéis\n| armor          = 0\n| skillboost     = [[Club Fighting]] +4\n| duration       = 30\n| attrib         = \n| weight         = 0.90\n| levelrequired  = 0\n| value          = 100 - 500\n| npcvalue       = 100\n| npcprice       = 500\n| droppedby      = [[Animated Ogre Brute]], [[Candy Floss Elemental]], [[Cursed Ape]], [[Cyclops]], [[Cyclops Drone]], [[Cyclops Smith]], [[Frost Giant]], [[Frost Giantess]], [[Gargoyle]], [[Gang Member]], [[Hairman The Huge]], [[Insectoid Scout]], [[Kongra]], [[Madareth]], [[Maior Domus]], [[Ogre Brute]], [[Plaguesmith]], [[War Golem]].\n| buyfrom        = Haroun \n| sellto         = Haroun\n| implemented    = 7.1\n| notes          = Faz parte do [[High Level Knight Basic Set]].\n<noinclude><p><spoiler>\n* Recompensa da [[Mintwallin Quest]].\n* Recompensa da [[The Hero Cave Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9080,
+    "ns": 0,
+    "title": "Crystal Ring",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Crystal Ring\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Anéis\n| armor          = 0\n| attrib         = Nenhum.\n| npcvalue       = 250\n| weight         = 0.90\n| levelrequired  = 0\n| stackable      = não\n| value          = 250 - 800\n| droppedby      = [[Banshee]], [[Boar Man]], [[Crystal Spider]], [[Elder Mummy]], [[Energy Elemental]], [[Fury]], [[High Voltage Elemental]], [[Ice Horror]], [[Iks Chuka]], [[Kusuma]], [[Mantosaurus]], [[Midnight Asura]], [[Mummy]], [[Naga Archer]], [[Nightstalker]], [[Raging Mage]], [[Stone Golem]], [[The Diamond Blossom]], [[True Midnight Asura]], [[Vashresamun]], [[Warlock]].\n| droppedRaidby  = [[Ferumbras]], [[Furyosa]], [[Ghazbaran]], [[Grorlam]], [[Morgaroth]], [[Orshabaal]].\n| buyfrom        = Jogadores.\n| sellto         = Rashid\n| notes          = O Crystal Ring é usado geralmente para enfeites. Mesmo sprite do [[Crystal Ring (Eleonore)]]. Faz parte do [[Crystal Set]].<noinclude><p><spoiler>* Recompensa da [[Behemoth Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9082,
+    "ns": 0,
+    "title": "Death Ring",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Death Ring\n| flavortext     = Wearing it makes you feel a little weaker than usual.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Anéis\n| armor          = 1\n| duration       = 7,5\n| skillboost     = [[Shielding]] -10\n| resist         = [[Death Damage|Death]] +5%\n| weight         = 0.80\n| levelrequired  = 0\n| value          = \n| npcvalue       = 1 000\n| droppedby      = [[Adlerauge]], [[Arachnophobica]], [[Arbaziloth]], [[Betrayed Wraith]], [[Blight Mariner]], [[Blightwalker]], [[Bretzecutioner]], [[Burning Book]], [[Clavius]], [[Court Warlock]], [[Dark Torturer]], [[Dawnfire Asura]], [[Defiler]], [[Destroyer]], [[Diabolic Imp]], [[Fury]], [[Golgordan]], [[Grave Guard]], [[Gravedigger]], [[Grim Reaper]], [[Hand of Cursed Fate]], [[Latrivan]], [[Lost Soul]], [[Madareth]], [[Michael the Stalwart]], [[Nightmare]], [[Nightmare Scion]], [[Norcferatu Nightweaver]], [[Phantasm]], [[Rotten Man-Maggot]], [[Shulgrax]], [[Sir Leonard]], [[Sir Leopold]], [[Souleater]], [[Spectre]], [[Spidris]], [[Spidris Elite]], [[The Blazing Rose]], [[The Diamond Blossom]], [[Tormentor]], [[True Dawnfire Asura]], [[Undead Dragon]], [[Wrathful Archivist]], [[Zanakeph]].\n| droppedRaidby  = [[Dracola]], [[Furyosa]], [[Ghazbaran]], [[Morgaroth]], [[Orshabaal]].\n| droppedEventby = [[Haunted Dragon]], [[Zorvorax]].\n| buyfrom        = Jogadores.\n| sellto         = Rashid\n| implemented    = 7.9\n| notes          = Um dos itens mais antigos do [[Tibia]].<br />\n<div class=\"toccolours mw-collapsible mw-collapsed\" style=\"width:70%; margin: 4px 0px;\">'''Histórico do Item'''<div class=\"mw-collapsible-content\"><table><tr><td align=left>\nUm dos primeiros seis anéis existentes no jogo. Inicialmente tinha a cor vermelha e, como os outros anéis, não possuía nenhum atributo, sendo apenas um item raro de decoração.<br />\nCom o [[Updates/7.1|Update 7.1]] (dezembro de 2002) os anéis ganharam atributos e funcionalidades e todos os antigos death rings existentes foram transformados em [[Stealth Ring]]s, com o atual atributo.<br />\nQuatro anos depois, em dezembro de 2006, com o [[Updates/7.9| Update 7.9]], o Death Ring retornou ao jogo com sua versão e atributos atuais.\n</td></tr></table></div></div>\n<noinclude><p><spoiler>* 02 são necessários para a [[Dreamer's Challenge Quest]].\n* Recompensa da [[Into The Bone Pit Quest]] parte dos [[Tibia Tales Quest|Tibia Tales]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9083,
+    "ns": 0,
+    "title": "Dwarven Ring",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Dwarven Ring\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Anéis\n| armor          = 0\n| attrib         = Impede-o de ficar [[Drunkenness|bêbado]].\n| duration       = 60\n| weight         = 1.10\n| levelrequired  = 0\n| stackable      = não\n| value          = 200 - 1 000\n| npcvalue       = 100\n| npcprice       = 2 000\n| droppedby      = [[Amenef The Burning]], [[Bulltaur Brute]], [[Crazed Beggar]], [[Drillworm]], [[Dwarf]], [[Dwarf Geomancer]], [[Dwarf Miner]], [[Gore Horn]], [[Gozzler]], [[Haunted Treeling]], [[Lost Basher]], [[Lost Berserker]], [[Lost Exile]], [[Lost Husher]], [[Madareth]], [[Massive Earth Elemental]], [[Mindmasher]], [[Novice of the Cult]], [[Orewalker]], [[Stone Devourer]], [[War Golem]].\n| buyfrom        = Yaman\n| sellto         = Yaman\n| implemented    = 7.1\n| notes          = Muito útil para caçar criaturas que deixam bêbado, como [[Djinn]]s, [[Assassin]]s, [[Wyvern]]s, [[Dworc Voodoomaster]]s, [[Cyclops Smith]]s e Cultistas. Faz parte do [[Dwarven Set]].\n<noinclude><p><spoiler>\n* Recompensa da [[Deeper Fibula Quest]]. \n* Recompensa da [[Thais Quest]].\n* Recompensa da [[The Explorer Society Quest]]. \n* Recompensa da [[Triangle Tower Quest]].\n* Recompensa da [[Waterfall Quest]].\n* Uso recomendado na [[Ferumbras' Ascendant Quest]].\n* Possibilidade de ser obtido como presente do NPC [[Santa Claus]] e em um [[Surprise Cube]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9084,
+    "ns": 0,
+    "title": "Energy Ring",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Energy Ring\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Anéis\n| armor          = 0\n| attrib         = Provém [[Mana Shield]].\n| duration       = 10\n| weight         = 0.80\n| levelrequired  = 0\n| vocrequired    = [[Monk]]s, [[Knight]]s and [[Paladin]]s\n| stackable      = não\n| value          = 100\n| npcvalue       = 100\n| npcprice       = 2 000\n| droppedby      = [[Albino Dragon]], [[Animated Feather]], [[Arachnophobica]], [[Askarak Demon]], [[Askarak Lord]], [[Bruise Payne]], [[Choking Fear]], [[Demodras]], [[Dipthrah]], [[Dragon Lord]], [[Energy Elemental]], [[Enlightened of the Cult]], [[Frost Dragon]], [[Golgordan]], [[Hand of Cursed Fate]], [[High Voltage Elemental]], [[Infernalist]], [[Knowledge Elemental]], [[Latrivan]], [[Magma Crawler]], [[Massive Water Elemental]], [[Mazoran]], [[Metal Gargoyle]], [[Mutated Bat]], [[Serpent Spawn]], [[Shaburak Demon]], [[Shaburak Lord]], [[Tarbaz]], [[The Old Widow]], [[Twisted Shaper]], [[Warlock]], [[Water Elemental]], [[Vexclaw]].\n| droppedRaidby  = [[Ghazbaran]], [[Mamma Longlegs]], [[Morgaroth]], [[The Handmaiden]], [[Zarabustor]].\n| droppedEventby = [[Ice Dragon]], [[Kalyassa]].\n| buyfrom        = Yaman\n| sellto         = Yaman\n| implemented    = 7.1\n| updated1       = 15.25.3a4a52\n| notes          = Provém [[Magic Shield]] por 10 minutos. Dessa forma, todo [[dano]] recebido durante o efeito deste anel será reduzido de sua [[mana]] ao invés de seu [[HP]]. Faz parte do [[Blue Set]]. Desde o [[Patches/12.55.0000|patch 12.55.10451]], apenas [[knight]]s e [[paladin]]s podem utilizá-lo. Desde o [[Update do Balanceamento de Vocações]], todo dano recebido com o equipado ring é multiplicado por 2.\n<noinclude><p><spoiler>\n* Recompensa da [[Demona Quest]].\n* Recompensa da [[Draconia Quest]].\n* Possibilidade de ser obtido como presente do NPC [[Santa Claus]] e de um [[Surprise Cube]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9085,
+    "ns": 0,
+    "title": "Engraved Wedding Ring",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Engraved Wedding Ring\n| flavortext     = <bride name> & <groom name> forever - married on <date of marriage>.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Anéis\n| armor          = 0\n| secondarytype  = \n| attrib         = Nenhum.\n| weight         = 0.40\n| levelrequired  = 0\n| npcvalue       = 0\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.5\n| notes          = Decoração. Para obter um Engraved Wedding Ring, você deverá se casar primeiro. Ele substitui o [[Wedding Ring]], o nome do casal e a data do casamento será gravado neste anel.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9086,
+    "ns": 0,
+    "title": "Gold Ring",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name            = Gold Ring\n| itemclass       = Ferramentas e Outros Equipamentos\n| primarytype     = Anéis\n| armor           = 0\n| attrib          = Nenhum.\n| weight          = 1.00\n| levelrequired   = 0\n| value           = 8 000 - 12 000\n| droppedby       = [[Angry Demon]], [[Arbaziloth]], [[Blightwalker]], [[Bulltaur Alchemist]], [[Cave Chimera]], [[Dark Carnisylvan]], [[Demon]], [[Golden Servant]], [[Golgordan]], [[Harpy]], [[Katex Blood Tongue]], [[Latrivan]], [[Mantosaurus]], [[Misguided Thief]], [[Raubritter Skirmisher]], [[Shrieking Cry-Stal]], [[Yirkas Blue Scales]]. \n| droppedRaidby   = [[Ghazbaran]], [[Orshabaal]].\n| buyfrom         = Jogadores.\n| sellto          = Rashid\n| npcvalue        = 8 000\n| notes           = Frequentemente utilizado como elemento decorativo. Similar ao [[Ring of the Sky]]. Faz parte do [[Golden Set]], [[Semi Rare Set]], [[Rare Set]] e [[Full Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9087,
+    "ns": 0,
+    "title": "Life Ring",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Life Ring\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Anéis\n| armor          = 0\n| attrib         = [[Regeneration|Regeneração rápida]].\n| duration       = 20\n| weight         = 0.80\n| levelrequired  = 0\n| value          = 50 - 900\n| npcvalue       = 50\n| npcprice       = 900\n| droppedby      = [[Acolyte of the Cult]], [[Arachnophobica]], [[Arbaziloth]], [[Barbarian Headsplitter]], [[Barbarian Skullhunter]], [[Bloated Man-Maggot]], [[Choking Fear]], [[Deathling Scout]], [[Deathling Spellsinger]], [[Deepling Elite]], [[Deepling Master Librarian]], [[Deepling Scout]], [[Deepling Spellsinger]], [[Deepling Warrior]], [[Deepworm]], [[Ghoul]], [[Headwalker]], [[Lizard Dragon Priest]], [[Lizard Snakecharmer]], [[Madareth]], [[Mahrdis]], [[Massive Water Elemental]], [[Metal Gargoyle]], [[Mutated Tiger]], [[Omnivora]], [[Renegade Quara Hydromancer]], [[Rot Elemental]], [[Serpent Spawn]], [[The Lord of the Lice]], [[The Noxious Spawn]], [[The Snapper]], [[Undead Prospector]],  [[Wrathful Archivist]], [[Zombie]].\n| droppedRaidby  = [[Dracola]], [[Flamecaller Zazrak]], [[Gaz'Haragoth]], [[Groam]], [[Midnight Panther]], [[Zushuka (Mortal)]], [[Yakchal]], [[White Pale]], [[Zomba]].\n| buyfrom        = Alexander, Yaman, Khanna:1 000\n| sellto         = Yaman\n| implemented    = 7.1\n| notes          = O anel aumenta 8 [[manapoint]]s e 2 [[hitpoint]]s a cada 6 segundos por 20 minutos, resulta num total de 1600 [[manapoint]]s e 400 [[hitpoint]]s no total. Faz parte do [[Unrestricted Set]], [[Regeneration Set]] e [[Full Set]].\nVocê pode verificar a tabela de [[Dinheiro Gasto Por Mana|dinheiro gasto por mana]] para você fazer uma comparação entre os diferentes itens que lhe dá mana.\n<noinclude><p><spoiler>\n* Recompensa da [[Thais Quest]].\n* Recompensa da [[Darashia Dragon Quest]]\n* Recompensa da [[Behemoth Quest]].\n* Você pode conseguir [[Life Crystal]]s e trocar por '''Life Rings''' na [[Gamel Quest]].\n* 01 é necessário na [[Dreamer's Challenge Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9088,
+    "ns": 0,
+    "title": "Might Ring",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Might Ring\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Anéis\n| charges        = 20\n| armor          = 0\n| resist         = [[Physical Damage|Physical]] +20%, [[Fire Damage|Fire]] +20%, [[Earth Damage|Earth]] +20%, [[Energy Damage|Energy]] +20%, [[Ice Damage|Ice]] +20%, [[Holy Damage|Holy]] +20%, [[Death Damage|Death]] +20%\n| attrib         = Nenhum.\n| weight         = 1.00\n| levelrequired  = 0\n| value          = 1 000 - 5 000\n| npcvalue       = 250\n| npcprice       = 25 000\n| droppedby      = [[Angry Demon]], [[Arbaziloth]], [[Ashmunrah]], [[Bulltaur Brute]], [[Candy Floss Elemental]], [[Converter]], [[Cult Believer]], [[Cult Enforcer]], [[Cult Scholar]], [[Cliff Strider]], [[Demon]], [[Demon Outcast]], [[Diamond Servant]], [[Diamond Servant Replica]], [[Earth Elemental]], [[Energy Elemental]], [[Foam Stalker]], [[Hero]], [[High Voltage Elemental]], [[Honey Elemental]], [[Ironblight]], [[Knowledge Elemental]], [[Latrivan]], [[Lava Lurker]], [[Massive Earth Elemental]], [[Massive Energy Elemental]], [[Massive Fire Elemental]], [[Massive Water Elemental]], [[Rage Squid]], [[Roaring Lion]], [[Sulphur Spouter]], [[Turbulent Elemental]], [[Vexclaw]], [[Vicious Squire]], [[Water Elemental]], [[Worker Golem]], [[Yielothax]], [[Infernoid Blob]], [[Infernoid Hound]], [[Infernoid Soul]].\n| droppedRaidby  = [[Ghazbaran]], [[Morgaroth]], [[Orshabaal]], [[Sight of Surrender]].\n| buyfrom        = Yaman\n| sellto         = Yaman\n| implemented    = 7.1\n| notes          = Faz parte do [[Divine Set]], [[Paladin Set]], [[Blocking Set]], [[Glacier Set]], [[Lightning Set]], [[Magma Set]], [[Terra Set]], [[Unrestricted Set]], e [[Hero Set]].\n<noinclude><p><spoiler>\n* Recompensa da [[Ornamented Shield Quest]].\n* Recompensa do evento [[Lightbearer]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9089,
+    "ns": 0,
+    "title": "Power Ring",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Power Ring\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Anéis\n| armor          = 0\n| secondarytype  = \n| skillboost     = [[Fist Fighting]] +6\n| duration       = 30\n| weight         = 0.80\n| levelrequired  = 0\n| value          = 50 - 100\n| npcvalue       = 50\n| npcprice       = 100\n| droppedby      = [[Arachnophobica]], [[Blight Mariner]], [[Cursed Ape]], [[Dark Monk]], [[Monk]], [[Kongra]], [[Ogre Brute]], [[Stone Golem]].\n| droppedRaidby  = [[Fernfang]], [[Grorlam]], [[The Handmaiden]].\n| buyfrom        = Haroun\n| sellto         = Haroun\n| implemented    = 7.1\n| notes          = Aumenta o fist skill em 6 pontos por 30 minutos.\n<noinclude><p><spoiler>*01 é necessário na [[The Outlaw Camp Quest]].\n*Recompensa da: [[Power Ring Quest]] e [[Panpipe Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9090,
+    "ns": 0,
+    "title": "Ring of Healing",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ring of Healing\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Anéis\n| armor          = 0\n| attrib         = Provém rápida [[Regeneration|regeneração]].\n| duration       = 7,5\n| weight         = 0.80\n| levelrequired  = 0\n| value          = 600 - 1 200\n| npcvalue       = 100\n| npcprice       = 2 000\n| droppedby      = [[Ancient Spawn of Morgathla]], [[Angry Demon]], [[Arachnophobica]], [[Arbaziloth]], [[Arthei]], [[Banshee]], [[Boreth]], [[Broken Shaper]], [[Choking Fear]], [[Death Priest]], [[Demon]], [[Demon Outcast]], [[Esmeralda]], [[Hydra]], [[Glooth Bomb]], [[Golgordan]], [[Kollos]], [[Lady Tenebris]], [[Latrivan]], [[Lersatio]], [[Lich]], [[Lloyd]], [[Madareth]], [[Malvaroth]], [[Marziel]], [[Minotaur Amazon]], [[Minotaur Cult Follower]], [[Minotaur Cult Prophet]], [[Moohtant]], [[Moohtant Wallbreaker]], [[Nightfiend]], [[Overcharged Energy Elemental]], [[Plagirath]], [[Prince Drazzak]], [[Quara Hydromancer]], [[Quara Hydromancer Scout]], [[Ragiaz]], [[Rahemos]], [[Renegade Quara Constrictor]], [[Sea Serpent]], [[Shaper Matriarch]], [[Sharpclaw]], [[The Enraged Thorn Knight]], [[The Sandking]], [[The Time Guardian]], [[Tremor Worm]], [[Werebadger]], [[Werefox]], [[Zamulosh]], [[Vexclaw]].\n| droppedRaidby  = [[Arachir the Ancient One]], [[Crustacea Gigantica]], [[Diblis the Fair]], [[Gravelord Oshuran]], [[Ghazbaran]], [[Morgaroth]], [[Omrafir]], [[Orshabaal]], [[Sir Valorcrest]], [[The Pale Count]], [[Zevelon Duskbringer]].\n| buyfrom        = Yaman\n| sellto         = Yaman\n| implemented    = 7.1\n| notes          = Aumenta a velocidade de regeneração de [[Hit Points|hp]] e [[Mana Points|mp]] por 7.5 minutos. Regenera 24 [[Mana Points|mp]] e 6 [[Hit Points|hp]] a cada 6 segundos totalizando 1800 [[Mana Points|mp]] e 450 [[Hit Points|hp]] em 450 segundos (7.5 minutos). Faz parte do [[Minotaur Set]], [[Unrestricted Set]], [[Regeneration Set]] e [[Full Set]].\n\n<noinclude><p><spoiler>* Recompensa da [[The Desert Dungeon Quest]], [[Fire Axe Quest]] e do evento [[Lightbearer]].\n* Possibilidade de ser obtido como presente do NPC [[Santa Claus]] e de um [[Surprise Cube]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9091,
+    "ns": 0,
+    "title": "Ring of Wishes",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ring of Wishes\n| flavortext     = (This item has 3 charges left).\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Anéis\n| armor          = 0\n| secondarytype  = \n| attrib         = Nenhum.\n| weight         = 0.50\n| levelrequired  = 0\n| trade          = não\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Ninguém.\n| sellto         = Ninguém.\n| notes          = Podem ser visto na [[Serpentine Tower]] e [[mercado]].<br />Tem a mesma aparência do [[Ring of the Sky]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9092,
+    "ns": 0,
+    "title": "Ring of the Sky",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ring of the Sky\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Anéis\n| armor          = 0\n| attrib         = Nenhum.\n| weight         = 0.40\n| levelrequired  = 0\n| stackable      = não\n| npcvalue       = 30 000\n| value          = 30 000 - 70 000          \n| droppedby      = [[Crape Man]], [[Draken Spellweaver]], [[Draken Warmaster]], [[Izcandar the Banished]], [[Lady Tenebris]], [[Mad Mage]], [[Malofur Mangrinder]], [[Maxxenius]], [[Plagueroot]], [[Raging Mage]], [[Shrieking Cry-Stal]], [[The Nightmare Beast]], [[Warlock]].\n| droppedRaidby  = [[Ghazbaran]], [[Orshabaal]], [[Zarabustor]].\n| droppedEventby = [[The Percht Queen]].\n| buyfrom        = Jogadores.\n| sellto         = Rashid\n| notes          = Usado geralmente como decoração. Mesmo sprite de um [[Ring of Wishes]]. Faz parte do [[Semi Rare Set]] e [[Rare Set]].\n<noinclude><p><spoiler>* 01 é necessário para o [[Wizard Outfits]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9093,
+    "ns": 0,
+    "title": "Shapeshifter Ring",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Shapeshifter Ring\n| flavortext     = It will only work for a few days after the challenge of Kurik has been won.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Anéis\n| attrib         = Muda a sua aparência para forma de algumas criaturas.\n| duration       = 600\n| weight         = 0.80\n| levelrequired  = 0\n| stackable      = não\n| armor          = 1\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.7\n| notes          = Quando equipado ele irá te transformar de forma regulada nas seguintes criaturas: [[Carniphila]], [[Lost Soul]], [[Mutated Rat]], [[Nightstalker]], [[Quara Hydromancer]], [[Omruc]], [[Zombie]] e [[Blightwalker]]. Ele tem duração de 10 horas (600 minutos) e somente funciona após o servidor ter sucesso na world task em que se obtêm o anel.\n<noinclude><p><spoiler>* Recompensa do evento [[Last Creep Standing]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9094,
+    "ns": 0,
+    "title": "Signet Ring",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Essa página é sobre o '''item removido''' Signet Ring. Para o produto de criatura, veja [[Signet Ring (Valioso)]].''}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Signet Ring\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Anéis\n| armor          = 0\n| attrib         = Nenhum.\n| weight         = 0.80\n| levelrequired  = 0\n| stackable      = não\n| value          = \n| npcprice       = 15 000\n| droppedby      = Ninguém.\n| mercado        = não\n| buyfrom        = Black Bert\n| sellto         = Jogadores.\n| implemented    = 8.1\n| removed        = 10.40\n| notes          = Podia ser usado como um anel normal. Após o [[Patches/10.40|Patch 10.40]], foi substituído por dois novos anéis para serem diferenciados facilmente nas missões de uma quest.\n<noinclude><p><spoiler>\n* Era obtido e usado durante a [[Secret Service Quest]] (AVIN) e (TBI).\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9546,
+    "ns": 0,
+    "title": "Rerun's Ring",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Rerun's Ring\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Anéis\n| attrib         = Nenhum.\n| weight         = 0.90\n| implemented    = 8.4\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Mesmo sprite de um [[Sword Ring]] quando usado.\n<noinclude><p><spoiler>\n* Obtido e usado na [[The Hidden City of Beregar Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 17002,
+    "ns": 0,
+    "title": "Star Ring",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Star Ring\n| flavortext     = If you wear it on your ring slot, it will boost your health regeneration when you're not hungry.\n| vocrequired = players without vocation\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Anéis\n| duration       = 10\n| armor          = 0\n| attrib         = Aumenta o seu [[hitpoints]] quando você não estiver com fome.\n| weight         = 0.80\n| levelrequired  = 0\n| stackable      = não\n| value          = 200 - 1 000 (em [[Rookgaard]])\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.1\n| notes          = Este anel só poderá ser usado por jogadores sem vocação. Faz parte do [[Rook Set]].<noinclude><p><spoiler>* Obtido e usado na [[The Rookie Guard Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 17312,
+    "ns": 0,
+    "title": "Broken Ring of Ending",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Broken Ring of Ending\n| flavortext     = It seems all its former magical power has left this broken carcass of a ring.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Anéis\n| armor          = 0\n| attrib         = Pode ser combinado a outro item.\n| weight         = 0.60\n| levelrequired  = 0\n| stackable      = não\n| npcvalue       = 4 000\n| droppedby      = [[Yielothax]].\n| droppedEventby = [[Lionet (Criatura)|Lionet]].\n| sellto         = Tothdral, Augustin, Yasir\n| implemented    = 9.1\n| buyfrom        = Jogadores.\n| notes          = \n<noinclude><p><spoiler>\n* Você pode usar um [[Shimmer Swimmer]] nesse ring para se obter uma [[Shimmer Wand]].\n* Você pode usar um [[String of Mending]] nesse ring para se obter um [[Unstable Ring of Ending]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25334,
+    "ns": 0,
+    "title": "Prismatic Ring",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Prismatic Ring\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Anéis\n| armor          = 0\n| secondarytype  = \n| levelrequired  = 120\n| duration       = 60\n| resist         = [[Physical Damage|Physical]] +10%, [[Energy Damage|Energy]] +8%\n| npcvalue       = 0\n| weight         = 1.05\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.6\n| notes          = Faz parte do [[Prismatic Set]].\n<noinclude><p><spoiler>* Pode ser obtido na [[Bigfoot's Burden Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 31010,
+    "ns": 0,
+    "title": "Horn (Ring)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Horn (Ring)\n| itemclass     = Ferramentas e Outros Equipamentos\n| primarytype   = Anéis\n| raridade      = raro\n| armor         = 1\n| attrib         = Nenhum.\n| weight        = 1.20\n| levelrequired  = 0\n| stackable     = não\n| value         = 2 000 000 - 6 000 000\n| npcvalue      = 300\n| buyfrom       = Jogadores.\n| sellto        = Rashid\n| implemented   = 10.20\n| droppedRaidby = [[White Pale]].\n| notes         = Este raro anel oferece um aumento de defesa em +1 e não possui um limite de tempo para ser usado. Sendo assim, ele acaba sendo superior ao [[Death Ring]] e [[Shapeshifter Ring]], já que não possui desvantagens. Por ele ser um item que é [[loot]] exclusivo de um boss que aparece em raras [[invasões]], o White Pale, o seu preço pode ser bastante alto. Faz parte do [[Unrestricted Set]] e [[Dream Set]].\nApós o Summer Update de 2017, foi superado pelo [[Butterfly Ring]] que oferece um aumento de defesa em +2, assim como proteção contra [[death]] em 3%, sendo uma alternativa mais factível para os jogadores em geral, uma vez que se mostra mais fácil de ser obtido.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 31752,
+    "ns": 0,
+    "title": "Ring of Ending",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ring of Ending\n| levelrequired  = 200\n| flavortext     = This constantly rotating ring is perfectly weightless, yet feels infinitely heavy at the same time. You read: This eternal ring was forged in the pain of XXX and hardened by her/his endurance.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Anéis\n| secondarytype  = \n| armor          = 0\n| attrib         = Fornece uma pequena quantidade de luz avermelhada.\n| weight         = 0.00\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.30\n| mercado        = não\n| notes          = Ao ser criado com sucesso, este anel cria um tipo de vínculo com seu criador. Não se sabe ao certo seu uso real, mas há rumores de que este anel está ligado a alguma quest.\n<noinclude><p><spoiler>\n* É obtido ao ter sucesso ao usar um [[Unstable Ring of Ending]].\n</spoiler></p></noinclude>\n}}\n<noinclude>[[Categoria:Artefatos Primordiais]]</noinclude>"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 32982,
+    "ns": 0,
+    "title": "Family Signet Ring",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Family Signet Ring\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Anéis\n| attrib         = Nenhum.\n| armor          = 0\n| weight         = 0.80\n| levelrequired  = 0\n| stackable      = não\n| mercado        = não\n| value          = \n| npcprice       = 15 000\n| droppedby      = Ninguém.\n| buyfrom        = Black Bert\n| sellto         = Jogadores.\n| implemented    = 10.40\n| notes          = Tem a mesma aparência de um [[Signet Ring]]. Ele pode ser usado como um anel normal. Este anel e o [[Suspicious Signet Ring]], foram implementados no jogo para substituir os dois antigos [[Signet Ring]]. Eles possuíam o mesmo nome mas eram utilizados em diferentes missões de uma mesma quest.\n<noinclude><p><spoiler>\n* Obtido e usado durante a [[Secret Service Quest]] (AVIN).\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 38270,
+    "ns": 0,
+    "title": "Ring of Blue Plasma",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ring of Blue Plasma\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Anéis\n| armor          = 0\n| levelrequired  = 100\n| vocrequired    = [[Paladin]]s\n| duration       = 30\n| skillboost     = [[Distance Fighting]] +3, [[Magic Level]] +1\n| weight         = 0.90\n| value          = Negociável\n| npcvalue       = 8 000\n| droppedby      = [[Adventurer Group]], [[Ahau]], [[Alptramun]], [[Amenef The Burning]], [[Anomaly]], [[Arachnophobica]], [[Brain Squid]], [[Breach Brood]], [[Burster]], [[Cave Chimera]], [[Count Vlarkorth]], [[Crazed Summer Rearguard]], [[Dread Intruder]], [[Dreadful Disruptor]], [[Duke Krule]], [[Eradicator]], [[Essence Of Malice]], [[Freakish Lost Soul]], [[Guard Captain Quaid]], [[Izcandar Champion of Winter]], [[King Zelos]], [[Lord Azaram]], [[Malofur Mangrinder]], [[Maxxenius]], [[Outburst]], [[Pirat Bombardier]], [[Plagueroot]], [[Raubritter Marksman]], [[Reality Reaver]], [[Realityquake]]\n, [[Rupture]], [[Sir Baeloc]], [[Soul-Broken Harbinger]], [[Sparkion]], [[The Nightmare Beast]], [[The Unarmored Voidborn]], [[Venerable Girtablilu]], [[Vok the Freakish]],  [[World Devourer]].\n| droppedEventby = [[The Percht Queen]].\n| buyfrom        = Jogadores.\n| sellto         = Fadil\n| implemented    = 10.94\n| notes          = Quando equipado, aumenta o seu distance e o seu magic level durante 30 minutos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 38271,
+    "ns": 0,
+    "title": "Ring of Green Plasma",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ring of Green Plasma\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Anéis\n| armor          = 0\n| skillboost     = [[Magic Level]] +2\n| attrib         = [[Regeneration|Regeneração]] rápida de 1 de [[Hit Points|HP]] e 4 de [[Mana Points|MP]] a cada 6 segundos.\n| duration       = 30\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 100\n| weight         = 0.90\n| value          = Negociável\n| npcvalue       = 8 000\n| npcprice       = 0\n| droppedby      = [[Adventurer Group]], [[Ahau]], [[Alptramun]], [[Anomaly]], [[Brachiodemon]], [[Burster]], [[Count Vlarkorth]], [[Dread Intruder]], [[Eradicator]], [[Essence Of Malice]], [[Izcandar the Banished]], [[Katex Blood Tongue]], [[King Zelos]], [[Malofur Mangrinder]], [[Maxxenius]], [[Outburst]], [[Raubritter Chastener]], [[Realityquake]], [[Reality Reaver]], [[Rupture]], [[Sopping Corpus]], [[Srezz Yellow Eyes]], [[The Nightmare Beast]], [[Utua Stone Sting]], [[World Devourer]], [[Yirkas Blue Scales]].\n| buyfrom        = Jogadores.\n| sellto         = Fadil\n| implemented    = 10.94\n| notes          = Faz parte do [[Magic Level Set]] e [[Regeneration Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 38272,
+    "ns": 0,
+    "title": "Ring of Red Plasma",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ring of Red Plasma\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Anéis\n| armor          = 0\n| skillboost     = [[Sword Fighting]] +3, [[Club Fighting]] +3, [[Axe Fighting]] +3\n| resist         = [[Physical Damage|Physical]] +3%\n| levelrequired  = 100\n| vocrequired    = [[Knight]]s\n| duration       = 30\n| weight         = 0.90\n| value          = \n| npcvalue       = 8 000\n| npcprice       = 0\n| droppedby      = [[Ahau]], [[Alptramun]], [[Cobra Assassin]], [[Cobra Scout]], [[Count Vlarkorth]], [[Dread Intruder]], [[Eradicator]], [[Izcandar the Banished]], [[King Zelos]], [[Maxxenius]], [[Outburst]], [[Raubritter Skirmisher]], [[Realityquake]], [[Rupture]], [[The Last Lore Keeper]], [[The Nightmare Beast]], [[The Scourge of Oblivion]], [[The Source Of Corruption]], [[The Unarmored Voidborn]], [[Usurper Commander]], [[World Devourer]].\n| buyfrom        = Jogadores.\n| sellto         = Fadil\n| implemented    = 10.94\n| notes          = Quando equipado, aumenta todos os seus ''melee'' skills e sua proteção contra físico em 3% durante 30 minutos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 40943,
+    "ns": 0,
+    "title": "Butterfly Ring",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Butterfly Ring\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Anéis\n| armor          = 2\n| resist         = [[Death Damage|Death]] +3%\n| attrib         = Nenhum.\n| weight         = 1.20\n| levelrequired  = 50\n| value          = 2 000 - 5 000\n| npcvalue       = 2 000\n| droppedby      = [[Dark Carnisylvan]], [[Hawk Hopper]], [[Nymph]], [[Pixie]], [[Swan Maiden]], [[Undertaker]].\n| buyfrom        = Jogadores.\n| sellto         = Talila, Valindara\n| implemented    = 11.40\n| notes          = \n<noinclude><p><spoiler>\n* Recompensa da [[Threatened Dreams Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45663,
+    "ns": 0,
+    "title": "Frozen Claw",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Frozen Claw\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Anéis\n| armor          = 0\n| resist         = \n| attrib         = Nenhum.\n| weight         = 4.55\n| levelrequired  = 0\n| value          = Negociável\n| npcvalue       = \n| droppedEventby = [[The Percht Queen]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.02.7746\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 46685,
+    "ns": 0,
+    "title": "Blister Ring",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Blister Ring\n| flavortext     = This ring is out of magic energy.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Anéis\n| secondarytype  = \n| levelrequired  = 220\n| enchantable    = sim\n| enchanted      = \n| armor          = 0\n| duration       = \n| resist         = \n| attrib         = Nenhum.\n| weight         = 0.90\n| npcvalue       = \n| npcprice       = \n| value          = \n| droppedby      = [[Bragrumol]], [[Mozradek]], [[Urmahlullu the Weakened]], [[Xogixath]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.20\n| notes          = <noinclude><p><spoiler>* Pode ser transformado em um [[Enchanted Blister Ring]] entregando 02 [[Silver Token]]s para o NPC [[Cledwyn]].</spoiler></p></noinclude>\n{{Veja|Itens Recarregáveis}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 46852,
+    "ns": 0,
+    "title": "Ring of Secret Thoughts",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ring of Secret Thoughts\n| flavortext     = \n| itemclass      = Anéis\n| primarytype    = Itens de Quest\n| attrib         = Nenhum.\n| weight         = 0.90\n| stackable      = não\n| npcvalue       = 0\n| value          = 0\n| droppedby      = [[Urmahlullu the Weakened]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.20\n| mercado        = não\n| notes          = Pode ser obtido do boss '''somente''' enquanto o jogador '''não''' reportar a missão da [[Kilmaresh Quest]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 46853,
+    "ns": 0,
+    "title": "Ring of Secret Thoughts (Charged)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ring of Secret Thoughts (Charged)\n| flavortext     = It is charged with the memories of the Ambassador of Rathleton.\n| itemclass      = Anéis\n| primarytype    = Itens de Quest\n| attrib         = \n| weight         = 0.90\n| stackable      = não\n| npcvalue       = 0\n| value          = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.20\n| mercado        = não\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[Kilmaresh Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 48066,
+    "ns": 0,
+    "title": "Ring of Souls",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ring of Souls\n| flavortext     = This ring is out of magic energy.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Anéis\n| secondarytype  = \n| enchantable    = sim\n| enchanted      = \n| armor          = 0\n| duration       = \n| resist         = \n| attrib         = Nenhum.\n| weight         = 0.80\n| levelrequired  = 200\n| npcvalue       = \n| npcprice       = \n| droppedby      = [[Brain Head]], [[The Pale Worm]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| value          = \n| implemented    = 12.30\n| notes          = <noinclude><p><spoiler>* Pode ser transformado em um [[Enchanted Ring of Souls]] entregando 02 [[Silver Token]]s para o NPC [[Cledwyn]].</spoiler></p></noinclude>\n{{Veja|Itens Recarregáveis}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 49227,
+    "ns": 0,
+    "title": "Lion Ring",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Lion Ring\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Anéis\n| armor          = \n| attrib         = Nenhum.\n| weight         = 0.40\n| levelrequired  = 0\n| implemented    = 12.40\n| stackable      = não\n| npcvalue       = \n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = <noinclude><p><spoiler>* Obtido e usado na [[Grimvale Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 56134,
+    "ns": 0,
+    "title": "Arboreal Ring",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Arboreal Ring\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Anéis\n| enchantable    = sim\n| enchanted      = \n| vocrequired    = [[Druid]]s\n| armor          = 0\n| duration       = \n| skillboost     = [[Healing Magic Level]] +2\n| resist         = [[Fire Damage|Fire]] +4%, [[Earth Damage|Earth]] +4%, [[Energy Damage|Energy]] +4%, [[Ice Damage|Ice]] +4%\n| attrib         = Nenhum.\n| weight         = 0.70\n| levelrequired  = 400\n| npcvalue       = \n| npcprice       = \n| droppedby      = [[Magma Bubble]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| value          = \n| implemented    = 12.90\n| notes          = <noinclude><p><spoiler>* Pode ser transformado em um [[Charged Arboreal Ring]] entregando 05 [[Silver Token]]s para o NPC [[Cledwyn]]. Possibilidade de ser obtido ao usar uma [[Primal Bag]].</spoiler></p></noinclude>\n{{Veja|Itens Recarregáveis}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 56135,
+    "ns": 0,
+    "title": "Charged Arboreal Ring",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Charged Arboreal Ring\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Anéis\n| enchantable    = \n| enchanted      = sim\n| vocrequired    = [[Druid]]s\n| armor          = 0\n| duration       = 180\n| skillboost     = [[Magic Level]] +2, [[Healing Magic Level]] +2\n| resist         = [[Fire Damage|Fire]] +4%, [[Earth Damage|Earth]] +4%, [[Energy Damage|Energy]] +4%, [[Ice Damage|Ice]] +4%\n| modificadores  = [[Mana Leech]] chance 100%, [[Mana Leech]] amount +1%\n| attrib         = \n| weight         = 0.70\n| levelrequired  = 400\n| npcvalue       = \n| npcprice       = \n| droppedby      = Ninguém. \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| value          = \n| implemented    = 12.90\n| notes          = Esse item é um [[Arboreal Ring]] encantado.\n<noinclude></noinclude>\n{{Veja|Itens Recarregáveis}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 56137,
+    "ns": 0,
+    "title": "Arcanomancer Sigil",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Arcanomancer Sigil\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Anéis\n| enchantable    = sim\n| enchanted      = \n| vocrequired    = [[Sorcerer]]s\n| armor          = 0\n| duration       = \n| skillboost     = [[Fire Magic Level]] +1, [[Energy Magic Level]] +1\n| resist         = [[Fire Damage|Fire]] +4%, [[Earth Damage|Earth]] +4%, [[Energy Damage|Energy]] +4%, [[Ice Damage|Ice]] +4%\n| attrib         = Nenhum.\n| weight         = 0.90\n| levelrequired  = 400\n| npcvalue       = \n| npcprice       = \n| droppedby      = [[Magma Bubble]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| value          = \n| implemented    = 12.90\n| notes          = <noinclude><p><spoiler>* Pode ser transformado em um [[Charged Arcanomancer Sigil]] entregando 05 [[Silver Token]]s para o NPC [[Cledwyn]]. Possibilidade de ser obtido ao usar uma [[Primal Bag]].</spoiler></p></noinclude>\n{{Veja|Itens Recarregáveis}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 56141,
+    "ns": 0,
+    "title": "Charged Arcanomancer Sigil",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Charged Arcanomancer Sigil\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Anéis\n| enchantable    = \n| enchanted      = sim\n| vocrequired    = [[Sorcerer]]s\n| armor          = 0\n| duration       = 180\n| skillboost     = [[Magic Level]] +2, [[Fire Magic Level]] +1, [[Energy Magic Level]] +1\n| resist         = [[Fire Damage|Fire]] +4%, [[Earth Damage|Earth]] +4%, [[Energy Damage|Energy]] +4%, [[Ice Damage|Ice]] +4%\n| modificadores  = [[Mana Leech]] chance 100%, [[Mana Leech]] amount +1%\n| attrib         = \n| weight         = 0.90\n| levelrequired  = 400\n| npcvalue       = \n| npcprice       = \n| droppedby      = Ninguém. \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| value          = \n| implemented    = 12.90\n| notes          = Esse item é um [[Arcanomancer Sigil]] encantado.\n<noinclude></noinclude>\n{{Veja|Itens Recarregáveis}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 56143,
+    "ns": 0,
+    "title": "Alicorn Ring",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Alicorn Ring\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Anéis\n| vocrequired    = [[Paladin]]s\n| enchantable    = sim\n| enchanted      = \n| armor          = 0\n| duration       = \n| skillboost     = [[Holy Magic Level]] +1\n| resist         = [[Fire Damage|Fire]] +4%, [[Earth Damage|Earth]] +4%, [[Energy Damage|Energy]] +4%, [[Ice Damage|Ice]] +4%\n| attrib         = Nenhum.\n| weight         = 0.85\n| levelrequired  = 400\n| npcvalue       = \n| npcprice       = \n| droppedby      = [[Magma Bubble]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| value          = \n| implemented    = 12.90\n| notes          = <noinclude><p><spoiler>* Pode ser transformado em um [[Charged Alicorn Ring]] entregando 05 [[Silver Token]]s para o NPC [[Cledwyn]]. Possibilidade de ser obtido ao usar uma [[Primal Bag]].</spoiler></p></noinclude>\n{{Veja|Itens Recarregáveis}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 56150,
+    "ns": 0,
+    "title": "Charged Alicorn Ring",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Charged Alicorn Ring\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Anéis\n| enchantable    = \n| enchanted      = sim\n| vocrequired    = [[Paladin]]s\n| armor          = 0\n| duration       = 180\n| skillboost     = [[Distance Fighting]] +3, [[Magic Level]] +1, [[Holy Magic Level]] +1\n| resist         = [[Fire Damage|Fire]] +4%, [[Earth Damage|Earth]] +4%, [[Energy Damage|Energy]] +4%, [[Ice Damage|Ice]] +4%, [[Holy Damage|Holy]] +4%, [[Death Damage|Death]] +4%\n| modificadores  = \n| attrib         = \n| weight         = 0.85\n| levelrequired  = 400\n| npcvalue       = \n| npcprice       = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| value          = \n| implemented    = 12.90\n| notes          = Esse item é um [[Alicorn Ring]] encantado.\n<noinclude></noinclude>\n{{Veja|Itens Recarregáveis}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 56151,
+    "ns": 0,
+    "title": "Spiritthorn Ring",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Spiritthorn Ring\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Anéis\n| enchantable    = sim\n| enchanted      = \n| vocrequired    = [[Knight]]s\n| armor          = 0\n| duration       = \n| skillboost     = \n| resist         = [[Physical Damage|Physical]] +2%, [[Fire Damage|Fire]] +4%, [[Earth Damage|Earth]] +4%, [[Energy Damage|Energy]] +4%, [[Ice Damage|Ice]] +4%\n| attrib         = Nenhum.\n| weight         = 0.95\n| levelrequired  = 400\n| npcvalue       = \n| npcprice       = \n| droppedby      = [[Magma Bubble]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| value          = \n| implemented    = 12.90\n| notes          = <noinclude><p><spoiler>* Pode ser transformado em um [[Charged Spiritthorn Ring]] entregando 05 [[Silver Token]]s para o NPC [[Cledwyn]]. Possibilidade de ser obtido ao usar uma [[Primal Bag]].</spoiler></p></noinclude>\n{{Veja|Itens Recarregáveis}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 56152,
+    "ns": 0,
+    "title": "Charged Spiritthorn Ring",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Charged Spiritthorn Ring\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Anéis\n| enchantable    = \n| enchanted      = sim\n| vocrequired    = [[Knight]]s\n| armor          = 2\n| duration       = 180\n| skillboost     = [[Sword Fighting]] +3, [[Club Fighting]] +3, [[Axe Fighting]] +3\n| resist         = [[Physical Damage|Physical]] +8%, [[Fire Damage|Fire]] +4%, [[Earth Damage|Earth]] +4%, [[Energy Damage|Energy]] +4%, [[Ice Damage|Ice]] +4%\n| modificadores  = \n| attrib         = \n| weight         = 0.95\n| levelrequired  = 400\n| npcvalue       = \n| npcprice       = \n| droppedby      = Ninguém. \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| value          = \n| implemented    = 12.90\n| notes          = Esse item é um [[Spiritthorn Ring]] encantado.\n<noinclude></noinclude>\n{{Veja|Itens Recarregáveis}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 56155,
+    "ns": 0,
+    "title": "Enchanted Ring of Souls",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Enchanted Ring of Souls\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Anéis\n| secondarytype  = \n| enchantable    = \n| enchanted      = sim\n| armor          = 0\n| duration       = 120\n| resist         = [[Physical Damage|Physical]] +2%, [[Life Drain]] +10%\n| attrib         = \n| weight         = 0.80\n| levelrequired  = 200\n| npcvalue       = \n| npcprice       = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| value          = \n| implemented    = 12.30\n| notes          = Esse item é um [[Ring of Souls]] encantado.\n<noinclude></noinclude>\n{{Veja|Itens Recarregáveis}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 56157,
+    "ns": 0,
+    "title": "Enchanted Blister Ring",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Enchanted Blister Ring\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Anéis\n| secondarytype  = \n| enchantable    = \n| enchanted      = sim\n| armor          = 0\n| duration       = 60\n| resist         = [[Fire Damage|Fire]] +6%\n| attrib         = \n| weight         = 0.90\n| levelrequired  = 220\n| npcvalue       = \n| npcprice       = \n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.20\n| notes          = Esse item é um [[Blister Ring]] encantado.\n<noinclude></noinclude>\n{{Veja|Itens Recarregáveis}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 62220,
+    "ns": 0,
+    "title": "Ring of Temptation",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ring of Temptation\n| flavortext     = This ring provides a delicious defense for a limited number of uses.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Anéis\n| vocrequired    = \n| enchantable    = não\n| enchanted      = \n| armor          = 0\n| duration       = \n| charges        = 200\n| skillboost     = \n| resist         = [[Mana Drain]] +30%\n| attrib         = Nenhum.\n| weight         = 0.80\n| levelrequired  = 100\n| npcvalue       = \n| npcprice       = 250 [[Dark Chocolate Coin]]s\n| droppedby      = [[Sugar Daddy]].\n| buyfrom        = Coco\n| sellto         = Jogadores.\n| value          = \n| implemented    = 13.40.54ea79\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 63952,
+    "ns": 0,
+    "title": "Charged Ethereal Ring",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Charged Ethereal Ring\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Anéis\n| enchantable    = \n| enchanted      = sim\n| vocrequired    = [[Monk]]s\n| armor          = 0\n| duration       = 180\n| skillboost     = [[Fist Fighting]] +3, [[Magic Level]] +2, [[Life Leech]] +2%\n| resist         = [[Physical Damage|Physical]] +4%, [[Fire Damage|Fire]] +4% [[Earth Damage|Earth]] +4%, [[Energy Damage|Energy]] +4%, [[Ice Damage|Ice]] +4%\n| modificadores  = \n| attrib         = \n| mantra         = 2\n| weight         = 0.85\n| levelrequired  = 400\n| npcvalue       = \n| npcprice       = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| value          = \n| implemented    = 15.00.249ccc\n| notes          = Esse item é um [[Ethereal Ring]] encantado.\n<noinclude><p></p></noinclude>\n{{Veja|Itens Recarregáveis}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 63954,
+    "ns": 0,
+    "title": "Ethereal Ring",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ethereal Ring\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Anéis\n| vocrequired    = [[Monk]]s\n| enchantable    = sim\n| enchanted      = \n| armor          = 0\n| duration       = \n| skillboost     = \n| resist         = [[Physical Damage|Physical]] 1%, [[Fire Damage|Fire]] +4%, [[Earth Damage|Earth]] +4%, [[Energy Damage|Energy]] +4%, [[Ice Damage|Ice]] +4%\n| attrib         = Nenhum.\n| weight         = 0.85\n| levelrequired  = 400\n| npcvalue       = \n| npcprice       = \n| droppedby      = [[Magma Bubble]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| value          = \n| implemented    = 15.00.249ccc\n| notes          = <noinclude><p><spoiler>* Pode ser transformado em um [[Charged Ethereal Ring]] entregando 05 [[Silver Token]]s para o NPC [[Cledwyn]].\n* Possibilidade de ser obtido ao usar uma [[Primal Bag]].</spoiler></p></noinclude>\n{{Veja|Itens Recarregáveis}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 63974,
+    "ns": 0,
+    "title": "Ring of Orange Plasma",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ring of Orange Plasma\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Anéis\n| armor          = 0\n| levelrequired  = 100\n| vocrequired    = [[Monk]]s\n| duration       = 30\n| skillboost     = [[Fist Fighting]] +3, [[Magic Level]] +1\n| resist         = [[Physical Damage|Physical]] +2%\n| weight         = 0.90\n| value          = Negociável\n| npcvalue       = 8 000\n| npcprice       = 0\n| droppedby      = [[Barbarian Skullhunter]], [[Brain Squid]], [[Breach Brood]], [[Burster]], [[Distorted Phantom]], [[Dread Intruder]], [[Feral Werecrocodile]], [[Iks Pututu]], [[Monk's Apparition]], [[Raubritter Skirmisher]], [[Reality Reaver]], [[Sorcerer's Apparition]], [[Sparkion]], [[White Weretiger]].\n| droppedEventby = \n| buyfrom        = Jogadores.\n| sellto         = Fadil\n| implemented    = 15.00.249ccc\n| notes          = Quando equipado, aumenta o seu fist fighting e o seu magic level durante 30 minutos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 65818,
+    "ns": 0,
+    "title": "Guardian Ring",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Guardian Ring\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Anéis\n| armor          = 1\n| attrib         = Nenhum.\n| npcvalue       = 0\n| weight         = 0.90\n| levelrequired  = 0\n| stackable      = não\n| value          = 0\n| implemented    = 15.12.c7d92c\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Ninguém.\n| notes          = Mesmo sprite do [[Crystal Ring (Eleonore)]] e do [[Crystal Ring]].<noinclude><p><spoiler>* Recompensa da [[Newhaven Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9095,
+    "ns": 0,
+    "title": "Stealth Ring",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Stealth Ring\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Anéis\n| armor          = 0\n| duration       = 10\n| attrib         = Quando equipado, deixa o usuário [[Invisibilidade|invisível]].\n| weight         = 1.00\n| levelrequired  = 0\n| value          = 200 - 2 000\n| npcvalue       = 200\n| npcprice       = 5 000\n| droppedby      = [[Angry Demon]], [[Askarak Prince]], [[Bibby Bloodbath]], [[Black Vixen]], [[Brimstone Bug]], [[Burning Book]], [[Cave Devourer]], [[Demon]], [[Demon Outcast]], [[Diabolic Imp]], [[Ekatrix]], [[Enfeebled Silencer]], [[Ghost]], [[Golden Servant]], [[Golden Servant Replica]], [[Golgordan]], [[Latrivan]], [[Mad Mage]], [[Minotaur Hunter]], [[Mutated Rat]], [[Omruc]], [[Orc Warlord]], [[Phantasm]], [[Pirate Ghost]], [[Pooka]], [[Quara Mantassin Scout]], [[Quara Mantassin]], [[Raging Mage]], [[Renegade Quara Mantassin]], [[Sea Serpent]], [[Shaburak Prince]], [[Silencer]], [[Spectre]], [[Sulphur Scuttler]], [[Tarnished Spirit]], [[Thalas]], [[The Horned Fox]], [[The Old Widow]], [[Troll Legionnaire]], [[Twisted Pooka]], [[Undead Elite Gladiator]], [[Undead Gladiator]], [[Young Sea Serpent]], [[Zamulosh]].\n| droppedRaidby  = [[Captain Jones]], [[Ghazbaran]], [[Morgaroth]], [[Countess Sorrow]], [[Mamma Longlegs]], [[The Pale Count]], [[The Handmaiden]].\n| buyfrom        = Haroun\n| sellto         = Haroun\n| implemented    = 7.1\n| notes          = Em servidores [[PvP-Enforced]], a magia [[Exana Ina|Cancel Invisibility]] pode destruir Stealth Rings equipados de outros jogadores (com uma probabilidade de 20% de sucesso) e tirar a invisibilidade de magos que estavam com a magia. Faz parte do [[Blue Set]] e do [[Minotaur Set]].\n<noinclude><p><spoiler>\n* Recompensa da [[Demona Quest]].\n* Recompensa da [[Dark Pyramid Quest]].\n* Recompensa da [[The Demon Helmet Quest]].\n* Recompensa da [[The Queen of the Banshees Quest]].\n* Recompensa do evento [[The Lightbearer]].\n* Possibilidade de ser obtido ao usar um [[Mysterious Remains]].\n* Possibilidade de ser obtido usando um [[Surprise Cube]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9096,
+    "ns": 0,
+    "title": "Sword Ring",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Sword Ring\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Anéis\n| armor          = 0\n| skillboost     = [[Sword Fighting]] +4\n| duration       = 30\n| weight         = 0.90\n| levelrequired  = 0\n| value          = 100 - 500\n| npcvalue       = 100\n| npcprice       = 500\n| droppedby      = [[Arachnophobica]], [[Blight Mariner]], [[Damaged Worker Golem]], [[Madareth]], [[Michael the Stalwart]], [[Mooh'Tah Warrior]], [[Orc Cult Fanatic]], [[Orc Leader]], [[Renegade Orc]], [[Vulcongra]], [[Werehyaena Shaman]].\n| droppedRaidby  = [[Sir Valorcrest]].\n| buyfrom        = Haroun\n| sellto         = Haroun\n| implemented    = 7.1\n| notes          = Faz parte do [[High Level Knight Basic Set]].\n<noinclude><p><spoiler>* Recompensa da [[The Hero Cave Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9097,
+    "ns": 0,
+    "title": "Time Ring",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Time Ring\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Anéis\n| armor          = 0\n| skillboost     = [[Speed]] +30\n| duration       = 10\n| weight         = 0.90\n| levelrequired  = 0\n| value          = 1 000 - 3 000\n| npcvalue       = 100\n| npcprice       = 2 000\n| droppedby      = [[Adept of the Cult]], [[Armadile]], [[Crystal Spider]], [[Darkfang]], [[Giant Spider]], [[Hemming]], [[Hide]], [[Madareth]], [[Renegade Quara Pincher]], [[Rhindeer]], [[Sir Leonard]], [[Sir Leopold]], [[Spitter]], [[Tarantula]], [[Thalas]], [[The Bloodweb]], [[The Old Widow]], [[Werebear]], [[Werewolf]], [[Wrathful Archivist]], [[Zamulosh]].\n| droppedRaidby  = [[Chizzoron the Distorter]], [[Mamma Longlegs]].\n| buyfrom        = Yaman\n| sellto         = Yaman\n| implemented    = 7.1\n| notes          = Aumenta sua velocidade em 30 levels por 10 minutos. Faz parte do [[Haste Set]] e [[Unrestricted Set]].\n<noinclude><p><spoiler>\n* Recompensa da [[Ornamented Shield Quest]].\n* Recompensa da [[Shadowthorn Quest]].\n* Recompensa da [[The Hero Cave Quest]].\n* Recompensa do evento [[Lightbearer]].\n* Possibilidade de ser obtido na [[Rottin Wood and the Married Men Quest]].\n* Possibilidade de ser obtido usando um [[Surprise Cube]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9098,
+    "ns": 0,
+    "title": "Wedding Ring",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Wedding Ring\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Anéis\n| secondarytype  = \n| armor          = 0\n| attrib         = Nenhum.\n| weight         = 0.40\n| levelrequired  = 0\n| value          = \n| npcvalue       = 100\n| npcprice       = 990\n| droppedby      = [[Banshee]], [[Hero]], [[Vile Grandmaster]]. \n| buyfrom        = Briasol, Tesha, Augustin, Ishina, Iwan, Talila, Valindara, Yonan, Tezila, Chantalle, Gail, Edmund, Jessica, Hanna, Carina, Odemara, Oiriz, Giri\n| sellto         = Briasol, Tesha, Augustin, Ishina, Iwan, Talila, Valindara, Yonan, Tezila, Chantalle, Gail, Edmund, Jessica, Hanna, Carina, Odemara, Oiriz, Giri\n| implemented    = 6.0\n| notes          = Usado para [[Newly Wed Outfits Quest|casamentos]].\n<noinclude><p><spoiler>\n* Recompensa da [[Longsword Quest]].\n* Recompensa da [[The Hero Cave Quest]].\n* Possibilidade de ser obtido ao usar um [[Unrealized Dream]] próximo ao [[The Dreamcatcher Device]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 30112,
+    "ns": 0,
+    "title": "Vampire's Signet Ring",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Vampire's Signet Ring\n| flavortext     = A ring with a massive, faintly glowing seal, containing the blood of a vampire.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Anéis\n| armor          = 0\n| stackable      = não\n| attrib         = Nenhum.\n| weight         = 0.10\n| levelrequired  = 0\n| value          = \n| droppedRaidby      = [[The Pale Count]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.1\n| notes          = Nenhuma.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 32515,
+    "ns": 0,
+    "title": "Unstable Ring of Ending",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Unstable Ring of Ending\n| flavortext     = Something is happening to this ring.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Anéis\n| armor          = 0\n| secondarytype  = \n| mercado        = não\n| attrib         = Nenhum.\n| weight         = 0.60\n| levelrequired  = 0\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.30\n| notes          = <noinclude><p><spoiler>* Pode ser criado usando um [[String of Mending]] em um [[Broken Ring of Ending]].<br />\n* Ao ser usado, uma mensagem aparecerá e, ao final, o anel terá 50% de chance de explodir fazendo com que você morra instantaneamente ou ser restaurado se transformando em um [[Ring of Ending]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 32983,
+    "ns": 0,
+    "title": "Suspicious Signet Ring",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Suspicious Signet Ring\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Anéis\n| armor          = 0\n| attrib         = Nenhum.\n| weight         = 0.80\n| levelrequired  = 0\n| stackable      = não\n| value          = \n| npcprice       = 15 000\n| droppedby      = Ninguém.\n| buyfrom        = Black Bert\n| sellto         = Jogadores.\n| implemented    = 10.40\n| notes          = Tem a mesma aparência de um [[Signet Ring]]. Ele pode ser usado como um anel normal. Este anel e o [[Family Signet Ring]], foram implementados no jogo para substituir os dois antigos Signet Ring. Eles possuíam o mesmo nome mas eram utilizados em diferentes missões de uma mesma quest.\n<noinclude><p><spoiler>\n* Obtido e usado durante a [[Secret Service Quest]] (TBI).\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 35425,
+    "ns": 0,
+    "title": "Sweetheart Ring",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Sweetheart Ring\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Anéis\n| armor          = 0\n| secondarytype  = \n| mercado        = sim\n| weight         = 0.90\n| levelrequired  = 0\n| stackable      = não\n| attrib         = Quando equipado com ele, o personagem solta corações ao usá-lo. \n| droppedby      = Ninguém.\n| npcvalue       = \n| npcprice       = 500\n| buyfrom        = Valentina\n| sellto         = Jogadores.\n| implemented    = 10.73\n| notes          = Vendido durante o [[Valentine's Day]].\n}}"
+       }
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -79,11 +79,53 @@ h1 {
 .char-name {
   font-size: 15px;
   color: #eaf2fb;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.vocation-badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid;
+  text-transform: capitalize;
+}
+
+.vocation-badge.knight {
+  color: #f0c14b;
+  border-color: #8a6d1f;
+  background: rgba(240, 193, 75, 0.1);
+}
+
+.vocation-badge.paladin {
+  color: #7fc4e8;
+  border-color: #2f6a8a;
+  background: rgba(127, 196, 232, 0.1);
+}
+
+.vocation-badge.sorcerer {
+  color: #d69be8;
+  border-color: #7a3a8f;
+  background: rgba(214, 155, 232, 0.1);
+}
+
+.vocation-badge.druid {
+  color: #8fd6a0;
+  border-color: #2f7a48;
+  background: rgba(143, 214, 160, 0.1);
 }
 
 .char-meta {
   font-size: 12px;
   color: #8fa2b5;
+}
+
+.divider {
+  height: 1px;
+  background: #2a394d;
+  margin: 18px 0 16px;
 }
 
 .empty {
@@ -98,6 +140,7 @@ h1 {
 .create {
   display: flex;
   gap: 10px;
+  margin-bottom: 14px;
 }
 
 .create input {
@@ -112,6 +155,63 @@ h1 {
 
 .create input:focus {
   border-color: #4d86c9;
+}
+
+.vocation-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.vocation-card {
+  text-align: left;
+  padding: 12px;
+  background: #121a24;
+  border: 1px solid #2c3b4f;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.vocation-card:hover {
+  border-color: #4d86c9;
+}
+
+.vocation-card.selected {
+  border-color: #f0c14b;
+  background: rgba(240, 193, 75, 0.08);
+}
+
+.vc-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: #eaf2fb;
+}
+
+.vc-role {
+  font-size: 12px;
+  color: #f0c14b;
+  margin: 2px 0 6px;
+}
+
+.vc-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.vc-tag {
+  font-size: 11px;
+  padding: 2px 6px;
+  background: #1c2836;
+  border: 1px solid #2f4055;
+  border-radius: 4px;
+  color: #9fb2c4;
+}
+
+.create-btn {
+  width: 100%;
 }
 
 .btn-primary {

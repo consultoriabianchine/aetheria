@@ -21,17 +21,25 @@ model Account {
 }
 
 model Character {
-  id             String             @id @default(cuid())
+  id             String                   @id @default(cuid())
   accountId      String
-  name           String             @unique
+  name           String                   @unique
+  vocation       String                   @default("knight")
+  promoted       Boolean                  @default(false)
+  promotedAt     DateTime?
+  gold           Int                      @default(0)
   position       CharacterPosition?
   stats          CharacterStats?
   skills         CharacterSkills?
+  skillProgress  CharacterSkillProgress[]
   inventory      CharacterInventory?
   equipment      CharacterEquipment?
   quests         CharacterQuest[]
-  account        Account            @relation(fields: [accountId], references: [id], onDelete: Cascade)
-  createdAt      DateTime           @default(now())
+  huntProgress   HuntProgress[]
+  account        Account                  @relation(fields: [accountId], references: [id], onDelete: Cascade)
+  createdAt      DateTime                 @default(now())
+
+  @@index([vocation])
 }
 
 model CharacterPosition {
@@ -44,17 +52,19 @@ model CharacterPosition {
 }
 
 model CharacterStats {
-  id           String    @id @default(cuid())
-  characterId  String    @unique
-  level        Int       @default(1)
-  experience   Int       @default(0)
-  health       Int
-  maxHealth    Int
-  mana         Int
+  id          String    @id @default(cuid())
+  characterId String    @unique
+  level       Int       @default(1)
+  experience  Int       @default(0)
+  health      Int
+  maxHealth   Int
+  mana        Int
   maxMana     Int
-  attack       Int
-  defense      Int
-  character    Character @relation(fields: [characterId], references: [id], onDelete: Cascade)
+  attack      Int
+  defense     Int
+  character   Character @relation(fields: [characterId], references: [id], onDelete: Cascade)
+
+  @@index([level])
 }
 
 model CharacterSkills {
@@ -65,8 +75,39 @@ model CharacterSkills {
   club        Int       @default(10)
   distance    Int       @default(10)
   magic       Int       @default(10)
-  defense     Int       @default(10)
+  shielding   Int       @default(10)
   character   Character @relation(fields: [characterId], references: [id], onDelete: Cascade)
+}
+
+model CharacterSkillProgress {
+  id          String    @id @default(cuid())
+  characterId String
+  skillType   String
+  level       Int       @default(10)
+  experience  Int       @default(0)
+  updatedAt   DateTime  @updatedAt
+  character   Character @relation(fields: [characterId], references: [id], onDelete: Cascade)
+
+  @@unique([characterId, skillType])
+  @@index([characterId])
+}
+
+model HuntProgress {
+  id               String    @id @default(cuid())
+  characterId      String
+  huntId           String
+  completionCount  Int       @default(0)
+  firstClearAt     DateTime?
+  firstClearTimeMs Int?
+  bestClearTimeMs  Int?
+  bestClearAt      DateTime?
+  character        Character @relation(fields: [characterId], references: [id], onDelete: Cascade)
+  createdAt        DateTime  @default(now())
+  updatedAt        DateTime  @updatedAt
+
+  @@unique([characterId, huntId])
+  @@index([characterId])
+  @@map("hunt_progress")
 }
 
 // Itens do jogo (catálogo local em data/items.json). Tabela renomeada para
@@ -117,6 +158,7 @@ model CharacterEquipment {
 
 model CreatureDefinition {
   id                        String          @id @default(cuid())
+  creature_id               Int             @unique @default(autoincrement()) @map("creature_id")
   name                      String
   slug                      String          @unique
   description               String          @default("")
@@ -156,6 +198,8 @@ model CreatureDefinition {
   loots                     CreatureLoot[]
   sources                   CreatureSource[]
   spawns                    CreatureSpawn[]
+  sprite_asset              CreatureSpriteAsset?
+  animation_config          CreatureAnimationConfig?
   created_at                DateTime        @default(now()) @map("created_at")
   updated_at                DateTime        @updatedAt @map("updated_at")
 
@@ -221,6 +265,60 @@ model CreatureSource {
   @@unique([creature_id, source_url])
   @@index([creature_id])
   @@map("creature_sources")
+}
+
+// ---------------------------------------------------------------------------
+// Spritesheet + animação de criaturas (Central de Comando). O blob (BYTEA) é
+// servido por GET /assets/creatures/:id; a configuração de animação é um
+// JSONB validado por Zod, versionado para evitar sobrescritas concorrentes.
+// ---------------------------------------------------------------------------
+
+model CreatureSpriteAsset {
+  id           String             @id @default(cuid())
+  creature_id  Int                @unique @map("creature_id")
+  file_name    String             @map("file_name")
+  mime_type    String             @map("mime_type")
+  file_size    Int                @map("file_size")
+  image_width  Int                @map("image_width")
+  image_height Int                @map("image_height")
+  data         Bytes
+  checksum     String             @map("checksum")
+  uploaded_by  String?            @map("uploaded_by")
+  created_at   DateTime           @default(now()) @map("created_at")
+  updated_at   DateTime           @updatedAt @map("updated_at")
+  creature     CreatureDefinition @relation(fields: [creature_id], references: [creature_id], onDelete: Cascade)
+
+  @@map("creature_sprite_assets")
+}
+
+model CreatureAnimationConfig {
+  id          String             @id @default(cuid())
+  creature_id Int                @unique @map("creature_id")
+  config      Json
+  version     Int                @default(1)
+  created_at  DateTime           @default(now()) @map("created_at")
+  updated_at  DateTime           @updatedAt @map("updated_at")
+  creature    CreatureDefinition @relation(fields: [creature_id], references: [creature_id], onDelete: Cascade)
+
+  @@map("creature_animation_configs")
+}
+
+// ---------------------------------------------------------------------------
+// Auditoria da Central de Comando (ações administrativas).
+// ---------------------------------------------------------------------------
+
+model AdminAuditLog {
+  id          String   @id @default(cuid())
+  actor       String
+  action      String
+  entity_type String   @map("entity_type")
+  entity_id   String   @map("entity_id")
+  before      Json?
+  after       Json?
+  created_at  DateTime @default(now()) @map("created_at")
+
+  @@index([entity_type, entity_id])
+  @@map("admin_audit_log")
 }
 
 // ---------------------------------------------------------------------------
@@ -319,6 +417,33 @@ model MapTile {
   map          Map    @relation(fields: [mapId], references: [id], onDelete: Cascade)
 
   @@unique([mapId, x, y, z])
+}
+
+// ---------------------------------------------------------------------------
+// Hunts (Central de Comando). Começam seedadas de HUNT_CATALOG e ficam
+// editáveis no admin; o motor de hunts lê desta tabela (fallback: config).
+// ---------------------------------------------------------------------------
+
+model Hunt {
+  id             String   @id
+  name           String
+  ladderPosition Int
+  suggestedLevel Int
+  combatScore    Int?
+  basePackSize   Int
+  maxPackSize    Int
+  monsters       Json
+  boss           Json
+  arenaId        String
+  arenaWidth     Int?
+  arenaHeight    Int?
+  mapId          String?
+  theme          Json?
+  enabled        Boolean  @default(true)
+  created_at     DateTime @default(now()) @map("created_at")
+  updated_at     DateTime @updatedAt @map("updated_at")
+
+  @@map("hunts")
 }
 
 model Quest {

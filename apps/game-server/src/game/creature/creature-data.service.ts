@@ -27,6 +27,7 @@ export class CreatureDataService {
         const maxHealth = d.game_max_health ?? d.source_hp ?? 100;
         definitions.set(d.id, {
           id: d.id,
+          creatureId: d.creature_id,
           name: d.name,
           slug: d.slug,
           description: d.description,

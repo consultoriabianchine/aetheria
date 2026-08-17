@@ -1,0 +1,134 @@
+{
+ "query": {
+  "pages": [
+   {
+    "pageid": 8662,
+    "ns": 0,
+    "title": "Small Enchanted Amethyst",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Small Enchanted Amethyst\n| itemclass      = Outros Itens\n| primarytype    = Valiosos\n| secondarytype  = Itens Encantados\n| weight         = 0.10\n| value          = \n| npcvalue       = 200\n| stackable      = sim\n| attrib         = Pode-se dar \"Use\".\n| droppedby      = [[Chasm Spawn]], [[Dark Magician]], [[Deepworm]], [[Grand Commander Soeren]], [[Grand Chaplain Gaunder]], [[Kroazur]], [[Mad Scientist]], [[Nymph]], [[Pixie]], [[Sharpclaw]], [[Werebadger]], [[Werehyaena]].\n| buyfrom        = Jogadores.\n| sellto         = Briasol, Tesha, Augustin, Ishina, Iwan, Talila, Valindara, Yonan, Tezila, Chantalle, Gail, Edmund, Jessica, Hanna, Odemara, Oiriz\n| implemented    = 8.1\n| notes          = É uma [[Small Amethyst]] encantada.\n<noinclude><p><spoiler>\n* Knights precisam de 20 dessas para a [[The Elemental Spheres Quest]].\n* 02 são necessárias na [[Threatened Dreams Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8663,
+    "ns": 0,
+    "title": "Small Enchanted Emerald",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Small Enchanted Emerald\n| itemclass      = Outros Itens\n| primarytype    = Valiosos\n| secondarytype  = Itens Encantados\n| weight         = 0.10\n| value          = \n| npcvalue       = 250\n| stackable      = sim\n| attrib         = Pode-se dar \"Use\".\n| droppedby      = [[Adult Goanna]], [[Black Vixen]], [[Boogy]], [[Chasm Spawn]], [[Diremaw]], [[Feral Sphinx]], [[Gazer Spectre]], [[Swan Maiden]], [[Werefox]], [[Werehyaena Shaman]], [[Young Goanna]].\n| buyfrom        = Jogadores.\n| sellto         = Briasol, Tesha, Augustin, Ishina, Iwan, Talila, Valindara, Yonan, Tezila, Chantalle, Gail, Edmund, Jessica, Hanna, Odemara, Oiriz\n| implemented    = 8.1\n| notes          = É uma [[Small Emerald]] encantada. \n<noinclude><p><spoiler>\n* Druids precisam de 20 dessas para a [[The Elemental Spheres Quest]].\n* 02 são necessárias na [[Threatened Dreams Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8664,
+    "ns": 0,
+    "title": "Small Enchanted Ruby",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Small Enchanted Ruby\n| itemclass      = Outros Itens\n| primarytype    = Valiosos\n| secondarytype  = Itens Encantados\n| weight         = 0.10\n| value          = \n| npcvalue       = 250\n| stackable      = sim\n| attrib         = Pode-se dar \"Use\".\n| droppedby      = [[Bloodback]], [[Cave Devourer]], [[Crazed Summer Rearguard]], [[Floating Savant]], [[Gazer Spectre]], [[Infernalist]], [[Lava Lurker]], [[Menacing Carnivor]], [[Pooka]], [[Twisted Pooka]], [[Tunnel Tyrant]], [[Wereboar]], [[Werelion]].\n| buyfrom        = Jogadores.\n| sellto         = Briasol, Tesha, Augustin, Ishina, Iwan, Talila, Valindara, Yonan, Tezila, Chantalle, Gail, Edmund, Jessica, Hanna, Odemara, Oiriz\n| implemented    = 8.1\n| notes          = É uma [[Small Ruby]] encantada.\n<noinclude><p><spoiler>\n* Sorcerers precisam de 20 dessas para a [[The Elemental Spheres Quest]].\n* 02 são necessárias na [[Threatened Dreams Quest]].\n* 01 é necessária para recarregar uma [[Worn Firewalker Boots]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8665,
+    "ns": 0,
+    "title": "Small Enchanted Sapphire",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Small Enchanted Sapphire\n| itemclass      = Outros Itens\n| primarytype    = Valiosos\n| secondarytype  = Itens Encantados\n| weight         = 0.10\n| value          =\n| npcvalue       = 250\n| stackable      = sim\n| attrib         = Pode-se dar \"Use\".\n| droppedby      = [[Cave Devourer]], [[Crazed Summer Rearguard]], [[Dark Faun]], [[Darkfang]], [[Deathling Scout]], [[Deathling Spellsinger]], [[Faun]], [[Goggle Cake]], [[Iks Aucar]], [[Iks Churrascan]], [[Shadowpelt]], [[True Frost Flower Asura]], [[Tunnel Tyrant]], [[Werebear]], [[Werelioness]].\n| buyfrom        = Jogadores.\n| sellto         = Briasol, Tesha, Augustin, Ishina, Iwan, Talila, Valindara, Yonan, Tezila, Chantalle, Gail, Edmund, Jessica, Hanna, Odemara, Oiriz\n| implemented    = 8.1\n| notes          = É uma [[Small Sapphire]] encantada.\n<noinclude><p><spoiler>\n* 02 podem ser obtidas a cada 20 horas em um barril na ilha de [[Arctic Faun]]s ({{mapa|32096,31757,8:2|aqui}}).\n* Paladins precisam de 20 dessas para a [[The Elemental Spheres Quest]].\n* 02 são necessárias na [[Threatened Dreams Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8771,
+    "ns": 0,
+    "title": "Enchanted Chicken Wing",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Enchanted Chicken Wing\n| flavortext     = It is said to make your feet fly.\n| itemclass      = Outros Itens\n| primarytype    = Itens Encantados\n| secondarytype  = Itens de Addons\n| tertiarytype   = Produtos de Criaturas\n| weight         = 10.00\n| stackable      = sim\n| attrib         = Nenhum.\n| value          = 20 000 - 35 000\n| npcprice       = 1 [[Boots of Haste]]\n| npcvalue       = 20 000\n| droppedby      = [[Ancient Spawn of Morgathla]], [[Lloyd]], [[The Source Of Corruption]], [[Ushuriel]].\n| buyfrom        = Haroun, Yaman\n| sellto         = Fiona, Yasir\n| implemented    = 7.8\n| notes          = <noinclude><p><spoiler>*02 são necessários para o [[Oriental Outfits Quest]].\n*05 são necessários para os [[Hunter Outfits Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8775,
+    "ns": 0,
+    "title": "Flask of Warrior's Sweat",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Flask of Warrior's Sweat\n| flavortext     = It contains the sweat spilled in many battles and is said to be used for certain perfumes too.\n| itemclass      = Outros Itens\n| primarytype    = Itens Encantados\n| secondarytype  = Itens de Addons\n| tertiarytype   = Produtos de Criaturas\n| weight         = 3.00\n| attrib         = \n| stackable      = sim\n| value          = \n| npcprice       = 4 [[Warrior Helmet]]s\n| npcvalue       = 10 000\n| droppedby      = [[Undead Elite Gladiator]], [[Undead Gladiator]], [[Ushuriel]].\n| buyfrom        = Haroun, Yaman\n| sellto         = Fiona, Yasir\n| implemented    = 7.8\n| notes          = Parece com um [[Brown Flask]] ou [[Flask of Cough Syrup]]. Mesmo sendo um líquido, ele não pode ser bebido ou jogado no chão.\n<noinclude><p><spoiler>*Necessário para a [[Assassin Outfits Quest]], [[Barbarian Outfits Quest]] e [[Knight Outfits Quest]].\n*Possibilidade de ser obtido ao usar uma [[Belongings of a Deceased (Ottokar)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8776,
+    "ns": 0,
+    "title": "Magic Sulphur",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Magic Sulphur\n| flavortext     = It smells rather badly but is said to be an important catalyst for magical rituals.\n| itemclass      = Outros Itens\n| primarytype    = Itens Encantados\n| secondarytype  = Itens de Addons\n| tertiarytype   = Produtos de Criaturas \n| weight         = 1.00\n| stackable      = sim\n| attrib         = Nenhum.\n| value          = 8 000 - 15 000\n| npcprice       = 3 [[Fire Sword]]s\n| npcvalue       = 8 000\n| droppedby      = [[Alptramun]], [[Ancient Spawn of Morgathla]], [[Askarak Demon]], [[Askarak Lord]], [[Askarak Prince]], [[Brimstone Bug]], [[Cliff Strider]], [[Count Vlarkorth]], [[Draken Elite]], [[Ghulosh]], [[Gorzindel]], [[Infernalist]], [[Izcandar the Banished]], [[Ironblight]], [[King Zelos]], [[Lloyd]], [[Lokathmor]], [[Lost Berserker]], [[Orewalker]], [[Paiz the Pauperizer]], [[Plagueroot]], [[Ravenous Hunger]], [[Soul of Dragonking Zyrtarch]], [[Sulphur Scuttler]], [[Shaburak Demon]], [[Shaburak Lord]], [[Shaburak Prince]], [[The Baron from Below]], [[The Count Of The Core]], [[The Duke Of The Depths]], [[The False God]], [[The Sandking]], [[The Source Of Corruption]], [[The Time Guardian]], [[The Unarmored Voidborn]]. \n| droppedEventby = [[The Percht Queen]].\n| buyfrom        = Haroun, Yaman\n| sellto         = Fiona, Yasir\n| implemented    = 7.8\n| notes          = Mesma aparência de um [[Fine Sulphur]], [[Easily Inflammable Sulphur]] e um dead [[Wisp]].\n<noinclude><p><spoiler>* 15 são necessários para os [[Summoner Outfits Quest]] (para homens).<br />\n* 15 são necessários para os [[Mage Outfits Quest]] (para mulheres).<br />\n* 10 são necessários para os [[Mage Outfits Quest]] (para homens).<br />\n* 10 são necessários para os [[Summoner Outfits Quest]] (para mulheres).\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8778,
+    "ns": 0,
+    "title": "Spirit Container (Fighting Spirit)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Spirit Container (Fighting Spirit)\n| flavortext     = It contains pure fighting spirit.\n| itemclass      = Outros Itens\n| primarytype    = Itens Encantados\n| secondarytype  = Itens de Addons\n| tertiarytype   = Produtos de Criaturas \n| weight         = 6.00\n| attrib         = \n| stackable      = sim\n| value          =\n| npcprice       = 2 [[Royal Helmet]]s\n| npcvalue       = 40 000\n| droppedby      = [[King Zelos]], [[Souleater]], [[The Enraged Thorn Knight]], [[Ushuriel]].\n| buyfrom        = Haroun, Yaman\n| sellto         = Fiona, Yasir\n| implemented    = 7.8\n| notes          = Tem a mesma aparência de um [[Ectoplasm Container]] cheio. Você pode trocar 02 [[Royal Helmet]]s com os NPCs [[Haroun]] ou [[Yaman]] dizendo '''\"Fighting Spirit\"'''.\n<noinclude><p><spoiler>\n* 01 é necessário para o [[Warrior Outfits]].\n* 01 é necessário para o [[Barbarian Outfits]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

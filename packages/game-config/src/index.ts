@@ -1,4 +1,4 @@
-import type { NpcTemplate } from '@aetheria/types';
+import type { NpcTemplate, VocationDefinition, VocationId } from '@aetheria/types';
 
 /** Dimensões e andar inicial do mundo. */
 export const MAP_WIDTH = 64;
@@ -35,6 +35,104 @@ export const BASE_PLAYER = {
   skill: 10,
 };
 
+// ---------------------------------------------------------------------------
+// Vocações (M1)
+
+/** Valores globais do motor de vocações. */
+export const GAME_CONFIG = {
+  baseHp: 100,
+  baseMana: 50,
+  promotion: {
+    requiredLevel: 20,
+    goldCost: 20_000,
+    regenerationMultiplier: 1.5,
+  },
+  combatDistance: {
+    melee: 1,
+    close: 3,
+    ranged: 5,
+  },
+} as const;
+
+/** Definições das quatro vocações (data-driven, fonte única de verdade). */
+export const VOCATIONS: Record<VocationId, VocationDefinition> = {
+  knight: {
+    id: 'knight',
+    name: 'Knight',
+    promotedName: 'Elite Knight',
+    role: 'tank',
+    hpPerLevel: 15,
+    manaPerLevel: 5,
+    damageReduction: 0.1,
+    initialWeapon: 'hand-axe',
+    initialOffhand: 'wooden-shield',
+    primarySkill: 'axe',
+    canUseShield: true,
+    preferredDistance: 'melee',
+    allowedWeapons: ['sword', 'axe', 'club'],
+    trainingRates: { magic: 0.35, melee: 1.0, distance: 0.3, shielding: 1.0 },
+    regeneration: { hpPerSecond: 2, manaPerSecond: 1 },
+    promotion: { ...GAME_CONFIG.promotion },
+  },
+  paladin: {
+    id: 'paladin',
+    name: 'Paladin',
+    promotedName: 'Royal Paladin',
+    role: 'ranged',
+    hpPerLevel: 10,
+    manaPerLevel: 15,
+    damageReduction: 0,
+    initialWeapon: 'bow',
+    primarySkill: 'distance',
+    canUseShield: false,
+    preferredDistance: 'ranged',
+    allowedWeapons: ['bow', 'crossbow'],
+    trainingRates: { magic: 0.6, melee: 0.45, distance: 1.0, shielding: 0.4 },
+    regeneration: { hpPerSecond: 1.5, manaPerSecond: 2 },
+    promotion: { ...GAME_CONFIG.promotion },
+  },
+  sorcerer: {
+    id: 'sorcerer',
+    name: 'Sorcerer',
+    promotedName: 'Master Sorcerer',
+    role: 'caster',
+    hpPerLevel: 5,
+    manaPerLevel: 30,
+    damageReduction: 0,
+    initialWeapon: 'wand-of-vortex',
+    primarySkill: 'magic',
+    canUseShield: false,
+    preferredDistance: 'ranged',
+    allowedWeapons: ['wand'],
+    trainingRates: { magic: 1.0, melee: 0.2, distance: 0.2, shielding: 0.2 },
+    regeneration: { hpPerSecond: 1, manaPerSecond: 3 },
+    promotion: { ...GAME_CONFIG.promotion },
+  },
+  druid: {
+    id: 'druid',
+    name: 'Druid',
+    promotedName: 'Elder Druid',
+    role: 'support',
+    hpPerLevel: 5,
+    manaPerLevel: 30,
+    damageReduction: 0.1,
+    initialWeapon: 'snakebite-rod',
+    primarySkill: 'magic',
+    canUseShield: false,
+    preferredDistance: 'ranged',
+    allowedWeapons: ['rod'],
+    trainingRates: { magic: 1.0, melee: 0.2, distance: 0.2, shielding: 0.2 },
+    regeneration: { hpPerSecond: 1, manaPerSecond: 3 },
+    promotion: { ...GAME_CONFIG.promotion },
+  },
+};
+
+/** Nome de exibição da vocação (promovido usa o nome promovido). */
+export function getVocationDisplayName(vocationId: VocationId, promoted: boolean): string {
+  const def = VOCATIONS[vocationId];
+  return promoted ? def.promotedName : def.name;
+}
+
 /** Número de slots do inventário. */
 export const INVENTORY_SIZE = 24;
 
@@ -70,6 +168,17 @@ export const NPC_TEMPLATES: Record<string, NpcTemplate> = {
 
 /** Tempo de respawn padrão de criaturas (ms). */
 export const MONSTER_RESPAWN_MS = 8000;
+
+// ---------------------------------------------------------------------------
+// Sprites de criaturas (Central de Comando)
+
+/** Padrão oficial de sprite (32×32), fonte única — não espalhar `32` pelo código. */
+export const SPRITE_CONFIG = {
+  defaultWidth: 32,
+  defaultHeight: 32,
+  /** Ancoragem default (centro-inferior do tile). */
+  defaultAnchor: { x: 16, y: 32 },
+} as const;
 
 // ---------------------------------------------------------------------------
 // IA de criaturas
@@ -119,3 +228,175 @@ export const CHAT_CHANNELS = ['local', 'world'] as const;
 /** Limite de caracteres por mensagem e intervalo anti-spam. */
 export const CHAT_MAX_LENGTH = 120;
 export const CHAT_MIN_INTERVAL_MS = 1500;
+
+// ---------------------------------------------------------------------------
+// Hunts (M3)
+
+/** Configuração global do motor de Hunts (fonte única — sem magic numbers). */
+export const HUNT_CONFIG = {
+  waveCount: 10,
+  bossWave: 10,
+  defaultBasePackSize: 4,
+  maxPackSize: 9,
+  boss: {
+    hpMultiplier: 3,
+    damageMultiplier: 1.5,
+    xpMultiplier: 2.5,
+  },
+  wipe: {
+    minPenaltyLevel: 50,
+    goldPerLevel: 500,
+    respawnMs: 2500,
+  },
+  waveTransitionMs: 1500,
+  /** Recompensas em ouro (moeda do personagem) por kill/boss/clear. */
+  gold: {
+    perKill: (level: number) => Math.max(1, Math.round(level * 2)),
+    boss: (level: number) => Math.max(1, Math.round(level * 10)),
+    clearBonus: (suggestedLevel: number) => 100 + suggestedLevel * 5,
+  },
+} as const;
+
+/** Tamanho do pack de monstros para uma wave (1–9). */
+export function calculatePackSize(basePackSize: number, maxPackSize: number, wave: number): number {
+  return Math.min(maxPackSize, basePackSize + Math.floor((wave - 1) / 2));
+}
+
+/** Lado da escada de saída da arena (alterna a cada wave). */
+export function getStairSide(wave: number): 'left' | 'right' {
+  return wave % 2 === 1 ? 'left' : 'right';
+}
+
+/** Arenas disponíveis (grids determinísticos). */
+export const ARENAS: Record<string, import('@aetheria/types').ArenaDefinition> = {
+  arena_small: { id: 'arena_small', width: 20, height: 16, partySpawnSide: 'left', monsterSpawnSide: 'right' },
+  arena_basic: { id: 'arena_basic', width: 26, height: 20, partySpawnSide: 'left', monsterSpawnSide: 'right' },
+  arena_wide: { id: 'arena_wide', width: 34, height: 18, partySpawnSide: 'left', monsterSpawnSide: 'right' },
+};
+
+/** Catálogo de Hunts (ladder inicial). IDs estáveis; nomes originais de Aetheria. */
+export const HUNT_CATALOG: import('@aetheria/types').HuntDefinition[] = [
+  {
+    id: 'goblin_warren',
+    name: 'Toca dos Goblins',
+    ladderPosition: 1,
+    suggestedLevel: 1,
+    basePackSize: 4,
+    maxPackSize: 9,
+    monsters: [{ monsterId: 'goblin', weight: 1 }],
+    boss: { monsterId: 'goblin', name: 'Goblin Chefe', statMultipliers: { hp: 3, damage: 1.5, xp: 2.5 } },
+    arenaId: 'arena_small',
+    theme: { element: 'physical' },
+    enabled: true,
+  },
+  {
+    id: 'elf_outpost',
+    name: 'Posto de Guarda Élfico',
+    ladderPosition: 2,
+    suggestedLevel: 4,
+    basePackSize: 4,
+    maxPackSize: 9,
+    monsters: [
+      { monsterId: 'elf', weight: 60 },
+      { monsterId: 'goblin', weight: 40 },
+    ],
+    boss: { monsterId: 'elf', name: 'Matriarca Élfica', statMultipliers: { hp: 3, damage: 1.5, xp: 2.5 } },
+    arenaId: 'arena_basic',
+    theme: { element: 'physical' },
+    enabled: true,
+  },
+  {
+    id: 'troll_cave',
+    name: 'Caverna dos Trolls',
+    ladderPosition: 3,
+    suggestedLevel: 6,
+    basePackSize: 4,
+    maxPackSize: 9,
+    monsters: [
+      { monsterId: 'troll', weight: 65 },
+      { monsterId: 'goblin', weight: 35 },
+    ],
+    boss: { monsterId: 'troll', name: 'Troll da Rocha', statMultipliers: { hp: 3, damage: 1.5, xp: 2.5 } },
+    arenaId: 'arena_basic',
+    theme: { element: 'physical' },
+    enabled: true,
+  },
+  {
+    id: 'dwarf_forge',
+    name: 'Forja Anã',
+    ladderPosition: 4,
+    suggestedLevel: 9,
+    basePackSize: 4,
+    maxPackSize: 9,
+    monsters: [
+      { monsterId: 'dwarf', weight: 65 },
+      { monsterId: 'troll', weight: 35 },
+    ],
+    boss: { monsterId: 'dwarf', name: 'Mestre Ferreiro', statMultipliers: { hp: 3, damage: 1.5, xp: 2.5 } },
+    arenaId: 'arena_wide',
+    theme: { element: 'physical' },
+    enabled: true,
+  },
+  {
+    id: 'orc_camp',
+    name: 'Acampamento Orc',
+    ladderPosition: 5,
+    suggestedLevel: 12,
+    basePackSize: 4,
+    maxPackSize: 9,
+    monsters: [
+      { monsterId: 'orc', weight: 60 },
+      { monsterId: 'dwarf', weight: 40 },
+    ],
+    boss: { monsterId: 'orc', name: 'Orc Chefe de Guerra', statMultipliers: { hp: 3, damage: 1.5, xp: 2.5 } },
+    arenaId: 'arena_wide',
+    theme: { element: 'physical' },
+    enabled: true,
+  },
+  {
+    id: 'minotaur_labyrinth',
+    name: 'Labirinto do Minotauro',
+    ladderPosition: 6,
+    suggestedLevel: 15,
+    basePackSize: 4,
+    maxPackSize: 9,
+    monsters: [
+      { monsterId: 'minotaur', weight: 60 },
+      { monsterId: 'orc', weight: 40 },
+    ],
+    boss: { monsterId: 'minotaur', name: 'Minotauro Ancestral', statMultipliers: { hp: 3, damage: 1.5, xp: 2.5 } },
+    arenaId: 'arena_basic',
+    theme: { element: 'physical' },
+    enabled: true,
+  },
+  {
+    id: 'troll_masmorra',
+    name: 'Masmorra dos Trolls',
+    ladderPosition: 7,
+    suggestedLevel: 6,
+    basePackSize: 4,
+    maxPackSize: 9,
+    monsters: [{ monsterId: 'troll', weight: 1 }],
+    boss: { monsterId: 'troll', name: 'Troll da Rocha Rei', statMultipliers: { hp: 3, damage: 1.5, xp: 2.5 } },
+    arenaId: 'arena_basic',
+    arenaWidth: 24,
+    arenaHeight: 16,
+    theme: { element: 'physical' },
+    enabled: true,
+  },
+  {
+    id: 'dwarf_masmorra',
+    name: 'Masmorra dos Anões',
+    ladderPosition: 8,
+    suggestedLevel: 9,
+    basePackSize: 4,
+    maxPackSize: 9,
+    monsters: [{ monsterId: 'dwarf', weight: 1 }],
+    boss: { monsterId: 'dwarf', name: 'Rei Anão da Forja', statMultipliers: { hp: 3, damage: 1.5, xp: 2.5 } },
+    arenaId: 'arena_wide',
+    arenaWidth: 36,
+    arenaHeight: 22,
+    theme: { element: 'physical' },
+    enabled: true,
+  },
+];

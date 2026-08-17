@@ -1,0 +1,1910 @@
+{
+ "query": {
+  "pages": [
+   {
+    "pageid": 7328,
+    "ns": 0,
+    "title": "Draken Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre o '''fansite item''' Draken Doll. Para à réplica, veja [[Draken Doll (Réplica)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Draken Doll\n| flavortext       = This doll seems to be the favourite doll of the emperor. It was awarded by TibiaJourney.com\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Dolls e Bears\n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 15.00\n| mercado          = não\n| sounds           = \"For zze emperor!\"; \"Hail TibiaJourney.com!\"; \"Hail <Player>!!\".\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 8.7\n| notes            = \n* Item oficial do ex-fansite '''TibiaJourney'''. \n* O personagem {{Character|Demolition Loover}} recebeu um por ter sido o criador do item. \n* Um pode ser visto na exibição de prêmios de [[Thais]] aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7330,
+    "ns": 0,
+    "title": "Epaminondas Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Epaminondas Doll\n| flavortext       = He talks, moves and sings just like a real person. It is awarded only by PortalTibia.com.br\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Dolls e Bears\n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 7.77\n| mercado          = não\n| sounds           = \"Hail <nome do personagem>!\"; \"Hail Portal Tibia!\"; \"Hauopa!\"; \"WHERE IS MY HYDROMEL?!\"; \"Yala Boom\".\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 8.41\n| notes            = \nEpaminondas é o Taverneiro da ''Vila Scapula'', cidade do [[Portal Tibia]]. É conhecido por seu famoso Hidromel, uma bebida quente cuja receita é um mistério até hoje. Ao cantar \"Yala Boom\" ele produz notas vermelhas. No [[Patches/13.16.0000|Patch 13.16.13209]], teve sua aparência atualizada: [[Arquivo:Epaminondas Doll (Old).gif|link=]] [[Arquivo:Seta_icon.gif|link=]] [[Arquivo:Epaminondas Doll.gif|link=]].\n\n* Item oficial do fansite '''Portal Tibia'''.\n* O personagem {{Character|Joao Matheus}} recebeu um por ter sido o criador do item.\n* Pode ser visto na exibição de prêmios de Thais aos domingos.\n\n[[Epaminondas Doll/Donos|Clique aqui para conferir uma lista com donos do Epaminondas Doll]].\n\n<noinclude><gallery>\narquivo:Hail_phooenix.png|'''Epaminondas Doll''' no servidor [[Luminera]].\n</gallery></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7332,
+    "ns": 0,
+    "title": "Ferumbras Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Ferumbras Doll\n| flavortext       = It was awarded by Tibiopedia.pl\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Dolls e Bears\n| tertiarytype     = \n| attrib           = Nenhum.\n| stackable        = não\n| weight           = 17.00\n| mercado          = não\n| sounds           = \"NO ONE WILL STOP ME THIS TIME!\"; \"THE POWER IS MINE!\"; \"THE POWER IN TIBIOPEDIA!\"; \"Mwahaha!\".\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 8.55\n| notes            = \n* Item oficial do fansite '''Tibiopedia.pl'''.\n* O personagem {{Character|Oxyven}} recebeu um por ter sido o criador do item.\n* Pode ser visto na exibição de prêmios de Thais aos domingos.\n\n<gallery>\nArquivo:Ferumbras_doll_contest.png|'''Ferumbras Doll''' na casa da personagem {{character|Kat Woman}}\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7794,
+    "ns": 0,
+    "title": "Annihilation Bear",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Annihilation Bear \n| flavortext     = I braved the Annihilator and all I got is this lousy teddy bear. \n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| secondarytype  = \n| attrib         = Nenhum. \n| stackable      = não\n| weight         = 43.00 \n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores. \n| sellto         = Jogadores. \n| implemented    = 7.24\n| notes          = Mesmo sprite do [[Teddy Bear]]. Ele é muito pesado comparado com outros [[Dolls e Bears]]. \n<noinclude><p><spoiler>* Pode ser obtido na [[The Annihilator Quest]] em um [[Present|Present Box]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7796,
+    "ns": 0,
+    "title": "Baby Seal Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Baby Seal Doll \n| flavortext     =  \n| itemclass      = Itens de Decoração \n| primarytype    = Dolls e Bears \n| secondarytype  =  \n| attrib         = Anima quando usado. \n| weight         = 8.50 \n| stackable      = não\n| value          = 20 000 - 60 000 \n| npcvalue       = 20 000\n| npcprice       = 0 \n| droppedby      = Ninguém. \n| buyfrom        = Jogadores. \n| sellto         = Gnomission\n| implemented    = 8.0 \n| notes          = Perfeita projeção de um bebê foca. Este doll é usado para decoração.\n<noinclude><p><spoiler>*Recompensa da [[Barbarian Arena Quest|Barbarian Arena - Scrapper Mode]].\n*[[Arquivo:Achievement.gif]] Ao usar uma Baby Seal Doll, um [[Panda Teddy]], um [[Stuffed Dragon]] e um [[Santa Doll]], você receberá o achievement '''\"{{Achievement|I Need a Hug}}\"'''. </spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7799,
+    "ns": 0,
+    "title": "Bear Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Bear Doll \n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears \n| secondarytype  =  \n| attrib         = Nenhum. \n| weight         = 5.90 \n| stackable      = não\n| value          = 8 000 000 - 28 000 000\n| droppedby      = Ninguém. \n| buyfrom        = Jogadores. \n| sellto         = Jogadores. \n| implemented    = 8.7 \n| notes          = Há muito poucos donos conhecidos.\n<gallery>\narquivo:Bear-Doll.png|Bear Doll em [[Laudera]].\n</gallery>\n<noinclude><p><spoiler>*Possibilidade de ser obtido como presente do NPC [[Santa Claus]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7800,
+    "ns": 0,
+    "title": "Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Doll \n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears \n| secondarytype  =  \n| attrib         = Nenhum.\n| weight         = 6.50\n| stackable      = não\n| npcvalue       = 200 \n| value          = \n| droppedby      = [[Wild Warrior]].\n| droppedEventby = [[Piñata Dragon]].\n| buyfrom        = Jogadores. \n| sellto         = Rashid\n| implemented    = 6.0\n| notes          = Boneco comum usado para decoração. \n<noinclude><p><spoiler>*Possibilidade de ser obtido ao usar uma [[Belongings of a Deceased (Ottokar)]].\n*Possibilidade de ser obtido como presente do NPC [[Santa Claus]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7801,
+    "ns": 0,
+    "title": "Gamemaster Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Gamemaster Doll \n| flavortext     = It was awarded in memory of the dedicated service of Tibia's gamemaster team. \n| itemclass      = Itens de Decoração \n| primarytype    = Dolls e Bears \n| secondarytype  = \n| attrib         = Gravável. \n| weight         = 15.00 \n| stackable      = não\n| npcvalue       = 0 \n| value          = 600 000 000 - 800 000 000\n| sounds         = \n| mercado        = não\n| droppedby      = Ninguém. \n| buyfrom        = Jogadores. \n| sellto         = Jogadores. \n| implemented    = 8.61 \n| notes          = \nTodos os [[Gamemaster]]s receberam este doll no dia 24 de agosto de 2010 juntamente com um desses itens a seguir: \n*[[Ferumbras' Hat]]\n*[[Rainbow Shield]]\n*[[Great Shield]]\n*[[Snake God's Wristguard]]\n*[[Royal Crossbow]]\n*[[Solar Axe]]\n*[[Dark Trinity Mace]]\n*[[The Epiphany]]\n\n[[Arquivo:Gamemaster doll.png|200px|thumb|left|O Gamemaster Doll da ex-GM Exilya, localizado em [[Honera]].]]\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7803,
+    "ns": 0,
+    "title": "Jester Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Jester Doll \n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears \n| secondarytype  =  \n| attrib         = Nenhum \n| weight         = 12.00 \n| stackable      = não\n| npcvalue       =  \n| value          = 80 000 - 300 000 \n| droppedby      = Ninguém. \n| buyfrom        = Jogadores. \n| sellto         = Jogadores. \n| implemented    = 8.4 \n| notes          = Você pode obter esse doll após entregar 6 partes diferentes para [[Hoaxette]]:\n*[[Arquivo:The_Head_of_a_Jester_Doll.gif]] [[The Head of a Jester Doll]] (muito raro)\n*[[Arquivo:The_Torso_of_a_Jester_Doll.gif]] [[The Torso of a Jester Doll]] (muito raro)\n*[[Arquivo:Part_of_a_Jester_Doll_(Right_Leg).gif ]] [[Part of a Jester Doll (Right Leg)]] (raro)\n*[[Arquivo:Part_of_a_Jester_Doll_(Left_Leg).gif]] [[Part of a Jester Doll (Left Leg)]] (raro)\n*[[Arquivo:Part_of_a_Jester_Doll_(Right_Arm).gif]] [[Part of a Jester Doll (Right Arm)]] (semi-raro)\n*[[Arquivo:Part_of_a_Jester_Doll_(Left_Arm).gif]] [[Part of a Jester Doll (Left Arm)]] (semi-raro)\nTodas podem ser obtidos dos [[Undead Jester]]s durante as [[Invasões#Invasão de Undead Jesters|invasões]] de primeiro de abril.\n<noinclude><p><spoiler>Pode ser obtido através da [[Suspicious Surprise Bag]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7903,
+    "ns": 0,
+    "title": "Fan Doll of King Tibianus",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Fan Doll of King Tibianus\n| flavortext     = The small label reads: For my greatest admirer.\n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| secondarytype  = \n| attrib         = Nenhum.\n| weight         = 6.50\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Ele tem o mesmo sprite do [[Voodoo Doll (King)]].\n<noinclude><p><spoiler>* Pode ser obtido na [[Isle of Evil Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8606,
+    "ns": 0,
+    "title": "Dread Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Dread Doll\n| flavortext       = It is shining with positive energy and was awarded by FunTibia.com\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Dolls e Bears\n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\". Fornece uma pequena quantidade de luz vermelha.\n| stackable        = não\n| weight           = 11.00\n| mercado          = não\n| sounds           = \"Mhausheausheu! What a FAIL! Mwahaha!\"; \"Hail <nome do personagem>! You are wearing old socks!\"; \"You are so unpopular even your own shadow refuses to follow you.\"; \"Have fun with FunTibia.com!\".\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 8.72\n| notes            = \n* Item oficial do fansite '''FunTibia'''.\n* O personagem {{character|Geeviz}} recebeu um por ter sido o criador do item.\n* O personagem {{character|Romano The Knight}} recebeu um por ser o administrador do site.  \n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n\n<gallery>\nArquivo:DreadDoll.jpg|'''Dread Doll''' em exibição no servidor Rubera.\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 12279,
+    "ns": 0,
+    "title": "Meandi",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se este não é item que você procura, veja a página [[Demon Baby Doll|Demon Baby Doll (Desambiguação)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Meandi\n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| secondarytype  = \n| attrib         = Reage quando usado.\n| weight         = 6.00\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| npcprice       = 0\n| sounds         = \"Gah! Gah! Gah!\".\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.7\n| notes          = Existem outros tipos de [[Demon Baby Doll]]s. No estado normal ele estará satisfeito, quando usado, ele soltará corações durante 10 segundos.<noinclude><p><spoiler>* Pode ser obtido no evento [[Demon's Lullaby]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 12280,
+    "ns": 0,
+    "title": "Evilina",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se este não é item que você procura, veja a página [[Demon Baby Doll|Demon Baby Doll (Desambiguação)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Evilina\n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| secondarytype  = \n| attrib         = Reage quando usado.\n| weight         = 6.00\n| value          = \n| stackable      = não\n| npcvalue       = 0\n| npcprice       = 0\n| sounds         = \"Agha! Aghal!\".\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.7\n| notes          = Existem outros tipos de [[Demon Baby Doll]]s. No estado normal ele estará ganancioso, quando usado, ficará dormindo por 10 minutos.\n<noinclude><p><spoiler>* Pode ser obtido no evento [[Demon's Lullaby]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 12282,
+    "ns": 0,
+    "title": "Impward",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se este não é item que você procura, veja a página [[Demon Baby Doll|Demon Baby Doll (Desambiguação)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Impward\n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| secondarytype  = \n| attrib         = Reage quando usado.\n| weight         = 6.00\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| npcprice       = 0\n| sounds         = \"GI GI GI GI!\".\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.7\n| notes          = Existem outros tipos de [[Demon Baby Doll]]s. No estado normal ele estará dormindo, quando usado, ele ficará com cara de satisfeito e com olhar ganancioso.\n<noinclude><p><spoiler>* Pode ser obtido no evento [[Demon's Lullaby]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 18776,
+    "ns": 0,
+    "title": "Fan Doll of Queen Eloise",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Fan Doll of Queen Eloise\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Dolls e Bears\n| secondarytype  = \n| attrib         = Nenhum.\n| weight         = 15.60\n| stackable      = não\n| value          = 400 000 - 1 000 000\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.2\n| notes          = Fan Doll of Queen Eloise foi introduzido no jogo para substituir o [[Dread Doll]] devido [http://portaltibia.com.br/?p=6678 à um bug no mapa].\n<noinclude><p><spoiler>* Pode ser obtido na mini world change \"[[Mini World Changes#Noodles is Gone|Noodles is Gone]]\".</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 20355,
+    "ns": 0,
+    "title": "Babel Swimmer",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name            = Babel Swimmer\n| flavortext      = \n| itemclass       = Itens de Decoração\n| primarytype     = Dolls e Bears\n| secondarytype   = \n| attrib          = Nenhum.\n| stackable       = não\n| weight          = 5.00\n| npcvalue        = 0\n| droppedby       = Nenhum.\n| buyfrom         = Jogadores.\n| sellto          = Jogadores.\n| implemented     = 9.1\n| notes           = Não se sabe como obtê-lo. Acredita-se que ele seja a combinação de um [[Shimmer Swimmer]] com algum outro item ou possua alguma relação com esse peixe.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 20890,
+    "ns": 0,
+    "title": "Durin The Almighty",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre o '''fansite item''' Durin The Almighty. Para à réplica, veja [[Doll of Durin The Almighty]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Durin The Almighty\n| flavortext       = The mightiest. The only. God of all dwarfs. Awarded by Tibia Bariloche\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Dolls e Bears\n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\". Fornece uma pequena quantidade de luz azul.\n| stackable        = não\n| weight           = 40.00\n| mercado          = não\n| sounds           = \"Hahaha! <nome do personagem>, what about a few demons in Thais?\"; \"My powers are limitless!\"; \"Hail Tibia Bariloche!\".\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 9.5\n| notes            = \n* Item oficial do ex-fansite '''TibiaBariloche'''. \n* O personagem {{Character|El Padrino}} recebeu um por ter sido o criador do item. \n* Um pode ser visto na exibição de prêmios de [[Thais]] aos domingos.\n<gallery>arquivo:Durindoll.png|Um '''Doll of Durin The Almighty''' visto em uma casa de [[Guardia]].</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25870,
+    "ns": 0,
+    "title": "Legs of Deathstrike",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Legs of Deathstrike\n| flavortext     =  \n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| stackable      = não\n| weight         = 8.00\n| attrib         = Nenhum.\n| value          = Negociável\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.6\n| notes          = Você deve juntar as 3 partes (incluindo essa) e entregar para a NPC [[Gnomally]] em [[Gnomebase]] para receber uma [[Statue of Deathstrike]].<br />\n<noinclude><p><spoiler>Você tem a chance de obter um desse após usar o [[Deathstrike Treasure Chest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25872,
+    "ns": 0,
+    "title": "Head of Deathstrike",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Head of Deathstrike\n| flavortext     =  \n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| stackable      = não\n| weight         = 4.00\n| attrib         = Nenhum.\n| value          = Negociável\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.6\n| notes          = Você deve juntar as 3 partes (incluindo essa) e entregar para a NPC [[Gnomally]] em [[Gnomebase]] para receber uma [[Statue of Deathstrike]].<br />\n<noinclude><p><spoiler>Você tem a chance de obter um desse após usar o [[Deathstrike Treasure Chest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25873,
+    "ns": 0,
+    "title": "Head of Gnomevil",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Head of Gnomevil\n| flavortext     =  \n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| stackable      = não\n| weight         = 6.00\n| attrib         = Nenhum.\n| value          = Negociável\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.6\n| notes          = Você deve juntar as 3 partes (incluindo essa) e entregar para a NPC [[Gnomally]] em [[Gnomebase]] para receber uma [[Statue of Gnomevil]].<br />\n<noinclude><p><spoiler>Você tem a chance de obter um desse após usar o [[Gnomevil Treasure Chest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25875,
+    "ns": 0,
+    "title": "Legs of Gnomevil",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Legs of Gnomevil\n| flavortext     =  \n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| stackable      = não\n| weight         = 7.00\n| attrib         = Nenhum.\n| value          = Negociável\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.6\n| notes          = Você deve juntar as 3 partes (incluindo essa) e entregar para a NPC [[Gnomally]] em [[Gnomebase]] para receber uma [[Statue of Gnomevil]].<br />\n<noinclude><p><spoiler>Você tem a chance de obter um desse após usar o [[Gnomevil Treasure Chest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25878,
+    "ns": 0,
+    "title": "Head of Abyssador",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Head of Abyssador\n| flavortext     =  \n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| stackable      = não\n| weight         = 9.00\n| attrib         = Nenhum.\n| value          = Negociável\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.6\n| notes          = Você deve juntar as 3 partes (incluindo essa) e entregar para a NPC [[Gnomally]] em [[Gnomebase]] para receber uma [[Statue of Abyssador]].<br />\n<noinclude><p><spoiler>Você tem a chance de obter um desse após usar o [[Abyssador Treasure Chest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 29061,
+    "ns": 0,
+    "title": "Bookworm Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre o '''fansite item''' Bookworm Doll. Para à réplica, veja [[Bookworm Doll (Réplica)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Bookworm Doll\n| flavortext       = It does not wish to be disturbed. Awarded by TibiaLibrary.org\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Dolls e Bears\n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 19.00\n| mercado          = não\n| sounds           = \"Shhhhhh, please be quiet!\"; \"Books are great!! Aren't they?\"; \"Hail Tibia Library!\".\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 9.85\n| notes            = \n* Item oficial do ex-fansite '''TibiaLibrary'''. \n* O personagem {{Character|Jaegaren}} recebeu um por ter sido o criador do item.\n* O personagem {{Character|Gorak}} recebeu um por ser o administrador do fansite. \n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 31777,
+    "ns": 0,
+    "title": "Frazzlemaw Santa",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Frazzlemaw Santa\n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| secondarytype  = \n| attrib         = Nenhum. \n| weight         = 6.00\n| stackable      = não\n| npcprice       = 250 [[Christmas Token]]s\n| droppedby      = Ninguém.\n| buyfrom        = Ruprecht\n| sellto         = Jogadores.\n| implemented    = 10.30\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 31779,
+    "ns": 0,
+    "title": "Leaf Golem Santa",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Leaf Golem Santa\n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| secondarytype  = \n| attrib         = Nenhum. \n| weight         = 6.50\n| stackable      = não\n| npcprice       = 250 [[Christmas Token]]s\n| buyfrom        = Ruprecht\n| sellto         = Jogadores.\n| implemented    = 10.30\n| notes          =\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 33159,
+    "ns": 0,
+    "title": "Lisa's Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Lisa's Doll\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| weight         = 6.50\n| attrib         = Nenhum. \n| stackable      = não\n| value          = \n| npcvalue       = 0\n| droppedby      = [[Lisa]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.50\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 34742,
+    "ns": 0,
+    "title": "Midnight Panther Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Midnight Panther Doll\n| flavortext       = It is said to be a symbol of perseverance and luck. Awarded by TibiaMagazine.net\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Dolls e Bears\n| tertiarytype     = Extra Slot\n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 17.00\n| mercado          = não\n| sounds           = \"Hail TibiaMagazine.net!\"; \"Don't be afraid of the darkness!\"; \"Purrrrrrr!\"; \"Feel lucky, <Jogador>!\"\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 10.70\n| notes            = \n* Item oficial do fansite '''TibiaMagazine'''.\n* O personagem {{Character|Makadamia}} recebeu um por ter sido o criador do item.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 35315,
+    "ns": 0,
+    "title": "Maxxen Santa",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Maxxen Santa\n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| attrib         = Nenhum. \n| weight         = 6.50\n| stackable      = não\n| npcprice       = 250 [[Christmas Token]]s\n| buyfrom        = Ruprecht\n| sellto         = Jogadores.\n| implemented    = 10.71\n| notes          =\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 35388,
+    "ns": 0,
+    "title": "Assassin Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre o '''fansite item''' Assassin Doll. Para à réplica, veja [[Assassin Doll (Réplica)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Assassin Doll\n| flavortext       = Only the real killers can touch me! This item was awarded by TibiaBrasileiros.com\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Dolls e Bears\n| tertiarytype     = \n| attrib           = Fornece uma pequena quantidade de luz rosa.\n| stackable        = não\n| weight           = 25.04\n| mercado          = não\n| sounds           = \"<FART...> Ahhh... silent and deadly...\"; \"Hail Tibia Brasileiros! (União&Força)\"; \"Hail <Player>! (União&Força)\"; \"Only the real killers can touch me!\"; \"The path of assassin is found in death, DIE!\".\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 10.75\n| notes            = \n* Item oficial do ex-fansite '''TibiaBrasileiros'''. \n* O personagem {{Character|Lupus Aurelius}} recebeu um por ter sido o criador do item. \n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 36182,
+    "ns": 0,
+    "title": "Little Adventurer Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Little Adventurer Doll\n| flavortext       = This little fellow has faced many dangers. He will follow you anywhere. Awarded by TibiaGuias\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Dolls e Bears\n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 26.13\n| mercado          = não\n| sounds           = \"Silence! I smell something!\", \"Watch your steps - we found the pit latrine.\", \"For concrete information visit TibiaGuias.com.br.\", \"I have a bad feeling about this.\", \"Let me guide you, <nome do personagem>!\", \"Hello, TibiaGuias!\"\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 10.79\n| notes            = \n* Item oficial do ex-fansite '''TibiaGuias'''. \n* O personagem {{Character|Mister Smithson}} recebeu um por ter sido o criador do item.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 36967,
+    "ns": 0,
+    "title": "Cateroide's Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre o '''fansite item''' Cateroide's Doll. Para à réplica, veja [[Crimson Doll]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Cateroide's Doll\n| flavortext       = A rare doll that only worthy warriors can touch! Awarded by Cateroide.com.br\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Dolls e Bears\n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\". Fornece uma pequena quantidade de luz vermelha.\n| stackable        = não\n| weight           = 15.00\n| mercado          = não\n| sounds           = \"Hail Cateroide!\"; \"Oops, have BOH!\"; \"Hail tibians you have the right to remain silent!\"; \"I am Cateroide and I always have BOH\".\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 10.82\n| notes            = \n* Item oficial do ex-fansite '''Cateroide'''. \n* O personagem {{Character|Gordo Warlike}} recebeu um por ter sido o criador do item.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n\n<noinclude><gallery>\nArquivo:Cateroide_doll.png|Cateroide's Doll com a personagem {{Character|Meninna Malvada}}.\n</gallery></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 37070,
+    "ns": 0,
+    "title": "Ferumbras' Teddy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ferumbras' Teddy\n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| attrib         = Nenhum. \n| weight         = 3.90\n| stackable      = não\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.90\n| notes          = <noinclude><p><spoiler>* Este item pode ser obtido como recompensa ao terminar a [[Ferumbras' Ascendant Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 37642,
+    "ns": 0,
+    "title": "Ferumbras' Teddy Santa",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ferumbras' Teddy Santa\n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| attrib         = Nenhum.\n| weight         = 6.50\n| stackable      = não\n| npcprice       = 250 [[Christmas Token]]s\n| droppedby      = Ninguém.\n| buyfrom        = Ruprecht\n| sellto         = Jogadores.\n| implemented    = 10.90\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 40612,
+    "ns": 0,
+    "title": "Loremaster Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre o '''fansite item''' Loremaster Doll. Para à réplica, veja [[Loremaster Doll (Réplica)]].}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Loremaster Doll\n| flavortext       = This doll possesses an infinite knowledge within. It was rewarded by TibiaTome.com\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Dolls e Bears\n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 77.00\n| mercado          = não\n| sounds           = \"Let me enlighten you!\".\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 11.30.4868\n| notes            = \n* Item oficial do ex-fansite '''TibiaTome'''.\n* O personagem {{Character|Xaarcus}} recebeu um por ter sido o criador do item.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n\n<noinclude><gallery>\nArquivo:Loremaster_Doll_Serdebra_2021.png|'''Loremaster Doll''' na casa de jogadores no servidor Serdebra. \n</gallery></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 43687,
+    "ns": 0,
+    "title": "Citizen Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre o '''fansite item''' Citizen Doll. Para à réplica, veja [[Citizen Doll (Réplica)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Citizen Doll\n| flavortext       = This doll carries the story of all Tibians in their legendary citizen outfit. Awarded by TibiaTV.com.br\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Dolls e Bears\n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 22.00\n| mercado          = não\n| sounds           = \"Thais is the oldest city in Tibia, did you know that?\"; \"Looking for the great histories and adventures? Take a look at TibiaTV.com.br!\"; \"Have you heard about the Sword of Fury in Rookgaard? It's been a long time since I have seen it...\"\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 11.65.6492\n| notes            = \n* Item oficial do ex-fansite '''TibiaTV'''.\n* O personagem {{Character|Tywolf}} recebeu um por ter sido o criador do item.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45448,
+    "ns": 0,
+    "title": "Ferumbras Puppet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ferumbras Puppet\n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| attrib         = Nenhum. \n| weight         = 5.50\n| stackable      = não\n| npcvalue       = \n| value          = 50 000 - 1 000 000\n| droppedEventby = [[Piñata Dragon]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.02.7746\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45450,
+    "ns": 0,
+    "title": "Lucky Pig",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Lucky Pig\n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| attrib         = \n| weight         = 7.00\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 0\n| droppedEventby = [[The Percht Queen]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.02.7746\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45949,
+    "ns": 0,
+    "title": "Badbara",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se este não é item que você procura, veja a página [[Demon Baby Doll|Demon Baby Doll (Desambiguação)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Badbara\n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| secondarytype  = \n| attrib         = Reage quando usado.\n| weight         = 6.00\n| value          = \n| stackable      = não\n| npcvalue       = 0\n| npcprice       = 0\n| sounds         = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.12.8202\n| notes          = Existem outros tipos de [[Demon Baby Doll]]s. Após usado mudará sua aparência durante um tempo [[Arquivo:Badbara use.gif|link=]].\n<noinclude><p><spoiler>* Pode ser obtido no evento [[Demon's Lullaby]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45954,
+    "ns": 0,
+    "title": "Cryana",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se este não é item que você procura, veja a página [[Demon Baby Doll|Demon Baby Doll (Desambiguação)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Cryana\n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| secondarytype  = \n| attrib         = Reage quando usado.\n| weight         = 6.00\n| value          = \n| stackable      = não\n| npcvalue       = 0\n| npcprice       = 0\n| sounds         = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.12.8202\n| notes          = Existem outros tipos de [[Demon Baby Doll]]s. Após usado mudará sua aparência durante um tempo [[Arquivo:Cryana use.gif|link=]].\n<noinclude><p><spoiler>* Pode ser obtido no evento [[Demon's Lullaby]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 47614,
+    "ns": 0,
+    "title": "Bat (Item)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bat (Item)\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| weight         = 7.00\n| stackable      = não\n| mercado        = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.20\n| notes          = <noinclude><p><spoiler>* Possibilidade de ser obtido ao usar uma [[Net (Ferramenta)]] em um [[Bat]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 49460,
+    "ns": 0,
+    "title": "Cave Rat (Item)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Cave Rat (Item)\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Itens de Quest\n| secondarytype  = Dolls e Bears\n| weight         = 6.00\n| stackable      = não\n| mercado        = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.40\n| notes          = \n<noinclude><p><spoiler>\n* Possibilidade de ser obtido ao usar uma [[Net (Ferramenta)]] em um [[Cave Rat]].\n* 05 são utilizados na [[Grimvale Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 49685,
+    "ns": 0,
+    "title": "Calamary (Item)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Calamary (Item)\n| flavortext    = \n| itemclass     = Itens de Decoração\n| primarytype   = Dolls e Bears\n| weight        = 7.0\n| stackable     = não\n| value         = Negociável\n| droppedby     = Ninguém.\n| mercado       = não\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| implemented   = 12.20\n| notes         = <noinclude><p><spoiler>* Possibilidade de ser obtido ao usar uma [[Net (Ferramenta)]] no mar.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 50055,
+    "ns": 0,
+    "title": "Bard Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Bard Doll\n| flavortext       = A mythical bard rumoured to magically appear in Tibian taverns with a lute and a mug to tell amazing and funny stories. Granted by Tibiaria.com\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Dolls e Bears\n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 8.50\n| mercado          = não\n| sounds           = \"That Avar Tar stole my sword once, people now call it Excalibug. Can you belive it?! <Jogador>!\"; \"If I could share all the stories I heard in the Tibiaria Tavern!\"; \"HAHAHA Who can marry a necromancer? His GHOUL-FRIEND!\"; \"...and then I realised it was a hunter and not a PK. HAHAHA\"; \"Let me tell you a story from my last adventure. Have a seat and grab your mug of hydromel!\".\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 12.31.9540\n| notes            = \n* Item oficial do fansite '''TibiaRia'''.\n* O personagem {{Character|Elfo Fantasma}} recebeu um por ter sido o criador do item.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 51584,
+    "ns": 0,
+    "title": "Banor Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Banor Doll\n| flavortext       = Imbued with the undying soul of the first human, it bestows the might of the gods to its owner. Awarded by TibiArt.net\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Dolls e Bears\n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 38.00\n| mercado          = não\n| sounds           = \"The might of the gods lies in Tibiart.net.\"; \"We are to triumph the forces of evil, the gods will do so.\"; \"I wield the power of my creators, I see their spark in you.\"; \"The gods made it my mission to save this world.\"; \"I was the first human, I am the pinnacle of creation.\".\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 12.66.10771 (1)\n| notes            = \n* Item oficial do fansite '''TibiaArt'''.\n* O personagem {{Character|Titan of Tsunami}} recebeu um por ter sido o criador do item.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 52966,
+    "ns": 0,
+    "title": "Bella Bonecrusher's Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Bella Bonecrusher's Doll\n| flavortext       = In this doll lives the courage and legacy of Bella Bonecrusher. Awarded by Tibiagallery.com\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Dolls e Bears\n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\". Fornece uma pequena quantidade de luz rosa.\n| stackable        = não\n| weight           = 4.20\n| mercado          = não\n| sounds           = \"Another head for me!\"; \"I will defend what's ours!\"; \"My memories will live forever in Tibiagallery.com\"\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 12.71.11017\n| notes            = \n* Item oficial do fansite '''Tibiagallery'''.\n* O personagem {{Character|Lupus Aurelius}} recebeu um por ter sido o criador do item.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 52968,
+    "ns": 0,
+    "title": "Luna (Tibia Goals)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Luna (Tibia Goals)\n| flavortext       = Gently shrouded in clouds, her dreams are about to come true. As she awakens something magical is about to happen. Granted by TibiaGoals.com\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Dolls e Bears\n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\". Fornece uma pequena quantidade de luz.\n| stackable        = não\n| weight           = 27.07\n| mercado          = não\n| sounds           = \"A horse with a shiny horn doesn't make a unicorn!\"; \"Oh my! Is this <player>! I've read about you on TibiaGoals.com!\"; \"I had a dream I was a queen! I woke up... still a QUEEN!\"; \"So divine!\"; \"There will never be another one after you, <Player>!\"; \"They say the sky is the limit but there are my hoof prints on the moon!\"\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 12.71.11017\n| notes            = \n* Item oficial do fansite '''Tibia Goals'''.\n* O personagem {{Character|Makadamia}} recebeu um por ter sido o criador do item.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59042,
+    "ns": 0,
+    "title": "Demon Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name            = Demon Doll\n| flavortext      = \n| itemclass       = Itens de Decoração\n| primarytype     = Dolls e Bears \n| attrib          = Nenhum.\n| weight          = \n| stackable       = não\n| value           = \n| npcvalue        = 0\n| npcprice        = 37500 [[Hunting Task Points|HTP]]\n| htaskvalue      = 37500 \n| tournamentvalue = 400\n| droppedby       = Ninguém.\n| buyfrom         = Walter Jaeger\n| sellto          = Jogadores.\n| implemented     = 12.31.9658\n| notes           = Antes do [[Patches/13.14.0000|Patch 13.14.13146]] este item só podia ser adquirido em troca de ''Tournament Coins'' através da [[Store]] mas após o [[Patches/13.14.0000|Patch 13.14.13146]] ele passou a ser obtido através das [[Hunting Tasks]] em troca de [[Hunting Task Points]]. Após comprar esse item ele irá para o seu [[Store Inbox]], veja [[Decoration Kit]] para informações de como desembrulhá-lo.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 61232,
+    "ns": 0,
+    "title": "Draccoon Santa",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Draccoon Santa\n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| weight         = 6.50\n| stackable      = sim\n| value          = \n| npcvalue       = \n| npcprice       = 250 [[Christmas Token]]s\n| buyfrom        = Ruprecht\n| droppedby      = Ninguém.\n| sellto         = Jogadores.\n| implemented    = 13.30.14423\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 63453,
+    "ns": 0,
+    "title": "Arbaziloth Santa",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Arbaziloth Santa\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| secondarytype  = \n| stackable      = não\n| weight         = 6.50\n| value          = \n| npcvalue       =\n| npcprice       = 250 [[Christmas Token]]s\n| droppedby      = Ninguém.\n| buyfrom        = Ruprecht\n| sellto         = \n| implemented    = 14.10.4e0c16\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 66455,
+    "ns": 0,
+    "title": "Ancient Bonelord Santa",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ancient Bonelord Santa\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| secondarytype  = \n| attrib         = Nenhum.\n| weight         = 6.50\n| stackable      = não\n| value          = \n| npcprice       = 250 [[Christmas Token]]s\n| sounds         = \n| droppedby      = Ninguém.\n| buyfrom        = Ruprecht\n| sellto         = Jogadores.\n| implemented    = 15.20.7a5cc9\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7355,
+    "ns": 0,
+    "title": "Nightmare Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Nightmare Doll\n| flavortext       = \n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Dolls e Bears\n| tertiarytype     = \n| attrib           = Nenhum.\n| stackable        = não\n| weight           = 18.00\n| mercado          = não\n| sounds           = \n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 8.54\n| notes            = \nEste item foi originalmente criado pelo jogador {{Character|Li Dao}} para a competição de itens do [[Tibiafriends]]. Ele não venceu a competição (ficou em segundo lugar), mas a equipe de conteúdo do Tibia gostou tanto que pediu ao jogador {{Character|Li Dao}} permissão para adicioná-lo ao jogo. Este item só pode ser obtido através de um prêmio em competições da Cipsoft ou de fansites. Faz parte do [[Demon Set]].\n<gallery>\narquivo:Nightmare_Doll.png|Um \"Nightmare Doll\" na casa do personagem {{character|Cimerian}}.\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7356,
+    "ns": 0,
+    "title": "Norseman Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre o '''fansite item''' Norseman Doll. Para à réplica, veja [[Norseman Doll (Réplica)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Norseman Doll\n| flavortext       = It is given to the winners of TibiaNordic competitions\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Dolls e Bears\n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 10.00\n| mercado          = não\n| sounds           = \"Hail TibiaNordic!\"; \"So cold...\"; \"Run, mammoth!\".\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 8.2\n| notes            = \n* Item oficial do ex-fansite '''TibiaNordic'''.\n* O personagem {{Character|Myst'Sharion}} recebeu um por ter sido o criador do item.\n* Um pode ser visto na exibição de prêmios de Thais ao domingos.\n\n<noinclude><gallery>\nArquivo:Norsemandoll.jpg|'''Norseman Doll''' no servidor [[Refugia]].\n</gallery></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7806,
+    "ns": 0,
+    "title": "Mini Mummy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Mini Mummy \n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears \n| secondarytype  = Prêmios de Eventos\n| attrib         = Nenhum. \n| weight         = 4.50 \n| stackable      = não\n| value          = 250 000+\n| sounds         = \n| droppedby      = [[Ashmunrah]], [[Dipthrah]], [[Elder Mummy]], [[Horestis]], [[Mahrdis]], [[Morguthis]], [[Mummy]], [[Omruc]], [[Putrid Mummy]], [[Rahemos]], [[Thalas]], [[Vashresamun]].\n| buyfrom        = Jogadores. \n| sellto         = Jogadores. \n| implemented    = 8.54 \n| notes          = <noinclude><gallery> Imagem:Mini mummy.jpg|Mini Mummy em [[Secura]].</gallery></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7863,
+    "ns": 0,
+    "title": "Mysterious Fetish",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Mysterious Fetish\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| secondarytype  = \n| attrib         = \n| stackable      = sim\n| weight         = 4.90\n| value          = 50 - Negociável\n| npcvalue       = 50\n| droppedby      = [[Demon Skeleton]], [[Dawnfire Asura]], [[Ogre Savage]], [[Orc Cult Priest]], [[Orclops Doomhauler]], [[Orclops Ravager]], [[True Dawnfire Asura]].\n| buyfrom        = Jogadores.\n| sellto         = Yaman\n| notes          = Usado como decoração. Antigamente, tinha a mesma função do [[Dragonfetish]], pelo qual foi substituído.\n<noinclude><p><spoiler>\n* Recompensa da [[The Hero Cave Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7864,
+    "ns": 0,
+    "title": "Panda Teddy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Panda Teddy\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| secondarytype  = \n| attrib         = Reage quando usado.\n| stackable      = não\n| sounds         = \"Hug me!\".\n| weight         = 6.00\n| value          = 50 000 - 200 000\n| npcvalue       = 30 000\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Gnomission\n| implemented    = 7.6\n| notes          = Ficava exposto no Navio do Capitão Cabin em [[Ankrahmun]]. Pode ser obtido em [[Surprise Bag (Red)]]. Pode ser obtido como presente de natal do NPC [[Santa Claus]].\n<noinclude><p><spoiler>*Recompensa da [[Barbarian Arena Quest|Barbarian Arena - Warlord Mode]].\n*Possibilidade de ser obtido como presente do NPC [[Santa Claus]].\n*[[Arquivo:Achievement.gif]] Ao usar um Panda Teddy, um [[Stuffed Dragon]], uma [[Baby Seal Doll]] e um [[Santa Doll]], você receberá o achievement '''\"{{Achievement|I Need a Hug}}\"'''.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7865,
+    "ns": 0,
+    "title": "Part of a Jester Doll (Left Arm)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se este não é o item que você procura, veja a página [[Part of a Jester Doll|Part of a Jester Doll (Desambiguação)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Part of a Jester Doll (Left Arm)\n| flavortext     = It seems to be the left arm.\n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = 1.00\n| value          = 2 000 - 3 000\n| npcvalue       = 0\n| droppedEventby = [[Undead Jester]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.4\n| notes          = Este item faz parte do [[Jester Doll]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7866,
+    "ns": 0,
+    "title": "Part of a Jester Doll (Left Leg)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se este não é o item que você procura, veja a página [[Part of a Jester Doll|Part of a Jester Doll (Desambiguação)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Part of a Jester Doll (Left Leg)\n| flavortext     = It seems to be the left leg.\n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = 1.00\n| value          = 2 000 - 3 000\n| npcvalue       = 0\n| droppedEventby = [[Undead Jester]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.4\n| notes          = Este item faz parte do [[Jester Doll]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7867,
+    "ns": 0,
+    "title": "Part of a Jester Doll (Right Arm)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se este não é o item que você procura, veja a página [[Part of a Jester Doll|Part of a Jester Doll (Desambiguação)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Part of a Jester Doll (Right Arm)\n| flavortext     = It seems to be the right arm.\n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = 1.00\n| value          = 2 000 - 3 000\n| npcvalue       = 0\n| droppedEventby = [[Undead Jester]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.4\n| notes          = Este item faz parte do [[Jester Doll]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7868,
+    "ns": 0,
+    "title": "Part of a Jester Doll (Right Leg)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se este não é o item que você procura, veja a página [[Part of a Jester Doll|Part of a Jester Doll (Desambiguação)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Part of a Jester Doll (Right Leg)\n| flavortext     = It seems to be the right leg.\n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = 1.00\n| value          = 2 000 - 3 000\n| npcvalue       = 0\n| droppedEventby = [[Undead Jester]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.4\n| notes          = Este item faz parte do [[Jester Doll]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7869,
+    "ns": 0,
+    "title": "Pirate Voodoo Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Pirate Voodoo Doll\n| flavortext     = \n| itemclass      = Decorações\n| primarytype    = Itens de Quest \n| secondarytype  = Dolls e Bears\n| attrib         = Nenhum\n| weight         = 6.50\n| stackable      = não\n| value          = \n| npcvalue       = 500\n| droppedby      = [[Acolyte of the Cult]], [[Adept of the Cult]], [[Enlightened of the Cult]],[[Novice of the Cult]].\n| buyfrom        = Jogadores.\n| sellto         = Rashid\n| implemented    = 7.8\n| notes          = Ótimo item para ser usado como decoração.<noinclude><p><spoiler>* 05 são necessários para a [[The Shattered Isles Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7870,
+    "ns": 0,
+    "title": "Santa Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Santa Doll\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| secondarytype  = \n| attrib         = Reage quando usado.\n| weight         = 7.50\n| stackable      = não\n| value          = 10 000 - 200 000 (dependendo do valor do [[Christmas Token]] em cada servidor)\n| npcprice       = 100 [[Christmas Token]]s\n| sounds         = \"Ho ho ho!\"; \"Jingle bells, jingle bells...\"; \"Have you been naughty?\"; \"Have you been nice?\"; \"Merry Christmas!\"; \"Can you stop squeezing me now... I'm starting to feel a little sick.\".\n| droppedby      = Ninguém.\n| buyfrom        = Ruprecht\n| sellto         = Jogadores.\n| implemented    = 7.9\n| notes          = <noinclude><p><spoiler>*Possibilidade de ser obtido como presente do NPC [[Santa Claus]].\n*[[Arquivo:Achievement.gif]] Ao usar um Santa Doll, uma [[Baby Seal Doll]], um [[Panda Teddy]] e um [[Stuffed Dragon]], você receberá o achievement '''\"{{Achievement|I Need a Hug}}\"'''.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7871,
+    "ns": 0,
+    "title": "Santa Teddy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Santa Teddy\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| secondarytype  = \n| attrib         = Nenhum. \n| weight         = 5.50\n| stackable      = não\n| value          = 50 000 - 500 000 (dependende do valor do [[Christmas Token]] em cada servidor)\n| npcprice       = 500 [[Christmas Token]]s\n| droppedby      = Ninguém.\n| buyfrom        = Ruprecht\n| sellto         = Jogadores.\n| implemented    = 8.54\n| notes          = <noinclude><p><spoiler>*Possibilidade de ser obtido como presente do NPC [[Santa Claus]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7872,
+    "ns": 0,
+    "title": "Snowman Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Snowman Doll\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| secondarytype  = \n| attrib         = Nenhum.\n| weight         = 6.20\n| stackable      = não\n| value          = Negociável\n| npcprice       = 150 [[Christmas Token]]s\n| droppedby      = Ninguém\n| buyfrom        = Ruprecht\n| sellto         = Jogadores.\n| implemented    = 8.54\n| notes          = <noinclude><p><spoiler>\n*Possibilidade de ser obtido como presente do NPC [[Santa Claus]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7873,
+    "ns": 0,
+    "title": "Stuffed Dragon",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Stuffed Dragon\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| secondarytype  = \n| attrib         = Reage quando usado.\n| sounds         = \"Fchhhhhh!\"; \"Zchhhhhh!\"; \"Groaaarrr.... *cough*\"; \"Aaa... CHOO!\" \"You... will.... burn!!\".\n| weight         = 8.50\n| stackable      = não\n| value          = \n| npcvalue       = 6 000\n| droppedby      = [[Demodras]].\n| droppedEventby = [[Kalyassa]], [[Piñata Dragon]].\n| buyfrom        = Jogadores.\n| sellto         = Gnomission\n| notes          = Quando você usa ele, eventualmente um sprite de explosão vai aparecer falando \"Aaa... CHOO!\", ou em ocasiões muito raras ele vai soltar o som \"Groaaarrr.... *cough*\". Em casos EXTREMAMENTE raros ele vai causar dano de 1 hitpoints e vai falar \"You... will.... Burn!!\". Pode ser obtido como presente de natal do NPC [[Santa Claus]].\n<noinclude><p><spoiler>\n* Recompensa da [[Pits of Inferno Quest]].\n* Recompensa da [[Chayenne's Realm Quest]].\n* Possibilidade de ser obtido como presente do NPC [[Santa Claus]]. \n* [[Arquivo:Achievement.gif|link=]] Ao usar um '''Stuffed Dragon''', um [[Panda Teddy]], uma [[Baby Seal Doll]] e um [[Santa Doll]], você receberá o achievement '''\"{{Achievement|I Need a Hug}}\"'''.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7874,
+    "ns": 0,
+    "title": "Stuffed Toad",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Stuffed Toad\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| secondarytype  = \n| attrib         = Nenhum.\n| weight         = 4.50\n| stackable      = não\n| value          = 2 000 000 - 3 500 000\n| npcvalue       = 0\n| droppedby      = [[Witch]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.54\n| notes          = Esse item também pode ser obtido em concursos feito pelos [[fansites|Promoteds e Supporteds Fansites]].\n<noinclude><gallery>\nImagem:Stuffed Toad menera.jpg|Stuffed Toad em [[Menera]]\n</gallery></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7876,
+    "ns": 0,
+    "title": "Teddy Bear",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Teddy Bear\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| secondarytype  = \n| attrib         = Nenhum.\n| stackable      = não\n| weight         = 5.90\n| value          = \n| droppedRaidby  = [[Ghazbaran]], [[Morgaroth]], [[Orshabaal]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 6.6\n| notes          = Os primeiros foram conseguidos como raros presentes de [[Santa Claus]] até se tornar itens raros de [[bosses]].\n\n'''Fato histórico:''' Em comemoração do [[Aniversário do Tibia#15.C2.BA anos|aniversário do Tibia]] de 15 anos, muitos jogadores conseguiram este item após abrir sua [[Surprise Bag (Red)|Surprise Bags]], diminuindo assim a sua raridade.<br />\nTem o mesmo sprite de um [[Annihilation Bear]].\n<noinclude><p><spoiler>*Podem ser obtido em [[Surprise Bag (Red)|Surprise Bags]].\n*Possibilidade de ser obtido como presente do NPC [[Santa Claus]]. \n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 20623,
+    "ns": 0,
+    "title": "Stuffed Bunny",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Stuffed Bunny\n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| attrib         = Nenhum.\n| weight         = 3.50\n| stackable      = não\n| value          = 1 000 000 - 10 000 000\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Apesar de existir no jogo há muito tempo, esse item só ficou disponível após o [[Updates/10.30|Update 10.30]].\n<noinclude><p><spoiler>* Possibilidade de ser obtido ao usar um [[Unrealized Dream]] próximo ao [[The Dreamcatcher Device]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25328,
+    "ns": 0,
+    "title": "Pet Pig",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Pet Pig\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| secondarytype  = \n| attrib         = Reage ao usar\n| weight         = 6.00\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 1 500\n| sounds         = \"Oink oink!\"\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Gnomission\n| implemented    = 9.6\n| notes          = Tem a mesma aparência que um [[Little Pig]].\n<noinclude><p><spoiler>Possibilidade de ser obtido ao usar um [[Gnomish Supply Package]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25876,
+    "ns": 0,
+    "title": "Tail of Abyssador",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Tail of Abyssador\n| flavortext     =  \n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| stackable      = não\n| weight         = 8.00\n| attrib         = Nenhum.\n| value          = Negociável\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.6\n| notes          = Você deve juntar as 3 partes (incluindo essa) e entregar para a NPC [[Gnomally]] em [[Gnomebase]] para receber uma [[Statue of Abyssador]].<br />\n<noinclude><p><spoiler>Você tem a chance de obter um desse após usar o [[Abyssador Treasure Chest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 27591,
+    "ns": 0,
+    "title": "Rat God Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Rat God Doll\n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| secondarytype  = Prêmios de Eventos\n| attrib         = Nenhum. \n| weight         = 7.50\n| stackable      = não\n| droppedby      = [[Corym Charlatan]], [[Corym Skirmisher]], [[Corym Vanguard]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.8\n| notes          = Foi dado como recompensa ao ganhador do concurso \"[http://portaltibia.com.br/home/?p=12364 Um rato é um rato é um ...]\" em outubro de 2012. O jogador {{Character|Bunny Luv}} recebeu por ter sido o vencedor do concurso.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 36226,
+    "ns": 0,
+    "title": "Nightmare Teddy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Nightmare Teddy\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| secondarytype  = \n| attrib         = Nenhum. \n| weight         = 5.90\n| stackable      = não\n| npcvalue       = 0\n| value          = \n| sounds         = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.80\n| notes          = \n<noinclude><p><spoiler>\n* Obtido na Mini World Change [[Mini_World_Changes#Nightmare|Nightmare]] ao derrotar os 06 [[Terrorsleep]]s, causando neles o maior dano.\n</spoiler></p></noinclude>}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 39334,
+    "ns": 0,
+    "title": "Orclops Santa",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Orclops Santa \n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| weight         = 6.50\n| stackable      = não\n| value          = Negociável\n| npcprice       = 250 [[Christmas Token]]s\n| droppedby      = Ninguém.\n| buyfrom        = Ruprecht\n| sellto         = Jogadores.\n| notes          = \n| implemented    = 11.02\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42684,
+    "ns": 0,
+    "title": "Santa Fox",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Santa Fox\n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| attrib         = Nenhum. \n| weight         = 6.50\n| stackable      = não\n| value          = Negociável.\n| npcprice       = 250 [[Christmas Token]]s\n| droppedby      = Ninguém.\n| buyfrom        = Ruprecht\n| sellto         = Jogadores.\n| implemented    = 11.50\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45401,
+    "ns": 0,
+    "title": "Nightmare Beast Santa",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Nightmare Beast Santa\n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| secondarytype  = \n| attrib         = Nenhum. \n| weight         = 0.70\n| stackable      = não\n| npcprice       = 250 [[Christmas Token]]s\n| droppedby      = Ninguém.\n| buyfrom        = Ruprecht\n| sellto         = Jogadores.\n| implemented    = 12.00\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45454,
+    "ns": 0,
+    "title": "Small Ladybug",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Small Ladybug\n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| attrib         = Nenhum. \n| weight         = 7.00\n| stackable      = não\n| npcvalue       = 0\n| droppedEventby = [[The Percht Queen]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.02.7746\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45952,
+    "ns": 0,
+    "title": "Tearesa",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se este não é item que você procura, veja a página [[Demon Baby Doll|Demon Baby Doll (Desambiguação)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Tearesa\n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| secondarytype  = \n| attrib         = Reage quando usado.\n| weight         = 6.00\n| value          = \n| stackable      = não\n| npcvalue       = 0\n| npcprice       = 0\n| sounds         = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.12.8202\n| notes          = Existem outros tipos de [[Demon Baby Doll]]s. Após usado mudará sua aparência durante um tempo [[Arquivo:Tearesa use.gif|link=]].\n<noinclude><p><spoiler>* Pode ser obtido no evento [[Demon's Lullaby]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 46820,
+    "ns": 0,
+    "title": "Omniscient Owl",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Omniscient Owl\n| flavortext       = This inconspicuous owl will answer every question. Awarded by TibiaQA.com\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Dolls e Bears\n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 9.10\n| mercado          = não\n| sounds           = \"I know the answer!\".\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 12.20\n| notes            = \n* Item oficial do fansite '''TibiaQA'''.\n* O personagem {{Character|Makadamia}} recebeu um por ter sido o criador do item.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 46890,
+    "ns": 0,
+    "title": "Small Petrified Tortoise",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Small Petrified Tortoise\n| flavortext     = It is a present you received from the medusa Alyxo.\n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| weight         = 43.00\n| stackable      = não\n| value          = \n| npcvalue       = \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.20\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 46891,
+    "ns": 0,
+    "title": "Small Tortoise",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Small Tortoise\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| weight         = 43.00\n| stackable      = não\n| value          = \n| npcvalue       = \n| mercado        = não\n| droppedby      = [[Adult Goanna]], [[Young Goanna]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.20\n| notes          = \n<noinclude><p><spoiler>\n* 01 é necessária para a missão ''The Boards that Mean the World'' da [[Kilmaresh Quest]].\n* Você também pode conseguir uma Small Tortoise usando uma [[Net (Ferramenta)|Rede]] no mar ou pegando uma em um ninho ao sul de [[Issavi]], ({{Mapa|33857,31749,7:2|aqui}}).\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 47178,
+    "ns": 0,
+    "title": "Scorpion (Objeto)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Scorpion (Objeto)\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| weight         = 4.0\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| mercado        = não\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.20\n| notes          = <noinclude><p><spoiler>* Possibilidade de ser obtido ao usar uma [[Net (Ferramenta)]] em um [[Scorpion]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 47181,
+    "ns": 0,
+    "title": "Scared Frog",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Scared Frog\n| flavortext     = It hopped out of the mouth of recently killed goanna. It is barely alive and looks very scared.\n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| weight         = 7.00\n| stackable      = não\n| value          = \n| mercado        = não\n| npcvalue       = \n| droppedby      = [[Adult Goanna]], [[Young Goanna]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.20\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 47728,
+    "ns": 0,
+    "title": "Plushie of Devovorga",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Plushie of Devovorga \n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears \n| secondarytype  =  \n| attrib         = Nenhum.\n| weight         = 5.00\n| stackable      = não\n| npcvalue       = \n| value          =  \n| droppedby      = [[Orger Treasure]].\n| droppedEventby = \n| buyfrom        = Jogadores. \n| sellto         = Jogadores.\n| implemented    = 12.20.9066\n| notes          = <noinclude><p><spoiler>* Possibilidade de ser obtido ao usar um [[Lots]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 47729,
+    "ns": 0,
+    "title": "Plushie of Gaz'Haragoth",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Plushie of Gaz'Haragoth\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears \n| secondarytype  =  \n| attrib         = Nenhum.\n| weight         = 5.00\n| stackable      = não\n| npcvalue       = \n| value          =  \n| droppedby      = [[Orger Treasure]].\n| droppedEventby = \n| buyfrom        = Jogadores. \n| sellto         = Jogadores.\n| implemented    = 12.20.9066\n| notes          = <noinclude><p><spoiler>*Possibilidade de ser obtido ao usar um [[Lots]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 47730,
+    "ns": 0,
+    "title": "Plushie of King Tibianus",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Plushie of King Tibianus\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears \n| secondarytype  =  \n| attrib         = Nenhum.\n| weight         = 5.00\n| stackable      = não\n| npcvalue       = \n| value          =  \n| droppedby      = [[Orger Treasure]].\n| droppedEventby = \n| buyfrom        = Jogadores. \n| sellto         = Jogadores.\n| implemented    = 12.20.9066\n| notes          = <noinclude><p><spoiler>* Possibilidade de ser obtido ao usar um [[Lots]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 47731,
+    "ns": 0,
+    "title": "Sight of Surrender's Plushie",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Sight of Surrender's Plushie\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears \n| secondarytype  =  \n| attrib         = Nenhum.\n| weight         = 5.00\n| stackable      = não\n| npcvalue       = \n| value          =  \n| droppedby      = [[Orger Treasure]].\n| droppedEventby = \n| buyfrom        = Jogadores. \n| sellto         = Jogadores.\n| implemented    = 12.20.9066\n| notes          = <noinclude><p><spoiler>* Possibilidade de ser obtido ao usar um [[Lots]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 48233,
+    "ns": 0,
+    "title": "Santa Leech",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Santa Leech\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| secondarytype  = \n| attrib         = \n| weight         = 7.20\n| stackable      = não\n| value          = \n| npcprice       = 250 [[Christmas Token]]s\n| sounds         = \n| droppedby      = Ninguém.\n| buyfrom        = Ruprecht\n| sellto         = Jogadores.\n| implemented    = 12.30\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 48476,
+    "ns": 0,
+    "title": "Plushie of a Deepling",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Plushie of a Deepling\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears \n| secondarytype  =  \n| attrib         = Nenhum.\n| weight         = 5.00\n| stackable      = não\n| npcvalue       = \n| value          =  \n| droppedby      = [[Orger Treasure]].\n| droppedEventby = \n| buyfrom        = Jogadores. \n| sellto         = Jogadores.\n| implemented    = 12.20.9066\n| notes          = <noinclude><p><spoiler>* Possibilidade de ser obtido ao usar um [[Lots]] durante o evento [[Orcsoberfest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 48479,
+    "ns": 0,
+    "title": "Plushie of a Hydra",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Plushie of a Hydra\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears \n| secondarytype  =  \n| attrib         = Nenhum.\n| weight         = 5.00\n| stackable      = não\n| npcvalue       = \n| value          =  \n| droppedby      = [[Orger Treasure]].\n| droppedEventby = \n| buyfrom        = Jogadores. \n| sellto         = Jogadores.\n| implemented    = 12.20.9066\n| notes          = <noinclude><p><spoiler>* Possibilidade de ser obtido ao usar um [[Lots]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 49462,
+    "ns": 0,
+    "title": "Salted Cave Rat",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Salted Cave Rat\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Itens de Quest\n| secondarytype  =  Dolls e Bears\n| weight         = 63.00\n| stackable      = não\n| mercado        = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.40\n| notes          = \n<noinclude><p><spoiler>\n* Obtido ao usar o [[Salt]] em um [[Cave Rat (Item)]].\n* 05 são utilizados na [[Grimvale Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 50776,
+    "ns": 0,
+    "title": "Plushie of Tentugly",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Plushie of Tentugly\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| attrib         = Nenhum.\n| weight         = 6.20\n| stackable      = não\n| npcvalue       = \n| npcprice       = \n| mercado        = \n| droppedby      = [[Tentugly's Head]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.60\n| notes          =\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 50963,
+    "ns": 0,
+    "title": "Raccoon Santa",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Raccoon Santa\n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| attrib         = Nenhum. \n| weight         = 6.50\n| stackable      = não\n| value          = Negociável.\n| npcprice       = 250 [[Christmas Token]]s\n| droppedby      = Ninguém.\n| buyfrom        = Ruprecht\n| sellto         = Jogadores.\n| implemented    = 12.60\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 52003,
+    "ns": 0,
+    "title": "Plushie of Lavaworm",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Plushie of Lavaworm\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears \n| secondarytype  =  \n| attrib         = Nenhum.\n| weight         = 5.00\n| stackable      = não\n| npcvalue       = \n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores. \n| sellto         = Jogadores.\n| implemented    = 12.70\n| notes          = <noinclude><p><spoiler>* Pode ser obtido ao usar um [[Eldritch Casket]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 52007,
+    "ns": 0,
+    "title": "Plushie of a Domestikion",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Plushie of a Domestikion\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears \n| attrib         = Nenhum.\n| weight         = \n| stackable      = não\n| value          = \n| npcvalue       = 0\n| mercado       = não\n| npcprice       = 2 500 [[Drome Point]]s\n| droppedby      = Ninguém.\n| buyfrom        = Agostina, Alberto, Fabiana, Emilio, Lorenzo\n| sellto         = \n| implemented    = 12.70\n| notes          = Pode ser obtido em arenas [[Tibiadrome]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 52008,
+    "ns": 0,
+    "title": "Plushie of a Hoodinion",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Plushie of a Hoodinion\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears \n| attrib         = Nenhum.\n| weight         = \n| stackable      = não\n| value          = \n| npcvalue       = 0\n| npcprice       = 2 500 [[Drome Point]]s\n| droppedby      = Ninguém.\n| buyfrom        = Agostina, Alberto, Fabiana, Emilio, Lorenzo\n| sellto         = \n| implemented    = 12.70\n| mercado        = não\n| notes          = Pode ser obtido em arenas [[Tibiadrome]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 52009,
+    "ns": 0,
+    "title": "Plushie of a Mearidion",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Plushie of a Mearidion\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears \n| attrib         = Nenhum.\n| weight         = \n| stackable      = não\n| value          = \n| npcvalue       = 0 \n| npcprice       = 2 500 [[Drome Point]]s\n| droppedby      = Ninguém.\n| buyfrom        = Agostina, Alberto, Fabiana, Emilio, Lorenzo\n| sellto         = \n| implemented    = 12.70\n| mercado        = não\n| notes          = Pode ser obtido em arenas [[Tibiadrome]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 52010,
+    "ns": 0,
+    "title": "Plushie of a Murmillion",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Plushie of a Murmillion\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears \n| attrib         = Nenhum.\n| weight         = \n| stackable      = não\n| value          = \n| npcvalue       = 0\n| npcprice       = 2 500 [[Drome Point]]s\n| droppedby      = Ninguém.\n| buyfrom        = Agostina, Alberto, Fabiana, Emilio, Lorenzo\n| sellto         = \n| implemented    = 12.70\n| mercado        = não\n| notes          = Pode ser obtido em arenas [[Tibiadrome]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 52011,
+    "ns": 0,
+    "title": "Plushie of a Scissorion",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Plushie of a Scissorion\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears  \n| attrib         = Nenhum.\n| weight         = \n| stackable      = não\n| value          = \n| npcvalue       = 0\n| npcprice       = 2 500 [[Drome Point]]s\n| droppedby      = Ninguém.\n| buyfrom        = Agostina, Alberto, Fabiana, Emilio, Lorenzo\n| sellto         = \n| implemented    = 12.70\n| mercado        = não\n| notes          = Pode ser obtido em arenas [[Tibiadrome]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 58286,
+    "ns": 0,
+    "title": "Santa Ahau",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Santa Ahau\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| secondarytype  = \n| attrib         = Nenhum.\n| weight         = 6.00\n| stackable      = não\n| value          = \n| npcprice       = 250 [[Christmas Token]]s\n| sounds         = \n| droppedby      = Ninguém.\n| buyfrom        = Ruprecht\n| sellto         = Jogadores.\n| implemented    = 13.10\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59045,
+    "ns": 0,
+    "title": "Ogre Rowdy Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name            = Ogre Rowdy Doll\n| flavortext      = \n| itemclass       = Itens de Decoração\n| primarytype     = Dolls e Bears \n| attrib          = Nenhum.\n| weight          = \n| stackable       = não\n| value           = \n| npcvalue        = 0\n| npcprice        = 2500 [[Drome Point]]s\n| dromevalue      = 2500\n| tournamentvalue = 400\n| droppedby       = Ninguém.\n| buyfrom         = Agostina, Alberto, Fabiana, Emilio, Lorenzo\n| sellto          = \n| implemented     = 12.31.9658\n| mercado        = não\n| notes           = Antes do [[Patches/13.14.0000|Patch 13.14.13146]] este item só podia ser adquirido em troca de ''Tournament Coins'' através da [[Store]] mas após o [[Patches/13.14.0000|Patch 13.14.13146]] ele passou a ser vendido através das arenas [[Tibiadrome]] em troca de [[Drome Point]]s. Após comprar esse item ele irá para o seu [[Store Inbox]], veja [[Decoration Kit]] para informações de como desembrulhá-lo.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59046,
+    "ns": 0,
+    "title": "Retching Horror Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name            = Retching Horror Doll\n| flavortext      = \n| itemclass       = Itens de Decoração\n| primarytype     = Dolls e Bears \n| attrib          = Nenhum.\n| weight          = \n| stackable       = não\n| value           = \n| npcvalue        = 0\n| npcprice        = 2500 [[Drome Point]]s\n| dromevalue      = 2500\n| tournamentvalue = 400\n| droppedby       = Ninguém.\n| buyfrom         = Agostina, Alberto, Fabiana, Emilio, Lorenzo\n| sellto          = \n| implemented     = 12.31.9658\n| mercado        = não\n| notes           = Antes do [[Patches/13.14.0000|Patch 13.14.13146]] este item só podia ser adquirido em troca de ''Tournament Coins'' através da [[Store]] mas após o [[Patches/13.14.0000|Patch 13.14.13146]] ele passou a ser vendido através das arenas [[Tibiadrome]] em troca de [[Drome Point]]s. Após comprar esse item ele irá para o seu [[Store Inbox]], veja [[Decoration Kit]] para informações de como desembrulhá-lo.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7877,
+    "ns": 0,
+    "title": "The Head of a Jester Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = The Head of a Jester Doll\n| flavortext     =  \n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| stackable      = não\n| weight         = 4.00\n| attrib         = Nenhum.\n| value          = 5 000 - 10 000\n| npcvalue       = 0\n| droppedEventby = [[Undead Jester]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.4\n| notes          = Você deve juntar as 6 partes (incluindo essa) e entregar para a NPC [[Hoaxette]] em [[Thais]] para receber um [[Jester Doll]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7878,
+    "ns": 0,
+    "title": "The Torso of a Jester Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = The Torso of a Jester Doll\n| flavortext     =  \n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| stackable      = não\n| weight         = 4.00\n| attrib         = Nenhum.\n| value          = 5 000 - 15 000\n| npcvalue       = 0\n| droppedEventby = [[Undead Jester]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.4\n| notes          = Você deve juntar as 6 partes (incluindo essa) e entregar para a NPC [[Hoaxette]] em [[Thais]] para receber um [[Jester Doll]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7879,
+    "ns": 0,
+    "title": "Toy Mouse",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Toy Mouse\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| secondarytype  = \n| attrib         = Nenhum.\n| stackable      = não\n| weight         = 12.50\n| value          = \n| npcprice       = 16 000\n| droppedby      = Ninguém.\n| droppedEventby = [[Piñata Dragon]], [[Suspicious Surprise Bag]].\n| buyfrom        = Black Bert\n| sellto         = Jogadores.\n| notes          = Este brinquedo é exatamente como um rato, e pode enganar muitas pessoas.<br />\n<noinclude><p><spoiler>\n* Este item é temporariamente obtido durante a [[What a Foolish Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7880,
+    "ns": 0,
+    "title": "Toy Spider",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Toy Spider\n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| attrib         = Nenhum.\n| weight         = 0.20\n| stackable      = não\n| value          = 50 000 - 300 000+\n| implemented    = 8.3\n| droppedEventby = [[The Mutated Pumpkin]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = <noinclude><p><spoiler>Você pode obter este item ao utilizar uma [[Obsidian Knife]] no corpo de uma [[The Mutated Pumpkin]] na sala de recompensas do [[Eventos e Festividades#Eventos durante o ano|evento]] de [[Halloween]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7881,
+    "ns": 0,
+    "title": "Treasure Island Voodoo Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Treasure Island Voodoo Doll\n| flavortext     = You read the numbers xxxx on the back of the doll.\n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| secondarytype  = \n| attrib         = Nenhum.\n| weight         = 6.50\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| mercado        = não\n| notes          = Este item é obtido durante uma missão. Você não pode vendê-lo a um [[NPCs|npc]] nem usá-lo em outra [[quest]]. Tem a mesma aparência de um [[Voodoo Doll]].\n<noinclude><p><spoiler>\nObtido na [[Treasure Hunt Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7882,
+    "ns": 0,
+    "title": "Vampire Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Vampire Doll\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| secondarytype  = Prêmios de Eventos\n| attrib         = Nenhum. \n| weight         = 9.40\n| stackable      = não\n| npcvalue       = 0\n| value          = 3 000 000 - 30 000 000\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Ele é extremamente raro pois ele só pode ser obtido em uma quest em que é necessário matar uma imensa quantidade de [[Vampire Lords]] e as vezes é usado como prêmio em eventos de [[fansites]]. <br />{{character|Voogelitt Vanu}} foi o primeiro jogador de todo o tibia a conquistá-lo.\n<noinclude><p><spoiler>* Pode ser obtido depois de entregar 100 [[Vampire Lord Token]]s para [[Storkus]] na [[Vampire Hunter Quest]].</spoiler></p></noinclude>\n<gallery>arquivo:Vampire_Doll.png| Uma \"Vampire Doll\" pode ser vista na House da personagem {{character|Aninka Ninka}}.</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7883,
+    "ns": 0,
+    "title": "Voodoo Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Voodoo Doll\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| secondarytype  = Itens de Addons\n| attrib         = Nenhum\n| weight         = 6.50\n| stackable      = não\n| value          = 60 000 - 400 000\n| npcvalue       = 400\n| droppedby      = [[Death Priest Shargon]], [[Dworc Voodoomaster]], [[Latrivan]], [[Ogre Shaman]].\n| droppedRaidby  = [[Orshabaal]].\n| buyfrom        = Jogadores.\n| sellto         = Rashid\n| notes          = Usando este boneco em qualquer jogador ou NPC irá mostrar um dos seguintes textos: ''\"You concentrate on your victim, hit the needle in the doll.......but nothing happens.\"'', ou: ''\"You concentrate on your victim and hit the needle in the doll.\"'', nesse caso um pequeno hit de [[blood]] aparecerá no alvo, porém não fará nenhum tipo de dano.''<br />\nExiste outros dois tipos de voodoo dolls: [[Pirate Voodoo Doll]] e [[Voodoo Doll (King)]].\nTem a mesma aparência de um [[Treasure Island Voodoo Doll]] por isso tenha atenção quando comprar um.\n<noinclude><p><spoiler>\n*05 são necessários para a [[Shaman Outfits Quest]].\n*01 é necessário para a [[Treasure Hunt Quest]].\n*[[Arquivo:Achievement.gif]] Após acertar um jogador com um Voodoo Doll, você receberá o achievement \"'''{{Achievement|Dark Voodoo Priest}}'''\".\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7884,
+    "ns": 0,
+    "title": "Voodoo Doll (King)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Voodoo Doll (King)\n| flavortext     = It looks like a little king.\n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| secondarytype  = \n| attrib         = Nenhum.\n| weight         = 6.50\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Ela tem o mesmo nome da [[Voodoo Doll]], mas elas são [[item|itens]] bem diferentes.<br /> Depois do [[Update]] 7.8 o nome desse [[item]] foi mudado de '''Voodoodoll''' para '''Voodoo Doll'''.<br />\nAntes do [[Update]] 7.8 ela tinha a mesma estética da [[Doll]].\n<noinclude><p><spoiler>\nPode ser obtido na [[Voodoo Doll Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7885,
+    "ns": 0,
+    "title": "Wooden Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Wooden Doll\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| secondarytype  = \n| attrib         = Nenhum\n| stackable      = não\n| weight         = 8.60\n| value          = 400\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = <noinclude><p><spoiler>* Pode ser obtido na [[Longsword Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 12281,
+    "ns": 0,
+    "title": "Whinona",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se este não é item que você procura, veja a página [[Demon Baby Doll|Demon Baby Doll (Desambiguação)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Whinona\n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| secondarytype  = \n| attrib         = Reage quando usado.\n| weight         = 6.00\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| npcprice       = 0\n| sounds         = \"Ugi! Ugi!\"\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.7\n| notes          = Existem outros tipos de [[Demon Baby Doll]]s. No estado normal ele vai estar chorando, quando usado, ele vai dormir por 1 hora.\n<noinclude><p><spoiler>* Pode ser obtido no evento [[Demon's Lullaby]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 20233,
+    "ns": 0,
+    "title": "Torn Teddy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Torn Teddy\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| secondarytype  = \n| attrib         = Nenhum.\n| weight         = 1.00\n| stackable      = não\n| value          = 200 000 - 800 000\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.1\n| notes          = <noinclude><p><spoiler>*Pode ser obtido entregando [[Blood Herb]]s para [[Wyda]].<br />\n*[[Arquivo:Achievement.gif]] Ao obter esse boneco você também receberá o achievement '''\"{{Achievement|Torn Treasures}}\"'''. As chances de obtê-lo são pequenas.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25871,
+    "ns": 0,
+    "title": "Torso of Deathstrike",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Torso of Deathstrike\n| flavortext     =  \n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| stackable      = não\n| weight         = 9.00\n| attrib         = Nenhum.\n| value          = Negociável\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.6\n| notes          = Você deve juntar as 3 partes (incluindo essa) e entregar para a NPC [[Gnomally]] em [[Gnomebase]] para receber uma [[Statue of Deathstrike]].<br />\n<noinclude><p><spoiler>Você tem a chance de obter um desse após usar o [[Deathstrike Treasure Chest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25874,
+    "ns": 0,
+    "title": "Torso of Gnomevil",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Torso of Gnomevil\n| flavortext     =  \n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| stackable      = não\n| weight         = 9.00\n| attrib         = Nenhum.\n| value          = Negociável\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.6\n| notes          = Você deve juntar as 3 partes (incluindo essa) e entregar para a NPC [[Gnomally]] em [[Gnomebase]] para receber uma [[Statue of Gnomevil]].<br />\n<noinclude><p><spoiler>Você tem a chance de obter um desse após usar o [[Gnomevil Treasure Chest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25877,
+    "ns": 0,
+    "title": "Torso of Abyssador",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Torso of Abyssador\n| flavortext     =  \n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| stackable      = não\n| weight         = 7.00\n| attrib         = Nenhum.\n| value          = Negociável\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.6\n| notes          = Você deve juntar as 3 partes (incluindo essa) e entregar para a NPC [[Gnomally]] em [[Gnomebase]] para receber uma [[Statue of Abyssador]].<br />\n<noinclude><p><spoiler>Você tem a chance de obter um desse após usar o [[Abyssador Treasure Chest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 35429,
+    "ns": 0,
+    "title": "Truelove Teddy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Truelove Teddy\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Dolls e Bears\n| secondarytype  = \n| attrib         = Nenhum. \n| weight         = 5.90\n| stackable      = não\n| droppedby      = Ninguém.\n| npcprice       = 1 000\n| buyfrom        = Valentina\n| sellto         = Jogadores.\n| implemented    = 10.73\n| notes          = Não aparece no [[NPC Trade|trade do NPC]].<noinclude><p><spoiler>Você deve dizer '''Truelove Teddy''' para [[Valentina]] para poder comprar esse doll. Ele pode custar um pouco caro já que cada jogador só pode comprar um por ano, durante o \"Valentine's Day\".</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 51583,
+    "ns": 0,
+    "title": "White Lion Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = White Lion Doll\n| flavortext       = Its serene presence encourages bravery. Awarded by ElPodcastibiano.com\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Dolls e Bears\n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 17.00\n| mercado          = não\n| sounds           = \"Hear me roar!\"; \"The sun guides our hearts.\"; \"The moon guards our dreams.\".\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 12.66.10771 (1)\n| notes            = \n* Item oficial do fansite '''El Podcast Tibiano'''.\n* O personagem {{Character|Madakamia}} recebeu um por ter sido o criador do item.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 57769,
+    "ns": 0,
+    "title": "The Gods' Twilight Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = The Gods' Twilight Doll\n| flavortext       = It represents Valiant on behalf of Fardos and Ragna on behalf of Variphor. It symbolizes the fight between light and darkness, wisdom and ignorance, freedom and domination. Granted by TibiaLight.com\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Dolls e Bears\n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\" alternando entre Valiant e Ragna. Ambos possuem animação própria.\n| stackable        = não\n| weight           = 253.21\n| mercado          = não\n| sounds           = \"The path of light or darkness, it's your choice <playername>... You've always been free to choose your side.\";</br>\"<Playername>, the moment has come... Make your decision, would you follow Fardos or Variphor?\";</br>\"Look by your side, you're not alone, you've never been...\";</br>\"You read on the back: forged in the flames of the Temple of Light.\";</br>\"Azerus, Prince Drazzak, Mazarius, World Devourer, Source of Corruption, Scourge of Oblivion - harbingers of things to come.\"\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 12.91.12329\n| notes            = \n* Item oficial do fansite '''Tibia Light'''.\n* O personagem {{Character|Brighid Grand Explorateur}} recebeu um por ter sido o criador do item.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 57771,
+    "ns": 0,
+    "title": "Yeti Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Yeti Doll\n| flavortext       = It may be a little too cool to handle. It is entrusted by TibiaFanart.com\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Dolls e Bears\n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 20.21\n| mercado          = não\n| sounds           = \"Me wanna build snowman!\"; \"Evil Santa stole my slippers!\"; \"Let it go, let it go!\"; \"Yooodelaaahooohooo!\"; \"<Playername>, paint me a snowman or a happy tree or the almighty Lord Ferumbras!\"; \"Hail TibiaFanart.com!\"\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 12.91.12329\n| notes            = \n* Item oficial do fansite '''TibiaFanart.com!'''.\n* O personagem {{Character|Makadamia}} recebeu um por ter sido o criador do item.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59043,
+    "ns": 0,
+    "title": "Vexclaw Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name            = Vexclaw Doll\n| flavortext      = \n| itemclass       = Itens de Decoração\n| primarytype     = Dolls e Bears \n| attrib          = Nenhum.\n| weight          = \n| stackable       = não\n| value           = \n| npcvalue        = 0\n| npcprice        = 37500 [[Hunting Task Points|HTP]]\n| htaskvalue      = 37500 \n| tournamentvalue = 400\n| droppedby       = Ninguém.\n| buyfrom         = Walter Jaeger\n| sellto          = Jogadores.\n| implemented     = 12.31.9658\n| notes           = Antes do [[Patches/13.14.0000|Patch 13.14.13146]] este item só podia ser adquirido em troca de ''Tournament Coins'' através da [[Store]] mas após o [[Patches/13.14.0000|Patch 13.14.13146]] ele passou a ser obtido através das [[Hunting Tasks]] em troca de [[Hunting Task Points]]. Após comprar esse item ele irá para o seu [[Store Inbox]], veja [[Decoration Kit]] para informações de como desembrulhá-lo.\n}}"
+       }
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

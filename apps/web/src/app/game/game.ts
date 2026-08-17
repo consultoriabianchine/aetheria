@@ -6,7 +6,7 @@ import type { CharacterEquipment, ItemStack } from '@aetheria/types';
 import { WsService } from '../core/ws.service';
 import { GameState } from './game-state';
 import { ItemCatalogService } from './item-catalog.service';
-import { CreatureCatalogService } from './creature-catalog.service';
+import { CreatureAssetService } from './creature-asset.service';
 import { WorldScene } from './scenes/world-scene';
 
 interface InvEntry {
@@ -34,7 +34,7 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   private readonly el = inject(ElementRef);
   private readonly ws = inject(WsService);
   private readonly itemCatalog = inject(ItemCatalogService);
-  private readonly creatureCatalog = inject(CreatureCatalogService);
+  private readonly creatureAssets = inject(CreatureAssetService);
   private readonly router = inject(Router);
   private phaser: Phaser.Game | null = null;
 
@@ -45,7 +45,6 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
     }
     if (!this.ws.connected) this.ws.connect();
     void this.itemCatalog.ensureLoaded();
-    void this.creatureCatalog.ensureLoaded();
     if (!this.state.inGame()) {
       void this.router.navigate(['/characters']);
     }
@@ -64,7 +63,7 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
       scene: [],
     });
     this.phaser.scene.add('World', WorldScene, false);
-    this.phaser.scene.start('World', { ws: this.ws, state: this.state, catalog: this.creatureCatalog });
+    this.phaser.scene.start('World', { ws: this.ws, state: this.state, assets: this.creatureAssets });
   }
 
   ngOnDestroy() {
@@ -140,6 +139,31 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
 
   closeDialog() {
     this.state.dialog.set(null);
+  }
+
+  fmtTime(ms: number | null): string {
+    return ms == null ? '—' : GameState.formatTime(ms);
+  }
+
+  startHunt(huntId: string) {
+    this.state.startHunt(huntId, false);
+  }
+
+  startLoop(huntId: string) {
+    this.state.startHunt(huntId, true);
+  }
+
+  stopHunt() {
+    this.state.stopHunt();
+  }
+
+  toggleLoop() {
+    const h = this.state.hunt();
+    if (h) this.state.setLoop(!h.loopEnabled);
+  }
+
+  toggleHunts() {
+    this.state.toggleHunts();
   }
 
   exit() {

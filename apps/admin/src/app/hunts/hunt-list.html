@@ -1,0 +1,50 @@
+<h1>Hunts</h1>
+<p class="sub">Central de Comando — editor de masmorras (waves, boss, mapa e criaturas).</p>
+
+<div class="toolbar">
+  <button class="primary" (click)="create()">+ Nova hunt</button>
+  <button (click)="load()" [disabled]="loading()">Atualizar</button>
+</div>
+
+@if (error()) {
+  <p class="error">{{ error() }}</p>
+}
+@if (loading()) {
+  <p>Carregando…</p>
+}
+
+@if (!loading() && !error()) {
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Nome</th>
+        <th>Nível</th>
+        <th>Pack</th>
+        <th>Monstros</th>
+        <th>Arena</th>
+        <th>Mapa</th>
+        <th>Status</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (h of hunts(); track h.id) {
+        <tr>
+          <td class="mono">{{ h.ladderPosition }}</td>
+          <td>{{ h.name }}</td>
+          <td>{{ h.suggestedLevel }}</td>
+          <td class="mono">{{ h.basePackSize }}–{{ h.maxPackSize }}</td>
+          <td class="mono">{{ h.monsters.map((m) => m.monsterId).join(', ') }}</td>
+          <td class="mono">{{ h.arenaId }}</td>
+          <td class="mono">{{ h.mapId ?? '—' }}</td>
+          <td>{{ h.enabled ? 'Ativa' : 'Inativa' }}</td>
+          <td>
+            <a [routerLink]="['/hunts', h.id]">Editar</a>
+            <button class="danger" (click)="remove(h.id)">Excluir</button>
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+}

@@ -1,0 +1,2646 @@
+{
+ "query": {
+  "pages": [
+   {
+    "pageid": 6407,
+    "ns": 0,
+    "title": "Amazon Armor",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Amazon Armor\n| stackable      = não\n| itemclass      = Equipamentos de Corpo\n| vocrequired    = [[Paladin]]s\n| levelrequired  = 60\n| primarytype    = Armaduras\n| skillboost     = [[Distance Fighting]] +3\n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| armor          = 13\n| weight         = 45.00\n| value          = 250 000 000 - 320 000 000\n| droppedRaidby  = [[Orc Warlord]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.6\n| notes          = Item raro e valioso. Faz parte do [[Amazon Set]].\n<noinclude><div class=\"toccolours mw-collapsible mw-collapsed\" style=\"margin: 4px 0px;\">'''\"História do Item\"'''<div class=\"mw-collapsible-content\"><table ><tr><td align=left>\nDepois do [[Summer Update 2008|Update 8.2]], só pode ser usado por paladinos.\n</td></tr></table></div></div></noinclude> \n<noinclude><p><spoiler>\n* Possibilidade de ser obtido apenas durante as invasões de Orcs em [[Femor Hills]].\n* Antigamente acreditava-se que este item poderia ser obtido em invasões de orcs em [[Carlin]] e em [[Thais]], mito desmentido pelo Tibia Bosses, nesta matéria: https://www.tibiabosses.com/forum/topic/orc-raids-and-amazon-set-mythbusters/\n</spoiler></p></noinclude>\n<gallery>\nArquivo:Golden helmet on shanera.jpg|Amazon Armor junto com outros rares em [[Shanera]].\nArquivo:Femor Hills Orc Raid Amazon Armor.png|Amazon Armor dropada pelo jogador {{Character|Bomdrax}} em seu maker {{Character|Geleious}}.\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6426,
+    "ns": 0,
+    "title": "Ball Gown",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ball Gown\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| stackable      = não\n| armor          = 0\n| weight         = 25.00\n| value          = 8 000 000 - 33 000 000\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.6\n| notes          = Item raro e valioso. Frequentemente utilizado como elemento decorativo. Pode ser visto na loja de moda de [[Hugo]] em [[Venore]] e na casa do Santa Claus em [[Vega]].\n<noinclude><div class=\"toccolours mw-collapsible mw-collapsed\" style=\"margin: 4px 0px;\">'''\"História do Item\"'''<div class=\"mw-collapsible-content\"><table ><tr><td align=left>\nUm foi dado a Senator {{character|Queen of Light II}} de [[Secura]] por ter reportado um importante bug. E, em uma gincana entre tutores, \n{{character|Savage Demon}} conseguiu uma por meio de uma [[Surprise Bag]]. Há rumores que desde o [[Updates/9.8|Update 9.8]] há uma nova maneira mais fácil de conseguir o item.\n</td></tr></table></div></div></noinclude>\n<noinclude><p><spoiler>* Possibilidade de ser obtido como presente do NPC [[Santa Claus]].</spoiler></p></noinclude>\n\n<gallery>\narquivo:Ball_Gown.png|Ball Gown em [[Menera]].\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6517,
+    "ns": 0,
+    "title": "Belted Cape",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Belted Cape \n| vocrequired    = [[Paladin]]s \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| armor          = 10 \n| weight         = 35.00\n| classificacao  = 1\n| max_tier       = 1\n| value          = 500 - 1 500 \n| npcvalue       = 500 \n| npcprice       = 1 300 \n| droppedby      = [[Afflicted Strider]], [[Amenef The Burning]], [[Bog Raider]], [[Crazed Summer Vanguard]], [[Gladiator]], [[Undead Elite Gladiator]], [[Undead Gladiator]].\n| droppedRaidby  = [[Weakened Shlorg]].\n| buyfrom        = Rudolph\n| sellto         = Rudolph\n| implemented    = 8.2 \n| notes          = Ótima opção de armadura para [[Paladin]]s iniciantes que acabaram de chegara a [[Tibia (Continente)]] por não ser cara, possui a mesma defesa de uma [[Plate Armor]] porém ser muito mais leve. Faz parte do [[Paladin Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6518,
+    "ns": 0,
+    "title": "Blue Robe",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Blue Robe \n| flavortext     = It is a magic robe. \n| itemclass      = Equipamentos de Corpo \n| primarytype    = Armaduras\n| stackable      = não\n| imbuement      = 2\n| armor          = 11 \n| weight         = 22.00\n| classificacao  = 2\n| max_tier       = 2\n| value          = \n| npcvalue       = 10 000\n| droppedby      = [[Banshee]], [[Enlightened of the Cult]], [[Feversleep]], [[Girtablilu Warrior]], [[Hellgorak]], [[Horadron]], [[Lich]], [[Lokathmor]], [[Lumbering Carnivor]], [[Midnight Asura]], [[Quara Mantassin]], [[Renegade Quara Mantassin]], [[Spiky Carnivor]], [[Tamru the Black]], [[Terrorsleep]], [[True Midnight Asura]], [[Vashresamun]], [[Warlock]].\n| droppedRaidby  = [[Countess Sorrow]], [[Grandfather Tridian]], [[Gravelord Oshuran]], [[The Handmaiden]], [[Zarabustor]]. \n| buyfrom        = Jogadores. \n| sellto         = Nah'Bob\n| implemented    = 6.6\n| notes          = Era a escolha habitual de [[Mage]]s por ser muito leve. Porém, com a implementação dos sets que oferecem proteção a elementos específicos, sua popularidade diminuiu. Faz parte do [[Blue Set]], [[Paladin Set]], [[Mage Set]] e [[Unrestricted Set]].\n \n<noinclude><p><spoiler>* Recompensa da: [[Necromancer Quest]].</spoiler></p></noinclude> \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6519,
+    "ns": 0,
+    "title": "Brass Armor",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Brass Armor \n| stackable      = não\n| itemclass      = Equipamentos de Corpo \n| primarytype    = Armaduras \n| armor          = 8 \n| weight         = 80.00\n| classificacao  = 1\n| max_tier       = 1\n| value          = 150 - 450 \n| npcvalue       = 150 \n| npcprice       = 450 \n| droppedby      = [[Bandit]], [[Crypt Defiler]], [[Gladiator]], [[Grave Robber]], [[Hunter]], [[Minotaur Archer]], [[Minotaur Guard]], [[Nomad]], [[Nomad (Blue)]], [[Orc Warlord]], [[Quara Constrictor]], [[Quara Constrictor Scout]], [[Renegade Quara Constrictor]], [[The Horned Fox]], [[Undead Gladiator]], [[Wild Warrior]].\n| droppedRaidby  = [[General Murius]].\n| buyfrom        = Shanar, Memech, Cornelia, Hireling (Trader), Azil, Willard, Esrik, Rock In A Hard Place, Ulrik, Raffael, Kroox, Cedrik, Brengus, Flint, Robert, Hardek, Sam, Turvy, Baltim, Yanni, Morpel\n| sellto         = Shanar, Memech, Cornelia, Hireling (Trader), Azil, Willard, Esrik, Rock In A Hard Place, Ulrik, Kroox, Cedrik, H.L.:50, Brengus, Flint, Robert, Hardek, Sam, Turvy, Baltim, Yanni, Morpel\n| notes          = Dado para os personagens que escolheram como vocação definitiva serem [[Knight]]s em [[Dawnport]] ou na [[Isle of Destiny]]. Faz parte do [[Brass Set]], [[Rookgaard/Dawnport Set]] e [[Isle of Destiny Knight Set]]. \n<noinclude><p><spoiler>\n* Recompensa da [[Mintwallin Quest]].\n* Possibilidade de ser obtido ao [[Rust Remover|remover a ferrugem]] de um [[Heavily Rusted Armor]]. \n* Possibilidade de ser obtido ao [[Rust Remover|remover a ferrugem]] de um [[Rusted Armor]]. \n* Possibilidade de ser obtido ao [[Rust Remover|remover a ferrugem]] de um [[Slightly Rusted Armor]].\n</spoiler></p></noinclude> \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6520,
+    "ns": 0,
+    "title": "Cape",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Cape \n| itemclass      = Equipamentos de Corpo \n| primarytype    = Armaduras \n| armor          = 1 \n| weight         = 32.00\n| classificacao  = 1\n| max_tier       = 1\n| value          = 9 \n| npcvalue       = 0 \n| npcprice       = 9 \n| stackable      = não\n| droppedby      = [[Ekatrix]], [[Ghost]], [[Lizard Snakecharmer]], [[Quara Mantassin]], [[Renegade Quara Mantassin]], [[Tarnished Spirit]], [[Two-Headed Turtle]], [[Witch]], [[Lizard Magician]].\n| droppedRaidby  = [[Yaga the Crone]].\n| buyfrom        = Rudolph\n| sellto         = Jogadores. \n| notes          = Tem a mesma aparência de uma [[The Rain Coat]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6521,
+    "ns": 0,
+    "title": "Chain Armor",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Chain Armor \n| itemclass      = Equipamentos de Corpo \n| primarytype    = Armaduras \n| imbuement      = 2\n| classificacao  = 1\n| max_tier       = 1\n| armor          = 6 \n| weight         = 100.00 \n| value          = 40 - 200 \n| npcvalue       = 70 \n| npcprice       = 200 \n| stackable      = não\n| droppedby      = [[Barbarian Bloodwalker]], [[Barbarian Brutetamer]], [[Blood Crab]], [[Deepsea Blood Crab]], [[Dwarf Soldier]], [[Juvenile Cyclops]], [[Lizard Sentinel]], [[Minotaur]], [[Minotaur Bruiser]], [[Minotaur Guard]], [[Minotaur Poacher]], [[Orc Berserker]], [[Orc Shaman]], [[Orc Warrior]], [[Pirate Marauder]], [[Quara Mantassin Scout]], [[Scar Tribe Warrior]], [[Valkyrie]]. \n| buyfrom        = Shanar, Memech, Cornelia, Hireling (Trader), Azil, Willard, Esrik, Rock In A Hard Place, Ulrik, Raffael, Kroox, Cedrik, Brengus, Flint, Robert, Sam, Turvy, Hardek, Baltim, Yanni, Morpel\n| sellto         = Shanar, Memech, Cornelia, Hireling (Trader), Azil, Coltrayne:40, Willard, Esrik, Rock In A Hard Place, Ulrik, Raffael:40, Kroox, Cedrik, H.L.:30, Brengus, Flint, Dixi:40, Lee'Delle:40, Robert, Sam, Hardek, Turvy, Baltim, Yanni, Morpel\n| notes          = Melhor armadura de [[Dawnport]] e [[Rookgaard]], mas algumas pessoas preferem a [[Studded Armor]] por ser mais leve. Faz parte do [[Rook Set]], [[Chain Set]] e [[Minotaur Set]]. Bom para [[Lootbag]]s. \n\n<noinclude><p><spoiler>\n* Recompensa da [[Bear Room Quest]]. \n* Recompensa da [[Mintwallin Quest]].\n* Possibilidade de ser obtido ao [[Rust Remover|remover a ferrugem]] de um [[Heavily Rusted Armor]]. \n* Possibilidade de ser obtido ao [[Rust Remover|remover a ferrugem]] de um [[Rusted Armor]]. \n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6522,
+    "ns": 0,
+    "title": "Coat",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Coat \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras \n| stackable      = não\n| armor          = 1 \n| weight         = 27.00\n| classificacao  = 1\n| max_tier       = 1\n| value          = 1 - 8\n| npcvalue       = 1 \n| npcprice       = 7\n| droppedby      = [[Ekatrix]], [[Frost Troll]], [[Witch]].\n| droppedRaidby  = [[Yaga the Crone]]. \n| buyfrom        = Shanar:8, Memech:8, Cornelia:8, Hireling (Trader):8, Azil:8, Coltrayne:8, Willard:8, Esrik:8, Rock In A Hard Place:8, Ulrik:8, Kroox:8, Cedrik:8, Brengus:8, Flint:8, Dixi:8, Lee'Delle, Robert:8, Sam:8, Turvy:8, Hardek:8, Baltim:8, Norbert:8, Yanni:8, Morpel:8\n| sellto         = Shanar, Memech, Cornelia, Hireling (Trader), Azil, Willard, Esrik, Rock In A Hard Place, Ulrik, Kroox, Cedrik, Brengus, Flint, Robert, Sam, Turvy, Hardek, Baltim, Norbert, Yanni, Morpel\n| notes          = Era recompensa da [[The Beginning Quest]]. Faz parte do [[Set Inicial]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6523,
+    "ns": 0,
+    "title": "Crown Armor",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Crown Armor \n| vocrequired    = [[Knight]]s and [[Paladin]]s\n| itemclass      = Equipamentos de Corpo \n| primarytype    = Armaduras\n| stackable      = não\n| imbuement      = 1\n| classificacao  = 2\n| max_tier       = 2\n| armor          = 13 \n| weight         = 99.00 \n| value          = 11 500 - 13 000 \n| npcvalue       = 12 000\n| droppedby      = [[Ashmunrah]], [[Cliff Strider]], [[Demon Outcast]], [[Execowtioner]], [[Gorzindel]], [[Hand of Cursed Fate]], [[Hellgorak]], [[Hero]], [[Horadron]], [[King Zelos]], [[Orewalker]], [[Phantasm]], [[Prince Drazzak]], [[Quara Pincher]], [[Raubritter Skirmisher]], [[Renegade Knight]], [[Renegade Quara Pincher]], [[Serpent Spawn]], [[The Noxious Spawn]], [[Thul]], [[Vile Grandmaster]]. \n| buyfrom        = Jogadores. \n| sellto         = Nah'Bob, H.L.:210\n| notes          = Faz parte do [[Crown Set]], [[Minotaur Set]] e [[Hero Set]].\n<noinclude><p><spoiler>\n* Recompensa da [[Black Knight Quest]].\n* Utilizado em uma das possíveis trocas que constituem as [[Exchange Quests]]:\n** Pode ser trocado por 01 [[Piece of Royal Steel]] com o NPC [[A Sweaty Cyclops]].\n* Possibilidade de ser obtido ao [[Rust Remover|remover a ferrugem]] de um [[Rusted Armor]].\n* Possibilidade de ser obtido ao [[Rust Remover|remover a ferrugem]] de um [[Slightly Rusted Armor]].\n</spoiler></p></noinclude> \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6524,
+    "ns": 0,
+    "title": "Crystalline Armor",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Crystalline Armor \n| vocrequired    = [[Knight]]s and [[Paladin]]s\n| levelrequired  = 60 \n| resist         = [[Ice Damage|Ice]] +3%, [[Energy Damage|Energy]] -3% \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras \n| armor          = 13 \n| weight         = 84.50\n| classificacao  = 2\n| max_tier       = 2\n| value          = 15 500 - 20 000 \n| npcvalue       = 16 000 \n| droppedby      = [[Animated Feather]], [[Armadile]], [[Blight Mariner]], [[Crystal Wolf]], [[Darklight Source]], [[Diamond Servant]], [[Diamond Servant Replica]], [[Eradicator]], [[Haunted Hunter]], [[Icecold Book]], [[Ice Overlord]], [[Mazzinor]], [[Melting Frozen Horror]], [[Michael the Stalwart]], [[Orewalker]], [[Prince Drazzak]], [[Realityquake]], [[Ravenous Hunger]], [[Roaming Dread]], [[Sea Serpent]], [[Squid Warden]], [[The Count Of The Core]], [[Tunnel Tyrant]], [[Turbulent Elemental]].\n| droppedRaidby  = [[Ghazbaran]].\n| buyfrom        = Jogadores. \n| sellto         = Rashid\n| implemented    = 8.2 \n| notes          = Faz parte do [[Crystal Set]].\n<noinclude><p><spoiler>* Possibilidade de ser obtido ao [[Muck Remover|remover o muco]] de um [[Mucus Plug]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6525,
+    "ns": 0,
+    "title": "Dark Armor",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Dark Armor \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| armor          = 10 \n| weight         = 120.00\n| classificacao  = 1\n| max_tier       = 1\n| value          = 400 - 1 500\n| npcvalue       = 400 \n| npcprice       = 1 500\n| stackable      = não\n| droppedby      = [[Adlerauge]], [[Ancient Lion Knight]], [[Behemoth]], [[Bibby Bloodbath]], [[Black Knight]], [[Blight Mariner]], [[Bretzecutioner]], [[Clavius]], [[Destroyer]], [[Gargoyle]], [[Ghastly Dragon]], [[Michael the Stalwart]], [[Overseer Osverger]], [[Pirate Corsair]], [[Spiky Carnivor]], [[Werelion]]. \n| droppedRaidby  = [[Arthom the Hunter]], [[Dracola]].\n| droppedEventby = [[Haunted Dragon]].\n| buyfrom        = Alesar\n| sellto         = Alesar, H.L.:130\n| notes          = Mesmos atributos do [[Plate Armor]], porém um pouco mais cara e incomum. Faz parte do [[Dark Set]].\n<noinclude><p><spoiler>* Recompensa da [[Against the Spider Cult Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6526,
+    "ns": 0,
+    "title": "Dark Lord's Cape",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Dark Lord's Cape \n| vocrequired    = [[Sorcerer]]s\n| levelrequired  = 65 \n| flavortext     = There is a dark aura surrounding it. \n| itemclass      = Equipamentos de Corpo \n| primarytype    = Armaduras\n| armor          = 11 \n| resist         = [[Death Damage|Death]] +8%, [[Holy Damage|Holy]] -8% \n| weight         = 29.00\n| classificacao  = 4\n| max_tier       = 10\n| value          = 5 000 000 - 25 000 000 \n| npcvalue       = 0 \n| droppedRaidby  = [[Morgaroth]].\n| droppedEventby = \n| buyfrom        = Jogadores. \n| sellto         = Jogadores. \n| implemented    = 8.2 \n| notes          = Item raro e valioso. Dropado de um boss que faz raras [[invasões]] e outro que só é encontrados um evento específico.\n<gallery>\nArquivo:Dark_lords_cape_on_vinera.png|Dark Lord's Cape em [[Vinera]].\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6527,
+    "ns": 0,
+    "title": "Demon Armor",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Demon Armor \n| itemclass      = Equipamentos de Corpo \n| primarytype    = Armaduras\n| stackable      = não\n| imbuement      = 2\n| classificacao  = 2\n| max_tier       = 2\n| armor          = 16 \n| weight         = 80.00 \n| value          = 150 000 - 250 000 \n| npcvalue       = 195\n| npcprice       = 0\n| buyfrom        = Jogadores.\n| sellto         = H.L.\n| notes          = Faz parte do [[Demon Set]], [[Unrestricted Set]], [[Rare Set]] e [[Full Set]].\n<noinclude><p><spoiler>* Pode ser obtido como recompensa da [[The Annihilator Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6528,
+    "ns": 0,
+    "title": "Divine Plate",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Divine Plate \n| vocrequired    = [[Paladin]]s \n| levelrequired  = 75 \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| resist         = [[Death Damage|Death]] +10%, [[Holy Damage|Holy]] -10% \n| armor          = 13 \n| weight         = 75.00\n| classificacao  = 2\n| max_tier       = 2\n| value          = 55 000 - 300 000 \n| npcvalue       = 55 000\n| droppedby      = [[Dragon Pack]], [[Ferumbras Mortal Shell]], [[Undead Dragon]], [[Zanakeph]]. \n| droppedRaidby  = [[Ferumbras]].\n| buyfrom        = Jogadores. \n| sellto         = Rashid\n| implemented    = 8.2 \n| notes          = Faz parte do [[Divine Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6529,
+    "ns": 0,
+    "title": "Doublet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Doublet \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| stackable      = não\n| armor          = 2 \n| weight         = 25.00\n| classificacao  = 1\n| max_tier       = 1\n| value          = 3 - 16\n| npcvalue       = 3 \n| npcprice       = 14\n| droppedby      = [[Afflicted Strider]], [[Amenef The Burning]], [[Dawnfly]], [[Gore Horn]], [[Gorerilla]], [[Hulking Prehemoth]], [[Jungle Moa]], [[Spiky Carnivor]], [[Werehyaena Shaman]], [[Werelion]]. \n| buyfrom        = Shanar:16, Memech:16, Cornelia:16, Hireling (Trader):16, Azil:16, Coltrayne:16, Willard:16, Esrik:16, Rock In A Hard Place:16, Ulrik:16, Kroox:16, Cedrik:16, Brengus:16, Flint:16, Dixi:16, Lee'Delle, Robert:16, Sam:16, Turvy:16, Hardek:16, Baltim:16, Norbert:16, Yanni:16, Morpel:16\n| sellto         = Shanar, Memech, Cornelia, Hireling (Trader), Azil, Coltrayne, Willard, Esrik, Rock In A Hard Place, Ulrik, Kroox, Cedrik, H.L.:1, Brengus, Flint, Dixi, Lee'Delle, Robert, Sam, Turvy, Hardek, Baltim, Norbert, Yanni, Morpel\n| notes          = Melhor opção para personagens recém criados tanto em [[Dawnport]] quanto em [[Rookgaard]]. Oferece uma proteção melhor que as opções de armaduras iniciais dadas automaticamente. Contudo, assim que possível, deve-se procurar obter uma armadura melhor.\n<noinclude><p><spoiler>* Recompensa da: [[Doublet Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6530,
+    "ns": 0,
+    "title": "Dragon Robe",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Dragon Robe \n| vocrequired    = [[Sorcerer]]s\n| levelrequired  = 75 \n| flavortext     = It is covered with runic symbols.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| resist         = [[Fire Damage|Fire]] +12%, [[Ice Damage|Ice]] -12% \n| armor          = 12 \n| weight         = 28.50\n| classificacao  = 2\n| max_tier       = 2\n| value          = 50 000 - 300 000 \n| npcvalue       = 50 000\n| droppedRaidby  = [[Furyosa]], [[Morgaroth]].\n| trade          = sim\n| buyfrom        = Jogadores. \n| sellto         = Gnomission\n| implemented    = 8.2 \n| notes          = Faz parte do [[Magma Set]]. \n<noinclude><p><spoiler>* Pode ser obtido como recompensa da [[The Elemental Spheres Quest]]. </spoiler></p></noinclude> \n<gallery>\narquivo:Dragon_robe.png| Dragon Robe vista em [[Elera]].\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6531,
+    "ns": 0,
+    "title": "Dragon Scale Mail",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Dragon Scale Mail \n| vocrequired    = [[Knight]]s and [[Paladin]]s\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| stackable      = não\n| imbuement      = 1\n| classificacao  = 2\n| max_tier       = 2\n| armor          = 15 \n| weight         = 114.00\n| value          = 38 000 - 42 000 \n| npcvalue       = 40 000\n| droppedby      = [[Demodras]], [[Dragon Lord]], [[Frost Dragon]], [[Paiz the Pauperizer]], [[Soul of Dragonking Zyrtarch]], [[Albino Dragon]]. \n| droppedRaidby  = [[Chizzoron the Distorter]].\n| droppedEventby = [[Gelidrazah the Frozen]], [[Ice Dragon]], [[Kalyassa]], [[Tazhadur]].\n| trade          = sim\n| buyfrom        = Jogadores. \n| sellto         = Rashid, H.L.:280\n| notes          = Faz parte do [[Dragon Set]], [[Dragon Scale Set]], [[Semi Rare Set]] e [[Full Set]].\n<noinclude><p><spoiler>* 01 é necessário para addon do [[Wizard Outfits]].</spoiler></p></noinclude>\n\n<gallery>\nArquivo:Oldsm.jpg|Antigo sprite da Dragon Scale Mail.\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6532,
+    "ns": 0,
+    "title": "Dwarven Armor",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Dwarven Armor \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| stackable      = não\n| imbuement      = 2\n| classificacao  = 3\n| max_tier       = 3\n| armor          = 10\n| resist         = [[Physical Damage|Physical]] +5% \n| weight         = 130.00\n| value          = 30 000 - 3 000 000\n| npcvalue       = 30 000\n| buyfrom        = Jogadores.\n| sellto         = Rashid\n| notes          = Item raro e valioso. Está entre uma das armaduras mais pesadas do jogo. Faz parte do [[Dwarven Set]] e [[Paladin Set]].\n<noinclude><p><spoiler>\n* Recompensa da [[Sam's Old Backpack Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6534,
+    "ns": 0,
+    "title": "Earthborn Titan Armor",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Earthborn Titan Armor \n| vocrequired    = [[Knight]]s \n| levelrequired  = 100 \n| itemclass      = Equipamentos de Corpo \n| primarytype    = Armaduras\n| skillboost     = [[Axe Fighting]] +2 \n| resist         = [[Earth Damage|Earth]] +5%, [[Fire Damage|Fire]] -5% \n| armor          = 15 \n| weight         = 120.00\n| classificacao  = 4\n| max_tier       = 10\n| value          = 20 000 000 - 45 000 000\n| droppedby      = [[Ancient Spawn of Morgathla]], [[Lord of the Elements]], [[Terofar]].\n| droppedRaidby  = [[Zulazza the Corruptor]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.2\n| notes          = Item raro e valioso. Faz parte do [[High Level Knight Basic Set]]. \n<gallery>Arquivo:Earthborn Candia.png|Earthborn Titan Armor em [[Candia]].</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6535,
+    "ns": 0,
+    "title": "Elite Draken Mail",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Elite Draken Mail \n| vocrequired    = [[Knight]]s and [[Paladin]]s \n| levelrequired  = 100 \n| itemclass      = Equipamentos de Corpo \n| primarytype    = Armaduras \n| stackable      = não\n| imbuement      = 2\n| classificacao  = 2\n| max_tier       = 2\n| armor          = 15 \n| skillboost     = [[Speed]] +10 \n| weight         = 120.00 \n| value          = 48 000 - 200 000\n| droppedby      = [[Draken Elite]], [[Paiz the Pauperizer]].\n| npcvalue       = 50 000\n| npcprice       = 0 \n| buyfrom        = Jogadores. \n| sellto         = Esrik\n| implemented    = 8.6 \n| notes          = Perdeu sua popularidade com a implementação do [[Prismatic Armor]]. Faz parte do [[Haste Set]] e [[Draken Set]]. \n<noinclude><p><spoiler>* Para vendê-lo ao NPC é preciso ter entregue 9 [[Tome of Knowledge|tomos]] na [[Tomes of Knowledge Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6536,
+    "ns": 0,
+    "title": "Elven Mail",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Elven Mail \n| itemclass      = Equipamentos de Corpo \n| primarytype    = Armaduras\n| imbuement      = 3\n| armor          = 9 \n| weight         = 90.00\n| classificacao  = 3\n| max_tier       = 3\n| trade          = não\n| value          = 600 000 - 1 500 000\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| droppedby      = [[Ravenous Hunger]].\n| notes          = Foi encontrada em [[Rookgaard]] durante um [[Test Server]] realizado em 16 de Maio de 2006, e até o [[Update de Verão 2017|Summer Update de 2017]] obtê-la era um mistério, porém agora ela é loot raro do boss [[Ravenous Hunger]]. Possui o antigo sprite da [[Dragon Scale Mail]]. Faz parte do [[Elven Set]]. Até o momento essa é a única armadura com três slots para [[imbuements]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6537,
+    "ns": 0,
+    "title": "Ethno Coat",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Ethno Coat \n| vocrequired    = [[Sorcerer]]s and [[Druid]]s \n| itemclass      = Equipamentos de Corpo \n| primarytype    = Armaduras\n| skillboost     = [[Magic Level]] +1 \n| armor          = 7 \n| weight         = 25.50\n| classificacao  = 1\n| max_tier       = 1\n| value          = 200 - 750 \n| npcvalue       = 200\n| npcprice       = 750\n| buyfrom        = Lailene\n| sellto         = Lailene\n| droppedby      = Ninguém.\n| implemented    = 8.2 \n| notes          = Faz parte do [[Magic Level Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6538,
+    "ns": 0,
+    "title": "Fireborn Giant Armor",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Fireborn Giant Armor \n| vocrequired    = [[Knight]]s \n| levelrequired  = 100 \n| itemclass      = Equipamentos de Corpo \n| primarytype    = Armaduras\n| skillboost     = [[Sword Fighting]] +2 \n| resist         = [[Fire Damage|Fire]] +5%, [[Ice Damage|Ice]] -5% \n| armor          = 15\n| weight         = 120.00\n| classificacao  = 2\n| max_tier       = 2\n| value          = 400 000 - 1 000 000 \n| npcvalue       = 0 \n| droppedby      = [[Ancient Spawn of Morgathla]], [[Lord of the Elements]]. \n| droppedRaidby  = [[Morgaroth]].\n| buyfrom        = Jogadores. \n| sellto         = Jogadores. \n| implemented    = 8.2 \n| notes          = Faz parte do [[High Level Knight Basic Set]].\n<noinclude><p><spoiler>* Pode ser obtido como recompensa da [[The Inquisition Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6539,
+    "ns": 0,
+    "title": "Flower Dress",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Flower Dress \n| itemclass      = Equipamentos de Corpo \n| primarytype    = Armaduras \n| stackable      = não\n| armor          = 0 \n| weight         = 19.00\n| value          = 1 000 - 15 000\n| droppedby      = [[Dryad]].\n| npcvalue       = 1 000\n| buyfrom        = Jogadores. \n| sellto         = Rashid \n| implemented    = 8.4 \n| notes          = Visto pela primeira vez no dia 1º de Junho de 2009. Faz parte do [[Dryad Set]].\n<noinclude><p><spoiler>* Pode ser obtido apenas durante as invasões que ocorrem no evento [[Flower Month]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 19206,
+    "ns": 0,
+    "title": "Depth Lorica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Depth Lorica\n| stackable      = não\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| skillboost     = [[Distance Fighting]] +3\n| vocrequired    = [[Paladin]]s\n| imbuement      = 2\n| classificacao  = 2\n| max_tier       = 2\n| levelrequired  = 150\n| armor          = 16\n| resist         = [[Death Damage|Death]] +5%\n| weight         = 145.00\n| value          = 800 000 - 3 200 000 \n| npcvalue       = 30 000\n| droppedby      = [[Jaul]].\n| buyfrom        = Jogadores.\n| sellto         = Rock In A Hard Place\n| implemented    = 9.4\n| notes          = Até o [[Update de Inverno 2015]], era a melhor armadura disponível no jogo para [[paladin]]s . Faz parte do [[Depth Set]], [[Paladin Set]] e [[Rare Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 20182,
+    "ns": 0,
+    "title": "Calopteryx Cape",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Calopteryx Cape\n| stackable      = não\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 80\n| armor          = 12\n| skillboost     = [[Magic Level]] +1\n| resist         = [[Ice Damage|Ice]] +5%\n| weight         = 20.00\n| classificacao  = 2\n| max_tier       = 2\n| implemented    = 9.4\n| value          = 14 700 - 15 300\n| npcvalue       = 15 000\n| droppedby      = [[Hive Overseer]], [[Kollos]], [[Spidris]], [[Spidris Elite]], [[Spitter]], [[The Sandking]], [[The Baron from Below]].\n| buyfrom        = Jogadores.\n| sellto         = Rock In A Hard Place\n| notes          = Faz parte do [[Glacier Set]], [[Mage Set]], [[Magic Level Set]] e [[Hive Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 27598,
+    "ns": 0,
+    "title": "Buckle",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Buckle\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| armor          = 12\n| weight         = 75.00\n| classificacao  = 2\n| max_tier       = 2\n| npcvalue       = 7 000\n| value          = 6 900 - 7 500\n| stackable      = não\n| buyfrom        = Jogadores.\n| sellto         = Rashid\n| droppedby      = [[Lost Basher]], [[Lost Exile]], [[Lost Husher]], [[Lost Thrower]], [[Spiky Carnivor]].\n| implemented    = 9.8\n| notes          = Mesmo atributo defensivo do [[Knight Armor]], porém bem mais leve e sem restrições de uso quanto a [[vocação]] do personagem.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 31000,
+    "ns": 0,
+    "title": "Albino Plate",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Albino Plate\n| itemclass     = Equipamentos de Corpo\n| primarytype   = Armaduras\n| raridade      = raro\n| imbuement     = 2\n| classificacao  = 3\n| max_tier       = 3\n| armor         = 11\n| weight        = 84.00\n| stackable     = não\n| value         = 800 000 - 4 000 000\n| npcvalue      = 1 500\n| buyfrom       = Jogadores.\n| sellto        = Rashid\n| droppedby     = [[White Pale]].\n| implemented   = 10.20\n| notes         = Item raro e valioso. Dropado de boss que faz raras [[invasões]]. É uma das armaduras com atributo de defesa de 11 em que não há restrição de vocação para o uso, contudo, é a segunda mais pesada.\n<noinclude><gallery>Arquivo:Albino.png|Albino Plate em [[Pacera]].</gallery></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 37249,
+    "ns": 0,
+    "title": "Earthmind Raiment",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Earthmind Raiment\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 200\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| skillboost     = [[Magic Level]] +4\n| resist         = [[Earth Damage|Earth]] +8%, [[Fire Damage|Fire]] -8%\n| armor          = 15\n| weight         = 55.00\n| classificacao  = 2\n| max_tier       = 2\n| npcprice       = 100 [[Silver Token]]s\n| buyfrom        = Cledwyn\n| sellto         = Jogadores.\n| droppedby      = Ninguém.\n| implemented    = 10.90\n| notes          = Pertence a nova geração de armaduras de atributo defensivo superior para [[mages]] (15). Supera as anteriores tanto nos atributos defensivos quanto em benefícios de [[skills]]. Faz parte do [[Mage Set]] e [[Magic Level Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 37250,
+    "ns": 0,
+    "title": "Firemind Raiment",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Firemind Raiment\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 200\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| skillboost     = [[Magic Level]] +4\n| resist         = [[Fire Damage|Fire]] +8%, [[Ice Damage|Ice]] -8%\n| armor          = 15\n| weight         = 55.00\n| classificacao  = 2\n| max_tier       = 2\n| npcprice       = 100 [[Silver Token]]s\n| buyfrom        = Cledwyn\n| sellto         = Jogadores.\n| implemented    = 10.90\n| droppedby      = Ninguém.\n| notes          = Pertence a nova geração de armaduras de atributo defensivo superior para [[mages]] (15). Supera as anteriores tanto nos atributos defensivos quanto em benefícios de [[skills]]. Faz parte do [[Mage Set]] e [[Magic Level Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 37253,
+    "ns": 0,
+    "title": "Earthsoul Tabard",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Earthsoul Tabard\n| vocrequired    = [[Paladin]]s\n| levelrequired  = 200\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| skillboost     = [[Distance Fighting]] +4\n| resist         = [[Earth Damage|Earth]] +8%, [[Fire Damage|Fire]] -8%\n| armor          = 18\n| weight         = 145.00\n| classificacao  = 2\n| max_tier       = 2\n| npcprice       = 100 [[Silver Token]]s\n| buyfrom        = Cledwyn\n| sellto         = Jogadores.\n| implemented    = 10.90\n| notes          = Pertence a nova geração de armaduras de atributo defensivo superior para [[Paladin]]s (18). Supera as anteriores tanto nos atributos defensivos quanto em benefícios de [[skills]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 37255,
+    "ns": 0,
+    "title": "Firesoul Tabard",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Firesoul Tabard\n| vocrequired    = [[Paladin]]s\n| levelrequired  = 200\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| skillboost     = [[Distance Fighting]] +4\n| resist         = [[Fire Damage|Fire]] +8%, [[Ice Damage|Ice]] -8%\n| armor          = 18\n| weight         = 145.00\n| classificacao  = 2\n| max_tier       = 2\n| npcprice       = 100 [[Silver Token]]s\n| buyfrom        = Cledwyn\n| sellto         = Jogadores.\n| implemented    = 10.90\n| notes          = Pertence a nova geração de armaduras de atributo defensivo superior para [[Paladin]]s (18). Supera as anteriores tanto nos atributos defensivos quanto em benefícios de [[skills]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 37262,
+    "ns": 0,
+    "title": "Earthheart Platemail",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Earthheart Platemail\n| vocrequired    = [[Knight]]s\n| levelrequired  = 200\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| skillboost     = [[Club Fighting]] +4\n| resist         = [[Earth Damage|Earth]] +8%, [[Fire Damage|Fire]] -8%\n| armor          = 18\n| weight         = 145.00\n| classificacao  = 2\n| max_tier       = 2\n| npcprice       = 100 [[Silver Token]]s\n| buyfrom        = Cledwyn\n| sellto         = Jogadores.\n| implemented    = 10.90\n| notes          = Pertence a nova geração de armaduras de atributo defensivo superior para [[Knight]]s (18). Supera as anteriores tanto nos atributos defensivos quanto em benefícios de [[skills]]. Faz parte do [[High Level Knight Basic Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 37263,
+    "ns": 0,
+    "title": "Earthheart Hauberk",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Earthheart Hauberk\n| vocrequired    = [[Knight]]s\n| levelrequired  = 200\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| skillboost     = [[Axe Fighting]] +4\n| resist         = [[Earth Damage|Earth]] +8%, [[Fire Damage|Fire]] -8%\n| armor          = 18\n| weight         = 145.00\n| classificacao  = 2\n| max_tier       = 2\n| npcprice       = 100 [[Silver Token]]s\n| buyfrom        = Cledwyn\n| sellto         = Jogadores.\n| implemented    = 10.90\n| notes          = Pertence a nova geração de armaduras de atributo defensivo superior para [[Knight]]s (18). Supera as anteriores tanto nos atributos defensivos quanto em benefícios de [[skills]]. Faz parte do [[High Level Knight Basic Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 37264,
+    "ns": 0,
+    "title": "Earthheart Cuirass",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Earthheart Cuirass\n| levelrequired  = 200\n| vocrequired    = [[Knight]]s\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| skillboost     = [[Sword Fighting]] +4\n| resist         = [[Earth Damage|Earth]] +8%, [[Fire Damage|Fire]] -8%\n| armor          = 18\n| weight         = 145.00\n| classificacao  = 2\n| max_tier       = 2\n| npcprice       = 100 [[Silver Token]]s\n| buyfrom        = Cledwyn\n| sellto         = Jogadores.\n| implemented    = 10.90\n| notes          = Pertence a nova geração de armaduras de atributo defensivo superior para [[Knight]]s (18). Supera as anteriores tanto nos atributos defensivos quanto em benefícios de [[skills]]. Faz parte do [[High Level Knight Basic Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 37265,
+    "ns": 0,
+    "title": "Fireheart Platemail",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Fireheart Platemail\n| vocrequired    = [[Knight]]s\n| levelrequired  = 200\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| skillboost     = [[Club Fighting]] +4\n| resist         = [[Fire Damage|Fire]] +8%, [[Ice Damage|Ice]] -8%\n| armor          = 18\n| weight         = 145.00\n| classificacao  = 2\n| max_tier       = 2\n| npcprice       = 100 [[Silver Token]]s\n| buyfrom        = Cledwyn\n| sellto         = Jogadores.\n| implemented    = 10.90\n| notes          = Faz parte de uma nova geração de armaduras de atributo defensivo superior (18). Supera as anteriores tanto nos atributos defensivos quanto em benefícios de [[skills]]. Faz parte do [[High Level Knight Basic Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 37266,
+    "ns": 0,
+    "title": "Fireheart Hauberk",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Fireheart Hauberk\n| vocrequired    = [[Knight]]s\n| levelrequired  = 200\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| skillboost     = [[Axe Fighting]] +4\n| resist         = [[Fire Damage|Fire]] +8%, [[Ice Damage|Ice]] -8%\n| armor          = 18\n| weight         = 145.00\n| classificacao  = 2\n| max_tier       = 2\n| npcprice       = 100 [[Silver Token]]s\n| buyfrom        = Cledwyn\n| sellto         = Jogadores.\n| implemented    = 10.90\n| notes          = Pertence a nova geração de armaduras de atributo defensivo superior para [[knight]]s (18). Supera as anteriores tanto nos atributos defensivos quanto em benefícios de [[skills]]. Faz parte do [[High Level Knight Basic Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 37267,
+    "ns": 0,
+    "title": "Fireheart Cuirass",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Fireheart Cuirass\n| vocrequired    = [[Knight]]s\n| levelrequired  = 200\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| skillboost     = [[Sword Fighting]] +4\n| resist         = [[Fire Damage|Fire]] +8%, [[Ice Damage|Ice]] -8%\n| armor          = 18\n| weight         = 145.00\n| classificacao  = 2\n| max_tier       = 2\n| npcprice       = 100 [[Silver Token]]s\n| buyfrom        = Cledwyn\n| sellto         = Jogadores.\n| implemented    = 10.90\n| notes          = Pertence a nova geração de armaduras de atributo defensivo superior para [[knight]]s (18). Supera as anteriores tanto nos atributos defensivos quanto em benefícios de [[skills]]. Faz parte do [[High Level Knight Basic Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 43989,
+    "ns": 0,
+    "title": "Falcon Plate",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Falcon Plate\n| stackable      = não\n| levelrequired  = 300\n| vocrequired    = [[Knight]]s\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| skillboost     = [[Shielding]] +4\n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| armor          = 18\n| resist         = [[Physical Damage|Physical]] +12%\n| weight         = 188.00\n| value          = 90 000 000 - 120 000 000\n| npcvalue       = \n| droppedby      = [[Grand Canon Dominus]], [[Grand Master Oberon]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.80\n| notes          = Faz parte do [[Falcon Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45031,
+    "ns": 0,
+    "title": "Dream Shroud",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Dream Shroud\n| skillboost     = [[Magic Level]] +3\n| resist         = [[Energy Damage|Energy]] +10%\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| imbuement      = 1\n| classificacao  = 3\n| max_tier       = 3\n| levelrequired  = 180\n| stackable      = não\n| armor          = 12\n| weight         = 25.00\n| value          = Negociável\n| npcprice       = \n| droppedby      = [[Alptramun]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.00\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 46687,
+    "ns": 0,
+    "title": "Embrace of Nature",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Embrace of Nature\n| vocrequired    = [[Paladin]]s \n| levelrequired  = 220\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| skillboost     = [[Distance Fighting]] +4\n| imbuement      = 1\n| classificacao  = 3\n| max_tier       = 3\n| armor          = 16\n| resist         = [[Ice Damage|Ice]] +11%, [[Energy Damage|Energy]] -3%\n| weight         = 24.00\n| stackable      = não\n| value          = 500 000\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| droppedby      = [[Count Vlarkorth]], [[Duke Krule]], [[Lord Azaram]], [[Sir Baeloc]].\n| implemented    = 12.20\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 46699,
+    "ns": 0,
+    "title": "Bear Skin",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bear Skin\n| vocrequired    = [[Druid]]s \n| levelrequired  = 230\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| skillboost     = [[Magic Level]] +4\n| armor          = 16\n| resist         = [[Earth Damage|Earth]] +11%, [[Fire Damage|Fire]] -2%\n| weight         = 44.00\n| imbuement      = 1\n| classificacao  = 3\n| max_tier       = 3\n| stackable      = não\n| value          = \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| droppedby      = [[Lord Azaram]], [[Duke Krule]], [[Count Vlarkorth]], [[Sir Baeloc]].\n| implemented    = 12.20\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 48051,
+    "ns": 0,
+    "title": "Burial Shroud",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Burial Shroud\n| flavortext     = It is made of faintly glowing yarn.\n| itemclass      = Equipamentos de Corpo \n| primarytype    = Armaduras \n| armor          = 0\n| resist         = [[Death Damage|Death]] +5%\n| weight         = 5.00\n| value          =\n| npcvalue       = 0 \n| npcprice       = 0\n| stackable      = não\n| buyfrom        = Jogadores.\n| sellto         = Jogadores. \n| implemented    = 12.30\n| mercado        = não\n| notes          = <noinclude><p><spoiler>* Obtida e usada durante a [[Feaster of Souls Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 52296,
+    "ns": 0,
+    "title": "Eldritch Cuirass",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Eldritch Cuirass\n| flavortext     = \n| stackable      = não\n| levelrequired  = 250\n| vocrequired    = [[Knight]]s\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| skillboost     = \n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| armor          = 16\n| resist         = [[Physical Damage|Physical]] +10%\n| weight         = 110.00\n| value          = Negociável\n| npcvalue       = \n| droppedby      = [[The Brainstealer]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.70\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 56112,
+    "ns": 0,
+    "title": "Dawnfire Sherwani",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Dawnfire Sherwani\n| vocrequired    = [[Sorcerer]]s\n| levelrequired  = 270\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| skillboost     = [[Magic Level]] +4\n| armor          = 16\n| resist         = [[Fire Damage|Fire]] +10%, [[Earth Damage|Earth]] -2%\n| weight         = 28.00\n| imbuement      = 1\n| classificacao  = 4\n| max_tier       = 10\n| stackable      = não\n| value          =\n| buyfrom        = Jogadores. \n| sellto         = Jogadores.\n| droppedby      = [[Timira the Many-Headed]]\n| implemented    = 12.90\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 58179,
+    "ns": 0,
+    "title": "Broken Iks Cuirass",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Broken Iks Cuirass\n| flavortext     = This cuirass once kept a brave warrior of the ancient Iks from harm.\n| stackable      = sim\n| levelrequired  = 0\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| secondarytype  = Produtos de Criaturas\n| skillboost     = \n| imbuement      = \n| classificacao  = \n| max_tier       = \n| armor          = 1\n| resist         = \n| weight         = 19.00\n| value          = \n| npcvalue       = \n| droppedby      = [[Ahau]], [[Iks Aucar]].\n| buyfrom        = Jogadores.\n| sellto         = Yasir\n| implemented    = 13.10\n| notes          = \n<noinclude><p><spoiler>\n* 01 é necessária para a [[Ancient Aucar Outfits Quest]].\n</spoiler></p></noinclude>\n}}\n<noinclude>[[Categoria:Itens de Addons]]</noinclude>"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 61201,
+    "ns": 0,
+    "title": "Arcane Dragon Robe",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Arcane Dragon Robe \n| vocrequired    = [[Sorcerer]]s\n| levelrequired  = 300 \n| flavortext     = \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| resist         = [[Ice Damage|Ice]] +12%, [[Fire Damage|Fire]] -6% \n| skillboost     = [[Magic Level]] +3, [[Energy Magic Level]] +1\n| augments       = Energy Wave -> +5% Life Leech\n| imbuement      = 1\n| armor          = 15 \n| weight         = 43.00\n| classificacao  = 4\n| max_tier       = 10\n| value          = \n| droppedby      = [[Dragon Hoard]].\n| trade          = sim\n| buyfrom        = Jogadores. \n| implemented    = 13.30.14423\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 61202,
+    "ns": 0,
+    "title": "Dauntless Dragon Scale Armor",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Dauntless Dragon Scale Armor\n| vocrequired    = [[Knight]]s\n| levelrequired  = 300 \n| flavortext     = \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| resist         = [[Physical Damage|Physical]] +8%\n| skillboost     = [[Sword Fighting]] +3, [[Club Fighting]] +3, [[Axe Fighting]] +3\n| augments       = Front Sweep -> +4% Life Leech\n| imbuement      = 2\n| armor          = 18 \n| weight         = 152.00\n| classificacao  = 4\n| max_tier       = 10\n| value          = \n| droppedby      = [[Dragon Hoard]].\n| trade          = sim\n| buyfrom        = Jogadores. \n| implemented    = 13.30.14423\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64035,
+    "ns": 0,
+    "title": "Energy Robe",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Energy Robe\n| vocrequired    = [[Monk]]s\n| levelrequired  = 200\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| skillboost     = [[Fist Fighting]] +4\n| resist         = [[Energy Damage|Energy]] +8%, [[Earth Damage|Earth]] -8%\n| armor          = 9\n| weight         = 75.00\n| mantra         = 14\n| classificacao  = 2\n| max_tier       = 2\n| droppedby      = Ninguém.\n| npcprice       = 100 [[Silver Token]]s\n| buyfrom        = Cledwyn\n| sellto         = Jogadores.\n| implemented    = 15.00.249ccc\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64086,
+    "ns": 0,
+    "title": "Death Oyoroi",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Death Oyoroi\n| vocrequired    = [[Monk]]s\n| levelrequired  = 230\n| flavortext     = A dark oyoroi with an even darker past. Worn and ragged from many a battle\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| resist         = [[Death Damage|Death]] +5%\n| skillboost     = [[Fist Fighting]] +4, [[Magic Level]] +1\n| augments       = \n| imbuement      = 1\n| armor          = 9\n| mantra         = 16\n| weight         = 105.00\n| classificacao  = 3\n| max_tier       = 3\n| value          = \n| droppedby      = [[Sir Nictros]], [[King Zelos]].\n| trade          = sim\n| buyfrom        = Jogadores. \n| implemented    = 15.00.249ccc\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6540,
+    "ns": 0,
+    "title": "Focus Cape",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Focus Cape \n| vocrequired    = [[Sorcerer]]s and [[Druid]]s \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras \n| skillboost     = [[Magic Level]] +1 \n| armor          = 9 \n| weight         = 21.00\n| classificacao  = 2\n| max_tier       = 2\n| value          = 5 500 - 8 000 \n| npcvalue       = 6 000 \n| droppedby      = [[Afflicted Strider]], [[Amenef The Burning]], [[Converter]], [[Dawnfire Asura]], [[Draken Spellweaver]], [[Girtablilu Warrior]], [[Harpy]], [[Hellgorak]], [[Lizard Dragon Priest]], [[Lumbering Carnivor]], [[Nightmare Scion]], [[Pirat Cutthroat]], [[Raging Mage]], [[Reality Reaver]], [[Sea Serpent]], [[Tremendous Tyrant]], [[True Dawnfire Asura]], [[Wyrm]].\n| droppedRaidby  = [[Captain Jones]].\n| buyfrom        = Jogadores. \n| sellto         = Lailene\n| implemented    = 8.2 \n| notes          = Popularmente utilizada por [[mage]]s de level mediando antes do level 80, quando podem utilizar a [[Calopteryx Cape]] que tem maior atributo defensivo. Faz parte do [[Mage Set]], [[Magic Level Set]] e [[Unrestricted Set]]. Bom para [[Lootbag]]s.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6541,
+    "ns": 0,
+    "title": "Frozen Plate",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Frozen Plate \n| vocrequired    = [[Paladin]]s \n| levelrequired  = 75 \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| resist         = [[Ice Damage|Ice]] +7%, [[Energy Damage|Energy]] -7% \n| armor          = 13 \n| weight         = 75.00\n| classificacao  = 2\n| max_tier       = 2\n| value          = 100 000 - 400 000\n| npcvalue       = 0 \n| droppedby      = [[Leviathan]], [[Melting Frozen Horror]], [[Renegade Quara Predator]].\n| droppedRaidby  = [[Ghazbaran]].\n| droppedEventby = [[Gelidrazah the Frozen]].\n| buyfrom        = Jogadores. \n| sellto         = Jogadores. \n| implemented    = 8.2 \n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6542,
+    "ns": 0,
+    "title": "Girl's Dress",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Girl's Dress \n| itemclass      = Equipamentos de Corpo \n| primarytype    = Armaduras\n| armor          = 0 \n| weight         = 13.00\n| value          = Negociável \n| npcvalue       = 0 \n| buyfrom        = Jogadores. \n| sellto         = Jogadores. \n| implemented    = 8.2 \n| notes          = Apesar disso, ainda não se sabe se é possível ser obtido nos mundos regulares. Há rumores que só poderia ser equipado por personagens femininos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6543,
+    "ns": 0,
+    "title": "Glacier Robe",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Glacier Robe \n| vocrequired    = [[Sorcerer]]s and [[Druid]]s \n| levelrequired  = 50 \n| itemclass      = Equipamentos de Corpo \n| primarytype    = Armaduras \n| stackable      = não\n| armor          = 11 \n| resist         = [[Ice Damage|Ice]] +8%, [[Energy Damage|Energy]] -8% \n| weight         = 22.50\n| classificacao  = 2\n| max_tier       = 2\n| value          = 11 000 - 18 000 \n| droppedby      = [[Crazed Winter Rearguard]], [[Crazed Winter Vanguard]], [[Girtablilu Warrior]], [[Goggle Cake]], [[Icecold Book]], [[King Zelos]], [[Quara Pincher]], [[Quara Predator]], [[Squid Warden]], [[Srezz Yellow Eyes]], [[Tarbaz]], [[Tremendous Tyrant]], [[Turbulent Elemental]].\n| droppedRaidby  = [[Zushuka (Mortal)]], [[Yakchal]].\n| droppedEventby = [[Schiach]].\n| buyfrom        = Jogadores. \n| npcvalue       = 11 000 \n| sellto         = Rashid\n| implemented    = 8.1 \n| notes          = Faz parte do [[Glacier Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6544,
+    "ns": 0,
+    "title": "Golden Armor",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Golden Armor \n| vocrequired    = [[Knight]]s and [[Paladin]]s\n| itemclass      = Equipamentos de Corpo \n| primarytype    = Armaduras \n| stackable      = não\n| imbuement      = 2\n| classificacao  = 2\n| max_tier       = 2\n| armor          = 14 \n| weight         = 80.00 \n| value          = 20 000 - 30 000 \n| npcvalue       = 20 000 \n| droppedby      = [[Falcon Knight]], [[Falcon Paladin]], [[Ferumbras Mortal Shell]], [[Golden Servant]], [[Golden Servant Replica]], [[Grand Canon Dominus]], [[Grand Commander Soeren]], [[Hellflayer]], [[Hellgorak]], [[Horadron]], [[Horestis]], [[Juggernaut]], [[Katex Blood Tongue]], [[Kerberos]], [[Preceptor Lazare]], [[The Last Lore Keeper]], [[Undead Dragon]], [[Warlock]], [[Zanakeph]].\n| droppedRaidby  = [[Ferumbras]], [[Ghazbaran]], [[Massacre]].\n| buyfrom        = Jogadores. \n| sellto         = Rashid, Shanar:1 500, H.L.:580\n| notes          = Faz parte do [[Golden Set]], [[Semi Rare Set]] e [[Full Set]]. \n<noinclude><p><spoiler>\n* Recompensa da [[Behemoth Quest]].\n* Possibilidade de ser obtido ao [[Rust Remover|remover a ferrugem]] de um [[Slightly Rusted Armor]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6545,
+    "ns": 0,
+    "title": "Greenwood Coat",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Greenwood Coat \n| vocrequired    = [[Druid]]s \n| levelrequired  = 75 \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras \n| resist         = [[Earth Damage|Earth]] +12%, [[Fire Damage|Fire]] -12% \n| armor          = 12 \n| weight         = 28.50\n| classificacao  = 2\n| max_tier       = 2\n| value          = 50 000 - 75 000\n| npcvalue       = 50 000\n| trade          = sim\n| droppedby      = [[Ferumbras Mortal Shell]].\n| droppedRaidby  = [[Ferumbras]], [[Chizzoron the Distorter]].\n| buyfrom        = Jogadores. \n| sellto         = Gnomission\n| implemented    = 8.2 \n| notes          = Faz parte do [[Terra Set]].\n<noinclude><p><spoiler>* Pode ser obtido como recompensa da [[The Elemental Spheres Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6546,
+    "ns": 0,
+    "title": "Heavy Metal T-Shirt",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Heavy Metal T-Shirt \n| flavortext     = Oddly enough it is not made of metal at all, but years without washing grant it added protection. \n| itemclass      = Equipamentos de Corpo \n| primarytype    = Armaduras \n| imbuement      = 2\n| armor          = 6 \n| weight         = 8.00\n| classificacao  = 2\n| max_tier       = 2\n| stackable      = não\n| npcvalue       = 0 \n| droppedby      = [[Boogey]]. \n| buyfrom        = Jogadores. \n| sellto         = Jogadores. \n| implemented    = 8.5 \n| notes          = Mesmo sprite de um [[Pirate Tapestry]].\n<noinclude><p><spoiler>* Possibilidade de ser obtido aleatoriamente durante a [[The Isle of Evil Quest]].\n*Para tentar obtê-lo deve-se dar \"'''use'''\" no corpo morto do boss [[Boogey]]. \n*Só é possível tentar obtê-lo na primeira vez em que a criatura for morta.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6547,
+    "ns": 0,
+    "title": "Hibiscus Dress",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Hibiscus Dress \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras \n| armor          = 0 \n| weight         = 19.00\n| value          = 2 500 - 3 000 \n| npcvalue       = 3 000 \n| droppedby      = [[Angry Sugar Fairy]], [[Boreth]], [[Nymph]], [[Vampire Bride]], [[Wyrm]]. \n| buyfrom        = Jogadores. \n| sellto         = Rashid, Talila, Valindara\n| implemented    = 8.2 \n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6548,
+    "ns": 0,
+    "title": "Jacket",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Jacket \n| itemclass      = Equipamentos de Corpo \n| primarytype    = Armaduras \n| stackable      = não\n| armor          = 1 \n| weight         = 24.00\n| classificacao  = 1\n| max_tier       = 1\n| npcvalue       = 1 \n| npcprice       = 9\n| value          = 1 - 12\n| droppedby      = Ninguém.\n| buyfrom        = Shanar:12, Memech:12, Cornelia:12, Hireling (Trader):12, Azil:12, Coltrayne:10, Rudolph:12, Willard:12, Esrik:12, Rock In A Hard Place:12, Ulrik:12, Kroox:12, Cedrik:12, Brengus:12, Flint:12, Dixi:10, Lee'Delle, Robert:12, Sam:12, Turvy:12, Hardek:12, Baltim:12, Norbert:12, Yanni:12, Morpel:12\n| sellto         = Shanar, Memech, Cornelia, Hireling (Trader), Azil, Willard, Esrik, Rock In A Hard Place, Ulrik, Kroox, Cedrik, Brengus, Flint, Robert, Sam, Turvy, Hardek, Baltim, Norbert, Yanni, Morpel\n| notes          = Podia ser obtido ao chegar em [[Rookgaard]] sem ter realizado a [[The Beginning Quest]]. Faz parte do [[Set Inicial]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6549,
+    "ns": 0,
+    "title": "Knight Armor",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Knight Armor \n| vocrequired    = [[Knight]]s and [[Paladin]]s\n| itemclass      = Equipamentos de Corpo \n| primarytype    = Armaduras \n| stackable      = não\n| imbuement      = 2\n| classificacao  = 2\n| max_tier       = 2\n| armor          = 12 \n| weight         = 120.00 \n| value          = 4 000 - 6 000 \n| npcvalue       = 5 000\n| droppedby      = [[Afflicted Strider]], [[Amenef The Burning]], [[Black Knight]], [[Brutus Bloodbeard]], [[Crystal Spider]], [[Deadeye Devious]], [[Esmeralda]], [[Falcon Knight]], [[Fleshcrawler]], [[Giant Spider]], [[Grand Chaplain Gaunder]], [[Hand of Cursed Fate]], [[Hydra]], [[Juggernaut]], [[Lethal Lissy]], [[Medusa]], [[Mooh'Tah Warrior]], [[Naga Warrior]], [[Pirat Cutthroat]], [[Preceptor Lazare]], [[Quara Hydromancer]], [[Quara Hydromancer Scout]], [[Rhindeer]], [[Ron The Ripper]], [[Sir Leonard]], [[Sir Leopold]], [[Stampor]], [[Terrorsleep]], [[The Bloodweb]], [[The Many]], [[The Old Widow]], [[The Snapper]], [[Tromphonyte]], [[Undead Dragon]], [[Usurper Archer]], [[Zanakeph]].\n| droppedRaidby  = [[Mamma Longlegs]], [[The Welter]].\n| buyfrom        = Jogadores. \n| sellto         = Alesar, Shanar:875, H.L.:140\n| notes          = Faz parte do [[Knight Set]]. Bom para [[Lootbag]]s.\n<noinclude><p><spoiler>\n* Recompensa da [[The Djinn War Quest]].\n*Possibilidade de ser obtido ao [[Rust Remover|remover a ferrugem]] de um [[Rusted Armor]].\n*Possibilidade de ser obtido ao [[Rust Remover|remover a ferrugem]] de um [[Slightly Rusted Armor]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6550,
+    "ns": 0,
+    "title": "Lavos Armor",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Lavos Armor \n| vocrequired    = [[Knight]]s and [[Paladin]]s\n| levelrequired  = 60 \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras \n| resist         = [[Fire Damage|Fire]] +3%, [[Ice Damage|Ice]] -3% \n| armor          = 13 \n| weight         = 85.00\n| classificacao  = 2\n| max_tier       = 2\n| value          = 16 000 - 300 000\n| npcvalue       = 16 000 \n| droppedby      = [[Annihilon]], [[Fire Overlord]], [[Terofar]], [[Zavarash]]\n| buyfrom        = Jogadores. \n| sellto         = Rashid\n| implemented    = 8.2 \n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6551,
+    "ns": 0,
+    "title": "Leather Armor",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Leather Armor \n| itemclass      = Equipamentos de Corpo \n| primarytype    = Armaduras\n| armor          = 4 \n| weight         = 60.00\n| classificacao  = 1\n| max_tier       = 1\n| value          = 12 - 35\n| npcvalue       = 12 \n| npcprice       = 22\n| stackable      = não\n| droppedby      = [[Dworc Fleshhunter]], [[Dworc Venomsniper]], [[Dworc Voodoomaster]], [[Goblin]], [[Goblin Assassin]], [[Goblin Leader]], [[Goblin Scavenger]], [[Mountain Troll]], [[Muglex Clan Assassin]], [[Muglex Clan Footman]], [[Muglex Clan Scavenger]].\n| droppedRaidby  = [[Oodok Witchmaster]].\n| buyfrom        = Shanar:35, Memech:35, Cornelia:35, Hireling (Trader):35, Azil:35, Coltrayne:25, Willard:35, Esrik:35, Rock In A Hard Place:35, Ulrik:35, Kroox:35, Cedrik:35, Brengus:35, Dixi:25, Lee'Delle, Blind Orc:25, Flint:35, Robert:35, Sam:35, Turvy:35, Hardek:35, Baltim:35, Norbert:35, Yanni:35, Morpel:35\n| sellto         = Shanar, Memech, Cornelia, Hireling (Trader), Azil, Coltrayne:5, Willard, Esrik, Rock In A Hard Place, Ulrik, Raffael, Kroox, Cedrik, H.L.:2, Brengus, Flint, Dixi:5, Lee'Delle:5, Robert, Sam, Turvy, Hardek, Baltim, Norbert, Yanni, Morpel\n| notes          = Indicado para jogadores de nível baixo de [[Dawnport]] e [[Rookgaard]] até o personagem obter uma armadura com melhor atributo defensivo que não comprometa sua capacidade de carga. Faz parte do [[Leather Set]].\n\n<noinclude><p><spoiler>* Recompensa da: [[Iron Helmet Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6552,
+    "ns": 0,
+    "title": "Leopard Armor",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Leopard Armor \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| stackable      = não\n| imbuement      = 2\n| armor          = 9 \n| weight         = 95.00\n| classificacao  = 2\n| max_tier       = 2\n| value          = 300 - 1 000 \n| npcvalue       = 1 000 \n| droppedby      = [[Assassin]].\n| buyfrom        = Jogadores. \n| sellto         = Rashid, Brengus:300\n| implemented    = 7.5\n| notes          = Mesmo atributo defensivo do [[Scale Armor]], porém mais leve. \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6553,
+    "ns": 0,
+    "title": "Lightning Robe",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Lightning Robe \n| vocrequired    = [[Sorcerer]]s and [[Druid]]s \n| levelrequired  = 50 \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras \n| stackable      = não\n| armor          = 11 \n| resist         = [[Energy Damage|Energy]] +8%, [[Earth Damage|Earth]] -8% \n| weight         = 22.50\n| classificacao  = 2\n| max_tier       = 2\n| value          = 10 500 - 18 000 \n| droppedby      = [[Anomaly]], [[Bulltaur Forgepriest]], [[Court Warlock]], [[Cursed Prospector]], [[Elder Wyrm]], [[High Voltage Elemental]], [[Mad Mage]], [[Prince Drazzak]], [[Raubritter Chastener]], [[Realityquake]], [[Tyrn]], [[Warlock]]. \n| droppedRaidby  = [[Omrafir]], [[Zarabustor]].\n| buyfrom        = Jogadores. \n| npcvalue       = 11 000 \n| sellto         = Rashid\n| implemented    = 8.1 \n| notes          = Faz parte do [[Lightning Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6554,
+    "ns": 0,
+    "title": "Magic Plate Armor",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Magic Plate Armor \n| vocrequired    = [[Knight]]s and [[Paladin]]s \n| itemclass      = Equipamentos de Corpo \n| primarytype    = Armaduras \n| stackable      = não\n| imbuement      = 2\n| classificacao  = 2\n| max_tier       = 2\n| armor          = 17 \n| weight         = 85.00 \n| value          = 90 000 - 200 000 \n| npcvalue       = 90 000 \n| droppedby      = [[Angry Demon]], [[Arbaziloth]], [[Demon]], [[Dracola]], [[Ferumbras Mortal Shell]], [[Grimeleech]], [[Harpy]], [[Hellflayer]], [[Katex Blood Tongue]], [[Rage Squid]], [[Rotrender]], [[Shulgrax]], [[Terofar]], [[The Source Of Corruption]], [[Utua Stone Sting]], [[Vexclaw]], [[Yirkas Blue Scales]]. \n| droppedRaidby  = [[Ferumbras]], [[Ghazbaran]], [[Morgaroth]], [[Orshabaal]], [[Sight of Surrender]].\n| droppedEventby = [[Bones]].\n| buyfrom        = Jogadores. \n| sellto         = Rashid, H.L.:720\n| notes          = Também conhecida como ''Enchanted Plate'' ou ''MPA''. Já foi um item raro. Até o [[Update de Inverno 2015]] era a armadura com melhor atributo defensivo. Faz parte do [[Paladin Set]], [[Unrestricted Set]] e [[Rare Set]].\n\n<noinclude><div class=\"toccolours mw-collapsible mw-collapsed\" style=\"margin: 4px 0px;\">'''\"História do Item\"'''<div class=\"mw-collapsible-content\"><table ><tr><td align=left>\nAntigamente, apenas podia ser obtida como [[loot]] de Demons e do Orshabaal. Haviam poucas pessoas jogando e poucos respawns de demons, o que a tornava um item raro, valioso e desejado por muitos.\n</td></tr></table></div></div></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6555,
+    "ns": 0,
+    "title": "Magician's Robe",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Magician's Robe \n| vocrequired    = [[Sorcerer]]s and [[Druid]]s \n| flavortext     = This robe feels soft and light as a feather. \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras \n| armor          = 6 \n| weight         = 25.00\n| classificacao  = 1\n| max_tier       = 1\n| value          = 450 \n| npcvalue       = 0\n| npcprice       = 450\n| buyfrom        = Lailene, Raffael \n| sellto         = Jogadores.\n| droppedby      = Ninguém.\n| implemented    = 8.2 \n| notes          = Dado para os personagens que escolheram como vocação definitiva serem [[Sorcerer]]s ou [[Druid]]s em [[Dawnport]] ou na [[Isle of Destiny]]. Faz parte do [[Isle of Destiny Druid Set]] e [[Isle of Destiny Sorcerer Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6556,
+    "ns": 0,
+    "title": "Mammoth Fur Cape",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Mammoth Fur Cape \n| flavortext     = It is imbued with protective magic. \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras \n| imbuement      = 2\n| classificacao  = 2\n| max_tier       = 2\n| armor          = 10 \n| weight         = 20.00 \n| value          = 5 800 - 9 000 \n| npcvalue       = 6 000 \n| stackable      = não\n| droppedby      = [[Barbaria]], [[Barbarian Brutetamer]], [[Ravenous Hunger]], [[The Bloodtusk]]. \n| buyfrom        = Jogadores. \n| sellto         = Rashid\n| implemented    = 8.0 \n| notes          = Boa alternativa para [[mage]]s por ser mais leve que o [[Plate Armor]] e ter atributos defensivos equivalentes. Faz parte do [[Barbarian Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6557,
+    "ns": 0,
+    "title": "Master Archer's Armor",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Master Archer's Armor \n| vocrequired    = [[Paladin]]s \n| levelrequired  = 100 \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras \n| skillboost     = [[Distance Fighting]] +3\n| imbuement      = 1\n| classificacao  = 3\n| max_tier       = 3\n| armor          = 15 \n| weight         = 69.00 \n| value          = 350 000 - 1 500 000 \n| npcvalue       = 0 \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| droppedby      = Ninguém.\n| implemented    = 8.2 \n| notes          = Faz parte do [[Paladin Set]].\n<noinclude><p><spoiler>* Pode ser obtido como recompensa da [[The Inquisition Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6558,
+    "ns": 0,
+    "title": "Molten Plate",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Molten Plate \n| vocrequired    = [[Paladin]]s \n| levelrequired  = 75 \n| itemclass      = Equipamentos de Corpo \n| primarytype    = Armaduras \n| resist         = [[Fire Damage|Fire]] +7%, [[Ice Damage|Ice]] -7% \n| armor          = 13 \n| weight         = 75.00\n| classificacao  = 4\n| max_tier       = 10\n| value          = 13 000 000 - 17 000 000+\n| npcvalue       = 0 \n| droppedRaidby  = [[Morgaroth]].\n| buyfrom        = Jogadores. \n| sellto         = Jogadores. \n| implemented    = 8.2 \n| notes          = Item raro e valioso. Dropado de um boss que faz raras [[invasões]]. O primeiro foi obtido em [[Azura]] no dia 05/02/2009.\n<noinclude><gallery>Arquivo:Plate.PNG|Molten Plate em [[Azura]]\narquivo:Molten_plate.png|Molten Plate em uma GuildHouse\n</gallery></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6638,
+    "ns": 0,
+    "title": "Magma Coat",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Magma Coat\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 50\n| resist         = [[Fire Damage|Fire]] +8%, [[Ice Damage|Ice]] -8%\n| itemclass      = Equipamentos de Corpo \n| primarytype    = Armaduras \n| armor          = 11\n| weight         = 22.50\n| classificacao  = 2\n| max_tier       = 2\n| value          = 11 000 - 18 000\n| droppedby      = [[Afflicted Strider]], [[Burning Book]], [[Cinder Wyrmling]], [[Crape Man]], [[Dawnfire Asura]], [[Diabolic Imp]], [[Fire Overlord]], [[Gazer Spectre]], [[Girtablilu Warrior]], [[Gorerilla]], [[Guardian Of Tales]], [[Hellfire Fighter]], [[Hellhound]], [[Insane Siren]], [[King Zelos]], [[Lava Golem]], [[Manticore]], [[Mazoran]], [[Scarlett Etzel]], [[Shaburak Lord]], [[Shaburak Prince]], [[Stalking Stalk]], [[The Baron from Below]], [[The Flaming Orchid]], [[The Sandking]], [[True Dawnfire Asura]], [[Urmahlullu the Weakened]], [[Vulcongra]], [[Wandering Pillar]], [[Weeper]].\n| droppedRaidby  = [[Furyosa]], [[Gaz'Haragoth]], [[Morgaroth]], [[The Imperor]].\n| droppedEventby = [[Percht]].\n| buyfrom        = Jogadores.\n| npcvalue       = 11 000\n| sellto         = Rashid\n| implemented    = 8.1\n| notes          = Faz parte do [[Magma Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6639,
+    "ns": 0,
+    "title": "Green Tunic",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Green Tunic\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| armor          = 1\n| weight         = 9.30\n| classificacao  = 1\n| max_tier       = 1\n| value          = 1 - 25\n| npcvalue       = 0\n| npcprice       = 25\n| droppedby      = [[Elf Arcanist]], [[Hero]], [[Vicious Squire]].\n| droppedRaidby  = [[Fernfang]].\n| buyfrom        = Rudolph\n| sellto         = Jogadores.\n| notes          = \n<noinclude><p><spoiler>* Utilizado em uma das possíveis trocas que constituem as [[Exchange Quests]]:\n**150 podem ser trocadas por 01 [[Green Piece of Cloth]] com a NPC [[Irmana]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25309,
+    "ns": 0,
+    "title": "Gill Coat",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Gill Coat\n| skillboost     = [[Magic Level]] +1\n| resist         = [[Earth Damage|Earth]] +10%, [[Fire Damage|Fire]] -10%\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| levelrequired  = 150\n| stackable      = não\n| armor          = 12\n| weight         = 19.00\n| classificacao  = 2\n| max_tier       = 2\n| value          = 5 000 - 30 000\n| npcprice       = 10 [[Major Crystalline Token]]\n| droppedby      = Ninguém.\n| buyfrom        = Gnomally\n| sellto         = Jogadores.\n| implemented    = 9.6\n| notes          = Faz parte do [[Gill Set]], [[Magic Level Set]] e [[Mage Set]].\n{{DASH|'''Dica:''' Dependendo do valor do [[Major Crystalline Token]] no mundo, pode ser mais barato comprar o token e trocar pelo item na [[NPC]] do que comprá-lo diretamente de algum jogador.}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 27606,
+    "ns": 0,
+    "title": "Leather Harness",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Leather Harness\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| armor          = 9\n| weight         = 29.00\n| classificacao  = 1\n| max_tier       = 1\n| stackable      = não\n| buyfrom        = Jogadores.\n| npcvalue       = 750\n| value          = 750\n| sellto         = Rafzan\n| droppedby      = [[Corym Charlatan]], [[Corym Skirmisher]], [[Corym Vanguard]].\n| implemented    = 9.8\n| notes          = Faz parte do [[Corym Set]].É a mais leve das armaduras com atributo defensivo 9 e não apresenta restrições quanto ao uso.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 31002,
+    "ns": 0,
+    "title": "Furious Frock",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Furious Frock\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s \n| levelrequired  = 130\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| skillboost     = [[Magic Level]] +2\n| armor          = 12\n| resist         = [[Fire Damage|Fire]] +5%\n| weight         = 34.00\n| classificacao  = 4\n| max_tier       = 10\n| stackable      = não\n| value          = 42 000 000 - 60 000 000\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| droppedRaidby  = [[Furyosa]].\n| implemented    = 10.20\n| notes          = Item raro e valioso. Dropado de um boss que faz raras [[invasões]]. Atributos defensivos equivalentes ao [[Royal Scale Robe]], porém mais leve e com restrição de [[level]] para ser utilizada. Faz parte do [[Magic Level Set]]. \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 31013,
+    "ns": 0,
+    "title": "Goo Shell",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Goo Shell\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| raridade       = raro\n| armor          = 12\n| resist         = [[Earth Damage|Earth]] +2%, [[Fire Damage|Fire]] -2% \n| weight         = 58.00\n| classificacao  = 3\n| max_tier       = 3\n| stackable      = não\n| value          = 4 000 - 2 000 000 +\n| npcvalue       = 4 000\n| buyfrom        = Jogadores.\n| sellto         = Rashid\n| droppedRaidby  = [[Weakened Shlorg]].\n| implemented    = 10.20\n| notes          = Item raro e valioso. Dropado de um boss que faz raras [[invasões]]. Frequentemente utilizado como elemento decorativo.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 33138,
+    "ns": 0,
+    "title": "Glooth Cape",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Glooth Cape\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 40\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| stackable      = não\n| resist         = [[Earth Damage|Earth]] +5%, [[Fire Damage|Fire]] -5%\n| weight         = 29.00\n| classificacao  = 2\n| max_tier       = 2\n| armor          = 9\n| value          = Negociável\n| npcvalue       = 7 000\n| droppedby      = [[Devourer (Criatura)]], [[Glooth Anemone]], [[Glooth Bandit]], [[Glooth Fairy]], [[Lisa]], [[Tremor Worm]].\n| buyfrom        = Jogadores.\n| sellto         = Flint\n| implemented    = 10.50\n| notes          = Faz parte do [[Glooth Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 33143,
+    "ns": 0,
+    "title": "Mooh'tah Plate",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Mooh'tah Plate\n| vocrequired    = [[Knight]]s and [[Paladin]]s\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| stackable      = não\n| imbuement      = 2\n| classificacao  = 2\n| max_tier       = 2\n| armor          = 12\n| weight         = 125.00\n| value          = Negociável\n| npcvalue       = 6 000\n| droppedby      = [[Minotaur Hunter]], [[Minotaur Invader]], [[Mooh'Tah Warrior]], [[Bullwark]].\n| buyfrom        = Jogadores.\n| sellto         = Flint\n| implemented    = 10.50\n| notes          = Faz parte do [[Minotaur Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 33158,
+    "ns": 0,
+    "title": "Heat Core",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Heat Core\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| weight         = 55.00\n| classificacao  = 2\n| max_tier       = 2\n| imbuement      = 2\n| armor          = 12\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 10 000\n| droppedby      = [[Glooth Brigand]], [[Glooth Fairy]], [[Glooth Golem]].\n| buyfrom        = Jogadores.\n| sellto         = Flint\n| implemented    = 10.50\n| notes          = Faz parte do [[Metal Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 36243,
+    "ns": 0,
+    "title": "Fur Armor",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Fur Armor\n| levelrequired  = 50\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| armor          = 11\n| resist         = [[Earth Damage|Earth]] +5%, [[Ice Damage|Ice]] +5%\n| weight         = 49.00\n| classificacao  = 2\n| max_tier       = 2\n| npcvalue       = 5 000\n| stackable      = não\n| droppedby      = [[Adult Goanna]], [[Blemished Spawn]], [[Bloodback]], [[Cave Chimera]], [[Girtablilu Warrior]], [[Lumbering Carnivor]], [[Michael the Stalwart]], [[Shadowpelt]], [[Raubritter Skirmisher]], [[Rotten Golem]], [[Turbulent Elemental]], [[Varnished Diremaw]], [[Werebear]], [[Wereboar]], [[Werepanther]], [[Young Goanna]].\n| droppedRaidby  = [[Feroxa (Mortal)]], [[Owin (Criatura)]].\n| buyfrom        = Jogadores.\n| sellto         = Domizian, Gladys\n| implemented    = 10.80\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 37247,
+    "ns": 0,
+    "title": "Frostmind Raiment",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Frostmind Raiment\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 200\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| skillboost     = [[Magic Level]] +4\n| resist         = [[Ice Damage|Ice]] +8%, [[Energy Damage|Energy]] -8%\n| armor          = 15\n| weight         = 55.00\n| classificacao  = 2\n| max_tier       = 2\n| npcprice       = 100 [[Silver Token]]s\n| buyfrom        = Cledwyn\n| sellto         = Jogadores.\n| droppedby      = Ninguém.\n| implemented    = 10.90\n| notes          = Pertence a nova geração de armaduras de atributo defensivo superior para [[mages]] (15). Supera as anteriores tanto nos atributos defensivos quanto em benefícios de [[skills]]. Faz parte do [[Mage Set]] e [[Magic Level Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 37251,
+    "ns": 0,
+    "title": "Frostsoul Tabard",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Frostsoul Tabard\n| vocrequired    = [[Paladin]]s\n| levelrequired  = 200\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| skillboost     = [[Distance Fighting]] +4\n| resist         = [[Ice Damage|Ice]] +8%, [[Energy Damage|Energy]] -8%\n| armor          = 18\n| weight         = 145.00\n| classificacao  = 2\n| max_tier       = 2\n| npcprice       = 100 [[Silver Token]]s\n| buyfrom        = Cledwyn\n| sellto         = Jogadores.\n| implemented    = 10.90\n| notes          = Pertence a nova geração de armaduras de atributo defensivo superior para [[Paladin]]s (18). Supera as anteriores tanto nos atributos defensivos quanto em benefícios de [[skills]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 37256,
+    "ns": 0,
+    "title": "Frostheart Platemail",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Frostheart Platemail\n| vocrequired    = [[Knight]]s\n| levelrequired  = 200\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| skillboost     = [[Club Fighting]] +4\n| resist         = [[Ice Damage|Ice]] +8%, [[Energy Damage|Energy]] -8%\n| armor          = 18\n| weight         = 145.00\n| classificacao  = 2\n| max_tier       = 2\n| npcprice       = 100 [[Silver Token]]s\n| buyfrom        = Cledwyn\n| sellto         = Jogadores.\n| implemented    = 10.90\n| notes          = Pertence a nova geração de armaduras de atributo defensivo superior para [[knight]]s (18). Supera as anteriores tanto nos atributos defensivos quanto em benefícios de [[skills]]. Faz parte do [[High Level Knight Basic Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 37257,
+    "ns": 0,
+    "title": "Frostheart Hauberk",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Frostheart Hauberk\n| vocrequired    = [[Knight]]s\n| levelrequired  = 200\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| skillboost     = [[Axe Fighting]] +4\n| resist         = [[Ice Damage|Ice]] +8%, [[Energy Damage|Energy]] -8%\n| armor          = 18\n| weight         = 145.00\n| classificacao  = 2\n| max_tier       = 2\n| npcprice       = 100 [[Silver Token]]s\n| buyfrom        = Cledwyn\n| sellto         = Jogadores.\n| implemented    = 10.90\n| notes          = Pertence a nova geração de armaduras de atributo defensivo superior para [[knight]]s (18). Supera as anteriores tanto nos atributos defensivos quanto em benefícios de [[skills]]. Faz parte do [[High Level Knight Basic Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 37258,
+    "ns": 0,
+    "title": "Frostheart Cuirass",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Frostheart Cuirass\n| vocrequired    = [[Knight]]s\n| levelrequired  = 200\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| skillboost     = [[Sword Fighting]] +4\n| resist         = [[Ice Damage|Ice]] +8%, [[Energy Damage|Energy]] -8%\n| armor          = 18\n| weight         = 145.00\n| classificacao  = 2\n| max_tier       = 2\n| npcprice       = 100 [[Silver Token]]s\n| buyfrom        = Cledwyn\n| sellto         = Jogadores.\n| implemented    = 10.90\n| notes          = Pertence a nova geração de armaduras de atributo defensivo superior para [[knight]]s (18). Supera as anteriores tanto nos atributos defensivos quanto em benefícios de [[skills]]. Faz parte do [[High Level Knight Basic Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42675,
+    "ns": 0,
+    "title": "Gnome Armor",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Gnome Armor\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| vocrequired    = [[Paladin]]s\n| imbuement      = 2\n| stackable      = não\n| levelrequired  = 200\n| skillboost     = [[Distance Fighting]] +3\n| resist         = [[Physical Damage|Physical]] +4%, [[Energy Damage|Energy]] +8%, [[Ice Damage|Ice]] -2%\n| armor          = 17\n| weight         = 120.00\n| classificacao  = 3\n| max_tier       = 3\n| droppedby      = [[The Baron from Below]].\n| npcprice       = 0\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.50\n| notes          = Faz parte do [[Gnome Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45030,
+    "ns": 0,
+    "title": "Living Armor",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Living Armor\n| skillboost     = [[Magic Level]] +2\n| resist         = [[Earth Damage|Earth]] +12%, [[Fire Damage|Fire]] -5%\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| imbuement      = 1\n| classificacao  = 3\n| max_tier       = 3\n| levelrequired  = 180\n| stackable      = não\n| armor          = 13\n| weight         = 48.00\n| value          = \n| npcprice       = \n| droppedby      = [[Plagueroot]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.00\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 47990,
+    "ns": 0,
+    "title": "Ghost Chestplate",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ghost Chestplate\n| stackable      = não\n| levelrequired  = 230\n| vocrequired    = [[Paladin]]s\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| skillboost     = [[Distance Fighting]] +2\n| imbuement      = 2\n| classificacao  = 3\n| max_tier       = 3\n| armor          = 17\n| resist         = [[Physical Damage|Physical]] +3%\n| weight         = 123.00\n| value          = 10 000 000 - 20 000 000\n| npcvalue       =\n| droppedby      = [[The Fear Feaster]], [[The Pale Worm]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.30\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 49009,
+    "ns": 0,
+    "title": "Lion Plate",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Lion Plate\n| flavortext     = \n| stackable      = não\n| levelrequired  = 270\n| vocrequired    = [[Knight]]s\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| skillboost     = [[Sword Fighting]] +3, [[Club Fighting]] +3, [[Axe Fighting]] +3\n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| armor          = 17\n| resist         = [[Physical Damage|Physical]] +6%\n| weight         = 150.00\n| value          = Negociável\n| npcvalue       =  \n| droppedby      = [[Ancient Lion Knight]], [[Drume]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.40\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53590,
+    "ns": 0,
+    "title": "Green Demon Armor",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Green Demon Armor \n| itemclass      = Equipamentos de Corpo \n| primarytype    = Armaduras\n| stackable      = não\n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 2\n| armor          = 16 \n| weight         = 80.00 \n| value          =  \n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = Ninguém.\n| droppedRaidby  = [[Morshabaal]]\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Nenhuma.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 56111,
+    "ns": 0,
+    "title": "Midnight Tunic",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Midnight Tunic\n| vocrequired    = [[Druid]]s\n| levelrequired  = 300\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| skillboost     = [[Magic Level]] +4\n| armor          = 16\n| resist         = [[Physical Damage|Physical]] +3%\n| weight         = 27.00\n| imbuement      = 1\n| classificacao  = 4\n| max_tier       = 10\n| stackable      = não\n| value          = \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| droppedby      = [[Timira the Many-Headed]].\n| implemented    = 12.90\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 58486,
+    "ns": 0,
+    "title": "Mutated Skin Armor",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Mutated Skin Armor\n| flavortext     = \n| stackable      = não\n| levelrequired  = 270\n| vocrequired    = [[Paladin]]s\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| skillboost     = [[Distance Fighting]] +3\n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| armor          = 17\n| resist         = [[Physical Damage|Physical]] +3%, [[Earth Damage|Earth]] +8%\n| weight         = 63.00\n| value          = \n| npcvalue       = \n| droppedby      = [[The Monster]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 13.10\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 63871,
+    "ns": 0,
+    "title": "Merudri Battle Mail",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Merudri Battle Mail\n| vocrequired    = [[Monk]]s\n| levelrequired  = 300 \n| flavortext     = \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| resist         = [[Earth Damage|Earth]] +10%, [[Energy Damage|Energy]] -5% \n| skillboost     = [[Fist Fighting]] +4, [[Magic Level]] +1\n| augments       = Flurry of Blows -> +3% life leech\n| imbuement      = 2\n| armor          = 10\n| mantra         = 17\n| weight         = 29.00\n| classificacao  = 4\n| max_tier       = 10\n| value          = \n| droppedby      = [[Dragon Pack]]\n| trade          = sim\n| buyfrom        = Jogadores. \n| implemented    = 15.00.249ccc\n| notes          =\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64029,
+    "ns": 0,
+    "title": "Ice Robe",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Ice Robe\n| vocrequired    = [[Monk]]s\n| levelrequired  = 200\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| skillboost     = [[Fist Fighting]] +4\n| resist         = [[Ice Damage|Ice]] +8%, [[Energy Damage|Energy]] -8%\n| armor          = 9\n| weight         = 75.00\n| classificacao  = 2\n| droppedby      = Ninguém.\n| max_tier       = 2\n| mantra         = 14\n| npcprice       = 100 [[Silver Token]]s\n| buyfrom        = Cledwyn\n| sellto         = Jogadores.\n| implemented    = 15.00.249ccc\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64031,
+    "ns": 0,
+    "title": "Magma Robe",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Magma Robe\n| vocrequired    = [[Monk]]s\n| levelrequired  = 200\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| skillboost     = [[Fist Fighting]] +4\n| resist         = [[Fire Damage|Fire]] +8%, [[Ice Damage|Ice]] -8%\n| armor          = 9\n| mantra         = 14\n| weight         = 75.00\n| classificacao  = 2\n| max_tier       = 2\n| npcprice       = 100 [[Silver Token]]s\n| buyfrom        = Cledwyn\n| sellto         = Jogadores.\n| implemented    = 15.00.249ccc\n| droppedby      = Ninguém.\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64033,
+    "ns": 0,
+    "title": "Leaf Robe",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Leaf Robe\n| vocrequired    = [[Monk]]s\n| levelrequired  = 200\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| skillboost     = [[Fist Fighting]] +4\n| resist         = [[Earth Damage|Earth]] +8%, [[Fire Damage|Fire]] -8%\n| armor          = 9\n| weight         = 75.00\n| mantra         = 14\n| classificacao  = 2\n| max_tier       = 2\n| npcprice       = 100 [[Silver Token]]s\n| buyfrom        = Cledwyn\n| sellto         = Jogadores.\n| implemented    = 15.00.249ccc\n| notes          =\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64040,
+    "ns": 0,
+    "title": "Gnomish Cuirass",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Gnomish Cuirass\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| vocrequired    = [[Monk]]s\n| levelrequired  = 150\n| skillboost     = [[Fist Fighting]] +3\n| resist         = [[Physical Damage|Physical]] +2%\n| armor          = 8\n| classificacao  = 2\n| max_tier       = 2\n| weight         = 100.00\n| value          = \n| imbuement      = 1\n| mantra         = 14\n| npcprice       = 100 [[Major Crystalline Token]]\n| buyfrom        = Gnomally\n| sellto         = Jogadores.\n| droppedby      = Ninguém.\n| implemented    = 15.00.249ccc\n| notes          = \n{{DASH|'''Dica:''' Dependendo do valor do [[Major Crystalline Token]] no mundo, pode ser mais barato comprar o token e trocar pelo item na [[NPC]] do que comprá-lo diretamente de algum jogador.}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64044,
+    "ns": 0,
+    "title": "Ghazbaran Oyoroi",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ghazbaran Oyoroi\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| vocrequired    = [[Monk]]s\n| levelrequired  = 75\n| skillboost     = [[Fist Fighting]] +1, [[Magic Level]] +1\n| resist         = [[Energy Damage|Energy]] +7%, [[Ice Damage|Ice]] -7%\n| armor          = 8\n| classificacao  = 4\n| max_tier       = 10\n| weight         = 135.00\n| value          = \n| mantra         = 12\n| npcprice       = \n| buyfrom        =\n| sellto         = Jogadores.\n| droppedby      = [[Ghazbaran]].\n| implemented    = 15.00.249ccc\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64078,
+    "ns": 0,
+    "title": "Merudri Scale Mail",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Merudri Scale Mail\n| vocrequired    = [[Monk]]s\n| levelrequired  = 100 \n| flavortext     = \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| resist         = [[Fire Damage|Fire]] +4%\n| skillboost     = [[Fist Fighting]] +2\n| augments       = \n| imbuement      = \n| armor          = 7\n| mantra         = 13\n| weight         = 29.00\n| classificacao  = 3\n| max_tier       = 3\n| value          = \n| droppedby      = Ninguém.\n| trade          = sim\n| buyfrom        = Jogadores. \n| implemented    = 15.00.249ccc\n| notes          = <spoiler>* Recompensa da [[Wrath of the Emperor Quest]]</spoiler>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64084,
+    "ns": 0,
+    "title": "Merudri Nanbando",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Merudri Nanbando\n| vocrequired    = [[Monk]]s\n| levelrequired  = 125\n| flavortext     = A rare metal breastplate worn by early Merudri guardians\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| resist         = \n| skillboost     = [[Fist Fighting]] +3\n| augments       = Greater Flurry of Blows -> +8% critical extra damage\n| imbuement      = 1\n| armor          = 7\n| mantra         = 13\n| weight         = 106.00\n| classificacao  = 2\n| max_tier       = 2\n| value          = \n| droppedby      = Ninguém.\n| trade          = sim\n| buyfrom        = Jogadores. \n| implemented    = 15.00.249ccc\n| notes          = <spoiler>* Recompensa da [[The Inquisition Quest]]</spoiler>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64088,
+    "ns": 0,
+    "title": "Monk Robe",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Monk Robe\n| vocrequired    = [[Monk]]s\n| levelrequired  = \n| flavortext     = The traditional robe of a Merudri monk\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| resist         = \n| skillboost     = [[Fist Fighting]] +1\n| augments       = \n| imbuement      = \n| armor          = 7\n| mantra         = 9\n| weight         = 70.00\n| classificacao  = 1\n| max_tier       = 1\n| value          = \n| droppedby      = [[Tarantula]].\n| trade          = sim\n| buyfrom        = Jogadores. \n| implemented    = 15.00.249ccc\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6560,
+    "ns": 0,
+    "title": "Native Armor",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Native Armor \n| itemclass      = Equipamentos de Corpo \n| primarytype    = Armaduras \n| stackable      = não\n| armor          = 7 \n| weight         = 80.00\n| classificacao  = 4\n| max_tier       = 10\n| value          = Sem definição de preço em\n| npcvalue       = 0 \n| buyfrom        = Jogadores. \n| sellto         = Jogadores. \n| implemented    = 8.4 \n| notes          = Apesar disso, ainda não se sabe se é possível ser obtido nos mundos regulares. Pode ser visto em algumas [[Treasure Rooms|salas de tesouros]] existentes.\n<gallery>\nArquivo:Native_armor.JPG|Native Armor na Treasure Rooms|sala do tesouro do [[Pythius The Rotten]].\n</gallery> \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6561,
+    "ns": 0,
+    "title": "Noble Armor",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Noble Armor \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras \n| stackable      = não\n| imbuement      = 2\n| classificacao  = 1\n| max_tier       = 1\n| armor          = 11 \n| weight         = 120.00\n| value          = 900 - 8 000\n| npcvalue       = 900 \n| npcprice       = 8 000\n| buyfrom        = Nah'Bob\n| sellto         = Nah'Bob, H.L.:140\n| notes          = Atributo defensivo melhor que do [[Plate Armor]] e mesmo peso.\n<noinclude><div class=\"toccolours mw-collapsible mw-collapsed\" style=\"margin: 4px 0px;\">'''\"História do Item\"'''<div class=\"mw-collapsible-content\">\n<table ><tr><td align=left>\nAntigamente era conhecida como Rose Armor. Foi originalmente implementada em [[Antica]] como presente dos [[Gods#Creators|Gods]] para membros da Red Rose, uma das primeiras [[guild]]s do Tibia. Um outro presente dado a mesma guild foi o [[Rose Shield]].\n</td></tr></table></div></div>\n<noinclude><p><spoiler>* Recompensa da [[Thais Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6563,
+    "ns": 0,
+    "title": "Oceanborn Leviathan Armor",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Oceanborn Leviathan Armor \n| vocrequired    = [[Knight]]s \n| levelrequired  = 100 \n| skillboost     = [[Shielding]] +1 \n| resist         = [[Ice Damage|Ice]] +5%, [[Energy Damage|Energy]] -5% \n| itemclass       = Equipamentos de Corpo \n| primarytype    = Armaduras\n| armor          = 15 \n| weight         = 100.00\n| classificacao  = 4\n| max_tier       = 10\n| value          = 5 000 000 - 20 000 000 \n| npcvalue       = 0 \n| droppedby      = [[Lord of the Elements]].\n| droppedRaidby  = [[Ghazbaran]].\n| buyfrom        = Jogadores. \n| sellto         = Jogadores. \n| implemented    = 8.2 \n| notes          = Item raro e valioso. Dropado de um boss que faz raras [[invasões]]. A Primeira foi obtida em [[Lucera]].\n<gallery>Arquivo:Ghaz Loot Lucera.jpg|Oceanborn Leviathan Armor em Lucera.</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6564,
+    "ns": 0,
+    "title": "Old Cape",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Old Cape \n| flavortext     = This old cape might be worth more than what it looks like.\n| itemclass      = Equipamentos de Corpo \n| primarytype    = Armaduras \n| armor          = 1 \n| weight         = 35.00\n| classificacao  = 3\n| max_tier       = 3\n| value          = 3 000 - 50 000\n| npcvalue       = 0 \n| stackable      = não\n| buyfrom        = Jogadores. \n| sellto         = Jogadores. \n| implemented    = 8.6 \n| notes          = <noinclude><p><spoiler>* 01 é necessário para o primeiro addon do [[Wayfarer Outfits]].\n* Recompensa da [[A Father's Burden Quest]].</spoiler></p></noinclude> \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6565,
+    "ns": 0,
+    "title": "Paladin Armor",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Paladin Armor \n| vocrequired    = [[Paladin]]s \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras \n| skillboost     = [[Distance Fighting]] +2\n| imbuement      = 1\n| classificacao  = 2\n| max_tier       = 2\n| armor          = 12 \n| weight         = 65.00\n| value          = 15 000 - 20 000 \n| npcvalue       = 15 000 \n| droppedby      = [[Annihilon]], [[Bog Raider]], [[Terofar]], [[Zavarash]].\n| droppedRaidby  = [[Zulazza the Corruptor]]. \n| buyfrom        = Jogadores. \n| sellto         = Rashid\n| implemented    = 8.2 \n| notes          = Faz parte do [[Paladin Set]].\n<noinclude><p><spoiler>\n* Possibilidade de ser obtido ao [[Rust Remover|remover a ferrugem]] de um [[Rusted Armor]].\n* Possibilidade de ser obtido ao [[Rust Remover|remover a ferrugem]] de um [[Slightly Rusted Armor]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6567,
+    "ns": 0,
+    "title": "Pirate Shirt",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Pirate Shirt\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| armor          = 3\n| weight         = 20.00\n| classificacao  = 1\n| max_tier       = 1\n| stackable      = não\n| value          = 500 - 3 000\n| npcvalue       = 500\n| npcprice       = 0\n| droppedby      = [[Pirate Buccaneer]], [[Pirate Gunner]].\n| buyfrom        = Jogadores.\n| sellto         = Rashid\n| implemented    = 7.8\n| notes          = Mesma aparência da [[The Lethal Lissy's Shirt]], mas sem as manchas vermelhas. Faz parte do [[Pirate Set]]. \n<noinclude><p><spoiler>* 01 é necessário para a [[Meriana Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6568,
+    "ns": 0,
+    "title": "Plate Armor",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Plate Armor\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| armor          = 10\n| weight         = 120.00\n| classificacao  = 1\n| max_tier       = 1\n| value          = 400 - 1 200\n| npcvalue       = 400\n| npcprice       = 1 200\n| stackable      = não\n| droppedby      = [[Ancient Lion Knight]], [[Ancient Scarab]], [[Behemoth]], [[Black Knight]], [[Bonebeast]], [[Brutus Bloodbeard]], [[Crystal Spider]], [[Cursed Ape]], [[Deadeye Devious]], [[Destroyer]], [[Dreadbeast]], [[Giant Spider]], [[High Templar Cobrass]], [[Kongra]], [[Lethal Lissy]], [[Lizard Templar]], [[Naga Warrior]], [[Orc Cult Fanatic]], [[Orc Leader]], [[Orc Warlord]], [[Pirate Buccaneer]], [[Quara Pincher Scout]], [[Ron The Ripper]], [[Sacred Spider]], [[The Snapper]], [[Undead Elite Gladiator]], [[Undead Gladiator]], [[Valkyrie]].\n| droppedRaidby  = [[Warlord Ruzad]]. \n| buyfrom        = Shanar, Memech, Cornelia, Hireling (Trader), Azil, Willard, Esrik, Rock In A Hard Place, Ulrik, Kroox, Cedrik, Brengus, Flint, Robert, Sam, Turvy, Hardek, Baltim, Yanni, Morpel\n| sellto         = Shanar, Memech, Cornelia, Hireling (Trader), Azil, Willard, Esrik, Rock In A Hard Place, Ulrik, Kroox, Cedrik, H.L.:110, Brengus, Flint, Robert, Sam, Turvy, Hardek, Baltim, Yanni, Morpel\n| notes          = Faz parte do [[Plate Set]]. Bom para [[Lootbag]]s.\n<noinclude><p><spoiler>\n* Recompensa da [[Plate Armor Quest]].\n* Possibilidade de ser obtido ao [[Rust Remover|remover a ferrugem]] de um [[Heavily Rusted Armor]]. \n* Possibilidade de ser obtido ao [[Rust Remover|remover a ferrugem]] de um [[Rusted Armor]].\n* Possibilidade de ser obtido ao [[Rust Remover|remover a ferrugem]] de um [[Slightly Rusted Armor]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6569,
+    "ns": 0,
+    "title": "Ranger's Cloak",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ranger's Cloak\n| vocrequired    = [[Paladin]]s \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| armor          = 7\n| weight         = 48.00\n| classificacao  = 1\n| max_tier       = 1\n| value          = 450 - 550\n| npcvalue       = 150\n| npcprice       = 550\n| buyfrom        = Rudolph, Raffael:450\n| sellto         = Avriel, Hector the Mentor\n| droppedby      = [[Corrupted Skeleton]], [[The Corruptor]], [[Corrupted Ghost]], [[Muglex Clan Footman]] e [[Muglex Clan Assassin]].\n| implemented    = 8.2\n| notes          = Até o Update de Newhaven, podia ser obtido ao escolher a vocação de [[Paladin]]s em [[Dawnport]] ou na [[Isle of Destiny]]. Faz parte do [[Isle of Destiny Paladin Set]]. \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6570,
+    "ns": 0,
+    "title": "Red Robe",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Red Robe\n| flavortext     = The robe is artfully embroidered.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| armor          = 1\n| weight         = 26.00\n| classificacao  = 1\n| max_tier       = 1\n| stackable      = não\n| value          = \n| npcvalue       = 300\n| droppedby      = [[Adept of the Cult]], [[Banshee]], [[Pirate Ghost]].\n| droppedRaidby  = [[Captain Jones]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 6.6\n| notes          = Até o update de verão de 2006 era considerado um item muito raro e valioso.\n<noinclude><p><spoiler>* Utilizado em uma das possíveis trocas que constituem as [[Exchange Quests]]:\n**Pode ser trocado por 01 [[Red Piece of Cloth]] com a NPC [[Irmana]].<br />\n*01 é necessário para a [[The Secret Library Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6572,
+    "ns": 0,
+    "title": "Red Tunic",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Red Tunic\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| stackable      = não\n| armor          = 2\n| weight         = 14.00\n| trade          = não\n| value          = Sem definição de preço em \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 6.6\n| notes          = Apesar disso, ainda não se sabe se é possível ser obtido nos mundos regulares. Pode ser visto na casa do Santa Claus em [[Vega]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6573,
+    "ns": 0,
+    "title": "Robe of the Ice Queen",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Robe of the Ice Queen\n| vocrequired    = [[Druid]]s\n| levelrequired  = 75\n| flavortext     = The soft tissue shimmers.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| resist         = [[Ice Damage|Ice]] +12%, [[Energy Damage|Energy]] -12%\n| armor          = 12\n| weight         = 29.50\n| classificacao  = 4\n| max_tier       = 10\n| value          = 15 000 000+\n| npcvalue       = 0\n| droppedRaidby  = [[Ghazbaran]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.2\n| notes          = Oferece maior proteção contra [[Ice Damage|danos de gelo]] que uma [[Glacier Robe]] (4%). Obtida pela primeira vez em [[Guardia]]. Faz parte do [[Glacier Set]].\n<gallery>\nArquivo:Robeoftheicequeen.png|Um '''Robe of the Ice Queen''' em Lutabra, na casa da jogadora {{Character|Jeni Ryther}}.\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6574,
+    "ns": 0,
+    "title": "Robe of the Underworld",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Robe of the Underworld\n| vocrequired    = [[Sorcerer]]s\n| levelrequired  = 100\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| resist         = [[Death Damage|Death]] +12%, [[Holy Damage|Holy]] -12%\n| armor          = 12\n| weight         = 31.00\n| classificacao  = 2\n| max_tier       = 2\n| value          = 250 000 - 600 000\n| npcvalue       = 0\n| droppedby      = [[Ancient Spawn of Morgathla]].\n| droppedRaidby  = [[Orshabaal]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.2\n| notes          = Dropado de um boss que faz raras [[invasões]]. Faz parte do [[Bone Set]] e do [[Mage Set]].\n<noinclude><p><spoiler>* Pode ser obtida como recompensa da [[The Inquisition Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6575,
+    "ns": 0,
+    "title": "Royal Draken Mail",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Royal Draken Mail\n| vocrequired    = [[Knight]]s\n| levelrequired  = 100\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| skillboost     = [[Shielding]] +3\n| armor          = 16\n| resist         = [[Physical Damage|Physical]] +5%\n| weight         = 130.00\n| classificacao  = 3\n| max_tier       = 3\n| value          = 700 000 - 1 200 000\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.6\n| notes          = Contra as criaturas que possuem um forte ataque de [[Physical Damage|dano físico]], pode bloquear mais que a [[Magic Plate Armor]] devido ao atributo especial. Faz parte do [[Blocking Set]] e [[Rare Set]].\n<noinclude><p><spoiler>* Pode ser obtido como recompensa da [[Wrath of the Emperor Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6576,
+    "ns": 0,
+    "title": "Royal Scale Robe",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Royal Scale Robe\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 100\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| skillboost     = [[Magic Level]] +2\n| armor          = 12\n| resist         = [[Fire Damage|Fire]] +5%\n| weight         = 45.00\n| classificacao  = 3\n| max_tier       = 3\n| value          = 700 000 - 1 200 000\n| droppedby      = Ninguém.\n| droppedEventby =\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.6\n| notes          = Faz parte do [[Magma Set]], [[Mage Set]] e [[Magic Level Set]].\n<noinclude><div class=\"toccolours mw-collapsible mw-collapsed\" style=\"margin: 4px 0px;\">'''\"História do Item\"'''<div class=\"mw-collapsible-content\"><table ><tr><td align=left>\nInicialmente foi desenvolvida para prover 20% de proteção contra [[Mana Drain]], mas devido a feedback de jogadores durante o [[Test Server]], seu atributo foi modificado para a forma atual. \n</td></tr></table></div></div></noinclude>\n\n<noinclude><p><spoiler>* Pode ser obtido como recompensa da [[Wrath of the Emperor Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6577,
+    "ns": 0,
+    "title": "Scale Armor",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Scale Armor\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| armor          = 9\n| weight         = 105.00\n| classificacao  = 1\n| max_tier       = 1\n| value          = 75 - 260\n| npcvalue       = 75\n| npcprice       = 260\n| stackable      = não\n| droppedby      = [[Barbarian Headsplitter]], [[Barbarian Skullhunter]], [[Dwarf Guard]], [[Ghoul]], [[Lizard Sentinel]], [[Minotaur Archer]], [[Mutated Human]], [[Orc Rider]], [[Pirate Cutthroat]], [[Quara Predator Scout]], [[Undead Prospector]], [[Lizard Commander]].\n| droppedRaidby  = [[Grorlam]].\n| buyfrom        = Shanar, Memech, Cornelia, Hireling (Trader), Azil, Willard, Esrik, Rock In A Hard Place, Ulrik, Kroox, Cedrik, Brengus, Flint, Robert, Sam, Turvy, Hardek, Baltim, Yanni, Morpel\n| sellto         = Shanar, Memech, Cornelia, Hireling (Trader), Azil, Willard, Esrik, Rock In A Hard Place, Ulrik, Kroox, Cedrik, H.L., Brengus, Flint, Robert, Sam, Turvy, Hardek, Baltim, Yanni, Morpel\n| notes          = Frequentemente utilizado por jogadores recém chegados à [[Tibia (Continente)]]. Parte do [[Newbie Set]].\n<noinclude><p><spoiler>\n* 01 pode ser obtida na [[Thais Northern Dungeon]], em um baú localizado abaixo do poço ({{mapa|32354,32131,8:2|aqui}}).\n* Possibilidade de ser obtido ao [[Rust Remover|remover a ferrugem]] de um [[Heavily Rusted Armor]].\n* Possibilidade de ser obtido ao [[Rust Remover|remover a ferrugem]] de um [[Rusted Armor]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6578,
+    "ns": 0,
+    "title": "Simple Dress",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Simple Dress\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| stackable      = não\n| armor          = 0\n| weight         = 10.00\n| npcvalue       = 50\n| value          = 50\n| droppedby      = [[Banshee]], [[Zombie]].\n| buyfrom        = Jogadores.\n| sellto         = Irmana\n| implemented    = 7.5\n| notes          = Mesmo sprite de um [[Spectral Dress]].\n<noinclude><p><spoiler>* Possibilidade de ser obtido ao usar um [[Unrealized Dream]] próximo ao [[The Dreamcatcher Device]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6579,
+    "ns": 0,
+    "title": "Skullcracker Armor",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Skullcracker Armor\n| vocrequired    = [[Knight]]s\n| levelrequired  = 85\n| resist         = [[Death Damage|Death]] +5%, [[Holy Damage|Holy]] -5%\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| armor          = 14\n| weight         = 110.00\n| classificacao  = 2\n| max_tier       = 2\n| value          = 18 000 - 25 000\n| npcvalue       = 18 000\n| droppedby      = [[Annihilon]], [[Bony Sea Devil]], [[Frost Flower Asura]], [[Grim Reaper]], [[Midnight Asura]], [[Sopping Corpus]], [[The Moonlight Aster]], [[The Scourge of Oblivion]], [[The Source Of Corruption]], [[True Frost Flower Asura]], [[True Midnight Asura]], [[Undead Dragon]].\n| droppedEventby = [[Haunted Dragon]].\n| buyfrom        = Jogadores.\n| sellto         = Rashid\n| implemented    = 8.2\n| notes          = Faz parte do [[Bone Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6581,
+    "ns": 0,
+    "title": "Spirit Cloak",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Spirit Cloak\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| skillboost     = [[Magic Level]] +1\n| armor          = 8\n| weight         = 26.50\n| classificacao  = 1\n| max_tier       = 1\n| value          = 350 - 2 000\n| droppedby      = [[Afflicted Strider]], [[Goggle Cake]], [[Hellgorak]], [[Nightstalker]], [[Renegade Quara Hydromancer]], [[Sea Serpent]], [[Werelion]].\n| npcvalue       = 350\n| npcprice       = 1 000\n| buyfrom        = Lailene\n| sellto         = Lailene\n| implemented    = 8.2\n| notes          = Popular entre [[mage]]s com level médio-baixo que ainda não adquiriram a [[Focus Cape]]. Faz parte do [[Magic Level Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6582,
+    "ns": 0,
+    "title": "Studded Armor",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Studded Armor\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| armor          = 5\n| weight         = 71.00\n| classificacao  = 1\n| max_tier       = 1\n| value          = 25 - 90\n| npcvalue       = 25\n| npcprice       = 90\n| stackable      = não\n| droppedby      = [[Brittle Skeleton]], [[Crazed Dwarf]], [[Dwarf]], [[Dwarf Miner]], [[Elf]], [[Minotaur Bruiser]], [[Minotaur Poacher]], [[Orc]], [[Scar Tribe Shaman]], [[Troll Marauder]], [[Woodling]].\n| buyfrom        = Shanar, Memech, Cornelia, Hireling (Trader), Azil, Willard, Esrik, Rock In A Hard Place, Ulrik, Kroox, Cedrik, Brengus, Flint, Blind Orc, Robert, Sam, Turvy, Hardek, Baltim, Norbert, Yanni, Morpel\n| sellto         = Shanar, Memech, Cornelia, Hireling (Trader), Azil, Coltrayne:10, Willard, Esrik, Rock In A Hard Place, Ulrik, Raffael:20, Kroox, Cedrik, H.L.:18, Brengus, Flint, Lee'Delle, Dixi:10, Robert, Sam, Turvy, Hardek, Baltim, Norbert, Yanni, Morpel\n| implemented    = 7.9\n| notes          = Frequentemente utilizada por personagens iniciantes em [[Dawnport]] e [[Rookgaard]] que ainda não adquiriram o [[Chain Armor]]. Faz parte do [[Studded Set]].\n<noinclude><p><spoiler>* Recompensas da: [[The Rookie Guard Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6583,
+    "ns": 0,
+    "title": "Summer Dress",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Summer Dress\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| armor          = 0\n| resist         = [[Death Damage|Death]] +5%\n| weight         = 10.00\n| value          = \n| npcvalue       = 1 500\n| buyfrom        = Jogadores.\n| sellto         = Talila, Valindara\n| implemented    = 8.2\n| droppedby      = [[Swan Maiden]].\n| notes          = <br> Esse item foi adicionado no [[Updates/8.2|Summer Update de 2008]], e era considerado um mistério a sua obtenção até a vinda do [[Update de Verão 2017|Summer Update de 2017]], onde ele pode ser obtido como loot de criaturas.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6584,
+    "ns": 0,
+    "title": "Swamplair Armor",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Swamplair Armor\n| vocrequired    = [[Knight]]s and [[Paladin]]s\n| levelrequired  = 60\n| resist         = [[Earth Damage|Earth]] +3%, [[Fire Damage|Fire]] -3%\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| armor          = 13\n| weight         = 84.50\n| classificacao  = 2\n| max_tier       = 2\n| value          = 15 500 - 20 000\n| droppedby      = [[Cursed Book]], [[Earth Overlord]], [[Feral Werecrocodile]], [[Ink Blob]], [[Paiz the Pauperizer]], [[Serpent Spawn]], [[The Enraged Thorn Knight]], [[The Noxious Spawn]].\n| droppedRaidby  = [[Chizzoron the Distorter]].\n| buyfrom        = Jogadores.\n| sellto         = Rashid\n| npcvalue       = 16 000\n| implemented    = 8.2\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6585,
+    "ns": 0,
+    "title": "Terra Mantle",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Terra Mantle\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 50\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| armor          = 11\n| resist         = [[Earth Damage|Earth]] +8%, [[Fire Damage|Fire]] -8%\n| weight         = 22.50\n| classificacao  = 2\n| max_tier       = 2\n| value          = 10 600 - 15 000\n| droppedby      = [[Adlerauge]], [[Ancient Spawn of Morgathla]], [[Askarak Lord]], [[Askarak Prince]], [[Banshee]], [[Blightwalker]], [[Bramble Wyrmling]], [[Choking Fear]], [[Cursed Book]], [[Drume]], [[Earth Overlord]], [[Esmeralda]], [[Exotic Cave Spider]], [[Feral Werecrocodile]], [[Fleshcrawler]], [[Glooth Bandit]], [[Glooth Brigand]], [[Gorgo]], [[Hideous Fungus]], [[Humongous Fungus]], [[Ink Blob]], [[Ink Splash]], [[Medusa]], [[Raubritter Marksman]], [[Rotten Golem]], [[Scarlett Etzel]], [[Spiky Carnivor]].\n| droppedRaidby  = [[The Evil Eye]].\n| buyfrom        = Jogadores.\n| npcvalue       = 11 000\n| sellto         = Rashid\n| implemented    = 8.1\n| notes          = Faz parte do [[Terra Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6586,
+    "ns": 0,
+    "title": "The Rain Coat",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = The Rain Coat\n| flavortext     = The wearer of this cape commands the forces of heaven.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| imbuement      = \n| armor          = 1\n| stackable      = não\n| weight         = 32.00\n| npcvalue       = 0\n| droppedby      = [[Mephiles]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Tem a mesma aparência de uma [[Cape]]. Quando equipada, por 5 minutos aparecerá sob o personagem efeito igual ao da magia [[Rage of the Skies]].\n<noinclude><p><spoiler>* Possibilidade de ser obtido aleatoriamente durante a [[The Isle of Evil Quest]].\n*Para tentar obtê-lo deve-se dar \"'''use'''\" no corpo morto do boss [[Mephiles]]. \n*Só é possível tentar obtê-lo na primeira vez em que a criatura for morta.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9342,
+    "ns": 0,
+    "title": "Spectral Dress",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Spectral Dress\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Itens de Quest\n| secondarytype  = Armaduras\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = 10.00\n| value          = \n| buyfrom        = Black Bert\n| npcprice       = 15 000\n| sellto         = Jogadores.\n| implemented    = 7.6\n| notes          = Mesmo sprite de um [[Simple Dress]]. Pode ser equipado no slot de armaduras do inventário mas não oferece nenhuma proteção ao personagem.\n<noinclude><p><spoiler>* Obtido e usado durante a missão ''The Spectral Dress'' na [[The Explorer Society Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9690,
+    "ns": 0,
+    "title": "Spellweaver's Robe",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Spellweaver's Robe\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 60\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| resist         = [[Energy Damage|Energy]] +10%, [[Earth Damage|Earth]] -10%\n| armor          = 11\n| weight         = 23.50\n| classificacao  = 2\n| max_tier       = 2\n| value          = 12 000 - 20 000\n| stackable      = não\n| droppedby      = [[Arbaziloth]], [[Bulltaur Alchemist]], [[Burning Gladiator]], [[Draken Spellweaver]], [[Ethershreck]], [[Ghastly Dragon]], [[Hatebreeder]], [[Juvenile Bashmu]], [[Lady Tenebris]], [[Lloyd]], [[Lokathmor]], [[The Duke Of The Depths]], [[Undead Dragon]], [[Utua Stone Sting]], [[Wrathful Archivist]], [[Yirkas Blue Scales]].\n| droppedEventby = [[Haunted Dragon]].\n| npcvalue       = 12 000\n| npcprice       = 0\n| buyfrom        = Jogadores.\n| sellto         = Lailene\n| implemented    = 8.54\n| notes          = Embora mais pesado, oferece mais resistência a danos de energia que o [[Lightning Robe]]. Faz parte do [[Lightning Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 19208,
+    "ns": 0,
+    "title": "Ornate Chestplate",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ornate Chestplate\n| stackable      = não\n| levelrequired  = 200\n| vocrequired    = [[Knight]]s\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| skillboost     = [[Shielding]] +3\n| imbuement      = 2\n| classificacao  = 2\n| max_tier       = 2\n| armor          = 16\n| resist         = [[Physical Damage|Physical]] +8%\n| weight         = 156.00\n| value          = 60 000 - 5 000 000\n| npcvalue       = 60 000\n| droppedby      = [[Jaul]].\n| buyfrom        = Jogadores.\n| sellto         = Rock In A Hard Place\n| implemented    = 9.4\n| notes          = Oferece a melhor proteção contra [[Physical Damage|Dano Físico]] (8)%. Até o [[Update de Inverno 2015]] era considerada a melhor armadura do jogo. Faz parte do [[Ornate Set]], [[Blocking Set]], [[Rare Set]] e [[Dream Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25329,
+    "ns": 0,
+    "title": "Prismatic Armor",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Prismatic Armor\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| vocrequired    = [[Knight]]s and [[Paladin]]s\n| levelrequired  = 120\n| resist         = [[Physical Damage|Physical]] +5%\n| skillboost     = [[Speed]] +15\n| imbuement      = 1\n| classificacao  = 2\n| max_tier       = 2\n| stackable      = não\n| armor          = 15\n| weight         = 79.00\n| value          = 5 000 - 30 000\n| npcprice       = 10 [[Major Crystalline Token]]\n| buyfrom        = Gnomally\n| sellto         = Jogadores.\n| implemented    = 9.6\n| droppedby      = Ninguém.\n| notes          = Faz parte do [[Paladin Set]], [[Prismatic Set]] e [[Haste Set]].\n{{DASH|'''Dica:''' Dependendo do valor do [[Major Crystalline Token]] no mundo, pode ser mais barato comprar o token e trocar pelo item na [[NPC]] do que comprá-lo diretamente de algum jogador.}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 37259,
+    "ns": 0,
+    "title": "Thunderheart Platemail",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Thunderheart Platemail\n| vocrequired    = [[Knight]]s\n| levelrequired  = 200\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| skillboost     = [[Club Fighting]] +4\n| resist         = [[Energy Damage|Energy]] +8%, [[Earth Damage|Earth]] -8%\n| armor          = 18\n| weight         = 145.00\n| classificacao  = 2\n| max_tier       = 2\n| npcprice       = 100 [[Silver Token]]s\n| buyfrom        = Cledwyn\n| sellto         = Jogadores.\n| implemented    = 10.90\n| notes          = Pertence a nova geração de armaduras de atributo defensivo superior para [[knight]]s (18). Supera as anteriores tanto nos atributos defensivos quanto em benefícios de [[skills]]. Faz parte do [[High Level Knight Basic Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 37260,
+    "ns": 0,
+    "title": "Thunderheart Hauberk",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Thunderheart Hauberk\n| vocrequired    = [[Knight]]s\n| levelrequired  = 200\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| skillboost     = [[Axe Fighting]] +4\n| resist         = [[Energy Damage|Energy]] +8%, [[Earth Damage|Earth]] -8%\n| armor          = 18\n| weight         = 145.00\n| classificacao  = 2\n| max_tier       = 2\n| npcprice       = 100 [[Silver Token]]s\n| buyfrom        = Cledwyn\n| sellto         = Jogadores.\n| implemented    = 10.90\n| notes          = Pertence a nova geração de armaduras de atributo defensivo superior para [[knight]]s (18). Supera as anteriores tanto nos atributos defensivos quanto em benefícios de [[skills]]. Faz parte do [[High Level Knight Basic Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 37261,
+    "ns": 0,
+    "title": "Thunderheart Cuirass",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Thunderheart Cuirass\n| vocrequired    = [[Knight]]s\n| levelrequired  = 200\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| skillboost     = [[Sword Fighting]] +4\n| resist         = [[Energy Damage|Energy]] +8%, [[Earth Damage|Earth]] -8%\n| armor          = 18\n| weight         = 145.00\n| classificacao  = 2\n| max_tier       = 2\n| npcprice       = 100 [[Silver Token]]s\n| buyfrom        = Cledwyn\n| sellto         = Jogadores.\n| implemented    = 10.90\n| notes          = Pertence a nova geração de armaduras de atributo defensivo superior para [[knight]]s (18). Supera as anteriores tanto nos atributos defensivos quanto em benefícios de [[skills]]. Faz parte do [[High Level Knight Basic Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 40942,
+    "ns": 0,
+    "title": "Swan Feather Cloak",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Swan Feather Cloak\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| flavortext     = It was carefully crafted out of one hundred swan maiden feathers.\n| resist         = [[Earth Damage|Earth]] +12%, [[Energy Damage|Energy]] +12%\n| skillboost     = [[Speed]] +10\n| armor          = 12\n| weight         = 4.00\n| classificacao  = 2\n| max_tier       = 2\n| levelrequired  = 60\n| value          = 300 000 - 800 000\n| npcvalue       = \n| npcprice       = \n| stackable      = não\n| droppedby      = Ninguém.\n| droppedRaidby  = \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = </br><noinclude><p><spoiler>* Recompensa da [[Threatened Dreams Quest]].</spoiler></p></noinclude>\n| implemented    = 11.40\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 48055,
+    "ns": 0,
+    "title": "Pair of Old Bracers",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Pair of Old Bracers\n| itemclass      = Equipamentos de Corpo \n| primarytype    = Armaduras\n| armor          = 1\n| resist         = \n| weight         = 2.00\n| value          =\n| npcvalue       = 500 \n| npcprice       = 0\n| stackable      = não\n| droppedby      = [[Thaian]].\n| buyfrom        = Jogadores.\n| sellto         = Yasir \n| implemented    = 12.30\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 49351,
+    "ns": 0,
+    "title": "Soulmantle",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Soulmantle\n| flavortext     = \n| stackable      = não\n| levelrequired  = 400\n| vocrequired    = [[Sorcerer]]s\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| skillboost     = [[Magic Level]] +4\n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| armor          = 17\n| resist         = [[Physical Damage|Physical]] +4%\n| weight         = 24.00\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.40\n| notes          = <noinclude><p><spoiler>* Possibilidade de ser obtido ao usar um [[Bag You Desire]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 49353,
+    "ns": 0,
+    "title": "Soulshroud",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Soulshroud\n| flavortext     = \n| stackable      = não\n| levelrequired  = 400\n| vocrequired    = [[Druid]]s\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| skillboost     = [[Magic Level]] +4\n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| armor          = 17\n| resist         = [[Death Damage|Death]] +10%\n| weight         = 24.00\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.40\n| notes          = <noinclude><p><spoiler>* Possibilidade de ser obtido ao usar um [[Bag You Desire]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 49355,
+    "ns": 0,
+    "title": "Soulshell",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Soulshell\n| flavortext     = \n| stackable      = não\n| levelrequired  = 400\n| vocrequired    = [[Paladin]]s\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| skillboost     = [[Distance Fighting]] +4 \n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| armor          = 18\n| resist         = [[Physical Damage|Physical]] +3%, [[Fire Damage|Fire]] +15%\n| weight         = 123.00\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.40\n| notes          = <noinclude><p><spoiler>* Possibilidade de ser obtido ao usar um [[Bag You Desire]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 56132,
+    "ns": 0,
+    "title": "Spiritthorn Armor",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Spiritthorn Armor\n| stackable      = não\n| levelrequired  = 400\n| vocrequired    = [[Knight]]s\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| skillboost     = [[Sword Fighting]] +4, [[Club Fighting]] +4, [[Axe Fighting]] +4\n| resist         = [[Physical Damage|Physical]] +13%\n| modificadores  = [[Damage Reflection]] +19\n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| armor          = 20\n| weight         = 160.00\n| value          = \n| npcvalue       = \n| droppedby      = [[Magma Bubble]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.90\n| notes          = <noinclude><p><spoiler>* Possibilidade de ser obtido ao usar uma [[Primal Bag]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 61203,
+    "ns": 0,
+    "title": "Mystical Dragon Robe",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Mystical Dragon Robe \n| vocrequired    = [[Druid]]s\n| levelrequired  = 300 \n| flavortext     = \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| resist         = [[Fire Damage|Fire]] +12%, [[Ice Damage|Ice]] -6%\n| skillboost     = [[Magic Level]] +3, [[Earth Magic Level]] +1\n| augments       = Terra Wave -> +3% Life Leech\n| imbuement      = 1\n| armor          = 15 \n| weight         = 38.00\n| classificacao  = 4\n| max_tier       = 10\n| value          = \n| droppedby      = [[Dragon Hoard]].\n| trade          = sim\n| buyfrom        = Jogadores. \n| implemented    = 13.30.14423\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 61204,
+    "ns": 0,
+    "title": "Stoic Iks Chestplate",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Stoic Iks Chestplate\n| vocrequired    = [[Knight]]s\n| levelrequired  = 250 \n| flavortext     = \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| resist         = [[Physical Damage|Physical]] +8%\n| skillboost     = [[Shielding]] +3\n| augments       = Intense Wound Cleansing -> -24s cooldown\n| imbuement      = 2\n| armor          = 16 \n| weight         = 142.00\n| classificacao  = 4\n| max_tier       = 10\n| value          = \n| droppedby      = [[Mitmah Vanguard]].\n| trade          = sim\n| buyfrom        = Jogadores. \n| implemented    = 13.30.14423\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 61239,
+    "ns": 0,
+    "title": "Stoic Iks Cuirass",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Stoic Iks Cuirass\n| vocrequired    = [[Druid]]s\n| levelrequired  = 250 \n| flavortext     = \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| resist         = [[Death Damage|Death]] +5%\n| skillboost     = [[Magic Level]] +4\n| augments       = Wrath of Nature -> +8% base damage\n| imbuement      = 1\n| armor          = 15\n| weight         = 44.00\n| classificacao  = 4\n| max_tier       = 10\n| value          = \n| droppedby      = [[Mitmah Vanguard]].\n| trade          = sim\n| buyfrom        = Jogadores. \n| implemented    = 13.30.14423\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64072,
+    "ns": 0,
+    "title": "Robe of Enlightenment",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Robe of Enlightenment\n| flavortext     = Traditional robe worn by pilgrims of the Three-Fold Path. Its design features elements of the natural appearance of moths\n| stackable      = não\n| levelrequired  = 150\n| vocrequired    = [[Monk]]s\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| skillboost     = [[Fist Fighting]] +3\n| imbuement      = 1\n| armor          = 8\n| classificacao  = 1\n| max_tier       = 1\n| mantra         = 15\n| resist         = [[Ice Damage|Ice]] +4%\n| augments       = Forceful Uppercut -> -15s cooldown\n| weight         = 24.00\n| value          = \n| npcvalue       = \n| npcprice       = 150 000\n| droppedby      = Ninguém.\n| buyfrom        = Enpa-Deia Pema\n| sellto         = Enpa-Deia Pema:150\n| implemented    = 15.00.249ccc\n| notes          = <spoiler>* Pode ser obtido por [[Monk]]s ao usar o nono Santuário (''9 - '''Serenity''' of Body and Mind'') da [[The Way of the Monk Quest]].</spoiler>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64080,
+    "ns": 0,
+    "title": "Naga Tanko",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Naga Tanko\n| vocrequired    = [[Monk]]s\n| levelrequired  = 270\n| flavortext     = A metal tanko, originally manufactured and refined by the ancient Naga\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| resist         = [[Physical Damage| Physical]] +2%, [[Fire Damage|Fire]] +6% \n| skillboost     = [[Fist Fighting]] +3, [[Magic Level]] +2\n| augments       =\n| imbuement      = 2\n| armor          = 10\n| mantra         = 18\n| weight         = 90.00\n| classificacao  = 4\n| max_tier       = 10\n| value          = \n| droppedby      = [[Timira the Many-Headed]]\n| trade          = sim\n| buyfrom        = Jogadores. \n| implemented    = 15.00.249ccc\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64090,
+    "ns": 0,
+    "title": "Plain Monk Robe",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Plain Monk Robe\n| vocrequired    = [[Monk]]s\n| levelrequired  = \n| flavortext     = A plain variant of the traditional robe of Merudri monks\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| resist         = \n| skillboost     = [[Fist Fighting]] +1\n| augments       = \n| imbuement      = \n| armor          = 6\n| mantra         = 7\n| weight         = 65.00\n| classificacao  = 1\n| max_tier       = 1\n| value          = \n| npcprice       = 450\n| npcvalue       = 1\n| droppedby      = Desconhecido.\n| trade          = sim\n| buyfrom        = Enpa-Deia Pema\n| sellto         = Avriel\n| implemented    = 15.00.249ccc\n| notes          = <spoiler>* Pode ser obtido durante a [[The Way of the Monk Quest]].</spoiler>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64092,
+    "ns": 0,
+    "title": "Stoic Iks Robe",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Stoic Iks Robe\n| vocrequired    = [[Monk]]s\n| levelrequired  = 250 \n| flavortext     = \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| resist         = [[Physical Damage|Physical]] +2%, [[Energy Damage|Energy]] +5%\n| skillboost     = [[Fist Fighting]] +4\n| augments       = Spirit Mend -> +8% base healing\n| imbuement      = 2\n| armor          = 9\n| mantra         = 16\n| weight         = 128.00\n| classificacao  = 4\n| max_tier       = 10\n| value          = \n| droppedby      = [[Mitmah Vanguard]].\n| trade          = sim\n| buyfrom        = Jogadores. \n| implemented    = 15.00.249ccc\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64094,
+    "ns": 0,
+    "title": "Soulgarb",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Soulgarb\n| flavortext     = \n| stackable      = não\n| levelrequired  = 400\n| vocrequired    = [[Monk]]s\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| skillboost     = [[Fist Fighting]] +4 , [[Magic Level]] +2\n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| armor          = 11\n| resist         = [[Physical Damage|Physical]] +4%, [[Ice Damage|Ice]] +8%\n| weight         = 107.00\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.00.249ccc\n| mantra         = 19\n| notes          = <noinclude><p><spoiler>* Possibilidade de ser obtido ao usar um [[Bag You Desire]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64513,
+    "ns": 0,
+    "title": "Spirit Bind",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Spirit Bind\n| vocrequired    = [[Monk]]s\n| levelrequired  = 75\n| flavortext     = A sturdy robe interwoven with ethereal spirits\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| resist         = [[Energy Damage|Energy]] +5%, [[Ice Damage|Ice]] -5%\n| skillboost     = [[Fist Fighting]] +2\n| augments       = \n| imbuement      = \n| armor          = 8\n| mantra         = 12\n| weight         = 135.00\n| classificacao  = 2\n| max_tier       = 2\n| value          = \n| droppedby      = Ninguém.\n| trade          = sim\n| buyfrom        = Jogadores. \n| implemented    = 15.00.249ccc\n| notes          = <noinclude><p><spoiler>* Pode ser obtido como recompensa da [[The Elemental Spheres Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64935,
+    "ns": 0,
+    "title": "Norcferatu Tuskplate",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Norcferatu Tuskplate\n| vocrequired    = [[Knight]]s\n| levelrequired  = 270\n| flavortext     = \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| resist         = [[Physical Damage|Physical]] +4%\n| skillboost     = [[Sword Fighting]] +3, [[Club Fighting]] +3, [[Axe Fighting]] +3\n| augments       = Brutal Strike -> -2s cooldown, Brutal Strike -> +10% critical extra damage\n| imbuement      = \n| armor          = 22\n| mantra         = \n| weight         = 148.00\n| classificacao  = 4\n| max_tier       = 10\n| value          = \n| droppedby      = [[Vladrukh]]\n| trade          = sim\n| buyfrom        = Jogadores. \n| implemented    = 15.10.46b862\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64937,
+    "ns": 0,
+    "title": "Norcferatu Bloodhide",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Norcferatu Bloodhide\n| vocrequired    = [[Sorcerer]]s\n| levelrequired  = 270\n| flavortext     = \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| resist         = [[Earth Damage|Earth]] +8%\n| skillboost     = [[Energy Magic Level]] +6, [[Fire Magic Level]] +3\n| augments       = Ultimate Energy Strike -> +14% critical extra damage, Ultimate Energy Strike -> +5% critical hit chance\n| imbuement      = 1\n| armor          = 16\n| mantra         = \n| weight         = 39.00\n| classificacao  = 4\n| max_tier       = 10\n| value          = \n| droppedby      = [[Vladrukh]].\n| trade          = sim\n| buyfrom        = Jogadores. \n| implemented    = 15.10.46b862\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64939,
+    "ns": 0,
+    "title": "Norcferatu Bonecloak",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Norcferatu Bonecloak\n| vocrequired    = [[Druid]]s\n| levelrequired  = 270\n| flavortext     = \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| resist         = [[Ice Damage|Ice]] +8%\n| skillboost     = [[Earth Magic Level]] +6, [[Healing Magic Level]] +3\n| augments       = Ultimate Terra Strike -> +14% critical extra damage, Ultimate Terra Strike -> +5% critical hit chance\n| imbuement      = 1\n| armor          = 16\n| mantra         = \n| weight         = 42.00\n| classificacao  = 4\n| max_tier       = 10\n| value          = \n| droppedby      = [[Vladrukh]].\n| trade          = sim\n| buyfrom        = Jogadores. \n| implemented    = 15.10.46b862\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 65935,
+    "ns": 0,
+    "title": "Stag Robe",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Stag Robe\n| vocrequired    = [[Monk]]s\n| levelrequired  = 350\n| flavortext     = \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| resist         = [[Physical Damage|Physical]] +4%\n| skillboost     = [[Fist Fighting]] +4\n| augments       = Spiritual Outburst -> +1% critical hit chance\n| imbuement      = 2\n| armor          = 10\n| mantra         = 17\n| weight         = 80.00\n| classificacao  = 4\n| max_tier       = 10\n| buyfrom        = \n| sellto         =\n| npcvalue       =\n| npcprice       =\n| droppedby      = [[Court Warlock]].\n| trade          = sim \n| implemented    = 15.20.7a5cc9\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 66090,
+    "ns": 0,
+    "title": "Stag Plate",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Stag Plate\n| vocrequired    = [[Paladin]]s\n| levelrequired  = 350\n| flavortext     = \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| resist         = [[Physical Damage|Physical]] +3%, [[Ice Damage|Ice]] +8%\n| skillboost     = [[Distance Fighting]] +3, [[Shielding]] +3\n| augments       = Divine Grenade -> +1% critical hit chance\n| imbuement      = 2\n| armor          = 17\n| mantra         = \n| weight         = 130.00\n| classificacao  = 4\n| max_tier       = 10\n| buyfrom        = \n| sellto         =\n| npcvalue       =\n| npcprice       =\n| droppedby      = [[Court Warlock]].\n| trade          = sim \n| implemented    = 15.20.7a5cc9\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6588,
+    "ns": 0,
+    "title": "Tunic",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Tunic\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| armor          = 0\n| weight         = 15.00\n| value          = \n| npcvalue       = 0\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.2\n| notes          = Apesar disso, ainda não se sabe se é possível ser obtido nos mundos regulares.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6589,
+    "ns": 0,
+    "title": "Velvet Mantle",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Velvet Mantle\n| vocrequired    = [[Sorcerer]]s\n| levelrequired  = 75\n| flavortext     = The smooth tissue seems to sparkle.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| stackable      = não\n| armor          = 12\n| resist         = [[Energy Damage|Energy]] +12%, [[Earth Damage|Earth]] -12%\n| weight         = 28.50\n| classificacao  = 2\n| max_tier       = 2\n| value          = 6 000 000 - 15 000 000 +\n| droppedby      = [[Ferumbras Mortal Shell]], [[The False God]].\n| droppedRaidby  = [[Ferumbras]].\n| buyfrom        = Jogadores.\n| npcvalue       = 0\n| sellto         = Jogadores. \n| implemented    = 8.2\n| notes          = Item raro e valioso. Obtido pela primeira vez em [[Astera]]. Faz parte do [[Lightning Set]].\n<gallery>Arquivo:Velvet.JPG|Velvet Mantle em Astera. </gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6591,
+    "ns": 0,
+    "title": "Voltage Armor",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Voltage Armor\n| vocrequired    = [[Knight]]s and [[Paladin]]s\n| levelrequired  = 60\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| resist         = [[Energy Damage|Energy]] +3%, [[Earth Damage|Earth]] -3%\n| armor          = 13\n| weight         = 84.50\n| classificacao  = 2\n| max_tier       = 2\n| value          = 100 000 - 500 000\n| npcvalue       = 0\n| droppedby      = [[Energy Overlord]], [[Hellgorak]], [[Terofar]], [[The Last Lore Keeper]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.2\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6592,
+    "ns": 0,
+    "title": "White Dress",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = White Dress\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| armor          = 0\n| stackable      = não\n| weight         = 24.00\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Apesar disso, ainda não se sabe se é possível ser obtido nos mundos regulares. Item visto uma vez em [[Justera]]. Existe, também, um em [[Antica]]. Este, pertencia a personagem {{Character|White Dress}}, que trocou com {{Character|Sheepyy}} por um [[Golden Helmet]].\n\n<gallery>\nArquivo:White Dress.png|White Dress exibido em uma [http://www.tibia.com/abouttibia/?subtopic=screenshots&currentscreenshot=6 foto] no site oficial.\nArquivo:White_dress_sheepyy.jpg|White Dress na casa do personagem {{Character|Sheepyy}}.\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6593,
+    "ns": 0,
+    "title": "Windborn Colossus Armor",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Windborn Colossus Armor\n| vocrequired    = [[Knight]]s\n| levelrequired  = 100\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| skillboost     = [[Club Fighting]] +2\n| resist         = [[Energy Damage|Energy]] +5%, [[Earth Damage|Earth]] -5%\n| armor          = 15\n| weight         = 120.00\n| classificacao  = 2\n| max_tier       = 2\n| value          = 50 000 - 500 000\n| npcvalue       = 50 000\n| trade          = sim\n| buyfrom        = Jogadores.\n| sellto         = Gnomission\n| implemented    = 8.2\n| notes          = Faz parte do [[High Level Knight Basic Set]].\n<noinclude><p><spoiler>* Pode ser obtido como recompensa da [[The Elemental Spheres Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6594,
+    "ns": 0,
+    "title": "Witchhunter's Coat",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Witchhunter's Coat\n| levelrequired  = 50\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| resist         = [[Death Damage|Death]] +2%, [[Holy Damage|Holy]] -2%\n| armor          = 11\n| weight         = 25.00\n| value          = Negociável\n| npcvalue       = 0\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.2\n| notes          = Apesar disso, ainda não se sabe se é possível ser obtido nos mundos regulares.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6597,
+    "ns": 0,
+    "title": "Yalahari Armor",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Yalahari Armor\n| vocrequired    = [[Knight]]s\n| levelrequired  = 80\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| armor          = 16\n| resist         = [[Death Damage|Death]] +3%\n| weight         = 70.00\n| classificacao  = 2\n| max_tier       = 2\n| value          = 50 000 - 150 000\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.4\n| notes          = Armadura leve e com boa defesa. Faz parte do [[Yalahari Set]] e [[Rare Set]].\n<noinclude><p><spoiler>* Pode ser obtido como recompensa da [[In Service of Yalahar Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6598,
+    "ns": 0,
+    "title": "Zaoan Armor",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Zaoan Armor\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| vocrequired    = [[Knight]]s and [[Paladin]]s\n| levelrequired  = 50\n| skillboost     = [[Speed]] +10\n| armor          = 13\n| weight         = 95.50\n| classificacao  = 2\n| max_tier       = 2\n| value          = 13 500 - 20 000\n| droppedby      = [[Darklight Emitter]], [[Draken Abomination]], [[Draken Elite]], [[Draken Warmaster]], [[Ethershreck]], [[Fazzrah]], [[Ghastly Dragon]], [[Lizard Chosen]], [[Lizard High Guard]], [[Lizard Legionnaire]], [[Lizard Zaogun]], [[Paiz the Pauperizer]].\n| droppedRaidby  = [[Battlemaster Zunzu]].\n| npcvalue       = 14 000\n| npcprice       = 0\n| buyfrom        = Jogadores.\n| sellto         = Esrik\n| implemented    = 8.54\n| notes          = Faz parte do [[Zaoan Set]] e do [[Haste Set]].\n<noinclude><p><spoiler>* Para vendê-lo ao NPC é preciso ter entregue 9 [[Tome of Knowledge|tomos]] na [[Tomes of Knowledge Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6599,
+    "ns": 0,
+    "title": "Zaoan Robe",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Zaoan Robe\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 60\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| resist         = [[Fire Damage|Fire]] +10%, [[Ice Damage|Ice]] -10%\n| armor          = 11\n| weight         = 24.50\n| classificacao  = 2\n| max_tier       = 2\n| value          = 11 500 - 20 000\n| droppedby      = [[Lizard Dragon Priest]], [[Draken Spellweaver]].\n| droppedRaidby  = [[Flamecaller Zazrak]].\n| npcvalue       = 12 000\n| npcprice       = 0\n| buyfrom        = Jogadores.\n| sellto         = Lailene\n| implemented    = 8.54\n| notes          = Oferece a segunda melhor proteção contra danos de fogo do jogo, menor apenas que o [[Mystical Dragon Robe]] e [[Dragon Robe]]. Faz parte do [[Magma Set]] e do [[Zaoan Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 37248,
+    "ns": 0,
+    "title": "Thundermind Raiment",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Thundermind Raiment\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 200\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| skillboost     = [[Magic Level]] +4\n| resist         = [[Energy Damage|Energy]] +8%, [[Earth Damage|Earth]] -8%\n| armor          = 15\n| weight         = 55.00\n| classificacao  = 2\n| max_tier       = 2\n| npcprice       = 100 [[Silver Token]]s\n| buyfrom        = Cledwyn\n| sellto         = Jogadores.\n| droppedby      = Ninguém.\n| implemented    = 10.90\n| notes          = Pertence a nova geração de armaduras de atributo defensivo superior para [[mages]] (15). Supera as anteriores tanto nos atributos defensivos quanto em benefícios de [[skills]]. Faz parte do [[Mage Set]] e [[Magic Level Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 37252,
+    "ns": 0,
+    "title": "Thundersoul Tabard",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Thundersoul Tabard\n| vocrequired    = [[Paladin]]s\n| levelrequired  = 200\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| skillboost     = [[Distance Fighting]] +4\n| resist         = [[Energy Damage|Energy]] +8%, [[Earth Damage|Earth]] -8%\n| armor          = 18\n| weight         = 145.00\n| classificacao  = 2\n| max_tier       = 2\n| npcprice       = 100 [[Silver Token]]s\n| buyfrom        = Cledwyn\n| sellto         = Jogadores.\n| implemented    = 10.90\n| notes          = Pertence a nova geração de armaduras de atributo defensivo superior para [[Paladin]]s (18). Supera as anteriores tanto nos atributos defensivos quanto em benefícios de [[skills]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 46701,
+    "ns": 0,
+    "title": "Toga Mortis",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Toga Mortis\n| vocrequired    = [[Sorcerer]]s \n| levelrequired  = 220\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| skillboost     = [[Magic Level]] +4\n| imbuement      = 1\n| classificacao  = 3\n| max_tier       = 3\n| armor          = 16\n| resist         = [[Death Damage|Death]] +6%\n| weight         = 52.00\n| stackable      = não\n| value          = \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| droppedby      = [[King Zelos]].\n| implemented    = 12.20\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 47778,
+    "ns": 0,
+    "title": "Traditional Shirt",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Traditional Shirt\n| flavortext     = A traditional white Orcsoberfest shirt. Not worm by many ogres during the actual festivities anymore, however.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| secondarytype  = \n| armor          = 0\n| weight         = 4.00\n| stackable      = não\n| value          = \n| npcvalue       =\n| droppedby      = Ninguém.\n| droppedRaidby  = \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.20.9066\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 61205,
+    "ns": 0,
+    "title": "Unerring Dragon Scale Armor",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Unerring Dragon Scale Armor\n| vocrequired    = [[Paladin]]s\n| levelrequired  = 300 \n| flavortext     = \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| resist         = [[Energy Damage|Energy]] +10%, [[Earth Damage|Earth]] -5% \n| skillboost     = [[Distance Fighting]] +3, [[Holy Magic Level]] +1\n| augments       = Strong Ethereal Spear -> +4% Life Leech\n| imbuement      = 2\n| armor          = 17 \n| weight         = 135.00\n| classificacao  = 4\n| max_tier       = 10\n| value          = \n| droppedby      = [[Dragon Hoard]].\n| trade          = sim\n| buyfrom        = Jogadores. \n| implemented    = 13.30.14423\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 63869,
+    "ns": 0,
+    "title": "Zaoan Monk Robe",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Zaoan Monk Robe\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Armaduras\n| vocrequired    = [[Monk]]s\n| levelrequired  = 50\n| skillboost     = [[Fist Fighting]] +1\n| augments       = Mystic Repulse -> Critical Extra Damage +10%\n| armor          = 7\n| mantra         = 11\n| weight         = 110.00\n| classificacao  = 2\n| max_tier       = 2\n| value          = \n| droppedby      = [[Ethershreck]], [[Hatebreeder]], [[Soul of Dragonking Zyrtarch]], [[Lizard Templar]].\n| droppedRaidby  = \n| npcvalue       = \n| npcprice       = \n| buyfrom        = Jogadores.\n| sellto         = \n| implemented    = 15.00.249ccc\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

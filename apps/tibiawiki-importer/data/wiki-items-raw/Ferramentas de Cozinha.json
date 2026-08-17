@@ -1,0 +1,326 @@
+{
+ "query": {
+  "pages": [
+   {
+    "pageid": 7271,
+    "ns": 0,
+    "title": "Bowl",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bowl\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes Líquidos\n| secondarytype  = Ferramentas de Cozinha\n| attrib         = Carrega líquido.\n| stackable      = não\n| weight         = 3.80\n| npcvalue       = 0\n| droppedRaidby  = [[Fernfang]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Pode ser usado para carregar líquidos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7275,
+    "ns": 0,
+    "title": "Cup",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Cup\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes Líquidos\n| secondarytype  = Ferramentas de Cozinha\n| attrib         = Carrega líquido.\n| stackable      = não\n| weight         = 2.00\n\n| value          = 2\n| npcvalue       = 0\n| npcprice       = 2\n| droppedby      = Ninguém.\n| buyfrom        = Bashira, Ahmet, Sarina:3, Halif, Red Lilly, Perod, Maro, Bertha, Gorn, Zora, Chephan, Gree Dee\n| sellto         = Jogadores.\n| notes          = Pode carregar líquidos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7276,
+    "ns": 0,
+    "title": "Cup (Pirate)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Cup (Pirate)\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes Líquidos\n| secondarytype  = Ferramentas de Cozinha\n| attrib         = Carrega líquido.\n| stackable      = não\n| weight         = 2.00\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Pode ser encontrado em [[Nargor]] e [[Darashia]]. Um pode ser encontrado em um ponto de respawn diário na taberna de [[Farmine]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7281,
+    "ns": 0,
+    "title": "Jug",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Jug\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas de Cozinha\n| secondarytype  = Recipientes Líquidos\n| attrib         = Carrega líquido.\n| stackable      = não\n| weight         = 7.50\n| value          = Negociável\n| npcprice       = 10\n| droppedby      = Ninguém.\n| buyfrom        = Perod, Maro, Bertha, Gorn, Zora, Chephan\n| sellto         = Jogadores.\n| notes          = Você pode encontrar em quase todas as [[tavern]]as do jogo.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7283,
+    "ns": 0,
+    "title": "Mug",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Mug\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas de Cozinha\n| secondarytype  = Recipientes Líquidos\n| attrib         = Carrega líquido.\n| weight         = 2.50\n\n| stackable      = não\n| value          = Negociável\n| npcprice       = 1\n| droppedby      = Ninguém.\n| buyfrom        = Arito, Bolfona:2, Karl:20, Miraia:2, Swolt, Jimbin, Snake Eye:5, Clyde, Mirabell, Perod:4, Maro:4, Norma:2, Bertha:4, Dankwart:3, Gorn:4, Zora:4, Boozer, Chephan:4, Maria, Urkalio, Pugwah, Armenius:3\n| sellto         = Jogadores.\n| notes          = O item comprado vem com algum tipo de [[Líquidos|liquido]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7564,
+    "ns": 0,
+    "title": "Baking Tray",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Baking Tray\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas de Cozinha\n| secondarytype  = \n| attrib         = Pode-se colocar um [[Lump of Dough]] neste item.\n| stackable      = sim\n| weight         = 12.00\n| value          = 20\n| npcprice       = 20\n| droppedby      = Ninguém.\n| buyfrom        = Maro, Chephan\n| sellto         = Jogadores.\n| implemented    = 7.6\n| notes          = Você pode encontrar em várias tabernas do Tibia. Pode ser encontrado no palácio de Thais, [[Nargor]] (Kitchen), [[Fibula]] e nas cavernas de [[Troll]]s de [[Thais]]. Pode ser usado para fazer [[Cookie]]s. Após usar um [[Lump of Cake Dough]] nesse item, o nome mudará para [[Baking Tray (With Dough)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7566,
+    "ns": 0,
+    "title": "Cleaver",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Cleaver\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas de Cozinha\n| secondarytype  = \n| attrib         = Nenhum.\n| stackable      = não\n| weight         = 6.60\n| npcprice       = 15\n| droppedby      = [[Diabolic Imp]], [[Dworc Fleshhunter]], [[Fire Devil]].\n| buyfrom        = Maro, Chephan\n| sellto         = Jogadores.\n| notes          = Pode ser visto na loja de [[Tom]] em [[Rookgaard]] e outros lugares como cozinhas.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7567,
+    "ns": 0,
+    "title": "Fork",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Fork\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas de Cozinha\n| secondarytype  = \n| attrib         = Nenhum.\n| stackable      = não\n| npcprice       = 10\n| weight         = 1.00\n| droppedby      = Ninguém.\n| buyfrom        = Maro, Chephan\n| sellto         = Jogadores.\n| notes          = Pode ser encontrado em muitas cidades, particularmente em castelos ou tabernas.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7568,
+    "ns": 0,
+    "title": "Kitchen Knife",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se procura pela espada, veja [[Knife]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Kitchen Knife\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas de Cozinha\n| secondarytype  = \n| attrib         = Nenhum.\n| stackable      = não\n| weight         = 1.00\n| npcprice       = 10\n| value          = 10\n| droppedby      = Ninguém.\n| buyfrom        = Larek:20, Maro, Chephan\n| sellto         = Jogadores.\n| notes          = Pode ser encontrado em muitas cidades, ou em certas áreas aonde [[criaturas]] moram. Ela pode ser usada para cortar [[pumpkin]]s, e para decorar [[Cake]]s.<br />\n<noinclude><p><spoiler>Duas são necessárias para missões da [[What a Foolish Quest]].<br />É necessária para as [[The Ice Islands Quest]].<br />Também é necessária na [[Rottin Wood and the Married Men Quest]], mas você também pode usar uma [[Obsidian Knife]] nela.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7569,
+    "ns": 0,
+    "title": "Oven Spatula",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Oven Spatula\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas de Cozinha\n| secondarytype  = \n| attrib         = Nenhum.\n| stackable      = não\n| npcprice       = 12\n| weight         = 14.00\n| droppedby      = Ninguém.\n| buyfrom        = Chephan\n| sellto         = Jogadores.\n| notes          = Pode ser encontrado em muitas cidades, particularmente em castelos e tavernas.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7570,
+    "ns": 0,
+    "title": "Pan",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Pan\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas de Cozinha\n| secondarytype  = \n| attrib         = Nenhum.\n| stackable      = não\n| weight         = 18.00\n| value          = 20\n| npcprice       = 20\n| droppedby      = Ninguém.\n| buyfrom        = Chephan, Maro\n| sellto         = Jogadores.\n| notes          = \n<noinclude><p><spoiler>\n* Obtido na [[Goblin Temple Quest]].\n* Pode ser trocado por uma [[Small Health Potion]] com [[Billy]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7571,
+    "ns": 0,
+    "title": "Plate",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Plate\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas de Cozinha\n| secondarytype  = \n| attrib         = Nenhum.\n| stackable      = não\n| weight         = 1.50\n| value          = 6\n| npcvalue       = 0\n| npcprice       = 6\n| droppedRaidby  = [[Fernfang]].\n| buyfrom        = Bashira, Ahmet, Sarina, Halif, Red Lilly, Perod, Maro, Bertha, Gorn, Zora, Chephan, Gree Dee\n| sellto         = Jogadores.\n| notes          = Plates podem ser encontradas em várias cidades do [[Tibia]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7572,
+    "ns": 0,
+    "title": "Rolling Pin",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Rolling Pin\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas de Cozinha\n| secondarytype  = \n| attrib         = Nenhum.\n| weight         = 5.00\n| stackable      = não\n| npcprice       = 12\n| value          = Negociável\n| npcvalue       = 0\n| droppedby      = [[Crazed Beggar]].\n| buyfrom        = Chephan, Bozo:250\n| sellto         = Jogadores.\n| notes          = Podem ser encontrados na maioria das cidades, especialmente nas tavernas ou castelos. '''Mace of the Fury''' é um '''Rolling Pin''', não uma arma, como diz [[Bozo]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7574,
+    "ns": 0,
+    "title": "Spoon",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Spoon\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas de Cozinha\n| secondarytype  = \n| stackable      = não\n| attrib         = Nenhum.\n| weight         = 1.00\n| npcprice       = 10\n| droppedby      = Ninguém.\n| buyfrom        = Maro, Chephan\n| sellto         = Jogadores.\n| notes          = Podem ser encontrados na maioria das cidades, especialmente nas tabernas ou castelos.<noinclude><p><spoiler>Necessária para uma missão da [[What a Foolish Quest]].<br />Necessária para uma missão da [[The Ice Islands Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7575,
+    "ns": 0,
+    "title": "Wooden Spoon",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Wooden Spoon\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas de Cozinha\n| secondarytype  = \n| npcprice       = 5\n| stackable      = não\n| attrib         = Nenhum.\n| weight         = 1.00\n| value          = 5\n| droppedby      = [[Crazed Beggar]].\n| buyfrom        = Maro, Chephan\n| sellto         = Jogadores.\n| notes          = Pode ser encontrado em várias cidades, normalmente em castelos e tabernas.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 26614,
+    "ns": 0,
+    "title": "Cup (Dwarven)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Cup (Dwarven)\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes Líquidos\n| secondarytype  = Ferramentas de Cozinha\n| attrib         = Carrega líquido.\n| stackable      = não\n| weight         = 2.00\n| trade          = não\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Pode ser vista no [[mercado]]. Dois podem ser encontrados em pontos de respawn diário na taberna de [[Farmine]].\n\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 47957,
+    "ns": 0,
+    "title": "Empty Beer Mug",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Empty Beer Mug\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas de Cozinha\n| secondarytype  = Recipientes Líquidos\n| attrib         = Carrega [[Beer|Cerveja]].\n| weight         = 5.00\n| stackable      = não\n| location       = [[Secluded Island (Orcsoberfest)|Secluded Island]] e em casa de jogadores.\n| implemented    = 12.20.9066\n| buyfrom        = Xaver\n| npcprice       = 450 [[Festive Point]]s\n| sellto         = Jogadores.\n| notes          = <noinclude><p><spoiler>* Você pode enchê-la em uma [[Super Cask]] [[Arquivo:Super Cask.gif|link=]] para obter a [[Beer Mug]][[Arquivo:Beer Mug.gif]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 54986,
+    "ns": 0,
+    "title": "Bowl (Cinza)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bowl (Cinza)\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas de Cozinha\n| secondarytype  = \n| attrib         = Nenhum.\n| weight         = 18.50\n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.8\n| notes          = Pode ser encontrado em [[Nargor]] e na casa do [[Rottin Wood]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 54987,
+    "ns": 0,
+    "title": "Bowl (Verde)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bowl (Verde)\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas de Cozinha\n| secondarytype  = \n| attrib         = Nenhum.\n| weight         = 18.50\n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.8\n| notes          = Pode ser encontrado em Zao ({{mapa|33155,31042,5:2|aqui}}).\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 54988,
+    "ns": 0,
+    "title": "Bowl (Amarelo)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bowl (Amarelo)\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas de Cozinha\n| secondarytype  = \n| attrib         = Nenhum.\n| weight         = 18.50\n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.8\n| notes          = Pode ser encontrado em .\n}}"
+       }
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

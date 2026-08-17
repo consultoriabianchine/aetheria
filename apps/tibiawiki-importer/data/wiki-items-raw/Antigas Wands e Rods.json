@@ -1,0 +1,230 @@
+{
+ "query": {
+  "pages": [
+   {
+    "pageid": 6350,
+    "ns": 0,
+    "title": "Quagmire Rod",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Quagmire Rod\n| itemclass     = Armas\n| primarytype   = Antigas Wands e Rods\n| flavortext    = It emits clouds of poisonous swamp gas.\n| vocrequired   = [[Druid]]s\n| levelrequired = 26\n| damage        = 45\n| damagetype    = Earth\n| weight        = 26.50\n| mana          = 8\n| range         = 2\n| trade         = não\n| mercado       = não\n| buyfrom       = Ninguém.\n| sellto        = Ninguém.\n| npcvalue      = 2 000\n| droppedby     = [[Acolyte of the Cult]], [[Bonelord]], [[Elder Bonelord]], [[Fury]], [[Lizard Snakecharmer]].\n| price         = 10 000 [[gp]]\n| implemented   = 7.6\n| removed       = 8.1\n| notes         = Quagmire Rods substituíram Wooden Wands [[Arquivo:Wooden Wand.gif]] no [[Updates e Patches|Update 7.6]].<br>\nFoi substituída pela [[Terra Rod]] [[Arquivo:Terra Rod.gif]] no [[Updates/8.1|update 8.1]]. Antigamente o dano earth era conhecido como poison.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6351,
+    "ns": 0,
+    "title": "Blue Spell Wand",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Blue Spell Wand\n| flavortext     =\n| itemclass      = Armas\n| primarytype    = Antigas Wands e Rods\n| secondarytype  = \n| attrib         = Nenhum.\n| mana           = \n| weight         = 23.00\n| buyfrom        = Ninguém.\n| sellto         = Ninguém.\n| mercado        = não\n| removed        = 7.6\n| droppedby      = [[Orc Shaman]].\n| notes          = Essa wand foi transformada na [[Wand of Vortex]] no [[Updates e Patches|Update 7.6]]. Podia ser comprada do NPC [[Alexander]] por 1 600 [[gp]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6365,
+    "ns": 0,
+    "title": "Tempest Rod",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Tempest Rod\n| flavortext     = It grants you the power of striking your foes with furious thunderstorms.\n| vocrequired    = [[Druid]]s\n| levelrequired  = 33\n| itemclass      = Armas\n| primarytype    = Antigas Wands e Rods\n| damage         = 55-75\n| damagetype     = Energy\n| weight         = 21.00\n| mana           = 13\n| range          = 1\n| droppedby      = [[Adept of the Cult]], [[Blightwalker]], [[Marid]], [[Priestess]].\n| mercado        = não\n| value          = 15 000\n| npcvalue       = 3 000\n| buyfrom        = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 7.6\n| removed        = 8.1\n| notes          = Tempest Rods substituíram Elven Wands [[Arquivo:Elven Wand.gif]] no [[Updates e Patches|Update 7.6]].<br>\nFoi substituída pela [[Hailstorm Rod]] [[Arquivo:Hailstorm Rod.gif]] no [[Updates/8.1|Update 8.1]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6366,
+    "ns": 0,
+    "title": "Volcanic Rod",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Volcanic Rod\n| itemclass     = Armas\n| primarytype   = Antigas Wands e Rods\n| flavortext    = It erupts powerful bursts of magma upon everything in your path.\n| vocrequired   = [[Druid]]s\n| levelrequired = 19\n| damage        = 30\n| damagetype    = Fire\n| weight        = 29.00\n| mana          = 5\n| range         = 3\n| trade         = não\n| mercado       = não\n| buyfrom       = Ninguém.\n| sellto        = Ninguém.\n| npcvalue      = 1 000\n| droppedby     = [[Diabolic Imp]], [[Fire Devil]], [[Morgaroth]], [[Rahemos]], [[Warlock]], [[Witch]].\n| implemented   = 7.6\n| removed       = 8.1\n| notes         = Volcanic Rods substituíram a Wand of Might [[Arquivo:Wand of Might.gif]] no [[Updates e Patches|Update 7.6]].<br>\nFoi substituída pela [[Necrotic Rod]] [[Arquivo:Necrotic Rod.gif]] no [[Updates/8.1|Update 8.1]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6367,
+    "ns": 0,
+    "title": "Wand of Plague",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Wand of Plague\n| flavortext    = Infectious goo covers its tip.\n| itemclass     = Armas\n| primarytype   = Antigas Wands e Rods\n| vocrequired   = [[Sorcerer]]s\n| levelrequired = 19\n| damage        = 30\n| damagetype    = Earth\n| weight        = 23.00\n| mana          = 5\n| range         = 2\n| mercado       = não\n| buyfrom       = Ninguém.\n| sellto        = Ninguém.\n| droppedby     = [[Orc Shaman]].\n| implemented   = 7.6\n| removed       = 8.1\n| notes         = Wands of Plague substituíram a Green Spell Wand [[Arquivo:Green_Spell_Wand.gif]] no [[Updates e Patches|Update 7.6]].<br>\nFoi substituída pela [[Wand of Decay]] [[Arquivo:Wand of Decay.gif]] no [[Updates/8.1|update 8.1]]. Antigamente o dano earth era conhecido como poison.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6368,
+    "ns": 0,
+    "title": "Conjurer Wand",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Conjurer Wand\n| flavortext     =\n| itemclass      = Armas\n| primarytype    = Antigas Wands e Rods\n| secondarytype  = \n| attrib         = Nenhum.\n| mana           = \n| weight         = 19.05\n| removed        = 7.6\n| droppedby      = [[Necromancer]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| mercado        = não\n| notes          = Essa wand foi transformada na [[Moonlight Rod]] no [[Updates e Patches|Update 7.6]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6369,
+    "ns": 0,
+    "title": "Yellow Spell Wand",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Yellow Spell Wand\n| flavortext     =\n| itemclass      = Armas\n| primarytype    = Antigas Wands e Rods\n| secondarytype  = \n| attrib         = Nenhum.\n| mana           = \n| weight         = 23.00\n| value          = Negociável\n| mercado        = não\n| removed        = 7.6\n| droppedby      = Ninguém.\n| buyfrom        = Ninguém.\n| sellto         = Ninguém.\n| notes          = Essa wand foi transformada na [[Wand of Cosmic Energy]] no '''Update 7.6'''. Não existe mais no jogo.<br>\nEra obtida onde hoje se consegue como recompensa a [[Wand of Cosmic Energy]] na [[The Paradox Tower Quest]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6370,
+    "ns": 0,
+    "title": "Elven Wand",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Elven Wand\n| flavortext     =\n| itemclass      = Armas\n| primarytype    = Antigas Wands e Rods\n| secondarytype  = \n| weight         = 21.00\n| trade          = não\n| attrib         = Nenhum.\n| mana           = \n| removed        = 7.6\n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Ninguém.\n| sellto         = Ninguém.\n| notes          = Essa wand foi transformada na [[Tempest Rod]] no '''Update 7.6'''. Não existe mais no jogo.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6371,
+    "ns": 0,
+    "title": "Golden Wand",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Golden Wand\n| flavortext     =\n| itemclass      = Armas\n| primarytype    = Antigas Wands e Rods\n| secondarytype  = \n| attrib         = Nenhum.\n| mana           = \n| weight         = 43\n| trade          = não\n| removed        = 7.6\n| mercado        = não\n| droppedby      = [[Ghost]]\n| buyfrom        = Ninguém.\n| sellto         = Ninguém.\n| notes          = Essa wand foi transformada na [[Snakebite Rod]] no '''Update 7.6'''. Não existe mais no jogo.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6372,
+    "ns": 0,
+    "title": "Green Spell Wand",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Green Spell Wand\n| flavortext     =\n| itemclass      = Armas\n| primarytype    = Antigas Wands e Rods\n| secondarytype  = \n| attrib         = Nenhum.\n| mana           = \n| removed        = 7.6\n| mercado        = não\n| weight         = 23.00\n| droppedby      = [[Behemoth]]\n| buyfrom        = Ninguém.\n| sellto         = Ninguém.\n| notes          = Essa wand foi transformada na [[Wand of Plague]] no '''Update 7.6'''. Não existe mais no jogo.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6373,
+    "ns": 0,
+    "title": "Red Spell Wand",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Red Spell Wand\n| flavortext     = \n| itemclass      = Armas\n| primarytype    = Antigas Wands e Rods\n| secondarytype  = \n| attrib         = Nenhum.\n| mana           = \n| weight         = 23.00\n| removed        = 7.6\n| mercado        = não\n| droppedby      = [[Fire Devil]]\n| buyfrom        = Ninguém.\n| sellto         = Ninguém.\n| notes          = Essa wand foi transformada na [[Wand of Dragonbreath]] no '''Update 7.6'''. Não existe mais no jogo.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6374,
+    "ns": 0,
+    "title": "Ritual Wand",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ritual Wand\n| flavortext     =\n| itemclass      = Armas\n| primarytype    = Antigas Wands e Rods\n| secondarytype  = \n| attrib         = Nenhum.\n| mana           = \n| weight         = ?\n| mercado        = não\n| removed        = 7.6\n| droppedby      = Ninguém.\n| buyfrom        = Ninguém.\n| sellto         = Ninguém.\n| notes          = Essa wand foi transformada na [[Wand of Inferno]] no '''Update 7.6'''. Não existe mais no jogo.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6375,
+    "ns": 0,
+    "title": "Wand of Might",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Wand of Might\n| flavortext     = \n| itemclass      = Armas\n| primarytype    = Antigas Wands e Rods\n| secondarytype  = \n| attrib         = Nenhum.\n| mana           = \n| weight         = 29.00\n| mercado        = não\n| removed        = 7.6\n| value          = Negociável\n| droppedby      = [[Warlock]], [[Rahemos]].\n| buyfrom        = Ninguém.\n| sellto         = Ninguém.\n| notes          = Essa wand foi transformada na [[Volcanic Rod]] no '''Update 7.6'''. Não existe mais no jogo.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6376,
+    "ns": 0,
+    "title": "Wooden Wand",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Wooden Wand\n| flavortext     =\n| itemclass      = Armas\n| primarytype    = Antigas Wands e Rods\n| secondarytype  = \n| attrib         = Nenhum.\n| mana           = \n| weight         = 26.50\n| mercado        = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Ninguém.\n| sellto         = Ninguém.\n| removed        = 7.6\n| notes          = Essa wand foi transformada na [[Quagmire Rod]] no '''Update 7.6'''. Não existe mais no jogo.\n}}"
+       }
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

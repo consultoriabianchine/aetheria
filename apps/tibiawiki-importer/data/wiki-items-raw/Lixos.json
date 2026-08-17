@@ -1,0 +1,838 @@
+{
+ "query": {
+  "pages": [
+   {
+    "pageid": 8681,
+    "ns": 0,
+    "title": "Banana Skin",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Banana Skin\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Lixos\n| implemented    = 4.0\n| secondarytype  = \n| attrib         = \n| weight         = 0.30\n| stackable      = sim\n| droppedby      = [[Animated Guzzlemaw]], [[Frazzlemaw]], [[Guzzlemaw]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Encontradas em caves de [[Troll]]s. Se você estiver procurando uma Banana Skin, procure na cave do sudeste de [[Troll]]s em [[Thais]] ou [[Nargor]].\n<noinclude><p><spoiler>\n* 01 é necessária para a [[Postman Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8682,
+    "ns": 0,
+    "title": "Big Bone",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Big Bone\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Lixos\n| secondarytype  = \n| attrib         = \n| stackable      = sim\n| weight         = 19.00\n| droppedby      = [[Animated Guzzlemaw]], [[Behemoth]], [[Biting Book]], [[Dreadbeast]], [[Dworc Voodoomaster]], [[Frazzlemaw]], [[Gore Horn]], [[Guzzlemaw]], [[Hellhound]], [[Necropharus]], [[Pirate Skeleton]], [[Weakened Frazzlemaw]].\n| droppedRaidby  = [[Ghazbaran]], [[Massacre]], [[The Handmaiden]], [[Oodok Witchmaster]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| mercado        = não\n| notes          = Não possui nenhum uso prático.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8683,
+    "ns": 0,
+    "title": "Bone",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bone\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Lixos\n| secondarytype  = \n| attrib         = \n| stackable      = sim\n| weight         = 9.50\n| droppedby      = [[Animated Guzzlemaw]], [[Brittle Skeleton]], [[Bonebeast]], [[Crypt Shambler]], [[Crypt Warrior]], [[Demon (Goblin)]], [[Dreadbeast]], [[Dworc Voodoomaster]], [[Feverish Citizen]], [[Frazzlemaw]], [[Goblin]], [[Goblin Assassin]], [[Goblin Leader]], [[Goblin Scavenger]], [[Grand Master Oberon]], [[Guzzlemaw]], [[Hulking Carnisylvan]], [[Jailer]], [[Lost Soul]], [[Muglex Clan Assassin]], [[Muglex Clan Scavenger]], [[Pirate Skeleton]], [[Skeleton]], [[Skeleton Elite Warrior]], [[Skeleton Warrior]], [[Tomb Servant]],[[Two-Headed Turtle]],  [[Undead Mine Worker]], [[Weakened Frazzlemaw]].\n| droppedRaidby  = [[Teleskor]].\n| droppedEventby = [[Fluffy]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Não possui uso prático.\n<noinclude><p><spoiler>* Pode ser obtido na [[Parchment Room Quest]].\n* O personagem precisará de 20 bones para a [[Postman Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8684,
+    "ns": 0,
+    "title": "Broken Bottle",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Broken Bottle\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Lixos\n| secondarytype  = \n| attrib         = \n| stackable      = sim\n| weight         = 2.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Não possui uso prático.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8685,
+    "ns": 0,
+    "title": "Broken Brown Glass",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Broken Brown Glass\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Lixos\n| secondarytype  = \n| attrib         = \n| stackable      = sim\n| weight         = 1.70\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Não possui uso prático.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8686,
+    "ns": 0,
+    "title": "Broken Flask",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Broken Flask\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Lixos\n| secondarytype  = \n| attrib         = \n| stackable      = sim\n| weight         = 2.50\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Não possui uso prático.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8687,
+    "ns": 0,
+    "title": "Broken Green Glass",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Broken Green Glass\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Lixos\n| secondarytype  = \n| attrib         = \n| stackable      = sim\n| weight         = 1.70\n| droppedby      = [[Putrid Mummy]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Não possui uso prático.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8689,
+    "ns": 0,
+    "title": "Broken Piggy Bank",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Broken Piggy Bank\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Lixos\n| secondarytype  = \n| attrib         = Nenhum.\n| weight         = 7.50\n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.8\n| mercado        = não\n| notes          = Não possui uso prático. Isso acontece quando você utiliza muito um [[Piggy Bank]].\n<noinclude><p><spoiler>* Possibilidade de ser obtido ao usar uma [[Belongings of a Deceased (Ottokar)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8690,
+    "ns": 0,
+    "title": "Broken Pottery",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Broken Pottery\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Lixos\n| secondarytype  = \n| attrib         = \n| stackable      = sim\n| weight         = 1.80\n| droppedby      = [[Juggernaut]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.6\n| notes          = Não possui uso prático.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8691,
+    "ns": 0,
+    "title": "Broken Sword",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Broken Sword\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Lixos\n| secondarytype  = \n| attrib         = \n| stackable      = sim\n| weight         = 35.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Não possui uso prático.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8692,
+    "ns": 0,
+    "title": "Burnt Scroll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Burnt Scroll\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Lixos\n| secondarytype  = \n| stackable      = sim\n| attrib         = \n| weight         = 0.40\n| droppedby      = [[Guardian Of Tales]], [[Hellfire Fighter]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Não possui nenhum uso prático.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8694,
+    "ns": 0,
+    "title": "Dirty Cape",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Dirty Cape\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Lixos\n| secondarytype  = \n| stackable      = sim\n| attrib         = \n| weight         = 29.50\n| droppedby      = [[Ancient Lion Knight]], [[Crazed Beggar]], [[Plaguesmith]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Não possui nenhuma função prática.\n<noinclude><p><spoiler>Possibilidade de ser obtido ao usar uma [[Belongings of a Deceased (Ottokar)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8695,
+    "ns": 0,
+    "title": "Dirty Fur",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Dirty Fur\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Lixos\n| secondarytype  = \n| attrib         = \n| stackable      = sim\n| weight         = 2.00\n| droppedby      = [[Ancient Lion Knight]], [[Starving Wolf]].\n| droppedRaidby  = [[Fernfang]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Não possui uso prático. Podem ser encontrados em caves de [[troll]]s e em quase todas as de [[orcs]].\n<noinclude><p><spoiler>\n* 01 é necessária para a [[Postman Quest]].\n* 01 é necessária para a [[The Scatterbrained Sorcerer Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8696,
+    "ns": 0,
+    "title": "Empty Potion Flask (Large)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se este não é item que você procura, veja a página [[Empty Potion Flask|Empty Potion Flask (Desambiguação)]].}}\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Empty Potion Flask (Large)\n| flavortext     = Return it to a potion store for your deposit or refill it with a potion keg or cask.\n| itemclass      = Outros Itens\n| primarytype    = Lixos\n| secondarytype  = \n| attrib         = Nenhum.\n| weight         = 1.35\n| stackable      = sim\n| value          = 5\n| npcvalue       = 5\n| npcprice       = 0\n| implemented    = 8.1\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Alaistar, Asima, Asnarus, Chartan, Chuckles, Digger, Frederik, Ghorza, Gnomegica, Hireling (Trader), Maun, Mehkesh, Nelly, Rabaz, Rachel, Rock In A Hard Place, Romir, Sandra, Shiriel, Siflind, Sigurd, Talila, Tandros, Tarun, Topsy, Valindara, Xodet\n| notes          = <noinclude><p><spoiler>* Necessário para [[Mage Outfits Quest]] e [[Summoner Outfits Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8697,
+    "ns": 0,
+    "title": "Empty Potion Flask (Medium)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se este não é item que você procura, veja a página [[Empty Potion Flask|Empty Potion Flask (Desambiguação)]].}}\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Empty Potion Flask (Medium)\n| flavortext     = Return it to a potion store for your deposit or refill it with a potion keg or cask.\n| itemclass      = Outros Itens\n| primarytype    = Lixos\n| secondarytype  = \n| attrib         = Nenhum.\n| weight         = 1.00\n| stackable      = sim\n| value          = 5\n| npcvalue       = 5\n| npcprice       = 0\n| implemented    = 8.1\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Alaistar, Asima, Asnarus, Chartan, Chuckles, Digger, Frederik, Ghorza, Gnomegica, Hireling (Trader), Maun, Mehkesh, Nelly, Rabaz, Rachel, Rock In A Hard Place, Romir, Sandra, Shiriel, Siflind, Sigurd, Talila, Tandros, Tarun, Topsy, Valindara, Xodet\n| notes          = <noinclude><p><spoiler>* Necessário para [[Mage Outfits Quest]] e [[Summoner Outfits Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8698,
+    "ns": 0,
+    "title": "Empty Potion Flask (Small)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se este não é item que você procura, veja a página [[Empty Potion Flask|Empty Potion Flask (Desambiguação)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Empty Potion Flask (Small)\n| flavortext     = Return it to a potion store for your deposit or refill it with a potion keg or cask.\n| itemclass      = Outros Itens\n| primarytype    = Lixos\n| secondarytype  = \n| attrib         = Nenhum.\n| weight         = 0.75\n| stackable      = sim\n| value          = 5\n| npcvalue       = 5\n| npcprice       = 0\n| implemented    = 8.1\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Alaistar, Asima, Asnarus, Chartan, Chuckles, Digger, Frederik, Ghorza, Gnomegica, Hireling (Trader), Hyacinth (NPC), Lily, Maun, Mehkesh, Nelly, Rabaz, Rachel, Raffael, Rock In A Hard Place, Romir, Sandra, Shiriel, Siflind, Sigurd, Talila, Tandros, Tarun, Topsy, Valindara, Xodet\n| notes          = <noinclude><p><spoiler>* Necessário para [[Mage Outfits Quest]] e [[Summoner Outfits Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8699,
+    "ns": 0,
+    "title": "Fish Tail (Trash)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Fish Tail (Trash)\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Lixos\n| secondarytype  = \n| attrib         = \n| stackable      = sim\n| weight         = 2.50\n| droppedby      = [[Frazzlemaw]], [[Guzzlemaw]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Não possui uso prático. <br /> Pode ser encontrado no chão do acampamento de [[Cyclops]] em [[Plains of Havoc]] e no spawn de [[Demon Skeleton]]s na [[Pits of Inferno]].\nEra considerado um item raro por um longo período, até possuir um spawn oficial em '''PoH '''e em '''Poi'''.\nAtualmente, pode ser encontrado em muitos outros lugares espalhados pelo Tibia.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8700,
+    "ns": 0,
+    "title": "Fishbone",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Fishbone\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Lixos\n| secondarytype  = \n| attrib         = \n| weight         = 0.70\n| stackable      = sim\n| npcvalue       = 0\n| droppedby      = [[Ancient Lion Knight]], [[Frazzlemaw]], [[Guzzlemaw]], [[Mutated Human]], [[Sharptooth]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Não possui uso prático.\n<noinclude><p><spoiler>\n* Pode ser obtido se você não tiver sorte durante a [[Twisted Waters World Change]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8701,
+    "ns": 0,
+    "title": "Mouldy Cheese",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name            = Mouldy Cheese\n| flavortext      =\n| itemclass       = Outros Itens\n| primarytype     = Lixos\n| secondarytype   = \n| attrib          = Nenhum.\n| stackable       = sim\n| weight          = 4.00\n| npcvalue        = 0\n| npcprice        = 0\n| droppedby       = [[Demon (Goblin)]], [[Goblin]], [[Goblin Assassin]], [[Goblin Leader]], [[Goblin Scavenger]], [[Muglex Clan Assassin]], [[Muglex Clan Footman]], [[Muglex Clan Scavenger]], [[Mutated Rat]], [[Plaguesmith]], [[Swamp Troll]].\n| buyfrom         = Jogadores.\n| sellto          = Jogadores.\n| notes           = Não possui uso prático, mas pode ser necessário para quests. Pode ser encontrado na casa de [[Wyda]], na saída central de [[Venore]] e no abrigo de [[Ottokar]] em [[Venore]].\n<noinclude><p><spoiler>\n* 01 é necessário para a [[Postman Quest]].\n* 01 é necessário para uma task da [[Goblin Merchant Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8702,
+    "ns": 0,
+    "title": "Old Twig",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Old Twig\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Lixos\n| secondarytype  = \n| attrib         = \n| stackable      = sim\n| weight         = 0.50\n| droppedRaidby  = [[Massacre]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Não possui uso prático. Você pode encontrar esse item em várias cavernas pelo Tibia.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8703,
+    "ns": 0,
+    "title": "Remains of a Fish",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Remains of a Fish\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Lixos\n| secondarytype  = \n| stackable      = sim\n| attrib         = \n| weight         = 1.10\n| droppedby      = [[Foam Stalker]], [[Frazzlemaw]], [[Guzzlemaw]], [[Weakened Frazzlemaw]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Não possui uso prático.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8704,
+    "ns": 0,
+    "title": "Rotten Meat",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Rotten Meat\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Lixos\n| secondarytype  = \n| attrib         = \n| stackable      = sim\n| weight         = 0.60\n| droppedby      = [[Crypt Shambler]], [[Tomb Servant]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Não possui uso prático.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8705,
+    "ns": 0,
+    "title": "Skeleton (Item)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Skeleton (Item)\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Lixos\n| secondarytype  = \n| attrib         = Nenhum.\n| stackable      = não\n| weight         = 100.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Não possui um uso prático. Pode ser encontrado em várias caves do Tibia.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8706,
+    "ns": 0,
+    "title": "Skull (Item)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se este não é item que você procura, veja a página: [[Skull|Skull (Desambiguação)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Skull (Item)\n| itemclass      = Outros Itens\n| secondarytype  = Extra Slot\n| primarytype    = Lixos\n| weight         = 21.80\n| value          = Negociável\n| npcvalue       = 0\n| stackable      = sim\n| droppedby      = [[Ancient Lion Knight]], [[Animated Ogre Shaman]], [[Amazon]], [[Barbarian Headsplitter]], [[Barbarian Skullhunter]], [[Bonebeast]], [[Brutus Bloodbeard]], [[Deadeye Devious]], [[Dreadbeast]], [[Dworc Fleshhunter]], [[Dworc Venomsniper]], [[Dworc Voodoomaster]], [[Frazzlemaw]], [[Ghoul]], [[Guzzlemaw]], [[Lethal Lissy]], [[Mutated Rat]], [[Necropharus]], [[Ogre Shaman]], [[Pirate Skeleton]], [[Quara Mantassin Scout]], [[Ron The Ripper]], [[Shaper Matriarch]], [[The Source Of Corruption]], [[The Weakened Count]], [[Undead Prospector]], [[Valkyrie]], [[Vampire]], [[Weakened Frazzlemaw]].\n| droppedRaidby  = [[Arachir the Ancient One]], [[Diblis the Fair]], [[Sir Valorcrest]], [[Xenia]], [[Zevelon Duskbringer]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Muitas pessoas acreditam que essas skulls são de pessoas mortas pelas criaturas que as carregam.\nPossui a mesma aparência que a [[Skull of Ratha]]. Você pode fazer uma [[Skull Candle]] usando a skull na [[Candle]].\n<noinclude><p><spoiler>04 são necessárias para acessar a área restrita onde se encontra a [[Paradox Tower]] e 01 para a [[Feaster of Souls Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8707,
+    "ns": 0,
+    "title": "Some Leaves",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Some Leaves\n| flavortext    = \n| itemclass     = Outros Itens\n| primarytype   = Lixos\n| secondarytype = \n| attrib        = Nenhum.\n| stackable     = sim\n| weight        = 0.80\n| droppedby     = [[Muddy Earth Elemental]].\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| notes         = Muitos podem ser encontrados espalhados por toda [[Zao Steppe]]. Tem a mesma aparência de uma [[Some Special Leaves]].\n<noinclude><p><spoiler>\n* 02 podem ser encontradas na área da [[Voodoo Doll Quest]].\n* * 01 é necessário para uma task da [[Unnatural Selection Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8708,
+    "ns": 0,
+    "title": "Some Wood",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Some Wood\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Lixos\n| secondarytype  = \n| attrib         = \n| weight         = 0.40\n| stackable      = sim\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Não possui uso prático.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8709,
+    "ns": 0,
+    "title": "Torn Book",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Torn Book\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Lixos\n| secondarytype  = \n| stackable      = sim\n| attrib         = \n| weight         = 11.00\n| droppedby      = Ninguém.\n| value          = 0\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Não tem um uso prático. Sua aparência é igual a de um [[Damaged Logbook]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8710,
+    "ns": 0,
+    "title": "Trashed Draken Boots",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{Deprecated}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Trashed Draken Boots\n| flavortext     = They will expire within a short time, sell them back to Esrik before they do.\n| itemclass      = Outros Itens\n| primarytype    = Lixos\n| stackable      = não\n| attrib         = Nenhum.\n| weight         = 25.00\n| trade          = sim\n| mercado        = não\n| npcvalue       = 40 000\n| droppedby      = Ninguém.\n| buyfrom        = Ninguém.\n| sellto         = Esrik\n| notes          = Devido a {{OfficialNewsArchive|1390|um erro}}, o NPC [[Esrik]] vendia [[Draken Boots]] ao invés de comprar. Para corrigir o erro, todas as Draken Boots existentes naquele momento foram transformadas neste item e podiam ser vendidas ao NPC Esrik por 40 000 gps. <br/ >\nEm dia 15 de Julho de 2010, todas as botas foram retiradas do jogo. \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8711,
+    "ns": 0,
+    "title": "Twigs",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Twigs\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Lixos\n| secondarytype  = \n| attrib         = \n| weight         = 2.10\n| stackable      = sim\n| droppedby      = [[Ancient Lion Knight]], [[Foam Stalker]], [[Frost Troll]], [[Jagged Earth Elemental]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Não possui uso prático. Podem ser encontrados em várias cavernas e em pilhas de lixo.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8712,
+    "ns": 0,
+    "title": "Used Candelabrum",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Used Candelabrum\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Lixos\n| secondarytype  = \n| attrib         = Nenhum.\n| weight         = 45.00\n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Não possui uso prático.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8713,
+    "ns": 0,
+    "title": "Used Candlestick",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Used Candlestick\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Lixos\n| secondarytype  = \n| attrib         = Nenhum.\n| weight         = 2.50\n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Não possui uso prático.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8714,
+    "ns": 0,
+    "title": "Wooden Trash",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Wooden Trash\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Lixos\n| secondarytype  = \n| attrib         = \n| weight         = 5.70\n| stackable      = sim\n| implemented    = 7.4\n| droppedby      = [[Poisonous Carnisylvan]], [[Haunted Treeling]], [[Bane Bringer]], [[Bane Lord]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Pode ser pego destruindo [[furniture]]s com uma arma [[melee]], mas não possuí nenhum uso prático.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8894,
+    "ns": 0,
+    "title": "Piece of Iron",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Piece of Iron\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Lixos\n| secondarytype  = \n| attrib         = \n| weight         = 0.20\n| stackable      = sim\n| droppedby      = [[Frazzlemaw]], [[Guzzlemaw]], [[Plaguesmith]], [[Weakened Frazzlemaw]].\n| droppedRaidby  = [[The Handmaiden]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Não tem nenhum uso.<br />\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 14339,
+    "ns": 0,
+    "title": "Starfish",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Starfish\n| itemclass      = Outros Itens\n| primarytype    = Lixos\n| secondarytype  = Decorações\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = 1.50\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Só pode ser obtido na ilha Vigintia, parte de um joguinho que se chama Treasure Hunting, você pode encontrá-los cavando a areia. A ilha só fica disponível nos eventos de comemoração de aniversários do Tibia.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 22013,
+    "ns": 0,
+    "title": "Dead Snake",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Dead Snake\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Lixos\n| secondarytype  = \n| attrib         = \n| weight         = 12.00\n| stackable      = não\n| droppedby      = [[Lizard Snakecharmer]].\n| droppedRaidby  = [[Apprentice Sheng]].\n| mercado        = não\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Não possui uso prático. Após matar uma [[Snake]], a mesma fica com essa aparência.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 27467,
+    "ns": 0,
+    "title": "Crystal Rubbish",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Crystal Rubbish\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Lixos\n| secondarytype  = \n| attrib         = \n| weight         = 9.80\n| stackable      = sim\n| droppedby      = [[Animated Guzzlemaw]], [[Frazzlemaw]], [[Guzzlemaw]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.7\n| notes          = Pode ser obtido destruindo uma [[Crystal Table]] com uma arma [[melee]], mas não possuí nenhum uso prático.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 29132,
+    "ns": 0,
+    "title": "Stone Rubbish",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Stone Rubbish\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Lixos\n| secondarytype  = \n| attrib         = \n| weight         = 9.80\n| stackable      = sim\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Pode ser obtido destruindo estátuas montadas dentro de casas, como por exemplo: [[Monkey Statue (No Hearing)]]. Esse item não possuí nenhum uso prático.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 30113,
+    "ns": 0,
+    "title": "Large Yellowed Bone",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Large Yellowed Bone\n| flavortext     = A large human bone yellow with age and shimmering as if polished clean.\n| itemclass      = Outros Itens\n| primarytype    = Lixos\n| attrib         = Pode-se dar \"Use\".\n| stackable      = não\n| mercado        = não\n| weight         = 19.00\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.1\n| notes          = Pode ser encontrado em diversos lugares de [[Drefia]].\n<noinclude><p><spoiler>\n* 01 é necessário para a [[The Gravedigger of Drefia Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 32330,
+    "ns": 0,
+    "title": "Remains of Crude Dream",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Remains of Crude Dream\n| flavortext     = They melt away as you look at them.\n| itemclass      = Outros Itens\n| primarytype    = Lixos\n| secondarytype  = \n| attrib         = Nenhum.\n| weight         = \n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| mercado        = não\n| implemented    = 10.30\n| notes          = Tem a mesma aparência que um [[Crystal Rubbish]]. Some depois de um tempo.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 35357,
+    "ns": 0,
+    "title": "Towel",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Towel\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Lixos\n| weight         = \n| attrib         = \n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Ninguém.\n| sellto         = Ninguém.\n| mercado        = não\n| implemented    = 10.70\n| notes          = Pode ser encontrado em um baú de [[Rathleton]]. Não pode ser carregado, portanto não possui peso.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 40614,
+    "ns": 0,
+    "title": "Soft Piece of Cloth",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Soft Piece of Cloth\n| flavortext     = Though beatuifully woven, it seems rather thin and airy.\n| itemclass      = Outros Itens\n| primarytype    = Lixos \n| attrib         = \n| stackable      = não\n| weight         = 5.00\n| value          = Negociável\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.70\n| mercado        = não\n| notes          = Encontrado abaixo do NPC [[Zeronex]]. É igual ao [[Dubious Piece of Cloth]], a não ser pelo nome, então cuidado para não cair em um golpe ao comprar um Dubious.\n\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 40616,
+    "ns": 0,
+    "title": "Badly Made Piece of Cloth",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Badly Made Piece of Cloth\n| flavortext     = It doesn't look as though it could be useful for anything.\n| itemclass      = Outros Itens\n| primarytype    = Lixos \n| attrib         = \n| stackable      = não\n| weight         = 5.00\n| value          = Negociável\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.70\n| mercado        = não\n| notes          = Encontrado abaixo do NPC [[Zeronex]]. É igual ao [[Luminous Piece of Cloth]], a não ser pelo nome, então cuidado para não cair em um golpe ao comprar um Luminous.\n\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 43957,
+    "ns": 0,
+    "title": "Dead Frog",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Dead Frog\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Lixos\n| secondarytype  = \n| attrib         = \n| weight         = 54.00\n| stackable      = não\n| droppedby      = [[Dark Apprentice]].\n| mercado        = não\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Não possui uso prático. Após matar os [[Anfíbios]] abaixo, ficam com essa aparência:\n*[[Azure Frog]];\n*[[Coral Frog]];\n*[[Crimson Frog]];\n*[[Green Frog]];\n*[[Infernal Frog]];\n*[[Orchid Frog]];\n*[[The Frog Prince]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 47848,
+    "ns": 0,
+    "title": "Addled Egg",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Addled Egg\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Lixos\n| secondarytype  = \n| attrib         = \n| stackable      = não\n| weight         = 1.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.20.9066\n| notes          = Some depois de uma certo tempo.\n<noinclude><p><spoiler>\n* Pode ser encontrado no chão dos ''Feeding Grounds'' na [[Secluded Island (Orcsoberfest)]].\n* Utilizado para alimentar o [[Meager Porker]] e o seu 2° Estágio o [[Porker]], no jogo '''Do Not Feed The Porker!''' da [[Orcsoberfest]].\n</noinclude></p></spoiler>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 47849,
+    "ns": 0,
+    "title": "Potato Peelings",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Potato Peelings\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Lixos\n| secondarytype  = \n| attrib         = \n| stackable      = não\n| weight         = 1.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.20.9066\n| notes          = Some depois de uma certo tempo.\n<noinclude><p><spoiler>\n* Pode ser encontrado no chão dos ''Feeding Grounds'' na [[Secluded Island (Orcsoberfest)]].\n* Utilizado para alimentar o [[Meager Porker]] e o seu 2° Estágio o [[Porker]], no jogo '''Do Not Feed The Porker!''' da [[Orcsoberfest]].</noinclude></p></spoiler>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 47850,
+    "ns": 0,
+    "title": "Old Meat",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Old Meat\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Lixos\n| secondarytype  = \n| attrib         = \n| stackable      = não\n| weight         = 1.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.20.9066\n| notes          = Some depois de uma certo tempo.\n<noinclude><p><spoiler>\n* Pode ser encontrado no chão dos ''Feeding Grounds'' na [[Secluded Island (Orcsoberfest)]].\n* Utilizado para alimentar o [[Meager Porker]] e o seu 2° Estágio o [[Porker]], no jogo '''Do Not Feed The Porker!''' da [[Orcsoberfest]].</noinclude></p></spoiler>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 47851,
+    "ns": 0,
+    "title": "Flaccid Salad",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Flaccid Salad\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Lixos\n| secondarytype  = \n| attrib         = \n| stackable      = não\n| weight         = 1.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.20.9066\n| notes          = Some depois de uma certo tempo.\n<noinclude><p><spoiler>\n* Pode ser encontrado no chão dos ''Feeding Grounds'' na [[Secluded Island (Orcsoberfest)]].\n* Utilizado para alimentar o [[Meager Porker]] e o seu 2° Estágio o [[Porker]], no jogo '''Do Not Feed The Porker!''' da [[Orcsoberfest]].</noinclude></p></spoiler>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 47852,
+    "ns": 0,
+    "title": "Rotten Tomatoes",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Rotten Tomatoes\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Lixos\n| secondarytype  = \n| attrib         = \n| stackable      = não\n| weight         = 1.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.20.9066\n| notes          = Some depois de uma certo tempo.\n<noinclude><p><spoiler>\n* Pode ser encontrado no chão dos ''Feeding Grounds'' na [[Secluded Island (Orcsoberfest)]].\n* Utilizado para alimentar o [[Meager Porker]] e o seu 2° Estágio o [[Porker]], no jogo '''Do Not Feed The Porker!''' da [[Orcsoberfest]].</noinclude></p></spoiler>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 47853,
+    "ns": 0,
+    "title": "Bread Crust",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bread Crust\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Lixos\n| secondarytype  = \n| attrib         = \n| stackable      = não\n| weight         = 1.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.20.9066\n| notes          = Some depois de uma certo tempo.\n<noinclude><p><spoiler>\n* Pode ser encontrado no chão dos ''Feeding Grounds'' na [[Secluded Island (Orcsoberfest)]].\n* Utilizado para alimentar o [[Meager Porker]] e o seu 2° Estágio o [[Porker]], no jogo '''Do Not Feed The Porker!''' da [[Orcsoberfest]].</noinclude></p></spoiler>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59376,
+    "ns": 0,
+    "title": "Dead Frog (Item)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Dead Frog (Item)\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Lixos\n| secondarytype  = \n| attrib         = \n| weight         = 4.50\n| stackable      = sim\n| droppedby      = [[Dark Apprentice]].\n| mercado        = não\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.40.10030\n| notes          = Tem mesma aparência de um [[Dead Frog]]. Este item foi implementado para substituir o [[Dead Frog]] que [[Dark Apprentice]]s dropam e permitir que seja tratado como outros itens são por mecanismos como [[Quick Looting]]. \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8716,
+    "ns": 0,
+    "title": "Worn Leather Boots",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Worn Leather Boots\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Lixos\n| secondarytype  = \n| attrib         = \n| stackable      = sim\n| weight         = 9.00\n| droppedby      = [[Pirate Buccaneer]].\n| droppedRaidby  = [[Countess Sorrow]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Elas são encontradas nas redondezas do [[Tibia]]. Não podem ser usadas.\n<noinclude><p><spoiler>*Recompensa da [[Iron Helmet Quest]].\n*Possibilidade de ser obtido ao usar uma [[Belongings of a Deceased (Ottokar)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 30114,
+    "ns": 0,
+    "title": "Yellowed Bone",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Yellowed Bone\n| flavortext     = A human bone yellow with age and shimmering as if polished clean.\n| itemclass      = Outros Itens\n| primarytype    = Lixos \n| attrib         = Pode-se dar \"Use\".\n| stackable      = não\n| weight         = 9.50\n| value          = \n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.1\n| mercado        = não\n| notes          = Pode ser encontrado em diversos lugares de [[Drefia]].\n<noinclude><p><spoiler>\n* 01 é necessário para a [[The Gravedigger of Drefia Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

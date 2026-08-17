@@ -2,6 +2,7 @@ import { parseArgs } from 'node:util';
 import { PrismaClient } from '@aetheria/database';
 import { ImportRepository } from '../database/import.repository';
 import { ImportOrchestrator } from '../services/import-orchestrator.service';
+import { generateItemsCatalog } from '../items/items-catalog.generator';
 import type { CliOptions } from '../types/scraper.types';
 import { Logger } from '../utils/logger';
 
@@ -15,6 +16,7 @@ const OPTIONS = {
   update: { type: 'boolean' as const, default: false },
   verbose: { type: 'boolean' as const, default: false },
   inspect: { type: 'boolean' as const, default: false },
+  items: { type: 'boolean' as const, default: false },
   slug: { type: 'string' as const },
   help: { type: 'boolean' as const, default: false },
 };
@@ -33,6 +35,7 @@ export function parseCliOptions(argv: string[]): CliOptions {
     update: values['update'] ?? false,
     verbose: values['verbose'] ?? false,
     inspect: values['inspect'] ?? false,
+    items: values['items'] ?? false,
     slug: values['slug'],
     help: values['help'] ?? false,
   };
@@ -55,12 +58,14 @@ Flags:
   --skip-assets          Não baixa assets
   --verbose              Logs detalhados
   --inspect --slug=<x>   Inspeciona uma criatura já importada
+  --items                Regenera items.json a partir dos snapshots locais
   --help                 Esta ajuda
 
 Exemplos:
   npm run importer -- --dry-run --limit=3
   npm run importer -- --limit=3
   npm run importer
+  npm run importer -- --items
   npm run importer -- --category-url="https://www.tibiawiki.com.br/wiki/Human%C3%B3ides"
 `);
 }
@@ -75,6 +80,10 @@ export async function runCli(argv: string[], logger: Logger): Promise<number> {
   if (opts.inspect) {
     await inspectCreature(opts.slug, logger);
     return 0;
+  }
+  if (opts.items) {
+    const { total } = generateItemsCatalog(logger);
+    return total > 0 ? 0 : 1;
   }
   const orchestrator = new ImportOrchestrator(opts.verbose);
   const summary = await orchestrator.run(opts);

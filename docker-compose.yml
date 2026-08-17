@@ -28,9 +28,10 @@ services:
       postgres:
         condition: service_healthy
     environment:
-      DATABASE_URL: ${DATABASE_URL:-postgresql://aetheria:aetheria_dev@postgres:5432/aetheria?schema=public}
+      DATABASE_URL: postgresql://${POSTGRES_USER:-aetheria}:${POSTGRES_PASSWORD:-aetheria_dev}@postgres:5432/${POSTGRES_DB:-aetheria}?schema=public
       PORT: "4000"
       JWT_SECRET: ${JWT_SECRET:-change_me_in_production}
+      ADMIN_TOKEN: ${ADMIN_TOKEN:-dev-admin-token}
     ports:
       - "4000:4000"
     healthcheck:
@@ -50,6 +51,17 @@ services:
     ports:
       - "4200:80"
 
+  admin:
+    build:
+      context: .
+      dockerfile: apps/admin/Dockerfile
+    container_name: aetheria-admin
+    restart: unless-stopped
+    depends_on:
+      - game-server
+    ports:
+      - "4300:80"
+
   tibiawiki-importer:
     profiles: ["importer"]
     build:
@@ -60,7 +72,7 @@ services:
       postgres:
         condition: service_healthy
     environment:
-      DATABASE_URL: ${DATABASE_URL:-postgresql://aetheria:aetheria_dev@postgres:5432/aetheria?schema=public}
+      DATABASE_URL: postgresql://${POSTGRES_USER:-aetheria}:${POSTGRES_PASSWORD:-aetheria_dev}@postgres:5432/${POSTGRES_DB:-aetheria}?schema=public
       TIBIAWIKI_CATEGORY_URL: ${TIBIAWIKI_CATEGORY_URL:-https://www.tibiawiki.com.br/wiki/Human%C3%B3ides}
       SCRAPER_CONCURRENCY: ${SCRAPER_CONCURRENCY:-1}
       SCRAPER_DELAY_MS: ${SCRAPER_DELAY_MS:-2500}

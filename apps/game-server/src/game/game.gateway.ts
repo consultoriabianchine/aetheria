@@ -37,13 +37,18 @@ export class GameGateway implements OnGatewayConnection, OnGatewayDisconnect {
   }
 
   @SubscribeMessage('auth.createCharacter')
-  async onCreateCharacter(socket: Socket, payload: { token: string; name: string }) {
-    await this.engine.handleCreateCharacter(socket.id, payload.token, payload.name);
+  async onCreateCharacter(socket: Socket, payload: { token: string; name: string; vocation: string }) {
+    await this.engine.handleCreateCharacter(socket.id, payload.token, payload.name, payload.vocation as never);
   }
 
   @SubscribeMessage('auth.selectCharacter')
   async onSelectCharacter(socket: Socket, payload: { token: string; characterId: string }) {
     await this.engine.handleSelectCharacter(socket.id, payload.token, payload.characterId);
+  }
+
+  @SubscribeMessage('promotion.promote')
+  async onPromote(socket: Socket, payload: { token: string }) {
+    await this.engine.handlePromote(socket.id, payload.token);
   }
 
   @SubscribeMessage('game.input')
@@ -79,5 +84,25 @@ export class GameGateway implements OnGatewayConnection, OnGatewayDisconnect {
   @SubscribeMessage('npc.interact')
   onNpcInteract(socket: Socket, payload: { npcId: string }) {
     this.engine.handleNpcInteract(socket.id, payload.npcId);
+  }
+
+  @SubscribeMessage('hunt.list')
+  async onHuntList(socket: Socket, payload: { token: string }) {
+    await this.engine.handleHuntList(socket.id, payload.token);
+  }
+
+  @SubscribeMessage('hunt.start')
+  async onHuntStart(socket: Socket, payload: { token: string; huntId: string; loopEnabled: boolean }) {
+    await this.engine.handleHuntStart(socket.id, payload.token, payload.huntId, payload.loopEnabled);
+  }
+
+  @SubscribeMessage('hunt.stop')
+  async onHuntStop(socket: Socket, payload: { token: string }) {
+    await this.engine.handleHuntStop(socket.id, payload.token);
+  }
+
+  @SubscribeMessage('hunt.setLoop')
+  async onHuntSetLoop(socket: Socket, payload: { token: string; enabled: boolean }) {
+    await this.engine.handleHuntSetLoop(socket.id, payload.token, payload.enabled);
   }
 }

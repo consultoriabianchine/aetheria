@@ -1,0 +1,86 @@
+{
+ "query": {
+  "pages": [
+   {
+    "pageid": 59072,
+    "ns": 0,
+    "title": "Gilded Magic Longsword",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Object|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name            = Gilded Magic Longsword\n| flavortext      = This is a gilded replica of the famous magic longsword.\n| objectclass     = Réplicas\n| attrib          = Nenhum.\n| weight          = \n| stackable       = não\n| storevalue      = 250\n| tournamentvalue = 1500\n| implemented     = 12.67.10918\n| notes           = Antes do [[Patches/13.14.0000|Patch 13.14.13146]] este item só podia ser adquirido em troca de ''Tournament Coins'' através da [[Store]] mas após o [[Patches/13.14.0000|Patch 13.14.13146]] ele passou a ser vendido através da [[Store]] em troca de [[Tibia Coins]]. Após comprar esse item ele irá para o seu [[Store Inbox]], veja [[Decoration Kit]] para informações de como desembrulhá-lo. Tem a mesma aparência de uma [[Golden Magic Longsword]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59082,
+    "ns": 0,
+    "title": "Gilded Crown",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Object|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name            = Gilded Crown\n| flavortext      = This is a gilded replica of the famous crown.\n| objectclass     = Réplicas\n| attrib          = Nenhum.\n| weight          = \n| stackable       = não\n| storevalue      = 250\n| tournamentvalue = 1500\n| implemented     = 12.40.10061\n| notes           = Antes do [[Patches/13.14.0000|Patch 13.14.13146]] este item só podia ser adquirido em troca de ''Tournament Coins'' através da [[Store]] mas após o [[Patches/13.14.0000|patch 13.14.13146]] ele passou a ser vendido através da [[Store]] em troca de [[Tibia Coins]]. Após comprar esse item ele irá para o seu [[Store Inbox]], veja [[Decoration Kit]] para informações de como desembrulhá-lo. Tem a mesma aparência de uma [[Golden Crown]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59083,
+    "ns": 0,
+    "title": "Gilded Blessed Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Object|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name            = Gilded Blessed Shield\n| flavortext      = This is a gilded replica of the famous blessed shield.\n| objectclass     = Réplicas\n| attrib          = Nenhum.\n| weight          = \n| stackable       = não\n| storevalue      = 250\n| tournamentvalue = 1500\n| implemented     = 12.72.11206\n| notes           = Antes do [[Patches/13.14.0000|patch 13.14.13146]] este item só podia ser adquirido em troca de ''Tournament Coins'' através da [[Store]] mas após o [[Patches/13.14.0000|Patch 13.14.13146]] ele passou a ser vendido através da [[Store]] em troca de [[Tibia Coins]]. Após comprar esse item ele irá para o seu [[Store Inbox]], veja [[Decoration Kit]] para informações de como desembrulhá-lo. Tem a mesma aparência de uma [[Golden Blessed Shield]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59084,
+    "ns": 0,
+    "title": "Gilded Horned Helmet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Object|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name            = Gilded Horned Helmet\n| flavortext      = This is a gilded replica of the famous horned helmet.\n| objectclass     = Réplicas\n| attrib          = Nenhum.\n| weight          = \n| stackable       = não\n| storevalue      = 250\n| tournamentvalue = 1500\n| implemented     = 12.86.11809\n| notes           = Antes do [[Patches/13.14.0000|Patch 13.14.13146]] este item só podia ser adquirido em troca de ''Tournament Coins'' através da [[Store]] mas após o [[Patches/13.14.0000|Patch 13.14.13146]] ele passou a ser vendido através da [[Store]] em troca de [[Tibia Coins]]. Após comprar esse item ele irá para o seu [[Store Inbox]], veja [[Decoration Kit]] para informações de como desembrulhá-lo. Tem a mesma aparência de uma [[Golden Horned Helmet]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59089,
+    "ns": 0,
+    "title": "Gilded Warlord Sword",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Object|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name            = Gilded Warlord Sword\n| flavortext      = This is a gilded replica of the famous warlord sword.\n| objectclass     = Réplicas\n| attrib          = Nenhum.\n| weight          = \n| stackable       = não\n| storevalue      = 250\n| tournamentvalue = 1500\n| implemented     = 12.91.12329\n| notes           = Antes do [[Patches/13.14.0000|Patch 13.14.13146]] este item só podia ser adquirido em troca de ''Tournament Coins'' através da [[Store]] mas após o [[Patches/13.14.0000|Patch 13.14.13146]] ele passou a ser vendido através da [[Store]] em troca de [[Tibia Coins]]. Após comprar esse item ele irá para o seu [[Store Inbox]], veja [[Decoration Kit]] para informações de como desembrulhá-lo. Tem a mesma aparência de uma [[Golden Warlord Sword]].\n}}"
+       }
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,1990 @@
+{
+ "query": {
+  "pages": [
+   {
+    "pageid": 6783,
+    "ns": 0,
+    "title": "Amazon Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Amazon Shield\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| stackable      = não\n| imbuement      = 1\n| defense        = 42\n| weight         = 62.00\n| droppedRaidby  = [[Orc Warlord]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.6\n| notes          = Item raro e valioso. Possui a mesma defesa de um [[Crown Shield]]. Faz parte do [[Amazon Set]].\n<noinclude><p><spoiler>* Possibilidade de ser obtido apenas durante as invasões de [[Orcs]] em [[Femor Hills]].\n* Antigamente acreditava-se que este item poderia ser obtido em invasões de orcs em [[Carlin]] e em [[Thais]], mito desmentido pelo Tibia Bosses, nesta matéria: https://www.tibiabosses.com/forum/topic/orc-raids-and-amazon-set-mythbusters/\n</spoiler></p></noinclude>\n<gallery>\nArquivo:Golden helmet on shanera.jpg|Amazon Shield junto com outros rares em [[Shanera]].\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6787,
+    "ns": 0,
+    "title": "Ancient Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ancient Shield\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| defense        = 36\n| weight         = 61.00\n| value          = \n| npcvalue       = 900\n| npcprice       = 5 000\n| droppedby      = [[Crusader]], [[Enslaved Dwarf]], [[Enraged Soul]], [[Ghost]], [[Lich]], [[Nightmare]], [[Sir Leonard]], [[Sir Leopold]], [[Tarnished Spirit]].\n| buyfrom        = Alesar,\n| sellto         = Alesar,H.L.:49,\n| implemented    = 7.4\n| notes          = Semelhante ao [[Viking Shield]]. Faz parte do [[Ancient Set]].\n<noinclude>\n    <div class=\"toccolours mw-collapsible mw-collapsed\" style=\"margin: 4px 0px;\">\n'''\"História do Item\"'''\n        <div class=\"mw-collapsible-content\">\n            <table>\n                  <tr>\n                     <td align=\"left\">\nAntigamente era conhecido como Kreal Shield. Foi originalmente implementada em [[Antica]] como presente dos [[Gods#Creators|Gods]] para membros da guilda Kreal, uma das primeiras guilds do jogo.\n                     </td>\n                  </tr>\n            </table>\n        </div>\n    </div>\n</noinclude>\n<noinclude><p><spoiler>\n* Possibilidade de ser obtido ao [[Rust Remover|remover a ferrugem]] de um [[Rusted Shield]]. \n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6791,
+    "ns": 0,
+    "title": "Battle Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Battle Shield\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| defense        = 30\n| weight         = 62.00\n| value          = 90 - 100\n| npcvalue       = 95\n| droppedby      = [[Assassin]], [[Cyclops]], [[Cyclops Drone]], [[Cyclops Smith]], [[Demon Skeleton]], [[Dwarf Guard]], [[Elf Overseer]], [[Foreman Kneebiter]], [[Frost Giant]], [[Frost Giantess]], [[Gargoyle]], [[Hellspawn]], [[Minotaur Guard]], [[Mutated Bat]], [[Orc Rider]], [[Pirate Buccaneer]], [[The Horned Fox]], [[War Golem]].\n| droppedRaidby  = [[General Murius]].\n| buyfrom        = Jogadores.\n| sellto         = Shanar, Memech, Cornelia, Hireling (Trader), Azil, Willard, Esrik, Rock In A Hard Place, Ulrik, Kroox, Cedrik, H.L.:50, Brengus, Flint, Robert, Sam, Turvy, Hardek, Baltim, Yanni, Morpel\n| notes          = Bom para [[Lootbag]]s.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6794,
+    "ns": 0,
+    "title": "Black Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Black Shield\n| flavortext     = An unholy creature covers the shield.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| defense        = 24\n| weight         = 42.00\n| value          = 800 - 1 000\n| npcvalue       = 800\n| droppedby      = [[Bruise Payne]], [[Candy Horror]], [[Gloom Maw]], [[Lost Basher]], [[Lost Berserker]], [[Magma Crawler]], [[Mummy]], [[Mutated Bat]], [[Priestess]], [[Sandstone Scorpion]], [[Thanatursus]], [[Werehyaena Shaman]], [[Wiggler]].\n| buyfrom        = Jogadores.\n| sellto         = Alesar, H.L.:5\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6796,
+    "ns": 0,
+    "title": "Blessed Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Blessed Shield\n| flavortext     = The shield grants divine protection.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| defense        = 52\n| weight         = 68.00\n| buyfrom        = Jogadores.\n| npcvalue       = 650\n| npcprice       = 0\n| sellto         = H.L.\n| value          = 12 000 000 000+\n| notes          = Já foi o escudo mais forte do jogo. Faz parte do [[Unrestricted Set]], [[Dream Set]] e [[Full Set]].\n<noinclude><div class=\"toccolours mw-collapsible mw-collapsed\" style=\"margin: 4px 0px;\">'''\"História do Item\"'''<div class=\"mw-collapsible-content\"><table><tr><td align=left>\nO único Blessed Shield do jogo foi dado para Elleshar por sua contribuição com os gráficos do jogo. Ele ficou com o shield por um tempo (com seu fantástico skill de 40 de defesa) até que o vendeu pelo preço de 130k (esse dinheiro na época era uma valor fora do comum) para Muecil.\nO Blessed Shield foi vendido junto com a promessa de que o comprador nunca mais o vendesse novamente. Mas alguns anos depois a promessa foi quebrada. Muecil colocou o item em leilão e conseguiu o valor de 5 milhões em dinheiro e itens (itens raros eram vendidos entre 300k e 600k na época). Lightbringer foi o grande vencedor do leilão do Blessed Shield.\n</td></tr></table></div></div></noinclude>\n\n<gallery>\nArquivo:Hellgate Treasure Room.png|Tesouros do Hellgate.\nArquivo:Blessed.jpg|{{Character|Lightbringer}} e seu escudo.\nArquivo:Mls Lightbringer.jpg|{{Character|Lightbringer}} e {{Character|Pytru}} em posse do escudo.\nArquivo:blessedantica7.jpg|Escudo na casa de um de seus antigos donos, o jogador {{Character|Gryphee}}.\nArquivo:Rares antica mls blessed-crop.png|Escudo na casa de um de seus antigos donos, o jogador {{Character|Sheepyy}}.\nArquivo:Blessed com Rei de Lutabra.png|Escudo com seu atual dono, o jogador {{Character|Rei de Lutabra}}.\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6799,
+    "ns": 0,
+    "title": "Bone Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bone Shield\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| defense        = 26\n| weight         = 55.00\n| value          = 80\n| npcvalue       = 80\n| stackable      = não\n| droppedby      = [[Bonebeast]], [[Chakoya Toolshaper]], [[Chakoya Tribewarden]], [[Chakoya Windcaller]], [[Crypt Shambler]], [[Dreadbeast]], [[Dworc Fleshhunter]], [[Necropharus]], [[Ribstride]], [[Tomb Servant]].\n\n| droppedRaidby  = [[Ocyakao]].\n\n| buyfrom        = Jogadores.\n| sellto         = Rashid\n| notes          = Não é usado com frequência devido a opções mais populares e com melhor atributo defensivo como por exemplo [[Battle Shield]] e [[Dwarven Shield]]. Faz parte do [[Bone Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6801,
+    "ns": 0,
+    "title": "Bonelord Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bonelord Shield\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| imbuement      = 1\n| defense        = 37\n| weight         = 47.00\n| stackable      = não\n| value          = 1 200 - 7 000\n| npcvalue       = 1 200\n| npcprice       = 7 000\n| droppedby      = [[Bone Overlord]], [[Bonelord]], [[Braindeath]], [[Elder Bonelord]], [[The Gravedigger]].\n| droppedRaidby  = [[The Evil Eye]].\n| buyfrom        = Nah'Bob\n| sellto         = Nah'Bob, H.L.:79\n| notes          = Recomendado para [[mage]]s pois é muito leve. Porém, seu uso não é tão comum. Faz parte do [[Bonelord Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6803,
+    "ns": 0,
+    "title": "Brass Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Brass Shield\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| defense        = 21\n| weight         = 60.00\n| value          = 25 - 65\n| npcvalue       = 25\n| npcprice       = 65\n| stackable      = não\n| droppedby      = [[Bandit]], [[Brittle Skeleton]], [[Grand Master Oberon]], [[Skeleton]], [[Stalker]], [[Wild Warrior]].\n| droppedRaidby  = [[Teleskor]].\n| buyfrom        = Shanar, Memech, Cornelia, Hireling (Trader), Azil, Willard, Esrik, Rock In A Hard Place, Ulrik, Kroox, Cedrik, Brengus, Flint, Robert, Sam, Turvy, Hardek, Baltim, Yanni, Morpel\n| sellto         = Shanar, Memech, Cornelia, Hireling (Trader), Azil, Coltrayne, Willard, Esrik, Rock In A Hard Place, Ulrik, Raffael, Kroox, Cedrik, H.L.:15, Brengus, Flint, Dixi, Lee'Delle, Robert, Sam, Turvy, Hardek, Baltim, Yanni, Morpel\n| implemented    = 7.9\n| notes          = Terceiro melhor escudo em [[Rookgaard]]. Faz parte do [[Brass Set]].\n<noinclude><p><spoiler>* Recompensa da: [[The Rookie Guard Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6804,
+    "ns": 0,
+    "title": "Castle Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Castle Shield\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| imbuement      = 1\n| defense        = 37\n| weight         = 49.00\n| value          = 5 000 - 40 000\n| npcvalue       = 5 000\n| droppedby      = [[Lich]].\n| buyfrom        = Jogadores.\n| sellto         = Rashid\n| notes          = Frequentemente utilizado como elemento decorativo dada a raridade. Colecionadores de itens podem pagar um bom preço por esses escudos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6806,
+    "ns": 0,
+    "title": "Copper Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Copper Shield\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| defense        = 25\n| weight         = 63.00\n| value          = 50 - 100\n| npcvalue       = 50\n| npcprice       = 0\n| stackable      = não\n| droppedby      = [[Dwarf]], [[Orc Warrior]].\n| droppedRaidby  = [[Rottie the Rotworm]].\n| buyfrom        = Jogadores.\n| sellto         = Shanar, Memech, Cornelia, Hireling (Trader), Azil, Coltrayne, Willard, Esrik, Rock In A Hard Place, Ulrik, Raffael, Kroox, Cedrik, H.L.:10, Brengus, Flint, Dixi, Lee'Delle, Robert, Sam, Turvy, Hardek, Baltim, Yanni, Morpel\n| notes          = O melhor escudo em [[Rookgaard]]. Faz parte do [[Rook Set]].\n<noinclude><p><spoiler>* Recompensa da: [[Dragon Corpse Quest]]</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6808,
+    "ns": 0,
+    "title": "Crown Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Crown Shield\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| imbuement      = 1\n| stackable      = não\n| defense        = 42\n| weight         = 62.00\n| value          = 7 000 - 10 000\n| npcvalue       = 8 000\n| droppedby      = [[Annihilon]], [[Demon Outcast]], [[Flameborn]], [[Hero]], [[Lava Golem]], [[Michael the Stalwart]], [[Raubritter Skirmisher]], [[Renegade Knight]], [[Retching Horror]], [[Soul-Broken Harbinger]], [[Sulphider]], [[Terofar]], [[Varnished Diremaw]], [[Vile Grandmaster]].\n| buyfrom        = Jogadores.\n| sellto         = Nah'Bob, H.L.:109\n| notes          = Mesmo atributo defensivo do [[Tower Shield]] porém é mais leve. Faz parte do [[Crown Set]] e [[Hero Set]].\n<noinclude><p><spoiler>\n* Recompensa da [[Black Knight Quest]].\n* Possibilidade de ser obtido ao [[Rust Remover|remover a ferrugem]] de um [[Rusted Shield]]. \n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6809,
+    "ns": 0,
+    "title": "Dark Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Dark Shield\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| stackable      = não\n| defense        = 33\n| weight         = 52.00\n| value          = 400 - 500\n| npcvalue       = 400\n| droppedby      = [[Ancient Lion Knight]], [[Grim Reaper]], [[Michael the Stalwart]], [[Pirate Corsair]], [[Silencer]], [[Thanatursus]], [[Werelion]].\n| droppedRaidby  = [[The Handmaiden]].\n| droppedEventby = [[Haunted Dragon]].\n| buyfrom        = Jogadores.\n| sellto         = Rashid, H.L.:60\n| notes          = Popular entre os personagens que chegam a [[Tibia (Continente)]] dada a facilidade para ser adquirido. Faz parte do [[Dark Set]].\n<noinclude><p><spoiler>* Recompensa da: [[Thais Lighthouse Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6834,
+    "ns": 0,
+    "title": "Fiery Rainbow Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Fiery Rainbow Shield\n| flavortext     = It has been temporarily imbued with fire magic and boosts your shielding skill.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| vocrequired    = [[Knight]]s\n| levelrequired  = 100\n| enchanted      = sim\n| attrib         = \n| skillboost     = [[Shielding]] +3\n| duration       = 15\n| defense        = 47\n| weight         = 69.00\n| npcprice       = 0\n| npcvalue       = 0\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| droppedby      = Ninguém.\n| implemented    = 8.2\n| notes          = Recarregável. É um [[Rainbow Shield]] encantado com o elemento fogo. Faz parte do [[Blocking Set]] e [[Rare Set]].\n<noinclude><p><spoiler>\n* 01 [[Small Enchanted Ruby]] é necessário para recarregá-lo.\n</spoiler></p></noinclude>\n{{Veja|Itens Recarregáveis}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6835,
+    "ns": 0,
+    "title": "Demon Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Demon Shield\n| flavortext     = This powerful shield seems to be as light as air.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| stackable      = não\n| imbuement      = 1\n| defense        = 46\n| weight         = 26.00\n| npcvalue       = 30 000\n| value          = \n| droppedby      = [[Angry Demon]], [[Annihilon]], [[Arbaziloth]], [[Brinebrute Inferniarch]], [[Demon]], [[Demon Outcast]], [[Essence Of Malice]], [[Ferumbras Mortal Shell]], [[Golgordan]], [[Grimeleech]], [[Latrivan]], [[Katex Blood Tongue]], [[Rage Squid]], [[Rotrender]], [[Shulgrax]], [[Terofar]], [[Utua Stone Sting]], [[Vexclaw]], [[Yirkas Blue Scales]], [[Zavarash]].\n| droppedRaidby  = [[Ferumbras]], [[Ghazbaran]], [[Orshabaal]].\n| droppedEventby = [[Minishabaal]].\n| buyfrom        = Jogadores.\n| sellto         = Rashid, H.L.:130\n| implemented    = 5.1\n| notes          = Recomendado para [[mages]] por ser um item leve e com ótimo atributo defensivo. Muito popular entre personagens de todas as vocações entre os [[level]]s 35-60. Faz parte do [[Demon Set]], [[Paladin Set]], [[Mage Set]], [[Semi Rare Set]] e [[Full Set]].\n<noinclude><p><spoiler>\n* Recompensa da [[Behemoth Quest]]. \n* Recompensa da [[The Demon Helmet Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6836,
+    "ns": 0,
+    "title": "Demon Powered Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{deprecated}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Demon Powered Shield\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| stackable      = não\n| attack         = 5\n| defense        = 50\n| weight         = 50.00\n| trade          = não\n| mercado        = não\n| buyfrom        = Ninguém.\n| sellto         = Ninguém.\n| implemented    = Ilegalmente.\n| notes          = Retirado do jogo em 1999.\n<noinclude><div class=\"toccolours mw-collapsible mw-collapsed\" style=\"margin: 4px 0px;\">'''\"História do Item\"'''<div class=\"mw-collapsible-content\"><table ><tr><td align=left>\nConhecido como Demon Powered Shield, era um item  muito poderoso que foi implementado ilegalmente ao jogo. Além do incrível atributo defensivo, ainda possuía capacidade de ataque. Chegou a ser duplicado e vendido a todos que pudessem pagar cerca de 30k.\n\nComo punição pelo bug abuse, todos os personagens que possuíam o item foram deletados. Apenas Lightbringer conseguiu escapar da punição por ter sido quem reportou o bug e alegar que não sabia que o escudo havia entrado de forma ilegal.\n</td></tr></table></div></div></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6838,
+    "ns": 0,
+    "title": "Dragon Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Dragon Shield\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| imbuement      = 1\n| defense        = 41\n| weight         = 60.00\n| value          = 3 000 - 5 000\n| npcvalue       = 4 000\n| stackable      = não\n| droppedby      = [[Bramble Wyrmling]], [[Cinder Wyrmling]], [[Dragon]], [[Inkwing]].\n| droppedRaidby  = [[Grand Mother Foulscale]].\n| droppedEventby = [[Tazhadur]].\n| buyfrom        = Jogadores.\n| sellto         = Shanar:360, Nah'Bob, H.L.:115\n| notes          = Popular entre personagens de todas as vocações que estão entre os [[level]]s 20-30. Faz parte do [[Dragon Set]].\n<noinclude><p><spoiler>* 01 é necessário na [[Obsidian Knife Quest]].\n* Utilizado em uma das possíveis trocas que constituem as [[Exchange Quests]]:\n**Pode ser trocado por 01 [[Piece of Draconian Steel]] com o NPC [[A Sweaty Cyclops]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6839,
+    "ns": 0,
+    "title": "Dwarven Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Dwarven Shield\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| defense        = 34\n| weight         = 55.00\n| stackable      = não\n| value          = 100 - 500\n| npcvalue       = 100\n| npcprice       = 500\n| droppedby      = [[Ancient Lion Knight]], [[Dwarf Soldier]].\n| buyfrom        = Shanar, Memech, Cornelia, Hireling (Trader), Azil, Willard, Esrik, Rock In A Hard Place, Ulrik, Kroox, Cedrik, Brengus, Flint, Robert, Sam, Turvy, Hardek, Baltim, Yanni, Morpel\n| sellto         = Shanar, Memech, Cornelia, Hireling (Trader), Azil, Willard, Esrik, Rock In A Hard Place, Ulrik, Kroox, Cedrik, H.L.:55, Brengus, Flint, Robert, Sam, Turvy, Hardek, Baltim, Yanni, Morpel\n| notes          = É aconselhável adquirir este escudo assim que chegar a [[Tibia (Continente)]]. Faz parte do [[Dwarven Set]] e [[Newbie Set]].\n<noinclude><p><spoiler>* Recompensa da [[To Blind the Enemy Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6840,
+    "ns": 0,
+    "title": "Great Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Great Shield\n| flavortext     = The shield is made of dragon scales.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| stackable      = não\n| imbuement      = 1\n| defense        = 50\n| weight         = 84.00\n| value          = 40 000 000 - 55 000 000\n| droppedby      = [[Ferumbras Mortal Shell]],[[Razzagorn]], [[Soul of Dragonking Zyrtarch]].\n| droppedRaidby  = [[Ferumbras]], [[Massacre]], [[Morgaroth]], [[Ghazbaran]].\n| npcvalue       = 480\n| npcprice       = 0\n| buyfrom        = Jogadores.\n| sellto         = H.L.\n| notes          = Item raro e valioso, é um dos mais antigos itens do jogo.  É o terceiro melhor escudo do jogo. Pode ser visto em algumas das salas do tesouro existentes. Faz parte do [[Dragon Scale Set]], [[Dragon Set]], [[Paladin Set]], [[Rare Set]] e [[Full Set]].\n<noinclude><div class=\"toccolours mw-collapsible mw-collapsed\" style=\"margin: 4px 0px;\">'''\"História do Item\"'''<div class=\"mw-collapsible-content\">\n<table ><tr><td align=left>Em meados de 2000 a CipSoft já havia adicionado os [[Dragon Lord]]s ao jogo e com o novo cliente(versão 6.0) eles teriam um item especial como loot. Por isso, durante um ano eles droparam este raro escudo. Nesta época, havia poucos respawns de Dragon Lords e, com  a retirada dos [[Daemon]]s eles se tornaram as criaturas mais difíceis de se matar.  \n\nMesmo com a descoberta de uma forma de trapar o Dragon Lord e manter o personagem na diagonal, evitando assim suas waves, era uma época que poucas pessoas jogavam Tibia e a maioria dos personagens possuíam em médio o level 50. Então, ainda assim, era muito raro conseguir o item. Estima-se que era dropado por volta de 1 shield por mês.\n\nUm ano depois da implementação do [[Mastermind Shield]], o Great Shield  foi retirado da relação dos itens dropados de Dragon lords. Pois estava interferindo no balanceamento do jogo. Nesta época o Mastermind Shield possuía defesa de 38 enquanto a do Great Shield era 42. Sem a possibilidade de ser adquirido como loot, havia, apenas, cerca de 20 deles no jogo.\n\nO item, julgado por muitos como \"perdido pra sempre\", reapareceu anos depois (2007/2008), como loot de alguns bosses e surpreendendo muitos jogadores. Contudo sua defesa foi reajustada para o valor atua.\n\n<br /></td></tr></table></div></div></noinclude>\n<gallery>Arquivo:Rares on tenebra.jpg|Great Shield em [[Tenebra]].</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6841,
+    "ns": 0,
+    "title": "Griffin Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Griffin Shield\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| stackable      = não\n| imbuement      = 1\n| defense        = 38\n| weight         = 50.00\n| value          = 2 000 - 3 000\n| npcvalue       = 3 000\n| npcprice       = 0\n| buyfrom        = Jogadores.\n| sellto         = H.L.: 59, Rashid\n| notes          = Frequentemente utilizado como elemento decorativo. Implementado em substituição ao [[Mercenary Shield]].\n<noinclude><p><spoiler>\n* Recompensa da [[Demona Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6842,
+    "ns": 0,
+    "title": "Guardian Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Guardian Shield\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| defense        = 39\n| weight         = 55.00\n| value          = 2 000 - 2 500\n| npcvalue       = 2 000\n| stackable      = não\n| droppedby      = [[Annihilon]], [[Burning Book]], [[Choking Fear]], [[Cult Enforcer]], [[Demon Skeleton]], [[Diabolic Imp]], [[Energy Elemental]], [[Enslaved Dwarf]], [[Fire Devil]], [[Knowledge Elemental]], [[Lost Berserker]], [[Lost Exile]], [[Lost Husher]], [[Minotaur Invader]], [[Mooh'Tah Warrior]], [[Mutated Tiger]], [[Spiky Carnivor]], [[Terofar]], [[Vicious Squire]], [[Zavarash]].\n| droppedRaidby  = [[Tyrn]], [[Zomba]], [[Zulazza the Corruptor]].\n| droppedEventby = [[Minishabaal]].\n| buyfrom        = Jogadores.\n| sellto         = Shanar:180, Nah'Bob, H.L.:150\n| notes          = Faz parte do [[Guardian Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 19098,
+    "ns": 0,
+    "title": "Eagle Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Eagle Shield\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| defense        = 42\n| weight         = 62.00\n| value          = Negociável\n| npcvalue       = 0\n| npcprice       = 0\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.3\n| notes          = Apesar disso, ainda não se sabe se é possível ser obtido nos mundos regulares. Pode ser visto na [[Treasure Rooms#Sala de Tesouros de Morguthis|sala do tesouro de Morguthis]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 19111,
+    "ns": 0,
+    "title": "Carapace Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Carapace Shield\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| imbuement      = 1\n| defense        = 47\n| weight         = 55.00\n| value          = 32 000\n| npcvalue       = 32 000\n| npcprice       = 0\n| droppedby      = [[Hive Overseer]], [[Kollos]], [[Spidris]], [[Spidris Elite]], [[Waspoid]].\n| buyfrom        = Jogadores.\n| sellto         = Rock In A Hard Place\n| implemented    = 9.4\n| notes          = Faz parte do [[Hive Set]] e [[Paladin Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 30999,
+    "ns": 0,
+    "title": "Haunted Mirror Piece",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Haunted Mirror Piece\n| itemclass     = Equipamentos de Corpo\n| primarytype   = Escudos\n| imbuement     = 1\n| defense       = 45\n| weight        = 28.00\n| stackable     = não\n| value         = 3 000 000 - 8 000 000\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| implemented   = 10.20\n| droppedRaidby = [[The Pale Count]].\n| notes         = Item raro e valioso. Dropado de um boss que faz raras [[invasões]]. Embora seja o mais leve dos escudos com atributo defensivo 34, é frequentemente utilizado como elemento decorativo.\n<noinclude><gallery>\nArquivo:Haunted Mirror Piece Foto.jpg|Haunted Mirror Piece em Grimera \n</gallery></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 31745,
+    "ns": 0,
+    "title": "Crude Umbral Spellbook",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Crude Umbral Spellbook\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Spellbooks\n| secondarytype  = Escudos \n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 75\n| defense        = 23\n| skillboost     = [[Magic Level]] +1\n| resist         = [[Earth Damage|Earth]] +2%, [[Energy Damage|Energy]] +2%, [[Fire Damage|Fire]] +2%, [[Ice Damage|Ice]] +2%\n| weight         = 40.00\n| npcvalue       = 0\n| value          = 300 000 - 700 000\n| droppedby      = [[Lady Tenebris]].\n| droppedRaidby  = [[Gaz'Haragoth]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.30\n| notes          = Esta arma pode ser feita e melhorada por jogadores em um complexo processo de captação e materialização de sonhos, conhecido como [[Umbral Creation]]. Faz parte do [[Magic Level Set]].\n<noinclude><p><spoiler>* Pode ser obtido trocando 1 [[Dream Matter]] e 20 [[Cluster of Solace|Clusters of Solace]] com o NPC [[Eruaran]]. Existe a chance de falhar.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 32749,
+    "ns": 0,
+    "title": "Eerie Song Book",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Eerie Song Book\n| flavortext     = The songs in it are... special. Very special. Not for weak stomachs.\n| itemclass      = Escudos\n| primarytype    = Itens de Quest\n| secondarytype  = Livros\n| defense        = 0\n| weight         = 13.00\n| stackable      = não\n| mercado        = não\n| value          = \n| npcvalue       = 0\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.30\n| notes          = Pode ser equipado no slot de escudos do [[inventário]] mas não oferece nenhuma proteção ao personagem. \n<noinclude><p><spoiler>\n* Obtido e usado durante a task [[Roshamuul_Quest#Soothing Bad Dreams|Soothing Bad Dreams]].\n{{DASH|'''Nota:''' caso o perca basta falar ''lost'' para a [[Dream Butterfly]] e será possível refazer a missão para adquiri-lo.}}\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 36986,
+    "ns": 0,
+    "title": "Broken Wooden Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Broken Wooden Shield\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| defense        = 15\n| weight         = 40.00\n| implemented    = 10.55\n| npcvalue       = 0\n| npcprice       = 0\n| stackable      = não\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Apesar disso, ainda não se sabe se é possível ser obtido nos mundos regulares. Como foi introduzido juntamente com a implementação de [[Dawnport]], há rumores de que seria  dado aos jovens [[Knights]] no lugar do [[Wooden Shield]] que recebem atualmente. \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 37072,
+    "ns": 0,
+    "title": "Book of Lies",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Book of Lies\n| levelrequired  = 150\n| itemclass      = Equipamentos de Corpo \n| primarytype    = Spellbooks\n| secondarytype  = Escudos\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| imbuement      = 1\n| defense        = 29\n| skillboost     = [[Magic Level]] +4\n| weight         = 24.00\n| value          = \n| npcvalue       = 0\n| droppedby      = [[Lady Tenebris]], [[Zamulosh]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.90\n| notes          = Faz parte do [[Magic Level Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 37166,
+    "ns": 0,
+    "title": "Death Gaze",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Death Gaze\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| levelrequired  = 200\n| imbuement      = 1\n| defense        = 50\n| weight         = 79.00\n| value          = Negociável\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = [[Ferumbras Mortal Shell]], [[Ragiaz]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.90\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42671,
+    "ns": 0,
+    "title": "Gnome Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Gnome Shield\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| vocrequired    = [[Knight]]s and [[Paladin]]s\n| levelrequired  = 200\n| resist         = [[Physical Damage|Physical]] +6%, [[Energy Damage|Energy]] +8%, [[Ice Damage|Ice]] -2%\n| skillboost     = [[Shielding]] +2\n| imbuement      = 1\n| defense        = 50\n| weight         = 60.00\n| stackable      = não\n| npcvalue       = 0\n| value          = \n| droppedby      = [[The Count Of The Core]], [[The Duke Of The Depths]], [[The Baron from Below]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.50\n| notes          = Faz parte do [[Gnome Set]]. \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 43990,
+    "ns": 0,
+    "title": "Falcon Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Falcon Shield\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| vocrequired    = [[Knight]]s and [[Paladin]]s \n| levelrequired  = 300\n| resist         = [[Physical Damage|Physical]] +6%, [[Fire Damage|Fire]] +10%\n| imbuement      = 1\n| stackable      = não\n| defense        = 51\n| skillboost     = \n| weight         = 57.00\n| value          = \n| npcvalue       = \n| droppedby      = [[Grand Chaplain Gaunder]], [[Grand Master Oberon]].\n| buyfrom        = Jogadores.\n| implemented    = 11.80\n| sellto         = Jogadores.\n| notes          = Faz parte do [[Falcon Set]].\n<noinclude><p><spoiler>* Item necessário para forjar o [[Falcon Escutcheon]], juntamente com o [[Grant of Arms]] e o [[Patch of Fine Cloth]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 44012,
+    "ns": 0,
+    "title": "Falcon Escutcheon",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Falcon Escutcheon\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| vocrequired    = [[Knight]]s and [[Paladin]]s \n| levelrequired  = 300\n| resist         = [[Physical Damage|Physical]] +7%, [[Fire Damage|Fire]] +15%\n| imbuement      = 1\n| defense        = 52\n| weight         = 60.00\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.80\n| notes          = Faz parte do [[Falcon Set]].\n<noinclude><p><spoiler>\n* Para forjar esse escudo, é necessário usar a [[Anvil]] localizada na forja do [[Falcon Bastion]] e ter em sua backpack os seguintes itens: 01 [[Falcon Shield]], 01 [[Grant of Arms]] e 01 [[Patch of Fine Cloth]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 44799,
+    "ns": 0,
+    "title": "Adamant Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Adamant Shield\n| flavortext       = It was forged with magical diamonds collected during the journey of a true Tibian. Awarded by TibiaLife.com.br\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = \n| tertiarytype     = \n| attrib           = \n| stackable        = não\n| weight           = 91.00\n| mercado          = não\n| sounds           = \n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 11.90.7293\n| notes            = \n* Item oficial do fansite '''TibiaLife'''. \n* O personagem {{Character|Makadamia}} recebeu um por ter sido o criador do item.\n* O personagem {{Character|Mirhadrael}} recebeu um como prêmio por ter vencido o concurso [https://tibialife.com.br/resultado-concurso-o-shield-lendario O shield Lendário] elaborado pelos fansites '''TibiaLife''' e '''BomDiaTibia''' em fevereiro de 2019.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}\n<noinclude>[[Categoria:Escudos]]</noinclude>"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45029,
+    "ns": 0,
+    "title": "Ectoplasmic Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ectoplasmic Shield\n| skillboost     = [[Axe Fighting]] +3, [[Club Fighting]] +3\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| imbuement      = 1\n| levelrequired  = 180\n| vocrequired    = [[Knight]]s\n| stackable      = não\n| defense        = 49\n| resist         = [[Ice Damage|Ice]] +7%, [[Fire Damage|Fire]] -3%\n| weight         = 58.00\n| value          = \n| npcvalue       = 0\n| droppedby      = [[Faceless Bane]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.00\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45072,
+    "ns": 0,
+    "title": "Brain in a Jar",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Brain in a Jar\n| itemclass     = Equipamentos de Corpo\n| primarytype   = Spellbooks\n| secondarytype = Escudos\n| vocrequired   = [[Sorcerer]]s and [[Druid]]s\n| imbuement     = 1\n| levelrequired = 180\n| defense       = 31\n| skillboost    = [[Magic Level]] +3\n| resist        = [[Earth Damage|Earth]] +7%\n| weight        = 27.00\n| droppedby     = [[Maxxenius]].\n| stackable     = não\n| value         = Negociável\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| npcvalue      = \n| implemented   = 12.00\n| notes         = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 50815,
+    "ns": 0,
+    "title": "Blue Quiver",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Blue Quiver\n| levelrequired  = 0\n| itemclass      = Equipamentos de Corpo \n| primarytype    = Aljavas\n| secondarytype  = Escudos\n| vocrequired    = [[Paladin]]s\n| imbuement      = \n| skillboost     = \n| volume         = 6\n| weight         = 17.00\n| npcprice       = 400 \n| npcvalue       =\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Irea, Dario, Perac, Edoch, Willard, Taegen, Pompan, Rock In A Hard Place, Raffael:350, Eliyas, Gnomerrow, Uzgod, Cedrik, Maun, Mugruu, Brengus, Perod, Silas, Asnarus, Robert, Galuna, Xed, Vincent, Hireling (Trader)\n| sellto         = Jogadores.\n| implemented    = 12.55.10451\n| notes          = Faz parte do [[Paladin Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 52300,
+    "ns": 0,
+    "title": "Eldritch Quiver",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Eldritch Quiver\n| levelrequired  = 250\n| itemclass      = Equipamentos de Corpo \n| primarytype    = Aljavas\n| secondarytype  = Escudos\n| vocrequired    = [[Paladin]]s\n| imbuement      = \n| skillboost     = \n| modificadores  = [[Perfect Shot]] +20 at range 4\n| volume         = 8 \n| weight         = 22.00\n| npcprice       = \n| npcvalue       = \n| value          = Negociável\n| droppedby      = [[The Brainstealer]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.70\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 52301,
+    "ns": 0,
+    "title": "Eldritch Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Eldritch Shield\n| levelrequired  = 270\n| itemclass      = Equipamentos de Corpo \n| primarytype    = Escudos\n| vocrequired    = [[Knight]]s\n| resist         = [[Physical Damage|Physical]] +4%\n| imbuement      = 1\n| stackable      = não\n| defense        = 51\n| modificadores  = [[Damage Reflection]] +42\n| volume         = \n| weight         = 69.00\n| npcprice       = \n| npcvalue       = \n| value          = \n| droppedby      = [[The Brainstealer]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.70\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 52302,
+    "ns": 0,
+    "title": "Eldritch Tome",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Eldritch Tome\n| levelrequired  = 300\n| itemclass      = Equipamentos de Corpo \n| primarytype    = Spellbooks\n| secondarytype  = Escudos\n| vocrequired    = [[Druid]]s\n| imbuement      = 1\n| stackable      = não\n| defense        = 34\n| skillboost     = [[Magic Level]] +4, [[Earth Magic Level]] +1\n| resist         = [[Fire Damage|Fire]] +6%\n| modificadores  = [[Magic Shield Capacity]] +80 and 8%\n| volume         = \n| weight         = 26.00\n| npcprice       = \n| npcvalue       = \n| value          = Negociável\n| droppedby      = [[The Brainstealer]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.70\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 52303,
+    "ns": 0,
+    "title": "Eldritch Folio",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Eldritch Folio\n| levelrequired  = 300\n| itemclass      = Equipamentos de Corpo \n| primarytype    = Spellbooks\n| secondarytype  = Escudos\n| vocrequired    = [[Sorcerer]]s\n| imbuement      = 1\n| stackable      = não\n| defense        = 34\n| skillboost     = [[Magic Level]] +4, [[Death Magic Level]] +1\n| resist         = [[Earth Damage|Earth]] +6%\n| modificadores  = [[Magic Shield Capacity]] +80 and 8%\n| volume         = \n| weight         = 28.00\n| npcprice       = \n| npcvalue       = \n| value          = Negociável\n| droppedby      = [[The Brainstealer]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.70\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 56102,
+    "ns": 0,
+    "title": "Arboreal Tome",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Arboreal Tome\n| levelrequired  = 400\n| itemclass      = Equipamentos de Corpo \n| primarytype    = Spellbooks\n| secondarytype  = Escudos\n| vocrequired    = [[Druid]]s\n| imbuement      = 1\n| stackable      = não\n| defense        = 36\n| skillboost     = [[Magic Level]] +5, [[Ice Magic Level]] +1, [[Healing Magic Level]] +1\n| resist         = [[Physical Damage|Physical]] +4%, [[Energy Damage|Energy]] +6%\n| modificadores  = \n| volume         = \n| weight         = 23.00\n| npcprice       = \n| npcvalue       = \n| value          = Negociável\n| droppedby      = [[Magma Bubble]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.90\n| notes          = <noinclude><p><spoiler>* Possibilidade de ser obtido ao usar um [[Primal Bag]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 56108,
+    "ns": 0,
+    "title": "Arcanomancer Folio",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Arcanomancer Folio\n| levelrequired  = 400\n| itemclass      = Equipamentos de Corpo \n| primarytype    = Spellbooks\n| secondarytype  = Escudos\n| vocrequired    = [[Sorcerer]]s\n| imbuement      = 1\n| stackable      = não\n| defense        = 36\n| skillboost     = [[Magic Level]] +5, [[Fire Magic Level]] +1, [[Energy Magic Level]] +1\n| resist         = [[Physical Damage|Physical]] +3%, [[Fire Damage|Fire]] +8%\n| modificadores  = \n| volume         = \n| weight         = 26.00\n| npcprice       = \n| npcvalue       = \n| value          = Negociável\n| droppedby      = [[Magma Bubble]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.90\n| notes          = <noinclude><p><spoiler>* Possibilidade de ser obtido ao usar uma [[Primal Bag]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 56125,
+    "ns": 0,
+    "title": "Alicorn Quiver",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Alicorn Quiver\n| levelrequired  = 400\n| itemclass      = Equipamentos de Corpo \n| primarytype    = Aljavas\n| secondarytype  = Escudos\n| vocrequired    = [[Paladin]]s\n| imbuement      = \n| skillboost     = [[Magic Level]] +1\n| modificadores  = [[Perfect Shot]] +20 at range 3\n| volume         = 12\n| weight         = 20.00\n| npcprice       = \n| npcvalue       = \n| value          = Negociável\n| droppedby      = [[Magma Bubble]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.90\n| notes          = <noinclude><p><spoiler>* Possibilidade de ser obtido ao usar uma [[Primal Bag]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 58481,
+    "ns": 0,
+    "title": "Alchemist's Notepad",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Alchemist's Notepad\n| flavortext    = \n| itemclass     = Equipamentos de Corpo\n| primarytype   = Spellbooks\n| secondarytype = Escudos\n| vocrequired   = [[Sorcerer]]s\n| imbuement     = 1\n| levelrequired = 250\n| defense       = 32\n| skillboost    = [[Magic Level]] +2, [[Fire Magic Level]] +3, [[Energy Magic Level]] +3\n| resist        = [[Death Damage|Death]] +5% \n| weight        = 13.00\n| droppedby     = [[The Monster]].\n| stackable     = não\n| value         = \n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| implemented   = 13.10\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59090,
+    "ns": 0,
+    "title": "Golden Blessed Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Golden Blessed Shield\n| flavortext     = This is a golden replica of the famous blessed shield.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| vocrequired    = \n| levelrequired  = \n| resist         = \n| imbuement      = \n| stackable      = não\n| defense        = \n| skillboost     = \n| weight         = 68.00\n| value          = \n| npcvalue       = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.67.10918\n| notes          = Este item foi atribuído aos vencedores do torneio [[Torneio Honour|Honour]]. A [[Gilded Blessed Shield]] têm a mesma aparência e pode ser comprada na [[Store]], o que também significa que não pode ser comercializada com outros jogadores.\n{{Veja|Torneios|Torneio Honour}}\n<noinclude>[[Categoria:Prêmios de Torneios]]</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 60801,
+    "ns": 0,
+    "title": "Aylie",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Aylie\n| flavortext       = She fights injustice with kindness in any kingdom, glowing with her light and knowledge throughout all of Tibia. Awarded by TibiaTales.com\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Escudos\n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 12.06\n| mercado          = não\n| sounds           = \n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 13.21.13810\n| notes            = \n* Item oficial do fansite '''Tibia Tales'''.\n* O personagem {{Character|}} recebeu um por ter sido o criador do item.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 62174,
+    "ns": 0,
+    "title": "Biscuit Barrier",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Biscuit Barrier\n| flavortext     = This tasty-looking shield protects from damage and boosts your regeneration.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| vocrequired    = [[Knight]]s\n| levelrequired  = 200\n| resist         = [[Physical Damage|Physical]] +3%, [[Fire Damage|Fire]] +5%\n| augments       = Wound Cleansing -> Base Healing +16,5%\n| imbuement      = 1\n| stackable      = não\n| defense        = 47\n| attrib         = [[Regeneration|Regeneração]] rápida.\n| skillboost     = [[Shielding]] +2\n| modificadores  = Faster [[Regeneration]], [[Life Leech]] +2%\n| weight         = 52.00\n| value          = \n| npcprice       = 8 000 [[Dark Chocolate Coin]]s\n| droppedby      = [[Sugar Daddy]].\n| buyfrom        = Coco\n| sellto         = Jogadores.\n| implemented    = 13.40.54ea79\n| notes          = Faz parte do [[Regeneration Set]] para knights de alto nível. Diferente de outros itens que aceleram a regeneração, ele não precisa ser recarregado e também não tem um limitador de tempo para uso, tornando-se um item desejado.\n<br />Inicialmente, o custo para adquirir o item era de 16.000 [[Dark Chocolate Coin]]s e a dificuldade para conseguir essas moedas eram maior, porém isso foi alterado com a chegada do [[Patches/13.40.0000#Patch_13.40.6a0a21|patch 13.40.6a0a21]] no dia 23 de julho [https://www.tibia.com/news/?subtopic=newsarchive&id=7983].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 62182,
+    "ns": 0,
+    "title": "Cocoa Grimoire",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Cocoa Grimoire\n| flavortext     = This spellbook was made from rich dark chocolate and is filled with powerful knowledge.\n| levelrequired  = 200\n| itemclass      = Equipamentos de Corpo \n| primarytype    = Spellbooks\n| secondarytype  = Escudos\n| vocrequired    = [[Sorcerer]]s\n| augments       = Ultimate Flame Strike -> Base Damage +33%\n| imbuement      = 1\n| stackable      = não\n| defense        = 31\n| skillboost     = [[Magic Level]] +3, [[Fire Magic Level]] +1, [[Magic Shield Capacity]] +150 e +3%\n| resist         = [[Physical Damage|Physical]] +2%, [[Energy Damage|Energy]] +5%\n| modificadores  = \n| volume         = \n| weight         = 15.00\n| npcprice       = 8 000 [[Dark Chocolate Coin]]s\n| npcvalue       = \n| value          = Negociável\n| droppedby      = [[Sugar Daddy]]\n| buyfrom        = Coco\n| sellto         = Jogadores.\n| implemented    = 13.40.54ea79\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 62183,
+    "ns": 0,
+    "title": "Creamy Grimoire",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Creamy Grimoire\n| flavortext     = This spellbook was made from pure white chocolate and is brimming with magical finesse.\n| levelrequired  = 200\n| itemclass      = Equipamentos de Corpo \n| primarytype    = Spellbooks\n| secondarytype  = Escudos\n| vocrequired    = [[Druid]]s\n| augments       = Ultimate Ice Strike -> Base Damage +33%\n| imbuement      = 1\n| stackable      = não\n| defense        = 31\n| skillboost     = [[Magic Level]] +3, [[Healing Magic Level]] +1, [[Magic Shield Capacity]] +150 e +3%\n| resist         = [[Physical Damage|Physical]] +2%, [[Fire Damage|Fire]] +5%\n| modificadores  = \n| volume         = \n| weight         = 17.00\n| npcprice       = 8 000 [[Milk Chocolate Coin]]s\n| npcvalue       = \n| value          = Negociável\n| droppedby      = [[Sugar Daddy]]\n| buyfrom        = Coco\n| sellto         = Jogadores.\n| implemented    = 13.40.54ea79\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 62184,
+    "ns": 0,
+    "title": "Candy-Coated Quiver",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Candy-Coated Quiver\n| flavortext     = This quiver may run out of arrows, but it will never run out of treats.\n| levelrequired  = 200\n| itemclass      = Equipamentos de Corpo \n| primarytype    = Aljavas\n| secondarytype  = Escudos\n| vocrequired    = [[Paladin]]s\n| imbuement      = \n| skillboost     = \n| modificadores  = \n| volume         = 8\n| resist         = [[Fire Damage|Fire]] +2%\n| weight         = 18.00\n| npcprice       = 8 000 [[Milk Chocolate Coin]]s\n| npcvalue       = \n| value          = Negociável\n| droppedby      = [[Sugar Daddy]].\n| buyfrom        = Coco\n| sellto         = Jogadores.\n| implemented    = 13.40.54ea79\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64573,
+    "ns": 0,
+    "title": "Aurora's Collection",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Aurora's Collection\n| flavortext       = Equipped with a magical backpack that never runs out of space, Aurora carries her endless collection on every adventure, eager to show it to everyone along the way. Awarded by TibiaCollection.com\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = \n| tertiarytype     = \n| implemented      = 13.22.14366\n| attrib           = Nenhum.\n| stackable        = não\n| weight           = 7.09\n| mercado          = não\n| sounds           = \n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| notes            = \n* Item oficial do fansite '''TibiaCollection.com'''. \n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}\n<noinclude>[[Categoria:Escudos]]</noinclude>"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6792,
+    "ns": 0,
+    "title": "Snake God's Wristguard",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Snake God's Wristguard\n| flavortext      = It shows your spells and can also shield against attacks when worn.\n| vocrequired     = [[Sorcerer]]s and [[Druid]]s\n| levelrequired   = 100\n| itemclass       = Equipamentos de Corpo\n| primarytype     = Spellbooks\n| secondarytype   = Escudos\n| skillboost      = [[Magic Level]] +3\n| defense         = 23\n| weight          = 28.00\n| value           = 100 000 - 400 000\n| npcvalue        = 0\n| droppedby       = [[Draken Abomination]], [[Draken Elite]], [[Hatebreeder]].\n| buyfrom         = Jogadores.\n| sellto          = Jogadores.\n| implemented    = 8.6\n| notes           = Este item pode ser considerado um spellbook por ter os mesmos atributos de um. Faz parte do [[Magic Level Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6798,
+    "ns": 0,
+    "title": "Spellbook",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Spellbook\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 0\n| flavortext     = It shows your spells and can also shield against attacks when worn.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Spellbooks\n| secondarytype  = Escudos\n| defense        = 23\n| weight         = 18.00\n| imbuement      = 1\n| value          = 0-150\n| npcprice       = 150\n| npcvalue       = 0\n| droppedby      = [[Banshee]], [[Bonelord]], [[Braindeath]], [[Clavius]], [[Dark Carnisylvan]], [[Death Priest]], [[Dwarf Geomancer]], [[Elder Bonelord]], [[Lich]].\n| droppedRaidby  = [[Gravelord Oshuran]], [[The Evil Eye]].\n| buyfrom        = Shiriel, Fenech, Rachel, Asima, Thomas, Rabaz, Gnomegica, Sigurd, Frederik, Siflind, Tandros, Nelly, Romir, Topsy, Xodet, Frans, Chuckles\n| sellto         = Hector the Mentor\n| npcvalue       = 30\n| npcprice       = 150\n| notes          = Você não precisa carregar um spellbook com você o tempo todo. Eles mostram as magias que você possui e as respectivas palavras mágicas. Apenas [[Druid]]s e [[Sorcerer]]s podem usá-lo como escudo. Mesmo sprite de um [[Spellbook of Dragha]], de um [[Nature Magic Spellbook]] e de um [[Almanac of Magic]]. Dado para os personagens que escolheram como vocação definitiva serem [[Sorcerer]]s ou [[Druid]]s  em [[Dawnport]] ou na [[Isle of Destiny]]. Faz parte do [[Isle of Destiny Druid Set]] e [[Isle of Destiny Sorcerer Set]].\n\n<noinclude><p><spoiler>\n* Recompensa das quests:\n** [[To Blind the Enemy Quest]].\n** [[Ornamented Shield Quest]]. \n* [[Respawn Diário]] no castelo de [[Senja]].\n* 01 é necessário para [[Sorcerer]]s durante a [[The Desert Dungeon Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6800,
+    "ns": 0,
+    "title": "Spellbook of Dark Mysteries",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Spellbook of Dark Mysteries\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 80\n| flavortext     = It shows your spells and can also shield against attacks when worn.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Spellbooks\n| secondarytype  = Escudos\n| skillboost     = [[Magic Level]] +3\n| defense        = 26\n| weight         = 28.50\n| value          = 250 000 - 500 000\n| npcvalue       = 0\n| droppedby      = [[Ferumbras Mortal Shell]], [[Hellgorak]], [[Horadron]], [[Prince Drazzak]].\n| droppedRaidby  = [[Ferumbras]], [[Ghazbaran]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.2\n| notes          = Aumenta seu magic level em 3. Considerado o terceiro melhor spellbook por oferecer melhores atributos se comparado a outros. Faz parte do [[Magic Level Set]].\n<noinclude><p><spoiler>* Pode ser obtido como recompensa da [[The Inquisition Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6802,
+    "ns": 0,
+    "title": "Spellbook of Enlightenment",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Spellbook of Enlightenment\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 30\n| flavortext     = It shows your spells and can also shield against attacks when worn.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Spellbooks\n| secondarytype  = Escudos\n| skillboost     = [[Magic Level]] +1\n| defense        = 29\n| weight         = 19.50\n| imbuement      = 1\n| value          = \n| npcvalue       = 4 000\n| droppedby      = [[Blood Hand]], [[Frost Dragon Hatchling]], [[Golden Servant]], [[Golden Servant Replica]], [[Iks Ahpututu]], [[Iks Pututu]], [[Jungle Moa]], [[Lloyd]], [[Mutated Rat]], [[Omnivora]], [[Shadow Pupil]], [[Two-Headed Turtle]].\n| buyfrom        = Jogadores.\n| sellto         = Alexander, Khanna:3 500\n| implemented    = 8.2\n| notes          = Faz parte do [[Magic Level Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6805,
+    "ns": 0,
+    "title": "Spellbook of Lost Souls",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Spellbook of Lost Souls\n| flavortext     = It shows your spells and can also shield against attacks when worn.\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 60\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Spellbooks\n| secondarytype  = Escudos\n| skillboost     = [[Magic Level]] +2\n| defense        = 32\n| weight         = 25.60\n| value          = \n| npcvalue       = 19 000\n| npcprice       = \n| buyfrom        = Jogadores.\n| trade          = sim\n| sellto         = Alexander, Khanna:17 500\n| implemented    = 8.2\n| droppedby      = [[Eradicator]], [[Ferumbras Mortal Shell]], [[Hellgorak]], [[Horadron]], [[Lady Tenebris]], [[The Souldespoiler]].\n| droppedRaidby  = [[Diblis the Fair]], [[Ferumbras]], [[Ghazbaran]], [[The Pale Count]].\n| notes          = Faz parte do [[Magic Level Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6807,
+    "ns": 0,
+    "title": "Spellbook of Mind Control",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Spellbook of Mind Control\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 50\n| flavortext     = It shows your spells and can also shield against attacks when worn.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Spellbooks\n| secondarytype  = Escudos\n| skillboost     = [[Magic Level]] +2\n| defense        = 26\n| weight         = 24.50\n| value          = \n| npcvalue       = 13 000\n| droppedby      = [[Blood Priest]], [[Brachiodemon]], [[Bulltaur Forgepriest]], [[Carnivostrich]], [[Choking Fear]], [[Crypt Mage]], [[Dawnfire Asura]], [[Ferumbras Mortal Shell]], [[Frost Flower Asura]], [[Hellflayer]], [[Hellgorak]], [[Horadron]], [[Infernalist]], [[Lava Golem]], [[Midnight Asura]], [[Nighthunter]], [[Raging Mage]], [[Serpent Spawn]], [[Soul-Broken Harbinger]], [[Soul of Dragonking Zyrtarch]], [[The Noxious Spawn]], [[True Dawnfire Asura]], [[True Midnight Asura]], [[Wrathful Archivist]], [[Yirkas Blue Scales]].\n| droppedRaidby  = [[Ferumbras]], [[Ghazbaran]], [[Yaga the Crone]]. \n| buyfrom        = Jogadores.\n| sellto         = Alexander, Khanna:12 000\n| implemented    = 8.2\n| notes          = Considerado raro até o [[Updates/8.4|Update de Inverno 2008]], quando passou a ser loot de outras criaturas. Faz parte do [[Magic Level Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6827,
+    "ns": 0,
+    "title": "Sparking Rainbow Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Sparking Rainbow Shield\n| flavortext     = It has been temporarily imbued with energy magic and increases your speed.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| vocrequired    = [[Knight]]s\n| levelrequired  = 100\n| enchanted      = sim\n| attrib         = \n| skillboost     = [[Speed]] +10\n| duration       = 15\n| defense        = 47\n| weight         = 69.00\n| npcprice       = 0\n| npcvalue       = 0\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| droppedby      = Ninguém.\n| implemented    = 8.2\n| notes          = Recarregável. É um [[Rainbow Shield]] encantado com o elemento energy. Faz parte do [[Haste Set]].\n<noinclude><p><spoiler>\n* 01 [[Small Enchanted Amethyst]] é necessário para recarregá-lo.\n</spoiler></p></noinclude>\n{{Veja|Itens Recarregáveis}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6828,
+    "ns": 0,
+    "title": "Shield of Honour",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Shield of Honour\n| flavortext     = A mighty shield awarded by the gods of Tibia.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| stackable      = não\n| defense        = 43\n| weight         = 54.00\n| value          = 145 000 000 - 165 000 000\n| npcvalue       = 520\n| npcprice       = 0\n| buyfrom        = Jogadores.\n| sellto         = H.L.\n| implemented    = 6.0\n| notes          = Item raro e valioso. \n<noinclude><div class=\"toccolours mw-collapsible mw-collapsed\" style=\"margin: 4px 0px;\">'''\"História do Item\"'''<div class=\"mw-collapsible-content\"><table ><tr><td align=left>\nFoi implementado em 7 de Janeiro de 2002 como brinde a todos que comprassem uma [[Premium Account]] de 7 meses. A promoção especial ocorreu em virtude do 5º [[Aniversário do Tibia]] e e como forma de incentivar as vendas das Premium Accounts que haviam iniciado 3 meses antes. \n\n20 foram dados como prêmio em um [http://www.tibia.com/news/?subtopic=newsarchive&id=3809&fbegind=5&fbeginm=1&fbeginy=2017&fendd=31&fendm=1&fendy=2017&flist=11111111 concurso] em comemoração ao aniversário de 20 anos do Tibia. A notícia pode ser lida no site oficial {{OfficialNewsArchive|119|aqui}}.\n</td></tr></table></div></div></noinclude>\n\n<gallery>\nArquivo:bronzeneck.jpg|6 Shields of Honour em [[Antica]].\narquivo:Shieldofhonour.png|Shield Of Honour na casa de um de seus donos, o jogador {{Character|Rei de Lutabra}}.\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6829,
+    "ns": 0,
+    "title": "Shield of Corruption",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Shield of Corruption\n| skillboost     = [[Sword Fighting]] +3\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| imbuement      = 1\n| levelrequired  = 80\n| vocrequired    = [[Knight]]s\n| stackable      = não\n| defense        = 47\n| weight         = 49.00\n| value          = 3 000 000 - 5 000 000\n| npcvalue       = 0\n| droppedby      = [[Draken Abomination]], [[Essence Of Malice]], [[Soul of Dragonking Zyrtarch]], [[The Souldespoiler]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.6\n| notes          = Considerado uma excelente opção para [[Knight]]s que usam [[Sword|espada]], apesar do [[Mastermind Shield]] ainda ser mais popular. Mesmo sendo loot de criaturas regulares, ainda é considerado um item raro e valioso. Faz parte do [[High Level Knight Basic Set]]. \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6830,
+    "ns": 0,
+    "title": "Shield of Care",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Shield of Care\n| flavortext     = This shield will surely care for anyone who can bear it.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| imbuement      = 1\n| defense        = 11\n| weight         = 17.00\n| stackable      = não\n| npcvalue       = 0\n| droppedby      = [[Monstor]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Mesmo sprite de uma [[Heart Pillow]] e se parece com um [[Striker's Favourite Pillow]].\n<noinclude><p><spoiler>* Possibilidade de ser obtido aleatoriamente durante a [[The Isle of Evil Quest]].\n*Para tentar obtê-lo deve-se dar \"'''use'''\" no corpo morto do boss [[Monstor]]. \n*Só é possível tentar obtê-lo na primeira vez em que a criatura for morta.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6831,
+    "ns": 0,
+    "title": "Sentinel Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Sentinel Shield\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| stackable      = não\n| imbuement      = 1\n| defense        = 29\n| weight         = 49.00\n| value          = 120\n| npcvalue       = 120\n| droppedby      = [[Lizard Sentinel]], [[Lizard Henchman]].\n| buyfrom        = Jogadores.\n| sellto         = Brengus\n| implemented    = 7.5\n| notes          = Considerado uma boa opção para personagens iniciantes por ser o mais leve dentre os que tem o mesmo atributo defensivo. Porém, não é um escudo popular.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6832,
+    "ns": 0,
+    "title": "Rainbow Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Rainbow Shield\n| flavortext     = Strange elemental magic flows over this shield.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| vocrequired    = [[Knight]]s\n| levelrequired  = 100\n| enchantable    = sim\n| attrib         = \n| skillboost     = \n| duration       = \n| defense        = 39\n| weight         = 69.00\n| npcprice       = 0\n| npcvalue       = 0\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| droppedby      = Ninguém.\n| implemented    = 8.2\n| notes          = Cada encantamento possibilita um atributo especial diferente:\n* [[Fiery Rainbow Shield]] - confere ao item a capacidade de aumentar o shielding skill em 3 pontos e mais 6 pontos de defesa.\n* [[Icy Rainbow Shield]] - confere ao item mais 9 pontos de defesa.\n* [[Sparking Rainbow Shield]] - confere ao item a capacidade de aumentar a velocidade do personagem em 10 levels e mais 6 pontos de defesa.\n* [[Terran Rainbow Shield]] - confere ao item a capacidade de aumentar a velocidade de regeneração do personagem (8 [[mana]] e 2 [[hp]] à cada 6 segundos) e mais 7 pontos de defesa.\n<noinclude><p><spoiler>\n* Recompensa da [[The Demon Oak Quest]].\n{{DASH|'''Nota''':\n* 01 [[Small Enchanted Ruby]] é necessário para encantá-lo com o elemento fogo (Fiery Rainbow Shield).\n* 01 [[Small Enchanted Sapphire]] é necessário para encantá-lo com o elemento gelo (Icy Rainbow Shield).\n* 01 [[Small Enchanted Amethyst]] é necessário para encanta-lo com o elemento energia (Sparking Rainbow Shield).\n* 01 [[Small Enchanted Emerald]] é necessário para encanta-lo com o elemento terra (Terran Rainbow Shield).}}\n</spoiler></p></noinclude>\n{{Veja|Itens Recarregáveis}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6833,
+    "ns": 0,
+    "title": "Icy Rainbow Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Icy Rainbow Shield\n| flavortext     = It has been temporarily imbued with ice magic and has a greatly increased shielding value.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| vocrequired    = [[Knight]]s\n| levelrequired  = 100\n| enchanted      = sim\n| attrib         = \n| skillboost     = \n| duration       = 15\n| defense        = 51\n| weight         = 69.00\n| npcprice       = 0\n| npcvalue       = 0\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| droppedby      = Ninguém.\n| implemented    = 8.2\n| notes          = Recarregável. É um [[Rainbow Shield]] encantado com o elemento gelo. Dentre todos os escudos, possui o segundo melhor atributo defensivo, perdendo apenas para o [[Blessed Shield]]. Contudo, essa vantagem defensiva depende do tempo do encantamento.\n<noinclude><p><spoiler>\n* 01 [[Small Enchanted Sapphire]] é necessário para recarregá-lo.\n</spoiler></p></noinclude>\n{{Veja|Itens Recarregáveis}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6843,
+    "ns": 0,
+    "title": "Mastermind Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Mastermind Shield\n| flavortext     = It's an enchanted shield.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| stackable      = não\n| imbuement      = 1\n| defense        = 49\n| weight         = 57.00\n| value          = 50 000 - 80 000\n| npcvalue       = 50 000\n| droppedby      = [[Angry Demon]], [[Annihilon]], [[Brachiodemon]], [[Demon]], [[Falcon Knight]], [[Falcon Paladin]], [[Ferumbras Mortal Shell]], [[Grand Canon Dominus]], [[Hellflayer]], [[Juggernaut]], [[Latrivan]], [[Preceptor Lazare]], [[Rhindeer]], [[Terofar]], [[Vexclaw]], [[Zavarash]].\n| droppedRaidby  = [[Ferumbras]], [[Ghazbaran]], [[Orshabaal]], [[Zulazza the Corruptor]].\n| buyfrom        = Jogadores.\n| sellto         = Rashid, H.L.:550\n| notes          = Dentre os escudos mais populares e sem restrições quanto ao uso ainda é considerado o melhor do jogo. Contudo, dentre todos os escudos disponíveis, é o sexto melhor, o quarto em valor defensivo. Apesar de ter o mesmo atributo defensivo que o [[Nightmare Shield]] e o [[Necromancer Shield]] fica atrás deles no ranking por ser mais pesado. Mas, mesmo assim, é mais popular que seus equivalentes por ser mais barato. Citado no livro [[Legendary Curses Volume IX Pt 1 (Book)]]. Faz parte do [[Paladin Set]], [[Unrestricted Set]], [[Semi Rare Set]] e [[Rare Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6844,
+    "ns": 0,
+    "title": "Meat Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Meat Shield\n| flavortext     = A sturdy shield made of old meat.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| imbuement      = 1\n| defense        = 13\n| weight         = 5.00\n| stackable      = não\n| droppedby      = [[Doctor Perhaps]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Mesmo sprite de um [[Ham]].\n<noinclude><p><spoiler>* Possibilidade de ser obtido aleatoriamente durante a [[The Isle of Evil Quest]].\n*Para tentar obtê-lo deve-se dar \"'''use'''\" no corpo morto do boss [[Doctor Perhaps]]. \n*Só é possível tentar obtê-lo na primeira vez em que a criatura for morta.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6845,
+    "ns": 0,
+    "title": "Medusa Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Medusa Shield\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| stackable      = não\n| imbuement      = 1\n| defense        = 43\n| weight         = 58.00\n| value          = 9 000 - 15 000\n| npcvalue       = 9 000\n| droppedby      = [[Gorgo]], [[Hydra]], [[Lion Hydra]], [[Medusa]], [[The Enraged Thorn Knight]], [[The Many]], [[The Souldespoiler]].\n| droppedRaidby  = [[The Welter]].\n| buyfrom        = Jogadores.\n| sellto         = Rashid\n| implemented    = 7.5\n| notes          = Ótima opção para personagens de level intermediário que ainda não tem condição de adquirir um escudo com maior atributo defensivo. \n<noinclude><p><spoiler>* 01 é necessário para addon do [[Wizard Outfits]].\n* Recompensa da: [[Medusa Shield Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6846,
+    "ns": 0,
+    "title": "Mercenary Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{deprecated}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Mercenary Shield\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| stackable      = não\n| defense        = 24\n| weight         = 52.00\n| trade          = não\n| npcvalue       = 0\n| mercado        = não\n| buyfrom        = Ninguém.\n| sellto         = Ninguém.\n| notes          = Substituído pelo [[Griffin Shield]].\n\n<noinclude><div class=\"toccolours mw-collapsible mw-collapsed\" style=\"margin: 4px 0px;\">'''\"História do Item\"'''<div class=\"mw-collapsible-content\">\n<table ><tr><td align=left>\nFoi originalmente implementada em [[Antica]] como presente dos [[Gods#Creators|Gods]] para membros da Mercenarys, uma das primeiras [[guild]]s do Tibia.\n</td></tr></table></div></div></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6847,
+    "ns": 0,
+    "title": "Necromancer Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Necromancer Shield\n| flavortext     = It is enchanted with unholy, necromantic powers.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| secondarytype  = Fontes de Luz\n| attrib         = Fornece uma pequena quantidade de luz esverdeada quando equipado.\n| stackable      = não\n| imbuement      = 1\n| defense        = 49\n| weight         = 32.00\n| value          = 200 000 - 450 000\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| droppedby      = Ninguém.\n| implemented    = 7.9\n| notes          = Apesar de possuir o mesmo atributo defensivo que o [[Mastermind Shield]] e de ser mais leve, não é tão popular. Faz parte do [[Mage Set]], [[Paladin Set]], [[Unrestricted Set]] e [[Rare Set]].\n<noinclude><p><spoiler>* Pode ser obtido como recompensa da [[Dreamer's Challenge Quest]].\n{{DASH|'''Nota''': Para obtê-lo deve-se jurar fidelidade aos [[Brotherhood of Bones]] e entregar 1000 [[Demonic Essence]]s.}}</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6848,
+    "ns": 0,
+    "title": "Nightmare Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Nightmare Shield\n| flavortext     = It was crafted by the ancient order of the nightmare knights.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| secondarytype  = Fontes de Luz\n| attrib         = Fornece uma pequena quantidade de luz avermelhada quando equipado.\n| stackable      = não\n| imbuement      = 1\n| defense        = 49\n| weight         = 32.00\n| value          = 500 000 - 900 000\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| droppedby      = Ninguém.\n| implemented    = 7.9\n| notes          = Apesar de possuir o mesmo atributo defensivo que o [[Mastermind Shield]] e de ser mais leve, não é tão popular. Faz parte do [[Light Set]], [[Paladin Set]], [[Mage Set]], [[Unrestricted Set]], [[Rare Set]] e [[High Level Knight Basic Set]].\n<noinclude><p><spoiler>* Pode ser obtido como recompensa da [[Dreamer's Challenge Quest]].\n{{DASH|'''Nota''': Para obtê-lo deve-se jurar fidelidade aos [[Nightmare Knights]] e entregar 1000 [[Demonic Essence]]s.}}</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6849,
+    "ns": 0,
+    "title": "Norse Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Norse Shield\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| defense        = 37\n| stackable      = não\n| imbuement      = 1\n| weight         = 41.00\n| value          = 1 500\n| npcvalue       = 1 500\n| npcprice       = 0\n| droppedby      = [[Frost Giant]], [[Frost Giantess]].\n| sellto         = Rashid\n| buyfrom        = Jogadores.\n| implemented    = 8.0\n| notes          = Excelente escolha para jogadores de level baixo. Mesmo atributo defensivo do [[Bonelord Shield]], porém mais leve. Faz parte do [[Barbarian Set]].\n<noinclude><p><spoiler>* Possibilidade de ser obtido ao [[Rust Remover|remover a ferrugem]] de um [[Rusted Shield]]. \n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6850,
+    "ns": 0,
+    "title": "Ornamented Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ornamented Shield\n| flavortext     = Many gems sparkle on the shield.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| imbuement      = 1\n| defense        = 29\n| weight         = 67.00\n| value          = 1 000 - 1 500\n| stackable      = não\n| npcvalue       = 1 500\n| npcprice       = 0\n| buyfrom        = Jogadores.\n| sellto         = H.L.:45, Gnomission\n| notes          = Frequentemente utilizado como elemento decorativo. Antigamente era um item que davam respawn em quest.\n<noinclude><p><spoiler>* Recompensa da: [[Ornamented Shield Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6851,
+    "ns": 0,
+    "title": "Phoenix Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Phoenix Shield\n| flavortext     = This shield feels warm to the touch.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| stackable      = não\n| imbuement      = 1\n| defense        = 45\n| weight         = 35.00\n| value          = 1 000 000 - 2 000 000+\n| npcvalue       = 16 000\n| droppedby      = [[Ferumbras Mortal Shell]], [[Mahrdis]], [[The Time Guardian]]. \n| droppedRaidby  = [[Ferumbras]], [[Furyosa]].\n| buyfrom        = Jogadores.\n| sellto         = Nah'Bob\n| implemented    = 7.3\n| notes          = Item raro e valioso. Perdeu um pouco seu valor quando passou a ser possível obtê-lo de outros bosses. <gallery>Arquivo:Phoenix_shield.JPG|Phoenix Shield em [[Menera]].</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6853,
+    "ns": 0,
+    "title": "Plate Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Plate Shield\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| defense        = 23\n| stackable      = não\n| weight         = 65.00\n| value          = 40 - 125\n| npcvalue       = 45\n| npcprice       = 125\n| droppedby      = [[Assassin]], [[Cyclops]], [[Cyclops Drone]], [[Cyclops Smith]], [[Crazed Dwarf]], [[Elf]], [[Gladiator]], [[Gozzler]], [[Iks Aucar]], [[Juvenile Cyclops]], [[Minotaur]], [[Minotaur Bruiser]], [[Minotaur Cult Follower]], [[Mutated Rat]], [[Orc Cult Fanatic]], [[Orc Leader]], [[Pirate Marauder]], [[Renegade Orc]], [[Rorc]], [[Scar Tribe Warrior]], [[Tarantula]], [[Tortoise]], [[Wailing Widow]], [[War Golem]], [[Werewolf]].\n| buyfrom        = Shanar, Memech, Cornelia, Hireling (Trader), Azil, Willard, Esrik, Rock In A Hard Place, Ulrik, Raffael, Kroox, Cedrik, Brengus, Flint, Robert, Sam, Turvy, Hardek, Baltim, Yanni, Morpel\n| sellto         = Shanar, Memech, Cornelia, Hireling (Trader), Azil, Coltrayne, Willard, Esrik, Rock In A Hard Place, Ulrik, Raffael:40, Kroox, Cedrik, H.L.:25, Brengus, Flint, Dixi:40, Lee'Delle:40, Robert, Sam, Turvy, Hardek, Baltim, Yanni, Morpel\n| notes          = Segundo melhor escudo encontrado em [[Rookgaard]]. Faz parte do [[Plate Set]] e do [[Minotaur Set]].\n<noinclude><p><spoiler>* Possibilidade de ser obtido ao [[Rust Remover|remover a ferrugem]] de um [[Rusted Shield]]. \n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6854,
+    "ns": 0,
+    "title": "Rose Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Rose Shield\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| stackable      = não\n| defense        = 36\n| weight         = 52.00\n| npcvalue       = 49\n| npcprice       = 0\n| buyfrom        = Jogadores.\n| sellto         = H.L.\n| notes          = Item raro e valioso. Originalmente só existia em [[Antica]], contudo, com a implementação da possibilidade de [[Character World Transfer|transferência dos personagens]], pode ser que seja encontrado em outros mundos.\n\n<noinclude><div class=\"toccolours mw-collapsible mw-collapsed\" style=\"margin: 4px 0px;\">'''\"História do Item\"'''<div class=\"mw-collapsible-content\"><table ><tr><td align=left>\n\nFoi originalmente implementado em Antica como presente dos [[Gods#Creators|Gods]] para membros da Red Rose, uma das primeiras [[guild]]s do Tibia. Um outro presente dado a mesma guild foi o [[Noble Armor|Rose Armor]].\n\nDos quatro itens entregues pelos '''Gods''' para as três guildas mais antigas de todos os tempo, é o único que até hoje não foi modificado.\n</td></tr></table></div></div></noinclude>\n\n<gallery>\nArquivo:rose_shield.jpg|Rose Shield em Edron\nArquivo:Rose Shield2.png|Rose Shield em Thais\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6855,
+    "ns": 0,
+    "title": "Scarab Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Scarab Shield\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| defense        = 33\n| weight         = 47.00\n| value          = 2000\n| npcvalue       = 2 000\n| stackable      = não\n| droppedby      = [[Ancient Scarab]], [[Ancient Spawn of Morgathla]], [[Fleshcrawler]], [[The Ravager]].\n| buyfrom        = Jogadores.\n| sellto         = Rashid\n| notes          = Apesar de ser mais leve e possuir os mesmos atributos defensivo que o [[Dark Shield]] não é tão popular. Há um item similar que pode ser visto no balcão próximo ao [[Omruc]], contudo não se sabe se é realmente o mesmo item pois um [[bone|osso]] colocado sobre ele impede a visualização.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6856,
+    "ns": 0,
+    "title": "Salamander Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Salamander Shield\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| stackable      = não\n| defense        = 34\n| weight         = 59.00\n| value          = 280\n| npcvalue       = 280\n| droppedby      = [[High Templar Cobrass]], [[Lizard Templar]], [[Lizard Executioner]].\n| buyfrom        = Jogadores.\n| sellto         = Brengus\n| implemented    = 7.5\n| notes          = Apesar de mais pesado, possui os mesmos atributos defensivos do [[Dwarven Shield]] e não é tão popular. Frequentemente utilizado como elemento decorativo.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9466,
+    "ns": 0,
+    "title": "Shield of the White Knight",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Shield of the White Knight \n| flavortext     = It seems a bit chunky, but what was good enough for a white knight should be good for everyone. \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| imbuement      = 1\n| defense        = 11\n| weight         = 5.00 \n| stackable      = não\n| npcvalue       = 0 \n| droppedby      = [[Mephiles]]. \n| buyfrom        = Jogadores. \n| sellto         = Jogadores. \n| notes          = Mesmo sprite da peça de [[Xadrez]] [[White Knight Token]]\n<noinclude><p><spoiler>* Possibilidade de ser obtido aleatoriamente durante a [[The Isle of Evil Quest]].\n*Para tentar obtê-lo deve-se dar \"'''use'''\" no corpo morto do boss [[Mephiles]]. \n*Só é possível tentar obtê-lo na primeira vez em que a criatura for morta.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 19227,
+    "ns": 0,
+    "title": "Ornate Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ornate Shield\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| vocrequired    = [[Knight]]s\n| imbuement      = 1\n| defense        = 47\n| levelrequired  = 130\n| resist         = [[Physical Damage|Physical]] +5%\n| weight         = 71.00\n| value          = 40 000 - 150 000\n| npcvalue       = 42 000\n| npcprice       = 0\n| droppedby      = [[Jaul]],[[Tanjis]].\n| buyfrom        = Jogadores.\n| sellto         = Rock In A Hard Place\n| implemented    = 9.4\n| notes          = Está entre os melhores escudos do jogo para [[knights]]. Devido ao bônus de resistência contra dano físico, oferece melhor proteção que o [[Blessed Shield]]. Considera-se que a proteção oferecida por ele ao dano físico pode até ser mais eficaz que a do [[Prismatic Shield]], pois o bônus de skills oferecido pelo segundo é perdido quando se enfrenta simultaneamente mais de duas criaturas. Faz parte do [[Ornate Set]], [[Blocking Set]] e [[High Level Knight Basic Set]].\n<noinclude><p><spoiler>* Pode ser encantado pelo [[Imbuing System]] em Basic, Intricate e Powerful. <p>[[Death]], [[Earth]], [[Energy]], [[Fire]], [[Holy]], [[Ice]], Skillboost.</p> </spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 22224,
+    "ns": 0,
+    "title": "Mathmaster Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre o '''fansite item''' Mathmaster Shield. Para à réplica, veja [[Mathmaster Shield (Réplica)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Mathmaster Shield\n| flavortext       = This is an emblem of wisdom. It was awarded by TibiaStat.com\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = \n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\". Brilha com uma luz azul.\n| stackable        = não\n| weight           = 3.14\n| mercado          = não\n| sounds           = \n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 9.5\n| notes            = \n* Item oficial do ex-fansite '''TibiaStat'''. \n* O personagem {{Character|Lupus Aurelius}} recebeu um por ter sido o criador do item.  \n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}\n<noinclude>[[Categoria:Escudos]]</noinclude>"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 23285,
+    "ns": 0,
+    "title": "Spellbook of Ancient Arcana",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Spellbook of Ancient Arcana\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 150\n| flavortext     = It shows your spells and can also shield against attacks when worn.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Spellbooks\n| secondarytype  = Escudos\n| skillboost     = [[Magic Level]] +4\n| resist         = [[Death Damage|Death]] +5%\n| defense        = 31\n| weight         = 25.00\n| value          = 5 500 000 - 8 500 000\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.5\n| notes          = Faz parte do [[Mage Set]] e [[Magic Level Set]].\n<noinclude><p><spoiler>\n* Recompensa da [[The Demon Oak Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25335,
+    "ns": 0,
+    "title": "Prismatic Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Prismatic Shield\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| levelrequired  = 150\n| vocrequired    = [[Knight]]s\n| skillboost     = [[Shielding]] +2\n| resist         = [[Physical Damage|Physical]] +4%\n| stackable      = não\n| defense        = 49\n| weight         = 72.00\n| value          = 5 000 - 30 000\n| npcprice       = 10 [[Major Crystalline Token]]\n| buyfrom        = Gnomally\n| sellto         = Jogadores.\n| implemented    = 9.6\n| droppedby      = Ninguém.\n| notes          = Até o [[Update de Inverno 2017]] era considerado o melhor escudo do jogo. Ideal para os [[blocker]]s.  Equivale ao [[Mastermind Shield]] em atributo defensivo mas possui um bônus de resistência ao dano físico e adiciona skills de shielding ao personagem. Pode bloquear mais dano físico do que um [[Blessed Shield]]. Faz parte do [[Prismatic Set]], [[Blocking Set]] e [[High Level Knight Basic Set]].\n{{DASH|'''Dica:''' Dependendo do valor do [[Major Crystalline Token]] no mundo, pode ser mais barato comprar o token e trocar pelo item na [[NPC]] do que comprá-lo diretamente de algum jogador.}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25339,
+    "ns": 0,
+    "title": "Spellbook of Vigilance",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Spellbook of Vigilance\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| flavortext     = It shows your spells and can also shield against attacks when worn.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Spellbooks\n| secondarytype  = Escudos\n| levelrequired  = 130\n| resist         = [[Earth Damage|Earth]] +3%, [[Fire Damage|Fire]] -3%\n| skillboost     = [[Magic Level]] +3\n| defense        = 32\n| weight         = 27.00\n| value          = 5 000 - 30 000\n| npcvalue       = 0\n| npcprice       = 10 [[Major Crystalline Token]]\n| droppedby      = Ninguém.\n| buyfrom        = Gnomally\n| sellto         = Jogadores.\n| implemented    = 9.6\n| notes          = Faz parte do [[Gill Set]], [[Mage Set]] e [[Magic Level Set]].\n{{DASH|'''Dica:''' Dependendo do valor do [[Major Crystalline Token]] no mundo, pode ser mais barato comprar o token e trocar pelo item na [[NPC]] do que comprá-lo diretamente de algum jogador.}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 30993,
+    "ns": 0,
+    "title": "Runic Ice Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Runic Ice Shield\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| imbuement      = 1\n| defense        = 41\n| weight         = 49.00\n| droppedby      = [[Melting Frozen Horror]].\n| droppedRaidby  = [[Hirintror]].\n| droppedEventby = [[Gelidrazah the Frozen]].\n| value          = 60 000 - 500 000\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.20\n| notes          = Apesar de possuir o mesmo atributo defensivo do [[Dragon Shield]] e ser mais leve, não é tão popular. Frequentemente utilizado como elemento decorativo. Perdeu um pouco seu valor e raridade após o [[Update de Inverno 2016]] quando passou a ser loot de outras criaturas.\n<gallery>\nArquivo:Runic.jpg|Escudo na casa de um jogador.\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 33142,
+    "ns": 0,
+    "title": "Mino Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Mino Shield\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| weight         = 65.00\n| defense        = 41\n| value          = Negociável\n| npcvalue       = 3 000\n| droppedby      = [[Bulltaur Brute]], [[Minotaur Amazon]], [[Minotaur Cult Follower]], [[Minotaur Hunter]], [[Thanatursus]], [[The False God]], [[Usurper Archer]].\n| buyfrom        = Jogadores.\n| sellto         = Flint\n| implemented    = 10.50\n| notes          = Faz parte do [[Minotaur Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 34146,
+    "ns": 0,
+    "title": "Spellbook of the Novice",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Spellbook of the Novice\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| flavortext     = It shows your spells and can also shield against attacks when worn.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Spellbooks\n| secondarytype  = Escudos\n| defense        = 13\n| weight         = 14.00\n| value          = \n| npcvalue       = 15\n| npcprice       = 75\n| droppedby      = Ninguém.\n| buyfrom        = Asima, Chuckles, Frederik, Gnomegica, Nelly, Rabaz, Rachel, Romir, Shiriel, Siflind, Sigurd, Tandros, Topsy, Xodet, Frans, Fenech, Thomas\n| sellto         = Hector the Mentor\n| mercado        = sim\n| implemented    = 10.55\n| notes          = * Faz parte do [[Set Inicial]] de [[Druid]]s e [[Sorcerer]]s.\n* Após o [[Update de Newhaven]], este item passou a ser vendido em NPCs no continente principal e pode ser comercializado no [[Mercado]].\n\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 37217,
+    "ns": 0,
+    "title": "Rift Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Rift Shield\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| imbuement      = 1\n| defense        = 49\n| weight         = 65.00\n| value          = Negociável\n| npcvalue       = 50 000\n| buyfrom        = Jogadores.\n| sellto         = Rashid\n| droppedby      = [[Ferumbras Mortal Shell]], [[Grimeleech]], [[Hellflayer]], [[Shulgrax]], [[The Scourge of Oblivion]], [[Vexclaw]].\n| implemented    = 10.90\n| notes          = Possui a mesma defesa do [[Mastermind Shield]], porém é 8oz mais pesado.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 37571,
+    "ns": 0,
+    "title": "Painted Gourd Rattle",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Painted Gourd Rattle\n| flavortext     = It is filled with shark teeth and onyx chips and covered with strange runes.\n| itemclass      = Outros Itens\n| primarytype    = Escudos\n| secondarytype  = Itens de Quest\n| weight         = 3.90\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 0\n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.90\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[Krailos Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 37909,
+    "ns": 0,
+    "title": "Shield of Destiny",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre o '''fansite item''' Shield of Destiny. Para à réplica, veja [[Shield of Destiny (Réplica)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Shield of Destiny\n| flavortext       = Holding the divine intellect of Uman and the merciless destruction instinct of Zathroth, the eternal balance remains on the hands of its owner. Granted by TibiaRoyal.com\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = \n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\". Fornece uma pequena quantidade de luz vermelha e verde.\n| stackable        = não\n| weight           = 68.00\n| mercado          = não\n| sounds           = \n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 10.90\n| notes            = \n* Item oficial do ex-fansite '''TibiaRoyal'''. \n* O personagem {{Character|Lupus Aurelius}} recebeu um por ter sido o criador do item. \n* Um pode ser visto na exibição de prêmios de Thais aos domingos. \n* Ao ser usado, muda de aparência: [[Arquivo:Shield of Destiny 2.gif|link=]].\n}}\n<noinclude>[[Categoria:Escudos]]</noinclude>"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42510,
+    "ns": 0,
+    "title": "Journal Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Journal Shield\n| flavortext       = Tibia's very first headline is written on it. Awarded by BomDiaTibia.com\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = \n| tertiarytype     = \n| attrib           = Brilha constantemente no canto superior esquerdo. Fornece uma pequena quantidade de luz amarela.\n| stackable        = não\n| weight           = 27.00\n| mercado          = não\n| sounds           = \"Read these ancient news to get protected, <nome do personagem>\"; \"Well, I have one very old report for you. Old but gold!; \"Hail BomDiaTibia.com!\"; \"Can I tell you some gossip, <nome do personagem>?\".\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 11.48.5712\n| notes            = \nEste item pode ser equipado em seu inventário como um escudo, porém não oferece nenhuma proteção ao personagem.\n* Item oficial do fansite '''BomDiaTibia'''.\n* O personagem {{Character|Didi Hadid}} recebeu um por ter sido o criador do item.\n* Pode ser visto na exibição de prêmios de Thais aos domingos.\n\n[[Journal Shield/Donos|Confira a lista de donos clicando aqui]].\n\n<noinclude><gallery>\nArquivo:Foto Journal Shield.png|'''Journal Shield''' na casa do personagem {{Character|Wachusett}}, administrador do BomDiaTibia.\n</gallery></noinclude>\n}}\n<noinclude>[[Categoria:Escudos]]</noinclude>"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45076,
+    "ns": 0,
+    "title": "Shoulder Plate",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Shoulder Plate\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Spellbooks\n| secondarytype  = Escudos\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| imbuement      = 1\n| levelrequired  = 180\n| defense        = 34\n| skillboost     = [[Magic Level]] +3\n| resist         = [[Earth Damage|Earth]] +6%, [[Physical Damage|Physical]] +2%\n| weight         = 35.00\n| droppedby      = [[Malofur Mangrinder]].\n| stackable      = não\n| value          = Negociável\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| npcvalue       = \n| implemented    = 12.00\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45325,
+    "ns": 0,
+    "title": "Shield of Endless Search",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Shield of Endless Search\n| flavortext       = This is a tribute to every lost soul in the Tibia land. Awarded by OrcSearch.com\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = \n| tertiarytype     = \n| attrib           = \n| stackable        = não\n| weight           = 11.00\n| mercado          = não\n| sounds           = \n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 12.00\n| notes            = \n* Item oficial do ex-fansite '''OrcSearch'''.\n* O personagem {{Character|Dev Zimm}} recebeu um por ter sido o criador do item.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}\n<noinclude>[[Categoria:Escudos]]</noinclude>"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 49013,
+    "ns": 0,
+    "title": "Lion Spellbook",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Lion Spellbook\n| flavortext    = \n| itemclass     = Equipamentos de Corpo\n| primarytype   = Spellbooks\n| secondarytype = Escudos\n| vocrequired   = [[Sorcerer]]s and [[Druid]]s\n| imbuement     = 1\n| levelrequired = 220\n| defense       = 32\n| skillboost    = [[Magic Level]] +4\n| resist        = [[Physical Damage|Physical]] +3%, [[Ice Damage|Ice]] +7%\n| weight        = 25.00\n| droppedby     = [[Ancient Lion Knight]], [[Drume]]\n| stackable     = não\n| value         = \n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| implemented   = 12.40\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 49015,
+    "ns": 0,
+    "title": "Lion Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Lion Shield\n| flavortext     = \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| vocrequired    = [[Knight]]s\n| levelrequired  = 250\n| resist         = [[Physical Damage|Physical]] +7%, [[Earth Damage|Earth]] +10%\n| imbuement      = 1\n| stackable      = não\n| defense        = 51\n| weight         = 65.00\n| value          = Negociável\n| npcvalue       = \n| droppedby      = [[Ancient Lion Knight]], [[Drume]].\n| implemented    = 12.40\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 49289,
+    "ns": 0,
+    "title": "Soulbastion",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Soulbastion\n| flavortext     = \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| vocrequired    = [[Knight]]s\n| levelrequired  = 400\n| resist         = [[Physical Damage|Physical]] +10%, [[Death Damage|Death]] +10%\n| imbuement      = 1\n| stackable      = não\n| defense        = 55\n| skillboost     = \n| weight         = 58.00\n| value          = \n| npcvalue       = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.40\n| notes          = <noinclude><p><spoiler>* Possibilidade de ser obtido ao usar um [[Bag You Desire]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 50816,
+    "ns": 0,
+    "title": "Quiver",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Quiver\n| levelrequired  = 0\n| itemclass      = Equipamentos de Corpo \n| primarytype    = Aljavas\n| secondarytype  = Escudos\n| vocrequired    = [[Paladin]]s\n| imbuement      = \n| skillboost     = \n| volume         = 6\n| weight         = 17.00\n| value          = \n| npcprice       = 400\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Irea, Dario, Perac, Hireling (Trader), Edoch, Willard, Taegen, Pompan, Gnomerrow, Rock In A Hard Place, Raffael:350, Eliyas, Uzgod, Mugruu, Cedrik, Brengus, Perod, Silas, Asnarus, Maun, Robert, Galuna, Hector the Mentor, Xed, Vincent\n| sellto         = Hector the Mentor:100\n| implemented    = 12.55.10451\n| notes          = Faz parte do [[Paladin Set]].\n<noinclude><p><spoiler>* Pode ser obtida um vez por dia em um baú próximo ao NPC [[Blind Orc]] em [[Rookgaard]], ({{mapa|32100,32127,4:2|aqui}}).</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 50817,
+    "ns": 0,
+    "title": "Red Quiver",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Red Quiver\n| levelrequired  = 0\n| itemclass      = Equipamentos de Corpo \n| primarytype    = Aljavas\n| secondarytype  = Escudos\n| vocrequired    = [[Paladin]]s\n| imbuement      = \n| skillboost     = \n| volume         = 6\n| weight         = 17.00\n| value          = \n| npcprice       = 400\n| npcvalue       = 0\n| droppedby      = [[Adlerauge]].\n| buyfrom        = Irea, Dario, Perac, Edoch, Willard, Taegen, Pompan, Rock In A Hard Place, Raffael:350, Eliyas, Gnomerrow, Uzgod, Cedrik, Maun, Mugruu, Brengus, Perod, Silas, Asnarus, Robert, Galuna, Xed, Vincent, Hireling (Trader)\n| sellto         = Jogadores.\n| implemented    = 12.55.10451\n| notes          = Faz parte do [[Paladin Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 50882,
+    "ns": 0,
+    "title": "Jungle Quiver",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Jungle Quiver\n| levelrequired  = 150\n| itemclass      = Equipamentos de Corpo \n| primarytype    = Aljavas\n| secondarytype  = Escudos\n| vocrequired    = [[Paladin]]s\n| imbuement      = \n| skillboost     = \n| volume         = 8\n| weight         = 18.00\n| npcprice       = \n| npcvalue       = \n| value          = Negociável\n| droppedby      = [[Ratmiral Blackwhiskers]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.60\n| notes          = Faz parte do [[Paladin Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53561,
+    "ns": 0,
+    "title": "Morshabaal's Mask",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Morshabaal's Mask\n| levelrequired  = 150\n| itemclass      = Equipamentos de Corpo \n| primarytype    = Escudos\n| resist         =\n| imbuement      = 0\n| stackable      = não\n| defense        = 0\n| skillboost     = [[Fire Magic Level]] +1, [[Ice Magic Level]] +1, [[Earth Magic Level]] +1, [[Energy Magic Level]] +1\n| volume         = \n| weight         = 41.00\n| npcprice       = \n| npcvalue       = \n| value          = \n| droppedby      = Ninguém.\n| droppedRaidby  = [[Morshabaal]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 56126,
+    "ns": 0,
+    "title": "Naga Quiver",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Naga Quiver\n| levelrequired  = 250\n| itemclass      = Equipamentos de Corpo \n| primarytype    = Aljavas\n| secondarytype  = Escudos\n| vocrequired    = [[Paladin]]s\n| imbuement      = \n| skillboost     = \n| resist         = [[Ice Damage|Ice]] +2%\n| modificadores  = \n| volume         = 8\n| weight         = 19.00\n| npcprice       = \n| npcvalue       = \n| value          = Negociável\n| droppedby      = [[Timira the Many-Headed]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.90\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 66087,
+    "ns": 0,
+    "title": "Refined Stag Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Refined Stag Shield\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| flavortext     = A refined silver stag shield\n| vocrequired    = [[Knight]]s\n| levelrequired  = 350\n| resist         = [[Physical Damage|Physical]] +5%, [[Ice Damage|Ice]] +12%\n| skillboost     = [[Axe Fighting]] +2, [[Club Fighting]] +2, [[Sword Fighting]] +2\n| augments       = Berserk -> +1% critical hit chance\n| imbuement      = 1\n| stackable      = não\n| defense        = 54\n| auguments      = Front Sweep -> +1% critical hit chance\n| weight         = 62.00\n| value          = \n| npcvalue       = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| implemented    = 15.20.7a5cc9\n| sellto         = Jogadores.\n| notes          = {{Veja|Como Forjar um Stag Shield}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6810,
+    "ns": 0,
+    "title": "Spellbook of Warding",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Spellbook of Warding\n| flavortext     = It shows your spells and can also shield against attacks when worn.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Spellbooks\n| secondarytype  = Escudos\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 40\n| skillboost     = [[Magic Level]] +1\n| defense        = 36\n| weight         = 21.00\n| imbuement      = 1\n| npcvalue       = 8 000\n| buyfrom        = Jogadores.\n| sellto         = Alexander, Khanna:7 500\n| implemented    = 8.2\n| droppedby      = [[Amenef The Burning]], [[Anomaly]], [[Blood Priest]], [[Dark Carnisylvan]], [[Energuardian Of Tales]], [[Eradicator]], [[Gorzindel]], [[Guardian Of Tales]], [[Hellgorak]], [[High Voltage Elemental]], [[Horadron]], [[Lloyd]], [[Lady Tenebris]], [[Mad Mage]], [[Massive Energy Elemental]], [[Necromancer]], [[Plagirath]], [[Tremendous Tyrant]], [[Usurper Commander]], [[Varnished Diremaw]].\n| droppedRaidby  = [[Ghazbaran]].\n| notes          = A partir do [[Winter Update 2011|update 9.40]] tornou-se o segundo spellbook com a maior defesa do jogo. O primeiro foi obtido em 2009 em Lucera. Faz parte do [[Mage Set]] e [[Magic Level Set]].\n<noinclude><p><spoiler>* Pode ser obtido como recompensa da [[The Thieves Guild Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6811,
+    "ns": 0,
+    "title": "Spellscroll of Prophecies",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Spellscroll of Prophecies\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 70\n| flavortext     = It shows your spells and can also shield against attacks when worn.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Spellbooks\n| secondarytype  = Escudos\n| skillboost     = [[Magic Level]] +3\n| defense        = 20\n| weight         = 26.50\n| value          = 70 000 - 300 000\n| npcvalue       = 0\n| droppedby      = [[Ferumbras Mortal Shell]], [[Hellgorak]], [[Horadron]], [[Prince Drazzak]], [[The Time Guardian]].\n| droppedRaidby  = [[Ferumbras]], [[Gravelord Oshuran]], [[Ghazbaran]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.2\n| notes          = Considerado melhor que o [[Spellbook of Dark Mysteries]], pois implementa o mesmo valor de magic level sendo que é é mais leve e mais barato. Contudo, possui defesa menor. Faz parte do [[Magic Level Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6813,
+    "ns": 0,
+    "title": "Wooden Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Wooden Shield\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| defense        = 19\n| weight         = 40.00\n| value          = 3 - 15\n| npcvalue       = 5\n| npcprice       = 13\n| stackable      = não\n| droppedby      = [[Big Boss Trolliver]], [[Frost Troll]], [[Island Troll]], [[Troll]], [[Troll Champion]], [[Troll Marauder]], [[Young Troll]].\n| buyfrom        = Shanar:15, Memech:15, Cornelia:15, Hireling (Trader):15, Azil:15, Coltrayne:15, Willard:15, Esrik:15, Rock In A Hard Place:15, Ulrik:15, Kroox:15, Cedrik:15, Brengus:15, Flint:15, Lee'Delle, Dixi:15, Robert:15, Sam:15, Turvy:15, Hardek:15, Baltim:15, Yanni:15, Morpel:15\n| sellto         = Shanar, Memech, Cornelia, Hireling (Trader), Azil, Willard, Esrik, Rock In A Hard Place, Ulrik, Raffael:3, Kroox, Cedrik, H.L.:1, Brengus, Flint, Lee'Delle:3, Dixi:3, Robert, Sam, Turvy, Hardek, Baltim, Yanni, Morpel\n| notes          = Escudo mais fraco do Tibia. Faz parte do [[Set Inicial]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6814,
+    "ns": 0,
+    "title": "Viking Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Viking Shield\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| stackable      = não\n| imbuement      = 1\n| defense        = 29\n| weight         = 66.00\n| value          = 85 - 260\n| npcvalue       = 85\n| npcprice       = 260\n| buyfrom        = Shanar, Memech, Cornelia, Hireling (Trader), Azil, Willard, Esrik, Rock In A Hard Place, Ulrik, Raffael, Kroox, Cedrik, Brengus, Flint, Robert, Sam, Turvy, Hardek, Baltim, Yanni, Morpel\n| sellto         = Shanar, Memech, Cornelia, Hireling (Trader), Azil, Willard, Esrik, Rock In A Hard Place, Ulrik, Kroox, Cedrik, H.L.:35, Brengus, Flint, Robert, Sam, Turvy, Hardek, Baltim, Yanni, Morpel\n| notes          = Desde que escudos melhores ficaram mais acessíveis, este item caiu em desuso. Faz parte do [[Viking Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6815,
+    "ns": 0,
+    "title": "Vampire Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Vampire Shield\n| flavortext     = Dark powers enchant this shield.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| imbuement      = 1\n| defense        = 45\n| weight         = 38.00\n| value          = 14 000 - 16 000 \n| npcvalue       = 15 000\n| droppedby      = [[Arthei]], [[Boreth]], [[Lersatio]], [[Nightfiend]], [[The Count]], [[The Weakened Count]], [[Vampire]], [[Vampire Viscount]].\n| droppedRaidby  = [[Arachir the Ancient One]], [[Diblis the Fair]], [[Sir Valorcrest]], [[The Pale Count]], [[Zevelon Duskbringer]].\n| buyfrom        = Jogadores.\n| sellto         = Alesar, H.L.:119\n| notes          = Ótima opção para personagens intermediários por ter uma boa defesa, ser leve e ter um preço acessível. Faz parte do [[Blue Set]] e [[Paladin Set]].\n<noinclude><p><spoiler>\n* Recompensa da [[The Hero Cave Quest]].\n* Possibilidade de ser obtido ao [[Rust Remover|remover a ferrugem]] de um [[Rusted Shield]]. \n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6819,
+    "ns": 0,
+    "title": "Tusk Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Tusk Shield\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| stackable      = não\n| defense        = 36\n| weight         = 69.00\n| value          = 800 - 900\n| npcvalue       = 850\n| droppedby      = [[Clomp]], [[Elephant]], [[Mammoth]], [[Stone Rhino]], [[Terrified Elephant]], [[The Bloodtusk]].\n| buyfrom        = Jogadores.\n| sellto         = Brengus\n| implemented    = 7.5\n| notes          = Frequentemente utilizado como elemento decorativo. Faz parte do [[Barbarian Set]]. Bom para [[Lootbag]]s.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6820,
+    "ns": 0,
+    "title": "Tower Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Tower Shield\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| imbuement      = 1\n| defense        = 42\n| weight         = 82.00\n| stackable      = não\n| value          = 7 000 - 9 000\n| npcvalue       = 8 000\n| droppedby      = [[Albino Dragon]], [[Annihilon]], [[Armadile]], [[Boar Man]], [[Dragon Lord]], [[Draken Warmaster]], [[Enslaved Dwarf]], [[Esmeralda]], [[Eternal Guardian]], [[Frost Dragon]], [[Lizard High Guard]], [[Lizard Zaogun]], [[Lizard Chosen]], [[Lost Berserker]], [[Lost Exile]], [[Lost Husher]], [[Lost Soul]], [[Mutated Rat]], [[Retching Horror]], [[Serpent Spawn]], [[The Noxious Spawn]].\n| droppedRaidby  =  [[Sight of Surrender]], [[Zulazza the Corruptor]].\n| buyfrom        = Jogadores.\n| sellto         = Alesar, H.L.:90\n| notes          = Faz parte do [[Royal Set]]. Bom para [[Lootbag]]s.\n<noinclude><p><spoiler>\n* Recompensa da [[Deeper Fibula Quest]].\n* Recompensa da [[The Queen of the Banshees Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6821,
+    "ns": 0,
+    "title": "Tortoise Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Tortoise Shield\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| defense        = 34\n| weight         = 52.00\n| stackable      = não\n| value          = 150 - 500\n| npcvalue       = 150\n| droppedby      = [[Tortoise]].\n| buyfrom        = Jogadores.\n| sellto         = Rashid\n| implemented    = 7.8\n| notes          = Mesmo atributo defensivo de um [[Dwarven Shield]], porém mais leve. Bom para [[Lootbag]]s.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6822,
+    "ns": 0,
+    "title": "The Shield Nevermourn",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = The Shield Nevermourn\n| flavortext     = It is said that the wearer of Nevermourn will never mourn. What a powerful shield.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| defense        = 33\n| weight         = 52.00\n| stackable      = não\n| droppedby      = [[Dirtbeard]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| sounds         = \"Servant! Please call me a coach. - Yes, sir. You are a coach!\"; \"Did your father help you do your homework? No, he did it all by himself.\"; \"If big elephants have big trunks, do small elephants have suitcases?\"; \"Do you want to hear a dirty joke ? A white horse fell in the mud.\"; \"What do you call a deer with no eyes ? - I have no I-Deer!\"; \"My friend said he knew a man with a wooden leg called Sam. So I asked him 'What was the name of his other leg?' \"; \"Did you hear about the Lich who walked into frodo's bar? He ordered a cup of beer and a mup.\"; \"If whistles are made of tin, what are fog horns made of?\"\n| notes          = Produz um som quando usado. Mesmo sprite de um [[Dark Shield]].\n<noinclude><p><spoiler>* Possibilidade de ser obtido aleatoriamente durante a [[The Isle of Evil Quest]].\n*Para tentar obtê-lo deve-se dar \"'''use'''\" no corpo morto do boss [[Dirtbeard]]. \n*Só é possível tentar obtê-lo na primeira vez em que a criatura for morta.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6823,
+    "ns": 0,
+    "title": "Terran Rainbow Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Terran Rainbow Shield\n| flavortext     = It has been temporarily imbued with earth magic and boosts your regeneration.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| vocrequired    = [[Knight]]s\n| levelrequired  = 100\n| enchanted      = sim\n| attrib         = [[Regeneração]].\n| skillboost     = \n| duration       = 15\n| defense        = 49\n| weight         = 69.00\n| npcprice       = 0\n| npcvalue       = 0\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| droppedby      = Ninguém.\n| implemented    = 8.2\n| notes          = Recarregável. É um [[Rainbow Shield]] encantado com o elemento terra. Faz parte do [[Regeneration Set]]. \nRegenera 8 [[manapoint]]s e 2 [[hitpoint]]s a cada 6 segundos (300 hp e 1200 de mana ao total).\n<noinclude><p><spoiler>\n* 01 [[Small Enchanted Emerald]] é necessário para recarregá-lo.\n</spoiler></p></noinclude>\n{{Veja|Itens Recarregáveis}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6824,
+    "ns": 0,
+    "title": "Tempest Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Tempest Shield\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| stackable      = não\n| imbuement      = 1\n| defense        = 47\n| weight         = 51.00\n| value          = 40 000 000 - 50 000 000\n| droppedby      = [[Mazoran]].\n| droppedEventby = [[Minishabaal]].\n| droppedRaidby  = [[Ferumbras]], [[The Imperor]].\n| buyfrom        = Jogadores.\n| npcvalue       = 35 000\n| sellto         = Rashid\n| notes          = Por muito tempo considerado o sétimo melhor escudo do jogo. Item raro e valioso. Dropado de bosses que fazem raras [[invasões]].\n<noinclude><div class=\"toccolours mw-collapsible mw-collapsed\" style=\"margin: 4px 0px;\">'''\"História do Item\"'''<div class=\"mw-collapsible-content\"><table ><tr><td align=left>\nImplementado em 2007 como loot do Minishabaal, que aparecia em invasões ocorrias ao norte de [[Darashia]] durante a comemoração do 10º [[Aniversário do Tibia]].\n</td></tr></table></div></div></noinclude>\n<gallery>arquivo:Tempest_shield.png| Tempest Shield em [[Guardia]].</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6825,
+    "ns": 0,
+    "title": "Studded Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Studded Shield\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| defense        = 20\n| weight         = 58.00\n| value          = 16 - 50\n| npcvalue       = 16\n| npcprice       = 47\n| stackable      = não\n| droppedby      = [[Ancient Lion Knight]], [[Orc]], [[Woodling]].\n| droppedRaidby  = [[Xenia]].\n| buyfrom        = Shanar:50, Memech:50, Cornelia:50, Hireling (Trader):50, Azil:50, Coltrayne:50, Willard:50, Esrik:50, Rock In A Hard Place:50, Ulrik:50, Kroox:50, Cedrik:50, Brengus:50, Flint:50, Dixi:50, Lee'Delle, Robert:50, Sam:50, Turvy:50, Hardek:50, Baltim:50, Yanni:50, Morpel:50\n| sellto         = Shanar, Memech, Cornelia, Hireling (Trader), Azil, Coltrayne, Willard, Esrik, Rock In A Hard Place, Ulrik, Raffael, Kroox, Cedrik, H.L.:2, Brengus, Flint, Dixi, Lee'Delle, Robert, Sam, Turvy, Hardek, Baltim, Yanni, Morpel\n| notes  = Um bom escudo para personagens novos em [[Dawnport]] e [[Rookgaard]]. Faz parte do [[Studded Set]].\n<noinclude><p><spoiler>* Recompensa da: [[Studded Shield Quest]] e [[The Rookie Guard Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6826,
+    "ns": 0,
+    "title": "Steel Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Steel Shield\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| imbuement      = 1\n| defense        = 28\n| weight         = 69.00\n| value          = 80 - 240\n| npcvalue       = 80\n| npcprice       = 200\n| stackable      = não\n| droppedby      = [[Assassin]], [[Bonelord]], [[Braindeath]], [[Crypt Defiler]], [[Dragon]], [[Elder Bonelord]], [[Gladiator]], [[Grave Robber]],  [[Nomad]], [[Pirate Cutthroat]], [[Plaguesmith]], [[Wild Warrior]].\n| droppedRaidby  = [[Grorlam]], [[Rukor Zad]], [[The Evil Eye]].\n| buyfrom        = Shanar:240, Memech:240, Cornelia:240, Hireling (Trader):240, Azil:240, Willard:240, Esrik:240, Rock In A Hard Place:240, Ulrik:240, Raffael, Kroox:240, Cedrik:240, Brengus:240, Flint:240, Robert:240, Sam:240, Turvy:240, Hardek:240, Baltim:240, Yanni:240, Morpel:240\n| sellto         = Shanar, Memech, Cornelia, Hireling (Trader), Azil, Willard, Esrik, Rock In A Hard Place, Ulrik, Kroox, Cedrik, H.L.:30, Brengus, Flint, Robert, Sam, Turvy, Hardek, Baltim, Yanni, Morpel\n| notes          = Parte do set dado para os personagens que escolheram como vocação definitiva serem [[Knight]]s em [[Dawnport]] ou na [[Isle of Destiny]]. Frequentemente, o primeiro escudo que um personagem utiliza em [[Tibia (Continente)]]. Faz parte do [[Steel Set]], [[Isle of Destiny Knight Set]] e [[Rookgaard/Dawnport Set]].\n<noinclude><p><spoiler>* Recompensa da: [[Edron Goblin Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 19228,
+    "ns": 0,
+    "title": "Warrior's Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Warrior's Shield\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| imbuement      = 1\n| defense        = 43\n| weight         = 75.00\n| value          = 8 500 - 9 000\n| npcvalue       = 9 000\n| npcprice       = 0\n| droppedby      = [[Ancient Spawn of Morgathla]], [[Crape Man]], [[Deathling Scout]], [[Deathling Spellsinger]], [[Deepling Elite]], [[Deepling Warrior]], [[Thanatursus]], [[The Sandking]], [[Tremendous Tyrant]].\n| buyfrom        = Jogadores.\n| sellto         = Rock In A Hard Place\n| implemented    = 9.4\n| notes          = <noinclude><p><spoiler>* Recompensa por derrotar os bosses [[Tanjis]] e [[Jaul]] durante a [[Deeplings World Change]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 27590,
+    "ns": 0,
+    "title": "Spike Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Spike Shield\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| defense        = 37\n| weight         = 59.00\n| value          =\n| npcvalue       = 250\n| npcprice       = 0\n| droppedby      = [[Corym Charlatan]], [[Corym Skirmisher]], [[Corym Vanguard]].\n| buyfrom        = Jogadores.\n| sellto         = Rafzan\n| implemented    = 9.8\n| notes          = Faz parte do [[Corym Set]].Um ótimo escudo para personagens iniciantes. Apesar de ser mais pesado que o [[Bonelord Shield]] é mais fácil de ser obtido.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 31746,
+    "ns": 0,
+    "title": "Umbral Spellbook",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Umbral Spellbook\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Spellbooks\n| secondarytype  = Escudos \n| imbuement      = 1\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 150\n| defense        = 26\n| skillboost     = [[Magic Level]] +2\n| resist         = [[Earth Damage|Earth]] +3%, [[Energy Damage|Energy]] +3%, [[Fire Damage|Fire]] +3%, [[Ice Damage|Ice]] +3%\n| weight         = 35.00\n| value          = 1 000 000 - 3 000 000\n| npcvalue       = 0\n| droppedby      = [[Lady Tenebris]].\n| droppedRaidby  = [[Gaz'Haragoth]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.30\n| notes          = Este é um [[Crude Umbral Spellbook]] aperfeiçoado. Se o jogador quiser, ele pode tentar transformá-lo em uma versão \"Umbral Master\" no arriscado processo conhecido como [[Umbral Creation]]. Faz parte do [[Magic Level Set]].\n<noinclude><p><spoiler>* Pode ser obtido trocando 1 [[Crude Umbral Spellbook]] e 75 [[Cluster of Solace|Clusters of Solace]] com o NPC [[Eruaran]]. Existe a chance de falhar.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 31747,
+    "ns": 0,
+    "title": "Umbral Master Spellbook",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Umbral Master Spellbook\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Spellbooks\n| secondarytype  = Escudos \n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 250\n| defense        = 32\n| skillboost     = [[Magic Level]] +4\n| resist         = [[Earth Damage|Earth]] +5%, [[Energy Damage|Energy]] +5%, [[Fire Damage|Fire]] +5%, [[Ice Damage|Ice]] +5%\n| weight         = 30.00\n| imbuement      = 1\n| value          = 12 000 000 - 18 000 000\n| npcvalue       = 0\n| droppedRaidby  = [[Gaz'Haragoth]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.30\n| notes          = Este é um [[Umbral Spellbook]] transformado através de um complexo processo conhecido como [[Umbral Creation]]. Faz parte do [[Mage Set]] e [[Magic Level Set]]. <br />\nNo [[Patches/10.31|patch 10.31]] foi corrigido um erro no item, ele não tinha as proteções que foram decididas no [[Test Server]]. Fora isso, outro erro foi descoberto, esqueceram de colocar a defesa e o bônus de [[magic level]] correto, o que também foi corrigido mais tarde. <noinclude><p><spoiler>*Pode ser obtido trocando 1 [[Umbral Spellbook]] e 150 [[Cluster of Solace|Clusters of Solace]] com o NPC [[Eruaran]]. Existe a chance de falhar. \n*[[Arquivo:achievement.gif]] Ao conseguir transformar um [[Umbral Spellbook]] para estágio \"Master\", você receberá o achievement \"'''{{achievement|Umbral Harbinger}}'''\".\n*[[Arquivo:Achievement.gif]] Ao elevar todos os itens '''Umbral''' para '''Umbral Master''', você receberá o achievement \"'''{{Achievement|Umbral Master}}'''\".</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 32075,
+    "ns": 0,
+    "title": "Strange Good Night Songs",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Strange Good Night Songs\n| flavortext     = It contains some hypnotic melodies that are hard to remember.\n| itemclass      = Escudos\n| primarytype    = Itens de Quest\n| secondarytype  = Livros\n| defense        = 0\n| weight         = 13.00\n| stackable      = não\n| mercado        = não\n| value          = \n| npcvalue       = 0\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.30\n| notes          = Pode ser equipado no slot de escudos do [[inventário]] mas não oferece nenhuma proteção ao personagem. \n<noinclude><p><spoiler>\n* Obtido e usado na task [[Roshamuul_Quest#Soothing_Bad_Dreams|Soothing Bad Dreams]] da [[Roshamuul Quest]].\n{{DASH|'''Nota:''' caso o perca basta falar ''lost'' para a NPC [[Dream Butterfly]] e será possível refazer a missão para adquiri-lo.}}\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 40949,
+    "ns": 0,
+    "title": "Wooden Spellbook",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Wooden Spellbook\n| itemclass     = Equipamentos de Corpo\n| primarytype   = Spellbooks\n| secondarytype = Escudos\n| vocrequired   = [[Sorcerer]]s and [[Druid]]s\n| imbuement     = 1\n| levelrequired = 80\n| defense       = 26\n| skillboost    = [[Magic Level]] +2\n| resist        = [[Earth]] +5%\n| weight        = 12.00\n| stackable     = não\n| value         = \n| droppedby     = [[Arctic Faun]], [[Boogy]], [[Clavius]], [[Dark Faun]], [[Noxious Ripptor]], [[Pixie]], [[Raubritter Chastener]], [[Raxias]], [[Ravenous Hunger]], [[Young Goanna]].\n| buyfrom       = Jogadores.\n| sellto        = Valindara, Talila\n| npcvalue      = 12 000\n| implemented   = 11.40\n| notes         = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45077,
+    "ns": 0,
+    "title": "Spirit Guide",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Spirit Guide\n| itemclass     = Equipamentos de Corpo\n| primarytype   = Spellbooks\n| secondarytype = Escudos\n| vocrequired   = [[Sorcerer]]s and [[Druid]]s\n| imbuement     = 1\n| levelrequired = 180\n| defense       = 28\n| skillboost    = [[Magic Level]] +4\n| resist        = [[Energy Damage|Energy]] +6%\n| weight        = 18.00\n| droppedby     = [[Faceless Bane]].\n| stackable     = não\n| value         = Negociável\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| npcvalue      = \n| implemented   = 12.00\n| notes         = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 60799,
+    "ns": 0,
+    "title": "The Dragon Spirit",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = The Dragon Spirit\n| flavortext       = It represents the spirit of your first dragon. Granted by Intibia.com\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Escudos\n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 26.02\n| mercado          = não\n| sounds           = \n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 13.21.13810\n| notes            = \n* Item oficial do fansite '''Intibia'''.\n* O personagem {{Character|}} recebeu um por ter sido o criador do item.\n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 66080,
+    "ns": 0,
+    "title": "Stag Spellbook",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Stag Spellbook\n| levelrequired  = 350\n| itemclass      = Equipamentos de Corpo \n| primarytype    = Spellbooks\n| secondarytype  = Escudos\n| vocrequired    = [[Sorcerer]]s\n| imbuement      = 1\n| stackable      = não\n| defense        = 34\n| auguments      = Great Fire Wave -> +1% critical hit chance\n| skillboost     = [[Magic Level]] +5\n| resist         = [[Physical Damage|Physical]] +2%, [[Energy Damage|Energy]] +6%\n| modificadores  = \n| volume         = \n| weight         = 20.00\n| npcprice       = \n| augments       = Great Fire Wave -> +1% critical hit chance\n| npcvalue       = \n| value          = Negociável\n| droppedby      = [[Court Warlock]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.20.7a5cc9\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 66082,
+    "ns": 0,
+    "title": "Stag Scrolls",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Stag Scrolls\n| levelrequired  = 350\n| itemclass      = Equipamentos de Corpo \n| primarytype    = Spellbooks\n| secondarytype  = Escudos\n| vocrequired    = [[Druid]]s\n| imbuement      = 1\n| stackable      = não\n| defense        = 34\n| augments       = Terra Wave -> +1% critical hit chance\n| skillboost     = [[Magic Level]] +5\n| resist         = [[Physical Damage|Physical]] +2%, [[Death Damage|Death]] +5%\n| modificadores  = \n| volume         = \n| weight         = 20.00\n| npcprice       = \n| npcvalue       = \n| value          = Negociável\n| droppedby      = [[Court Warlock]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.20.7a5cc9\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 66084,
+    "ns": 0,
+    "title": "Stag Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Stag Shield\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| vocrequired    = [[Knight]]s\n| levelrequired  = 350\n| resist         = [[Physical Damage|Physical]] +5%, [[Ice Damage|Ice]] +10%\n| imbuement      = 1\n| augments       = Berserk -> +1% critical hit chance\n| stackable      = não\n| defense        = 52\n| auguments      = Front Sweep -> +1% critical hit chance\n| weight         = 62.00\n| value          = \n| npcvalue       = \n| droppedby      = [[Court Warlock]].\n| buyfrom        = Jogadores.\n| implemented    = 15.20.7a5cc9\n| sellto         = Jogadores.\n| notes          = {{Veja|Como Forjar um Stag Shield}}\n}}"
+       }
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

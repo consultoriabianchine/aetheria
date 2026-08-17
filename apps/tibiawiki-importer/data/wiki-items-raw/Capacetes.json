@@ -1,0 +1,2422 @@
+{
+ "query": {
+  "pages": [
+   {
+    "pageid": 6417,
+    "ns": 0,
+    "title": "Amazon Helmet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Amazon Helmet\n| stackable      = não\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 7\n| weight         = 29.50\n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| implemented    = 7.6\n| value          = 150 000 000 - 190 000 000\n| droppedRaidby  = [[Orc Warlord]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Item raro e valioso. Por muito tempo considerado uma lenda. Mesma capacidade de defesa e peso que o [[Crown Helmet]]. Faz parte do [[Amazon Set]].\n<noinclude><p><spoiler>* Possibilidade de ser obtido apenas durante as invasões de [[Orcs]] em [[Femor Hills]].\n* Antigamente acreditava-se que este item poderia ser obtido em invasões de orcs em [[Carlin]] e em [[Thais]], mito desmentido pelo Tibia Bosses, nesta matéria: https://www.tibiabosses.com/forum/topic/orc-raids-and-amazon-set-mythbusters/</spoiler></p></noinclude>\n<gallery>\nArquivo:Golden helmet on shanera.jpg|Amazon Helmet junto com outros rares em [[Shanera]].\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6418,
+    "ns": 0,
+    "title": "Ancient Tiara",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ancient Tiara\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 0\n| weight         = 8.20\n| imbuement      = 2\n| value          = 400 000 - 2 500 000\n| droppedby      = [[Vashresamun]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.4\n| notes          = Pode ser visto no segundo andar da [[Explorer Society]] em [[Port Hope]]. Frequentemente utilizado como elemento decorativo. Faz parte do [[Ancient Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6419,
+    "ns": 0,
+    "title": "Bandana",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bandana\n| flavortext     = It is quite fashionable as well as useful for anyone spending huge amounts of time in the sun.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 1\n| weight         = 8.50\n| classificacao  = 1\n| max_tier       = 1\n| npcvalue       = 150\n| value          = 150\n| stackable      = não\n| droppedby      = [[Pirate Marauder]], [[Pirate Navigator]].\n| buyfrom        = Jogadores.\n| sellto         = Rashid\n| implemented    = 7.8\n| notes          = Faz parte do [[Pirate Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6420,
+    "ns": 0,
+    "title": "Bonelord Helmet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bonelord Helmet\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 7\n| weight         = 46.00\n| imbuement      = 2\n| classificacao  = 2\n| max_tier       = 2\n| value          = 2 200 - 40 000\n| npcvalue       = 7 500\n| npcprice       = 0\n| droppedby      = [[Braindeath]], [[Elder Bonelord]], [[The Evil Eye]], [[The Last Lore Keeper]].\n| buyfrom        = Jogadores.\n| sellto         = Rashid, Brengus:2 200\n| notes          = Item raro. Faz parte do [[Bonelord Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6421,
+    "ns": 0,
+    "title": "Brass Helmet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Brass Helmet\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 3\n| weight         = 27.00\n| classificacao  = 1\n| max_tier       = 1\n| value          = 22 - 120\n| npcvalue       = 30\n| npcprice       = 120\n| stackable      = não\n| droppedby      = [[Barbarian Headsplitter]], [[Barbarian Skullhunter]], [[Chakoya Windcaller]], [[Hunter]], [[Minotaur]], [[Minotaur Bruiser]], [[Salamander]], [[Undead Prospector]], [[Zombie]].\n| buyfrom        = Shanar, Memech, Cornelia, Hireling (Trader), Azil, Willard, Esrik, Rock In A Hard Place, Ulrik, Kroox, Cedrik, Brengus, Flint, Robert, Gamel, Sam, Turvy, Hardek, Baltim, Aldo, Yanni, Morpel\n| sellto         = Shanar, Memech, Cornelia, Hireling (Trader), Azil, Coltrayne:22, Willard, Esrik, Rock In A Hard Place, Ulrik, Raffael:22, Kroox, Cedrik, H.L.:8, Brengus, Flint, Dixi:22, Lee'Delle:22, Robert, Gamel, Sam, Turvy, Hardek, Baltim, Aldo, Yanni, Morpel\n| notes          = Faz parte do [[Brass Set]] e [[Minotaur Set]].\n<noinclude><p><spoiler>\n* Recompensa da [[Bear Room Quest]].\n* Recompensa da [[Mintwallin Quest]].\n* Recompensa da [[The Rookie Guard Quest]].\n* Possibilidade de ser obtido ao [[Rust Remover|remover a ferrugem]] de um [[Rusted Helmet]]. \n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6422,
+    "ns": 0,
+    "title": "Ceremonial Mask",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ceremonial Mask\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| secondarytype  = Item não obtivel\n| armor          = 9\n| weight         = 40.00\n| classificacao  = 4\n| max_tier       = 10\n| stackable      = não\n| npcvalue       = 0\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.8\n| notes          = Pode ser visto na sala do tesouro da torre do [[Ferumbras]]. Há uma certa semelhança entre o sprite deste elmo com o do [[Helmet of the Ancients]].\n<gallery>\nArquivo:ceremonialmask.jpg|Ceremonial Mask em [[Nova]].\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6424,
+    "ns": 0,
+    "title": "Chain Helmet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Chain Helmet\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 2\n| weight         = 42.00\n| classificacao  = 1\n| max_tier       = 1\n| stackable      = não\n| value          = 17 - 52\n| npcvalue       = 17\n| npcprice       = 49\n| droppedby      = [[Bandit]], [[Barbarian Bloodwalker]], [[Gladiator]], [[Juvenile Cyclops]], [[Troll-Trained Salamander]], [[Wild Warrior]].\n| buyfrom        = Shanar:52, Memech:52, Cornelia:52, Hireling (Trader):52, Azil:52, Coltrayne:52, Willard:52, Esrik:52, Rock In A Hard Place:52, Ulrik:52, Kroox:52, Cedrik:52, Brengus:52, Flint:52, Dixi:52, Lee'Delle, Robert:52, Gamel:52, Sam:52, Turvy:52, Hardek:52, Baltim:52, Aldo:52, Yanni:52, Morpel:52\n| sellto         = Shanar, Memech, Cornelia, Hireling (Trader), Azil, Coltrayne:12, Willard, Esrik, Rock In A Hard Place, Ulrik, Kroox, Cedrik, H.L.:4, Brengus, Flint, Dixi:12, Lee'Delle:12, Robert, Gamel, Sam, Turvy, Hardek, Baltim, Aldo, Yanni, Morpel\n| notes          = Mesmo atributo defensivo que o [[Studded Helmet]]. Embora mais pesado, é mais popular por ser mais barato. Faz parte do [[Chain Set]].\n<noinclude><p><spoiler>\n* Recompensa da [[Mintwallin Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6425,
+    "ns": 0,
+    "title": "Charmer's Tiara",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Charmer's Tiara\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 2\n| weight         = 22.00\n| classificacao  = 1\n| max_tier       = 1\n| stackable      = não\n| value          = 700 - 5 000\n| npcvalue       = 900\n| droppedby      = [[Lizard Snakecharmer]], [[Serpent Spawn]], [[Lizard Magician]].\n| buyfrom        = Jogadores.\n| sellto         = Brengus\n| implemented    = 7.5\n| notes          = Frequentemente utilizado como elemento decorativo.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6427,
+    "ns": 0,
+    "title": "Cobra Crown",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Cobra Crown\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| skillboost     = [[Magic Level]] +2\n| resist         = [[Earth Damage|Earth]] +5%, [[Fire Damage|Fire]] -5%\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 3\n| weight         = 8.50\n| classificacao  = 2\n| max_tier       = 2\n| npcvalue       = 50 000\n| value          = 50 000 - 500 000\n| droppedby      = [[Draken Elite]], [[Hatebreeder]], [[King Zelos]], [[Ravenous Hunger]].\n| buyfrom        = Jogadores.\n| sellto         = Rashid\n| implemented    = 8.6\n| notes          = Item raro. Indicado para magos de todos os níveis. Faz parte do [[Terra Set]], [[Draken Set]] e [[Magic Level Set]].\n<gallery>Arquivo:Cobra_Crown.png|Cobra Crown em [[Secura]].</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6428,
+    "ns": 0,
+    "title": "Crown Helmet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Crown Helmet\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 7\n| weight         = 29.50\n| imbuement      = 2\n| classificacao  = 2\n| max_tier       = 2\n| value          = 2 000 - 4 000\n| npcvalue       = 2 500\n| stackable      = não\n| droppedby      = [[Hero]], [[Nightmare Scion]], [[Orewalker]], [[Renegade Knight]], [[Roaring Lion]], [[Ushuriel]], [[Vile Grandmaster]], [[Werelioness]], [[Zanakeph]].\n| buyfrom        = Jogadores.\n| sellto         = Nah'Bob, H.L.:70\n| notes          = Muito utilizado por personagens de level médio por ser bem leve. Faz parte do [[Crown Set]] e do [[Hero Set]].\n<noinclude><p><spoiler>\n* Recompensa da [[Thais Quest]].\n* Possibilidade de ser obtido ao [[Rust Remover|remover a ferrugem]] de um [[Rusted Helmet]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6429,
+    "ns": 0,
+    "title": "Crusader Helmet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Crusader Helmet\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 8\n| weight         = 52.00\n| imbuement      = 2\n| classificacao  = 2\n| max_tier       = 2\n| stackable      = não\n| value          = \n| npcvalue       = 6 000\n| droppedby      = [[Bibby Bloodbath]], [[Brinebrute Inferniarch]], [[Cliff Strider]], [[Demon Outcast]], [[Duke Krule]], [[Orc Warlord]], [[Spitter]], [[Thul]], [[Undead Elite Gladiator]], [[Undead Gladiator]].\n| droppedRaidby  = [[Sight of Surrender]].\n| buyfrom        = Jogadores.\n| sellto         = Nah'Bob\n| implemented    = 6.6\n| notes          = Frequentemente utilizado por personagens de level intermediário. Mais leve do que um [[Warrior Helmet]].\n<noinclude><p><spoiler>\n* Recompensa da [[Crusader Helmet Quest]].\n* Possibilidade de ser obtido ao [[Rust Remover|remover a ferrugem]] de um [[Rusted Helmet]]. \n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6432,
+    "ns": 0,
+    "title": "Dark Helmet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Dark Helmet\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 6\n| weight         = 46.00\n| classificacao  = 1\n| max_tier       = 1\n| value          = 250 - 1 000\n| npcvalue       = 250\n| npcprice       = 1 000\n| stackable      = não\n| droppedby      = [[Black Knight]], [[Cyclops]], [[Cyclops Drone]], [[Cyclops Smith]], [[Frost Giant]], [[Frost Giantess]], [[Orc Warlord]], [[Undead Elite Gladiator]], [[Undead Gladiator]], [[Wandering Pillar]].\n| droppedRaidby  = [[Warlord Ruzad]].\n| buyfrom        = Alesar\n| sellto         = Alesar, H.L.:40\n| notes          = Popular entre personagens recém chegados em [[Tibia (Continente)]]. Possui a mesma defesa e peso do [[Steel Helmet]], porém é mais barato. Faz parte do [[Newbie Set]] e [[Dark Set]].\n<noinclude><p><spoiler>* Recompensa da: [[Dark Helmet Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6433,
+    "ns": 0,
+    "title": "Demon Helmet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Demon Helmet\n| flavortext     = You hear an evil whispering from inside.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 10\n| weight         = 29.50\n| imbuement      = 2\n| classificacao  = 2\n| max_tier       = 2\n| stackable      = não\n| value          = 40 000 - 55 000\n| droppedby      = [[Lloyd]].\n| droppedEventby = [[Minishabaal]].\n| npcvalue       = 40 000\n| npcprice       = 0\n| buyfrom        = Jogadores.\n| sellto         = Gnomission, H.L.:95\n| notes          = Antigamente era muito raro. Faz parte do [[Demon Set]], [[Paladin Set]], [[Unrestricted Set]], [[Rare Set]] e [[Full Set]].\n\n<noinclude><div class=\"toccolours mw-collapsible mw-collapsed\" style=\"margin: 4px 0px;\">'''\"História do Item\"'''<div class=\"mw-collapsible-content\"><table ><tr><td align=left>\nAntigamente, podia ser obtido apenas em alguns pontos de spawn ou como presente dos [[Gods#Creators|Gods]]. Provavelmente foi criado inspirado na mitologia grega, especificamente no elmo de Hades, deus dos mortos e do submundo. Segundo a mitologia, é um elmo capaz de se transformar em diversas coisas e espalhar o terror.\n</td></tr></table></div></div></noinclude>\n\n<noinclude><p><spoiler>* Recompensa da [[The Demon Helmet Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6434,
+    "ns": 0,
+    "title": "Devil Helmet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Devil Helmet\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 7\n| weight         = 50.00\n| classificacao  = 2\n| max_tier       = 2\n| stackable      = não\n| value          = 450 - 1 000\n| npcvalue       = 1 000\n| droppedby      = [[Angry Demon]], [[Arbaziloth]], [[Bloated Man-Maggot]], [[Demon]], [[Demon Outcast]], [[Golgordan]], [[Grimeleech]], [[Latrivan]], [[Rage Squid]], [[Razzagorn]], [[The Source Of Corruption]], [[Vexclaw]].\n| droppedRaidby  = [[Morgaroth]], [[Orshabaal]].\n| buyfrom        = Jogadores.\n| sellto         = Shanar:450, Kroox:450, H.L.:80, Hardek:450, Rashid\n| notes          = \n<noinclude><p><spoiler>\n* Recompensa da [[Mintwallin Quest]].\n* Utilizado em uma das possíveis trocas que constituem as [[Exchange Quests]]:\n**Pode ser trocado por 01 [[Piece of Hell Steel]] com o NPC [[A Sweaty Cyclops]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6436,
+    "ns": 0,
+    "title": "Dragon Scale Helmet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Dragon Scale Helmet\n| flavortext     = It is made of dragon scales.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| stackable      = não\n| armor          = 9\n| weight         = 32.50\n| classificacao  = 3\n| max_tier       = 3\n| value          = Negociável\n| npcvalue       = 0\n| droppedby      = [[Soul of Dragonking Zyrtarch]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Pode ser visto em uma [[Salas de Tesouros|sala de tesouros]] do [[Amazon Camp]]. Faz parte do [[Dragon Set]], [[Dragon Scale Set]] e [[Full Set]].\n<noinclude><div class=\"toccolours mw-collapsible mw-collapsed\" style=\"margin: 4px 0px;\">'''\"História do Item\"'''<div class=\"mw-collapsible-content\"><table ><tr><td align=left>\nExiste no jogo há bastante tempo, mas só pôde ser efetivamente obtido após o [[Updates/11.02|Update 11.02]].\n</td></tr></table></div></div></noinclude> \n<gallery>\nArquivo:Amazon_Camp_Treasure_Room.gif|DSH junto a outros rares na Salas de Tesouros do Amazon Camp.\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6438,
+    "ns": 0,
+    "title": "Dwarven Helmet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Dwarven Helmet\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 6\n| resist         = [[Physical Damage|Physical]] +2%\n| imbuement      = 2\n| weight         = 42.00\n| classificacao  = 3\n| max_tier       = 3\n| stackable      = não\n| value          = 200 000 - 450 000\n| npcvalue       = 0\n| droppedby      = [[The Horned Fox]].\n| droppedRaidby  = [[General Murius]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Mesmo atributo defensivo do [[Demon Helmet]]. Faz parte do [[Dwarven Set]].\n\n<noinclude><div class=\"toccolours mw-collapsible mw-collapsed\" style=\"margin: 4px 0px;\">'''\"Curiosidade Estatística\"'''<div class=\"mw-collapsible-content\"><table ><tr><td align=left>\nAo enfrentar criaturas mais fortes e com dano principal do tipo [[Physical Damage|físico]], esse elmo chega a se equivaler ao [[Demon Helmet]]. Ou seja, contra ataques de 205+ (ataque máximo da criatura deve ser 205x2 = 410) ambos os elmos dão ao personagem o mesmo atributo defensivo.\n</td></tr></table></div></div></noinclude>\n \n<noinclude><div class=\"toccolours mw-collapsible mw-collapsed\" style=\"margin: 4px 0px;\">'''\"História do Item\"'''<div class=\"mw-collapsible-content\"><table ><tr><td align=left>\nAntigamente era um item raro e caro pois era apenas loot de bosses com raras aparições. <br />\nPerdeu um pouco do seu valor e relativa raridade após o [[Summer Update 2009]], quando o [[The Horned Fox|Horned Fox]] ganhou um spawn fixo por meio de uma das tasks da [[Killing in the Name of... Quest]].\n</td></tr></table></div></div></noinclude> \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6439,
+    "ns": 0,
+    "title": "Elite Draken Helmet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Elite Draken Helmet\n| vocrequired    = [[Paladin]]s\n| levelrequired  = 100\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| imbuement      = 1\n| classificacao  = 3\n| max_tier       = 3\n| stackable      = não\n| armor          = 9\n| skillboost     = [[Distance Fighting]] +1\n| resist         = [[Death Damage|Death]] +3%\n| weight         = 43.00 \n| value          = 700 000 - 1 200 000\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.6\n| droppedby      = Ninguém.\n| notes          = Faz parte do [[Paladin Set]], [[Divine Set]] e [[Rare Set]].\n<noinclude><p><spoiler>* Pode ser obtido como recompensa da [[Wrath of the Emperor Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6440,
+    "ns": 0,
+    "title": "Feather Headdress",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Feather Headdress\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 2\n| weight         = 21.00\n| classificacao  = 1\n| max_tier       = 1\n| value          = 850\n| npcvalue       = 850\n| droppedby      = [[Terror Bird]].\n| buyfrom        = Jogadores.\n| sellto         = Brengus\n| implemented    = 7.6\n| notes          = Frequentemente utilizado como elemento decorativo.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6640,
+    "ns": 0,
+    "title": "Batwing Hat",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Batwing Hat\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 50\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| skillboost     = [[Magic Level]] +1\n| armor          = 3\n| weight         = 6.00\n| imbuement      = 1\n| classificacao  = 2\n| max_tier       = 2\n| value          = 7 800 - 12 000\n| stackable      = não\n| droppedby      = [[Bruise Payne]], [[Gloom Maw]], [[Mutated Bat]].\n| npcvalue       = 8 000\n| npcprice       = 0\n| buyfrom        = Jogadores.\n| sellto         = Lailene\n| implemented    = 8.4\n| notes          = Um dos elmos mais leves do jogo. Contudo, o [[Hat of the Mad]] ainda é mais popular por ser mais facilmente adquirido e não possuir requerimento de level. Faz parte do [[Magic Level Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6641,
+    "ns": 0,
+    "title": "Damaged Helmet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Damaged Helmet\n| flavortext     = This item seems to have several parts missing.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 5\n| weight         = 18.00\n| value          = Negociável\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| droppedby      = Ninguém.\n| implemented    = 7.4\n| notes          = <noinclude><p><spoiler>* Obtido e usado na [[The Ancient Tombs Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8623,
+    "ns": 0,
+    "title": "Crown",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Crown\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 0\n| weight         = 19.00\n| value          = 2 500 000 000\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Item muito raro. Pode ser visto em algumas das salas do tesouro existentes, como em: [[Kazordoon]], [[Maze of the Lost Souls]], [[Hellgate]] e covil de [[Omruc]].\n\n<noinclude><div class=\"toccolours mw-collapsible mw-collapsed\" style=\"margin: 4px 0px;\">'''\"História do Item\"'''<div class=\"mw-collapsible-content\"><table><tr><td align=left>\nVisto pela primeira vez em [[Antica]], nos primórdios do jogo, quando Knightmare jogou esse item juntamente com uma [[Crystal Wand]], como uma recompensa especial, no templo de [[Thais]]. Pertencia ao famoso colecionador de itens raros, Lightbringer, depois foi vendido para uma pessoa até então desconhecida. Segundo rumores, pode ser obtido através de uma quest envolvendo o [[King Tibianus]].<br>\nAtualmente se encontra nas mãos de um jogador em Lutabra, sendo considerado um dos itens mais caros vendidos até hoje.\n</td></tr></table></div></div></noinclude>\n\n<gallery>\nArquivo:Rares antica mls blessed-crop.png|Coroa na casa de seu antigo dono, o jogador {{Character|Sheepyy}}.\nArquivo:Crown com Rei de Lutabra.png|Coroa com seu atual dono, o jogador {{Character|Rei de Lutabra}}.\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 19205,
+    "ns": 0,
+    "title": "Depth Galea",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Depth Galea\n| flavortext     = Enables underwater exploration.\n| stackable      = não\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| skillboost     = [[Speed]] +300 *\n| resist         = [[Drowning]] +100%\n| levelrequired  = 150\n| armor          = 8\n| weight         = 46.00\n| value          = 35 000 - 700 000\n| npcvalue       = 35 000\n| droppedby      = [[Jaul]].\n| buyfrom        = Jogadores.\n| sellto         = Rock In A Hard Place\n| implemented    = 9.4\n| notes          = O melhor capacete para proteção contra [[drowning]]. Mais leve e com melhor atributo defensivo que o [[Helmet of the Deep]]. Faz parte do [[Depth Set]] e [[Rare Set]].\n{{DASH|'''Atenção''': O bônus de velocidade (*) somente é obtido se você comer um [[Coconut Shrimp Bake]]. Esse pequeno aumento de velocidade durará 24 horas e será cancelado se o elmo for colocado na backpack, no chão ou se o personagem retornar para a cidade.}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 31832,
+    "ns": 0,
+    "title": "Broken Visor",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Broken Visor\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| secondarytype  = Produtos de Criaturas\n| armor          = 1\n| weight         = 14.00\n| stackable      = não\n| value          = 1 600 - 1 900\n| npcvalue       = 1 900\n| droppedRaidby  = [[Sight of Surrender]].\n| buyfrom        = Jogadores.\n| sellto         = Asnarus, Yasir, Augustin\n| implemented    = 10.30\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 34836,
+    "ns": 0,
+    "title": "Crest of the Deep Seas",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Crest of the Deep Seas\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| resist         = [[Ice Damage|Ice]] +5%\n| skillboost     = [[Speed]] +5\n| levelrequired  = 80\n| weight         = 45.00\n| classificacao  = 2\n| max_tier       = 2\n| armor          = 7\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 10 000\n| droppedby      = [[Seacrest Serpent]].\n| buyfrom        = Jogadores.\n| sellto         = Flint\n| implemented    = 10.70\n| notes          = Opção para personagens que não podem utilizar o [[Shrunken Head Necklace]]. Faz parte do [[Haste Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 43241,
+    "ns": 0,
+    "title": "Blue Spectacles",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Blue Spectacles\n| flavortext     = These spectacles have strange blue lenses which appear completely opaque, yet provide perfectly clear vision. \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Itens de Quest\n| secondarytype  = Capacetes\n| mercado        = não\n| stackable      = não\n| weight         = 2.50\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.50\n| notes          = \n<noinclude><p><spoiler>* Obtido e usado durante a [[Opticording Sphere Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 44010,
+    "ns": 0,
+    "title": "Falcon Coif",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Falcon Coif\n| vocrequired    = [[Knight]]s and [[Paladin]]s\n| levelrequired  = 300\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| skillboost     = [[Distance Fighting]] +2, [[Shielding]] +2\n| resist         = [[Physical Damage|Physical]] +3%, [[Fire Damage|Fire]] +10%\n| armor          = 10\n| weight         = 28.00\n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| droppedby      = [[Grand Commander Soeren]], [[Grand Master Oberon]].\n| implemented    = 11.80\n| notes          = Faz parte do [[Falcon Set]]. O bônus de distance fighting só funciona para os [[Paladin]]s.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 44011,
+    "ns": 0,
+    "title": "Falcon Circlet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Falcon Circlet\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 300\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| skillboost     = [[Magic Level]] +2\n| resist         = [[Fire Damage|Fire]] +9%\n| armor          = 8\n| weight         = 13.00\n| droppedby      = [[Grand Master Oberon]].\n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| npcprice       = \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.80\n| notes          = Faz parte do [[Falcon Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45089,
+    "ns": 0,
+    "title": "Dark Whispers",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Dark Whispers\n| vocrequired    = [[Paladin]]s\n| levelrequired  = 180\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| imbuement      = 2 \n| classificacao  = 3\n| max_tier       = 3\n| stackable      = não\n| armor          = 7\n| skillboost     = [[Distance Fighting]] +2\n| resist         = [[Ice Damage|Ice]] +3%\n| weight         = 34.00\n| droppedby      = [[The Nightmare Beast]].\n| value          = Negociável\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.00\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 46697,
+    "ns": 0,
+    "title": "Cobra Hood",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Cobra Hood\n| vocrequired    = [[Knight]]s\n| levelrequired  = 270\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| skillboost     = [[Sword Fighting]] +1, [[Club Fighting]] +1, [[Axe Fighting]] +1\n| resist         = [[Physical Damage|Physical]] +5%\n| armor          = 9\n| weight         = 27.00\n| classificacao  = 4\n| max_tier       = 10\n| imbuement      = 2\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| droppedby      = [[Scarlett Etzel]], [[Guard Captain Quaid]].\n| implemented    = 12.20\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 52297,
+    "ns": 0,
+    "title": "Eldritch Hood",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Eldritch Hood\n| flavortext     = \n| stackable      = não\n| levelrequired  = 250\n| vocrequired    = [[Druid]]s\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| skillboost     = [[Magic Level]] +2\n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| armor          = 7\n| resist         = [[Earth Damage|Earth]] +7%\n| weight         = 27.00\n| value          = Negociável\n| npcvalue       = \n| droppedby      = [[The Brainstealer]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.70\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 52298,
+    "ns": 0,
+    "title": "Eldritch Cowl",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Eldritch Cowl\n| flavortext     = \n| stackable      = não\n| levelrequired  = 250\n| vocrequired    = [[Sorcerer]]s\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| skillboost     = [[Magic Level]] +2\n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| armor          = 7\n| resist         = [[Ice Damage|Ice]] +7%\n| weight         = 26.00\n| value          = Negociável\n| npcvalue       = \n| droppedby      = [[The Brainstealer]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.70\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53675,
+    "ns": 0,
+    "title": "Bridal Wreath",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bridal Wreath\n| flavortext     = \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| secondarytype  = \n| armor          = 0\n| weight         = 18.00\n| stackable      = não\n| value          = \n| npcvalue       = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = <noinclude><p><spoiler>* Obtido e usado na [[25 Years of Tibia Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 56097,
+    "ns": 0,
+    "title": "Arboreal Crown",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Arboreal Crown\n| vocrequired    = [[Druid]]s\n| levelrequired  = 400\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| skillboost     = [[Magic Level]] +3\n| resist         = [[Physical Damage|Physical]] +2%, [[Ice Damage|Ice]] +9%\n| armor          = 9\n| weight         = 12.00\n| droppedby      = [[Magma Bubble]].\n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| npcprice       = \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.90\n| notes          = <noinclude><p><spoiler>* Possibilidade de ser obtido ao usar um [[Primal Bag]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 56098,
+    "ns": 0,
+    "title": "Arcanomancer Regalia",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Arcanomancer Regalia\n| vocrequired    = [[Sorcerer]]s\n| levelrequired  = 400\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| skillboost     = [[Magic Level]] +3\n| resist         = [[Physical Damage|Physical]] +3%, [[Earth Damage|Earth]] +7%\n| armor          = 9\n| weight         = 15.00\n| droppedby      = [[Magma Bubble]].\n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| npcprice       = \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.90\n| notes          = <noinclude><p><spoiler>* Possibilidade de ser obtido ao usar uma [[Primal Bag]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 56133,
+    "ns": 0,
+    "title": "Alicorn Headguard",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Alicorn Headguard\n| flavortext     = \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 11\n| levelrequired  = 400\n| vocrequired    = [[Paladin]]s\n| weight         = 39.00\n| skillboost     = [[Distance Fighting]] +3\n| resist         = [[Physical Damage|Physical]] +5%, [[Fire Damage|Fire]] +5%, [[Earth Damage|Earth]] +5%, [[Energy Damage|Energy]] +5%, [[Ice Damage|Ice]] +5%, [[Holy Damage|Holy]] +5%, [[Death Damage|Death]] +5%\n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| stackable      = não\n| value          = \n| npcvalue       = \n| droppedby      = [[Magma Bubble]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.90\n| notes          = <noinclude><p><spoiler>* Possibilidade de ser obtido ao usar uma [[Primal Bag]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 58181,
+    "ns": 0,
+    "title": "Broken Iks Headpiece",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Broken Iks Headpiece\n| flavortext     = This headpiece once protected a fierce warrior of the ancient Iks.\n| stackable      = sim\n| levelrequired  = \n| vocrequired    = \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| secondarytype  = Produtos de Criaturas\n| skillboost     = \n| imbuement      = \n| classificacao  = \n| max_tier       = \n| armor          = 1\n| resist         = \n| weight         = 9.00\n| value          = \n| npcvalue       = 560\n| droppedby      = [[Ahau]], [[Iks Chuka]], [[Iks Pututu]].\n| buyfrom        = Jogadores.\n| sellto         = Yasir\n| implemented    = 13.10\n| notes          = \n<noinclude><p><spoiler>\n* 01 é necessária para a [[Ancient Aucar Outfits Quest]].\n</spoiler></p></noinclude>\n}}\n<noinclude>[[Categoria:Itens de Addons]]</noinclude>"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 58482,
+    "ns": 0,
+    "title": "Antler-Horn Helmet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Antler-Horn Helmet\n| flavortext     = \n| stackable      = não\n| levelrequired  = 250\n| vocrequired    = [[Knight]]s\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| skillboost     = [[Sword Fighting]] +1, [[Axe Fighting]] +1, [[Club Fighting]] +1\n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| armor          = 9\n| resist         = [[Physical Damage|Physical]] +3%, [[Ice Damage|Ice]] +7%\n| weight         = 22.00\n| value          =\n| npcvalue       = \n| droppedby      = [[The Monster]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 13.10\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 58671,
+    "ns": 0,
+    "title": "Enchanted Werewolf Helmet (Axe)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|''Este artigo se refere ao [[Enchanted Werewolf Helmet (Axe)]]. Para outros, veja [[Enchanted Werewolf Helmet|Enchanted Werewolf Helmet (Desambiguação)]].''}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Enchanted Werewolf Helmet (Axe)\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| secondarytype  = \n| enchantable    = \n| enchanted      = sim\n| vocrequired    = [[Knight]]s\n| armor          = 9\n| duration       = 60\n| skillboost     = [[Axe Fighting]] +1\n| resist         = [[Physical Damage|Physical]] +4%\n| levelrequired  = 100\n| weight         = 25.00\n| mercado        = não\n| npcvalue       = 0\n| npcprice       = 0\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| droppedby      = Ninguém.\n| implemented    = 10.80\n| notes          = Recarregável. O atributo deste elmo mudará conforme a escolha do personagem que o encantar.\n<noinclude><p><spoiler>\n* Com o helmet em sua backpack ou equipado, fale '''Hi - Werewolf Helmet - Yes''' para a NPC [[Maeryn]] para escolher a vocação e/ou o tipo de [[Weapon]] para o atributo de encantamento desejado.\n* Após definido o atributo, use [[Moonlight Crystals]] no [[Werewolf Helmet]] para encantar o item.\n</spoiler></p></noinclude>\n{{Veja|Itens Recarregáveis}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 58672,
+    "ns": 0,
+    "title": "Enchanted Werewolf Helmet (Club)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|''Este artigo se refere ao [[Enchanted Werewolf Helmet (Club)]]. Para outros, veja [[Enchanted Werewolf Helmet|Enchanted Werewolf Helmet (Desambiguação)]].''}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Enchanted Werewolf Helmet (Club)\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| secondarytype  = \n| enchantable    = \n| enchanted      = sim\n| vocrequired    = [[Knight]]s\n| armor          = 9\n| duration       = 60\n| skillboost     = [[Club Fighting]] +1\n| resist         = [[Physical Damage|Physical]] +4%\n| levelrequired  = 100\n| weight         = 25.00\n| mercado        = não\n| npcvalue       = 0\n| npcprice       = 0\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| droppedby      = Ninguém.\n| implemented    = 10.80\n| notes          = Recarregável. O atributo deste elmo mudará conforme a escolha do personagem que o encantar.\n<noinclude><p><spoiler>\n* Com o helmet em sua backpack ou equipado, fale '''Hi - Werewolf Helmet - Yes''' para a NPC [[Maeryn]] para escolher a vocação e/ou o tipo de [[Weapon]] para o atributo de encantamento desejado.\n* Após definido o atributo, use [[Moonlight Crystals]] no [[Werewolf Helmet]] para encantar o item.\n</spoiler></p></noinclude>\n{{Veja|Itens Recarregáveis}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 58673,
+    "ns": 0,
+    "title": "Enchanted Werewolf Helmet (Sword)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|''Este artigo se refere ao [[Enchanted Werewolf Helmet (Sword)]]. Para outros, veja [[Enchanted Werewolf Helmet|Enchanted Werewolf Helmet (Desambiguação)]].''}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Enchanted Werewolf Helmet (Sword)\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| secondarytype  = \n| enchantable    = \n| enchanted      = sim\n| vocrequired    = [[Knight]]s\n| armor          = 9\n| duration       = 60\n| skillboost     = [[Sword Fighting]] +1\n| resist         = [[Physical Damage|Physical]] +4%\n| levelrequired  = 100\n| weight         = 25.00\n| mercado        = não\n| npcvalue       = 0\n| npcprice       = 0\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| droppedby      = Ninguém.\n| implemented    = 10.80\n| notes          = Recarregável. O atributo deste elmo mudará conforme a escolha do personagem que o encantar.\n<noinclude><p><spoiler>\n* Com o helmet em sua backpack ou equipado, fale '''Hi - Werewolf Helmet - Yes''' para a NPC [[Maeryn]] para escolher a vocação e/ou o tipo de [[Weapon]] para o atributo de encantamento desejado.\n* Após definido o atributo, use [[Moonlight Crystals]] no [[Werewolf Helmet]] para encantar o item.\n</spoiler></p></noinclude>\n{{Veja|Itens Recarregáveis}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 58674,
+    "ns": 0,
+    "title": "Enchanted Werewolf Helmet (Magic)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|''Este artigo se refere ao [[Enchanted Werewolf Helmet (Magic)]]. Para outros, veja [[Enchanted Werewolf Helmet|Enchanted Werewolf Helmet (Desambiguação)]].''}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Enchanted Werewolf Helmet (Magic)\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| secondarytype  = \n| enchantable    = \n| enchanted      = sim\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| armor          = 9\n| duration       = 60\n| skillboost     = [[Magic Level]] +1\n| resist         = [[Physical Damage|Physical]] +4%\n| levelrequired  = 100\n| weight         = 25.00\n| mercado        = não\n| npcvalue       = 0\n| npcprice       = 0\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| droppedby      = Ninguém.\n| implemented    = 10.80\n| notes          = Recarregável. O atributo deste elmo mudará conforme a escolha do personagem que o encantar.\n<noinclude><p><spoiler>\n* Com o helmet em sua backpack ou equipado, fale '''Hi - Werewolf Helmet - Yes''' para a NPC [[Maeryn]] para escolher a vocação e/ou o tipo de [[Weapon]] para o atributo de encantamento desejado.\n* Após definido o atributo, use [[Moonlight Crystals]] no [[Werewolf Helmet]] para encantar o item.\n</spoiler></p></noinclude>\n{{Veja|Itens Recarregáveis}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 58675,
+    "ns": 0,
+    "title": "Enchanted Werewolf Helmet (Distance)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|''Este artigo se refere ao [[Enchanted Werewolf Helmet (Distance)]]. Para outros, veja [[Enchanted Werewolf Helmet|Enchanted Werewolf Helmet (Desambiguação)]].''}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Enchanted Werewolf Helmet (Distance)\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| secondarytype  = \n| enchantable    = \n| enchanted      = sim\n| vocrequired    = [[Paladin]]s\n| armor          = 9\n| duration       = 60\n| skillboost     = [[Distance Fighting]] +1\n| resist         = [[Physical Damage|Physical]] +4%\n| levelrequired  = 100\n| weight         = 25.00\n| mercado        = não\n| npcvalue       = 0\n| npcprice       = 0\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| droppedby      = Ninguém.\n| implemented    = 10.80\n| notes          = Recarregável. O atributo deste elmo mudará conforme a escolha do personagem que o encantar.\n<noinclude><p><spoiler>\n* Com o helmet em sua backpack ou equipado, fale '''Hi - Werewolf Helmet - Yes''' para a NPC [[Maeryn]] para escolher a vocação e/ou o tipo de [[Weapon]] para o atributo de encantamento desejado.\n* Após definido o atributo, use [[Moonlight Crystals]] no [[Werewolf Helmet]] para encantar o item.\n</spoiler></p></noinclude>\n{{Veja|Itens Recarregáveis}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 63392,
+    "ns": 0,
+    "title": "Demonfang Mask",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Demonfang Mask\n| vocrequired    = [[Druid]]s\n| levelrequired  = 300\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| skillboost     = [[Magic Level]] +2, [[Healing Magic Level]] +1\n| resist         = [[Physical Damage|Physical]] +2%, [[Death Damage|Death]] +5%\n| armor          = 8\n| augments       = Terra Wave -> +2% mana leech\n| weight         = 15.00\n| droppedby      = [[Arbaziloth]].\n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| npcprice       = \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 14.10.4e0c16\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 63400,
+    "ns": 0,
+    "title": "Dreadfire Headpiece",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Dreadfire Headpiece\n| vocrequired    = [[Sorcerer]]s\n| levelrequired  = 300\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| skillboost     = [[Magic Level]] +2\n| resist         = [[Physical Damage|Physical]] +2%, [[Death Damage|Death]] +6%\n| armor          = 8\n| augments       = Energy Wave -> +4% mana leech\n| weight         = 16.00\n| droppedby      = [[Arbaziloth]].\n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| npcprice       = \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 14.10.4e0c16\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 63868,
+    "ns": 0,
+    "title": "Demon Mengu",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Demon Mengu\n| vocrequired    = [[Monk]]s\n| levelrequired  = 300\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| skillboost     = [[Fist Fighting]] +2, [[Magic Level]] +1\n| resist         = [[Physical Damage|Physical]] +2%, [[Death Damage|Death]] +6%\n| armor          = 6\n| mantra         = 10\n| augments       = Flurry of Blows -> +3% Mana Leech \n| weight         = 19.00\n| droppedby      = [[Arbaziloth]]\n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| npcprice       = \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.00.249ccc\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64047,
+    "ns": 0,
+    "title": "Coned Hat of Enlightenment",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Coned Hat of Enlightenment\n| itemclass      = Equipamentos de Corpo\n| descricao      = Traditional coned hat worn by pilgrims of the Three-Fold Path. Its design features elements of the natural appearance of moths\n| primarytype    = Capacetes\n| vocrequired    = [[Monk]]s\n| levelrequired  = 70\n| skillboost     = [[Fist Fighting]] +1\n| resist         = \n| armor          = 4\n| classificacao  = 1\n| max_tier       = 1\n| imbuement      = 1\n| weight         = 10.00\n| augments       = Chained Penance -> +6% base damage\n| value          = \n| mantra         = 4\n| npcprice       = 70 000\n| buyfrom        = Enpa-Deia Pema\n| sellto         = Enpa-Deia Pema:700\n| droppedby      = Ninguém.\n| implemented    = 15.00.249ccc\n| notes          = <spoiler>* Pode ser obtido por [[Monk]]s ao usar o sexto Santuário (''6 - '''Harmony''' of Waterfalls'') durante a [[The Way of the Monk Quest]].</spoiler>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64064,
+    "ns": 0,
+    "title": "Enchanted Werewolf Helmet (Fist)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|''Este artigo se refere ao [[Enchanted Werewolf Helmet (Sword)]]. Para outros, veja [[Enchanted Werewolf Helmet|Enchanted Werewolf Helmet (Desambiguação)]].''}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Enchanted Werewolf Helmet (Fist)\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| secondarytype  = \n| enchantable    = \n| enchanted      = sim\n| vocrequired    = [[Monk]]s\n| armor          = 9\n| duration       = 60\n| skillboost     = [[Fist Fighting]] +1\n| resist         = [[Physical Damage|Physical]] +4%\n| levelrequired  = 100\n| weight         = 25.00\n| mercado        = não\n| npcvalue       = 0\n| npcprice       = 0\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| droppedby      = Ninguém.\n| implemented    = 15.00.249ccc\n| notes          = Recarregável. O atributo deste elmo mudará conforme a escolha do personagem que o encantar.\n<noinclude><p><spoiler>\n* Com o helmet em sua backpack ou equipado, fale '''Hi - Werewolf Helmet - Yes''' para a NPC [[Maeryn]] para escolher a vocação e/ou o tipo de [[Weapon]] para o atributo de encantamento desejado.\n* Após definido o atributo, use [[Moonlight Crystals]] no [[Werewolf Helmet]] para encantar o item.\n</spoiler></p></noinclude>\n{{Veja|Itens Recarregáveis}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64115,
+    "ns": 0,
+    "title": "Dark Vision Bandana",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Dark Vision Bandana\n| flavortext     = \n| levelrequired  = 180\n| vocrequired    = [[Monk]]s\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 5\n| skillboost     = [[Fist Fighting]] +2\n| resist         = [[Energy Damage|Energy]] +4%\n| augments       =\n| imbuement      = 2\n| weight         = 11.00\n| classificacao  = 3\n| max_tier       = 3\n| mantra         = 8\n| npcvalue       = \n| value          = \n| stackable      = não\n| droppedby      = [[The Nightmare Beast]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.00.249ccc\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64131,
+    "ns": 0,
+    "title": "Ethereal Coned Hat",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ethereal Coned Hat\n| itemclass      = Equipamentos de Corpo\n| descricao      = \n| primarytype    = Capacetes\n| vocrequired    = [[Monk]]s\n| levelrequired  = 400\n| skillboost     = [[Fist Fighting]] +3, [[Magic Level]] +2\n| resist         = [[Physical Damage|Physical]] +4%, [[Fire Damage|Fire]] +8%\n| armor          = 7\n| classificacao  = 4\n| max_tier       = 12\n| imbuement      = 2\n| weight         = 12.00\n| augments       = \n| value          = \n| mantra         = 10\n| npcprice       = \n| buyfrom        = \n| sellto         = \n| droppedby      = [[Magma Bubble]].\n| implemented    = 15.00.249ccc\n| notes          = <noinclude><p><spoiler>* Possibilidade de ser obtido ao usar uma [[Primal Bag]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 66785,
+    "ns": 0,
+    "title": "Charred Mask",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Charred Mask\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| skillboost     = \n| resist         = [[Fire Damage|Fire]] +2%\n| modificadores  = \n| npcvalue       = 1500\n| armor          = 0\n| weight         = 8.50\n| classificacao  = 2\n| max_tier       = 2\n| buyfrom        = Jogadores.\n| sellto         = Yasir, Aurelia\n| droppedby      = [[Herald of Fire]].\n| implemented    = 15.24.95dcf3\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6399,
+    "ns": 0,
+    "title": "Golden Helmet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Golden Helmet\n| flavortext     = It is the famous Helmet of the Stars.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 12\n| weight         = 32.00\n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| value          = 2 500 000 000 - 3 500 000 000\n| npcvalue       = 420\n| npcprice       = 0\n| buyfrom        = Jogadores.\n| sellto         = H.L.\n| notes          = Elmo com o melhor \"arm\" do jogo, porém pouco utilizado, não só pela raridade como também devido a existência de outros que oferecem bônus de [[skill]] e proteções a algum tipo específico de [[dano]]. Faz parte do [[Golden Set]], [[Unrestricted Set]], [[Full Set]], [[Rare Set]] e [[Dream Set]].\n<noinclude><div class=\"toccolours mw-collapsible mw-collapsed\" style=\"margin: 4px 0px;\">'''\"História do Item\"'''<div class=\"mw-collapsible-content\"><table ><tr><td align=left>\nNos primórdios do jogo, era [[loot]] dos [[Daemon]]s e só havia indícios de sua existência em mundos mais antigos. Contudo, com a implementação da possibilidade de [[Character World Transfer|transferência dos personagens]], pode ser encontrado em outros mundos. \n</td></tr></table></div></div></noinclude>\n<noinclude><div class=\"toccolours mw-collapsible mw-collapsed\" style=\"margin: 4px 0px;\">'''O Primeiro Golden Helmet - Uma velha história de Karl, ex-\"Wizard¹\"'''<div class=\"mw-collapsible-content\">\n<table ><tr><td align=left>\n''\"Antes de eu começar, tenho de salientar que não foi realmente o primeiro Golden Helmet que foi obtido por um jogador, mas o primeiro que existe ainda hoje. Houve uma atualização (talvez em 1999? - corrija-me se estou errado), onde agora todos os itens raros foram eliminados e toda a configuração do sistema de itens foi reformulada. Isso foi necessário porque era muito fácil chegar até aqueles itens (dragons dropavam todos eles) e no nível 5 um jogador já tinha um conjunto completo dos então melhores itens no jogo: Golden Helmet, Magic Plate Armor e Fire Sword. Então, para tornar o Tibia mais interessante, todos estes itens foram substituídos por um capacete de aço (chain helmet), uma chain armor e uma espada regular. A partir dessa atualização em diante, os raros itens se tornaram difíceis de obter''.\n\n''Então, quando o servidor ficou online com a nova atualização, Thais se surpreendeu, com pessoas enchendo o templo imediatamente, de forma a dar ao bom e velho [[Quentin]] um choque pelo aparecimento súbito de tantos jogadores fazendo login em sua residência. Alguns ficaram chateados por que perderam os equipamentos que estavam usando, alguns foram apressados até o depósito para verificar o que aconteceu com seus itens. Um jogador correu à frente de todos os outros para ser o primeiro a ver o que o demônio dos tesouros estava escondendo. Esta foi {{Character|Galadriel}}, provavelmente a mais poderosa dos magos na época. Ela não deveria ter tido muita pressa, já que não havia mais ninguém que estava tão ansioso quanto ela para ver o grande demônio, mas ainda assim ela teve. Havia, na época, apenas um lugar em Tibia em que você poderia enfrentar um demônio, e era bem abaixo Thais, ao sul de Mintwallin. Entre 10-15 minutos depois de o servidor vir online recebo uma mensagem de Galadriel: ela havia derrotado os demônios e encontrou o tesouro: um Helmet of The Stars e uma Magic Plate Armor. Ela ficou um pouco chateada, porque ela ainda achava fácil de obter o HOTS (Helmet of the Stars). O que não sabíamos era que este magnífico tesouro foi dado apenas uma vez pelo demônio solitário, logo, foi Galadriel a primeira e única jogadora a ter este agradável item durante algum tempo\"''.\n----\n'''Nota¹: '''Wizard era como os [[Gamemaster]]s eram chamados há muito tempo.\n</td></tr></table></div></div>\n\n<gallery>\nArquivo:Daemon_loot.jpg|Daemon morto em [[Mintwallin]].\nArquivo:Golden_helmet_on_shanera.jpg|Golden Helmet em [[Shanera]].\nArquivo:Golden_helmet.png|Golden Helmet em [[Menera]].\n</gallery></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6442,
+    "ns": 0,
+    "title": "Ferumbras' Hat",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ferumbras' Hat\n| flavortext     = It is the proof that Ferumbras has fallen. For now. The Edron Academy should be interested in this.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Addons\n| secondarytype  = Capacetes\n| tertiarytype   = Produtos de Criaturas\n| armor          = 1\n| weight         = 8.50\n| classificacao  = 4\n| max_tier       = 10\n| stackable      = não\n| value          = 1 750 000 000 - 1 820 000 000\n| npcvalue       = 0\n| droppedby      = [[Ferumbras Mortal Shell]].\n| droppedRaidby  = [[Ferumbras]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.8\n| notes          = Item raro, um dos mais difíceis de se obter, e muito cobiçado pelos jogadores.\n<noinclude><p><spoiler>* 01 é necessário para o addon do [[Mage Outfits]] (male) / [[Summoner Outfits]] (female).\n*Possibilidade de ser obtido na [[Ferumbras' Ascendant Quest]]. </spoiler></p></noinclude>\n<gallery>\narquivo:Ferumbrashat.png|Ferumbras'Hat em [[Luminera]].\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6443,
+    "ns": 0,
+    "title": "Flower Wreath",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Flower Wreath\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 0\n| weight         = 5.00\n| classificacao  = 1\n| max_tier       = 1\n| value          = 500 - 5 000\n| npcvalue       = 500\n| droppedby      = [[Dryad]], [[Nymph]], [[Swan Maiden]].\n| buyfrom        = Jogadores.\n| sellto         = Rashid\n| implemented    = 8.4\n| notes          = Visto pela primeira vez no dia 1º de Junho de 2009. Faz parte do [[Dryad Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6444,
+    "ns": 0,
+    "title": "Full Helmet of the Ancients",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Full Helmet of the Ancients\n| flavortext     = The gem is glowing with power.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| enchantable    = \n| enchanted      = sim\n| armor          = 11\n| weight         = 27.60\n| stackable      = não\n| duration       = 30\n| mercado        = não\n| value          = \n| npcvalue       = 0\n| buyfrom        = Jogadores.\n| droppedby      = Ninguém.\n| sellto         = Jogadores.\n| implemented    = 7.4\n| notes          = Recarregável. É um [[Helmet of the Ancients]] encantado com uma [[Small Ruby]], o que aumenta seu atributo defensivo de 8 para 11. Faz parte do [[Ancient Set]], [[High Level Knight Basic Set]], [[Unrestricted Set]] e [[Rare Set]].\n\n<noinclude><div class=\"toccolours mw-collapsible mw-collapsed\" style=\"margin: 4px 0px;\">'''\"Rumores\"'''<div class=\"mw-collapsible-content\"><table ><tr><td align=left>\nBaseados em um [[Morgathla Reveals the Secrets of the Mask (Book)|livro encontrado em Ankrahmun]], acredita-se que um ''Soul Ruby'' seria capaz de fazer o efeito do encantamento tornar-se permanente. Ou seja, sua excepcional defesa seria um atributo constante.\n</td></tr></table></div></div></noinclude>\n{{Veja|Itens Recarregáveis}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6445,
+    "ns": 0,
+    "title": "Fur Cap",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Fur Cap\n| flavortext     = It feels nice and warm on your ears.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 3\n| weight         = 18.00\n| classificacao  = 3\n| max_tier       = 3\n| stackable      = não\n| imbuement      = 2\n| value          = 1 500 000 - 6 000 000\n| npcvalue       = 0\n| droppedRaidby  = [[Man In The Cave]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.0\n| notes          = Frequentemente utilizado como elemento decorativo. Faz parte do [[Barbarian Set]] e [[Mammoth Set]].\n<gallery>arquivo:Fur_cap.png| Fur Cap visto em [[Luminera]]. </gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6447,
+    "ns": 0,
+    "title": "Glacier Mask",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Glacier Mask\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| resist         = [[Ice Damage|Ice]] +4%, [[Energy Damage|Energy]] -5%\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 5\n| weight         = 10.00\n| classificacao  = 2\n| max_tier       = 2\n| stackable      = não\n| npcvalue       = 2 500\n| value          = 2 300 - 4 000\n| droppedby      = [[Animated Feather]], [[Court Warlock]], [[Crazed Winter Rearguard]], [[Crystal Spider]], [[Icecold Book]], [[Ice Golem]], [[Monk's Apparition]], [[Seacrest Serpent]], [[Shardhead]], [[Squid Warden]], [[The Bloodweb]], [[Two-Headed Turtle]].\n| droppedRaidby  = [[Hirintror]], [[Zushuka (Mortal)]].\n| droppedEventby = [[Animated Snowman]], [[Gelidrazah the Frozen]], [[Ice Dragon]].\n| buyfrom        = Jogadores.\n| trade          = sim\n| sellto         = Rashid\n| implemented    = 8.1\n| notes          = Faz parte do [[Glacier Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6450,
+    "ns": 0,
+    "title": "Hat of the Mad",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Hat of the Mad\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| flavortext     = You have a vague feeling that it looks somewhat silly.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| skillboost     = [[Magic Level]] +1\n| armor          = 3\n| weight         = 7.00\n| imbuement      = 1\n| classificacao  = 2\n| max_tier       = 2\n| value          = 8 000 - 30 000\n| stackable      = não\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| droppedby      = Ninguém.\n| notes          = Aparentemente uma alusão ao \"Chapeleiro Maluco\" de [http://pt.wikipedia.org/wiki/Alice_no_Pa%C3%ADs_das_Maravilhas Alice no País das Maravilhas]. Faz parte do [[Mage Set]], [[Magic Level Set]] e [[Unrestricted Set]].\n<noinclude><p><spoiler>\n* Recompensa da [[Mintwallin Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6451,
+    "ns": 0,
+    "title": "Helmet of Nature",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Helmet of Nature\n| flavortext     = One can only hope nobody will ever insist on wearing that.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 3\n| weight         = 11.00\n| imbuement      = 2\n| classificacao  = 2\n| max_tier       = 2\n| stackable      = não\n| npcvalue       = 0\n| droppedby      = [[Dirtbeard]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Mesmo sprite de uma [[Flower Bowl]].\n<noinclude><p><spoiler>* Possibilidade de ser obtido aleatoriamente durante a [[The Isle of Evil Quest]].\n*Para tentar obtê-lo deve-se dar \"'''use'''\" no corpo morto do boss [[Dirtbeard]]. \n*Só é possível tentar obtê-lo na primeira vez em que a criatura for morta.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6454,
+    "ns": 0,
+    "title": "Helmet of the Ancients",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Helmet of the Ancients\n| flavortext     = The gem of the helmet is burned out and should be replaced.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| enchantable    = sim\n| armor          = 8\n| weight         = 27.60\n| value          = \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.4\n| droppedby      = Ninguém.\n| notes          = Pode ser encantado usando uma [[Small Ruby]], transformando-se em um [[Full Helmet of the Ancients]] o que aumenta a sua defesa em 3 pontos por 30 minutos. Faz parte do [[Ancient Set]].\n<noinclude><p><spoiler>\n* Recompensa da [[The Ancient Tombs Quest]].\n* [[Arquivo:Achievement.gif|link=]] Ao usar uma [[Small Ruby]] em um Helmet of the Ancients, você receberá o achievement '''\"{{achievement|Hidden Powers}}\"'''.</spoiler></p></noinclude>\n{{Veja|Itens Recarregáveis}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6457,
+    "ns": 0,
+    "title": "Helmet of the Deep",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Helmet of the Deep\n| flavortext     = Enables underwater exploration.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| resist         = [[Drowning]] +100%\n| skillboost     = [[Speed]] +300 *\n| armor          = 2\n| weight         = 210.00\n| stackable      = não\n| droppedby      = Ninguém.\n| value          = 4 500 - 5 500\n| npcprice       = 5 000\n| npcvalue       = 5 000\n| buyfrom        = Captain Max\n| sellto         = Captain Max\n| implemented    = 7.8\n| notes          = Utilizado para acessar áreas submersas devido a proteção contra o [[drowning]]. Mais pesado e com atributo defensivo menor que o [[Depth Galea]], mas não possui restrição de level para seu uso.\n<noinclude><div class=\"toccolours mw-collapsible mw-collapsed\" style=\"margin: 4px 0px;\">'''\"História do Item\"'''<div class=\"mw-collapsible-content\"><table ><tr><td align=left>\nPor muito tempo foi a principal e única opção para se caçar neste tipo de ambiente, contudo com o [[Updates/9.4|Update 9.4]] foi implementado o [[Depth Galea]], que oferece a mesma taxa de proteção contra o afogamento, porém mais leve e com maior defesa.\n</td></tr></table></div></div></noinclude>\n<noinclude><p><spoiler>Pode ser comprado por 5 000 gp, se:\n* Possuir o Rank de '''Relic Hunter''' na [[Explorer Society]].\n* Tiver a permissão da NPC [[Berenice]] para ir a Calassa.</spoiler></p></noinclude>\n\n{{DASH|*'''Atenção''': O bônus de velocidade (*) somente é obtido se você comer um [[Coconut Shrimp Bake]]. Esse pequeno aumento de velocidade durará 24 horas, antigamente esse bônus seria cancelado se o elmo fosse colocado na backpack, no chão ou se o personagem retornar-se para a cidade, porém, atualmente isso não acontece mais, podendo portanto retornar para cidade, por exemplo, que o efeito permanecerá.\n*'''Dica:''' Muito útil para caçar [[Water Elemental]]s uma vez que este helmet bloqueia um dos seus ataques mais fortes.}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6459,
+    "ns": 0,
+    "title": "Horned Helmet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Horned Helmet\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 11\n| weight         = 51.00\n| classificacao  = 4\n| max_tier       = 10\n| value          = 6 000 000 000 - 7 000 000 000\n| npcvalue       = 155\n| npcprice       = 0\n| buyfrom        = Jogadores.\n| sellto         = H.L.\n| notes          = Item raro e valioso. Segundo elmo com melhor atributo defensivo do jogo.\n<noinclude><div class=\"toccolours mw-collapsible mw-collapsed\" style=\"margin: 4px 0px;\">'''\"História do Item\"'''<div class=\"mw-collapsible-content\"><table ><tr><td align=left>\nAntigamente recompensa de uma quest no [[Outlaw Camp]] contudo, havia apenas um único spawn por mundo. Após a reformulação da quest foi retirado do jogo podendo ser visto apenas em mundos mais antigos. Atualmente, com a implementação da possibilidade de [[Character World Transfer|transferência dos personagens]], pode ser encontrado em outros mundos.\n</td></tr></table></div></div></noinclude>\n<gallery>\nImage:Antica_Rares.jpg|Um '''Horned Helmet''' e outros rares em [[Antica]].\nImage:rush.jpg|Um '''Horned Helmet''' e vários rares em [[Shanera]].\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6460,
+    "ns": 0,
+    "title": "Horseman Helmet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Horseman Helmet\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 6\n| weight         = 42.00\n| classificacao  = 1\n| max_tier       = 1\n| value          = 280 - 1 000\n| npcvalue       = 280\n| stackable      = não\n| droppedby      = [[Assassin]].\n| buyfrom        = Jogadores.\n| sellto         = Brengus\n| implemented    = 7.5\n| notes          = Item raro e incomum. Frequentemente utilizado como elemento decorativo.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6461,
+    "ns": 0,
+    "title": "Iron Helmet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Iron Helmet\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 5\n| weight         = 30.00\n| classificacao  = 1\n| max_tier       = 1\n| value          = 150 - 390\n| npcvalue       = 150\n| npcprice       = 390\n| stackable      = não\n| droppedby      = [[Bandit]], [[Crypt Defiler]], [[Crypt Shambler]], [[Demon Skeleton]], [[Gladiator]], [[Grave Robber]], [[Menacing Carnivor]], [[Nomad]], [[Wild Warrior]].\n| buyfrom        = Shanar, Memech, Cornelia, Hireling (Trader), Azil, Willard, Esrik, Rock In A Hard Place, Ulrik, Kroox, Cedrik, Brengus, Flint, Robert, Gamel, Sam, Turvy, Hardek, Baltim, Aldo, Yanni, Morpel\n| sellto         = Shanar, Memech, Cornelia, Hireling (Trader), Azil, Willard, Esrik, Rock In A Hard Place, Ulrik, Kroox, Cedrik, H.L.:30, Brengus, Flint, Robert, Gamel, Sam, Turvy, Hardek, Baltim, Aldo, Yanni, Morpel\n| notes          = Pouco utilizado, personagens de level baixo preferem o [[Soldier Helmet]] por ser mais barato e fácil de se conseguir. Faz parte do [[Newbie Set]] e [[Iron Set]].\n<noinclude><p><spoiler>\n* Recompensa da [[Iron Helmet Quest]].\n* Possibilidade de ser obtido ao [[Rust Remover|remover a ferrugem]] de um [[Rusted Helmet]]. \n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6463,
+    "ns": 0,
+    "title": "Jade Hat",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Jade Hat\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 60\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| skillboost     = [[Magic Level]] +1\n| armor          = 4\n| weight         = 9.00\n| imbuement      = 1\n| classificacao  = 2\n| max_tier       = 2\n| value          = 9 000 - 15 000\n| stackable      = não\n| droppedby      = [[Ethershreck]], [[Ghastly Dragon]], [[Hatebreeder]], [[Ironblight]], [[Ravenous Hunger]], [[Zanakeph]].\n| npcvalue       = 9 000\n| npcprice       = 0\n| buyfrom        = Jogadores.\n| sellto         = Lailene\n| implemented    = 8.54\n| notes          = Faz parte do [[Zaoan Set]] e [[Magic Level Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6466,
+    "ns": 0,
+    "title": "Jester Hat",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Jester Hat\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 1\n| weight         = 10.00\n| classificacao  = 2\n| max_tier       = 2\n| value          = \n| stackable      = não\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.1\n| notes          = Utilizado como elemento decorativo.\n<noinclude><p><spoiler>* Recompensa da [[What a Foolish Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6469,
+    "ns": 0,
+    "title": "Krimhorn Helmet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Krimhorn Helmet\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 6\n| weight         = 51.00\n| classificacao  = 1\n| max_tier       = 1\n| value          = 200 - 2 000\n| npcvalue       = 200\n| stackable      = não\n| droppedby      = [[Barbarian Headsplitter]].\n| buyfrom        = Jogadores.\n| sellto         = Rashid\n| implemented    = 8.0\n| notes          = Item raro e incomum. Possui a mesma defesa do [[Dark Helmet]] e do [[Steel Helmet]], porém mais caro e mais pesado. Frequentemente utilizado como elemento decorativo. Faz parte do [[Barbarian Set]]. \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6472,
+    "ns": 0,
+    "title": "Leather Helmet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Leather Helmet\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 1\n| weight         = 22.00\n| classificacao  = 1\n| max_tier       = 1\n| value          = 4 - 12\n| npcvalue       = 4\n| npcprice       = 11\n| stackable      = não\n| droppedby      = [[Goblin]], [[Goblin Assassin]], [[Goblin Leader]], [[Goblin Scavenger]], [[Island Troll]], [[Minotaur Mage]], [[Minotaur Occultist]], [[Muglex Clan Assassin]], [[Muglex Clan Scavenger]], [[Poacher]], [[Smuggler]], [[Troll]], [[Werelioness]], [[Young Troll]].\n| droppedRaidby  = [[Apprentice Sheng]].\n| buyfrom        = Shanar:12, Memech:12, Cornelia:12, Hireling (Trader):12, Azil:12, Coltrayne:12, Willard:12, Esrik:12, Rock In A Hard Place:12, Ulrik:12, Kroox:12, Cedrik:12, Brengus:12, Flint:12, Dixi:12, Lee'Delle, Robert:12, Gamel:12, Sam:12, Turvy:12, Hardek:12, Baltim:12, Aldo:12, Yanni:12, Morpel:12\n| sellto         = Shanar, Memech, Cornelia, Hireling (Trader), Azil, Willard, Esrik, Rock In A Hard Place, Ulrik, Raffael, Kroox, Cedrik, H.L.:1, Brengus, Flint, Dixi:3, Lee'Delle:3, Robert, Gamel, Sam, Turvy, Hardek, Baltim, Aldo, Yanni, Morpel\n| notes          = Frequentemente usado por iniciantes, seja em [[Dawnport]] ou [[Rookgaard]]. Faz parte do [[Leather Set]] e do [[Set Inicial]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6475,
+    "ns": 0,
+    "title": "Legion Helmet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Legion Helmet\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| secondarytype  = Itens de Addons\n| armor          = 4\n| weight         = 31.00\n| classificacao  = 2\n| max_tier       = 2\n| value          = 22 - 20 000\n| npcvalue       = 22\n| stackable      = não\n| droppedRaidby  = [[Rottie the Rotworm]], [[Rotworm Queen]].\n| buyfrom        = Jogadores.\n| sellto         = Shanar, Memech, Cornelia, Hireling (Trader), Azil, Willard, Esrik, Rock In A Hard Place, Ulrik, Raffael, Kroox, Cedrik, H.L.:8, Brengus, Flint, Dixi, Lee'Delle, Robert, Gamel, Sam, Turvy, Hardek, Baltim, Aldo, Yanni, Morpel\n| implemented    = 7.4\n| notes          = Melhor opção para os iniciantes em [[Rookgaard]], tem a mesma defesa do [[Viking Helmet]], porém é mais leve. Faz parte do [[Rook Set]] e [[Isle of Destiny Paladin Set]].\n<noinclude><p><spoiler>\n* Em '''Rookgaard''':\n** Recompensa da [[Dragon Corpse Quest]].\n** Recompensa da [[Present Box Quest]].\n** 01 é requerido para um addon do [[Citizen Outfits Quest on Rook]].\n* No '''continente principal''':\n** 01 é requerido para um addon do [[Citizen Outfits Quest]].\n** Antes do [[Update de Newhaven]], podia ser obtido durante a [[Sanctuary of the Lizard God Quest]].\n** Pode ser obtido na [[Newhaven Quest]].\n{{Veja|Onde conseguir um Legion Helmet}}\n</spoiler></p></noinclude>\n| history       = Historia\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6479,
+    "ns": 0,
+    "title": "Lightning Headband",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Lightning Headband\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| resist         = [[Energy Damage|Energy]] +4%, [[Earth Damage|Earth]] -5%\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 5\n| weight         = 10.00\n| classificacao  = 2\n| max_tier       = 2\n| stackable      = não\n| npcvalue       = 2 500\n| value          = 2 500 - 5 000\n| droppedby      = [[Anomaly]], [[Burning Gladiator]], [[Burster]], [[Giant Spider]], [[High Voltage Elemental]], [[Hulking Carnisylvan]], [[Outburst]], [[Reality Reaver]], [[Sphinx]], [[Usurper Warlock]], [[Werelioness]], [[World Devourer]].\n| buyfrom        = Jogadores.\n| sellto         = Rashid\n| implemented    = 8.1\n| notes          = Faz parte do [[Lightning Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6483,
+    "ns": 0,
+    "title": "Mage Hat",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Mage Hat\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 3\n| weight         = 9.00\n| imbuement      = 2\n| classificacao  = 1\n| max_tier       = 1\n| value          = 10 - 150\n| npcprice       = 150\n| stackable      = não\n| buyfrom        = Raffael\n| sellto         = Jogadores.\n| droppedby      = Ninguém.\n| implemented    = 8.2\n| notes          = Dado para os personagens que escolheram como vocação definitiva serem [[Sorcerer]]s ou [[Druid]]s em [[Dawnport]] ou na [[Isle of Destiny]]. Faz parte do [[Isle of Destiny Druid Set]] e [[Isle of Destiny Sorcerer Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6488,
+    "ns": 0,
+    "title": "Magician Hat",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Magician Hat\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 1\n| weight         = 7.50\n| imbuement      = 2\n| classificacao  = 3\n| max_tier       = 3\n| value          = \n| stackable      = não\n| droppedby      = [[Rahemos]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 6.6\n| notes          = Item incomum. Utilizado como elemento decorativo.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6491,
+    "ns": 0,
+    "title": "Magma Monocle",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Magma Monocle\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| stackable      = não\n| armor          = 5\n| weight         = 10.00\n| classificacao  = 2\n| max_tier       = 2\n| resist         = [[Fire Damage|Fire]] +4%, [[Ice Damage|Ice]] -5%.\n| value          = 2 500 - 5 000\n| droppedby      = [[Burning Book]], [[Cinder Wyrmling]], [[Diabolic Imp]], [[Efreet]], [[Essence Of Malice]], [[Fahim the Wise]], [[Feral Sphinx]], [[Hellhound]], [[Insane Siren]], [[Manticore]], [[Marid]], [[Merikh the Slaughterer]], [[Overseer Osverger]], [[Raubritter Chastener]], [[Scarlett Etzel]], [[Sphinx]], [[Urmahlullu the Weakened]], [[Usurper Warlock]], [[Werepanther]].\n| droppedEventby = [[Percht]].\n| buyfrom        = Jogadores.\n| npcvalue       = 2 500\n| sellto         = Rashid\n| implemented    = 8.1\n| notes          = Faz parte do [[Magma Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6495,
+    "ns": 0,
+    "title": "Mighty Helm of Green Sparks",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Mighty Helm of Green Sparks\n| flavortext     = This helmet spawns green stars. Awesome.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 6\n| weight         = 46.00\n| classificacao  = 2\n| max_tier       = 2\n| stackable      = não\n| droppedby      = [[Doctor Perhaps]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.5\n| notes          = Mesmo sprite de um [[Steel Helmet]], mas possui um brilho verde.\n<noinclude><p><spoiler>* Possibilidade de ser obtido aleatoriamente durante a [[The Isle of Evil Quest]].\n*Para tentar obtê-lo deve-se dar \"'''use'''\" no corpo morto do boss [[Doctor Perhaps]]. \n*Só é possível tentar obtê-lo na primeira vez em que a criatura for morta.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6496,
+    "ns": 0,
+    "title": "Mining Helmet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Mining Helmet\n| flavortext     = This is your personal mining helmet.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| secondarytype  = Fontes de Luz\n| attrib         = Fornece 5 [[sqm]]s de luz amarelada quando equipado.\n| armor          = 1\n| weight         = 7.00\n| classificacao  = 1\n| max_tier       = 1\n| value          = Negociável\n| npcvalue       = 0\n| stackable      = não\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.1\n| notes          = Faz parte do [[Light Set]].\n<noinclude><p><spoiler>* Recompensa da: [[To Outfox a Fox Quest]] parte dos [[Tibia Tales Quest|Tibia Tales]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9564,
+    "ns": 0,
+    "title": "Mining Helmet (Budrik)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Mining Helmet (Budrik)\n| flavortext     = This is [[Budrik]]s old mining helmet.\n| itemclass      = Capacetes\n| primarytype    = Itens de Quest\n| secondarytype  = \n| armor          = 0\n| weight         = 7.00\n| value          = \n| npcvalue       = 0\n| npcprice       = 0\n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.1\n| notes          = Não pode ser equipado em sua cabeça.\n<noinclude><p><spoiler>* Obtido e usado durante a [[To Outfox a Fox Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9687,
+    "ns": 0,
+    "title": "Helmet of Ultimate Terror",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Helmet of Ultimate Terror\n| flavortext     = There is evil inside.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 3\n| weight         = 12.50\n| classificacao  = 2\n| max_tier       = 2\n| imbuement      = 2\n| stackable      = não\n| npcvalue       = 0\n| droppedby      = [[Monstor]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.5\n| notes          = Mesmo sprite de uma [[Pumpkinhead]].\n<noinclude><p><spoiler>* Possibilidade de ser obtido aleatoriamente durante a [[The Isle of Evil Quest]].\n*Para tentar obtê-lo deve-se dar \"'''use'''\" no corpo morto do boss [[Monstor]]. \n*Só é possível tentar obtê-lo na primeira vez em que a criatura for morta.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 17314,
+    "ns": 0,
+    "title": "Mage's Cap",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Mage's Cap\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| secondarytype  = Itens de Addons\n| stackable      = não\n| armor          = 3\n| weight         = 10.00\n| classificacao  = 4\n| max_tier       = 10\n| resist         = [[Fire Damage|Fire]] +4%\n| value          = 35 000 000 - 75 000 000\n| droppedby      = [[Mad Mage]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.1\n| notes          = Apesar da proteção contra [[Fire]] é pouco utilizado, pois existem opções mais baratas e que oferecem uma melhor proteção como é o caso do [[Magma Monocle]]. \n<noinclude><p><spoiler>* 01 é necessário para a [[Elementalist Outfits Quest]].</spoiler></p></noinclude>\n<gallery>arquivo:Mage's_cape.png| Mage's Cap vista em [[Menera]].</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 20357,
+    "ns": 0,
+    "title": "Laurel Wreath",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Laurel Wreath\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| writable       = sim\n| armor          = 0\n| weight         = 9.00 \n| mercado        = não\n| npcvalue       = 0 \n| npcprice       = 0 \n| buyfrom        = Jogadores. \n| sellto         = Jogadores. \n| notes          = Item raro e valioso. Utilizado como elemento decorativo\n<noinclude><div class=\"toccolours mw-collapsible mw-collapsed\" style=\"margin: 4px 0px;\">'''\"História do Item\"'''<div class=\"mw-collapsible-content\"><table ><tr><td align=left>\nUtilizado como prêmio especial para os tutores que se destacaram em suas atribuições:\n*Em dezembro de 2011 o então GM {{Character|Grimrath|}} premiou os tutores: {{character|Abiston}}, {{character|Mirkaan}} e {{character|Zinina}}. \n*Em janeiro de 2013 o, então [[Head Tutor]], {{Character|Karvar|Karvar}} premiou os tutores: {{character|Lee kun}}, {{character|Parodox}} e {{character|Gogue da Terra de Magogue}}.\nPremiações posteriores, se ocorreram, não foram divulgadas.\n</td></tr></table></div></div></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25454,
+    "ns": 0,
+    "title": "Gill Gugel",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Gill Gugel\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| resist         = [[Earth Damage|Earth]] +6%, [[Fire Damage|Fire]] -6%\n| levelrequired  = 150\n| skillboost     = [[Magic Level]] +2\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 5\n| weight         = 9.00\n| classificacao  = 2\n| max_tier       = 2\n| value          = 5 000 - 30 000\n| npcprice       = 10 [[Major Crystalline Token]]\n| buyfrom        = Gnomally\n| sellto         = Jogadores.\n| droppedby      = Ninguém.\n| implemented    = 9.6\n| notes          = Faz parte do [[Gill Set]], [[Magic Level Set]] e [[Mage Set]].\n{{DASH|'''Dica:''' Dependendo do valor do [[Major Crystalline Token]] no mundo, pode ser mais barato comprar o token e trocar pelo item na [[NPC]] do que comprá-lo diretamente de algum jogador.}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 27593,
+    "ns": 0,
+    "title": "Helmet of The Lost",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Helmet of The Lost\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 7\n| weight         = 35.00\n| imbuement      = 2\n| classificacao  = 2\n| max_tier       = 2\n| value          = 1 800 - 3 000\n| stackable      = não\n| buyfrom        = Jogadores.\n| sellto         = Rashid\n| droppedby      = [[Lost Thrower]]\n| npcvalue       = 2 000\n| implemented    = 9.8\n| notes          = Mesma defesa do [[Crown Helmet]] e do [[Bonelord Helmet]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 40064,
+    "ns": 0,
+    "title": "Ferumbras' Candy Hat",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ferumbras' Candy Hat\n| flavortext     = It is a sweet candy replica of the famous Ferumbras' hat.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| edible         = não\n| armor          = 1\n| weight         = 8.50\n| classificacao  = 1\n| max_tier       = 1\n| implemented    = 11.02\n| value          = Negociável\n| stackable      = não\n| droppedEventby = [[Piñata Dragon]].\n| npcvalue       = 0\n| npcprice       = 0\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Item especial. Implementado durante as comemorações do 20º [[Aniversário do Tibia]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 41821,
+    "ns": 0,
+    "title": "Leaf Crown",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Leaf Crown\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 0\n| weight         = 5.00\n| value          = Negociável\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.40\n| notes          = Ao usar o item em sua [[House|casa]], ele se transformará em uma [[Your Magical Tree (Druid)]].<br>\n<spoiler>* Recompensa da [[Cults of Tibia Quest]] apenas para [[Druid]]s.</spoiler>\n<gallery>Arquivo:Leaf Crown.jpg|A personagem {{Character|Faith Bella}} com uma '''Leaf Crown''' em sua casa.\nArquivo:Magic Tree.jpg|'''Leaf Crown''' se transformando em árvore.</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 41822,
+    "ns": 0,
+    "title": "Iron Crown",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Iron Crown\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 0\n| weight         = 10.00\n| value          = Negociável\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.40\n| notes          = Ao usar o item em sua [[House|casa]], ele se transforma em uma [[Your Magical Tree (Knight)]].<br>\n<spoiler>* Recompensa da [[Cults of Tibia Quest]] apenas para [[Knight]]s.</spoiler>\n<gallery>Arquivo:Iron Crown.png|O personagem {{Character|Fairy Fox}} com a '''Iron Crown''' em sua casa.\nArquivo:Iron Crown 2.png|'''Iron Crown''' se transformando em árvore.</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 41823,
+    "ns": 0,
+    "title": "Incandescent Crown",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Incandescent Crown\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 0\n| weight         = 10.00\n| value          = Negociável\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.40\n| notes          = Ao usar o item em sua [[House|casa]], ele se transformará em uma [[Your Magical Tree (Paladin)]].<br>\n<noinclude><spoiler>* Recompensa da [[Cults of Tibia Quest]] apenas para [[Paladin]]s.</spoiler></noinclude>\n[[Arquivo:Incandescent Crown01.gif]]\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42686,
+    "ns": 0,
+    "title": "Gnome Helmet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Gnome Helmet\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| levelrequired  = 200\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| imbuement      = 2\n| classificacao  = 3\n| max_tier       = 3\n| resist         = [[Physical Damage|Physical]] +3%, [[Energy Damage|Energy]] +8%, [[Ice Damage|Ice]] -2%\n| skillboost     = [[Magic Level]] +2\n| armor          = 8\n| weight         = 24.00\n| stackable      = não\n| droppedby      = [[The Count Of The Core]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.50\n| notes          = Faz parte do [[Gnome Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 46686,
+    "ns": 0,
+    "title": "Galea Mortis",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Galea Mortis\n| vocrequired    = [[Sorcerer]]s \n| levelrequired  = 220\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| skillboost     = [[Magic Level]] +2\n| armor          = 7\n| resist         = [[Death Damage|Death]] +6%, [[Holy Damage|Holy]] -3%\n| weight         = 23.00\n| classificacao  = 3\n| max_tier       = 3\n| imbuement      = 2\n| stackable      = não\n| value          = \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| droppedby      = [[King Zelos]].\n| implemented    = 12.20\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 46732,
+    "ns": 0,
+    "title": "Mirror Mask",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Mirror Mask\n| flavortext     = It is composed of many small shards.\n| itemclass      = Capacetes\n| primarytype    = Itens de Quest\n| secondarytype  = Decorações\n| weight         = 16.00\n| stackable      = não\n| mercado        = não\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.20\n| notes          = \n<noinclude><p><spoiler>\n* Necessária para entrar em uma das portas seladas do [[Kilmaresh Catacombs]].\n* Obtida e usada na [[Kilmaresh Quest]].\n* Para obtê-la, vá para a escada ao norte do palácio ({{mapa|33885,31460,7:2|aqui}}), siga para o sul até encontrar um [[Ancient Sepulchre]] ({{mapa|33796,31551,7:2|aqui}}), desça (basta andar por cima do sepulchre) e colete a [[Mirror Mask]] no sarcófago.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 46786,
+    "ns": 0,
+    "title": "Gryphon Mask",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Gryphon Mask\n| flavortext     = It is carved from sequoia wood.\n| itemclass      = Capacetes\n| primarytype    = Itens de Quest\n| secondarytype  = Decorações\n| weight         = 20.00\n| stackable      = não\n| mercado        = não\n| value          = \n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.20\n| notes          = \n<noinclude><p><spoiler>\n* Necessária para entrar em uma das portas seladas das [[Kilmaresh Catacombs]].\n* É necessário equipá-la em sua cabeça quando for domar um [[Gryphon]].\n* Obtida e usada na [[Kilmaresh Quest]].\n* Para obtê-la, vá para as montanhas até a entrada ({{mapa|33839,31712,7:2|aqui}}). Suba e contorne a montanha seguindo para o norte até encontrar outra escada. Suba mais 3 andares e colete a máscara clicando em um ninho ({{mapa|33840,31681,3:2|aqui}}).\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 46817,
+    "ns": 0,
+    "title": "Ivory Mask",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ivory Mask\n| flavortext     = It is smoothly polished and cool to the touch.\n| itemclass      = Capacetes\n| primarytype    = Itens de Quest\n| secondarytype  = Itens de Decoração\n| weight         = 18.00\n| stackable      = não\n| mercado        = não\n| value          = \n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.20\n| notes          = \n<noinclude><p><spoiler>\n* Obtida e usada na [[Kilmaresh Quest]].\n* Necessária para entrar em uma das portas seladas das [[Kilmaresh Catacombs]].\n* Para obtê-la, vá até a biblioteca do palácio ({{mapa|33879,31489,6:2|aqui}}), note que existem vários pisos [[Sun Mosaic (Piso)|Sun Mosaic]]s e [[Wave Mosaic]]s, mas somente um [[Ankh Mosaic]]. Use uma [[Small Emerald]] no piso com o desenho de um Ankh e você encontrará a máscara.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 49007,
+    "ns": 0,
+    "title": "Lion Spangenhelm",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Lion Spangenhelm\n| flavortext     = \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 7\n| levelrequired  = 230\n| vocrequired    = [[Paladin]]s\n| weight         = 30.00\n| skillboost     = [[Distance Fighting]] +2\n| resist         = [[Physical Damage|Physical]] +3%, [[Earth Damage|Earth]] +5%\n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| stackable      = não\n| value          = \n| npcvalue       = \n| droppedby      = [[Ancient Lion Knight]], [[Drume]].\n| implemented    = 12.40\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53591,
+    "ns": 0,
+    "title": "Green Demon Helmet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Green Demon Helmet\n| flavortext     = You hear an evil whispering from inside.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 10\n| weight         = 29.50\n| imbuement      = 2\n| classificacao  = 2\n| max_tier       = 2\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| droppedRaidby  = [[Morshabaal]].\n| npcvalue       = 0\n| npcprice       = 0\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Nenhuma.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59091,
+    "ns": 0,
+    "title": "Golden Horned Helmet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Golden Horned Helmet\n| flavortext     = This is a golden replica of the famous horned helmet.\n| vocrequired    = \n| levelrequired  = \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| skillboost     = \n| resist         = \n| modificadores  = \n| armor          = 0\n| weight         = 51.00\n| imbuement      = \n| stackable      = não\n| classificacao  = \n| max_tier       = \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| droppedby      = Ninguém.\n| implemented    = 12.72.11206\n| notes          = Este item foi atribuído aos vencedores do torneio [[Torneio Radiance|Radiance]]. A [[Gilded Horned Helmet]] têm a mesma aparência e pode ser comprada na [[Store]], o que também significa que não pode ser comercializada com outros jogadores.\n{{Veja|Torneios|Torneio Radiance}}\n<noinclude>[[Categoria:Prêmios de Torneios]]</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59112,
+    "ns": 0,
+    "title": "Golden Crown",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Golden Crown\n| flavortext     = This is a golden replica of the famous crown.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 0\n| weight         = 20.00\n| imbuement      = \n| classificacao  = \n| max_tier       = \n| value          = 200 000 000 - 400 000 000\n| npcvalue       = \n| npcprice       = \n| implemented    = 12.31.9658\n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Este item foi atribuído aos vencedores do torneio [[Torneio Valour|Triumph]]. A [[Gilded Crown]] têm a mesma aparência e pode ser comprada na [[Store]], o que também significa que não pode ser comercializada com outros jogadores.\n{{Veja|Torneios|Torneio Triumph}}\n<noinclude>[[Categoria:Prêmios de Torneios]]</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 63402,
+    "ns": 0,
+    "title": "Hellstalker Visor",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Hellstalker Visor\n| vocrequired    = [[Paladin]]s\n| levelrequired  = 300\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| skillboost     = [[Distance Fighting]] +2\n| resist         = [[Physical Damage|Physical]] +3%, [[Death Damage|Death]] +6%\n| armor          = 10\n| augments       = Strong Ethereal Spear -> +3% mana leech\n| weight         = 36.00\n| droppedby      = [[Arbaziloth]].\n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| npcprice       = \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 14.10.4e0c16\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 63403,
+    "ns": 0,
+    "title": "Maliceforged Helmet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Maliceforged Helmet\n| vocrequired    = [[Knight]]s\n| levelrequired  = 300\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| skillboost     = [[Sword Fighting]] +2, [[Axe Fighting]] +2, [[Club Fighting]] +2\n| resist         = [[Physical Damage|Physical]] +3%, [[Death Damage|Death]] +6%\n| armor          = 10\n| augments       = Front Sweep -> +3% mana leech\n| weight         = 26.00\n| droppedby      = [[Arbaziloth]].\n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| npcprice       = \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 14.10.4e0c16\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64109,
+    "ns": 0,
+    "title": "Light Bandana",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Light Bandana\n| flavortext     = \n| vocrequired    = [[Monk]]s\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 3\n| skillboost     = [[Fist Fighting]] +1\n| augments       =\n| weight         = 9.00\n| classificacao  = 1\n| max_tier       = 1\n| mantra         = 2\n| npcvalue       = \n| value          = \n| stackable      = não\n| droppedby      = [[Orc Warrior]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.00.249ccc\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64111,
+    "ns": 0,
+    "title": "Jade Conical Hat",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Jade Conical Hat\n| flavortext     = \n| levelrequired  = 110\n| vocrequired    = [[Monk]]s\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 5\n| skillboost     = [[Fist Fighting]] +2\n| resist         = [[Ice Damage|Ice]] +4%\n| augments       =\n| imbuement      = 1\n| weight         = 21.00\n| classificacao  = 2\n| max_tier       = 2\n| mantra         = 6\n| npcvalue       = \n| value          = \n| stackable      = não\n| droppedby      = [[Armadile]], [[Lord of the Elements]], [[Spirit Overlord]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.00.249ccc\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 67368,
+    "ns": 0,
+    "title": "Moonsilver Spirit Mask",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Moonsilver Spirit Mask\n| flavortext     = \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 10\n| levelrequired  = 800\n| vocrequired    = [[Druid]]s\n| weight         = 38.00\n| skillboost     = [[Magic Level]] +4\n| resist         = [[Physical Damage|Physical]] +3%, [[Energy Damage|Energy]] +8%\n| augments       = Forked Glacier -> +8% critical extra damage\n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| stackable      = não\n| value          = \n| npcvalue       = \n| droppedby      = [[Maior Domus]], [[Mimar Haffar]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.30.a30dad\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 67369,
+    "ns": 0,
+    "title": "Moonsilver Nimbus Hat",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Moonsilver Nimbus Hat\n| flavortext     = \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 10\n| levelrequired  = 800\n| vocrequired    = [[Sorcerer]]s\n| weight         = 13.00\n| skillboost     = [[Magic Level]] +4\n| resist         = [[Physical Damage|Physical]] +3%, [[Ice Damage|Ice]] +8%\n| augments       = Death Echo -> +8% critical extra damage\n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| stackable      = não\n| value          = \n| npcvalue       = \n| droppedby      = [[Maior Domus]], [[Mimar Haffar]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.30.a30dad\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 67371,
+    "ns": 0,
+    "title": "Moonsilver Battle Visor",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Moonsilver Battle Visor\n| flavortext     = \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 14\n| levelrequired  = 800\n| vocrequired    = [[Knight]]s\n| weight         = 14.50\n| skillboost     = [[Sword Fighting]] +4, [[Club Fighting]] +4, [[Axe Fighting]] +4, [[Magic Level]] +1\n| resist         = [[Physical Damage|Physical]] +8%, [[Fire Damage|Fire]] +10%\n| augments       = Groundshaker -> +12% critical extra damage\n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| stackable      = não\n| value          = \n| npcvalue       = \n| droppedby      = [[Maior Domus]], [[Mimar Haffar]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.30.a30dad\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6476,
+    "ns": 0,
+    "title": "Yalahari Mask",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Yalahari Mask\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 80\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| skillboost     = [[Magic Level]] +2\n| imbuement      = 1\n| armor          = 5\n| weight         = 35.00\n| classificacao  = 2\n| max_tier       = 2\n| value          = 60 000 - 150 000\n| stackable      = não\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| droppedby      = Ninguém.\n| implemented    = 8.4\n| notes          = Faz parte do [[Yalahari Set]], [[Magic Level Set]] e [[Mage Set]].\n<noinclude><p><spoiler>* Pode ser obtido como recompensa da [[In Service of Yalahar Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6478,
+    "ns": 0,
+    "title": "Witch Hat",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Witch Hat\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| resist         = [[Mana Drain]] +5%\n| armor          = 3\n| weight         = 7.80\n| imbuement      = 1\n| classificacao  = 2\n| max_tier       = 2\n| npcvalue       = 5 000\n| value          = 4 000 - 10 000 \n| droppedby      = [[Essence Of Malice]], [[Witch]].\n| buyfrom        = Jogadores.\n| sellto         = Rashid\n| implemented    = 8.54\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6484,
+    "ns": 0,
+    "title": "Winged Helmet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Winged Helmet\n| flavortext     = It's the Helmet of Hermes.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 10\n| weight         = 12.00\n| classificacao  = 4\n| max_tier       = 10\n| value          = 6 000 000 000 - 7 000 000 000\n| npcvalue       = 320\n| npcprice       = 0\n| buyfrom        = Jogadores.\n| sellto         = H.L.\n| notes          = Item raro e valioso.\n<noinclude><div class=\"toccolours mw-collapsible mw-collapsed\" style=\"margin: 4px 0px;\">'''\"História do Item\"'''<div class=\"mw-collapsible-content\"><table ><tr><td align=left>\nUm dos itens mais antigos do jogo. Foi implementado quando apenas Thais existia no mapa. Podia ser obtido em um spawn único no [[Farol de Thais]]. Contudo, apesar de ser facilmente obtido, seu respawn só ocorria uma vez a cada atualização do mapa.<br />\nDevido ao nome e sprite, suspeitava-se que ele teria como atributo aumentar a velocidade do personagem, contudo, ele realmente não oferece nenhum atributo especial além da proteção. <br / >\nAtualmente, ainda existem poucas unidade desse elmo, especialmente em mundos mais antigos. Contudo, com a implementação da possibilidade de [[Character World Transfer|transferência dos personagens]], pode ser encontrado em outros mundos.\n</td></tr></table></div></div></noinclude>\n<gallery>Arquivo:Winged Helmet.png|Um Winged Helmet e outros rares em [[Menera]]</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6490,
+    "ns": 0,
+    "title": "Post Officer's Hat",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Post Officer's Hat\n| flavortext     = This hat is the insignia of all Tibian post officers.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 1\n| weight         = 7.00\n| classificacao  = 1\n| max_tier       = 1\n| value          = Negociável\n| stackable      = não\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Item usado basicamente como decoração.\n<noinclude><p><spoiler>* Recompensa da [[The Postman Missions Quest]]. \n*Pode ser utilizado na missão 6 da [[The Thieves Guild Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6492,
+    "ns": 0,
+    "title": "Warrior Helmet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Warrior Helmet\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 8\n| weight         = 68.00\n| imbuement      = 2\n| classificacao  = 2\n| max_tier       = 2\n| value          = 696 - 5 000 \n| npcvalue       = 5 000\n| droppedby      = [[Black Knight]], [[Crusader]], [[Cult Enforcer]], [[Enslaved Dwarf]], [[Flameborn]], [[Hellspawn]], [[Hydra]], [[Minotaur Amazon]], [[Minotaur Cult Follower]], [[Minotaur Invader]], [[Monk's Apparition]],  [[Orc Cult Fanatic]], [[Orc Leader]], [[Quara Pincher]], [[Renegade Orc]], [[Renegade Quara Pincher]], [[Serpent Spawn]], [[Sir Leonard]], [[Sir Leopold]], [[Spiky Carnivor]], [[Terrorsleep]], [[The Many]], [[Ushuriel]], [[Usurper Archer]], [[Vicious Squire]].\n| droppedRaidby  = [[The Welter]].\n| buyfrom        = Jogadores.\n| sellto         = Shanar:696, Alesar, Kroox:696, H.L.:75\n| notes          = Mesmo atributo de defesa que o [[Crusader Helmet]], porém mais pesado. Faz parte do [[Plate Set]].\n<noinclude><p><spoiler>* Utilizado em uma das possíveis trocas que constituem as [[Exchange Quests]] (04 podem ser trocados por 01 frasco de [[Warrior Sweat|Warrior's Sweat]] com os NPCs [[Haroun]] ou [[Yaman]]).\n* Recompensa da [[Deeper Fibula Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6494,
+    "ns": 0,
+    "title": "Viking Helmet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Viking Helmet\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 4\n| weight         = 39.00\n| classificacao  = 1\n| max_tier       = 1\n| value          = 25 - 265\n| npcvalue       = 66\n| npcprice       = 265\n| droppedby      = [[Barbarian Headsplitter]], [[Barbarian Skullhunter]], [[Brittle Skeleton]], [[Ghoul]], [[Gnome Pack Crawler]], [[Skeleton]], [[Undead Prospector]].\n| droppedRaidby  = [[Teleskor]].\n| buyfrom        = Shanar, Memech, Cornelia, Hireling (Trader), Azil, Willard, Esrik, Timur, Rock In A Hard Place, Ulrik, Kroox, Cedrik, Brengus, Flint, Robert, Gamel, Sam, Turvy, Hardek, Baltim, Aldo, Yanni, Morpel\n| sellto         = Shanar, Memech, Cornelia, Hireling (Trader), Azil, Coltrayne:25, Willard, Esrik, Timur, Rock In A Hard Place, Ulrik, Kroox, Cedrik, H.L.:12, Brengus, Flint, Dixi:25, Lee'Delle:25, Robert, Gamel, Sam, Turvy, Hardek, Baltim, Aldo, Yanni, Morpel\n| notes          = Segundo elmo mais valioso de [[Dawnport]] e [[Rookgaard]], perde apenas para o [[Legion Helmet]] que é mais leve. Faz parte do [[Viking Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6497,
+    "ns": 0,
+    "title": "Tribal Mask",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Tribal Mask\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| secondarytype  = Itens de Addons\n| armor          = 2\n| weight         = 25.00\n| classificacao  = 1\n| max_tier       = 1\n| stackable      = não\n| npcvalue       = 250\n| value          = \n| droppedby      = [[Dworc Fleshhunter]], [[Dworc Shadowstalker]], [[Dworc Venomsniper]], [[Dworc Voodoomaster]], [[Midnight Asura]], [[True Midnight Asura]].\n| buyfrom        = Jogadores.\n| sellto         = Brengus\n| implemented    = 7.5\n| notes          = \n<noinclude><p><spoiler>\n* 05 são necessários para um addon do [[Shaman Outfits]].\n* Pode ser obtido utilizando uma [[Shaggy Ogre Bag]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6498,
+    "ns": 0,
+    "title": "Mystic Turban",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Mystic Turban\n| flavortext     = Something is strange about this turban.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 1\n| weight         = 8.50\n| classificacao  = 1\n| max_tier       = 1\n| value          = \n| npcvalue       = 150\n| stackable      = não\n| droppedby      = [[Blood Hand]], [[Blood Priest]], [[Blue Djinn]], [[Dawnfire Asura]], [[Efreet]], [[Fahim the Wise]], [[Green Djinn]], [[Ice Witch]], [[Marid]], [[Merikh the Slaughterer]], [[Necromancer]], [[Necropharus]], [[Shadow Pupil]], [[True Dawnfire Asura]].\n| droppedRaidby  = [[Zushuka (Mortal)]].\n| buyfrom        = Jogadores.\n| sellto         = Alesar\n| implemented    = 6.6\n| notes          = Faz parte do [[Blue Set]].\n<noinclude><p><spoiler>* Utilizado em uma das possíveis trocas que constituem as [[Exchange Quests]]:\n**Pode ser trocado por 01 [[Blue Piece of Cloth]] com a NPC [[Irmana]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6499,
+    "ns": 0,
+    "title": "Terra Hood",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Terra Hood\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 5\n| resist         = [[Earth Damage|Earth]] +4%, [[Fire Damage|Fire]] -5%\n| weight         = 10.00\n| classificacao  = 2\n| max_tier       = 2\n| value          = 2 300 - 3 000\n| npcvalue       = 2 500\n| npcprice       = 0\n| stackable      = não\n| droppedby      = [[Adult Goanna]], [[Ancient Scarab]], [[Ancient Spawn of Morgathla]], [[Bramble Wyrmling]], [[Clavius]], [[Cobra Vizier]], [[Court Warlock]], [[Crazed Winter Vanguard]], [[Cursed Book]], [[Draken Abomination]], [[Drume]], [[Duke Krule]], [[Glooth Bandit]], [[Glooth Brigand]], [[Hide]], [[Hulking Carnisylvan]], [[Ink Blob]], [[Ink Splash]], [[Lamassu]], [[Scarlett Etzel]], [[Thanatursus]], [[The Unarmored Voidborn]], [[Usurper Warlock]], [[Young Goanna]].\n| droppedRaidby  = [[Arthom the Hunter]].\n| buyfrom        = Jogadores.\n| sellto         = Rashid\n| implemented    = 8.1\n| notes          = Faz parte do [[Terra Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6500,
+    "ns": 0,
+    "title": "Studded Helmet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Studded Helmet\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 2\n| weight         = 24.50\n| classificacao  = 1\n| max_tier       = 1\n| value          = 20 - 63\n| npcvalue       = 20\n| npcprice       = 58\n| stackable      = não\n| droppedby      = [[Elf]], [[Orc]], [[Orc Spearman]], [[Troll-Trained Salamander]].\n| buyfrom        = Shanar:63, Memech:63, Cornelia:63, Hireling (Trader):63, Azil:63, Coltrayne:63, Willard:63, Esrik:63, Rock In A Hard Place:63, Ulrik:63, Kroox:63, Cedrik:63, Brengus:63, Flint:63, Blind Orc:60, Dixi:63, Lee'Delle, Robert:63, Gamel:63, Sam:63, Turvy:63, Hardek:63, Baltim:63, Aldo:63, Yanni:63, Morpel:63\n| sellto         = Shanar, Memech, Cornelia, Hireling (Trader), Azil, Coltrayne, Willard, Esrik, Rock In A Hard Place, Ulrik, Kroox, Cedrik, H.L.:2, Brengus, Flint, Dixi, Lee'Delle, Robert, Gamel, Sam, Turvy, Hardek, Baltim, Aldo, Yanni, Morpel\n| implemented    = 7.9\n| notes          = Possui a mesma defesa do [[Chain Helmet]]. Faz parte do [[Studded Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6501,
+    "ns": 0,
+    "title": "Odd Hat",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Odd Hat\n| flavortext     = It has to be one of the fabled helmets of light.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 5\n| weight         = 7.00\n| imbuement      = 2\n| classificacao  = 2\n| max_tier       = 2\n| stackable      = não\n| npcvalue       = 0\n| droppedby      = [[Dirtbeard]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.5\n| notes          = Mesmo sprite de um [[Party Cake]].\n<noinclude><p><spoiler>* Possibilidade de ser obtido aleatoriamente durante a [[The Isle of Evil Quest]].\n*Para tentar obtê-lo deve-se dar \"'''use'''\" no corpo morto do boss [[Dirtbeard]]. \n*Só é possível tentar obtê-lo na primeira vez em que a criatura for morta.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6502,
+    "ns": 0,
+    "title": "Pair of Earmuffs",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Pair of Earmuffs\n| flavortext     = They feel nice and warm on your ears.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| resist         = [[Ice Damage|Ice]] +2%\n| armor          = 0\n| weight         = 5.00\n| classificacao  = 2\n| max_tier       = 2\n| value          = 1 500 - 20 000\n| npcvalue       = 1 500\n| stackable      = não\n| droppedby      = [[Ice Witch]], [[Melting Frozen Horror]].\n| droppedRaidby  = [[Yakchal]], [[Zushuka (Mortal)]].\n| buyfrom        = Jogadores.\n| sellto         = Iyad\n| implemented    = 8.0\n| notes          = Frequentemente utilizado como elemento decorativo. Apesar de oferecer resistência ao [[Ice Damage|dano tipo ice]] seu uso não é aconselhado pois não possui atributo defensivo. Há outros equipamentos que simultaneamente tem atributos defensivos e protegem contra o dano pelo frio. Faz parte do [[Glacier Set]].\n<noinclude><p><spoiler>* Possibilidade de ser obtido ao usar um [[Unrealized Dream]] próximo ao [[The Dreamcatcher Device]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6503,
+    "ns": 0,
+    "title": "Party Hat",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Party Hat\n| itemclass      = Outros Itens\n| primarytype    = Itens de Festa\n| secondarytype  = Capacetes\n| weight         = 7.50\n| classificacao  = 1\n| max_tier       = 1\n| stackable      = não\n| npcprice       = 600\n| value          = 600 - 10 000\n| npcvalue       = Nada.\n| armor          = 1\n| droppedEventby = [[Azure Frog]], [[Badger]], [[Bat]], [[Bolfrim (Criatura)]], [[Bonelord]], [[Crystal Spider]], [[Deepling Guard]], [[Deepling Scout]], [[Deepling Spellsinger]], [[Deepling Worker]], [[Dire Penguin]], [[Dragon]], [[Dragon Lord]], [[Dragon Lord Hatchling]], [[Elder Bonelord]], [[Frost Dragon]], [[Frost Dragon Hatchling]], [[Frost Giant]], [[Frost Giantess]], [[Frost Troll]], [[Killer Caiman]], [[Lancer Beetle]], [[Lizard Chosen]], [[Lizard High Guard]], [[Lizard Legionnaire]], [[Mutated Bat]], [[Orchid Frog]], [[Penguin]], [[Polar Bear]], [[Quara Constrictor]], [[Quara Constrictor Scout]], [[Quara Mantassin]], [[Quara Mantassin Scout]], [[Sandcrawler]], [[Squirrel]], [[Terror Bird]], [[Tortoise]], [[Winter Wolf]], [[Yeti]].\n| buyfrom        = Hireling (Apprentice):800, Stan\n| sellto         = Jogadores.\n| implemented    = 7.92\n| notes          = Ao dar \"'''use'''\" no item, quando ele estiver equipado no slot de cabeça do [[Inventário]], confetes cairão sobre o personagem.\n<noinclude><p><spoiler>*[[Arquivo:Achievement.gif]] Ao usar 200 vezes este item ou um [[Party Trumpet]] vocé receberá o achievement '''\"{{Achievement|Party Animal}}\"'''.<br /> \n*Pode ser obtido durante o evento [[The Colours of Magic]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6505,
+    "ns": 0,
+    "title": "Pirate Hat",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Pirate Hat\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 3\n| weight         = 12.50\n| classificacao  = 1\n| max_tier       = 1\n| value          = 1 000 - 4 000\n| npcvalue       = 1 000\n| npcprice       = 0\n| stackable      = não\n| droppedby      = [[Pirate Corsair]], [[Sea Captain]].\n| buyfrom        = Jogadores.\n| sellto         = Rashid\n| implemented    = 7.8\n| notes          = Se parece com o [[Brutus Bloodbeard's Hat]], mas tem a pluma mais escura. Faz parte do [[Pirate Set]].\n<noinclude><p><spoiler>* 01 é necessário para a [[Meriana Quest]].\n*Recompensa da: [[Waterfall Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6506,
+    "ns": 0,
+    "title": "Strange Helmet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Strange Helmet\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 6\n| weight         = 46.00\n| classificacao  = 1\n| max_tier       = 1\n| value          = 500 - 600\n| npcvalue       = 500\n| stackable      = não\n| droppedby      = [[Adlerauge]], [[Albino Dragon]], [[Arbaziloth]], [[Blight Mariner]], [[Dragon Lord]], [[Frost Dragon]], [[Icecold Book]], [[Ice Golem]], [[Lavaworm]], [[Lich]], [[Michael the Stalwart]], [[Quara Mantassin]], [[Renegade Quara Mantassin]], [[Serpent Spawn]], [[Ushuriel]], [[Vampire]].\n| droppedRaidby  = [[Hirintror]].\n| buyfrom        = Jogadores.\n| sellto         = Alesar, H.L.:55\n| notes          = Item incomum e pouco usado pelos jogadores pois existem outras opções de elmos com a mesma resistência e obtidos com mais facilidade.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6507,
+    "ns": 0,
+    "title": "Steel Helmet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Steel Helmet\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 6\n| weight         = 46.00\n| classificacao  = 1\n| max_tier       = 1\n| value          = 293 - 580\n| npcvalue       = 293\n| npcprice       = 580\n| droppedby      = [[Assassin]], [[Black Knight]], [[Crystal Spider]], [[Dragon]], [[Dwarf Guard]], [[Foreman Kneebiter]], [[Gargoyle]], [[Giant Spider]], [[Hide]], [[High Templar Cobrass]], [[Lizard Templar]], [[Sandstone Scorpion]], [[Tarantula]], [[The Old Widow]], [[Werelioness]], [[Zombie]].\n| droppedRaidby  = [[Mamma Longlegs]].\n| buyfrom        = Shanar, Memech, Cornelia, Hireling (Trader), Azil, Willard, Esrik, Rock In A Hard Place, Ulrik, Kroox, Cedrik, Brengus, Flint, Robert, Gamel, Sam, Turvy, Hardek, Baltim, Aldo, Yanni, Morpel\n| sellto         = Shanar, Memech, Cornelia, Hireling (Trader), Azil, Willard, Esrik, Rock In A Hard Place, Ulrik, Kroox, Cedrik, H.L.:60, Brengus, Flint, Robert, Gamel, Sam, Turvy, Hardek, Baltim, Aldo, Yanni, Morpel\n| notes          = Bom capacete para níveis baixos, mas é mais caro que o [[Dark Helmet]] que possui a mesma defesa, o mesmo peso e é mais fácil de ser obtido. Faz parte do [[Newbie Set]], [[Steel Set]] e [[Plate Set]]. Bom para [[Lootbag]]s.\n<noinclude><p><spoiler>\n* Recompensa da [[Steel Helmet Quest]].\n* Possibilidade de ser obtido ao [[Rust Remover|remover a ferrugem]] de um [[Rusted Helmet]]. \n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6508,
+    "ns": 0,
+    "title": "Royal Helmet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Royal Helmet\n| flavortext     = An excellent masterpiece of a smith.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 9\n| weight         = 48.00\n| imbuement      = 2\n| classificacao  = 2\n| max_tier       = 2\n| value          = \n| npcvalue       = 30 000\n| stackable      = não\n| droppedby      = [[Albino Dragon]], [[Brachiodemon]], [[Dragon Lord]], [[Frost Dragon]], [[Hydra]], [[Lost Berserker]], [[Serpent Spawn]], [[Shock Head]], [[Terofar]], [[The Enraged Thorn Knight]], [[The Many]], [[The Noxious Spawn]], [[Undead Dragon]], [[Ushuriel]], [[Zanakeph]].\n| droppedRaidby  = [[The Welter]].\n| droppedEventby = [[Kalyassa]].\n| buyfrom        = Jogadores.\n| sellto         = Nah'Bob\n| implemented    = 6.6\n| notes          = Dentre os elmos mais populares, e ainda é um dos melhores do Tibia. Faz parte do [[Paladin Set]], [[Royal Set]] e [[Semi Rare Set]].\n<noinclude><p><spoiler>\n* Utilizado em uma das possíveis trocas que constituem as [[Exchange Quests]]:\n** 02 podem ser trocados por 01 [[Fighting Spirit]] com os NPCs [[Haroun]] ou [[Yaman]].\n* Possibilidade de ser obtido ao [[Rust Remover|remover a ferrugem]] de um [[Rusted Helmet]]. \n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6509,
+    "ns": 0,
+    "title": "Soldier Helmet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Soldier Helmet\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 5\n| weight         = 32.00\n| classificacao  = 1\n| max_tier       = 1\n| value          = 16 - 200\n| npcvalue       = 16\n| npcprice       = 110\n| stackable      = não\n| droppedby      = [[Dwarf Soldier]].\n| buyfrom        = Shanar, Memech, Cornelia, Hireling (Trader), Azil, Willard, Esrik, Rock In A Hard Place, Ulrik, Raffael:200, Kroox, Cedrik, Brengus, Flint, Robert, Gamel, Sam, Turvy, Hardek, Baltim, Aldo, Yanni, Morpel\n| sellto         = Shanar, Memech, Cornelia, Hireling (Trader), Azil, Willard, Esrik, Rock In A Hard Place, Ulrik, Kroox, Cedrik, H.L., Brengus, Flint, Robert, Gamel, Sam, Turvy, Hardek, Baltim, Aldo, Yanni, Morpel\n| notes          = Elmo fácil de ser obtido e ótimo para ser utilizado do level 10 ao 15. Como um próximo capacete é bom adquirir um [[Dark Helmet]] ou [[Steel Helmet]]. Parte do [[Newbie Set]], [[Rookgaard/Dawnport Set]] e [[Isle of Destiny Knight Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6510,
+    "ns": 0,
+    "title": "Skull Helmet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se este não é item que você procura, veja a página: [[Skull|Skull (Desambiguação)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Skull Helmet\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 9\n| weight         = 42.00\n| imbuement      = 2\n| classificacao  = 2\n| max_tier       = 2\n| value          = 40 000 - 50 000\n| npcvalue       = 40 000\n| stackable      = não\n| droppedby      = [[Betrayed Wraith]], [[Bretzecutioner]], [[Cyclursus]], [[Destroyer]], [[Hellflayer]], [[Katex Blood Tongue]], [[Lost Soul]], [[Mad Mage]], [[Monk's Apparition]], [[Prince Drazzak]], [[Quara Predator]], [[Ragiaz]], [[Ribstride]], [[Raging Mage]], [[Renegade Quara Predator]], [[Skeleton Elite Warrior]], [[Srezz Yellow Eyes]], [[Ushuriel]], [[Terofar]], [[The Unarmored Voidborn]], [[Utua Stone Sting]], [[Yirkas Blue Scales]], [[Zanakeph]].\n| droppedRaidby  = [[Dracola]], [[Omrafir]].\n| droppedEventby = [[Bones]], [[Zorvorax]].\n| buyfrom        = Jogadores.\n| sellto         = Rashid\n| implemented    = 7.8\n| notes          = Possui a mesma defesa de um [[Royal Helmet]], mas é mais leve. Faz parte do [[Bone Set]], [[Paladin Set]] e [[Semi Rare Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6511,
+    "ns": 0,
+    "title": "Sedge Hat",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Sedge Hat\n| flavortext     = This simple hat might be more worth than what it looks like.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 2\n| weight         = 18.00\n| classificacao  = 1\n| max_tier       = 1\n| value          = 50 000 - 100 000\n| npcvalue       = 0\n| stackable      = não\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.6\n| notes          = Adicionado com o nome de \"Coolie Hat\" e renomeado para \"Sedge Hat\" no patch seguinte.\n<noinclude><p><spoiler>* 01 é necessário para a [[Wayfarer Outfits Quest]].\n* Recompensa da [[An Interest In Botany Quest]] parte dos [[Tibia Tales Quest|Tibia Tales]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6512,
+    "ns": 0,
+    "title": "Santa Hat",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Santa Hat\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 1\n| weight         = 7.50\n| classificacao  = 1\n| max_tier       = 1\n| stackable      = não\n| value          = 10 000 - 40 000\n| npcprice       = 50 [[Christmas Token]]s\n| npcvalue       = 0\n| buyfrom        = Ruprecht\n| sellto         = Jogadores.\n| implemented    = 7.9\n| notes          = Frequentemente utilizado como elemento decorativo.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6595,
+    "ns": 0,
+    "title": "Wood Cape",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Wood Cape\n| itemclass      = Equipamentos de Corpo\n| vocrequired    = [[Paladin]]s\n| primarytype    = Capacetes\n| armor          = 3\n| resist         = [[Earth Damage|Earth]] +4%\n| skillboost     = [[Distance Fighting]] +1\n| weight         = 11.00\n| classificacao  = 2\n| max_tier       = 2\n| value          = \n| buyfrom        = Jogadores.\n| npcvalue       = 5 000\n| sellto         = Talila, Valindara\n| droppedby      = [[Adult Goanna]], [[Arctic Faun]], [[Crazed Summer Rearguard]], [[Dark Faun]], [[Faun]], [[Monk's Apparition]], [[Pirat Bombardier]], [[Ravenous Hunger]], [[Raxias]], [[Rotten Golem]], [[Rotten Man-Maggot]], [[Soul-Broken Harbinger]], [[Turbulent Elemental]], [[Usurper Archer]], [[Varnished Diremaw]], [[Venerable Girtablilu]].\n| implemented    = 6.6\n| notes          = Até o [[Update de Verão 2017|Summer Update de 2017]], esse item era considerado um mistério, até se especulava poder ser encontrado ao norte de [[Venore]] utilizando-se uma determinada [[Key|chave]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6642,
+    "ns": 0,
+    "title": "Ragnir Helmet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ragnir Helmet\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 6\n| weight         = 31.00\n| classificacao  = 1\n| max_tier       = 1\n| value          = 400\n| npcvalue       = 400\n| stackable      = não\n| droppedby      = [[Barbarian Skullhunter]].\n| buyfrom        = Jogadores.\n| sellto         = Rashid\n| implemented    = 8.0\n| notes          = Apesar de ser ter os mesmos atributos defensivos do [[Dark Helmet]] e do [[Steel Helmet]] e ser mais leve, é pouco utilizado por ser mais raro. Faz parte do [[Barbarian Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 15912,
+    "ns": 0,
+    "title": "The Epic Wisdom",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = The Epic Wisdom\n| flavortext       = This hat was handcrafted by Uman the Wise and cursed by Zathroth the Destroyer. It is awarded by TibiaWiki.com.br\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = \n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 8.05\n| mercado          = não\n| sounds           = \"MY BRAIN... TOO MUCH... KNOWLEDGE! AAAAH!\"; \"Excalibug is lying at the heart of every true fighter.\"; \"Fire is fascinating. But whether it is going to light your path or burning you till death, you can never tell\".\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 9.1\n| notes            = \nEste item pode ser equipado como um capacete, porém não oferece nenhuma proteção ao personagem.\n* Item oficial do fansite '''TibiaWiki.com.br'''.\n* O personagem {{Character|Insane Jack}} recebeu um por ter sido o criador do item.\n* Pode ser visto na exibição de prêmios de Thais aos domingos.\n\n[[The Epic Wisdom/Donos|Confira a lista de donos clicando aqui]].\n\n<gallery>\nArquivo:Hat.jpg|Galera do Portal Tibia e do TibiaWiki.com.br reunida durante um test server para conhecer o item oficial do Tibia Wiki.</gallery>\n}}\n<noinclude>[[Categoria:Capacetes]]</noinclude>"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25452,
+    "ns": 0,
+    "title": "Prismatic Helmet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Prismatic Helmet\n| vocrequired    = [[Knight]]s\n| skillboost     = [[Shielding]] +1\n| resist         = [[Physical Damage|Physical]] +5%\n| stackable      = não\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| levelrequired  = 150\n| armor          = 9\n| weight         = 56.00\n| classificacao  = 2\n| max_tier       = 2\n| value          = 5 000 - 30 000\n| npcprice       = 10 [[Major Crystalline Token]]\n| buyfrom        = Gnomally\n| sellto         = Jogadores.\n| implemented    = 9.6\n| droppedby      = Ninguém.\n| notes          = Faz parte do [[Prismatic Set]], [[Blocking Set]] e [[High Level Knight Basic Set]].\n{{DASH|'''Dica:''' Dependendo do valor do [[Major Crystalline Token]] no mundo, pode ser mais barato comprar o token e trocar pelo item na [[NPC]] do que comprá-lo diretamente de algum jogador.}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 33145,
+    "ns": 0,
+    "title": "Rubber Cap",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Rubber Cap\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 70\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| resist         = [[Earth Damage|Earth]] +3%, [[Fire Damage|Fire]] -3%\n| skillboost     = [[Magic Level]] +1\n| armor          = 5\n| weight         = 8.00\n| classificacao  = 2\n| max_tier       = 2\n| npcvalue       = 11 000\n| droppedby      = [[Darklight Matter]], [[Glooth Bandit]], [[Glooth Brigand]], [[Glooth Fairy]], [[Glooth Golem]], [[Rotten Golem]], [[Turbulent Elemental]].\n| buyfrom        = Jogadores.\n| sellto         = Flint\n| implemented    = 10.50\n| notes          = Faz parte do [[Metal Set]], [[Glooth Set]] e [[Magic Level Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 36242,
+    "ns": 0,
+    "title": "Werewolf Helmet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Werewolf Helmet\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| secondarytype  = \n| enchantable    = sim\n| enchanted      = \n| levelrequired  = 100\n| skillboost     = [[Speed]] +15\n| armor          = 9\n| weight         = 25.00\n| value          = \n| npcvalue       = 0\n| npcprice       = 0\n| droppedRaidby  = [[Feroxa (Mortal)]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.80\n| notes          = Pode ser encantado com o uso de um [[Moonlight Crystals]] transformado-se em um [[Enchanted Werewolf Helmet]]. Faz parte do [[Haste Set]]. O atributo deste elmo mudará conforme a escolha do personagem que o encantar. Os encantamentos possíveis são escolhidos pelas vocações:\n* '''[[Enchanted Werewolf Helmet (Magic)|Druids e Sorcerers]]:''' <span style=\"color:green; font-weight:bold;\">(Arm:9, magic level +1, protection physical +4%).</span>\n* '''[[Enchanted Werewolf Helmet (Axe)|Knights (Axe)]]:''' <span style=\"color:green; font-weight:bold;\">(Arm:9, axe fighting +1, protection physical +4%).</span>\n* '''[[Enchanted Werewolf Helmet (Club)|Knights (Club)]]:''' <span style=\"color:green; font-weight:bold;\">(Arm:9, club fighting +1, protection physical +4%).</span>\n* '''[[Enchanted Werewolf Helmet (Sword)|Knights (Sword)]]:''' <span style=\"color:green; font-weight:bold;\">(Arm:9, sword fighting +1, protection physical +4%).</span>\n* '''[[Enchanted Werewolf Helmet (Distance)|Paladins]]:''' <span style=\"color:green; font-weight:bold;\">(Arm:9, distance skill +1, protection physical +4%).</span>\n<noinclude><p><spoiler>\n* Pode ser obtido apenas na invasão que ocorre durante a Mini World Change [[Mini_World_Changes#Grimvale_Moon|Grimvale Moon]].\n* Com o helmet em sua backpack ou equipado, fale '''Hi - Werewolf Helmet - Yes''' para a NPC [[Maeryn]] para escolher a vocação e/ou o tipo de [[Weapon]] para o atributo de encantamento desejado.\n* Após definido o atributo, use [[Moonlight Crystals]] no [[Werewolf Helmet]] para produzir o [[Enchanted Werewolf Helmet]].\n</spoiler></p></noinclude>\n{{Veja|Itens Recarregáveis}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 37147,
+    "ns": 0,
+    "title": "Shamanic Mask",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Shamanic Mask\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 4\n| weight         = 31.00\n| imbuement      = 2\n| classificacao  = 2\n| max_tier       = 2\n| stackable      = não\n| npcvalue       = 2 000\n| droppedby      = [[Ogre Brute]], [[Ogre Savage]], [[Ogre Shaman]].\n| buyfrom        = Jogadores.\n| sellto         = Mugruu\n| implemented    = 10.90\n| notes          = <noinclude><p><spoiler>* Possibilidade de ser obtido ao usar um [[Shaggy Ogre Bag]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 37162,
+    "ns": 0,
+    "title": "Visage of the End Days",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Visage of the End Days\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 10\n| weight         = 38.00\n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| value          = Negociável\n| npcvalue       = 0\n| droppedby      = [[Razzagorn]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.90\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 37165,
+    "ns": 0,
+    "title": "Shroud of Despair",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Shroud of Despair\n| levelrequired  = 150\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| resist         = [[Death Damage|Death]] +3%\n| armor          = 7\n| weight         = 34.00\n| classificacao  = 4\n| max_tier       = 10\n| value          = Negociável\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = [[Tarbaz]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.90\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 38258,
+    "ns": 0,
+    "title": "Tiara of Power",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Tiara of Power\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| levelrequired  = 100\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| attrib         = [[Regeneration|Regeneração]] rápida.\n| armor          = 7\n| duration       = 60\n| skillboost     = [[Speed]] +20\n| modificadores  = faster [[Regeneration]]\n| resist         = [[Energy Damage|Energy]] +8%\n| weight         = 11.50\n| value          = Negociável\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = [[Anomaly]], [[Outburst]], [[Rupture]], [[World Devourer]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Faz parte do [[Haste Set]] e [[Regeneration Set]].\n| implemented    = 10.94\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 40091,
+    "ns": 0,
+    "title": "Rusty Winged Helmet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Rusty Winged Helmet\n| flavortext     = It's the Helmet of Hermes but it clearly has seen better days.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 2\n| weight         = 12.00\n| classificacao  = 1\n| max_tier       = 1\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.02\n| notes          = <noinclude><p><spoiler>* Possibilidade de ser obtido como recompensa do jogo \"Caça ao Tesouro\" na [[Vigintia Island]] durante as comemorações de [[Aniversário do Tibia]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 40104,
+    "ns": 0,
+    "title": "Porcelain Mask",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Porcelain Mask\n| itemclass      = Outros Itens\n| primarytype    = Itens de Addons\n| secondarytype  = Capacetes\n| resist         = [[Mana Drain]] +10%\n| armor          = 1\n| weight         = 4.50\n| classificacao  = 2\n| max_tier       = 2\n| stackable      = não\n| value          = \n| buyfrom        = Jogadores.\n| sellto         = Yasir\n| npcvalue       = 2 000\n| implemented    = 11.02\n| notes          = \n<noinclude><p><spoiler>\n* 01 pode ser obtida na [[The First Dragon Quest]].\n* 03 são necessárias para o Addon 1 da [[Festive Outfits Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 41820,
+    "ns": 0,
+    "title": "Reflecting Crown",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Reflecting Crown\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 0\n| weight         = 5.00\n| value          = Negociável\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.40\n| notes          = Ao usar o item em sua [[House|casa]], ele se transformará em uma [[Your Magical Tree (Sorcerer)]].<br>\n<spoiler>* Recompensa da [[Cults of Tibia Quest]] apenas para [[Sorcerer]]s.</spoiler>\n<gallery>Arquivo:IMG-20170726-WA0010.jpg|A personagem {{Character|Ireneta}} com a '''Reflecting Crown''' em sua casa.\n Arquivo:IMG-20170726-WA0011.jpg|'''Reflecting Crown''' se transformando em árvore.<br></gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45547,
+    "ns": 0,
+    "title": "The Crown of the Percht Queen (Fire)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = The Crown of the Percht Queen (Fire)\n| flavortext     = \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| secondarytype  = Produtos de Criaturas\n| mercado        = sim\n| stackable      = não\n| weight         = 19.00\n| droppedEventby = [[The Percht Queen]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.02.7746\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45549,
+    "ns": 0,
+    "title": "The Crown of the Percht Queen (Ice)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = The Crown of the Percht Queen (Ice)\n| flavortext     = \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| secondarytype  = Produtos de Criaturas\n| mercado        = sim\n| stackable      = não\n| weight         = 19.00\n| droppedEventby = [[The Percht Queen]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.02.7746\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 46666,
+    "ns": 0,
+    "title": "Terra Helmet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Terra Helmet\n| vocrequired    = [[Knight]]s\n| levelrequired  = 230\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| skillboost     = [[Sword Fighting]] +2, [[Club Fighting]] +2, [[Axe Fighting]] +2\n| resist         = [[Physical Damage|Physical]] +5%, [[Earth Damage|Earth]] +5%\n| armor          = 9\n| weight         = 31.00\n| classificacao  = 3\n| max_tier       = 3\n| imbuement      = 1\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| droppedby      = [[Count Vlarkorth]], [[Duke Krule]], [[Earl Osam]], [[Lord Azaram]], [[Sir Baeloc]].\n| implemented    = 12.20\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 46816,
+    "ns": 0,
+    "title": "Silver Mask",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Silver Mask\n| flavortext     = It is slightly tarnished.\n| itemclass      = Capacetes\n| primarytype    = Itens de Quest\n| secondarytype  = Decorações\n| weight         = 32.00\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| droppedby      = Ninguém\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.20\n| notes          = \n<noinclude><p><spoiler>\n* Necessária para entrar em uma das portas seladas das [[Kilmaresh Catacombs]].\n* Obtida e usada na [[Kilmaresh Quest]].\n* Para obtê-la, vá para o sul de Kilmaresh pelo lado esquerdo das montanhas até chegar em uma ilha onde você encontrará a [[Silver Mask]] em uma palmeira ({{mapa|33781,31660,7:1|aqui}}).\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 46916,
+    "ns": 0,
+    "title": "Sphinx Tiara",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Sphinx Tiara\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Capacetes\n| secondarytype  = Produtos de Criaturas\n| armor          = 0\n| weight         = 3.50\n| stackable      = não\n| value          = \n| npcvalue       = 360\n| droppedby      = [[Feral Sphinx]], [[Sphinx]].\n| buyfrom        = Jogadores.\n| sellto         = Khanna, Yasir\n| implemented    = 12.20\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 47775,
+    "ns": 0,
+    "title": "Traditional Gamsbart Hat",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Traditional Gamsbart Hat\n| flavortext     = This traditional Orcsoberfest gamsbart shows a bit of use but is still in good shape and will clothe any sophisticated ogre just fine\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| secondarytype  = \n| armor          = 0\n| weight         = 2.50\n| stackable      = não\n| value          = \n| npcvalue       = \n| droppedby      = Ninguém.\n| droppedRaidby  = \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.20.9066\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 48050,
+    "ns": 0,
+    "title": "Spooky Hood",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Spooky Hood\n| flavortext     = Every time you look away you have a strange feeling, as if something watches you from its depths.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| secondarytype  = Itens de Addons\n| weight         = 12.50\n| value          = \n| npcvalue       = \n| npcprice       = \n| droppedby      = [[Unaz the Mean]], [[Brain Head]], [[The Dread Maiden]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.30\n| notes          = <noinclude><p><spoiler>* 01 é necessário para o Addon 01 do [[Poltergeist Outfits|Poltergeist Outfit]].</noinclude><p></spoiler>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 56131,
+    "ns": 0,
+    "title": "Spiritthorn Helmet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Spiritthorn Helmet\n| vocrequired    = [[Knight]]s\n| levelrequired  = 400\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| skillboost     = [[Sword Fighting]] +3, [[Club Fighting]] +3, [[Axe Fighting]] +3\n| resist         = [[Physical Damage|Physical]] +6%, [[Energy Damage|Energy]] +10%\n| modificadores  = [[Damage Reflection]] +13\n| armor          = 12\n| weight         = 44.00\n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| droppedby      = [[Magma Bubble]].\n| implemented    = 12.90\n| notes          = <noinclude><p><spoiler>* Possibilidade de ser obtido ao usar uma [[Primal Bag]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 61235,
+    "ns": 0,
+    "title": "Stoic Iks Casque",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Stoic Iks Casque\n| vocrequired    = [[Paladin]]s\n| levelrequired  = 250 \n| flavortext     = \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| resist         = [[Physical Damage|Physical]] +3%, [[Energy Damage|Energy]] + 6%\n| skillboost     = [[Distance Fighting]] +2\n| augments       = Divine Missile -> +13% base damage\n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| armor          = 8 \n| weight         = 35.00\n| value          = \n| droppedby      = [[Mitmah Vanguard]].\n| trade          = sim\n| buyfrom        = Jogadores. \n| implemented    = 13.30.14423\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 61236,
+    "ns": 0,
+    "title": "Stoic Iks Headpiece",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Stoic Iks Headpiece\n| vocrequired    = [[Druid]]s\n| levelrequired  = 250 \n| flavortext     = \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| resist         = [[Death Damage|Death]] +3%\n| skillboost     = [[Magic Level]] +2\n| augments       = Wrath of Nature -> +5% critical extra damage\n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| armor          = 8 \n| weight         = 21.00\n| value          = \n| droppedby      = [[Mitmah Vanguard]].\n| trade          = sim\n| buyfrom        = Jogadores. \n| implemented    = 13.30.14423\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 63988,
+    "ns": 0,
+    "title": "Sensing Crown",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Sensing Crown\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 0\n| weight         = 10.00\n| value          = Negociável\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| droppedby      = Ninguém.\n| implemented    = 15.00.249ccc\n| notes          = Ao usar o item em sua [[House|casa]], ele se transformará em uma [[Your Magical Tree (Monk)]].<br>\n<spoiler>* Recompensa da [[Cults of Tibia Quest]] apenas para [[Monk]]s.</spoiler>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64931,
+    "ns": 0,
+    "title": "Norcferatu Skullguard",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Norcferatu Skullguard\n| itemclass      = Equipamentos de Corpo\n| descricao      = \n| primarytype    = Capacetes\n| vocrequired    = [[Paladin]]s\n| levelrequired  = 270\n| skillboost     = [[Distance Fighting]] +2\n| resist         = [[Physical Damage|Physical]] +3%, [[Ice Damage|Ice]] +6%\n| armor          = 9\n| classificacao  = 4\n| max_tier       = 10\n| imbuement      = 2\n| weight         = 32.00\n| augments       = Ethereal Spear -> +40% base damage , Ethereal Spear -> +2% critical hit chance \n| value          = \n| npcprice       = \n| buyfrom        = \n| sellto         = \n| droppedby      = [[Vladrukh]].\n| implemented    = 15.10.46b862\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64933,
+    "ns": 0,
+    "title": "Norcferatu Bonehood",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Norcferatu Bonehood\n| itemclass      = Equipamentos de Corpo\n| descricao      = \n| primarytype    = Capacetes\n| vocrequired    = [[Monk]]s\n| levelrequired  = 230\n| skillboost     = [[Fist Fighting]] +2\n| resist         = [[Physical Damage|Physical]] +2%, [[Ice Damage|Ice]] +5%\n| armor          = 5\n| classificacao  = 4\n| max_tier       = 10\n| imbuement      = 2\n| weight         = 14.00\n| augments       = Greater Tiger Clash -> +33% base damage\n| value          = \n| mantra         = 8\n| npcprice       = \n| buyfrom        = \n| sellto         = \n| droppedby      = [[Vladrukh]].\n| implemented    = 15.10.46b862\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 66078,
+    "ns": 0,
+    "title": "Stag Helmet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Stag Helmet\n| itemclass      = Equipamentos de Corpo\n| descricao      = \n| primarytype    = Capacetes\n| vocrequired    = [[Sorcerer]]s\n| levelrequired  = 350\n| skillboost     = [[Magic Level]] +2, [[Fire Magic Level]] +2\n| resist         = [[Physical Damage|Physical]] 2%, [[Energy Damage|Energy]] +8%\n| armor          = 8\n| classificacao  = 4\n| max_tier       = 10\n| imbuement      = 2\n| weight         = 14.00\n| augments       = Great Fire Wave -> +6.5% critical extra damage\n| value          = \n| mantra         = \n| npcprice       = \n| npcvalue       =\n| buyfrom        = \n| sellto         = \n| droppedby      = [[Court Warlock]].\n| implemented    = 15.20.7a5cc9\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 67367,
+    "ns": 0,
+    "title": "Moonsilver Trail Hood",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Moonsilver Trail Hood\n| flavortext     = \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 12\n| levelrequired  = 800\n| vocrequired    = [[Paladin]]s\n| weight         = 12.00\n| skillboost     = [[Distance Fighting]] +4, [[Holy Magic Level]] +2\n| resist         = [[Physical Damage|Physical]] +6%, [[Earth Damage|Earth]] +10%\n| augments       = Divine Barrage -> +8% critical extra damage\n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| stackable      = não\n| value          = \n| npcvalue       = \n| droppedby      = [[Maior Domus]], [[Mimar Haffar]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.30.a30dad\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 67370,
+    "ns": 0,
+    "title": "Moonsilver Strike Helm",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Moonsilver Strike Helm\n| flavortext     = \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| armor          = 8\n| levelrequired  = 800\n| vocrequired    = [[Monk]]s\n| weight         = 41.00\n| skillboost     = [[Fist Fighting]] +4, [[Magic Level]] +3\n| resist         = [[Physical Damage|Physical]] +5%, [[Earth Damage|Earth]] +8%\n| augments       = Thousand Fist Blows -> +12% critical extra damage, Restore Balance -> +10% base healing\n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| stackable      = não\n| value          = \n| npcvalue       = \n| droppedby      = [[Maior Domus]], [[Mimar Haffar]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.30.a30dad\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6467,
+    "ns": 0,
+    "title": "Zaoan Helmet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Zaoan Helmet\n| vocrequired    = [[Knight]]s and [[Paladin]]s\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| resist         = [[Physical Damage|Physical]] +5%\n| imbuement      = 1\n| classificacao  = 2\n| max_tier       = 2\n| armor          = 9\n| weight         = 66.00\n| value          = 45 000 - 60 000\n| npcvalue       = 45 000\n| npcprice       = 0\n| stackable      = não\n| droppedby      = [[Draken Abomination]], [[Draken Elite]], [[Ethershreck]], [[Ghastly Dragon]], [[Hatebreeder]], [[Lizard Chosen]], [[Lizard Gate Guardian]].\n| buyfrom        = Jogadores.\n| sellto         = Esrik\n| implemented    = 8.54\n| notes          = Considerado melhor que o [[Demon Helmet]]. Indicado para personagens que pretendem exercer a função de blocker e ainda não podem ter o [[Prismatic Helmet]] . Faz parte do [[Paladin Set]], [[Zaoan Set]], [[Unrestricted Set]] e [[Blocking Set]].\n<noinclude><div class=\"toccolours mw-collapsible mw-collapsed\" style=\"margin: 4px 0px;\">'''\"Curiosidade Estatística\"'''<div class=\"mw-collapsible-content\"><table ><tr><td align=left>\nApesar de ter tributo defensivo menor que o Demon Helmet, ele aumenta a resistência do personagem ao [[Physical Damage|dano físico]]. \nExemplo: se uma criatura atinge uma média de 100 pontos de dano a cada golpe, o Demon Helmet reduzirá o dano em uma faixa de 4,8 a 8,5%. Já o Zaoan Helmet, contra a mesma criatura, reduzirá o dano de 4,3 a 7,6% porém, haverá uma proteção adicional de 5% em casos de danos físicos. Ou seja, no total, este elmo, reduzirá danos físicos entre de 9 - 12% enquanto o Demon Helmet protegerá em um intervalo de 5 a 9%.\n</td></tr></table></div></div></noinclude>\n<noinclude><p><spoiler>* Para vendê-lo ao NPC é preciso ter entregue 9 [[Tome of Knowledge|tomos]] na [[Tomes of Knowledge Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

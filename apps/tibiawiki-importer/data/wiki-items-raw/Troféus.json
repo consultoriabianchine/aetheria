@@ -1,0 +1,1334 @@
+{
+ "query": {
+  "pages": [
+   {
+    "pageid": 7307,
+    "ns": 0,
+    "title": "Bronze Cup of Honour",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bronze Cup of Honour\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Troféus\n| attrib         = Pode ser escrito.\n| stackable      = não\n| weight         = 16.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.4\n| mercado        = não\n| notes          = Esse item pode ser obtido em um campeonato de futebol.<br />\nO primeiro foi dado para o time do ex-fansite TibiaCz no primeiro [[Fansite Soccer Cup]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7309,
+    "ns": 0,
+    "title": "Bronze Trophy of Excellence",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bronze Trophy of Excellence\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Troféus\n| attrib         = Pode ser escrito\n| stackable      = não\n| weight         = 13.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.4\n| mercado        = não\n| notes          = Você só pode ler o texto se você estiver a dois quadrados ou menos de distância.\nExistem 3 tipos de trophies of excellence: [[Bronze Trophy of Excellence|bronze]], [[Silver Trophy of Excellence|silver]] e [[Golden Trophy of Excellence|golden]].<br />\nO trophy of excellence de bronze simboliza o terceiro lugar em uma competição.<br />\n\n<gallery>\narquivo:Bronzetrophyofexcellence.png|Um exemplar do Troféu pode ser visto na House do jogador {{character|Raven Hayes}}.\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7311,
+    "ns": 0,
+    "title": "Golden Trophy of Excellence",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Golden Trophy of Excellence\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Troféus\n| attrib         = Pode ser escrito.\n| stackable      = não\n| weight         = 13.00\n\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.4\n| mercado        = não\n| notes          = Você só pode ler o texto se você ficar a dois quadrados do troféu ou menos.\nExistem 3 tipos de trophies of excellence: [[Bronze Trophy of Excellence|bronze]], [[Silver Trophy of Excellence|silver]] e '''golden'''.<br />\nO trophy of excellence de ouro simboliza o primeiro lugar em uma competição.\n<gallery>\narquivo:Goldentrophyofexcellence.png|Um exemplar do Troféu pode ser vista na House do jogador {{character|Raven haves}}.\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7315,
+    "ns": 0,
+    "title": "Bronze Warrior Trophy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bronze Warrior Trophy\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Troféus\n| attrib         = Pode ser escrito.\n| stackable      = não\n| weight         = 18.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.4\n| mercado        = não\n| notes          = Pode ser obtido em concursos realizados por [[Fansites]]. O warrior trophy de bronze simboliza o terceiro lugar em uma competição.<br />\nExistem 3 tipos de warrior trophies: [[Bronze Warrior Trophy|bronze]], [[Silver Warrior Trophy|silver]] e [[Golden Warrior Trophy|golden]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7317,
+    "ns": 0,
+    "title": "Golden Warrior Trophy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Golden Warrior Trophy\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Troféus\n| attrib         = Pode ser escrito.\n| stackable      = não\n| weight         = 19.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.4\n| mercado        = não\n| notes          = Pode ser obtido em concursos realizados por [[Fansites]]. O warrior trophy de ouro simboliza o primeiro lugar em uma competição.<br />\nExistem 3 tipos de warrior trophies: [[Bronze Warrior Trophy|bronze]], [[Silver Warrior Trophy|silver]] e [[Golden Warrior Trophy|golden]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7322,
+    "ns": 0,
+    "title": "Champion's Cup",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Champion's Cup\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Troféus\n| attrib         = Pode ser escrito.\n| stackable      = não\n| weight         = 18.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.4\n| mercado        = não\n| notes          = Este item só pode ser obtido em um torneio de futebol.<br />\nO primeiro foi dado para o time do ex-fansite TibiaMx na primeira [[Fansite Soccer Cup]].\n<gallery>\narquivo:Champion's_cup.png|Um pode ser visto na casa do jogador {{character|Solgeris}}\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7337,
+    "ns": 0,
+    "title": "Golden Fafnar Trophy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Golden Fafnar Trophy\n| flavortext     = \"Nome\" kept all ten fire basins burning and is one of the true lightbearers of this world.\n| itemclass      = Itens de Decoração\n| tertiarytype   = Extra Slot\n| primarytype    = Troféus\n| secondarytype  = Fontes de Luz\n| attrib         = Fornece uma pequena quantidade de luz.\n| weight         = 9.00\n| stackable      = não\n| value          = \n| npcvalue       = 10 000\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Gnomission\n| implemented    = 8.5\n| mercado        = não\n| notes          =\n<noinclude><p><spoiler>\n* Se o seu servidor ganhar o evento [[Lightbearer]], os jogadores que tiverem acendido todos os basins ganharão um fafnar trophy de ouro com seu nome.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7359,
+    "ns": 0,
+    "title": "Phoenix Statue",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre o '''fansite item''' Phoenix Statue. Para à réplica, veja [[Phoenix Statue (Réplica)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Phoenix Statue\n| flavortext       = This mighty statue contains a true phoenix feather inside. Awarded by Tibiafans.se\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Troféus\n| tertiarytype     = \n| attrib           = Fornece uma pequena quantidade de luz vermelha.\n| stackable        = não\n| weight           = 20.00\n| mercado          = não\n| sounds           = \"Come closer, I will show some of Tibian mysteries to you!\", \"Feel the eternity of Tibiafans!\", \"<player name> you are worth to feel power of Tibiafans! HAIL TIBIAFANS!\"\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 8.61\n| notes            = \n* Item oficial do ex-fansite [[TibiaFans]]. \n* O personagem {{Character|Van Lyves}} recebeu um por ter sido o criador do item. \n* Um pode ser visto na exibição de prêmios de [[Thais]] aos domingos.\n<gallery>arquivo:Phoenix_statue.png| Uma '''Phoenix Statue''' visto na house da personagem {{character|Arechion}} em [[Luminera]].</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7360,
+    "ns": 0,
+    "title": "Pigeon Trophy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre o '''fansite item''' Pigeon Trophy. Para à réplica, veja [[Pigeon Trophy (Réplica)]].}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Pigeon Trophy\n| flavortext       = It's a symbol of peace handed out by Tibia ML\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Troféus\n| tertiarytype     = \n| attrib           = Pode ser pendurado na parede.\n| stackable        = não\n| weight           = 4.00\n| mercado          = não\n| sounds           = \n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 8.5\n| notes            = \n* Item oficial do ex-fansite '''TibiaML'''. \n* O personagem {{character|Goldstorm}} recebeu um por ter sido o criador do item. \n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n<noinclude><gallery>\nArquivo:Pigeontrophy.png|'''Pigeon Trophy''' no servidor [[Guardia]].\n</gallery></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8012,
+    "ns": 0,
+    "title": "Behemoth Trophy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name         = Behemoth Trophy\n| itemclass    = Itens de Decoração\n| primarytype  = Troféus\n| attrib       = Pode ser pendurado na parede.\n| weight       = 5.00\n| stackable    = não\n| value        = 20 000 - 25 000\n| npcvalue     = 20 000\n| droppedby    = [[Behemoth]], [[Stonecracker]].\n| buyfrom      = Jogadores.\n| sellto       = Grizzly Adams\n| implemented  = 8.0\n| notes        = Pode ser visto no barco de [[Venore]]. Pode ser vendido para um NPC, porém é necessário ter um rank em uma quest.\n<noinclude><p><spoiler>* Para vender é necessário ter o rank \"Trophy Hunter\" na [[Killing in the Name of... Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8021,
+    "ns": 0,
+    "title": "Bonebeast Trophy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bonebeast Trophy\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Troféus\n| secondarytype  = \n| attrib         = Pode ser pendurado.\n| weight         = 5.00\n| stackable      = não\n| value          = 6 000 - 25 000\n| npcvalue       = 6 000\n| droppedby      = [[Bonebeast]], [[Ribstride]].\n| buyfrom        = Jogadores.\n| implemented    = 8.54\n| sellto         = Grizzly Adams\n| notes          = Loot raro de [[Bonebeast]]. Pode ser vendido para um NPC, porém é necessário ter um rank em uma quest.<noinclude><p><spoiler>Para vender, é necessário ter o rank \"Big Game Hunter\" na [[Killing in the Name of... Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8022,
+    "ns": 0,
+    "title": "Cyclops Trophy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Cyclops Trophy\n| itemclass      = Itens de Decoração\n| primarytype    = Troféus\n| attrib         = Pode ser pendurado em paredes.\n| weight         = 5.00\n| stackable      = não\n| value          = 100 - 500\n| npcvalue       = 500\n| droppedby      = [[Cyclops]], [[Cyclops Drone]], [[Cyclops Smith]], [[The Old Whopper]].\n| buyfrom        = Jogadores.\n| sellto         = Grizzly Adams\n| implemented    = 8.0\n| notes          = Pode ser vendido para um NPC, porém é necessário ter um rank em uma quest.<noinclude><p><spoiler>Para vender, é necessário ter o rank \"Huntsman\" na [[Killing in the Name of... Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8023,
+    "ns": 0,
+    "title": "Deer Trophy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Deer Trophy\n| itemclass      = Itens de Decoração\n| primarytype    = Troféus\n| attrib         = Pode ser pendurado em [[paredes]].\n| weight         = 5.00\n| stackable      = não\n| value          = 3 000 - 10 000\n| npcvalue       = 3 000\n| droppedby      = [[Smuggler]], [[Hunter]].\n| buyfrom        = Jogadores.\n| sellto         = Grizzly Adams\n| implemented    = 8.0\n| notes          = Pode ser vendido para um NPC, porém é necessário ter um rank em uma quest.\n<noinclude><p><spoiler>Necessário para a [[The Travelling Trader Quest]]. Para vender esse item, é necessário ter o rank \"Big Game Hunter\" na [[Killing in the Name of... Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8024,
+    "ns": 0,
+    "title": "Demon Trophy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Demon Trophy\n| itemclass      = Itens de Decoração\n| primarytype    = Troféus\n| attrib         = Pode ser pendurado em paredes.\n| weight         = 5.00\n| stackable      = não\n| value          = 20 000 - 40 000\n| npcvalue       = 40 000\n| droppedby      = [[Angry Demon]], [[Demon]], [[Rage Squid]].\n| buyfrom        = Jogadores.\n| sellto         = Grizzly Adams\n| implemented    = 8.0\n| notes          = Pode ser visto em alguns lugares do tibia. Depois do update de 2007 pode ser usado como decoração. Esse item pode ser vendido para um NPC, porém é necessário ter um rank em uma quest.<noinclude><p><spoiler>Para vender esse item, é necessário ter o rank \"Trophy Hunter\" na [[Killing in the Name of... Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8025,
+    "ns": 0,
+    "title": "Disgusting Trophy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Disgusting Trophy\n| itemclass      = Itens de Decoração\n| primarytype    = Troféus\n| secondarytype  = \n| attrib         = Pode ser pendurado em paredes.\n| weight         = 7.00\n| stackable      = não\n| npcvalue       = 3 000\n| droppedRaidby  = [[Cublarc the Plunderer]].\n| buyfrom        = Jogadores.\n| sellto         = Grizzly Adams\n| implemented    = 8.54\n| value          = 2 000 000 - 3 000 000\n| notes          = Este ítem pode ser considerado raro, uma vez que é loot de um boss que raramente aparece em uma [[Invasões|invasão]] em zao. Pode ser vendido para um NPC, porém é necessário ter um rank em uma quest.<noinclude><p><spoiler>\nPara vender esse item, é necessário ter o rank \"Trophy Hunter\" na [[Killing in the Name of... Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8026,
+    "ns": 0,
+    "title": "Dragon Lord Trophy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Dragon Lord Trophy\n| itemclass      = Itens de Decoração\n| primarytype    = Troféus\n| attrib         = Pode ser pendurado em paredes.\n| weight         = 5.00\n| stackable      = não\n| value          = 10 000-12 000\n| npcvalue       = 10 000\n| droppedby      = [[Dragon Lord]].\n| buyfrom        = Jogadores.\n| sellto         = Grizzly Adams\n| implemented    = 8.0\n| notes          = Pode ser visto na [[Tibian Explorer Society]] de [[Svargrond]] ou na [[Amazon Camp]] na torre da [[Valkyrie]]. Pode ser vendido para um NPC, porém é necessário ter um rank em uma quest. \n<noinclude><p><spoiler>\n* 10 são necessários para o addon 2 do [[Dragon Slayer Outfits]]. \n* Para vender esse item, é necessário ter o rank \"Trophy Hunter\" na [[Killing in the Name of... Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8027,
+    "ns": 0,
+    "title": "Draken Trophy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Draken Trophy\n| itemclass     = Itens de Decoração\n| primarytype   = Troféus\n| attrib        = Nenhum.\n| weight        = 6.00\n| stackable     = não\n\n| npcvalue      = 15 000\n| droppedby     = [[Draken Spellweaver]].\n| buyfrom       = Jogadores.\n| sellto        = Grizzly Adams\n| implemented   = 8.54\n| notes         = Pode ser vendido para um NPC, porém é necessário ter um rank em uma quest.<noinclude><p><spoiler>Para vender, é necessário ter o rank \"Huntsman\" na [[Killing in the Name of... Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8028,
+    "ns": 0,
+    "title": "Lion Trophy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Lion Trophy\n| itemclass      = Itens de Decoração\n| primarytype    = Troféus\n| attrib         = Pode ser pendurado em paredes.\n| weight         = 5.00\n| stackable      = não\n| value          = 3 000\n| npcvalue       = 3 000\n| droppedby      = [[Hunter]].\n| buyfrom        = Jogadores.\n| sellto         = Grizzly Adams\n| implemented    = 8.0\n| notes          = Ele pode ser visto em [[Liberty Bay Fortress]] próximo de Liberty Bay. Pode ser vendido para um NPC, porém é necessário ter um rank em uma quest.\n<noinclude><p><spoiler>\n* Recompensa da [[Shards of Ancient Winters Quest]]. \n* Para vender esse item, é necessário ter o rank \"Big Game Hunter\" na [[Killing in the Name of... Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8029,
+    "ns": 0,
+    "title": "Lizard Trophy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name         = Lizard Trophy\n| itemclass    = Itens de Decoração\n| primarytype  = Troféus\n| attrib       = Nenhum.\n| weight       = 5.50\n| stackable    = não\n| value        = 8 000 - 80 000\n| npcvalue     = 8 000\n| droppedby    = [[Lizard Legionnaire]].\n| buyfrom      = Jogadores.\n| sellto       = Grizzly Adams\n| implemented  = 8.54\n| notes        = Um loot extremamente raro de [[Lizard Legionnaire]]. Pode ser vendido para um NPC, porém é necessário ter um rank em uma quest.<noinclude><p><spoiler>Para vender, é necessário ter o rank \"Huntsman\" na [[Killing in the Name of... Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8030,
+    "ns": 0,
+    "title": "Marlin Trophy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Marlin Trophy\n| itemclass      = Itens de Decoração\n| primarytype    = Troféus\n| attrib         = Pode ser pendurado.\n| weight         = 5.00\n| stackable      = não\n| npcprice       = 1 [[Marlin]]\n| npcvalue       = 5 000\n| droppedby      = Ninguém.\n| buyfrom        = Pemaret\n| sellto         = Gnomission\n| implemented    = 8.1\n| notes          = Nenhuma.\n<noinclude><p><spoiler>\n* Recompensa da [[Marlin Trophy Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8031,
+    "ns": 0,
+    "title": "Minotaur Trophy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name         = Minotaur Trophy\n| itemclass    = Itens de Decoração\n| primarytype  = Troféus\n| attrib       = Pode ser pendurado em [[paredes]].\n| weight       = 5.00\n| stackable    = não\n| value        = 100 - 500\n| npcvalue     = 500\n| droppedby    = [[Execowtioner]], [[Minotaur Amazon]], [[Minotaur Cult Follower]], [[Minotaur Cult Prophet]], [[Minotaur Cult Zealot]], [[Minotaur Guard]], [[Minotaur Hunter]], [[Minotaur Invader]], [[Moohtant]], [[Mooh'Tah Warrior]], [[Worm Priestess]].\n| droppedRaidby  = [[General Murius]].\n| buyfrom      = Jogadores.\n| sellto       = Grizzly Adams\n| implemented  = 8.0\n| notes        = Pode ser vendido para um NPC, porém é necessário ter um rank em uma quest.<noinclude><p><spoiler>Para vender, é necessário ter o rank \"Huntsman\" na [[Killing in the Name of... Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8032,
+    "ns": 0,
+    "title": "Orc Trophy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Orc Trophy\n| itemclass      = Itens de Decoração\n| primarytype    = Troféus\n| attrib         = Pode ser pendurado nas paredes.\n| weight         = 5.00\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 1 000\n| droppedby      = [[Bibby Bloodbath]], [[Orc Warlord]].\n| buyfrom        = Jogadores.\n| sellto         = Grizzly Adams\n| implemented    = 8.0\n| notes          = Pode ser visto na [[Tibian Explorer Society]] de [[Northport]], e na torre de [[Valkyrie]] no norte de [[Venore]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 18956,
+    "ns": 0,
+    "title": "Elven Trophy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Elven Trophy\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Troféus\n| attrib         = Pode ser escrito. \n| stackable      = não\n| weight         = 9.00 \n \n| npcvalue       = 0 \n| npcprice       = 0 \n| droppedby      = Ninguém. \n| buyfrom        = Jogadores. \n| sellto         = Jogadores. \n| implemented    = 9.2 \n| mercado        = não\n| notes          = Você pode ler o texto em até 2 SQMs de distancia.<br />\nEsse item pode ser obtido em concursos feito pelos [[fansites|Promoteds e Supporteds Fansites]]. \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 21285,
+    "ns": 0,
+    "title": "Delany's Golden Bug Trophy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se este não é item que você procura, veja a página [[Golden Bug Trophy|Golden Bug Trophy (Desambiguação)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Delany's Golden Bug Trophy\n| flavortext     = It was awarded during the festivities of Tibia's 15th anniversary.\n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Troféus\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = 12.50\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.44\n| notes          = Parece com um [[The Famous Golden Bug]] mas é menor. Existem outros dois [[Golden Bug Trophy]]. Podia ser obtido como loot da criatura [[Delany (Criatura)|Delany]] durante o aniversário de 15 anos do Tibia, atualmente não é mais possível obter esse item.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 21289,
+    "ns": 0,
+    "title": "Bolfrim's Golden Bug Trophy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se este não é item que você procura, veja a página [[Golden Bug Trophy|Golden Bug Trophy (Desambiguação)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bolfrim's Golden Bug Trophy\n| flavortext     = It was awarded during the festivities of Tibia's 15th anniversary.\n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Troféus\n| stackable      = não\n| attrib         = Nenhum.\n| weight         = 12.50\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.44\n| notes          = Parece com um [[The Famous Golden Bug]] mas é menor. Existem outros dois [[Golden Bug Trophy]]. Podia ser obtido como loot da criatura [[Bolfrim (Criatura)|Bolfrim]] durante o aniversário de 15 anos do Tibia, atualmente não é mais possível obter esse item.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 38259,
+    "ns": 0,
+    "title": "Arena Badge",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre o item Arena Badge. Para a réplica, veja [[Arena Badge (Réplica)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Arena Badge\n| itemclass      = Itens de Decoração\n| primarytype    = Troféus\n| weight         = 1.00\n| stackable      = sim\n| value          = Negociável\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = <noinclude><p><spoiler>* Pode ser obtido após completar uma luta na [[Arena PvE]]. Você pode trocá-los por poções com o mesmo NPC.</spoiler></p></noinclude>\n| implemented    = 10.94\n| removed        = 12.70\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 38261,
+    "ns": 0,
+    "title": "Brown Pit Demon",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Brown Pit Demon\n| flavortext     = Figurine 1 of 5.\n| itemclass      = Itens de Decoração\n| secondarytype  = Extra Slot\n| primarytype    = Troféus\n| attrib         = Nenhum.\n| weight         = 5.00\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| npcprice       = 400 [[Drome Points]]\n| droppedby      = Ninguém.\n| buyfrom        = Agostina, Alberto, Fabiana, Emilio, Lorenzo\n| sellto         = Jogadores.\n| implemented    = 10.94\n| notes          = Pode ser obtido em arenas [[Tibiadrome]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 38262,
+    "ns": 0,
+    "title": "Green Pit Demon",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Green Pit Demon\n| flavortext     = Figurine 2 of 5.\n| itemclass      = Itens de Decoração\n| secondarytype  = Extra Slot\n| primarytype    = Troféus\n| attrib         = Nenhum.\n| weight         = 5.00\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| npcprice       = 750 [[Drome Points]]\n| droppedby      = Ninguém.\n| buyfrom        = Agostina, Alberto, Fabiana, Emilio, Lorenzo\n| sellto         = Jogadores.\n| implemented    = 10.94\n| notes          = Pode ser obtido em arenas [[Tibiadrome]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 38263,
+    "ns": 0,
+    "title": "Blue Pit Demon",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Blue Pit Demon\n| flavortext     = Figurine 3 of 5.\n| itemclass      = Itens de Decoração\n| secondarytype  = Extra Slot\n| primarytype    = Troféus\n| attrib         = Nenhum.\n| weight         = 5.00\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| npcprice       = 1 500 [[Drome Points]]\n| droppedby      = Ninguém.\n| buyfrom        = Agostina, Alberto, Fabiana, Emilio, Lorenzo\n| sellto         = Jogadores.\n| implemented    = 10.94\n| notes          = Pode ser obtido em arenas [[Tibiadrome]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 38264,
+    "ns": 0,
+    "title": "Black Pit Demon",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Black Pit Demon\n| flavortext     = Figurine 4 of 5.\n| itemclass      = Itens de Decoração\n| secondarytype  = Extra Slot\n| primarytype    = Troféus\n| attrib         = Nenhum.\n| weight         = 5.00\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| npcprice       = 3 000 [[Drome Points]]\n| droppedby      = Ninguém.\n| buyfrom        = Agostina, Alberto, Fabiana, Emilio, Lorenzo\n| sellto         = Jogadores.\n| implemented    = 10.94\n| notes          = Pode ser obtido em arenas [[Tibiadrome]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 38265,
+    "ns": 0,
+    "title": "Red Pit Demon",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Red Pit Demon\n| flavortext     = Figurine 5 of 5.\n| itemclass      = Itens de Decoração\n| secondarytype  = Extra Slot\n| primarytype    = Troféus\n| attrib         = Nenhum.\n| weight         = 5.00\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| npcprice       = 6 000 [[Drome Points]]\n| droppedby      = Ninguém.\n| buyfrom        = Agostina, Alberto, Fabiana, Emilio, Lorenzo\n| sellto         = Jogadores.\n| implemented    = 10.94\n| notes          = Pode ser obtido em arenas [[Tibiadrome]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 40128,
+    "ns": 0,
+    "title": "Gilded Birthday Cup",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Gilded Birthday Cup\n| flavortext     = It displays the number 20 and was awarded during the festivities of Tibia's 20th anniversary.\n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Troféus\n| stackable      = não\n| weight         = 38.00\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.02\n| notes          = <noinclude><p><spoiler>* Pode ser obtido como prêmio principal no jogo \"Can Knockdown\" na [[Vigintia Island]] durante as comemoração de [[Aniversário do Tibia|20 anos]] do Tibia.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45487,
+    "ns": 0,
+    "title": "Birthday Cup",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           =  Birthday Cup\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Troféus\n| stackable      = não\n| weight         = 38.00\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.02.7746\n| notes          = <noinclude><p><spoiler>* Possibilidade de ser obtido como recompensa do jogo \"Can Knockdown\" na [[Vigintia Island]] durante as comemorações de [[Aniversário do Tibia]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 50545,
+    "ns": 0,
+    "title": "Blue Shark Trophy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Blue Shark Trophy\n| itemclass      = Itens de Decoração\n| primarytype    = Troféus\n| attrib         = Pode ser pendurado em paredes.\n| weight         = \n| stackable      = não\n| mercado        = não\n| value          = \n| npcprice       = 4 000 [[Trust Points]]\n| droppedby      = Ninguém.\n| buyfrom        = Tik'hi Tak'he\n| sellto         = Jogadores.\n| implemented    = 12.60\n| notes          = Após comprar esse item, ele irá para o seu [[Store Inbox]], veja [[Decoration Kit]] para informações de como desembrulhá-lo.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 50546,
+    "ns": 0,
+    "title": "Brown Shark Trophy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Brown Shark Trophy\n| itemclass      = Itens de Decoração\n| primarytype    = Troféus\n| attrib         = Pode ser pendurado em paredes.\n| weight         = \n| stackable      = não\n| mercado        = não\n| value          = \n| npcprice       = 5 000 [[Trust Points]]\n| droppedby      = Ninguém.\n| buyfrom        = Tik'hi Tak'he\n| sellto         = Jogadores.\n| implemented    = 12.60\n| notes          = Após comprar esse item, ele irá para o seu [[Store Inbox]], veja [[Decoration Kit]] para informações de como desembrulhá-lo.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 50547,
+    "ns": 0,
+    "title": "Golden Shark Trophy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Golden Shark Trophy\n| itemclass      = Itens de Decoração\n| primarytype    = Troféus\n| attrib         = Pode ser pendurado em paredes.\n| weight         = \n| stackable      = não\n| mercado        = não\n| value          = \n| npcprice       = 12 000 [[Trust Points]]\n| droppedby      = Ninguém.\n| buyfrom        = Tik'hi Tak'he\n| sellto         = Jogadores.\n| implemented    = 12.60\n| notes          = Após comprar esse item, ele irá para o seu [[Store Inbox]], veja [[Decoration Kit]] para informações de como desembrulhá-lo.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 50550,
+    "ns": 0,
+    "title": "Hammerhead Trophy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Hammerhead Trophy\n| itemclass      = Itens de Decoração\n| primarytype    = Troféus\n| attrib         = Pode ser pendurado em paredes.\n| weight         = \n| stackable      = não\n| mercado        = não\n| value          = \n| npcprice       = 8 000 [[Trust Points]]\n| droppedby      = Ninguém.\n| buyfrom        = Tik'hi Tak'he\n| sellto         = Jogadores.\n| implemented    = 12.60\n| notes          = Após comprar esse item, ele irá para o seu [[Store Inbox]], veja [[Decoration Kit]] para informações de como desembrulhá-lo.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 52172,
+    "ns": 0,
+    "title": "Arena Badge (Réplica)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre a '''Réplica''' do item Arena Badge. Para o item, veja [[Arena Badge]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Arena Badge (Réplica)\n| itemclass      = Itens de Decoração\n| primarytype    = Troféus\n| attrib         = Nenhum.\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| npcprice       = 250 [[Drome Point]]s\n| droppedby      = Ninguém.\n| buyfrom        = Agostina, Alberto, Fabiana, Emilio, Lorenzo\n| sellto         = Jogadores.\n| implemented    = 12.70\n| notes          = Pode ser obtido em arenas [[Tibiadrome]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55358,
+    "ns": 0,
+    "title": "Pantibian Amphora",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Pantibian Amphora\n| flavortext     = It emanates a divine aura.\n| itemclass      = Itens de Decoração\n| primarytype    = Troféus\n| secondarytype  = \n| attrib         = Nenhum.\n| weight         = 25.00\n| stackable      = não\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.87.12038\n| notes          = Foi entregue aos participantes do [[Pantibian Festival]] como parte das comemorações de 25 anos do Tibia.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59065,
+    "ns": 0,
+    "title": "Gold Cup (Triumph)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Gold Cup (Triumph)\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Troféus\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.31.9658\n| mercado        = não\n| notes          = Este é um dos prêmios para os personagens que ficaram em primeiro no ranking do torneio [[Torneio Triumph|Triumph]]. Este trófeu contêm o nome do personagem criado para o torneio, o ranking, o nome do torneio e é assinado pela Cipsoft.</br>\nExistem três variações deste trófeu: [[Bronze Cup (Triumph)|Bronze]], [[Silver Cup (Triumph)|Silver]] e [[Gold Cup (Triumph)|Golden]]. {{Veja|Torneios|Torneio Triumph}}\n<noinclude>[[Categoria:Prêmios de Torneios]]</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59067,
+    "ns": 0,
+    "title": "Bronze Cup (Triumph)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bronze Cup (Triumph)\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Troféus\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.31.9658\n| mercado        = não\n| notes          = Este é um dos prêmios para os personagens que ficaram em terceiro no ranking do torneio [[Torneio Triumph|Triumph]]. Este trófeu contêm o nome do personagem criado para o torneio, o ranking, o nome do torneio e é assinado pela Cipsoft.</br>\nExistem três variações deste trófeu: [[Bronze Cup (Triumph)|Bronze]], [[Silver Cup (Triumph)|Silver]] e [[Gold Cup (Triumph)|Golden]]. {{Veja|Torneios|Torneio Triumph}}\n<noinclude>[[Categoria:Prêmios de Torneios]]</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59068,
+    "ns": 0,
+    "title": "Gold Cup (Valour)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Gold Cup (Valour)\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Troféus\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.40.10061\n| mercado        = não\n| notes          = Este é um dos prêmios para os personagens que ficaram em primeiro no ranking do torneio [[Torneio Valour|Valour]]. Este trófeu contêm o nome do personagem criado para o torneio, o ranking, o nome do torneio e é assinado pela Cipsoft.</br>\nExistem três variações deste trófeu: [[Bronze Cup (Valour)|Bronze]], [[Silver Cup (Valour)|Silver]] e [[Gold Cup (Valour)|Golden]]. {{Veja|Torneios|Torneio Valour}}\n<noinclude>[[Categoria:Prêmios de Torneios]]</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59070,
+    "ns": 0,
+    "title": "Bronze Cup (Valour)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bronze Cup (Valour)\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Troféus\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.40.10061\n| mercado        = não\n| notes          = Este é um dos prêmios para os personagens que ficaram em terceiro no ranking do torneio [[Torneio Valour|Valour]]. Este trófeu contêm o nome do personagem criado para o torneio, o ranking, o nome do torneio e é assinado pela Cipsoft.</br>\nExistem três variações deste trófeu: [[Bronze Cup (Valour)|Bronze]], [[Silver Cup (Valour)|Silver]] e [[Gold Cup (Valour)|Golden]]. {{Veja|Torneios|Torneio Valour}}\n<noinclude>[[Categoria:Prêmios de Torneios]]</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59073,
+    "ns": 0,
+    "title": "Gold Cup (Honour)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Gold Cup (Honour)\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Troféus\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.67.10918\n| mercado        = não\n| notes          = Este é um dos prêmios para os personagens que ficaram em primeiro no ranking do torneio [[Torneio Honour|Honour]]. Este trófeu contêm o nome do personagem criado para o torneio, o ranking, o nome do torneio e é assinado pela Cipsoft.</br>\nExistem três variações deste trófeu: [[Bronze Cup (Honour)|Bronze]], [[Silver Cup (Honour)|Silver]] e [[Gold Cup (Honour)|Golden]]. {{Veja|Torneios|Torneio Honour}}\n<noinclude>[[Categoria:Prêmios de Torneios]]</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59075,
+    "ns": 0,
+    "title": "Bronze Cup (Honour)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bronze Cup (Honour)\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Troféus\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.67.10918\n| mercado        = não\n| notes          = Este é um dos prêmios para os personagens que ficaram em terceiro no ranking do torneio [[Torneio Honour|Honour]]. Este trófeu contêm o nome do personagem criado para o torneio, o ranking, o nome do torneio e é assinado pela Cipsoft.</br>\nExistem três variações deste trófeu: [[Bronze Cup (Honour)|Bronze]], [[Silver Cup (Honour)|Silver]] e [[Gold Cup (Honour)|Golden]]. {{Veja|Torneios|Torneio Honour}}\n<noinclude>[[Categoria:Prêmios de Torneios]]</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59076,
+    "ns": 0,
+    "title": "Gold Cup (Radiance)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Gold Cup (Radiance)\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Troféus\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.72.11206\n| mercado        = não\n| notes          = Este é um dos prêmios para os personagens que ficaram em primeiro no ranking do torneio [[Torneio Radiance|Radiance]]. Este trófeu contêm o nome do personagem criado para o torneio, o ranking, o nome do torneio e é assinado pela Cipsoft.</br>\nExistem três variações deste trófeu: [[Bronze Cup (Radiance)|Bronze]], [[Silver Cup (Radiance)|Silver]] e [[Gold Cup (Radiance)|Golden]]. {{Veja|Torneios|Torneio Radiance}}\n<noinclude>[[Categoria:Prêmios de Torneios]]</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59078,
+    "ns": 0,
+    "title": "Bronze Cup (Radiance)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bronze Cup (Radiance)\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Troféus\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.72.11206\n| mercado        = não\n| notes          = Este é um dos prêmios para os personagens que ficaram em terceiro no ranking do torneio [[Torneio Radiance|Radiance]]. Este trófeu contêm o nome do personagem criado para o torneio, o ranking, o nome do torneio e é assinado pela Cipsoft.</br>\nExistem três variações deste trófeu: [[Bronze Cup (Radiance)|Bronze]], [[Silver Cup (Radiance)|Silver]] e [[Gold Cup (Radiance)|Golden]]. {{Veja|Torneios|Torneio Radiance}}\n<noinclude>[[Categoria:Prêmios de Torneios]]</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59079,
+    "ns": 0,
+    "title": "Gold Cup (Ascension)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Gold Cup (Ascension)\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Troféus\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.86.11809\n| mercado        = não\n| notes          = Este é um dos prêmios para os personagens que ficaram em primeiro no ranking do torneio [[Torneio Ascension|Ascension]]. Este trófeu contêm o nome do personagem criado para o torneio, o ranking, o nome do torneio e é assinado pela Cipsoft.</br>\nExistem três variações deste trófeu: [[Bronze Cup (Ascension)|Bronze]], [[Silver Cup (Ascension)|Silver]] e [[Gold Cup (Ascension)|Golden]]. {{Veja|Torneios|Torneio Ascension}}\n<noinclude>[[Categoria:Prêmios de Torneios]]</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59081,
+    "ns": 0,
+    "title": "Bronze Cup (Ascension)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bronze Cup (Ascension)\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Troféus\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.86.11809\n| mercado        = não\n| notes          = Este é um dos prêmios para os personagens que ficaram em terceiro no ranking do torneio [[Torneio Ascension|Ascension]]. Este trófeu contêm o nome do personagem criado para o torneio, o ranking, o nome do torneio e é assinado pela Cipsoft.</br>\nExistem três variações deste trófeu: [[Bronze Cup (Ascension)|Bronze]], [[Silver Cup (Ascension)|Silver]] e [[Gold Cup (Ascension)|Golden]]. {{Veja|Torneios|Torneio Ascension}}\n<noinclude>[[Categoria:Prêmios de Torneios]]</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 61015,
+    "ns": 0,
+    "title": "Dragon Trophy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Dragon Trophy\n| itemclass      = Itens de Decoração\n| primarytype    = Troféus\n| attrib         = Pode ser pendurado em paredes.\n| weight         = 5.00\n| stackable      = não\n| value          = \n| npcvalue       = 4 000\n| droppedby      = [[Dragon]].\n| buyfrom        = Jogadores.\n| sellto         = Grizzly Adams\n| implemented    = 13.21.14040 (2)\n| notes          = Pode ser vendido para um NPC, porém é necessário ter um rank em uma quest. \n<noinclude><p><spoiler>\n* 10 são necessários para o addon 02 do [[Dragon Slayer Outfits]]. \n* Para vender esse item, é necessário ter o rank \"Trophy Hunter\" na [[Killing in the Name of... Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7310,
+    "ns": 0,
+    "title": "Silver Trophy of Excellence",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Silver Trophy of Excellence\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Troféus\n| attrib         = Pode ser escrito.\n| stackable      = não\n| weight         = 13.00\n\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| mercado        = não\n| notes          = Você só pode ler o texto se você ficar a dois sqms ou menos do item.<br />\nExistem 3 tipos de trophies of excellence: [[Bronze Trophy of Excellence|bronze]], '''silver''' e [[Golden Trophy of Excellence|golden]].<br />\nO trophy of excellence de prata simboliza o segundo lugar em uma competição ou concurso.\n<gallery>\narquivo:Silvertrophyofexcellence.png|Um exemplar do Troféu pode ser visto na House do jogador {{character|Raven Hayes}}.\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7316,
+    "ns": 0,
+    "title": "Silver Warrior Trophy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Silver Warrior Trophy\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Troféus\n| attrib         = Pode ser escrito.\n| stackable      = não\n| weight         = 18.50\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.4\n| mercado        = não\n| notes          = Pode ser obtido em concursos realizados por [[Fansites]]. O warrior trophy de prata simboliza o segundo lugar em uma competição.<br />\nExistem 3 tipos de warrior trophies: [[Bronze Warrior Trophy|bronze]], [[Silver Warrior Trophy|silver]] e [[Golden Warrior Trophy|golden]].\n<gallery>\narquivo:Silverwariortrophy.png|Um exemplar do Troféu na casa do jogador {{character|Dark Black Magician}}.\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7321,
+    "ns": 0,
+    "title": "Silver Cup of Honour",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Silver Cup of Honour\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Troféus\n| attrib         = Pode ser escrito.\n| stackable      = não\n| weight         = 16.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.4\n| mercado        = não\n| notes          = Este item só pode ser obtido ganhando um torneio de futebol.<br />\nO primeiro foi dado para o time do TibiaNews na primeira [[Fansite Soccer Cup]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7338,
+    "ns": 0,
+    "title": "Silver Fafnar Trophy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Silver Fafnar Trophy\n| flavortext     = \"Nome\" helped to keep the fire basins burning and is one of the lightbearers of this world.\n| itemclass      = Itens de Decoração\n| tertiarytype   = Extra Slot\n| primarytype    = Troféus\n| secondarytype  = Fontes de Luz\n| attrib         = Fornece uma pequena quantidade de luz.\n| weight         = 9.00\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 1 000\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Gnomission\n| implemented    = 8.5\n| mercado        = não\n| notes          = Existe também uma [[Golden Fafnar Trophy|versão de ouro]]\nQuando equipado, este troféu ilumina num raio de 1 quadrado ao redor de seu personagem.\n<noinclude><p><spoiler>\nSe o seu servidor ganhar o evento [[Lightbearer]], cada jogador que acendeu ao menos uma das tochas ganhará um trophy especial com seu nome.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7362,
+    "ns": 0,
+    "title": "Statue of Devovorga",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Statue of Devovorga\n| flavortext     = In memory of her - half plant, half demon, incredibly powerful and betrayed by her own creators.\n| itemclass      = Itens de Decoração\n| primarytype    = Troféus\n| secondarytype  = Extra Slot\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = 18.00 \n| value          = Negociável\n| npcvalue       = 1 500\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Gnomission\n| implemented    = 8.61\n| notes          = \n<noinclude><p><spoiler>\nPode ser obtido como recompensa do evento [[Rise of Devovorga]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7363,
+    "ns": 0,
+    "title": "The Famous Golden Bug",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = The Famous Golden Bug\n| flavortext     = It's given to skilled discoverers of extra nasty bugs and to great scholars writing useful reports.\n| itemclass      = Itens de Decoração\n| primarytype    = Troféus\n| writable       = sim\n| stackable      = não\n| weight         = 12.50\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.5\n| mercado        = não\n| notes          = Costuma ser dado principalmente para aqueles que melhor contribuírem reportando bugs durante [[Test Server]]s, dentre outras razões.\n<gallery>Arquivo:Golden Bug Exhibited.png|Exposição de fansite itens em [[Thais]].</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8033,
+    "ns": 0,
+    "title": "Sea Serpent Trophy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Sea Serpent Trophy\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Troféus\n| secondarytype  = \n| attrib         = \n| weight         = 5.00\n| stackable      = sim\n| value          = 10 000\n| npcvalue       = 10 000\n| droppedby      = [[Leviathan]].\n| buyfrom        = Jogadores.\n| sellto         = Gnomission\n| implemented    = 8.5\n| notes          = Você não pode colocar este item em uma parede.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8034,
+    "ns": 0,
+    "title": "Souleater Trophy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Souleater Trophy\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Troféus\n| secondarytype  = \n| attrib         = Nenhum.\n| weight         = 5.00\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 7 500\n| droppedby      = [[Souleater]].\n| buyfrom        = Jogadores.\n| sellto         = Gnomission\n| implemented    = 8.6\n| notes          = É um item extremamente raro que dropa de [[Souleater]]s.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8035,
+    "ns": 0,
+    "title": "Wolf Trophy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Wolf Trophy\n| itemclass      = Itens de Decoração\n| primarytype    = Troféus\n| attrib         = Pode ser pendurado em paredes.\n| weight         = 5.00\n| stackable      = não\n| value          = 3 000+\n| npcvalue       = 3 000\n| droppedby      = [[Darkfang]], [[Hunter]], [[War Wolf]].\n| droppedRaidby  = [[The Big Bad One]].\n| buyfrom        = Jogadores.\n| sellto         = Grizzly Adams\n| implemented    = 8.0\n| notes          = Pode ser vendido para um NPC, porém é necessário ter um rank em uma quest.\n<noinclude><p><spoiler>* Para vender esse item, é necessário ter o rank \"Big Game Hunter\" na [[Killing in the Name of... Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 19019,
+    "ns": 0,
+    "title": "Snake God Trophy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Snake God Trophy\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Troféus\n| weight         = 5.00 \n| stackable      = não\n| npcvalue       = 0 \n| npcprice       = 0 \n| droppedby      = Ninguém. \n| buyfrom        = Jogadores. \n| sellto         = Jogadores. \n| implemented    = 9.2 \n| notes          = Esse item pode ser obtido em concursos feito pelos [[fansites|Promoteds e Supporteds Fansites]]. \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 20220,
+    "ns": 0,
+    "title": "Trophy of Jaul",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Trophy of Jaul\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Troféus\n| secondarytype  = \n| attrib         = Pode ser pendurado em paredes.\n| weight         = 5.00\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 4 000\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Gnomission\n| implemented    = 9.4\n| notes          = \n<noinclude><p><spoiler>\nPode ser obtido em um baú durante a [[Deepling Outfits Quest]] após derrotar o boss [[Jaul]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 20221,
+    "ns": 0,
+    "title": "Trophy of Obujos",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Trophy of Obujos\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Troféus\n| secondarytype  = \n| attrib         = Pode ser pendurado em paredes.\n| weight         = 5.00\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 3 000\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Gnomission\n| implemented    = 9.4\n| notes          = \n<noinclude><p><spoiler>\nPode ser obtido em um baú durante a [[Deepling Outfits Quest]] após derrotar o boss [[Obujos]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 20222,
+    "ns": 0,
+    "title": "Trophy of Tanjis",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Trophy of Tanjis\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Troféus\n| secondarytype  = \n| attrib         = Pode ser pendurado em paredes.\n| weight         = 5.00\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 2 000\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Gnomission\n| implemented    = 9.4\n| notes          = \n<noinclude><p><spoiler>\nPode ser obtido em um baú durante a [[Deepling Outfits Quest]] após derrotar o boss [[Tanjis]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 21287,
+    "ns": 0,
+    "title": "Siramal's Golden Bug Trophy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se este não é item que você procura, veja a página [[Golden Bug Trophy|Golden Bug Trophy (Desambiguação)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Siramal's Golden Bug Trophy\n| flavortext     = It was awarded during the festivities of Tibia's 15th anniversary.\n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Troféus\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = 12.50\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.44\n| notes          = Parece com um [[The Famous Golden Bug]] mas é menor. Existem outros dois [[Golden Bug Trophy]]. Podia ser obtido como loot da criatura [[Siramal (Criatura)|Siramal]] durante o aniversário de 15 anos do Tibia, atualmente não é mais possível obter esse item.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25894,
+    "ns": 0,
+    "title": "Statue of Deathstrike",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Statue of Deathstrike\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Troféus \n| secondarytype  =  \n| attrib         = Nenhum \n| weight         = 21.00 \n| stackable      = não\n| npcvalue       = 3 000\n| value          = Negociável\n| droppedby      = Ninguém. \n| buyfrom        = Jogadores. \n| sellto         = Gnomission\n| implemented    = 9.6 \n| notes          = Você deve juntar as 3 partes e entregar para a NPC [[Gnomally]] em [[Gnomebase]] para receber essa estátua, as partes são:\n*[[Arquivo:Head of Deathstrike.gif]] [[Head of Deathstrike]]\n*[[Arquivo:Torso of Deathstrike.gif]] [[Torso of Deathstrike]]\n*[[Arquivo:Legs of Deathstrike.gif]] [[Legs of Deathstrike]]\n<noinclude><p><spoiler>Você pode ter a chance de obter as partes dessa estátua usando o [[Deathstrike Treasure Chest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25895,
+    "ns": 0,
+    "title": "Statue of Gnomevil",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Statue of Gnomevil\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Troféus \n| secondarytype  =  \n| attrib         = Nenhum \n| weight         = 22.00\n| stackable      = não\n| npcvalue       = 2 000\n| value          = Negociável\n| droppedby      = Ninguém. \n| buyfrom        = Jogadores. \n| sellto         = Gnomission\n| implemented    = 9.6 \n| notes          = Você deve juntar as 3 partes e entregar para a NPC [[Gnomally]] em [[Gnomebase]] para receber essa estátua, as partes são:\n*[[Arquivo:Head of Gnomevil.gif]] [[Head of Gnomevil]]\n*[[Arquivo:Torso of Gnomevil.gif]] [[Torso of Gnomevil]]\n*[[Arquivo:Legs of Gnomevil.gif]] [[Legs of Gnomevil]]\n<noinclude><p><spoiler>Você pode ter a chance de obter as partes dessa estátua usando o [[Gnomevil Treasure Chest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25896,
+    "ns": 0,
+    "title": "Statue of Abyssador",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Statue of Abyssador\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Troféus \n| secondarytype  =  \n| attrib         = Nenhum \n| weight         = 24.00\n| stackable      = não\n| npcvalue       = 4 000\n| value          = Negociável\n| droppedby      = Ninguém. \n| buyfrom        = Jogadores. \n| sellto         = Gnomission\n| implemented    = 9.6 \n| notes          = Você deve juntar as 3 partes e entregar para a NPC [[Gnomally]] em [[Gnomebase]] para receber essa estátua, as partes são:\n*[[Arquivo:Head of Abyssador.gif]] [[Head of Abyssador]]\n*[[Arquivo:Torso of Abyssador.gif]] [[Torso of Abyssador]]\n*[[Arquivo:Tail of Abyssador.gif]] [[Tail of Abyssador]]\n<noinclude><p><spoiler>Você pode ter a chance de obter as partes dessa estátua usando o [[Abyssador Treasure Chest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 36235,
+    "ns": 0,
+    "title": "Wereboar Trophy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Wereboar Trophy\n| itemclass      = Itens de Decoração\n| primarytype    = Troféus\n| attrib         = Pode ser pendurado nas paredes.\n| weight         = 5.00\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 10 000\n| droppedby      = [[Bloodback]], [[Wereboar]].\n| droppedRaidby  = [[Owin (Criatura)]].\n| buyfrom        = Jogadores.\n| sellto         = Grizzly Adams\n| implemented    = 10.80\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 36236,
+    "ns": 0,
+    "title": "Werebear Trophy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Werebear Trophy\n| itemclass      = Itens de Decoração\n| primarytype    = Troféus\n| attrib         = Pode ser pendurado nas paredes.\n| weight         = 5.00\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 11 000\n| droppedby      = [[Shadowpelt]], [[Werebear]].\n| buyfrom        = Jogadores.\n| sellto         = Grizzly Adams\n| implemented    = 10.80\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 36237,
+    "ns": 0,
+    "title": "Trophy of Feroxa",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Trophy of Feroxa\n| itemclass      = Itens de Decoração\n| primarytype    = Troféus\n| attrib         = Pode ser pendurado nas paredes.\n| weight         = 5.00\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 0\n| droppedRaidby  = [[Feroxa (Mortal)]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.80\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 36238,
+    "ns": 0,
+    "title": "Werebadger Trophy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Werebadger Trophy\n| itemclass      = Itens de Decoração\n| primarytype    = Troféus\n| attrib         = Pode ser pendurado nas paredes.\n| weight         = 5.00\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 9 000\n| droppedby      = [[Sharpclaw]], [[Werebadger]].\n| buyfrom        = Jogadores.\n| sellto         = Grizzly Adams\n| implemented    = 10.80\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42683,
+    "ns": 0,
+    "title": "Werefox Trophy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Werefox Trophy\n| itemclass      = Itens de Decoração\n| primarytype    = Troféus\n| attrib         = Pode ser pendurado nas paredes.\n| weight         = 5.00\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 9 000\n| droppedby      = [[Black Vixen]], [[Werefox]].\n| buyfrom        = Jogadores.\n| sellto         = Grizzly Adams\n| implemented    = 11.50\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 49320,
+    "ns": 0,
+    "title": "Werehyaena Trophy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Werehyaena Trophy\n| itemclass      = Itens de Decoração\n| primarytype    = Troféus\n| attrib         = Pode ser pendurado em paredes.\n| weight         = 5.00\n| stackable      = não\n| value          = \n| npcvalue       = 12 000\n| droppedby      = [[Katex Blood Tongue]], [[Werehyaena]], [[Werehyaena Shaman]].\n| buyfrom        = Jogadores.\n| sellto         = Grizzly Adams\n| implemented    = 12.40\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 50548,
+    "ns": 0,
+    "title": "Stripped Shark Trophy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Stripped Shark Trophy\n| itemclass      = Itens de Decoração\n| primarytype    = Troféus\n| attrib         = Pode ser pendurado em paredes.\n| weight         = \n| stackable      = não\n| mercado        = não\n| value          = \n| npcprice       = 5 000 [[Trust Points]]\n| droppedby      = Ninguém.\n| buyfrom        = Tik'hi Tak'he\n| sellto         = Jogadores.\n| implemented    = 12.60\n| notes          = Após comprar esse item, ele irá para o seu [[Store Inbox]], veja [[Decoration Kit]] para informações de como desembrulhá-lo.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 50549,
+    "ns": 0,
+    "title": "Shark Jaws",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Shark Jaws\n| itemclass      = Itens de Decoração\n| primarytype    = Troféus\n| attrib         = Pode ser pendurado em paredes.\n| weight         = \n| stackable      = não\n| mercado        = não\n| value          = \n| npcprice       = 6 000 [[Trust Points]]\n| droppedby      = Ninguém.\n| buyfrom        = Tik'hi Tak'he\n| sellto         = Jogadores.\n| implemented    = 12.60\n| notes          = Após comprar esse item, ele irá para o seu [[Store Inbox]], veja [[Decoration Kit]] para informações de como desembrulhá-lo.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59066,
+    "ns": 0,
+    "title": "Silver Cup (Triumph)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Silver Cup (Triumph)\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Troféus\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.31.9658\n| mercado        = não\n| notes          = Este é um dos prêmios para os personagens que ficaram em segundo no ranking do torneio [[Torneio Triumph|Triumph]]. Este trófeu contêm o nome do personagem criado para o torneio, o ranking, o nome do torneio e é assinado pela Cipsoft.</br>\nExistem três variações deste trófeu: [[Bronze Cup (Triumph)|Bronze]], [[Silver Cup (Triumph)|Silver]] e [[Gold Cup (Triumph)|Golden]]. {{Veja|Torneios|Torneio Triumph}}\n<noinclude>[[Categoria:Prêmios de Torneios]]</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59069,
+    "ns": 0,
+    "title": "Silver Cup (Valour)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Silver Cup (Valour)\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Troféus\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.40.10061\n| mercado        = não\n| notes          = Este é um dos prêmios para os personagens que ficaram em segundo no ranking do torneio [[Torneio Valour|Valour]]. Este trófeu contêm o nome do personagem criado para o torneio, o ranking, o nome do torneio e é assinado pela Cipsoft.</br>\nExistem três variações deste trófeu: [[Bronze Cup (Valour)|Bronze]], [[Silver Cup (Valour)|Silver]] e [[Gold Cup (Valour)|Golden]]. {{Veja|Torneios|Torneio Valour}}\n<noinclude>[[Categoria:Prêmios de Torneios]]</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59074,
+    "ns": 0,
+    "title": "Silver Cup (Honour)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Silver Cup (Honour)\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Troféus\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.67.10918\n| mercado        = não\n| notes          = Este é um dos prêmios para os personagens que ficaram em segundo no ranking do torneio [[Torneio Honour|Honour]]. Este trófeu contêm o nome do personagem criado para o torneio, o ranking, o nome do torneio e é assinado pela Cipsoft.</br>\nExistem três variações deste trófeu: [[Bronze Cup (Honour)|Bronze]], [[Silver Cup (Honour)|Silver]] e [[Gold Cup (Honour)|Golden]]. {{Veja|Torneios|Torneio Honour}}\n<noinclude>[[Categoria:Prêmios de Torneios]]</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59077,
+    "ns": 0,
+    "title": "Silver Cup (Radiance)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Silver Cup (Radiance)\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Troféus\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.72.11206\n| mercado        = não\n| notes          = Este é um dos prêmios para os personagens que ficaram em segundo no ranking do torneio [[Torneio Radiance|Radiance]]. Este trófeu contêm o nome do personagem criado para o torneio, o ranking, o nome do torneio e é assinado pela Cipsoft.</br>\nExistem três variações deste trófeu: [[Bronze Cup (Radiance)|Bronze]], [[Silver Cup (Radiance)|Silver]] e [[Gold Cup (Radiance)|Golden]]. {{Veja|Torneios|Torneio Radiance}}\n<noinclude>[[Categoria:Prêmios de Torneios]]</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59080,
+    "ns": 0,
+    "title": "Silver Cup (Ascension)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Silver Cup (Ascension)\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Troféus\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.86.11809\n| mercado        = não\n| notes          = Este é um dos prêmios para os personagens que ficaram em segundo no ranking do torneio [[Torneio Ascension|Ascension]]. Este trófeu contêm o nome do personagem criado para o torneio, o ranking, o nome do torneio e é assinado pela Cipsoft.</br>\nExistem três variações deste trófeu: [[Bronze Cup (Ascension)|Bronze]], [[Silver Cup (Ascension)|Silver]] e [[Gold Cup (Ascension)|Golden]]. {{Veja|Torneios|Torneio Ascension}}\n<noinclude>[[Categoria:Prêmios de Torneios]]</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 60129,
+    "ns": 0,
+    "title": "Werecrocodile Trophy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Werecrocodile Trophy\n| itemclass      = Itens de Decoração\n| primarytype    = Troféus\n| attrib         = Pode ser pendurado em paredes.\n| weight         = 5.00\n| stackable      = não\n| value          = \n| npcvalue       = 15 000\n| droppedby      = [[Werecrocodile]].\n| buyfrom        = Jogadores.\n| sellto         = Grizzly Adams\n| implemented    = 13.20.13560\n| notes          =\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 60130,
+    "ns": 0,
+    "title": "Weretiger Trophy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Weretiger Trophy\n| itemclass      = Itens de Decoração\n| primarytype    = Troféus\n| attrib         = Pode ser pendurado em paredes.\n| weight         = 5.00\n| stackable      = não\n| value          = \n| npcvalue       = 15 000\n| droppedby      = [[Weretiger]].\n| buyfrom        = Jogadores.\n| sellto         = Grizzly Adams\n| implemented    = 13.20.13560\n| notes          =\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 60131,
+    "ns": 0,
+    "title": "Werepanther Trophy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Werepanther Trophy\n| itemclass      = Itens de Decoração\n| primarytype    = Troféus\n| attrib         = Pode ser pendurado em paredes.\n| weight         = 5.00\n| stackable      = não\n| value          = \n| npcvalue       = 14 000\n| droppedby      = [[Rakesh Moonfang]], [[Werepanther]].\n| buyfrom        = Jogadores.\n| sellto         = Grizzly Adams\n| implemented    = 13.20.13560\n| notes          =\n}}"
+       }
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

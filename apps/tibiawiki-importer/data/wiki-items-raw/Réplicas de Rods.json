@@ -1,0 +1,150 @@
+{
+ "query": {
+  "pages": [
+   {
+    "pageid": 42320,
+    "ns": 0,
+    "title": "Ornate Carving Rod",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ornate Carving Rod\n| flavortext     = This replica looks overcharged\n| enchantable    = não\n| enchanted      = não\n| primarytype   = Réplicas de Rods\n| attrib          = Nenhum.\n| type           = Réplicas \n| weight         = 35.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Apprentice's_Strike|Mana_Leech|+1% mana leech para Apprentice's Strike}}\n| perk2          = {{Weapon Perk|Spell_Apprentice's_Strike|Mana_Leech|+1% mana leech para Apprentice's Strike}}\n| perk3          = {{Weapon Perk|Spell_Apprentice's_Strike|Mana_Leech|+3% mana leech para Apprentice's Strike}}\n| perk4          = {{Weapon Perk|Spell_Apprentice's_Strike|Mana_Leech|+4% mana leech para Apprentice's Strike}}\n| perk5          = {{Weapon Perk|Type_Skill_Magic||+1 Magic Level}}\n| notes          = É uma réplica da [[Rod of Carving (Overcharged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42340,
+    "ns": 0,
+    "title": "Valuable Carving Rod",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Valuable Carving Rod\n| flavortext     = This replica looks heavily charged\n| enchantable    = não\n| enchanted      = não\n| primarytype   = Réplicas de Rods\n| attrib          = Nenhum.\n| type           = Réplicas \n| weight         = 35.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Apprentice's_Strike|Mana_Leech|+1% mana leech para Apprentice's Strike}}\n| perk2          = {{Weapon Perk|Spell_Apprentice's_Strike|Mana_Leech|+1% mana leech para Apprentice's Strike}}\n| perk3          = {{Weapon Perk|Spell_Apprentice's_Strike|Mana_Leech|+3% mana leech para Apprentice's Strike}}\n| perk4          = {{Weapon Perk|Spell_Apprentice's_Strike|Mana_Leech|+4% mana leech para Apprentice's Strike}}\n| perk5          = {{Weapon Perk|Type_Skill_Magic||+1 Magic Level}}\n| notes          = É uma réplica da [[Rod of Carving (Heavily Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42362,
+    "ns": 0,
+    "title": "Plain Carving Rod",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Plain Carving Rod\n| flavortext     = This replica looks charged\n| enchantable    = não\n| enchanted      = não\n| primarytype   = Réplicas de Rods\n| attrib          = Nenhum.\n| type           = Réplicas \n| weight         = 35.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Apprentice's_Strike|Mana_Leech|+1% mana leech para Apprentice's Strike}}\n| perk2          = {{Weapon Perk|Spell_Apprentice's_Strike|Mana_Leech|+1% mana leech para Apprentice's Strike}}\n| perk3          = {{Weapon Perk|Spell_Apprentice's_Strike|Mana_Leech|+3% mana leech para Apprentice's Strike}}\n| perk4          = {{Weapon Perk|Spell_Apprentice's_Strike|Mana_Leech|+4% mana leech para Apprentice's Strike}}\n| perk5          = {{Weapon Perk|Type_Skill_Magic||+1 Magic Level}}\n| notes          = É uma réplica da [[Rod of Carving (Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42383,
+    "ns": 0,
+    "title": "Ornate Mayhem Rod",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ornate Mayhem Rod\n| flavortext     = This replica looks overcharged\n| enchantable    = não\n| enchanted      = não\n| primarytype   = Réplicas de Rods\n| attrib          = Nenhum.\n| type           = Réplicas \n| weight         = 35.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Apprentice's_Strike|Critical_Dmg|+10% critical extra damage para Apprentice's Strike}}\n| perk2          = {{Weapon Perk|Spell_Apprentice's_Strike|Critical_Dmg|+20% critical extra damage para Apprentice's Strike}}\n| perk3          = {{Weapon Perk|Spell_Apprentice's_Strike|Critical_Dmg|+30% critical extra damage para Apprentice's Strike}}\n| perk4          = {{Weapon Perk|Spell_Apprentice's_Strike|Critical_Chance|+5% critical hit chance para Apprentice's Strike}}\n| perk5          = {{Weapon Perk|Type_Skill_Magic||+1 Magic Level}}\n| notes          = É uma réplica da [[Rod of Mayhem (Overcharged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42403,
+    "ns": 0,
+    "title": "Ornate Remedy Rod",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ornate Remedy Rod\n| flavortext     = This replica looks overcharged\n| enchantable    = não\n| enchanted      = não\n| primarytype   = Réplicas de Rods\n| attrib          = Nenhum.\n| type           = Réplicas \n| weight         = 35.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Apprentice's_Strike|Life_Leech|+1% life leech para Apprentice's Strike}}\n| perk2          = {{Weapon Perk|Spell_Apprentice's_Strike|Life_Leech|+1% life leech para Apprentice's Strike}}\n| perk3          = {{Weapon Perk|Spell_Apprentice's_Strike|Life_Leech|+3% life leech para Apprentice's Strike}}\n| perk4          = {{Weapon Perk|Spell_Apprentice's_Strike|Life_Leech|+4% life leech para Apprentice's Strike}}\n| perk5          = {{Weapon Perk|Type_Skill_Magic||+1 Magic Level}}\n| notes          = É uma réplica da [[Rod of Remedy (Overcharged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42423,
+    "ns": 0,
+    "title": "Valuable Remedy Rod",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Valuable Remedy Rod\n| flavortext     = This replica looks heavily charged\n| enchantable    = não\n| enchanted      = não\n| primarytype   = Réplicas de Rods\n| attrib          = Nenhum.\n| type           = Réplicas \n| weight         = 35.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Apprentice's_Strike|Life_Leech|+1% life leech para Apprentice's Strike}}\n| perk2          = {{Weapon Perk|Spell_Apprentice's_Strike|Life_Leech|+1% life leech para Apprentice's Strike}}\n| perk3          = {{Weapon Perk|Spell_Apprentice's_Strike|Life_Leech|+3% life leech para Apprentice's Strike}}\n| perk4          = {{Weapon Perk|Spell_Apprentice's_Strike|Life_Leech|+4% life leech para Apprentice's Strike}}\n| perk5          = {{Weapon Perk|Type_Skill_Magic||+1 Magic Level}}\n| notes          = É uma réplica da [[Rod of Remedy (Heavily Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42443,
+    "ns": 0,
+    "title": "Plain Remedy Rod",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Plain Remedy Rod\n| flavortext     = This replica looks charged\n| enchantable    = não\n| enchanted      = não\n| primarytype   = Réplicas de Rods\n| attrib          = Nenhum.\n| type           = Réplicas \n| weight         = 35.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Apprentice's_Strike|Life_Leech|+1% life leech para Apprentice's Strike}}\n| perk2          = {{Weapon Perk|Spell_Apprentice's_Strike|Life_Leech|+1% life leech para Apprentice's Strike}}\n| perk3          = {{Weapon Perk|Spell_Apprentice's_Strike|Life_Leech|+3% life leech para Apprentice's Strike}}\n| perk4          = {{Weapon Perk|Spell_Apprentice's_Strike|Life_Leech|+4% life leech para Apprentice's Strike}}\n| perk5          = {{Weapon Perk|Type_Skill_Magic||+1 Magic Level}}\n| notes          = É uma réplica da [[Rod of Remedy (Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42463,
+    "ns": 0,
+    "title": "Plain Mayhem Rod",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Plain Mayhem Rod\n| flavortext     = This replica looks charged\n| enchantable    = não\n| enchanted      = não\n| primarytype   = Réplicas de Rods\n| attrib          = Nenhum.\n| type           = Réplicas \n| weight         = 35.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Apprentice's_Strike|Critical_Dmg|+10% critical extra damage para Apprentice's Strike}}\n| perk2          = {{Weapon Perk|Spell_Apprentice's_Strike|Critical_Dmg|+20% critical extra damage para Apprentice's Strike}}\n| perk3          = {{Weapon Perk|Spell_Apprentice's_Strike|Critical_Dmg|+30% critical extra damage para Apprentice's Strike}}\n| perk4          = {{Weapon Perk|Spell_Apprentice's_Strike|Critical_Chance|+5% critical hit chance para Apprentice's Strike}}\n| perk5          = {{Weapon Perk|Type_Skill_Magic||+1 Magic Level}}\n| notes          = É uma réplica da [[Rod of Mayhem (Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42483,
+    "ns": 0,
+    "title": "Valuable Mayhem Rod",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Valuable Mayhem Rod\n| flavortext     = This replica looks heavily charged\n| enchantable    = não\n| enchanted      = não\n| primarytype   = Réplicas de Rods\n| attrib          = Nenhum.\n| type           = Réplicas \n| weight         = 35.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Apprentice's_Strike|Critical_Dmg|+10% critical extra damage para Apprentice's Strike}}\n| perk2          = {{Weapon Perk|Spell_Apprentice's_Strike|Critical_Dmg|+20% critical extra damage para Apprentice's Strike}}\n| perk3          = {{Weapon Perk|Spell_Apprentice's_Strike|Critical_Dmg|+30% critical extra damage para Apprentice's Strike}}\n| perk4          = {{Weapon Perk|Spell_Apprentice's_Strike|Critical_Chance|+5% critical hit chance para Apprentice's Strike}}\n| perk5          = {{Weapon Perk|Type_Skill_Magic||+1 Magic Level}}\n| notes          = É uma réplica da [[Rod of Mayhem (Heavily Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

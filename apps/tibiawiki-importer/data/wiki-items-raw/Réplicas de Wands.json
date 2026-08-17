@@ -1,0 +1,150 @@
+{
+ "query": {
+  "pages": [
+   {
+    "pageid": 42322,
+    "ns": 0,
+    "title": "Ornate Carving Wand",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ornate Carving Wand\n| flavortext     = This replica looks overcharged\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas de Wands\n| attrib = Nenhum.\n| type           = Réplicas \n| weight         = 35.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Apprentice's_Strike|Mana_Leech|+1% mana leech para Apprentice's Strike}}\n| perk2          = {{Weapon Perk|Spell_Apprentice's_Strike|Mana_Leech|+1% mana leech para Apprentice's Strike}}\n| perk3          = {{Weapon Perk|Spell_Apprentice's_Strike|Mana_Leech|+3% mana leech para Apprentice's Strike}}\n| perk4          = {{Weapon Perk|Spell_Apprentice's_Strike|Mana_Leech|+4% mana leech para Apprentice's Strike}}\n| perk5          = {{Weapon Perk|Type_Skill_Magic||+1 Magic Level}}\n| notes          = É uma réplica da [[Wand of Carving (Overcharged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42342,
+    "ns": 0,
+    "title": "Valuable Carving Wand",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Valuable Carving Wand\n| flavortext     = This replica looks heavily charged\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas de Wands\n| attrib = Nenhum.\n| type           = Réplicas \n| weight         = 35.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Apprentice's_Strike|Mana_Leech|+1% mana leech para Apprentice's Strike}}\n| perk2          = {{Weapon Perk|Spell_Apprentice's_Strike|Mana_Leech|+1% mana leech para Apprentice's Strike}}\n| perk3          = {{Weapon Perk|Spell_Apprentice's_Strike|Mana_Leech|+3% mana leech para Apprentice's Strike}}\n| perk4          = {{Weapon Perk|Spell_Apprentice's_Strike|Mana_Leech|+4% mana leech para Apprentice's Strike}}\n| perk5          = {{Weapon Perk|Type_Skill_Magic||+1 Magic Level}}\n| notes          = É uma réplica da [[Wand of Carving (Heavily Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42364,
+    "ns": 0,
+    "title": "Plain Carving Wand",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Plain Carving Wand\n| flavortext     = This replica looks charged\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas de Wands\n| attrib = Nenhum.\n| type           = Réplicas \n| weight         = 35.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Apprentice's_Strike|Mana_Leech|+1% mana leech para Apprentice's Strike}}\n| perk2          = {{Weapon Perk|Spell_Apprentice's_Strike|Mana_Leech|+1% mana leech para Apprentice's Strike}}\n| perk3          = {{Weapon Perk|Spell_Apprentice's_Strike|Mana_Leech|+3% mana leech para Apprentice's Strike}}\n| perk4          = {{Weapon Perk|Spell_Apprentice's_Strike|Mana_Leech|+4% mana leech para Apprentice's Strike}}\n| perk5          = {{Weapon Perk|Type_Skill_Magic||+1 Magic Level}}\n| notes          = É uma réplica da [[Wand of Carving (Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42385,
+    "ns": 0,
+    "title": "Ornate Mayhem Wand",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ornate Mayhem Wand\n| flavortext     = This replica looks overcharged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas de Wands\n| attrib = Nenhum.\n| type           = Réplicas \n| range          = \n| attack         = \n| defense        = \n| weight         = 35.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Apprentice's_Strike|Critical_Dmg|+10% critical extra damage para Apprentice's Strike}}\n| perk2          = {{Weapon Perk|Spell_Apprentice's_Strike|Critical_Dmg|+20% critical extra damage para Apprentice's Strike}}\n| perk3          = {{Weapon Perk|Spell_Apprentice's_Strike|Critical_Dmg|+30% critical extra damage para Apprentice's Strike}}\n| perk4          = {{Weapon Perk|Spell_Apprentice's_Strike|Critical_Chance|+5% critical hit chance para Apprentice's Strike}}\n| perk5          = {{Weapon Perk|Type_Skill_Magic||+1 Magic Level}}\n| notes          = É uma réplica da [[Wand of Mayhem (Overcharged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42405,
+    "ns": 0,
+    "title": "Ornate Remedy Wand",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ornate Remedy Wand\n| flavortext     = This replica looks overcharged\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas de Wands\n| attrib = Nenhum.\n| type           = Réplicas \n| weight         = 35.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Apprentice's_Strike|Life_Leech|+1% life leech para Apprentice's Strike}}\n| perk2          = {{Weapon Perk|Spell_Apprentice's_Strike|Life_Leech|+1% life leech para Apprentice's Strike}}\n| perk3          = {{Weapon Perk|Spell_Apprentice's_Strike|Life_Leech|+3% life leech para Apprentice's Strike}}\n| perk4          = {{Weapon Perk|Spell_Apprentice's_Strike|Life_Leech|+4% life leech para Apprentice's Strike}}\n| perk5          = {{Weapon Perk|Type_Skill_Magic||+1 Magic Level}}\n| notes          = É uma réplica da [[Wand of Remedy (Overcharged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42425,
+    "ns": 0,
+    "title": "Valuable Remedy Wand",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Valuable Remedy Wand\n| flavortext     = This replica looks heavily charged\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas de Wands\n| attrib = Nenhum.\n| type           = Réplicas \n| weight         = 35.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Apprentice's_Strike|Life_Leech|+1% life leech para Apprentice's Strike}}\n| perk2          = {{Weapon Perk|Spell_Apprentice's_Strike|Life_Leech|+1% life leech para Apprentice's Strike}}\n| perk3          = {{Weapon Perk|Spell_Apprentice's_Strike|Life_Leech|+3% life leech para Apprentice's Strike}}\n| perk4          = {{Weapon Perk|Spell_Apprentice's_Strike|Life_Leech|+4% life leech para Apprentice's Strike}}\n| perk5          = {{Weapon Perk|Type_Skill_Magic||+1 Magic Level}}\n| notes          = É uma réplica da [[Wand of Remedy (Heavily Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42445,
+    "ns": 0,
+    "title": "Plain Remedy Wand",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Plain Remedy Wand\n| flavortext     = This replica looks charged\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas de Wands\n| attrib = Nenhum.\n| type           = Réplicas \n| weight         = 35.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Apprentice's_Strike|Life_Leech|+1% life leech para Apprentice's Strike}}\n| perk2          = {{Weapon Perk|Spell_Apprentice's_Strike|Life_Leech|+1% life leech para Apprentice's Strike}}\n| perk3          = {{Weapon Perk|Spell_Apprentice's_Strike|Life_Leech|+3% life leech para Apprentice's Strike}}\n| perk4          = {{Weapon Perk|Spell_Apprentice's_Strike|Life_Leech|+4% life leech para Apprentice's Strike}}\n| perk5          = {{Weapon Perk|Type_Skill_Magic||+1 Magic Level}}\n| notes          = É uma réplica da [[Wand of Remedy (Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42465,
+    "ns": 0,
+    "title": "Plain Mayhem Wand",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Plain Mayhem Wand\n| flavortext     = This replica looks charged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas de Wands\n| attrib = Nenhum.\n| type           = Réplicas \n| range          = \n| attack         = \n| defense        = \n| weight         = 35.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Apprentice's_Strike|Critical_Dmg|+10% critical extra damage para Apprentice's Strike}}\n| perk2          = {{Weapon Perk|Spell_Apprentice's_Strike|Critical_Dmg|+20% critical extra damage para Apprentice's Strike}}\n| perk3          = {{Weapon Perk|Spell_Apprentice's_Strike|Critical_Dmg|+30% critical extra damage para Apprentice's Strike}}\n| perk4          = {{Weapon Perk|Spell_Apprentice's_Strike|Critical_Chance|+5% critical hit chance para Apprentice's Strike}}\n| perk5          = {{Weapon Perk|Type_Skill_Magic||+1 Magic Level}}\n| notes          = É uma réplica da [[Wand of Mayhem (Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42485,
+    "ns": 0,
+    "title": "Valuable Mayhem Wand",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Valuable Mayhem Wand\n| flavortext     = This replica looks heavily charged\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas de Wands\n| attrib = Nenhum.\n| type           = Réplicas \n| weight         = 35.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Apprentice's_Strike|Critical_Dmg|+10% critical extra damage para Apprentice's Strike}}\n| perk2          = {{Weapon Perk|Spell_Apprentice's_Strike|Critical_Dmg|+20% critical extra damage para Apprentice's Strike}}\n| perk3          = {{Weapon Perk|Spell_Apprentice's_Strike|Critical_Dmg|+30% critical extra damage para Apprentice's Strike}}\n| perk4          = {{Weapon Perk|Spell_Apprentice's_Strike|Critical_Chance|+5% critical hit chance para Apprentice's Strike}}\n| perk5          = {{Weapon Perk|Type_Skill_Magic||+1 Magic Level}}\n| notes          = É uma réplica da [[Wand of Mayhem (Heavily Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

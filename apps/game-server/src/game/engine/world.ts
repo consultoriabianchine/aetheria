@@ -5,6 +5,7 @@ import type {
   ItemStack,
   NpcDialogue,
   Position,
+  VocationId,
 } from '@aetheria/types';
 import type { StoredCharacter } from '../store/store';
 
@@ -28,6 +29,10 @@ export class GamePlayer {
   id: string;
   accountId: string;
   name: string;
+  vocation: VocationId;
+  promoted: boolean;
+  promotedAt: number | null;
+  gold: number;
   position: Position;
   level = 1;
   experience = 0;
@@ -36,6 +41,7 @@ export class GamePlayer {
   mana: number;
   maxMana: number;
   skills: CharacterSkills;
+  skillProgress: { skillType: keyof CharacterSkills; level: number; experience: number }[] = [];
   inventory: (ItemStack | null)[];
   equipment: CharacterEquipment;
   attackBase: number;
@@ -47,11 +53,16 @@ export class GamePlayer {
   socketId: string | null = null;
   lastChatAt = 0;
   lastSavedAt = 0;
+  lastRegenAt = 0;
 
   constructor(character: StoredCharacter) {
     this.id = character.id;
     this.accountId = character.accountId;
     this.name = character.name;
+    this.vocation = character.vocation;
+    this.promoted = character.promoted;
+    this.promotedAt = character.promotedAt;
+    this.gold = character.gold;
     this.position = { ...character.position };
     this.level = character.level;
     this.experience = character.experience;
@@ -60,6 +71,11 @@ export class GamePlayer {
     this.maxMana = character.maxMana;
     this.mana = character.mana;
     this.skills = { ...character.skills };
+    this.skillProgress = Object.keys(character.skills).map((skillType) => ({
+      skillType: skillType as keyof CharacterSkills,
+      level: character.skills[skillType as keyof CharacterSkills],
+      experience: 0,
+    }));
     this.inventory = character.inventory.map((s) => (s ? { ...s } : null));
     this.equipment = {
       head: character.equipment.head ? { ...character.equipment.head } : undefined,
@@ -73,6 +89,7 @@ export class GamePlayer {
     };
     this.attackBase = character.level + 8;
     this.defenseBase = 5 + Math.floor(character.level / 2);
+    this.lastRegenAt = Date.now();
   }
 
   toStored(): StoredCharacter {
@@ -80,6 +97,10 @@ export class GamePlayer {
       id: this.id,
       accountId: this.accountId,
       name: this.name,
+      vocation: this.vocation,
+      promoted: this.promoted,
+      promotedAt: this.promotedAt,
+      gold: this.gold,
       level: this.level,
       experience: this.experience,
       health: this.health,

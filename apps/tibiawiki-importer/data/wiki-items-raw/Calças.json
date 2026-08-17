@@ -1,0 +1,1062 @@
+{
+ "query": {
+  "pages": [
+   {
+    "pageid": 6414,
+    "ns": 0,
+    "title": "Bast Skirt",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bast Skirt\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| armor          = 0\n| weight         = 3.50\n| stackable      = não\n| value          = 750 - 180 000\n| npcvalue       = 750\n| droppedby      = [[Dworc Venomsniper]].\n| droppedRaidby  = [[Oodok Witchmaster]].\n| buyfrom        = Jogadores.\n| sellto         = Brengus\n| implemented    = 7.6\n| notes          = Item considerado difícil de ser obtido. \n\n<noinclude><div class=\"toccolours mw-collapsible mw-collapsed\" style=\"margin: 4px 0px;\">'''\"História do Item\"'''<div class=\"mw-collapsible-content\"><table ><tr><td align=left>\nAntigamente, era utilizado como elemento decorativo. Tornou-se valorizado após o [[Updates e Patches|Update de Verão de 2006]] por ser utilizado em uma [[quest]].\n</td></tr></table></div></div></noinclude>\n\n<noinclude><p><spoiler>* 03 são necessários para a [[The Sweaty Cyclops Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6610,
+    "ns": 0,
+    "title": "Blue Legs",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Blue Legs\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| armor          = 8\n| classificacao  = 2\n| max_tier       = 2\n| weight         = 18.00\n| value          = 25 000 - 90 000\n| npcvalue       = 15 000\n| buyfrom        = Jogadores.\n| sellto         = Gnomission\n| droppedby      = Ninguém.\n| implemented    = 8.1\n| notes          = Recomendado para [[mage]]s de level médio. Mesmo atributo defensivo de [[Knight Legs]] e [[Crown Legs]], mas com a vantagem de ser mais leve. Faz parte do [[Blue Set]], [[Paladin Set]], [[Mage Set]] e [[Unrestricted Set]].\n<noinclude><p><spoiler>* Recompensa da [[Koshei The Deathless Quest]] parte dos [[Tibia Tales Quest|Tibia Tales]].</spoiler></p>\n<gallery>\nArquivo:Blue_elgs.PNG|Blue Legs em [[Titania]].\n</gallery></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6612,
+    "ns": 0,
+    "title": "Brass Legs",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Brass Legs\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| armor          = 5\n| classificacao  = 1\n| max_tier       = 1\n| weight         = 38.00\n| value          = 49 - 195\n| npcvalue       = 49\n| npcprice       = 195\n| droppedby      = [[Black Knight]], [[Blood Crab]], [[Deepsea Blood Crab]], [[Orc Cult Fanatic]], [[Orc Leader]], [[Stalker]], [[Tarantula]], [[Undead Gladiator]].\n| droppedRaidby  = [[Warlord Ruzad]].\n| buyfrom        = Shanar, Memech, Cornelia, Hireling (Trader), Azil, Willard, Esrik, Rock In A Hard Place, Raffael, Kroox, Cedrik, Brengus, Flint, Robert, Sam, Turvy, Hardek, Baltim, Aldo, Yanni, Morpel\n| sellto         = Shanar, Memech, Cornelia, Hireling (Trader), Azil, Willard, Esrik, Rock In A Hard Place, Kroox, Cedrik, H.L.:15, Brengus, Flint, Robert, Sam, Turvy, Hardek, Baltim, Aldo, Yanni, Morpel\n| notes          = Dado para os personagens que escolheram como vocação definitiva serem [[Knight]]s em [[Dawnport]] ou na [[Isle of Destiny]]. Faz parte do [[Brass Set|Brass]], [[Newbie Set]], [[Rookgaard/Dawnport Set]] e [[Isle of Destiny Knight Set]].\n<noinclude><p><spoiler>* Recompensa da: [[Troll Cave Quest]].\n*Possibilidade de ser obtido ao [[Rust Remover|remover a ferrugem]] de um [[Heavily Rusted Legs]]. \n*Possibilidade de ser obtido ao [[Rust Remover|remover a ferrugem]] de um [[Rusted Legs]]. \n*Possibilidade de ser obtido ao [[Rust Remover|remover a ferrugem]] de um [[Slightly Rusted Legs]]</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6613,
+    "ns": 0,
+    "title": "Chain Legs",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Chain Legs\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| armor          = 3\n| classificacao  = 1\n| max_tier       = 1\n| weight         = 35.00\n| value          = 25 - 80\n| npcvalue       = 25\n| npcprice       = 80\n| droppedby      = [[The Horned Fox]].\n| droppedRaidby  = [[General Murius]].\n| buyfrom        = Shanar, Memech, Cornelia, Hireling (Trader), Azil, Willard, Esrik, Rock In A Hard Place, Kroox, Cedrik, Brengus, Flint, Robert, Sam, Turvy, Hardek, Baltim, Aldo, Yanni, Morpel\n| sellto         = Shanar, Memech, Cornelia, Hireling (Trader), Azil, Willard, Esrik, Rock In A Hard Place, Kroox, Cedrik, Brengus, Flint, Robert, Sam, Turvy, Hardek, Baltim, Aldo, Yanni, Morpel\n| notes          = Pouco utilizado. Em [[Tibia (Continente)]] há facilidade de se encontrar outras calças com atributo defensivo maior, como por exemplo a [[Brass Legs]]. Faz parte do [[Chain Set]].\n<noinclude><p><spoiler>\n* Possibilidade de ser obtido ao [[Rust Remover|remover a ferrugem]] de um [[Heavily Rusted Legs]]. \n* Possibilidade de ser obtido ao [[Rust Remover|remover a ferrugem]] de um [[Rusted Legs]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6614,
+    "ns": 0,
+    "title": "Crown Legs",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Crown Legs\n| vocrequired    = [[Knight]]s and [[Paladin]]s\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| armor          = 8\n| classificacao  = 2\n| max_tier       = 2\n| weight         = 65.00\n| value          = 11 000 - 13 000\n| npcvalue       = 12 000\n| droppedby      = [[Hellgorak]], [[Hero]], [[Horadron]], [[Renegade Knight]], [[Vile Grandmaster]].\n| droppedRaidby  = [[The Imperor]].\n| droppedEventby = [[Minishabaal]].\n| buyfrom        = Jogadores.\n| sellto         = Nah'Bob, H.L.:60\n| notes          = Possui mesma defesa de uma [[Knight Legs]], porém mais leve e não tão popular. Faz parte do [[Crown Set]], [[Hero Set]] e [[Semi Rare Set]].\n<noinclude><p><spoiler>\n* 01 é necessário para o addon do [[Wizard Outfits Quest]].\n* Possibilidade de ser obtido ao [[Rust Remover|remover a ferrugem]] de um [[Rusted Legs]]. \n* Possibilidade de ser obtido ao [[Rust Remover|remover a ferrugem]] de um [[Slightly Rusted Legs]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6616,
+    "ns": 0,
+    "title": "Demon Legs",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Demon Legs\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| armor          = 9\n| classificacao  = 4\n| max_tier       = 10\n| weight         = 70.00\n| value          = 5 500 000 - 9 000 000\n| npcvalue       = 84\n| npcprice       = 0\n| buyfrom        = Jogadores.\n| sellto         = H.L.\n| notes          = Faz parte do [[Demon Set]], [[Unrestricted Set]], [[Rare Set]] e [[Full Set]].\n<noinclude><div class=\"toccolours mw-collapsible mw-collapsed\" style=\"margin: 4px 0px;\">'''\"História do Item\"'''<div class=\"mw-collapsible-content\"><table ><tr><td align=left>\nAntigamente era a recompensa da atual [[The Demon Helmet Quest]]. Contudo, havia uma escada no local do teleport. Como muitas das quests antigas, o respawn era único e ocorria em um intervalo de tempo determinado, neste caso, um respawn por mundo. E, por causa da característica do respawn, a disputa pelo item gerou uma guerra em [[Rubera]].\n\nFoi só a partir do update 8.2 que o item passou a ser recompensa de uma nova quest e assim possível de ser obtida por mais de um personagem por mundo. Com essa mudança muitos jogadores acusaram a empresa desenvolvedora de acabar com uma parte da história do jogo mas a empresa não voltou atrás na decisão de tornar o item mais acessível. \n<gallery>\nArquivo:Demon_Legs_Quest.jpg|Antiga Demon Legs Quest.\nArquivo:DemonOak1.png|Nova Demon Legs Quest.\n</gallery>\n<br /></td></tr></table></div></div></noinclude>\n<noinclude><p><spoiler>\n* Recompensa da [[The Demon Oak Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6617,
+    "ns": 0,
+    "title": "Dragon Scale Legs",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Dragon Scale Legs             \n| itemclass     = Equipamentos de Corpo        \n| primarytype   = Calças      \n| armor         = 10    \n| classificacao  = 4\n| max_tier       = 10        \n| weight        = 48.00           \n| value         = 800 000 000+      \n| npcvalue      = 180         \n| npcprice      = 0         \n| buyfrom       = Jogadores.          \n| sellto        = H.L.    \n| notes         = Segunda calça mais forte do [[Tibia]]. Pode ser vista na sala do tesouros de [[Kazordoon]] perto do [[Emperor Kruzak]]. Faz parte do [[Dragon Scale Set]], [[Dragon Set]], [[Unrestricted Set]], [[Dream Set]], [[Rare Set]] e [[Full Set]]. Até onde se sabe, existem somente três exemplares desse item no Tibia.\n<noinclude><div class=\"toccolours mw-collapsible mw-collapsed\" style=\"margin: 4px 0px;\">'''\"História do Item\"'''<div class=\"mw-collapsible-content\">\n<table ><tr><td align=left>Criado por Lostboy, antigo mapeador do Tibia e criador de [[Calcanea]], sendo ele o primeiro a receber um após sua implementação.\n{{Character|Pskonejott}} de [[Trimera]] também possui uma, acredita-se que tenha recebido por serviços prestados a comunidade, como por exemplo, reportando bugs importantes.\nTambém foi dado uma como presente a um jogador de [[Titania]] no dia 26/07/2007 por ter sido o 100 000º cliente a comprar uma [[Premium Time|Premium Account]].</td></tr></table></div></div></noinclude>\n\n<gallery>\nArquivo:rush.jpg|DSL em [[Shanera]].\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6619,
+    "ns": 0,
+    "title": "Dwarven Legs",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Dwarven Legs\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| armor          = 7\n| classificacao  = 3\n| max_tier       = 3\n| resist         = [[Physical Damage|Physical]] +3%\n| weight         = 49.00\n| value          = 40 000 - 80 000\n| npcvalue       = 40 000\n| buyfrom        = Jogadores.\n| sellto         = Gnomission\n| droppedby      = Ninguém.\n| implemented    = 8.5\n| notes          = Tem o mesmo atributo defensivo que [[Plate Legs]], porém, mais leve e como atributo extra a resistência a [[Physical Damage|dano físico]]. Faz parte do [[Dwarven Set]], [[Mage Set]] e [[Unrestricted Set]].\n<noinclude><div class=\"toccolours mw-collapsible mw-collapsed\" style=\"margin: 4px 0px;\">'''\"Curiosidade Estatística\"'''<div class=\"mw-collapsible-content\"><table ><tr><td align=left>\nÉ capaz de bloquear ataques físicos na mesma proporção que [[Golden Legs]], mas, somente se o personagem receber golpes físicos de 56+. Ou seja para sua proteção equivaler a da Golden Legs, deve enfrentar criaturas mais fortes cujo maior valor de ataque seja de, no mínimo, 56x2 = 112.\n</td></tr></table></div></div></noinclude>\n<noinclude><p><spoiler>* Recompensa da [[The Hidden City of Beregar Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6620,
+    "ns": 0,
+    "title": "Glacier Kilt",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Glacier Kilt\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| armor          = 8\n| classificacao  = 2\n| max_tier       = 2\n| resist         = [[Ice Damage|Ice]] +6%, [[Energy Damage|Energy]] -6%\n| levelrequired  = 40\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| weight         = 19.00 \n| value          = 11 000 - 15 000\n| droppedby      = [[Cave Chimera]], [[Crape Man]], [[Ferumbras Mortal Shell]], [[Grim Reaper]], [[Icecold Book]], [[Sea Serpent]], [[Seacrest Serpent]], [[Squid Warden]], [[Srezz Yellow Eyes]], [[Tarbaz]], [[The Bloodweb]], [[Utua Stone Sting]], [[Varnished Diremaw]].\n| droppedRaidby  = [[Ferumbras]], [[Ghazbaran]], [[Zushuka (Mortal)]], [[Yakchal]].\n| droppedEventby = [[Animated Snowman]], [[Schiach]].\n| buyfrom        = Jogadores.\n| npcvalue       = 11 000\n| sellto         = Rashid\n| implemented    = 8.1\n| notes          = Faz parte do [[Glacier Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6621,
+    "ns": 0,
+    "title": "Golden Legs",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Golden Legs\n| vocrequired    = [[Knight]]s and [[Paladin]]s\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| armor          = 9\n| classificacao  = 2\n| max_tier       = 2\n| weight         = 56.00\n| value          = 28 000 - 32 000\n| npcvalue       = 30 000\n| droppedby      = [[Angry Demon]], [[Arbaziloth]], [[Dark Torturer]], [[Demon]], [[Fury]], [[Hellgorak]], [[Juggernaut]], [[Latrivan]], [[Realityquake]], [[Vexclaw]], [[World Devourer]].\n| droppedRaidby  = [[Ferumbras]], [[Gaz'Haragoth]], [[Ghazbaran]], [[Morgaroth]], [[Orshabaal]], [[The Imperor]], [[Rotrender]].\n| droppedEventby = [[Minishabaal]].\n| buyfrom        = Jogadores.\n| sellto         = Rashid, H.L.:120\n| notes          = Faz parte do [[Golden Set]], [[Paladin Set]], [[Unrestricted Set]], [[Semi Rare Set]], [[Rare Set]] e [[Full Set]].\n<noinclude><p><spoiler>\n* Possibilidade de ser obtido ao [[Rust Remover|remover a ferrugem]] de um [[Slightly Rusted Legs]]. \n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6623,
+    "ns": 0,
+    "title": "Knight Legs",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Knight Legs\n| vocrequired    = [[Knight]]s and [[Paladin]]s\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| armor          = 8\n| classificacao  = 1\n| max_tier       = 1\n| weight         = 70.00\n| value          = 4 500 - 5 500\n| npcvalue       = 5 000\n| droppedby      = [[Black Knight]], [[Cliff Strider]], [[Cult Enforcer]], [[Crystal Spider]], [[Flameborn]], [[Foam Stalker]], [[Giant Spider]], [[Gore Horn]], [[Hellgorak]], [[Hellspawn]], [[Hide]], [[Horadron]], [[Lost Basher]], [[Menacing Carnivor]], [[Mooh'Tah Warrior]], [[Nightmare]], [[Orewalker]], [[Plaguesmith]], [[Sir Leonard]], [[The Bloodweb]], [[The Old Widow]], [[Tormentor]], [[Two-Headed Turtle]], [[Usurper Knight]], [[Usurper Warlock]], [[Vicious Squire]].\n| droppedRaidby  = [[Mamma Longlegs]].\n| buyfrom        = Jogadores.\n| sellto         = Shanar:375, Alesar, Kroox:375, H.L.:130\n| notes          = Já foi a quarta melhor calça do jogo, atualmente existem outras calças que oferecem o mesmo atributo defensivo porém são mais leves, como por exemplo as [[Blue Legs]]. Faz parte do [[Knight Set]] e [[Minotaur Set]].\n<noinclude><p><spoiler>\n* Possibilidade de ser obtido ao [[Rust Remover|remover a ferrugem]] de um [[Heavily Rusted Legs]]. \n* Possibilidade de ser obtido ao [[Rust Remover|remover a ferrugem]] de um [[Rusted Legs]]. \n* Possibilidade de ser obtido ao [[Rust Remover|remover a ferrugem]] de um [[Slightly Rusted Legs]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6624,
+    "ns": 0,
+    "title": "Leaf Legs",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Leaf Legs\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| stackable      = não\n| armor          = 0\n| classificacao  = 1\n| max_tier       = 1\n| weight         = 12.00\n| value          = Negociável\n| npcvalue       = 500\n| droppedby      = [[Arctic Faun]], [[Dark Faun]], [[Dryad]], [[Faun]].\n| buyfrom        = Jogadores.\n| sellto         = Rashid\n| implemented    = 8.4\n| notes          = Visto pela primeira vez no dia 1º de Junho de 2009. Faz parte do [[Dryad Set]].\n<noinclude><p><spoiler>* Pode ser obtido durante as invasões que ocorrem no evento [[Flower Month]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6625,
+    "ns": 0,
+    "title": "Leather Legs",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Leather Legs\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| armor          = 1\n| classificacao  = 1\n| max_tier       = 1\n| weight         = 18.00\n| value          = 5 - 10\n| npcvalue       = 9\n| npcprice       = 9\n| droppedby      = [[Bandit]], [[Crazed Dwarf]], [[Dwarf]], [[Dwarf Miner]], [[Gang Member]], [[Minotaur Mage]], [[Poacher]], [[Smuggler]], [[Usurper Knight]].\n| droppedRaidby  = [[Apprentice Sheng]], [[Arthom the Hunter]].\n| buyfrom        = Shanar:10, Memech:10, Cornelia:10, Hireling (Trader):10, Azil:10, Coltrayne:10, Rudolph:10, Willard:10, Esrik:10, Rock In A Hard Place:10, Kroox:10, Cedrik:10, Brengus:10, Flint:10, Dixi:10, Lee'Delle, Robert:10, Sam:10, Turvy:10, Hardek:10, Baltim:10, Aldo:10, Yanni:10, Morpel:10\n| sellto         = Shanar, Memech, Cornelia, Hireling (Trader), Azil, Willard, Esrik, Rock In A Hard Place, Raffael, Kroox, Cedrik, Brengus, Flint, Dixi:2, Lee'Delle:2, Robert, Sam, Turvy, Hardek, Baltim, Aldo, Yanni, Morpel\n| notes          = Faz parte do [[Set Inicial]], [[Leather Set]] e [[Minotaur Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6626,
+    "ns": 0,
+    "title": "Lightning Legs",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Lightning Legs\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 40\n| resist         = [[Energy Damage|Energy]] +6%, [[Earth Damage|Earth]] -6%\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| stackable      = não\n| armor          = 8\n| classificacao  = 2\n| max_tier       = 2\n| weight         = 19.00 \n| value          = 11 000 - 15 000\n| npcvalue       = 11 000\n| droppedby      = [[Anomaly]], [[Black Knight]], [[Burning Gladiator]], [[Converter]], [[Crape Man]], [[Cursed Prospector]], [[Elder Wyrm]], [[Energuardian Of Tales]], [[Essence Of Malice]], [[Ferumbras Mortal Shell]], [[High Voltage Elemental]], [[Horadron]], [[Juvenile Bashmu]], [[Lloyd]], [[Massive Energy Elemental]], [[Shulgrax]], [[Tremendous Tyrant]], [[Outburst]], [[Urmahlullu the Weakened]], [[Utua Stone Sting]], [[Yielothax]].\n| droppedRaidby  = [[Ferumbras]], [[Tyrn]].\n| buyfrom        = Jogadores.\n| sellto         = Rashid\n| implemented    = 8.1\n| notes          = Faz parte do [[Lightning Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6627,
+    "ns": 0,
+    "title": "Magma Legs",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Magma Legs\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 40\n| resist         = [[Fire Damage|Fire]] +6%, [[Ice Damage|Ice]] -6%\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| stackable      = não\n| armor          = 8\n| classificacao  = 2\n| max_tier       = 2\n| weight         = 19.00\n| value          = 11 000 - 30 000\n| droppedby      =  [[Arbaziloth]], [[Feral Sphinx]], [[Ferumbras Mortal Shell]], [[Grimeleech]], [[Guardian Of Tales]], [[Hellfire Fighter]], [[Hellflayer]], [[Hellgorak]], [[Hellhound]], [[Honey Elemental]], [[Insane Siren]], [[Manticore]], [[Massive Fire Elemental]], [[Mazoran]], [[Shaburak Demon]], [[Sphinx]], [[The Diamond Blossom]], [[The Lily Of Night]], [[The Time Guardian]], [[Usurper Knight]], [[Weeper]], [[Werelioness]], [[Yirkas Blue Scales]].\n| droppedRaidby  = [[Ferumbras]], [[Furyosa]].\n| droppedEventby = [[Percht]].\n| buyfrom        = Jogadores.\n| npcvalue       = 11 000\n| sellto         = Rashid\n| implemented    = 8.1\n| notes          = Faz parte do [[Magma Set]] e [[Mage Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6628,
+    "ns": 0,
+    "title": "Mammoth Fur Shorts",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Mammoth Fur Shorts\n| flavortext     = They offer little protection but will at least provide some comfort and warmth.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| armor          = 0\n| classificacao  = 2\n| max_tier       = 2\n| weight         = 1.50\n| value          = 850 - 1 500\n| npcvalue       = 850\n| droppedby      = [[Barbarian Brutetamer]].\n| buyfrom        = Jogadores.\n| sellto         = Rashid\n| implemented    = 8.0\n| notes          = Faz parte do [[Barbarian Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6629,
+    "ns": 0,
+    "title": "Pirate Knee Breeches",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Pirate Knee Breeches\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| armor          = 1\n| classificacao  = 1\n| max_tier       = 1\n| weight         = 12.00\n| stackable      = não\n| value          = 200 - 2 000\n| npcvalue       = 200\n| npcprice       = 0\n| droppedby      = [[Pirate Cook]], [[Pirate Cutthroat]], [[Pirate Quartermaster]].\n| buyfrom        = Jogadores.\n| sellto         = Rashid\n| implemented    = 7.8\n| notes          = Faz parte do [[Pirate Set]].\n<noinclude><p><spoiler>* 01 é necessário para a [[Meriana Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6630,
+    "ns": 0,
+    "title": "Plate Legs",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Plate Legs\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| stackable      = não\n| armor          = 7\n| classificacao  = 1\n| max_tier       = 1\n| weight         = 50.00\n| value          = 115 - 500\n| droppedby      = [[Bibby Bloodbath]], [[Bog Raider]], [[Dragon]], [[Giant Spider]], [[Ghastly Dragon]], [[Orc Cult Fanatic]], [[Orc Leader]], [[Orc Warlord]], [[Renegade Orc]], [[Sea Serpent]], [[The Snapper]], [[Undead Elite Gladiator]], [[Undead Gladiator]].\n| droppedRaidby  = [[Countess Sorrow]], [[Grand Mother Foulscale]], [[Warlord Ruzad]].\n| buyfrom        = Jogadores.\n| npcvalue       = 115\n| sellto         = Shanar, Memech, Cornelia, Hireling (Trader), Azil, Willard, Esrik, Rock In A Hard Place, Kroox, Cedrik, Brengus, Flint, Robert, Sam, Turvy, Hardek, Baltim, Aldo, Yanni, Morpel\n| notes          = Item muito popular entre os jogadores de níveis médio/baixo. Faz parte do [[Plate Set]].\n<noinclude><p><spoiler>\n* Possibilidade de ser obtido ao [[Rust Remover|remover a ferrugem]] de um [[Heavily Rusted Legs]]. \n* Possibilidade de ser obtido ao [[Rust Remover|remover a ferrugem]] de um [[Rusted Legs]]. \n* Possibilidade de ser obtido ao [[Rust Remover|remover a ferrugem]] de um [[Slightly Rusted Legs]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6631,
+    "ns": 0,
+    "title": "Ranger Legs",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ranger Legs\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| armor          = 4\n| classificacao  = 1\n| max_tier       = 1\n| weight         = 35.00\n| vocrequired    = [[Paladin]]s\n| value          = Negociável\n| npcvalue       = 0\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| droppedby      = Ninguém.\n| implemented    = 8.2\n| notes          = Dado para os personagens que escolheram como vocação definitiva serem [[Paladin]]s em [[Dawnport]] ou na [[Isle of Destiny]]. Faz parte do [[Isle of Destiny Paladin Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 19221,
+    "ns": 0,
+    "title": "Ornate Legs",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ornate Legs\n| stackable      = não\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| levelrequired  = 185\n| vocrequired    = [[Knight]]s\n| armor          = 8\n| classificacao  = 2\n| max_tier       = 2\n| resist         = [[Physical Damage|Physical]] +5%\n| weight         = 77.00\n| value          = 500 000 - 2 000 000\n| npcvalue       = 40 000\n| droppedby      = [[Jaul]], [[Obujos]], [[Reflection Of Obujos]].\n| buyfrom        = Jogadores.\n| sellto         = Rock In A Hard Place\n| implemented    = 9.4\n| notes          = Considerada a melhor calça para Knights. Faz parte do [[Ornate Set]], [[Blocking Set]], [[Rare Set]] e [[High Level Knight Basic Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 19230,
+    "ns": 0,
+    "title": "Depth Ocrea",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Depth Ocrea\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| itemclass      = Equipamentos de Corpo \n| primarytype    = Calças\n| resist         = [[Mana Drain]] +15%\n| levelrequired  = 130\n| armor          = 8\n| classificacao  = 2\n| max_tier       = 2\n| weight         = 48.00\n| value          = 16 000 - 60 000\n| npcvalue       = 16 000\n| droppedby      = [[Tanjis]].\n| buyfrom        = Jogadores.\n| sellto         = Rock In A Hard Place\n| implemented    = 9.4\n| notes          = Recomendada para enfrentar criaturas com grande habilidade de [[Mana Drain]]. Faz parte do [[Depth Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 20225,
+    "ns": 0,
+    "title": "Grasshopper Legs",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Grasshopper Legs\n| itemclass      = Equipamentos de Corpo \n| primarytype    = Calças\n| skillboost     = [[Speed]] +10\n| levelrequired  = 75\n| armor          = 7\n| classificacao  = 2\n| max_tier       = 2\n| weight         = 32.00\n| value          = 15 000 - 40 000\n| npcvalue       = 15 000\n| droppedby      = [[Crawler]], [[Spitter]], [[The Sandking]], [[Waspoid]].\n| buyfrom        = Jogadores.\n| sellto         = Rock In A Hard Place\n| implemented    = 9.4\n| notes          = Faz parte do [[Haste Set]] e do [[Hive Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25310,
+    "ns": 0,
+    "title": "Gill Legs",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Gill Legs\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 150\n| skillboost     = [[Magic Level]] +1\n| resist         = [[Earth Damage|Earth]] +8%, [[Fire Damage|Fire]] -8%\n| armor          = 7\n| classificacao  = 2\n| max_tier       = 2\n| weight         = 28.00\n| value          = 5 000 - 30 000\n| npcprice       = 10 [[Major Crystalline Token]]\n| buyfrom        = Gnomally\n| sellto         = Jogadores.\n| droppedby      = Ninguém.\n| implemented    = 9.6\n| notes          = Faz parte do [[Gill Set]], [[Mage Set]] e [[Magic Level Set]].\n{{DASH|'''Dica:''' Dependendo do valor do [[Major Crystalline Token]] no mundo, pode ser mais barato comprar o token e trocar pelo item na [[NPC]] do que comprá-lo diretamente de algum jogador.}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25332,
+    "ns": 0,
+    "title": "Prismatic Legs",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Prismatic Legs\n| resist         = [[Physical Damage|Physical]] +3%\n| skillboost     = [[Distance Fighting]] +2\n| stackable      = não\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| levelrequired  = 150\n| vocrequired    = [[Paladin]]s\n| armor          = 8\n| classificacao  = 2\n| max_tier       = 2\n| weight         = 71.00\n| value          = 5 000 - 30 000\n| npcprice       = 10 [[Major Crystalline Token]]\n| buyfrom        = Gnomally\n| sellto         = Jogadores.\n| implemented    = 9.6\n| droppedby      = Ninguém.\n| notes          = Faz parte do [[Prismatic Set]], [[Paladin Set]] e [[Rare Set]].\n{{DASH|'''Dica:''' Dependendo do valor do [[Major Crystalline Token]] no mundo, pode ser mais barato comprar o token e trocar pelo item na [[NPC]] do que comprá-lo diretamente de algum jogador.}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 31012,
+    "ns": 0,
+    "title": "Icy Culottes",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Icy Culottes\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| resist         = [[Ice Damage|Ice]] +8%\n| armor          = 8\n| classificacao  = 4\n| max_tier       = 10\n| weight         = 15.00\n| droppedRaidby  = [[Zushuka (Mortal)]].\n| value          = 20 000 000 - 30 000 000\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.20\n| notes          = Item raro e valioso. Melhor calça para [[mages]] que buscam proteção a danos do tipo gelo. Diferentemente da [[Glacier Kilt]], ela não possui fraqueza a danos do tipo [[Energy Damage|energy]]. Faz parte do [[Glacier Set]].\n<gallery>\nArquivo:Icy Culotte.png|Icy Culotte em [[Neptera]].\n</gallery></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 33132,
+    "ns": 0,
+    "title": "Alloy Legs",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Alloy Legs\n| levelrequired  = 60\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| skillboost     = [[Velocidade|Speed]] +10\n| weight         = 45.00\n| armor          = 6\n| classificacao  = 2\n| max_tier       = 2\n| value          = Negociável\n| npcvalue       = 11 000\n| droppedby      = [[Brachiodemon]], [[Bulltaur Alchemist]], [[Control Tower]], [[Metal Gargoyle]], [[Yirkas Blue Scales]].\n| buyfrom        = Jogadores.\n| sellto         = Flint\n| implemented    = 10.50\n| notes          = Faz parte do [[Haste Set]] e [[Metal Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 40066,
+    "ns": 0,
+    "title": "Chocolatey Dragon Scale Legs",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Chocolatey Dragon Scale Legs \n| flavortext     = This is a chocolate replica of the famous dragon scale legs.      \n| itemclass      = Equipamentos de Corpo        \n| primarytype    = Calças      \n| armor          = 2     \n| classificacao  = 1\n| max_tier       = 1    \n| weight         = 18.00           \n| implemented    = 11.02\n| value          = Negociável\n| droppedEventby = [[Mirade (Criatura)]], [[Piñata Dragon]].\n| npcvalue       = 0\n| npcprice       = 0         \n| buyfrom        = Jogadores.          \n| sellto         = Jogadores.\n| notes          = Item especial. Implementado durante as comemorações do 20º [[Aniversário do Tibia]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 41404,
+    "ns": 0,
+    "title": "Elven Legs",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Elven Legs\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| armor          = 4\n| classificacao  = 3\n| max_tier       = 3\n| weight         = 33.00\n| value          = \n| npcvalue       = 0\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| droppedby      = [[Ravenous Hunger]].\n| implemented    = 7.4\n| notes          = Faz parte do [[Elven Set]]\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42747,
+    "ns": 0,
+    "title": "Gnome Legs",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Gnome Legs\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 200\n| resist         = [[Energy Damage|Energy]] +7%, [[Ice Damage|Ice]] -2%\n| skillboost     = [[Magic Level]] +2\n| armor          = 9\n| classificacao  = 3\n| max_tier       = 3\n| weight         = 25.00\n| value          = Negociável\n| droppedby      = [[The Duke Of The Depths]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.50\n| notes          = Faz parte do [[Gnome Set]]. \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 44009,
+    "ns": 0,
+    "title": "Falcon Greaves",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Falcon Greaves\n| vocrequired    = [[Knight]]s and [[Paladin]]s\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| levelrequired  = 300\n| skillboost     = [[Distance Fighting]] +3, [[Sword Fighting]] +3, [[Club Fighting]] +3, [[Axe Fighting]] +3\n| resist         = [[Physical Damage|Physical]] +7%, [[Ice Damage|Ice]] +7%\n| armor          = 10\n| classificacao  = 4\n| max_tier       = 10\n| weight         = 36.00\n| droppedby      = [[Grand Master Oberon]], [[Preceptor Lazare]].\n| npcprice       = \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.80\n| notes          = Faz parte do [[Falcon Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 47836,
+    "ns": 0,
+    "title": "Lederhosen",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Lederhosen\n| flavortext     = Made from dried and tanned orc skin, these tranditional Orcsoberfest leather trousers are sturdy and fit a wide range of orgres.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| secondarytype  = \n| armor          = 0\n| weight         = 8.00\n| stackable      = não\n| value          = \n| npcvalue       = \n| droppedRaidby  = \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| mercado        = não\n| implemented    = 12.20.9066\n| notes          = <noinclude><p><spoiler>* O jogador irá receber em sua backpack uma Lederhosen, quando ganhar o desafio do [[King Chuck]] pela 1ª vez na [[Orcsoberfest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 47988,
+    "ns": 0,
+    "title": "Fabulous Legs",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Fabulous Legs\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| vocrequired    = [[Knight]]s and [[Paladin]]s\n| levelrequired  = 225\n| resist         = [[Physical Damage|Physical]] +4%, [[Fire Damage|Fire]] +2%\n| skillboost     = [[Distance Fighting]] +2, [[Sword Fighting]] +2, [[Club Fighting]] +2, [[Axe Fighting]] +2\n| armor          = 9\n| classificacao  = 3\n| max_tier       = 3\n| weight         = 55.00\n| value          = 2 000 000 - 4 000 000\n| droppedby      = [[The Unwelcome]], [[The Pale Worm]]\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.30\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 50503,
+    "ns": 0,
+    "title": "Exotic Legs",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Exotic Legs\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| vocrequired    = [[Knight]]s\n| levelrequired  = 130\n| resist         = [[Physical Damage|Physical]] +4%\n| skillboost     = \n| armor          = 8\n| classificacao  = 4\n| max_tier       = 10\n| weight         = 72.00\n| value          = \n| droppedby      = [[Ratmiral Blackwhiskers]]\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.60\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 50504,
+    "ns": 0,
+    "title": "Bast Legs",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bast Legs\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| vocrequired    = [[Paladin]]s\n| levelrequired  = 150\n| resist         = [[Energy Damage|Energy]] +4%\n| skillboost     = [[Distance Fighting]] +2\n| armor          = 8\n| classificacao  = 4\n| max_tier       = 10\n| weight         = 64.00\n| value          = \n| droppedby      = [[Ratmiral Blackwhiskers]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.60\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 52299,
+    "ns": 0,
+    "title": "Eldritch Breeches",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Eldritch Breeches\n| flavortext     = \n| stackable      = não\n| levelrequired  = 250\n| vocrequired    = [[Paladin]]s\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| skillboost     = [[Distance Fighting]] +2\n| imbuement      = \n| armor          = 9\n| classificacao  = 4\n| max_tier       = 10\n| resist         = [[Physical Damage|Physical]] +2%, [[Holy Damage|Holy]] +7%\n| weight         = 69.00\n| value          = \n| npcvalue       =  \n| droppedby      = [[The Brainstealer]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.70\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53589,
+    "ns": 0,
+    "title": "Green Demon Legs",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Green Demon Legs\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| armor          = 9\n| classificacao  = 4\n| max_tier       = 10\n| weight         = 70.00\n| value          = \n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = Ninguém.\n| droppedRaidby  = [[Morshabaal]]\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Nenhuma.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 56099,
+    "ns": 0,
+    "title": "Midnight Sarong",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Midnight Sarong\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| vocrequired    = [[Druid]]s\n| levelrequired  = 250\n| resist         = [[Ice Damage|Ice]] +7%\n| skillboost     = [[Magic Level]] +2\n| armor          = 8\n| classificacao  = 4\n| max_tier       = 10\n| weight         = 31.00\n| value          = \n| droppedby      = [[Timira the Many-Headed]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.90\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 56101,
+    "ns": 0,
+    "title": "Dawnfire Pantaloons",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Dawnfire Pantaloons\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| vocrequired    = [[Sorcerer]]s\n| levelrequired  = 300\n| resist         = [[Physical Damage|Physical]] +3%\n| skillboost     = [[Magic Level]] +2\n| armor          = 8\n| classificacao  = 4\n| max_tier       = 10\n| weight         = 30.00\n| value          = \n| droppedby      = [[Timira the Many-Headed]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.90\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 58180,
+    "ns": 0,
+    "title": "Broken Iks Faulds",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Broken Iks Faulds\n| flavortext     = These faulds were once worn by a proud warrior of the ancient Iks.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| secondarytype  = Produtos de Criaturas\n| armor          = 1\n| weight         = 15.00\n| stackable      = sim\n| value          = \n| npcvalue       = 530\n| droppedby      = [[Ahau]], [[Iks Aucar]], [[Iks Pututu]].\n| droppedRaidby  = \n| buyfrom        = Jogadores.\n| sellto         = Yasir\n| mercado        = não\n| implemented    = 13.10\n| notes          = \n<noinclude><p><spoiler>\n* 01 é necessária para a [[Ancient Aucar Outfits Quest]].\n</spoiler></p></noinclude>\n}}\n<noinclude>[[Categoria:Itens de Addons]]</noinclude>"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 58484,
+    "ns": 0,
+    "title": "Mutant Bone Kilt",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Mutant Bone Kilt\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| vocrequired    = [[Druid]]s\n| levelrequired  = 300\n| resist         = [[Physical Damage|Physical]] +3%\n| skillboost     = [[Magic Level]] +2\n| armor          = 8\n| classificacao  = 4\n| max_tier       = 10\n| weight         = 35.00\n| value          = \n| droppedby      = [[The Monster]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 13.10\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 58485,
+    "ns": 0,
+    "title": "Mutated Skin Legs",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Mutated Skin Legs\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| vocrequired    = [[Paladin]]s\n| levelrequired  = 270\n| resist         = [[Physical Damage|Physical]] +4%, [[Earth Damage|Earth]] +4%\n| skillboost     = [[Distance Fighting]] +2\n| armor          = 9\n| classificacao  = 4\n| max_tier       = 10\n| weight         = 52.00\n| value          = \n| droppedby      = [[The Monster]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 13.10\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59844,
+    "ns": 0,
+    "title": "Sanguine Greaves",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Sanguine Greaves\n| flavortext     = \n| stackable      = não\n| levelrequired  = 500\n| vocrequired    = [[Paladin]]s\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| skillboost     = [[Distance Fighting]] +4, [[Holy Magic Level]] +1\n| imbuement      = \n| armor          = 11\n| classificacao  = 4\n| max_tier       = 10\n| resist         = [[Physical Damage|Protection Physical]] +7%, [[Energy Damage|Energy]] +9%\n| augments       = Avatar of Light -> -900s cooldown, Divine Caldera -> +8% critical extra damage\n| weight         = 32.00\n| value          = \n| npcvalue       =  \n| droppedby      = [[Bakragore]], [[Chagorz]], [[Ichgahal]], [[Murcion]] e [[Vemiath]], dentro de uma [[Bag You Covet]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 13.20.13560\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 63866,
+    "ns": 0,
+    "title": "Legs of Enlightenment",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Legs of Enlightenment\n| flavortext     = Traditional legs worn by pilgrims of the Three-Fold Path. Its design features elements of the natural appearance of moths\n| stackable      = não\n| levelrequired  = 40\n| vocrequired    = [[Monk]]s\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| skillboost     = [[Fist Fighting]] +1\n| imbuement      = \n| armor          = 4\n| mantra         = 3\n| classificacao  = 1\n| max_tier       = 1\n| resist         = [[Earth Damage|Earth]] +3%\n| augments       = Double Jab -> +12% base damage\n| weight         = 21.00\n| value          = \n| npcvalue       =  \n| npcprice       = 40 000\n| droppedby      = Ninguém.\n| buyfrom        = Enpa-Deia Pema\n| sellto         = Enpa-Deia Pema:400\n| implemented    = 15.00.249ccc\n| notes          = <spoiler>* Pode ser obtido por [[Monk]]s ao usar o quarto Santuário (''4 - '''Legacy''' of the Elves'') durante a [[The Way of the Monk Quest]].</spoiler>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64119,
+    "ns": 0,
+    "title": "Legs of Wisdom",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Legs of Wisdom\n| flavortext     = \n| stackable      = não\n| levelrequired  = 80\n| vocrequired    = [[Monk]]s\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| skillboost     = [[Fist Fighting]] +1\n| imbuement      = \n| armor          = 4\n| mantra         = 4\n| classificacao  = 2\n| max_tier       = 2\n| resist         = [[Energy Damage|Energy]] +3%\n| augments       = \n| weight         = 26.00\n| value          = \n| npcvalue       =  \n| droppedby      = [[Elder Wyrm]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.00.249ccc\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64123,
+    "ns": 0,
+    "title": "Jungle Survivor Legs",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Jungle Survivor Legs\n| flavortext     = \n| stackable      = não\n| levelrequired  = 130\n| vocrequired    = [[Monk]]s\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| skillboost     = [[Fist Fighting]] +1\n| imbuement      = \n| armor          = 5\n| mantra         = 5\n| classificacao  = 4\n| max_tier       = 10\n| resist         = [[Fire Damage|Fire]] +4%\n| augments       = \n| weight         = 51.00\n| value          = \n| npcvalue       =  \n| droppedby      = [[Ratmiral Blackwhiskers]]\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.00.249ccc\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64125,
+    "ns": 0,
+    "title": "Jade Legs",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Jade Legs\n| flavortext     = \n| stackable      = não\n| levelrequired  = 210\n| vocrequired    = [[Monk]]s\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| skillboost     = [[Fist Fighting]] +1 , [[Magic Level]] +1\n| imbuement      = \n| armor          = 5\n| classificacao  = 3\n| max_tier       = 3\n| resist         = [[Ice Damage|Ice]] +4%\n| augments       = \n| weight         = 37.00\n| mantra         = 6\n| value          = \n| npcvalue       =  \n| droppedby      = [[The Pale Worm]], [[The Dread Maiden]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.00.249ccc\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64127,
+    "ns": 0,
+    "title": "Mutant Hide Trousers",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Mutant Hide Trousers\n| flavortext     = \n| stackable      = não\n| levelrequired  = 300\n| vocrequired    = [[Monk]]s\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| skillboost     = [[Fist Fighting]] +2 , [[Magic Level]] +1\n| imbuement      = \n| armor          = 6\n| classificacao  = 4\n| max_tier       = 10\n| resist         = [[Physical Damage|Physical]] +2%, [[Earth Damage|Earth]] +5%\n| augments       = \n| weight         = 33.00\n| mantra         = 8\n| value          = \n| npcvalue       =  \n| droppedby      = [[The Monster]]\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.00.249ccc\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64941,
+    "ns": 0,
+    "title": "Norcferatu Thornwraps",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Norcferatu Thornwraps\n| flavortext     = \n| stackable      = não\n| levelrequired  = 270\n| vocrequired    = [[Paladin]]s\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| skillboost     = [[Distance Fighting]] +2\n| imbuement      = \n| armor          = 9\n| mantra         = \n| classificacao  = 4\n| max_tier       = 10\n| resist         = [[Physical Damage|Physical]] +4%, [[Death Damage|Death]] +4%\n| augments       = Ethereal Spear -> +40% base damage , Ethereal Spear -> +8% critical extra damage\n| weight         = 11.50\n| value          = \n| npcvalue       =  \n| droppedby      = [[Vladrukh]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.10.46b862\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64943,
+    "ns": 0,
+    "title": "Norcferatu Bloodstrider",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Norcferatu Bloodstrider\n| flavortext     = \n| stackable      = não\n| levelrequired  = 270\n| vocrequired    = [[Druid]]s\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| skillboost     = [[Magic Level]] +2\n| imbuement      = \n| armor          = 8\n| mantra         = \n| classificacao  = 4\n| max_tier       = 10\n| resist         = [[Death Damage|Death]] +4%\n| augments       = Ultimate Terra Strike -> +33% base damage\n| weight         = 11.50\n| value          = \n| npcvalue       =  \n| droppedby      = [[Vladrukh]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.10.46b862\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64945,
+    "ns": 0,
+    "title": "Norcferatu Fleshguards",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Norcferatu Fleshguards\n| flavortext     = \n| stackable      = não\n| levelrequired  = 230\n| vocrequired    = [[Monk]]s\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| skillboost     = [[Fist Fighting]] +2\n| imbuement      = \n| armor          = 5\n| mantra         = 6\n| classificacao  = 4\n| max_tier       = 10\n| resist         = [[Death Damage|Death]] +4%\n| augments       = Greater Tiger Clash -> +2.5% critical hit chance, Greater Tiger Clash -> +10% critical extra damage\n| weight         = 11.50\n| value          = \n| npcvalue       =  \n| droppedby      = [[Vladrukh]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.10.46b862\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6632,
+    "ns": 0,
+    "title": "Studded Legs",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Studded Legs\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| stackable      = não\n| armor          = 2\n| classificacao  = 1\n| max_tier       = 1\n| weight         = 26.00\n| value          = 15 - 50\n| npcvalue       = 15\n| npcprice       = 50\n| droppedby      = [[Gang Member]], [[Juvenile Cyclops]], [[Orc Spearman]], [[Scar Tribe Shaman]], [[Scar Tribe Warrior]].\n| buyfrom        = Shanar, Memech, Cornelia, Hireling (Trader), Azil, Willard, Esrik, Rock In A Hard Place, Raffael, Kroox, Cedrik, Brengus, Flint, Robert, Sam, Turvy, Hardek, Baltim, Aldo, Yanni, Morpel\n| sellto         = Shanar, Memech, Cornelia, Hireling (Trader), Azil, Coltrayne, Willard, Esrik, Rock In A Hard Place, Raffael, Kroox, Cedrik, H.L., Brengus, Flint, Dixi, Lee'Delle, Robert, Sam, Turvy, Hardek, Baltim, Aldo, Yanni, Morpel\n| implemented    = 7.9\n| notes          = Calça mais poderosa de [[Rookgaard]]. Faz parte do [[Rook Set]], [[Studded Set]], [[Isle of Destiny Druid Set]] e [[Isle of Destiny Sorcerer Set]].\n<noinclude><p><spoiler>\n* Recompensa da [[Studded Legs Quest]] (Rookgaard).\n* Possibilidade de ser obtido ao [[Rust Remover|remover a ferrugem]] de um [[Heavily Rusted Legs]]. \n* Possibilidade de ser obtido ao [[Rust Remover|remover a ferrugem]] de um [[Rusted Legs]]. \n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6633,
+    "ns": 0,
+    "title": "Terra Legs",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Terra Legs\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 40\n| resist         = [[Earth Damage|Earth]] +6%, [[Fire Damage|Fire]] -6%\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| stackable      = não\n| armor          = 8\n| classificacao  = 2\n| max_tier       = 2\n| weight         = 19.00\n| value          = 11 500 - 15 000\n| droppedby      = [[Ancient Spawn of Morgathla]], [[Askarak Demon]], [[Blight Mariner]], [[Blightwalker]], [[Cursed Book]], [[Drume]], [[Enfeebled Silencer]], [[Ferumbras Mortal Shell]], [[Ghastly Dragon]], [[Glooth Bandit]], [[Glooth Brigand]], [[Gorgo]], [[Hideous Fungus]], [[Humongous Fungus]], [[Ink Blob]], [[Ink Splash]], [[Ironblight]], [[Liodile]], [[Lost Exile]], [[Lost Husher]], [[Medusa]], [[Menacing Carnivor]], [[Michael the Stalwart]], [[Noxious Ripptor]], [[Silencer]], [[Undertaker]].\n| droppedRaidby  = [[Ferumbras]].\n| buyfrom        = Jogadores.\n| npcvalue       = 11 000\n| sellto         = Rashid\n| implemented    = 8.1\n| notes          = Faz parte do [[Terra Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6634,
+    "ns": 0,
+    "title": "Trousers of the Ancients",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Trousers of the Ancients\n| flavortext     = These atavistic trousers already served the forefathers of mankind.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| armor          = 2\n| classificacao  = 2\n| max_tier       = 2\n| weight         = 0.30\n| stackable      = não\n| droppedby      = [[Doctor Perhaps]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = A mais leve de todas as calças. Possui mesmo sprite de uma [[Fern]]. Faz parte do [[Ancient Set]].\n<noinclude><p><spoiler>* Possibilidade de ser obtido aleatoriamente durante a [[The Isle of Evil Quest]].\n*Para tentar obtê-lo deve-se dar \"'''use'''\" no corpo morto do boss [[Doctor Perhaps]]. \n*Só é possível tentar obtê-lo na primeira vez em que a criatura for morta.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6636,
+    "ns": 0,
+    "title": "Yalahari Leg Piece",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Yalahari Leg Piece\n| vocrequired    = [[Paladin]]s\n| levelrequired  = 80\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| skillboost     = [[Distance Fighting]] +2\n| resist         = [[Death Damage|Death]] +5%\n| armor          = 8\n| classificacao  = 2\n| max_tier       = 2\n| weight         = 65.00\n| value          = 120 000 - 280 000\n| npcvalue       = 0\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.4\n| droppedby      = Ninguém.\n| notes          = Considerada a melhor calça disponível exclusivamente para [[Paladin]]s. Faz parte do [[Yalahari Set]] e do [[Divine Set]].\n<noinclude><p><spoiler>* Pode ser obtido como recompensa da [[In Service of Yalahar Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6637,
+    "ns": 0,
+    "title": "Zaoan Legs",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Zaoan Legs\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| resist         = [[Physical Damage|Physical]] +2%\n| armor          = 8\n| classificacao  = 2\n| max_tier       = 2\n| weight         = 66.00\n| value          = 13 500 - 18 000\n| droppedby      = [[Draken Abomination]], [[Draken Elite]], [[Draken Spellweaver]], [[Draken Warmaster]], [[Ethershreck]], [[Fazzrah]], [[Ghastly Dragon]], [[Hatebreeder]], [[Lizard Chosen]], [[Lizard Gate Guardian]], [[Lizard High Guard]], [[Lizard Zaogun]].\n| droppedRaidby  = [[Battlemaster Zunzu]].\n| npcvalue       = 14 000\n| npcprice       = 0\n| buyfrom        = Jogadores.\n| sellto         = Esrik\n| implemented    = 8.54\n| notes          = Boa alternativa para personagens de level médio se comparada às calças comuns que não possuem nenhum tipo de proteção ou bônus. Após o level 80 os personagens podem substituí-la por outras com melhores atributos e restritas a vocações específicas. Parte do [[Zaoan Set]] e [[Paladin Set]].\n<noinclude><p><spoiler>* Para vendê-lo ao NPC é preciso ter entregue 09 [[Tome of Knowledge|tomos]] na [[Tomes of Knowledge Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 36256,
+    "ns": 0,
+    "title": "Wereboar Loincloth",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Wereboar Loincloth\n| flavortext     = They offer little protection but will at least provide some comfort and warmth.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| armor          = 6\n| classificacao  = 2\n| max_tier       = 2\n| weight         = 13.00\n| stackable      = não\n| npcvalue       = 1 500\n| droppedby      = [[Bloodback]], [[Wereboar]].\n| droppedRaidby  = [[Feroxa (Mortal)]], [[Owin (Criatura)]].\n| buyfrom        = Jogadores.\n| sellto         = Domizian, Gladys\n| implemented    = 10.80\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 40092,
+    "ns": 0,
+    "title": "Tatty Dragon Scale Legs",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Tatty Dragon Scale Legs           \n| flavortext    = They clearly have seen better days.\n| itemclass     = Equipamentos de Corpo        \n| primarytype   = Calças       \n| armor         = 2       \n| classificacao  = 1\n| max_tier       = 1    \n| weight        = 38.00           \n| value         = \n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| implemented   = 11.02\n| notes         = <noinclude><p><spoiler>* Possibilidade de ser obtido como recompensa do jogo \"Caça ao Tesouro\" na [[Vigintia Island]] durante as comemorações de [[Aniversário do Tibia]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 47989,
+    "ns": 0,
+    "title": "Soulful Legs",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Soulful Legs\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 180\n| resist         = [[Holy Damage|Holy]] +8%\n| skillboost     = [[Magic Level]] +1\n| armor          = 8\n| classificacao  = 3\n| max_tier       = 3\n| weight         = 38.00\n| value          = \n| droppedby      = [[The Unwelcome]], [[The Pale Worm]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.30\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 49295,
+    "ns": 0,
+    "title": "Soulshanks",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Soulshanks\n| flavortext     = \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| vocrequired    = [[Sorcerer]]s\n| levelrequired  = 400\n| resist         = [[Death Damage|Death]] +10%\n| skillboost     = [[Magic Level]] +3\n| armor          = 10\n| classificacao  = 4\n| max_tier       = 10\n| weight         = 38.00\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.40\n| notes          = <noinclude><p><spoiler>* Possibilidade de ser obtido ao usar um [[Bag You Desire]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 49297,
+    "ns": 0,
+    "title": "Soulstrider",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Soulstrider\n| flavortext     = \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| vocrequired    = [[Druid]]s\n| levelrequired  = 400\n| resist         = [[Fire Damage|Fire]] +10%\n| skillboost     = [[Magic Level]] +3\n| armor          = 10\n| classificacao  = 4\n| max_tier       = 10\n| weight         = 38.00\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.40\n| notes          = <noinclude><p><spoiler>* Possibilidade de ser obtido ao usar um [[Bag You Desire]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 58487,
+    "ns": 0,
+    "title": "Stitched Mutant Hide Legs",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Stitched Mutant Hide Legs\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| vocrequired    = [[Knight]]s\n| levelrequired  = 270\n| resist         = [[Physical Damage|Physical]] +5%, [[Earth Damage|Earth]] +5%\n| skillboost     = [[Sword Fighting]] +2, [[Axe Fighting]] +2, [[Club Fighting]] +2\n| armor          = 9\n| classificacao  = 4\n| max_tier       = 10\n| weight         = 34.00\n| value          = \n| droppedby      = [[The Monster]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 13.10\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59843,
+    "ns": 0,
+    "title": "Sanguine Legs",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Sanguine Legs\n| flavortext     = \n| stackable      = não\n| levelrequired  = 500\n| vocrequired    = [[Knight]]s\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| skillboost     = [[Sword Fighting]] +4, [[Axe Fighting]] +4, [[Club Fighting]] +4\n| imbuement      = \n| armor          = 12\n| classificacao  = 4\n| max_tier       = 10\n| resist         = [[Physical Damage|Protection Physical]] +9%, [[Death Damage|Death]] +6%\n| augments       = Avatar of Steel -> -900s cooldown, Fierce Berserk -> +8% critical extra damage\n| weight         = 38.00\n| value          = \n| npcvalue       =  \n| droppedby      = [[Bakragore]], [[Chagorz]], [[Ichgahal]], [[Murcion]] e [[Vemiath]], dentro de uma [[Bag You Covet]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 13.20.13560\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 61237,
+    "ns": 0,
+    "title": "Stoic Iks Culet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Stoic Iks Culet\n| vocrequired    = [[Knight]]s\n| levelrequired  = 250 \n| flavortext     = \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| resist         = [[Physical Damage|Physical]] +4%, [[Energy Damage|Energy]] + 2%\n| skillboost     = [[Sword Fighting]] +2, [[Axe Fighting]] +2, [[Club Fighting]] +2\n| augments       = Intense Wound Cleansing -> +50% base healing\n| armor          = 9\n| weight         = 51.00\n| classificacao  = 4\n| max_tier       = 10\n| value          = \n| droppedby      = [[Mitmah Vanguard]].\n| trade          = sim\n| buyfrom        = Jogadores. \n| implemented    = 13.30.14423\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 61238,
+    "ns": 0,
+    "title": "Stoic Iks Faulds",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Stoic Iks Faulds\n| vocrequired    = [[Sorcerer]]s\n| levelrequired  = 250 \n| flavortext     = \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| resist         = [[Fire Damage|Fire]] +6%\n| skillboost     = [[Magic Level]] +2\n| augments       = Great Energy Beam -> +7% base damage, Great Death Beam -> +7% base damage\n| armor          = 8\n| weight         = 34.00\n| classificacao  = 4\n| max_tier       = 10\n| value          = \n| droppedby      = [[Mitmah Vanguard]].\n| trade          = sim\n| buyfrom        = Jogadores. \n| implemented    = 13.30.14423\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 63950,
+    "ns": 0,
+    "title": "Sanguine Trousers",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Sanguine Trousers\n| flavortext     = \n| stackable      = não\n| levelrequired  = 500\n| vocrequired    = [[Monk]]s\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| skillboost     = [[Fist Fighting]] +4, [[Magic Level]] +2\n| imbuement      = \n| armor          = 6\n| mantra         = 10\n| classificacao  = 4\n| max_tier       = 10\n| resist         = [[Physical Damage | Physical]] +4%, [[Energy Damage|Energy]] +8%\n| augments       = Avatar of Balance -> -900s cooldown, Chained Penance -> +8% critical extra damage\n| weight         = 35.00\n| value          = \n| npcvalue       =  \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.00.249ccc\n| notes          = <spoiler>* Possibilidade de ser obtido ao usar um [[Bag You Covet]].</spoiler>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 66075,
+    "ns": 0,
+    "title": "Stag Legs",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Stag Legs\n| flavortext     = \n| stackable      = não\n| levelrequired  = 350\n| vocrequired    = [[Knight]]s\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Calças\n| skillboost     = [[Axe Fighting]] +3, [[Club Fighting]] +3, [[Sword Fighting]] +3, [[Shielding]] +2\n| imbuement      = \n| armor          = 10\n| mantra         = \n| classificacao  = 4\n| max_tier       = 10\n| resist         = [[Physical Damage|Physical]] +7%, [[Fire Damage|Fire]] +7%\n| augments       = Berserk -> +10% critical extra damage\n| weight         = 11.50\n| value          = \n| npcvalue       =  \n| npcprice       =\n| droppedby      = [[Court Warlock]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.20.7a5cc9\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

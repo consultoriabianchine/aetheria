@@ -1,0 +1,614 @@
+{
+ "query": {
+  "pages": [
+   {
+    "pageid": 42184,
+    "ns": 0,
+    "title": "Earth Blacksteel Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Earth Blacksteel Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas\n| hands          = Duas\n| type           = Réplicas de Espadas\n| attack         = 5\n| defense        = 5\n| weight         = 59.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+0.50% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+1.00% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+1.50% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+2.00% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Earth||+1 Earth Magic Level}}\n| notes          = É uma réplica da [[Earth Blacksteel Sword]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42199,
+    "ns": 0,
+    "title": "Earth Mystic Blade Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Earth Mystic Blade Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas\n| hands          = Uma\n| type           = Réplicas de Espadas\n| attack         = 5\n| defense        = 5\n| weight         = 35.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+0.50% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+1.00% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+1.50% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+2.00% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Earth||+1 Earth Magic Level}}\n| notes          = É uma réplica da [[Earth Mystic Blade]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42203,
+    "ns": 0,
+    "title": "Earth Relic Sword Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Earth Relic Sword Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas\n| hands          = Uma\n| type           = Réplicas de Espadas\n| attack         = 5\n| defense        = 5\n| weight         = 48.00\n| classificacao  = 1\n| max_tier       = 1\n| mercado        = sim\n| droppedby      = Ninguém.\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+0.50% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+1.00% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+1.50% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+2.00% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Earth||+1 Earth Magic Level}}\n| notes          = É uma réplica da [[Earth Relic Sword]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42205,
+    "ns": 0,
+    "title": "Earth Slayer Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Earth Slayer Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas\n| hands          = Duas\n| type           = Réplicas de Espadas\n| attack         = 5\n| defense        = 5\n| weight         = 82.00\n| classificacao  = 1\n| max_tier       = 1\n| mercado        = sim\n| droppedby      = Ninguém.\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+0.50% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+1.00% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+1.50% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+2.00% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Earth||+1 Earth Magic Level}}\n| notes          = É uma réplica da [[Earth Dragon Slayer]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42207,
+    "ns": 0,
+    "title": "Earth Spike Sword Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Earth Spike Sword Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas\n| hands          = Uma\n| type           = Réplicas de Espadas\n| attack         = 5\n| defense        = 5\n| weight         = 50.00\n| classificacao  = 1\n| max_tier       = 1\n| mercado        = sim\n| droppedby      = Ninguém.\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+0.50% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+1.00% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+1.50% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+2.00% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Earth||+1 Earth Magic Level}}\n| notes          = É uma réplica da [[Earth Spike Sword]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42217,
+    "ns": 0,
+    "title": "Energy Blacksteel Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Energy Blacksteel Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas\n| hands          = Duas\n| type           = Réplicas de Espadas\n| attack         = 5\n| defense        = 5\n| weight         = 59.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+0.50% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+1.00% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+1.50% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+2.00% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Energy||+1 Energy Magic Level}}\n| notes          = É uma réplica da [[Energy Blacksteel Sword]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42219,
+    "ns": 0,
+    "title": "Energy Blade Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Energy Blade Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas\n| hands          = Uma\n| type           = Réplicas de Espadas\n| attack         = 5\n| defense        = 5\n| weight         = 35.00\n| classificacao  = 1\n| max_tier       = 1\n| npcvalue       = 500\n| npcprice       = 500\n| mercado        = sim\n| droppedby      = Ninguém.\n| buyfrom        = Cillia\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+0.50% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+1.00% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+1.50% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+2.00% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Energy||+1 Energy Magic Level}}\n| notes          = É uma réplica da [[Energy Mystic Blade]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42233,
+    "ns": 0,
+    "title": "Energy Relic Sword Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Energy Relic Sword Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas\n| hands          = Uma\n| type           = Réplicas de Espadas\n| attack         = 5\n| defense        = 5\n| weight         = 48.00\n| classificacao  = 1\n| max_tier       = 1\n| mercado        = sim\n| droppedby      = Ninguém.\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+0.50% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+1.00% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+1.50% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+2.00% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Energy||+1 Energy Magic Level}}\n| notes          = É uma réplica da [[Energy Relic Sword]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42235,
+    "ns": 0,
+    "title": "Energy Slayer Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Energy Slayer Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas\n| hands          = Duas\n| type           = Réplicas de Espadas\n| attack         = 5\n| defense        = 5\n| weight         = 82.00\n| classificacao  = 1\n| max_tier       = 1\n| mercado        = sim\n| droppedby      = Ninguém.\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+0.50% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+1.00% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+1.50% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+2.00% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Energy||+1 Energy Magic Level}}\n| notes          = É uma réplica da [[Energy Dragon Slayer]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42237,
+    "ns": 0,
+    "title": "Energy Spike Sword Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Energy Spike Sword Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas\n| hands          = Uma\n| type           = Réplicas de Espadas\n| attack         = 5\n| defense        = 5\n| weight         = 50.00\n| classificacao  = 1\n| max_tier       = 1\n| mercado        = sim\n| droppedby      = Ninguém.\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+0.50% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+1.00% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+1.50% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+2.00% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Energy||+1 Energy Magic Level}}\n| notes          = É uma réplica da [[Energy Spike Sword]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42251,
+    "ns": 0,
+    "title": "Fiery Dragon Slayer Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Fiery Dragon Slayer Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas\n| hands          = Duas\n| type           = Réplicas de Espadas\n| attack         = 5\n| defense        = 5\n| weight         = 82.00\n| classificacao  = 1\n| max_tier       = 1\n| mercado        = sim\n| droppedby      = Ninguém.\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+0.50% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+1.00% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+1.50% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+2.00% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Fire||+1 Fire Magic Level}}\n| notes          = É uma réplica da [[Fiery Dragon Slayer]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42259,
+    "ns": 0,
+    "title": "Fiery Mystic Blade Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Fiery Mystic Blade Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas\n| hands          = Uma\n| type           = Réplicas de Espadas\n| attack         = 5\n| defense        = 5\n| weight         = 35.00\n| classificacao  = 1\n| max_tier       = 1\n| mercado        = sim\n| droppedby      = Ninguém.\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+0.50% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+1.00% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+1.50% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+2.00% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Fire||+1 Fire Magic Level}}\n| notes          = É uma réplica da [[Fiery Mystic Blade]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42263,
+    "ns": 0,
+    "title": "Fiery Relic Sword Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Fiery Relic Sword Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas\n| hands          = Uma\n| type           = Réplicas de Espadas\n| attack         = 5\n| defense        = 5\n| weight         = 48.00\n| classificacao  = 1\n| max_tier       = 1\n| mercado        = sim\n| droppedby      = Ninguém.\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+0.50% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+1.00% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+1.50% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+2.00% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Fire||+1 Fire Magic Level}}\n| notes          = É uma réplica da [[Fiery Relic Sword]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42265,
+    "ns": 0,
+    "title": "Fiery Spike Sword Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Fiery Spike Sword Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas\n| hands          = Uma\n| type           = Réplicas de Espadas\n| attack         = 5\n| defense        = 5\n| weight         = 50.00\n| classificacao  = 1\n| max_tier       = 1\n| mercado        = sim\n| droppedby      = Ninguém.\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+0.50% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+1.00% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+1.50% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+2.00% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Fire||+1 Fire Magic Level}}\n| notes          = É uma réplica da [[Fiery Spike Sword]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42271,
+    "ns": 0,
+    "title": "Fire Blacksteel Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Fire Blacksteel Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas\n| hands          = Duas\n| type           = Réplicas de Espadas\n| attack         = 5\n| defense        = 5\n| weight         = 59.00\n| classificacao  = 1\n| max_tier       = 1\n| mercado        = sim\n| droppedby      = Ninguém.\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+0.50% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+1.00% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+1.50% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+2.00% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Fire||+1 Fire Magic Level}}\n| notes          = É uma réplica da [[Fiery Blacksteel Sword]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42275,
+    "ns": 0,
+    "title": "Icy Blacksteel Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Icy Blacksteel Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas\n| hands          = Duas\n| type           = Réplicas de Espadas\n| attack         = 5\n| defense        = 5\n| weight         = 59.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+0.50% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+1.00% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+1.50% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+2.00% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Ice||+1 Ice Magic Level}}\n| notes          = É uma réplica da [[Icy Blacksteel Sword]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42283,
+    "ns": 0,
+    "title": "Icy Dragon Slayer Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Icy Dragon Slayer Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas\n| hands          = Duas\n| type           = Réplicas de Espadas\n| attack         = 5\n| defense        = 5\n| weight         = 82.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+0.50% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+1.00% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+1.50% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+2.00% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Ice||+1 Ice Magic Level}}\n| notes          = É uma réplica da [[Icy Dragon Slayer]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42291,
+    "ns": 0,
+    "title": "Icy Mystic Blade Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Icy Mystic Blade Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas\n| hands          = Uma\n| type           = Réplicas de Espadas\n| attack         = 5\n| defense        = 5\n| weight         = 35.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+0.50% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+1.00% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+1.50% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+2.00% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Ice||+1 Ice Magic Level}}\n| notes          = É uma réplica da [[Icy Mystic Blade]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42295,
+    "ns": 0,
+    "title": "Icy Relic Sword Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Icy Relic Sword Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas\n| hands          = Uma\n| type           = Réplicas de Espadas\n| attack         = 5\n| defense        = 5\n| weight         = 48.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+0.50% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+1.00% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+1.50% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+2.00% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Ice||+1 Ice Magic Level}}\n| notes          = É uma réplica da [[Icy Relic Sword]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42297,
+    "ns": 0,
+    "title": "Icy Spike Sword Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Icy Spike Sword Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas\n| hands          = Uma\n| type           = Réplicas de Espadas\n| attack         = 5\n| defense        = 5\n| weight         = 50.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+0.50% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+1.00% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+1.50% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+2.00% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Ice||+1 Ice Magic Level}}\n| notes          = É uma réplica da [[Icy Spike Sword]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42308,
+    "ns": 0,
+    "title": "Ornate Carving Blade",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ornate Carving Blade\n| flavortext     = This replica looks overcharged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas\n| hands          = Uma\n| type           = Réplicas de Espadas\n| attack         = 5\n| defense        = 5\n| weight         = 50.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+1% mana leech para Lesser Front Sweep}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+1% mana leech para Lesser Front Sweep}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+3% mana leech para Lesser Front Sweep}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+4% mana leech para Lesser Front Sweep}}\n| perk5          = {{Weapon Perk|Type_Skill_Sword||+1 Sword Fighting}}\n| notes          = É uma réplica da [[Blade of Carving (Overcharged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42324,
+    "ns": 0,
+    "title": "Ornate Carving Slayer",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ornate Carving Slayer\n| flavortext     = This replica looks overcharged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas\n| secondarytype  = \n| hands          = Duas\n| type           = Réplicas de Espadas\n| range          = \n| attack         = 5\n| defense        = 5\n| weight         = 70.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+1% mana leech para Lesser Front Sweep}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+1% mana leech para Lesser Front Sweep}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+3% mana leech para Lesser Front Sweep}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+4% mana leech para Lesser Front Sweep}}\n| perk5          = {{Weapon Perk|Type_Skill_Sword||+1 Sword Fighting}}\n| notes          = É uma réplica da [[Slayer of Carving (Overcharged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42328,
+    "ns": 0,
+    "title": "Valuable Carving Blade",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Valuable Carving Blade\n| flavortext     = This replica looks heavily charged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas\n| secondarytype  = \n| hands          = Uma\n| type           = Réplicas de Espadas\n| range          = \n| attack         = 5\n| defense        = 5\n| weight         = 50.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+1% mana leech para Lesser Front Sweep}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+1% mana leech para Lesser Front Sweep}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+3% mana leech para Lesser Front Sweep}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+4% mana leech para Lesser Front Sweep}}\n| perk5          = {{Weapon Perk|Type_Skill_Sword||+1 Sword Fighting}}\n| notes          = É uma réplica da [[Blade of Carving (Heavily Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42344,
+    "ns": 0,
+    "title": "Valuable Carving Slayer",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Valuable Carving Slayer\n| flavortext     = This replica looks heavily charged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas\n| secondarytype  = \n| hands          = Duas\n| type           = Réplicas de Espadas\n| range          = \n| attack         = 5\n| defense        = 5\n| weight         = 70.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+1% mana leech para Lesser Front Sweep}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+1% mana leech para Lesser Front Sweep}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+3% mana leech para Lesser Front Sweep}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+4% mana leech para Lesser Front Sweep}}\n| perk5          = {{Weapon Perk|Type_Skill_Sword||+1 Sword Fighting}}\n| notes          = É uma réplica da [[Slayer of Carving (Heavily Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42348,
+    "ns": 0,
+    "title": "Plain Carving Blade",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Plain Carving Blade\n| flavortext     = This replica looks charged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas\n| secondarytype  = \n| hands          = Uma\n| type           = Réplicas de Espadas\n| range          = \n| attack         = 5\n| defense        = 5\n| weight         = 50.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+1% mana leech para Lesser Front Sweep}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+1% mana leech para Lesser Front Sweep}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+3% mana leech para Lesser Front Sweep}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+4% mana leech para Lesser Front Sweep}}\n| perk5          = {{Weapon Perk|Type_Skill_Sword||+1 Sword Fighting}}\n| notes          = É uma réplica da [[Blade of Carving (Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42360,
+    "ns": 0,
+    "title": "Plain Carving Slayer",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Plain Carving Slayer\n| flavortext     = This replica looks charged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas\n| secondarytype  = \n| hands          = Duas\n| type           = Réplicas de Espadas\n| range          = \n| attack         = 5\n| defense        = 5\n| weight         = 70.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+1% mana leech para Lesser Front Sweep}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+1% mana leech para Lesser Front Sweep}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+3% mana leech para Lesser Front Sweep}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+4% mana leech para Lesser Front Sweep}}\n| perk5          = {{Weapon Perk|Type_Skill_Sword||+1 Sword Fighting}}\n| notes          = É uma réplica da [[Slayer of Carving (Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42369,
+    "ns": 0,
+    "title": "Ornate Mayhem Blade",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ornate Mayhem Blade\n| flavortext     = This replica looks overcharged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas\n| secondarytype  = \n| hands          = Uma\n| type           = Réplicas de Espadas\n| range          = \n| attack         = 5\n| defense        = 5\n| weight         = 50.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Dmg|+10% critical extra damage para Lesser Front Sweep}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Dmg|+20% critical extra damage para Lesser Front Sweep}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Dmg|+30% critical extra damage para Lesser Front Sweep}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Chance|+5% critical hit chance para Lesser Front Sweep}}\n| perk5          = {{Weapon Perk|Type_Skill_Sword||+1 Sword Fighting}}\n| notes          = É uma réplica da [[Blade of Mayhem (Overcharged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42381,
+    "ns": 0,
+    "title": "Ornate Mayhem Slayer",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ornate Mayhem Slayer\n| flavortext     = This replica looks overcharged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas\n| secondarytype  = \n| hands          = Duas\n| type           = Réplicas de Espadas\n| range          = \n| attack         = 5\n| defense        = 5\n| weight         = 70.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Dmg|+10% critical extra damage para Lesser Front Sweep}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Dmg|+20% critical extra damage para Lesser Front Sweep}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Dmg|+30% critical extra damage para Lesser Front Sweep}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Chance|+5% critical hit chance para Lesser Front Sweep}}\n| perk5          = {{Weapon Perk|Type_Skill_Sword||+1 Sword Fighting}}\n| notes          = É uma réplica da [[Slayer of Mayhem (Overcharged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42389,
+    "ns": 0,
+    "title": "Ornate Remedy Blade",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ornate Remedy Blade\n| flavortext     = This replica looks overcharged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas\n| secondarytype  = \n| hands          = Uma\n| type           = Réplicas de Espadas\n| range          = \n| attack         = 5\n| defense        = 5\n| weight         = 50.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+1% life leech para Lesser Front Sweep}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+1% life leech para Lesser Front Sweep}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+3% life leech para Lesser Front Sweep}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+4% life leech para Lesser Front Sweep}}\n| perk5          = {{Weapon Perk|Type_Skill_Sword||+1 Sword Fighting}}\n| notes          = É uma réplica da [[Blade of Remedy (Overcharged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42401,
+    "ns": 0,
+    "title": "Ornate Remedy Slayer",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ornate Remedy Slayer\n| flavortext     = This replica looks overcharged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas\n| secondarytype  = \n| hands          = Duas\n| type           = Réplicas de Espadas\n| range          = \n| attack         = 5\n| defense        = 5\n| weight         = 70.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+1% life leech para Lesser Front Sweep}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+1% life leech para Lesser Front Sweep}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+3% life leech para Lesser Front Sweep}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+4% life leech para Lesser Front Sweep}}\n| perk5          = {{Weapon Perk|Type_Skill_Sword||+1 Sword Fighting}}\n| notes          = É uma réplica da [[Slayer of Remedy (Overcharged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42409,
+    "ns": 0,
+    "title": "Valuable Remedy Blade",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Valuable Remedy Blade\n| flavortext     = This replica looks heavily charged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas\n| secondarytype  = \n| hands          = Uma\n| type           = Réplicas de Espadas\n| range          = \n| attack         = 5\n| defense        = 5\n| weight         = 50.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+1% life leech para Lesser Front Sweep}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+1% life leech para Lesser Front Sweep}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+3% life leech para Lesser Front Sweep}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+4% life leech para Lesser Front Sweep}}\n| perk5          = {{Weapon Perk|Type_Skill_Sword||+1 Sword Fighting}}\n| notes          = É uma réplica da [[Blade of Remedy (Heavily Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42421,
+    "ns": 0,
+    "title": "Valuable Remedy Slayer",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Valuable Remedy Slayer\n| flavortext     = This replica looks heavily charged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas\n| hands          = Duas\n| type           = Réplicas de Espadas\n| range          = \n| attack         = 5\n| defense        = 5\n| weight         = 70.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+1% life leech para Lesser Front Sweep}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+1% life leech para Lesser Front Sweep}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+3% life leech para Lesser Front Sweep}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+4% life leech para Lesser Front Sweep}}\n| perk5          = {{Weapon Perk|Type_Skill_Sword||+1 Sword Fighting}}\n| notes          = É uma réplica da [[Slayer of Remedy (Heavily Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42429,
+    "ns": 0,
+    "title": "Plain Remedy Blade",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Plain Remedy Blade\n| flavortext     = This replica looks charged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas\n| secondarytype  = \n| hands          = Uma\n| type           = Réplicas de Espadas\n| range          = \n| attack         = 5 \n| defense        = 5\n| weight         = 50.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+1% life leech para Lesser Front Sweep}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+1% life leech para Lesser Front Sweep}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+3% life leech para Lesser Front Sweep}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+4% life leech para Lesser Front Sweep}}\n| perk5          = {{Weapon Perk|Type_Skill_Sword||+1 Sword Fighting}}\n| notes          = É uma réplica da [[Blade of Remedy (Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42441,
+    "ns": 0,
+    "title": "Plain Remedy Slayer",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Plain Remedy Slayer\n| flavortext     = This replica looks charged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas\n| secondarytype  = \n| hands          = Duas\n| type           = Réplicas de Espadas\n| range          = \n| attack         = 5\n| defense        = 5\n| weight         = 70.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+1% life leech para Lesser Front Sweep}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+1% life leech para Lesser Front Sweep}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+3% life leech para Lesser Front Sweep}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+4% life leech para Lesser Front Sweep}}\n| perk5          = {{Weapon Perk|Type_Skill_Sword||+1 Sword Fighting}}\n| notes          = É uma réplica da [[Slayer of Remedy (Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42449,
+    "ns": 0,
+    "title": "Plain Mayhem Blade",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Plain Mayhem Blade\n| flavortext     = This replica looks charged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas\n| secondarytype  = \n| hands          = Uma\n| type           = Réplicas de Espadas\n| range          = \n| attack         = 5\n| defense        = 5\n| weight         = 50.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Dmg|+10% critical extra damage para Lesser Front Sweep}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Dmg|+20% critical extra damage para Lesser Front Sweep}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Dmg|+30% critical extra damage para Lesser Front Sweep}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Chance|+5% critical hit chance para Lesser Front Sweep}}\n| perk5          = {{Weapon Perk|Type_Skill_Sword||+1 Sword Fighting}}\n| notes          = É uma réplica da [[Blade of Mayhem (Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42461,
+    "ns": 0,
+    "title": "Plain Mayhem Slayer",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Plain Mayhem Slayer\n| flavortext     = This replica looks charged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas\n| secondarytype  = \n| hands          = Duas\n| type           = Réplicas de Espadas\n| range          = \n| attack         = 5\n| defense        = 5\n| weight         = 70.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Dmg|+10% critical extra damage para Lesser Front Sweep}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Dmg|+20% critical extra damage para Lesser Front Sweep}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Dmg|+30% critical extra damage para Lesser Front Sweep}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Chance|+5% critical hit chance para Lesser Front Sweep}}\n| perk5          = {{Weapon Perk|Type_Skill_Sword||+1 Sword Fighting}}\n| notes          = É uma réplica da [[Slayer of Mayhem (Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42469,
+    "ns": 0,
+    "title": "Valuable Mayhem Blade",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Valuable Mayhem Blade\n| flavortext     = This replica looks heavily charged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas\n| secondarytype  = \n| hands          = Uma\n| type           = Réplicas de Espadas\n| range          = \n| attack         = 5\n| defense        = 5\n| weight         = 50.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Dmg|+10% critical extra damage para Lesser Front Sweep}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Dmg|+20% critical extra damage para Lesser Front Sweep}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Dmg|+30% critical extra damage para Lesser Front Sweep}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Chance|+5% critical hit chance para Lesser Front Sweep}}\n| perk5          = {{Weapon Perk|Type_Skill_Sword||+1 Sword Fighting}}\n| notes          = É uma réplica da [[Blade of Mayhem (Heavily Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42481,
+    "ns": 0,
+    "title": "Valuable Mayhem Slayer",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Valuable Mayhem Slayer\n| flavortext     = This replica looks heavily charged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| primarytype    = Réplicas\n| secondarytype  = \n| hands          = Duas\n| type           = Réplicas de Espadas\n| range          = \n| attack         = 5\n| defense        = 5\n| weight         = 70.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Dmg|+10% critical extra damage para Lesser Front Sweep}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Dmg|+20% critical extra damage para Lesser Front Sweep}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Dmg|+30% critical extra damage para Lesser Front Sweep}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Chance|+5% critical hit chance para Lesser Front Sweep}}\n| perk5          = {{Weapon Perk|Type_Skill_Sword||+1 Sword Fighting}}\n| notes          = É uma réplica da [[Slayer of Mayhem (Heavily Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

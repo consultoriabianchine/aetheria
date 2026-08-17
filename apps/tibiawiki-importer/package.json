@@ -11,6 +11,9 @@
     "importer:dry": "node dist/main.js --dry-run",
     "importer:test": "node dist/main.js --dry-run --limit=3",
     "importer:inspect": "node dist/main.js --inspect",
+    "importer:items": "node dist/main.js --items",
+    "importer:items:fetch": "node scripts/fetch-wiki-items.cjs",
+    "importer:items:fetch-images": "node scripts/fetch-wiki-items.cjs --images-only",
     "importer:integration": "node dist/main.js --dry-run --limit=1 --verbose",
     "test": "vitest run"
   },

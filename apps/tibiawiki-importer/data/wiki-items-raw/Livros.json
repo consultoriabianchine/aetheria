@@ -1,0 +1,1238 @@
+{
+ "query": {
+  "pages": [
+   {
+    "pageid": 6441,
+    "ns": 0,
+    "title": "Big Blue Book",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Big Blue Book\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Livros\n| weight         = 13.00\n| attrib         = Nenhum.\n| readable       = \n| writable       = \n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.8\n| notes          = Pode ser encontrado em [[Demona]] e [[Nargor]]. Mesmo [[sprite]] de um [[Atlas]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6446,
+    "ns": 0,
+    "title": "Black Book",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Black Book \n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Livros\n| attrib         = Pode ser escrito.\n| writable       = \n| weight         = 13.00\n| stackable      = não\n| value          = \n| npcprice       = 15 \n| droppedby      = Ninguém. \n| buyfrom        = Thomas, Gorn, Shiantis, Perod, Zora, Bertha\n| sellto         = Jogadores. \n| notes          = Uma vez escrito, não pode ser modificado. Você pode comprá-lo de qualquer vendedor de equipamentos em [[Tibia]], como [[Gorn]], na cidade de [[Thais]]. \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6449,
+    "ns": 0,
+    "title": "Blue Book",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Blue Book \n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Livros\n| attrib         = Pode ser escrito.\n| stackable      = não\n| mercado        = não\n| writable       = \n| weight         = 13.00 \n| value          = 20 \n| npcvalue       = 20 \n| droppedby      = [[Blue Djinn]].\n| buyfrom        = Jogadores. \n| sellto         = Gorn, Perod, Shiantis, Thomas, Bertha\n| notes          = Pode ser encontrado na Torre de Bibliotecas dos [[Djinn]]s, assim como em várias bibliotecas de [[Ankrahmun]]. Mesmo ''sprite'' de um [[Your Student Book]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6458,
+    "ns": 0,
+    "title": "Blue Tome",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Blue Tome \n| flavortext     = It's a volume of The Mystic Secrets of Tibia. \n| itemclass      = Itens de Decoração\n| primarytype    = Livros\n| secondarytype  =  \n| attrib         = Nenhum.\n| stackable      = não\n| weight         = 19.00 \n| value          = 19 000 000 - 30 000 000+ \n| droppedRaidby  = [[Ghazbaran]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 6.4\n| notes          = Podia ser obtido como recompensa na antiga quest da [[Demon Legs]], que foi substituída pela atual quest do Demon Helmet. Pode ser obtido como presente dos deuses ou comprando de jogadores. A partir do Update 8.4, o '''Blue Tome''' se tornou loot de [[Ghazbaran]] e o primeiro dropado pelo boss foi no servidor de [[Danera]] em 01/01/09. Esse item também pode ser obtido como premiação em concursos de [[fansites]].\n<noinclude><gallery>\nArquivo:Demon_Legs_Quest.jpg|[[Blue Tome]] na antiga Demon Legs Quest\nArquivo:tomenardi.png|[[Blue Tome]] em [[Luminera]]\n</gallery></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6462,
+    "ns": 0,
+    "title": "Book of Prayers",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Book of Prayers \n| flavortext     =  \n| itemclass      = Itens de Decoração\n| primarytype    = Produtos de Criaturas\n| secondarytype  = Livros\n| weight         = 1.50 \n| attrib         = Agrupável.\n| stackable      = \n| value          = 120 \n| npcvalue       = 120 \n| droppedby      = [[Dark Monk]], [[Monk]]. \n| droppedRaidby  = [[Fernfang]].\n| buyfrom        = Jogadores. \n| sellto         = Tothdral,Yasir,\n| implemented    = 8.54\n| notes          = Nenhuma.\n<noinclude><p><spoiler>* Possibilidade de ser obtido ao usar uma [[Belongings of a Deceased (Ottokar)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6465,
+    "ns": 0,
+    "title": "Botany Almanach",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Botany Almanach \n| flavortext     = The title of this heavy book reads: '[[Rabaz]]' Unabridged Almanach Of Botany'. \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Livros\n| weight         = 15.00 \n| readable       = não\n| stackable      = não\n| attrib         = Coletar amostras de [[plantas]].\n \n| npcvalue       = 0 \n| npcprice       = 0 \n| droppedby      = Ninguém. \n| buyfrom        = Jogadores.\n| sellto         = Jogadores. \n| implemented    = 8.6 \n| notes          = Tem a mesma aparência que um [[Black Book]]. \n<noinclude><p><spoiler>* Usado na [[An Interest In Botany Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6470,
+    "ns": 0,
+    "title": "Brown Book",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Brown Book\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Livros\n| secondarytype  = \n| stackable      = não\n| writable       = sim\n| weight         = 13.00\n| value          = 15 \n| npcprice       = 15\n| droppedby      = Ninguém.\n| buyfrom        = Thomas, Gorn, Perod, Shiantis, Zora, Bertha\n| sellto         = Jogadores.\n| notes          = Pode ser escrito com até 1023 caracteres. Uma vez escrito, não pode ser modificado novamente.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6477,
+    "ns": 0,
+    "title": "Brown Square Book",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Brown Square Book \n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Livros \n| secondarytype  =  \n| stackable      = não\n| mercado        = não\n| writable       = sim\n| weight         = 13.00 \n| droppedby      = Ninguém.\n| value          = 30 \n| npcprice       = 30 \n| buyfrom        = The Librarian\n| sellto         = Jogadores.\n| notes          = Pode ser encontrado na cabana de [[Robin]], o chefe dos caçadores de [[Thais]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6481,
+    "ns": 0,
+    "title": "Brown Thin Book",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Brown Thin Book \n| flavortext     =  \n| itemclass      = Itens de Decoração\n| primarytype    = Livros \n| secondarytype  =  \n| stackable      = não\n| mercado        = não\n| writable       = sim\n| weight         = 13.00 \n| droppedby      = Ninguém.\n| value          = 30\n| npcprice       = 30\n| buyfrom        = The Librarian\n| sellto         = Jogadores. \n| notes          = Pode ser encontrado em lugares como o banco de [[Thais]]. Parece com um [[File AH-X17L89]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6487,
+    "ns": 0,
+    "title": "Cookbook",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Cookbook \n| flavortext     = It contains several exotic recipes. \n| itemclass      = Itens de Decoração\n| primarytype    = Livros \n| secondarytype  =  \n| readable       = não\n| stackable      = não\n| weight         = 15.00\n| value          = 150 \n| npcprice       = 150 \n| droppedby      = Ninguém. \n| buyfrom        = Maryza, Black Bert:1 000\n| sellto         = Jogadores. \n| implemented    = 7.5\n| notes          = Cada personagem pode comprá-lo com [[Maryza]] apenas uma vez.\n<noinclude><p><spoiler>* 01 é necessário para completar uma das missões dos Blue Djinn durante a [[The Djinn War Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6493,
+    "ns": 0,
+    "title": "Gemmed Book",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Gemmed Book\n| itemclass      = Itens de Decoração\n| primarytype    = Livros\n| secondarytype  = \n| writable       = sim\n| weight         = 13.00\n| stackable      = não\n| value          = \n| npcvalue       = 100\n| npcprice       = 0\n| mercado        = não\n| droppedby      = [[Albino Dragon]], [[Dragon Lord]], [[Demodras]], [[Frost Dragon]].\n| buyfrom        = Jogadores.\n| sellto         = Gorn, Shiantis, Perod, Thomas, Bertha\n| implemented    = 7.9\n| notes          = Pode ser escrito com até 1100 caracteres. Cuidado ao escrever neste livro! Uma vez escrito, ele não pode ser editado, então pense bem antes de salvar as informações nele.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6922,
+    "ns": 0,
+    "title": "Book of Necromantic Rituals",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Book of Necromantic Rituals\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Produtos de Criaturas\n| secondarytype  = Livros\n| weight         = 3.58\n| value          = 180\n| npcvalue       = 180\n| stackable      = sim\n| droppedby      = [[Blood Hand]], [[Blood Priest]], [[Floating Savant]], [[Necromancer]], [[Necromancer Servant]], [[Necropharus]], [[Shadow Pupil]].\n| buyfrom        = Jogadores.\n| sellto         = Tothdral, Yasir\n| implemented    = 8.54\n| notes          = Nenhuma.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7061,
+    "ns": 0,
+    "title": "Almanac of Magic",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Almanac of Magic\n| flavortext     = Invaluable for all magic research.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Livros\n| weight         = 55.55\n| stackable      = não\n| attrib         = Nenhum.\n| droppedby      = Ninguém.\n| npcvalue       = 0\n| npcprice       = 600\n| buyfrom        = Black Bert\n| sellto         = Jogadores.\n| implemented    = 8.54\n| notes          = Mesmo sprite de um [[Spellbook of Dragha]], de um [[Nature Magic Spellbook]] e de um [[Spellbook]].\n<noinclude><p><spoiler>* Usado na [[The New Frontier Quest]]. </spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7081,
+    "ns": 0,
+    "title": "Nature Magic Spellbook",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Nature Magic Spellbook\n| flavortext     = It contains the arcane secrets of nature magic.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Livros\n| attrib         = Nenhum.\n| readable       = não\n| stackable      = não\n| weight         = 58.00\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.1\n| notes          = Mesmo sprite de um [[Spellbook of Dragha]], de um [[Almanac of Magic]] e de um [[Spellbook]].\n<noinclude><p><spoiler>* Obtido e usado na [[Secret Service Quest]] (CGB).</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7083,
+    "ns": 0,
+    "title": "Jean Pierre's Cookbook II",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Jean Pierre's Cookbook II\n| flavortext     = It was given to you by the djinn maître and contains new recipes you cooked.\n| itemclass      = Itens de Decoração\n| primarytype    = Livros\n| secondarytype  = \n| readable       = sim\n| stackable      = não\n| weight         = 15.00\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.6\n| notes          = Segundo livro de [[Jean Pierre]] com 4 receitas. Para ler o contéudo deste livro, clique [[Jean Pierre's Cookbook II (Book)|aqui]].\n<noinclude><p><spoiler>* Recompensa da [[Hot Cuisine Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7086,
+    "ns": 0,
+    "title": "Heavily Bound Book",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Heavily Bound Book\n| flavortext       = It contains the scribings of many knowledgeable Tibians. It was awarded by Tibia.Fandom.com\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Livros\n| tertiarytype     = \n| attrib           = Pode ser escrito.\n| stackable        = não\n| weight           = 78.00\n| mercado          = não\n| sounds           = \n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 8.2\n| notes            = \n* Item oficial do fansite '''Tibia.Fandom.com'''.\n* O personagem {{Character|Shinner}} recebeu um por ter sido o criador do item.\n* Pode ser visto na exibição de prêmios de Thais aos domingos.\n\n<noinclude><gallery>\nArquivo:ErigHBB1.PNG|'''Heavily Bound Book''' na casa do personagem {{character|Erig}} no servidor [[Pacera]].\n</gallery></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7087,
+    "ns": 0,
+    "title": "Grey Tome",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Grey Tome\n| flavortext     = It's a volume of The Mystic Secrets of Tibia.\n| itemclass      = Itens de Decoração\n| primarytype    = Livros\n| secondarytype  = \n| stackable      = não\n| weight         = 19.00\n| value          = 198 000 000 - 225 000 000\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 6.4\n| notes          = O '''Grey Tome''' costumava dar respawn há muito tempo atrás em [[Mintwallin]]. \nA guild {{guild|Mercenarys}} recebeu um como recompensa dos deuses por ganhar a Tibia Ball League em 2004 (um evento de futebol organizado pelos Mercenarys). Em janeiro de 2008 eles o venderam para {{character|Lord Potatis Skalare}} por 7 milhões de gps. O segundo '''Grey Tome''' pertenceu a {{character|Embermane}} e custou 8 milhões de gps.\nAtualmente este item pode ser obtido em concursos de [[fansites]].\n\n<noinclude><p><gallery>\nGrey_Tome.jpg|O set de Tomes em [[Gentebra]], casa do jogador {{Character|Surufon}}.\nArquivo:greytometbl.jpg|Mercenarys vencendo o TBL em 2004.\n</gallery></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7092,
+    "ns": 0,
+    "title": "Grey Small Book",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Grey Small Book\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Livros\n| secondarytype  = \n| writable       = sim\n| weight         = 13.00\n| stackable      = não\n| value          = 15\n| npcprice       = 15\n| droppedby      = [[Orc Shaman]], [[Barbarian Brutetamer]], [[Barbaria]].\n| buyfrom        = Gorn, Perod, Thomas, Zora, Bertha, Shiantis\n| sellto         = Jogadores.\n| notes          = Uma vez escrito, não pode ser modificado. Pode ser comprado de qualquer vendedor de equipamento em [[Tibia]], como [[Gorn]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7093,
+    "ns": 0,
+    "title": "Green Tome",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Green Tome\n| flavortext     = It's a volume of The Mystic Secrets of Tibia.\n| itemclass      = Itens de Decoração\n| primarytype    = Livros\n| weight         = 19.00\n| stackable      = não\n| value          = 200 000 000 - 250 000 000\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 6.4\n| notes          = Obtido pela primeira vez na [[Isle of the Mists]] há muito tempo, o [[Green Tome]] ainda pode ser visto com certa frequência em Antica, já que provavelmente existem vários exemplares lá. Entretanto, em mundos mais novos este item é considerado muito raro, o qual atualmente é obtido apenas quando concedido como presente dos [[Gods]] ou através de recompensa em concursos de [[Fansites]].\n\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7095,
+    "ns": 0,
+    "title": "Green Book",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Green Book\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Livros\n| secondarytype  = \n| writable       = sim\n| stackable      = não\n| mercado        = não\n| weight         = 13.00\n| npcvalue       = 15\n| value          = \n| droppedby      = [[Green Djinn]].\n| buyfrom        = Jogadores.\n| sellto         = Gorn, Shiantis, Perod, Thomas, Bertha\n| notes          = Encontrado na biblioteca da Djinn Tower. Você também pode encontrar um exemplar na loja de [[Lily]], em [[Rookgaard]], com algumas [[Blueberry|blueberries]] em cima.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7097,
+    "ns": 0,
+    "title": "Fat Green Book",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Fat Green Book\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Livros\n| secondarytype  = \n| writable       = sim\n| stackable      = não\n| weight         = 13.00\n| value          = 30 \n| npcprice       = 30 \n| droppedby      = Ninguém.\n| buyfrom        = The Librarian\n| sellto         = Jogadores.\n| notes          = Nenhuma.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7629,
+    "ns": 0,
+    "title": "Book (CGB)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Book (CGB)\n| flavortext     = It is filled with family trees.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Livros\n| stackable      = não\n| attrib         = Nenhum.\n| weight         = 13.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.1\n| notes          = Tem a mesma aparência de um [[Big Blue Book]] e um [[Atlas]].\n<noinclude><p><spoiler>* Obtido e usado durante a [[Secret Service Quest]] (CGB).</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9128,
+    "ns": 0,
+    "title": "Amarie's Favourite Book",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Amarie's Favourite Book\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Livros\n| attrib         = Nenhum.\n| readable       = não\n| stackable      = não\n| weight         = 8.00\n| npcvalue       = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.5\n| notes          = Mesmo sprite de um [[Red Square Book]].\n<noinclude><p><spoiler>* Temporariamente obtido na [[The Scatterbrained Sorcerer Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9230,
+    "ns": 0,
+    "title": "Elven Poetry Book",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Elven Poetry Book\n| flavortext     = It contains a collection of beautiful elven poems.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Livros\n| stackable      = não\n| attrib         = Nenhum.\n| weight         = 13.00 \n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.6\n| notes          = \n<noinclude><p><spoiler>* Obtido e usado durante a [[The Explorer Society Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9339,
+    "ns": 0,
+    "title": "Dragha's Spellbook",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Dragha's Spellbook\n| flavortext     = It apparently belonged to someone called Dragha, the apprentice of a voodoomaster.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Livros\n| stackable      = não\n| readable       = não\n| attrib         = Nenhum.\n| weight         = 58.00\n| value          = \n| droppedby      = Ninguém.\n| npcvalue       = 0\n| npcprice       = 16 000\n| buyfrom        = Black Bert\n| sellto         = Jogadores.\n| implemented    = 7.8\n| notes          = \n<noinclude><p><spoiler>\n* Obtido em um corpo morto em [[Goroma]].\n* Necessário para missão ''Voodoo Master'' da [[The Shattered Isles Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9380,
+    "ns": 0,
+    "title": "File AH-X17L89",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = File AH-X17L89\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Livros\n| stackable      = não\n| attrib         = Nenhum.\n| weight         = 13.00\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.1\n| notes          = Mesma aparência de um [[Brown Thin Book]].\n<noinclude><p><spoiler>* Obtido e usado na [[Secret Service Quest]] (AVIN).</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 13434,
+    "ns": 0,
+    "title": "Damaged Logbook",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Damaged Logbook\n| flavortext     = It must be the one which the explorer society requested.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Livros\n| attrib         = Nenhum.\n| weight         = 11.00\n| stackable      = não\n| value          = \n| npcprice       = 40 000\n| droppedby      = Ninguém.\n| buyfrom        = Black Bert\n| sellto         = Jogadores.\n| implemented    = 7.8\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[The Explorer Society Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 14005,
+    "ns": 0,
+    "title": "Jean Pierre's Cookbook I",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Jean Pierre's Cookbook I\n| flavortext    = It was given to you by maître Jean Pierre and contains the collection of recipes you cooked.\n| itemclass     = Itens de Decoração\n| primarytype   = Livros\n| secondarytype = \n| readable      = sim\n| stackable     = não\n| weight        = 15.00\n| value         = \n| droppedby     = Ninguém.\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| implemented   = 8.5\n| notes         = O primeiro livro de [[Jean Pierre]] com 10 receitas. Para ler o contéudo deste livro, clique [[Jean Pierre's Cookbook I (Book)|aqui]].\n<noinclude><p><spoiler>* Recompensa da [[Hot Cuisine Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 17218,
+    "ns": 0,
+    "title": "Book of Orc Language",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Book of Orc Language\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Livros\n| attrib         = Nenhum.\n| weight         = 12.00\n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.1\n| notes          = <noinclude><p><spoiler>* Obtido e usado na [[The Rookie Guard Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 26950,
+    "ns": 0,
+    "title": "Monk's Diary",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Monk's Diary\n| flavortext    = \n| itemclass     = Outros Itens\n| primarytype   = Itens de Quest\n| secondarytype = Livros\n| readable      = sim\n| stackable     = não\n| weight        = 13.00\n| npcprice      = 3 000\n| droppedby     = Ninguém.\n| buyfrom       = Black Bert\n| sellto        = Jogadores.\n| implemented   = 7.24\n| notes         = Tem a mesma aparência de um [[Black Book]]. Para ler o conteúdo desde item, veja [[Fugio's Diary (Book)]].\n<noinclude><p><spoiler>* Obtido e usado durante a [[The White Raven Monastery Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 32749,
+    "ns": 0,
+    "title": "Eerie Song Book",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Eerie Song Book\n| flavortext     = The songs in it are... special. Very special. Not for weak stomachs.\n| itemclass      = Escudos\n| primarytype    = Itens de Quest\n| secondarytype  = Livros\n| defense        = 0\n| weight         = 13.00\n| stackable      = não\n| mercado        = não\n| value          = \n| npcvalue       = 0\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.30\n| notes          = Pode ser equipado no slot de escudos do [[inventário]] mas não oferece nenhuma proteção ao personagem. \n<noinclude><p><spoiler>\n* Obtido e usado durante a task [[Roshamuul_Quest#Soothing Bad Dreams|Soothing Bad Dreams]].\n{{DASH|'''Nota:''' caso o perca basta falar ''lost'' para a [[Dream Butterfly]] e será possível refazer a missão para adquiri-lo.}}\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 39345,
+    "ns": 0,
+    "title": "Forbidden Tome",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Forbidden Tome \n| itemclass      = Itens de Decoração\n| primarytype    = Livros\n| weight         = 6.50\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 0\n| droppedby      = [[The Last Lore Keeper]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = <noinclude><p><spoiler>* [[Arquivo:Achievement.gif]] Ao usar a [[Key to Knowledge]] no tome, e ter comido a [[Forbidden Fruit]], você receberá o achievement '''\"{{Achievement|Forbidden Knowledge}}\"''' ao fazer isso tanto a Key quanto o Tome irão desaparecer e a seguinte mensagem irá surgir na tela \"'''''You gained a tremendous amount of knowledge'''''\".</spoiler></p></noinclude>\n| implemented    = 11.02\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 39623,
+    "ns": 0,
+    "title": "Heavy Old Tome",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Heavy Old Tome\n| itemclass      = Itens de Decoração\n| primarytype    = Itens de Quest\n| secondarytype  = Livros\n| weight         = 10.00\n| stackable      = sim\n| value          = \n| npcvalue       = 30\n| droppedby      = [[Cyclops]], [[Ghoul]], [[Grand Master Oberon]], [[Lost Gnome]], [[Orc]], [[Orc Cult Priest]], [[Orc Shaman]], [[Orc Spearman]], [[Orc Warrior]], [[Skeleton]], [[Troll]].\n| buyfrom        = Jogadores.\n| sellto         = Albinius\n| mercado        = sim\n| notes          = <noinclude><p><spoiler>* 05 são necessários para a [[Forgotten Knowledge Quest]].</spoiler></p></noinclude>\n| implemented    = 11.02\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 40757,
+    "ns": 0,
+    "title": "Old Tome",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Old Tome\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Livros\n| readable       = sim\n| stackable      = não\n| weight         = 20.00\n| droppedby      = Ninguém.\n| attrib         = Nenhum.\n| implemented    = 11.02\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Pode ser encontrado na [[Bibliotecas de Isle of the Kings|biblioteca de Isle of the Kings]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 41009,
+    "ns": 0,
+    "title": "Book with Old Legends",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Book with Old Legends\n| flavortext     = It contains many stories and myths about the woods and the forest animals. But you don't find any story about a white deer.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Livros\n| weight         = 13.00\n| readable       = não\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| mercado        = não\n| droppedby      = Ninguém.\n| npcprice       = 2 000\n| buyfrom        = Black Bert\n| sellto         = Jogadores.\n| implemented    = 11.40\n| notes          = \n<noinclude><p><spoiler>\n* Obtido e usado na [[Threatened Dreams Quest]].\n</noinclude></p></spoiler>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 44575,
+    "ns": 0,
+    "title": "Knowledgeable Book",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Knowledgeable Book\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Livros\n| weight         = 20.00\n| stackable      = não\n| value          = \n| droppedby      = [[Gorzindel]]\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.80\n| notes          = \n* Ainda não se sabe sobre o seu verdadeiro uso, mas acredita-se que seja apenas um item decorativo. <br>\n<gallery>Arquivo:Knowledgeable Book Print.jpeg|O livro obtido por um jogador.</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 44578,
+    "ns": 0,
+    "title": "Ominous Book",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ominous Book\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Livros\n| weight         = 15.00\n| stackable      = não\n| value          = \n| droppedby      = [[Gorzindel]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.80\n| notes          = Ainda não se sabe sobre o seu verdadeiro uso, mas acredita-se que seja apenas um item decorativo.\n<gallery>\nArquivo:Ominous Book Print.jpg|O livro obtido por um jogador.\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45208,
+    "ns": 0,
+    "title": "Anatomy Book",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Anatomy Book\n| flavortext     = It describes the physiology of different humanoid races.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Livros\n| attrib         = Nenhum\n| weight         = 13.00\n| stackable      = não\n| npcvalue       = \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.00\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[The Dream Courts Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 47544,
+    "ns": 0,
+    "title": "Black Thin Book",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Black Thin Book\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Livros\n| weight         = 13.00\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.80\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 51939,
+    "ns": 0,
+    "title": "Old Royal Diary",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Old Royal Diary\n| flavortext     = An old royal diary that once belonged to Yselda of Bounac.\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Produtos de Criaturas\n| secondarytype  = Livros\n| weight         = 1.30\n| value          = 220 000\n| npcvalue       = 220 000\n| stackable      = sim\n| droppedby      = [[Megasylvan Yselda]].\n| buyfrom        = Jogadores.\n| sellto         = Yasir\n| implemented    = 12.70\n| notes          =\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 54081,
+    "ns": 0,
+    "title": "Half Empty Picture Album (Falcon Banner)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se este não é item que você procura, veja a página [[Picture|Picture (Desambiguação)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Half Empty Picture Album (Falcon Banner)\n| flavortext     = Eight pictures are missing. Under the first missing one you read: \"Banner of the Falcon Order\".\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Livros\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = 5.00\n| value          = \n| npcvalue       = 0\n| npcprice       = 0\n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = \n<noinclude><p><spoiler>\n* Obtido e usado durante a [[25 Years of Tibia Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 54082,
+    "ns": 0,
+    "title": "Half Empty Picture Album (Halls of Hope)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se este não é item que você procura, veja a página [[Picture|Picture (Desambiguação)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Half Empty Picture Album (Halls of Hope)\n| flavortext     = Seven pictures are missing. Under the first missing one you read: \"The Halls of Hope\".\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Livros\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = 6.00\n| value          = \n| npcvalue       = 0\n| npcprice       = 0\n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = \n<noinclude><p><spoiler>\n* Obtido e usado durante a [[25 Years of Tibia Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 54083,
+    "ns": 0,
+    "title": "Half Empty Picture Album (Adventurers' Guild)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se este não é item que você procura, veja a página [[Picture|Picture (Desambiguação)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Half Empty Picture Album (Adventurers' Guild)\n| flavortext     = Six pictures are missing. Under the first missing one you read: \"the skill trainers in the Adventurers' Guild\".\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Livros\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = 7.00\n| value          = \n| npcvalue       = 0\n| npcprice       = 0\n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = \n<noinclude><p><spoiler>\n* Obtido e usado durante a [[25 Years of Tibia Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 54087,
+    "ns": 0,
+    "title": "Almost Full Picture Album (Elven House)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se este não é item que você procura, veja a página [[Picture|Picture (Desambiguação)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Almost Full Picture Album (Elven House)\n| flavortext     = Two pictures are missing. Under the first missing one you read: \"house in the southern part of Ab'Dendriel\".\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Livros\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = 11.00\n| value          = \n| npcvalue       = 0\n| npcprice       = 0\n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = \n<noinclude><p><spoiler>\n* Obtido e usado durante a [[25 Years of Tibia Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 54088,
+    "ns": 0,
+    "title": "Almost Full Picture Album (Calcanea)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se este não é item que você procura, veja a página [[Picture|Picture (Desambiguação)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Almost Full Picture Album (Calcanea)\n| flavortext     = One picture is missing. You read: \"Calcanea\".\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Livros\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = 12.00\n| value          = \n| npcvalue       = 0\n| npcprice       = 0\n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = \n<noinclude><p><spoiler>\n* Obtido e usado durante a [[25 Years of Tibia Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 58382,
+    "ns": 0,
+    "title": "Book with Transcripts",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Book with Transcripts\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Livros\n| writable       = não\n| stackable      = não\n| weight         = 2.50\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Ninguém.\n| sellto         = Jogadores.\n| implemented    = 13.10\n| notes          = <noinclude><p><spoiler>* Faz parte da [[The Cradle of Monsters Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 58779,
+    "ns": 0,
+    "title": "Grey Thin Book",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Grey Thin Book\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Livros\n| weight         = 13.00\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.80\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 60220,
+    "ns": 0,
+    "title": "Book About Spells",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Object|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Book About Spells\n| flavortext     = This book contains descriptions of spells and what they do. Some of it does not sound very likely at all.\n| objectclass    = Livros\n| primarytype    = \n| secondarytype  = Objetos de Quests\n| attrib         = Nenhum.\n| weight         = 0.00\n| stackable      = não\n| npcvalue       = \n| value          = \n| mercado        = não\n| location       = [[Buried Cathedral]].\n| droppedby      = Ninguém.\n| implemented    = 12.00\n| notes          = Não pode ser movido.\n<noinclude><p><spoiler>\n* Faz parte da [[The Dream Courts Quest]].\n* Ao clicar nele, o jogador é teleportado para a sala da alavanca do boss [[Faceless Bane]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 60222,
+    "ns": 0,
+    "title": "Large Book of Chants",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Object|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Large Book of Chants\n| flavortext     = This book contains frenetic chants which seem to make little if any sense.\n| objectclass    = Livros\n| primarytype    = \n| secondarytype  = Objetos de Quests\n| attrib         = Nenhum.\n| weight         = 0.00\n| stackable      = não\n| npcvalue       = \n| value          = \n| mercado        = não\n| location       = [[Buried Cathedral]].\n| droppedby      = Ninguém.\n| implemented    = 12.00\n| notes          = Não pode ser movido.\n<noinclude><p><spoiler>\n* Faz parte da [[The Dream Courts Quest]].\n* Existem quatro desses livros e fazem parte do acesso ao boss [[Faceless Bane]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 65831,
+    "ns": 0,
+    "title": "Book of Wisdom",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Book of Wisdom\n| flavortext     = Its written in an unrecognizable language. Showing strange drawings, multiple notes and mystic figures. It might be useful for someone.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Livros\n| attrib         = Nenhum.\n| weight         = 1.00\n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.12.c7d92c\n| notes          = <noinclude><p><spoiler>* Obtido e usado na [[Newhaven Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7063,
+    "ns": 0,
+    "title": "Your Student Book",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Your Student Book\n| flavortext     = Write down important notes in here.\n| itemclass      = Itens de Decoração\n| primarytype    = Livros\n| secondarytype  = \n| writable       = sim\n| rewriteable    = sim\n| stackable      = não\n| weight         = 9.00\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Encontrado no [[Box (Brown)|Box]] próximo a [[Amber]], no subsolo da [[Academia de Rookgaard]].<br />\nMesmo sprite do [[Blue Book]] e pode ter até 1 023 letras.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7065,
+    "ns": 0,
+    "title": "Unholy Book",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Unholy Book\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Livros\n| weight         = 13.00\n| stackable      = não\n| npcvalue       = 30 000\n| droppedby      = [[Ushuriel]].\n| buyfrom        = Jogadores.\n| sellto         = Gnomission\n| mercado        = não\n| notes          = Exposto na sala dos sorcerers da [[Isle of Destiny]].<br />Mesmo sprite do [[The Witches' Grimoire]].\n<noinclude><gallery>\nArquivo:Unholy Book.png|'''Unholy Book'''\n</noinclude></gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7068,
+    "ns": 0,
+    "title": "Tome of Knowledge",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Tome of Knowledge\n| flavortext     = Bring this encrypted book to a sage in Farmine to gain wisdom or unlock more of Zao's culture.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Livros\n| readable       = não\n| stackable      = não\n| weight         = 15.00\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.54\n| notes          = Um livro raro, encontrado somente em [[Zao]]. Existem vários deles espalhados em partes do continente. \n<noinclude><p><spoiler>* Recompensa da [[Tomes of Knowledge Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7069,
+    "ns": 0,
+    "title": "Tibiacity Encyclopedia",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre o '''fansite item''' Tibiacity Encyclopedia. Para à réplica, veja [[Encyclopedia]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Tibiacity Encyclopedia\n| flavortext       = It contains all the knowledge of Tibia\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Livros\n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 13.37\n| mercado          = não\n| sounds           = \"Weirdo, you're a weirdo! Actually all of you are!\"; \"Pie for breakfast, pie for lunch and pie for dinner!\"; \"All hail the control panel!\"; \"I own, Tibiacity owns, perfect match!\"; \"Hug me! Feed me! Hail me!\".\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 8.2\n| notes            = \n* Item oficial do ex-fansite '''TibiaCity'''.\n* O personagem {{character|Mage of the Fall}} recebeu um por ter sido o criador do item. \n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n<noinclude><gallery>\nArquivo:tomenardi.png|'''Tibiacity Encyclopedia''' no servidor [[Luminera]].\n</gallery></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7072,
+    "ns": 0,
+    "title": "The Holy Tible",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = The Holy Tible\n| itemclass      = Itens de Decoração\n| primarytype    = Itens de Quest\n| secondarytype  = Livros\n| attrib         = Nenhum.\n| writable       = não\n| readable       = sim\n| weight         = 13.00\n| stackable      = não\n| mercado        = não\n| value          = \n| npcvalue       = 0\n| npcprice       = 1 000\n| droppedby      = Ninguém.\n| buyfrom        = Oldrak\n| sellto         = Jogadores.\n| implemented    = 7.9\n| notes          = Veja seu conteúdo e tradução em [[The Holy Tible (Book)]].\n<noinclude><p><spoiler>\n* Obtida e usada durante a [[The Pits of Inferno Quest]].\n* Usada para atravessar a parede na entrada da [[Pits of Inferno]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7074,
+    "ns": 0,
+    "title": "Spellbook (Alternative)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Spellbook (Alternative)\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Livros\n| secondarytype  = \n| attrib         = \n| weight         = 58.00\n| stackable      = não\n| writable      = não\n| readable       = sim\n| value          = \n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Pode ser visto no porão do [[Mal'ouquah]] (Green Djinn Fortress) e na [[Treasure_Rooms#Sala_de_Tesouros_de_Kharos|Kharos Treasure Room]]. Foi visto pela primeira vez no [[Updates/8.54|Test Server de Natal 2009]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7076,
+    "ns": 0,
+    "title": "Red Tome",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Red Tome\n| flavortext     = It's a volume of The Mystic Secrets of Tibia.\n| itemclass      = Itens de Decoração\n| primarytype    = Livros\n| weight         = 19.00\n| stackable      = não\n| npcvalue       = 2 000\n| value          = 2 000 - 10 000\n| droppedby      = [[Infernalist]], [[Warlock]], [[King Zelos]].\n| droppedRaidby  = [[Ferumbras]], [[Morgaroth]].\n| buyfrom        = Jogadores.\n| sellto         = Gnomission\n| implemented    = 6.4\n| notes          = Um dos 5 [[Tome|tomos]] (livros grossos) de [[Tibia]]. Este é o segundo tomo mais comum, seguido pelo [[Purple Tome]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7077,
+    "ns": 0,
+    "title": "Red Square Book",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Red Square Book\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Livros\n| readable       = sim\n| stackable      = não\n| weight         = 13.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Pode ser encontrado em [[Bibliotecas]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7079,
+    "ns": 0,
+    "title": "Purple Tome",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Purple Tome\n| flavortext     = It's a volume of The Mystic Secrets of Tibia.\n| itemclass      = Itens de Decoração\n| primarytype    = Livros\n| secondarytype  = \n| weight         = 19.00\n| stackable      = não\n| value          = 2 000 - 20 000\n| npcvalue       = 2 000\n| droppedby      = [[Angry Demon]], [[Arbaziloth]], [[Demon]], [[Rage Squid]], [[Vexclaw]].\n| droppedRaidby  = [[Orshabaal]].\n| buyfrom        = Jogadores.\n| sellto         = Augustin, Gnomission\n| implemented    = 6.4\n| notes          = Você não pode escrever em um Purple [[Tome]]. Um dos 5 [[tomes]] do Tibia.\n<noinclude><p><spoiler>* Recompensa da [[Demona Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7080,
+    "ns": 0,
+    "title": "Orange Book",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Orange Book\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Livros\n| secondarytype  = \n| writable       = sim\n| mercado        = não\n| stackable      = não\n| weight         = 13.00\n| value          = 60\n| npcvalue       = 30\n| droppedby      = [[Acolyte of the Cult]], [[Adept of the Cult]], [[Enlightened of the Cult]], [[Ghost]], [[Hand of Cursed Fate]], [[Novice of the Cult]], [[Priestess]], [[Tarnished Spirit]].\n| buyfrom        = Jogadores.\n| sellto         = Gorn:30, Shiantis:30, Perod:30, Thomas:30, Bertha:30, The Librarian\n| notes          = Um livro que pode ser vendido em [[NPC]]s.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 20699,
+    "ns": 0,
+    "title": "Seashell Book (Blue) (A)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se este não é item que você procura, veja a página [[Seashell Book|Seashell Book (Desambiguação)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Seashell Book (Blue) (A)\n| itemclass      = Itens de Decoração\n| primarytype    = Livros\n| weight         = 13.00\n| stackable      = não\n| readable       = não\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.4\n| notes          = Diferente dos ''Seashell Books'' de quests (com manchas de sangue), estes podem ser lidos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 20701,
+    "ns": 0,
+    "title": "Seashell Book (Green) (B)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se este não é item que você procura, veja a página [[Seashell Book|Seashell Book (Desambiguação)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Seashell Book (Green) (B)\n| flavortext     = And they drove them mad and to the edge of extinction. Extinction of the world that surrounded them.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Livros\n| weight         = 13.00\n| stackable      = não\n| mercado        = sim\n| readable       = não\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.4\n| notes          = Diferente de [[Seashell Book|seashell books]] comuns, estes não podem ser lidos. Eles possuem a mancha de sangue para diferenciá-los dos outros, já que estes são utilizados em uma quest.<noinclude><p><spoiler>\n* 01 é necessário para obter o [[Deepling Outfits]] na [[Liquid Black Quest]];\n* É um livro muito importante para os deeplings, você pode obtê-lo [[Use|usando]] uma [[Key to the Drowned Library]] em um [[Seashell Bookcase]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 20703,
+    "ns": 0,
+    "title": "Seashell Book (Yellow) (B)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se este não é item que você procura, veja a página [[Seashell Book|Seashell Book (Desambiguação)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Seashell Book (Yellow) (B)\n| flavortext     = Darkness clutches the creatures of the sea to end all living things. Be watchful of this black void.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Livros\n| weight         = 13.00\n| stackable      = não\n| mercado        = sim\n| readable       = não\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.4\n| notes          = Diferente de [[Seashell Book|seashell books]] comuns, estes não podem ser lidos. Eles possuem a mancha de sangue para diferenciá-los dos outros, já que estes são utilizados em uma quest.<noinclude><p><spoiler>\n* 01 é necessário para obter o [[Deepling Outfits]] na [[Liquid Black Quest]];\n* É um livro muito importante para os deeplings, você pode obtê-lo [[Use|usando]] uma [[Key to the Drowned Library]] em um [[Seashell Bookcase]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 28969,
+    "ns": 0,
+    "title": "Torn Book (Marziel's Diary)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Torn Book (Marziel's Diary)\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Livros\n| attrib         = Nenhum.\n| weight         = 11.00\n| readable       = sim\n| stackable      = não\n| value          = \n| npcprice       =\n| droppedby      = Ninguém.\n| buyfrom        = Ninguém.\n| sellto         = Jogadores.\n| implemented    = 8.4\n| notes          = Mesmo sprite de um [[Torn Book]]. Para ver o conteúdo, veja o livro [[Marziel's Diary I (Book)]].\n<noinclude><p><spoiler>* Obtido e usado durante a [[Blood Brothers Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 31659,
+    "ns": 0,
+    "title": "Seashell Book (Blue) (B)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se este não é item que você procura, veja a página [[Seashell Book|Seashell Book (Desambiguação)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Seashell Book (Blue) (B)\n| flavortext     = I write this trilogy of blackness and death to warn the world of the evil in the depths.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Livros\n| weight         = 13.00\n| stackable      = não\n| mercado        = sim\n| readable       = não\n| npcvalue       = 0\n| npcprice       = 0\n| droppedEventby = [[Lionet (Criatura)|Lionet]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.4\n| notes          = Diferente de [[Seashell Book|seashell books]] comuns, estes não podem ser lidos. Eles possuem a mancha de sangue para diferenciá-los dos outros, já que estes são utilizados em uma quest.<noinclude><p><spoiler>\n* 01 é necessário para obter o [[Deepling Outfits]] na [[Liquid Black Quest]];\n* É um livro muito importante para os deeplings, você pode obtê-lo [[Use|usando]] uma [[Key to the Drowned Library]] em um [[Seashell Bookcase]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 32075,
+    "ns": 0,
+    "title": "Strange Good Night Songs",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Strange Good Night Songs\n| flavortext     = It contains some hypnotic melodies that are hard to remember.\n| itemclass      = Escudos\n| primarytype    = Itens de Quest\n| secondarytype  = Livros\n| defense        = 0\n| weight         = 13.00\n| stackable      = não\n| mercado        = não\n| value          = \n| npcvalue       = 0\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.30\n| notes          = Pode ser equipado no slot de escudos do [[inventário]] mas não oferece nenhuma proteção ao personagem. \n<noinclude><p><spoiler>\n* Obtido e usado na task [[Roshamuul_Quest#Soothing_Bad_Dreams|Soothing Bad Dreams]] da [[Roshamuul Quest]].\n{{DASH|'''Nota:''' caso o perca basta falar ''lost'' para a NPC [[Dream Butterfly]] e será possível refazer a missão para adquiri-lo.}}\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 34411,
+    "ns": 0,
+    "title": "Torn Log Book",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Torn Log Book\n| flavortext     = It's rather tattered.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Livros\n| npcvalue       = 0\n| npcprice       = 0\n| stackable      = não\n| weight         = 5.00\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.55\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[Dawnport Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 44051,
+    "ns": 0,
+    "title": "The True Book of Death",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = The True Book of Death\n| flavortext     = The writing in this book seems clear at first but is almost illegible if you try to make sense of anything. It's as if the book itself does not want to be read.\n| itemclass      = Artefatos Primordiais\n| primarytype    = Itens de Quest\n| secondarytype  = Livros\n| readable       = não\n| weight         = 13.00\n| mercado        = não\n| stackable      = não\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = [[Brokul]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.80\n| notes          = \n<noinclude><p><spoiler>\n* Obtido e usado durante a [[The Secret Library Quest]].\n* Obtido sempre como loot do boss [[Brokul]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 44161,
+    "ns": 0,
+    "title": "Ornate Tome",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ornate Tome\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Livros\n| weight         = 15.00\n| stackable      = não\n| value          = \n| droppedby      = [[Ghulosh]], [[Lokathmor]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Nenhuma.\n| implemented    = 11.80\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 44615,
+    "ns": 0,
+    "title": "Sinister Book",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Sinister Book\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Livros\n| weight         = 15.00\n| stackable      = não\n| value          = \n| droppedby      = [[Gorzindel]], [[Mazzinor]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.80\n| notes          = Ainda não se sabe sobre o seu verdadeiro uso, mas acredita-se que seja apenas um item decorativo. <br><gallery>Arquivo:SinisterBookLoot.jpeg|Jogador com o Sinister Book.</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53425,
+    "ns": 0,
+    "title": "The Spatial Warp Almanac",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = The Spatial Warp Almanac\n| flavortext     = An extremely old book on teleportation containing a variety of spells on bending space. It seems tainted by something.\n| itemclass      = Artefatos Primordiais\n| primarytype    = Itens de Quest\n| secondarytype  = Livros\n| attrib         = Nenhum.\n| weight         = 2.00\n| stackable      = não\n| npcvalue       = \n| droppedby      = [[Grand Master Oberon]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.80\n| notes          = \n<noinclude><p><spoiler>\n* Obtido e usado na [[The Secret Library Quest]].\n* Obtido sempre como loot do boss [[Grand Master Oberon]].\n* Utilizado para o achievement [[Avid Spectral Reader (Achievement)]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 54084,
+    "ns": 0,
+    "title": "Partly Empty Picture Album (Colossus Fortress)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se este não é item que você procura, veja a página [[Picture|Picture (Desambiguação)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Partly Empty Picture Album (Colossus Fortress)\n| flavortext     = Five pictures are missing. Under the first missing one you read: \"the Colossus Fortress\".\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Livros\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = 8.00\n| value          = \n| npcvalue       = 0\n| npcprice       = 0\n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = \n<noinclude><p><spoiler>\n* Obtido e usado durante a [[25 Years of Tibia Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 54085,
+    "ns": 0,
+    "title": "Partly Empty Picture Album (Bank of Carlin)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se este não é item que você procura, veja a página [[Picture|Picture (Desambiguação)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Partly Empty Picture Album (Bank of Carlin)\n| flavortext     = Four pictures are missing. Under the first missing one you read: \"the bank of Carlin\".\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Livros\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = 9.00\n| value          = \n| npcvalue       = 0\n| npcprice       = 0\n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = \n<noinclude><p><spoiler>\n* Obtido e usado durante a [[25 Years of Tibia Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 54086,
+    "ns": 0,
+    "title": "Partly Empty Picture Album (Golden Statue)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se este não é item que você procura, veja a página [[Picture|Picture (Desambiguação)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Partly Empty Picture Album (Golden Statue)\n| flavortext     = Three pictures are missing. Under the first missing one you read: \"the Golden Statue at the harbour of Venore\".\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Livros\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = 10.00\n| value          = \n| npcvalue       = 0\n| npcprice       = 0\n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = \n<noinclude><p><spoiler>\n* Obtido e usado durante a [[25 Years of Tibia Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 54089,
+    "ns": 0,
+    "title": "Picture Album",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se este não é item que você procura, veja a página [[Picture|Picture (Desambiguação)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Picture Album\n| flavortext     = The album is completed and full of pictures, some of them drawn by yourself.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Livros\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = 13.00\n| value          = \n| npcvalue       = 0\n| npcprice       = 0\n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = \n<noinclude><p><spoiler>\n* Obtido e usado durante a [[25 Years of Tibia Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59700,
+    "ns": 0,
+    "title": "Seashell Book (Yellow) (A)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se este não é item que você procura, veja a página [[Seashell Book|Seashell Book (Desambiguação)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Seashell Book (Yellow) (A)\n| itemclass      = Itens de Decoração\n| primarytype    = Livros\n| weight         = 13.00\n| stackable      = não\n| readable       = não\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.4\n| notes          = Diferente dos ''Seashell Books'' de quests (com manchas de sangue), estes podem ser lidos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59701,
+    "ns": 0,
+    "title": "Seashell Book (Green) (A)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se este não é item que você procura, veja a página [[Seashell Book|Seashell Book (Desambiguação)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Seashell Book (Green) (A)\n| itemclass      = Itens de Decoração\n| primarytype    = Livros\n| weight         = 13.00\n| stackable      = não\n| readable       = não\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.4\n| notes          = Diferente dos ''Seashell Books'' de quests (com manchas de sangue), estes podem ser lidos.\n}}"
+       }
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,1158 @@
+{
+ "query": {
+  "pages": [
+   {
+    "pageid": 6430,
+    "ns": 0,
+    "title": "Cultish Mask",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Cultish Mask\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| stackable      = sim\n| weight         = 1.65\n| value          = 280\n| npcvalue       = 280\n| droppedby      = [[Enlightened of the Cult]].\n| buyfrom        = Jogadores.\n| sellto         = Tothdral, Yasir\n| implemented    = 8.54\n| notes          = <noinclude><p><spoiler>* 25 são necessários para fazer o Imbuement [[Demon Presence (Proteção de Sagrado)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6891,
+    "ns": 0,
+    "title": "Battle Stone",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Battle Stone\n| flavortext     = It seems to be perfect to shape a weapon from it. Someone could definitely be interested in it.\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| attrib         = \n| stackable      = sim\n| weight         = 1.50\n| value          = 290\n| npcvalue       = 290\n| droppedby      = [[Armadile]], [[Behemoth]], [[Ogre Brute]].\n| buyfrom        = Jogadores.\n| sellto         = Telas,\n| implemented    = 8.6\n| notes          = <noinclude><p><spoiler>* 25 são necessários para fazer o Imbuement [[Chop (Skillboost de Machado)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6916,
+    "ns": 0,
+    "title": "Bloody Pincers",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bloody Pincers\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| stackable      = sim\n| weight         = 1.20\n| value          = 100 - 4 000\n| npcvalue       = 100\n| droppedby      = [[Blood Crab]], [[Deepsea Blood Crab]], [[Thanatursus]].\n| buyfrom        = Jogadores.\n| sellto         = Grizzly Adams, Yasir\n| implemented    = 8.54\n| notes          = <noinclude><p><spoiler>* 15 são necessários para fazer o Imbuement [[Vampirism (Roubo de Vida)]].\n* Para vender, é necessário ter o rank \"Huntsman\" na [[Killing in the Name of... Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6923,
+    "ns": 0,
+    "title": "Brimstone Fangs",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Brimstone Fangs\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| attrib         = \n| stackable      = sim\n| weight         = 1.12\n| npcvalue       = 380\n| value          = 380\n| droppedby      = [[Brimstone Bug]], [[Sulphur Scuttler]].\n| buyfrom        = Jogadores.\n| sellto         = Fiona, Yasir\n| implemented    = 8.6\n| notes          = <noinclude><p><spoiler>* 10 são necessários para fazer o Imbuement [[Snake Skin (Proteção de Terra)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6924,
+    "ns": 0,
+    "title": "Brimstone Shell",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Brimstone Shell\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| attrib         =\n| stackable      = sim\n| weight         = 1.12\n| npcvalue       = 210\n| value          = 210\n| droppedby      = [[Brimstone Bug]], [[Sulphur Scuttler]].\n| buyfrom        = Jogadores.\n| sellto         = Fiona, Yasir\n| implemented    = 8.6\n| notes          = <noinclude><p><spoiler>* 25 são necessários para fazer o Imbuement [[Blockade (Skillboost de Escudo)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6932,
+    "ns": 0,
+    "title": "Broken Shamanic Staff",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Broken Shamanic Staff\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| attrib         = \n| stackable      = sim\n| weight         = 1.28\n| npcvalue       = 35\n| droppedby      = [[Ogre Sage]], [[Ogre Shaman]], [[Orc Cult Priest]], [[Orc Shaman]], [[Scar Tribe Shaman]].\n| buyfrom        = Jogadores.\n| sellto         = Inigo, Baxter, Yasir\n| implemented    = 8.6\n| notes          = <noinclude><p><spoiler>* 15 são necessários para fazer o Imbuement [[Epiphany (Skillboost de Nível Mágico)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6945,
+    "ns": 0,
+    "title": "Compass",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Compass\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| weight         = 0.80\n| value          = 45\n| npcvalue       = 45\n| stackable      = sim\n| droppedby      = [[Pirate Marauder]], [[Pirate Cutthroat]], [[Pirate Buccaneer]], [[Pirate Corsair]].\n| buyfrom        = Jogadores.\n| sellto         = Buddel, Yasir\n| implemented    = 8.54\n| notes          = <noinclude><p><spoiler>* 25 são necessários para fazer o Imbuement [[Swiftness (Skillboost de Velocidade)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6949,
+    "ns": 0,
+    "title": "Cultish Robe",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Cultish Robe\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| weight         = 2.00\n| stackable      = sim\n| value          = 150\n| npcvalue       = 150\n| droppedby      = [[Acolyte of the Cult]], [[Adept of the Cult]], [[Cult Believer]], [[Cult Scholar]], [[Minotaur Cult Follower]], [[Minotaur Cult Prophet]], [[Minotaur Cult Zealot]], [[Novice of the Cult]], [[Orc Cult Fanatic]], [[Orc Cult Inquisitor]], [[Orc Cult Minion]], [[Orc Cult Priest]], [[Orc Cultist]], [[Priestess]].\n| buyfrom        = Jogadores.\n| sellto         = Tothdral, Yasir\n| implemented    = 8.54\n| notes          = <noinclude><p><spoiler>* 25 são necessários para fazer o Imbuement [[Demon Presence (Proteção de Sagrado)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6953,
+    "ns": 0,
+    "title": "Cyclops Toe",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Cyclops Toe\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| stackable      = sim\n| weight         = 1.11\n| value          = 55\n| npcvalue       = 55\n| droppedby      = [[Cyclops]], [[Cyclops Drone]], [[Cyclops Smith]], [[Juvenile Cyclops]], [[The Old Whopper]].\n| buyfrom        = Jogadores.\n| sellto         = Inigo, Grizzly Adams, Yasir\n| implemented    = 8.54\n| notes          = Pode ser vendido para NPCs, porém em um é necessário ter um rank em uma quest.\n<noinclude><p><spoiler>* 20 são necessários para fazer o Imbuement [[Bash (Skillboost de Clava)]].\n* Para vender, é necessário ter o rank \"Huntsman\" na [[Killing in the Name of... Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6958,
+    "ns": 0,
+    "title": "Demon Horn",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Demon Horn\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| attrib         = \n| weight         = 10.00\n| stackable      = sim\n| value          = 1 000 - 10 000\n| npcvalue       = 1 000\n| droppedby      = [[Angry Demon]], [[Annihilon]], [[Demon]], [[Ghulosh]], [[Gorzindel]], [[Hellgorak]], [[Horadron]], [[Lokathmor]], [[Madareth]], [[Mazzinor]], [[Prince Drazzak]], [[Terofar]], [[Zavarash]], [[Zugurosh]], [[Ushuriel]].\n| droppedRaidby  = [[Gaz'Haragoth]], [[Ghazbaran]], [[Morgaroth]], [[Omrafir]], [[Orshabaal]].\n| buyfrom        = Jogadores.\n| sellto         = Fiona, Yasir\n| implemented    = 7.8\n| notes          = <noinclude><p><spoiler>* 5 são necessários para fazer o Imbuement [[Scorch (Dano de Fogo)]].\n* 50 são necessárias para a [[Doomforging]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6960,
+    "ns": 0,
+    "title": "Demonic Skeletal Hand",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Demonic Skeletal Hand\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| stackable      = sim\n| weight         = 1.32\n| value          = \n| npcvalue       = 80\n| droppedby      = [[Demon Skeleton]].\n| buyfrom        = Jogadores.\n| sellto         = Fiona, Yasir\n| implemented    = 8.54\n| notes          = \n<noinclude><p><spoiler>\n* 20 são necessários para fazer o Imbuement [[Reap (Dano de Morte)]].\n* 02 são necessários para [[The Gravedigger of Drefia Quest]].\n* 200 são necessários para [[Doomforging]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6969,
+    "ns": 0,
+    "title": "Draken Sulphur",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Draken Sulphur\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| attrib         = \n| stackable      = sim\n| weight         = 0.68\n| npcvalue       = 550\n| value          = Negociável\n| droppedby      = [[Draken Elite]], [[Draken Spellweaver]], [[Paiz the Pauperizer]].\n| buyfrom        = Jogadores.\n| sellto         = Fiona, Yasir\n| implemented    = 8.6\n| notes          = <noinclude><p><spoiler>* 5 são necessários para fazer o Imbuement [[Dragon Hide (Proteção de Fogo)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6978,
+    "ns": 0,
+    "title": "Elven Scouting Glass",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Elven Scouting Glass\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| stackable      = sim\n| weight         = 0.80\n| value          = 50\n| npcvalue       = 50\n| droppedby      = [[Elf Scout]].\n| buyfrom        = Jogadores.\n| sellto         = Fiona, Yasir\n| implemented    = 8.6\n| notes          = <noinclude><p><spoiler>* 25 são necessários para fazer o Imbuement [[Precision (Skillboost de Distância)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6980,
+    "ns": 0,
+    "title": "Elvish Talisman",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Elvish Talisman\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| stackable      = sim\n| weight         = 1.10\n| value          = 45\n| npcvalue       = 45\n| droppedby      = [[Crazed Summer Rearguard]], [[Elf]], [[Elf Arcanist]], [[Elf Overseer]], [[Elf Scout]], [[Firestarter]], [[Soul-Broken Harbinger]].\n| droppedRaidby  = [[Dharalion]].\n| buyfrom        = Jogadores.\n| sellto         = Tothdral, Yasir\n| implemented    = 8.54\n| notes          = <noinclude><p><spoiler>* 25 são necessários para fazer o Imbuement [[Epiphany (Skillboost de Nível Mágico)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7000,
+    "ns": 0,
+    "title": "Fiery Heart",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Fiery Heart\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| weight         = 1.15\n| stackable      = sim\n| value          = 375\n| npcvalue       = 375\n| droppedby      = [[Blazing Fire Elemental]], [[Blistering Fire Elemental]], [[Hellfire Fighter]], [[Hellhound]], [[Fire Overlord]], [[Lava Golem]], [[Magma Crawler]], [[Thornfire Wolf]], [[Vulcongra]], [[Weeper]].\n| buyfrom        = Jogadores.\n| sellto         = Fiona,Yasir\n| implemented    = 8.54\n| notes          = <noinclude><p><spoiler>* 25 são necessários para fazer o Imbuement [[Scorch (Dano de Fogo)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7002,
+    "ns": 0,
+    "title": "Flask of Embalming Fluid",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Flask of Embalming Fluid\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| attrib         = \n| stackable      = sim\n| weight         = 0.75\n| value          = 30\n| npcvalue       = 30\n| droppedby      = [[Elder Mummy]], [[Mahatheb]], [[Mummy]].\n| buyfrom        = Jogadores.\n| sellto         = Tothdral, Yasir\n| implemented    = 8.6\n| notes          = <noinclude><p><spoiler>\n* 25 são necessários para fazer o Imbuement [[Lich Shroud (Proteção de Morte)]].\n* Necessário na [[Thornfire World Change]].\n* 01 é necessário na [[The Cursed Crystal Quest]].\n* 05 podem ser obtidos a cada 10 horas no [[Black Sphinx Estate]], em um baú localizado na sala do [[Warlock]], ({{mapa|32830,31689,9:2|aqui}}).</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7006,
+    "ns": 0,
+    "title": "Frosty Heart",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Frosty Heart\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| weight         = 1.86\n| value          = 280\n| stackable      = sim\n| npcvalue       = 280\n| droppedby      = [[Frost Dragon Hatchling]], [[Hirintror]], [[Icecold Book]], [[Ice Golem]], [[Melting Frozen Horror]], [[Shardhead]], [[Squid Warden]].\n| buyfrom        = Jogadores.\n| sellto         = Fiona, Yasir\n| implemented    = 8.54\n| notes          = <noinclude><p><spoiler>* 25 são necessários para fazer o Imbuement [[Frost (Dano de Gelo)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7013,
+    "ns": 0,
+    "title": "Ghostly Tissue",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ghostly Tissue\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| secondarytype  = \n| weight         = 0.50\n| value          = 90\n| npcvalue       = 90\n| stackable      = sim\n| droppedby      = [[Enraged Soul]], [[Ghost]], [[Tarnished Spirit]].\n| buyfrom        = Jogadores.\n| sellto         = Irmana, Yasir\n| implemented    = 8.54\n| notes          =\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7024,
+    "ns": 0,
+    "title": "Green Dragon Leather",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Green Dragon Leather\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| weight         = 0.60\n| stackable      = sim\n| value          = \n| npcvalue       = 100\n| attrib         = \n| droppedby      = [[Dragon]], [[Lizard Commander]].\n| droppedRaidby  = [[Grand Mother Foulscale]].\n| droppedEventby = [[Tazhadur]].\n| buyfrom        = Jogadores.\n| sellto         = Irmana, Yasir\n| implemented    = 7.8\n| notes          = Também pode ser obtido [[Skinning|tirando a pele]] de um [[Dragon]].\n<noinclude><p><spoiler>\n* 20 são necessários para fazer o Imbuement [[Dragon Hide (Proteção de Fogo)]].\n* 100 são necessários para o outfit básico do [[Dragon Slayer Outfits]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7025,
+    "ns": 0,
+    "title": "Green Dragon Scale",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Green Dragon Scale\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| attrib         = \n| weight         = 0.80\n| stackable      = sim\n| value          = \n| npcvalue       = 100\n| droppedby      = [[Dragon]].\n| droppedRaidby  = [[Grand Mother Foulscale]].\n| droppedEventby = [[Tazhadur]].\n| buyfrom        = Jogadores.\n| sellto         = Fiona, Yasir\n| implemented    = 7.8\n| notes          = \n<noinclude><p><spoiler>\n* 05 são necessárias para fazer o Imbuement [[Scorch (Dano de Fogo)]].\n* 01 é necessária para a [[The Ice Islands Quest]].\n* 500 são necessárias para o outfit básico do [[Dragon Slayer Outfits]]. \n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7027,
+    "ns": 0,
+    "title": "Hellspawn Tail",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Hellspawn Tail\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| attrib         = \n| weight         = 1.25\n| value          = 475\n| npcvalue       = 475\n| stackable      = sim\n| droppedby      = [[Hellspawn]], [[Flameborn]].\n| buyfrom        = Jogadores.\n| sellto         = Fiona, Tarun, Yasir\n| implemented    = 8.54\n| notes          = <noinclude><p><spoiler>* 20 são necessários para fazer o Imbuement [[Demon Presence (Proteção de Sagrado)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7056,
+    "ns": 0,
+    "title": "Lion's Mane",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Lion's Mane\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| weight         = 1.80\n| value          = 60\n| npcvalue       = 60\n| stackable      = sim\n| droppedby      = [[Lion]], [[Noble Lion]], [[Roaring Lion]], [[Werelion]], [[Werelioness]].\n| droppedRaidby  = [[Zomba]].\n| buyfrom        = Jogadores.\n| sellto         = Domizian, Irmana, Yasir\n| implemented    = 8.54\n| notes          = <noinclude><p><spoiler>* 25 são necessários para fazer o Imbuement [[Slash (Skillboost de Espada)]].\n* 05 podem ser obtidos a cada 20 horas ao dar ''use'' em um [[Tree Stump (Feyrist)|Tree Stump]] no alto do [[Lion's Rock]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7419,
+    "ns": 0,
+    "title": "Mantassin Tail",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Mantassin Tail\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| stackable      = sim\n| weight         = 1.15\n| value          = 280\n| npcvalue       = 280\n| droppedby      = [[Renegade Quara Mantassin]], [[Quara Mantassin]], [[Quara Mantassin Scout]].\n| buyfrom        = Jogadores.\n| sellto         = Grizzly Adams, Yasir\n| implemented    = 8.6\n| notes          = Pode ser vendido para NPCs, porém em um é necessário ter um rank em uma quest.<noinclude><p><spoiler>\n* Para vender, é necessário ter o rank \"Huntsman\" na [[Killing in the Name of... Quest]].\n* 20 são necessários para fazer o Imbuement [[Punch (Skillboost de Punhos)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7432,
+    "ns": 0,
+    "title": "Mystical Hourglass",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Mystical Hourglass\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| weight         = 0.96\n| value          = 700\n| npcvalue       = 700\n| stackable      = sim\n| droppedby      = [[Grim Reaper]], [[The Last Lore Keeper]].\n| buyfrom        = Jogadores.\n| sellto         = Fiona, Yasir\n| implemented    = 8.54\n| notes          = <noinclude><p><spoiler>* 5 são necessários para fazer o Imbuement [[Lich Shroud (Proteção de Morte)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7441,
+    "ns": 0,
+    "title": "Orc Tooth",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Orc Tooth\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| stackable      = sim\n| weight         = 1.00\n| value          = 150 - 500\n| npcvalue       = 150\n| droppedby      = [[Orc]], [[Orc Berserker]], [[Orc Cult Fanatic]], [[Orc Cult Inquisitor]], [[Orc Cult Priest]], [[Orc Leader]], [[Orc Marauder]], [[Orc Rider]], [[Orc Shaman]], [[Orc Spearman]], [[Orc Warlord]], [[Orc Warrior]], [[Renegade Orc]], [[Scar Tribe Shaman]].\n| droppedRaidby  = [[Cublarc the Plunderer]].\n| buyfrom        = Jogadores.\n| sellto         = Inigo, Baxter, Tom:40, Yasir \n| implemented    = 8.54\n| notes          = Assim como o [[Sabretooth (Item)|Sabretooth]], quando agrupado em 2 ou mais o nome deste item muda para \"'''Orc Teeth'''\".\n<noinclude><p><spoiler>* 20 são necessários para fazer o Imbuement [[Chop (Skillboost de Machado)]].\n* 1 é necessário para a [[Threatened Dreams Quest]].\n* 5 deles são necessários para a [[Unnatural Selection Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7451,
+    "ns": 0,
+    "title": "Petrified Scream",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Petrified Scream\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| weight         = 1.50\n| value          = 250\n| npcvalue       = 250\n| stackable      = sim\n| droppedby      = [[Banshee]].\n| buyfrom        = Jogadores.\n| sellto         = Malunga, Yasir\n| implemented    = 8.54\n| notes          = <noinclude><p><spoiler>* 5 são necessários para fazer o Imbuement [[Reap (Dano de Morte)]].\n* 1 é necessário para [[The Cursed Crystal Quest]].\n* 5 podem ser obtidos nos [[Cults of Tibia (The Barkless)|Barkless]], em um baú localizado ({{mapa|32739,31426,8:2|aqui}}).</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7454,
+    "ns": 0,
+    "title": "Piece of Dead Brain",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Piece of Dead Brain\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| weight         = 1.32\n| value          = 420 - 15 000\n| npcvalue       = 420\n| stackable      = sim\n| droppedby      = [[Braindeath]], [[Brain Squid]], [[Rage Squid]], [[Squid Warden]].\n| buyfrom        = Jogadores.\n| sellto         = Malunga, Yasir\n| implemented    = 8.54\n| notes          = <noinclude><p><spoiler>* 5 são necessários para fazer o Imbuement [[Vampirism (Roubo de Vida)]].\n* 100 são necessários para a [[Doomforging]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7468,
+    "ns": 0,
+    "title": "Metal Spike",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Metal Spike\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| weight         = 0.50\n| value          = 320\n| npcvalue       = 320\n| stackable      = sim\n| droppedby      = [[Destroyer]], [[Bretzecutioner]].\n| buyfrom        = Jogadores.\n| sellto         = Telas\n| implemented    = 8.54\n| notes          = <noinclude><p><spoiler>* 10 são necessários para fazer o Imbuement [[Precision (Skillboost de Distância)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7469,
+    "ns": 0,
+    "title": "Piece of Scarab Shell",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Piece of Scarab Shell\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| attrib         =\n| stackable      = sim\n| weight         = 1.42\n| npcvalue       = 45\n| value          = 45\n| droppedby      = [[Scarab]].\n| buyfrom        = Jogadores.\n| sellto         = Malunga, Yasir\n| implemented    = 8.54\n| notes          = <noinclude><p><spoiler>* 20 são necessários para fazer o Imbuement [[Blockade (Skillboost de Escudo)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7472,
+    "ns": 0,
+    "title": "Pile of Grave Earth",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Pile of Grave Earth\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| attrib         = \n| stackable      = sim\n| weight         = 0.98\n| value          = 25\n| npcvalue       = 25\n| droppedby      = [[Ghoul]], [[Gravedigger]].\n| buyfrom        = Jogadores.\n| sellto         = Malunga, Yasir\n| implemented    = 8.6\n| notes          = <noinclude><p><spoiler>* 25 são necessários para fazer o Imbuement [[Reap (Dano de Morte)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7474,
+    "ns": 0,
+    "title": "Poisonous Slime",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Poisonous Slime\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| stackable      = sim\n| weight         = 0.80\n| npcvalue       = 50\n| value          = 50\n| droppedby      = [[Blood Beast]], [[Brimstone Bug]], [[Diremaw]], [[Filth Toad]], [[Ink Blob]], [[Ink Splash]], [[Lancer Beetle]], [[Stonerefiner]], [[Sulphur Scuttler]], [[Toad]].\n| droppedRaidby  = [[The Blightfather]].\n| buyfrom        = Jogadores.\n| sellto         = Malunga, Augustin, Yasir\n| implemented    = 8.54\n| notes          = <noinclude><p><spoiler>* 20 são necessários para fazer o Imbuement [[Venom (Dano de Terra)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7475,
+    "ns": 0,
+    "title": "Polar Bear Paw",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Polar Bear Paw\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| weight         = 1.50\n| stackable      = sim\n| value          = 30\n| npcvalue       = 30\n| droppedby      = [[Polar Bear]].\n| buyfrom        = Jogadores.\n| sellto         = Baltim, Yasir\n| implemented    = 8.54\n| notes          = <noinclude><p><spoiler>* 5 são necessários para fazer o Imbuement [[Frost (Dano de Gelo)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 20240,
+    "ns": 0,
+    "title": "Deepling Warts",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Deepling Warts\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| attrib         = \n| stackable      = sim\n| weight         = 2.40\n| value          = 180\n| npcvalue       = 180\n| droppedby      = [[Deathling Scout]], [[Deathling Spellsinger]], [[Deepling Elite]], [[Deepling Warrior]].\n| buyfrom        = Jogadores.\n| sellto         = Rock In A Hard Place, Malunga, Yasir\n| implemented    = 9.4\n| notes          = <noinclude><p><spoiler>* 10 são necessários para fazer o Imbuement [[Quara Scale (Proteção de Gelo)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 20242,
+    "ns": 0,
+    "title": "Crawler Head Plating",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Crawler Head Plating\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| attrib         = \n| stackable      = sim\n| weight         = 2.65\n| value          = 210\n| npcvalue       = 210\n| droppedby      = [[Crawler]], [[Shadowstalker]].\n| buyfrom        = Jogadores.\n| sellto         = Rock In A Hard Place, Malunga, Yasir\n| implemented    = 9.4\n| notes          = <noinclude><p><spoiler>* 15 são necessários para fazer o Imbuement [[Cloud Fabric (Proteção de Energia)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25290,
+    "ns": 0,
+    "title": "Blazing Bone",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Blazing Bone\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| weight         = 2.20\n| stackable      = sim\n| value          = 610\n| npcvalue       = 610\n| droppedby      = [[Hellhound]], [[Lava Golem]], [[Magma Crawler]], [[Vulcongra]], [[Weeper]].\n| droppedRaidby  = [[Dragonling]].\n| buyfrom        = Jogadores.\n| sellto         = Fiona, Yasir\n| implemented    = 9.6\n| notes          = <noinclude><p><spoiler>* 10 são necessários para fazer o Imbuement [[Dragon Hide (Proteção de Fogo)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 27602,
+    "ns": 0,
+    "title": "Piece of Swampling Wood",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Piece of Swampling Wood\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| weight         = 3.50\n| stackable      = sim\n| droppedby      = [[Swampling]], [[Woodling]].\n| buyfrom        = Jogadores.\n| sellto         = Inigo, Malunga, Yasir\n| npcvalue       = 30\n| value          = 30\n| implemented    = 9.8\n| notes          = <noinclude><p><spoiler>* 25 são necessários para fazer o Imbuement [[Snake Skin (Proteção de Terra)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 27608,
+    "ns": 0,
+    "title": "Damselfly Wing",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Damselfly Wing\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| weight         = 1.20\n| stackable      = sim\n| droppedby      = [[Dawnfly]], [[Emerald Damselfly]].\n| buyfrom        = Jogadores.\n| sellto         = Inigo, Malunga, Yasir\n| npcvalue       = 20\n| value          = 20\n| implemented    = 9.8\n| notes          = <noinclude><p><spoiler>* 15 são necessários para fazer o Imbuement [[Swiftness (Skillboost de Velocidade)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 30055,
+    "ns": 0,
+    "title": "Elven Hoof",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Elven Hoof\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| stackable      = sim\n| weight         = 2.30\n| value          = 115\n| npcvalue       = 115\n| droppedby      = [[Elder Forest Fury]], [[Forest Fury]].\n| buyfrom        = Jogadores.\n| sellto         = Grizzly Adams, Yasir\n| implemented    = 10.1\n| notes          = Pode ser vendido para um NPC, porém é necessário ter um rank em uma quest.\n<noinclude><p><spoiler>* 20 são necessários para fazer o Imbuement [[Precision (Skillboost de Distância)]].\n* Para vender, é necessário ter o rank \"Huntsman\" na [[Killing in the Name of... Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 31753,
+    "ns": 0,
+    "title": "Frazzle Skin",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Frazzle Skin\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| weight         = 1.90\n| stackable      = sim\n| value          = 400\n| npcvalue       = 400\n| droppedby      = [[Animated Guzzlemaw]], [[Frazzlemaw]], [[Guzzlemaw]], [[Nibblemaw]], [[Weakened Frazzlemaw]].\n| buyfrom        = Jogadores.\n| sellto         = Asnarus, Yasir\n| implemented    = 10.30\n| notes          = <noinclude><p><spoiler>* 25 são necessários para fazer o Imbuement [[Blockade (Skillboost de Escudo)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 31760,
+    "ns": 0,
+    "title": "Goosebump Leather",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Goosebump Leather\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| weight         = 2.80\n| stackable      = sim\n| value          = 650\n| npcvalue       = 650\n| droppedby      = [[Retching Horror]], [[Shock Head]].\n| buyfrom        = Jogadores.\n| sellto         = Asnarus, Yasir\n| implemented    = 10.30\n| notes          = <noinclude><p><spoiler>* 5 são necessários para fazer o Imbuement [[Featherweight (Aumento de Capacidade)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 33144,
+    "ns": 0,
+    "title": "Mooh'tah Shell",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Mooh'tah Shell\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| weight         = 5.00\n| value          = 110\n| stackable      = sim\n| npcvalue       = 110\n| droppedby      = [[Moohtant Wallbreaker]], [[Mooh'Tah Warrior]].\n| buyfrom        = Jogadores.\n| sellto         = Alaistar\n| implemented    = 10.50\n| notes          = <noinclude><p><spoiler>* 25 são necessários para fazer o Imbuement [[Slash (Skillboost de Espada)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 33165,
+    "ns": 0,
+    "title": "Moohtant Horn",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Moohtant Horn\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| weight         = 3.50\n| attrib         = \n| stackable      = sim\n| value          = 140\n| npcvalue       = 140\n| droppedby      = [[Animated Moohtant]], [[Bullwark]], [[Glooth Bomb]], [[Moohtant]], [[Moohtant Wallbreaker]].\n| buyfrom        = Jogadores.\n| sellto         = Alaistar\n| implemented    = 10.50\n| notes          = <noinclude><p><spoiler>* 20 são necessários para fazer o Imbuement [[Chop (Skillboost de Machado)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 36239,
+    "ns": 0,
+    "title": "Gloom Wolf Fur",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Gloom Wolf Fur\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| weight         = 1.20\n| attrib         =\n| stackable      = sim\n| value          = 70\n| npcvalue       = 70\n| droppedby      = [[Gloom Wolf]].\n| buyfrom        = Jogadores.\n| implemented    = 10.80\n| sellto         = Irmana, Yasir\n| notes          = <noinclude><p><spoiler>* 20 são necessários para fazer o Imbuement [[Lich Shroud (Proteção de Morte)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 36259,
+    "ns": 0,
+    "title": "Peacock Feather Fan",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Peacock Feather Fan\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| attrib         = \n| weight         = 2.00\n| stackable      = sim\n| value          = 350\n| npcvalue       = 350\n| droppedby      = [[Dawnfire Asura]], [[Kusuma]], [[Midnight Asura]], [[The Blazing Rose]], [[The Diamond Blossom]], [[The Flaming Orchid]], [[The Lily Of Night]], [[True Dawnfire Asura]], [[True Midnight Asura]].\n| buyfrom        = Jogadores.\n| sellto         = Tarun, Yasir\n| implemented    = 10.80\n| notes          = <noinclude><p><spoiler>* 5 são necessários para fazer o Imbuement [[Electrify (Dano de Energia)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 37145,
+    "ns": 0,
+    "title": "Ogre Nose Ring",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ogre Nose Ring\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| weight         = 21.00\n| stackable      = sim\n| npcvalue       = 210\n| droppedby      = [[Animated Ogre Brute]], [[Animated Ogre Shaman]], [[Ogre Brute]], [[Ogre Rowdy]], [[Ogre Ruffian]], [[Ogre Sage]], [[Ogre Savage]], [[Ogre Shaman]], [[Shaper Matriarch]].\n| buyfrom        = Jogadores.\n| sellto         = Mugruu, Yasir\n| implemented    = 10.90\n| notes          = <noinclude><p><spoiler>* 15 são necessários para fazer o Imbuement [[Bash (Skillboost de Clava)]].\n* Possibilidade de ser obtido ao usar um [[Shaggy Ogre Bag]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 38279,
+    "ns": 0,
+    "title": "Crystallized Anger",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Crystallized Anger\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| stackable      = sim\n| weight         = 12.00\n| value          = 400\n| npcvalue       = 400\n| npcprice       = 0\n| droppedby      = [[Breach Brood]], [[Burster]], [[Realityquake]], [[The Last Lore Keeper]],[[The Source Of Corruption]], [[World Devourer]].\n| buyfrom        = Jogadores.\n| sellto         = Fadil, Yasir\n| implemented    = 10.94\n| notes          = <noinclude><p><spoiler>* 15 são necessários para fazer o Imbuement [[Vibrancy (Remoção de Paralisia)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 38280,
+    "ns": 0,
+    "title": "Energy Vein",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Energy Vein\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| stackable      = sim\n| weight         = 2.00\n| value          = 270\n| npcvalue       = 270\n| npcprice       = 0\n| droppedby      = [[Dreadful Disruptor]], [[Realityquake]], [[Reality Reaver]], [[The Last Lore Keeper]], [[Tunnel Tyrant]], [[World Devourer]].\n| buyfrom        = Jogadores.\n| sellto         = Fadil, Yasir\n| implemented    = 10.94\n| notes          = <noinclude><p><spoiler>* 1 é necessário para fazer o Imbuement [[Electrify (Dano de Energia)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 40945,
+    "ns": 0,
+    "title": "Fairy Wings",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Fairy Wings\n| itemclass     = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype   = Itens de Imbuements\n| secondarytype = Produtos de Criaturas\n| weight        = 2.00\n| stackable     = sim\n| value         = Negociável\n| buyfrom       = Jogadores.\n| sellto        = Valindara, Talila, Yasir\n| npcvalue      = 200\n| droppedby     = [[Boogy]], [[Dark Faun]], [[Enfeebled Silencer]], [[Kroazur]], [[Raxias]], [[Twisted Pooka]], [[Weakened Frazzlemaw]].\n| implemented   = 11.40\n| notes         = <noinclude><p><spoiler>* 20 são necessários para fazer o Imbuement [[Featherweight (Aumento de Capacidade)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 40961,
+    "ns": 0,
+    "title": "Little Bowl of Myrrh",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Little Bowl of Myrrh\n| flavortext     = It smells like mummy's spirit.\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| weight         = 0.60\n| stackable      = sim\n| value          = 500\n| npcvalue       = 500\n| droppedby      = [[Putrid Mummy]].\n| buyfrom        = Jogadores.\n| sellto         = Fadil, Yasir\n| implemented    = 11.40\n| notes          = <noinclude><p><spoiler>* 10 são necessários para fazer o Imbuement [[Featherweight (Aumento de Capacidade)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 58186,
+    "ns": 0,
+    "title": "Gold-Brocaded Cloth",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Gold-Brocaded Cloth\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| weight         = 2.10\n| value          = \n| npcvalue       = 175\n| stackable      = sim\n| droppedby      = [[Ahau]], [[Iks Ahpututu]], [[Iks Aucar]], [[Iks Chuka]], [[Iks Pututu]], [[Mitmah Scout]], [[Mitmah Seer]].\n| buyfrom        = Jogadores.\n| sellto         = Yasir\n| implemented    = 13.10\n| notes          = <noinclude><p><spoiler>* 15 são necessários para fazer o Imbuement [[Punch (Skillboost de Punhos)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7136,
+    "ns": 0,
+    "title": "Wyvern Talisman",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Wyvern Talisman\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| weight         = 2.25\n| value          = 265\n| npcvalue       = 265\n| stackable      = sim\n| droppedby      = [[Wyvern]].\n| buyfrom        = Jogadores.\n| sellto         = Fiona, Yasir\n| implemented    = 8.54\n| notes          = <noinclude><p><spoiler>* 20 são necessários para fazer o Imbuement [[Cloud Fabric (Proteção de Energia)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7137,
+    "ns": 0,
+    "title": "Wyrm Scale",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Wyrm Scale\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| weight         = 1.80\n| value          = 400\n| stackable      = sim\n| npcvalue       = 400\n| droppedby      = [[Elder Wyrm]], [[Wyrm]].\n| droppedRaidby  = [[Tyrn]].\n| buyfrom        = Jogadores.\n| sellto         = Fiona, Yasir\n| implemented    = 8.54\n| notes          = <noinclude><p><spoiler>* 10 são necessários para fazer o Imbuement [[Cloud Fabric (Proteção de Energia)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7142,
+    "ns": 0,
+    "title": "Winter Wolf Fur",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Winter Wolf Fur\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| attrib         =\n| stackable      = sim\n| weight         = 1.10\n| value          = 20\n| npcvalue       = 20\n| droppedby      = [[Winter Wolf]].\n| buyfrom        = Jogadores.\n| sellto         = Irmana, Yasir\n| implemented    = 8.54\n| notes          = <noinclude><p><spoiler>* 25 são necessários para fazer o Imbuement [[Quara Scale (Proteção de Gelo)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7148,
+    "ns": 0,
+    "title": "Warmaster's Wristguards",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Warmaster's Wristguards\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| weight         = 1.20\n| value          = 200\n| stackable      = sim\n| npcvalue       = 200\n| droppedby      = [[Draken Warmaster]].\n| buyfrom        = Jogadores.\n| sellto         = Esrik, Yasir\n| implemented    = 8.6\n| notes          = <noinclude><p><spoiler>* 10 são necessários para fazer o Imbuement [[Bash (Skillboost de Clava)]].\n* Para vendê-lo aos NPCs é preciso ter entregue 9 [[Tome of Knowledge|tomos]] na [[Tomes of Knowledge Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7149,
+    "ns": 0,
+    "title": "War Crystal",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = War Crystal\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| weight         = 1.45\n| value          = 460\n| stackable      = sim\n| npcvalue       = 460\n| droppedby      = [[Control Tower]], [[Ironblight]], [[War Golem]].\n| buyfrom        = Jogadores.\n| sellto         = Telas\n| implemented    = 8.54\n| notes          = <noinclude><p><spoiler>* 5 são necessários para fazer o Imbuement [[Slash (Skillboost de Espada)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7376,
+    "ns": 0,
+    "title": "Vampire Teeth",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Vampire Teeth\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| weight         = 0.50\n| value          = 275\n| stackable      = sim\n| npcvalue       = 275\n| droppedby      = [[Dworc Shadowstalker]], [[Nightfiend]], [[Norcferatu Heartless]], [[Orclops Bloodbreaker]], [[Vampire]], [[Vampire Bride]], [[Vampire Viscount]].\n| droppedRaidby  = [[Vicious Manbat]].\n| buyfrom        = Jogadores.\n| sellto         = Julius, Yasir\n| implemented    = 8.54\n| notes          = <noinclude><p><spoiler>* 25 são necessários para fazer o Imbuement [[Vampirism (Roubo de Vida)]].\n* 1 é necessário para a [[Threatened Dreams Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7389,
+    "ns": 0,
+    "title": "Thick Fur",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Thick Fur\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| stackable      = sim\n| weight         = 1.25\n| value          = 150\n| npcvalue       = 150\n| droppedby      = [[Animated Clomp]], [[Clomp]], [[Mammoth]].\n| buyfrom        = Jogadores.\n| sellto         = Baltim, Irmana, Yasir\n| implemented    = 8.54\n| notes          = <noinclude><p><spoiler>* 15 são necessários para fazer o Imbuement [[Quara Scale (Proteção de Gelo)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7476,
+    "ns": 0,
+    "title": "Protective Charm",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Protective Charm\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| attrib         = \n| stackable      = sim\n| weight         = 1.20\n| value          = 1000 - 2000\n| npcvalue       = 60\n| droppedby      = [[Amazon]], [[Valkyrie]].\n| buyfrom        = Jogadores.\n| sellto         = Legola, Yasir\n| implemented    = 8.6\n| notes          = <noinclude><p><spoiler>* 20 são necessários para fazer o Imbuement [[Strike (Dano Crítico)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7487,
+    "ns": 0,
+    "title": "Rope Belt",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Rope Belt\n| flavortext     = Though the name implies it, this simple and thin belt is not suited to be used as rope.\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| attrib         = \n| stackable      = sim\n| weight         = 0.97\n| value          = 1 800 - 3 500\n| npcvalue       = 66\n| droppedby      = [[Acolyte of the Cult]], [[Adept of the Cult]], [[Crypt Defiler]], [[Dark Monk]], [[Grave Robber]], [[Monk]], [[Novice of the Cult]], [[Nomad]], [[Nomad (Blue)]].\n| droppedRaidby  = [[Fernfang]].\n| buyfrom        = Jogadores.\n| sellto         = Irmana, Yasir\n| implemented    = 8.6\n| notes          = <noinclude><p><spoiler>* 25 são necessários para fazer o Imbuement [[Void (Roubo de Mana)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7498,
+    "ns": 0,
+    "title": "Sabretooth (Item)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|''Este artigo se refere ao produto de criatura. Para ver outros, veja [[Sabretooth|Sabretooth (Desambiguação)]].''}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Sabretooth (Item)\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| stackable      = sim\n| weight         = 1.28\n| value          = 400 - 5 000\n| npcvalue       = 400\n| droppedby      = [[Mutated Tiger]].\n| droppedRaidby  = [[Midnight Panther]].\n| buyfrom        = Jogadores.\n| sellto         = Grizzly Adams, Tarun, Yasir\n| implemented    = 8.54\n| notes          = Assim como o [[Orc Tooth]], quando agrupado em 2 ou mais o nome deste item muda para \"'''Sabreteeth'''\".\n<noinclude><p><spoiler>* 25 são necessários para fazer o Imbuement [[Strike (Dano Crítico)]].\n* Para vender, é necessário ter o rank \"Huntsman\" na [[Killing in the Name of... Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7520,
+    "ns": 0,
+    "title": "Snake Skin",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Snake Skin\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| stackable      = sim\n| weight         = 1.00\n| value          = 400\n| npcvalue       = 400\n| droppedby      = [[Serpent Spawn]], [[Srezz Yellow Eyes]], [[The Noxious Spawn]].\n| buyfrom        = Jogadores.\n| sellto         = Irmana, Yasir\n| implemented    = 8.54\n| notes          = <noinclude><p><spoiler>* 20 são necessários para fazer o Imbuement [[Snake Skin (Proteção de Terra)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7528,
+    "ns": 0,
+    "title": "Strand of Medusa Hair",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Strand of Medusa Hair\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| stackable      = sim\n| weight         = 2.30\n| value          = 600\n| npcvalue       = 600\n| droppedby      = [[Medusa]], [[Gorgo]].\n| buyfrom        = Jogadores.\n| sellto         = Malunga, Yasir\n| implemented    = 8.54\n| notes          = <noinclude><p><spoiler>* 15 são necessários para fazer o Imbuement [[Epiphany (Skillboost de Nível Mágico)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7531,
+    "ns": 0,
+    "title": "Swamp Grass",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Swamp Grass\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| weight         = 0.94\n| value          = 20\n| stackable      = sim\n| npcvalue       = 20\n| droppedby      = [[Swamp Troll]].\n| buyfrom        = Jogadores.\n| sellto         = Luna, Yasir\n| implemented    = 8.54\n| notes          = <noinclude><p><spoiler>* 25 são necessários para fazer o Imbuement [[Venom (Dano de Terra)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 20258,
+    "ns": 0,
+    "title": "Waspoid Wing",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Waspoid Wing\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| attrib         = \n| stackable      = sim\n| weight         = 1.90\n| trade          = sim\n| value          = 190\n| npcvalue       = 190 \n| droppedby      = [[Chopper]], [[Waspoid]].\n| buyfrom        = Jogadores.\n| sellto         = Rock In A Hard Place, Malunga, Yasir\n| implemented    = 9.4\n| notes          = <noinclude><p><spoiler>* 20 são necessários para fazer o Imbuement [[Swiftness (Skillboost de Velocidade)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 30041,
+    "ns": 0,
+    "title": "Rorc Feather",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Rorc Feather\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| stackable      = sim\n| weight         = 2.50\n| value          = 70\n| npcvalue       = 70\n| droppedby      = [[Rorc]].\n| buyfrom        = Jogadores.\n| sellto         = Grizzly Adams, Yasir\n| implemented    = 10.1\n| notes          = Pode ser vendido para um NPC, porém é necessário ter um rank em uma quest.\n<noinclude><p><spoiler>* 25 são necessários para fazer o Imbuement [[Electrify (Dano de Energia)]].\n* Para vender, é necessário ter o rank \"Huntsman\" na [[Killing in the Name of... Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 31755,
+    "ns": 0,
+    "title": "Silencer Claws",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Silencer Claws\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| weight         = 4.20\n| stackable      = sim\n| value          = 390\n| npcvalue       = 390\n| droppedby      = [[Enfeebled Silencer]], [[Silencer]].\n| buyfrom        = Jogadores.\n| sellto         = Asnarus, Yasir\n| implemented    = 10.30\n| notes          = <noinclude><p><spoiler>* 25 são necessários para fazer o Imbuement [[Void (Roubo de Mana)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 33169,
+    "ns": 0,
+    "title": "Slime Heart",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Slime Heart\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| weight         = 1.80\n| attrib         = \n| stackable      = sim\n| value          = 160\n| npcvalue       = 160\n| droppedby      = [[Blood Beast]], [[Cave Devourer]], [[Rage Squid]], [[Squid Warden]].\n| buyfrom        = Jogadores.\n| sellto         = Alaistar\n| implemented    = 10.50\n| notes          = <noinclude><p><spoiler>* 2 são necessários para fazer o Imbuement [[Venom (Dano de Terra)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 34830,
+    "ns": 0,
+    "title": "Seacrest Hair",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Seacrest Hair\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| weight         = 1.80\n| attrib         = \n| stackable      = sim\n| value          = 260\n| npcvalue       = 260\n| droppedby      = [[Seacrest Serpent]].\n| buyfrom        = Jogadores.\n| sellto         = Alaistar\n| implemented    = 10.70\n| notes          = <noinclude><p><spoiler>* 10 são necessários para fazer o Imbuement [[Frost (Dano de Gelo)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 36228,
+    "ns": 0,
+    "title": "Wereboar Hooves",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Wereboar Hooves\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| weight         = 2.50\n| attrib         =\n| stackable      = sim\n| value          = 175\n| npcvalue       = 175\n| droppedby      = [[Bloodback]], [[Wereboar]].\n| droppedRaidby  = [[Owin (Criatura)]].\n| buyfrom        = Jogadores.\n| implemented    = 10.80\n| sellto         = Domizian, Gladys, Yasir\n| notes          = <noinclude><p><spoiler>* 20 são necessários para fazer o Imbuement [[Vibrancy (Remoção de Paralisia)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 37157,
+    "ns": 0,
+    "title": "Vexclaw Talon",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Vexclaw Talon\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| weight         = 9.00\n| stackable      = sim\n| npcvalue       = 1 100\n| droppedby      = [[Vexclaw]].\n| buyfrom        = Jogadores.\n| sellto         = Fiona, Yasir\n| implemented    = 10.90\n| notes          = <noinclude><p><spoiler>* 5 são necessários para fazer o Imbuement [[Strike (Dano Crítico)]].\n* 100 são necessários para a [[Doomforging]].</spoiler></p></noinclude>\n\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 37159,
+    "ns": 0,
+    "title": "Some Grimeleech Wings",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Some Grimeleech Wings\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| weight         = 8.50\n| stackable      = sim\n| npcvalue       = 1 200\n| droppedby      = [[Grimeleech]].\n| buyfrom        = Jogadores.\n| sellto         = Fiona, Yasir\n| implemented    = 10.90\n| notes          = <noinclude><p><spoiler>* 5 são necessários para fazer o Imbuement [[Void (Roubo de Mana)]].\n* 100 são necessários para a [[Doomforging]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 44086,
+    "ns": 0,
+    "title": "Quill",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Quill\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Itens de Imbuements\n| secondarytype  = Produtos de Criaturas\n| attrib         = \n| weight         = 0.90\n| stackable      = sim\n| npcvalue       = 1 100\n| droppedby      = [[Animated Feather]], [[Icecold Book]], [[Knowledge Elemental]].\n| buyfrom        = Jogadores.\n| sellto         = Yasir, The Librarian\n| implemented    = 11.80\n| notes          = <noinclude><p><spoiler>* 5 são necessários para fazer o Imbuement [[Vibrancy (Remoção de Paralisia)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

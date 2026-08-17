@@ -1,0 +1,38 @@
+<h1>Mapas</h1>
+<p class="sub">Central de Comando — editor de masmorras (usadas por hunts com <code>mapId</code>).</p>
+
+<div class="toolbar">
+  <button class="primary" (click)="create()">+ Novo mapa</button>
+  <button (click)="load()" [disabled]="loading()">Atualizar</button>
+</div>
+
+@if (error()) {
+  <p class="error">{{ error() }}</p>
+}
+@if (loading()) {
+  <p>Carregando…</p>
+}
+
+@if (!loading() && !error()) {
+  <table>
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Dimensões</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (m of maps(); track m.id) {
+        <tr>
+          <td>{{ m.name }}</td>
+          <td class="mono">{{ m.width }}×{{ m.height }}</td>
+          <td>
+            <a [routerLink]="['/maps', m.id]">Editar</a>
+            <button class="danger" (click)="remove(m.id)">Excluir</button>
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+}

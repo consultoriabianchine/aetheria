@@ -45,6 +45,11 @@ export class CreatureManager {
     return this.creatures.delete(id);
   }
 
+  /** Remove todas as criaturas (usado entre waves de uma hunt). */
+  clear(): void {
+    this.creatures.clear();
+  }
+
   /**
    * Popula o mundo a partir das definições e spawns carregados do banco.
    * Cada spawn pode instanciar até maxInstances criaturas.

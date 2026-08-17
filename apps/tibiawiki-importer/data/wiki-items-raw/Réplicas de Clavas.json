@@ -1,0 +1,614 @@
+{
+ "query": {
+  "pages": [
+   {
+    "pageid": 42182,
+    "ns": 0,
+    "title": "Earth Basher Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Earth Basher Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| hands          = Uma\n| type           = Réplicas de Clavas\n| attack         = 5\n| defense        = 5\n| weight         = 78.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+0.50% do seu Club Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+1.00% do seu Club Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+1.50% do seu Club Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+2.00% do seu Club Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Earth||+1 Earth Magic Level}}\n| notes          = É uma réplica do [[Earth Cranial Basher]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42189,
+    "ns": 0,
+    "title": "Earth Cleric Mace Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Earth Cleric Mace Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| hands          = Uma\n| type           = Réplicas de Clavas\n| attack         = 5\n| defense        = 5\n| weight         = 58.00\n| classificacao  = 1\n| max_tier       = 1\n| mercado        = sim\n| droppedby      = Ninguém.\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+0.50% do seu Club Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+1.00% do seu Club Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+1.50% do seu Club Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+2.00% do seu Club Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Earth||+1 Earth Magic Level}}\n| notes          = É uma réplica da [[Earth Clerical Mace]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42191,
+    "ns": 0,
+    "title": "Earth Crystal Mace Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Earth Crystal Mace Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| hands          = Uma\n| type           = Réplicas de Clavas\n| attack         = 5\n| defense        = 5\n| weight         = 80.00\n| classificacao  = 1\n| max_tier       = 1\n| mercado        = sim\n| droppedby      = Ninguém.\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+0.50% do seu Club Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+1.00% do seu Club Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+1.50% do seu Club Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+2.00% do seu Club Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Earth||+1 Earth Magic Level}}\n| notes          = É uma réplica da [[Earth Crystal Mace]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42201,
+    "ns": 0,
+    "title": "Earth Orcish Maul Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Earth Orcish Maul Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| hands          = Duas\n| type           = Réplicas de Clavas\n| attack         = 5\n| defense        = 5\n| weight         = 54.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+0.50% do seu Club Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+1.00% do seu Club Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+1.50% do seu Club Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+2.00% do seu Club Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Earth||+1 Earth Magic Level}}\n| notes          = É uma réplica da [[Earth Orcish Maul]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42211,
+    "ns": 0,
+    "title": "Earth War Hammer Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Earth War Hammer Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| hands          = Duas\n| type           = Réplicas de Clavas\n| attack         = 5\n| defense        = 5\n| weight         = 85.00\n| classificacao  = 1\n| max_tier       = 1\n| mercado        = sim\n| droppedby      = Ninguém.\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+0.50% do seu Club Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+1.00% do seu Club Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+1.50% do seu Club Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+2.00% do seu Club Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Earth||+1 Earth Magic Level}}\n| notes          = É uma réplica da [[Earth War Hammer]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42215,
+    "ns": 0,
+    "title": "Energy Basher Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Energy Basher Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| hands          = Uma\n| type           = Réplicas de Clavas\n| attack         = 5\n| defense        = 5\n| weight         = 78.00\n| classificacao  = 1\n| max_tier       = 1\n| mercado        = sim\n| droppedby      = Ninguém.\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+0.50% do seu Club Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+1.00% do seu Club Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+1.50% do seu Club Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+2.00% do seu Club Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Energy||+1 Energy Magic Level}}\n| notes          = É uma réplica da [[Energy Cranial Basher]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42221,
+    "ns": 0,
+    "title": "Energy Cleric Mace Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Energy Cleric Mace Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| hands          = Uma\n| type           = Réplicas de Clavas\n| attack         = 5\n| defense        = 5\n| weight         = 58.00\n| classificacao  = 1\n| max_tier       = 1\n| mercado        = sim\n| droppedby      = Ninguém.\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+0.50% do seu Club Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+1.00% do seu Club Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+1.50% do seu Club Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+2.00% do seu Club Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Energy||+1 Energy Magic Level}}\n| notes          = É uma réplica da [[Energy Clerical Mace]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42229,
+    "ns": 0,
+    "title": "Energy Mace Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Energy Mace Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| hands          = Uma\n| type           = Réplicas de Clavas\n| attack         = 5\n| defense        = 5\n| weight         = 80.00\n| classificacao  = 1\n| max_tier       = 1\n| mercado        = sim\n| droppedby      = Ninguém.\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+0.50% do seu Club Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+1.00% do seu Club Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+1.50% do seu Club Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+2.00% do seu Club Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Energy||+1 Energy Magic Level}}\n| notes          = É uma réplica da [[Energy Crystal Mace]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42231,
+    "ns": 0,
+    "title": "Energy Orcish Maul Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Energy Orcish Maul Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| hands          = Duas\n| type           = Réplicas de Clavas\n| attack         = 5\n| defense        = 5\n| weight         = 54.00\n| classificacao  = 1\n| max_tier       = 1\n| mercado        = sim\n| droppedby      = Ninguém.\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+0.50% do seu Club Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+1.00% do seu Club Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+1.50% do seu Club Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+2.00% do seu Club Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Energy||+1 Energy Magic Level}}\n| notes          = É uma réplica da [[Energy Orcish Maul]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42241,
+    "ns": 0,
+    "title": "Energy War Hammer Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Energy War Hammer Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| hands          = Duas\n| type           = Réplicas de Clavas\n| attack         = 5\n| defense        = 5\n| weight         = 85.00\n| classificacao  = 1\n| max_tier       = 1\n| mercado        = sim\n| droppedby      = Ninguém.\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+0.50% do seu Club Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+1.00% do seu Club Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+1.50% do seu Club Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+2.00% do seu Club Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Energy||+1 Energy Magic Level}}\n| notes          = É uma réplica da [[Energy War Hammer]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42245,
+    "ns": 0,
+    "title": "Fiery Basher Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Fiery Basher Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| hands          = Uma\n| type           = Réplicas de Clavas\n| attack         = 5\n| defense        = 5\n| weight         = 78.00\n| classificacao  = 1\n| max_tier       = 1\n| mercado        = sim\n| droppedby      = Ninguém.\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+0.50% do seu Club Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+1.00% do seu Club Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+1.50% do seu Club Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+2.00% do seu Club Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Fire||+1 Fire Magic Level}}\n| notes          = É uma réplica da [[Fiery Cranial Basher]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42247,
+    "ns": 0,
+    "title": "Fiery Clerical Mace Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Fiery Clerical Mace Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| hands          = Uma\n| type           = Réplicas de Clavas\n| attack         = 5\n| defense        = 5\n| weight         = 58.00\n| classificacao  = 1\n| max_tier       = 1\n| mercado        = sim\n| droppedby      = Ninguém.\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+0.50% do seu Club Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+1.00% do seu Club Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+1.50% do seu Club Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+2.00% do seu Club Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Fire||+1 Fire Magic Level}}\n| notes          = É uma réplica da [[Fiery Clerical Mace]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42249,
+    "ns": 0,
+    "title": "Fiery Crystal Mace Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Fiery Crystal Mace Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| hands          = Uma\n| type           = Réplicas de Clavas\n| attack         = 5\n| defense        = 5\n| weight         = 80.00\n| classificacao  = 1\n| max_tier       = 1\n| mercado        = sim\n| droppedby      = Ninguém.\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+0.50% do seu Club Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+1.00% do seu Club Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+1.50% do seu Club Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+2.00% do seu Club Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Fire||+1 Fire Magic Level}}\n| notes          = É uma réplica da [[Fiery Crystal Mace]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42261,
+    "ns": 0,
+    "title": "Fiery Orcish Maul Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Fiery Orcish Maul Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| hands          = Duas\n| type           = Réplicas de Clavas\n| attack         = 5\n| defense        = 5\n| weight         = 54.00\n| classificacao  = 1\n| max_tier       = 1\n| mercado        = sim\n| droppedby      = Ninguém.\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+0.50% do seu Club Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+1.00% do seu Club Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+1.50% do seu Club Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+2.00% do seu Club Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Fire||+1 Fire Magic Level}}\n| notes          = É uma réplica da [[Fiery Orcish Maul]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42269,
+    "ns": 0,
+    "title": "Fiery War Hammer Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Fiery War Hammer Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| hands          = Duas\n| type           = Réplicas de Clavas\n| attack         = 5\n| defense        = 5\n| weight         = 85.00\n| classificacao  = 1\n| max_tier       = 1\n| mercado        = sim\n| droppedby      = Ninguém.\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+0.50% do seu Club Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+1.00% do seu Club Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+1.50% do seu Club Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+2.00% do seu Club Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Fire||+1 Fire Magic Level}}\n| notes          = É uma réplica da [[Fiery War Hammer]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42277,
+    "ns": 0,
+    "title": "Icy Clerical Mace Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Icy Clerical Mace Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| hands          = Uma\n| type           = Réplicas de Clavas\n| attack         = 5\n| defense        = 5\n| weight         = 58.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+0.50% do seu Club Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+1.00% do seu Club Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+1.50% do seu Club Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+2.00% do seu Club Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Ice||+1 Ice Magic Level}}\n| notes          = É uma réplica da [[Icy Clerical Mace]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42279,
+    "ns": 0,
+    "title": "Icy Cranial Basher Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Icy Cranial Basher Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| hands          = Uma\n| type           = Réplicas de Clavas\n| attack         = 5\n| defense        = 5\n| weight         = 78.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+0.50% do seu Club Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+1.00% do seu Club Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+1.50% do seu Club Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+2.00% do seu Club Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Ice||+1 Ice Magic Level}}\n| notes          = É uma réplica da [[Icy Cranial Basher]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42281,
+    "ns": 0,
+    "title": "Icy Crystal Mace Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Icy Crystal Mace Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| hands          = Uma\n| type           = Réplicas de Clavas\n| attack         = 5\n| defense        = 5\n| weight         = 80.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+0.50% do seu Club Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+1.00% do seu Club Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+1.50% do seu Club Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+2.00% do seu Club Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Ice||+1 Ice Magic Level}}\n| notes          = É uma réplica da [[Icy Crystal Mace]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42293,
+    "ns": 0,
+    "title": "Icy Orcish Maul Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Icy Orcish Maul Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| hands          = Duas\n| type           = Réplicas de Clavas\n| attack         = 5\n| defense        = 5\n| weight         = 54.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+0.50% do seu Club Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+1.00% do seu Club Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+1.50% do seu Club Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+2.00% do seu Club Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Ice||+1 Ice Magic Level}}\n| notes          = É uma réplica da [[Icy Orcish Maul]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42301,
+    "ns": 0,
+    "title": "Icy War Hammer Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Icy War Hammer Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| hands          = Duas\n| type           = Réplicas de Clavas\n| attack         = 5\n| defense        = 5\n| weight         = 85.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+0.50% do seu Club Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+1.00% do seu Club Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+1.50% do seu Club Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+2.00% do seu Club Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Ice||+1 Ice Magic Level}}\n| notes          = É uma réplica da [[Icy War Hammer]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42316,
+    "ns": 0,
+    "title": "Ornate Carving Hammer",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ornate Carving Hammer\n| flavortext     = This replica looks overcharged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| secondarytype  = \n| hands          = Duas\n| type           = Réplicas de Clavas\n| range          = \n| attack         = 5\n| defense        = 5\n| weight         = 70.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+1% mana leech para Lesser Front Sweep}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+1% mana leech para Lesser Front Sweep}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+3% mana leech para Lesser Front Sweep}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+4% mana leech para Lesser Front Sweep}}\n| perk5          = {{Weapon Perk|Type_Skill_Club||+1 Club Fighting}}\n| notes          = É uma réplica da [[Hammer of Carving (Overcharged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42318,
+    "ns": 0,
+    "title": "Ornate Carving Mace",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ornate Carving Mace\n| flavortext     = This replica looks overcharged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| secondarytype  = \n| hands          = Uma\n| type           = Réplicas de Clavas\n| range          = \n| attack         = 5\n| defense        = 5\n| weight         = 50.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+1% mana leech para Lesser Front Sweep}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+1% mana leech para Lesser Front Sweep}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+3% mana leech para Lesser Front Sweep}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+4% mana leech para Lesser Front Sweep}}\n| perk5          = {{Weapon Perk|Type_Skill_Club||+1 Club Fighting}}\n| notes          = É uma réplica da [[Mace of Carving (Overcharged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42336,
+    "ns": 0,
+    "title": "Valuable Carving Hammer",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Valuable Carving Hammer\n| flavortext     = This replica looks heavily charged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| secondarytype  = \n| hands          = Duas\n| type           = Réplicas de Clavas\n| range          = \n| attack         = 5\n| defense        = 5\n| weight         = 70.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+1% mana leech para Lesser Front Sweep}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+1% mana leech para Lesser Front Sweep}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+3% mana leech para Lesser Front Sweep}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+4% mana leech para Lesser Front Sweep}}\n| perk5          = {{Weapon Perk|Type_Skill_Club||+1 Club Fighting}}\n| notes          = É uma réplica da [[Hammer of Carving (Heavily Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42338,
+    "ns": 0,
+    "title": "Valuable Carving Mace",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Valuable Carving Mace\n| flavortext     = This replica looks heavily charged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| secondarytype  = \n| hands          = Uma\n| type           = Réplicas de Clavas\n| range          = \n| attack         = 5\n| defense        = 5\n| weight         = 50.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+1% mana leech para Lesser Front Sweep}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+1% mana leech para Lesser Front Sweep}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+3% mana leech para Lesser Front Sweep}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+4% mana leech para Lesser Front Sweep}}\n| perk5          = {{Weapon Perk|Type_Skill_Club||+1 Club Fighting}}\n| notes          = É uma réplica da [[Mace of Carving (Heavily Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42356,
+    "ns": 0,
+    "title": "Plain Carving Hammer",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Plain Carving Hammer\n| flavortext     = This replica looks charged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| secondarytype  = \n| hands          = Duas\n| type           = Réplicas de Clavas\n| range          = \n| attack         = 5\n| defense        = 5\n| weight         = 70.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+1% mana leech para Lesser Front Sweep}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+1% mana leech para Lesser Front Sweep}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+3% mana leech para Lesser Front Sweep}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+4% mana leech para Lesser Front Sweep}}\n| perk5          = {{Weapon Perk|Type_Skill_Club||+1 Club Fighting}}\n| notes          = É uma réplica da [[Hammer of Carving (Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42358,
+    "ns": 0,
+    "title": "Plain Carving Mace",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Plain Carving Mace\n| flavortext     = This replica looks charged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| secondarytype  = \n| hands          = Uma\n| type           = Réplicas de Clavas\n| range          = \n| attack         = 5\n| defense        = 5\n| weight         = 50.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+1% mana leech para Lesser Front Sweep}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+1% mana leech para Lesser Front Sweep}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+3% mana leech para Lesser Front Sweep}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+4% mana leech para Lesser Front Sweep}}\n| perk5          = {{Weapon Perk|Type_Skill_Club||+1 Club Fighting}}\n| notes          = É uma réplica da [[Mace of Carving (Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42377,
+    "ns": 0,
+    "title": "Ornate Mayhem Hammer",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ornate Mayhem Hammer\n| flavortext     = This replica looks overcharged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| secondarytype  = \n| hands          = Duas\n| type           = Réplicas de Clavas\n| range          = \n| attack         = 5\n| defense        = 5\n| weight         = 70.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Dmg|+10% critical extra damage para Lesser Front Sweep}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Dmg|+20% critical extra damage para Lesser Front Sweep}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Dmg|+30% critical extra damage para Lesser Front Sweep}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Chance|+5% critical hit chance para Lesser Front Sweep}}\n| perk5          = {{Weapon Perk|Type_Skill_Club||+1 Club Fighting}}\n| notes          = É uma réplica da [[Hammer of Mayhem (Overcharged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42379,
+    "ns": 0,
+    "title": "Ornate Mayhem Mace",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ornate Mayhem Mace\n| flavortext     = This replica looks overcharged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| secondarytype  = \n| hands          = Uma\n| type           = Réplicas de Clavas\n| range          = \n| attack         = 5\n| defense        = 5\n| weight         = 50.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Dmg|+10% critical extra damage para Lesser Front Sweep}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Dmg|+20% critical extra damage para Lesser Front Sweep}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Dmg|+30% critical extra damage para Lesser Front Sweep}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Chance|+5% critical hit chance para Lesser Front Sweep}}\n| perk5          = {{Weapon Perk|Type_Skill_Club||+1 Club Fighting}}\n| notes          = É uma réplica da [[Mace of Mayhem (Overcharged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42397,
+    "ns": 0,
+    "title": "Ornate Remedy Hammer",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ornate Remedy Hammer\n| flavortext     = This replica looks overcharged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| secondarytype  = \n| hands          = Duas\n| type           = Réplicas de Clavas\n| range          = \n| attack         = 5\n| defense        = 5\n| weight         = 70.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+1% life leech para Lesser Front Sweep}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+1% life leech para Lesser Front Sweep}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+3% life leech para Lesser Front Sweep}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+4% life leech para Lesser Front Sweep}}\n| perk5          = {{Weapon Perk|Type_Skill_Club||+1 Club Fighting}}\n| notes          = É uma réplica da [[Hammer of Remedy (Overcharged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42399,
+    "ns": 0,
+    "title": "Ornate Remedy Mace",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ornate Remedy Mace\n| flavortext     = This replica looks overcharged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| secondarytype  = \n| hands          = Uma\n| type           = Réplicas de Clavas\n| range          = \n| attack         = 5\n| defense        = 5\n| weight         = 50.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+1% life leech para Lesser Front Sweep}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+1% life leech para Lesser Front Sweep}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+3% life leech para Lesser Front Sweep}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+4% life leech para Lesser Front Sweep}}\n| perk5          = {{Weapon Perk|Type_Skill_Club||+1 Club Fighting}}\n| notes          = É uma réplica da [[Mace of Remedy (Overcharged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42417,
+    "ns": 0,
+    "title": "Valuable Remedy Hammer",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Valuable Remedy Hammer\n| flavortext     = This replica looks heavily charged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| secondarytype  = \n| hands          = Duas\n| type           = Réplicas de Clavas\n| range          = \n| attack         = 5\n| defense        = 5\n| weight         = 70.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+1% life leech para Lesser Front Sweep}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+1% life leech para Lesser Front Sweep}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+3% life leech para Lesser Front Sweep}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+4% life leech para Lesser Front Sweep}}\n| perk5          = {{Weapon Perk|Type_Skill_Club||+1 Club Fighting}}\n| notes          = É uma réplica da [[Hammer of Remedy (Heavily Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42419,
+    "ns": 0,
+    "title": "Valuable Remedy Mace",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Valuable Remedy Mace\n| flavortext     = This replica looks heavily charged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| secondarytype  = \n| hands          = Uma\n| type           = Réplicas de Clavas\n| range          = \n| attack         = 5\n| defense        = 5\n| weight         = 50.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+1% life leech para Lesser Front Sweep}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+1% life leech para Lesser Front Sweep}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+3% life leech para Lesser Front Sweep}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+4% life leech para Lesser Front Sweep}}\n| perk5          = {{Weapon Perk|Type_Skill_Club||+1 Club Fighting}}\n| notes          = É uma réplica da [[Mace of Remedy (Heavily Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42437,
+    "ns": 0,
+    "title": "Plain Remedy Hammer",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Plain Remedy Hammer\n| flavortext     = This replica looks charged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| secondarytype  = \n| hands          = Duas\n| type           = Réplicas de Clavas\n| range          = \n| attack         = 5\n| defense        = 5\n| weight         = 70.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+1% life leech para Lesser Front Sweep}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+1% life leech para Lesser Front Sweep}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+3% life leech para Lesser Front Sweep}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+4% life leech para Lesser Front Sweep}}\n| perk5          = {{Weapon Perk|Type_Skill_Club||+1 Club Fighting}}\n| notes          = É uma réplica da [[Hammer of Remedy (Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42439,
+    "ns": 0,
+    "title": "Plain Remedy Mace",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Plain Remedy Mace\n| flavortext     = This replica looks charged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| secondarytype  = \n| hands          = Uma\n| type           = Réplicas de Clavas\n| range          = \n| attack         = 5\n| defense        = 5\n| weight         = 50.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+1% life leech para Lesser Front Sweep}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+1% life leech para Lesser Front Sweep}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+3% life leech para Lesser Front Sweep}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+4% life leech para Lesser Front Sweep}}\n| perk5          = {{Weapon Perk|Type_Skill_Club||+1 Club Fighting}}\n| notes          = É uma réplica da [[Mace of Remedy (Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42457,
+    "ns": 0,
+    "title": "Plain Mayhem Hammer",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Plain Mayhem Hammer\n| flavortext     = This replica looks charged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| secondarytype  = \n| hands          = Duas\n| type           = Réplicas de Clavas\n| range          = \n| attack         = 5\n| defense        = 5\n| weight         = 70.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Dmg|+10% critical extra damage para Lesser Front Sweep}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Dmg|+20% critical extra damage para Lesser Front Sweep}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Dmg|+30% critical extra damage para Lesser Front Sweep}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Chance|+5% critical hit chance para Lesser Front Sweep}}\n| perk5          = {{Weapon Perk|Type_Skill_Club||+1 Club Fighting}}\n| notes          = É uma réplica da [[Hammer of Mayhem (Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42459,
+    "ns": 0,
+    "title": "Plain Mayhem Mace",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Plain Mayhem Mace\n| flavortext     = This replica looks charged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| secondarytype  = \n| hands          = Uma\n| type           = Réplicas de Clavas\n| range          = \n| attack         = 5\n| defense        = 5\n| weight         = 50.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Dmg|+10% critical extra damage para Lesser Front Sweep}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Dmg|+20% critical extra damage para Lesser Front Sweep}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Dmg|+30% critical extra damage para Lesser Front Sweep}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Chance|+5% critical hit chance para Lesser Front Sweep}}\n| perk5          = {{Weapon Perk|Type_Skill_Club||+1 Club Fighting}}\n| notes          = É uma réplica da [[Mace of Mayhem (Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42477,
+    "ns": 0,
+    "title": "Valuable Mayhem Hammer",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Valuable Mayhem Hammer\n| flavortext     = This replica looks heavily charged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| secondarytype  = \n| hands          = Duas\n| type           = Réplicas de Clavas\n| range          = \n| attack         = 5\n| defense        = 5\n| weight         = 70.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Dmg|+10% critical extra damage para Lesser Front Sweep}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Dmg|+20% critical extra damage para Lesser Front Sweep}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Dmg|+30% critical extra damage para Lesser Front Sweep}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Chance|+5% critical hit chance para Lesser Front Sweep}}\n| perk5          = {{Weapon Perk|Type_Skill_Club||+1 Club Fighting}}\n| notes          = É uma réplica da [[Hammer of Mayhem (Heavily Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42479,
+    "ns": 0,
+    "title": "Valuable Mayhem Mace",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Valuable Mayhem Mace \n| flavortext     = This replica looks heavily charged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| secondarytype  = \n| hands          = Uma\n| type           = Réplicas de Clavas\n| range          = \n| attack         = 5\n| defense        = 5\n| weight         = 50.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Dmg|+10% critical extra damage para Lesser Front Sweep}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Dmg|+20% critical extra damage para Lesser Front Sweep}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Dmg|+30% critical extra damage para Lesser Front Sweep}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Chance|+5% critical hit chance para Lesser Front Sweep}}\n| perk5          = {{Weapon Perk|Type_Skill_Club||+1 Club Fighting}}\n| notes          = É uma réplica da [[Mace of Mayhem (Heavily Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

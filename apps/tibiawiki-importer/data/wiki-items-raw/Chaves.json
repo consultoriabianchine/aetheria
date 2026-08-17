@@ -1,0 +1,1926 @@
+{
+ "query": {
+  "pages": [
+   {
+    "pageid": 8567,
+    "ns": 0,
+    "title": "Green Key",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{deprecated}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Green Key \n| itemclass     = Ferramentas e Outros Equipamentos \n| primarytype   = Chaves\n| secondarytype =  \n| attrib        = Nenhum.\n| weight        = 1.00 \n| mercado        = não\n| droppedby     = Ninguém.\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| notes         = Não há Green Keys conhecidas hoje em dia. No passado, algumas [[Wooden Key]]s costumavam ser Green Keys, como as chaves da [[Fibula Dungeon]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8593,
+    "ns": 0,
+    "title": "Key 0000",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 0000\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Wooden Keys\n| weight         = 1.00 \n| npcprice       = 0\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Antigamente era usada para abrir todas as portas no [[Tibia]]. {{Character|Shapeshifter}} era o dono de uma dessa mas foi hackeado em 2009 e perdeu a chave, junto com outras chaves raras.<br>\nEsta chave entrou no jogo quando um membro da [[CipSoft]] foi morto há muito tempo atrás, os jogadores que mataram conseguiram esta chave e enviaram para outra pessoa antes que eles fossem deletados. Porem dias depois, a chave parou de funcionar.\n\n<noinclude><div class=\"toccolours mw-collapsible mw-collapsed\" style=\"margin: 4px 0px;\">'''\"História do Item\"'''<div class=\"mw-collapsible-content\"><table><tr><td align=left>\nMuitos anos atrás no mundo de [[Antica]], um nobre guerreiro chamado {{Character|Sythius}} fazia parte de uma guilda nomeada Nightmare Knights, o líder da guild era o famoso {{Character|Karr Chaos}}. Nessa guilda havia um velho amigo de Sythius, que era conhecido como {{Character|Shapeshifter}}, um outro amigo se chamava {{Character|Entwin}} (que além de na época ser seu melhor amigo RL, foi responsável por sua entrada na guilda), e por fim, mas não menos importante, havia uma donzela chamada {{Character|Linkette}}, que anos depois se tornou esposa de Sythius na RL.\n\nShapeshifter foi o responsável por reunir muitas chaves no Tibia, ele procurava em todos os lados e estava construindo uma coleção enorme! Até que um dia ele conseguiu a sonhada \"Wooden Key 0000\", uma chave que não deveria estar no jogo, pois era capaz de abrir TODAS as portas do Tibia! Mas era para ser usada apenas por Deuses.\n\nShapeshifter disse ao Sythius que quando desse ''retired'' do Tibia, ele deixaria de presente a sua coleção das chaves! Mas infelizmente, antes que pudesse chegar esse sonhado dia para Sythius, Shapeshifter foi hackeado e perdeu todas as suas chaves, incluindo a Lendária \"Key 0000\".\n\nMuitos anos depois as [[World Transfer]]s foram liberadas pelos Deuses do Tibia, nesta época Sythius se mudou junto de sua esposa para o world de [[Rubera]] e logo em seguida para [[Magera]], pois devido ao pouco tempo na RL, eles não conseguiriam se empenhar o bastante em um world PvP.\n\nEm Magera, Sythius conheceu alguém de quem ele se tornou muito amigo, seu nome era {{Character|Yor}}. Com o passar dos anos Sythius contou a Yor sobre a história de Shapeshifter, na qual ele o daria sua coleção de chaves. Eventualmente, Yor decidiu dar ''retired'' do Tibia, e para a surpresa de Sythius, Yor estava comprando secretamente não apenas as chaves que Shapeshifter havia coletado, mas também muitas outras! Quando chegou seu dia, Yor decidiu honrar o acordo original entre Shapeshifter e Sythius, entregando toda aquela coleção de chaves!\n\nAté hoje, a \"Key 0000\" continua sendo a chave mais rara, única e desejada que já existiu no Tibia! O único outro tipo de cópia da Key 0000 pode ser encontrado em Test Servers, e não é mais uma Wooden Key, mas sim uma Purple Magical Key. Ela é usada apenas por Deuses para que eles possam testar novas portas.\n\nAtualmente existe apenas uma \"Key 0000\" em todos os mundos do Tibia. Ela teve pouquíssimos proprietários, e agora depois de cerca de 10 anos, finalmente Sythius passou a chave ao seu novo proprietário, conhecido no Tibia como {{Character|King of Kalibra}}.\n</td></tr></table></div></div>\n\n<gallery>\nArquivo:Key0000shapeshifterhouse.jpg|Key na casa de seu antigo dono, o jogador {{Character|Shapeshifter}}.\nArquivo:Key com King of Kalibra.png|Key com seu atual dono, o jogador {{Character|King of Kalibra}}.\n</gallery></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8596,
+    "ns": 0,
+    "title": "Key 3350",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3350\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Silver Keys\n| location       = [[Isle of the Kings]]\n| attrib         = Nenhum.\n| weight         = 1.00 \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.2\n| notes          = \n<noinclude><p><spoiler>\n* Pode ser obtida uma vez por personagem ao dar \"Use\" em uma estante próxima ao NPC [[Costello]] ({{mapa|32180,31934,7:2|aqui}}), dentro da bag você encontra o documento [[Monastery Intruders (Book)]] e esta chave.\n* A chave é usada para acessar os andares superiores do monastério. Seja cuidadoso, pois se você entrar na área restrita do mosteiro, você não poderá sair da ilha a menos que pague uma certa quantia de gold, baseada no seu level.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8790,
+    "ns": 0,
+    "title": "Key 3012",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3012\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Copper Keys\n| location       = Ab'Dendriel\n| attrib         = Nenhum.\n| weight         = 1.00 \n| mercado        = não\n| npcprice       = 5 000\n| trade          = sim\n| buyfrom        = Elathriel\n| sellto         = Jogadores.\n| implemented    = 6.2\n| notes          = Também conhecida como \"Hellgate Key\". Usada para trancar e destrancar as principais portas que levam para o [[Hellgate]].\n<noinclude><p><spoiler>* Ela é usada na [[World Quest]] [[The Lightbearer]].\n* Ela é necessária para uma missão da [[The Explorer Society Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8791,
+    "ns": 0,
+    "title": "Key 3033",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3033\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Silver Keys\n| location       = Ab'Dendriel\n| attrib         = Nenhum.\n| weight         = 1.00 \n| mercado        = não\n| droppedby      = Ninguém.\n| npcprice       = 50\n| buyfrom        = Shirith\n| sellto         = Jogadores.\n| implemented    = 6.2\n| notes          = Esta chave é conhecida como Shadow Cave Key e/ou Ab'dendriel Troll Cave Key.<noinclude><p><spoiler>* Usada para trancar e destrancar as duas portas na frente da [[Shadow Caves]] em [[Ab'Dendriel]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8792,
+    "ns": 0,
+    "title": "Key 3001",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3001\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Silver Keys\n| location       = Draconia\n| attrib         = Nenhum.\n| weight         = 1.00 \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 6.2\n| notes          = Esta chave é obtida e usada durante uma quest.\n<noinclude><p><spoiler>\n* Faz parte da [[Draconia Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8793,
+    "ns": 0,
+    "title": "Key 3002",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3002\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Silver Keys\n| location       = Draconia\n| attrib         = Nenhum.\n| weight         = 1.00 \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 6.2\n| notes          = Esta chave é obtida e usada durante uma quest.\n<noinclude><p><spoiler>\n* Faz parte da [[Draconia Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8794,
+    "ns": 0,
+    "title": "Key 3003",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3003\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Silver Keys\n| location       = Draconia\n| attrib         = Nenhum.\n| weight         = 1.00 \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 6.2\n| notes          = Esta chave é obtida e usada durante uma quest.\n<noinclude><p><spoiler>\n* Faz parte da [[Draconia Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8953,
+    "ns": 0,
+    "title": "Key 3004",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3004\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Silver Keys\n| location       = Draconia\n| attrib         = Nenhum.\n| weight         = 1.00 \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 6.2\n| notes          = Esta chave é obtida e usada durante uma quest.\n<noinclude><p><spoiler>\n* Faz parte da [[Draconia Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8954,
+    "ns": 0,
+    "title": "Key 3005",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3005\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Silver Keys\n| location       = Draconia\n| attrib         = Nenhum.\n| weight         = 1.00 \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 6.2\n| notes          = Esta chave é obtida e usada durante uma quest.\n<noinclude><p><spoiler>\n* Faz parte da [[Draconia Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8955,
+    "ns": 0,
+    "title": "Key 3006",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3006\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Silver Keys\n| location       = Draconia\n| attrib         = Nenhum.\n| weight         = 1.00 \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 6.2\n| notes          = Esta chave é obtida e usada durante uma quest.\n<noinclude><p><spoiler>\n* Faz parte da [[Draconia Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8956,
+    "ns": 0,
+    "title": "Key 3007",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3007\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Silver Keys\n| location       = Draconia\n| attrib         = Nenhum.\n| weight         = 1.00 \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 6.2\n| notes          = Esta chave é obtida e usada durante uma quest.\n<noinclude><p><spoiler>\n* Faz parte da [[Draconia Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8957,
+    "ns": 0,
+    "title": "Key 3008",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3008\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Silver Keys\n| location       = Draconia\n| attrib         = Nenhum.\n| weight         = 1.00 \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 6.2\n| notes          = Esta chave é obtida e usada durante uma quest.\n<noinclude><p><spoiler>\n* Faz parte da [[Draconia Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8958,
+    "ns": 0,
+    "title": "Key 3520",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3520\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Bone Keys\n| location       = Carlin\n| attrib         = Nenhum.\n| weight         = 1.00 \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Esta chave é conhecida como Carlin Crypt Key e/ou Fanfare Key.<noinclude><p><spoiler>Você obtêm esta chave no armazém próximo ao barco de [[Carlin]].<br />Você pode usar ela para entrar no [[Carlin Graveyard|Cemitério de Carlin]] na [[Fanfare Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9038,
+    "ns": 0,
+    "title": "Key 3600",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3600\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Silver Keys\n| location       = Ancient Temple\n| attrib         = Nenhum.\n| weight         = 1.00 \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Também conhecida com ''Ghoul Room Key''.\n<noinclude><p><spoiler>\n* Obtida e usada na [[Mintwallin Quest]].\n* Abre a porta da sala dos Ghouls ({{mapa|32505,32176,14:2|aqui}}).\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9039,
+    "ns": 0,
+    "title": "Key 3610",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3610\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Silver Keys\n| location       = Ancient Temple\n| attrib         = Nenhum.\n| weight         = 1.00 \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Também conhecida como Mintwallin Secret Laboratory Key.\n<noinclude><p><spoiler>\n* Obtida e usada na [[Mintwallin Quest]].\n* Pode ser encontrada em um acampamento de Cyclops e Minotaurs. Abre a porta para o laboratório secreto em Mintwallin.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9040,
+    "ns": 0,
+    "title": "Key 3620",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3620\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Silver Keys\n| location       = Mintwalin\n| attrib         = Nenhum.\n| weight         = 1.00 \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Também conhecida como Mintwallin Prison Key.<noinclude><p><spoiler>Você pode achar essa chave nas casinhas dos guardas de [[Mintwallin]], justamente ao norte do portão sul.<br />\n* Essa chave é usada para destrancar a porta acima da prisão de [[Mintwallin]].\n* Essa chave é necessária para uma missão da [[The Paradox Tower Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9100,
+    "ns": 0,
+    "title": "Key 3301",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3301\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Copper Keys\n| location       = Outlaw Camp\n| mercado        = não\n| attrib         = Nenhum.\n| weight         = 1.00 \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Esta chave é obtida e usada durante uma quest.\n<noinclude><p><spoiler>\n* Faz parte da [[The Outlaw Camp Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9101,
+    "ns": 0,
+    "title": "Key 3302",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3302\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Silver Keys\n| location       = Outlaw Camp\n| attrib         = Nenhum.\n| weight         = 1.00 \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Esta chave é obtida e usada durante uma quest.\n<noinclude><p><spoiler>\n* Faz parte da [[The Outlaw Camp Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9102,
+    "ns": 0,
+    "title": "Key 3303",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3303\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Copper Keys\n| location       = Outlaw Camp\n| mercado        = não\n| attrib         = Nenhum.\n| weight         = 1.00 \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Esta chave é obtida e usada durante uma quest.\n<noinclude><p><spoiler>\n* Faz parte da [[The Outlaw Camp Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9103,
+    "ns": 0,
+    "title": "Key 3304",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3304\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Golden Keys\n| location       = Outlaw Camp\n| attrib         = Nenhum.\n| weight         = 1.00 \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Esta chave também é conhecida como Bright Sword Quest Key. Procure em Outlaw Camp a sudoeste da vila num buraco escondido. Você precisará da [[Key 3303]] para conseguir está chave.\n<noinclude><p><spoiler>Você pode obter essa chave em um baú na caverna de [[Wild Warrior]] em [[Outlaw Camp]].<br />Esta chave abre a porta da recompensa da [[The Outlaw Camp Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9115,
+    "ns": 0,
+    "title": "Key 0004",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 0004\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Copper Keys\n| location       = Thais\n| attrib         = Nenhum.\n| weight         = 1.00 \n| mercado        = não\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Esta é uma velha chave da cidade de [[Thais]]. Ela é uma relíquia do passado do Tibia, e até onde se sabe é somente encontrada nas mãos de colecionadores.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9116,
+    "ns": 0,
+    "title": "Key 0005",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 0005\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Silver Keys\n| location       = Thais\n| attrib         = Nenhum.\n| weight         = 1.00 \n| mercado        = não\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Esta é uma velha chave da cidade de Thais. Ela é uma relíquia do passado do Tibia, e até onde se sabe é somente encontrada nas mãos de colecionadores.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9117,
+    "ns": 0,
+    "title": "Key 0006",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 0006\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Silver Keys\n| location       = Thais\n| attrib         = Nenhum.\n| weight         = 1.00 \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Essa chave tinha respawn em um castelo. Ela é uma relíquia do passado do Tibia, e até onde se sabe é somente encontrada nas mãos de colecionadores.\n<noinclude>\n<gallery>\nArquivo:Key 0006 com Rei.png|Chave com um de seus poucos donos, o jogador {{Character|Rei de Lutabra}}.\n</gallery>\n</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9118,
+    "ns": 0,
+    "title": "Key 0007",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 0007\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Silver Keys\n| location       = Thais\n| attrib         = Nenhum.\n| weight         = 1.00 \n| mercado        = não\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Esta é uma velha chave da cidade de Thais. \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9119,
+    "ns": 0,
+    "title": "Key 0008",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 0008\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Silver Keys\n| location       = Thais\n| attrib         = Nenhum.\n| weight         = 1.00 \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Esta chave é uma relíquia do passado do Tibia.\n<noinclude>\n<gallery>\nArquivo:Key 0008 com Rei de Lutabra.png|Um dos poucos exemplares dessa chave com o jogador {{Character|Rei de Lutabra}}.\n</gallery>\n</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9120,
+    "ns": 0,
+    "title": "Key 0009",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 0009\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Silver Keys\n| location       = Thais\n| attrib         = Nenhum.\n| weight         = 1.00 \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Esta é uma velha chave da cidade de Thais. \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9121,
+    "ns": 0,
+    "title": "Key 0020",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 0020\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Copper Keys\n| location       = Thais\n| attrib         = Nenhum.\n| weight         = 1.00 \n| mercado        = não\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          =Também conhecida como \"Jail key\". A chave uma vez abria as celas da [[Thais Jail|Prisão de Thais]]. Mas, com o update 8.0, a chave deixou de funcionar. Dava [[Spawn]] a cada [[update]] na cadeia. Disponível apenas em [[Antica]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9122,
+    "ns": 0,
+    "title": "Key 0021",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 0021\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Silver Keys\n| location       = Thais\n| attrib         = Nenhum.\n| weight         = 1.00 \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Esta chave é uma relíquia do passado do Tibia. Ela é uma relíquia do passado do Tibia, e até onde se sabe é somente encontrada nas mãos de colecionadores.<noinclude><gallery>\nArquivo:Key 0021 com Rei de Lutabra.png|Um dos poucos exemplares dessa chave com o jogador {{Character|Rei de Lutabra}}.\n</gallery></noinclude>}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9123,
+    "ns": 0,
+    "title": "Key 3142",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3142\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Copper Keys\n| location       = Mount Sternum\n| mercado        = não\n| attrib         = Nenhum.\n| weight         = 1.00 \n| npcprice       = 1 000\n| buyfrom        = Skjaar\n| sellto         = Jogadores.\n| notes          = Também conhecida como \"Skjaar Key\".\n<noinclude><p><spoiler>\n* Necessária para a [[Thais Quest]]. \n* Você pode entrar na sala do caixão do mestre de [[Skjaar]] para obter um [[Crown Helmet]] e uma [[Noble Armor]] com essa chave. Você recebe a chave de Skjaar depois de responder algumas perguntas. \n:Caso você responda errado, você precisa terminar a conversa, e tem que gastar outros 1.000 [[gp]]s para tentar novamente. Algumas sugestões para responder às questões estão disponíveis em uma caverna secreta de [[Demon Skeleton]] por perto.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9124,
+    "ns": 0,
+    "title": "Key 3100",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3100 \n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Copper Keys\n| location       = Mount Sternum\n| mercado        = não\n| attrib         = Nenhum.\n| weight         = 1.00 \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Um velha chave tibiana, acredita-se ser a velha chave de [[Skjaar]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9526,
+    "ns": 0,
+    "title": "Key (Prison Cells)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key (Prison Cells)\n| flavortext     = It is the key to the prison cells.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Chaves\n| stackable      = não\n| attrib         = Nenhum.\n| weight         = 1.00\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.5\n| notes          = Mesmo sprite de uma [[Crystal Key]].\n<noinclude><p><spoiler>\n* Obtido e usado durante a [[The Hidden City of Beregar Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 21342,
+    "ns": 0,
+    "title": "Chayenne's Magical Key",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Chayenne's Magical Key\n| flavortext     = No one really knows where it leads to, but the dragon graveyard might reveal the secret - or not.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Prêmios de Eventos\n| attrib         = Nenhum.\n| weight         = 1.00 \n| value          = 15 000 000 - 40 000 000\n| droppedby      = [[Chayenne (Criatura)|Chayenne]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.44\n| notes          = Uma chave muito rara atualmente, já que ela só podia ser obtida da criatura \"[[Chayenne (Criatura)|Chayenne]]\" durante as festividades de [[Aniversário do Tibia|15 anos]] do Tibia. Em uma [http://forum.tibia.com/forum/?action=thread&postid=33444086#post33444086 declaração oficial] a [[Chayenne]] confirmou que existe um uso para ela, e de fato foi descoberto por alguns jogadores que ela é utilizada para obter acesso ao [[Chayenne's Realm]].<noinclude><p><spoiler>* 01 é necessária para fazer a [[Chayenne's Realm Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 31766,
+    "ns": 0,
+    "title": "Copper Prison Key",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Copper Prison Key\n| flavortext     = You dreamt that this key unlocks the prison of a powerful horror that you had to face on your own.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Prêmios de Eventos\n| weight         = 2.00\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 0\n| droppedby      = Ninguém\n| location       = [[Roshamuul]]\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.30\n| notes          = É necessária para acessar uma cela da [[Roshamuul Prison]].\n<noinclude><p><spoiler>\n* 01 é necessária para acesso a cela de [[Horadron]].\n* Possibilidade de ser obtido ao usar um [[Unrealized Dream]] próximo ao [[The Dreamcatcher Device]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 31767,
+    "ns": 0,
+    "title": "Bronze Prison Key",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bronze Prison Key\n| flavortext     = You dreamt that this key unlocks the prison of a powerful horror that you had to face on your own.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Prêmios de Eventos\n| weight         = 2.00\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 0\n| droppedby      = Ninguém\n| location       = [[Roshamuul]]\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.30\n| notes          = É necessária para acessar uma cela da [[Roshamuul Prison]].\n<noinclude><p><spoiler>\n* 01 é necessária para acesso a cela de [[Zavarash]].\n* Possibilidade de ser obtido ao usar um [[Unrealized Dream]] próximo ao [[The Dreamcatcher Device]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 31768,
+    "ns": 0,
+    "title": "Golden Prison Key",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Golden Prison Key\n| flavortext     = You dreamt that this key unlocks the prison of a powerful horror that you had to face on your own.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Prêmios de Eventos\n| weight         = 2.00\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 0\n| droppedby      = Ninguém\n| location       = [[Roshamuul]]\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.30\n| notes          = É necessária para acessar uma cela da [[Roshamuul Prison]].\n<noinclude><p><spoiler>\n* 01 é necessária para acesso a cela de [[Prince Drazzak]].\n* Possibilidade de ser obtido ao usar um [[Unrealized Dream]] próximo ao [[The Dreamcatcher Device]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 33654,
+    "ns": 0,
+    "title": "Key 0001",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 0001\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Golden Keys\n| tertiarytype   = Copper Keys\n| location       = Rathleton\n| attrib         = Nenhum.\n| weight         = 1.00\n| mercado        = não\n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.50\n| notes          = Esta chave só pode ser vista na sala de tesouros da cidade de [[Rathleton]]. Ela também pode ser vista na aparência de uma Golden Key: [[Arquivo:Key 3304.gif]]\n<noinclude><gallery>Arquivo:Key 0001 Rathleton.jpg</gallery></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 34278,
+    "ns": 0,
+    "title": "Key 0010",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 0010\n| flavortext     = This could be the key to a room in the outpost.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Silver Keys\n| location       = Dawnport\n| attrib         = Nenhum.\n| weight         = 1.00\n| mercado        = não\n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.55\n| notes          = <noinclude><p><spoiler>* Obtido e usada na [[Dawnport Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 37391,
+    "ns": 0,
+    "title": "Goblin Bone Key",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Goblin Bone Key\n| flavortext     = Key:0555\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Silver Keys\n| attrib         = Nenhum.\n| weight         = 1.00\n| mercado        = não\n| stackable      = não\n| droppedby      = Ninguém.\n| location       = [[Krailos]]\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.90\n| notes          = Esta chave é obtida e usada durante uma quest.\n<noinclude><p><spoiler>\n* Faz parte da [[Krailos Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42844,
+    "ns": 0,
+    "title": "Forged Key",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Forged Key\n| flavortext     = The key is ornate and nearly perfectly forged.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Chaves\n| stackable      = não\n| attrib         = Nenhum.\n| weight         = 2.50\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.50\n| mercado        = não\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[Hidden Threats Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42974,
+    "ns": 0,
+    "title": "Forged Glowing Key",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Forged Glowing Key\n| flavortext     = The key is forged, still glowing.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Chaves\n| stackable      = não\n| attrib         = Nenhum.\n| weight         = 2.50\n| mercado        = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.50\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[Hidden Threats Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 44024,
+    "ns": 0,
+    "title": "Eye Key",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Eye Key\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Chaves\n| attrib         = \n| weight         = 1.00 \n| mercado        = não\n| buyfrom        = Jogadores.\n| droppedby      = Ninguém.\n| implemented    = 11.80\n| sellto         = Jogadores.\n| notes          = <noinclude><p><spoiler>* Obtido e usado na [[The Secret Library Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45724,
+    "ns": 0,
+    "title": "Key 0808",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 0808\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Golden Keys\n| attrib         = Nenhum.\n| weight         = 1.00 \n| mercado        = não\n| location       = Falcon Bastion\n| droppedby      = Ninguém\n| implemented    = 11.80\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Você pode obter esta chave em um respawn diário no [[Falcon Bastion]], ({{mapa|33357,31357,5:2|aqui}}).\n<noinclude><p><spoiler>\n* Ela abre a porta que te leva a torre com o corpo de uma mulher, próximo ao local com Monks, ({{mapa|33363,31360,3:2|aqui}}).\n:[[Arquivo:Falcon golden key.png|150px|Chave no spawn diário.]]\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45726,
+    "ns": 0,
+    "title": "Key 0909",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 0909\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Silver Keys\n| location       = Falcon Bastion\n| attrib         = Nenhum.\n| weight         = 1.00 \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.80\n| notes          = Você pode obter esta chave em um baú no [[Falcon Bastion]], ({{mapa|33377,31320,1:2|aqui}}).\n<noinclude><p><spoiler>* Ela abre as portas no [[Falcon Bastion]], ({{mapa|33360,31350,7:2|aqui}}) e ({{mapa|33368,31331,7:2|aqui}}).</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45864,
+    "ns": 0,
+    "title": "Key 3200",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3200\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Wooden Keys\n| location       = Buried Cathedral\n| attrib         = Nenhum.\n| weight         = 1.00 \n| mercado        = não\n| implemented    = 12.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = <noinclude><p><spoiler>* Há uma pequena chance de pegá-la em um dos túmulos na [[Buried Cathedral]], ({{mapa|33555,32540,15:1|aqui}}). O tempo para tentar novamente é de 10 minutos.\n* Essa chave é necessária para abrir a porta de uma sala com um baú, ({{mapa|33661,32547,14:2|aqui}}).</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 47572,
+    "ns": 0,
+    "title": "Key 0303",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 0303\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Golden Keys\n| attrib         = Nenhum.\n| weight         = 1.00\n| mercado        = não\n| location       = Cobra Bastion\n| droppedby      = Ninguém\n| implemented    = 12.20\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = <noinclude><p><spoiler>* Você pode obter esta chave em um esqueleto na sala do tesouro de [[Cobra Bastion]], ({{mapa|33395,32641,4:2|aqui}}).\n* Ela abre a porta da sala logo abaixo de onde a pegamos, nessa sala tem uma nota e um baú do tesouro, ({{mapa|33402,32651,4:2|aqui}}).</spoiler></p></noinclude>\n<noinclude><gallery>\nArquivo:Golden Key 0303.png|Local da Chave\n</gallery></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 49645,
+    "ns": 0,
+    "title": "Key 0101",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 0101 \n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Copper Keys\n| location       = Bounac\n| attrib         = Nenhum.\n| weight         = 1.00\n| mercado        = não\n| stackable      = não\n| droppedby      = Ninguém. \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.40\n| notes          = \n<noinclude><p><spoiler>\n* Você pode obter esta chave no chão, na ante-sala do NPC [[Augustin]], ({{mapa|32396,32474,4:2|aqui}}).\n* Essa chave abre a porta da salinha ao sul ({{mapa|32395,32485,4:2|aqui}}), onde pode ser encontrada uma cópia dela, embaixo do [[Parchment]].\n</spoiler><gallery>\nArquivo:1key0101.png\nArquivo:2key0101.png\n</gallery></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 50566,
+    "ns": 0,
+    "title": "Cheesy Key",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Cheesy Key\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Chaves\n| attrib         = Nenhum.\n| weight         = 2.50\n| stackable      = não\n| location       = \n| mercado        = não\n| droppedby      = [[Tentugly's Head]].\n| implemented    = 12.60\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = <noinclude><p><spoiler>* Obtida e usada durante a [[A Pirate's Tail Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 62580,
+    "ns": 0,
+    "title": "Intricate Cage Key",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Intricate Cage Key\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Chaves\n| attrib         = Nenhum.\n| weight         = 0.50\n| stackable      = não\n| location       = \n| mercado        = não\n| droppedby      = Ninguém.\n| implemented    = 13.40.54ea79\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = <noinclude><p><spoiler>* Obtida e usada durante a [[Threatened Dreams Quest|Sweet Dreams Quest.]]</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 67618,
+    "ns": 0,
+    "title": "Key (Asura Citadel)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = \n| location       = \n| attrib         = Nenhum.\n| weight         = 1.00 \n| mercado        = não\n| implemented    = 15.30.a30dad\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          =\n* Utilizada para abrir a porta {{mapa|33899,32666,8:2|neste local}} durante a [[Shards of a Broken Moon Quest]].\n* Caso perca a chave durante a quest, é possível obter outra conversando com a NPC [[Javala]] e dizendo '''Hi - Lost'''.\n* Após concluir a [[Shards of a Broken Moon Quest]], a chave deixa de ser necessária, pois a porta pode ser aberta normalmente com um clique.\n\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8597,
+    "ns": 0,
+    "title": "Key 3909",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3909\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Copper Keys\n| mercado        = não\n| attrib         = Nenhum.\n| weight         = 1.00 \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Provavelmente a chave de uma [[Guildhall]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8598,
+    "ns": 0,
+    "title": "Key 3910",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3910\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Copper Keys\n| mercado        = não\n| attrib         = Nenhum.\n| weight         = 1.00 \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Provavelmente a chave de uma [[Guildhall]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8599,
+    "ns": 0,
+    "title": "Key 3911",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3911\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Copper Keys\n| mercado        = não\n| attrib         = Nenhum.\n| weight         = 1.00 \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Provavelmente a chave de uma [[Guildhall]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8600,
+    "ns": 0,
+    "title": "Key 3912",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3912\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Copper Keys\n| mercado        = não\n| attrib         = Nenhum.\n| weight         = 1.00 \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Provavelmente a chave de uma [[Guildhall]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8601,
+    "ns": 0,
+    "title": "Key 3913",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3913\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Copper Keys\n| mercado        = não\n| attrib         = Nenhum.\n| weight         = 1.00 \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Provavelmente a chave de uma [[Guildhall]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8602,
+    "ns": 0,
+    "title": "Key 3914",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3914\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Copper Keys\n| mercado        = não\n| attrib         = Nenhum.\n| weight         = 1.00 \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Provavelmente a chave de uma [[Guildhall]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8610,
+    "ns": 0,
+    "title": "Key 3915",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3915\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Copper Keys\n| mercado        = não\n| attrib         = Nenhum.\n| weight         = 1.00 \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Provavelmente a chave de uma [[Guildhall]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8611,
+    "ns": 0,
+    "title": "Key 3916",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3916\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Copper Keys\n| mercado        = não\n| attrib         = Nenhum.\n| weight         = 1.00 \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = Pré-6.0\n| notes          = Provavelmente a chave de uma [[Guildhall]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8612,
+    "ns": 0,
+    "title": "Key 3917",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3917\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Copper Keys\n| mercado        = não\n| attrib         = Nenhum.\n| weight         = 1.00 \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Provavelmente a chave de uma [[Guildhall]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8613,
+    "ns": 0,
+    "title": "Key 3923",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3923  \n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Copper Keys\n| location       = Fibula\n| mercado        = não\n| attrib         = Nenhum.\n| weight         = 1.00 \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Antiga chave de [[Fibula]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8614,
+    "ns": 0,
+    "title": "Key 3925",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3925\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Copper Keys\n| mercado        = não\n| attrib         = Nenhum.\n| weight         = 1.00 \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Provavelmente a chave de uma [[Guildhall]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8782,
+    "ns": 0,
+    "title": "Key 3930",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3930\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Copper Keys\n| location       = Fibula\n| mercado        = não\n| attrib         = Nenhum.\n| weight         = 1.00 \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Também conhecida como \"Mercenary key\". É uma das chaves da [[Mercenary Tower]] em [[Fibula]]. Existe também uma versão dessa [[Wooden Key|chave em madeira]], provavelmente não é uma chave de uma [[Guildhall]], mas sim para um outro edifício em [[Fibula]], ou algum local perto, como [[Calcanea]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8783,
+    "ns": 0,
+    "title": "Key 3932",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3932\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Copper Keys\n| location       = Fibula\n| mercado        = não\n| attrib         = Nenhum.\n| weight         = 1.00 \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Também conhecida como \"Mercenary key\". É uma das chaves da [[Mercenary Tower]] em [[Fibula]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8784,
+    "ns": 0,
+    "title": "Key 3934",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3934\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Copper Keys\n| location       = Fibula\n| mercado        = não\n| attrib         = Nenhum.\n| weight         = 1.00 \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Também conhecida como \"Mercenary key\". É uma das chaves da [[Mercenary Tower]] em [[Fibula]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8785,
+    "ns": 0,
+    "title": "Key 3935",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3935\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Copper Keys\n| location       = Fibula\n| mercado        = não\n| attrib         = Nenhum.\n| weight         = 1.00 \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Também conhecida como \"Mercenary key\". É uma das chaves da [[Mercenary Tower]] em [[Fibula]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8786,
+    "ns": 0,
+    "title": "Key 3937",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3937\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Copper Keys\n| location       = Fibula\n| mercado        = não\n| attrib         = Nenhum.\n| weight         = 1.00 \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Também conhecida como \"Mercenary key\". É uma das chaves da [[Mercenary Tower]] em [[Fibula]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8787,
+    "ns": 0,
+    "title": "Key 3938",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3938\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Copper Keys\n| location       = Fibula\n| mercado        = não\n| attrib         = Nenhum.\n| weight         = 1.00 \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Também conhecida como \"Mercenary key\". É uma das chaves da [[Mercenary Tower]] em [[Fibula]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8788,
+    "ns": 0,
+    "title": "Key 3940",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3940 \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Wooden Keys\n| location       = Fibula\n| weight         = 1.00 \n| npcprice       = 800\n| buyfrom        = Simon The Beggar, Dermot:2 000\n| sellto         = Jogadores.\n| notes          = Existe uma [[Copper Key]] 3940 que provavelmente é uma chave de [[guildhall]].\n<noinclude><p><spoiler>\n* Usada para entrar e sair da [[Fibula Dungeon]].\n* Durante a compra da chave com o NPC [[Simon The Beggar]] diga '''help'''. Continue dando dinheiro para ele e quando você tiver dado 800 [[gp]]s ele vai lhe entregar a chave.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8789,
+    "ns": 0,
+    "title": "Key 3988",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3988\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Copper Keys\n| mercado        = não\n| attrib         = Nenhum.\n| weight         = 1.00 \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Provavelmente a chave de uma [[Guildhall]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9020,
+    "ns": 0,
+    "title": "Key 4501",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 4501\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Copper Keys\n| location       = Senja\n| mercado        = não\n| attrib         = Nenhum.\n| weight         = 1.00 \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 6.4\n| notes          = Também conhecida como \"Senja Castle Key\" e \"Alawar's Vault Key\".\n<noinclude><p><spoiler>\n* Esta chave é usada para entrar e sair da sala de armazenamento de [[Alawar's Vault Quest|Alawar's Vault]]. \n* É encontrada em um baú atrás do [[Minotaur Mage]] em uma caverna abaixo das [[Ice Islands]]. Local do baú onde está a chave ({{Mapa|32167,31598,10:2|aqui}}).\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9021,
+    "ns": 0,
+    "title": "Key 4502",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 4502 \n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Copper Keys\n| location       = Senja\n| mercado        = não\n| attrib         = Nenhum.\n| weight         = 1.00 \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 6.4\n| notes          = Também conhecida como \"Senja Castle Key\" e \"Alawar's Vault Key\".\n<noinclude><p><spoiler>\n* Esta chave é usada para entrar e sair de [[Alawar's Vault Quest|Alawar's Vault]]. \n* Encontrado em um baú atrás do [[Minotaur Mage]] em uma caverna abaixo das [[Ice Islands]]. Local do baú onde está a chave ({{Mapa|32201,31571,10:2|aqui}}).\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9022,
+    "ns": 0,
+    "title": "Key 4503",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 4503 \n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Copper Keys\n| location       = Senja\n| mercado        = não\n| attrib         = Nenhum.\n| weight         = 1.00 \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 6.4\n| notes          = \n<noinclude><p><spoiler>\n* Essa chave dá acesso ao [[Minotaur|minotauro]] restrito embaixo das [[Ice Islands]]. \n* Pode ser encontrada em um baú atrás de alguns [[Fire Field]]s abaixo das [[Ice Islands]]. Local do baú onde está a chave ({{Mapa|32031,31686,8:2|aqui}}).\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9024,
+    "ns": 0,
+    "title": "Key 3950",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3950\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Wooden Keys\n| location       = Fibula\n| weight         = 1.00 \n| npcprice       = 0\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Nenhuma.\n<noinclude><p><spoiler>\n* Usada para entrar e sair da velha área de [[Cyclops]] em [[Fibula]].\n</spoiler>\n<gallery>\nArquivo:Key 3950 com Rei de Lutabra.png|Um dos poucos exemplares dessa chave com o jogador {{Character|Rei de Lutabra}}.\n</gallery>\n</p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9025,
+    "ns": 0,
+    "title": "Key 3960",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3960\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Wooden Keys\n| weight         = 1.00 \n| npcprice       = 0\n| attrib         = Nenhum.\n| mercado        = não\n| droppedby      = Ninguém.\n| location       = Fíbula\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Abria a sala da Flauta em [[Fibula]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9026,
+    "ns": 0,
+    "title": "Key 3980",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3980\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Golden Keys\n| location       = Fibula\n| attrib         = Nenhum.\n| weight         = 1.00 \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Esta chave também é conhecida como Deeper Fibula Key.<noinclude><p><spoiler>* Pode ser obtida na [[Fibula Dungeon]], ela te dá acesso à [[Deeper Fibula Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9027,
+    "ns": 0,
+    "title": "Key 4210",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 4210\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Golden Keys\n| location       = Fibula\n| attrib         = Nenhum.\n| weight         = 1.00 \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Provavelmente uma chave da Guild Hall da [[Guild Hall of the Red Rose|Red Rose]] ou da {{guild|Mercenarys|Mercenary}} em [[Fibula]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9028,
+    "ns": 0,
+    "title": "Key 4001",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 4001 \n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Silver Keys\n| location       = Jakundaf Desert\n| attrib         = Nenhum.\n| weight         = 1.00 \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Esta chave está dentro de um baú protegido por [[Orc Berserker]]s. Abre a porta no fosso dos [[Fire Devil]]s.\n<noinclude><p><spoiler>\n* Use uma [[pick]] em uma pedra para liberar a passagem e alcançar o baú.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9029,
+    "ns": 0,
+    "title": "Key 4009",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 4009 \n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Silver Keys\n| location       = Jakundaf Desert\n| attrib         = Nenhum.\n| weight         = 1.00 \n| mercado        = não\n| droppedby      = Ninguém\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Abre a ports da [[Bibliotecas de Jakundaf Desert|Biblioteca de Jakundaf Desert]].\n<noinclude><p><spoiler>\n* Você precisa da [[Key 4022]] para pegar esta chave.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9030,
+    "ns": 0,
+    "title": "Key 4022",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 4022\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Silver Keys\n| location       = Jakundaf Desert\n| attrib         = Nenhum.\n| weight         = 1.00 \n| mercado        = não\n| droppedby      = Ninguém\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Ela abre a porta da sala onde a [[Key 4009]] está.\n<noinclude><p><spoiler>\n* Você pode pegar essa chave com o [[Hagor]]. Dicas são encontradas no [[Diary of Morrin (Book)|diário de Morrin]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9031,
+    "ns": 0,
+    "title": "Key 4023",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 4023\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Silver Keys\n| attrib         = Nenhum.\n| weight         = 1.00 \n| mercado        = não\n| location       = Jakundaf Desert\n| droppedby      = Ninguém\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Você pode conseguir essa chave com [[Adrenius]], esta chave é utilizada para abrir a porta da sala dos 4 teleports abaixo do [[Jakundaf Desert]]. Algumas dicas são encontradas na [[Bibliotecas de Jakundaf Desert|biblioteca do Jakundaf Desert]].\n<noinclude><p><spoiler>\n* Ela abre a porta da sala do teletransporte. Você vai receber essa chave quando você passar no quiz do [[Adrenius]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9032,
+    "ns": 0,
+    "title": "Key 4037",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 4037\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Silver Keys\n| location       = Jakundaf Desert\n| attrib         = Nenhum.\n| weight         = 1.00 \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Abre a porta para o [[Hall of Lost Doors]].\n<noinclude><p><spoiler>\n* Você pode conseguir essa chave do [[Nemal]] se você o ajudar. Dicas são achadas na '''Biblioteca da Desert Dungeon'''.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9033,
+    "ns": 0,
+    "title": "Key 4055",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 4055\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Silver Keys\n| location       = Jakundaf Desert\n| attrib         = Nenhum.\n| weight         = 1.00 \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Também conhecida como \"Panpipe Quest Key\" e \"Desert Dungeon Key\".\n<noinclude><p><spoiler>\n* Esta chave está escondida em uma pedra ao sul da entrada da Desert Dungeon ({{mapa|32652,32107,7:2|aqui}}), basta dar \"Use\" na pedra para obter a chave. Permite que você abra a porta para a [[Panpipe Quest]]. \n* A dica de como encontrar esta chave pode ser obtida em um pedaço de papel ([[A Strange Looking Stone (Book)|A Strange Looking Stone]]) que fica atrás de uma porta que só pode ser aberta com uma crowbar ({{mapa|32680,32083,9:2|aqui}}).\n* Para alcançar o documento que fica do outro lado de um rio de lava após a porta trancada, é preciso ativar uma ponte puxando uma alavanca escondida na área do fosso com Fire Devils ({{mapa|32698,32120,9:2|aqui}}).\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9034,
+    "ns": 0,
+    "title": "Key 3800",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3800 \n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Copper Keys\n| location       = Kazordoon\n| mercado        = não\n| attrib         = Nenhum.\n| weight         = 1.00 \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 6.1\n| notes          = Também conhecida como \"Emperor Kruzak's Key\".\n<noinclude><p><spoiler>\n* Recompensa da [[Emperor's Cookies Quest]]. \n* Ela abre a porta no lado norte da sala do trono em Kazordoon, dando acesso para poder pegar a [[Key 3801]] e 27 [[Cookies]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9035,
+    "ns": 0,
+    "title": "Key 3801",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3801\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Copper Keys\n| location       = Kazordoon\n| mercado        = não\n| attrib         = Nenhum.\n| weight         = 1.00 \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 6.1\n| notes          = Também conhecida como \"Kazordoon Armory Key\".\n<noinclude><p><spoiler>\n* Recompensa da [[Emperor's Cookies Quest]]. \n* Ela abre uma porta perto do arsenal em Kazordoon, dando acesso para poder pegar a [[Key 3802]]. \n* Ela abre uma porta para sala do tesouro do [[Emperor Kruzak]] onde existe um spawn de 02 [[Dwarf Guard]]s.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9036,
+    "ns": 0,
+    "title": "Key 3802",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3802 \n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Copper Keys\n| location       = Kazordoon\n| mercado        = não\n| attrib         = Nenhum.\n| weight         = 1.00 \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 6.1\n| notes          = Também conhecida como \"Kazordoon Prison Key\".\n<noinclude><p><spoiler>\n* Recompensa da [[Emperor's Cookies Quest]]. \n* Essa chave abre as portas para a prisão [[Dwacatra]] embaixo de Kazordoon. \n* Essa chave abre as portas do [[Mine Hub]] nas [[Kazordoon Dwarf Mines]].\n* Ela é necessária durante o evento [[The Lightbearer]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9037,
+    "ns": 0,
+    "title": "Key 3899",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3899 \n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Copper Keys\n| location       = Paradox Tower\n| mercado        = não\n| attrib         = Nenhum.\n| weight         = 1.00 \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Também conhecida como \"Paradox Quest Key\".<noinclude><p><spoiler>Abre a porta para a [[The Paradox Tower Quest]]. Pode ser encontrada em uma árvore morta perto da [[Paradox Tower]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9041,
+    "ns": 0,
+    "title": "Key 3650",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3650\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Silver Keys\n| location       = Mintwalin\n| attrib         = Nenhum.\n| weight         = 1.00 \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Também conhecida como Mintwallin Storage Room Key.\n<noinclude><p><spoiler>\n* Obtida e usada na [[Mintwallin Quest]].\n* Essa chave pode ser encontrada em uma cômoda dentro do castelo de Mintwallin, na mesma sala que o NPC [[Markwin]] ({{mapa|32414,32147,15:2|aqui}}). Com essa chave, você pode acessar a sala de depósito da cidade e área abandonada ao sul de Minwallin.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9042,
+    "ns": 0,
+    "title": "Key 3666",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3666\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Silver Keys\n| location       = Mintwalin\n| attrib         = Nenhum.\n| weight         = 1.00 \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Também conhecida como Mad Mage Key.\n<noinclude><p><spoiler>\n* Obtida e usada na [[Mintwallin Quest]].\n* A chave abre o quarto da recompensa da Mad Mage Room. Fale com o NPC [[A Prisoner]] na prisão de Mintwallin, você precisará de [[Key 3620]] para chegar até o NPC. Ele dará essa chave a você, se você souber a resposta para sua [[The Riddle (Book)|charada]] e lhe der algumas [[Apples|maçãs]] (aproximadamente 7). Diga: '''hi - pd-d-ks-p-pd''', então '''yes''' várias vezes.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9043,
+    "ns": 0,
+    "title": "Key 3667",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3667\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Silver Keys\n| location       = Ancient Temple\n| attrib         = Nenhum.\n| weight         = 1.00 \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Também conhecida como \"Lost Devil Helmet Key\".\n<noinclude><p><spoiler>\n* Obtida e usada durante a [[Mintwallin Quest]].\n* Enquanto estiver fazendo a quest, você deve ir para o acampamento dos Cyclops e Minotaurs, onde existe uma alavanca que você pode usar para obter a [[Key 3610]]. Essa alavanca só poder ser usada uma vez, até o próximo [[Floor Reset]], mas também existem portas. A [[Key 3667]] as abre. É meio engraçado porque você precisa ser 40+ para pegar a chave que é usado na quest level 30+.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9104,
+    "ns": 0,
+    "title": "Key 4600",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 4600\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Silver Keys\n| location       = Rookgaard\n| attrib         = Nenhum.\n| weight         = 1.00 \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Também conhecida como \"Rookgaard Academy Key\". Esta chave é uma relíquia do passado do Tibia. Essa chave fornecia acesso a sala de treinamento no subsolo da [[Academia de Rookgaard]] antes do [[Updates/9.1]]. Custava 5 [[gp]]s e era vendida pelo [[Seymour]]. Depois da mudança o [[NPC]] parou de vende-la e hoje a chave é uma das Relíquias do Passado de Rookgaard.}}\n<noinclude>\n<gallery>\nArquivo:Key 4600 com Rei de Lutabra.png|Um dos poucos exemplares dessa chave com o jogador {{Character|Rei de Lutabra}}.\n</gallery>\n</noinclude>"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9105,
+    "ns": 0,
+    "title": "Key 4601",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 4601 \n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Copper Keys\n| location       = Rookgaard\n| mercado        = não\n| attrib         = Nenhum.\n| weight         = 1.00 \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Também conhecida como \"Bear Room Key\".<noinclude><p><spoiler>Pode ser encontrada num baú perto da Bear Room depois de revelar uma buraco com uma [[pick]]. Esta chave permite que você entre na Bear Room - lugar com alguns valiosos itens (em [[Rookgaard]]). Uma versão de prata desta chave também existe em todos os servidores que já estavam online na versão 7.4 e é considerada muito rara. Para mais informações olhe [[Bear Room Quest|aqui]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9106,
+    "ns": 0,
+    "title": "Key 4603",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 4603\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Silver Keys\n| location       = Rookgaard\n| attrib         = Nenhum.\n| weight         = 1.00 \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Também conhecida como \"Katana Room Key\".\n<noinclude><p><spoiler>*Pode ser encontrada no final do \"Beco dos Corpos\", dois andares acima da [[Katana Quest]], dentro de um corpo.<br />\n*Está chave permite que você entre na sala que protege a ''Katana Room''.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9107,
+    "ns": 0,
+    "title": "Key 3701",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3701\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Silver Keys\n| location       = Plains of Havoc\n| attrib         = Nenhum.\n| weight         = 1.00 \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Também é conhecida como \"Necromancers House Key\" ou \"the Void\".<noinclude><p><spoiler>Esta chave é usada para abrir as portas na [[Necromant House]] que leva ao teleport \"quebrado\". Ele teleporta você para a \"sala\" com o famoso [[vácuo]].<br />[[Arquivo:key3701.jpg]]<br />Está escondida no chão da casa.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9108,
+    "ns": 0,
+    "title": "Key 3702",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3702\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Crystal Keys\n| location       = Plains of Havoc\n| attrib         = Nenhum.\n| weight         = 1.00 \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = No passado ela abria a [[Tower of Knightwatch]], aparentemente perdeu-se sua utilidade.\n<noinclude><p><spoiler>* Pode ser obtida na [[Ornamented Shield Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9110,
+    "ns": 0,
+    "title": "Key 3703",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3703\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Silver Keys\n| location       = Pits of Inferno\n| attrib         = Nenhum.\n| weight         = 1.00 \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Está chave pode ser vista atrás de uma pedra na [[Pits of Inferno]]. Ainda não se sabe como obtê-la nem para que ela serve.<noinclude><p><spoiler>* Ela fica em uma sala junto com 13 alavancas, sendo uma atrás de outra pedra. No meio da sala existe um livro com um enigma: <br />\n<pre>\nlook at the 4 and ignore the 2\nend the 7 with 5 in mind\nvalue of 6 is 9\nexplain the second of 4\nrun past the 7\nsubstract 10\nuse the northeast first\nsee the colors change\nerrors are red\nlook what changes\nexpect no mercy\nsix times 10\nstupidity is red.\n</pre>\nNo entanto, se você pegar somente a primeira letra de cada linha, verá as palavras \"levers useless\" que quer dizer \"alavancas inúteis\".\n[[Arquivo:Key3703.png|300px]]</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9111,
+    "ns": 0,
+    "title": "Key 3700",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3700\n| flavortext     =\n| itemclass      = Chaves\n| primarytype    = Itens de Quest\n| secondarytype  = Crystal Keys\n| location       = [[Venore]]\n| attrib         = Nenhum.\n| weight         = 1.00 \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.9\n| notes          = Esta chave é obtida e usada durante uma quest.\n<noinclude><p><spoiler>\n* Esta chave é utilizada para abrir a sala de recompensa da [[Pits of Inferno Quest]].\n* Pode ser encontrada descendo em um buraco, ({{mapa|32835,32232,7:2|aqui}}).\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9112,
+    "ns": 0,
+    "title": "Key 5000",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 5000\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Silver Keys\n| location       = Green Claw Swamp\n| attrib         = Nenhum.\n| weight         = 1.00 \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Também conhecida como \"Witch House Key\".<noinclude><p><spoiler>*Escondida em um caixão de marfim abaixo da casa de [[Wyda]].<br />\n*Com ela você poderá abrir a porta para a casa de [[Wyda]]. [[Knight]]s normalmente usam a sala para treinar com [[Slime]]s.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 22859,
+    "ns": 0,
+    "title": "Key 3936",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3936\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Copper Keys\n| location       = Fibula\n| mercado        = não\n| attrib         = Nenhum.\n| weight         = 1.00 \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Também conhecida como \"Mercenary key\". É uma das chaves da [[Mercenary Tower]] em [[Fibula]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 22860,
+    "ns": 0,
+    "title": "Key 3900",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 3900\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Copper Keys\n| mercado        = não\n| attrib         = Nenhum.\n| weight         = 1.00 \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Provavelmente a chave de uma [[Guildhall]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 22862,
+    "ns": 0,
+    "title": "Key 4033",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{disputed}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 4033\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Silver Keys\n| location       = Jakundaf Desert\n| attrib         = Nenhum.\n| weight         = 1.00 \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Aparentemente usada no salão do portal no sub-solo do [[Jakundaf Desert]]. Esta chave pode não existir.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8569,
+    "ns": 0,
+    "title": "Orange Key",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{deprecated}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Orange Key \n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  =  \n| attrib         = Nenhum.\n| mercado        = não\n| weight         = 1.00 \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Não há muitas informações sobre orange keys.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9023,
+    "ns": 0,
+    "title": "Key 6010",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 6010\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Golden Keys\n| location       = Edron\n| attrib         = Nenhum.\n| weight         = 1.00 \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Esta chave é obtida e usada durante uma quest.\n<noinclude><p><spoiler>\n* Esta chave também é conhecida como \"Demon Key\".\n* Pode ser obtida na ''Parchment Room'' durante a [[The Ultimate Challenges Quest]]. \n* Essa chave é necessária para abrir a porta da missão ''The Demon Hell'' da [[The Ultimate Challenges Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9048,
+    "ns": 0,
+    "title": "Magical Cage Key",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Magical Cage Key\n| flavortext     = It fits into the lock of the demon cage in Eclesius' cellar.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Chaves\n| location       = [[Thais]]\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = 1.00 \n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.5\n| notes          = Esta chave é obtida e usada durante uma quest.\n<noinclude><p><spoiler>\n* Faz parte da [[The Scatterbrained Sorcerer Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9109,
+    "ns": 0,
+    "title": "Key 5050",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 5050\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Bone Keys\n| location       = Dark Cathedral\n| attrib         = Nenhum.\n| weight         = 1.00 \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Esta chave também é conhecida como DC prison key.\n<noinclude><p><spoiler>Ela abre a porta para a cela da [[NPC]] [[Angelina]] em [[Dark Cathedral]]. Pode ser encontrada em uma sala a oeste da própria prisão da NPC.\nNecessária para a [[Mage Outfits Quest]] (male) e [[Summoner Outfits Quest]] (female).</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9113,
+    "ns": 0,
+    "title": "Key 5010",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 5010\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Silver Keys\n| location       = Green Claw Swamp\n| attrib         = Nenhum.\n| weight         = 1.00 \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Também conhecida como \"Black Knight Villa Key\".<noinclude><p><spoiler>* Pode ser encontrada em duas diferentes árvores secas diretamente ao oeste da [[Black Knight Villa]], ({{mapa|32812,31964,7:2|aqui}}), ou [[Green Claw Swamp]], ({{mapa|32799,31959,7:2|aqui}}).<br />\n*Essa chave fornece acesso para as cavernas no subsolo da [[Black Knight Villa]] em [[Green Claw Swamp]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9354,
+    "ns": 0,
+    "title": "Theodore Loveless' Key",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Theodore Loveless' Key\n| flavortext     = It is the key to his private room.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Chaves\n| tertiarytype   = Silver Keys\n| location       = [[Liberty Bay]]\n| stackable      = não\n| attrib         = Nenhum.\n| weight         = 1.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.2\n| notes          = Esta chave é obtida e usada durante uma quest.\n<noinclude><p><spoiler>\n* Obtido e usado durante a [[The Thieves Guild Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 20249,
+    "ns": 0,
+    "title": "Key to the Drowned Library",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key to the Drowned Library\n| flavortext     = The strange shape of this key glistens softly in the light.\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Produtos de Criaturas\n| secondarytype  = Chaves\n| attrib         = Nenhum.\n| stackable      = sim\n| weight         = 1.20\n| value          = 330\n| npcvalue       = 330\n| droppedby      = [[Deepling Spellsinger]], [[Deepling Master Librarian]].\n| buyfrom        = Jogadores.\n| sellto         = Fiona, Rock In A Hard Place, Yasir\n| implemented    = 9.4\n| notes          = \n<noinclude><p><spoiler>\n* 01 é necessária para a [[Liquid Black Quest]]. Você pode usar este item em [[Seashell Bookcase]]s para obter um [[Seashell Book]]s.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 20422,
+    "ns": 0,
+    "title": "Prison Cell Key",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Prison Cell Key\n| flavortext     =\n| itemclass      = Chaves\n| primarytype    = Itens de Quest\n| secondarytype  = Crystal Keys\n| location       = Beregar\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = 1.00 \n| mercado        = sim\n| droppedby      = Ninguém.\n| implemented    = 8.5\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Esta chave é obtida e usada durante uma quest.\n<noinclude><p><spoiler>\n* Obtida e usada durante a [[The Hidden City of Beregar Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 22861,
+    "ns": 0,
+    "title": "Key 5002",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 5002\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Silver Keys\n| location       = Green Claw Swamp\n| attrib         = Nenhum.\n| weight         = 1.00 \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Usado para abrir uma porta sem saída na [[Black Knight Villa]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 30099,
+    "ns": 0,
+    "title": "Omrabas' Copper Key",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Omrabas' Copper Key\n| flavortext     = A very ornate key, made of solid copper.\n| itemclass      = Chaves\n| primarytype    = Itens de Quest\n| secondarytype  = Copper Keys\n| mercado        = não\n| stackable      = não\n| weight         = 1.00\n| location       = Drefia\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.1\n| notes          = Esta chave é obtida e usada durante uma quest.\n<noinclude><p><spoiler>\n* Obtida e usada na [[The Gravedigger of Drefia Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 30101,
+    "ns": 0,
+    "title": "Omrabas' Bone Key",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Omrabas' Bone Key\n| flavortext     = It is delicately carved out of the bone of some animal and bears strange inscriptions.\n| itemclass      = Chaves\n| primarytype    = Itens de Quest\n| secondarytype  = Bone Keys\n| mercado        = não\n| stackable      = não\n| weight         = 1.00\n| location       = Drefia\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.1\n| notes          = Esta chave é obtida e usada durante uma quest.\n<noinclude><p><spoiler>\n* Obtida e usada na [[The Gravedigger of Drefia Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 31765,
+    "ns": 0,
+    "title": "Silver Prison Key",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Silver Prison Key\n| flavortext     = You dreamt that this key unlocks the prison of a powerful horror that you had to face on your own.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Prêmios de Eventos\n| weight         = 2.00\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 0\n| droppedby      = Ninguém\n| location       = [[Roshamuul]]\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.30\n| notes          = É necessária para acessar uma cela da [[Roshamuul Prison]].\n<noinclude><p><spoiler>\n* 01 é necessária para acesso a cela de [[Terofar]].\n* Possibilidade de ser obtido ao usar um [[Unrealized Dream]] próximo ao [[The Dreamcatcher Device]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 39346,
+    "ns": 0,
+    "title": "Key to Knowledge",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key to Knowledge \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Produtos de Criaturas\n| secondarytype  = Chaves\n| weight         = 6.50\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 0\n| droppedby      = [[The Last Lore Keeper]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.02\n| notes          = \n<noinclude><p><spoiler>\n* [[Arquivo:Achievement.gif]] Após ter comido a [[Forbidden Fruit]] e usado a Key no [[Forbidden Tome]], você receberá o achievement '''\"{{Achievement|Forbidden Knowledge}}\"''', ao fazer isso tanto a Key quanto o Tome irão desaparecer e a seguinte mensagem irá surgir na tela \"'''''You gained a tremendous amount of knowledge'''''\".\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 39628,
+    "ns": 0,
+    "title": "Old Silver Key",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Old Silver Key\n| flavortext     = It is beautifully ornate but heavily tarnished.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Chaves\n| weight         = 2.50\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| mercado        = não\n| implemented    = 11.02\n| notes          = Esta chave é obtida e usada durante uma quest.\n<noinclude><p><spoiler>\n* Faz parte da [[Forgotten Knowledge Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 44025,
+    "ns": 0,
+    "title": "Lotus Key",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Lotus Key\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Chaves\n| attrib         = \n| weight         = 1.00 \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.80\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[The Secret Library Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45025,
+    "ns": 0,
+    "title": "Strangely Ornamented Key",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Strangely Ornamented Key\n| flavortext     = This key belongs to an ancient being which will reclaim it if you do not hurry.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Chaves\n| attrib         = Nenhum.\n| weight         = 1.00 \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.00\n| notes          = \n<noinclude><p><spoiler>\n* Faz parte da [[The Dream Courts Quest]].\n* Assim que é obtido, ele tem a duração de 30 minutos.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 47056,
+    "ns": 0,
+    "title": "Wooden Cage Key",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Wooden Cage Key\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Chaves\n| location       = [[Kilmaresh]].\n| attrib         = Nenhum.\n| weight         = 0.77\n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.20\n| notes          = <noinclude><p><spoiler>* Obtida e usada durante a [[Kilmaresh Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 66279,
+    "ns": 0,
+    "title": "Key 7772",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 7772\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Bronze Keys\n| location       = Isle of Ada\n| attrib         = Nenhum.\n| weight         = 1.00 \n| mercado        = não\n| implemented    = 15.20.7a5cc9\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          =\n* Pode ser obtida em um [[Brass-Shod Chest (Ada)]] [[Arquivo: Brass-Shod Chest.gif]] na [[Isle of Ada]].\n* Serve para abrir o quarto da forja dentro do '''Stag Bastion''' ({{Mapa|33870,32104,5:2|aqui}}).\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 66281,
+    "ns": 0,
+    "title": "Key 7770",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 7770\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Silver Keys\n| location       = Isle of Ada ({{Mapa|33864,32102,2:2|aqui}})\n| attrib         = Nenhum.\n| weight         = 1.00 \n| mercado        = não\n| implemented    = 15.20.7a5cc9\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          =\n* Pode ser obtida dentro da sala do NPC [[Eldoran the Ambitious]];  \n* Abre a porta localizada ({{Mapa|33860,32106,3:2|aqui}});  \n* Atrás dela há um baú de recompensa.  \n\n{{Veja|Baús de Recompensa Isle of Ada}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 66388,
+    "ns": 0,
+    "title": "Key 7909",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Key 7909\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Chaves\n| secondarytype  = Silver Keys\n| location       = Isle of Ada ({{Mapa|33827,32192,7:2|aqui}})\n| attrib         = Nenhum.\n| weight         = 1.00 \n| mercado        = não\n| implemented    = 15.20.7a5cc9\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          =\n* A chave pode ser obtida dentro de um [[Skeleton]] escondido no interior de uma árvore na [[Isle of Ada]] ({{Mapa|33826,32193,7:2|aqui}}).\n* '''Ainda em investigação''': quando o baú proximo ao buraco, ao clicar se torna mimico, o piso acima do buraco pode apresentar tentáculos ({{Mapa|33828,32193,6:2|aqui}}). Utilize um [[Canivetes|canivete]] para abrir a passagem e descer.\n* A chave é utilizada para abrir a grade que dá acesso ao baú localizada {{Mapa|33888,32141,7:2|aqui}}.\n\n<gallery mode=\"nolines\" widths=\"250px\" heights=\"250px\">\nArquivo:Isle of Ada - Tentaculos.jpg|Tentáculos na Isle of Ada\nArquivo:Isle of Ada - Esqueleto Arvore.jpg|Skeleton dentro da árvore\n</gallery>\n\n}}"
+       }
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

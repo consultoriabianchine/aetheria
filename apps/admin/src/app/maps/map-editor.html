@@ -1,0 +1,60 @@
+<div class="editor-head">
+  <a routerLink="/maps">← Mapas</a>
+  <h1>{{ id === 'new' ? 'Novo mapa' : name() }}</h1>
+  @if (dirty()) {
+    <span class="unsaved">Alterações não salvas</span>
+  }
+  <div class="actions">
+    <button class="primary" (click)="save()" [disabled]="saving() || !dirty()">Salvar mapa</button>
+  </div>
+</div>
+
+@if (error()) {
+  <p class="error">{{ error() }}</p>
+}
+
+<div class="map-layout">
+  <section class="panel palette">
+    <h2>Tiles</h2>
+    <div class="palette-grid">
+      @for (t of tiles; track t.id) {
+        <div class="tile-btn" [class.active]="selectedTile() === t.id" (click)="selectedTile.set(t.id)">
+          <span class="swatch" [style.background]="t.color"></span>
+          {{ t.name }}
+        </div>
+      }
+    </div>
+    <button (click)="fill()">Preencher tudo</button>
+
+    <h2>Dimensões</h2>
+    <div class="field">
+      <label>Nome</label>
+      <input type="text" [value]="name()" (input)="name.set($any($event.target).value); dirty.set(true)" />
+    </div>
+    <div class="row">
+      <div class="field">
+        <label>Largura</label>
+        <input type="number" [value]="width()" (input)="width.set(+$any($event.target).value)" min="4" max="256" />
+      </div>
+      <div class="field">
+        <label>Altura</label>
+        <input type="number" [value]="height()" (input)="height.set(+$any($event.target).value)" min="4" max="256" />
+      </div>
+      <button (click)="resize()">Redimensionar</button>
+    </div>
+    <p class="hint">Dica: pinte paredes (borda) e interior caminhável. Salve e aponte <code>mapId</code> numa hunt.</p>
+  </section>
+
+  <section class="panel canvas-panel">
+    <div class="canvas-wrap">
+      <canvas
+        #canvas
+        class="sprite-preview"
+        (pointerdown)="onPointerDown($event)"
+        (pointermove)="onPointerMove($event)"
+        (pointerup)="onPointerUp()"
+        (pointerleave)="onPointerUp()"
+      ></canvas>
+    </div>
+  </section>
+</div>

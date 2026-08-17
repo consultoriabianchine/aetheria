@@ -1,0 +1,2246 @@
+{
+ "query": {
+  "pages": [
+   {
+    "pageid": 6111,
+    "ns": 0,
+    "title": "Crowbar",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Crowbar\n| flavortext     = It may come in handy sometime.\n| levelrequired  = 0\n| enchantable    = não\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| secondarytype  = Clavas\n| attack         = 5\n| defense        = 6\n| hands          = Uma\n| type           = Clava\n| weight         = 21.00\n| classificacao  = 1\n| max_tier       = 1\n| stackable      = não\n| value          = 50 - 260\n| npcvalue       = 50\n| npcprice       = 260\n| droppedby      = [[Behemoth]], [[Destroyer]], [[Faceless Bane]], [[Girtablilu Warrior]], [[Pirat Cutthroat]].\n| buyfrom        = Bashira, Shanar, Ahmet, Memech, Rowenna, Sarina, Hireling (Trader), Habdel, Halif, Beatrice, Willard, Esrik, Pompan, Timur, Rock In A Hard Place, Ulrik, Gladys, Bezil, Nezil, Uzgod, Tefrit, Cedrik, Red Lilly, Asphota, Brengus, Perod, Flint, Maro, Maun, Bertha, Robert, Gamel, Gorn, Sam, Turvy, Hardek, Lubo, Baltim, Zora, Nelliem, Romella, Shiantis, Gree Dee, Morpel\n| sellto         = Bashira, Shanar, Ahmet, Memech, Rowenna, Sarina, Hireling (Trader), Habdel, Halif, Beatrice, Willard, Esrik, Pompan, Timur, Rock In A Hard Place, Ulrik, Gladys, Bezil, Nezil, Uzgod, Tefrit, Cedrik, Red Lilly, Asphota, H.L.:1, Brengus, Perod, Flint, Maro, Maun, Bertha, Robert, Gamel, Gorn, Sam, Turvy, Hardek, Lubo, Baltim, Zora, Romella, Shiantis, Gree Dee, Morpel\n| implemented    = 7.4\n| perk1          = {{Weapon Perk|Type_Auto_Atk_Critical_Dmg||+15.00% critical extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+4.00% do seu Club Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Auto_Atk_Critical_Chance||+2.00% critical hit chance para auto-attacks}}<br/>{{Weapon Perk|Type_Mana_On_Kill||+5 mana on kill}}\n| perk4          = {{Weapon Perk|Type_Bestiary_Dmg_Construct||+1.00% damage contra Construct}}\n| notes          = Pode ser usado para consertar ou destruir certos objetos. Também possui o ataque mais baixo dentre os [[clavas|clubs]] sendo ótimos para [[Training|treinar]].\n<noinclude><p><spoiler>\n* 01 é necessário para: [[In Service of Yalahar Quest]], [[The Ape City Quest]] e [[The Postman Missions Quest]].\n* O [[Whacking Driller of Fate]] pode ser utilizado como Crowbar.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8382,
+    "ns": 0,
+    "title": "Flask of Rust Remover",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Flask of Rust Remover\n| flavortext     = It can be used to clean and polish old and rusty armors.\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| secondarytype   = Ferramentas\n| attrib         = Pode ser usado para remover a ferrugem de equipamentos.\n| stackable      = sim\n| weight         = 0.90\n| value          = 50\n| npcprice       = 50\n| npcvalue       = 50\n| droppedby      = [[Control Tower]], [[Deepling Scout]], [[Rustheap Golem]].\n| buyfrom        = Harog\n| sellto         = Jogadores.\n| implemented    = 8.4\n| notes          = Pode ser usado para remover a ferrugem da [[Rusty Armor]], [[Rusty Helmet]], [[Rusty Legs]] e [[Rusty Shield]].\n\n<noinclude><p><spoiler>\n*Completar a parte '''Justice for All''' da [[The Hidden City of Beregar Quest]] permite ao personagem comprar este item.\n*[[Arquivo:Achievement.gif]] Após você [[Flask of Rust Remover|polir]] 1000 [[Rusty Armor]]s, [[Rusty Helmet]]s, [[Rusty Legs]] ou [[Rusty Shield]]s, você receberá o achievement \"'''{{Achievement|Polisher}}'''\".\n*[[Arquivo:Achievement.gif]] Ao pescar um [[Leviathan's Amulet]] de um [[Massive Water Elemental]] ou de um [[Water Elemental]] e [[Flask of Rust Remover|polir]] uma [[Golden Armor]] de uma [[Slightly Rusted Armor]], você ganhará o achievement \"'''{{Achievement|Lucky Devil}}'''\".\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8942,
+    "ns": 0,
+    "title": "Bait",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name         = Bait\n| flavortext   = \n| itemclass    = Ferramentas e Outros Equipamentos\n| primarytype  = Ferramentas\n| stackable    = não\n| attrib       = Nenhum.\n| weight       = 8.00\n| value        = \n| npcvalue     = 0\n| npcprice     = 50\n| droppedby    = Ninguém.\n| trade        = sim\n| buyfrom      = Captain Haba\n| sellto       = Jogadores.\n| implemented  = 8.2\n| notes        = <noinclude><p><spoiler>* Obtido e usado na [[The Hunt for the Sea Serpent Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8945,
+    "ns": 0,
+    "title": "Blessed Wooden Stake",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Blessed Wooden Stake\n| flavortext     = Many mighty priests of Tibia have blessed this stake.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| attrib         = Pode-se retirar dust de [[Vampire]]s, [[Vampire Viscount]], [[Vampire Bride]] e [[Demon]].\n| weight         = 5.00\n| stackable      = não\n| value          = 5 000 - 10 000\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.8\n| notes          = Pode ser usado em [[Vampire]]s, [[Vampire Bride]], [[Vampire Viscount]] e [[Vampire Lords]] mortos para conseguir [[Vampire Dust]] e em [[Demon]]s mortos para obter [[Demon Dust]].\n<noinclude><p><spoiler>\n* Recompensa da [[The Blessed Stake Quest]].\n* 01 é necessário para a [[Hot Cuisine Quest]].\n* [[Arquivo:Achievement.gif|link=]] Após conseguir 500 dust de [[Demon]] e/ou Vampires, você receberá o Achievement \"'''{{Achievement|Ashes to Dust}}'''\".\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8946,
+    "ns": 0,
+    "title": "Broom",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Broom\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| stackable      = não\n| attrib         = Nenhum.\n| weight         = 11.00\n| npcvalue       = 0\n| npcprice       = 12\n| droppedby      = [[Ekatrix]], [[Witch]].\n| droppedRaidby  = [[Yaga the Crone]].\n| droppedEventby = [[Grynch Clan Goblin]].\n| buyfrom        = Nelliem\n| sellto         = Jogadores.\n| notes          = [[Broom]]s normalmente não possuem uso prático. Possui a mesma aparência que a [[Witchesbroom]].\n<noinclude><p><spoiler>* Necessário na [[The Scatterbrained Sorcerer Quest]]. \n* Necessário no desafio Mopping up Vomit da [[Orcsoberfest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8948,
+    "ns": 0,
+    "title": "Closed Trap",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Closed Trap\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| secondarytype  = \n| attrib         = Nenhum.\n| weight         = 21.00\n| stackable      = não\n| value          = 75\n| npcvalue       = 75\n| npcprice       = 280\n| implemented    = 6.6\n| droppedby      = [[Falcon Knight]], [[Juggernaut]], [[Poacher]], [[Preceptor Lazare]].\n| buyfrom        = Bashira, Ahmet, Sarina, Hireling (Trader), Halif, Beatrice, Pompan, Timur, Rock In A Hard Place, Gladys, Bezil, Nezil, Tefrit, Red Lilly, Asphota , Perod, Maro, Maun, Bertha, Gorn, Lubo, Zora, Shiantis, Gree Dee\n| sellto         = Bashira, Ahmet, Sarina, Hireling (Trader), Halif, Beatrice, Pompan, Timur, Rock In A Hard Place, Gladys, Bezil, Nezil, Tefrit, Red Lilly, Asphota , Perod, Maro, Maun, Bertha, Gorn, Lubo, Zora, Shiantis, Gree Dee\n| notes          = Traps podem ser utilizadas para ferir criaturas, podendo causar um dano de até 29, mas elas não param o movimento das criaturas. Você pode encontrar este item em volta do acampamento de [[Dwarfs]] na floresta de [[Tiquanda]]. Coloque-a no chão e dê \"use\" nela para montá-la (Se transforma em uma [[Trap]]).<br>\nSe você mover uma [[Trap|Trap aberta]] ela irá se fechar novamente. Note que ao utilizar uma dessas para matar um monstro você ainda ganhará [[experience|pontos de experiência]] e ela também é usado para ferir jogadores, com exceção em servidores [[Optional PvP]]. Não pode ser aberta em [[Protection Zone]]s.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8949,
+    "ns": 0,
+    "title": "Elvenhair Rope",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Elvenhair Rope\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| secondarytype  = \n| attrib         = Nenhum.\n| stackable      = não\n| weight         = 6.00\n| value          = 2 000 - 8 000\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Mesma função de uma [[rope|corda]], mas 12 [[oz]] mais leve.\n<noinclude><p><spoiler>* Recompensa da [[Troll Sabotage Quest]] parte dos [[Tibia Tales Quest|Tibia Tales]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8988,
+    "ns": 0,
+    "title": "Golem Disassembler",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Golem Disassembler\n| flavortext     = It looks suspiciously similar to a crowbar.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| attrib         = Nenhum.\n| weight         = 15.00\n| value          = Negociável\n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.5\n| notes          = Tem a mesma aparência de um [[Crowbar]].\n<noinclude><p><spoiler>\nObtido durante a [[Shadows of Yalahar Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8989,
+    "ns": 0,
+    "title": "Fishing Rod",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Fishing Rod\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| secondarytype  = \n| attrib         = Serve para pescar. Necessário [[worms]].\n| weight         = 8.50\n| value          = 40\n| npcvalue       = 40\n| npcprice       = 140\n| stackable      = não\n| droppedby      = [[Minotaur Guard]], [[Swamp Troll]], [[The Horned Fox]].\n| droppedRaidby  = [[General Murius]].\n| buyfrom        = Bashira:150, Zethra:150, Ahmet:150, Richard:150, Sarina:150, Hireling (Trader):150, Halif:150, Beatrice:150, Pompan:150, Timur:150, Rock In A Hard Place:150, Gladys:150, Raffael:150, Bezil:150, Nezil:150, Tefrit:150, Red Lilly:150, Asphota:150, Perod:150, Maro:150, Al Dee:150, Lee'Delle, Maun:150, Bertha:150, Gorn:150, Lubo:150, John:300, Zora:150, Nelliem:150, Shiantis:150, Rafzan:150, Gree Dee:150, Iriana:150\n| sellto         = Bashira, Zethra:30, Ahmet, Richard:30, Sarina, Hireling (Trader), Halif, Beatrice, Pompan, Timur, Rock In A Hard Place, Gladys, Bezil, Nezil, Tefrit, Red Lilly, Asphota, Perod, Maro, Al Dee:30, Lee'Delle:30, Maun, Bertha, Gorn, Lubo, Zora, Shiantis, Rafzan:30, Gree Dee\n| notes          = Fishing Rods são usadas para pescar. Conforme você vai pescando você irá aumentando o seu skill de [[fishing]]. Apenas alguns quadrados de água contém peixe a qualquer hora, e uma vez que o [[fish]] é pego de um quadrado, leva mais ou menos 30 minutos para dar o [[respawn]]. Fishing é o único skill que não é relacionado com combate.<br>\nDesde o update de agosto de 2005, você também precisa de [[worms]] para pescar.<br>\nVocê precisa de uma dessa para \"pescar\" o loot de um [[Water Elemental]].\n* Usando [[Yummy Gummy Worm]]s ou [[Gummy Rotworm]]s,você pode pescar [[Taiyaki]] nos lagos de [[Candia]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9153,
+    "ns": 0,
+    "title": "Botanist's Container",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Botanist's Container\n| flavortext     = It is empty.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| attrib         = Usado para coletar amostras de plantas.\n| weight         = 18.00\n| stackable      = não\n| droppedby      = Ninguém.\n| npcprice       = 500\n| buyfrom        = Angus, Mortimer\n| sellto         = Jogadores.\n| implemented    = 7.6\n| notes          = Este item é dado por alguns NPCs durante algumas quests e pode ser usado para coletar amostras de algumas plantas pelo Tibia.<noinclude><p><spoiler>* Obtido e usado durante a [[Druid Outfits Quest]], [[Krailos Quest]] e [[The Explorer Society Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9159,
+    "ns": 0,
+    "title": "Bricklayers' Kit",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Bricklayers' Kit\n| flavortext    = Use it on destroyed brick walls to repair them.\n| itemclass     = Ferramentas e Outros Equipamentos\n| primarytype   = Itens de Quest\n| secondarytype = Ferramentas\n| stackable     = não\n| attrib        = Repara paredes.\n| weight        = 18.00\n| trade         = sim\n| npcvalue      = 0\n| npcprice      = 100\n| droppedby     = Ninguém.\n| buyfrom       = Baxter\n| sellto        = Jogadores.\n| implemented   = 8.2\n| notes         = Tem a mesma aparência de um [[Emergency Kit]].\n<noinclude><p><spoiler>\n* 01 é necessário para a missão ''Royal Rescue'' da [[The Hidden City of Beregar Quest]].\n* 40 são necessários para a [[Machinery of War Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9164,
+    "ns": 0,
+    "title": "Butterfly Conservation Kit",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Butterfly Conservation Kit\n| flavortext     = It is empty.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| attrib         = Coletar amostras de borboletas.\n| stackable      = não\n| weight         = 7.00\n| npcprice       = 40 000\n| mercado        = sim\n| droppedby      = Ninguém.\n| buyfrom        = Black Bert\n| sellto         = Jogadores.\n| implemented    = 7.6\n| notes          = Entregue por [[Angus]] em Port Hope ou por [[Mortimer]] em Northport para coletar algumas [[Butterfly]]s. Dependendo da cor a descrição do item muda. Pode ser obtido com [[Nihaka]] em Marapur para coletar uma [[Emerald Damselfly]].\n<noinclude><p><spoiler>\n* Obtido e usado durante a [[The Explorer Society Quest]].\n* Obtido e usado durante a [[Within the Tides Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9215,
+    "ns": 0,
+    "title": "Dwarven Pickaxe",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Dwarven Pickaxe\n| flavortext     = It is a masterpiece of dwarvish smithery and made of especially hard steel.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| stackable      = não\n| attrib         = Nenhum.\n| weight         = 60.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.6\n| notes          = Mesmo sprite de uma [[Ice Pick]]. Note que Dwarven Pickaxes não podem ser usados para abrir buracos (você não pode usá-lo).<noinclude><p><spoiler>\n* Obtido e usado na [[The Explorer Society Quest]]. \n* 06 delas também aparecem nas [[Kazordoon Dwarf Mines]] em um [[Respawn Diário]]:\n** Na [[Old Ore Mine]] aparece {{mapa|32506,31964,12:2|aqui}}.\n** Na [[Splintered Stone Mine]] aparece {{mapa|32427,31900,12:2|aqui}}.\n** Na [[Bright Ledge Mine]] aparece {{mapa|32520,31929,10:2|aqui}} e também {{mapa|32503,31922,12:2|aqui}}.\n** Na [[Pick 'N Shovel Mine]] aparece {{mapa|32447,31973,11:2|aqui}} e também {{mapa|32425,31948,12:2|aqui}}.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9227,
+    "ns": 0,
+    "title": "Ectoplasm Container",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ectoplasm Container\n| flavortext     = It is empty.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = 6.00\n| value          = \n| npcprice       = 750\n| droppedby      = Ninguém.\n| buyfrom        = Angus, Mortimer\n| sellto         = Jogadores.\n| implemented    = 7.6\n| notes          = Dado por [[Angus]] ([[Port Hope]]) ou por [[Mortimer]] ([[Northport]]) para coletar ectoplasma de um [[ghost]] morto recentemente ou [[Muriel]], para coletar ossos. Um Ectoplasm Container cheio tem a mesma aparência de um [[Spirit Container]].\n[[Arquivo:Full Ectoplasm Container.gif]]<br />Quando cheio, a descrição do item muda dependendo do tipo de quest:\n*<span style=\"color:green; font-weight:bold;\">It is filled with ectoplasm.</span>\n*<span style=\"color:green; font-weight:bold;\">It is filled with a desecrated bone.</span>\n<noinclude><p><spoiler>\n* Esse item tem uma estranha propriedade de conter ectoplasma contidos em ghosts mortos recentemente ou ossos.\n* É temporariamente obtido na [[The Explorer Society Quest]] e [[Into The Bone Pit Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 20529,
+    "ns": 0,
+    "title": "Dog Collar",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Dog Collar\n| flavortext     = It belongs to Noodles, the King's dog.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = 1.10\n| value          = \n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.4\n| notes          = \n<noinclude><p><spoiler>\n* Pode ser obtido falando com o [[King Tibianus]] durante a Mini World Change [[Mini_World_Changes#Noodles_is_Gone|Noodles is Gone]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 21509,
+    "ns": 0,
+    "title": "Artist's Palette",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Artist's Palette\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| attrib         = Nenhum.\n| weight         = 5.50\n| stackable      = não\n| npcvalue       = 0\n| npcprice       = 0\n| droppedEventby = [[Lyxoph (Criatura)|Lyxoph]], [[Penciljack (Criatura)|Penciljack]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.44\n| notes          = Use um [[Artist's Brush]] nele para preenchê-lo com tinta.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 21523,
+    "ns": 0,
+    "title": "Artist's Brush",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Artist's Brush\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| attrib         = Nenhum.\n| weight         = 1.00\n| stackable      = não\n| npcvalue       = 0\n| npcprice       = 0\n| droppedEventby = [[Lyxoph (Criatura)|Lyxoph]], [[Penciljack (Criatura)|Penciljack]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.44\n| notes          = Use ele em um [[Artist's Palette]] para conseguir um [[Artist's Brush (With Ink)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 21524,
+    "ns": 0,
+    "title": "Artist's Canvas",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Artist's Canvas\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| attrib         = Pode ser combinado a outro item.\n| weight         = 10.00\n| stackable      = não\n| npcvalue       = 0\n| npcprice       = 0\n| droppedEventby = [[Lyxoph (Criatura)|Lyxoph]], [[Penciljack (Criatura)|Penciljack]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.44\n| notes          = Use isso em um [[Easel]] para conseguir um [[Artist's Easel]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 21599,
+    "ns": 0,
+    "title": "Artist's Brush (With Ink)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Artist's Brush (With Ink)\n| flavortext     = Paint is dripping from its tip.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| secondarytype  = \n| attrib         = Nenhum.\n| weight         = 1.00\n| stackable      = não\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.44\n| notes          = Use um [[Artist's Brush]] em um [[Artist's Palette]] para conseguir um desse.<br />\nUse isso em um [[Artist's Easel]] para conseguir um [[Masterpiece of a Gozzler]], [[Masterpiece of a Muse]], [[Painting of a Gozzler]] ou um [[Painting of a Muse]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25798,
+    "ns": 0,
+    "title": "Gnomish Spore Gatherer",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Gnomish Spore Gatherer\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| attrib         = Nenhum.\n| weight         = 8.00\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| npcprice       = 50\n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Gnomally\n| sellto         = Jogadores.\n| implemented    = 9.6\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[Bigfoot's Burden Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 27770,
+    "ns": 0,
+    "title": "Can of Oil",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Can of Oil\n| flavortext    = Makes your tools go swimmingly.\n| itemclass     = Ferramentas e Outros Equipamentos\n| primarytype   = Itens de Quest\n| secondarytype = Ferramentas\n| weight        = 19.00\n| stackable     = não\n| mercado       = não\n| droppedby     = Ninguém.\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| implemented   = 9.8\n| notes         = <noinclude><p><spoiler>* Obtido e usado durante a [[Venore Daily Tasks]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 27849,
+    "ns": 0,
+    "title": "Adventurer's Stone",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Adventurer's Stone\n| itemclass     = Outros Itens\n| primarytype   = Itens de Quest\n| secondarytype = Ferramentas\n| flavortext    = Use it in a city temple to travel to the Adventurers Guild. A replacement is available at temples.\n| weight        = 0.30\n| stackable     = não\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| attrib        = Pode-se dar \"Use\".\n| implemented   = 9.8\n| droppedby     = Ninguém.\n| mercado       = não\n| notes         = Você pode usar este item dentro de um [[templo]] para ser teletransportado para a [[Adventurers' Guild]].\n<noinclude><p><spoiler>* O personagem pode conseguir essa pedra de graça falando '''Hi - Adventurer's Stone - Yes''' para qualquer [[Templo#NPCs de Templos|NPCs de Templos]] (apenas na primeira vez no mesmo dia). Se você pedir muitas delas, eles irão cobrar uma taxa de 30 ''gps''.<br>\n* Uma também pode ser obtida em um baú no navio do [[Captain Kurt]] na [[Isle of Destiny]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 29011,
+    "ns": 0,
+    "title": "Fire Bug",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Fire Bug\n| flavortext    = This strange creature has the tendency to set certain things on fire.\n| itemclass     = Ferramentas e Outros Equipamentos\n| primarytype   = Ferramentas\n| secondarytype = \n| weight        = 30.50\n| value         = 100\n| npcprice      = 100\n| stackable     = não\n| droppedby     = Ninguém.\n| buyfrom       = Evan\n| sellto        = Jogadores.\n| implemented   = 7.8\n| notes         = Esta ferramenta é usada para queimar plantações de açúcar para produzir [[Rum]]. As vezes pode explodir ao usá-lo, causando 5 de dano no jogador e destruir o processo em que está sendo usado. Serve também para destruir as teias de aranha que bloqueiam uma passagem.\n<noinclude><p><spoiler>\n* 01 é necessário para a [[Dreamer's Challenge Quest]], [[Secret Service Quest]] (para a TBI), [[Tibia Tales Quest]] e [[The Shattered Isles Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 30997,
+    "ns": 0,
+    "title": "Ghost Detector",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Ghost Detector\n| itemclass     = Ferramentas e Outros Equipamentos\n| primarytype   = Itens de Quest\n| secondarytype = Ferramentas\n| weight        = 9.00\n| stackable     = não\n| mercado       = não\n| value         = \n| npcprice      = 150\n| buyfrom       = Gnomux\n| sellto        = Jogadores.\n| implemented   = 10.20\n| droppedby     = Ninguém.\n| notes         = <noinclude><p><spoiler>* Obtido e usado na [[Spike Tasks]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 31006,
+    "ns": 0,
+    "title": "Gnomish Supplies",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Gnomish Supplies\n| itemclass     = Outros Itens\n| primarytype   = Itens de Quest\n| secondarytype = Ferramentas\n| weight        = 8.00\n| stackable     = sim\n| value         = 100\n| npcprice      = 100\n| buyfrom       = Gnomux\n| sellto        = Jogadores.\n| mercado      = não\n| implemented   = 10.20\n| droppedby     = Ninguém.\n| notes         = <noinclude><p><spoiler>* Pode ser obtido e usado na [[Spike Tasks]]</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 31994,
+    "ns": 0,
+    "title": "Dream Nebuliser",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Dream Nebuliser\n| flavortext     = Used to spray fine dream sand on things.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| weight         = 1.00\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.30\n| notes          = <noinclude><p><spoiler>* Obtido e usado na missão [[Roshamuul_Quest#Ancient_Dreams|Ancient Dreams]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 34825,
+    "ns": 0,
+    "title": "Calibrated Indicator Gauge",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Calibrated Indicator Gauge\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| weight         = 0.10\n| attrib         = \n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.70\n| notes          = <noinclude><p><spoiler>* Obtido e usado na task ''The Mutated Glooth Plague'' da [[Oramond Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 34826,
+    "ns": 0,
+    "title": "Copper Valve",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Copper Valve\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| weight         = 0.20\n| attrib         = \n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.70\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a task ''The Mutated Glooth Plague'' da [[Oramond Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 34917,
+    "ns": 0,
+    "title": "Glooth Converter",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Glooth Converter\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| weight         = 5.00\n| attrib         = \n| mercado        = não\n| stackable      = não\n| droppedby      = Ninguém\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.70\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a task ''The Mutated Glooth Plague'' da [[Oramond Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 35048,
+    "ns": 0,
+    "title": "Filled Glooth Converter",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Filled Glooth Converter\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| weight         = 5.00\n| attrib         = \n| mercado        = não\n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.70\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a task ''The Mutated Glooth Plague'' da [[Oramond Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 36323,
+    "ns": 0,
+    "title": "Closed Silvered Trap",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Closed Silvered Trap\n| flavortext     = It looks like a common leghold trap, but the jags are coated in silver. The trap is closed and safe.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| weight         = 22.00\n| stackable      = não\n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.80\n| notes          = Esta armadilha é usada no chão para ferir em aproximadamente 1000 [[hp|hitpoints]] a [[Feroxa (Imune)]]. Após aberta não pode mais ser movida, e irá desaparecer quando a criatura passar por cima.\n<noinclude><p><spoiler>* Obtido e usado durante a [[Grimvale Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42695,
+    "ns": 0,
+    "title": "Gnomish Pesticides",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Gnomish Pesticides\n| flavortext     = Gnomes use devices such as this to battle various insect pests.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| weight         = 5.00\n| value          = \n| npcvalue       = 0\n| stackable      = não\n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.50\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[Dangerous Depths Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42819,
+    "ns": 0,
+    "title": "Gnome Trignometre",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Gnome Trignometre\n| flavortext     = The device measures heat by absorbing it like a sponge. It changes its smell under certain conditions.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| stackable      = não\n| weight         = 2.00\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.50\n| mercado        = não\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[Dangerous Depths Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 44084,
+    "ns": 0,
+    "title": "Can of Grease",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Can of Grease\n| flavortext     = Ideal to grease large mechanisms. The can is leaky.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| attrib         = Nenhum.\n| weight         = 19.00\n| stackable      = não\n| npcvalue       = \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.80\n| notes          = Irá sumir alguns minutos após ser obtido.\n<noinclude><p><spoiler>\n* Pode ser encontrado dentro de um baú no térreo do [[Falcon Bastion]] ({{mapa|33364,31335,7:2|aqui}}).\n* Ao usá-lo em um mecanismo ({{mapa|33372,31317,3:2|aqui}}), e em seguida usar o mecanismo, irá abrir o portão de ferro do [[Falcon Bastion]] ({{mapa|33369,31316,3:2|aqui}}).\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45222,
+    "ns": 0,
+    "title": "Acid Resistant Fishing Rod",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Acid Resistant Fishing Rod\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| attrib         = Nenhum\n| weight         = 8.50\n| stackable      = \n| npcvalue       = \n| mercado        = sim\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.00\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[The Dream Courts Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 46799,
+    "ns": 0,
+    "title": "Bark Peeler",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bark Peeler\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| attrib         = Nenhum.\n| weight         = 10.00\n| value          = \n| npcprice       = \n| npcvalue       = \n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.20\n| notes          = \n<noinclude><p><spoiler>\n* 01 pode ser encontrado em um baú próximo ao barco de Issavi, ({{mapa|33896,31477,7:3|aqui}}).\n* Faz parte da [[Kilmaresh Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 47797,
+    "ns": 0,
+    "title": "All Knowing Sausages",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{event}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = All Knowing Sausages\n| flavortext     = The all knowing sausages know probably all mysteries of the world. Too bad they only want to talk about schnitzel.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| secondarytype  = \n| attrib         = Serve para verificar a posição do [[Omnious Cauldron]].\n| stackable      = não\n| weight         = 15.00\n| value          = \n| npcvalue       = \n| npcprice       = 100 Festive Points\n| droppedby      = Ninguém.\n| buyfrom        = Xaver\n| sellto         = Jogadores.\n| implemented    = 12.20.9066\n| mercado        = não\n| notes          =\n<noinclude><p><spoiler>\n* Faz parte do evento [[Orcsoberfest]].\n* Quando usado uma mensagem aparecerá dizendo onde está o portal para o [[The Great Schnitzel]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 48052,
+    "ns": 0,
+    "title": "Death Knell",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Death Knell\n| itemclass     = Ferramentas e Outros Equipamentos\n| primarytype   = Itens de Quest\n| secondarytype = Ferramentas\n| attrib        = Nenhum.\n| weight        = 2.50\n| stackable     = \n| value         = \n| npcvalue      = \n| mercado       = não\n| droppedby     = Ninguém.\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| implemented   = 12.30\n| notes         = Trata-se de sino do mundo dos mortos.\n<noinclude><p><spoiler>\n* Obtido e usado durante a [[Feaster of Souls Quest]].\n* Se você perder esse item, pode obtê-lo novamente falando '''\"lost knell\"''' ao npc [[Para Norbert]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 51994,
+    "ns": 0,
+    "title": "Gnome Shovel",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Gnome Shovel\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| attrib         = Nenhum.\n| weight         = 28.00\n| mercado        = não\n| value          = \n| npcvalue       = \n| npcprice       = \n| stackable      = não\n| droppedby      = Ninguem.\n| droppedRaidby  = \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.70\n| notes          = \n<noinclude><p><spoiler>\n* Obtido e usado durante a [[Too Hot To Handle Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 52028,
+    "ns": 0,
+    "title": "Brush",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Brush\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| attrib         = Nenhum.\n| weight         = 8.50\n| mercado        = sim\n| npcvalue       = \n| npcprice       = \n| stackable      = não\n| droppedby      = Ninguém.\n| droppedRaidby  = \n| buyfrom        = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 12.70\n| notes          = \n<noinclude><p><spoiler>\n* Obtido e usado durante a [[Too Hot To Handle Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 52029,
+    "ns": 0,
+    "title": "Chisel",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Chisel\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| attrib         = Nenhum.\n| weight         = 8.50\n| mercado        = sim\n| npcvalue       = \n| npcprice       = \n| stackable      = não\n| droppedby      = Ninguém.\n| droppedRaidby  = \n| buyfrom        = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 12.70\n| notes          = \n<noinclude><p><spoiler>\n* Obtido e usado durante a [[Too Hot To Handle Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 52080,
+    "ns": 0,
+    "title": "Gnome Pick",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Gnome Pick\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| attrib         = Nenhum.\n| weight         = 45.00\n| mercado        = não\n| value          = \n| npcvalue       = \n| npcprice       = \n| stackable      = não\n| droppedby      = Ninguém.\n| droppedRaidby  = \n| buyfrom        = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 12.70\n| notes          = \n<noinclude><p><spoiler>\n* Obtido e usado durante a [[Too Hot To Handle Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 52081,
+    "ns": 0,
+    "title": "Gnomish Lava Fishing Rod",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Gnomish Lava Fishing Rod\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| attrib         = Nenhum.\n| weight         = 8.50\n| mercado        = não\n| value          = \n| npcvalue       = \n| npcprice       = \n| stackable      = não\n| droppedby      = Ninguém.\n| droppedRaidby  = \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.70\n| notes          = \n<noinclude><p><spoiler>\n* Obtido e usado durante a [[Too Hot To Handle Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 52237,
+    "ns": 0,
+    "title": "Glowing Gnomish Stonesmasher",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Glowing Gnomish Stonesmasher\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| attrib         = Nenhum.\n| weight         = 64.50\n| mercado        = não\n| npcvalue       = \n| npcprice       = \n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.70\n| notes          = É um [[Gnomish Stonesmasher]] pegando fogo.\n<noinclude><p><spoiler>\n* Obtido e usado na [[Too Hot To Handle Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 52238,
+    "ns": 0,
+    "title": "Gnomish Stonesmasher",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Gnomish Stonesmasher\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| attrib         = Nenhum.\n| weight         = 64.50\n| mercado        = não\n| value          = \n| npcvalue       = \n| npcprice       = \n| stackable      = não\n| droppedby      = Ninguém.\n| droppedRaidby  = \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.70\n| notes          = Nenhuma.\n<noinclude><p><spoiler>\n* Obtido e usado durante a [[Too Hot To Handle Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53474,
+    "ns": 0,
+    "title": "Divining Rod",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Divining Rod\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| attrib         = Nenhum.\n| weight         = 9.00\n| mercado        = não\n| value          = \n| npcvalue       = \n| npcprice       = \n| stackable      = não\n| droppedby      = Ninguém.\n| droppedRaidby  = \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Nenhuma.\n<noinclude><p><spoiler>* Obtida e usada no [[Pantibian Festival]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 58178,
+    "ns": 0,
+    "title": "Daedal Chisel",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Daedal Chisel\n| flavortext     = A richly ornamented chisel with crude but complex symbols and signs. The intense workmanship this ancient tool underwent made it brittle and fragile. Used in an Iks ritual to destroy urns.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| attrib         = Nenhum.\n| weight         = 1.00\n| mercado        = não\n| npcvalue       = \n| npcprice       = \n| stackable      = não\n| droppedby      = [[Iks Ahpututu]].\n| droppedRaidby  = \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 13.10\n| notes          = \n<noinclude><p><spoiler>\n* Pode ser usado para quebrar as anfôras na sala do boss [[Ahau]]. Cada chisel só quebra uma anfôra portanto é necessário que o jogador ou time tenha pelo menos 03.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 58272,
+    "ns": 0,
+    "title": "Egg Cracker",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Egg Cracker\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| attrib         = Nenhum.\n| weight         = 5.00\n| mercado        = não\n| npcvalue       = \n| npcprice       = \n| stackable      = não\n| droppedby      = Ninguém.\n| droppedRaidby  = \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 13.10\n| notes          = \n<noinclude><p><spoiler>\n* Obtido e usado durante a [[The Cradle of Monsters Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 63005,
+    "ns": 0,
+    "title": "Amber Crusher",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Amber Crusher\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| attrib         = Nenhum\n| weight         = 3.00\n| stackable      = \n| npcvalue       = \n| mercado        = sim\n| droppedby      = [[The Rootkraken]]\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 13.40.54ea79\n| notes          = <noinclude><p><spoiler>* Obtido como loot do [[The Rootkraken]] ao matar pela primeira vez. Tem o mesmo uso do [[Crusher]] de revelar Gemas no [[Updates/13.30.14423#Expansão da Wheel of Destiny - Gem Atelier|Gem Atelier]] mas não tem cargas e pode quebrar ate 10 gemas por vez. Transforma [[Lesser Gem]] em [[Lesser Fragment]]s e [[Greater Gem]] em [[Greater Fragment]]s.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 65769,
+    "ns": 0,
+    "title": "Crusher",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Crusher\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| secondarytype  = \n| attrib         = Nenhum\n| weight         = 3.00\n| stackable      = \n| npcprice       = 500\n| mercado        = sim\n| droppedby      = Ninguém.\n| buyfrom        = Bashira, Ahmet, Sarina, Halif, Beatrice, Timur, Rock In A Hard Place, Gladys, Bezil, Nezil, Tefrit, Red Lilly, Asphota, Perod, Maun, Bertha, Gorn, Lubo, Zora, Shiantis, Gree Dee, Tamru\n| sellto         = Jogadores.\n| implemented    = 13.40.54ea79\n| notes          = <noinclude><p><spoiler>*  Tem o mesmo uso do [[Amber Crusher]] de revelar Gemas no [[Updates/13.30.14423#Expansão da Wheel of Destiny - Gem Atelier|Gem Atelier]] mas tem somente 10 cargas e quebra apenas uma por vez. Transforma [[Lesser Gem]] em [[Lesser Fragment]]s e [[Greater Gem]] em [[Greater Fragment]]s.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6045,
+    "ns": 0,
+    "title": "Sickle",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Sickle\n| flavortext     = \n| levelrequired  = 0\n| enchantable    = não\n| itemclass      = Armas\n| primarytype    = Machados\n| secondarytype  = Ferramentas\n| hands          = Uma\n| type           = Machado\n| attack         = 5\n| defense        = 4\n| weight         = 10.50\n| classificacao  = 1\n| max_tier       = 1\n| stackable      = não\n| value          = 3 - 8\n| npcvalue       = 3\n| npcprice       = 7\n| droppedby      = [[Ekatrix]], [[Thanatursus]], [[Witch]].\n| buyfrom        = Shanar, Memech, Rowenna, Hireling (Trader), Habdel, Willard, Esrik, Rock In A Hard Place, Ulrik, Uzgod, Cedrik, Brengus, Flint, Lee'Delle, Obi:8, Robert, Gamel, Sam, Turvy, Hardek, Baltim, Romella, Morpel\n| sellto         = Shanar, Memech, Rowenna, Hireling (Trader), Habdel, Beatrice, Willard, Esrik, Pompan, Rock In A Hard Place, Ulrik, Uzgod, Cedrik, H.L.:1, Brengus, Flint, Lee'Delle:2, Obi:2, Robert, Gamel, Sam, Turvy, Hardek, Baltim, Romella, Morpel\n| perk1          = {{Weapon Perk|Type_Shield_Mod||+1 defence modifier}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+4.00% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Auto_Atk_Critical_Chance||+1.00% critical hit chance para auto-attacks}}<br/>{{Weapon Perk|Type_Life_On_Kill||+5 hit points on kill}}\n| notes          = O machado mais fraco do jogo, por isso muitas vezes usado para treinos. \n<noinclude><p><spoiler>* Utilizado para cortar a [[Sugar Cane|Cana de Açúcar]] depois de queimada com [[Fire Bug]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6085,
+    "ns": 0,
+    "title": "Heavy Machete",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Heavy Machete\n| flavortext     = \n| levelrequired  = 0\n| enchantable    = não\n| itemclass      = Ferramentas e Outros Equipamentos \n| primarytype    = Ferramentas\n| secondarytype  = Espadas\n| attack         = 16\n| defense        = 10\n| hands          = Uma\n| type           = Espada\n| weight         = 18.40\n| classificacao  = 1\n| max_tier       = 1\n| value          = 90 - 100\n| npcvalue       = 90\n| stackable      = não\n| droppedby      = [[Cobra Assassin]], [[Cyclops Smith]], [[Efreet]], [[Marid]], [[Menacing Carnivor]], [[Merikh the Slaughterer]].\n| buyfrom        = Jogadores.\n| sellto         = Rashid\n| perk1          = {{Weapon Perk|Type_Shield_Mod||+1 defence modifier}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+4.00% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Auto_Atk_Critical_Chance||+2.00% critical hit chance para auto-attacks}}<br/>{{Weapon Perk|Type_Mana_On_Kill||+5 mana on kill}}\n| perk4          = {{Weapon Perk|Type_Bestiary_Dmg_Plant||+1.50% damage contra Plant}}\n| notes          = Como uma [[Machete]], mas como o nome diz, mais pesada (e forte). Pode ser usada para cortar [[Jungle Grass]] e [[Venorean Spice]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6201,
+    "ns": 0,
+    "title": "Scythe",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Scythe\n| flavortext     = \n| itemclass      = Armas\n| primarytype    = Clavas\n| secondarytype  = Ferramentas\n| levelrequired  = 0\n| enchantable    = não\n| attack         = 8\n| hands          = Duas\n| type           = Clava\n| defense        = 3\n| weight         = 30.00\n| classificacao  = 1\n| max_tier       = 1\n| value          = 10 - 50\n| npcvalue       = 10\n| npcprice       = 10\n| stackable      = não\n| droppedby      = [[Blightwalker]], [[Grim Reaper]].\n| buyfrom        = Bashira:50, Zethra:12, Ahmet:50, Sarina:50, Hireling (Trader):50, Halif:50, Beatrice:50, Pompan:50, Timur:50, Rock In A Hard Place:50, Gladys:50, Bezil:50, Nezil:50, Tefrit:50, Red Lilly:50, Asphota: 50, Perod:50, Maro:50, Al Dee:12, Lee'Delle, Obi:12, Maun:50, Bertha:50, Gorn:50, Lubo:50, Zora:50, Nelliem:25, Shiantis:50, Rafzan:12, Gree Dee:50\n| sellto         = Bashira, Ahmet, Sarina, Hireling (Trader), Halif, Beatrice, Pompan, Timur, Rock In A Hard Place, Gladys, Bezil, Nezil, Tefrit, Red Lilly, Asphota, Perod, Maro, Lee'Delle:3, Obi:3, Maun, Bertha, Gorn, Lubo, Zora, Shiantis, Gree Dee\n| perk1          = {{Weapon Perk|Type_Defence||+1 defence}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+4.00% do seu Club Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Auto_Atk_Critical_Chance||+1.00% critical hit chance para auto-attacks}}<br/>{{Weapon Perk|Type_Life_On_Kill||+5 hit points on kill}}\n| notes          = Essa arma é usada para cortar [[Wheat]]s e produzir [[Flour]] através dos [[Bunch of Wheat]]s.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6242,
+    "ns": 0,
+    "title": "Machete",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Machete\n| flavortext     =\n| levelrequired  = 0\n| enchantable    = não\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| secondarytype  = Espadas\n| attack         = 12\n| defense        = 9\n| hands          = Uma\n| type           = Espada\n| weight         = 16.50\n| classificacao  = 1\n| max_tier       = 1\n| value          = 6 - 35\n| npcvalue       = 6\n| npcprice       = 35\n| stackable      = não\n| droppedby      = [[Afflicted Strider]], [[Cobra Assassin]], [[Mean Lost Soul]], [[Menacing Carnivor]], [[Orc Spearman]], [[Unaz the Mean]].\n| buyfrom        = Bashira, Ahmet, Sarina, Hireling (Trader), Halif, Richard:6, Beatrice, Timur, Rock In A Hard Place, Gladys, Bezil, Nezil, Tefrit, Red Lilly, Asphota, Maun, Perod, Maro, Bertha, Gorn, Lubo, Zora, Nelliem, Shiantis, Gree Dee\n| sellto         = Bashira, Ahmet, Sarina, Hireling (Trader), Halif, Beatrice, Timur, Rock In A Hard Place, Gladys, Bezil, Nezil, Tefrit, Red Lilly, Asphota, Maun, H.L., Perod, Maro, Lee'Delle, Obi, Bertha, Gorn, Lubo, Zora, Shiantis, Gree Dee\n| perk1          = {{Weapon Perk|Type_Shield_Mod||+1 defence modifier}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+4.00% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Auto_Atk_Critical_Chance||+2.00% critical hit chance para auto-attacks}}<br/>{{Weapon Perk|Type_Mana_On_Kill||+5 mana on kill}}\n| perk4          = {{Weapon Perk|Type_Bestiary_Dmg_Plant||+1.00% damage contra Plant}}\n| notes          = Machetes podem ser usadas para cortar [[Jungle Grass]] e [[Venorean Spice]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8969,
+    "ns": 0,
+    "title": "Sneaky Stabber of Eliteness",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se este não é o item que você procura, veja a página [[Secret Agent Tool|Secret Agent Tool (Desambiguação)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Sneaky Stabber of Eliteness\n| flavortext     = This nifty gadget can be used for many vital and less vital purposes. If it's not jammed, that is.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| secondarytype  = \n| attrib         = Você pode usar como uma [[Rope]], [[Shovel]], [[Pick]], [[Machete]], [[Spoon]] e [[Kitchen Knife]].\n| weight         = 3.00\n| value          = \n| npcvalue       = 0\n| npcprice       = 0\n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.5\n| notes          = <noinclude><p><spoiler>* Obtido como recompensa da [[Secret Service Quest]], ao abrir um [[Mysterious Package]] da [[AVIN]].</spoiler></p></noinclude>\nVocê deve ter em mente que às vezes esse item pode \"emperrar\" e não poderá ser usado por 1 minuto. Se emperrar, ao tentar usá-lo pela primeira vez, ele irá mostrar esta frase em laranja:\n\n<span style=\"color:#D14703;font-weight:bold;\">Oh no! Your tool is jammed and can't be used for a minute.</span>\n\nEntão é bom levar uma corda ou shovel caso isso aconteça.\n\n<noinclude><p><spoiler>* [[Arquivo:Achievement.gif|link=]] Emperrando sua ferramenta 10 vezes você receberá o achievement '''\"{{Achievement|Bad Timing}}\"'''.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8973,
+    "ns": 0,
+    "title": "Small Axe",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Small Axe\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| secondarytype  = \n| attrib         = Nenhum.\n| stackable      = não\n| weight         = 20.00\n| value          = 5\n| npcvalue       = 5\n| npcprice       = 0\n| droppedby      = [[Goblin]], [[Goblin Assassin]], [[Goblin Leader]], [[Goblin Scavenger]], [[Muglex Clan Assassin]], [[Muglex Clan Footman]], [[Muglex Clan Scavenger]].\n| buyfrom        = Jogadores.\n| sellto         =  Shanar, Memech, Cornelia, Rowenna, Azil, Habdel, Willard, Esrik, Rock In A Hard Place, Ulrik, Kroox, Uzgod, Cedrik, Brengus, Flint, Robert, Gamel, Sam, Turvy, Hardek, Baltim, Aldo, Romella, Yanni, Morpel\n| notes          = em [[Rookgaard]], um Small Axe pode ser trocado com [[Al Dee]] por uma [[Pick]].\n<noinclude><p><spoiler>*01 é necessário para a [[Pick Quest]].\n*Pode ser obtido através de [[Respawn Diário#Rookgaard|respawn diário]]\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8974,
+    "ns": 0,
+    "title": "Saw",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Saw\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| secondarytype  = \n| attrib         = Nenhum.\n| weight         = 10.00\n| stackable      = não\n| value          = \n| droppedby      = [[Dark Torturer]].\n| npcprice       = 95\n| buyfrom        = Nelliem\n| sellto         = Jogadores.\n| implemented    = 6.6\n| notes          = Este item pode ser encontrado diariamente no acampamento de [[Dwarf]]s de [[Tiquanda]], ({{mapa|32935,32646,7:5|aqui}}) e em [[Nargor]]. É usado para fazer [[Wooden Ties]], usando-o em um pedaço de [[Wood]]. Támbem pode ser encontrada na cidade de Venore, junto dos barcos em construção ao noroeste dentro da cidade.<br />\n<noinclude><p><spoiler>\n* 01 é necessário para a missão ''Royal Rescue'' da [[The Hidden City of Beregar Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8975,
+    "ns": 0,
+    "title": "Rope",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Rope\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| secondarytype  = \n| attrib         =\n| stackable      = não\n| weight         = 18.00\n| value          = Negociável\n| npcvalue       = 15\n| npcprice       = 45\n| droppedby      = [[Black Knight]], [[Emerald Damselfly]], [[Hero]], [[Island Troll]], [[Marsh Stalker]], [[Meadow Strider]], [[Mountain Troll]], [[Pirate Navigator]], [[Renegade Knight]], [[Salamander]], [[Salamander Trainer]], [[Swampling]], [[Troll]], [[Troll Guard]], [[Vicious Squire]], [[Vile Grandmaster]], [[Woodling]], [[Young Troll]].\n| droppedRaidby  = [[Apprentice Sheng]], [[Man In The Cave]].\n| droppedEventby = [[Grynch Clan Goblin]].\n| buyfrom        = Bashira:50, Zethra:50, Ahmet:50, Sarina:50, Hireling (Trader):50, Halif:50, Richard:50, Beatrice:50, Pompan:50, Timur:50, Rock In A Hard Place:50, Gladys:50, Raffael:50, Bezil:50, Nezil:50, Tefrit:50, Larek:50, Red Lilly:50, Asphota:50, Perod:50, Maro:50, Al Dee:50, Lee'Delle, Maun:50, Bertha:50, Gorn:50, Lubo:50, John:100, Zora:50, Nelliem:50, Shiantis:50, Rafzan:50, Gree Dee:50\n| sellto         = Avriel:8, Bashira, Zethra:8, Ahmet, Sarina, Hireling (Trader), Halif, Richard:8, Beatrice, Pompan, Timur, Rock In A Hard Place, Gladys, Bezil, Nezil, Tefrit, Red Lilly, Asphota, Perod, Maro, Al Dee:8, Lee'Delle:8, Maun, Bertha, Gorn, Lubo, Zora, Shiantis, Rafzan:8, Gree Dee\n| notes          = Cordas são provavelmente as ferramentas mais usadas no Tibia. Elas são usadas para puxar alguém, algum item ou você mesmo de um buraco. A \"[[Magic Rope]]\" [[spell]] é usada somente para puxar você mesmo, mas você pode subir de buracos sem precisar de itens.\n<noinclude><p><spoiler>Pode ser obtida na [[Tutorial Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8976,
+    "ns": 0,
+    "title": "Rake",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Rake\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = 15.00\n| value          = 20\n| npcprice       = 20\n| droppedby      = Ninguém.\n| buyfrom        = Maro, Nelliem\n| sellto         = Jogadores.\n| notes          = Você pode encontrar este item em vários lugares do Tibia.</br>\n<noinclude><p><spoiler>* 01 é necessário para a [[Oramond Quest]], [[The Shattered Isles Quest]] e [[Threatened Dreams Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8977,
+    "ns": 0,
+    "title": "Pitchfork",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Pitchfork\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| secondarytype  = \n| attrib         = \n| weight         = 25.00\n| value          = 25\n| stackable      = não\n| npcprice       = 25\n| droppedby      = [[Diabolic Imp]].\n| droppedRaidby  = [[The Imperor]].\n| droppedEventby = [[Minishabaal]].\n| buyfrom        = Nelliem\n| sellto         = Jogadores.\n| notes          = Não possui uso prático.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8978,
+    "ns": 0,
+    "title": "Pick",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Pick\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| secondarytype  = \n| attrib         = Nenhum.\n| weight         = 45.00\n| value          = 15\n| npcprice       = 15\n| npcvalue       = 15\n| stackable      = não\n| droppedby      = [[Behemoth]], [[Chakoya Toolshaper]], [[Crazed Dwarf]], [[Destroyer]], [[Drillworm]], [[Dwarf]], [[Dwarf Miner]], [[Floating Savant]].\n| droppedRaidby  = [[Grorlam]].\n| buyfrom        = Bashira:50, Ahmet:50, Sarina:50, Hireling (Trader):50, Halif:50, Richard, Beatrice:50, Pompan:50, Timur:50, Rock In A Hard Place:50, Gladys:50, Bezil:50, Nezil:50, Tefrit:50, Red Lilly:50, Asphota:50, Perod:50, Maro:50, Maun:50, Bertha:50, Gorn:50, Lubo:50, John:100, Zora:50, Nelliem:50, Shiantis:50, Gree Dee:50\n| sellto         = Bashira, Ahmet, Sarina, Hireling (Trader), Halif, Beatrice, Pompan, Timur, Rock In A Hard Place, Gladys, Bezil, Nezil, Tefrit, Red Lilly, Asphota, Perod, Maro, Maun, Bertha, Gorn, Lubo, Zora, Shiantis, Gree Dee\n| notes          = Picks são usadas para abrir buracos escondidos, também em alguns lugares barrosos. As vezes podem destruir pedras.\n<noinclude><p><spoiler>*Necessário para uma missão da [[The Ice Islands Quest]].\n*Necessário para uma missão da [[Kissing a Pig Quest]].\n*Necessário para acessar a [[The Pits of Inferno Quest]].\n*Para obter uma Pick em Rookgaard, faça a [[Small Axe Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8979,
+    "ns": 0,
+    "title": "Mirror",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Mirror\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| stackable      = não\n| attrib         = \n| weight         = 9.50\n| npcvalue       = 10\n| droppedEventby = [[Grynch Clan Goblin]].\n| buyfrom        = Jogadores.\n| sellto         = Beatrice, Pompan\n| notes          = Admire sua beleza.\n<noinclude><p><spoiler>\n* Recompensa da [[Longsword Quest]].\n* Obtido e usado na [[To Blind the Enemy Quest]]. \n* Possibilidade de ser obtido ao usar um [[Unrealized Dream]] próximo ao [[The Dreamcatcher Device]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8980,
+    "ns": 0,
+    "title": "Obsidian Knife",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Obsidian Knife\n| flavortext     = Sharp and light, this is a useful tool for tanners, doctors and assassins.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| attrib         = Pode-se retirar pele/escamas de todos tipos de [[Minotaur]]s, [[Dragon]]s, [[Dragon Lord]]s, Lizards, [[Bonebeast]]s e [[Behemoth]]s.\n| weight         = 1.00\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.8\n| notes          = Uma Obsidian Knife pode ser usada pra obter diferentes tipos de escamas de corpos de certas criaturas, como [[Minotaur]]s, [[Dragon]]s, [[Dragon Lord]]s, Lizards, [[Bonebeast]]s e [[Behemoth]]s. Se você quer saber como usar esse item, olhe o manual [[Skinning]] e [[Trabalhos Manuais]].\n<noinclude><p><spoiler>\n* Recompensa da [[Obsidian Knife Quest]].\n* 01 é necessária para a [[Grimvale Quest]].\n* [[Arquivo:Achievement.gif|link=]] Após conseguir 500 leathers, você receberá o achievement \"'''{{Achievement|Skin-Deep}}'''\".\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8981,
+    "ns": 0,
+    "title": "Mechanical Fishing Rod",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Mechanical Fishing Rod\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| secondarytype  = \n| attrib         = Necessária para pegar [[Mechanical Fish]].\n| weight         = 9.20\n| value          = Negociável\n| npcvalue       = 0\n| npcprice       = 0\n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.5\n| notes          = Você precisa dessa vara de pescar e [[nail]]s para pegar [[Mechanical Fish]].\n<noinclude><p><spoiler>Obtida na [[Isle of Evil Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8982,
+    "ns": 0,
+    "title": "Lock Pick",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Lock Pick\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| secondarytype  = \n| attrib         = \n| stackable      = sim\n| weight         = 0.85\n| value          = 50\n| npcprice       = 50\n| droppedby      = Ninguém.\n| buyfrom        = Dorian\n| sellto         = Jogadores.\n| notes          = Usado para abrir caixas.\n<noinclude><p><spoiler>\nItem usado na [[The Thieves Guild Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8983,
+    "ns": 0,
+    "title": "Light Shovel",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Light Shovel\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| secondarytype  = \n| attrib         = Nenhum.\n| weight         = 15.00\n| stackable      = não\n| value          = 300 - 800\n| npcvalue       = 300 \n| droppedby      = [[Pirate Cook]], [[Pirate Cutthroat]].\n| buyfrom        = Jogadores.\n| sellto         = Rashid\n| implemented    = 7.8\n| notes          = Possui a mesma função que uma [[Shovel]] sendo que 20 [[oz]] mais leve, o que o torna um item valioso, especialmente para [[mage]]s.\n<noinclude><p><spoiler>* Recompensa da [[The Ultimate Booze Quest]] parte dos [[Tibia Tales Quest|Tibia Tales]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8984,
+    "ns": 0,
+    "title": "Juice Squeezer",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Juice Squeezer\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| secondarytype  = \n| attrib          = Utilizadas em frutas para fazer suco.\n| weight         = 15.00\n| sounds         = \"*squish*\".\n| value          = 100\n| npcvalue       = 0\n| npcprice       = 100\n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Brasith, Larek, Ariella, Livielle, Serafin, Sessek\n| sellto         = Jogadores.\n| notes          = Essa ferramenta é usada para fazer [[Fruit Juice]] com qualquer tipo de fruta. <br>Além disso, você também pode fazer [[Coconut Milk]] com [[Coconut]]s.\n<noinclude><p><spoiler>Necessário na [[Krailos Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8985,
+    "ns": 0,
+    "title": "Inkwell",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Inkwell\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| stackable      = não\n| attrib         = Nenhum\n| weight         = 2.00\n| npcvalue       = 9\n| npcprice       = 10\n| value          = 9\n| droppedby      = [[Elf Arcanist]], [[Warlock]], [[Ink Splash]].\n| buyfrom        = Thomas, The Librarian:20, Perod, Fyodor, Bertha, Gorn, Shiantis\n| sellto         = Beatrice:8, Thomas:8, Pompan:8, The Librarian, Perod:8, Fyodor:8, Bertha:8, Gorn:8, Shiantis:8\n| notes          = Pode ser encontrado em todas as cidades do Tibia.\n<noinclude><p><spoiler>* Recompensa da [[Ornamented Shield Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8986,
+    "ns": 0,
+    "title": "Hoe",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Hoe\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| secondarytype  = \n| attrib         = Nenhum\n| weight         = 28.00\n| stackable      = não\n| droppedby      = Ninguém.\n| npcprice       = 15\n| buyfrom        = Larek, Maro, Nelliem\n| sellto         = Jogadores.\n| notes          = Pode ser encontrado em cidades, principalmente em casas de fazendeiros.<br /><noinclude><p><spoiler>Obtido e usado na task '''Tending Gloothworms''' da [[Oramond Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8987,
+    "ns": 0,
+    "title": "Hammer",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Hammer\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| secondarytype  = \n| attrib         = Nenhum\n| stackable      = não\n| weight         = 11.50\n| value          = \n| npcprice       = 80\n| droppedby      = Ninguém.\n| buyfrom        = Nelliem\n| sellto         = Jogadores.\n| implemented    = 6.6\n| notes          = Pode ser encontrado em [[Nargor]].\n<noinclude><p><spoiler>\n* 01 é necessário para a missão ''Royal Rescue'' da [[The Hidden City of Beregar Quest]].\n* 01 é necessário para a [[Rottin Wood and the Married Men Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9053,
+    "ns": 0,
+    "title": "Shovel",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Shovel\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| secondarytype  = \n| attrib         = Nenhum.\n| weight         = 35.00\n| trade          = sim\n| value          = 20\n| npcvalue       = 8\n| npcprice       = 9\n| stackable      = não\n| droppedby      = [[Dwarf Soldier]], [[Minotaur]], [[Minotaur Bruiser]], [[Troll-Trained Salamander]], [[Lizard Henchman]].\n| droppedRaidby  = [[Apprentice Sheng]].\n| buyfrom        = Bashira:50, Zethra:10, Ahmet:50, Sarina:50, Hireling (Trader):50, Halif:50, Richard:10, Beatrice:50, Pompan:50, Timur:50, Simon The Beggar:50, Rock In A Hard Place:50, Gladys:50, Raffael:50, Bezil:50, Nezil:50, Tefrit:50, Larek:50, Red Lilly:50, Asphota:50, Perod:50, Maro:50, Al Dee:10, Lee'Delle, Maun:50, Bertha:50, Gorn:50, Lubo:50, John:100, Zora:50, Nelliem:20, Shiantis:50, Rafzan:10, Gree Dee:50\n| sellto         = Bashira, Zethra:2, Ahmet, Sarina, Hireling (Trader), Halif, Richard:2, Beatrice, Pompan, Timur, Rock In A Hard Place, Gladys, Bezil, Nezil, Tefrit, Red Lilly, Asphota, Perod, Maro, Al Dee:2, Lee'Delle:2, Maun, Bertha, Gorn, Lubo, Zora, Shiantis, Rafzan:2, Gree Dee\n| notes          = Shovels são muito usadas para abrir buracos ou para achar coisas nas areias dos desertos. Pode ser geralmente encontradas em minas de Dwarfs em [[Kazordoon]]. Possui a mesma função que uma [[Light Shovel]], porém é mais pesada.\n<noinclude><p><spoiler>\nPode ser obtido na [[Tutorial Quest|The Tutorial Quest]]\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9349,
+    "ns": 0,
+    "title": "Snake Destroyer",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Snake Destroyer\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| stackable      = não\n| attrib         = Nenhum.\n| weight         = 66.00\n| value          = \n| npcprice       = 8 000\n| droppedby      = Ninguém.\n| buyfrom        = Black Bert\n| sellto         = Jogadores.\n| implemented    = 7.6\n| notes          = Mesmo sprite de um [[Iron Hammer]].\n<noinclude><p><spoiler>\n* Obtido e usado durante a [[The Ape City Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9400,
+    "ns": 0,
+    "title": "Grodrik's Favourite Axe",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Grodrik's Favourite Axe\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = 25.00\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.5\n| notes          = Mesmo sprite de um [[Double Axe]].<noinclude><p><spoiler>* Obtido e usado durante a [[The Scatterbrained Sorcerer Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9401,
+    "ns": 0,
+    "title": "Hallowed Axe",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Hallowed Axe\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| stackable      = não\n| mercado        = sim\n| attrib         = Nenhum.\n| weight         = 40.00\n| value          = \n| npcvalue       = 0\n| npcprice       = 1 000\n| droppedby      = Ninguém.\n| buyfrom        = Oldrak\n| sellto         = Jogadores.\n| implemented    = 8.2\n| notes          = Para obter esse item, você precisa de um [[axe]] e de 1 000 [[gp]]s para dar ao NPC [[Oldrak]], em [[Plains of Havoc]]. Após certo tempo, esse item se transforma em uma axe novamente.\n<noinclude><p><spoiler>\n* Obtido e usado durante a [[The Demon Oak Quest]].\n* Para fazer a negociação, você deve dizer ''Hi, Axe, Yes''.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9407,
+    "ns": 0,
+    "title": "Heated Worm Punisher",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Heated Worm Punisher\n| flavortext     = This hammer is a worm's worst nightmare.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| weight         = 64.50\n| stackable      = não\n| mercado        = não\n| value          = \n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.5\n| notes          = \n<noinclude><p><spoiler>\n* Obtido e usado durante a [[The Isle of Evil Quest]].\n* Esse item, [[Worm Punisher]], fica assim após ser usado em um [[Crucible]] e dura por 10 segundos. Pode ser usado para acertar Rotworms e Carrion Worms na sua cabeça quando eles pulam de fora dos túneis.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9414,
+    "ns": 0,
+    "title": "Ice Pick",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ice Pick\n| flavortext     = It might come in handy in cold regions.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| stackable      = não\n| attrib         = Nenhum.\n| weight         = 70.00\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.6\n| notes          = Mesmo sprite de um [[Dwarven Pickaxe]]. Note que essa pick não abre buracos.\n<noinclude><p><spoiler>* Obtido e usado durante a [[The Explorer Society Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9544,
+    "ns": 0,
+    "title": "Magical Measurement Device",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Magical Measurement Device\n| flavortext     = The spirit meter consists of a large handle combined with a green crystal full of magical markings.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| attrib         = Nenhum.\n| weight         = 25.50\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.7\n| notes          = \n<noinclude><p><spoiler>\n* Obtido e usado durante a [[Spirithunters Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 20761,
+    "ns": 0,
+    "title": "Small Lamp",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Small Lamp\n| itemclass      = Ferramentas e Outros Equipamentos\n| secondarytype  = Extra Slot\n| primarytype    = Ferramentas\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = 10.00\n| value          = Negociável\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.54\n| notes          = É possível encontrá-la em um respawn diário em [[Dawnport]], ao lado do NPC [[Mr Morris]].<br>\nTambém é possível encontrar três dessas em respawns diários dentro do [[Asura Palace]]. Faz parte do [[Rookgaard/Dawnport Set]].\n\n<gallery>\nArquivo:Small Lamps Asura Palace +3.png|Essa small lamp é encontrada ({{Mapa|32946,32673,4:5|aqui}}).\nArquivo:Small Lamps Asura Palace +4.png|As outras duas ficam nessa região, ({{Mapa|32959,32673,3:5|aqui}}).\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 26272,
+    "ns": 0,
+    "title": "Griffinclaw Container",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Griffinclaw Container\n| flavortext     = It holds a sample of the rare griffinclaw flower.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| attrib         = \n| weight         = 18.00\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| trade          = não\n| npcprice       = \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.8\n| notes          = Tem a mesma aparência de um [[Botanist's Container]]. Item obtido após utilizar [[Botanist's Container]] dada por [[Ceiron]] em [[Ab'Dendriel]], em uma [[Blooming Griffinclaw]].\n<noinclude><p><spoiler>* Obtido e usado durante a [[Druid Outfits Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 27854,
+    "ns": 0,
+    "title": "Guardcatcher",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Guardcatcher\n| flavortext    = \n| itemclass     = Outros Itens\n| primarytype   = Itens de Quest\n| secondarytype = Ferramentas\n| weight        = 8.00 \n| stackable     = não\n| mercado       = não\n| npcprice      = 200\n| buyfrom       = Rafzan\n| sellto        = Jogadores.\n| droppedby     = Ninguém.\n| implemented   = 9.8\n| notes         = Tem a mesma aparência de um [[Bow]]. \n<noinclude><p><spoiler>\n* Obtido e usado durante a [[Goblin Merchant Quest]].\n* Desaparece após completar a missão.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 27889,
+    "ns": 0,
+    "title": "Pathfinder Kit",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Pathfinder Kit\n| flavortext    = Resupplies the pathfinder crew with tools and new moral.\n| itemclass     = Outros Itens\n| primarytype   = Itens de Quest\n| secondarytype = Ferramentas\n| weight        = 18.00\n| stackable     = não\n| mercado       = não\n| droppedby     = Ninguém.\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| implemented   = 9.8\n| notes         = <noinclude><p><spoiler>* Obtido e usado durante a [[Venore Daily Tasks]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 31011,
+    "ns": 0,
+    "title": "Lodestone",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Lodestone\n| itemclass     = Outros Itens\n| primarytype   = Itens de Quest\n| secondarytype = Ferramentas\n| weight        = 3.00\n| stackable     = não\n| mercado       = não\n| value         = 250\n| npcprice      = 250\n| buyfrom       = Gnomux\n| sellto        = Jogadores.\n| implemented   = 10.20\n| droppedby     = Ninguém.\n| notes         = <noinclude><p><spoiler>* Pode ser obtido e usado na task Geomantic Charges, da [[Spike Tasks]]</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 31026,
+    "ns": 0,
+    "title": "Smoking Coal",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Smoking Coal\n| flavortext    = This coal is smoking and emmits quite a stench.\n| itemclass     = Outros Itens\n| primarytype   = Itens de Quest\n| secondarytype = Ferramentas\n| weight        = 10.00\n| stackable     = não\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| implemented   = 10.20\n| droppedby     = Ninguém.\n| notes         = <noinclude><p><spoiler>Este item aparece durante as invasões do boss [[Shlorg]]. Jogando este item em basins próximo ao boss, acabará enfraquecendo a criatura e aparecendo o [[Weakened Shlorg]]. </spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 33565,
+    "ns": 0,
+    "title": "Mono Detector",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Mono Detector\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| attrib         = \n| weight         = 8.00\n| stackable      = não\n| mercado        = não\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.50\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante uma task da [[Oramond Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 33628,
+    "ns": 0,
+    "title": "Necrometer",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Necrometer\n| flavortext     = \n| attrib         = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| weight         = 8.00\n| stackable      = não\n| mercado        = não\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.50\n| notes          = Mesma aparência de um [[Thermometer]]\n<noinclude><p><spoiler>Usado durante uma missão da [[Dark Trails Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 37419,
+    "ns": 0,
+    "title": "Heavy Stone Hammer",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Heavy Stone Hammer\n| flavortext     = It's a wonder a goblin might ever be able to lift this massive thing.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| weight         = 28.00\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.90\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[Krailos Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 37630,
+    "ns": 0,
+    "title": "Large Pliers",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Large Pliers\n| flavortext     = A crude tool, but still useful for fixing broken screws, wheels and more.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| weight         = 15.00\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.90\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[Krailos Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 37873,
+    "ns": 0,
+    "title": "Hyaena Trap",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Hyaena Trap\n| flavortext     = It is a roughly woven net made of cactus tree fibres.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| weight         = 2.00\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.90\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[Krailos Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 41572,
+    "ns": 0,
+    "title": "Loupe",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Loupe\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| weight         = 14.00\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.40\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[Cults of Tibia Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 46724,
+    "ns": 0,
+    "title": "Hand Auger",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Hand Auger\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| attrib         = Nenhum.\n| weight         = 10.00\n| value          = \n| npcprice       = 25\n| npcvalue       = 25\n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Bashira, Ahmet, Sarina, Halif, Beatrice, Timur, Rock In A Hard Place, Gladys, Bezil, Nezil, Tefrit, Red Lilly, Asphota, Maun, Perod, Maro, Bertha, Gorn, Lubo, Zora, Shiantis, Gree Dee\n| sellto         = Jogadores.\n| implemented    = 12.20\n| notes          = <noinclude><p><spoiler>* Faz parte da [[Kilmaresh Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 46877,
+    "ns": 0,
+    "title": "Ritual Scissors",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ritual Scissors\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| attrib         = Nenhum.\n| weight         = 1.00\n| value          = \n| npcprice       = \n| npcvalue       = \n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.20\n| notes          = \n<noinclude><p><spoiler>\n* Faz parte da [[Kilmaresh Quest]].\n* Podem ser obtidas dentro de um sarcófago em uma tumba no cemitério ao norte da cidade. Desça ({{Mapa|33870,31446,7:2|aqui}}), e apenas dê \"Use\" no sarcófago ({{Mapa|33872,31446,8:2|aqui}}) para obter as Ritual Scissors.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 46902,
+    "ns": 0,
+    "title": "Pick (Enchanted)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Pick (Enchanted)\n| flavortext     = It seems to be enchanted with a spell.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| duration       = 5\n| attrib         = \n| weight         = 45.00\n| value          = \n| npcprice       = \n| npcvalue       = \n| stackable      = não\n| droppedby      = Ninguém.\n| droppedRaidby  = \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.20\n| notes          = \n<noinclude><p><spoiler>\n* Faz parte da [[Kilmaresh Quest]].\n* Pode ser usado para extrair [[Tagralt Nugget]]s de [[Veined Stone]]s.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 47517,
+    "ns": 0,
+    "title": "Net (Ferramenta)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Net (Ferramenta)\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| attrib         = Nenhum.\n| weight         = 10.00\n| value          = 50\n| npcprice       = 50\n| npcvalue       = 50\n| stackable      = não\n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Bashira, Ahmet, Sarina, Halif, Beatrice, Timur, Rock In A Hard Place, Gladys, Bezil, Nezil, Red Lilly, Asphota, Maun, Perod, Maro, Bertha, Gorn, Lubo, Zora, Shiantis, Gree Dee\n| sellto         = Jogadores.\n| implemented    = 12.20\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 47840,
+    "ns": 0,
+    "title": "Schnitzel Meat Grinder",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Schnitzel Meat Grinder\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| secondarytype  = \n| attrib         = Nenhum\n| stackable      = não\n| weight         = 3.43\n| value          = \n| npcprice       = \n| droppedby      = [[Spawn of the Schnitzel]]\n| buyfrom        = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 12.20.9066\n| notes          = \n<noinclude><p><spoiler>* Utilizado para ganhar Schnitzel Points, ao usá-lo no boss [[The Great Schnitzel]] durante o evento [[Orcsoberfest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 48058,
+    "ns": 0,
+    "title": "Purifier for Lost Souls",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Purifier for Lost Souls\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| weight         = 1.80\n| value          = \n| npcvalue       = 0 \n| npcprice       = 25000\n| stackable      = não\n| mercado        = não\n| droppedby      = Ninguém.\n| droppedRaidby  = \n| buyfrom        = Para Norbert\n| sellto         = Jogadores. \n| implemented    = 12.30\n| notes          = \n<noinclude><p><spoiler>\n* Obtido e usado durante a [[Feaster of Souls Quest]].\n* Se você perder esse item, pode obtê-lo novamente falando '''\"lost purifier\"''' ao npc Para Norbert.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 48144,
+    "ns": 0,
+    "title": "Scalpel",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Scalpel\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| weight         = 4.90\n| stackable      = \n| value          = \n| npcvalue       = 0 \n| npcprice       = 25000\n| droppedby      = Ninguém.\n| mercado        = não\n| buyfrom        = Para Norbert\n| sellto         = Jogadores.\n| implemented    = 12.30\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a missão ''Drain the Brain'' da [[Feaster of Souls Quest]], para cortar os [[Ulcer Probe]]s.\n*Se você perder esse item, pode obtê-lo novamente falando '''\"lost scalpel\"''' ao npc Para Norbert.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 48229,
+    "ns": 0,
+    "title": "Luminescent Crystal Pickaxe",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Luminescent Crystal Pickaxe\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| weight         = 1.35\n| stackable      = não\n| value          = \n| mercado        = sim\n| npcvalue       = 50\n| droppedby      = [[Thaian]]\n| buyfrom        = Jogadores.\n| sellto         = Yasir\n| implemented    = 12.30\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 48230,
+    "ns": 0,
+    "title": "Jagged Sickle",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Jagged Sickle\n| itemclass      = Valiosos\n| primarytype    = Ferramentas\n| secondarytype  = \n| weight         = 0.80\n| stackable      = \n| attrib         = Fornece uma pequena quantidade de luz vermelha.\n| value          = \n| npcvalue       = 150 000\n| droppedby      = [[The Dread Maiden]].\n| buyfrom        = Jogadores.\n| sellto         = Yasir\n| implemented    = 12.30\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55388,
+    "ns": 0,
+    "title": "Highly Charged Lodestone",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Highly Charged Lodestone\n| itemclass     = Outros Itens\n| primarytype   = Itens de Quest\n| secondarytype = Ferramentas\n| weight        = 3.00\n| stackable     = não\n| mercado       = não\n| value         = \n| npcprice      = \n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| implemented   = 10.20\n| droppedby     = Ninguém.\n| notes         = <noinclude><p><spoiler>* Obtido e usado durante a task ''Geomantic Charges'' da [[The Spike Tasks]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55389,
+    "ns": 0,
+    "title": "Partially Charged Lodestone",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Partially Charged Lodestone\n| itemclass     = Outros Itens\n| primarytype   = Itens de Quest\n| secondarytype = Ferramentas\n| weight        = 3.00\n| stackable     = não\n| mercado       = não\n| value         = \n| npcprice      = \n| droppedby     = Ninguém.\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| implemented   = 10.20\n| notes         = <noinclude><p><spoiler>* Obtido e usado durante a ''Geomantic Charges'' da [[The Spike Tasks]]</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8959,
+    "ns": 0,
+    "title": "Worm",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name         = Worm\n| flavortext   = \n| itemclass    = Ferramentas e Outros Equipamentos\n| primarytype  = Ferramentas\n| secondarytype= \n| attrib       = Necessário ao pescar.\n| stackable    = sim\n| weight       = 0.05\n| trade        = sim\n| value        = 800 - 1 600 [[gp]]s por backpack\n| npcvalue     = 1\n| npcprice     = 1\n| droppedby    = [[Agrestic Chicken]], [[Animated Mummy]], [[Azure Frog]], [[Carrion Worm]], [[Cave Rat]], [[Chicken]], [[Coral Frog]], [[Crimson Frog]], [[Crypt Shambler]], [[Drillworm]], [[Elder Mummy]], [[Fleabringer]], [[Ghoul]], [[Ghoulish Hyaena]], [[Gnarlhound]], [[Hyaena]], [[Mahatheb]], [[Marsh Stalker]], [[Meadow Strider]], [[Mummy]], [[Mutated Human]], [[Orchid Frog]], [[Rotworm]], [[Slug]], [[Terror Bird]], [[Tomb Servant]], [[Undead Prospector]].\n| droppedRaidby  = [[Feverish Citizen]], [[Munster]], [[Rottie the Rotworm]], [[Rotworm Queen]].\n| buyfrom      = Bashira, Zethra, Ahmet, Sarina, Hireling (Trader), Halif, Beatrice, Pompan, Timur, Rock In A Hard Place, Raffael, Bezil, Nezil, Red Lilly, Asphota, Perod, Maro, Al Dee, Maun, Bertha, Gorn, Lubo, John:2, Zora, Nelliem, Shiantis, Rafzan, Gree Dee, Iriana, Xaver\n| sellto       = Hector the Mentor\n| implemented  = 7.5\n| notes        = São necessárias para [[Fishing|pescar]].\n<noinclude><p><spoiler>* Possibilidade de ser obtido ao usar uma [[Belongings of a Deceased (Ottokar)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8960,
+    "ns": 0,
+    "title": "Wooden Ties",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Wooden Ties\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| secondarytype  = \n| stackable      = sim\n| attrib         = Nenhum.\n| weight         = 5.00\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Pode ser obtido usando um [[Saw]] em um pedaço de [[Wood]].\n<noinclude><p><spoiler>\n* Necessário para a missão ''Royal Rescue'' da [[The Hidden City of Beregar Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8961,
+    "ns": 0,
+    "title": "Wooden Stake",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Wooden Stake\n| flavortext     = It is a simple wooden stake.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| secondarytype  = \n| attrib         = Nenhum.\n| weight         = 5.00\n| stackable      = não\n| value          = 5 000\n| npcvalue       = 0\n| npcprice       = 5 000\n| droppedby      = Ninguém.\n| buyfrom        = Gamon\n| sellto         = Jogadores.\n| implemented    = 7.8\n| notes          = Pode ser abençoada e virar uma [[Blessed Wooden Stake]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8962,
+    "ns": 0,
+    "title": "Wooden Hammer",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Wooden Hammer\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| secondarytype  = \n| attrib         = Nenhum.\n| stackable      = não\n| weight         = 6.00\n| value          = Negociável\n| npcvalue       = 15\n| npcprice       = 0\n| droppedby      = [[Crazed Beggar]].\n| buyfrom        = Jogadores.\n| sellto         = Bashira, Ahmet, Sarina, Hireling (Trader), Halif, Beatrice, Timur, Rock In A Hard Place, Gladys, Bezil, Nezil, Tefrit, Red Lilly, Asphota, Perod, Maro, Maun, Bertha, Gorn, Lubo, Zora, Shiantis, Gree Dee\n| notes          = Pode ser encontrado em vários locais ao redor Tibia. Há um na entrada de uma mina dos anões (a primeira das escadas ao oeste, desça e você encontrará o NPC [[Budrik]]), e no salão de reuniões em [[Mintwallin]].\n<noinclude><p><spoiler>Necessário para uma tarefa da [[The Scatterbrained Sorcerer Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8963,
+    "ns": 0,
+    "title": "Watering Can",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Watering Can\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| secondarytype  = \n| attrib         =\n| stackable      = não\n| weight         = 8.50\n| value          = Negociável\n| npcvalue       = 0\n| npcprice       = 50\n| droppedby      = Ninguém.\n| buyfrom        = Talila, Valindara, Maro, Nelliem\n| sellto         = Jogadores.\n| notes          = Pode ser usado para regar um [[Flower Pot]] ou para obter uma [[Blessed Acorn]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8964,
+    "ns": 0,
+    "title": "Whacking Driller of Fate",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se este não é item que você procura, veja a página [[Secret Agent Tool|Secret Agent Tool (Desambiguação)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Whacking Driller of Fate\n| flavortext     = This nifty gadget can be used for many vital and less vital purposes. If it's not jammed, that is.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| secondarytype  = \n| attrib         = Você pode usar como uma [[Rope]], [[Shovel]], [[Pick]], [[Machete]], [[Crowbar]] e [[Kitchen Knife]].\n| weight         = 3.00\n| value          = \n| npcvalue       = 0\n| npcprice       = 0\n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.5\n| notes          = <noinclude><p><spoiler>* Obtido como recompensa da [[Secret Service Quest]], ao abrir um [[Mysterious Package]] da [[TBI]].</spoiler></p></noinclude>\nVocê deve ter em mente que às vezes esse item pode \"emperrar\" e não poderá ser usado por 1 minuto. Se emperrar, ao tentar usá-lo pela primeira vez, ele irá mostrar esta frase em laranja:\n\n<span style=\"color:#D14703;font-weight:bold;\">Oh no! Your tool is jammed and can't be used for a minute.</span>\n\nEntão é bom levar uma corda ou shovel caso isso aconteça.\n\n<noinclude><p><spoiler>* [[Arquivo:Achievement.gif|link=]] Emperrando sua ferramenta 10 vezes você receberá o achievement '''\"{{Achievement|Bad Timing}}\"'''.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8965,
+    "ns": 0,
+    "title": "Witchesbroom",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Witchesbroom\n| flavortext     = Don't use it without flying license. Not suitable for minors.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| secondarytype  = \n| stackable      = não\n| attrib         =\n| weight         = 11.00\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Pode ser obtido no pântano de [[Venore]] trocando um [[Blood Herb]] com [[Wyda]]. Pode ser considerado raro, mas [[Blood Herb]]s são geralmente típicos entre jogadores.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8966,
+    "ns": 0,
+    "title": "Watch",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Watch\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| secondarytype  = \n| attrib         = Pode-se dar \"Use\".\n| weight         = 0.50\n| stackable      = não\n| value          = 6-20\n| npcprice       = 20\n| npcvalue       = 6\n| droppedEventby = [[Grynch Clan Goblin]].\n| buyfrom        = Bashira, Ahmet, Sarina, Hireling (Trader), Halif, Beatrice, Pompan, Timur, Rock In A Hard Place, Gladys, Bezil, Nezil, Tefrit, Red Lilly, Asphota, Perod, Maro, Maun, Bertha, Gorn, Lubo, Zora, Shiantis, Gree Dee\n| sellto         = Bashira, Ahmet, Sarina, Hireling (Trader), Halif, Beatrice, Pompan, Timur, Rock In A Hard Place, Gladys, Bezil, Nezil, Tefrit, Red Lilly, Asphota, Perod, Maro, Maun, Bertha, Gorn, Lubo, Zora, Shiantis, Gree Dee\n| notes          = Quando você usa ele, o relógio mostra a [[Formula#Time|hora]]: <font color=green>'''The time is ''hh'':''mm''.'''</font><br>\nMesmo sprite de um [[Magical Watch]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8967,
+    "ns": 0,
+    "title": "Very Noble-Looking Watch",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Very Noble-Looking Watch\n| flavortext     = Unfortunately it seems to be broken.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| secondarytype  = \n| attrib         = Nenhum.\n| weight         = 0.50\n\n| stackable      = não\n| value          = 500 - 1 000\n| npcprice       = 500\n| droppedby      = [[Crazed Beggar]].\n| buyfrom        = John\n| sellto         = Jogadores.\n| notes          = Ele mostra a hora e quebra depois de um tempo.<br />\nMesmo sprite de um [[Magical Watch]] e [[Watch]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8968,
+    "ns": 0,
+    "title": "Squeezing Gear of Girlpower",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se este não é item que você procura, veja a página [[Secret Agent Tool|Secret Agent Tool (Desambiguação)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Squeezing Gear of Girlpower\n| flavortext     = This nifty gadget can be used for many vital and less vital purposes. If it's not jammed, that is.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| secondarytype  = \n| attrib         = Você pode usar como [[Juice Squeezer]], [[Rope]], [[Shovel]], [[Pick]], [[Machete]], [[Scythe]] e [[Sickle]].\n| weight         = 3.00\n| value          = \n| npcvalue       = 0\n| npcprice       = 0\n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.5\n| notes          = <noinclude><p><spoiler>* Obtido como recompensa da [[Secret Service Quest]], ao abrir um [[Mysterious Package]] da [[CGB]].</spoiler></p></noinclude>\nVocê deve ter em mente que às vezes esse item pode \"emperrar\" e não poderá ser usado por 1 minuto. Se emperrar, ao tentar usá-lo pela primeira vez, ele irá mostrar esta frase em laranja:\n\n<span style=\"color:#D14703;font-weight:bold;\">Oh no! Your tool is jammed and can't be used for a minute.</span>\n\nEntão é bom levar uma corda ou shovel caso isso aconteça.\n\n<noinclude><p><spoiler>* [[Arquivo:Achievement.gif|link=]] Emperrando sua ferramenta 10 vezes você receberá o achievement '''\"{{Achievement|Bad Timing}}\"'''.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8971,
+    "ns": 0,
+    "title": "Treasure Map (Falso)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Treasure Map (Falso)\n| flavortext     = It obviously shows Treasure Island including a big, red cross and detailed instructions.\n| attrib         = Reage ao se dar \"Use\".\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| weight         = 8.30\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 0\n| npcprice       = 1 000\n| droppedby      = Ninguém.\n| buyfrom        = John\n| sellto         = Jogadores.\n| implemented    = 7.8\n| notes          = Mesma aparência de um [[Pirate Treasure Map]] e de um [[Treasure Map]]. Não é um mapa real e é facilmente confundido com o [[Treasure Map]] que é [[loot]] de piratas, já que ambos possuem o mesmo nome e peso, porém há diferenças na descrição dos itens.<br>\nAo dar \"use\" aparece mensagens na cor laranja que indica quantos passos dar ou direções a ir e aonde cavar.\n<noinclude><p><spoiler>*[[Arquivo:Achievement.gif]] Ao usar um [[Treasure Map (Falso)]] 100 vezes, você receberá o achievement '''\"{{Achievement|Slim Chance}}\"'''.<br>Obs: Não funciona com um [[Pirate Treasure Map]] e com um [[Treasure Map]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8972,
+    "ns": 0,
+    "title": "Trap",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Trap\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| secondarytype  = \n| implemented    = 6.6\n| attrib         = Nenhum.\n| weight         = 21.00\n| stackable      = não\n| mercado        = não\n| value          = 75\n| npcvalue       = 75\n| npcprice       = 280\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Você pode compra-lá em sua outra forma ([[Closed Trap]]). Traps podem ser utilizadas para ferir criaturas, podendo causar um dano de até 29, mas elas não param o movimento das criaturas. Você pode encontrar este item em volta do acampamento de [[Dwarfs]] na floresta de [[Tiquanda]].<br>\nSe você mover uma Trap ela irá se fechar novamente. Note que ao utilizar uma dessas para matar um monstro você ainda ganhará [[experience|pontos de experiência]] e ela também é usado para ferir jogadores, com exceção em servidores [[Optional PvP]]. Não pode ser aberta em [[Protection Zone]]s.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9261,
+    "ns": 0,
+    "title": "Worm Punisher",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Worm Punisher\n| flavortext     = The hammer would be more effective when heated.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| weight         = 64.50\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.5\n| notes          = \n<noinclude><p><spoiler>\n* Obtido e usado durante a [[The Isle of Evil Quest]].\n* Quando este item é utilizado com um [[Crucible]] vai se transformar em um [[Heated Worm Punisher]] por 10 segundos e pode ser usado para bater na cabeça de um [[Rotworm]] e [[Carrion Worm]]s quando eles saírem de seus túneis.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9286,
+    "ns": 0,
+    "title": "Universal Tool",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Universal Tool\n| flavortext     = The tool of choice for any gadgeteer.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| attrib         = \n| weight         = 3.00\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| npcprice       = 550\n| droppedby      = Ninguém.\n| buyfrom        = Black Bert\n| sellto         = Jogadores.\n| implemented    = 8.54\n| notes          = <noinclude><p><spoiler>* Usado na [[The New Frontier Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 17224,
+    "ns": 0,
+    "title": "Tarantula Trap",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Tarantula Trap\n| flavortext     = A good item to paralyse fast and rowdy orcs.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| stackable      = não\n| attrib         = Nenhum.\n| weight         = 0.10\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.1\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[The Rookie Guard Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 26505,
+    "ns": 0,
+    "title": "Treasure Map",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Treasure Map\n| flavortext     = It obviously shows Treasure Island including a big, red cross.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| secondarytype  = \n| attrib         = Nenhum.\n| weight         = 8.30\n| stackable      = não\n| value          = 40 - 400\n| npcvalue       = 0\n| droppedby      = [[Pirate Buccaneer]], [[Pirate Cutthroat]], [[Pirate Marauder]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.8\n| notes          = Tem a mesma aparência de um [[Treasure Map (Falso)]] e de um [[Pirate Treasure Map]]. Por ter a mesma aparência de outro item é facilmente confundido com o [[Treasure Map (Falso)]] vendido na [[Treasure Island]], já que ambos possuem o mesmo nome e peso, porém há diferenças na descrição dos itens. <noinclude><p><spoiler>*Este item é necessário para se obter acesso as cavernas subterrâneas da [[Treasure Island]] e ele some da sua backpack ao abrir buracos na ilha.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 27858,
+    "ns": 0,
+    "title": "Trunkhammer",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Trunkhammer\n| flavortext    = \n| itemclass     = Ferramentas e Outros Equipamentos\n| primarytype   = Itens de Quest\n| secondarytype = Ferramentas\n| weight        = 68.00 \n| stackable     = não\n| npcprice      = 150\n| droppedby     = Ninguém.\n| buyfrom       = Rafzan\n| sellto        = Jogadores.\n| implemented   = 9.8\n| notes         = Tem a mesma aparência do [[Battle Hammer]] e [[Giant Smithhammer]].\n<noinclude><p><spoiler>\n* Obtido e usado durante a [[Goblin Merchant Quest]]. \n* Desaparece após completar a missão.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 31004,
+    "ns": 0,
+    "title": "Thermometer",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Thermometer\n| itemclass     = Outros Itens\n| primarytype   = Itens de Quest\n| secondarytype = Ferramentas\n| weight        = 8.00\n| stackable     = não\n| mercado       = não\n| value         = 500\n| npcprice      = 500\n| buyfrom       = Gnomux\n| sellto        = Jogadores.\n| implemented   = 10.20\n| droppedby     = Ninguém.\n| notes         = Mesma aparência de um [[Necrometer]].\n<noinclude><p><spoiler>* Pode ser obtido e usado na [[Spike Tasks]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 31008,
+    "ns": 0,
+    "title": "Tuning Fork",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Tuning Fork\n| flavortext    = \n| itemclass     = Ferramentas e Outros Equipamentos\n| primarytype   = Itens de Quest\n| secondarytype = Ferramentas\n| weight        = 1.00\n| stackable     = não\n| mercado       = não\n| value         = \n| npcprice      = 150\n| buyfrom       = Gnomux\n| sellto        = Jogadores.\n| implemented   = 10.20\n| droppedby     = Ninguém.\n| notes         = <noinclude><p><noinclude><spoiler>* Obtido e usado durante a [[Spike Tasks]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 31009,
+    "ns": 0,
+    "title": "Spirit Shovel",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Spirit Shovel\n| itemclass     = Ferramentas e Outros Equipamentos\n| primarytype   = Itens de Quest\n| secondarytype = Ferramentas\n| weight        = 28.00\n| stackable     = não\n| mercado       = não\n| value         = \n| npcprice      = 150\n| droppedby     = Ninguém.\n| buyfrom       = Gnomux\n| sellto        = Jogadores.\n| implemented   = 10.20\n| notes         = <noinclude><p><spoiler>* Obtido e usado na [[Spike Tasks]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 31068,
+    "ns": 0,
+    "title": "Thawing Ice Pick",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Thawing Ice Pick\n| flavortext     = It is frosted  with tiny ice crystals and starts to melt as look at it.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| stackable      = não\n| attrib         = Nenhum.\n| weight         = 62.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.20\n| notes          = Mesmo sprite de um [[Dwarven Pickaxe]] e [[Ice Pick]]. Note que essa pick não abre buracos de [[pick]] e ela some após algum tempo.\n<noinclude><p><spoiler>\n* Pode ser obtido apenas durante as raras [[invasões]] da boss [[Zushuka]] no [[Ice Witch Temple]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 33566,
+    "ns": 0,
+    "title": "Strange Probing Device",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Strange Probing Device\n| flavortext     = There is no evidence this thing even works. Even slightest movement may trigger its mechanisms.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| attrib         = \n| weight         = 8.00\n| stackable      = não\n| mercado        = não\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.50\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante uma task da [[Oramond Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 37282,
+    "ns": 0,
+    "title": "Teleportation Rod",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Teleportation Rod\n| flavortext     = A rod to be powerful enough to transport the godbreaker parts to a place of safety.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| weight         = 30.00\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.90\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[Ferumbras' Ascendant Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 38284,
+    "ns": 0,
+    "title": "Spying Eye",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Spying Eye\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| secondarytype  = \n| attrib         = Serve para verificar a posição do portal de entrada para o The Void. Ele informa a localização de dois portais por vez, combinando dois grupos de lugares, o primeiro grupo sendo [[Ankrahmun]], [[Svargrond]] e o segundo grupo sendo [[Kazordoon]], [[Zao]] e [[Edron]].\n| stackable      = não\n| weight         = 4.00\n| value          = Negociável\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.94\n| notes          = Quando usado, aparecerá uma mensagem dizendo onde o portal está ativo para o [[The Void]].\n<noinclude><p><spoiler>* Recompensa da [[Heart of Destruction Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 41272,
+    "ns": 0,
+    "title": "Tool for Analyzing Fluids",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Tool for Analyzing Fluids\n| flavortext     = With this tool it is possible to analyze fluids in a very comfortable way.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| weight         = 1.80\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.40\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[Cults of Tibia Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42523,
+    "ns": 0,
+    "title": "Temporary Gold Converter",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Temporary Gold Converter\n| flavortext     = That has 100 charges left and that will expire in 7 days.\nYou bought this item in the Store or gained it as a daily reward.\nThis item cannot be traded.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| attrib         = Você pode transformar pilhas de 100 [[Gold Coin]]s ou [[Platinum Coin]]s em 1 [[Platinum Coin]] ou [[Crystal Coin]], respectivamente. Possui 100 cargas e expira em 7 dias.\n| weight         = 3.00\n| stackable      = não\n| value          = 0\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| mercado        = não\n| notes          = É uma versão temporária do [[Gold Converter]], você pode encontrá-lo no seu [[Store Inbox]] e só é possível movê-lo para o [[Depot Box]]. Esse item é ligado ao personagem e, portanto, não é possível dar para outros jogadores.\n<noinclude><p><spoiler>* Pode ser adquirido através das [[Recompensas Diárias]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45649,
+    "ns": 0,
+    "title": "Soft Hammer",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Soft Hammer\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| secondarytype  = \n| attrib         = Nenhum.\n| stackable      = não\n| weight         = 4.20\n| implemented    = 12.02.7746\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Pode ser obtido usando um [[Barrel Filled With Hammers]]<noinclude><p><spoiler>Com ele é possível desacordar um [[Bonny Bunny]], isso é necessário para completar a quest [[Winterlight Solstice]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 47126,
+    "ns": 0,
+    "title": "Wheel Oil",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Wheel Oil\n| flavortext     = Ideal to oil large wheels. The can is leaky.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| attrib         = Nenhum.\n| weight         = 19.00\n| stackable      = não\n| npcvalue       = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.20\n| notes          = \n<noinclude><spoiler>\n* O boss [[Cart Packed With Gold]] derruba alguns no chão, o mesmo não poderá ser movido ou colocado na backpack, use-o no próprio boss para fazê-lo \"pular\" alguns SQMs para frente.\n</spoiler></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 47779,
+    "ns": 0,
+    "title": "Traditional Stein",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Traditional Stein\n| flavortext     = A practical, classic mug which is typically used to serve beer during the Orcsoberfest.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| secondarytype  = Recipientes Líquidos\n| armor          = 0\n| weight         = 3.50\n| stackable      = não\n| value          = \n| npcvalue       =\n| droppedby      = Ninguém.\n| droppedRaidby  =\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.20.9066\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 57939,
+    "ns": 0,
+    "title": "Unremarkable Hammer",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Unremarkable Hammer\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| attrib         = Nenhum.\n| weight         = 64.50\n| mercado        = não\n| value          = \n| npcvalue       = \n| npcprice       = \n| stackable      = não\n| droppedby      = Ninguém.\n| droppedRaidby  = \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Nenhuma.\n<noinclude><p><spoiler>\n* Obtido e usado durante a [[25 Years of Tibia Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 57941,
+    "ns": 0,
+    "title": "The Ban Hammer",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = The Ban Hammer\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| attrib         = Nenhum.\n| weight         = 64.50\n| mercado        = não\n| npcvalue       = \n| npcprice       = \n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = É um [[Unremarkable Hammer]] pegando fogo.\n<noinclude><p><spoiler>\n* Obtido e usado durante a [[25 Years of Tibia Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 60781,
+    "ns": 0,
+    "title": "Training Axe",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Training Axe\n| flavortext     = You see a training sword that has 50 charges left and that will expire in X days and X hours.\nThis item cannot be traded.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| attrib         = Item com 50 cargas. Utilizado para treinar nos [[Exercise Dummy|Exercise Dummies]].\n| weight         = 10.00\n| stackable      = não\n| value          = \n| npcvalue       = \n| npcprice       = \n| droppedby      = Ninguém.\n| buyfrom        = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.73.6703\n| mercado        = não\n| notes          = Pode ser obtido como recompensa do sexto dia nas Recompensas Diárias. Expira em 7 dias. Veja [[Recompensas Diárias]] para mais informações.\n| storevalue     = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 60782,
+    "ns": 0,
+    "title": "Training Bow",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Training Bow\n| flavortext     = You see a training bow that has 50 charges left and that will expire in X days and X hours.\nThis item cannot be traded.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| attrib         = Item com 50 cargas. Utilizado para treinar nos [[Exercise Dummy|Exercise Dummies]].\n| weight         = 10.00\n| stackable      = não\n| value          = \n| npcvalue       = \n| npcprice       = \n| droppedby      = Ninguém.\n| buyfrom        = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.73.6703\n| mercado        = não\n| notes          = Pode ser obtido como recompensa do sexto dia nas Recompensas Diárias. Expira em 7 dias. Veja [[Recompensas Diárias]] para mais informações.\n| storevalue     = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 60783,
+    "ns": 0,
+    "title": "Training Club",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Training Club\n| flavortext     = You see a training club that has 50 charges left and that will expire in X days and X hours.\nThis item cannot be traded.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| attrib         = Item com 50 cargas. Utilizado para treinar nos [[Exercise Dummy|Exercise Dummies]].\n| weight         = 10.00\n| stackable      = não\n| value          = \n| npcvalue       = \n| npcprice       = \n| droppedby      = Ninguém.\n| buyfrom        = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.73.6703\n| mercado        = não\n| notes          = Pode ser obtido como recompensa do sexto dia nas Recompensas Diárias. Expira em 7 dias. Veja [[Recompensas Diárias]] para mais informações.\n| storevalue     = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 60784,
+    "ns": 0,
+    "title": "Training Rod",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Training Rod\n| flavortext     = You see a training rod that has 50 charges left and that will expire in X days and X hours.\nThis item cannot be traded.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| attrib         = Item com 50 cargas. Utilizado para treinar nos [[Exercise Dummy|Exercise Dummies]].\n| weight         = 10.00\n| stackable      = não\n| value          = \n| npcvalue       = \n| npcprice       = \n| droppedby      = Ninguém.\n| buyfrom        = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.73.6703\n| mercado        = não\n| notes          = Pode ser obtido como recompensa do sexto dia nas Recompensas Diárias. Expira em 7 dias. Veja [[Recompensas Diárias]] para mais informações.\n| storevalue     = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 60785,
+    "ns": 0,
+    "title": "Training Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Training Shield\n| flavortext     = You see a training shield that has 50 charges left and that will expire in X days and X hours.\nThis item cannot be traded.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| attrib         = Item com 50 cargas. Utilizado para treinar nos [[Exercise Dummy|Exercise Dummies]].\n| weight         = 10.00\n| stackable      = não\n| value          = \n| npcvalue       = \n| npcprice       = \n| droppedby      = Ninguém.\n| buyfrom        = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 13.21.13810\n| mercado        = não\n| notes          = Pode ser obtido como recompensa do sexto dia nas Recompensas Diárias. Expira em 7 dias. Veja [[Recompensas Diárias]] para mais informações.\n| storevalue     = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 60786,
+    "ns": 0,
+    "title": "Training Sword",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Training Sword\n| flavortext     = You see a training sword that has 50 charges left and that will expire in X days and X hours.\nThis item cannot be traded.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| attrib         = Item com 50 cargas. Utilizado para treinar nos [[Exercise Dummy|Exercise Dummies]].\n| weight         = 10.00\n| stackable      = não\n| value          = \n| npcvalue       = \n| npcprice       = \n| droppedby      = Ninguém.\n| buyfrom        = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.73.6703\n| mercado        = não\n| notes          = Pode ser obtido como recompensa do sexto dia nas Recompensas Diárias. Expira em 7 dias. Veja [[Recompensas Diárias]] para mais informações.\n| storevalue     = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 60787,
+    "ns": 0,
+    "title": "Training Wand",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Training Wand\n| flavortext     = You see a training wand that has 50 charges left and that will expire in X days and X hours.\nThis item cannot be traded.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| attrib         = Item com 50 cargas. Utilizado para treinar nos [[Exercise Dummy|Exercise Dummies]].\n| weight         = 10.00\n| stackable      = não\n| value          = \n| npcvalue       = \n| npcprice       = \n| droppedby      = Ninguém.\n| buyfrom        = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.73.6703\n| mercado        = não\n| notes          = Pode ser obtido como recompensa do sexto dia nas Recompensas Diárias. Expira em 7 dias. Veja [[Recompensas Diárias]] para mais informações.\n| storevalue     = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 61323,
+    "ns": 0,
+    "title": "Spirit Container (Ratha)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Spirit Container (Ratha)\n| flavortext     = It is empty.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Ferramentas\n| attrib         = Usado para coletar espíritos.\n| weight         = 6.00\n| stackable      = não\n| mercado        = não\n| droppedby      = Ninguém.\n| npcprice       = \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 13.30.14423\n| notes          = <noinclude><spoiler>* Obtido e usado na [[20 Years a Cook Quest]].</spoiler></p></noinclude>\nPossui uma versão de mesmo nome preenchido com o espírito de Ratha.\n[[Arquivo:Spirit Container (Ratha) Filled.gif|link=]]\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64009,
+    "ns": 0,
+    "title": "Training Wraps",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Training Wraps\n| flavortext     = You see a training wraps that has 50 charges left and that will expire in X days and X hours.\nThis item cannot be traded.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Ferramentas\n| attrib         = Item com 50 cargas. Utilizado para treinar nos [[Exercise Dummy|Exercise Dummies]].\n| weight         = 10.00\n| stackable      = não\n| value          = \n| npcvalue       = \n| npcprice       = \n| droppedby      = Ninguém.\n| buyfrom        = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 15.00.249ccc\n| mercado        = não\n| notes          = Pode ser obtido como recompensa do sexto dia nas Recompensas Diárias. Expira em 7 dias. Veja [[Recompensas Diárias]] para mais informações.\n| storevalue     = \n}}"
+       }
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

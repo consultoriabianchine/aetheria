@@ -1,0 +1,128 @@
+<div class="editor-head">
+  <a routerLink="/hunts">← Hunts</a>
+  <h1>{{ id === 'new' ? 'Nova hunt' : draft()?.name }}</h1>
+  @if (dirty()) {
+    <span class="unsaved">Alterações não salvas</span>
+  }
+  <div class="actions">
+    <button class="primary" (click)="save()" [disabled]="saving() || !dirty()">Salvar hunt</button>
+  </div>
+</div>
+
+@if (error()) {
+  <p class="error">{{ error() }}</p>
+}
+
+@if (draft(); as h) {
+  <div class="form">
+    <section class="panel">
+      <h2>Geral</h2>
+      <div class="field">
+        <label>Nome</label>
+        <input type="text" [value]="h.name" (input)="patch({ name: $any($event.target).value })" />
+      </div>
+      <div class="row">
+        <div class="field">
+          <label>Posição (ladder)</label>
+          <input type="number" [value]="h.ladderPosition" (input)="patch({ ladderPosition: +$any($event.target).value })" />
+        </div>
+        <div class="field">
+          <label>Nível sugerido</label>
+          <input type="number" [value]="h.suggestedLevel" (input)="patch({ suggestedLevel: +$any($event.target).value })" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="field">
+          <label>Pack base</label>
+          <input type="number" [value]="h.basePackSize" (input)="patch({ basePackSize: +$any($event.target).value })" />
+        </div>
+        <div class="field">
+          <label>Pack máx</label>
+          <input type="number" [value]="h.maxPackSize" (input)="patch({ maxPackSize: +$any($event.target).value })" />
+        </div>
+      </div>
+      <label class="check"><input type="checkbox" [checked]="h.enabled" (change)="patch({ enabled: $any($event.target).checked })" /> Ativa</label>
+    </section>
+
+    <section class="panel">
+      <h2>Monstros</h2>
+      @for (m of h.monsters; track $index; let i = $index) {
+        <div class="row">
+          <select [value]="m.monsterId" (change)="setMonster(i, { monsterId: $any($event.target).value })">
+            @for (c of creatures(); track c.creatureId) {
+              <option [value]="c.slug">{{ c.name }}</option>
+            }
+          </select>
+          <div class="field">
+            <label>Peso</label>
+            <input type="number" [value]="m.weight" (input)="setMonster(i, { weight: +$any($event.target).value })" min="1" />
+          </div>
+          <button class="danger" (click)="removeMonster(i)">✕</button>
+        </div>
+      }
+      <button (click)="addMonster()">+ Monstro</button>
+    </section>
+
+    <section class="panel">
+      <h2>Boss</h2>
+      <div class="field">
+        <label>Monstro</label>
+        <select [value]="h.boss.monsterId" (change)="setBoss({ monsterId: $any($event.target).value })">
+          @for (c of creatures(); track c.creatureId) {
+            <option [value]="c.slug">{{ c.name }}</option>
+          }
+        </select>
+      </div>
+      <div class="field">
+        <label>Nome do boss</label>
+        <input type="text" [value]="h.boss.name" (input)="setBoss({ name: $any($event.target).value })" />
+      </div>
+      <div class="row">
+        <div class="field">
+          <label>Multi HP</label>
+          <input type="number" [value]="h.boss.statMultipliers.hp" (input)="setBoss({ statMultipliers: { ...h.boss.statMultipliers, hp: +$any($event.target).value } })" step="0.5" />
+        </div>
+        <div class="field">
+          <label>Multi Dano</label>
+          <input type="number" [value]="h.boss.statMultipliers.damage" (input)="setBoss({ statMultipliers: { ...h.boss.statMultipliers, damage: +$any($event.target).value } })" step="0.1" />
+        </div>
+        <div class="field">
+          <label>Multi XP</label>
+          <input type="number" [value]="h.boss.statMultipliers.xp" (input)="setBoss({ statMultipliers: { ...h.boss.statMultipliers, xp: +$any($event.target).value } })" step="0.5" />
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Masmorra</h2>
+      <div class="field">
+        <label>Arena</label>
+        <select [value]="h.arenaId" (change)="patch({ arenaId: $any($event.target).value })">
+          @for (a of arenas; track a) {
+            <option [value]="a">{{ a }}</option>
+          }
+        </select>
+      </div>
+      <div class="row">
+        <div class="field">
+          <label>Largura (opcional)</label>
+          <input type="number" [value]="h.arenaWidth ?? ''" placeholder="auto" (input)="patch({ arenaWidth: +$any($event.target).value || undefined })" />
+        </div>
+        <div class="field">
+          <label>Altura (opcional)</label>
+          <input type="number" [value]="h.arenaHeight ?? ''" placeholder="auto" (input)="patch({ arenaHeight: +$any($event.target).value || undefined })" />
+        </div>
+      </div>
+      <div class="field">
+        <label>Mapa custom</label>
+        <select [value]="h.mapId ?? ''" (change)="patch({ mapId: $any($event.target).value || undefined })">
+          <option value="">(arena procedural)</option>
+          @for (m of maps(); track m.id) {
+            <option [value]="m.id">{{ m.name }} ({{ m.width }}×{{ m.height }})</option>
+          }
+        </select>
+      </div>
+      <p class="hint">Se escolher um mapa custom, ele substitui a arena procedural.</p>
+    </section>
+  </div>
+}

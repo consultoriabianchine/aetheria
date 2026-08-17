@@ -63,7 +63,12 @@ interface Harness {
   attacks: { creature: CreatureEntity; target: CreatureTarget; amount: number; critical: boolean; now: number }[];
 }
 
-function makeHarness(def: CreatureDefinition, position: Position, players: CreatureTarget[] = []): Harness {
+function makeHarness(
+  def: CreatureDefinition,
+  position: Position,
+  players: CreatureTarget[] = [],
+  options: { aggressive?: boolean } = {},
+): Harness {
   const world = makeWorld();
   const movement = new MovementService(world);
   const creatures: CreatureEntity[] = [];
@@ -71,13 +76,16 @@ function makeHarness(def: CreatureDefinition, position: Position, players: Creat
   const attacks: Harness['attacks'] = [];
   const playersMap = new Map(players.map((p) => [p.id, p]));
 
-  const ai = new CreatureAIService({
-    movement,
-    getPlayers: () => playersMap.values(),
-    getPlayerById: (id) => playersMap.get(id) ?? null,
-    broadcast: (event, data) => broadcasts.push({ event, data: data as Record<string, unknown> }),
-    onAttackPlayer: (c, t, amount, critical, now) => attacks.push({ creature: c, target: t, amount, critical, now }),
-  });
+  const ai = new CreatureAIService(
+    {
+      movement,
+      getPlayers: () => playersMap.values(),
+      getPlayerById: (id) => playersMap.get(id) ?? null,
+      broadcast: (event, data) => broadcasts.push({ event, data: data as Record<string, unknown> }),
+      onAttackPlayer: (c, t, amount, critical, now) => attacks.push({ creature: c, target: t, amount, critical, now }),
+    },
+    options,
+  );
 
   const creature = new CreatureEntity('creature-1', def, position);
   creatures.push(creature);
@@ -224,6 +232,48 @@ describe('CreatureAIService', () => {
     expect(['south', 'southeast', 'southwest', 'north', 'northeast', 'northwest', 'east', 'west']).toContain(dir);
     expect(move!.data.creatureId).toBe('creature-1');
     expect(move!.data.to).toBeDefined();
+  });
+
+  describe('modo agressivo (hunts)', () => {
+    it('detecta o jogador a qualquer distância, mesmo com viewRange pequeno', () => {
+      const h = makeHarness(makeDefinition({ viewRange: 1 }), { x: 5, y: 5, z: 0 }, [
+        makePlayer('p1', { x: 1, y: 1, z: 0 }),
+      ], { aggressive: true });
+      step(h, 0);
+      expect(h.creature.state).toBe('CHASE');
+      expect(h.creature.targetId).toBe('p1');
+    });
+
+    it('persegue mesmo quando a criatura não pode caçar (canChase=false)', () => {
+      const h = makeHarness(makeDefinition({ canChase: false, canWander: false }), { x: 5, y: 5, z: 0 }, [
+        makePlayer('p1', { x: 5, y: 8, z: 0 }),
+      ], { aggressive: true });
+      for (let now = 0; now < 5000 && h.creature.state !== 'ATTACK'; now += 100) step(h, now);
+      expect(h.creature.state).toBe('ATTACK');
+    });
+
+    it('nunca foge mesmo com canFlee e HP baixo', () => {
+      const h = makeHarness(makeDefinition({ canFlee: true, fleeHealthPercent: 100 }), { x: 5, y: 5, z: 0 }, [
+        makePlayer('p1', { x: 5, y: 6, z: 0 }),
+      ], { aggressive: true });
+      step(h, 0);
+      expect(h.creature.state).toBe('CHASE');
+      step(h, 100);
+      expect(h.creature.state).toBe('ATTACK');
+      h.creature.health = 1;
+      step(h, 200);
+      expect(h.creature.state).toBe('ATTACK');
+      expect(h.creature.state).not.toBe('FLEE');
+    });
+
+    it('não desiste da perseguição por distância ao spawn', () => {
+      const h = makeHarness(makeDefinition({ chaseRange: 2 }), { x: 5, y: 5, z: 0 }, [
+        makePlayer('p1', { x: 5, y: 9, z: 0 }),
+      ], { aggressive: true });
+      for (let now = 0; now < 20000 && h.creature.state !== 'ATTACK'; now += 100) step(h, now);
+      expect(h.creature.state).toBe('ATTACK');
+      expect(h.creature.state).not.toBe('RETURN');
+    });
   });
 });
 

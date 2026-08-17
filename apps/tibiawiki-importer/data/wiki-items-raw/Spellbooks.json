@@ -1,0 +1,486 @@
+{
+ "query": {
+  "pages": [
+   {
+    "pageid": 6792,
+    "ns": 0,
+    "title": "Snake God's Wristguard",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Snake God's Wristguard\n| flavortext      = It shows your spells and can also shield against attacks when worn.\n| vocrequired     = [[Sorcerer]]s and [[Druid]]s\n| levelrequired   = 100\n| itemclass       = Equipamentos de Corpo\n| primarytype     = Spellbooks\n| secondarytype   = Escudos\n| skillboost      = [[Magic Level]] +3\n| defense         = 23\n| weight          = 28.00\n| value           = 100 000 - 400 000\n| npcvalue        = 0\n| droppedby       = [[Draken Abomination]], [[Draken Elite]], [[Hatebreeder]].\n| buyfrom         = Jogadores.\n| sellto          = Jogadores.\n| implemented    = 8.6\n| notes           = Este item pode ser considerado um spellbook por ter os mesmos atributos de um. Faz parte do [[Magic Level Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6798,
+    "ns": 0,
+    "title": "Spellbook",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Spellbook\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 0\n| flavortext     = It shows your spells and can also shield against attacks when worn.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Spellbooks\n| secondarytype  = Escudos\n| defense        = 23\n| weight         = 18.00\n| imbuement      = 1\n| value          = 0-150\n| npcprice       = 150\n| npcvalue       = 0\n| droppedby      = [[Banshee]], [[Bonelord]], [[Braindeath]], [[Clavius]], [[Dark Carnisylvan]], [[Death Priest]], [[Dwarf Geomancer]], [[Elder Bonelord]], [[Lich]].\n| droppedRaidby  = [[Gravelord Oshuran]], [[The Evil Eye]].\n| buyfrom        = Shiriel, Fenech, Rachel, Asima, Thomas, Rabaz, Gnomegica, Sigurd, Frederik, Siflind, Tandros, Nelly, Romir, Topsy, Xodet, Frans, Chuckles\n| sellto         = Hector the Mentor\n| npcvalue       = 30\n| npcprice       = 150\n| notes          = Você não precisa carregar um spellbook com você o tempo todo. Eles mostram as magias que você possui e as respectivas palavras mágicas. Apenas [[Druid]]s e [[Sorcerer]]s podem usá-lo como escudo. Mesmo sprite de um [[Spellbook of Dragha]], de um [[Nature Magic Spellbook]] e de um [[Almanac of Magic]]. Dado para os personagens que escolheram como vocação definitiva serem [[Sorcerer]]s ou [[Druid]]s  em [[Dawnport]] ou na [[Isle of Destiny]]. Faz parte do [[Isle of Destiny Druid Set]] e [[Isle of Destiny Sorcerer Set]].\n\n<noinclude><p><spoiler>\n* Recompensa das quests:\n** [[To Blind the Enemy Quest]].\n** [[Ornamented Shield Quest]]. \n* [[Respawn Diário]] no castelo de [[Senja]].\n* 01 é necessário para [[Sorcerer]]s durante a [[The Desert Dungeon Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6800,
+    "ns": 0,
+    "title": "Spellbook of Dark Mysteries",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Spellbook of Dark Mysteries\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 80\n| flavortext     = It shows your spells and can also shield against attacks when worn.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Spellbooks\n| secondarytype  = Escudos\n| skillboost     = [[Magic Level]] +3\n| defense        = 26\n| weight         = 28.50\n| value          = 250 000 - 500 000\n| npcvalue       = 0\n| droppedby      = [[Ferumbras Mortal Shell]], [[Hellgorak]], [[Horadron]], [[Prince Drazzak]].\n| droppedRaidby  = [[Ferumbras]], [[Ghazbaran]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.2\n| notes          = Aumenta seu magic level em 3. Considerado o terceiro melhor spellbook por oferecer melhores atributos se comparado a outros. Faz parte do [[Magic Level Set]].\n<noinclude><p><spoiler>* Pode ser obtido como recompensa da [[The Inquisition Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6802,
+    "ns": 0,
+    "title": "Spellbook of Enlightenment",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Spellbook of Enlightenment\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 30\n| flavortext     = It shows your spells and can also shield against attacks when worn.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Spellbooks\n| secondarytype  = Escudos\n| skillboost     = [[Magic Level]] +1\n| defense        = 29\n| weight         = 19.50\n| imbuement      = 1\n| value          = \n| npcvalue       = 4 000\n| droppedby      = [[Blood Hand]], [[Frost Dragon Hatchling]], [[Golden Servant]], [[Golden Servant Replica]], [[Iks Ahpututu]], [[Iks Pututu]], [[Jungle Moa]], [[Lloyd]], [[Mutated Rat]], [[Omnivora]], [[Shadow Pupil]], [[Two-Headed Turtle]].\n| buyfrom        = Jogadores.\n| sellto         = Alexander, Khanna:3 500\n| implemented    = 8.2\n| notes          = Faz parte do [[Magic Level Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6805,
+    "ns": 0,
+    "title": "Spellbook of Lost Souls",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Spellbook of Lost Souls\n| flavortext     = It shows your spells and can also shield against attacks when worn.\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 60\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Spellbooks\n| secondarytype  = Escudos\n| skillboost     = [[Magic Level]] +2\n| defense        = 32\n| weight         = 25.60\n| value          = \n| npcvalue       = 19 000\n| npcprice       = \n| buyfrom        = Jogadores.\n| trade          = sim\n| sellto         = Alexander, Khanna:17 500\n| implemented    = 8.2\n| droppedby      = [[Eradicator]], [[Ferumbras Mortal Shell]], [[Hellgorak]], [[Horadron]], [[Lady Tenebris]], [[The Souldespoiler]].\n| droppedRaidby  = [[Diblis the Fair]], [[Ferumbras]], [[Ghazbaran]], [[The Pale Count]].\n| notes          = Faz parte do [[Magic Level Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6807,
+    "ns": 0,
+    "title": "Spellbook of Mind Control",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Spellbook of Mind Control\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 50\n| flavortext     = It shows your spells and can also shield against attacks when worn.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Spellbooks\n| secondarytype  = Escudos\n| skillboost     = [[Magic Level]] +2\n| defense        = 26\n| weight         = 24.50\n| value          = \n| npcvalue       = 13 000\n| droppedby      = [[Blood Priest]], [[Brachiodemon]], [[Bulltaur Forgepriest]], [[Carnivostrich]], [[Choking Fear]], [[Crypt Mage]], [[Dawnfire Asura]], [[Ferumbras Mortal Shell]], [[Frost Flower Asura]], [[Hellflayer]], [[Hellgorak]], [[Horadron]], [[Infernalist]], [[Lava Golem]], [[Midnight Asura]], [[Nighthunter]], [[Raging Mage]], [[Serpent Spawn]], [[Soul-Broken Harbinger]], [[Soul of Dragonking Zyrtarch]], [[The Noxious Spawn]], [[True Dawnfire Asura]], [[True Midnight Asura]], [[Wrathful Archivist]], [[Yirkas Blue Scales]].\n| droppedRaidby  = [[Ferumbras]], [[Ghazbaran]], [[Yaga the Crone]]. \n| buyfrom        = Jogadores.\n| sellto         = Alexander, Khanna:12 000\n| implemented    = 8.2\n| notes          = Considerado raro até o [[Updates/8.4|Update de Inverno 2008]], quando passou a ser loot de outras criaturas. Faz parte do [[Magic Level Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6810,
+    "ns": 0,
+    "title": "Spellbook of Warding",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Spellbook of Warding\n| flavortext     = It shows your spells and can also shield against attacks when worn.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Spellbooks\n| secondarytype  = Escudos\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 40\n| skillboost     = [[Magic Level]] +1\n| defense        = 36\n| weight         = 21.00\n| imbuement      = 1\n| npcvalue       = 8 000\n| buyfrom        = Jogadores.\n| sellto         = Alexander, Khanna:7 500\n| implemented    = 8.2\n| droppedby      = [[Amenef The Burning]], [[Anomaly]], [[Blood Priest]], [[Dark Carnisylvan]], [[Energuardian Of Tales]], [[Eradicator]], [[Gorzindel]], [[Guardian Of Tales]], [[Hellgorak]], [[High Voltage Elemental]], [[Horadron]], [[Lloyd]], [[Lady Tenebris]], [[Mad Mage]], [[Massive Energy Elemental]], [[Necromancer]], [[Plagirath]], [[Tremendous Tyrant]], [[Usurper Commander]], [[Varnished Diremaw]].\n| droppedRaidby  = [[Ghazbaran]].\n| notes          = A partir do [[Winter Update 2011|update 9.40]] tornou-se o segundo spellbook com a maior defesa do jogo. O primeiro foi obtido em 2009 em Lucera. Faz parte do [[Mage Set]] e [[Magic Level Set]].\n<noinclude><p><spoiler>* Pode ser obtido como recompensa da [[The Thieves Guild Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6811,
+    "ns": 0,
+    "title": "Spellscroll of Prophecies",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Spellscroll of Prophecies\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 70\n| flavortext     = It shows your spells and can also shield against attacks when worn.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Spellbooks\n| secondarytype  = Escudos\n| skillboost     = [[Magic Level]] +3\n| defense        = 20\n| weight         = 26.50\n| value          = 70 000 - 300 000\n| npcvalue       = 0\n| droppedby      = [[Ferumbras Mortal Shell]], [[Hellgorak]], [[Horadron]], [[Prince Drazzak]], [[The Time Guardian]].\n| droppedRaidby  = [[Ferumbras]], [[Gravelord Oshuran]], [[Ghazbaran]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.2\n| notes          = Considerado melhor que o [[Spellbook of Dark Mysteries]], pois implementa o mesmo valor de magic level sendo que é é mais leve e mais barato. Contudo, possui defesa menor. Faz parte do [[Magic Level Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 19112,
+    "ns": 0,
+    "title": "Depth Scutum",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Depth Scutum\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Spellbooks\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| imbuement      = 1\n| levelrequired  = 120\n| defense        = 33\n| skillboost     = [[Magic Level]] +2\n| weight         = 30.00\n| value          = 36 000\n| npcvalue       = 36 000\n| npcprice       = 0\n| droppedby      = [[Ancient Spawn of Morgathla]], [[Obujos]], [[Reflection Of Obujos]].\n| buyfrom        = Jogadores.\n| sellto         = Rock In A Hard Place\n| implemented    = 9.4\n| notes          = [[Spellbooks|Spellbook]] com maior defesa. Faz parte do [[Depth Set]] e [[Magic Level Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 23285,
+    "ns": 0,
+    "title": "Spellbook of Ancient Arcana",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Spellbook of Ancient Arcana\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 150\n| flavortext     = It shows your spells and can also shield against attacks when worn.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Spellbooks\n| secondarytype  = Escudos\n| skillboost     = [[Magic Level]] +4\n| resist         = [[Death Damage|Death]] +5%\n| defense        = 31\n| weight         = 25.00\n| value          = 5 500 000 - 8 500 000\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.5\n| notes          = Faz parte do [[Mage Set]] e [[Magic Level Set]].\n<noinclude><p><spoiler>\n* Recompensa da [[The Demon Oak Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25339,
+    "ns": 0,
+    "title": "Spellbook of Vigilance",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Spellbook of Vigilance\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| flavortext     = It shows your spells and can also shield against attacks when worn.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Spellbooks\n| secondarytype  = Escudos\n| levelrequired  = 130\n| resist         = [[Earth Damage|Earth]] +3%, [[Fire Damage|Fire]] -3%\n| skillboost     = [[Magic Level]] +3\n| defense        = 32\n| weight         = 27.00\n| value          = 5 000 - 30 000\n| npcvalue       = 0\n| npcprice       = 10 [[Major Crystalline Token]]\n| droppedby      = Ninguém.\n| buyfrom        = Gnomally\n| sellto         = Jogadores.\n| implemented    = 9.6\n| notes          = Faz parte do [[Gill Set]], [[Mage Set]] e [[Magic Level Set]].\n{{DASH|'''Dica:''' Dependendo do valor do [[Major Crystalline Token]] no mundo, pode ser mais barato comprar o token e trocar pelo item na [[NPC]] do que comprá-lo diretamente de algum jogador.}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 31745,
+    "ns": 0,
+    "title": "Crude Umbral Spellbook",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Crude Umbral Spellbook\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Spellbooks\n| secondarytype  = Escudos \n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 75\n| defense        = 23\n| skillboost     = [[Magic Level]] +1\n| resist         = [[Earth Damage|Earth]] +2%, [[Energy Damage|Energy]] +2%, [[Fire Damage|Fire]] +2%, [[Ice Damage|Ice]] +2%\n| weight         = 40.00\n| npcvalue       = 0\n| value          = 300 000 - 700 000\n| droppedby      = [[Lady Tenebris]].\n| droppedRaidby  = [[Gaz'Haragoth]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.30\n| notes          = Esta arma pode ser feita e melhorada por jogadores em um complexo processo de captação e materialização de sonhos, conhecido como [[Umbral Creation]]. Faz parte do [[Magic Level Set]].\n<noinclude><p><spoiler>* Pode ser obtido trocando 1 [[Dream Matter]] e 20 [[Cluster of Solace|Clusters of Solace]] com o NPC [[Eruaran]]. Existe a chance de falhar.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 31746,
+    "ns": 0,
+    "title": "Umbral Spellbook",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Umbral Spellbook\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Spellbooks\n| secondarytype  = Escudos \n| imbuement      = 1\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 150\n| defense        = 26\n| skillboost     = [[Magic Level]] +2\n| resist         = [[Earth Damage|Earth]] +3%, [[Energy Damage|Energy]] +3%, [[Fire Damage|Fire]] +3%, [[Ice Damage|Ice]] +3%\n| weight         = 35.00\n| value          = 1 000 000 - 3 000 000\n| npcvalue       = 0\n| droppedby      = [[Lady Tenebris]].\n| droppedRaidby  = [[Gaz'Haragoth]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.30\n| notes          = Este é um [[Crude Umbral Spellbook]] aperfeiçoado. Se o jogador quiser, ele pode tentar transformá-lo em uma versão \"Umbral Master\" no arriscado processo conhecido como [[Umbral Creation]]. Faz parte do [[Magic Level Set]].\n<noinclude><p><spoiler>* Pode ser obtido trocando 1 [[Crude Umbral Spellbook]] e 75 [[Cluster of Solace|Clusters of Solace]] com o NPC [[Eruaran]]. Existe a chance de falhar.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 31747,
+    "ns": 0,
+    "title": "Umbral Master Spellbook",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Umbral Master Spellbook\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Spellbooks\n| secondarytype  = Escudos \n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 250\n| defense        = 32\n| skillboost     = [[Magic Level]] +4\n| resist         = [[Earth Damage|Earth]] +5%, [[Energy Damage|Energy]] +5%, [[Fire Damage|Fire]] +5%, [[Ice Damage|Ice]] +5%\n| weight         = 30.00\n| imbuement      = 1\n| value          = 12 000 000 - 18 000 000\n| npcvalue       = 0\n| droppedRaidby  = [[Gaz'Haragoth]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.30\n| notes          = Este é um [[Umbral Spellbook]] transformado através de um complexo processo conhecido como [[Umbral Creation]]. Faz parte do [[Mage Set]] e [[Magic Level Set]]. <br />\nNo [[Patches/10.31|patch 10.31]] foi corrigido um erro no item, ele não tinha as proteções que foram decididas no [[Test Server]]. Fora isso, outro erro foi descoberto, esqueceram de colocar a defesa e o bônus de [[magic level]] correto, o que também foi corrigido mais tarde. <noinclude><p><spoiler>*Pode ser obtido trocando 1 [[Umbral Spellbook]] e 150 [[Cluster of Solace|Clusters of Solace]] com o NPC [[Eruaran]]. Existe a chance de falhar. \n*[[Arquivo:achievement.gif]] Ao conseguir transformar um [[Umbral Spellbook]] para estágio \"Master\", você receberá o achievement \"'''{{achievement|Umbral Harbinger}}'''\".\n*[[Arquivo:Achievement.gif]] Ao elevar todos os itens '''Umbral''' para '''Umbral Master''', você receberá o achievement \"'''{{Achievement|Umbral Master}}'''\".</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 34146,
+    "ns": 0,
+    "title": "Spellbook of the Novice",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Spellbook of the Novice\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| flavortext     = It shows your spells and can also shield against attacks when worn.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Spellbooks\n| secondarytype  = Escudos\n| defense        = 13\n| weight         = 14.00\n| value          = \n| npcvalue       = 15\n| npcprice       = 75\n| droppedby      = Ninguém.\n| buyfrom        = Asima, Chuckles, Frederik, Gnomegica, Nelly, Rabaz, Rachel, Romir, Shiriel, Siflind, Sigurd, Tandros, Topsy, Xodet, Frans, Fenech, Thomas\n| sellto         = Hector the Mentor\n| mercado        = sim\n| implemented    = 10.55\n| notes          = * Faz parte do [[Set Inicial]] de [[Druid]]s e [[Sorcerer]]s.\n* Após o [[Update de Newhaven]], este item passou a ser vendido em NPCs no continente principal e pode ser comercializado no [[Mercado]].\n\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 37072,
+    "ns": 0,
+    "title": "Book of Lies",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Book of Lies\n| levelrequired  = 150\n| itemclass      = Equipamentos de Corpo \n| primarytype    = Spellbooks\n| secondarytype  = Escudos\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| imbuement      = 1\n| defense        = 29\n| skillboost     = [[Magic Level]] +4\n| weight         = 24.00\n| value          = \n| npcvalue       = 0\n| droppedby      = [[Lady Tenebris]], [[Zamulosh]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.90\n| notes          = Faz parte do [[Magic Level Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 40949,
+    "ns": 0,
+    "title": "Wooden Spellbook",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Wooden Spellbook\n| itemclass     = Equipamentos de Corpo\n| primarytype   = Spellbooks\n| secondarytype = Escudos\n| vocrequired   = [[Sorcerer]]s and [[Druid]]s\n| imbuement     = 1\n| levelrequired = 80\n| defense       = 26\n| skillboost    = [[Magic Level]] +2\n| resist        = [[Earth]] +5%\n| weight        = 12.00\n| stackable     = não\n| value         = \n| droppedby     = [[Arctic Faun]], [[Boogy]], [[Clavius]], [[Dark Faun]], [[Noxious Ripptor]], [[Pixie]], [[Raubritter Chastener]], [[Raxias]], [[Ravenous Hunger]], [[Young Goanna]].\n| buyfrom       = Jogadores.\n| sellto        = Valindara, Talila\n| npcvalue      = 12 000\n| implemented   = 11.40\n| notes         = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45072,
+    "ns": 0,
+    "title": "Brain in a Jar",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Brain in a Jar\n| itemclass     = Equipamentos de Corpo\n| primarytype   = Spellbooks\n| secondarytype = Escudos\n| vocrequired   = [[Sorcerer]]s and [[Druid]]s\n| imbuement     = 1\n| levelrequired = 180\n| defense       = 31\n| skillboost    = [[Magic Level]] +3\n| resist        = [[Earth Damage|Earth]] +7%\n| weight        = 27.00\n| droppedby     = [[Maxxenius]].\n| stackable     = não\n| value         = Negociável\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| npcvalue      = \n| implemented   = 12.00\n| notes         = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45076,
+    "ns": 0,
+    "title": "Shoulder Plate",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Shoulder Plate\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Spellbooks\n| secondarytype  = Escudos\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| imbuement      = 1\n| levelrequired  = 180\n| defense        = 34\n| skillboost     = [[Magic Level]] +3\n| resist         = [[Earth Damage|Earth]] +6%, [[Physical Damage|Physical]] +2%\n| weight         = 35.00\n| droppedby      = [[Malofur Mangrinder]].\n| stackable      = não\n| value          = Negociável\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| npcvalue       = \n| implemented    = 12.00\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45077,
+    "ns": 0,
+    "title": "Spirit Guide",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Spirit Guide\n| itemclass     = Equipamentos de Corpo\n| primarytype   = Spellbooks\n| secondarytype = Escudos\n| vocrequired   = [[Sorcerer]]s and [[Druid]]s\n| imbuement     = 1\n| levelrequired = 180\n| defense       = 28\n| skillboost    = [[Magic Level]] +4\n| resist        = [[Energy Damage|Energy]] +6%\n| weight        = 18.00\n| droppedby     = [[Faceless Bane]].\n| stackable     = não\n| value         = Negociável\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| npcvalue      = \n| implemented   = 12.00\n| notes         = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 49013,
+    "ns": 0,
+    "title": "Lion Spellbook",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Lion Spellbook\n| flavortext    = \n| itemclass     = Equipamentos de Corpo\n| primarytype   = Spellbooks\n| secondarytype = Escudos\n| vocrequired   = [[Sorcerer]]s and [[Druid]]s\n| imbuement     = 1\n| levelrequired = 220\n| defense       = 32\n| skillboost    = [[Magic Level]] +4\n| resist        = [[Physical Damage|Physical]] +3%, [[Ice Damage|Ice]] +7%\n| weight        = 25.00\n| droppedby     = [[Ancient Lion Knight]], [[Drume]]\n| stackable     = não\n| value         = \n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| implemented   = 12.40\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 52302,
+    "ns": 0,
+    "title": "Eldritch Tome",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Eldritch Tome\n| levelrequired  = 300\n| itemclass      = Equipamentos de Corpo \n| primarytype    = Spellbooks\n| secondarytype  = Escudos\n| vocrequired    = [[Druid]]s\n| imbuement      = 1\n| stackable      = não\n| defense        = 34\n| skillboost     = [[Magic Level]] +4, [[Earth Magic Level]] +1\n| resist         = [[Fire Damage|Fire]] +6%\n| modificadores  = [[Magic Shield Capacity]] +80 and 8%\n| volume         = \n| weight         = 26.00\n| npcprice       = \n| npcvalue       = \n| value          = Negociável\n| droppedby      = [[The Brainstealer]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.70\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 52303,
+    "ns": 0,
+    "title": "Eldritch Folio",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Eldritch Folio\n| levelrequired  = 300\n| itemclass      = Equipamentos de Corpo \n| primarytype    = Spellbooks\n| secondarytype  = Escudos\n| vocrequired    = [[Sorcerer]]s\n| imbuement      = 1\n| stackable      = não\n| defense        = 34\n| skillboost     = [[Magic Level]] +4, [[Death Magic Level]] +1\n| resist         = [[Earth Damage|Earth]] +6%\n| modificadores  = [[Magic Shield Capacity]] +80 and 8%\n| volume         = \n| weight         = 28.00\n| npcprice       = \n| npcvalue       = \n| value          = Negociável\n| droppedby      = [[The Brainstealer]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.70\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 56102,
+    "ns": 0,
+    "title": "Arboreal Tome",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Arboreal Tome\n| levelrequired  = 400\n| itemclass      = Equipamentos de Corpo \n| primarytype    = Spellbooks\n| secondarytype  = Escudos\n| vocrequired    = [[Druid]]s\n| imbuement      = 1\n| stackable      = não\n| defense        = 36\n| skillboost     = [[Magic Level]] +5, [[Ice Magic Level]] +1, [[Healing Magic Level]] +1\n| resist         = [[Physical Damage|Physical]] +4%, [[Energy Damage|Energy]] +6%\n| modificadores  = \n| volume         = \n| weight         = 23.00\n| npcprice       = \n| npcvalue       = \n| value          = Negociável\n| droppedby      = [[Magma Bubble]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.90\n| notes          = <noinclude><p><spoiler>* Possibilidade de ser obtido ao usar um [[Primal Bag]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 56108,
+    "ns": 0,
+    "title": "Arcanomancer Folio",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Arcanomancer Folio\n| levelrequired  = 400\n| itemclass      = Equipamentos de Corpo \n| primarytype    = Spellbooks\n| secondarytype  = Escudos\n| vocrequired    = [[Sorcerer]]s\n| imbuement      = 1\n| stackable      = não\n| defense        = 36\n| skillboost     = [[Magic Level]] +5, [[Fire Magic Level]] +1, [[Energy Magic Level]] +1\n| resist         = [[Physical Damage|Physical]] +3%, [[Fire Damage|Fire]] +8%\n| modificadores  = \n| volume         = \n| weight         = 26.00\n| npcprice       = \n| npcvalue       = \n| value          = Negociável\n| droppedby      = [[Magma Bubble]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.90\n| notes          = <noinclude><p><spoiler>* Possibilidade de ser obtido ao usar uma [[Primal Bag]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 58481,
+    "ns": 0,
+    "title": "Alchemist's Notepad",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Alchemist's Notepad\n| flavortext    = \n| itemclass     = Equipamentos de Corpo\n| primarytype   = Spellbooks\n| secondarytype = Escudos\n| vocrequired   = [[Sorcerer]]s\n| imbuement     = 1\n| levelrequired = 250\n| defense       = 32\n| skillboost    = [[Magic Level]] +2, [[Fire Magic Level]] +3, [[Energy Magic Level]] +3\n| resist        = [[Death Damage|Death]] +5% \n| weight        = 13.00\n| droppedby     = [[The Monster]].\n| stackable     = não\n| value         = \n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| implemented   = 13.10\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 62182,
+    "ns": 0,
+    "title": "Cocoa Grimoire",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Cocoa Grimoire\n| flavortext     = This spellbook was made from rich dark chocolate and is filled with powerful knowledge.\n| levelrequired  = 200\n| itemclass      = Equipamentos de Corpo \n| primarytype    = Spellbooks\n| secondarytype  = Escudos\n| vocrequired    = [[Sorcerer]]s\n| augments       = Ultimate Flame Strike -> Base Damage +33%\n| imbuement      = 1\n| stackable      = não\n| defense        = 31\n| skillboost     = [[Magic Level]] +3, [[Fire Magic Level]] +1, [[Magic Shield Capacity]] +150 e +3%\n| resist         = [[Physical Damage|Physical]] +2%, [[Energy Damage|Energy]] +5%\n| modificadores  = \n| volume         = \n| weight         = 15.00\n| npcprice       = 8 000 [[Dark Chocolate Coin]]s\n| npcvalue       = \n| value          = Negociável\n| droppedby      = [[Sugar Daddy]]\n| buyfrom        = Coco\n| sellto         = Jogadores.\n| implemented    = 13.40.54ea79\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 62183,
+    "ns": 0,
+    "title": "Creamy Grimoire",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Creamy Grimoire\n| flavortext     = This spellbook was made from pure white chocolate and is brimming with magical finesse.\n| levelrequired  = 200\n| itemclass      = Equipamentos de Corpo \n| primarytype    = Spellbooks\n| secondarytype  = Escudos\n| vocrequired    = [[Druid]]s\n| augments       = Ultimate Ice Strike -> Base Damage +33%\n| imbuement      = 1\n| stackable      = não\n| defense        = 31\n| skillboost     = [[Magic Level]] +3, [[Healing Magic Level]] +1, [[Magic Shield Capacity]] +150 e +3%\n| resist         = [[Physical Damage|Physical]] +2%, [[Fire Damage|Fire]] +5%\n| modificadores  = \n| volume         = \n| weight         = 17.00\n| npcprice       = 8 000 [[Milk Chocolate Coin]]s\n| npcvalue       = \n| value          = Negociável\n| droppedby      = [[Sugar Daddy]]\n| buyfrom        = Coco\n| sellto         = Jogadores.\n| implemented    = 13.40.54ea79\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 66080,
+    "ns": 0,
+    "title": "Stag Spellbook",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Stag Spellbook\n| levelrequired  = 350\n| itemclass      = Equipamentos de Corpo \n| primarytype    = Spellbooks\n| secondarytype  = Escudos\n| vocrequired    = [[Sorcerer]]s\n| imbuement      = 1\n| stackable      = não\n| defense        = 34\n| auguments      = Great Fire Wave -> +1% critical hit chance\n| skillboost     = [[Magic Level]] +5\n| resist         = [[Physical Damage|Physical]] +2%, [[Energy Damage|Energy]] +6%\n| modificadores  = \n| volume         = \n| weight         = 20.00\n| npcprice       = \n| augments       = Great Fire Wave -> +1% critical hit chance\n| npcvalue       = \n| value          = Negociável\n| droppedby      = [[Court Warlock]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.20.7a5cc9\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 66082,
+    "ns": 0,
+    "title": "Stag Scrolls",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Stag Scrolls\n| levelrequired  = 350\n| itemclass      = Equipamentos de Corpo \n| primarytype    = Spellbooks\n| secondarytype  = Escudos\n| vocrequired    = [[Druid]]s\n| imbuement      = 1\n| stackable      = não\n| defense        = 34\n| augments       = Terra Wave -> +1% critical hit chance\n| skillboost     = [[Magic Level]] +5\n| resist         = [[Physical Damage|Physical]] +2%, [[Death Damage|Death]] +5%\n| modificadores  = \n| volume         = \n| weight         = 20.00\n| npcprice       = \n| npcvalue       = \n| value          = Negociável\n| droppedby      = [[Court Warlock]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.20.7a5cc9\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

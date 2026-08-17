@@ -10,6 +10,14 @@ export interface WorldMapData {
   byKey: Map<string, MapTile>;
 }
 
+/** Constrói um WorldMapData a partir de tiles (re-zona para o andar dado). */
+export function buildWorldMapData(tiles: MapTile[], width: number, height: number, z: number): WorldMapData {
+  const reZed = tiles.map((t) => ({ ...t, z }));
+  const byKey = new Map<string, MapTile>();
+  for (const t of reZed) byKey.set(tileKey(t.x, t.y, z), t);
+  return { tiles: reZed, width, height, z, byKey };
+}
+
 function clamp(v: number, min: number, max: number): number {
   return Math.max(min, Math.min(max, v));
 }

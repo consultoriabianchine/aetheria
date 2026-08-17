@@ -1,0 +1,1062 @@
+{
+ "query": {
+  "pages": [
+   {
+    "pageid": 6664,
+    "ns": 0,
+    "title": "Boots of Haste",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Boots of Haste\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| imbuement      = 1\n| classificacao  = 2\n| max_tier       = 2\n| skillboost     = [[Speed]] +20 \n| armor          = 0\n| weight         = 7.50\n| stackable      = não\n| value          = 29 000 - 33 000\n| npcvalue       = 30 000\n| droppedby      = [[Black Knight]], [[Blood Hand]], [[Blood Priest]], [[Broken Shaper]], [[Carnivostrich]], [[Enfeebled Silencer]], [[Golgordan]], [[Hand of Cursed Fate]], [[Hydra]], [[King Zelos]], [[Latrivan]], [[Lloyd]], [[Lokathmor]], [[Mad Mage]], [[Necromancer]], [[Necromancer Servant]], [[Necropharus]], [[Nightmare]], [[Nightstalker]], [[Nymph]], [[Omruc]], [[Ravenous Hunger]], [[Shadow Pupil]], [[Silencer]], [[Swan Maiden]], [[Terofar]], [[Tormentor]], [[Vampire Bride]], [[Zugurosh]].\n| droppedRaidby  = [[Gaz'Haragoth]], [[Orshabaal]], [[The Welter]], [[Yakchal]], [[Zushuka (Mortal)]].\n| buyfrom        = Jogadores.\n| sellto         = Nah'Bob\n| implemented    = 7.1\n| notes          = Frequentemente utilizadas por [[Mages]] e [[Paladin]]s. Proporciona um aumento de velocidade que equivale a velocidade do mesmo personagem com 20 [[level]]s a mais. Por exemplo, um personagem de level 30 equipado com elas tem a velocidade equivalente a um personagem de level 50. Faz parte do [[Haste Set]], [[Paladin Set]], [[Mage Set]], [[Unrestricted Set]] e [[Semi Rare Set]].\n<noinclude><p><spoiler>* 01 é necessário durante a [[Troll Sabotage Quest]].\n*Recompensa da: [[The Queen of the Banshees Quest]].\n*Utilizado em uma das possíveis trocas que constituem as [[Exchange Quests]]:\n**Pode ser trocado por 01 [[Enchanted Chicken Wing]] com os NPCs [[Haroun]] ou [[Yaman]].\n*Possibilidade de ser obtido ao usar uma [[Belongings of a Deceased (Ottokar)]].</spoiler></p>\n{{Veja|Velocidade}}\n</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6668,
+    "ns": 0,
+    "title": "Boots of Waterwalking",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Boots of Waterwalking\n| flavortext     = (This item has 5 charges left).\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| secondarytype  = Item não obtivel\n| stackable      = não\n| classificacao  = 4\n| max_tier       = 10\n| weight         = 7.70\n| value          = Não avaliado em\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.4\n| notes          = Apesar disso, ainda não se sabe se é possível ser obtido nos mundos regulares. Pode ser vista no subterrâneo da [[Serpentine Tower]] em [[Ankrahmun]]. Possui a mesma aparência da [[Pair of Soft Boots]].\n\n<noinclude><div class=\"toccolours mw-collapsible mw-collapsed\" style=\"margin: 4px 0px;\">'''\"Rumores\"'''<div class=\"mw-collapsible-content\"><table ><tr><td align=left>\nAcredita-se que seu uso torna possível que o personagem ande sobre a água e assim consiga alcançar [[Locais Inalcançáveis#Locais inacess.C3.ADveis por trechos d.27.C3.A1gua|Locais inacessíveis por causa de trechos inundados]].\n\nContudo, algumas pessoas acreditam que é apenas uma brincadeira por parte da [[CipSoft GmbH]] ou simplesmente um item que faz parte do [[roleplaying]] e da história do Tibia.\n</td></tr></table></div></div></noinclude>\n\n<gallery>Arquivo:Boots of Waterwalking ank.jpg|A bota embaixo da loja de magia em [[Ankrahmun]]</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6670,
+    "ns": 0,
+    "title": "Bunnyslippers",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bunnyslippers\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| imbuement      = 1\n| classificacao  = 4\n| max_tier       = 10\n| armor          = 0\n| weight         = 6.00\n| value          = 60 000 000 - 75 000 000\n| droppedby      = [[Yeti]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.3\n| notes          = Item raro e valioso. Dropado de um boss que faz raras [[invasões]]. Frequentemente utilizado como elemento decorativo.\n\n<noinclude><p><spoiler>\n* Possibilidade de ser obtido como presente do NPC [[Santa Claus]].\n</spoiler></p></noinclude>\n\n<gallery>\nArquivo:Bunnyslippers.png|Bunnyslippers em [[Luminera]].\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6671,
+    "ns": 0,
+    "title": "Coconut Shoes",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Coconut Shoes\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| armor          = 0\n| weight         = 6.00\n| imbuement      = 1\n| classificacao  = 1\n| max_tier       = 1\n| value          = 500 - 10 000\n| npcvalue       = 500\n| droppedby      = [[Dryad]].\n| buyfrom        = Jogadores.\n| sellto         = Rashid\n| implemented    = 8.4\n| notes          = Visto pela primeira vez no dia 1º de Junho de 2009. Faz parte do [[Dryad Set]].\n<noinclude><p><spoiler>* Pode ser obtido apenas durante as invasões que ocorrem no evento [[Flower Month]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6672,
+    "ns": 0,
+    "title": "Crocodile Boots",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Crocodile Boots\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| stackable      = não\n| armor          = 1\n| weight         = 9.00\n| imbuement      = 1\n| classificacao  = 2\n| max_tier       = 2\n| value          = \n| npcvalue       = 1 000\n| npcprice       = 0\n| droppedby      = [[Crocodile]], [[Killer Caiman]], [[The Snapper]].\n| buyfrom        = Jogadores.\n| sellto         = Rashid, Brengus\n| implemented    = 7.5\n| notes          = Equivalente a [[Leather Boots]] em defesa e peso. Porém, não é tão popular devido ao fato das criaturas listadas em áreas não serem caçadas e áreas para [[Free Account]]s.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6673,
+    "ns": 0,
+    "title": "Crystal Boots",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Crystal Boots\n| vocrequired    = [[Knight]]s and [[Paladin]]s\n| levelrequired  = 70\n| resist         = [[Ice Damage|Ice]] +3%, [[Energy Damage|Energy]] -3%\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| imbuement      = 1\n| classificacao  = 4\n| max_tier       = 10\n| armor          = 3\n| weight         = 18.50\n| value          = 12 000 000 - 25 000 000\n| droppedRaidby  = [[Chizzoron the Distorter]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.54\n| notes          = Item raro e valioso. Dropado de um boss que faz raras [[invasões]]. A primeira Crystal Boots do jogo foi obtida em [[Secura]]. Faz parte do [[Crystal Set]].\n<gallery>\narquivo:Crystal-Boots.jpg|Crystal Boots em [[Hydera]].\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6675,
+    "ns": 0,
+    "title": "Dragon Scale Boots",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Dragon Scale Boots\n| vocrequired    = [[Knight]]s and [[Paladin]]s\n| levelrequired  = 70\n| resist         = [[Fire Damage|Fire]] +3%, [[Ice Damage|Ice]] -3%\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| imbuement      = 1\n| classificacao  = 4\n| max_tier       = 10\n| armor          = 3\n| weight         = 18.50\n| value          = 12 000 000 - 25 000 000\n| droppedRaidby  = [[Zulazza the Corruptor]].\n| droppedEventby = \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.54\n| notes          = Item raro e valioso. Dropado de um boss que faz raras [[invasões]]. Equivalente a uma [[Steel Boots]] porém mais leve. Parte do [[Dragon Set]], [[Dragon Scale Set]], [[Full Set]] e [[Rare Set]]. A primeira Dragon Scale Boots do jogo foi obtida em [[Magera]]\n<noinclude><gallery>\nArquivo:Dsb.jpg|Dragon Scale Boots conquistada em [[Nerana]].\n</gallery></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6676,
+    "ns": 0,
+    "title": "Draken Boots",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Draken Boots\n| vocrequired    = [[Knight]]s and [[Paladin]]s\n| levelrequired  = 80\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| imbuement      = 1\n| classificacao  = 2\n| max_tier       = 2\n| skillboost     = [[Speed]] +15\n| armor          = 3\n| weight         = 25.00\n| stackable      = não\n| value          = 40 000 - 80 000\n| npcvalue       = 40 000\n| droppedby      = [[Draken Abomination]], [[Draken Elite]], [[Hatebreeder]].\n| buyfrom        = Jogadores.\n| sellto         = Esrik\n| implemented    = 8.6\n| notes          = Parte do [[Paladin Set]], [[Haste Set]], [[Draken Set]] e [[High Level Knight Basic Set]].\n<noinclude><div class=\"toccolours mw-collapsible mw-collapsed\" style=\"margin: 4px 0px;\">'''\"História do Item\"'''<div class=\"mw-collapsible-content\"><table><tr><td align=left>\nDevido a {{OfficialNewsArchive|1390|um erro}} essas botas podiam ser compradas com o NPC [[Esrik]]. Posteriormente a [[CipSoft]] corrigiu esse erro transformando-as em [[Trashed Draken Boots]]. \n</td></tr></table></div></div></noinclude>\n \n<noinclude><p><spoiler>* Para vendê-la ao NPC é preciso ter entregue 9 [[Tome of Knowledge|tomos]] na [[Tomes of Knowledge Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6677,
+    "ns": 0,
+    "title": "Firewalker Boots",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Firewalker Boots\n| flavortext     = Wearing these boots reduces the damage gotten from fiery ground.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| secondarytype  = \n| enchantable    = \n| enchanted      = sim\n| levelrequired  = 130\n| resist         = [[Fire Field]] 90%\n| duration       = 60\n| stackable      = não\n| armor          = 2\n| weight         = 9.50 \n| value          = \n| npcvalue       = 0\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| droppedby      = Ninguém.\n| implemented    = 8.4\n| notes          = Pode ser recarregada com uma [[Small Enchanted Ruby]]. Faz parte do [[Full Set]] e [[Rare Set]].\n<noinclude><p><spoiler>\n* Recompensa da [[The Hidden City of Beregar Quest]].\n* [[Arquivo:Achievement.gif|link=]] Ao andar 1 000 000 de [[sqm]]s em cima do fogo utilizando a Firewalker Boots, você receberá o achievement '''\"{{Achievement|Firewalker}}\"'''.\n</spoiler></p></noinclude>\n{{Veja|Itens Recarregáveis}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6678,
+    "ns": 0,
+    "title": "Fur Boots",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Fur Boots\n| flavortext     = These boots keep your toes warm even in the iciest regions, but they feel kind of heavy.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| imbuement      = 1\n| classificacao  = 2\n| max_tier       = 2\n| skillboost     = [[Speed]] -6\n| armor          = 2\n| weight         = 12.00\n| value          = 1 800 - 2 500\n| npcvalue       = 2 000\n| stackable      = não\n| droppedby      = [[Barbarian Brutetamer]], [[Barbarian Bloodwalker]], [[Barbarian Headsplitter]], [[Barbarian Skullhunter]], [[Bloodback]].\n| buyfrom        = Jogadores.\n| sellto         = Rashid\n| implemented    = 8.0\n| notes          = Frequentemente utilizado como elemento decorativo. Faz parte do [[Barbarian Set]].\n<noinclude><div class=\"toccolours mw-collapsible mw-collapsed\" style=\"margin: 4px 0px;\">'''\"História do Item\"'''<div class=\"mw-collapsible-content\"><table><tr><td align=left>\nJá foi uma boa opção de bota com atributo defensivo 2. Após o [[Updates/8.2|Summer Update 2008]] deixou de ser usada devido ao fato de reduzir a velocidade do personagem. \n</td></tr></table></div></div></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6679,
+    "ns": 0,
+    "title": "Glacier Shoes",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Glacier Shoes\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| imbuement      = 1\n| classificacao  = 2\n| max_tier       = 2\n| stackable      = não\n| armor          = 2\n| resist         = [[Ice Damage|Ice]] +5%, [[Energy Damage|Energy]] -5%\n| levelrequired  = 35\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| weight         = 7.50\n| value          = 2 300 - 4 000\n| npcvalue       = 2 500\n| droppedby      =  [[Bluebeak]], [[Foam Stalker]], [[Icecold Book]], [[Ice Witch]], [[Seacrest Serpent]], [[Soul-Broken Harbinger]], [[Two-Headed Turtle]], [[Usurper Archer]], [[Varnished Diremaw]].\n| droppedRaidby  = [[Hirintror]], [[Zushuka (Mortal)]].\n| buyfrom        = Jogadores.\n| sellto         = Rashid\n| implemented    = 8.1\n| notes          = Faz parte do [[Glacier Set]] e [[Blue Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6680,
+    "ns": 0,
+    "title": "Golden Boots",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Golden Boots\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| imbuement      = 1\n| classificacao  = 3\n| max_tier       = 3\n| stackable      = não\n| armor          = 4\n| weight         = 31.00\n| value          = 7 000 000 - 12 000 000\n| droppedby      = [[Zugurosh]], [[Prince Drazzak]].\n| droppedRaidby  = [[Ghazbaran]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Considerada a melhor bota que existe. Pode ser visto perto da sala do [[Koshei the Deathless]] e também em uma [[Salas de Tesouros|sala de tesouros]] do [[Amazon Camp]]. Faz parte do [[Golden Set]], [[Unrestricted Set]], [[Full Set]], [[Rare Set]] e [[Dream Set]].\n \n<noinclude><div class=\"toccolours mw-collapsible mw-collapsed\" style=\"margin: 4px 0px;\">'''\"História do Item\"'''<div class=\"mw-collapsible-content\">\n<table ><tr><td align=left>\nO primeiro foi implementado no jogo como um presente dos desenvolvedores para {{Character|Erana}}, por reportar um bug que permitia lurar [[Demon]]s até o barco de [[Edron]]. Na verdade, o jogador poderia escolher o item que quisesse pela revelação desse bug. <br />\nApós o [[Updates/8.4|Update 8.4]] perdeu sua raridade ao tornar-se loot de criaturas.\n</td></tr></table></div></div></noinclude>\n\n<gallery>Arquivo:Golden Boots Magera.jpg|Golden Boots em [[Magera]].</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6682,
+    "ns": 0,
+    "title": "Guardian Boots",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Guardian Boots\n| vocrequired    = [[Knight]]s and [[Paladin]]s\n| levelrequired  = 70\n| resist         = [[Physical Damage|Physical]] +2%, [[Holy Damage|Holy]] -2%\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| imbuement      = 1\n| classificacao  = 2\n| max_tier       = 2\n| stackable      = não\n| armor          = 3\n| weight         = 22.50\n| npcvalue       = 35 000\n| value          = 35 000 - 50 000\n| droppedby      = [[Ethershreck]], [[Ghastly Dragon]], [[Hatebreeder]], [[Lokathmor]], [[The Time Guardian]].\n| buyfrom        = Jogadores.\n| sellto         = Esrik\n| implemented    = 8.54\n| notes          = Botas incomuns e ótimas para [[knight]]s de [[level]]s medianos. Faz parte do [[Guardian Set]], [[Paladin Set]] e [[Rare Set]]. \nEsta bota não aceita imbui de velocidade. (Swiftness).\n<noinclude><p><spoiler>* Para vendê-lo ao NPC é preciso ter entregue 09 [[Tome of Knowledge|tomos]] na [[Tomes of Knowledge Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6683,
+    "ns": 0,
+    "title": "Leather Boots",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Leather Boots\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| imbuement      = 1\n| classificacao  = 1\n| max_tier       = 1\n| stackable      = não\n| armor          = 1\n| weight         = 9.00\n| value          = 2 - 10\n| npcvalue       = 2\n| npcprice       = 2\n| droppedby      = [[Big Boss Trolliver]], [[Dwarf Guard]], [[Elf]], [[Island Troll]], [[Swamp Troll]], [[Troll]], [[Troll Champion]], [[Troll Marauder]], [[Witch]], [[Young Troll]].\n| buyfrom        = Shanar:10, Memech:10, Cornelia:10, Hireling (Trader):10, Azil:10, Rudolph, Willard:10, Esrik:10, Rock In A Hard Place:10, Raffael:10, Kroox:10, Cedrik:10, Brengus:10, Flint:10, Robert:10, Sam:10, Turvy:10, Hardek:10, Baltim:10, Aldo:10, Yanni:10, Morpel:10\n| sellto         = Shanar, Memech, Cornelia, Hireling (Trader), Azil, Coltrayne, Willard, Esrik, Rock In A Hard Place, Raffael, Kroox, Cedrik, Brengus, Flint, Dixi, Lee'Delle, Robert, Sam, Turvy, Hardek, Baltim, Aldo, Yanni, Morpel\n| notes          = Botas mais comuns do jogo. Faz parte do [[Newbie Set]], [[Set Inicial]], [[Rook Set]], [[Leather Set]], [[Isle of Destiny Knight Set]], [[Isle of Destiny Druid Set]], [[Isle of Destiny Sorcerer Set]] e [[Rookgaard/Dawnport Set]].\n<noinclude><p><spoiler>* Recompensas da: [[The Rookie Guard Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6684,
+    "ns": 0,
+    "title": "Lightning Boots",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Lightning Boots\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 35\n| resist         = [[Energy Damage|Energy]] +5%, [[Earth Damage|Earth]] -5%\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| imbuement      = 1\n| classificacao  = 2\n| max_tier       = 2\n| stackable      = não\n| armor          = 2\n| weight         = 7.50\n| value          = 2 300 - 4 000\n| npcvalue       = 2 500\n| droppedby      = [[Burning Gladiator]], [[Cursed Prospector]], [[Elder Wyrm]], [[Lich]], [[Juvenile Bashmu]], [[Mazzinor]], [[Mercurial Menace]], [[Pirat Bombardier]], [[Prince Drazzak]], [[War Golem]].\n| droppedRaidby  = [[Omrafir]].\n| buyfrom        = Jogadores.\n| sellto         = Rashid\n| implemented    = 8.1\n| notes          = Faz parte do [[Lightning Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6685,
+    "ns": 0,
+    "title": "Magma Boots",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Magma Boots\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 35\n| resist         = [[Fire Damage|Fire]] +5%, [[Ice Damage|Ice]] -5%\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| imbuement      = 1\n| classificacao  = 2\n| max_tier       = 2\n| stackable      = não\n| armor          = 2\n| weight         = 7.50\n| npcvalue       = 2 500\n| value          = 2 300 - 5 000\n| droppedby      = [[Burning Gladiator]], [[Crazed Summer Vanguard]], [[Dragon Lord Hatchling]], [[Feral Sphinx]], [[Hellflayer]], [[Hellhound]], [[Honey Elemental]], [[Infernalist]], [[Lava Golem]], [[Magma Crawler]], [[Manticore]], [[Massive Fire Elemental]], [[Orc Warlord]], [[Pirat Bombardier]], [[Sphinx]], [[Sulphider]], [[The Souldespoiler]], [[Wandering Pillar]].\n| droppedRaidby  = [[Warlord Ruzad]].\n| buyfrom        = Jogadores.\n| sellto         = Rashid\n| implemented    = 8.1\n| notes          = Faz parte do [[Magma Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6686,
+    "ns": 0,
+    "title": "Pair of Soft Boots",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Pair of Soft Boots\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| secondarytype  = \n| enchantable    = \n| enchanted      = sim\n| attrib         = [[Regeneration|Regeneração]] rápida.\n| duration       = 240\n| stackable      = não\n| weight         = 8.00\n| value          = \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| droppedby      = Ninguém.\n| implemented    = 7.4\n| notes          = Recarregável. Apesar de não haver restrições quanto a vocação, seu uso é imprescindível entre os [[mage]]s. Sprite semelhante ao da [[Boots of Waterwalking]]. Pode ser vista na casa do Papai Noel em [[Vega]]. Quando estão totalmente gastas, transformam-se em [[Worn Soft Boots]]. Faz parte do [[Paladin Set]], [[Blue Set]], [[Mage Set]], [[Unrestricted Set]], [[Regeneration Set]] e do [[High Level Knight Basic Set]].<br />\n\n<noinclude><div class=\"toccolours mw-collapsible mw-collapsed\" style=\"margin: 4px 0px;\">'''\"Análise Estatística\"'''<div class=\"mw-collapsible-content\"><table ><tr><td align=left>\nDurante o tempo que sua carga durar, a regeneração de [[Mana]] (MP) e [[Hitpoints]] (HP) do personagem aumentarão a uma taxa de 3 HP e 12 MP por 6 segundos (0.5 HP e 2 MP /sec), ela recupera no total 28 800 MP e 7 200 HP.<br />\n\n'''Tabela detalhada:'''\n\n<table border=\"black\" width=\"100%\" height=\"85\">\n  <tr height=\"17\" style=\"height:12.75pt\">\n    <td style=\"height: 17; width: 91; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" align=\"left\">\n    <font size=\"1\">Regeneração em 4h:</font></td>\n    <td style=\"width: 65; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" align=\"right\" height=\"17\">\n    <font size=\"1\">D</font></td>\n    <td style=\"width: 65; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" align=\"right\" height=\"17\">\n    <font size=\"1\">ED</font></td>\n    <td style=\"width: 65; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" align=\"right\" height=\"17\">\n    <font size=\"1\">S</font></td>\n    <td style=\"width: 65; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" align=\"right\" height=\"17\">\n    <font size=\"1\">MS</font></td>\n    <td style=\"width: 65; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" align=\"right\" height=\"17\">\n    <font size=\"1\">K</font></td>\n    <td style=\"width: 65; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" align=\"right\" height=\"17\">\n    <font size=\"1\">EK</font></td>\n    <td style=\"width: 65; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" align=\"right\" height=\"17\">\n    <font size=\"1\">P</font></td>\n    <td style=\"width: 65; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" align=\"right\" height=\"17\">\n    <font size=\"1\">RP</font></td>\n  </tr>\n    <tr height=\"17\" style=\"height:12.75pt\">\n    <td style=\"height: 17; color: Red; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" width=\"91\">\n    <font size=\"1\">HP (usando SB)</font></td>\n    <td align=\"right\" style=\"color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" width=\"65\" height=\"17\">\n    <font size=\"1\">7200</font></td>\n    <td align=\"right\" style=\"color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" width=\"65\" height=\"17\">\n    <font size=\"1\">7200</font></td>\n    <td align=\"right\" style=\"color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" width=\"65\" height=\"17\">\n    <font size=\"1\">7200</font></td>\n    <td align=\"right\" style=\"color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" width=\"65\" height=\"17\">\n    <font size=\"1\">7200</font></td>\n    <td align=\"right\" style=\"color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" width=\"65\" height=\"17\">\n    <font size=\"1\">7200</font></td>\n    <td align=\"right\" style=\"color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" width=\"65\" height=\"17\">\n    <font size=\"1\">7200</font></td>\n    <td align=\"right\" style=\"color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" width=\"65\" height=\"17\">\n    <font size=\"1\">7200</font></td>\n    <td align=\"right\" style=\"color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" width=\"65\" height=\"17\">\n    <font size=\"1\">7200</font></td>\n  </tr>\n<tr height=\"17\" style=\"height:12.75pt\">\n    <td style=\"height: 17; color: Blue; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" width=\"91\">\n    <font size=\"1\">MP (usando SB)</font></td>\n    <td align=\"right\" style=\"color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" width=\"65\" height=\"17\">\n    <font size=\"1\">28800</font></td>\n    <td align=\"right\" style=\"color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" width=\"65\" height=\"17\">\n    <font size=\"1\">28800</font></td>\n    <td align=\"right\" style=\"color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" width=\"65\" height=\"17\">\n    <font size=\"1\">28800</font></td>\n    <td align=\"right\" style=\"color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" width=\"65\" height=\"17\">\n    <font size=\"1\">28800</font></td>\n    <td align=\"right\" style=\"color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" width=\"65\" height=\"17\">\n    <font size=\"1\">28800</font></td>\n    <td align=\"right\" style=\"color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" width=\"65\" height=\"17\">\n    <font size=\"1\">28800</font></td>\n    <td align=\"right\" style=\"color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" width=\"65\" height=\"17\">\n    <font size=\"1\">28800</font></td>\n    <td align=\"right\" style=\"color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" width=\"65\" height=\"17\">\n    <font size=\"1\">28800</font></td>\n  </tr>\n  <tr height=\"17\" style=\"height:12.75pt\">\n    <td style=\"height: 17; color: Red; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" width=\"91\">\n    <font size=\"1\">HP (comendo)</font></td>\n    <td align=\"right\" style=\"color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" width=\"65\" height=\"17\">\n    <font size=\"1\">1200</font></td>\n    <td align=\"right\" style=\"color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" width=\"65\" height=\"17\">\n    <font size=\"1\">1200</font></td>\n    <td align=\"right\" style=\"color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" width=\"65\" height=\"17\">\n    <font size=\"1\">1200</font></td>\n    <td align=\"right\" style=\"color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" width=\"65\" height=\"17\">\n    <font size=\"1\">1200</font></td>\n    <td align=\"right\" style=\"color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" width=\"65\" height=\"17\">\n    <font size=\"1\">2400</font></td>\n    <td align=\"right\" style=\"color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" width=\"65\" height=\"17\">\n    <font size=\"1\">3600</font></td>\n    <td align=\"right\" style=\"color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" width=\"65\" height=\"17\">\n    <font size=\"1\">1800</font></td>\n    <td align=\"right\" style=\"color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" width=\"65\" height=\"17\">\n    <font size=\"1\">2400</font></td>\n  </tr>\n  <tr height=\"17\" style=\"height:12.75pt\">\n    <td style=\"height: 17; color: Blue; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" width=\"91\">\n    <font size=\"1\">MP (comendo)</font></td>\n    <td align=\"right\" style=\"color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" width=\"65\" height=\"17\">\n    <font size=\"1\">9600</font></td>\n    <td align=\"right\" style=\"color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" width=\"65\" height=\"17\">\n    <font size=\"1\">14400</font></td>\n    <td align=\"right\" style=\"color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" width=\"65\" height=\"17\">\n    <font size=\"1\">9600</font></td>\n    <td align=\"right\" style=\"color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" width=\"65\" height=\"17\">\n    <font size=\"1\">14400</font></td>\n    <td align=\"right\" style=\"color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" width=\"65\" height=\"17\">\n    <font size=\"1\">4800</font></td>\n    <td align=\"right\" style=\"color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" width=\"65\" height=\"17\">\n    <font size=\"1\">4800</font></td>\n    <td align=\"right\" style=\"color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" width=\"65\" height=\"17\">\n    <font size=\"1\">7200</font></td>\n    <td align=\"right\" style=\"color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" width=\"65\" height=\"17\">\n    <font size=\"1\">9600</font></td>\n  </tr>\n  <tr height=\"17\" style=\"height:12.75pt\">\n    <td style=\"height: 17; color: Red; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" width=\"91\">\n    <font size=\"1\">HP (Food+SB)</font></td>\n    <td align=\"right\" style=\"color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" width=\"65\" height=\"17\">\n    <font size=\"1\">8400</font></td>\n    <td align=\"right\" style=\"color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" width=\"65\" height=\"17\">\n    <font size=\"1\">8400</font></td>\n    <td align=\"right\" style=\"color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" width=\"65\" height=\"17\">\n    <font size=\"1\">8400</font></td>\n    <td align=\"right\" style=\"color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" width=\"65\" height=\"17\">\n    <font size=\"1\">8400</font></td>\n    <td align=\"right\" style=\"color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" width=\"65\" height=\"17\">\n    <font size=\"1\">9600</font></td>\n    <td align=\"right\" style=\"color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" width=\"65\" height=\"17\">\n    <font size=\"1\">10800</font></td>\n    <td align=\"right\" style=\"color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" width=\"65\" height=\"17\">\n    <font size=\"1\">9000</font></td>\n    <td align=\"right\" style=\"color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" width=\"65\" height=\"17\">\n    <font size=\"1\">9600</font></td>\n  </tr>\n  <tr height=\"17\" style=\"height:12.75pt\">\n    <td style=\"height: 17; color: Blue; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" width=\"91\">\n    <font size=\"1\">MP (Food+SB)</font></td>\n    <td align=\"right\" style=\"color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" width=\"65\" height=\"17\">\n    <font size=\"1\">38400</font></td>\n    <td align=\"right\" style=\"color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" width=\"65\" height=\"17\">\n    <font size=\"1\">43200</font></td>\n    <td align=\"right\" style=\"color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" width=\"65\" height=\"17\">\n    <font size=\"1\">38400</font></td>\n    <td align=\"right\" style=\"color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" width=\"65\" height=\"17\">\n    <font size=\"1\">43200</font></td>\n    <td align=\"right\" style=\"color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" width=\"65\" height=\"17\">\n    <font size=\"1\">33600</font></td>\n    <td align=\"right\" style=\"color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" width=\"65\" height=\"17\">\n    <font size=\"1\">33600</font></td>\n    <td align=\"right\" style=\"color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" width=\"65\" height=\"17\">\n    <font size=\"1\">36000</font></td>\n    <td align=\"right\" style=\"color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: 1px solid; padding-left: 1px; padding-right: 1px; padding-top: 1px\" width=\"65\" height=\"17\">\n    <font size=\"1\">38400</font></td>\n  </tr>\n</table>\n\nQuando um mage [[promotion|promovido]] está comendo e usando a Soft Boots ao mesmo tempo, ele pode chegar a fazer até 129 '''runas''' de [[Sudden Death|SD]], 324 '''runas''' de [[Great Fireball|GFB]] e [[Avalanche Rune|Avalanche]], 108 '''runas''' de [[Ultimate Healing Rune|UH]], 1230 '''runas''' de [[Heavy Magic Missile|HMM]], durante o tempo de duração da bota.\n\n</td></tr></table></div></div></noinclude>\n\n\n<noinclude><div class=\"toccolours mw-collapsible mw-collapsed\" style=\"margin: 4px 0px;\">'''\"História do Item\"'''<div class=\"mw-collapsible-content\">\n<table ><tr><td align=left>\nAntes de ser a recompensa de uma quest, era considerado um ítem lendário, impossível de se conseguir. O único jogador que o possuía era {{Character|Mulf}} de [[Antica]].\n</td></tr></table></div></div>\n\n<noinclude><p><spoiler>\n* Recompensa da [[Pits of Inferno Quest]].\n* Worn Soft Boots podem ser recarregadas por 10 000 [[gp]]s em [[Venore]] pelo NPC [[Aldo]].\n</spoiler></p></noinclude>\n{{Veja|Itens Recarregáveis}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6688,
+    "ns": 0,
+    "title": "Patched Boots",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Patched Boots\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| imbuement      = 1\n| classificacao  = 4\n| max_tier       = 10\n| armor          = 2\n| weight         = 10.00\n| npcvalue       = 2 000\n| stackable      = não\n| buyfrom        = Jogadores.\n| sellto         = Rashid\n| implemented    = 8.2\n| notes          = Apesar disso, ainda não se sabe como é possível obtê-lá. Ela podem ser vistas na [[Treasure Rooms#Amazon Camp Treasure Room|Amazon Camp Treasure Room]].\n<gallery>Arquivo:Amazon_Camp_Treasure_Room.gif|Patched Boots.</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6690,
+    "ns": 0,
+    "title": "Pirate Boots",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Pirate Boots\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| armor          = 2\n| weight         = 8.00\n| imbuement      = 1\n| classificacao  = 1\n| max_tier       = 1\n| value          = 3 000 - 10 000\n| npcvalue       = 3 000\n| npcprice       = 0\n| stackable      = não\n| droppedby      = [[Pirate Corsair]], [[Sea Captain]].\n| buyfrom        = Jogadores.\n| sellto         = Rashid\n| implemented    = 7.8\n| notes          = Mesma defesa do [[Fur Boots]] porém considerado melhor por ser mais leve e não diminuir a velocidade do personagem. Parte do [[Pirate Set]].\n<noinclude><p><spoiler>* 01 é necessário na [[Meriana Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6691,
+    "ns": 0,
+    "title": "Sandals",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Sandals\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| imbuement      = 1\n| classificacao  = 1\n| max_tier       = 1\n| stackable      = não\n| armor          = 0\n| weight         = 6.00\n| value          = 2\n| npcvalue       = 0\n| npcprice       = 2\n| droppedby      = [[Dark Monk]], [[Elf Arcanist]], [[Elf Scout]], [[Monk]].\n| droppedRaidby  = [[Fernfang]].\n| buyfrom        = Rudolph, Aldo\n| sellto         = Jogadores.\n| notes          = Considerada rara em [[Rookgaard]]. \n<noinclude><p><spoiler>\n* Recompensa da [[Goblin Temple Quest]].\n* 01 par pode ser obtido em um baú localizado na loja do NPC [[Sam]], ({{mapa|32356,32196,7:2|aqui}}).\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 19207,
+    "ns": 0,
+    "title": "Depth Calcei",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Depth Calcei\n| stackable      = não\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| vocrequired    = [[Knight]]s\n| levelrequired  = 150\n| skillboost     = [[Speed]] -5\n| resist         = [[Physical Damage|Physical]] +5%\n| armor          = 3\n| weight         = 37.00\n| imbuement      = 1\n| classificacao  = 3\n| max_tier       = 3\n| value          = 300 000 - 1 000 000\n| npcvalue       = 25 000\n| droppedby      = [[Jaul]].\n| buyfrom        = Jogadores.\n| sellto         = Rock In A Hard Place\n| implemented    = 9.4\n| notes          = Faz parte do [[Depth Set]], [[Blocking Set]], [[High Level Knight Basic Set]] e [[Rare Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25331,
+    "ns": 0,
+    "title": "Prismatic Boots",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Prismatic Boots\n| skillboost     = [[Speed]] +15\n| levelrequired  = 150\n| vocrequired    = [[Paladin]]s\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| imbuement      = 1\n| classificacao  = 2\n| max_tier       = 2\n| resist         = [[Death Damage|Death]] +3%\n| armor          = 3\n| weight         = 18.00\n| value          = 5 000 - 30 000\n| npcprice       = 10 [[Major Crystalline Token]]\n| buyfrom        = Gnomally\n| sellto         = Jogadores.\n| implemented    = 9.6\n| droppedby      = Ninguém.\n| notes          = Faz parte do [[Haste Set]], [[Paladin Set]], [[Prismatic Set]] e [[Divine Set]].\n{{DASH|'''Dica:''' Dependendo do valor do [[Major Crystalline Token]] no mundo, pode ser mais barato comprar o token e trocar pelo item na [[NPC]] do que comprá-lo diretamente de algum jogador.}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 33162,
+    "ns": 0,
+    "title": "Metal Spats",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Metal Spats\n| vocrequired    = [[Knight]]s and [[Paladin]]s\n| levelrequired  = 50\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| imbuement      = 1\n| classificacao  = 2\n| max_tier       = 2\n| stackable      = não\n| resist         = [[Physical Damage|Physical]] +1%\n| weight         = 18.00\n| armor          = 1\n| value          = \n| npcvalue       = 2 000\n| droppedby      = [[Glooth Battery]], [[Gore Horn]], [[Metal Gargoyle]], [[Ogre Ruffian]], [[Walker]].\n| buyfrom        = Jogadores.\n| sellto         = Flint\n| implemented    = 10.50\n| notes          = Faz parte do [[Metal Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 36240,
+    "ns": 0,
+    "title": "Badger Boots",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Badger Boots\n| levelrequired  = 60\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| imbuement      = 1\n| classificacao  = 2\n| max_tier       = 2\n| skillboost     = [[Speed]] +10\n| armor          = 2\n| weight         = 12.00\n| npcvalue       = 7 500\n| stackable      = não\n| droppedby      = [[Sharpclaw]], [[The Baron from Below]], [[Werebadger]].\n| droppedRaidby  = [[Feroxa (Mortal)]].\n| buyfrom        = Jogadores.\n| sellto         = Domizian, Gladys \n| implemented    = 10.80\n| notes          = Faz parte do [[Haste Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 36244,
+    "ns": 0,
+    "title": "Oriental Shoes",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Oriental Shoes\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 80\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| skillboost     = [[Speed]] +15\n| armor          = 2\n| weight         = 5.00\n| imbuement      = 1\n| classificacao  = 2\n| max_tier       = 2\n| npcvalue       = 15 000\n| stackable      = não\n| droppedby      = [[Ancient Spawn of Morgathla]], [[Dawnfire Asura]], [[Midnight Asura]], [[Ravenous Hunger]], [[The Diamond Blossom]], [[The Flaming Orchid]], [[True Dawnfire Asura]], [[True Midnight Asura]].\n| buyfrom        = Jogadores.\n| sellto         = Rashid\n| implemented    = 10.80\n| notes          = Faz parte do [[Haste Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 37067,
+    "ns": 0,
+    "title": "Boots of Homecoming",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Boots of Homecoming\n| flavortext     = They are made of dark red buckskin and the golden clasps look like the letter F.\n| levelrequired  = 100\n| armor          = 2\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| weight         = 16.00\n| stackable      = não\n| npcvalue       = 0\n| droppedby      = [[Ferumbras Mortal Shell]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.90\n| value          = 300 000 - 1 200 000\n| notes          = Ao usá-la o personagem é transportado para [[Kharos]]. Possui [[cooldown]] de 24 horas. \n<noinclude><p><spoiler>\n* Para utilizá-la é necessário ter completado a [[Voodoo Master Quest]] ou a seguinte mensagem aparecerá: ''Some magical sparks blaze up and die out immediately. There is an energy barrier somewhere that you cannot pass yet.''.\n* Pode ser usada somente dentro de uma [[Protection Zone]]. \n* Aconselhamos a pedir permissão pro NPC [[Zoltan]], caso contrário não conseguirá entrar na torre.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 40090,
+    "ns": 0,
+    "title": "Filthy Bunnyslippers",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Filthy Bunnyslippers\n| flavortext     = They clearly have seen better days.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| armor          = 0\n| classificacao  = 1\n| max_tier       = 1\n| weight         = 6.00\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.02\n| notes          = \n<noinclude><p><spoiler>* Possibilidade de ser obtido como recompensa do jogo \"Caça ao Tesouro\" na [[Vigintia Island]] durante as comemorações de [[Aniversário do Tibia]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45074,
+    "ns": 0,
+    "title": "Pair of Dreamwalkers",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Pair of Dreamwalkers\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 180\n| resist         = [[Earth Damage|Earth]] +8%\n| skillboost     = [[Magic Level]] +1\n| itemclass      = Equipamentos de Corpo\n| imbuement      = 1\n| classificacao  = 3\n| max_tier       = 3\n| primarytype    = Botas\n| stackable      = não\n| armor          = 2\n| weight         = 8.00\n| value          = Negociável.\n| npcvalue       = \n| droppedby      = [[Alptramun]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.00\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 46673,
+    "ns": 0,
+    "title": "Cobra Boots",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Cobra Boots\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| imbuement      = 1\n| classificacao  = 4\n| max_tier       = 10\n| levelrequired  = 220\n| vocrequired    = [[Knight]]s\n| skillboost     = [[Speed]] +10\n| armor          = 3\n| resist         = [[Physical Damage|Physical]] +6%\n| weight         = 9.00\n| stackable      = não\n| value          = \n| npcvalue       = \n| droppedby      = [[Guard Captain Quaid]], [[Ugly Monster]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.20\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 47984,
+    "ns": 0,
+    "title": "Pair of Nightmare Boots",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Pair of Nightmare Boots\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 140\n| resist         = [[Energy Damage|Energy]] +6%\n| skillboost     = [[Magic Level]] +1\n| itemclass      = Equipamentos de Corpo\n| imbuement      = 1\n| classificacao  = 3\n| max_tier       = 3\n| primarytype    = Botas\n| stackable      = não\n| armor          = 2\n| weight         = 13.00\n| value          = \n| npcvalue       = \n| droppedby      = [[Irgix the Flimsy]], [[The Dread Maiden]], [[The Pale Worm]], [[Unaz the Mean]], [[Vok the Freakish]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.30\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 49291,
+    "ns": 0,
+    "title": "Pair of Soulstalkers",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Pair of Soulstalkers\n| flavortext     = \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| imbuement      = 1\n| classificacao  = 4\n| max_tier       = 10\n| levelrequired  = 400\n| vocrequired    = [[Paladin]]s\n| skillboost     = [[Distance Fighting]] +1, [[Speed]] +20\n| armor          = 3\n| resist         = [[Physical Damage|Physical]] +5%\n| weight         = 13.00\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.40\n| notes          = <noinclude><p><spoiler>* Possibilidade de ser obtido ao usar um [[Bag You Desire]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 49293,
+    "ns": 0,
+    "title": "Pair of Soulwalkers",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Pair of Soulwalkers\n| flavortext     = \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| imbuement      = 1\n| classificacao  = 4\n| max_tier       = 10\n| levelrequired  = 400\n| vocrequired    = [[Knight]]s\n| skillboost     = [[Sword Fighting]] +1, [[Club Fighting]] +1, [[Axe Fighting]] +1, [[Speed]] +15\n| armor          = 4\n| resist         = [[Physical Damage|Physical]] +7%, [[Fire Damage|Fire]] +5%\n| weight         = 13.00\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.40\n| notes          = <noinclude><p><spoiler>* Possibilidade de ser obtido ao usar um [[Bag You Desire]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 50505,
+    "ns": 0,
+    "title": "Make-do Boots",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Make-do Boots\n| vocrequired    = [[Druid]]s\n| levelrequired  = 150\n| resist         = [[Ice Damage|Ice]] +6%\n| skillboost     = [[Magic Level]] +1\n| itemclass      = Equipamentos de Corpo\n| imbuement      = 1\n| classificacao  = 4\n| max_tier       = 10\n| primarytype    = Botas\n| stackable      = não\n| armor          = 2\n| weight         = 14.50\n| value          = \n| npcvalue       = \n| droppedby      = [[Ratmiral Blackwhiskers]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.60\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 50506,
+    "ns": 0,
+    "title": "Makeshift Boots",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Makeshift Boots\n| vocrequired    = [[Sorcerer]]s\n| levelrequired  = 150\n| resist         = [[Fire Damage|Fire]] +6%\n| skillboost     = [[Magic Level]] +1\n| itemclass      = Equipamentos de Corpo\n| imbuement      = 1\n| classificacao  = 4\n| max_tier       = 10\n| primarytype    = Botas\n| stackable      = não\n| armor          = 2\n| weight         = 14.50\n| value          = \n| npcvalue       = \n| droppedby      = [[Ratmiral Blackwhiskers]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.60\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53595,
+    "ns": 0,
+    "title": "Green Demon Slippers",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Green Demon Slippers\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| imbuement      = 1\n| classificacao  = 4\n| max_tier       = 10\n| armor          = 0\n| weight         = 6.00\n| value          = \n| droppedby      = Ninguém.\n| droppedRaidby  = [[Morshabaal]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Nenhuma.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 56129,
+    "ns": 0,
+    "title": "Feverbloom Boots",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Feverbloom Boots\n| vocrequired    = [[Paladin]]s\n| levelrequired  = 270\n| resist         = [[Ice Damage|Ice]] +7%\n| skillboost     = [[Distance Fighting]] +1, [[Speed]] +15 \n| itemclass      = Equipamentos de Corpo\n| imbuement      = 1\n| classificacao  = 4\n| max_tier       = 10\n| primarytype    = Botas\n| stackable      = não\n| armor          = 2\n| weight         = 9.80\n| value          = \n| npcvalue       = \n| droppedby      = [[Timira the Many-Headed]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.90\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 56130,
+    "ns": 0,
+    "title": "Frostflower Boots",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Frostflower Boots\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| imbuement      = 1\n| classificacao  = 4\n| max_tier       = 10\n| levelrequired  = 270\n| vocrequired    = [[Knight]]s\n| skillboost     = \n| armor          = 3\n| resist         = [[Physical Damage|Physical]] +5%, [[Ice Damage|Ice]] +5%\n| weight         = 11.00\n| stackable      = não\n| value          = Negociável\n| npcvalue       =\n| droppedby      = [[Timira the Many-Headed]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.90\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 58182,
+    "ns": 0,
+    "title": "Broken Iks Sandals",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Broken Iks Sandals\n| flavortext     = These sandals once belonged to a warrior of the ancient Iks.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| secondarytype  = Produtos de Criaturas\n| imbuement      = \n| levelrequired  = \n| vocrequired    = \n| skillboost     = \n| armor          = 1\n| resist         = \n| weight         = 3.80\n| stackable      = sim\n| value          =\n| droppedby      = [[Ahau]], [[Iks Ahpututu]], [[Iks Aucar]], [[Iks Pututu]].\n| buyfrom        = Jogadores.\n| sellto         = Yasir\n| implemented    = 13.10\n| notes          = \n<noinclude><p><spoiler>\n* 01 é necessária para a [[Ancient Aucar Outfits Quest]].\n</spoiler></p></noinclude>\n}}\n<noinclude>[[Categoria:Itens de Addons]]</noinclude>"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 58480,
+    "ns": 0,
+    "title": "Alchemist's Boots",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Alchemist's Boots\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| imbuement      = 1\n| classificacao  = 4\n| max_tier       = 10\n| levelrequired  = 250\n| vocrequired    = [[Sorcerer]]s\n| skillboost     = [[Magic Level]] +1\n| armor          = 2\n| resist         = [[Physical Damage|Physical]] +2%\n| weight         = 16.00\n| stackable      = não\n| value          =\n| npcvalue       = \n| droppedby      = [[The Monster]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 13.10\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 58483,
+    "ns": 0,
+    "title": "Mutant Bone Boots",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Mutant Bone Boots\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| imbuement      = 1\n| classificacao  = 4\n| max_tier       = 10\n| levelrequired  = 250\n| vocrequired    = [[Druid]]s\n| skillboost     = [[Magic Level]] +1\n| armor          = 2\n| resist         = [[Death Damage|Death]] +3%\n| weight         = 11.00\n| stackable      = não\n| value          =\n| npcvalue       = \n| droppedby      = [[The Monster]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 13.10\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59849,
+    "ns": 0,
+    "title": "Sanguine Boots",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Sanguine Boots\n| flavortext     = \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| imbuement      = 1\n| classificacao  = 4\n| max_tier       = 10\n| levelrequired  = 500\n| vocrequired    = [[Sorcerer]]s\n| skillboost     = [[Magic Level]] +2, [[Speed]] +10, [[Death Magic Level]] +1\n| armor          = 3\n| resist         = [[Physical Damage|Physical]] +2%, [[Ice Damage|Ice]] +8%\n| augments       = Avatar of Storm -> -900s cooldown, Hell's Core -> +8% critical extra damage, Energy Wave -> +8% critical extra damage\n| weight         = 19.00\n| stackable      = não\n| value          = \n| droppedby      = [[Bakragore]], [[Chagorz]], [[Ichgahal]], [[Murcion]] e [[Vemiath]], dentro de uma [[Bag You Covet]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 13.20.13560\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59850,
+    "ns": 0,
+    "title": "Sanguine Galoshes",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Sanguine Galoshes\n| flavortext     = \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| imbuement      = 1\n| classificacao  = 4\n| max_tier       = 10\n| levelrequired  = 500\n| vocrequired    = [[Druid]]s\n| skillboost     = [[Magic Level]] +2, [[Speed]] +10, [[Healing Magic Level]] +1\n| armor          = 3\n| resist         = [[Physical Damage|Protection Physical]] +2%, [[Fire Damage|Fire]] +8%\n| augments       = Avatar of Nature -> -900s cooldown, Terra Wave -> +8% critical extra damage, Eternal Winter -> +8% critical extra damage\n| weight         = 17.00\n| stackable      = não\n| value          = \n| droppedby      = [[Bakragore]], [[Chagorz]], [[Ichgahal]], [[Murcion]] e [[Vemiath]], dentro de uma [[Bag You Covet]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 13.20.13560\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64025,
+    "ns": 0,
+    "title": "Iks Footwraps",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Iks Footwraps\n| vocrequired    = [[Monk]]s\n| levelrequired  = 250 \n| flavortext     = \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| resist         = [[Fire Damage|Fire]] +4%\n| skillboost     = [[Fist Fighting]] +2\n| augments       = Greater Flurry of Blows -> +8% base damage\n| imbuement      = 1\n| armor          = 2\n| weight         = 8.00\n| classificacao  = 4\n| max_tier       = 10\n| value          = \n| mantra         = \n| droppedby      = [[Mitmah Vanguard]].\n| trade          = sim\n| buyfrom        = Jogadores. \n| implemented    = 15.00.249ccc\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64027,
+    "ns": 0,
+    "title": "Gnomish Footwraps",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Gnomish Footwraps\n| vocrequired    = [[Monk]]s\n| levelrequired  = 150 \n| flavortext     = \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| resist         = [[Physical Damage|Physical]] +2%, [[Earth Damage|Earth]] +3%\n| skillboost     = [[Fist Fighting]] +2\n| augments       = \n| imbuement      = 1\n| armor          = 1\n| weight         = 11.00\n| classificacao  = 3\n| max_tier       = 3\n| value          = \n| mantra         = \n| trade          = sim\n| npcprice       = \n| buyfrom        = \n| sellto         = Jogadores.\n| droppedby      = [[The Baron from Below]], [[The Duke Of The Depths]], [[The Count Of The Core]]\n| implemented    = 15.00.249ccc\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64070,
+    "ns": 0,
+    "title": "Boots of Enlightenment",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Boots of Enlightenment\n| flavortext     = Traditional boots worn by pilgrims of the Three-Fold Path. Its design features elements of the natural appearance of moths\n| stackable      = não\n| levelrequired  = 8\n| vocrequired    = [[Monk]]s\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| skillboost     = [[Fist Fighting]] +1\n| imbuement      = 1\n| armor          = 1\n| classificacao  = 1\n| max_tier       = 1\n| mantra         = \n| resist         = \n| augments       = \n| weight         = 9.00\n| value          = \n| npcvalue       =  \n| npcprice       = 8 000\n| droppedby      = Ninguém.\n| buyfrom        = Enpa-Deia Pema\n| sellto         = Enpa-Deia Pema:80\n| implemented    = 15.00.249ccc\n| notes          = <spoiler>* Pode ser obtido por [[Monk]]s ao usar o primeiro Santuário (''1 - Thais Peninsula'') durante a [[The Way of the Monk Quest]].</spoiler>\n\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64076,
+    "ns": 0,
+    "title": "Eldritch Monk Boots",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Eldritch Monk Boots\n| flavortext     = \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| imbuement      = 1\n| classificacao  = 4\n| max_tier       = 10\n| levelrequired  = 300\n| vocrequired    = [[Monk]]s\n| skillboost     = [[Fist Fighting]] +2, [[Magic Level]] +1\n| armor          = 2\n| mantra         = \n| resist         = [[Energy Damage|Energy]] +5%\n| augments       = \n| weight         = 13.00\n| stackable      = não\n| value          = \n| droppedby      = [[The Brainstealer]]\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.00.249ccc\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64096,
+    "ns": 0,
+    "title": "Soulsoles",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Soulsoles\n| flavortext     = \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| imbuement      = 1\n| classificacao  = 4\n| max_tier       = 10\n| levelrequired  = 400\n| vocrequired    = [[Monk]]s\n| skillboost     = [[Fist Fighting]] +3, [[Speed]] +20\n| armor          = 2\n| mantra         = \n| resist         = [[Physical Damage|Physical]] +3%, [[Ice Damage|Ice]] +6%\n| weight         = 13.00\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.00.249ccc\n| notes          = <noinclude><p><spoiler>* Possibilidade de ser obtido ao usar um [[Bag You Desire]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64947,
+    "ns": 0,
+    "title": "Norcferatu Goretrampers",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Norcferatu Goretrampers\n| flavortext     = \n| stackable      = não\n| levelrequired  = 270\n| vocrequired    = [[Knight]]s\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| skillboost     = [[Speed]] +15 \n| imbuement      = 1\n| armor          = 3\n| classificacao  = 4\n| max_tier       = 10\n| mantra         = \n| resist         = [[Physical Damage|Physical]] +5%, [[Earth Damage|Earth]] +5%\n| augments       = Brutal Strike -> +33% base damage\n| weight         = 12.50\n| value          = \n| npcvalue       =  \n| npcprice       = \n| droppedby      = [[Vladrukh]].\n| buyfrom        = \n| sellto         = \n| implemented    = 15.10.46b862\n| notes          = \n\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64949,
+    "ns": 0,
+    "title": "Norcferatu Fangstompers",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Norcferatu Fangstompers\n| flavortext     = \n| stackable      = não\n| levelrequired  = 270\n| vocrequired    = [[Sorcerer]]s\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| skillboost     = [[Magic Level]] +1\n| imbuement      = 1\n| armor          = 2\n| classificacao  = 4\n| max_tier       = 10\n| mantra         = \n| resist         = [[Death Damage| Death]] +3%\n| augments       = Ultimate Energy Strike -> +33% base damage\n| weight         = 11.00\n| value          = \n| npcvalue       =  \n| npcprice       = \n| droppedby      = [[Vladrukh]].\n| buyfrom        = \n| sellto         = \n| implemented    = 15.10.46b862\n| notes          = \n\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 66086,
+    "ns": 0,
+    "title": "Stag Boots",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Stag Boots\n| vocrequired    = [[Druid]]s\n| levelrequired  = 350\n| flavortext     = \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| resist         = [[Energy Damage|Energy]] +8%\n| skillboost     = [[Earth Magic Level]] +1, [[Magic Level]] +1 \n| augments       = Terra Wave -> +6.5% critical extra damage\n| imbuement      = 1\n| classificacao  = 4\n| max_tier       = 10\n| armor          = 2 \n| weight         = 14.00\n| droppedby      = [[Court Warlock]].\n| trade          = sim\n| buyfrom        = Jogadores. \n| npcprice       =\n| npcvalue       =\n| implemented    = 15.20.7a5cc9\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6692,
+    "ns": 0,
+    "title": "Steel Boots",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Steel Boots\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| stackable      = não\n| armor          = 3\n| weight         = 29.00\n| imbuement      = 1\n| classificacao  = 2\n| max_tier       = 2\n| value          = 30 000 - 40 000 \n| npcvalue       = 30 000\n\n| droppedby      = [[Behemoth]], [[Bretzecutioner]], [[Cliff Strider]], [[Control Tower]], [[Dark Torturer]], [[Destroyer]], [[Eradicator]], [[Fury]], [[Gorzindel]], [[Grimeleech]], [[Hellgorak]], [[Hive Overseer]], [[Horadron]], [[Kollos]], [[Morguthis]], [[Plaguesmith]], [[Prince Drazzak]], [[Retching Horror]], [[Shaburak Lord]], [[Shaburak Prince]], [[Stonecracker]], [[Terofar]], [[Walker]], [[War Golem]], [[Zugurosh]].\n| droppedRaidby  = [[Furyosa]], [[Grorlam]], [[Sight of Surrender]], [[The Handmaiden]].\n\n| buyfrom        = Jogadores.\n| sellto         = Rashid\n| notes          = Já foi a segunda melhor bota do jogo em questão de defesa, perdendo somente para a [[Golden Boots]]. Passou a ser menos utilizada por jogadores acima do [[level]] 80 devido a implementação das [[Draken Boots]]. Faz parte do [[Steel Set]], [[Paladin Set]], [[Unrestricted Set]], [[Semi Rare Set]] e [[Rare Set]].\n<noinclude><p><spoiler>\n* Recompensa da [[The Demon Helmet Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6693,
+    "ns": 0,
+    "title": "Terra Boots",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Terra Boots\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 35\n| resist         = [[Earth Damage|Earth]] +5%, [[Fire Damage|Fire]] -5%\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| imbuement      = 1\n| classificacao  = 2\n| max_tier       = 2\n| stackable      = não\n| armor          = 2\n| weight         = 7.50\n| value          = 2 300 - 4 000\n| npcvalue       = 2 500\n| droppedby      = [[Armadile]], [[Blight Mariner]], [[Choking Fear]], [[Cobra Vizier]], [[Crazed Winter Vanguard]], [[Cursed Book]], [[Deathbine]], [[Dwarf Geomancer]], [[Enfeebled Silencer]], [[Exotic Cave Spider]], [[Foam Stalker]], [[Ghastly Dragon]], [[Glooth Bandit]], [[Glooth Brigand]], [[Hideous Fungus]], [[Hulking Carnisylvan]], [[Humongous Fungus]], [[Ink Blob]], [[Lost Basher]], [[Lost Berserker]], [[Lost Exile]], [[Lost Husher]], [[Mercurial Menace]], [[Ogre Sage]], [[Omnivora]],  [[Oozing Corpus]], [[Pirat Bombardier]], [[Ravenous Hunger]], [[Shrieking Cry-Stal]], [[Silencer]], [[Terofar]], [[Thanatursus]], [[Undertaker]].\n| buyfrom        = Jogadores.\n| sellto         = Rashid\n| implemented    = 8.1\n| notes          = Faz parte do [[Terra Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6694,
+    "ns": 0,
+    "title": "Zaoan Shoes",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Zaoan Shoes\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| imbuement      = 1\n| classificacao  = 2\n| max_tier       = 2\n| skillboost     = [[Speed]] +5\n| armor          = 1\n| weight         = 7.00\n| value          = 5 000 - 7 000\n| stackable      = não\n| droppedby      = [[Darklight Construct]], [[Draken Spellweaver]], [[Draken Warmaster]], [[Ethershreck]], [[Fazzrah]], [[Ghastly Dragon]], [[Hatebreeder]], [[Lizard Chosen]], [[Lizard Dragon Priest]], [[Lizard Gate Guardian]], [[Lizard High Guard]], [[Lizard Legionnaire]], [[Lizard Zaogun]], [[The Voice of Ruin]].\n| droppedRaidby  = [[Battlemaster Zunzu]], [[Flamecaller Zazrak]].\n| npcvalue       = 5 000\n| npcprice       = 0\n| buyfrom        = Jogadores.\n| sellto         = Esrik\n| implemented    = 8.54\n| notes          = Faz parte do [[Zaoan Set]] e [[Haste Set]].\n<noinclude><p><spoiler>* Para vendê-la ao NPC é preciso ter entregue 9 [[Tome of Knowledge|tomos]] na [[Tomes of Knowledge Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8715,
+    "ns": 0,
+    "title": "Worn Firewalker Boots",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Worn Firewalker Boots\n| flavortext     = They can be recharged with an enchanted ruby.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| levelrequired  = 130\n| enchantable    = sim\n| enchanted      = \n| attrib         = Recarregável.\n| armor          = 0\n| weight         = 9.50\n| value          = \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.4\n| notes          = É uma [[Firewalker Boots]] após ser completamente utilizada. Pode ser recarregada ao utilizar uma [[Small Enchanted Ruby]].\n{{Veja|Itens Recarregáveis}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8717,
+    "ns": 0,
+    "title": "Worn Soft Boots",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Worn Soft Boots\n| flavortext     = Someone specialised in shoes might be able to repair them for you.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| secondarytype  = \n| enchantable    = sim\n| enchanted      = \n| attrib         = Recarregável.\n| weight         = 8.00\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.4\n| notes          = [[Soft Boots]] após ser completamente utilizado. \n<noinclude><p><spoiler>* Pode ser recarregado por 10 000 [[gp]]s em [[Venore]] pelo NPC [[Aldo]].</spoiler></p></noinclude>\n{{Veja|Itens Recarregáveis}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 30994,
+    "ns": 0,
+    "title": "Vampire Silk Slippers",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Vampire Silk Slippers\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| secondarytype  = Decorações\n| armor          = 0\n| weight         = 11.50\n| imbuement      = 1\n| classificacao  = 4\n| max_tier       = 10\n| value          = 10 000 000 - 25 000 000\n| stackable      = não\n| droppedRaidby  = [[The Pale Count]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.20\n| notes          = Item raro e valioso. Dropado de um boss que faz raras [[invasões]]. Frequentemente utilizado como elemento decorativo\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 37164,
+    "ns": 0,
+    "title": "Treader of Torment",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Treader of Torment\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| armor          = 4\n| weight         = 36.00\n| imbuement      = 1\n| classificacao  = 4\n| max_tier       = 10\n| stackable      = não\n| npcvalue       = 0\n| droppedby      = [[Shulgrax]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.90\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 38257,
+    "ns": 0,
+    "title": "Void Boots",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Void Boots\n| levelrequired  = 150\n| armor          = 2\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| attrib         = [[Regeneration|Regeneração]] rápida.\n| weight         = 15.00\n| duration       = 60\n| modificadores  = faster [[Regeneration]]\n| skillboost     = [[Speed]] +30\n| resist         = [[Energy Damage|Energy]] +10%\n| stackable      = não\n| npcvalue       = 0\n| droppedby      = [[Anomaly]], [[Eradicator]], [[Outburst]], [[Rupture]], [[World Devourer]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.94\n| notes          = Faz parte do [[Haste Set]] e [[Regeneration Set]].<br>Note que essa bota irá desaparecer após acabar seus 60 minutos de uso.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45480,
+    "ns": 0,
+    "title": "Yetislippers",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Yetislippers\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| secondarytype  = Decorações\n| armor          = 0\n| weight         = 7.40\n| imbuement      = \n| classificacao  = 2\n| max_tier       = 2\n| value          = 1 500 000\n| stackable      = não\n| droppedby      = [[Baleful Bunny]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.02.7746\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 46704,
+    "ns": 0,
+    "title": "Winged Boots",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Winged Boots\n| vocrequired    = [[Paladin]]s\n| levelrequired  = 220\n| resist         = [[Earth Damage|Earth]] +7%\n| skillboost     = [[Distance Fighting]] +1, [[Speed]] +15 \n| itemclass      = Equipamentos de Corpo\n| imbuement      = 1\n| classificacao  = 3\n| max_tier       = 3\n| primarytype    = Botas\n| stackable      = não\n| armor          = 2\n| weight         = 12.00\n| value          = \n| npcvalue       = \n| droppedby      = [[Bragrumol]], [[Urmahlullu the Weakened]]\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.20\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 47776,
+    "ns": 0,
+    "title": "Traditional Leather Shoes",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Traditional Leather Shoes\n| flavortext    = Soled with sturdy orc hides, these traditional Orcsoberfest leather shoes are robust and useful.\n| itemclass     = Equipamentos de Corpo\n| primarytype   = Botas\n| secondarytype = \n| armor         = 0\n| weight        = 5.00\n| stackable     = não\n| value         = \n| npcvalue      =\n| droppedby     = Ninguém.\n| droppedRaidby = \n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| implemented   = 12.20.9066\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 61206,
+    "ns": 0,
+    "title": "Stoic Iks Boots",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Stoic Iks Boots\n| vocrequired    = [[Paladin]]s\n| levelrequired  = 250 \n| flavortext     = \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| resist         = [[Fire Damage|Fire]] +5%\n| skillboost     = [[Distance Fighting]] +1, [[Speed]] + 15\n| augments       = Divine Missile -> +5% Critical Extra Damage\n| imbuement      = 1\n| classificacao  = 4\n| max_tier       = 10\n| armor          = 2 \n| weight         = 15.00\n| value          = \n| droppedby      = [[Mitmah Vanguard]].\n| trade          = sim\n| buyfrom        = Jogadores. \n| implemented    = 13.30.14423\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 61207,
+    "ns": 0,
+    "title": "Stoic Iks Sandals",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Stoic Iks Sandals\n| vocrequired    = [[Sorcerer]]s\n| levelrequired  = 250 \n| flavortext     = \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| resist         = [[Ice Damage|Ice]] +6%\n| skillboost     = [[Magic Level]] +1\n| augments       = Great Energy Beam -> +5% Critical Extra Damage, Great Death Beam -> +5% Critical Extra Damage\n| imbuement      = 1\n| classificacao  = 4\n| max_tier       = 10\n| armor          = 2 \n| weight         = 9.00\n| value          = \n| droppedby      = [[Mitmah Vanguard]].\n| trade          = sim\n| buyfrom        = Jogadores. \n| implemented    = 13.30.14423\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 63867,
+    "ns": 0,
+    "title": "Yalahari Footwraps",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Yalahari Footwraps\n| vocrequired    = [[Monk]]s\n| levelrequired  = 80\n| resist         = [[Death Damage|Death]] +3%\n| skillboost     = [[Fist Fighting]] +2\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| imbuement      = 1\n| classificacao  = 2\n| max_tier       = 10\n| armor          = 1\n| mantra         = \n| weight         = 7.00\n| value          = \n| droppedby      = Ninguém. \n| droppedRaidby  = \n| droppedEventby = \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.00.249ccc\n| notes          = <spoiler>* Recompensa da [[In Service of Yalahar Quest]].</spoiler>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 65936,
+    "ns": 0,
+    "title": "Stag Footwraps",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Stag Footwraps\n| vocrequired    = [[Monk]]s\n| levelrequired  = 350\n| flavortext     = \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| resist         = [[Physical Damage|Physical]] +2%, [[Death Damage|Death]] +3%\n| skillboost     = [[Fist Fighting]] +2\n| augments       = Spiritual Outburst - Critical Extra Damage +8%\n| imbuement      = 1\n| classificacao  = 4\n| max_tier       = 10\n| armor          = 2 \n| weight         = 14.00\n| droppedby      = [[Court Warlock]].\n| trade          = sim\n| buyfrom        = Jogadores. \n| npcprice       =\n| npcvalue       =\n| implemented    = 15.20.7a5cc9\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 66077,
+    "ns": 0,
+    "title": "Stag Shinguards",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Stag Shinguards\n| vocrequired    = [[Paladin]]s\n| levelrequired  =  350\n| flavortext     = \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Botas\n| resist         = [[Physical Damage|Physical]] +2%, [[Energy Damage|Energy]] +5%\n| skillboost     = [[Speed]] + 10, [[Distance Fighting]] +1\n| augments       = Divine Grenade -> +8% critical extra damage\n| imbuement      = 1\n| classificacao  = 4\n| max_tier       = 10\n| armor          = 2 \n| weight         = 17.00\n| droppedby      = [[Court Warlock]].\n| trade          = sim\n| buyfrom        = Jogadores. \n| npcprice       =\n| npcvalue       =\n| implemented    = 15.20.7a5cc9\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

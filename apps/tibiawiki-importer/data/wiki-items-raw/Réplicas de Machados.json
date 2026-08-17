@@ -1,0 +1,614 @@
+{
+ "query": {
+  "pages": [
+   {
+    "pageid": 42180,
+    "ns": 0,
+    "title": "Earth Barbaric Axe Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Earth Barbaric Axe Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| hands          = Uma\n| type           = Réplicas de Machados\n| attack         = 5\n| defense        = 5\n| weight         = 51.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+0.50% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+1.00% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+1.50% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+2.00% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Earth||+1 Earth Magic Level}}\n| notes          = É uma réplica do [[Earth Barbarian Axe]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42193,
+    "ns": 0,
+    "title": "Earth Headchopper Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Earth Headchopper Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| hands          = Duas\n| type           = Réplicas de Machados\n| attack         = 5\n| defense        = 5\n| weight         = 45.00\n| classificacao  = 1\n| max_tier       = 1\n| mercado        = sim\n| droppedby      = Ninguém.\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+0.50% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+1.00% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+1.50% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+2.00% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Earth||+1 Earth Magic Level}}\n| notes          = É uma réplica da [[Earth Headchopper]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42195,
+    "ns": 0,
+    "title": "Earth Heroic Axe Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Earth Heroic Axe Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| hands          = Uma\n| type           = Réplicas de Machados\n| attack         = 5\n| defense        = 5\n| weight         = 61.00\n| classificacao  = 1\n| max_tier       = 1\n| mercado        = sim\n| droppedby      = Ninguém.\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+0.50% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+1.00% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+1.50% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+2.00% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Earth||+1 Earth Magic Level}}\n| notes          = É uma réplica da [[Earth Heroic Axe]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42197,
+    "ns": 0,
+    "title": "Earth Knight Axe Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Earth Knight Axe Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| hands          = Uma\n| type           = Réplicas de Machados\n| attack         = 5\n| defense        = 5\n| weight         = 59.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+0.50% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+1.00% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+1.50% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+2.00% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Earth||+1 Earth Magic Level}}\n| notes          = É uma réplica da [[Earth Knight Axe]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42209,
+    "ns": 0,
+    "title": "Earth War Axe Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Earth War Axe Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| hands          = Duas\n| type           = Réplicas de Machados\n| attack         = 5\n| defense        = 5\n| weight         = 61.50\n| classificacao  = 1\n| max_tier       = 1\n| mercado        = sim\n| droppedby      = Ninguém.\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+0.50% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+1.00% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+1.50% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+2.00% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Earth||+1 Earth Magic Level}}\n| notes          = É uma réplica da [[Earth War Axe]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42213,
+    "ns": 0,
+    "title": "Energy Axe Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Energy Axe Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| hands          = Uma\n| type           = Réplicas de Machados\n| attack         = 5\n| defense        = 5\n| weight         = 51.00\n| classificacao  = 1\n| max_tier       = 1\n| mercado        = sim\n| droppedby      = Ninguém.\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+0.50% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+1.00% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+1.50% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+2.00% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Energy||+1 Energy Magic Level}}\n| notes          = É uma réplica da [[Energy Barbarian Axe]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42223,
+    "ns": 0,
+    "title": "Energy Headchopper Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Energy Headchopper Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| hands          = Duas\n| type           = Réplicas de Machados\n| attack         = 5\n| defense        = 5\n| weight         = 45.00\n| classificacao  = 1\n| max_tier       = 1\n| mercado        = sim\n| droppedby      = Ninguém.\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+0.50% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+1.00% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+1.50% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+2.00% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Energy||+1 Energy Magic Level}}\n| notes          = É uma réplica da [[Energy Headchopper]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42225,
+    "ns": 0,
+    "title": "Energy Heroic Axe Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Energy Heroic Axe Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| hands          = Uma\n| type           = Réplicas de Machados\n| attack         = 5\n| defense        = 5\n| weight         = 61.00\n| classificacao  = 1\n| max_tier       = 1\n| mercado        = sim\n| droppedby      = Ninguém.\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+0.50% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+1.00% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+1.50% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+2.00% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Energy||+1 Energy Magic Level}}\n| notes          = É uma réplica da [[Energy Heroic Axe]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42227,
+    "ns": 0,
+    "title": "Energy Knight Axe Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Energy Knight Axe Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| hands          = Uma\n| type           = Réplicas de Machados\n| attack         = 5\n| defense        = 5\n| weight         = 59.00\n| classificacao  = 1\n| max_tier       = 1\n| mercado        = sim\n| droppedby      = Ninguém.\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+0.50% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+1.00% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+1.50% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+2.00% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Energy||+1 Energy Magic Level}}\n| notes          = É uma réplica da [[Energy Knight Axe]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42239,
+    "ns": 0,
+    "title": "Energy War Axe Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Energy War Axe Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| hands          = Duas\n| type           = Réplicas de Machados\n| attack         = 5\n| defense        = 5\n| weight         = 61.50\n| classificacao  = 1\n| max_tier       = 1\n| mercado        = sim\n| droppedby      = Ninguém.\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+0.50% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+1.00% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+1.50% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+2.00% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Energy||+1 Energy Magic Level}}\n| notes          = É uma réplica da [[Energy War Axe]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42243,
+    "ns": 0,
+    "title": "Fiery Barbarian Axe Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Fiery Barbarian Axe Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| hands          = Uma\n| type           = Réplicas de Machados\n| attack         = 5\n| defense        = 5\n| weight         = 51.00\n| classificacao  = 1\n| max_tier       = 1\n| mercado        = sim\n| droppedby      = Ninguém.\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+0.50% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+1.00% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+1.50% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+2.00% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Fire||+1 Fire Magic Level}}\n| notes          = É uma réplica da [[Fiery Barbarian Axe]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42253,
+    "ns": 0,
+    "title": "Fiery Headchopper Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Fiery Headchopper Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| hands          = Duas\n| type           = Réplicas de Machados\n| attack         = 5\n| defense        = 5\n| weight         = 45.00\n| classificacao  = 1\n| max_tier       = 1\n| mercado        = sim\n| droppedby      = Ninguém.\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+0.50% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+1.00% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+1.50% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+2.00% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Fire||+1 Fire Magic Level}}\n| notes          = É uma réplica da [[Fiery Headchopper]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42255,
+    "ns": 0,
+    "title": "Fiery Heroic Axe Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Fiery Heroic Axe Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| hands          = Uma\n| type           = Réplicas de Machados\n| attack         = 5\n| defense        = 5\n| weight         = 61.00\n| classificacao  = 1\n| max_tier       = 1\n| mercado        = sim\n| droppedby      = Ninguém.\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+0.50% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+1.00% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+1.50% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+2.00% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Fire||+1 Fire Magic Level}}\n| notes          = É uma réplica da [[Fiery Heroic Axe]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42257,
+    "ns": 0,
+    "title": "Fiery Knight Axe Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Fiery Knight Axe Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| hands          = Uma\n| type           = Réplicas de Machados\n| attack         = 5\n| defense        = 5\n| weight         = 59.00\n| classificacao  = 1\n| max_tier       = 1\n| mercado        = sim\n| droppedby      = Ninguém.\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+0.50% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+1.00% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+1.50% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+2.00% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Fire||+1 Fire Magic Level}}\n| notes          = É uma réplica da [[Fiery Knight Axe]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42267,
+    "ns": 0,
+    "title": "Fiery War Axe Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Fiery War Axe Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| hands          = Duas\n| type           = Réplicas de Machados\n| attack         = 5\n| defense        = 5\n| weight         = 61.50\n| classificacao  = 1\n| max_tier       = 1\n| mercado        = sim\n| droppedby      = Ninguém.\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+0.50% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+1.00% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+1.50% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+2.00% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Fire||+1 Fire Magic Level}}\n| notes          = É uma réplica da [[Fiery War Axe]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42273,
+    "ns": 0,
+    "title": "Icy Barbarian Axe Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Icy Barbarian Axe Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| hands          = Uma\n| type           = Réplicas de Machados\n| attack         = 5\n| defense        = 5\n| weight         = 51.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+0.50% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+1.00% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+1.50% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+2.00% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Ice||+1 Ice Magic Level}}\n| notes          = É uma réplica da [[Icy Barbarian Axe]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42285,
+    "ns": 0,
+    "title": "Icy Headchopper Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Icy Headchopper Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| hands          = Duas\n| type           = Réplicas de Machados\n| attack         = 5\n| defense        = 5\n| weight         = 45.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+0.50% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+1.00% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+1.50% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+2.00% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Ice||+1 Ice Magic Level}}\n| notes          = É uma réplica da [[Icy Headchopper]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42287,
+    "ns": 0,
+    "title": "Icy Heroic Axe Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Icy Heroic Axe Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| hands          = Uma\n| type           = Réplicas de Machados\n| attack         = 5\n| defense        = 5\n| weight         = 61.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+0.50% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+1.00% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+1.50% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+2.00% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Ice||+1 Ice Magic Level}}\n| notes          = É uma réplica da [[Icy Heroic Axe]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42289,
+    "ns": 0,
+    "title": "Icy Knight Axe Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Icy Knight Axe Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| hands          = Uma\n| type           = Réplicas de Machados\n| attack         = 5\n| defense        = 5\n| weight         = 59.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+0.50% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+1.00% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+1.50% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+2.00% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Ice||+1 Ice Magic Level}}\n| notes          = É uma réplica da [[Icy Knight Axe]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42299,
+    "ns": 0,
+    "title": "Icy War Axe Replica",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Icy War Axe Replica\n| flavortext     = \n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| hands          = Duas\n| type           = Réplicas de Machados\n| attack         = 5\n| defense        = 5\n| weight         = 61.50\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+0.50% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+1.00% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+1.50% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Axe||+2.00% do seu Axe Fighting como extra damage para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Ice||+1 Ice Magic Level}}\n| notes          = É uma réplica da [[Icy War Axe]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42306,
+    "ns": 0,
+    "title": "Ornate Carving Axe",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ornate Carving Axe\n| flavortext     = This replica looks overcharged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| hands          = Uma\n| type           = Réplicas de Machados\n| attack         = 5\n| defense        = 5\n| weight         = 50.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+1% mana leech para Lesser Front Sweep}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+1% mana leech para Lesser Front Sweep}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+3% mana leech para Lesser Front Sweep}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+4% mana leech para Lesser Front Sweep}}\n| perk5          = {{Weapon Perk|Type_Skill_Axe||+1 Axe Fighting}}\n| notes          = É uma réplica da [[Axe of Carving (Overcharged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42312,
+    "ns": 0,
+    "title": "Ornate Carving Chopper",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ornate Carving Chopper\n| flavortext     = This replica looks overcharged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| secondarytype  = \n| hands          = Duas\n| type           = Réplicas de Machados\n| range          = \n| attack         = 5\n| defense        = 5\n| weight         = 70.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+1% mana leech para Lesser Front Sweep}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+1% mana leech para Lesser Front Sweep}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+3% mana leech para Lesser Front Sweep}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+4% mana leech para Lesser Front Sweep}}\n| perk5          = {{Weapon Perk|Type_Skill_Axe||+1 Axe Fighting}}\n| notes          = É uma réplica da [[Chopper of Carving (Overcharged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42326,
+    "ns": 0,
+    "title": "Valuable Carving Axe",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Valuable Carving Axe\n| flavortext     = This replica looks heavily charged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| secondarytype  = \n| hands          = Uma\n| type           = Réplicas de Machados\n| range          = \n| attack         = 5\n| defense        = 5\n| weight         = 50.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+1% mana leech para Lesser Front Sweep}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+1% mana leech para Lesser Front Sweep}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+3% mana leech para Lesser Front Sweep}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+4% mana leech para Lesser Front Sweep}}\n| perk5          = {{Weapon Perk|Type_Skill_Axe||+1 Axe Fighting}}\n| notes          = É uma réplica da [[Axe of Carving (Heavily Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42334,
+    "ns": 0,
+    "title": "Valuable Carving Chopper",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Valuable Carving Chopper\n| flavortext     = This replica looks heavily charged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| secondarytype  = \n| hands          = Duas\n| type           = Réplicas de Machados\n| range          = \n| attack         = 5\n| defense        = 5\n| weight         = 70.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+1% mana leech para Lesser Front Sweep}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+1% mana leech para Lesser Front Sweep}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+3% mana leech para Lesser Front Sweep}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+4% mana leech para Lesser Front Sweep}}\n| perk5          = {{Weapon Perk|Type_Skill_Axe||+1 Axe Fighting}}\n| notes          = É uma réplica da [[Chopper of Carving (Heavily Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42346,
+    "ns": 0,
+    "title": "Plain Carving Axe",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Plain Carving Axe\n| flavortext     = This replica looks charged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| secondarytype  = \n| hands          = Uma\n| type           = Réplicas de Machados\n| range          = \n| attack         = 5\n| defense        = 5\n| weight         = 50.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+1% mana leech para Lesser Front Sweep}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+1% mana leech para Lesser Front Sweep}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+3% mana leech para Lesser Front Sweep}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+4% mana leech para Lesser Front Sweep}}\n| perk5          = {{Weapon Perk|Type_Skill_Axe||+1 Axe Fighting}}\n| notes          = É uma réplica da [[Axe of Carving (Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42354,
+    "ns": 0,
+    "title": "Plain Carving Chopper",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Plain Carving Chopper\n| flavortext     = This replica looks charged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| secondarytype  = \n| hands          = Duas\n| type           = Réplicas de Machados\n| range          = \n| attack         = 5\n| defense        = 5\n| weight         = 70.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+1% mana leech para Lesser Front Sweep}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+1% mana leech para Lesser Front Sweep}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+3% mana leech para Lesser Front Sweep}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Mana_Leech|+4% mana leech para Lesser Front Sweep}}\n| perk5          = {{Weapon Perk|Type_Skill_Axe||+1 Axe Fighting}}\n| notes          = É uma réplica da [[Chopper of Carving (Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42367,
+    "ns": 0,
+    "title": "Ornate Mayhem Axe",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ornate Mayhem Axe\n| flavortext     = This replica looks overcharged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| secondarytype  = \n| hands          = Uma\n| type           = Réplicas de Machados\n| range          = \n| attack         = 5\n| defense        = 5\n| weight         = 50.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Dmg|+10% critical extra damage para Lesser Front Sweep}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Dmg|+20% critical extra damage para Lesser Front Sweep}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Dmg|+30% critical extra damage para Lesser Front Sweep}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Chance|+5% critical hit chance para Lesser Front Sweep}}\n| perk5          = {{Weapon Perk|Type_Skill_Axe||+1 Axe Fighting}}\n| notes          = É uma réplica da [[Axe of Mayhem (Overcharged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42375,
+    "ns": 0,
+    "title": "Ornate Mayhem Chopper",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ornate Mayhem Chopper\n| flavortext     = This replica looks overcharged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| secondarytype  = \n| hands          = Duas\n| type           = Réplicas de Machados\n| range          = \n| attack         = 5\n| defense        = 5\n| weight         = 70.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Dmg|+10% critical extra damage para Lesser Front Sweep}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Dmg|+20% critical extra damage para Lesser Front Sweep}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Dmg|+30% critical extra damage para Lesser Front Sweep}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Chance|+5% critical hit chance para Lesser Front Sweep}}\n| perk5          = {{Weapon Perk|Type_Skill_Axe||+1 Axe Fighting}}\n| notes          = É uma réplica da [[Chopper of Mayhem (Overcharged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42387,
+    "ns": 0,
+    "title": "Ornate Remedy Axe",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ornate Remedy Axe\n| flavortext     = This replica looks overcharged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| secondarytype  = \n| hands          = Uma\n| type           = Réplicas de Machados\n| range          = \n| attack         = 5\n| defense        = 5\n| weight         = 50.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+1% life leech para Lesser Front Sweep}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+1% life leech para Lesser Front Sweep}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+3% life leech para Lesser Front Sweep}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+4% life leech para Lesser Front Sweep}}\n| perk5          = {{Weapon Perk|Type_Skill_Axe||+1 Axe Fighting}}\n| notes          = É uma réplica da [[Axe of Remedy (Overcharged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42395,
+    "ns": 0,
+    "title": "Ornate Remedy Chopper",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ornate Remedy Chopper\n| flavortext     = This replica looks overcharged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| secondarytype  = \n| hands          = Duas\n| type           = Réplicas de Machados\n| range          = \n| attack         = 5\n| defense        = 5\n| weight         = 70.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+1% life leech para Lesser Front Sweep}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+1% life leech para Lesser Front Sweep}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+3% life leech para Lesser Front Sweep}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+4% life leech para Lesser Front Sweep}}\n| perk5          = {{Weapon Perk|Type_Skill_Axe||+1 Axe Fighting}}\n| notes          = É uma réplica da [[Chopper of Remedy (Overcharged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42407,
+    "ns": 0,
+    "title": "Valuable Remedy Axe",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Valuable Remedy Axe\n| flavortext     = This replica looks heavily charged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| secondarytype  = \n| hands          = Uma\n| type           = Réplicas de Machados\n| range          = \n| attack         = 5\n| defense        = 5\n| weight         = 50.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+1% life leech para Lesser Front Sweep}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+1% life leech para Lesser Front Sweep}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+3% life leech para Lesser Front Sweep}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+4% life leech para Lesser Front Sweep}}\n| perk5          = {{Weapon Perk|Type_Skill_Axe||+1 Axe Fighting}}\n| notes          = É uma réplica da [[Axe of Remedy (Heavily Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42415,
+    "ns": 0,
+    "title": "Valuable Remedy Chopper",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Valuable Remedy Chopper\n| flavortext     = This replica looks heavily charged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| secondarytype  = \n| hands          = Duas\n| type           = Réplicas de Machados\n| range          = \n| attack         = 5\n| defense        = 5\n| weight         = 70.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+1% life leech para Lesser Front Sweep}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+1% life leech para Lesser Front Sweep}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+3% life leech para Lesser Front Sweep}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+4% life leech para Lesser Front Sweep}}\n| perk5          = {{Weapon Perk|Type_Skill_Axe||+1 Axe Fighting}}\n| notes          = É uma réplica da [[Chopper of Remedy (Heavily Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42427,
+    "ns": 0,
+    "title": "Plain Remedy Axe",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Plain Remedy Axe\n| flavortext     = This replica looks charged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| secondarytype  = \n| hands          = Uma\n| type           = Réplicas de Machados\n| range          = \n| attack         = 5 \n| defense        = 5\n| weight         = 50.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+1% life leech para Lesser Front Sweep}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+1% life leech para Lesser Front Sweep}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+3% life leech para Lesser Front Sweep}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+4% life leech para Lesser Front Sweep}}\n| perk5          = {{Weapon Perk|Type_Skill_Axe||+1 Axe Fighting}}\n| notes          = É uma réplica da [[Axe of Remedy (Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42435,
+    "ns": 0,
+    "title": "Plain Remedy Chopper",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Plain Remedy Chopper\n| flavortext     = This replica looks charged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| secondarytype  = \n| hands          = Duas\n| type           = Réplicas de Machados\n| range          = \n| attack         = 5\n| defense        = 5\n| weight         = 70.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+1% life leech para Lesser Front Sweep}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+1% life leech para Lesser Front Sweep}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+3% life leech para Lesser Front Sweep}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Life_Leech|+4% life leech para Lesser Front Sweep}}\n| perk5          = {{Weapon Perk|Type_Skill_Axe||+1 Axe Fighting}}\n| notes          = É uma réplica da [[Chopper of Remedy (Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42447,
+    "ns": 0,
+    "title": "Plain Mayhem Axe",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Plain Mayhem Axe\n| flavortext     = This replica looks charged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| secondarytype  = \n| hands          = Uma\n| type           = Réplicas de Machados\n| range          = \n| attack         = 5\n| defense        = 5\n| weight         = 50.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Dmg|+10% critical extra damage para Lesser Front Sweep}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Dmg|+20% critical extra damage para Lesser Front Sweep}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Dmg|+30% critical extra damage para Lesser Front Sweep}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Chance|+5% critical hit chance para Lesser Front Sweep}}\n| perk5          = {{Weapon Perk|Type_Skill_Axe||+1 Axe Fighting}}\n| notes          = É uma réplica da [[Axe of Mayhem (Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42455,
+    "ns": 0,
+    "title": "Plain Mayhem Chopper",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Plain Mayhem Chopper\n| flavortext     = This replica looks charged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| secondarytype  = \n| hands          = Duas\n| type           = Réplicas de Machados\n| range          = \n| attack         = 5\n| defense        = 5\n| weight         = 70.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Dmg|+10% critical extra damage para Lesser Front Sweep}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Dmg|+20% critical extra damage para Lesser Front Sweep}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Dmg|+30% critical extra damage para Lesser Front Sweep}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Chance|+5% critical hit chance para Lesser Front Sweep}}\n| perk5          = {{Weapon Perk|Type_Skill_Axe||+1 Axe Fighting}}\n| notes          = É uma réplica da [[Chopper of Mayhem (Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42467,
+    "ns": 0,
+    "title": "Valuable Mayhem Axe",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Valuable Mayhem Axe\n| flavortext     = This replica looks heavily charged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| secondarytype  = \n| hands          = Uma\n| type           = Réplicas de Machados\n| range          = \n| attack         = 5\n| defense        = 5\n| weight         = 50.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Dmg|+10% critical extra damage para Lesser Front Sweep}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Dmg|+20% critical extra damage para Lesser Front Sweep}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Dmg|+30% critical extra damage para Lesser Front Sweep}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Chance|+5% critical hit chance para Lesser Front Sweep}}\n| perk5          = {{Weapon Perk|Type_Skill_Axe||+1 Axe Fighting}}\n| notes          = É uma réplica da [[Axe of Mayhem (Heavily Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42475,
+    "ns": 0,
+    "title": "Valuable Mayhem Chopper",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Valuable Mayhem Chopper\n| flavortext     = This replica looks heavily charged\n| levelrequired  =\n| enchantable    = não\n| enchanted      = não\n| itemclass      = \n| primarytype    = Réplicas\n| secondarytype  = \n| hands          = Duas\n| type           = Réplicas de Machados\n| range          = \n| attack         = 5\n| defense        = 5\n| weight         = 70.00\n| classificacao  = 1\n| max_tier       = 1\n| npcprice       = 500\n| value          = 500\n| buyfrom        = Cillia\n| mercado        = sim\n| droppedby      = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Dmg|+10% critical extra damage para Lesser Front Sweep}}\n| perk2          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Dmg|+20% critical extra damage para Lesser Front Sweep}}\n| perk3          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Dmg|+30% critical extra damage para Lesser Front Sweep}}\n| perk4          = {{Weapon Perk|Spell_Lesser_Front_Sweep|Critical_Chance|+5% critical hit chance para Lesser Front Sweep}}\n| perk5          = {{Weapon Perk|Type_Skill_Axe||+1 Axe Fighting}}\n| notes          = É uma réplica da [[Chopper of Mayhem (Heavily Charged)]].\n}}"
+       }
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

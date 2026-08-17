@@ -1,0 +1,1462 @@
+{
+ "query": {
+  "pages": [
+   {
+    "pageid": 8465,
+    "ns": 0,
+    "title": "Amulet of Loss",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Amulet of Loss\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Amuletos e Colares\n| attrib         = 100% contra a perda de itens\n| resist         = \n| weight         = 4.20\n| armor          = 0\n| value          = 45 000 - 55 000\n| npcprice       = 50 000\n| npcvalue       = 45 000\n| droppedby      = [[Blightwalker]], [[Sulphider]], [[Zugurosh]], [[Zorvorax]]. \n| droppedEventby = [[Zorvorax]].\n| buyfrom        = Eremo\n| sellto         = Eremo\n| implemented    = 7.2\n| notes          = Evita que itens sejam perdidos (incluindo a Backpack) quando você morre. Não funciona com jogadores que estejam com [[Red Skull (PvP System)|Red Skull]] ou [[Black Skull (PvP System)|Black Skull]]. O amuleto é perdido após a morte. Jogadores [[Premium Account]] podem vender para os jogadores [[Free Account]] facilmente, pois eles não conseguem chegar ao NPC [[Eremo]] para comprar.<br>\n'''Nota:''' A partir do [[Updates/8.53|Update 8.53]] é possível obtê-lo em servidores [[Hardcore PvP]]. Faz parte do [[Semi Rare Set]] e do [[Rare Set]].\n<noinclude><p><spoiler>* Possibilidade de ser obtido em [[Surprise Bag (Red)|Red Surprise Bags]].\n*Possibilidade de ser obtido como presente do NPC [[Santa Claus]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8500,
+    "ns": 0,
+    "title": "Ancient Amulet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ancient Amulet\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Amuletos e Colares\n| attrib         = Nenhum.\n| weight         = 8.40\n| armor          = 0\n| value          = 200\n| npcvalue       = 200\n| droppedby      = [[Ancient Scarab]], [[Fleshcrawler]], [[The Ravager]].\n| droppedRaidby  = [[Orshabaal]].\n| buyfrom        = Jogadores.\n| sellto         = Rashid\n| implemented    = 7.4\n| notes          = Usado como decoração. Pode ser visto na sala do faraó [[Omruc]] em [[Ankrahmun]]. Parte do [[Ancient Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8502,
+    "ns": 0,
+    "title": "Beetle Necklace",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Beetle Necklace\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Amuletos e Colares\n| skillboost     = [[Speed]] +2\n| attrib         = Nenhum.\n| weight         = 8.20\n| armor          = 0\n| value          = 2 000 - 15 000\n| npcvalue       = 1 500\n| droppedby      = [[Lancer Beetle]], [[Orclops Doomhauler]].\n| buyfrom        = Jogadores.\n| sellto         = Rashid\n| implemented    = 8.54\n| notes          = Ele aumenta sua velocidade em 4 pontos (2 levels), porém é pouco utilizado devido a pouca diferença do andar e nenhuma proteção (arm). Os jogadores de level superior a 150 podem utilizar o item raro [[Shrunken Head Necklace]] que oferece uma velocidade superior. Faz parte do [[Haste Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8503,
+    "ns": 0,
+    "title": "Broken Amulet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Broken Amulet\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Amuletos e Colares\n| attrib         = Nenhum.\n| weight         = 4.20\n| armor          = 0\n| value          = 170 000 000 - 200 000 000\n| droppedby      = Ninguém.\n| npcvalue       = 50 000\n| buyfrom        = Jogadores.\n| sellto         = Eremo\n| implemented    = 7.2\n| notes          = Era o velho [[Amulet of Life]] antes de ser modificado. Pode ser vendido para o [[Eremo]], mas algumas pessoas preferem ficar com ele, como um item raro.\n\n<gallery>\nArquivo:Amulet com Rei de Lutabra.png|Amulet com seu atual dono, o jogador {{Character|Rei de Lutabra}}.\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8505,
+    "ns": 0,
+    "title": "Bronze Amulet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bronze Amulet\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Amuletos e Colares\n| resist         = [[Mana Drain]] +20%\n| charges        = 200\n| attrib         = Nenhum.\n| weight         = 5.00\n| armor          = 0\n| value          = 50\n| npcvalue       = 50\n| npcprice       = 100\n| droppedby      = [[Dworc Venomsniper]], [[Dworc Voodoomaster]], [[Minotaur]], [[Minotaur Bruiser]], [[Minotaur Cult Follower]], [[Sir Leonard]], [[Sir Leopold]], [[Vampire]].\n| buyfrom        = Haroun\n| sellto         = Haroun\n| implemented    = 7.1\n| notes          = Considerado muito valioso em [[Rookgaard]]. Faz parte do [[Rook Set]], [[Minotaur Set]] e [[Rookgaard/Dawnport Set]].\n<noinclude><p><spoiler>* Recompensa da [[Power Ring Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8508,
+    "ns": 0,
+    "title": "Bronze Necklace",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bronze Necklace\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Amuletos e Colares\n| attrib         = Nenhum.\n| weight         = 4.10\n| armor          = 0\n| value          = 250 000 000 - 300 000 000\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = <noinclude>\n<gallery>\nArquivo:TBL2003.jpg|O bronze necklace é o amuleto mais raro e antigo do [[Tibia]]. Foi dado como presente da [[CipSoft]] para o segundo colocado no Tibian Ball League em 2003, em [[Antica]]. Nos tempos antigos ele tinha [[spawn]] no pântano de [[Venore]]\nArquivo:bronzeneck.jpg|Um '''Bronze Necklace''' em uma casa em [[Antica]].\nArquivo:Contest.jpg|A jogadora Heart Lilly de [[Kenora]] ganhou o Necklace em um concurso do Tibia Wiki. </noinclude><br />\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8510,
+    "ns": 0,
+    "title": "Crystal Necklace",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Crystal Necklace\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Amuletos e Colares\n| attrib         = Nenhum.\n| weight         = 4.90\n| armor          = 0\n| value          = 400\n| npcvalue       = 400\n| droppedby      = [[Amazon]], [[Behemoth]], [[Bretzecutioner]], [[Crystal Spider]], [[Destroyer]], [[Hellgorak]], [[Priestess]].\n| droppedRaidby  = [[Orshabaal]].\n| buyfrom        = Jogadores.\n| sellto         = Rashid\n| notes          = É usado como decoração. O NPC [[Rashid]] começou a comprá-los a partir do [[Updates/8.4|Update de Natal 2008]] e o valor aumentou dramaticamente. Faz parte do [[Crystal Set]].\n<noinclude><p><spoiler>* Recompensa da [[The Explorer Society Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8511,
+    "ns": 0,
+    "title": "Demonbone Amulet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Demonbone Amulet\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Amuletos e Colares\n| attrib         = Nenhum.\n| weight         = 6.90\n| armor          = 0\n| value          = \n| npcvalue       = 32 000\n| npcprice       = 0\n| droppedby      = [[Arbaziloth]], [[Falcon Knight]], [[Hellfire Fighter]], [[Hellflayer]], [[Hellgorak]], [[Juggernaut]], [[Lokathmor]], [[Morguthis]], [[Preceptor Lazare]], [[Prince Drazzak]], [[Shulgrax]], [[Spectre]].\n| droppedRaidby  = [[The Imperor]].\n| buyfrom        = Jogadores.\n| sellto         = Rashid\n| implemented    = 7.3\n| notes          = Usado como decoração. Faz parte do [[Demon Set]], [[Bone Set]] e [[Full Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8512,
+    "ns": 0,
+    "title": "Dragon Necklace",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Dragon Necklace\n| charges        = 200\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Amuletos e Colares\n| attrib         = Nenhum.\n| weight         = 6.30\n| armor          = 0\n| resist         = [[Fire Damage|Fire]] +8%\n| stackable      = não\n| value          = 100 - 1 000\n| npcvalue       = 100\n| npcprice       = 1 000\n| droppedby      = [[Acolyte of the Cult]], [[Burster Spectre]], [[Crazed Summer Vanguard]], [[Feral Sphinx]], [[Hunter]], [[Inkwing]], [[Stalking Stalk]], [[The Count Of The Core]], [[The Duke Of The Depths]], [[Lizard Commander]].\n| droppedRaidby  = [[Arthom the Hunter]], [[Yakchal]], [[Zushuka (Mortal)]].\n| droppedEventby = [[Haunted Dragon]], [[Tazhadur]].\n| buyfrom        = Yaman\n| sellto         = Yaman\n| implemented    = 7.1\n| notes          = Mesmo sprite do [[Jerom's Family Necklace]]. Faz parte do [[Magma Set]], [[Dragon Set]] e [[Full Set]].\n<noinclude><p><spoiler>\n* Recompensa da [[Ornamented Shield Quest]].\n* Recompensa da [[Thais Quest]].\n* Recompensa da [[The Hero Cave Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8513,
+    "ns": 0,
+    "title": "Elven Amulet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Elven Amulet\n| charges        = 50\n| resist         = [[Physical Damage|Physical]] +5%, [[Fire Damage|Fire]] +5%, [[Earth Damage|Earth]] +5%, [[Energy Damage|Energy]] +5%, [[Ice Damage|Ice]] +5%, [[Holy Damage|Holy]] +5%, [[Death Damage|Death]] +5%\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Amuletos e Colares\n| attrib         = Nenhum.\n| weight         = 2.70\n| armor          = 0\n| stackable      = não\n| value          = 100 - 500\n| npcvalue       = 100\n| npcprice       = 500\n| droppedby      = [[Arachnophobica]], [[Burning Gladiator]], [[Burster Spectre]], [[Crazed Winter Rearguard]], [[Crypt Warden]], [[Cursed Prospector]], [[Elf Arcanist]], [[Lamassu]], [[Tremendous Tyrant]].\n| droppedRaidby  = [[Dharalion]].\n| buyfrom        = Haroun\n| sellto         = Haroun\n| implemented    = 7.1\n| notes          = Faz parte do [[Blue Set]] e do [[Elven Set]].\n<noinclude><p><spoiler>\n* Recompensa das quests:\n** [[Deeper Fibula Quest]].\n** [[Shadowthorn Quest]].\n** [[To Blind the Enemy Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8516,
+    "ns": 0,
+    "title": "Garlic Necklace",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Garlic Necklace\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Amuletos e Colares \n| charges        = 150\n| resist         = [[Life Drain]] +20%\n| attrib         = Nenhum.\n| weight         = 3.80\n| armor          = 0\n| stackable      = não\n| value          = 50 - 100\n| npcvalue       = 50\n| npcprice       = 100\n| droppedby      = [[Arachnophobica]], [[Blightwalker]], [[Burster Spectre]], [[Exotic Bat]], [[Novice of the Cult]], [[Witch]].\n| droppedRaidby  = [[Yaga the Crone]].\n| buyfrom        = Haroun\n| sellto         = Haroun\n| implemented    = 7.1\n| notes          = Faz parte do [[Rook Set]].\n<noinclude><p><spoiler>\n* Recompensa da [[Mintwallin Quest]]. \n* Recompensa da [[Ornamented Shield Quest]].\n* Recompensa da [[The Rookie Guard Quest]]. \n* Recompensa da [[Triangle Tower Quest]].\n* Recompensa da [[Troll Cave Quest]].\n* 03 são necessários para enfraquecer o [[The Count]].\n* Possibilidade de ser obtido ao usar uma [[Belongings of a Deceased (Ottokar)]].\n* Possibilidade de ser obtido ao usar um [[Mysterious Remains]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8523,
+    "ns": 0,
+    "title": "Glacier Amulet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Glacier Amulet\n| levelrequired  = 60\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Amuletos e Colares\n| charges        = 200\n| resist         = [[Ice Damage|Ice]] +20%, [[Energy Damage|Energy]] -10%\n| attrib         = Nenhum.\n| weight         = 5.00\n| armor          = 0\n| value          = 1 500\n| npcvalue       = 1 500\n| droppedby      = [[Animated Feather]], [[Bashmu]], [[Bluebeak]], [[Burster Spectre]], [[Cave Chimera]], [[Crazed Winter Rearguard]], [[Crazed Winter Vanguard]], [[Eyeless Devourer]], [[Goggle Cake]], [[Monk's Apparition]], [[Sea Serpent]], [[Seacrest Serpent]], [[Spiky Carnivor]], [[Tarbaz]], [[Turbulent Elemental]].\n| droppedRaidby  = [[Zushuka (Mortal)]].\n| droppedEventby = [[Animated Snowman]], [[Gelidrazah the Frozen]], [[Ice Dragon]].\n| buyfrom        = Festival Assistant:1\n| sellto         = Rashid\n| implemented    = 8.2\n| notes          = Faz parte do [[Glacier Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8524,
+    "ns": 0,
+    "title": "Golden Amulet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Golden Amulet\n| flavortext     = Many gems glitter on the amulet.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Amuletos e Colares\n| attrib         = Nenhum.\n| weight         = 8.30\n| armor          = 0\n| value          = 6 000 - 6 600\n| npcvalue       = 2 000\n| npcprice       = 6 600\n| droppedby      = [[Hellgorak]].\n| droppedRaidby  = [[Ghazbaran]].\n| buyfrom        = Briasol, Tesha, Ishina, Iwan, Talila, Valindara, Yonan, Tezila, Chantalle, Gail, Edmund, Jessica, Hanna, Carina, Odemara, Oiriz, Giri\n| sellto         = Gnomission\n| notes          = Frequentemente utilizado como elemento decorativo. Pode ser visto no quarto do faraó [[Omruc]] em [[Ankrahmun]]. Faz parte do [[Golden Set]] e do [[Full Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8525,
+    "ns": 0,
+    "title": "Jerom's Family Necklace",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Jerom's Family Necklace\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Quest\n| secondarytype  = Amuletos e Colares\n| attrib         = Nenhum.\n| weight         = 6.30\n| armor          = 0\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.2\n| notes          = Mesmo sprite de um [[Dragon Necklace]].\n<noinclude><p><spoiler>* Obtido e usado durante a [[Troll Sabotage Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 20294,
+    "ns": 0,
+    "title": "Bonfire Amulet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bonfire Amulet\n| flavortext     = It engulfs you in flames - fire against fire.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Amuletos e Colares\n| levelrequired  = 80\n| charges        = 5\n| resist         = [[Physical Damage|Physical]] +60%, [[Fire Damage|Fire]] +40%\n| attrib         = Nenhum.\n| weight         = 7.00\n| armor          = 0\n| npcvalue       = 0\n| droppedby      = Desconhecido.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.5\n| notes          = Faz parte do [[Magma Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 20295,
+    "ns": 0,
+    "title": "Golden Hyaena Pendant",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Golden Hyaena Pendant\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Amuletos e Colares\n| attrib         = Nenhum.\n| weight         = 3.50\n| armor          = 0\n| value          = Negociável\n| npcvalue       = 0\n| droppedby      = [[King Zelos]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.1\n| notes          = Só foi possível obtê-lo após o [[Updates/12.20|Update 12.20]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 20296,
+    "ns": 0,
+    "title": "Golden Scorpion Pendant",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Golden Scorpion Pendant\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Amuletos e Colares\n| attrib         = Nenhum.\n| weight         = 3.00\n| armor          = 0\n| value          = Negociável\n| npcvalue       = 0\n| droppedby      = Desconhecido.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.1\n| notes          = Não se sabe como obter este item ou se é relacionado a alguma [[quest]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25311,
+    "ns": 0,
+    "title": "Gill Necklace",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Gill Necklace\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Amuletos e Colares\n| levelrequired  = 150\n| charges        = 750\n| resist         = [[Physical Damage|Physical]] +15%, [[Earth Damage|Earth]] +10%\n| attrib         = Nenhum.\n| weight         = 4.10\n| armor          = 0\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.6\n| notes          = Faz parte do [[Gill Set]].\n<noinclude><p><spoiler>* Pode ser obtido após abrir o [[Deathstrike Treasure Chest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 33150,
+    "ns": 0,
+    "title": "Gearwheel Chain",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Gearwheel Chain\n| levelrequired  = 75\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Amuletos e Colares\n| attrib         = Nenhum.\n| weight         = 10.00\n| armor          = 3\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 5 000\n| droppedby      = [[Control Tower]], [[Glooth Bomb]], [[Glooth Golem]], [[Iks Yapunac]], [[Rustheap Golem]], [[Sir Leonard]], [[Walker]].\n| buyfrom        = Jogadores.\n| sellto         = Flint\n| implemented    = 10.50\n| notes          = Considerado melhor que o [[Platinum Amulet]]. Atualmente é o segundo amuleto com maior ''armor'' no jogo. Faz parte do [[Paladin Set]], [[Metal Set]], [[Mage Set]], [[High Level Knight Basic Set]] e [[Semi Rare Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 33153,
+    "ns": 0,
+    "title": "Glooth Amulet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Glooth Amulet\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 75\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Amuletos e Colares\n| resist         = [[Physical Damage|Physical]] +10%,  [[Fire Damage|Fire]] +10%, [[Earth Damage|Earth]] +10%, [[Energy Damage|Energy]] +10%, [[Ice Damage|Ice]] +10%, [[Holy Damage|Holy]] +10%, e [[Death Damage|Death]] +10%\n| charges        = 20\n| attrib         = Nenhum.\n| weight         = 2.20\n| armor          = 0\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 2 000\n| droppedby      = [[Blood Beast]], [[Devourer (Criatura)]], [[Glooth Anemone]], [[Glooth Bandit]], [[Glooth Blob]], [[Glooth Brigand]], [[Glooth Fairy]], [[Glooth Golem]], [[Lisa]], [[Rot Elemental]].\n| buyfrom        = Jogadores.\n| sellto         = Flint\n| implemented    = 10.50\n| notes          = Faz parte do [[Glooth Set]].\n<noinclude><p><spoiler>* Possibilidade de ser obtido ao usar um [[Glooth Bag]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 36503,
+    "ns": 0,
+    "title": "Enchanted Werewolf Amulet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Enchanted Werewolf Amulet\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Amuletos e Colares\n| secondarytype  = Fontes de Luz\n| enchantable    = \n| enchanted      = sim\n| duration       = 60\n| resist         = [[Physical Damage|Physical]] +6%\n| attrib         = Fornece uma pequena quantidade de luz.\n| stackable      = não\n| weight         = 5.50 \n| armor          = 3\n| value          = \n| npcvalue       = 0\n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.80\n| notes          = Esse item é um [[Werewolf Amulet]] encantado.\n<noinclude></noinclude>\n{{Veja|Itens Recarregáveis}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 37071,
+    "ns": 0,
+    "title": "Ferumbras' Amulet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ferumbras' Amulet\n| flavortext     = The rare jewel is made of sapphire and ruby and has a golden F pendant.\n| levelrequired  = 100\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Amuletos e Colares\n| attrib         = Nenhum.\n| weight         = 5.00\n| armor          = 3\n| value          = Negociável\n| npcvalue       = 0\n| droppedby      = [[Ferumbras Mortal Shell]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.90\n| notes          = <noinclude><p><spoiler>*Quando utilizado, esse amuleto pode encher, aleatoriamente, 1000 do seu [[HP]] ou 1000 da sua [[mana]] e pode ser usado uma vez a cada hora.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 38273,
+    "ns": 0,
+    "title": "Collar of Blue Plasma",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Collar of Blue Plasma\n| levelrequired  = 150\n| itemclass      = Ferramentas e Outros Equipamentos \n| primarytype    = Amuletos e Colares\n| vocrequired    = [[Paladin]]s\n| duration       = 30\n| skillboost     = [[Distance Fighting]] +4, [[Magic Level]] +2\n| attrib         = \n| weight         = 5.00\n| armor          = 0\n| value          = Negociável\n| npcvalue       = 6 000\n| droppedby      = [[Adventurer Group]], [[Ahau]], [[Alptramun]], [[Anomaly]], [[Bashmu]], [[Breach Brood]], [[Count Vlarkorth]], [[Crazed Summer Rearguard]], [[Dread Intruder]], [[Dreadful Disruptor]], [[Eradicator]], [[Guard Captain Quaid]], [[Izcandar the Banished]], [[King Zelos]], [[Lloyd]], [[Malofur Mangrinder]], [[Maxxenius]], [[Plagueroot]], [[Poisonous Carnisylvan]], [[Realityquake]], [[Rupture]], [[The Nightmare Beast]], [[The Unarmored Voidborn]], [[World Devourer]].\n| droppedEventby = [[The Percht Queen]].\n| buyfrom        = Jogadores.\n| sellto         = Fadil\n| implemented    = 10.94 \n| notes          = Quando equipado, aumenta o seu distance e o seu magic level durante 30 minutos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 38274,
+    "ns": 0,
+    "title": "Collar of Green Plasma",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Collar of Green Plasma\n| levelrequired  = 150\n| itemclass      = Ferramentas e Outros Equipamentos \n| primarytype    = Amuletos e Colares \n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| duration       = 30\n| skillboost     = [[Magic Level]] +3\n| attrib         = [[Regeneration|Regeneração]] rápida.\n| modificadores  = faster [[Regeneration]]\n| weight         = 5.00\n| armor          = 0\n| value          = Negociável\n| npcvalue       = 6 000\n| droppedby      = [[Adventurer Group]], [[Ahau]], [[Alptramun]], [[Arachnophobica]], [[Dread Intruder]], [[Eradicator]], [[Izcandar the Banished]], [[King Zelos]], [[Malofur Mangrinder]], [[Maxxenius]], [[Outburst]], [[Plagueroot]], [[Reality Reaver]], [[Rhindeer]], [[Sparkion]], [[The Nightmare Beast]], [[Tropical Desolator]].\n| droppedEventby = [[The Percht Queen]].\n| buyfrom        = Jogadores.\n| sellto         = Fadil\n| implemented    = 10.94 \n| notes          = Faz parte do [[Magic Level Set]] e [[Regeneration Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 38275,
+    "ns": 0,
+    "title": "Collar of Red Plasma",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Collar of Red Plasma\n| levelrequired  = 150\n| itemclass      = Ferramentas e Outros Equipamentos \n| primarytype    = Amuletos e Colares \n| skillboost     = [[Sword Fighting]] +4, [[Club Fighting]] +4, [[Axe Fighting]] +4\n| resist         = [[Physical Damage|Physical]] +5%\n| vocrequired    = [[Knight]]s\n| duration       = 30\n| attrib         = \n| weight         = 5.00\n| armor          = 0\n| value          = \n| npcvalue       = 6 000\n| droppedby      = [[Adventurer Group]], [[Ahau]], [[Alptramun]], [[Arachnophobica]], [[Breach Brood]], [[Burster]], [[Count Vlarkorth]], [[Darklight Matter]], [[Dread Intruder]], [[Eradicator]], [[Izcandar the Banished]],  [[King Zelos]], [[Malofur Mangrinder]], [[Maxxenius]], [[Outburst]], [[Plagueroot]], [[Reality Reaver]], [[Rupture]], [[Sparkion]], [[The Nightmare Beast]], [[World Devourer]].\n| droppedEventby = [[The Percht Queen]].\n| buyfrom        = Jogadores.\n| sellto         = Fadil\n| implemented    = 10.94 \n| notes          = Quando equipado, aumenta todos os seus ''melee'' skills e sua proteção contra danos físicos em 5% durante 30 minutos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42679,
+    "ns": 0,
+    "title": "Foxtail Amulet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Foxtail Amulet\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Amuletos e Colares\n| attrib         = Nenhum.\n| armor          = 2\n| resist         = [[Physical Damage|Physical]] +5%\n| levelrequired  = 100\n| weight         = 5.00\n| value          = 500.000 - 1.000.000\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.50\n| notes          = <noinclude><p><spoiler>* Recompensa da [[Grimvale Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45359,
+    "ns": 0,
+    "title": "Enchanted Pendulet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Enchanted Pendulet\n| levelrequired  = 180\n| itemclass      = Ferramentas e Outros Equipamentos \n| primarytype    = Amuletos e Colares\n| secondarytype  = \n| enchantable    = \n| enchanted      = sim\n| duration       = 120\n| vocrequired    = [[Paladin]]s\n| skillboost     = [[Distance Fighting]] +3\n| resist         = [[Energy Damage|Energy]] +18%, [[Physical Damage|Physical]] +5%\n| attrib         = \n| weight         = 6.50\n| armor          = 2\n| value          = \n| npcvalue       = \n| droppedby      = [[Faceless Bane]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.00\n| notes          = Esse item é um [[Pendulet]] encantado.\n<noinclude></noinclude>\n{{Veja|Itens Recarregáveis}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45361,
+    "ns": 0,
+    "title": "Enchanted Sleep Shawl",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Enchanted Sleep Shawl\n| levelrequired  = 180\n| itemclass      = Ferramentas e Outros Equipamentos \n| primarytype    = Amuletos e Colares\n| secondarytype  = \n| enchantable    = \n| enchanted      = sim\n| duration       = 60\n| vocrequired    = [[Paladin]]s\n| skillboost     = [[Distance Fighting]] +3\n| resist         = [[Earth Damage|Earth]] +24%, [[Physical Damage|Physical]] +7%\n| attrib         = \n| weight         = 4.30\n| armor          = 3\n| value          = \n| npcvalue       = \n| droppedby      = [[The Nightmare Beast]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.00\n| notes          = Esse item é um [[Sleep Shawl]] encantado.\n<noinclude></noinclude>\n{{Veja|Itens Recarregáveis}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 46667,
+    "ns": 0,
+    "title": "Enchanted Theurgic Amulet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Enchanted Theurgic Amulet\n| levelrequired  = 220\n| itemclass      = Ferramentas e Outros Equipamentos \n| primarytype    = Amuletos e Colares\n| secondarytype  = \n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| enchantable    = \n| enchanted      = sim\n| duration       = 120\n| skillboost     = [[Magic Level]] +3\n| resist         = [[Physical Damage|Physical]] +3%, [[Earth Damage|Earth]] +14%\n| stackable      = não\n| attrib         = \n| weight         = 5.00\n| armor          = 2\n| value          = \n| npcvalue       = \n| droppedby      = [[Bragrumol]], [[Mozradek]], [[Urmahlullu the Weakened]], [[Xogixath]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.20\n| notes          = Esse item é um [[Amulet of Theurgy]] encantado.\n<noinclude></noinclude>\n{{Veja|Itens Recarregáveis}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 46669,
+    "ns": 0,
+    "title": "Amulet of Theurgy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Amulet of Theurgy\n| levelrequired  = 220\n| itemclass      = Ferramentas e Outros Equipamentos \n| primarytype    = Amuletos e Colares\n| secondarytype  =\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| enchantable    = sim\n| enchanted      = \n| duration       = \n| armor          = 0\n| attrib         = Nenhum.\n| weight         = 5.00\n| value          = \n| npcvalue       = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.20\n| notes          = <noinclude><p><spoiler>* Pode ser transformado em um [[Enchanted Theurgic Amulet]] entregando 02 [[Silver Token]]s para o NPC [[Cledwyn]].</spoiler></p></noinclude>\n{{Veja|Itens Recarregáveis}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 50512,
+    "ns": 0,
+    "title": "Exotic Amulet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Exotic Amulet\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Amuletos e Colares\n| levelrequired  = 180\n| charges        = \n| resist         = [[Physical Damage|Physical]] +4%, [[Earth Damage|Earth]] +5%\n| attrib         = Nenhum.\n| weight         = 7.30\n| armor          = 0\n| npcvalue       = 0\n| droppedby      = [[Ratmiral Blackwhiskers]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.60\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 50574,
+    "ns": 0,
+    "title": "Garnet Necklace",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Garnet Necklace\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Amuletos e Colares\n| attrib         = Nenhum. \n| armor          = 0\n| weight         = 5.00\n| value          = \n| npcvalue       =  \n| npcprice       = 4 000 [[Trust Points]]\n| droppedby      = Ninguém.\n| buyfrom        = Tik'hi Tak'he\n| sellto         = Jogadores.\n| implemented    = 12.60\n| notes          = É apenas uma decoração.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 50575,
+    "ns": 0,
+    "title": "Amethyst Necklace",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Amethyst Necklace\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Amuletos e Colares\n| attrib         = Nenhum. \n| armor          = 0\n| weight         = 4.30\n| value          = \n| npcvalue       =  \n| npcprice       = 4 000 [[Trust Points]]\n| droppedby      = Ninguém.\n| buyfrom        = Tik'hi Tak'he\n| sellto         = Jogadores.\n| implemented    = 12.60\n| notes          = É apenas uma decoração.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 50576,
+    "ns": 0,
+    "title": "Emerald Necklace",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Emerald Necklace\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Amuletos e Colares\n| attrib         = Nenhum. \n| armor          = 0\n| weight         = 4.50\n| value          = \n| npcvalue       =  \n| npcprice       = 4 000 [[Trust Points]]\n| droppedby      = Ninguém.\n| buyfrom        = Tik'hi Tak'he\n| sellto         = Jogadores.\n| implemented    = 12.60\n| notes          = É apenas uma decoração.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 50577,
+    "ns": 0,
+    "title": "Diamond Necklace",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Diamond Necklace\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Amuletos e Colares\n| attrib         = Nenhum. \n| armor          = 0\n| weight         = 5.00\n| value          = \n| npcvalue       =  \n| npcprice       = 10 000 [[Trust Points]]\n| droppedby      = Ninguém.\n| buyfrom        = Tik'hi Tak'he\n| sellto         = Jogadores.\n| implemented    = 12.60\n| notes          = É apenas uma decoração.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 56154,
+    "ns": 0,
+    "title": "Enchanted Turtle Amulet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Enchanted Turtle Amulet\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos \n| primarytype    = Amuletos e Colares\n| secondarytype  = \n| enchantable    = \n| enchanted      = sim\n| vocrequired    = [[Knight]]s\n| armor          = 3\n| duration       = 120\n| skillboost     = [[Sword Fighting]] +3, [[Club Fighting]] +3, [[Axe Fighting]] +3\n| resist         = [[Physical Damage|Physical]] +7%, [[Ice Damage|Ice]] +15%\n| modificadores  = \n| attrib         = \n| weight         = 4.80\n| levelrequired  = 200\n| npcvalue       = \n| npcprice       = \n| droppedby      = [[Timira the Many-Headed]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| value          = \n| implemented    = 12.90\n| notes          = Esse item é um [[Turtle Amulet]] encantado.\n<noinclude></p></noinclude>\n{{Veja|Itens Recarregáveis}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 62181,
+    "ns": 0,
+    "title": "Candy Necklace",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Candy Necklace\n| flavortext     = This necklace provides a sugary barrier against attacks.\n| itemclass      = Ferramentas e Outros Equipamentos \n| primarytype    = Amuletos e Colares\n| secondarytype  = \n| enchantable    = \n| enchanted      = não\n| vocrequired    = \n| armor          = 2\n| duration       = \n| skillboost     = \n| resist         = [[Physical Damage|Physical]] +3%, [[Energy Damage|Energy]] +6%, [[Earth Damage|Earth]] -5%\n| modificadores  = \n| attrib         = Nenhum. \n| weight         = 5.10\n| levelrequired  = 220\n| npcprice       = 5 000 [[Milk Chocolate Coin]]s\n| npcvalue       = 5 000 [[Milk Chocolate Coin]]s\n| droppedby      = [[Sugar Daddy]].\n| buyfrom        = Coco\n| sellto         = Jogadores.\n| value          = \n| implemented    = 13.40.54ea79\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 63983,
+    "ns": 0,
+    "title": "Collar of Orange Plasma",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Collar of Orange Plasma\n| levelrequired  = 150\n| itemclass      = Ferramentas e Outros Equipamentos \n| primarytype    = Amuletos e Colares \n| skillboost     = [[Fist Fighting]] +4, [[Magic Level]] +2\n| resist         = \n| vocrequired    = [[Monk]]s\n| duration       = 30\n| attrib         = \n| weight         = 5.00\n| armor          = 0\n| value          = \n| npcvalue       = 6 000\n| droppedby      = [[Brain Squid]], [[Breach Brood]], [[Burster]], [[Dread Intruder]], [[Dreadful Disruptor]], [[Foam Stalker]], [[Lizard Chosen]], [[Monk's Apparition]], [[Reality Reaver]], [[Sparkion]], [[Terrorsleep]], [[The Rootkraken]], [[Tropical Desolator]], [[Usurper Knight]].\n| droppedEventby = \n| buyfrom        = Jogadores.\n| sellto         = Fadil\n| implemented    = 15.00.249ccc\n| notes          = Quando equipado, aumenta todos os seus first fighting e magic level durante 30 minutos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 63991,
+    "ns": 0,
+    "title": "Enchanted Merudri Brooch",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Enchanted Merudri Brooch\n| levelrequired  = 220\n| itemclass      = Ferramentas e Outros Equipamentos \n| primarytype    = Amuletos e Colares\n| secondarytype  = \n| vocrequired    = [[Monk]]s\n| enchantable    = \n| enchanted      = sim\n| duration       = 120\n| skillboost     = [[Fist Fighting]] +3, [[Magic Level]] +1\n| resist         = [[Physical Damage|Physical]] +4%, [[Fire Damage|Fire]] +15%\n| stackable      = não\n| attrib         = \n| weight         = 4.50\n| armor          = 0\n| mantra         = 2\n| value          = \n| npcvalue       = \n| droppedby      = [[Ravenous Hunger]]\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.00.249ccc\n| notes          = Esse item é um [[Merudri Brooch]] encantado.\n<noinclude></noinclude>\n{{Veja|Itens Recarregáveis}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64108,
+    "ns": 0,
+    "title": "Harmony Amulet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Harmony Amulet\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Amuletos e Colares\n| skillboost     = [[Fist Fighting]] +1\n| vocrequired    = [[Monk]]s\n| levelrequired  = \n| weight         = 5.10\n| armor          = 2\n| mantra         = 2\n| value          = \n| npcvalue       = \n| npcprice       = 1 000\n| droppedby      = [[The Corruptor]]\n| droppedRaidby  = \n| buyfrom        = Enpa-Deia Pema\n| sellto         = \n| implemented    = 15.00.249ccc\n| notes          = <spoiler>* Pode ser obtido durante a [[The Way of the Monk Quest]].</spoiler>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 65596,
+    "ns": 0,
+    "title": "Greater Garlic Necklace",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Greater Garlic Necklace\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Amuletos e Colares \n| charges        = 500\n| resist         = [[Life Drain]] +50%\n| attrib         = Nenhum.\n| weight         = 6.30\n| armor          = 0\n| stackable      = não\n| value          = \n| npcvalue       = 10000\n| npcprice       = \n| droppedby      = [[Norcferatu Heartless]], [[Norcferatu Nightweaver]], \n| droppedRaidby  = \n| buyfrom        =\n| sellto         = Haroun\n| implemented    = 15.10.46b862\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 67541,
+    "ns": 0,
+    "title": "Enchanted Flamingo Amulet of Precision",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Enchanted Flamingo Amulet of Precision\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos \n| primarytype    = Amuletos e Colares\n| secondarytype  = \n| enchantable    = \n| enchanted      = sim\n| vocrequired    = [[Paladin]]s\n| armor          = 4\n| duration       = 180\n| skillboost     = [[Distance Fighting]] +4, [[Holy Magic Level]] +1\n| resist         = [[Physical Damage|Physical]] +5%, [[Fire Damage|Fire]] +14%\n| modificadores  = \n| attrib         = \n| weight         = 4.60\n| levelrequired  = 270\n| npcvalue       = \n| npcprice       = \n| droppedby      = [[The Moonsnow Magnolia]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| value          = \n| implemented    = 15.30.a30dad\n| notes          = Esse item é um [[Flamingo Amulet of Precision]] encantado.\n<noinclude></p></noinclude>\n{{Veja|Itens Recarregáveis}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 67545,
+    "ns": 0,
+    "title": "Flamingo Amulet of Precision",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Flamingo Amulet of Precision\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos \n| primarytype    = Amuletos e Colares\n| secondarytype  = \n| enchantable    = sim\n| enchanted      = \n| vocrequired    = [[Paladin]]s\n| armor          = \n| duration       = \n| skillboost     = \n| resist         = \n| modificadores  = \n| attrib         = \n| weight         = 4.60\n| levelrequired  = 270\n| npcvalue       = \n| npcprice       = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| value          = \n| implemented    = 15.30.a30dad\n| notes          = \n<noinclude><p><spoiler>* Pode ser '''encantado''' ao entregar 5 [[Silver Token]]s para [[Cledwyn]], transformando-se em um [[Arquivo:Enchanted Flamingo Amulet of Precision.gif]] [[Enchanted Flamingo Amulet of Precision]]. \n* O encantamento dura '''3 horas''' (180 minutos) enquanto o amuleto estiver equipado.</spoiler></p></noinclude>\n{{Veja|Itens Recarregáveis}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 67552,
+    "ns": 0,
+    "title": "Enchanted Flamingo Amulet of Valor",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Enchanted Flamingo Amulet of Valor\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos \n| primarytype    = Amuletos e Colares\n| secondarytype  = \n| enchantable    = \n| enchanted      = sim\n| vocrequired    = [[Knight]]s\n| armor          = 4\n| duration       = 180\n| skillboost     = [[Sword Fighting]] +4, [[Axe Fighting]] +4, [[Club Fighting]] +4, [[Shielding]] +1\n| resist         = [[Physical Damage|Physical]] +7%, [[Fire Damage|Fire]] +12%\n| modificadores  = \n| attrib         = \n| weight         = 5.10\n| levelrequired  = 270\n| npcvalue       = \n| npcprice       = \n| droppedby      = [[The Moonsnow Magnolia]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| value          = \n| implemented    = 15.30.a30dad\n| notes          = Esse item é um [[Flamingo Amulet of Valor]] encantado.\n<noinclude></p></noinclude>\n{{Veja|Itens Recarregáveis}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 67558,
+    "ns": 0,
+    "title": "Flamingo Amulet of Valor",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Flamingo Amulet of Valor\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos \n| primarytype    = Amuletos e Colares\n| secondarytype  = \n| enchantable    = sim\n| enchanted      = \n| vocrequired    = [[Knight]]s\n| armor          = \n| duration       = \n| skillboost     = \n| resist         = \n| modificadores  = \n| attrib         = \n| weight         = 5.10\n| levelrequired  = 270\n| npcvalue       = \n| npcprice       = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| value          = \n| implemented    = 15.30.a30dad\n| notes          = \n<noinclude><p><spoiler>* Pode ser '''encantado''' ao entregar 5 [[Silver Token]]s para [[Cledwyn]], transformando-se em um [[Arquivo:Enchanted Flamingo Amulet of Valor.gif]] [[Enchanted Flamingo Amulet of Valor]]. \n* O encantamento dura '''3 horas''' (180 minutos) enquanto o amuleto estiver equipado.</spoiler></p></noinclude>\n{{Veja|Itens Recarregáveis}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 67564,
+    "ns": 0,
+    "title": "Enchanted Swan Amulet of Balance",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Enchanted Swan Amulet of Balance\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos \n| primarytype    = Amuletos e Colares\n| secondarytype  = \n| enchantable    = \n| enchanted      = sim\n| vocrequired    = [[Monk]]s\n| armor          = 0\n| duration       = 180\n| skillboost     = [[Fist Fighting]] +4, [[Magic Level]] +2\n| resist         = [[Physical Damage|Physical]] +4%, [[Ice Damage|Ice ]] +12%\n| mantra         = 4\n| modificadores  = \n| attrib         = \n| weight         = 5.30\n| levelrequired  = 270\n| npcvalue       = \n| npcprice       = \n| droppedby      = [[The Moonsnow Magnolia]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| value          = \n| implemented    = 15.30.a30dad\n| notes          = Esse item é um [[Swan Amulet of Balance]] encantado.\n<noinclude></p></noinclude>\n{{Veja|Itens Recarregáveis}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 67568,
+    "ns": 0,
+    "title": "Enchanted Flamingo Amulet of Destruction",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Enchanted Flamingo Amulet of Destruction\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos \n| primarytype    = Amuletos e Colares\n| secondarytype  = \n| enchantable    = \n| enchanted      = sim\n| vocrequired    = [[Sorcerer]]s\n| armor          = 3\n| duration       = 180\n| skillboost     = [[Magic Level]] +3, [[Energy Magic Level]] +1\n| resist         = [[Physical Damage|Physical]] +3%, [[Fire Damage|Fire]] +11%\n| modificadores  = \n| attrib         = \n| weight         = 4.70\n| levelrequired  = 270\n| npcvalue       = \n| npcprice       = \n| droppedby      = [[The Moonsnow Magnolia]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| value          = \n| implemented    = 15.30.a30dad\n| notes          = Esse item é um [[Flamingo Amulet of Destruction]] encantado.\n<noinclude></p></noinclude>\n{{Veja|Itens Recarregáveis}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 67583,
+    "ns": 0,
+    "title": "Flamingo Amulet of Destruction",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Flamingo Amulet of Destruction\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos \n| primarytype    = Amuletos e Colares\n| secondarytype  = \n| enchantable    = sim\n| enchanted      = \n| vocrequired    = [[Sorcerer]]s\n| armor          = \n| duration       = \n| skillboost     = \n| resist         = \n| modificadores  = \n| attrib         = \n| weight         = 4.70\n| levelrequired  = 270\n| npcvalue       = \n| npcprice       = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| value          = \n| implemented    = 15.30.a30dad\n| notes          = \n<noinclude><p><spoiler>* Pode ser '''encantado''' ao entregar 5 [[Silver Token]]s para [[Cledwyn]], transformando-se em um [[Arquivo:Enchanted Flamingo Amulet of Destruction.gif]] [[Enchanted Flamingo Amulet of Destruction]]. \n* O encantamento dura '''3 horas''' (180 minutos) enquanto o amuleto estiver equipado.</spoiler></p></noinclude>\n{{Veja|Itens Recarregáveis}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 67588,
+    "ns": 0,
+    "title": "Enchanted Flamingo Amulet of Nature",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Enchanted Flamingo Amulet of Nature\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos \n| primarytype    = Amuletos e Colares\n| secondarytype  = \n| enchantable    = \n| enchanted      = sim\n| vocrequired    = [[Druid]]s\n| armor          = 3\n| duration       = 180\n| skillboost     = [[Magic Level]] +3, [[Ice Magic Level]] +1\n| resist         = [[Physical Damage|Physical]] +3%, [[Fire Damage|Fire]] +11%\n| modificadores  = \n| attrib         = \n| weight         = 4.30\n| levelrequired  = 270\n| npcvalue       = \n| npcprice       = \n| droppedby      = [[The Moonsnow Magnolia]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| value          = \n| implemented    = 15.30.a30dad\n| notes          = Esse item é um [[Flamingo Amulet of Nature]] encantado.\n<noinclude></p></noinclude>\n{{Veja|Itens Recarregáveis}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 67590,
+    "ns": 0,
+    "title": "Flamingo Amulet of Nature",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Flamingo Amulet of Nature\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos \n| primarytype    = Amuletos e Colares\n| secondarytype  = \n| enchantable    = sim\n| enchanted      = \n| vocrequired    = [[Druid]]s\n| armor          = \n| duration       = \n| skillboost     = \n| resist         = \n| modificadores  = \n| attrib         = \n| weight         = 4.30\n| levelrequired  = 270\n| npcvalue       = \n| npcprice       = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| value          = \n| implemented    = 15.30.a30dad\n| notes          = \n<noinclude><p><spoiler>* Pode ser '''encantado''' ao entregar 5 [[Silver Token]]s para [[Cledwyn]], transformando-se em um [[Arquivo:Enchanted Flamingo Amulet of Nature.gif]] [[Enchanted Flamingo Amulet of Nature]]. \n* O encantamento dura '''3 horas''' (180 minutos) enquanto o amuleto estiver equipado.</spoiler></p></noinclude>\n{{Veja|Itens Recarregáveis}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8526,
+    "ns": 0,
+    "title": "Koshei's Ancient Amulet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Koshei's Ancient Amulet\n| resist         = [[Death Damage|Death]] +8%, [[Holy Damage|Holy]] -50%\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Amuletos e Colares\n| attrib         = Nenhum.\n| weight         = 5.50\n| armor          = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Pode ser usado como um amuleto normal. Faz parte do [[Ancient Set]], [[Divine Set]] e [[Rare Set]].\n<noinclude><p><spoiler>* Obtido e utilizado na [[Koshei The Deathless Quest]] parte dos [[Tibia Tales Quest|Tibia Tales]].\n* Deve-se aguardar 24 horas reais para o NPC [[A Sweaty Cyclops]] forjá-lo.\n* Deve-se \"'''usá-lo'''\" imediatamente no corpo do boss Koshei the Deathless para selá-lo. </spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8527,
+    "ns": 0,
+    "title": "Leviathan's Amulet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Leviathan's Amulet\n| flavortext     = It holds the last breath of Leviathan.\n| levelrequired  = 80\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Amuletos e Colares\n| charges        = 5\n| resist         = [[Physical Damage|Physical]] +60%, [[Ice Damage|Ice]] +40%\n| armor          = 0\n| attrib         = Nenhum.\n| weight         = 7.00\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 3 000\n| droppedby      = [[Animated Feather]], [[Icecold Book]], [[Leviathan]], [[Liodile]], [[Sea Serpent]], [[Squid Warden]].\n| buyfrom        = Jogadores.\n| sellto         = Rashid\n| implemented    = 8.5\n| notes          = Faz parte do [[Glacier Set]].\n<noinclude><p><spoiler>* Pode ser obtido ao usar uma [[Fishing Rod]] em um [[Water Elemental]] ou [[Massive Water Elemental]] mortos.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8533,
+    "ns": 0,
+    "title": "Lightning Pendant",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Lightning Pendant \n| levelrequired  = 60 \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Amuletos e Colares\n| charges        = 200\n| resist         = [[Energy Damage|Energy]] +20%, [[Earth Damage|Earth]] -10% \n| armor          = 0\n| attrib         = Nenhum.\n| weight         = 5.00\n| npcvalue       = 1 500 \n| droppedby      = [[Baleful Bunny]], [[Burning Gladiator]], [[Diamond Servant]], [[Diamond Servant Replica]], [[Elder Wyrm]], [[Faceless Bane]], [[High Voltage Elemental]], [[Juvenile Bashmu]], [[Massive Energy Elemental]], [[Shulgrax]], [[Sphinx]], [[Spiky Carnivor]], [[Tamru the Black]], [[Wrathful Archivist]], [[Wyrm]], [[Yielothax]].\n| droppedRaidby  = [[Tyrn]].\n| buyfrom        = Jogadores. \n| sellto         = Rashid\n| implemented    = 8.2 \n| notes          = Faz parte do [[Lightning Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8535,
+    "ns": 0,
+    "title": "Magma Amulet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Magma Amulet \n| levelrequired  = 60 \n| itemclass      = Ferramentas e Outros Equipamentos \n| primarytype    = Amuletos e Colares \n| charges        = 200 \n| resist         = [[Fire Damage|Fire]] +20%, [[Ice Damage|Ice]] -10% \n| attrib         = Nenhum.\n| weight         = 5.00 \n| armor          = 0\n| value          = Negociável \n| npcvalue       = 1 500 \n| droppedby      = [[Arachnophobica]], [[Arbaziloth]], [[Ayana the Crimson Curse]], [[Bashmu]], [[Bibby Bloodbath]], [[Burning Gladiator]], [[Clavius]], [[Crazed Summer Vanguard]], [[Darklight Construct]], [[Feral Sphinx]], [[Hellhound]], [[Insane Siren]], [[Kerberos]], [[Lava Golem]], [[Magma Crawler]], [[Massive Fire Elemental]], [[Mazoran]], [[Norcferatu Nightweaver]], [[Raubritter Chastener]], [[Scarlett Etzel]], [[Sphinx]], [[Vulcongra]], [[Werepanther]], [[Wrathful Archivist]].\n| droppedEventby = [[Percht]].\n| buyfrom        = Jogadores. \n| sellto         = Rashid\n| implemented    = 8.2 \n| notes          = Faz parte do [[Magma Set]]. Esse item também pode ser obtido em concursos feitos pelos [[fansites|Promoteds e Supporteds Fansites]]. \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8537,
+    "ns": 0,
+    "title": "Paw Amulet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Paw Amulet \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Amuletos e Colares \n| attrib         = Nenhum.\n| weight         = 4.20\n| armor          = 0\n| value          = Negociável.\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.6\n| notes          = Esse item pode ser visto no 2º andar da [[Tibian Explorer Society]] de [[Port Hope]]. Rumores dizem que é loot raro de [[War Wolf]] em invasões perto de [[Ab'Dendriel]] porém o mais provável é que ainda não esteja no jogo. Provavelmente é só um amuleto de decoração sem poderes mágicos. Tem o desenho de uma [[Bear Paw]] nele.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8538,
+    "ns": 0,
+    "title": "Platinum Amulet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Platinum Amulet \n| flavortext     = It is an amulet of protection. \n| itemclass      = Ferramentas e Outros Equipamentos \n| primarytype    = Amuletos e Colares \n| armor          = 2 \n| attrib         = Nenhum.\n| weight         = 6.00 \n| value          = 2 500 - 8 000 \n| droppedby      = [[Angry Demon]], [[Arachnophobica]], [[Arbaziloth]], [[Brimstone Bug]], [[Burster Spectre]], [[Crystal Spider]], [[Darkfang]], [[Demon]], [[Demon Outcast]], [[Enlightened of the Cult]], [[Giant Spider]], [[Golgordan]], [[Hand of Cursed Fate]], [[Lich]], [[Nightstalker]], [[Rage Squid]], [[Sharpclaw]], [[Spitter]], [[Sulphur Scuttler]], [[The Old Widow]], [[Twisted Shaper]], [[Vexclaw]], [[Vile Grandmaster]], [[Werebadger]], [[Werefox]], [[Werewolf]].\n| droppedRaidby  = [[Ghazbaran]], [[Morgaroth]], [[Mamma Longlegs]], [[Orshabaal]].\n| buyfrom        = Jogadores. \n| npcvalue       = 2 500 \n| sellto         = Rashid\n| notes          = Mais valioso que o [[Scarf]] por possuir maior atributo defensivo. Popular entre personagens de levels médio e alto. Faz parte do [[Blue Set]], [[Paladin Set]] e [[Unrestricted Set]]. \n<noinclude><p><spoiler>* Recompensa da [[Behemoth Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8539,
+    "ns": 0,
+    "title": "Protection Amulet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Protection Amulet \n| resist         = [[Physical Damage|Physical]] +6% \n| itemclass      = Ferramentas e Outros Equipamentos \n| primarytype    = Amuletos e Colares  \n| charges        = 250\n| armor          = 0\n| attrib         = Nenhum.\n| weight         = 5.50 \n| value          = 100 - 700 \n| npcvalue       = 100 \n| npcprice       = 700 \n| droppedby      = [[Burster Spectre]], [[Cobra Assassin]], [[Cursed Ape]], [[Cursed Book]], [[Enlightened of the Cult]], [[Golgordan]], [[Hand of Cursed Fate]], [[Headwalker]], [[Ink Blob]], [[Kongra]], [[Massive Earth Elemental]], [[Nightstalker]], [[Orc Warlord]], [[Shrieking Cry-Stal]], [[Sir Leonard]], [[Sir Leopold]], [[Undead Elite Gladiator]], [[Undead Gladiator]], [[Valkyrie]], [[Werehyaena Shaman]].\n| droppedRaidby  = [[Countess Sorrow]], [[Ghazbaran]], [[Orshabaal]], [[Tzumrah the Dazzler]], [[Warlord Ruzad]], [[Zomba]].\n| buyfrom        = Eremo, Yaman\n| sellto         = Yaman\n| implemented    = 7.1\n| notes          = Faz parte do [[Blocking Set]].\n<noinclude><p><spoiler>\n* Recompensa da [[Dark Pyramid Quest]].\n* Recompensa da [[The Desert Dungeon Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8541,
+    "ns": 0,
+    "title": "Ruby Necklace",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ruby Necklace \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Amuletos e Colares\n| attrib         = Nenhum. \n| armor          = 0\n| weight         = 5.70 \n| value          = 3 000 - 3 560 \n| npcvalue       = 2 000 \n| npcprice       = 3 560 \n| droppedby      = [[Angry Sugar Fairy]], [[Biting Book]], [[Black Knight]], [[Dawnfire Asura]], [[Lost Soul]], [[True Dawnfire Asura]], [[Hellgorak]]. \n| buyfrom        = Briasol, Tesha, Ishina, Iwan, Talila, Valindara, Yonan, Tezila, Chantalle, Nienna, Gail, Edmund, Jessica, Hanna, Carina, Odemara, Oiriz, Giri\n| sellto         = Rashid\n| notes          = É apenas uma decoração.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8542,
+    "ns": 0,
+    "title": "Sacred Tree Amulet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Sacred Tree Amulet \n| flavortext     = Its leaves stretch out to cover your whole body if you receive earth damage. \n| levelrequired  = 80 \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Amuletos e Colares  \n| charges        = 5\n| resist         = [[Physical Damage|Physical]] +60%, [[Earth Damage|Earth]] +40% \n| attrib         = Nenhum.\n| weight         = 7.00 \n| armor          = 0\n| value          = 3 000 \n| npcvalue       = 3 000 \n| droppedby      = [[Adult Goanna]], [[Arachnophobica]], [[Baleful Bunny]], [[Bashmu]], [[Blemished Spawn]], [[Cobra Scout]], [[Cursed Book]], [[Deepworm]], [[Eyeless Devourer]], [[Gorgo]], [[Ink Blob]], [[Lamassu]], [[Liodile]], [[Lion Hydra]], [[Medusa]], [[Noxious Ripptor]], [[Nymph]], [[Ogre Sage]], [[Poisonous Carnisylvan]], [[Ravenous Hunger]], [[Rotten Golem]], [[The Enraged Thorn Knight]], [[The Many]], [[Turbulent Elemental]], [[Young Goanna]].\n| droppedRaidby  = [[The Welter]].\n| buyfrom        = Jogadores. \n| sellto         = Rashid\n| implemented    = 8.5 \n| notes          = Faz parte do [[Terra Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8544,
+    "ns": 0,
+    "title": "Sapphire Amulet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Sapphire Amulet \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Amuletos e Colares\n| attrib         = Nenhum.\n| weight         = 6.80\n| armor          = 0\n| value          = 40 000 - 150 000+\n| droppedby      = [[Lady Tenebris]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.3\n| notes          = Pode ser visto nas catacumbas de [[Darashia]]. Ele existe no jogo há muito tempo, mas só pode ser obtido após o [[Updates/11.02|Update 11.02]].\n\n<gallery>Arquivo:Sapphire_amulet_em_menera.png|Um '''Sapphire Amulet''' em [[Menera]].</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8546,
+    "ns": 0,
+    "title": "Scarab Amulet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Scarab Amulet \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Amuletos e Colares\n| attrib         = Nenhum.\n| weight         = 7.70 \n| armor          = 0\n| value          = 200 \n| npcvalue       = 200 \n| droppedby      = [[Ancient Scarab]], [[Ancient Spawn of Morgathla]], [[Fleshcrawler]].\n| buyfrom        = Jogadores. \n| sellto         = Rashid\n| implemented    = 7.3\n| notes          = Usado somente para decoração.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8547,
+    "ns": 0,
+    "title": "Scarf",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Scarf \n| itemclass      = Ferramentas e Outros Equipamentos \n| primarytype    = Amuletos e Colares\n| armor          = 1 \n| attrib         = Nenhum.\n| weight         = 2.00 \n| stackable      = não\n| value          = Negociável \n| npcvalue       = 0 \n| npcprice       = 15\n| droppedby      = [[Cult Believer]], [[Cult Enforcer]], [[Cult Scholar]], [[Hero]], [[Novice of the Cult]], [[Vicious Squire]].\n| droppedEventby = [[Grynch Clan Goblin]].\n| buyfrom        = Rudolph, Raffael \n| sellto         = Jogadores. \n| notes          = Scarfs possui o simples atributo de +1 de arm. Um jogador que ainda não possui um [[Platinum Amulet]] deve usar um scarf. Esse item pode ser comprado em [[Edron]] e vendido por um preço mais elevado à um [[Free Account]]. Faz parte do [[Newbie Set]], [[Hero Set]], [[Isle of Destiny Knight Set]], [[Isle of Destiny Paladin Set]], [[Isle of Destiny Druid Set]] e [[Isle of Destiny Sorcerer Set]].\n \n<noinclude><p><spoiler>* Spawns diários em [[Plains of Havoc]], perto do [[NPC]] [[A Ghostly Woman]]. \n*Possibilidade de ser obtido ao usar uma [[Belongings of a Deceased (Ottokar)]].\n*Possibilidade de ser obtido ao usar um [[Mysterious Remains]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8548,
+    "ns": 0,
+    "title": "Shockwave Amulet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Shockwave Amulet \n| flavortext     = It tickles your neck in a rather pleasant way and absorbs loads of damage. \n| levelrequired  = 80\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Amuletos e Colares\n| charges        = 5\n| resist         = [[Physical Damage|Physical]] +60%, [[Energy Damage|Energy]] +40% \n| attrib         = Nenhum.\n| weight         = 7.00 \n| armor          = 0\n| value          = 3 000 \n| npcvalue       = 3 000 \n| droppedby      = [[Burster Spectre]], [[Clavius]], [[Cursed Prospector]], [[Diamond Servant]], [[Elder Wyrm]], [[Essence Of Malice]], [[Harpy]], [[High Voltage Elemental]], [[Massive Energy Elemental]], [[Raubritter Chastener]], [[Spiky Carnivor]], [[Wyrm]], [[Yielothax]].\n| droppedRaidby  = [[Tyrn]].\n| buyfrom        = Jogadores. \n| sellto         = Rashid\n| implemented    = 8.5 \n| notes          = Faz parte do [[Lightning Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8549,
+    "ns": 0,
+    "title": "Silver Amulet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Silver Amulet \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Amuletos e Colares \n| charges        = 200\n| resist         = [[Earth Damage|Earth]] +10% \n| attrib         = Nenhum.\n| weight         = 5.00 \n| armor          = 0\n| value          = 50 - 100\n| npcvalue       = 50 \n| npcprice       = 100\n| droppedby      = [[Adept of the Cult]], [[Arachnophobica]], [[Arbaziloth]], [[Banshee]], [[Big Boss Trolliver]], [[Candy Floss Elemental]], [[Energy Elemental]], [[Exotic Cave Spider]], [[Golgordan]], [[Island Troll]], [[Latrivan]], [[Midnight Asura]], [[Mummy]], [[Mutated Human]], [[Sir Leonard]], [[Sir Leopold]], [[Troll]], [[Troll Champion]], [[Troll Guard]], [[True Midnight Asura]], [[Young Goanna]].\n| droppedRaidby  = [[Ghazbaran]], [[Orshabaal]], [[Willi Wasp]].\n| buyfrom        = Yaman\n| sellto         = Yaman\n| implemented    = 7.1 \n| notes          = Faz parte do [[Terra Set]] e do [[Rook Set]].\n<noinclude><p><spoiler>\n* Recompensa da [[Edron Goblin Quest]].\n* Recompensa da [[The Rookie Guard Quest]].\n* 01 é necessário para a [[The Scatterbrained Sorcerer Quest]].\n* 01 pode ser obtido na [[Troll Cave Leste (Thais)]], em um baú localizado ({{mapa|32506,32269,9:2|aqui}}).\n* Possibilidade de ser obtido durante a Mini World Change [[Mini_World_Changes#Nomads|Nomads]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8552,
+    "ns": 0,
+    "title": "Silver Necklace",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Silver Necklace \n| itemclass      = Ferramentas e Outros Equipamentos \n| primarytype    = Amuletos e Colares\n| armor          = 0\n| attrib         = Nenhum.\n| weight         = 4.80 \n| droppedby      = Ninguém. \n| buyfrom        = Jogadores. \n| sellto         = Jogadores. \n| notes          = Decoração que aparecia na caverna de bonelords, perto da [[Black Knight Villa]]. Pode ser visto no [[banco]] de [[Venore]], também na sala do tesouro de [[draconia]], na sala do tesouro do [[Emperor Kruzak]], [[Kazordoon]].<br />\n'''Mulf''', um personagem que já foi deletado, de [[Antica]], possuia um desses. Não se sabe como ele conseguiu.\n<noinclude><gallery>Arquivo:draconia_treasure_room.jpg|Treasure Room em Draconia.</gallery></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8554,
+    "ns": 0,
+    "title": "Star Amulet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Star Amulet \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Amuletos e Colares\n| armor          = 0\n| attrib         = Nenhum.\n| weight         = 6.10 \n| value          = \n| npcvalue       = 500\n| droppedby      = Ninguém. \n| buyfrom        = Jogadores. \n| sellto         = Gnomission \n| notes          = Usado somente para decoração. Pode ser visto na [[Treasure_Rooms#Sala_de_Tesouros_de_Morguthis|sala do tesouro de Morguthis]], na [[Treasure_Rooms#Sala_de_Tesouros_de_Kazordoon|sala de Tesouros de Kazordoon]], na [[Treasure_Rooms#Sala_de_Tesouros_de_Omruc|sala de Tesouros de Omruc]] e na [[Treasure_Rooms#Sala_de_Tesouros_de_Draconia|sala de Tesouros de Draconia]].\n<noinclude><p><spoiler>\n* Recompensa da [[Mintwallin Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8555,
+    "ns": 0,
+    "title": "Stone Skin Amulet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Stone Skin Amulet \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Amuletos e Colares  \n| charges        = 5\n| resist         = [[Physical Damage|Physical]] +80%, [[Death Damage|Death]] +80% \n| armor          = 0\n| attrib         = Nenhum.\n| weight         = 7.00 \n| stackable      = não\n| value          = 500 - 5 000 \n| npcvalue       = 500 \n| npcprice       = 25 000\n| droppedby      = [[Arachnophobica]], [[Arbaziloth]], [[Bane of Light]], [[Banshee]], [[Betrayed Wraith]], [[Blight Mariner]], [[Blightwalker]], [[Bloodback]], [[Bonebeast]], [[Braindeath]], [[Bulltaur Forgepriest]], [[Burster Spectre]], [[Cobra Scout]], [[Cursed Book]], [[Crypt Shambler]], [[Crypt Warrior]], [[Darkfang]], [[Demon Skeleton]], [[Drume]], [[Dworc Shadowstalker]], [[Ghost]], [[Ghoul]], [[Ghulosh]], [[Gloom Maw]], [[Golgordan]], [[Gorzindel]], [[Grim Reaper]], [[Hand of Cursed Fate]], [[Hellgorak]], [[Hemming]], [[Hydra]], [[Iks Yapunac]], [[Ink Blob]], [[Latrivan]], [[Lich]], [[Lokathmor]], [[Lost Soul]], [[Massive Earth Elemental]], [[Mazzinor]], [[Minotaur Amazon]], [[Misguided Thief]], [[Monk's Apparition]], [[Morguthis]], [[Mummy]],  [[Nighthunter]], [[Ogre Ruffian]], [[Orclops Bloodbreaker]], [[Pirate Ghost]], [[Pirate Skeleton]], [[Raging Mage]], [[Rotten Golem]], [[Shaper Matriarch]], [[Sir Leopold]], [[Skeleton Elite Warrior]], [[Souleater]], [[Spectre]], [[Stone Devourer]], [[The Baron from Below]], [[The Count Of The Core]], [[The Duke Of The Depths]], [[The Many]], [[The Time Guardian]], [[Turbulent Elemental]], [[Undead Dragon]], [[Undead Elite Gladiator]], [[Undead Gladiator]], [[Undead Jester]], [[Undead Mine Worker]], [[Undead Prospector]], [[Vampire]], [[Vampire Bride]], [[Vampire Pig]], [[Warlock]], [[Werebear]], [[Wereboar]], [[Werewolf]], [[Zombie]].\n| droppedRaidby  = [[Feroxa_(Mortal)]], [[Morgaroth]], [[Orshabaal]], [[Owin (Criatura)]], [[Sight of Surrender]], [[The Welter]].\n| buyfrom        = Haroun\n| sellto         = Haroun\n| implemented    = 7.1\n| notes          = Faz parte do [[Paladin Set]], [[Divine Set]]. [[Unrestricted Set]] e [[Blocking Set]].\n<noinclude><p><spoiler>\n* Recompensa da [[Draconia Quest]].\n* Recompensa da [[Mintwallin Quest]].\n* Recompensa da [[The Queen of the Banshees Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8557,
+    "ns": 0,
+    "title": "Strange Talisman",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Strange Talisman \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Amuletos e Colares  \n| charges        = 200\n| resist         = [[Energy Damage|Energy]] +10% \n| armor          = 0\n| attrib         = Nenhum.\n| weight         = 2.90 \n| stackable      = não\n| value          = 30 - 100 \n| npcvalue       = 30 \n| npcprice       = 100 \n| droppedby      = [[Arachnophobica]], [[Baleful Bunny]], [[Burning Gladiator]], [[Elder Mummy]], [[Mummy]], [[Mutated Human]]. \n| buyfrom        = Yaman\n| implemented    = 7.1 \n| sellto         = Yaman\n| notes          = Faz parte do [[Lightning Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8559,
+    "ns": 0,
+    "title": "Terra Amulet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Terra Amulet \n| levelrequired  = 60 \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Amuletos e Colares\n| charges        = 200\n| resist         = [[Earth Damage|Earth]] +20%, [[Fire Damage|Fire]] -10% \n| armor          = 0\n| attrib         = Nenhum.\n| weight         = 5.00 \n| value          = Negociável \n| npcvalue       = 1 500 \n| droppedby      = [[Adult Goanna]], [[Baleful Bunny]], [[Bashmu]], [[Boogy]], [[Cursed Book]], [[Deathbine]], [[Deepworm]], [[Drillworm]], [[Exotic Bat]], [[Glooth Brigand]], [[Gorgo]], [[Hideous Fungus]], [[Honey Elemental]], [[Humongous Fungus]], [[Ink Blob]], [[Ink Splash]], [[Lamassu]], [[Massive Earth Elemental]], [[Medusa]], [[Megasylvan Yselda]], [[Ogre Sage]], [[Omnivora]], [[Plagirath]], [[Spiky Carnivor]], [[Two-Headed Turtle]], [[Wrathful Archivist]], [[Young Goanna]], [[Rotten Golem]].\n| buyfrom        = Jogadores. \n| sellto         = Rashid\n| implemented    = 8.1 \n| notes          = Faz parte do [[Terra Set]].\n<noinclude><p><spoiler>* Recompensa da [[Against the Spider Cult Quest]] parte dos [[Tibia Tales Quest|Tibia Tales]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8561,
+    "ns": 0,
+    "title": "Wailing Widow's Necklace",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Wailing Widow's Necklace \n| itemclass      = Ferramentas e Outros Equipamentos \n| primarytype    = Amuletos e Colares   \n| secondarytype  = Fontes de Luz\n| attrib         = Fornece uma pequena quantidade de luz verde.\n| armor          = 0\n| stackable       = não\n| weight         = 5.40 \n| value          = 3 000 - 20 000 \n| npcvalue       = 3 000 \n| droppedby      = [[Wailing Widow]].\n| buyfrom        = Jogadores. \n| sellto         = Esrik\n| implemented    = 8.54 \n| notes          = Faz parte do [[Light Set]].\n<noinclude><p><spoiler>* Para vendê-lo ao NPC é preciso ter entregue 9 [[Tome of Knowledge|tomos]] na [[Tomes of Knowledge Quest]]</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8562,
+    "ns": 0,
+    "title": "Wolf Tooth Chain",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Wolf Tooth Chain \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Amuletos e Colares \n| armor          = 0\n| attrib         = Nenhum.\n| weight         = 3.30 \n| stackable      = não\n| value          = 50 - 100 \n| npcvalue       = 100\n| droppedby      = [[Cyclops]], [[Ekatrix]], [[Gargoyle]], [[Gloom Wolf]], [[Orc Rider]], [[Ragged Rabid Wolf]], [[Rorc]], [[Witch]], [[Yeti]]. \n| droppedRaidby  = [[Fernfang]], [[Yaga the Crone]].\n| buyfrom        = Jogadores. \n| sellto         = Ustan\n| notes          = É um bom loot desde o [[Updates/8.5|Update 8.5]].\n<noinclude><p><spoiler>Pode ser obtido na [[Skull of Ratha Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9176,
+    "ns": 0,
+    "title": "Wolf Tooth Chain (Quest)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Wolf Tooth Chain (Quest)\n| flavortext     = It has the letter 'C' carved into one of the teeth.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Amuletos e Colares\n| armor          = 0\n| attrib         = Nenhum.\n| weight         = 3.30\n| stackable      = não\n| value          = Negociável\n| npcprice       = 10 000\n| droppedby      = Ninguém.\n| buyfrom        = Black Bert\n| sellto         = Jogadores.\n| implemented    = 7.8\n| notes          = <noinclude><p><spoiler>* 01 é necessário para a [[Druid Outfits Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 18835,
+    "ns": 0,
+    "title": "Ornamented Brooch",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ornamented Brooch\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Amuletos e Colares\n| armor          = 2\n| attrib         = Nenhum.\n| weight         = 8.40\n| value          = Negociável\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = [[Fleshcrawler]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.2\n| notes          = Ao dar '''\"Use\"''' no item, as [[blessing]]s que o personagem possui serão exibidas. Faz parte do [[Dream Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 19229,
+    "ns": 0,
+    "title": "Necklace of the Deep",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Necklace of the Deep\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Amuletos e Colares\n| levelrequired  = 120\n| charges        = 50\n| resist         = [[Life Drain]] +50%\n| armor          = 0\n| attrib         = Nenhum.\n| weight         = 5.09\n| value          = 3 000\n| npcvalue       = 3 000\n| droppedby      = [[Arachnophobica]], [[Deathling Scout]], [[Deathling Spellsinger]], [[Deepling Master Librarian]], [[Deepling Spellsinger]], [[Flimsy Lost Soul]], [[Irgix the Flimsy]].\n| buyfrom        = Jogadores.\n| sellto         = Rock In A Hard Place\n| implemented    = 9.4\n| notes          = Reduz o [[life drain]] em até 50%. Possui 50 cargas.\n<noinclude><p><spoiler>\n* Pode ser obtido em um baú durante a [[Deepling Outfits Quest]] após derrotar os bosses [[Tanjis]] ou [[Jaul]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25333,
+    "ns": 0,
+    "title": "Prismatic Necklace",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Prismatic Necklace\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Amuletos e Colares\n| levelrequired  = 150\n| charges        = 750\n| resist         = [[Physical Damage|Physical]] +10%, [[Energy Damage|Energy]] +15%\n| armor          = 0\n| attrib         = Nenhum.\n| weight         = 6.50\n| value          = \n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.6\n| notes          = Faz parte do [[Prismatic Set]].\n<noinclude><p><spoiler>* Pode ser obtido através de um [[Mucus Plug]] e na [[Bigfoot's Burden Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 30992,
+    "ns": 0,
+    "title": "Shrunken Head Necklace",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Shrunken Head Necklace\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Amuletos e Colares\n| levelrequired  = 150\n| skillboost     = [[Speed]] +10\n| attrib         = Nenhum.\n| weight         = 5.50\n| armor          = 0\n| droppedRaidby  = [[The Welter]].\n| value          = 12 000 000 - 18 000 000\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.20\n| droppedby      = Ninguém.\n| notes          = Este é um item raro que só pode ser dropado de um boss que faz raras [[invasões]] e, por isso, pode ter um alto preço. Este amuleto é uma versão melhorada do [[Beetle Necklace]], com a velocidade igual a das [[montaria]]s de +10. Por não possuir um arm, este item não oferece nenhum aumento em sua defesa. Faz parte do [[Haste Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 34837,
+    "ns": 0,
+    "title": "The Lion's Heart",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = The Lion's Heart\n| flavortext     = The amulet looks like a golden lion's head. A hermit in Carlin might tell you more about it.\n| attrib         = [[Montarias|Doma]] uma criatura específica.\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Itens de Domar\n| secondarytype  = Amuletos e Colares\n| weight         = 2.00\n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.70\n| notes          = Pode ser utilizado no slot de colares do inventário.\n\n<noinclude><p><spoiler>* 01 é necessário para tentar domar um [[Noble Lion]]\n*Pode ser obtido como recompensa da [[Lion's Rock Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 36241,
+    "ns": 0,
+    "title": "Werewolf Amulet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Werewolf Amulet\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Amuletos e Colares\n| secondarytype  = Fontes de Luz\n| enchantable    = sim\n| enchanted      = \n| armor          = 0\n| attrib         = Fornece uma pequena quantidade de luz.\n| stackable      = não\n| weight         = 5.50 \n| value          = \n| npcvalue       = 3 000\n| droppedby      = [[Black Vixen]], [[Werebadger]], [[Werebear]], [[Wereboar]], [[Werefox]]. \n| droppedRaidby  = [[Feroxa (Mortal)]], [[Owin (Criatura)]].\n| buyfrom        = Jogadores.\n| sellto         = Gladys\n| implemented    = 10.80\n| notes          = \n<spoiler>Pode ser transformado em um [[Enchanted Werewolf Amulet]] com o uso de [[Moonlight Crystals]].</spoiler>\n{{Veja|Itens Recarregáveis}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 37150,
+    "ns": 0,
+    "title": "Onyx Pendant",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Onyx Pendant\n| levelrequired  = 60\n| resist         = [[Death Damage|Death]] +2%\n| armor          = 2\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Amuletos e Colares\n| attrib         = Nenhum.\n| weight         = 8.50\n| npcvalue       = 3 500\n| buyfrom        = Jogadores.\n| sellto         = Rashid\n| droppedby      = [[Lady Tenebris]].\n| implemented    = 10.90\n| notes          = <noinclude><p><spoiler>* Recompensa da [[Krailos Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45066,
+    "ns": 0,
+    "title": "Pendulet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Pendulet\n| levelrequired  = 180\n| itemclass      = Ferramentas e Outros Equipamentos \n| primarytype    = Amuletos e Colares\n| secondarytype  = \n| enchantable    = sim\n| enchanted      = \n| duration       = \n| vocrequired    = [[Paladin]]s\n| skillboost     = \n| resist         = \n| armor          = 0\n| attrib         = Nenhum.\n| weight         = 6.50\n| value          = \n| npcvalue       = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.00\n| notes          = <noinclude><p><spoiler>* Pode ser transformado em um [[Enchanted Pendulet]] entregando 02 [[Silver Token]]s para o NPC [[Cledwyn]].</spoiler></p></noinclude>\n{{Veja|Itens Recarregáveis}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45073,
+    "ns": 0,
+    "title": "Sleep Shawl",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Sleep Shawl\n| levelrequired  = 180\n| itemclass      = Ferramentas e Outros Equipamentos \n| primarytype    = Amuletos e Colares\n| secondarytype  = \n| enchantable    = sim\n| enchanted      = \n| duration       = \n| vocrequired    = [[Paladin]]s\n| skillboost     = \n| resist         = \n| armor          = 0\n| attrib         = Nenhum.\n| weight         = 4.30\n| value          = \n| npcvalue       = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.00\n| notes          = <noinclude><p><spoiler>* Pode ser transformado em um [[Enchanted Sleep Shawl]] entregando 02 [[Silver Token]]s para o NPC [[Cledwyn]].</spoiler></p></noinclude>\n{{Veja|Itens Recarregáveis}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45584,
+    "ns": 0,
+    "title": "Rainbow Necklace",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Rainbow Necklace\n| levelrequired  = 220\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Amuletos e Colares\n| attrib         = Nenhum.\n| resist         = [[Physical Damage|Physical]] +3%, [[Fire Damage|Fire]] +6%, [[Ice Damage|Ice]] -5%\n| weight         = 4.90\n| armor          = 2\n| value          = \n| droppedby      = [[Urmahlullu the Weakened]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.02.7746\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 46705,
+    "ns": 0,
+    "title": "The Cobra Amulet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = The Cobra Amulet\n| flavortext     = The bearer of this amulet will command the gaze, the resilience and deadliness of the cobra. Yet what firmly has its place in the heart of its wearer, the cobra will conceal.\n| levelrequired  = 250\n| itemclass      = Ferramentas e Outros Equipamentos \n| primarytype    = Amuletos e Colares\n| secondarytype  = \n| duration       = \n| resist         = [[Death Damage|Death]] +9% \n| attrib         = \n| weight         = 5.30\n| armor          = 4\n| value          = \n| npcvalue       = \n| droppedby      = [[Scarlett Etzel]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.20\n| notes          = \n<noinclude><p><spoiler>\n* Usando esse item no [[Intricate Cobra Shrine|santuário em forma de cobra]] (localizado em uma cripta ao norte de [[Ankrahmun]], {{Mapa|33101,32630,7:2|aqui}}) ele se transformará em um [[Note About Two Souls]] que conta um pouco da história de [[Scarlett Etzel]] e Galthen.</spoiler></p></noinclude>\n}}\n<noinclude>[[Categoria:Artefatos Primordiais]]</noinclude>"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 47777,
+    "ns": 0,
+    "title": "Traditional Neckerchief",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Traditional Neckerchief\n| flavortext    = A traditional neckerchief which complements every traditional Orcsoberfest look.\n| itemclass     = Ferramentas e Outros Equipamentos\n| primarytype   = Amuletos e Colares\n| secondarytype = \n| weight        = 1.50\n| stackable     = não\n| npcvalue      = \n| droppedby     = Ninguém.\n| droppedRaidby =\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| implemented   = 12.20.9066\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 49024,
+    "ns": 0,
+    "title": "Lion Amulet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Lion Amulet\n| flavortext     = The heraldic animal of the Order of the Lion is emblazoned on this imposing amulet. It is worn with pride by true knights of the lion.\n| levelrequired  = 230\n| itemclass      = Ferramentas e Outros Equipamentos \n| primarytype    = Amuletos e Colares\n| duration       = \n| resist         = [[Physical Damage|Physical]] +3%, [[Ice Damage|Ice]] +7%\n| attrib         = \n| weight         = 5.20\n| armor          = 3\n| value          = Negociável\n| npcvalue       = \n| droppedby      = [[Ancient Lion Knight]], [[Drume]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.40\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 50578,
+    "ns": 0,
+    "title": "Rhodolith Necklace",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Rhodolith Necklace\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Amuletos e Colares\n| attrib         = Nenhum. \n| armor          = 0\n| weight         = 5.50\n| value          = \n| npcvalue       =  \n| npcprice       = 4 000 [[Trust Points]]\n| droppedby      = Ninguém.\n| buyfrom        = Tik'hi Tak'he\n| sellto         = Jogadores.\n| implemented    = 12.60\n| notes          = É apenas uma decoração.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 50579,
+    "ns": 0,
+    "title": "Sapphire Necklace",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Sapphire Necklace\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Amuletos e Colares\n| attrib         = Nenhum. \n| armor          = 0\n| weight         = 6.00\n| stackable      = não\n| mercado        = não\n| value          = \n| npcvalue       =  \n| npcprice       = 4 000 [[Trust Points]]\n| droppedby      = Ninguém.\n| buyfrom        = Tik'hi Tak'he\n| sellto         = Jogadores.\n| implemented    = 12.60\n| notes          = Após comprar esse item, ele irá para o seu [[Store Inbox]], veja [[Decoration Kit]] para informações de como desembrulhá-lo.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 52206,
+    "ns": 0,
+    "title": "The Eye of Suon",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = The Eye of Suon\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Amuletos e Colares\n| attrib         = Nenhum.\n| levelrequired  = \n| mercado        = não\n| weight         = 6.00\n| value          = \n| npcvalue       = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.70\n| notes          = <noinclude><p><spoiler>* Obtido e usado na [[Kilmaresh Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 56153,
+    "ns": 0,
+    "title": "Turtle Amulet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Turtle Amulet\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos \n| primarytype    = Amuletos e Colares\n| secondarytype  = \n| enchantable    = sim\n| enchanted      = \n| vocrequired    = [[Knight]]s\n| armor          = 0\n| duration       = \n| skillboost     = \n| resist         = \n| attrib         = Nenhum.\n| weight         = 4.80\n| levelrequired  = 200\n| npcvalue       = \n| npcprice       = \n| droppedby      = [[Timira the Many-Headed]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| value          = \n| implemented    = 12.90\n| notes          = <noinclude><p><spoiler>* Pode ser transformado em um [[Enchanted Turtle Amulet]] entregando 02 [[Silver Token]]s para o NPC [[Cledwyn]].</spoiler></p></noinclude>\n{{Veja|Itens Recarregáveis}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 63993,
+    "ns": 0,
+    "title": "Merudri Brooch",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Merudri Brooch\n| levelrequired  = 220\n| itemclass      = Ferramentas e Outros Equipamentos \n| primarytype    = Amuletos e Colares\n| secondarytype  =\n| vocrequired    = [[Monk]]s\n| enchantable    = sim\n| enchanted      = \n| duration       = \n| armor          = 0\n| mantra         = 2\n| attrib         = Nenhum.\n| weight         = 4.50\n| value          = \n| npcvalue       = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.00.249ccc\n| notes          = <noinclude><p><spoiler>* Pode ser transformado em um [[Enchanted Merudri Brooch]] entregando 02 [[Silver Token]]s para o NPC [[Cledwyn]].</spoiler></p></noinclude>\n{{Veja|Itens Recarregáveis}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 67566,
+    "ns": 0,
+    "title": "Swan Amulet of Balance",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Swan Amulet of Balance\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos \n| primarytype    = Amuletos e Colares\n| secondarytype  = \n| enchantable    = sim\n| enchanted      = \n| vocrequired    = [[Monk]]s\n| armor          = \n| duration       = \n| skillboost     = \n| resist         = \n| modificadores  = \n| attrib         = \n| weight         = 5.30\n| levelrequired  = 270\n| npcvalue       = \n| npcprice       = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| value          = \n| implemented    = 15.30.a30dad\n| notes          = <noinclude><p><spoiler>* Pode ser '''encantado''' ao entregar 5 [[Silver Token]]s para [[Cledwyn]], transformando-se em um [[Arquivo:Enchanted Swan Amulet of Balance.gif]] [[Enchanted Swan Amulet of Balance]]. \n* O encantamento dura '''3 horas''' (180 minutos) enquanto o amuleto estiver equipado.</spoiler></p></noinclude>\n{{Veja|Itens Recarregáveis}}\n}}"
+       }
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

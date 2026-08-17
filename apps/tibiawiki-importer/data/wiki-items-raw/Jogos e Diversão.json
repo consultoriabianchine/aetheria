@@ -1,0 +1,534 @@
+{
+ "query": {
+  "pages": [
+   {
+    "pageid": 8797,
+    "ns": 0,
+    "title": "Black Bishop Token",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Black Bishop Token\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Jogos e Diversão\n| secondarytype  = \n| stackable      = não\n| attrib         = Nenhum.\n| weight         = 5.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Usado para jogar nas [[Salas de Jogos|salas de jogos]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8798,
+    "ns": 0,
+    "title": "Black Castle Token",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Black Castle Token\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Jogos e Diversão\n| secondarytype  = \n| stackable      = não\n| attrib         = Nenhum.\n| weight         = 5.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Usado para jogar nas [[Salas de Jogos|salas de jogos]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8800,
+    "ns": 0,
+    "title": "Black King Token",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Black King Token\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Jogos e Diversão\n| secondarytype  = \n| stackable      = não\n| attrib         = Nenhum.\n| weight         = 5.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Usado para jogar nas [[Salas de Jogos|salas de jogos]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8810,
+    "ns": 0,
+    "title": "Die",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Die\n| itemclass      = Outros Itens\n| primarytype    = Jogos e Diversão\n| secondarytype  = \n| attrib         = Gira quando usado.\n| weight         = 2.00\n| stackable      = não\n| value          = 100 - 3 000\n| npcprice       = 100 [[gp]]s por uma chance de ganhar\n| droppedby      = [[Arctic Faun]], [[Dark Faun]], [[Faun]], [[Pirate Buccaneer]], [[Pirate Cutthroat]], [[Pirate Marauder]], [[Pirate Quartermaster]].\n| droppedRaidby  = [[Munster]].\n| droppedEventby = [[Grynch Clan Goblin]]. \n| buyfrom        = Zebron, Klaus\n| sellto         = Jogadores.\n| implemented    = 7.8\n| notes          = <br />\n*Quando usado é exibido um texto laranja que anuncia qual foi seu resultado obtido. O texto também pode ser visualizado por jogadores situados em um raio de 2 [[SQM|sqm]]. \n*Não pode ser usado sobre a caixa do [[Depot]]. \n*Quando usado em uma área aberta, é mostrada a animação do dado girando.<br />\n*No [[Patches/10.22|Patch 10.22]], o nome do item foi alterado de \"dice\" para \"Die\", uma vez que, Dice (dados) é o plural da palavra Die (dado).\n<noinclude><p><spoiler>*Possibilidade de ser obtido ao usar um [[Unrealized Dream]] próximo ao [[The Dreamcatcher Device]].\n*[[Arquivo:Achievement.gif]] Após tirar o número 6 três vezes seguidas, você receberá o achievement '''\"{{Achievement|Number of the Beast}}\"'''.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8812,
+    "ns": 0,
+    "title": "Heavy Ball",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Heavy Ball\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Jogos e Diversão\n| secondarytype  = \n| stackable = não\n| attrib         = Não pode ser posta num [[containers|contâiner]]\n| weight         = N/A\n\n| value          = Negociável\n| droppedby      = Ninguém.\n| npcprice       = 123\n| npcvalue       = 0\n| buyfrom        = Svenson\n| sellto         = Jogadores.\n| implemented    = 8.54\n| notes          = Esse item não pode ser pego, você não pode colocá-lo no [[depot]], [[backpack]], [[bag]]s entre outros.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8813,
+    "ns": 0,
+    "title": "O Tic-Tac-Toe Token",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = O Tic-Tac-Toe Token\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Jogos e Diversão\n| secondarytype  = \n| attrib         = Nenhum.\n| stackable      = sim\n| weight         = 5.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Usado para jogar nas [[Salas de Jogos|salas de jogos]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8814,
+    "ns": 0,
+    "title": "Waterball",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Waterball\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Jogos e Diversão\n| secondarytype  = \n| attrib         = Pode ser pega, flutua na água.\n| stackable      = não\n| weight         = 2.00\n| value          = 222\n| npcprice       = 200\n| droppedby      = Ninguém.\n| buyfrom        = Beatrice:222, Lee'Delle\n| sellto         = Jogadores.\n| implemented    = 8.2\n| notes          = Este item pode ser utilizado na água, e pode apenas ser pego em terra, não pode ser pego na própria água\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8815,
+    "ns": 0,
+    "title": "White Bishop Token",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = White Bishop Token\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Jogos e Diversão\n| secondarytype  = \n| stackable      = não\n| attrib         = Nenhum.\n| weight         = 5.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Usado para jogar nas [[Salas de Jogos|salas de jogos]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8816,
+    "ns": 0,
+    "title": "White Castle Token",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = White Castle Token\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Jogos e Diversão\n| secondarytype  = \n| stackable      = não\n| attrib         = Nenhum.\n| weight         = 5.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Usado para jogar nas [[Salas de Jogos|salas de jogos]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8817,
+    "ns": 0,
+    "title": "White King Token",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = White King Token\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Jogos e Diversão\n| secondarytype  = \n| stackable      = não\n| attrib         = Nenhum.\n| weight         = 5.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Usado para jogar nas [[Salas de Jogos|salas de jogos]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8818,
+    "ns": 0,
+    "title": "White Knight Token",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = White Knight Token\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Jogos e Diversão\n| secondarytype  = \n| stackable      = não\n| attrib         = Nenhum.\n| weight         = 5.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Usado nas [[Salas de Jogos|salas de jogos]].\n<noinclude><p><spoiler>* 1 é  necessário para se fazer a [[The Paradox Tower Quest]].\n*Pode ser obtido nas salas de [[Xadrez]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8819,
+    "ns": 0,
+    "title": "White Pawn Token",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = White Pawn Token\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Jogos e Diversão\n| secondarytype  = \n| stackable      = não\n| attrib         = Nenhum.\n| weight         = 5.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Usado para jogar nas [[Salas de Jogos|salas de jogos]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8820,
+    "ns": 0,
+    "title": "White Queen Token",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = White Queen Token\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Jogos e Diversão\n| secondarytype  = \n| stackable      = não\n| attrib         = Nenhum.\n| weight         = 5.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Usado para jogar nas [[Salas de Jogos|salas de jogos]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8821,
+    "ns": 0,
+    "title": "White Token",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = White Token\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Jogos e Diversão\n| secondarytype  = \n| attrib         = Nenhum.\n| stackable      = sim\n| weight         = 5.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Usado para jogar nas [[Salas de Jogos|salas de jogos]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8822,
+    "ns": 0,
+    "title": "X Tic-Tac-Toe Token",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = X Tic-Tac-Toe Token\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Jogos e Diversão\n| secondarytype  = \n| attrib         = Nenhum.\n| stackable      = sim\n| weight         = 5.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Usado para jogar nas [[Salas de Jogos|salas de jogos]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8835,
+    "ns": 0,
+    "title": "Black Token",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Black Token\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Jogos e Diversão\n| secondarytype  = \n| stackable      = sim\n| weight         = 5.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Usado para jogar nas [[Salas de Jogos|salas de jogos]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8836,
+    "ns": 0,
+    "title": "Black Knight Token",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Black Knight Token\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Jogos e Diversão\n| stackable      = não\n| secondarytype  = \n| attrib         = Nenhum.\n| weight         = 5.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Usado para jogar nas [[Salas de Jogos|salas de jogos]].<noinclude><p><spoiler>1 é  necessário para se fazer a [[The Paradox Tower Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8837,
+    "ns": 0,
+    "title": "Black Pawn Token",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Black Pawn Token\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Jogos e Diversão\n| secondarytype  = \n| stackable      = não\n| attrib         = Nenhum.\n| weight         = 5.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Usado para jogar nas [[Salas de Jogos|salas de jogos]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8838,
+    "ns": 0,
+    "title": "Black Queen Token",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Black Queen Token\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Jogos e Diversão\n| secondarytype  = \n| stackable      = não\n| attrib         = Nenhum.\n| weight         = 5.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Usado para jogar nas [[Salas de Jogos|salas de jogos]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 17548,
+    "ns": 0,
+    "title": "Shimmer Ball",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Shimmer Ball\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Jogos e Diversão\n| secondarytype  = \n| attrib         = Nenhum.\n| weight         = 2.00\n| npcvalue       = 0\n| stackable      = não\n| mercado        = sim\n| droppedby      = Ninguém\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.1\n| notes          = Este item pode ser utilizado na água e pode apenas ser pego em terra. É uma das duas únicas combinações de itens com um [[Shimmer Swimmer]] que não expira em 7 dias. A outra é o [[Shimmer Glower]].\n<noinclude><p><spoiler>* Use um [[Shimmer Swimmer]] em um [[Bellow]] para conseguir esse item. Existe um no barco subterrâneo de [[Thais]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 29330,
+    "ns": 0,
+    "title": "Obsidian Zaoan Rook",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Obsidian Zaoan Rook\n| flavortext     = A zaoan chess figure made of obsidian. It depicts the rook.\n| itemclass      = Outros Itens\n| tertiarytype   = Extra Slot\n| primarytype    = Jogos e Diversão\n| secondarytype  = Fontes de Luz\n| attrib         = Fornece uma pequena quantidade de luz.\n| stackable      = não\n| implemented    = 9.83\n| weight         = 5.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Uma peça estilizada para quem gosta de jogar [[xadrez]].<noinclude><p><spoiler>Este item é a recompensa da [[World Quest]] [[The Colours of Magic]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 29332,
+    "ns": 0,
+    "title": "Obsidian Zaoan Queen",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Obsidian Zaoan Queen\n| flavortext     = A zaoan chess figure made of obsidian. It depicts the queen.\n| itemclass      = Outros Itens\n| tertiarytype   = Extra Slot\n| primarytype    = Jogos e Diversão\n| secondarytype  = Fontes de Luz\n| attrib         = Fornece uma pequena quantidade de luz na cor azul Neon.\n| stackable      = não\n| implemented    = 9.83\n| weight         = 5.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Uma peça estilizada para quem gosta de jogar [[xadrez]].<noinclude><p><spoiler>Este item é a recompensa da [[World Quest]] [[The Colours of Magic]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 29334,
+    "ns": 0,
+    "title": "Obsidian Zaoan Pawn",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Obsidian Zaoan Pawn\n| flavortext     = A zaoan chess figure made of obsidian. It depicts the pawn.\n| itemclass      = Outros Itens\n| tertiarytype   = Extra Slot\n| primarytype    = Jogos e Diversão\n| secondarytype  = Fontes de Luz\n| attrib         = Fornece uma pequena quantidade de luz.\n| stackable      = não\n| implemented    = 9.83\n| weight         = 5.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Uma peça estilizada para quem gosta de jogar [[xadrez]].<noinclude><p><spoiler>Este item é a recompensa da [[World Quest]] [[The Colours of Magic]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 29336,
+    "ns": 0,
+    "title": "Obsidian Zaoan Knight",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Obsidian Zaoan Knight\n| flavortext     = A zaoan chess figure made of obsidian. It depicts the knight.\n| itemclass      = Outros Itens\n| tertiarytype   = Extra Slot\n| primarytype    = Jogos e Diversão\n| secondarytype  = Fontes de Luz\n| attrib         = Fornece uma pequena quantidade de luz.\n| stackable      = não\n| implemented    = 9.83\n| weight         = 5.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Uma peça estilizada para quem gosta de jogar [[xadrez]].<noinclude><p><spoiler>Este item é a recompensa da [[World Quest]] [[The Colours of Magic]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 29338,
+    "ns": 0,
+    "title": "Obsidian Zaoan King",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Obsidian Zaoan King\n| flavortext     = A zaoan chess figure made of obsidian. It depicts the king.\n| itemclass      = Outros Itens\n| tertiarytype   = Extra Slot\n| primarytype    = Jogos e Diversão\n| secondarytype  = Fontes de Luz\n| attrib         = Fornece uma pequena quantidade de luz.\n| stackable      = não\n| implemented    = 9.83\n| weight         = 5.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Uma peça estilizada para quem gosta de jogar [[xadrez]].<noinclude><p><spoiler>Este item é a recompensa da [[World Quest]] [[The Colours of Magic]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 29340,
+    "ns": 0,
+    "title": "Obsidian Zaoan Bishop",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Obsidian Zaoan Bishop\n| flavortext     = A zaoan chess figure made of obsidian. It depicts the bishop.\n| itemclass      = Outros Itens\n| tertiarytype   = Extra Slot\n| primarytype    = Jogos e Diversão\n| secondarytype  = Fontes de Luz\n| attrib         = Fornece uma pequena quantidade de luz.\n| stackable      = não\n| implemented    = 9.83\n| weight         = 5.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Uma peça estilizada para quem gosta de jogar [[xadrez]].<noinclude><p><spoiler>Este item é a recompensa da [[World Quest]] [[The Colours of Magic]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 29342,
+    "ns": 0,
+    "title": "Jade Zaoan Rook",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Jade Zaoan Rook\n| flavortext     = A zaoan chess figure made of jade. It depicts the rook.\n| itemclass      = Outros Itens\n| tertiarytype   = Extra Slot\n| primarytype    = Jogos e Diversão\n| secondarytype  = Fontes de Luz\n| attrib         = Fornece uma pequena quantidade de luz verde.\n| stackable      = não\n| implemented    = 9.83\n| weight         = 5.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Uma peça estilizada para quem gosta de jogar [[xadrez]].<noinclude><p><spoiler>Este item é a recompensa da [[World Quest]] [[The Colours of Magic]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 29348,
+    "ns": 0,
+    "title": "Jade Zaoan Bishop",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Jade Zaoan Bishop\n| flavortext     = A zaoan chess figure made of jade. It depicts the bishop.\n| itemclass      = Outros Itens\n| tertiarytype   = Extra Slot\n| primarytype    = Jogos e Diversão\n| secondarytype  = Fontes de Luz\n| attrib         = Fornece uma pequena quantidade de luz verde.\n| stackable      = não\n| implemented    = 9.83\n| weight         = 5.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Uma peça estilizada para quem gosta de jogar [[xadrez]].<noinclude><p><spoiler>Este item é a recompensa da [[World Quest]] [[The Colours of Magic]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 29349,
+    "ns": 0,
+    "title": "Jade Zaoan King",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Jade Zaoan King\n| flavortext     = A zaoan chess figure made of jade. It depicts the king.\n| itemclass      = Outros Itens\n| tertiarytype   = Extra Slot\n| primarytype    = Jogos e Diversão\n| secondarytype  = Fontes de Luz\n| attrib         = Fornece uma pequena quantidade de luz verde.\n| stackable      = não\n| implemented    = 9.83\n| weight         = 5.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Uma peça estilizada para quem gosta de jogar [[xadrez]].<noinclude><p><spoiler>Este item é a recompensa da [[World Quest]] [[The Colours of Magic]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 29350,
+    "ns": 0,
+    "title": "Jade Zaoan Knight",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Jade Zaoan Knight\n| flavortext     = A zaoan chess figure made of jade. It depicts the knight.\n| itemclass      = Outros Itens\n| tertiarytype   = Extra Slot\n| primarytype    = Jogos e Diversão\n| secondarytype  = Fontes de Luz\n| attrib         = Fornece uma pequena quantidade de luz verde.\n| stackable      = não\n| implemented    = 9.83\n| weight         = 5.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Uma peça estilizada para quem gosta de jogar [[xadrez]].<noinclude><p><spoiler>Este item é a recompensa da [[World Quest]] [[The Colours of Magic]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 29351,
+    "ns": 0,
+    "title": "Jade Zaoan Pawn",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Jade Zaoan Pawn\n| flavortext     = A zaoan chess figure made of jade. It depicts the pawn.\n| itemclass      = Outros Itens\n| tertiarytype   = Extra Slot\n| primarytype    = Jogos e Diversão\n| secondarytype  = Fontes de Luz\n| attrib         = Fornece uma pequena quantidade de luz verde.\n| stackable      = não\n| implemented    = 9.83\n| weight         = 5.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Uma peça estilizada para quem gosta de jogar [[xadrez]].<noinclude><p><spoiler>Este item é a recompensa da [[World Quest]] [[The Colours of Magic]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 29352,
+    "ns": 0,
+    "title": "Jade Zaoan Queen",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Jade Zaoan Queen\n| flavortext     = A zaoan chess figure made of jade. It depicts the queen.\n| itemclass      = Outros Itens\n| tertiarytype   = Extra Slot\n| primarytype    = Jogos e Diversão\n| secondarytype  = Fontes de Luz\n| attrib         = Fornece uma pequena quantidade de luz verde.\n| stackable      = não\n| implemented    = 9.83\n| weight         = 5.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Uma peça estilizada para quem gosta de jogar [[xadrez]].<noinclude><p><spoiler>Este item é a recompensa da [[World Quest]] [[The Colours of Magic]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45491,
+    "ns": 0,
+    "title": "Large Snowball",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Large Snowball\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Jogos e Diversão\n| secondarytype  = \n| attrib         = Não pode ser posta num [[containers|contâiner]].\n| hands          = \n| type           = \n| stackable      = não\n| weight         = N/A\n| implemented    = 12.02.7746\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| mercado        = não\n| notes          = \n<noinclude><p><spoiler>* Obtido usando uma [[Snowball]] em outra igual, no chão.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

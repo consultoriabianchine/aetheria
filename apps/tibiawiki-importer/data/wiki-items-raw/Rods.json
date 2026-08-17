@@ -1,0 +1,774 @@
+{
+ "query": {
+  "pages": [
+   {
+    "pageid": 6336,
+    "ns": 0,
+    "title": "Hailstorm Rod",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Hailstorm Rod\n| flavortext     = It grants you the power of striking your foes with furious hailstorms.\n| itemclass      = Armas\n| primarytype    = Rods\n| secondarytype  = Fontes de Luz\n| attrib         = Fornece 3 [[sqm]]s de luz azulada quando equipado.\n| stackable      = não\n| vocrequired    = [[Druid]]s\n| levelrequired  = 33\n| damage         = 65\n| damagetype     = Ice\n| weight         = 27.00\n| classificacao  = 1\n| max_tier       = 1\n| range          = 3\n| trade          = sim\n| buyfrom        = Alexander, Asima, Chuckles, Fenech, Frederik, Hireling (Trader), Mordecai, Nelly, Rabaz, Romir, Siflind, Tandros\n| sellto         = Yaman\n| value          = Negociável\n| npcvalue       = 3 000\n| npcprice       = 15 000\n| droppedby      = [[Adept of the Cult]], [[Animated Feather]], [[Blemished Spawn]], [[Blightwalker]], [[Bluebeak]], [[Burster Spectre]], [[Crazed Winter Rearguard]], [[Crystal Wolf]], [[Dark Carnisylvan]], [[Faceless Bane]], [[Flimsy Lost Soul]], [[Ice Witch]], [[Infernal Phantom]], [[Irgix the Flimsy]], [[Madareth]], [[Marid]], [[Melting Frozen Horror]], [[Priestess]], [[The Sandking]], [[Tremendous Tyrant]], [[Varnished Diremaw]], [[Werehyaena Shaman]].\n| droppedEventby = [[Animated Snowman]], [[Ice Dragon]].\n| implemented    = 8.1\n| perk1          = {{Weapon Perk|Type_Life_On_Hit||+3 hit points on hit}}\n| perk2          = {{Weapon Perk|Spell_Ice_Strike|Life_Leech|+2.5% life leech para Ice Strike}}<br/>{{Weapon Perk|Type_Element_Critical_Chance_Ice||+1.00% critical hit chance para Ice spells e runes}}\n| perk3          = {{Weapon Perk|Spell_Ice_Strike|Life_Leech|+2.5% life leech para Ice Strike}}<br/>{{Weapon Perk|Type_Mana_On_Kill||+20 mana on kill}}\n| perk4          = {{Weapon Perk|Type_Element_Critical_Dmg_Ice||+5.00% critical extra damage para Ice spells e runes}}\n| notes          = Substituiu a [[Tempest Rod]] no Update 8.1. Ótima para ser utilizada contra [[Dragons]]. Faz parte do [[Blue Set]] e [[Mage Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6346,
+    "ns": 0,
+    "title": "Moonlight Rod",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Moonlight Rod\n| flavortext     = Icecold rays of moonlight shimmer on its tip.\n| itemclass      = Armas\n| primarytype    = Rods\n| vocrequired    = [[Druid]]s\n| levelrequired  = 13\n| damage         = 19\n| trade          = sim\n| buyfrom        = Alexander, Asima, Chuckles, Fenech, Frans, Frederik, Gnomegica, Hamish, Hireling (Trader), Mordecai, Nelly, Rabaz, Rachel, Romir, Shiriel, Siflind, Sigurd, Tandros, Topsy, Xodet\n| sellto         = Yaman\n| damagetype     = Ice\n| weight         = 21.00\n| classificacao  = 1\n| max_tier       = 1\n| range          = 3\n| value          = 1 000\n| npcvalue       = 200\n| npcprice       = 1 000\n| droppedby      = [[Animated Snowman]], [[Black Vixen]], [[Crazed Winter Rearguard]], [[Golgordan]], [[Herald of Fire]], [[Latrivan]], [[Minotaur Cult Prophet]], [[Necropharus]], [[Psychic Spirit Elemental]], [[The Blazing Rose]], [[The Flaming Orchid]], [[The Lily Of Night]], [[Vampire Bride]], [[Werefox]].\n| implemented    = 7.6\n| perk1          = {{Weapon Perk|Type_Mana_On_Hit||+3 mana on hit}}\n| perk2          = {{Weapon Perk|Type_Perfect_Shot_Damage||+5 damage at range 3}}<br/>{{Weapon Perk|Type_Mana_On_Kill||+5 mana on kill}}\n| perk3          = {{Weapon Perk|Spell_Ice_Strike|Critical_Dmg|+10% critical extra damage para Ice Strike}}\n| notes          = Uma boa [[Rods|Rod]], já que poucas criaturas são imunes à [[Ice Damage|Gelo]].\nMoonlight Rods substituíram [[Conjurer Wand]]s [[Arquivo:Conjurer Wand.gif]] no Update 7.6.\nEla fornece uma pequena '''luz azul''' quando equipada ao jogador.\n<noinclude><p><spoiler>*É Necessária para o [[Mage Outfits Quest]] (male) e [[Summoner Outfits Quest]] (female).</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6352,
+    "ns": 0,
+    "title": "Necrotic Rod",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Necrotic Rod\n| flavortext     = It was brought up from hell to deliver death.\n| itemclass      = Armas\n| primarytype    = Rods\n| vocrequired    = [[Druid]]s\n| levelrequired  = 19\n| damage         = 30\n| damagetype     = Death\n| weight         = 23.00\n| classificacao  = 1\n| max_tier       = 1\n| range          = 3\n| buyfrom        = Alexander, Asima, Chuckles, Fenech, Frans, Frederik, Gnomegica, Hamish, Hireling (Trader), Mordecai, Nelly, Rabaz, Rachel, Romir, Shiriel, Siflind, Sigurd, Tandros, Topsy, Xodet\n| sellto         = Yaman\n| value          = 1 000 - 5 000\n| npcvalue       = 1 000\n| npcprice       = 5 000\n| droppedby      = [[Blood Hand]], [[Burning Book]], [[Dark Magician]], [[Death Priest Shargon]], [[Diabolic Imp]], [[Faceless Bane]], [[Fire Devil]], [[Golgordan]], [[Latrivan]], [[Midnight Asura]], [[Ogre Shaman]], [[Omnivora]], [[Shaper Matriarch]], [[Souleater]], [[The Flaming Orchid]], [[The Gravedigger]], [[True Midnight Asura]], [[Undertaker]], [[Venerable Girtablilu]], [[Witch]].\n| droppedRaidby  = [[Yaga the Crone]].\n| implemented    = 8.1\n| perk1          = {{Weapon Perk|Type_Life_On_Hit||+2 hit points on hit}}\n| perk2          = {{Weapon Perk|Type_Life_On_Kill||+4 hit points on kill}}<br/>{{Weapon Perk|Type_Perc_Auto_Atk_Magic||+15.00% do seu Magic Level como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Auto_Atk_Critical_Dmg||+20.00% critical extra damage para auto-attacks}}\n| notes          = Substituiu a [[Volcanic Rod]] no update 8.1.\n<noinclude><p><spoiler>* Necessária para o [[Mage Outfits|Mage Outfit masculino]].\n* Necessária para o [[Summoner Outfits|Summoner Outfit feminino]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6354,
+    "ns": 0,
+    "title": "Northwind Rod",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Northwind Rod\n| flavortext     = It was made by one of the shamans in Svargrond and symbolises an icy mammoth.\n| itemclass      = Armas\n| primarytype    = Rods\n| vocrequired    = [[Druid]]s\n| levelrequired  = 22\n| damage         = 30\n| damagetype     = Ice\n| trade          = sim\n| weight         = 29.00\n| imbuement      = 2\n| classificacao  = 1\n| max_tier       = 1\n| range          = 3\n| buyfrom        = Alexander, Asima, Chuckles, Fenech, Frederik, Hireling (Trader), Mordecai, Nelly, Rabaz, Romir, Siflind, Tandros\n| sellto         = Yaman\n| npcvalue       = 1 500\n| npcprice       = 7 500\n| value          = 1 500 - 7 500\n| droppedby      = [[Blemished Spawn]], [[Crazed Winter Rearguard]], [[Crazed Winter Vanguard]], [[Quara Predator Scout]], [[Renegade Quara Constrictor]], [[Roaring Water Elemental]], [[Sea Serpent]], [[Turbulent Elemental]], [[Venerable Girtablilu]].\n| implemented    = 8.2\n| perk1          = {{Weapon Perk|Type_Mana_On_Kill||+10 mana on kill}}\n| perk2          = {{Weapon Perk|Type_Perfect_Shot_Damage||+5 damage at range 3}}<br/>{{Weapon Perk|Type_Element_Critical_Dmg_Ice||+4.00% critical extra damage para Ice spells e runes}}\n| perk3          = {{Weapon Perk|Type_Life_On_Hit||+3 hit points on hit}}<br/>{{Weapon Perk|Spell_Ice_Strike|Critical_Dmg|+15% critical extra damage para Ice Strike}}\n| perk4          = {{Weapon Perk|Type_Element_Critical_Chance_Ice||+1.00% critical hit chance para Ice spells e runes}}\n| notes          = Não é muito indicado comprar uma destas, pois assim como a [[Wand of Draconia]] dos sorcerers, é mais difícil de ser obtida — pois é dropada por monstros fortes — e costuma ter um preço não acessível para jogadores de level baixo. Mas você terá algumas vantagens se comprar, tais como caçar mortos-vivos, como [[Ghoul]]s, [[Crypt Shambler]]s e [[Ghost]]s, que você não poderia com sua [[Necrotic Rod]]. Faz parte do [[Blue Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6358,
+    "ns": 0,
+    "title": "Snakebite Rod",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Snakebite Rod\n| flavortext     = It seems to twitch and quiver as if trying to escape your grip.\n| itemclass      = Armas\n| primarytype    = Rods\n| vocrequired    = [[Druid]]s\n| levelrequired  = 6\n| damage         = 13\n| damagetype     = Earth\n| weight         = 19.00\n| classificacao  = 1\n| max_tier       = 1\n| range          = 3\n| trade          = sim\n| buyfrom        = Alexander, Asima, Chuckles, Fenech, Frans, Frederik, Gnomegica, Hamish, Hireling (Trader), Mordecai, Nelly, Rabaz, Rachel, Romir, Shiriel, Siflind, Sigurd, Tandros, Topsy, Xodet\n| sellto         = Yaman\n| npcvalue       = 100\n| npcprice       = 500\n| value          = Primeira de graça, 500 [[gp]] para cada adicional.\n| droppedby      = [[Baleful Bunny]], [[Black Sphinx Acolyte]], [[Cobra Vizier]], [[Faceless Bane]], [[Golgordan]], [[Latrivan]], [[Lizard Snakecharmer]], [[Minotaur Cult Zealot]], [[Serpent Spawn]], [[Worm Priestess]], [[Young Goanna]].\n| implemented    = 7.6\n| perk1          = {{Weapon Perk|Type_Auto_Atk_Critical_Chance||+2.00% critical hit chance para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Life_On_Kill||+5 hit points on kill}}<br/>{{Weapon Perk|Type_Perc_Spell_Heal_Magic||+10.00% do seu Magic Level como extra healing para suas spells}}\n| perk3          = {{Weapon Perk|Spell_Light_Healing|Healing|+20% healing para Light Healing}}\n| notes          = É a [[Rod]] inicial dos [[Druids]]. Substituiu a [[Golden Wand]] no update 7.6. Faz parte do [[Newbie Set]] e [[Isle of Destiny Druid Set]]. \n<noinclude><p><spoiler>* 01 é necessário para o [[Mage Outfits Quest]] e [[Summoner Outfits Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6361,
+    "ns": 0,
+    "title": "Springsprout Rod",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Springsprout Rod\n| flavortext     = It is filled with the energy of growing plants.\n| itemclass      = Armas\n| primarytype    = Rods\n| vocrequired    = [[Druid]]s\n| levelrequired  = 37\n| damage         = 65\n| damagetype     = Earth\n| weight         = 27.00\n| classificacao  = 1\n| max_tier       = 1\n| range          = 3\n| buyfrom        = Alexander, Asima, Chuckles, Fenech, Frederik, Hireling (Trader), Mordecai, Nelly, Rabaz, Romir, Siflind, Tandros\n| sellto         = Yaman\n| npcvalue       = 3 600\n| npcprice       = 18 000\n| value          = 3 600 - 18 000\n| droppedby      = [[Amenef The Burning]], [[Ancient Scarab]], [[Ancient Spawn of Morgathla]], [[Askarak Demon]], [[Askarak Lord]], [[Askarak Prince]], [[Blemished Spawn]], [[Bog Raider]], [[Choking Fear]], [[Crawler]], [[Cursed Book]], [[Dark Carnisylvan]], [[Deathbine]], [[Deepworm]], [[Devourer (Criatura)]], [[Fleshcrawler]], [[Infernal Phantom]], [[Ink Blob]], [[Ironblight]], [[Irgix the Flimsy]], [[Liodile]], [[Madareth]], [[Ripper Spectre]], [[Turbulent Elemental]], [[Usurper Commander]], [[Usurper Warlock]], [[Varnished Diremaw]], [[Venerable Girtablilu]], [[Young Goanna]].\n| droppedRaidby  = [[Weakened Shlorg]].\n| implemented    = 8.2\n| perk1          = {{Weapon Perk|Type_Element_Critical_Dmg_Earth||+2.00% critical extra damage para Earth spells e runes}}\n| perk2          = {{Weapon Perk|Type_Element_Critical_Chance_Earth||+1.00% critical hit chance para Earth spells e runes}}<br/>{{Weapon Perk|Type_Perc_Spell_Heal_Magic||+5.00% do seu Magic Level como extra healing para suas spells}}\n| perk3          = {{Weapon Perk|Type_Element_Critical_Chance_Earth||+1.00% critical hit chance para Earth spells e runes}}<br/>{{Weapon Perk|Type_Perc_Spell_Heal_Magic||+5.00% do seu Magic Level como extra healing para suas spells}}\n| perk4          = {{Weapon Perk|Type_Element_Critical_Dmg_Earth||+4.00% critical extra damage para Earth spells e runes}}\n| notes          = Tem ataque igual à [[Hailstorm Rod]], mas seu elemento é de veneno.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6362,
+    "ns": 0,
+    "title": "Terra Rod",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Terra Rod\n| flavortext     = Small stones are flying from its tip.\n| itemclass      = Armas\n| primarytype    = Rods\n| vocrequired    = [[Druid]]s\n| levelrequired  = 26\n| damage         = 45\n| damagetype     = Earth\n| weight         = 25.00\n| classificacao  = 1\n| max_tier       = 1\n| range          = 3\n| buyfrom        = Alexander, Asima, Chuckles, Fenech, Frans, Frederik, Gnomegica, Hireling (Trader), Mordecai, Nelly, Rabaz, Rachel, Romir, Shiriel, Siflind, Sigurd, Tandros, Topsy, Xodet\n| sellto         = Yaman\n| npcvalue       = 2 000\n| npcprice       = 10 000\n| droppedby      = [[Acolyte of the Cult]], [[Adult Goanna]], [[Blemished Spawn]], [[Bloated Man-Maggot]], [[Bonelord]], [[Cobra Vizier]], [[Devourer (Criatura)]], [[Drume]], [[Elder Forest Fury]], [[Faceless Bane]], [[Flimsy Lost Soul]], [[Fury]], [[Infernal Phantom]], [[Irgix the Flimsy]], [[Lizard Dragon Priest]], [[Lizard Snakecharmer]], [[Menacing Carnivor]], [[Mercurial Menace]], [[Poisonous Carnisylvan]], [[Razzagorn]], [[Ripper Spectre]], [[Scarlett Etzel]], [[Varnished Diremaw]], [[Wiggler]], [[Young Goanna]].\n| droppedRaidby  = [[Oodok Witchmaster]].\n| value          = 2 000 - 10 000\n| implemented    = 8.1\n| perk1          = {{Weapon Perk|Type_Mana_On_Hit||+5 mana on hit}}\n| perk2          = {{Weapon Perk|Type_Element_Critical_Dmg_Earth||+5.00% critical extra damage para Earth spells e runes}}<br/>{{Weapon Perk|Type_Rune_Critical_Dmg||+3.00% critical extra damage para offensive runes}}\n| perk3          = {{Weapon Perk|Spell_Terra_Strike|Damage|+10% base damage para Terra Strike}}<br/>{{Weapon Perk|Type_Mana_On_Kill||+10 mana on kill}}\n| perk4          = {{Weapon Perk|Type_Element_Critical_Chance_Earth||+1.00% critical hit chance para Earth spells e runes}}<br/>{{Weapon Perk|Type_Rune_Critical_Chance||+1.00% critical hit chance para offensive runes}}\n| notes          = Infelizmente muitas criaturas são resistentes contra [[Earth Damage]]. Substituiu a [[Quagmire Rod]] no update 8.1. Faz parte do [[Bonelord Set]].\n<noinclude><p><spoiler>* 01 é necessário para o [[Mage Outfits Quest]] e [[Summoner Outfits Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6363,
+    "ns": 0,
+    "title": "Underworld Rod",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Underworld Rod\n| flavortext     = No one knows which hell this unholy rod comes from.\n| itemclass      = Armas\n| primarytype    = Rods\n| vocrequired    = [[Druid]]s\n| imbuement      = 2\n| classificacao  = 1\n| max_tier       = 1\n| levelrequired  = 42\n| damage         = 65\n| damagetype     = Death\n| weight         = 29.00\n| range          = 3\n| buyfrom        = Alexander, Asima, Chuckles, Fenech, Frederik, Hireling (Trader), Mordecai, Nelly, Rabaz, Romir, Siflind, Tandros\n| sellto         = Yaman\n| npcvalue       = 4 400\n| npcprice       = 22 000\n| value          = 4 400 - 22 000\n| droppedby      = [[Ancient Spawn of Morgathla]], [[Arachnophobica]], [[Arbaziloth]], [[Black Sphinx Acolyte]], [[Blood Priest]], [[Carnivostrich]], [[Choking Fear]], [[Dark Carnisylvan]], [[Drume]], [[Faceless Bane]], [[Grim Reaper]], [[Grimeleech]], [[Infernal Phantom]], [[Madareth]], [[Metal Gargoyle]], [[Midnight Asura]], [[Poisonous Carnisylvan]], [[Retching Horror]], [[Sharpclaw]], [[Sopping Corpus]], [[Tarbaz]], [[The Diamond Blossom]], [[The False God]], [[The Souldespoiler]], [[Tremor Worm]], [[True Midnight Asura]], [[Usurper Warlock]], [[Venerable Girtablilu]], [[Werebadger]], [[Worm Priestess]], [[Rotten Golem]].\n| droppedRaidby  = [[Feroxa (Mortal)]].\n| implemented    = 8.2\n| perk1          = {{Weapon Perk|Type_Life_On_Kill||+8 hit points on kill}}\n| perk2          = {{Weapon Perk|Type_Rune_Critical_Dmg||+3.00% critical extra damage para offensive runes}}<br/>{{Weapon Perk|Type_Mana_On_Kill||+25 mana on kill}}\n| perk3          = {{Weapon Perk|Type_Bestiary_Dmg_Undead||+2.50% damage contra Undead}}<br/>{{Weapon Perk|Type_Life_On_Kill||+8 hit points on kill}}\n| perk4          = {{Weapon Perk|Type_Rune_Critical_Dmg||+3.00% critical extra damage para offensive runes}}\n| notes          = Tem dano de [[Death Damage|death]] equivalente a [[Hailstorm Rod]] e a [[Springsprout Rod]]. Faz parte do [[Mage Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 17431,
+    "ns": 0,
+    "title": "Shimmer Rod",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Shimmer Rod\n| flavortext    = It feels cold and smooth.\n| itemclass     = Armas\n| primarytype   = Rods\n| vocrequired   = [[Druid]]s\n| levelrequired = 40\n| damage        = 65\n| attack        = 0\n| damagetype    = Ice\n| weight        = 31.00\n| range         = 4\n| buyfrom       = Jogadores.\n| mercado       = não\n| value         = Negociável\n| npcvalue      = 0\n| npcprice      = 0\n| implemented   = 9.1\n| sellto        = Jogadores.\n| droppedby     = Ninguém.\n| perk1          = {{Weapon Perk|Type_Mana_On_Kill||+20 mana on kill}}\n| perk2          = {{Weapon Perk|Type_Perc_Spell_Heal_Fishing||+7.00% do seu Fishing como extra healing para suas spells}}<br/>{{Weapon Perk|Type_Auto_Atk_Critical_Chance||+3.00% critical hit chance para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Bestiary_Dmg_Aquatic||+3.00% damage contra Aquatic}}<br/>{{Weapon Perk|Type_Auto_Atk_Critical_Dmg||+15.00% critical extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Fishing||+50.00% do seu Fishing como extra damage para auto-attacks}}\n| notes         = Expira em sete dias e os itens originais somem.\n<noinclude><p><spoiler>* Pode ser obtida misturando um [[Shimmer Swimmer]] com um [[Yielowax]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25312,
+    "ns": 0,
+    "title": "Glacial Rod",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Glacial Rod\n| flavortext     = Hurls the icy essence of the Svargrond glaciers.\n| itemclass      = Armas\n| primarytype    = Rods\n| vocrequired    = [[Druid]]s\n| levelrequired  = 65\n| damage         = 85\n| value          = Negociável\n| npcvalue       = 6 500\n| damagetype     = Ice\n| skillboost     = [[Magic Level]] +1 \n| weight         = 37.00\n| classificacao  = 2\n| max_tier       = 2\n| range          = 4\n| trade          = sim\n| buyfrom        = Jogadores.\n| sellto         = Yaman\n| droppedby      = [[Animated Feather]], [[Burster Spectre]], [[Cliff Strider]], [[Flimsy Lost Soul]], [[Icecold Book]], [[Ironblight]].\n| droppedEventby = [[Gelidrazah the Frozen]], [[Schiach]].\n| implemented    = 9.6\n| perk1          = {{Weapon Perk|Type_Skill_Magic||+1 Magic Level}}\n| perk2          = {{Weapon Perk|Type_Element_Critical_Chance_Ice||+2.00% critical hit chance para Ice spells e runes}}<br/>{{Weapon Perk|Type_Element_Critical_Dmg_Ice||+10.00% critical extra damage para Ice spells e runes}}\n| perk3          = {{Weapon Perk|Type_Mana_On_Kill||+30 mana on kill}}\n| perk4          = {{Weapon Perk|Type_Element_Critical_Chance_Ice||+2.00% critical hit chance para Ice spells e runes}}<br/>{{Weapon Perk|Type_Element_Critical_Dmg_Ice||+10.00% critical extra damage para Ice spells e runes}}\n| perk5          = {{Weapon Perk|Type_Bestiary_Dmg_Elemental||+3.00% damage contra Elemental}}\n| notes          = Equivalente a um [[Muck Rod]]. Faz parte do [[Mage Set]] e [[Magic Level Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25323,
+    "ns": 0,
+    "title": "Muck Rod",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Muck Rod\n| flavortext     = A true staff of old, spitting slimy orbs.\n| itemclass      = Armas\n| primarytype    = Rods\n| vocrequired    = [[Druid]]s\n| levelrequired  = 65\n| damage         = 85\n| value          = Negociável\n| npcvalue       = 6 000\n| damagetype     = Earth\n| skillboost     = \n| weight         = 37.00\n| classificacao  = 2\n| max_tier       = 2\n| range          = 4\n| trade          = sim\n| buyfrom        = Jogadores.\n| sellto         = Yaman\n| droppedby      = [[Adventurer Group]], [[Faceless Bane]], [[Gorzindel]], [[Hideous Fungus]], [[Humongous Fungus]], [[Kusuma]], [[Noxious Ripptor]], [[Plagirath]], [[Ravenous Hunger]], [[Stalking Stalk]], [[The Duke Of The Depths]].\n| implemented    = 9.6\n| perk1          = {{Weapon Perk|Type_Skill_Magic||+1 Magic Level}}\n| perk2          = {{Weapon Perk|Type_Element_Critical_Chance_Earth||+2.00% critical hit chance para Earth spells e runes}}<br/>{{Weapon Perk|Type_Element_Critical_Dmg_Earth||+10.00% critical extra damage para Earth spells e runes}}\n| perk3          = {{Weapon Perk|Type_Mana_On_Kill||+30 mana on kill}}\n| perk4          = {{Weapon Perk|Type_Element_Critical_Chance_Earth||+2.00% critical hit chance para Earth spells e runes}}<br/>{{Weapon Perk|Type_Element_Critical_Dmg_Earth||+10.00% critical extra damage para Earth spells e runes}}\n| perk5          = {{Weapon Perk|Type_Bestiary_Dmg_Elemental||+3.00% damage contra Elemental}}\n| notes          = Equivalente a um [[Glacial Rod]]. Faz parte do [[Mage Set]] e [[Magic Level Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 34145,
+    "ns": 0,
+    "title": "The Chiller",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = The Chiller\n| flavortext     = It is a little, well, chilly to the touch.\n| itemclass      = Armas\n| primarytype    = Rods\n| vocrequired    = [[Druid]]s\n| levelrequired  = 0\n| damage         = 6\n| damagetype     = Ice\n| weight         = 15.00\n| range          = 3\n| buyfrom        = Asima, Chuckles, Frederik, Gnomegica, Hireling (Trader), Nelly, Onfroi, Rabaz, Rachel, Romir, Shiriel, Siflind, Sigurd, Tandros, Topsy, Xodet, Sundara, Nipuna, Yerga, Frans, Khanna, Mordecai, Alexander, Fenech\n| sellto         = Ninguém.\n| npcvalue       = \n| npcprice       = 250\n| droppedby      = Ninguém.\n| mercado        = sim\n| implemented    = 10.55\n| perk1          = {{Weapon Perk|Type_Mana_On_Hit||+2 mana on hit}}\n| perk2          = {{Weapon Perk|Type_Auto_Atk_Critical_Dmg||+40.00% critical extra damage para auto-attacks}}<br/>{{Weapon Perk|Type_Life_On_Kill||+5 hit points on kill}}\n| perk3          = {{Weapon Perk|Spell_Chill_Out|Damage|+50% base damage para Chill Out}}\n| notes          = * Faz parte do [[Set Inicial]] de [[Druid]]s.\n* Após o [[Update de Newhaven]], este item passou a ser vendido em NPCs no continente principal e pode ser comercializado no [[Mercado]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 37286,
+    "ns": 0,
+    "title": "Ogre Scepta",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ogre Scepta\n| itemclass      = Armas\n| primarytype    = Rods\n| vocrequired    = [[Druid]]s\n| levelrequired  = 37\n| damage         = 65\n| damagetype     = Earth\n| weight         = 29.00\n| imbuement      = 2\n| classificacao  = 2\n| max_tier       = 2\n| range          = 3\n| buyfrom        = Jogadores.\n| sellto         = Mugruu\n| npcvalue       = 3 600\n| npcprice       = 0\n| droppedby      = [[Ogre Sage]], [[Ogre Shaman]], [[Shaper Matriarch]].\n| implemented    = 10.90\n| perk1          = {{Weapon Perk|Type_Perfect_Shot_Damage||+12 damage at range 1}}\n| perk2          = {{Weapon Perk|Spell_Physical_Strike|Critical_Dmg|+10% critical extra damage para Physical Strike}}<br/>{{Weapon Perk|Type_Life_On_Kill||+15 hit points on kill}}\n| perk3          = {{Weapon Perk|Spell_Physical_Strike|Damage|+5% base damage para Physical Strike}}<br/>{{Weapon Perk|Type_Mana_On_Kill||+20 mana on kill}}\n| perk4          = {{Weapon Perk|Type_Bestiary_Dmg_Giant||+4.00% damage contra Giant}}\n| notes          = <noinclude><p><spoiler>* Possibilidade de ser obtido ao usar um [[Shaggy Ogre Bag]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 38328,
+    "ns": 0,
+    "title": "Rod of Mayhem",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Rod of Mayhem\n| vocrequired   = [[Druid]]s\n| itemclass     = Armas Obsoletas\n| primarytype   = Rods\n| levelrequired = 100\n| damage        = 85\n| damagetype    = Ice\n| weight        = 35.00\n| imbuement     = 2\n| mana          = 18\n| range         = 3\n| value         = Negociável\n| npcprice      = 50 [[Gold Token]]s\n| droppedby     = Ninguém.\n| buyfrom       = Yana\n| sellto        = Jogadores.\n| implemented   = 10.94\n| removed       = 11.40\n| notes         = A partir do [[Update de Verão 2017]], recebeu 2 slots para o sistema de [[Imbuements]]. Antes disso, podia ser [[Encantamento|encantada]] para obter uma chance de dar um hit crítico e existiam três níveis de encantamento: [[Arquivo:Rod of Mayhem (Charged).gif]] ([[Rod of Mayhem (Charged)|Charged]]) [[Arquivo:Rod of Mayhem (Heavily Charged).gif]] ([[Rod of Mayhem (Heavily Charged)|Heavily Charged]]) [[Arquivo:Rod of Mayhem (Overcharged).gif]] ([[Rod of Mayhem (Overcharged)|Overcharged]]). Os itens encantados antes desse update puderam ser utilizados até o dia 25 de agosto de 2017 e, em seguida, perderam seu encantamento.<br />Com o [[Update de Inverno 2017]], as rods [[Rod of Carving]], [[Rod of Mayhem]] e [[Rod of Remedy]] foram transformadas no [[Rod of Destruction]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 38329,
+    "ns": 0,
+    "title": "Rod of Remedy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Rod of Remedy\n| vocrequired   = [[Druid]]s\n| itemclass     = Armas Obsoletas\n| primarytype   = Rods\n| levelrequired = 100\n| damage        = 85\n| damagetype    = Ice\n| weight        = 35.00\n| imbuement     = 2\n| mana          = 18\n| range         = 3\n| value         = Negociável\n| npcprice      = 50 [[Gold Token]]s\n| droppedby     = Ninguém.\n| buyfrom       = Yana\n| sellto        = Jogadores.\n| implemented   = 10.94\n| removed       = 11.40\n| notes         = A partir do [[Update de Verão 2017]], recebeu 2 slots para o sistema de [[Imbuements]]. Antes disso, podia ser [[Encantamento|encantada]] para obter uma chance de sugar a vida do oponente e existiam três níveis de encantamento: [[Arquivo:Rod of Remedy (Charged).gif]] ([[Rod of Remedy (Charged)|Charged]]) [[Arquivo:Rod of Remedy (Heavily Charged).gif]] ([[Rod of Remedy (Heavily Charged)|Heavily Charged]]) [[Arquivo:Rod of Remedy (Overcharged).gif]] ([[Rod of Remedy (Overcharged)|Overcharged]]). Os itens encantados antes desse update puderam ser utilizados até o dia 25 de agosto de 2017 e, em seguida, perderam seu encantamento.<br />\nCom o [[Update de Inverno 2017]], as rods [[Rod of Carving]], [[Rod of Mayhem]] e [[Rod of Remedy]] foram transformadas no [[Rod of Destruction]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 38330,
+    "ns": 0,
+    "title": "Rod of Carving",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Rod of Carving\n| vocrequired   = [[Druid]]s\n| itemclass     = Armas Obsoletas\n| primarytype   = Rods\n| levelrequired = 100\n| damage        = 85\n| damagetype    = Ice\n| weight        = 35.00\n| imbuement     = 2\n| mana          = 18\n| range         = 3\n| value         = Negociável\n| npcprice      = 50 [[Gold Token]]s\n| droppedby     = Ninguém.\n| buyfrom       = Yana\n| sellto        = Jogadores.\n| implemented   = 10.94\n| removed       = 11.40\n| notes         = A partir do [[Update de Verão 2017]], recebeu 2 slots para o sistema de [[Imbuements]]. Antes disso, podia ser [[Encantamento|encantada]] para obter uma chance de sugar a mana do oponente e existiam três níveis de encantamento: [[Arquivo:Rod of Carving (Charged).gif]] ([[Rod of Carving (Charged)|Charged]]) [[Arquivo:Rod of Carving (Heavily Charged).gif]] ([[Rod of Carving (Heavily Charged)|Heavily Charged]]) [[Arquivo:Rod of Carving (Overcharged).gif]] ([[Rod of Carving (Overcharged)|Overcharged]]). Os itens encantados antes desse update puderam ser utilizados até o dia 25 de agosto de 2017 e, em seguida, perderam seu encantamento.<br />Com o [[Update de Inverno 2017]], as rods [[Rod of Carving]], [[Rod of Mayhem]] e [[Rod of Remedy]] foram transformadas no [[Rod of Destruction]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 38742,
+    "ns": 0,
+    "title": "Rod of Carving (Charged)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Rod of Carving (Charged)\n| flavortext    = This weapon is charged.\n| vocrequired   = [[Druid]]s\n| itemclass     = Armas Obsoletas\n| primarytype   = Rods\n| levelrequired = 150\n| enchantable   = não\n| enchanted     = sim\n| modificadores = [[Mana Leech]] chance 100%, [[Mana Leech]] amount +5%\n| attrib        = Item com duração de 20 horas.\n| damage        = 85\n| damagetype    = Ice\n| weight        = 35.00\n| mana          = 18\n| range         = 3\n| value         = Negociável\n| npcprice      = 0\n| droppedby     = Ninguém.\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| implemented   = 10.94\n| removed       = 11.40\n| mercado       = não\n| notes         = Para obter um desse, você deve [[Encantamento|encantar]] um [[Rod of Carving]] com [[Yana]] usando 5 [[Gold Token]]s, mas tenha em mente que pode falhar e você perderá os tokens. Quando equipado, você tem 100% de chance de obter 5% do dano causado em forma de [[mana]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 38743,
+    "ns": 0,
+    "title": "Rod of Remedy (Charged)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Rod of Remedy (Charged)\n| flavortext    = This weapon is charged.\n| vocrequired   = [[Druid]]s\n| itemclass     = Armas Obsoletas\n| primarytype   = Rods\n| levelrequired = 150\n| enchantable   = não\n| enchanted     = sim\n| modificadores = [[Hit Points Leech]] chance 100%, [[Hit Points Leech]] amount +5%\n| attrib        = Item com duração de 20 horas.\n| damage        = 85\n| damagetype    = Ice\n| weight        = 35.00\n| mana          = 18\n| range         = 3\n| value         = Negociável\n| npcprice      = 0\n| droppedby     = Ninguém.\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| implemented   = 10.94\n| removed       = 11.40\n| mercado       = não\n| notes         = Para obter um desse, você deve [[Encantamento|encantar]] um [[Rod of Remedy]] com [[Yana]] usando 5 [[Gold Token]]s, mas tenha em mente que pode falhar e você perderá os tokens. Quando equipado, você tem 100% de chance de obter 5% do dano causado em forma de [[hp|vida]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 38744,
+    "ns": 0,
+    "title": "Rod of Mayhem (Charged)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Rod of Mayhem (Charged)\n| flavortext    = This weapon is charged.\n| vocrequired   = [[Druid]]s\n| itemclass     = Armas Obsoletas\n| primarytype   = Rods\n| levelrequired = 150\n| enchantable   = não\n| enchanted     = sim\n| modificadores = [[Critical Hit]] chance 10%, [[Critical Hit|Critical]] extra damage +20%\n| attrib        = Item com duração de 20 horas.\n| damage        = 85\n| damagetype    = Ice\n| weight        = 35.00\n| mana          = 18\n| range         = 3\n| value         = Negociável\n| npcprice      = 0\n| droppedby     = Ninguém.\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| implemented   = 10.94\n| removed       = 11.40\n| mercado       = não\n| notes         = Para obter um desse, você deve [[Encantamento|encantar]] um [[Rod of Mayhem]] com [[Yana]] usando 5 [[Gold Token]]s, mas tenha em mente que pode falhar e você perderá os tokens. Quando equipado, você tem 10% de chance de causar 20% de dano adicional.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 38745,
+    "ns": 0,
+    "title": "Rod of Carving (Heavily Charged)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Rod of Carving (Heavily Charged)\n| flavortext    = This weapon is heavily charged.\n| vocrequired   = [[Druid]]s\n| itemclass     = Armas Obsoletas\n| primarytype   = Rods\n| levelrequired = 200\n| enchantable   = não\n| enchanted     = sim\n| modificadores = [[Mana Leech]] chance 100%, [[Mana Leech]] amount +7%\n| attrib        = Item com duração de 10 horas.\n| damage        = 85\n| damagetype    = Ice\n| weight        = 35.00\n| mana          = 18\n| range         = 3\n| value         = Negociável\n| npcprice      = 0\n| droppedby     = Ninguém.\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| implemented   = 10.94\n| removed       = 11.40\n| mercado       = não\n| notes         = Para obter um desse, você deve [[Encantamento|encantar]] um [[Rod of Carving]] com [[Yana]] usando 10 [[Gold Token]]s, mas tenha em mente que pode falhar e você perderá os tokens. Quando equipado, você tem 100% de chance de obter 7% do dano causado em forma de [[mana]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 38746,
+    "ns": 0,
+    "title": "Rod of Carving (Overcharged)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Rod of Carving (Overcharged)\n| flavortext    = This weapon is over charged.\n| vocrequired   = [[Druid]]s\n| itemclass     = Armas Obsoletas\n| primarytype   = Rods\n| levelrequired = 250\n| enchantable   = não\n| enchanted     = sim\n| skillboost    = [[Magic Level]] +1\n| modificadores = [[Mana Leech]] chance 100%, [[Mana Leech]] amount +9%\n| attrib        = Item com duração de 15 horas.\n| damage        = 85\n| damagetype    = Ice\n| weight        = 35.00\n| mana          = 18\n| range         = 3\n| value         = Negociável\n| npcprice      = 0\n| droppedby     = Ninguém.\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| implemented   = 10.94\n| removed       = 11.40\n| mercado       = não\n| notes         = Para obter um desse, você deve [[Encantamento|encantar]] um [[Rod of Carving]] com [[Yana]] usando 15 [[Gold Token]]s, mas tenha em mente que pode falhar e você perderá os tokens. Quando equipado, você tem 100% de chance de obter 9% do dano causado em forma de [[mana]]. Faz parte do [[Magic Level Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 38747,
+    "ns": 0,
+    "title": "Rod of Remedy (Heavily Charged)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Rod of Remedy (Heavily Charged)\n| flavortext    = This weapon is heavily charged.\n| vocrequired   = [[Druid]]s\n| itemclass     = Armas Obsoletas\n| primarytype   = Rods\n| levelrequired = 200\n| enchantable   = não\n| enchanted     = sim\n| modificadores = [[Hit Points Leech]] chance 100%, [[Hit Points Leech]] amount +7%\n| attrib        = Item com duração de 10 horas.\n| damage        = 85\n| damagetype    = Ice\n| weight        = 35.00\n| mana          = 18\n| range         = 3\n| value         = Negociável\n| npcprice      = 0\n| droppedby     = Ninguém.\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| implemented   = 10.94\n| removed       = 11.40\n| mercado       = não\n| notes         = Para obter um desse, você deve [[Encantamento|encantar]] um [[Rod of Remedy]] com [[Yana]] usando 10 [[Gold Token]]s, mas tenha em mente que pode falhar e você perderá os tokens. Quando equipado, você tem 100% de chance de obter 7% do dano causado em forma de [[hp|vida]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 38748,
+    "ns": 0,
+    "title": "Rod of Remedy (Overcharged)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Rod of Remedy (Overcharged)\n| flavortext    = This weapon is over charged.\n| vocrequired   = [[Druid]]s\n| itemclass     = Armas Obsoletas\n| primarytype   = Rods\n| levelrequired = 250\n| enchantable   = não\n| enchanted     = sim\n| skillboost    = [[Magic Level]] +1\n| modificadores = [[Hit Points Leech]] chance 100%, [[Hit Points Leech]] amount +9%\n| attrib        = Item com duração de 15 horas.\n| damage        = 85\n| damagetype    = Ice\n| weight        = 35.00\n| mana          = 18\n| range         = 3\n| value         = Negociável\n| npcprice      = 0\n| droppedby     = Ninguém.\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| implemented   = 10.94\n| removed       = 11.40\n| mercado       = não\n| notes         = Para obter um desse, você deve [[Encantamento|encantar]] um [[Rod of Remedy]] com [[Yana]] usando 15 [[Gold Token]]s, mas tenha em mente que pode falhar e você perderá os tokens. Quando equipado, você tem 100% de chance de obter 9% do dano causado em forma de [[hp|vida]]. Faz parte do [[Magic Level Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 38749,
+    "ns": 0,
+    "title": "Rod of Mayhem (Heavily Charged)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Rod of Mayhem (Heavily Charged)\n| flavortext    = This weapon is heavily charged.\n| vocrequired   = [[Druid]]s\n| itemclass     = Armas Obsoletas\n| primarytype   = Rods\n| levelrequired = 200\n| enchantable   = não\n| enchanted     = sim\n| modificadores = [[Critical Hit]] chance 10%, [[Critical Hit|Critical]] extra damage +40%\n| attrib        = Item com duração de 10 horas.\n| damage        = 85\n| damagetype    = Ice\n| weight        = 35.00\n| mana          = 18\n| range         = 3\n| value         = Negociável\n| npcprice      = 0\n| droppedby     = Ninguém.\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| implemented   = 10.94\n| removed      = 11.40\n| mercado       = não\n| notes         = Para obter um desse, você deve [[Encantamento|encantar]] um [[Rod of Mayhem]] com [[Yana]] usando 10 [[Gold Token]]s, mas tenha em mente que pode falhar e você perderá os tokens. Quando equipado, você tem 10% de chance de causar 40% de dano adicional.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 38750,
+    "ns": 0,
+    "title": "Rod of Mayhem (Overcharged)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Rod of Mayhem (Overcharged)\n| flavortext    = This weapon is over charged.\n| vocrequired   = [[Druid]]s\n| itemclass     = Armas Obsoletas\n| primarytype   = Rods\n| levelrequired = 250\n| enchantable   = não\n| enchanted     = sim\n| skillboost    = [[Magic Level]] +1\n| modificadores = [[Critical Hit]] chance 10%, [[Critical Hit|Critical]] extra damage +60%\n| attrib        = Item com duração de 15 horas.\n| damage        = 85\n| damagetype    = Ice\n| weight        = 35.00\n| mana          = 18\n| range         = 3\n| value         = Negociável\n| npcprice      = 0\n| droppedby     = Ninguém.\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| implemented   = 10.94\n| removed       = 11.40\n| mercado       = não\n| notes         = Para obter um desse, você deve [[Encantamento|encantar]] um [[Rod of Mayhem]] com [[Yana]] usando 15 [[Gold Token]]s, mas tenha em mente que pode falhar e você perderá os tokens. Quando equipado, você tem 10% de chance de causar 60% de dano adicional. Faz parte do [[Magic Level Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 40993,
+    "ns": 0,
+    "title": "Dream Blossom Staff",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Dream Blossom Staff\n| flavortext     = It's a gnarly branch with a gleaming blue blossom.\n| imbuement      = 2\n| classificacao  = 2\n| max_tier       = 2\n| itemclass      = Armas\n| primarytype    = Rods\n| secondarytype  = Wands\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 80\n| damage         = 70\n| atributos      = \n| npcvalue       = 5 000\n| damagetype     = Energy\n| skillboost     = \n| weight         = 32.00\n| range          = 5\n| trade          = sim\n| buyfrom        = Jogadores.\n| sellto         = Talila, Valindara\n| droppedby      = [[Boogy]], [[Dark Faun]], [[Mercurial Menace]], [[Nymph]], [[Pixie]], [[Pooka]], [[Sugar Mommy]].\n| droppedEventby = \n| implemented    = 11.40\n| perk1          = {{Weapon Perk|Type_Element_Critical_Dmg_Energy||+3.00% critical extra damage para Energy spells e runes}}<br/>{{Weapon Perk|Type_Element_Critical_Dmg_Ice||+3.00% critical extra damage para Ice spells e runes}}\n| perk2          = {{Weapon Perk|Spell_Energy_Strike|Critical_Dmg|+10% critical extra damage para Energy Strike}}<br/>{{Weapon Perk|Spell_Ice_Strike|Critical_Dmg|+10% critical extra damage para Ice Strike}}\n| perk3          = {{Weapon Perk|Type_Bestiary_Dmg_Magical||+2.50% damage contra Magical}}<br/>{{Weapon Perk|Type_Skill_Magic||+1 Magic Level}}\n| perk4          = {{Weapon Perk|Type_Element_Critical_Chance_Energy||+1.00% critical hit chance para Energy spells e runes}}<br/>{{Weapon Perk|Type_Element_Critical_Chance_Ice||+1.00% critical hit chance para Ice spells e runes}}\n| perk5          = {{Weapon Perk|Spell_Energy_Strike|Critical_Chance|+1.5% critical hit chance para Energy Strike}}<br/>{{Weapon Perk|Spell_Ice_Strike|Critical_Chance|+1.5% critical hit chance para Ice Strike}}\n| notes          = Essa wand é uma alternativa a [[Wand of Destruction]], porque possui atributos semelhantes e pode ser usada a partir do level 80, além de ser negociada por um valor inferior.<br>\nAntes da atualização [[Patches/12.31.0000|patch 12.31.9604]] a arma modificava o skill de magia em +2 com alcance de 5 sqms.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42618,
+    "ns": 0,
+    "title": "Rod of Destruction",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Rod of Destruction\n| itemclass      = Armas\n| primarytype    = Rods\n| vocrequired    = [[Druid]]s\n| levelrequired  = 200\n| hands          = Uma\n| damage         = 88\n| damagetype     = Ice\n| skillboost     = \n| weight         = 35.00\n| imbuement      = 2\n| classificacao  = 2\n| max_tier       = 2\n| range          = 4\n| droppedby      = Ninguém.\n| value          = \n| npcprice       = 50 [[Gold Token]]s\n| buyfrom        = Yana\n| sellto         = Jogadores.\n| implemented    = 11.50\n| perk1          = {{Weapon Perk|Type_Element_Critical_Dmg_Ice||+3.00% critical extra damage para Ice spells e runes}}<br/>{{Weapon Perk|Type_Element_Critical_Dmg_Earth||+3.00% critical extra damage para Earth spells e runes}}<br/>{{Weapon Perk|Type_Rune_Critical_Dmg||+2.50% critical extra damage para offensive runes}}\n| perk2          = {{Weapon Perk|Type_Element_Critical_Dmg_Ice||+3.00% critical extra damage para Ice spells e runes}}<br/>{{Weapon Perk|Type_Element_Critical_Dmg_Earth||+3.00% critical extra damage para Earth spells e runes}}<br/>{{Weapon Perk|Type_Rune_Critical_Dmg||+2.50% critical extra damage para offensive runes}}\n| perk3          = {{Weapon Perk|Type_Powerful_Foe_Bonus||+3.00% damage contra bosses e Sinister Embraced}}<br/>{{Weapon Perk|Type_Skill_Magic||+1 Magic Level}}\n| perk4          = {{Weapon Perk|Type_Element_Critical_Dmg_Ice||+3.00% critical extra damage para Ice spells e runes}}<br/>{{Weapon Perk|Type_Element_Critical_Dmg_Earth||+3.00% critical extra damage para Earth spells e runes}}<br/>{{Weapon Perk|Type_Rune_Critical_Dmg||+2.50% critical extra damage para offensive runes}}\n| perk5          = {{Weapon Perk|Type_Element_Critical_Dmg_Ice||+3.00% critical extra damage para Ice spells e runes}}<br/>{{Weapon Perk|Type_Element_Critical_Dmg_Earth||+3.00% critical extra damage para Earth spells e runes}}<br/>{{Weapon Perk|Type_Rune_Critical_Dmg||+2.50% critical extra damage para offensive runes}}\n| notes          = Essa arma substituiu a [[Rod of Carving]], a [[Rod of Remedy]] e a [[Rod of Mayhem]] no [[Update de Inverno 2017]].<br>\nAntes da atualização [[Patches/12.31.0000|patch 12.31.9604]] a arma modificava o skill de Magic Level em +2.\n{{Veja|Destruction Weapons|Wand of Destruction}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 43988,
+    "ns": 0,
+    "title": "Falcon Rod",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Falcon Rod\n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| itemclass      = Armas\n| primarytype    = Rods\n| vocrequired    = [[Druid]]s\n| levelrequired  = 300\n| damage         = 90\n| damagetype     = Earth\n| atributos      = \n| skillboost     = [[Magic Level]] +3\n| resist         = [[Energy Damage|Energy]] +8%\n| weight         = 37.00\n| range          = 5\n| droppedby      = [[Grand Master Oberon]], [[Preceptor Lazare]].\n| value          = Negociável\n| npcprice       = \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.80\n| perk1          = {{Weapon Perk|Type_Life_On_Hit||+3 hit points on hit}}\n| perk2          = {{Weapon Perk|Type_Auto_Atk_Critical_Chance||+10.00% critical hit chance para auto-attacks}}<br/>{{Weapon Perk|Type_Mana_On_Kill||+20 mana on kill}}<br/>{{Weapon Perk|Spell_Terra_Wave|Critical_Chance|+1% critical hit chance para Terra Wave}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Shield||+100.00% do seu Shielding como extra damage para auto-attacks}}<br/>{{Weapon Perk|Type_Perc_Spell_Dmg_Magic||+5.00% do seu Magic Level como extra damage para suas spells}}\n| perk4          = {{Weapon Perk|Type_Auto_Atk_Critical_Dmg||+50.00% critical extra damage para auto-attacks}}<br/>{{Weapon Perk|Type_Magic_Boost_Earth||+1 Earth Magic Level}}<br/>{{Weapon Perk|Type_Bestiary_Dmg_Bird||+5.00% damage contra Bird}}\n| perk5          = {{Weapon Perk|Type_Critical_Dmg||+5.00% critical extra damage}}\n| notes          = Faz parte do [[Falcon Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 44017,
+    "ns": 0,
+    "title": "Deepling Ceremonial Dagger",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Deepling Ceremonial Dagger\n| imbuement      = 2\n| classificacao  = 3\n| max_tier       = 3\n| itemclass      = Armas\n| primarytype    = Rods\n| secondarytype  = Wands\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 180\n| damage         = 90\n| atributos      = \n| price          = \n| npcvalue       = \n| damagetype     = Ice\n| skillboost     = [[Magic Level]] +1\n| resist         = [[Earth Damage|Earth]] +5%\n| weight         = 32.00\n| range          = 6\n| trade          = sim\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| droppedby      = [[Brokul]]\n| implemented    = 11.80\n| perk1          = {{Weapon Perk|Type_Skill_Magic||+1 Magic Level}}\n| perk2          = {{Weapon Perk|Spell_Great_Energy_Beam|Life_Leech|+2.5% life leech para Great Energy Beam}}<br/>{{Weapon Perk|Spell_Ice_Wave|Life_Leech|+1.5% life leech para Ice Wave}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+50.00% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Spell_Great_Energy_Beam|Life_Leech|+2.5% life leech para Great Energy Beam}}<br/>{{Weapon Perk|Spell_Ice_Wave|Life_Leech|+1.5% life leech para Ice Wave}}\n| perk5          = {{Weapon Perk|Type_Bestiary_Dmg_Aquatic||+3.00% damage contra Aquatic}}\n| notes          = Antes da atualização [[Patches/12.31.0000|patch 12.31.9604]] o level requerido era 300.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 44018,
+    "ns": 0,
+    "title": "Deepling Fork",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Deepling Fork\n| imbuement      = 2\n| classificacao  = 3\n| max_tier       = 3\n| itemclass      = Armas\n| primarytype    = Rods\n| secondarytype  = Wands\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 230\n| damage         = 90\n| damagetype     = Ice\n| atributos      = \n| skillboost     = [[Magic Level]] +2\n| resist         = [[Holy Damage|Holy]] +8%\n| modificadores  = \n| weight         = 33.00\n| range          = 5\n| droppedby      = [[Brokul]].\n| value          = \n| npcprice       = \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.80\n| perk1          = {{Weapon Perk|Type_Critical_Chance||+5.00% critical hit chance}}\n| perk2          = {{Weapon Perk|Type_Critical_Dmg||+7.50% critical extra damage}}<br/>{{Weapon Perk|Type_Element_Critical_Dmg_Ice||+10.00% critical extra damage para Ice spells e runes}}\n| perk3          = {{Weapon Perk|Type_Critical_Dmg||+7.50% critical extra damage}}<br/>{{Weapon Perk|Type_Element_Critical_Dmg_Ice||+10.00% critical extra damage para Ice spells e runes}}\n| perk4          = {{Weapon Perk|Type_Perc_Spell_Dmg_Fishing||+10.00% do seu Fishing como extra damage para suas spells}}\n| perk5          = {{Weapon Perk|Type_Element_Critical_Chance_Ice||+3.00% critical hit chance para Ice spells e runes}}\n| notes          = Antes da atualização [[Patches/12.31.0000|patch 12.31.9604]] o level requerido era 300 e aumentava o skill de magia em 3.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45075,
+    "ns": 0,
+    "title": "Energized Limb",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Energized Limb\n| imbuement      = 2\n| classificacao  = 3\n| max_tier       = 3\n| itemclass      = Armas\n| primarytype    = Rods\n| secondarytype  = Wands\n| vocrequired    = [[Sorcerer]]s and [[Druid]]s\n| levelrequired  = 180\n| damage         = 98\n| damagetype     = Fire\n| atributos      = \n| skillboost     = [[Magic Level]] +1\n| resist         = [[Energy Damage|Energy]] +10%\n| weight         = 27.00\n| range          = 5\n| droppedby      = [[Maxxenius]].\n| value          = \n| npcprice       = \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.00\n| perk1          = {{Weapon Perk|Type_Skill_Magic||+1 Magic Level}}\n| perk2          = {{Weapon Perk|Type_Bestiary_Dmg_Elemental||+2.00% damage contra Elemental}}<br/>{{Weapon Perk|Type_Element_Critical_Dmg_Fire||+5.00% critical extra damage para Fire spells e runes}}\n| perk3          = {{Weapon Perk|Type_Magic_Boost_Fire||+1 Fire Magic Level}}<br/>{{Weapon Perk|Type_Element_Critical_Chance_Fire||+2.00% critical hit chance para Fire spells e runes}}\n| perk4          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+100.00% do seu Club Fighting como extra damage para auto-attacks}}\n| notes          = Antes da atualização [[Patches/12.31.0000|patch 12.31.9604]] tinha o alcance de 4 sqms.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 46676,
+    "ns": 0,
+    "title": "Cobra Rod",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Cobra Rod\n| itemclass      = Armas\n| primarytype    = Rods\n| vocrequired    = [[Druid]]s\n| levelrequired  = 220\n| damage         = 90\n| damagetype     = Earth\n| skillboost     = [[Magic Level]] +2\n| resist         = \n| modificadores  = [[Life Leech]] chance 100%, [[Life Leech]] amount +18%\n| weight         = 25.00\n| range          = 5\n| droppedby      = [[Gaffir]], [[Scarlett Etzel]], [[Ugly Monster]].\n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| value          = Negociável\n| npcprice       = \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.20\n| perk1          = {{Weapon Perk|Type_Life_On_Hit||+3 hit points on hit}}\n| perk2          = {{Weapon Perk|Type_Element_Critical_Dmg_Earth||+5.00% critical extra damage para Earth spells e runes}}<br/>{{Weapon Perk|Type_Magic_Boost_Earth||+1 Earth Magic Level}}<br/>{{Weapon Perk|Spell_Strong_Terra_Strike|Cooldown|-4s cooldown para Strong Terra Strike}}\n| perk3          = {{Weapon Perk|Type_Element_Critical_Chance_Earth||+1.00% critical hit chance para Earth spells e runes}}<br/>{{Weapon Perk|Type_Perc_Spell_Dmg_Magic||+5.00% do seu Magic Level como extra damage para suas spells}}\n| perk4          = {{Weapon Perk|Type_Bestiary_Dmg_Mammal||+4.00% damage contra Mammal}}<br/>{{Weapon Perk|Type_Magic_Boost_Earth||+1 Earth Magic Level}}<br/>{{Weapon Perk|Spell_Strong_Terra_Strike|Critical_Dmg|+10% critical extra damage para Strong Terra Strike}}\n| perk5          = {{Weapon Perk|Type_Critical_Dmg||+5.00% critical extra damage}}\n| notes          = \n<!--\nPode imbuir Critical mas não pode Vampirism\n-->\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 49022,
+    "ns": 0,
+    "title": "Lion Rod",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Lion Rod\n| flavortext     = \n| itemclass      = Armas\n| primarytype    = Rods\n| vocrequired    = [[Druid]]s\n| levelrequired  = 270\n| damage         = 85-105\n| damagetype     = Ice\n| atributos      = \n| skillboost     = [[Magic Level]] +2\n| resist         = \n| modificadores  = [[Critical Hit]] chance 5%, [[Critical Hit|Critical]] extra damage +25%\n| weight         = 26.00\n| range          = 5\n| droppedby      = [[Ancient Lion Knight]], [[Drume]].\n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| value          = Negociável\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.40\n| perk1          = {{Weapon Perk|Type_Life_On_Hit||+3 hit points on hit}}\n| perk2          = {{Weapon Perk|Type_Element_Critical_Dmg_Ice||+5.00% critical extra damage para Ice spells e runes}}<br/>{{Weapon Perk|Type_Element_Critical_Chance_Earth||+1.00% critical hit chance para Earth spells e runes}}\n| perk3          = {{Weapon Perk|Type_Element_Critical_Chance_Ice||+1.00% critical hit chance para Ice spells e runes}}<br/>{{Weapon Perk|Type_Magic_Boost_Earth||+1 Earth Magic Level}}\n| perk4          = {{Weapon Perk|Spell_Strong_Ice_Wave|Critical_Chance|+1% critical hit chance para Strong Ice Wave}}<br/>{{Weapon Perk|Type_Bestiary_Dmg_Lycanthrope||+3.00% damage contra Lycanthrope}}\n| perk5          = {{Weapon Perk|Type_Critical_Dmg||+5.00% critical extra damage}}\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 49330,
+    "ns": 0,
+    "title": "Soulhexer",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Soulhexer\n| flavortext     = \n| itemclass      = Armas\n| primarytype    = Rods\n| vocrequired    = [[Druid]]s\n| levelrequired  = 400\n| stackable      = não\n| damage         = 98-118\n| damagetype     = Ice\n| atributos      = \n| skillboost     = [[Magic Level]] +4\n| resist         = [[Ice Damage|Ice]] +12%\n| modificadores  = [[Life Leech]] amount +2%, [[Mana Leech]] amount +1%\n| weight         = 25.00\n| range          = 6\n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.40\n| perk1          = {{Weapon Perk|Type_Life_Leech||+3.00% life leech}}\n| perk2          = {{Weapon Perk|Type_Element_Critical_Dmg_Ice||+7.50% critical extra damage para Ice spells e runes}}<br/>{{Weapon Perk|Type_Skill_Magic||+1 Magic Level}}\n| perk3          = {{Weapon Perk|Spell_Ice_Burst|Life_Leech|+10% life leech para Ice Burst}}<br/>{{Weapon Perk|Type_Mana_Leech||+2.00% mana leech}}<br/>{{Weapon Perk|Type_Bestiary_Dmg_Inkborn||+3.00% damage contra Inkborn}}\n| perk4          = {{Weapon Perk|Type_Element_Critical_Chance_Ice||+1.00% critical hit chance para Ice spells e runes}}<br/>{{Weapon Perk|Spell_Ice_Burst|Mana_Leech|+5% mana leech para Ice Burst}}<br/>{{Weapon Perk|Type_Rune_Critical_Chance||+1.00% critical hit chance para offensive runes}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Ice||+2 Ice Magic Level}}<br/>{{Weapon Perk|Type_Skill_Magic||+1 Magic Level}}\n| perk6          = {{Weapon Perk|Type_Life_Leech||+5.00% life leech}}<br/>{{Weapon Perk|Type_Mana_Leech||+2.00% mana leech}}<br/>{{Weapon Perk|Type_Rune_Critical_Dmg||+12.00% critical extra damage para offensive runes}}\n| perk7          = {{Weapon Perk|Type_Critical_Chance||+1.00% critical hit chance}}\n| notes          = <noinclude><p><spoiler>* Possibilidade de ser obtido ao usar um [[Bag You Desire]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 50511,
+    "ns": 0,
+    "title": "Jungle Rod",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Jungle Rod\n| itemclass      = Armas\n| primarytype    = Rods\n| vocrequired    = [[Druid]]s\n| levelrequired  = 150\n| damage         = 80-100\n| damagetype     = Ice\n| atributos      = \n| skillboost     = [[Magic Level]] +1\n| resist         = [[Earth Damage|Earth]] +3%\n| weight         = 37.00\n| range          = 4\n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| value          = Negociável\n| npcprice       = \n| droppedby      = [[Ratmiral Blackwhiskers]]\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.60\n| perk1          = {{Weapon Perk|Type_Element_Critical_Dmg_Ice||+5.00% critical extra damage para Ice spells e runes}}\n| perk2          = {{Weapon Perk|Type_Skill_Magic||+1 Magic Level}}<br/>{{Weapon Perk|Type_Bestiary_Dmg_Vermin||+3.00% damage contra Vermin}}\n| perk3          = {{Weapon Perk|Type_Element_Critical_Dmg_Ice||+5.00% critical extra damage para Ice spells e runes}}<br/>{{Weapon Perk|Type_Magic_Boost_Ice||+1 Ice Magic Level}}\n| perk4          = {{Weapon Perk|Type_Life_On_Kill||+10 hit points on kill}}<br/>{{Weapon Perk|Type_Mana_On_Kill||+22 mana on kill}}\n| perk5          = {{Weapon Perk|Type_Element_Critical_Chance_Ice||+2.50% critical hit chance para Ice spells e runes}}\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 52288,
+    "ns": 0,
+    "title": "Eldritch Rod",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Eldritch Rod\n| flavortext     = \n| itemclass      = Armas\n| primarytype    = Rods\n| vocrequired    = [[Druid]]s\n| levelrequired  = 250\n| stackable      = não\n| damage         = 85-105\n| damagetype     = Ice\n| atributos      = \n| skillboost     = [[Magic Level]] +2, [[Healing Magic Level]] +2\n| resist         = [[Earth Damage|Earth]] +4%\n| weight         = 35.00\n| range          = 4\n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| value          = Negociável\n| droppedby      = [[The Brainstealer]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.70\n| perk1          = {{Weapon Perk|Type_Mana_On_Kill||+25 mana on kill}}\n| perk2          = {{Weapon Perk|Type_Magic_Boost_Ice||+1 Ice Magic Level}}<br/>{{Weapon Perk|Type_Magic_Boost_Healing||+2 Healing Magic Level}}\n| perk3          = {{Weapon Perk|Type_Critical_Dmg||+3.50% critical extra damage}}<br/>{{Weapon Perk|Spell_Heal_Friend|Healing|+4% healing para Heal Friend}}<br/>{{Weapon Perk|Type_Bestiary_Dmg_Magical||+3.00% damage contra Magical}}\n| perk4          = {{Weapon Perk|Type_Rune_Critical_Dmg||+7.00% critical extra damage para offensive runes}}<br/>{{Weapon Perk|Type_Perc_Spell_Heal_Magic||+10.00% do seu Magic Level como extra healing para suas spells}}\n| perk5          = {{Weapon Perk|Type_Rune_Critical_Chance||+1.50% critical hit chance para offensive runes}}\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 52289,
+    "ns": 0,
+    "title": "Gilded Eldritch Rod",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Gilded Eldritch Rod\n| flavortext     = Refined by the legendary artisan Gnomaurum.\n| itemclass      = Armas\n| primarytype    = Rods\n| vocrequired    = [[Druid]]s\n| levelrequired  = 250\n| stackable      = não\n| damage         = 85-105\n| damagetype     = Ice\n| atributos      = \n| skillboost     = [[Magic Level]] +2, [[Healing Magic Level]] +2\n| resist         = [[Earth Damage|Earth]] +4%\n| weight         = 36.00\n| range          = 4\n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| value          = Negociável\n| droppedby      = [[The Brainstealer]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.70\n| perk1          = {{Weapon Perk|Type_Mana_On_Kill||+25 mana on kill}}\n| perk2          = {{Weapon Perk|Type_Magic_Boost_Ice||+1 Ice Magic Level}}<br/>{{Weapon Perk|Type_Magic_Boost_Healing||+2 Healing Magic Level}}\n| perk3          = {{Weapon Perk|Type_Critical_Dmg||+5.00% critical extra damage}}<br/>{{Weapon Perk|Spell_Heal_Friend|Healing|+6% healing para Heal Friend}}<br/>{{Weapon Perk|Type_Bestiary_Dmg_Magical||+3.00% damage contra Magical}}\n| perk4          = {{Weapon Perk|Type_Rune_Critical_Dmg||+10.00% critical extra damage para offensive runes}}<br/>{{Weapon Perk|Type_Perc_Spell_Heal_Magic||+15.00% do seu Magic Level como extra healing para suas spells}}\n| perk5          = {{Weapon Perk|Type_Rune_Critical_Chance||+2.00% critical hit chance para offensive runes}}\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 56115,
+    "ns": 0,
+    "title": "Naga Rod",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Naga Rod\n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| itemclass      = Armas\n| primarytype    = Rods\n| vocrequired    = [[Druid]]s\n| levelrequired  = 250\n| atributos      = \n| skillboost     = [[Magic Level]] +2, [[Ice Magic Level]] +1\n| resist         = [[Fire Damage|Fire]] +4%\n| weight         = 29.00\n| damage         = 90-110\n| damagetype     = Ice\n| range          = 5\n| droppedby      = [[Timira the Many-Headed]]\n| value          = Negociável\n| npcprice       = \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.90\n| perk1          = {{Weapon Perk|Type_Element_Critical_Dmg_Ice||+3.00% critical extra damage para Ice spells e runes}}\n| perk2          = {{Weapon Perk|Type_Magic_Boost_Ice||+1 Ice Magic Level}}<br/>{{Weapon Perk|Type_Bestiary_Dmg_Reptile||+3.00% damage contra Reptile}}\n| perk3          = {{Weapon Perk|Spell_Ultimate_Ice_Strike|Critical_Dmg|+10% critical extra damage para Ultimate Ice Strike}}<br/>{{Weapon Perk|Spell_Ultimate_Ice_Strike|Life_Leech|+15% life leech para Ultimate Ice Strike}}\n| perk4          = {{Weapon Perk|Spell_Ultimate_Ice_Strike|Critical_Dmg|+10% critical extra damage para Ultimate Ice Strike}}<br/>{{Weapon Perk|Spell_Ultimate_Ice_Strike|Life_Leech|+15% life leech para Ultimate Ice Strike}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Ice||+1 Ice Magic Level}}\n| notes          = Este item também pode ser obtido nos [[Ornamented Chest]]s, encontrados durante a luta contra o boss [[Timira the Many-Headed]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59845,
+    "ns": 0,
+    "title": "Sanguine Rod",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Sanguine Rod\n| flavortext     = \n| itemclass      = Armas\n| primarytype    = Rods\n| vocrequired    = [[Druid]]s\n| levelrequired  = 600\n| stackable      = não\n| damage         = 112\n| damagetype     = Earth\n| atributos      = \n| skillboost     = [[Magic Level]] +4, [[Ice Magic Level]] +1, [[Earth Magic Level]] +1\n| modificadores  = [[Critical Hit|Critical]] extra damage +5%, [[Life Leech]] +6%, [[Mana Leech]] +1%\n| augments       = \n| resist         = [[Death Damage|Death]] +7%\n| weight         = 25.00\n| range          = 6\n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| value          = \n| droppedby      = [[Bakragore]], [[Chagorz]], [[Ichgahal]], [[Murcion]] e [[Vemiath]], dentro de uma [[Bag You Covet]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 13.20.13560\n| perk1          = {{Weapon Perk|Type_Skill_Magic||+1 Magic Level}}\n| perk2          = {{Weapon Perk|Type_Element_Critical_Dmg_Earth||+10.00% critical extra damage para Earth spells e runes}}<br/>{{Weapon Perk|Type_Element_Critical_Dmg_Ice||+10.00% critical extra damage para Ice spells e runes}}<br/>{{Weapon Perk|Type_Mana_Leech||+2.00% mana leech}}\n| perk3          = {{Weapon Perk|Spell_Terra_Wave|Damage|+4% base damage para Terra Wave}}<br/>{{Weapon Perk|Spell_Eternal_Winter|Critical_Dmg|+12.5% critical extra damage para Eternal Winter}}<br/>{{Weapon Perk|Type_Powerful_Foe_Bonus||+3.00% damage contra bosses e Sinister Embraced}}\n| perk4          = {{Weapon Perk|Type_Perc_Spell_Dmg_Magic||+4.00% do seu Magic Level como extra damage para suas spells}}<br/>{{Weapon Perk|Spell_Eternal_Winter|Damage|+3% base damage para Eternal Winter}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Earth||+2 Earth Magic Level}}<br/>{{Weapon Perk|Type_Magic_Boost_Ice||+2 Ice Magic Level}}<br/>{{Weapon Perk|Type_Magic_Boost_Healing||+3 Healing Magic Level}}\n| perk6          = {{Weapon Perk|Spell_Heal_Friend|Healing|+6% healing para Heal Friend}}<br/>{{Weapon Perk|Type_Mana_Leech||+2.00% mana leech}}<br/>{{Weapon Perk|Type_Critical_Dmg||+10.00% critical extra damage}}\n| perk7          = {{Weapon Perk|Type_Critical_Chance||+2.00% critical hit chance}}\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59846,
+    "ns": 0,
+    "title": "Grand Sanguine Rod",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Grand Sanguine Rod\n| flavortext     = \n| itemclass      = Armas\n| primarytype    = Rods\n| vocrequired    = [[Druid]]s\n| levelrequired  = 600\n| stackable      = não\n| damage         = 112\n| damagetype     = Earth\n| atributos      = \n| skillboost     = [[Magic Level]] +4, [[Ice Magic Level]] +1, [[Earth Magic Level]] +1\n| modificadores  = [[Critical Hit|Critical]] extra damage +5%, [[Life Leech]] +6%, [[Mana Leech]] +3%\n| augments       = \n| resist         = [[Death Damage|Death]] +7%\n| weight         = 24.00\n| range          = \n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| value          = \n| droppedby      = [[Bakragore]] dentro de uma [[Bag You Covet]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 13.20.13560\n| perk1          = {{Weapon Perk|Type_Skill_Magic||+1 Magic Level}}\n| perk2          = {{Weapon Perk|Type_Element_Critical_Dmg_Earth||+10.00% critical extra damage para Earth spells e runes}}<br/>{{Weapon Perk|Type_Element_Critical_Dmg_Ice||+10.00% critical extra damage para Ice spells e runes}}<br/>{{Weapon Perk|Type_Mana_Leech||+2.00% mana leech}}\n| perk3          = {{Weapon Perk|Spell_Terra_Wave|Damage|+8% base damage para Terra Wave}}<br/>{{Weapon Perk|Spell_Eternal_Winter|Critical_Dmg|+25% critical extra damage para Eternal Winter}}<br/>{{Weapon Perk|Type_Powerful_Foe_Bonus||+3.00% damage contra bosses e Sinister Embraced}}\n| perk4          = {{Weapon Perk|Type_Perc_Spell_Dmg_Magic||+8.00% do seu Magic Level como extra damage para suas spells}}<br/>{{Weapon Perk|Spell_Eternal_Winter|Damage|+6% base damage para Eternal Winter}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Earth||+2 Earth Magic Level}}<br/>{{Weapon Perk|Type_Magic_Boost_Ice||+2 Ice Magic Level}}<br/>{{Weapon Perk|Type_Magic_Boost_Healing||+3 Healing Magic Level}}\n| perk6          = {{Weapon Perk|Spell_Heal_Friend|Healing|+6% healing para Heal Friend}}<br/>{{Weapon Perk|Type_Mana_Leech||+2.00% mana leech}}<br/>{{Weapon Perk|Type_Critical_Dmg||+10.00% critical extra damage}}\n| perk7          = {{Weapon Perk|Type_Critical_Chance||+3.00% critical hit chance}}\n| notes          = <spoiler>* Este item só pode ser obtido do [[Bakragore]] caso lute contra o boss utilizando as ''Essences'' (As essences existentes são: [[The Essence of Chagorz|Chagorz]], [[The Essence of Ichgahal|Ichgahal]], [[The Essence of Murcion|Murcion]] ou [[The Essence of Vemiath|Vemiath]]).</spoiler>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 62101,
+    "ns": 0,
+    "title": "Amber Rod",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Amber Rod\n| flavortext     = \n| itemclass      = Armas\n| primarytype    = Rods\n| vocrequired    = [[Druid]]s\n| levelrequired  = 330\n| damage         = 106\n| damagetype     = Ice\n| atributos      = \n| skillboost     = [[Magic Level]] +2, [[Ice Magic Level]] +2\n| resist         = [[Fire Damage|Fire]] +6%\n| augments       = \n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| modificadores  = \n| weight         = 18.00\n| range          = 5\n| droppedby      = [[The Rootkraken]].\n| value          = Negociável\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 13.40.54ea79\n| perk1          = {{Weapon Perk|Type_Skill_Magic||+1 Magic Level}}\n| perk2          = {{Weapon Perk|Type_Perc_Spell_Heal_Magic||+8.00% do seu Magic Level como extra healing para suas spells}}<br/>{{Weapon Perk|Type_Rune_Critical_Dmg||+5.00% critical extra damage para offensive runes}}\n| perk3          = {{Weapon Perk|Type_Element_Critical_Chance_Ice||+1.00% critical hit chance para Ice spells e runes}}<br/>{{Weapon Perk|Type_Life_On_Kill||+25 hit points on kill}}\n| perk4          = {{Weapon Perk|Type_Rune_Critical_Chance||+1.00% critical hit chance para offensive runes}}<br/>{{Weapon Perk|Type_Bestiary_Dmg_Demon||+3.00% damage contra Demon}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Ice||+1 Ice Magic Level}}<br/>{{Weapon Perk|Spell_Strong_Ice_Wave|Critical_Dmg|+6% critical extra damage para Strong Ice Wave}}\n| perk6          = {{Weapon Perk|Type_Element_Critical_Dmg_Ice||+7.00% critical extra damage para Ice spells e runes}}\n| perk7          = {{Weapon Perk|Spell_Strong_Ice_Wave|Life_Leech|+10% life leech para Strong Ice Wave}}\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 63290,
+    "ns": 0,
+    "title": "Inferniarch Rod",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Inferniarch Rod\n| flavortext     = \n| itemclass      = Armas\n| primarytype    = Rods\n| vocrequired    = [[Druid]]s\n| levelrequired  = 300\n| damage         = 90-110\n| damagetype     = Earth\n| atributos      = \n| skillboost     = [[Magic Level]] +3, [[Earth Magic Level]] +1\n| resist         = [[Death Damage|Death]] +5%\n| augments       = \n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| modificadores  = \n| weight         = 22.00\n| range          = 5\n| droppedby      = [[Arbaziloth]].\n| value          = Negociável\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 14.10.4e0c16\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Fishing||+50.00% do seu Fishing como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Bestiary_Dmg_Plant||+3.00% damage contra Plant}}<br/>{{Weapon Perk|Type_Life_On_Kill||+20 hit points on kill}}\n| perk3          = {{Weapon Perk|Type_Powerful_Foe_Bonus||+3.00% damage contra bosses e Sinister Embraced}}<br/>{{Weapon Perk|Type_Element_Critical_Dmg_Earth||+6.00% critical extra damage para Earth spells e runes}}\n| perk4          = {{Weapon Perk|Spell_Ultimate_Terra_Strike|Critical_Dmg|+10% critical extra damage para Ultimate Terra Strike}}<br/>{{Weapon Perk|Spell_Ultimate_Terra_Strike|Life_Leech|+20% life leech para Ultimate Terra Strike}}<br/>{{Weapon Perk|Spell_Ultimate_Terra_Strike|Mana_Leech|+20% mana leech para Ultimate Terra Strike}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Earth||+1 Earth Magic Level}}\n| notes          = <spoiler>* Após matar o boss [[Arbaziloth]] no '''modo difícil 10 vezes''' você poderá obter esse item em um dos baús na sala de recompensa ao sul da [[Doomforging]].\n* Utilizando a [[Doomforging]] você pode transformar essa arma em:\n** [[Arquivo:Rending Inferniarch Rod.gif|link=]]'''[[Rending Inferniarch Rod]]''': 48% [[Strike (Dano Crítico)|Critical Damage]] (Nível 1 [[Weapon Proficiency|proficiência]])\n** [[Arquivo:Draining Inferniarch Rod.gif|link=]]'''[[Draining Inferniarch Rod]]''': 29% [[Life Leech]] (Nível 1 e Nível 3 de [[Weapon Proficiency|proficiência]], cada um com 14.5%)\n** [[Arquivo:Siphoning Inferniarch Rod.gif|link=]]'''[[Siphoning Inferniarch Rod]]''': 10% [[Mana Leech]] (Nível 1 e Nível 3 de [[Weapon Proficiency|proficiência]], cada um com 5%) </spoiler>}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 63291,
+    "ns": 0,
+    "title": "Rending Inferniarch Rod",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Rending Inferniarch Rod\n| flavortext     = \n| itemclass      = Armas\n| primarytype    = Rods\n| vocrequired    = [[Druid]]s\n| levelrequired  = 300\n| damage         = 90-110\n| damagetype     = Earth\n| atributos      = \n| skillboost     = [[Magic Level]] +3, [[Earth Magic Level]] +1\n| resist         = [[Death Damage|Death]] +5%\n| augments       = \n| imbuement      = 1\n| classificacao  = 4\n| max_tier       = 10\n| modificadores  = \n| weight         = 22.00\n| range          = 5\n| droppedby      = Ninguém.\n| value          = Negociável\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 14.10.4e0c16\n| perk1          = {{Weapon Perk|Type_Critical_Dmg||+48.00% critical extra damage}}\n| perk2          = {{Weapon Perk|Type_Bestiary_Dmg_Plant||+3.00% damage contra Plant}}<br/>{{Weapon Perk|Type_Life_On_Kill||+20 hit points on kill}}\n| perk3          = {{Weapon Perk|Type_Critical_Chance||+5.00% critical hit chance}}\n| perk4          = {{Weapon Perk|Type_Powerful_Foe_Bonus||+3.00% damage contra bosses e Sinister Embraced}}<br/>{{Weapon Perk|Type_Element_Critical_Dmg_Earth||+6.00% critical extra damage para Earth spells e runes}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Earth||+1 Earth Magic Level}}<br/>{{Weapon Perk|Spell_Ultimate_Terra_Strike|Cooldown|-8s cooldown para Ultimate Terra Strike}}<br/>{{Weapon Perk|Spell_Ultimate_Terra_Strike|Critical_Chance|+2.5% critical hit chance para Ultimate Terra Strike}}\n| perk6          = {{Weapon Perk|Type_Magic_Boost_Earth||+1 Earth Magic Level}}<br/>{{Weapon Perk|Spell_Ultimate_Terra_Strike|Critical_Dmg|+20% critical extra damage para Ultimate Terra Strike}}<br/>{{Weapon Perk|Type_Perc_Spell_Dmg_Magic||+7.00% do seu Magic Level como extra damage para suas spells}}\n| perk7          = {{Weapon Perk|Type_Element_Critical_Chance_Earth||+1.00% critical hit chance para Earth spells e runes}}\n| notes          = <noinclude><p><spoiler>* Pode ser criada no processo de [[Doomforging]]. Ela perderá 1 slot de imbuement comparada a arma \"base\" [[Inferniarch Rod]] e ganhará 48% [[Strike (Dano Crítico)|Critical Damage]] (Nível 1 [[Weapon Proficiency|proficiência]]).\n* '''Itens Necessários:'''\n** 01 Arma base Inferniarch [[Arquivo:Inferniarch Rod.gif|link=]]\n** 100 [[Vexclaw Talon]]s [[Arquivo:Vexclaw Talon.gif|link=]]\n** 500 [[Demonic Matter]]s [[Arquivo:Demonic Matter.gif|link=]]\n** 50 [[Demon Horn]]s [[Arquivo:Demon Horn.gif|link=]]\n** 350 [[Demonic Essence]]s [[Arquivo:Demonic Essence.gif|link=]]\n** 350 [[Flask of Demonic Blood]]s [[Arquivo:Flask of Demonic Blood.gif|link=]]\n** 01 [[Demonic Finger]] [[Arquivo:Demonic Finger.gif|link=]]\n** 01 [[Skin of Gralvalon]] [[Arquivo:Skin of Gralvalon.gif|link=]]</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 63293,
+    "ns": 0,
+    "title": "Siphoning Inferniarch Rod",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Siphoning Inferniarch Rod\n| flavortext     = \n| itemclass      = Armas\n| primarytype    = Rods\n| vocrequired    = [[Druid]]s\n| levelrequired  = 300\n| damage         = 90-110\n| damagetype     = Earth\n| atributos      = \n| skillboost     = [[Magic Level]] +3, [[Earth Magic Level]] +1\n| resist         = [[Death Damage|Death]] +5%\n| augments       = \n| imbuement      = 1\n| classificacao  = 4\n| max_tier       = 10\n| modificadores  = \n| weight         = 22.00\n| range          = 5\n| droppedby      = Ninguém.\n| value          = Negociável\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 14.10.4e0c16\n| perk1          = {{Weapon Perk|Type_Mana_Leech||+5.00% mana leech}}\n| perk2          = {{Weapon Perk|Type_Bestiary_Dmg_Plant||+3.00% damage contra Plant}}<br/>{{Weapon Perk|Type_Life_On_Kill||+20 hit points on kill}}\n| perk3          = {{Weapon Perk|Type_Mana_Leech||+5.00% mana leech}}\n| perk4          = {{Weapon Perk|Type_Powerful_Foe_Bonus||+3.00% damage contra bosses e Sinister Embraced}}<br/>{{Weapon Perk|Type_Element_Critical_Dmg_Earth||+6.00% critical extra damage para Earth spells e runes}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Earth||+1 Earth Magic Level}}<br/>{{Weapon Perk|Spell_Ultimate_Terra_Strike|Cooldown|-8s cooldown para Ultimate Terra Strike}}<br/>{{Weapon Perk|Spell_Ultimate_Terra_Strike|Critical_Chance|+2.5% critical hit chance para Ultimate Terra Strike}}\n| perk6          = {{Weapon Perk|Type_Magic_Boost_Earth||+1 Earth Magic Level}}<br/>{{Weapon Perk|Spell_Ultimate_Terra_Strike|Mana_Leech|+40% mana leech para Ultimate Terra Strike}}<br/>{{Weapon Perk|Type_Perc_Spell_Dmg_Magic||+7.00% do seu Magic Level como extra damage para suas spells}}\n| perk7          = {{Weapon Perk|Type_Element_Critical_Chance_Earth||+1.00% critical hit chance para Earth spells e runes}}\n| notes          = <noinclude><p><spoiler>* Pode ser criada no processo de [[Doomforging]]. Ela perderá 1 slot de imbuement comparada a arma \"base\" [[Inferniarch Rod]] e ganhará 10% [[Mana Leech]] (Nível 1 e Nível 3 de [[Weapon Proficiency|proficiência]], cada um com 5%).\n* '''Itens Necessários:'''\n** 01 Arma base Inferniarch [[Arquivo:Inferniarch Rod.gif|link=]]\n** 100 [[Some Grimeleech Wings]] [[Arquivo:Some Grimeleech Wings.gif|link=]]\n** 500 [[Demonic Matter]]s [[Arquivo:Demonic Matter.gif|link=]]\n** 750 [[Demonic Essence]]s [[Arquivo:Demonic Essence.gif|link=]]\n** 200 [[Demonic Skeletal Hand]]s [[Arquivo:Demonic Skeletal Hand.gif|link=]]\n** 01 [[Skin of Twisterror]] [[Arquivo:Skin of Twisterror.gif|link=]]</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 63294,
+    "ns": 0,
+    "title": "Draining Inferniarch Rod",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Draining Inferniarch Rod\n| flavortext     = \n| itemclass      = Armas\n| primarytype    = Rods\n| vocrequired    = [[Druid]]s\n| levelrequired  = 300\n| damage         = 90-110\n| damagetype     = Earth\n| atributos      = \n| skillboost     = [[Magic Level]] +3, [[Earth Magic Level]] +1\n| resist         = [[Death Damage|Death]] +5%\n| augments       = \n| imbuement      = 1\n| classificacao  = 4\n| max_tier       = 10\n| modificadores  = \n| weight         = 22.00\n| range          = 5\n| droppedby      = Ninguém.\n| value          = Negociável\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 14.10.4e0c16\n| perk1          = {{Weapon Perk|Type_Life_Leech||+14.50% life leech}}\n| perk2          = {{Weapon Perk|Type_Bestiary_Dmg_Plant||+3.00% damage contra Plant}}<br/>{{Weapon Perk|Type_Life_On_Kill||+20 hit points on kill}}\n| perk3          = {{Weapon Perk|Type_Life_Leech||+14.50% life leech}}\n| perk4          = {{Weapon Perk|Type_Powerful_Foe_Bonus||+3.00% damage contra bosses e Sinister Embraced}}<br/>{{Weapon Perk|Type_Element_Critical_Dmg_Earth||+6.00% critical extra damage para Earth spells e runes}}\n| perk5          = {{Weapon Perk|Type_Magic_Boost_Earth||+1 Earth Magic Level}}<br/>{{Weapon Perk|Spell_Ultimate_Terra_Strike|Cooldown|-8s cooldown para Ultimate Terra Strike}}<br/>{{Weapon Perk|Spell_Ultimate_Terra_Strike|Critical_Chance|+2.5% critical hit chance para Ultimate Terra Strike}}\n| perk6          = {{Weapon Perk|Type_Magic_Boost_Earth||+1 Earth Magic Level}}<br/>{{Weapon Perk|Spell_Ultimate_Terra_Strike|Life_Leech|+40% life leech para Ultimate Terra Strike}}<br/>{{Weapon Perk|Type_Perc_Spell_Dmg_Magic||+7.00% do seu Magic Level como extra damage para suas spells}}\n| perk7          = {{Weapon Perk|Type_Element_Critical_Chance_Earth||+1.00% critical hit chance para Earth spells e runes}}\n| notes          = <noinclude><p><spoiler>* Pode ser criada no processo de [[Doomforging]]. Ela perderá 1 slot de imbuement comparada a arma \"base\" [[Inferniarch Rod]] e ganhará 29% [[Life Leech]] (Nível 1 e Nível 3 de [[Weapon Proficiency|proficiência]], cada um com 14.5%).\n* '''Itens Necessários:'''\n** 01 Arma base Inferniarch [[Arquivo:Inferniarch Rod.gif|link=]]\n** 100 [[Piece of Dead Brain|Pieces of Dead Brain]] [[Arquivo:Piece of Dead Brain.gif|link=]]\n** 500 [[Demonic Matter]]s [[Arquivo:Demonic Matter.gif|link=]]\n** 750 [[Flask of Demonic Blood]]s [[Arquivo:Flask of Demonic Blood.gif|link=]]\n** 50 [[Demon Dust]]s [[Arquivo:Demon Dust.gif|link=]]\n** 01 [[Skin of Malvaroth]] [[Arquivo:Skin of Malvaroth.gif|link=]]</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 66073,
+    "ns": 0,
+    "title": "Crypt Jaw",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Crypt Jaw\n| flavortext     = Priests of decay called it Eternal Rest, believing it could grant true silence to the restless dead. One of the creations of the mysterious soul-smith\n| itemclass      = Armas\n| primarytype    = Rods\n| vocrequired    = [[Druid]]s\n| levelrequired  = 450\n| stackable      = não\n| damage         = \n| damagetype     = Physical\n| atributos      = \n| skillboost     = [[Magic Level]] +4\n| resist         = [[Energy Damage|Energy]] +6%\n| modificadores  = \n| weight         = 20.00\n| range          = 6\n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.20.7a5cc9\n| perk1          = {{Weapon Perk|Type_Armor_Penetration||+100% armor penetration}}\n| perk2          = {{Weapon Perk|Type_Element_Critical_Dmg_Earth||+7.50% critical extra damage para Earth spells e runes}}<br/>{{Weapon Perk|Type_Skill_Magic||+1 Magic Level}}\n| perk3          = {{Weapon Perk|Type_Alpha_Dmg||+4.00% damage contra targets above 95% hit points}}<br/>{{Weapon Perk|Type_Element_Pierce_Physical||+40% Physical pierce}}<br/>{{Weapon Perk|Spell_Wrath_of_Nature|Mana_Leech|+35% mana leech para Wrath of Nature}}\n| perk4          = {{Weapon Perk|Type_Alpha_Dmg||+10.00% damage contra targets above 95% hit points}}<br/>{{Weapon Perk|Type_Bestiary_Dmg_Undead||+3.00% damage contra Undead}}<br/>{{Weapon Perk|Type_Omega_Dmg||+2.50% damage contra targets below 30% hit points}}\n| perk5          = {{Weapon Perk|Type_Element_Pierce_Earth||+2% Earth pierce}}<br/>{{Weapon Perk|Type_Mana_Leech||+1.00% mana leech}}<br/>{{Weapon Perk|Spell_Wrath_of_Nature|Life_Leech|+50% life leech para Wrath of Nature}}\n| perk6          = {{Weapon Perk|Type_Magic_Boost_Healing||+2 Healing Magic Level}}<br/>{{Weapon Perk|Type_Mana_Leech||+1.50% mana leech}}<br/>{{Weapon Perk|Spell_Wrath_of_Nature|Damage|+15% base damage para Wrath of Nature}}\n| perk7          = {{Weapon Perk|Type_Element_Pierce_Earth||+4% Earth pierce}}<br/>{{Weapon Perk|Type_Element_Critical_Dmg_Physical||+100.00% critical extra damage para Physical spells e runes}}<br/>{{Weapon Perk|Type_Omega_Dmg||+4.00% damage contra targets below 30% hit points}}\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 67351,
+    "ns": 0,
+    "title": "Moonsilver Sceptre",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Moonsilver Sceptre\n| flavortext     = \n| levelrequired  = 1000\n| enchantable    = não\n| vocrequired    = [[Druid]]s\n| itemclass      = Armas\n| primarytype    = Rods\n| type           = \n| hands          = Uma\n| skillboost     = [[Magic Level]] +6, [[Ice Magic Level]] +1, [[Healing Magic Level]] +2\n| resist         = [[Earth Damage|Earth]] +7%\n| modificadores  = \n| augments       = \n| range          = 6\n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| attack         = \n| elementattack  = \n| defense        = \n| defensemod     = \n| weight         = 28.00\n| value          = \n| droppedby      = [[Phosphorus]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.30.a30dad\n| perk1          = {{Weapon Perk|Type_Critical_Dmg||+8.00% critical extra damage}}\n| perk2          = {{Weapon Perk|Type_Bestiary_Dmg_Human||+3.00% damage contra Human}}<br/>{{Weapon Perk|Type_Skill_Magic||+1 Magic Level}}<br/>{{Weapon Perk|Type_Critical_Dmg||+6.00% critical extra damage}}\n| perk3          = {{Weapon Perk|Spell_Strong_Ice_Wave|Damage|+5% base damage para Strong Ice Wave}}<br/>{{Weapon Perk|Type_Element_Pierce_Ice||Offensive spells have a 1% chance to fire a homing missile that deals Ice damage equal to 200% do seu level}}<br/>{{Weapon Perk|Spell_Forked_Thorns|Damage|+5% base damage para Forked Thorns}}\n| perk4          = {{Weapon Perk|Type_Element_Critical_Dmg_Ice||+12.50% critical extra damage para Ice spells e runes}}<br/>{{Weapon Perk|Type_Skill_Magic||+2 Magic Level}}<br/>{{Weapon Perk|Type_Element_Critical_Dmg_Earth||+12.50% critical extra damage para Earth spells e runes}}\n| perk5          = {{Weapon Perk|Spell_Strong_Ice_Wave|Critical_Chance|+2.5% critical hit chance para Strong Ice Wave}}<br/>{{Weapon Perk|Type_Perc_Spell_Heal_Magic||+32.00% do seu Magic Level como extra healing para suas spells}}<br/>{{Weapon Perk|Spell_Forked_Thorns|Critical_Chance|+2.5% critical hit chance para Forked Thorns}}\n| perk6          = {{Weapon Perk|Type_Element_Pierce_Ice||+4% Ice pierce}}<br/>{{Weapon Perk|Type_Critical_Dmg||+12.00% critical extra damage}}<br/>{{Weapon Perk|Type_Element_Pierce_Earth||+4% Earth pierce}}\n| perk7          = {{Weapon Perk|Type_Omega_Dmg||+6.00% damage contra targets below 30% hit points}}\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 67352,
+    "ns": 0,
+    "title": "Stellar Moonsilver Sceptre",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Stellar Moonsilver Sceptre\n| flavortext     = \n| levelrequired  = 1000\n| enchantable    = não\n| vocrequired    = [[Druid]]s\n| itemclass      = Armas\n| primarytype    = Rods\n| type           = \n| hands          = Uma\n| skillboost     = [[Magic Level]] +6, [[Ice Magic Level]] +1, [[Healing Magic Level]] +2\n| resist         = [[Earth Damage|Earth]] +7%\n| modificadores  = \n| augments       = \n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| range          = 6\n| attack         = \n| elementattack  = \n| defense        = \n| defensemod     = \n| weight         = 29.00\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.30.a30dad\n| perk1          = {{Weapon Perk|Type_Critical_Dmg||+12.00% critical extra damage}}\n| perk2          = {{Weapon Perk|Type_Bestiary_Dmg_Human||+3.00% damage contra Human}}<br/>{{Weapon Perk|Type_Skill_Magic||+1 Magic Level}}<br/>{{Weapon Perk|Type_Critical_Dmg||+6.00% critical extra damage}}\n| perk3          = {{Weapon Perk|Spell_Strong_Ice_Wave|Damage|+7.5% base damage para Strong Ice Wave}}<br/>{{Weapon Perk|Type_Element_Pierce_Ice||Offensive spells have a 1% chance to fire a homing missile that deals Ice damage equal to 300% do seu level}}<br/>{{Weapon Perk|Spell_Forked_Thorns|Damage|+7.5% base damage para Forked Thorns}}\n| perk4          = {{Weapon Perk|Type_Element_Critical_Dmg_Ice||+12.50% critical extra damage para Ice spells e runes}}<br/>{{Weapon Perk|Type_Skill_Magic||+2 Magic Level}}<br/>{{Weapon Perk|Type_Element_Critical_Dmg_Earth||+12.50% critical extra damage para Earth spells e runes}}\n| perk5          = {{Weapon Perk|Spell_Strong_Ice_Wave|Critical_Chance|+2.5% critical hit chance para Strong Ice Wave}}<br/>{{Weapon Perk|Type_Perc_Spell_Heal_Magic||+32.00% do seu Magic Level como extra healing para suas spells}}<br/>{{Weapon Perk|Spell_Forked_Thorns|Critical_Chance|+2.5% critical hit chance para Forked Thorns}}\n| perk6          = {{Weapon Perk|Type_Element_Pierce_Ice||+4% Ice pierce}}<br/>{{Weapon Perk|Type_Critical_Dmg||+12.00% critical extra damage}}<br/>{{Weapon Perk|Type_Element_Pierce_Earth||+4% Earth pierce}}\n| perk7          = {{Weapon Perk|Type_Omega_Dmg||+9.00% damage contra targets below 30% hit points}}\n| notes          =  <spoiler>\n* Para fabricar este item são necessários:\n** [[Arquivo:Auric Moon Sigil.gif]] [[Auric Moon Sigil]]\n** [[Arquivo:Soulhexer.gif]] [[Soulhexer]]\n** [[Arquivo:Sanguine Rod.gif]] [[Sanguine Rod]]\n** [[Arquivo:Moonsilver Sceptre.gif]] [[Moonsilver Sceptre]]\n* É necessário ter concluído a [[Make Believe Quest]].\n</spoiler>\n}}"
+       }
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

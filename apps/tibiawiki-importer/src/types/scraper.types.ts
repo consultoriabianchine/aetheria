@@ -69,6 +69,7 @@ export interface CliOptions {
   update: boolean;
   verbose: boolean;
   inspect: boolean;
+  items: boolean;
   slug?: string;
   help: boolean;
 }

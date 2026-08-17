@@ -1,0 +1,1398 @@
+{
+ "query": {
+  "pages": [
+   {
+    "pageid": 7109,
+    "ns": 0,
+    "title": "Backpack",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Backpack\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| implemented    = 3.0\n| imbuement      = 1\n| volume         = 20\n| weight         = 18.00\n| stackable      = não\n| npcvalue       = 0\n| npcprice       = 9\n| droppedby      = Ninguém.\n| buyfrom        = Zethra:10, Richard:10, Pompan:20, Rock In A Hard Place:20, Raffael:20, Maro:20, Al Dee:10, Lee'Delle, Lubo:25, Zora:20, Rafzan:10, Iriana:10\n| sellto         = Jogadores.\n| notes          = Única Backpack que pode ser comprada em [[Rookgaard]]. Faz parte do [[Mage Set]], [[Newbie Set]], [[Set Inicial]], [[Rook Set]], [[Rookgaard/Dawnport Set]], [[Isle of Destiny Knight Set]], [[Isle of Destiny Paladin Set]], [[Isle of Destiny Druid Set]] e [[Isle of Destiny Sorcerer Set]]. Devido a grande variedade, backpacks são consideradas itens colecionáveis e também usadas como decoração.\n<noinclude><p><spoiler>\n* 01 pode ser obtida em um baú em uma caverna localizada ao sul de [[Dawnport]] ({{mapa|32072,31937,7:2|aqui}}).\n</spoiler></p></noinclude>\n<noinclude>{{Veja|Backpacks}}</noinclude> \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7161,
+    "ns": 0,
+    "title": "Beach Backpack",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Beach Backpack\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| imbuement      = 1\n| volume         = 20\n| weight         = 18.00\n| stackable      = não\n| droppedby      = Ninguém.\n| npcvalue       = 0\n| npcprice       = 20\n| buyfrom        = Red Lilly, Relaxed Bartender\n| sellto         = Jogadores.\n| implemented    = 7.8\n| notes          = Devido a grande variedade, backpacks são consideradas itens colecionáveis e também usadas como decoração.\n<noinclude><p><spoiler>*Pode ser obtido na [[Chayenne's Realm Quest]].</spoiler></p>\n{{Veja|Backpacks}}</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7162,
+    "ns": 0,
+    "title": "Blue Backpack",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Blue Backpack\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| imbuement      = 1\n| volume         = 20\n| weight         = 18.00\n| stackable      = não\n| droppedby      = Ninguém.\n| npcvalue       = 0\n| npcprice       = 20\n| buyfrom        = Beatrice\n| sellto         = Jogadores.\n| implemented    = 7.2\n| notes          = Faz parte do [[Blue Set]]. Devido a grande variedade, backpacks são consideradas itens colecionáveis e também usadas como decoração.\n<noinclude>{{Veja|Backpacks}}</noinclude> \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7163,
+    "ns": 0,
+    "title": "Brocade Backpack",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Brocade Backpack\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| imbuement      = 1\n| volume         = 20\n| weight         = 18.00\n| stackable      = não\n| droppedby      = Ninguém.\n| npcvalue       = 0\n| npcprice       = 20\n| buyfrom        = Gree Dee\n| sellto         = Jogadores.\n| implemented    = 8.4\n| notes          = Faz parte do [[Yalahari Set]]. Devido a grande variedade, backpacks são consideradas itens colecionáveis e também usadas como decoração.\n<noinclude><p><spoiler>* Pode ser obtido no evento [[Lightbearer]].</spoiler></p>\n{{Veja|Backpacks}}</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7164,
+    "ns": 0,
+    "title": "Camouflage Backpack",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Camouflage Backpack\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| imbuement      = 1\n| volume         = 20\n| weight         = 18.00\n| stackable      = não\n| droppedby      = Ninguém.\n| npcvalue       = 0\n| npcprice       = 20\n| buyfrom        = Perod, John:30\n| sellto         = Jogadores.\n| implemented    = 7.5\n| notes          = Faz parte do [[Full Set]]. Devido a grande variedade, backpacks são consideradas itens colecionáveis e também usadas como decoração.\n<noinclude>{{Veja|Backpacks}}</noinclude> \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7165,
+    "ns": 0,
+    "title": "Crown Backpack",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Crown Backpack\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| imbuement      = 1\n| volume         = 20\n| weight         = 17.00\n| droppedby      = Ninguém.\n| stackable      = não\n| value          = 1 000 - 3 000\n| npcvalue       = 0\n| npcprice       = 800\n| buyfrom        = Angus, Mortimer\n| sellto         = Jogadores.\n| implemented    = 8.5\n| notes          = Mesmo peso que a [[Dragon Backpack]] e  1.00 oz a menos que as mochilas normais. Faz parte do [[Crown Set]] e [[Semi Rare Set]]. Devido a grande variedade, backpacks são consideradas itens colecionáveis e também usadas como decoração.\n<noinclude><p><spoiler>* Para comprá-la é necessário ter completado todas as quests do rank de '''Explorer''' da [[The Explorer Society Quest]].\n*Pode ser obtida no [[Lightbearer|Lightbearer Event]].</spoiler></p>\n{{Veja|Backpacks}}</noinclude> \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7166,
+    "ns": 0,
+    "title": "Demon Backpack",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Demon Backpack\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| imbuement      = 1\n| volume         = 20\n| weight         = 18.00\n| stackable      = não\n| value          = 1 000 - 3 000\n| npcvalue       = 0\n| npcprice       = 1 000\n| droppedby      = Ninguém.\n| buyfrom        = Grizzly Adams\n| sellto         = Jogadores.\n| implemented    = 8.5\n| notes          = Faz parte do [[Demon Set]] e [[Full Set]]. Devido a grande variedade, backpacks são consideradas itens colecionáveis e também usadas como decoração.\n<noinclude><p><spoiler>*Para comprá-lo é necessário o rank '''Trophy Hunter''' na [[Killing in the Name of... Quest]].\n*Pode ser obtido completando o evento [[Rise of Devovorga]].</spoiler></p>\n{{Veja|Backpacks}}</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7167,
+    "ns": 0,
+    "title": "Dragon Backpack",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Dragon Backpack\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| imbuement      = 1\n| volume         = 20\n| weight         = 17.00\n| stackable      = não\n| value          = 500 - 3 000\n| npcvalue       = 0\n| npcprice       = 200\n| droppedby      = Ninguém.\n| buyfrom        = Pompan\n| sellto         = Jogadores.\n| implemented    = 8.54\n| notes          = Pesa menos do que a maioria das backpacks do jogo. Faz parte do [[Dragon Set]]. Devido a grande variedade, backpacks são consideradas itens colecionáveis e também usadas como decoração.\n<noinclude><p><spoiler>* Para comprá-la é necessário entregar 5 [[Tome of Knowledge|tomes]] na [[Tomes of Knowledge Quest]].\n*Pode ser obtida na [[Wrath of the Emperor Quest]].</spoiler></p>\n{{Veja|Backpacks}}</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7168,
+    "ns": 0,
+    "title": "Expedition Backpack",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Expedition Backpack\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| imbuement      = 1\n| volume         = 20\n| weight         = 18.00\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 0\n| npcprice       = 100\n| droppedby      = Ninguém.\n| buyfrom        = Pompan\n| sellto         = Jogadores.\n| implemented    = 8.54\n| notes          = Devido a grande variedade, backpacks são consideradas itens colecionáveis e também usadas como decoração.\n<noinclude>{{Veja|Backpacks}}</noinclude> \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7169,
+    "ns": 0,
+    "title": "Fur Backpack",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Fur Backpack\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| imbuement      = 1\n| volume         = 20\n| weight         = 18.00\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| npcvalue       = 0\n| npcprice       = 20\n| buyfrom        = Bertha\n| sellto         = Jogadores.\n| implemented    = 8.0\n| notes          = Faz parte do [[Barbarian Set]]. Devido a grande variedade, backpacks são consideradas itens colecionáveis e também usadas como decoração.\n<noinclude>{{Veja|Backpacks}}</noinclude> \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7170,
+    "ns": 0,
+    "title": "Golden Backpack",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Golden Backpack\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| imbuement      = 1\n| volume         = 20\n| weight         = 18.00\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 0\n| npcprice       = 10\n| buyfrom        = Ahmet\n| sellto         = Jogadores.\n| implemented    = 7.3\n| droppedby      = [[Goldhanded Cultist]], [[Goldhanded Cultist Bride]].\n| notes          = Faz parte do [[Golden Set]] e [[Full Set]]. Devido a grande variedade, backpacks são consideradas itens colecionáveis e também usadas como decoração.\n<noinclude>{{Veja|Backpacks}}</noinclude> \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7171,
+    "ns": 0,
+    "title": "Green Backpack",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Green Backpack\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| imbuement      = 1\n| volume         = 20\n| weight         = 18.00\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| npcvalue       = 0\n| npcprice       = 20\n| buyfrom        = Bashira\n| sellto         = Jogadores.\n| implemented    = 7.2\n| notes          = Devido a grande variedade, backpacks são consideradas itens colecionáveis e também usadas como decoração.\n<noinclude>{{Veja|Backpacks}}</noinclude> \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7184,
+    "ns": 0,
+    "title": "Backpack of Holding",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Backpack of Holding\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| imbuement      = 1\n| volume         = 24\n| weight         = 15.00\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.9\n| notes          = Pode ser vista na sala final da [[The Explorer Society Quest]]. É a terceira backpack mais leve do jogo, perdendo apenas para a [[Pillow Backpack]] e a [[Ghost Backpack]], e possui 24 espaços para itens, o que faz com que ela seja muito valiosa. Faz parte do [[Paladin Set]], [[Mage Set]], [[Unrestricted Set]], [[Rare Set]], [[Dream Set]] e [[High Level Knight Basic Set]]. Devido a grande variedade, backpacks são consideradas itens colecionáveis e também usadas como decoração.\n<noinclude><p><spoiler>* Recompensa da [[Pits of Inferno Quest]].</spoiler></p>\n{{Veja|Backpacks}}</noinclude> \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7186,
+    "ns": 0,
+    "title": "Bag",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bag\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| implemented    = 1.0\n| volume         = 8\n| weight         = 8.00\n| stackable      = não\n| npcvalue       = 0\n| npcprice       = 4\n| droppedby      = Ninguém.\n| buyfrom        = Zethra, Richard, Pompan:5, Al Dee, Lee'Delle, Zora:5, Rafzan, Iriana:5\n| sellto         = Jogadores.\n| notes          = Faz parte do [[Set Inicial]]. Algumas vezes jogadores usam bags coloridas para decoração de casas.\n<noinclude>{{Veja|Bags}}</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7200,
+    "ns": 0,
+    "title": "Beach Bag",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Beach Bag\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| secondarytype  = \n| volume         = 8\n| weight         = 8.00\n| stackable      = não\n| droppedby      = Ninguém.\n| npcvalue       = 0\n| npcprice       = 4\n| buyfrom        = Red Lilly, Relaxed Bartender\n| sellto         = Jogadores.\n| implemented    = 7.8\n| notes          = Algumas vezes jogadores usam bags coloridas para decoração de casas.\n<noinclude>{{Veja|Bags}}</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7201,
+    "ns": 0,
+    "title": "Blue Bag",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Blue Bag\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| secondarytype  = \n| volume         = 8\n| weight         = 8.00\n| stackable      = não\n| droppedby      = Ninguém.\n| npcvalue       = 0\n| npcprice       = 5\n| buyfrom        = Beatrice\n| sellto         = Jogadores.\n| implemented    = 7.1\n| notes          = Algumas vezes jogadores usam bags coloridas para decoração de casas.\n<noinclude>{{Veja|Bags}}</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7202,
+    "ns": 0,
+    "title": "Brocade Bag",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Brocade Bag\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| volume         = 8\n| weight         = 8.00\n| stackable      = não\n| droppedby      = Ninguém.\n| npcvalue       = 0\n| npcprice       = 4\n| buyfrom        = Gree Dee\n| sellto         = Jogadores.\n| implemented    = 8.4\n| notes          = Faz parte do [[Yalahari Set]]. Algumas vezes jogadores usam bags coloridas para decoração de casas.\n<noinclude>{{Veja|Bags}}</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7203,
+    "ns": 0,
+    "title": "Camouflage Bag",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Camouflage Bag\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| secondarytype  = \n| volume         = 8\n| weight         = 8.00\n| stackable      = não\n| droppedby      = Ninguém.\n| npcvalue       = 0\n| npcprice       = 5\n| buyfrom        = Perod, John:10\n| sellto         = Jogadores.\n| implemented    = 7.5\n| notes          = Algumas vezes jogadores usam bags coloridas para decoração de casas.\n<noinclude>{{Veja|Bags}}</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7204,
+    "ns": 0,
+    "title": "Fur Bag",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Fur Bag\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| volume         = 8\n| weight         = 8.00\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 0\n| npcprice       = 5\n| buyfrom        = Bertha\n| sellto         = Jogadores.\n| droppedby      = [[Barbarian Brutetamer]], [[Barbaria]].\n| implemented    = 8.0\n| notes          = Faz parte do [[Barbarian Set]]. Algumas vezes jogadores usam bags coloridas para decoração de casas.\n<noinclude>{{Veja|Bags}}</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7205,
+    "ns": 0,
+    "title": "Golden Bag",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Golden Bag\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| volume         = 8\n| weight         = 8.00\n| stackable      = não\n| value          = Negociável\n| droppedby      = [[Goldhanded Cultist]], [[Goldhanded Cultist Bride]].\n| npcvalue       = 0\n| npcprice       = 4\n| buyfrom        = Ahmet\n| sellto         = Jogadores.\n| implemented    = 7.3\n| notes          = Faz parte do [[Golden Set]]. Algumas vezes jogadores usam bags coloridas para decoração de casas.\n<noinclude>{{Veja|Bags}}</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7213,
+    "ns": 0,
+    "title": "Expedition Bag",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Expedition Bag\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| secondarytype  = \n| volume         = 8\n| weight         = 8.00\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 0\n| npcprice       = 50\n| droppedby      = Ninguém.\n| buyfrom        = Pompan\n| sellto         = Jogadores.\n| implemented    = 8.54\n| notes          = Algumas vezes jogadores usam bags coloridas para decoração de casas.\n<noinclude>{{Veja|Bags}}</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7225,
+    "ns": 0,
+    "title": "Basket",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Basket\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| implemented    = 5.1\n| secondarytype  = \n| volume         = 5\n| weight         = 9.50\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| npcprice       = 6\n| droppedby      = Ninguém.\n| buyfrom        = Ahmet, Asphota, Bashira, Beatrice, Bertha, Bezil, Gladys, Gorn, Gree Dee, Halif, Hireling (Trader), Lubo, Maro, Maun, Nezil, Perod, Pompan, Red Lilly, Rock In A Hard Place, Sarina, Shiantis, Tefrit, Timur, Zora\n| sellto         = Jogadores.\n| notes          = Pode ser encontrado em respawns diários nestes lugares:\n\n* Na casa de [[Rottin Wood]] em [[Outlaw Camp]], ({{mapa|32655,32200,7:2|aqui}}).\n* Em um corredor de [[Maze of the Lost Souls]] no caminho para [[Demona]], ({{mapa|32397,31706,12:2|aqui}}).\n* Próximo a saída do porto de [[Venore]], ({{mapa|32963,32052,6:2|aqui}}).\n* No segundo andar da loja de equipamentos de [[Venore]], ({{mapa|32882,32082,4:2|aqui}}).\n* Na casa de [[Wyda]], em [[Green Claw Swamp]], atrás de uma porta trancada, ({{mapa|32729,31977,6:2|aqui}}).\n* No [[Abandoned Headquarters|quartel general]] dos Planegazers, ({{mapa|33850,32237,15:2|aqui}}).\n* Na plantação do [[Falcon Bastion]], ({{mapa|33377,31320,4:2|aqui}}).\n* No primeiro andar de uma casa no porto de [[Issavi]], ({{mapa|33879,31479,6:2|aqui}}).\n* No teatro de [[Alyxo]] em [[Issavi]], ({{mapa|33940,31466,7:2|aqui}}).\n* Na cozinha do [[Cobra Bastion]], ({{mapa|33405,32660,5:2|aqui}}).\n* Em uma casa de [[Bounac]], ({{mapa|32400,32494,7:2|aqui}}).\n* No depot de [[Bounac]], ({{mapa|32393,32492,7:2|aqui}}).\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7226,
+    "ns": 0,
+    "title": "Box",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Box\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| secondarytype  = \n| destructible   = sim\n| volume         = 10\n| weight         = 35.00\n| stackable      = não\n| value          = 10\n| npcvalue       = 0\n| npcprice       = 10\n| droppedby      = Ninguém.\n| buyfrom        = Ukea, Feizuhl, Nydala, Hireling (Apprentice), Yoem, Hofech, Edvard, Eddy, Inkaef, Iwar, Peggy, Nicholas, Vera, Janz, Gamon, Borkas, Dorbin\n| sellto         = Jogadores.\n| notes          = Usada para trapar alguns monstros ou subir em montanhas em [[Rookgaard]], onde não existe parcel.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7227,
+    "ns": 0,
+    "title": "Box (Brown)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Box (Brown)\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| secondarytype  = \n| destructible   = sim\n| volume         = 10\n| stackable      = não\n| weight         = 35.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Pode ser visto em vários [[Boat|barcos]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7229,
+    "ns": 0,
+    "title": "Chest",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Chest\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| secondarytype  = \n| volume         = 15\n| weight         = 120.00\n| stackable      = não\n| destructible   = sim\n| value          = 10\n| npcvalue       = 0\n| npcprice       = 10\n| droppedby      = Ninguém.\n| buyfrom        = Ukea, Feizuhl, Nydala, Hireling (Apprentice), Yoem, Hofech, Edvard, Eddy, Inkaef, Iwar, Peggy, Nicholas, Vera, Janz, Gamon, Borkas, Dorbin\n| sellto         = Jogadores.\n| notes          = Alguns desses guardam tesouros em [[quest]]s.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7230,
+    "ns": 0,
+    "title": "Christmas Present (Blue)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Christmas Present (Blue)\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| secondarytype  = \n| volume         = 5\n| weight         = 6.00\n| stackable      = não\n| value          = 20\n| npcvalue       = 0\n| npcprice       = 20\n| droppedby      = Ninguém.\n| buyfrom        = Messenger Of Santa\n| sellto         = Jogadores.\n| implemented    = 7.9\n| notes          = É uma caixa legal para por itens e dar como presente para alguém. Podem ser encontrados em três cores: [[Christmas Present (Red)|vermelho]], [[Christmas Present (Green)|verde]] e [[Christmas Present (Blue)|azul]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7234,
+    "ns": 0,
+    "title": "Christmas Present (Green)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Christmas Present (Green)\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| secondarytype  = \n| volume         = 5\n| weight         = 6.00\n| stackable      = não\n| value          = 20\n| npcvalue       = 0\n| npcprice       = 20\n| droppedby      = Ninguém.\n| buyfrom        = Messenger Of Santa\n| sellto         = Jogadores.\n| implemented    = 7.9\n| notes          = É uma caixa legal para por itens e dar como presente para alguém. Podem ser encontrados em três cores: [[Christmas Present (Red)|vermelho]], [[Christmas Present (Green)|verde]] e [[Christmas Present (Blue)|azul]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7236,
+    "ns": 0,
+    "title": "Christmas Present (Red)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Christmas Present (Red)\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| secondarytype  = \n| volume         = 5\n| weight         = 6.00\n| stackable      = não\n| value          = 20\n| npcvalue       = 0\n| npcprice       = 20\n| droppedby      = Ninguém.\n| buyfrom        = Messenger Of Santa\n| sellto         = Jogadores.\n| implemented    = 7.9\n| notes          = É uma caixa legal para por itens e dar como presente para alguém. Podem ser encontrados em três cores: [[Christmas Present (Red)|vermelho]], [[Christmas Present (Green)|verde]] e [[Christmas Present (Blue)|azul]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7238,
+    "ns": 0,
+    "title": "Crate",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Crate\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| secondarytype  = \n| volume         = 15\n| stackable      = não\n| weight         = 80.00\n| destructible   = sim\n| npcvalue       = 0\n| npcprice       = 10\n| droppedby      = Ninguém.\n| buyfrom        = Ukea, Feizuhl, Nydala, Hireling (Apprentice), Yoem, Hofech, Edvard, Eddy, Inkaef, Iwar, Peggy, Nicholas, Vera, Janz, Gamon, Borkas, Dorbin\n| sellto         = Jogadores.\n| notes          = Se parece com um [[Crate (Usable)]], [[Weapons Crate]], [[Machine Crate]] e um [[Crate (Jimmy)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 13820,
+    "ns": 0,
+    "title": "Dead Tree",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Object|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Dead Tree\n| objectclass    = Árvores\n| secondarytype  = Recipientes\n| attrib         = Nenhum.\n| walkable       = não\n| mover          = não\n| pegar          = não\n| location       = Espalhados pelas florestas do [[Tibia]].\n| notes          = É uma árvore que já morreu. Pode ser vista em outras versões:<br />\n[[Arquivo:Tree01.gif]] [[Arquivo:Tree02.gif]] [[Arquivo:Tree03.gif]]<noinclude><p><spoiler>\n*Uma ({{mapa|32581,32267,7:2|aqui}}) pode ser aberta como um [[recipiente]] e nela há [[Crate|caixas]] para ajudar a sair da área de quest que dá acesso a ilha. As caixas ressurgem a cada [[Server Save]].\n*Algumas em [[Outlaw Camp]] e na [[Black Knight Villa]] funcionam como um [[chest|baú]]. Um vez obtido o conteúdo do seu interior, elas ficam vazias.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 20403,
+    "ns": 0,
+    "title": "Buggy Backpack",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Buggy Backpack\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| imbuement      = 1\n| volume         = 20\n| weight         = 18.00\n| stackable      = não\n| droppedby      = [[Kollos]].\n| npcvalue       = 0\n| npcprice       = 0\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.4\n| value         = 45 000\n| notes          = Faz parte do [[Hive Set]]. Devido a grande variedade, backpacks são consideradas itens colecionáveis e também usadas como decoração.\n<noinclude>{{Veja|Backpacks}}</noinclude> \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 20404,
+    "ns": 0,
+    "title": "Deepling Backpack",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Deepling Backpack\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| imbuement      = 1\n| volume         = 20\n| weight         = 18.00\n| stackable      = não\n| value          = Negociável\n| droppedby      = [[Deepling Guard]], [[Deepling Tyrant]].\n| npcvalue       = 0\n| npcprice       = 0\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.4\n| notes          = Faz parte do [[Depth Set]]. Devido a grande variedade, backpacks são consideradas itens colecionáveis e também usadas como decoração.\n<noinclude>{{Veja|Backpacks}}</noinclude> \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 21010,
+    "ns": 0,
+    "title": "Anniversary Backpack",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Anniversary Backpack\n| flavortext     = It was awarded during the festivities of Tibia's 15th anniversary.\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| secondarytype  = Itens de Festa\n| imbuement      = 1\n| weight         = 15.00\n| stackable      = não\n| volume         = 15\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = Ninguém.\n| droppedEventby =\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.44\n| value          = 20 000+\n| notes          = É a menor backpack do Tibia, tendo apenas 15 espaços. Devido a grande variedade, backpacks são consideradas itens colecionáveis e também usadas como decoração. \n'''Histórico:''' Durante as festividades de [[Aniversário do Tibia|15 anos]] do Tibia, era obtida com [[Knightmare (NPC)|Knightmare]] em [[Thais]].\n<noinclude>{{Veja|Backpacks}}</noinclude> \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25295,
+    "ns": 0,
+    "title": "Crystal Backpack",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Crystal Backpack\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| imbuement      = 1\n| weight         = 18.00\n| volume         = 20\n| stackable      = não\n| droppedby      = Ninguém.\n| npcvalue       = 0\n| npcprice       = 0\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.6\n| notes          = Faz parte do [[Prismatic Set]] e do [[Crystal Set]]. Devido a grande variedade, backpacks são consideradas itens colecionáveis e também usadas como decoração.\n<noinclude><p><spoiler>* Possibilidade de ser obtido ao [[Muck Remover|remover o muco]] de um [[Mucus Plug]].</spoiler></p>\n{{Veja|Backpacks}}</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 32790,
+    "ns": 0,
+    "title": "Cake Backpack",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Cake Backpack\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| imbuement      = 1\n| volume         = 20\n| weight         = 18.00\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.35\n| notes          = Devido a grande variedade, backpacks são consideradas itens colecionáveis e também usadas como decoração.\n<noinclude><p><spoiler>Pode ser obtida como recompensa do evento [[A Piece of Cake]].</spoiler></p>\n{{Veja|Backpacks}}</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 33489,
+    "ns": 0,
+    "title": "Glooth Backpack",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Glooth Backpack\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| imbuement      = 1\n| volume         = 20\n| weight         = 18.00\n| stackable      = não\n| droppedby      = Ninguém.\n| value          = Negociável\n| npcvalue       = 0\n| npcprice       = 0\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.50\n| notes          = Faz parte do [[Glooth Set]]. Devido a grande variedade, backpacks são consideradas itens colecionáveis e também usadas como decoração.\n<noinclude><p><spoiler>* Possibilidade de ser obtido ao usar um [[Glooth Bag]].</spoiler></p>\n{{Veja|Backpacks}}.</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 33490,
+    "ns": 0,
+    "title": "Feedbag",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Feedbag\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| imbuement      = 1\n| volume         = 20\n| weight         = 18.00\n| stackable      = não\n| droppedby      = [[Glooth Fairy]], [[Professor Maxxen]].\n| npcvalue       = 0\n| npcprice       = 0\n| value          = 3 000 000 - 6 000 000\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.50\n| notes          = Faz parte do [[Metal Set]] e do [[Glooth Set]]. Devido a grande variedade, backpacks são consideradas itens colecionáveis e também usadas como decoração.\n<noinclude>{{Veja|Backpacks}}</noinclude> \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 38276,
+    "ns": 0,
+    "title": "Energetic Backpack",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Energetic Backpack\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| imbuement      = 1\n| volume         = 24\n| weight         = 21.60\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| npcvalue       = 0\n| npcprice       = 0\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.94\n| notes          = Devido a grande variedade, backpacks são consideradas itens colecionáveis e também usadas como decoração.\n<noinclude><p><spoiler>Pode ser obtida na [[Heart of Destruction Quest]].</spoiler></p></noinclude>\n<noinclude>{{Veja|Backpacks}}</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 39885,
+    "ns": 0,
+    "title": "Birthday Backpack",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Birthday Backpack\n| flavortext     = It was awarded during the festivities of Tibia's 20th anniversary.\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| imbuement      = 1\n| volume         = 20\n| weight         = 15.00\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| droppedEventby = [[Bolfrim (Criatura)]], [[Delany (Criatura)]], [[Mirade (Criatura)]], [[Piñata Dragon]], [[Rejana (Criatura)]], [[Siramal (Criatura)]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Essa é a backpack comemorativa de 20 anos.\n<noinclude>{{Veja|Backpacks}}</noinclude>\n| implemented    = 11.02\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 40944,
+    "ns": 0,
+    "title": "Blossom Bag",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Blossom Bag\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| volume         = 24\n| weight         = 8.00\n| stackable      = não\n| npcvalue       = 0\n| value          = 300 000 - 500 000\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.40\n| notes          = Devido a grande variedade, bags são consideradas itens colecionáveis e também usadas como decoração.\n<noinclude><p><spoiler>* Recompensa da [[Threatened Dreams Quest]].</spoiler></p>\n{{Veja|Bags}}</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 44047,
+    "ns": 0,
+    "title": "Book Backpack",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Book Backpack\n| itemclass     = Itens de Decoração\n| primarytype   = Recipientes\n| imbuement     = 1\n| weight        = 18.00\n| stackable     = não\n| volume        = 22\n| npcvalue      = 0\n| npcprice      = 0\n| droppedby     = [[Faceless Bane]].\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| implemented   = 11.80\n| value         = 1 000 000 - 5 000 000\n| notes         = Devido a grande variedade, backpacks são consideradas itens colecionáveis e também usadas como decoração.\n<noinclude>\n<gallery>\nArquivo:Primeira Book BP.png|Book Backpack em [[Menera]].\n</gallery>\n{{Veja|Backpacks}}\n</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45452,
+    "ns": 0,
+    "title": "Festive Backpack",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Festive Backpack\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| imbuement      = 1\n| volume         = 22\n| weight         = 15.00\n| stackable      = não\n| value          = Negociável\n| droppedEventby = [[Piñata Dragon]].\n| npcvalue       = 0\n| npcprice       = 0\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.02.7746\n| notes          = Devido a grande variedade, backpacks são consideradas itens colecionáveis e também usadas como decoração.\n<noinclude>\n{{Veja|Backpacks}}\n</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 47986,
+    "ns": 0,
+    "title": "Ghost Backpack",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Ghost Backpack\n| itemclass     = Itens de Decoração\n| primarytype   = Recipientes\n| imbuement     = 1\n| weight        = 5.00\n| stackable     = não\n| volume        = 26\n| npcvalue      = 0\n| npcprice      = 0\n| droppedby     = [[The Pale Worm]]\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| implemented   = 12.30\n| value         = 8 000 000 - 15 000 000\n| notes         = \n{{Veja|Backpacks}}\n\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 51987,
+    "ns": 0,
+    "title": "Artefact Box",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Artefact Box\n| flavortext     = The knight Galthen built this box to hold Prime Artefacts.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Recipientes\n| weight         = 50.00\n| stackable      = não\n| volume         = 32\n| npcvalue       = 0\n| mercado        = não\n| npcprice       = 0\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| attrib         = Nenhum.\n| implemented    = 12.70\n| notes          = Este é um dos recipientes com a maior capacidade dentro jogo, ele tem 32 espaços.\n<noinclude><p><spoiler>\n* Recompensa da [[Adventures of Galthen Quest]].\n* Pode ser obtida novamente a cada 30 dias junto com uma [[Galthen's Satchel]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 51988,
+    "ns": 0,
+    "title": "Galthen's Satchel",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Galthen's Satchel\n| flavortext     = The original satchel in which Galthen once carried all his personal notes and research.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Recipientes\n| weight         = 10.00\n| stackable      = não\n| volume         = 32\n| npcvalue       = 0\n| mercado        = não\n| npcprice       = 0\n| value          = \n| attrib         = Nenhum.\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.70\n| notes          = Este é um dos recipientes com a maior capacidade dentro jogo, ele tem 32 espaços.\n<noinclude><p><spoiler>\n* Recompensa da [[Adventures of Galthen Quest]].\n* Pode ser obtida novamente a cada 30 dias junto com uma [[Artefact Box]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53132,
+    "ns": 0,
+    "title": "Exaltation Chest",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Exaltation Chest\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| secondarytype  = \n| volume         = 2\n| attrib         = Nenhum.\n| weight         = 20.00\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 0\n| npcprice       = \n| mercado        = sim\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.80\n| notes          = São obtidos durante o uso do [[Exaltation System]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53441,
+    "ns": 0,
+    "title": "Changing Backpack",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Changing Backpack\n| flavortext     = It changes its appearance in the course of years, just like Tibia.\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| imbuement      = 1\n| volume         = 20\n| weight         = 15\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| npcprice       = 5000 [[Theon]]s\n| droppedby      = [[Retros Treasure]].\n| droppedEventby = \n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Essa é a backpack comemorativa de 25 anos.\n<noinclude>{{Veja|Backpacks}}</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55310,
+    "ns": 0,
+    "title": "25 Years Backpack",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = 25 Years Backpack\n| flavortext     = It could be bought for Theons after the festivities of Tibia's 25th anniversary.\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| secondarytype  = Itens de Festa\n| imbuement      = 1\n| volume         = 25\n| weight         = 17.00\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 7197\n| npcprice       = 7197 [[Theon]]s\n| droppedby      = Ninguém.\n| droppedEventby = \n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| notes          = Essa é a backpack comemorativa de 25 anos.\n<noinclude>{{Veja|Backpacks}}</noinclude>\n| implemented    = 12.87.12038\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 62792,
+    "ns": 0,
+    "title": "Bursa Obscura",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bursa Obscura\n| flavortext     = A mysterious pouch from an extra-dimensional realm.\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| secondarytype  = Valiosos\n| imbuement      = 1\n| volume         = 1\n| weight         = 1.50\n| stackable      = não\n| value          = \n| npcprice       = 55 [[Tentacle Piece]]s\n| droppedby      = Ninguém.\n| mercado        = sim\n| buyfrom        = Malunga, Dread Guardian\n| sellto         = Jogadores.\n| implemented    = 13.40.e15431\n| notes          = \n<noinclude><p><spoiler>\n* Pode ser obtida ao trocar 55 [[Tentacle Piece]]s com o NPC [[Dread Guardian]] durante a Mini World Change [[Mini_World_Changes#Devovorga's_Essence|Devovorga's Essence]].\n* A partir do update [[Patches/13.41.0000#Patch_13.41.a953fd|13.41.a953fd]] foi adicionado 1 slot de imbuement.\n* A partir do update [[Patches/14.00.0000#Patch_14.00.0e4f6f|14.00.0e4f6f]] ela também pode ser obtida ao trocar 55 [[Tentacle Piece]]s com o NPC [[Malunga]] em Liberty Bay.\n* Para comprar fale '''hi - bursa obscura - yes'''\n{{Transcrições|npc=Malunga|texto=\n''Jogador:'' '''Hi'''<br/>\n'''Malunga:''' Greetings. I have only little time to spare, so the conversation will be short. I teach sorcerer spells and buy a few magical ingredients.<br/>\n''Jogador:'' '''Bursa obscura'''<br/>\n'''Malunga:''' Concerning the looming threat of Devovorga... I'm more interested in the anatomy of that thing. Specifically the tentacles that come for free with the monstrosity. ...<br/>\n'''Malunga:''' Hm, I came by a very exotic antiquity recently - it's yours in exchange for 55 tentacle pieces. What do you say?<br/>\n''Jogador:'' '''Yes'''<br/>\n'''Malunga:''' Here you go, thank you for keeping science running - fifty-five tentacles at a time.<br/>\n}}\n</spoiler></p>\n{{Veja|Backpacks}}\n</noinclude> \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 66768,
+    "ns": 0,
+    "title": "Adventurer Backpack",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Adventurer Backpack\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| imbuement      = 1\n| volume         = 22\n| weight         = 18.00\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.24.95dcf3\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7172,
+    "ns": 0,
+    "title": "Grey Backpack",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Grey Backpack\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| imbuement      = 1\n| volume         = 20\n| weight         = 18.00\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| npcvalue       = 0\n| npcprice       = 10\n| buyfrom        = Bezil, Nezil\n| sellto         = Jogadores.\n| implemented    = 7.2\n| notes          = Devido a grande variedade, backpacks são consideradas itens colecionáveis e também usadas como decoração.\n<noinclude>{{Veja|Backpacks}}</noinclude> \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7173,
+    "ns": 0,
+    "title": "Heart Backpack",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Heart Backpack\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| imbuement      = 1\n| volume         = 20\n| weight         = 18.00\n| stackable      = não\n| value          = 500 - 15 000\n| npcprice       = 500\n| droppedby      = Ninguém.\n| buyfrom        = Valentina\n| sellto         = Jogadores.\n| implemented    = 8.54\n| notes          = Devido a grande variedade, backpacks são consideradas itens colecionáveis e também usadas como decoração. Comercializada apenas  uma vez ao ano. Não aparece no [[NPC Trade|trade do NPC]].\n<noinclude><p><spoiler>*Comercializada apenas no \"Valentine's Day\".\n*Diga '''Heart Backpack''' para poder comprá-la.</spoiler></p>\n{{Veja|Backpacks}}</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7174,
+    "ns": 0,
+    "title": "Minotaur Backpack",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Minotaur Backpack\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| imbuement      = 1\n| volume         = 20\n| weight         = 18.50\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 0\n| npcprice       = 200\n| droppedby      = Ninguém.\n| buyfrom        = Pompan\n| sellto         = Jogadores.\n| implemented    = 8.54\n| notes          = Pesa 0.50 oz. a mais do que todas as outras, sendo a mais pesada do jogo. Devido a grande variedade, backpacks são consideradas itens colecionáveis e também usadas como decoração.\n<noinclude><p><spoiler>Para comprá-la é necessário entregar 2 [[Tome of Knowledge|tomes]] na [[Tomes of Knowledge Quest]]</spoiler></p>\n{{Veja|Backpacks}}</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7175,
+    "ns": 0,
+    "title": "Moon Backpack",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Moon Backpack\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| secondarytype  = Fontes de Luz\n| imbuement      = 1\n| attrib         = Fornece 3 [[sqm]]s de luz azulada quando equipado.\n| volume         = 20\n| weight         = 18.00\n| droppedby      = [[Leviathan]], [[Wisp]].\n| stackable      = não\n| value          = 20 000 - 100 000\n| npcvalue       = 0\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.5\n| notes          = Faz parte do [[Blue Set]] e [[Rare Set]]. Devido a grande variedade, backpacks são consideradas itens colecionáveis e também usadas como decoração.\n<noinclude><p><spoiler>* Recompensa do [[Lightbearer|Lightbearer Event]].\n*Possibilidade de ser obtido como presente do NPC [[Santa Claus]].</spoiler></p>\n{{Veja|Backpacks}}</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7176,
+    "ns": 0,
+    "title": "Orange Backpack",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Orange Backpack\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| imbuement      = 1\n| volume         = 20\n| weight         = 18.00\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| npcvalue       = 0\n| npcprice       = 20\n| buyfrom        = Gorn\n| sellto         = Jogadores.\n| implemented    = 8.5\n| notes          = Devido a grande variedade, backpacks são consideradas itens colecionáveis e também usadas como decoração.\n<noinclude>{{Veja|Backpacks}}</noinclude> \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7177,
+    "ns": 0,
+    "title": "Pirate Backpack",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Pirate Backpack\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| imbuement      = 1\n| volume         = 20\n| weight         = 18.00\n| stackable      = não\n| droppedby      = [[Deadeye Devious]], [[Lethal Lissy]], [[Memory Of A Pirate]], [[Pirate Buccaneer]], [[Pirate Corsair]], [[Ron The Ripper]], [[Sea Captain]].\n| value          = 1 000 - 2 500\n| npcvalue       = 0\n| npcprice       = 0\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.8\n| notes          = Faz parte do [[Pirate Set]] e [[Semi Rare Set]]. Devido a grande variedade, backpacks são consideradas itens colecionáveis e também usadas como decoração.\n<noinclude><p><spoiler>Pode ser obtido na [[Waterfall Quest]] e na [[The Pits of Inferno Quest]].</spoiler></p>{{Veja|Backpacks}}</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7178,
+    "ns": 0,
+    "title": "Purple Backpack",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Purple Backpack\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| imbuement      = 1\n| volume         = 20\n| weight         = 18.00\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| npcvalue       = 0\n| npcprice       = 20\n| buyfrom        = Sarina\n| sellto         = Jogadores.\n| implemented    = 7.2\n| notes          = Devido a grande variedade, backpacks são consideradas itens colecionáveis e também usadas como decoração.\n<noinclude>{{Veja|Backpacks}}</noinclude> \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7179,
+    "ns": 0,
+    "title": "Red Backpack",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Red Backpack\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| imbuement      = 1\n| volume         = 20\n| weight         = 18.00\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| npcvalue       = 0\n| npcprice       = 20\n| buyfrom        = Shiantis\n| sellto         = Jogadores.\n| implemented    = 7.2\n| notes          = Devido a grande variedade, backpacks são consideradas itens colecionáveis e também usadas como decoração.\n<noinclude>{{Veja|Backpacks}}</noinclude> \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7180,
+    "ns": 0,
+    "title": "Santa Backpack",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Santa Backpack\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| imbuement      = 1\n| volume         = 20\n| weight         = 16.50\n| stackable      = não\n| value          = 20 000 - 150 000\n| npcvalue       = 0\n| npcprice       = 75 [[Christmas Token]]s\n| droppedby      = Ninguém.\n| buyfrom        = Ruprecht\n| sellto         = Jogadores.\n| implemented    = 8.54\n| notes          = Uma das mais leves do jogo. Devido a grande variedade, backpacks são consideradas itens colecionáveis e também usadas como decoração.\n<noinclude>{{Veja|Backpacks}}</noinclude> \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7181,
+    "ns": 0,
+    "title": "Yellow Backpack",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Yellow Backpack\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| imbuement      = 1\n| volume         = 20\n| weight         = 18.00\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| npcvalue       = 0\n| npcprice       = 10\n| buyfrom        = Halif\n| sellto         = Jogadores.\n| implemented    = 7.2\n| notes          = Devido a grande variedade, backpacks são consideradas itens colecionáveis e também usadas como decoração.\n<noinclude>{{Veja|Backpacks}}</noinclude> \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7182,
+    "ns": 0,
+    "title": "Jewelled Backpack",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Jewelled Backpack\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| imbuement      = 1\n| volume         = 22\n| weight         = 17.00\n| stackable      = não\n| value          = 5 000 - 15 000\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = [[Crystal Spider]], [[Dark Torturer]], [[Enlightened of the Cult]], [[The Bloodweb]].\n| droppedRaidby  = [[Grandfather Tridian]], [[Mr. Punish]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.6\n| notes          = Pesa 1.00 oz a menos que as mochilas comuns e tem 2 lugares a mais. Devido a grande variedade, backpacks são consideradas itens colecionáveis e também usadas como decoração.\n'''Histórico''': Substituiu automaticamente todos os [[Key Ring]]s.\n<noinclude><p><spoiler>* Pode ser obtida na [[Wrath of the Emperor Quest]].</spoiler></p>\n{{Veja|Backpacks}}</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7185,
+    "ns": 0,
+    "title": "Old and Used Backpack",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Old and Used Backpack\n| flavortext     = A label on the backpack reads: Property of Sam, Thais.\n| itemclass      = Recipientes\n| primarytype    = Itens de Quest\n| imbuement      = 1\n| stackable      = não\n| volume         = 20\n| weight         = 18.00\n| npcvalue       = 0\n| value          = \n| droppedRaidby  = [[Orc]] (somente em Ulderek's Rock).\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.5\n| notes          = Devido a grande variedade, backpacks são consideradas itens colecionáveis e também usadas como decoração.\n<noinclude><p><spoiler>\n* Faz parte da [[Sam's Old Backpack Quest]]. \n* Obtida de spawn raro de [[Orc]] no nordeste da [[Orc Fortress]] ({{mapa|32981,31740,7:2|aqui}}).\n</spoiler></p></noinclude>\n<noinclude>{{Veja|Backpacks}}</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7206,
+    "ns": 0,
+    "title": "Green Bag",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Green Bag\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| secondarytype  = \n| volume         = 8\n| weight         = 8.00\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| npcvalue       = 0\n| npcprice       = 4\n| buyfrom        = Bashira\n| sellto         = Jogadores.\n| implemented    = 7.1\n| notes          = Algumas vezes jogadores usam bags coloridas para decoração de casas.\n<noinclude>{{Veja|Bags}}</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7207,
+    "ns": 0,
+    "title": "Grey Bag",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Grey Bag\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| secondarytype  = \n| volume         = 8\n| weight         = 8.00\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| npcvalue       = 0\n| npcprice       = 4\n| buyfrom        = Bezil, Nezil\n| sellto         = Jogadores.\n| implemented    = 7.1\n| notes          = Algumas vezes jogadores usam bags coloridas para decoração de casas.\n<noinclude>{{Veja|Bags}}</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7208,
+    "ns": 0,
+    "title": "Pirate Bag",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Pirate Bag\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| volume         = 8\n| weight         = 8.00\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 0\n| npcprice       = 20\n| droppedby      = [[Pirate Marauder]], [[Pirate Cutthroat]], [[Pirate Quartermaster]], [[Sea Captain]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.8\n| notes          = Faz parte do [[Pirate Set]]. Algumas vezes jogadores usam bags coloridas para decoração de casas. Mesmo sprite da [[Bag (Ahmet)]] e da [[Suspicious Surprise Bag]].\n<noinclude>{{Veja|Bags}}</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7209,
+    "ns": 0,
+    "title": "Purple Bag",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Purple Bag\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| secondarytype  = \n| volume         = 8\n| weight         = 8.00\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| npcvalue       = 0\n| npcprice       = 5\n| buyfrom        = Sarina\n| sellto         = Jogadores.\n| implemented    = 7.1\n| notes          = Algumas vezes jogadores usam bags coloridas para decoração de casas.\n<noinclude>{{Veja|Bags}}</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7210,
+    "ns": 0,
+    "title": "Red Bag",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Red Bag\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| secondarytype  = \n| volume         = 8\n| weight         = 8.00\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| npcvalue       = 0\n| npcprice       = 5\n| buyfrom        = Shiantis\n| sellto         = Jogadores.\n| implemented    = 7.1\n| notes          = Algumas vezes jogadores usam bags coloridas para decoração de casas.\n<noinclude>{{Veja|Bags}}</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7211,
+    "ns": 0,
+    "title": "Yellow Bag",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Yellow Bag\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| secondarytype  = \n| volume         = 8\n| weight         = 8.00\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| npcvalue       = 0\n| npcprice       = 4\n| buyfrom        = Halif\n| sellto         = Jogadores.\n| implemented    = 7.1\n| notes          = Algumas vezes jogadores usam bags coloridas para decoração de casas.\n<noinclude>{{Veja|Bags}}</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7212,
+    "ns": 0,
+    "title": "Orange Bag",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Orange Bag\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| secondarytype  = \n| volume         = 8\n| weight         = 8.00\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| npcvalue       = 0\n| npcprice       = 5\n| buyfrom        = Gorn\n| sellto         = Jogadores.\n| implemented    = 8.5\n| notes          = Algumas vezes jogadores usam bags coloridas para decoração de casas.\n<noinclude>{{Veja|Bags}}</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7242,
+    "ns": 0,
+    "title": "Jewel Case (Azul)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Jewel Case (Azul)\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| secondarytype  = \n| stackable      = não\n| volume         = 1\n| weight         = 1.70\n| value          = 15 000 - 50 000\n| droppedby      = [[Zugurosh]].\n| droppedRaidby  = [[Massacre]].\n| buyfrom        = Ruprecht\n| sellto         = Jogadores.\n| npcprice       = 25 [[Christmas Token]]s\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7247,
+    "ns": 0,
+    "title": "Parcel",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Parcel\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| secondarytype  = \n| volume         = 10\n| weight         = 18.00\n| stackable      = não\n| value          = 10-15\n| npcprice       = 15\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Olrik, Jakahr, Liane,  Hireling (Trader), Chemar, Chrystal, Murim, Ezean, Rock In A Hard Place, Gnomailion, Ninos, Leonora, Lokur, Kaya, Herbert, Amra, Ray, Wally, Fyodor, Auron, Nelly, Benjamin, Dove, Redward\n| sellto         = Jogadores.\n| notes          = Você só pode enviar 20 Parcels ou [[Letter]]s em 10 minutos, caso ultrapasse, você ficará impedido de enviar por um tempo. O preço baixa para 10 [[gp]] se você completar a [[Postman Quest]]. Tem a mesma aparência de uma [[Package of Potions]] e uma [[Parcel (Watchtower)]].\n\n<div class=\"toccolours mw-collapsible mw-collapsed\" style=\"width:70%; margin: 4px 0px;\">'''Como enviar uma parcel'''<div class=\"mw-collapsible-content\">\n<table><tr><td align=left>\nParcels são usadas para enviar itens para si mesmo ou para outra pessoa. Para enviar uma parcel, você precisa seguir essas instruções:\n\n*Primeiro, você precisa comprar uma parcel vazia de [[NPCs Carteiro]]s (normalmente no ou perto do [[Depot|depósito]]). \n*Para enviar a parcel, ela deve conter uma [[Label]] com o nome do jogador que irá recebê-la.\n\nAssim que tiver preenchido com tudo o que você quer enviar, simplesmente solte-a em uma [[mailbox]]. Você pode enviar uma parcel ainda que haja itens estocados sobre a caixa de correio. Além disso, verifique se a caixa de correio está \"utilizável\". Algumas caixas de correio especiais em [[Tibia (Continente)|Mainland]] estão indisponíveis, o que significa que você não pode usá-las para enviar parcels ou letters. Por exemplo a caixa de correio de [[Vega]] em '''Santa's Home'''.\n----\n'''CUIDADO!'''\n\nCertifique-se de que o nome do personagem a receber a parcel esteja correto na [[label]]. Caso você escreva o nome errado, a parcel vai \"cair\" na caixa de correio, ficará sobre ela e algum jogador oportunista pode pegar. \n\n[[Arquivo:Stamped Parcel.gif|left]] Esteja atento, pois você não pode reutilizar uma parcel. Uma vez enviada pelo correios, ela se tornará uma [[Stamped Parcel]] e não pode ser enviada novamente.\n</td></tr></table></div></div>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7249,
+    "ns": 0,
+    "title": "Present",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Present\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| secondarytype  = \n| volume         = 5\n| stackable      = não\n| weight         = 6.00\n| value          = 10\n| npcvalue       = 0\n| npcprice       = 10\n| droppedby      = Ninguém.\n| buyfrom        = Bashira, Ahmet, Sarina, Hireling (Apprentice), Halif, Beatrice, Timur, Rock In A Hard Place, Valentina, Gladys, Bezil, Nezil, Tefrit, Red Lilly, Asphota, Maun, Nienna, Perod, Maro, Bertha, Gorn, Lubo, Zora, Shiantis, Gree Dee\n| sellto         = Jogadores.\n| notes          = Tem a mesma aparência de um [[Present (Postman)]] e um [[Present (Explosive)]].<br />\nUm bom item para embalar presentes para os amigos.<br />\n<noinclude><p><spoiler>* Recompensa da [[Present Quest]] em [[Rookgaard]].\n*Pode ser obtido como recompensa da [[The Annihilator Quest]].\n*Pode ser obtido como recompensa da [[Barbarian Arena Quest]]. \n*Possibilidade de ser obtido ao usar um [[Unrealized Dream]] próximo ao [[The Dreamcatcher Device]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7251,
+    "ns": 0,
+    "title": "Stamped Parcel",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Stamped Parcel\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| secondarytype  = \n| volume         = 10\n| weight         = 18.00\n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          =[[Parcel]] usado, serve para subir em lugares ou trapar criaturas para treino e etc.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 12551,
+    "ns": 0,
+    "title": "Treasure Chest (Ornamented)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Treasure Chest (Ornamented)\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| secondarytype  = \n| stackable      = não\n| volume         = 10\n| weight         = 95.00\n| value          = 1 000\n| npcvalue       = 0\n| npcprice       = 1 000\n| droppedby      = Ninguém.\n| buyfrom        = Ukea, Feizuhl, Nydala, Hireling (Apprentice), Yoem, Hofech, Edvard, Eddy, Inkaef, Iwar, Peggy, Nicholas, Vera, Janz, Gamon, Borkas, Dorbin\n| sellto         = Jogadores.\n| notes          = Pode ser visto geralmente com outros itens valiosos e raros, como no [[banco]] e na [[Explorer Society]] de [[Liberty Bay]].<br />No [[Updates/10.1|Update 10.1]] ocorreu um erro onde era possível obtê-lo em [[Drefia]] (veja [http://portaltibia.com.br/bug-em-drefia/ Bug em Drefia]). Isto foi corrigido com o server save de 18 de julho de 2013 e a caixa passou a ser comercializada em [[NPCs Comerciante de Móveis|lojas de móveis]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 13859,
+    "ns": 0,
+    "title": "Plum Tree",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Object|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Plum Tree\n| objectclass    = Árvores\n| secondarytype  = Recipientes \n| attrib         = Nenhum.\n| walkable       = não\n| mover          = não\n| pegar          = não\n| location       = Espalhadas em vários lugares do [[Tibia]].\n| notes          = É uma das árvores mais comuns do jogo. <noinclude><p><spoiler>Uma pode ser aberta como um [[recipiente]] e nela há [[Gold|dinheiro]] e [[Red Apple|maças]] ({{mapa|32550,31828,6:2|aqui}}). O conteúdo ressurge a cada [[Server Save]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25324,
+    "ns": 0,
+    "title": "Mushroom Backpack",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Mushroom Backpack\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| imbuement      = 1\n| weight         = 18.00\n| volume         = 20\n| stackable      = não\n| value          = Negociável\n| droppedby      = [[Chasm Spawn]], [[Diremaw]], [[Hideous Fungus]], [[Humongous Fungus]], [[Moonspawn Blightspitter]].\n| npcvalue       = 0\n| npcprice       = 15 [[Minor Crystalline Token]]\n| buyfrom        = Gnomally\n| sellto         = Jogadores.\n| implemented    = 9.6\n| notes          = Faz parte do [[Gill Set]]. Devido a grande variedade, backpacks são consideradas itens colecionáveis e também usadas como decoração.\n<noinclude>{{Veja|Backpacks}}</noinclude> \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 29328,
+    "ns": 0,
+    "title": "Zaoan Chess Box",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Zaoan Chess Box\n| flavortext     = This chess box is made of jade and obsidian. It will hold a full set of 32 Zaoan chess figures.\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| weight         = 38.00\n| stackable      = não\n| volume         = 32\n| npcvalue       = 0\n| npcprice       = 0\n| value          = 60 000 - 100 000\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.83\n| notes          = Este é o recipiente com a maior capacidade dentro jogo, ele tem 32 espaços, porém devido a seu grande peso é usado mais como decoração. Veja sobre as peças que compõem o set em [[Zaoan Chess]].<noinclude><p><spoiler>Este item é a recompensa da [[World Quest]] [[The Colours of Magic]]. Você só pode pegar uma Zaoan Chess Box por [[personagem]].</spoiler></p></noinclude>\n<gallery>\narquivo:Zaoanchessbox.png| Um \"Zaoan Chess Box\" Completo nas mãos do jogador {{character|Phooenix}}.\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 30051,
+    "ns": 0,
+    "title": "Pannier Backpack",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Pannier Backpack\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| imbuement      = 1\n| volume         = 20\n| weight         = 18.00\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| npcvalue       = 0\n| npcprice       = 0\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.1\n| notes          = Devido a grande variedade, backpacks são consideradas itens colecionáveis e também usadas como decoração.\n<noinclude><p><spoiler>* Possibilidade ser obtida na [[The Repenters Quest]].</spoiler></p>\n{{Veja|Backpacks}}</noinclude> \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 34456,
+    "ns": 0,
+    "title": "Shopping Bag",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Shopping Bag\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| secondarytype  = \n| implemented    = 10.55\n| volume         = 20\n| weight         = 18.00\n| value          = 20\n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Pode ser comprada em qualquer npc, desde que esteja habilitada a opção de comprar itens dentro de backpacks no [[NPC Trade|trade do NPC]]. Para habilitar a opção, clique com o botão direito sobre o item que deseja comprar e selecione a opção \"buy with backpacks\", assim, quando você comprar o item, ele virá dentro de uma shopping bag. Para desativar selecione \"buy no backpacks\".\n\n{{DASH|'''ATENÇÃO:''' Habilitar essa opção lhe custará 20gps a mais no valor do item que irá ser comprado.}}\n<noinclude>{{Veja|Bags}}</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 36301,
+    "ns": 0,
+    "title": "Wolf Backpack",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Wolf Backpack\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| imbuement      = 1\n| volume         = 20\n| weight         = 18.00\n| stackable      = não\n| droppedby      = [[Black Vixen]], [[Bloodback]], [[Darkfang]], [[Shadowpelt]], [[Sharpclaw]].\n| droppedRaidby  = [[Feroxa (Mortal)]].\n| npcvalue       = 0\n| npcprice       = 0\n| value          = 500 000 - 2 000 000\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.80\n| notes          = Devido a grande variedade, backpacks são consideradas itens colecionáveis e também usadas como decoração.\n<noinclude>{{Veja|Backpacks}}</noinclude> \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 39333,
+    "ns": 0,
+    "title": "Pillow Backpack",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Pillow Backpack\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| volume         = 24\n| weight         = 14.50\n| stackable      = não\n| imbuement      = 1\n| value          = 300 000 - 4 000 000\n| npcvalue       = 0\n| droppedby      = [[Lloyd]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Essa é a segunda melhor backpack do jogo, pesando apenas 14.50 oz e tendo 24 espaços.\n<noinclude>{{Veja|Backpacks}}</noinclude>\n| implemented    = 11.02\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 39864,
+    "ns": 0,
+    "title": "Treasure Chest (Marrom)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude></noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Treasure Chest (Marrom)\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| stackable      = não\n| volume         = 10\n| weight         = 95.00\n| value          = Negociável\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.02\n| notes          = <noinclude><p><spoiler>*Pode ser encontrado na sala de recompensas da [[The First Dragon Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 46683,
+    "ns": 0,
+    "title": "Winged Backpack",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Winged Backpack\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| imbuement      = 1\n| volume         = 24\n| weight         = 15.00\n| stackable      = não\n| implemented    = 12.20\n| npcvalue       = \n| npcprice       = \n| droppedby      = [[Urmahlullu the Weakened]]\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 50569,
+    "ns": 0,
+    "title": "Raccoon Backpack",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Raccoon Backpack\n| itemclass     = Itens de Decoração\n| primarytype   = Recipientes\n| imbuement     = 1\n| weight        = 18.00\n| stackable     = não\n| volume        = 20\n| npcvalue      = 0\n| npcprice      = 15 000 [[Trust Points]]\n| droppedby     = Ninguém.\n| buyfrom       = Tik'hi Tak'he\n| sellto        = Jogadores.\n| implemented   = 12.60\n| value         = \n| notes         = \n{{Veja|Backpacks}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 56094,
+    "ns": 0,
+    "title": "Lilypad Backpack",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Lilypad Backpack\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| imbuement      = 1\n| volume         = 26\n| weight         = 15.00\n| stackable      = não\n| implemented    = 12.90\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = <noinclude><p><spoiler>* Recompensa da [[Within the Tides Quest]].</spoiler></p></noinclude>{{Veja|Backpacks}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 62363,
+    "ns": 0,
+    "title": "Peppermint Backpack",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Peppermint Backpack\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| imbuement      = 1\n| volume         = 24\n| weight         = 15.00\n| stackable      = não\n| droppedby      = [[Sugar Daddy]].\n| npcvalue       = 0\n| npcprice       = 0\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 13.40.54ea79\n| value          = \n| notes          = \n<noinclude>{{Veja|Backpacks}}</noinclude> \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 68703,
+    "ns": 0,
+    "title": "Sailor's Backpack",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Sailor's Backpack\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| implemented    = 15.32.fc9100\n| imbuement      = 1\n| volume         = 24\n| weight         = 15.00\n| stackable      = não\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| npcprice       = 90 [[Event Point]]s\n| buyfrom        = Proprietor Piers\n| sellto         = Jogadores.\n| notes          = \n<noinclude>{{Veja|Backpacks}}</noinclude> \n}}"
+       }
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

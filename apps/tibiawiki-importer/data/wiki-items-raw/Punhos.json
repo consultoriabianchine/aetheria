@@ -1,0 +1,582 @@
+{
+ "query": {
+  "pages": [
+   {
+    "pageid": 6122,
+    "ns": 0,
+    "title": "Drachaku",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Drachaku\n| levelrequired  = 90\n| enchantable    = não\n| vocrequired    = [[Monk]]s\n| itemclass      = Armas\n| primarytype    = Punhos\n| type           = Punho\n| hands          = Duas\n| attack         = 39\n| defense        = 16\n| elemental_bond = Energy\n| weight         = 60.00\n| imbuement      = 2\n| classificacao  = 2\n| max_tier       = 2\n| stackable      = não\n| value          = 100 000+\n| droppedby      = [[Soul of Dragonking Zyrtarch]].\n| npcvalue       = 10 000\n| npcprice       = 0\n| buyfrom        = Jogadores.\n| sellto         = Esrik\n| implemented    = 8.54\n| elemental_bond = Energy\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Fist||+3.00% do seu Fist Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Fist||+3.00% do seu Fist Fighting como extra damage para auto-attacks}}<br/>{{Weapon Perk|Type_Life_On_Kill||+20 hit points on kill}}\n| perk3          = {{Weapon Perk|Type_Auto_Atk_Critical_Chance||+2.00% critical hit chance para auto-attacks}}<br/>{{Weapon Perk|Type_Mana_On_Kill||+10 mana on kill}}\n| perk4          = {{Weapon Perk|Type_Bestiary_Dmg_Dragon||+3.00% damage contra Dragon}}\n| notes          = Apesar de ser conhecido desde 2009, esse item só pôde ser obtido no jogo com o [[Updates/11.02|update 11.02]].\n<noinclude><p><spoiler>* Para vendê-lo ao NPC é preciso ter entregue 9 [[Tome of Knowledge|tomos]] na [[Tomes of Knowledge Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6213,
+    "ns": 0,
+    "title": "Staff",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Staff\n| levelrequired  = 15\n| enchantable    = não\n| itemclass      = Armas\n| primarytype    = Punhos\n| hands          = Duas\n| type           = Punho\n| attack         = 22\n| defense        = 14\n| weight         = 38.00\n| classificacao  = 1\n| max_tier       = 1\n| stackable      = não\n| elemental_bond = Earth\n| value          = 30 - 50\n| npcvalue       = 1\n| npcprice       = 40\n| droppedby      = [[Barbarian Brutetamer]], [[Blemished Spawn]], [[Foam Stalker]], [[Monk]].\n| droppedRaidby  = [[Fernfang]].\n| buyfrom        = Shanar, Gamel\n| sellto         = H.L.\n| perk1          = {{Weapon Perk|Type_Defence||+1 defence}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Fist||+4.00% do seu Fist Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Auto_Atk_Critical_Chance||+1.00% critical hit chance para auto-attacks}}<br/>{{Weapon Perk|Type_Life_On_Kill||+5 hit points on kill}}\n| notes          = Tem o mesmo sprite da [[Staff (Simon)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 27589,
+    "ns": 0,
+    "title": "Pair of Iron Fists",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Pair of Iron Fists\n| flavortext     = \n| enchantable    = não\n| vocrequired    = [[Monk]]s\n| levelrequired  = 80\n| itemclass      = Armas\n| primarytype    = Punhos\n| type           = Punho\n| attack         = 38\n| defense        = 15\n| elemental_bond = Physical\n| weight         = 45.00\n| imbuement      = 2\n| classificacao  = 2\n| max_tier       = 2\n| npcvalue       = 4 000\n| hands          = Duas\n| stackable      = não\n| droppedby      = [[Lost Basher]], [[Ogre Ruffian]], [[Orclops Doomhauler]], [[Orclops Ravager]], [[Shulgrax]], [[The False God]].\n| buyfrom        = Jogadores.\n| value          = 3 000 - 5 000\n| sellto         = Rashid\n| implemented    = 9.8\n| perk1          = {{Weapon Perk|Type_Defence||+1 defence}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Fist||+4.00% do seu Fist Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Auto_Atk_Critical_Chance||+1.00% critical hit chance para auto-attacks}}<br/>{{Weapon Perk|Type_Life_On_Kill||+5 hit points on kill}}\n| notes          = Antes do update da vocação do Monk era considerado uma clava e não podia ser usado com o [[skill]] de [[Fist Fighting]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 63872,
+    "ns": 0,
+    "title": "Crude Umbral Katar",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Crude Umbral Katar\n| itemclass      = Armas\n| primarytype    = Punhos\n| type           = Punho\n| levelrequired  = 75\n| vocrequired    = [[Monk]]s\n| imbuement      = \n| classificacao  = 2\n| max_tier       = 2\n| hands          = Duas\n| skillboost     = [[Fist Fighting]] +1\n| resist         = \n| attack         = 39\n| defense        = 16\n| defensemod     = \n| elemental_bond = Physical\n| weight         = 79.00\n| value          = \n| npcprice       = \n| droppedby      = Ninguém.\n| droppedRaidby  = [[Gaz'Haragoth]]\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.00.249ccc\n| perk1          = {{Weapon Perk|Type_Defence||+1 defence}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Fist||+8.00% do seu Fist Fighting como extra damage para auto-attacks}}<br/>{{Weapon Perk|Type_Life_On_Kill||+15 hit points on kill}}\n| perk3          = {{Weapon Perk|Type_Bestiary_Dmg_Humanoid||+3.00% damage contra Humanoid}}<br/>{{Weapon Perk|Type_Auto_Atk_Critical_Chance||+1.50% critical hit chance para auto-attacks}}\n| notes          = Esta arma pode ser feita e melhorada por jogadores em um complexo processo de captação e materialização de sonhos, conhecido como [[Umbral Creation]].\n<noinclude><p><spoiler>* Pode ser obtido trocando 1 [[Dream Matter]] e 20 [[Cluster of Solace|Clusters of Solace]] com o NPC [[Eruaran]]. Existe a chance de falhar.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 63873,
+    "ns": 0,
+    "title": "Nunchaku of Destruction",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Nunchaku of Destruction\n| itemclass      = Armas\n| primarytype    = Punhos\n| levelrequired  = 200\n| vocrequired    = [[Monk]]s\n| imbuement      = 3\n| classificacao  = 2\n| max_tier       = 2\n| hands          = Duas\n| type           = Punhos\n| attack         = 40\n| defense        = 17\n| weight         = 70.00\n| value          = Negociável\n| npcprice       = 50 [[Gold Token]]s\n| droppedby      = Ninguém.\n| buyfrom        = Yana\n| sellto         = Jogadores.\n| implemented    = 15.00.249ccc\n| perk1          = {{Weapon Perk|Type_Auto_Atk_Critical_Dmg||+10.00% critical extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Fist||+15.00% do seu Fist Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Powerful_Foe_Bonus||+3.00% damage contra bosses e Sinister Embraced}}<br/>{{Weapon Perk|Type_Auto_Atk_Critical_Chance||+3.50% critical hit chance para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Skill_Fist||+1 Fist Fighting}}\n| perk5          = {{Weapon Perk|Type_Perc_Spell_Dmg_Fist||+10.00% do seu Fist Fighting como extra damage para suas spells}}\n| notes          = \n| elemental_bond = Physical\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 63874,
+    "ns": 0,
+    "title": "Sanguine Claws",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Sanguine Claws\n| flavortext     = \n| levelrequired  = 600\n| enchantable    = não\n| vocrequired    = [[Monk]]s\n| itemclass      = Armas\n| primarytype    = Punhos\n| type           = Punho\n| hands          = Duas\n| skillboost     = [[Fist Fighting]] +4, [[Magic Level]] +2\n| resist         = \n| modificadores  = \n| augments       = \n| imbuement      = 3\n| classificacao  = 4\n| max_tier       = 10\n| attack         = 45\n| elemental_bond = Earth\n| elementattack  = \n| defense        = 21\n| defensemod     = \n| weight         = 71.00\n| value          = \n| droppedby      = [[Bakragore]], [[Chagorz]], [[Ichgahal]], [[Murcion]] e [[Vemiath]], dentro de uma [[Bag You Covet]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.00.249ccc\n| perk1          = {{Weapon Perk|Type_Skill_Fist||+1 Fist Fighting}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Fist||+5.00% do seu Fist Fighting como extra damage para auto-attacks}}<br/>{{Weapon Perk|Spell_Sweeping_Takedown|Life_Leech|+5% life leech para Sweeping Takedown}}<br/>{{Weapon Perk|Type_Critical_Dmg||+4.00% critical extra damage}}\n| perk3          = {{Weapon Perk|Type_Powerful_Foe_Bonus||+3.00% damage contra bosses e Sinister Embraced}}<br/>{{Weapon Perk|Spell_Sweeping_Takedown|Mana_Leech|+2% mana leech para Sweeping Takedown}}<br/>{{Weapon Perk|Type_Critical_Dmg||+8.00% critical extra damage}}\n| perk4          = {{Weapon Perk|Spell_Sweeping_Takedown|Critical_Dmg|+20% critical extra damage para Sweeping Takedown}}<br/>{{Weapon Perk|Spell_Sweeping_Takedown|Damage|+4% base damage para Sweeping Takedown}}\n| perk5          = {{Weapon Perk|Type_Perc_Spell_Dmg_Fist||+10.00% do seu Fist Fighting como extra damage para suas spells}}<br/>{{Weapon Perk|Spell_Sweeping_Takedown|Critical_Chance|+3% critical hit chance para Sweeping Takedown}}<br/>{{Weapon Perk|Type_Attack||+1 attack}}\n| perk6          = {{Weapon Perk|Type_Critical_Dmg||+10.00% critical extra damage}}<br/>{{Weapon Perk|Type_Perc_Spell_Heal_Magic||+100.00% do seu Magic Level como extra healing para suas spells}}\n| perk7          = {{Weapon Perk|Type_Critical_Chance||+2.00% critical hit chance}}\n| notes          =\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64000,
+    "ns": 0,
+    "title": "Grand Sanguine Claws",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Grand Sanguine Claws\n| flavortext     = \n| levelrequired  = 600\n| enchantable    = não\n| vocrequired    = [[Monk]]s\n| itemclass      = Armas\n| primarytype    = Punhos\n| type           = Punho\n| hands          = Duas\n| skillboost     = [[Fist Fighting]] +4, [[Magic Level]] +2\n| resist         = \n| modificadores  = \n| augments       = \n| imbuement      = 3\n| classificacao  = 4\n| max_tier       = 10\n| attack         = 45\n| elemental_bond = Earth\n| elementattack  = \n| defense        = 21\n| defensemod     = \n| weight         = 69.00\n| value          = \n| droppedby      = [[Bakragore]] dentro de uma [[Bag You Covet]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.00.249ccc\n| perk1          = {{Weapon Perk|Type_Skill_Fist||+1 Fist Fighting}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Fist||+5.00% do seu Fist Fighting como extra damage para auto-attacks}}<br/>{{Weapon Perk|Spell_Sweeping_Takedown|Life_Leech|+5% life leech para Sweeping Takedown}}<br/>{{Weapon Perk|Type_Critical_Dmg||+4.00% critical extra damage}}\n| perk3          = {{Weapon Perk|Type_Powerful_Foe_Bonus||+3.00% damage contra bosses e Sinister Embraced}}<br/>{{Weapon Perk|Spell_Sweeping_Takedown|Mana_Leech|+4% mana leech para Sweeping Takedown}}<br/>{{Weapon Perk|Type_Critical_Dmg||+8.00% critical extra damage}}\n| perk4          = {{Weapon Perk|Spell_Sweeping_Takedown|Critical_Dmg|+40% critical extra damage para Sweeping Takedown}}<br/>{{Weapon Perk|Spell_Sweeping_Takedown|Damage|+8% base damage para Sweeping Takedown}}\n| perk5          = {{Weapon Perk|Type_Perc_Spell_Dmg_Fist||+10.00% do seu Fist Fighting como extra damage para suas spells}}<br/>{{Weapon Perk|Spell_Sweeping_Takedown|Critical_Chance|+3% critical hit chance para Sweeping Takedown}}<br/>{{Weapon Perk|Type_Attack||+1 attack}}\n| perk6          = {{Weapon Perk|Type_Critical_Dmg||+10.00% critical extra damage}}<br/>{{Weapon Perk|Type_Perc_Spell_Heal_Magic||+100.00% do seu Magic Level como extra healing para suas spells}}\n| perk7          = {{Weapon Perk|Type_Critical_Chance||+3.00% critical hit chance}}\n| notes          = <spoiler>* Este item só pode ser obtido do [[Bakragore]] caso lute contra o boss utilizando as ''Essences'' (As essences existentes são: [[The Essence of Chagorz|Chagorz]], [[The Essence of Ichgahal|Ichgahal]], [[The Essence of Murcion|Murcion]] ou [[The Essence of Vemiath|Vemiath]]).</spoiler>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64003,
+    "ns": 0,
+    "title": "Soulkamas",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Soulkamas\n| flavortext     = \n| levelrequired  = 400\n| enchantable    = não\n| vocrequired    = [[Monk]]s\n| itemclass      = Armas\n| primarytype    = Punhos\n| type           = Machado\n| hands          = Duas\n| skillboost     = [[Fist Fighting]] +4, [[Magic Level]] +1\n| resist         = \n| modificadores  = \n| imbuement      = 3\n| classificacao  = 4\n| max_tier       = 10\n| attack         = 44\n| elemental_bond = Energy\n| elementattack  = \n| defense        = 21\n| defensemod     = \n| weight         = 84.00\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.00.249ccc\n| perk1          = {{Weapon Perk|Type_Skill_Fist||+1 Fist Fighting}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Fist||+5.00% do seu Fist Fighting como extra damage para auto-attacks}}<br/>{{Weapon Perk|Spell_Chained_Penance|Life_Leech|+5% life leech para Chained Penance}}<br/>{{Weapon Perk|Type_Critical_Dmg||+4.00% critical extra damage}}\n| perk3          = {{Weapon Perk|Type_Bestiary_Dmg_Inkborn||+3.00% damage contra Inkborn}}<br/>{{Weapon Perk|Spell_Chained_Penance|Mana_Leech|+2% mana leech para Chained Penance}}<br/>{{Weapon Perk|Type_Critical_Dmg||+6.00% critical extra damage}}\n| perk4          = {{Weapon Perk|Spell_Chained_Penance|Critical_Dmg|+20% critical extra damage para Chained Penance}}<br/>{{Weapon Perk|Spell_Chained_Penance|Damage|+3.5% base damage para Chained Penance}}\n| perk5          = {{Weapon Perk|Type_Perc_Spell_Dmg_Fist||+7.50% do seu Fist Fighting como extra damage para suas spells}}<br/>{{Weapon Perk|Spell_Chained_Penance|Critical_Chance|+1.5% critical hit chance para Chained Penance}}<br/>{{Weapon Perk|Type_Attack||+1 attack}}\n| perk6          = {{Weapon Perk|Type_Critical_Dmg||+10.00% critical extra damage}}<br/>{{Weapon Perk|Type_Mana_On_Kill||+20 mana on kill}}\n| perk7          = {{Weapon Perk|Type_Critical_Chance||+1.00% critical hit chance}}\n| notes          = <noinclude><p><spoiler>* Possibilidade de ser obtido ao usar um [[Bag You Desire]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64012,
+    "ns": 0,
+    "title": "Naga Katar",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Naga Katar\n| flavortext     = \n| levelrequired  = 300\n| enchantable    = não\n| vocrequired    = [[Monk]]s\n| itemclass      = Armas\n| primarytype    = Punhos\n| type           = Punho\n| hands          = Duas\n| skillboost     = [[Fist Fighting]] +3, [[Magic Level]] +1\n| resist         = \n| modificadores  = \n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| attack         = 43\n| elemental_bond = Earth\n| elementattack  =\n| defense        = 21\n| defensemod     = \n| weight         = 60.00\n| value          =\n| droppedby      = [[Timira the Many-Headed]]\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.00.249ccc\n| perk1          = {{Weapon Perk|Type_Defence||+1 defence}}\n| perk2          = {{Weapon Perk|Type_Life_On_Kill||+30 hit points on kill}}<br/>{{Weapon Perk|Type_Mana_On_Kill||+15 mana on kill}}\n| perk3          = {{Weapon Perk|Type_Perc_Auto_Atk_Magic||+12.00% do seu Magic Level como extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Skill_Magic||+1 Magic Level}}<br/>{{Weapon Perk|Type_Bestiary_Dmg_Reptile||+3.00% damage contra Reptile}}<br/>{{Weapon Perk|Type_Attack||+1 attack}}\n| perk5          = {{Weapon Perk|Type_Perc_Spell_Dmg_Magic||+12.00% do seu Magic Level como extra damage para suas spells}}\n| notes          = Este item também pode ser obtido nos [[Ornamented Chest]]s, encontrados durante a luta contra o boss [[Timira the Many-Headed]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64020,
+    "ns": 0,
+    "title": "Falcon Sai",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Falcon Sai\n| itemclass      = Armas\n| primarytype    = Punhos\n| type           = Punho\n| levelrequired  = 300\n| vocrequired    = [[Monk]]s\n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| hands          = Duas\n| skillboost     = [[Fist Fighting]] +4\n| resist         = \n| attack         = 43\n| defense        = 20\n| defensemod     = \n| elemental_bond = Physical\n| weight         = 82.00\n| value          = \n| npcprice       = \n| droppedby      = [[Grand Master Oberon]], [[Grand Chaplain Gaunder]]\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.00.249ccc\n| perk1          = {{Weapon Perk|Type_Life_Leech||+10.00% life leech}}\n| perk2          = {{Weapon Perk|Type_Perc_Spell_Dmg_Shield||+15.00% do seu Shielding como extra damage para suas spells}}<br/>{{Weapon Perk|Type_Perc_Spell_Heal_Shield||+15.00% do seu Shielding como extra healing para suas spells}}\n| perk3          = {{Weapon Perk|Type_Life_Leech||+4.00% life leech}}<br/>{{Weapon Perk|Spell_Flurry_of_Blows|Critical_Dmg|+10% critical extra damage para Flurry of Blows}}<br/>{{Weapon Perk|Spell_Flurry_of_Blows|Life_Leech|+5% life leech para Flurry of Blows}}\n| perk4          = {{Weapon Perk|Spell_Flurry_of_Blows|Critical_Chance|+1% critical hit chance para Flurry of Blows}}<br/>{{Weapon Perk|Type_Bestiary_Dmg_Bird||+5.00% damage contra Bird}}<br/>{{Weapon Perk|Type_Perc_Spell_Dmg_Shield||+20.00% do seu Shielding como extra damage para suas spells}}\n| perk5          = {{Weapon Perk|Type_Critical_Dmg||+5.00% critical extra damage}}\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64023,
+    "ns": 0,
+    "title": "Lion Claws",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Lion Claws\n| flavortext     = \n| itemclass      = Punhos\n| primarytype    = Punho\n| levelrequired  = 270\n| vocrequired    = [[Monk]]s\n| primarytype    = Punhos\n| type           = Punho\n| enchantable    = não\n| enchanted      = não\n| hands          = Duas\n| skillboost     = [[Fist Fighting]] +4\n| modificadores  = [[Critical Hit|Critical]] hit chance +5%\n| attack         = 43\n| elementattack  = \n| elemental_bond = Energy\n| defense        = 19\n| defensemod     = \n| weight         = 78.00\n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| droppedby      = [[Ancient Lion Knight]], [[Drume]].\n| value          = Negociável\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.00.249ccc\n| perk1          = {{Weapon Perk|Type_Critical_Dmg||+13.00% critical extra damage}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Fist||+8.00% do seu Fist Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Critical_Dmg||+6.00% critical extra damage}}<br/>{{Weapon Perk|Spell_Flurry_of_Blows|Life_Leech|+5% life leech para Flurry of Blows}}<br/>{{Weapon Perk|Spell_Flurry_of_Blows|Mana_Leech|+3% mana leech para Flurry of Blows}}\n| perk4          = {{Weapon Perk|Spell_Flurry_of_Blows|Critical_Chance|+1% critical hit chance para Flurry of Blows}}<br/>{{Weapon Perk|Type_Bestiary_Dmg_Lycanthrope||+3.00% damage contra Lycanthrope}}<br/>{{Weapon Perk|Type_Perc_Spell_Heal_Fist||+10.00% do seu Fist Fighting como extra healing para suas spells}}\n| perk5          = {{Weapon Perk|Type_Critical_Dmg||+5.00% critical extra damage}}\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64037,
+    "ns": 0,
+    "title": "Umbral Katar",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Umbral Katar\n| itemclass      = Armas\n| primarytype    = Punhos\n| type           = Punho\n| levelrequired  = 120\n| vocrequired    = [[Monk]]s\n| imbuement      = 1\n| classificacao  = 3\n| max_tier       = 3\n| hands          = Duas\n| skillboost     = [[Fist Fighting]] +2\n| resist         = \n| attack         = 40\n| defense        = 17\n| defensemod     = \n| elemental_bond = Physical\n| weight         = 74.00\n| value          = \n| npcprice       = \n| droppedby      = Ninguém.\n| droppedRaidby  = [[Gaz'Haragoth]]\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.00.249ccc\n| perk1          = {{Weapon Perk|Type_Defence||+1 defence}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Fist||+12.00% do seu Fist Fighting como extra damage para auto-attacks}}<br/>{{Weapon Perk|Type_Life_On_Kill||+25 hit points on kill}}\n| perk3          = {{Weapon Perk|Type_Bestiary_Dmg_Humanoid||+3.00% damage contra Humanoid}}<br/>{{Weapon Perk|Type_Auto_Atk_Critical_Chance||+2.00% critical hit chance para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Spell_Dmg_Fist||+5.00% do seu Fist Fighting como extra damage para suas spells}}<br/>{{Weapon Perk|Type_Mana_On_Kill||+15 mana on kill}}\n| notes          = Este é um [[Crude Umbral Katar]] aperfeiçoado. Se o jogador quiser, ele pode tentar transformá-lo em uma versão \"Umbral Master\" no arriscado processo conhecido como [[Umbral Creation]].\n<noinclude><p><spoiler>* Pode ser obtido trocando 1 [[Crude Umbral Katar]] e 75 [[Cluster of Solace|Clusters of Solace]] com o NPC [[Eruaran]]. Existe a chance de falhar.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64042,
+    "ns": 0,
+    "title": "Umbral Master Katar",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Umbral Master Katar\n| itemclass      = Armas\n| primarytype    = Punhos\n| type           = Punho\n| levelrequired  = 250\n| vocrequired    = [[Monk]]s\n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| hands          = Duas\n| skillboost     = [[Fist Fighting]] +3\n| resist         = \n| attack         = 41\n| defense        = 18\n| defensemod     = \n| elemental_bond = Physical\n| weight         = 69.00\n| value          = \n| npcprice       = \n| droppedby      = Ninguém.\n| droppedRaidby  = [[Gaz'Haragoth]]\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.00.249ccc\n| perk1          = {{Weapon Perk|Type_Defence||+1 defence}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Fist||+16.00% do seu Fist Fighting como extra damage para auto-attacks}}<br/>{{Weapon Perk|Type_Life_On_Kill||+40 hit points on kill}}\n| perk3          = {{Weapon Perk|Type_Bestiary_Dmg_Humanoid||+3.00% damage contra Humanoid}}<br/>{{Weapon Perk|Type_Auto_Atk_Critical_Chance||+3.00% critical hit chance para auto-attacks}}\n| perk4          = {{Weapon Perk|Type_Perc_Spell_Dmg_Fist||+5.00% do seu Fist Fighting como extra damage para suas spells}}<br/>{{Weapon Perk|Type_Mana_On_Kill||+20 mana on kill}}\n| perk5          = {{Weapon Perk|Type_Perc_Spell_Dmg_Fist||+15.00% do seu Fist Fighting como extra damage para suas spells}}\n| notes          = Esta arma pode ser feita por jogadores em um complexo processo de captação e materialização de sonhos, conhecido como [[Umbral Creation]].\n\n<noinclude><p><spoiler>*Pode ser obtida trocando 1 [[Umbral Katar]] e 150 [[Cluster of Solace|Clusters of Solace]] com o NPC [[Eruaran]]. Existe a chance de falhar. \n*[[Arquivo:achievement.gif]] Ao conseguir transformar uma [[Umbral Katar]] para estágio \"Master\", você receberá o achievement \"'''{{achievement|Umbral Redeemer}}'''\".\n*[[Arquivo:Achievement.gif]] Ao elevar todos os itens '''Umbral''' para '''Umbral Master''', você receberá o achievement \"'''{{Achievement|Umbral Master}}'''\".</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64049,
+    "ns": 0,
+    "title": "Light Jo Staff",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Light Jo Staff\n| itemclass      = Armas\n| primarytype    = Punhos\n| type           = Punho\n| levelrequired  = 0\n| vocrequired    = [[Monk]]s\n| imbuement      = \n| classificacao  = \n| max_tier       = \n| hands          = Duas\n| skillboost     = [[Fist Fighting]] +1\n| resist         = \n| attack         = 10\n| defense        = 6\n| defensemod     = \n| elemental_bond = Energy\n| weight         = 17.00\n| value          = \n| npcprice       = 250\n| droppedby      = Ninguém.\n| buyfrom        = Enpa-Deia Pema\n| sellto         =\n| mercado        = sim\n| implemented    = 15.00.249ccc\n| perk1          = {{Weapon Perk|Type_Defence||+1 defence}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Fist||+4.00% do seu Fist Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Auto_Atk_Critical_Chance||+1.00% critical hit chance para auto-attacks}}<br/>{{Weapon Perk|Type_Life_On_Kill||+5 hit points on kill}}\n| notes          = * Faz parte do [[Set Inicial]] de [[Monk]]. \n* Após o [[Update de Newhaven]], este item passou a ser vendido em NPCs no continente principal e pode ser comercializado no [[Mercado]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64051,
+    "ns": 0,
+    "title": "Cobra Bo",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Cobra Bo\n| itemclass      = Armas\n| primarytype    = Punhos\n| type           = Punho\n| levelrequired  = 250\n| vocrequired    = [[Monk]]s\n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| hands          = Duas\n| skillboost     = [[Fist Fighting]] +4\n| resist         = \n| attack         = 42\n| defense        = 20\n| defensemod     = \n| elemental_bond = Earth\n| weight         = 56.00\n| value          = \n| npcprice       = \n| droppedby      = [[Scarlett Etzel]]\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.00.249ccc\n| perk1          = {{Weapon Perk|Type_Life_Leech||+10.00% life leech}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Fist||+8.00% do seu Fist Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Life_Leech||+4.00% life leech}}<br/>{{Weapon Perk|Spell_Flurry_of_Blows|Critical_Dmg|+10% critical extra damage para Flurry of Blows}}<br/>{{Weapon Perk|Spell_Flurry_of_Blows|Mana_Leech|+3% mana leech para Flurry of Blows}}\n| perk4          = {{Weapon Perk|Spell_Flurry_of_Blows|Critical_Chance|+1% critical hit chance para Flurry of Blows}}<br/>{{Weapon Perk|Type_Bestiary_Dmg_Mammal||+4.00% damage contra Mammal}}<br/>{{Weapon Perk|Type_Perc_Spell_Heal_Fist||+10.00% do seu Fist Fighting como extra healing para suas spells}}\n| perk5          = {{Weapon Perk|Type_Critical_Dmg||+5.00% critical extra damage}}\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64053,
+    "ns": 0,
+    "title": "Nunchaku of Enlightenment",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Nunchaku of Enlightenment \n| flavortext     = Traditional nunchaku used by pilgrims of the Three-Fold Path. Its design features elements of the natural appearance of moths\n| levelrequired  = 50\n| enchantable    = não\n| vocrequired    = [[Monk]]s\n| itemclass      = Armas\n| primarytype    = Punhos\n| type           = Punho\n| hands          = Duas\n| skillboost     = \n| resist         = \n| modificadores  = \n| augments       = \n| imbuement      = 1\n| classificacao  = 1\n| max_tier       = 1\n| attack         = 33\n| elementattack  = \n| defense        = 15\n| defensemod     = \n| weight         = 29.00\n| value          = \n| npcvalue       = 500\n| npcprice       = 50 000\n| droppedby      = Ninguém.\n| buyfrom        = Enpa-Deia Pema\n| sellto         = Enpa-Deia Pema\n| implemented    = 15.00.249ccc\n| perk1          = {{Weapon Perk|Spell_Greater_Tiger_Clash|Damage|+6% base damage para Greater Tiger Clash}}\n| perk2          = {{Weapon Perk|Type_Auto_Atk_Critical_Dmg||+15.00% critical extra damage para auto-attacks}}<br/>{{Weapon Perk|Type_Mana_On_Kill||+6 mana on kill}}\n| perk3          = {{Weapon Perk|Spell_Greater_Tiger_Clash|Damage|+6% base damage para Greater Tiger Clash}}\n| perk4          = {{Weapon Perk|Type_Skill_Fist||+1 Fist Fighting}}<br/>{{Weapon Perk|Type_Perc_Spell_Dmg_Magic||+5.00% do seu Magic Level como extra damage para suas spells}}\n| notes          = <spoiler>* Pode ser obtido por [[Monk]]s ao usar o quinto Santuário (''5 - '''Empathy''' of the Lost'') durante a [[The Way of the Monk Quest]].</spoiler>\n| elemental_bond = Physical\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64056,
+    "ns": 0,
+    "title": "Inferniarch Claws",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Inferniarch Claws\n| flavortext     = \n| levelrequired  = 300\n| enchantable    = não\n| vocrequired    = [[Monk]]s\n| itemclass      = Armas\n| primarytype    = Punhos\n| type           = Punho\n| hands          = Duas\n| skillboost     = [[Fist Fighting]] +4\n| resist         = \n| modificadores  = \n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| attack         = 43\n| elementattack  = \n| defense        = 21\n| defensemod     = \n| weight         = 84.00\n| value          = Negociável\n| droppedby      = [[Arbaziloth]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.00.249ccc\n| elemental_bond = Energy\n| perk1          = {{Weapon Perk|Type_Defence||+1 defence}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Fist||+10.00% do seu Fist Fighting como extra damage para auto-attacks}}<br/>{{Weapon Perk|Type_Auto_Atk_Critical_Dmg||+10.00% critical extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Auto_Atk_Critical_Dmg||+15.00% critical extra damage para auto-attacks}}\n| perk4          = {{Weapon Perk|Spell_Greater_Flurry_of_Blows|Life_Leech|+5% life leech para Greater Flurry of Blows}}<br/>{{Weapon Perk|Spell_Greater_Flurry_of_Blows|Critical_Chance|+1% critical hit chance para Greater Flurry of Blows}}<br/>{{Weapon Perk|Spell_Greater_Flurry_of_Blows|Mana_Leech|+3% mana leech para Greater Flurry of Blows}}\n| notes          = <spoiler>* Após matar o boss [[Arbaziloth]] no '''modo difícil 10 vezes''' você poderá obter esse item em um dos baús na sala de recompensa ao sul da [[Doomforging]].\n* Utilizando a [[Doomforging]] você pode transformar essa arma em:\n** [[Arquivo:Rending Inferniarch Claws.gif|link=]]'''[[Rending Inferniarch Claws]]''': 48% [[Strike (Dano Crítico)|Critical Damage]] (Nível 1 [[Weapon Proficiency|proficiência]])\n** [[Arquivo:Draining Inferniarch Claws.gif|link=]]'''[[Draining Inferniarch Claws]]''': 29% [[Life Leech]] (Nível 1 e Nível 3 de [[Weapon Proficiency|proficiência]], cada um com 14.5%)\n** [[Arquivo:Siphoning Inferniarch Claws.gif|link=]]'''[[Siphoning Inferniarch Claws]]''': 10% [[Mana Leech]] (Nível 1 e Nível 3 de [[Weapon Proficiency|proficiência]], cada um com 5%) </spoiler>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64058,
+    "ns": 0,
+    "title": "Rending Inferniarch Claws",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Rending Inferniarch Claws\n| flavortext     = \n| levelrequired  = 300\n| enchantable    = não\n| vocrequired    = [[Monk]]s\n| itemclass      = Armas\n| primarytype    = Punhos\n| type           = Punho\n| hands          = Duas\n| skillboost     = [[Fist Fighting]] +4\n| resist         = \n| modificadores  = \n| imbuement      = 1\n| classificacao  = 4\n| max_tier       = 10\n| attack         = 43\n| elementattack  = \n| defense        = 21\n| defensemod     = \n| weight         = 84.00\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.00.249ccc\n| perk1          = {{Weapon Perk|Type_Critical_Dmg||+48.00% critical extra damage}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Fist||+10.00% do seu Fist Fighting como extra damage para auto-attacks}}<br/>{{Weapon Perk|Type_Auto_Atk_Critical_Dmg||+10.00% critical extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Critical_Chance||+5.00% critical hit chance}}\n| perk4          = {{Weapon Perk|Spell_Greater_Flurry_of_Blows|Life_Leech|+10% life leech para Greater Flurry of Blows}}<br/>{{Weapon Perk|Spell_Greater_Flurry_of_Blows|Mana_Leech|+5% mana leech para Greater Flurry of Blows}}\n| perk5          = {{Weapon Perk|Type_Skill_Fist||+1 Fist Fighting}}<br/>{{Weapon Perk|Type_Bestiary_Dmg_Plant||+3.00% damage contra Plant}}<br/>{{Weapon Perk|Type_Auto_Atk_Critical_Chance||+2.50% critical hit chance para auto-attacks}}\n| perk6          = {{Weapon Perk|Type_Powerful_Foe_Bonus||+3.00% damage contra bosses e Sinister Embraced}}<br/>{{Weapon Perk|Type_Perc_Spell_Dmg_Fist||+5.00% do seu Fist Fighting como extra damage para suas spells}}\n| perk7          = {{Weapon Perk|Spell_Greater_Flurry_of_Blows|Critical_Chance|+1.5% critical hit chance para Greater Flurry of Blows}}\n| notes          = <noinclude><p><spoiler>* Pode ser criada no processo de [[Doomforging]]. Ela perderá 1 slot de imbuement comparada a arma \"base\" [[Inferniarch Claws]] e ganhará 48% [[Strike (Dano Crítico)|Critical Damage]] (Nível 1 [[Weapon Proficiency|proficiência]]).\n* '''Itens Necessários:'''\n** 01 Arma base Inferniarch [[Arquivo:Inferniarch Claws.gif|link=]]\n** 100 [[Vexclaw Talon]]s [[Arquivo:Vexclaw Talon.gif|link=]]\n** 500 [[Demonic Matter]]s [[Arquivo:Demonic Matter.gif|link=]]\n** 50 [[Demon Horn]]s [[Arquivo:Demon Horn.gif|link=]]\n** 350 [[Demonic Essence]]s [[Arquivo:Demonic Essence.gif|link=]]\n** 350 [[Flask of Demonic Blood]]s [[Arquivo:Flask of Demonic Blood.gif|link=]]\n** 01 [[Demonic Finger]] [[Arquivo:Demonic Finger.gif|link=]]\n** 01 [[Skin of Gralvalon]] [[Arquivo:Skin of Gralvalon.gif|link=]]</spoiler></p></noinclude>\n| elemental_bond = Energy\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64060,
+    "ns": 0,
+    "title": "Draining Inferniarch Claws",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Draining Inferniarch Claws\n| flavortext     = \n| levelrequired  = 300\n| enchantable    = não\n| vocrequired    = [[Monk]]s\n| itemclass      = Armas\n| primarytype    = Punhos\n| type           = Punho\n| hands          = Duas\n| skillboost     = [[Fist Fighting]] +4\n| resist         = \n| modificadores  = \n| imbuement      = 1\n| classificacao  = 4\n| max_tier       = 10\n| attack         = 43\n| elementattack  = \n| defense        = 21\n| defensemod     = \n| weight         = 84.00\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.00.249ccc\n| perk1          = {{Weapon Perk|Type_Life_Leech||+14.50% life leech}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Fist||+10.00% do seu Fist Fighting como extra damage para auto-attacks}}<br/>{{Weapon Perk|Type_Auto_Atk_Critical_Dmg||+10.00% critical extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Life_Leech||+14.50% life leech}}\n| perk4          = {{Weapon Perk|Spell_Greater_Flurry_of_Blows|Mana_Leech|+5% mana leech para Greater Flurry of Blows}}<br/>{{Weapon Perk|Spell_Greater_Flurry_of_Blows|Critical_Dmg|+8% critical extra damage para Greater Flurry of Blows}}\n| perk5          = {{Weapon Perk|Type_Skill_Fist||+1 Fist Fighting}}<br/>{{Weapon Perk|Type_Bestiary_Dmg_Plant||+3.00% damage contra Plant}}<br/>{{Weapon Perk|Type_Auto_Atk_Critical_Chance||+2.50% critical hit chance para auto-attacks}}\n| perk6          = {{Weapon Perk|Type_Powerful_Foe_Bonus||+3.00% damage contra bosses e Sinister Embraced}}<br/>{{Weapon Perk|Type_Perc_Spell_Dmg_Fist||+5.00% do seu Fist Fighting como extra damage para suas spells}}\n| perk7          = {{Weapon Perk|Spell_Greater_Flurry_of_Blows|Critical_Chance|+1.5% critical hit chance para Greater Flurry of Blows}}\n| notes          = <noinclude><p><spoiler>* Pode ser criada no processo de [[Doomforging]]. Ela perderá 1 slot de imbuement comparada a arma \"base\" [[Inferniarch Claws]] e ganhará 29% [[Life Leech]] (Nível 1 e Nível 3 de [[Weapon Proficiency|proficiência]], cada um com 14.5%).\n* '''Itens Necessários:'''\n** 01 Arma base Inferniarch [[Arquivo:Inferniarch Claws.gif|link=]]\n** 100 [[Piece of Dead Brain|Pieces of Dead Brain]] [[Arquivo:Piece of Dead Brain.gif|link=]]\n** 500 [[Demonic Matter]]s [[Arquivo:Demonic Matter.gif|link=]]\n** 750 [[Flask of Demonic Blood]]s [[Arquivo:Flask of Demonic Blood.gif|link=]]\n** 50 [[Demon Dust]]s [[Arquivo:Demon Dust.gif|link=]]\n** 01 [[Skin of Malvaroth]] [[Arquivo:Skin of Malvaroth.gif|link=]]</spoiler></p></noinclude>\n| elemental_bond = Energy\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64062,
+    "ns": 0,
+    "title": "Siphoning Inferniarch Claws",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Siphoning Inferniarch Claws\n| flavortext     = \n| levelrequired  = 300\n| enchantable    = não\n| vocrequired    = [[Monk]]s\n| itemclass      = Armas\n| primarytype    = Punhos\n| type           = Punho\n| hands          = Duas\n| skillboost     = [[Fist Fighting]] +4\n| resist         = \n| modificadores  = \n| imbuement      = 1\n| classificacao  = 4\n| max_tier       = 10\n| attack         = 43\n| elementattack  = \n| defense        = 21\n| defensemod     = \n| weight         = 84.00\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.00.249ccc\n| perk1          = {{Weapon Perk|Type_Mana_Leech||+5.00% mana leech}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Fist||+10.00% do seu Fist Fighting como extra damage para auto-attacks}}<br/>{{Weapon Perk|Type_Auto_Atk_Critical_Dmg||+10.00% critical extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Mana_Leech||+5.00% mana leech}}\n| perk4          = {{Weapon Perk|Spell_Greater_Flurry_of_Blows|Life_Leech|+10% life leech para Greater Flurry of Blows}}<br/>{{Weapon Perk|Spell_Greater_Flurry_of_Blows|Critical_Dmg|+8% critical extra damage para Greater Flurry of Blows}}\n| perk5          = {{Weapon Perk|Type_Skill_Fist||+1 Fist Fighting}}<br/>{{Weapon Perk|Type_Bestiary_Dmg_Plant||+3.00% damage contra Plant}}<br/>{{Weapon Perk|Type_Auto_Atk_Critical_Chance||+2.50% critical hit chance para auto-attacks}}\n| perk6          = {{Weapon Perk|Type_Powerful_Foe_Bonus||+3.00% damage contra bosses e Sinister Embraced}}<br/>{{Weapon Perk|Type_Perc_Spell_Dmg_Fist||+5.00% do seu Fist Fighting como extra damage para suas spells}}\n| perk7          = {{Weapon Perk|Spell_Greater_Flurry_of_Blows|Critical_Chance|+1.5% critical hit chance para Greater Flurry of Blows}}\n| notes          = <noinclude><p><spoiler>* Pode ser criada no processo de [[Doomforging]]. Ela perderá 1 slot de imbuement comparada a arma \"base\" [[Inferniarch Claws]] e ganhará 10% [[Mana Leech]] (Nível 1 e Nível 3 de [[Weapon Proficiency|proficiência]], cada um com 5%).\n* '''Itens Necessários:'''\n** 01 Arma base Inferniarch [[Arquivo:Inferniarch Claws.gif|link=]]\n** 100 [[Some Grimeleech Wings]] [[Arquivo:Some Grimeleech Wings.gif|link=]]\n** 500 [[Demonic Matter]]s [[Arquivo:Demonic Matter.gif|link=]]\n** 750 [[Demonic Essence]]s [[Arquivo:Demonic Essence.gif|link=]]\n** 200 [[Demonic Skeletal Hand]]s [[Arquivo:Demonic Skeletal Hand.gif|link=]]\n** 01 [[Skin of Twisterror]] [[Arquivo:Skin of Twisterror.gif|link=]]</spoiler></p></noinclude>\n| elemental_bond = Energy\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64066,
+    "ns": 0,
+    "title": "Sai of Enlightenment",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Sai of Enlightenment \n| flavortext     = Traditional sai worn by pilgrims of the Three-Fold Path. Its design features elements of the natural appearance of moths\n| levelrequired  = 100\n| enchantable    = não\n| vocrequired    = [[Monk]]s\n| itemclass      = Armas\n| primarytype    = Punhos\n| type           = Punho\n| hands          = Duas\n| skillboost     = \n| resist         = \n| modificadores  = \n| augments       = \n| imbuement      = 1\n| classificacao  = 1\n| max_tier       = 1\n| attack         = 40\n| elementattack  = \n| defense        = 16\n| defensemod     = \n| weight         = 59.00\n| value          = \n| npcvalue       = 100\n| npcprice       = 100 000\n| droppedby      = Ninguém.\n| buyfrom        = Enpa-Deia Pema\n| sellto         = Enpa-Deia Pema\n| implemented    = 15.00.249ccc\n| perk1          = {{Weapon Perk|Spell_Greater_Tiger_Clash|Damage|+8% base damage para Greater Tiger Clash}}\n| perk2          = {{Weapon Perk|Type_Auto_Atk_Critical_Dmg||+15.00% critical extra damage para auto-attacks}}<br/>{{Weapon Perk|Type_Mana_On_Kill||+6 mana on kill}}\n| perk3          = {{Weapon Perk|Spell_Greater_Tiger_Clash|Damage|+8% base damage para Greater Tiger Clash}}\n| perk4          = {{Weapon Perk|Type_Skill_Fist||+1 Fist Fighting}}<br/>{{Weapon Perk|Type_Perc_Spell_Dmg_Magic||+5.00% do seu Magic Level como extra damage para suas spells}}\n| notes          = <spoiler>* Pode ser obtido por [[Monk]]s ao usar o sétimo Santuário (''7 - '''Power''' of the Fire'') durante a [[The Way of the Monk Quest]].</spoiler>\n| elemental_bond = Earth\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64068,
+    "ns": 0,
+    "title": "Fists of Enlightenment",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Fists of Enlightenment \n| flavortext     = Traditional wraps worn by pilgrims of the Three-Fold Path. Its design features elements of the natural appearance of moths\n| levelrequired  = 20\n| enchantable    = não\n| vocrequired    = [[Monk]]s\n| itemclass      = Armas\n| primarytype    = Punhos\n| type           = Punho\n| hands          = Duas\n| skillboost     = \n| resist         = \n| modificadores  = \n| augments       = \n| imbuement      = 1\n| classificacao  = 1\n| max_tier       = 1\n| attack         = 23\n| elementattack  = \n| defense        = 14\n| defensemod     = \n| weight         = 18.00\n| value          = \n| npcvalue       = 200\n| npcprice       = 20 000\n| droppedby      = Ninguém.\n| buyfrom        = Enpa-Deia Pema\n| sellto         = Enpa-Deia Pema\n| implemented    = 15.00.249ccc\n| perk1          = {{Weapon Perk|Spell_Greater_Tiger_Clash|Damage|+4% base damage para Greater Tiger Clash}}\n| perk2          = {{Weapon Perk|Type_Auto_Atk_Critical_Dmg||+15.00% critical extra damage para auto-attacks}}<br/>{{Weapon Perk|Type_Mana_On_Kill||+6 mana on kill}}\n| perk3          = {{Weapon Perk|Spell_Greater_Tiger_Clash|Damage|+4% base damage para Greater Tiger Clash}}\n| perk4          = {{Weapon Perk|Type_Skill_Fist||+1 Fist Fighting}}<br/>{{Weapon Perk|Type_Perc_Spell_Dmg_Magic||+5.00% do seu Magic Level como extra damage para suas spells}}\n| notes          = <spoiler>* Pode ser obtido por [[Monk]]s ao usar o segundo Santuário ('' 2 - '''Tranquility''' of the Plains'') durante a [[The Way of the Monk Quest]].</spoiler>\n| elemental_bond = Energy\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64074,
+    "ns": 0,
+    "title": "Bambus Jo",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bambus Jo\n| flavortext     = \n| levelrequired  = 150\n| enchantable    = não\n| vocrequired    = [[Monk]]s\n| itemclass      = Armas\n| primarytype    = Punhos\n| type           = Punho\n| hands          = Duas\n| skillboost     = [[Fist Fighting]] +1\n| resist         = \n| modificadores  = \n| augments       = \n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| attack         = 40\n| elementattack  =\n| defense        = 19\n| defensemod     = \n| weight         = 38.00\n| value          = \n| droppedby      = [[Ratmiral Blackwhiskers]].\n| buyfrom        = \n| sellto         = \n| implemented    = 15.00.249ccc\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Fist||+5.00% do seu Fist Fighting como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Auto_Atk_Critical_Chance||+10.00% critical hit chance para auto-attacks}}<br/>{{Weapon Perk|Type_Life_On_Kill||+25 hit points on kill}}\n| perk3          = {{Weapon Perk|Type_Skill_Fist||+1 Fist Fighting}}<br/>{{Weapon Perk|Type_Bestiary_Dmg_Vermin||+3.00% damage contra Vermin}}\n| perk4          = {{Weapon Perk|Type_Auto_Atk_Critical_Chance||+3.50% critical hit chance para auto-attacks}}\n| perk5          = {{Weapon Perk|Type_Skill_Fist||+1 Fist Fighting}}\n| notes          = \n| elemental_bond = Earth\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64098,
+    "ns": 0,
+    "title": "Eldritch Crescent Moon Spade",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Eldritch Crescent Moon Spade\n| flavortext     = \n| levelrequired  = 250\n| enchantable    = não\n| vocrequired    = [[Monk]]s\n| itemclass      = Armas\n| primarytype    = Punhos\n| type           = Punho\n| hands          = Duas\n| skillboost     = [[Fist Fighting]] +2, [[Magic Level]] +2\n| resist         = \n| modificadores  = [[Damage Reflection]] +50\n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| attack         = 42\n| elementattack  = \n| defense        = 20\n| defensemod     = \n| weight         = 88.00\n| value          = Negociável\n| droppedby      = [[The Brainstealer]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.00.249ccc\n| elemental_bond = Energy\n| perk1          = {{Weapon Perk|Type_Auto_Atk_Critical_Dmg||+20.00% critical extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Magic||+10.00% do seu Magic Level como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Spell_Dmg_Magic||+12.50% do seu Magic Level como extra damage para suas spells}}\n| perk4          = {{Weapon Perk|Type_Bestiary_Dmg_Magical||+3.00% damage contra Magical}}<br/>{{Weapon Perk|Type_Mana_Leech||+2.00% mana leech}}\n| perk5          = {{Weapon Perk|Type_Skill_Fist||+1 Fist Fighting}}\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64100,
+    "ns": 0,
+    "title": "Gilded Eldritch Crescent Moon Spade",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Gilded Eldritch Crescent Moon Spade\n| flavortext     = Refined by the legendary artisan Gnomaurum.\n| levelrequired  = 250\n| enchantable    = não\n| vocrequired    = [[Monk]]s\n| itemclass      = Armas\n| primarytype    = Punhos\n| type           = Punho\n| hands          = Duas\n| skillboost     = [[Fist Fighting]] +2, [[Magic Level]] +2\n| resist         = \n| modificadores  = [[Damage Reflection]] 50\n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| attack         = 42\n| elementattack  = \n| defense        = 20\n| defensemod     = \n| weight         = 86.00\n| value          = Negociável\n| droppedby      = [[The Brainstealer]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.00.249ccc\n| perk1          = {{Weapon Perk|Type_Auto_Atk_Critical_Dmg||+30.00% critical extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Magic||+15.00% do seu Magic Level como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Perc_Spell_Dmg_Magic||+12.50% do seu Magic Level como extra damage para suas spells}}\n| perk4          = {{Weapon Perk|Type_Bestiary_Dmg_Magical||+3.00% damage contra Magical}}<br/>{{Weapon Perk|Type_Mana_Leech||+2.00% mana leech}}\n| perk5          = {{Weapon Perk|Type_Skill_Fist||+2 Fist Fighting}}\n| notes          = \n| elemental_bond = Energy\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64102,
+    "ns": 0,
+    "title": "Amber Kusarigama",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Amber Kusarigama\n| flavortext     =\n| vocrequired    = [[Monk]]s\n| levelrequired  = 330\n| itemclass      = Armas\n| primarytype    = Punhos\n| hands          = Duas\n| skillboost     = [[Fist Fighting]] +4, [[Magic Level]] +1\n| augments       = \n| type           = Punho\n| attack         = 44\n| elementattack  = \n| defense        = 20\n| defensemod     = \n| weight         = 86.00\n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| stackable      = não\n| enchantable    = não\n| value          = \n| npcvalue       = \n| npcprice       = \n| droppedby      = [[The Rootkraken]].\n| droppedRaidby  = \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.00.249ccc\n| elemental_bond = Physical\n| perk1          = {{Weapon Perk|Type_Perc_Auto_Atk_Magic||+25.00% do seu Magic Level como extra damage para auto-attacks}}\n| perk2          = {{Weapon Perk|Spell_Devastating_Knockout|Critical_Dmg|+7% critical extra damage para Devastating Knockout}}<br/>{{Weapon Perk|Spell_Devastating_Knockout|Life_Leech|+35% life leech para Devastating Knockout}}\n| perk3          = {{Weapon Perk|Spell_Devastating_Knockout|Cooldown|-4s cooldown para Devastating Knockout}}\n| perk4          = {{Weapon Perk|Spell_Devastating_Knockout|Critical_Dmg|+7% critical extra damage para Devastating Knockout}}<br/>{{Weapon Perk|Spell_Devastating_Knockout|Life_Leech|+35% life leech para Devastating Knockout}}\n| perk5          = {{Weapon Perk|Spell_Devastating_Knockout|Critical_Chance|+2.5% critical hit chance para Devastating Knockout}}<br/>{{Weapon Perk|Spell_Devastating_Knockout|Cooldown|-8s cooldown para Devastating Knockout}}<br/>{{Weapon Perk|Type_Bestiary_Dmg_Demon||+3.00% damage contra Demon}}\n| perk6          = {{Weapon Perk|Type_Attack||+1 attack}}<br/>{{Weapon Perk|Spell_Devastating_Knockout|Mana_Leech|+35% mana leech para Devastating Knockout}}\n| perk7          = {{Weapon Perk|Type_Perc_Spell_Dmg_Magic||+25.00% do seu Magic Level como extra damage para suas spells}}\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64113,
+    "ns": 0,
+    "title": "Jo Staff",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Jo Staff\n| levelrequired  = 0\n| vocrequired    = [[Monk]]s\n| enchantable    = não\n| itemclass      = Armas\n| primarytype    = Punhos\n| type           = Punho\n| hands          = Duas\n| skillboost     = [[Fist Fighting]] +1\n| modificadores  = \n| augments       = \n| attack         = 17\n| defense        = 12\n| defensemod     = \n| elemental_bond = Energy\n| weight         = 21.00\n| classificacao  = 1\n| max_tier       = 1\n| value          = \n| npcvalue       = \n| npcprice       = 500\n| droppedby  = \n| droppedRaidby  = \n| buyfrom        = Enpa-Deia Pema\n| sellto         = \n| implemented    = 15.00.249ccc\n| perk1          = {{Weapon Perk|Type_Defence||+1 defence}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Fist||+4.00% do seu Fist Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Auto_Atk_Critical_Chance||+1.00% critical hit chance para auto-attacks}}<br/>{{Weapon Perk|Type_Life_On_Kill||+5 hit points on kill}}\n| notes          = <spoiler>* Obtido durante a [[The Way of the Monk Quest]].</spoiler>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64117,
+    "ns": 0,
+    "title": "Depth Claws",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Depth Claws\n| flavortext     = \n| levelrequired  = 135\n| enchantable    = não\n| vocrequired    = [[Monk]]s\n| itemclass      = Armas\n| primarytype    = Punhos\n| type           = Punho\n| hands          = Duas\n| skillboost     = [[Fist Fighting]] +2\n| resist         = \n| modificadores  = \n| augments       = \n| imbuement      = 2\n| classificacao  = 4\n| max_tier       = 10\n| attack         = 40\n| elemental_bond = Energy\n| elementattack  = \n| defense        = 18\n| defensemod     = \n| weight         = 64.00\n| value          = \n| droppedby      = [[Ancient Spawn of Morgathla]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.00.249ccc\n| perk1          = {{Weapon Perk|Type_Defence||+1 defence}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Fist||+5.00% do seu Fist Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Spell_Mystic_Repulse|Critical_Dmg|+25% critical extra damage para Mystic Repulse}}<br/>{{Weapon Perk|Type_Skill_Magic||+1 Magic Level}}\n| perk4          = {{Weapon Perk|Spell_Mystic_Repulse|Critical_Chance|+10% critical hit chance para Mystic Repulse}}<br/>{{Weapon Perk|Type_Perc_Spell_Dmg_Magic||+5.00% do seu Magic Level como extra damage para suas spells}}<br/>{{Weapon Perk|Spell_Mystic_Repulse|Damage|+14% base damage para Mystic Repulse}}\n| perk5          = {{Weapon Perk|Type_Powerful_Foe_Bonus||+3.00% damage contra bosses e Sinister Embraced}}\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64121,
+    "ns": 0,
+    "title": "Pair of Monk Fists",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Pair of Monk Fists\n| flavortext     = \n| levelrequired  = 10\n| enchantable    = não\n| vocrequired    = [[Monk]]s\n| itemclass      = Armas\n| primarytype    = Punhos\n| type           = Punho\n| hands          = Duas\n| skillboost     = [[Fist Fighting]] +1\n| resist         = \n| modificadores  = \n| augments       = \n| imbuement      = \n| classificacao  = 1\n| max_tier       = 1\n| attack         = 21\n| elemental_bond = Physical\n| elementattack  = \n| defense        = 14\n| defensemod     = \n| weight         = 12.00\n| value          = \n| npcvalue       = 90\n| npcprice       = 270\n| droppedby      = [[Herald of Fire]].\n| buyfrom        = Shanar, Memech, Rowenna, Wes The Blacksmith, Hireling (Trader), Habdel, Willard, Esrik, Rock In A Hard Place, Ulrik, Uzgod, Cedrik, Brengus, Flint, Robert, Gamel, Sam, Turvy, Hardek, Baltim, Romella, Morpel\n| sellto         = Shanar, Memech, Rowenna, Hireling (Trader), Habdel, Willard, Esrik, Rock In A Hard Place, Ulrik, Uzgod, Cedrik, Brengus, Flint, Robert, Gamel, Sam, Turvy, Hardek, Baltim, Romella, Morpel\n| implemented    = 15.00.249ccc\n| perk1          = {{Weapon Perk|Type_Defence||+1 defence}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Fist||+4.00% do seu Fist Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Auto_Atk_Critical_Chance||+1.00% critical hit chance para auto-attacks}}<br/>{{Weapon Perk|Type_Life_On_Kill||+5 hit points on kill}}\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64129,
+    "ns": 0,
+    "title": "Nunchaku",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Nunchaku\n| flavortext     = \n| levelrequired  = 40\n| enchantable    = não\n| vocrequired    = [[Monk]]s\n| itemclass      = Armas\n| primarytype    = Punhos\n| type           = Punho\n| hands          = Duas\n| skillboost     = [[Fist Fighting]] +1\n| resist         = \n| modificadores  = \n| augments       = \n| imbuement      = \n| classificacao  = 1\n| max_tier       = 1\n| attack         = 31\n| elemental_bond = Earth\n| elementattack  = \n| defense        = 15\n| defensemod     = \n| weight         = 25.00\n| value          = \n| npcvalue       = 135\n| npcprice       = 405\n| droppedby      = Desconhecido.\n| buyfrom        = Shanar, Memech, Rowenna, Wes The Blacksmith, Hireling (Trader), Habdel, Willard, Esrik, Rock In A Hard Place, Ulrik, Uzgod, Cedrik, Brengus, Flint, Robert, Gamel, Sam, Turvy, Hardek, Baltim, Romella, Morpel\n| sellto         = Shanar, Memech, Rowenna, Wes The Blacksmith, Hireling (Trader), Habdel, Willard, Esrik, Rock In A Hard Place, Ulrik, Uzgod, Cedrik, Brengus, Flint, Robert, Gamel, Sam, Turvy, Hardek, Baltim, Romella, Morpel\n| implemented    = 15.00.249ccc\n| perk1          = {{Weapon Perk|Type_Defence||+1 defence}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Fist||+4.00% do seu Fist Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Auto_Atk_Critical_Chance||+1.00% critical hit chance para auto-attacks}}<br/>{{Weapon Perk|Type_Life_On_Kill||+5 hit points on kill}}\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64133,
+    "ns": 0,
+    "title": "Sai",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Sai\n| flavortext     = \n| levelrequired  = 60\n| enchantable    = não\n| vocrequired    = [[Monk]]s\n| itemclass      = Armas\n| primarytype    = Punhos\n| type           = Punho\n| hands          = Duas\n| skillboost     = [[Fist Fighting]] +1\n| resist         = \n| modificadores  = \n| augments       = \n| imbuement      = 1\n| classificacao  = 1\n| max_tier       = 1\n| attack         = 36\n| elemental_bond = Energy\n| elementattack  = \n| defense        = 16\n| defensemod     = \n| weight         = 49.00\n| value          = \n| npcvalue       = 180\n| npcprice       = 540\n| droppedby      = Desconhecido.\n| buyfrom        = Shanar, Memech, Rowenna, Wes The Blacksmith, Hireling (Trader), Habdel, Willard, Esrik, Rock In A Hard Place, Ulrik, Uzgod, Cedrik, Brengus, Flint, Robert, Gamel, Sam, Turvy, Hardek, Baltim, Romella, Morpel\n| sellto         = Shanar, Memech, Rowenna, Wes The Blacksmith, Hireling (Trader), Habdel, Willard, Esrik, Rock In A Hard Place, Ulrik, Uzgod, Cedrik, Brengus, Flint, Robert, Gamel, Sam, Turvy, Hardek, Baltim, Romella, Morpel\n| implemented    = 15.00.249ccc\n| perk1          = {{Weapon Perk|Type_Defence||+1 defence}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Fist||+4.00% do seu Fist Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Auto_Atk_Critical_Chance||+1.00% critical hit chance para auto-attacks}}<br/>{{Weapon Perk|Type_Life_On_Kill||+5 hit points on kill}}\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64333,
+    "ns": 0,
+    "title": "Traditional Sai",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|''Este artigo é sobre a nova '''Traditional Sai''' que substituiu a [[Sai (Espada)]] após o [[Monk Update]]. Não confundir com a nova [[Sai]] não diretamente relacionada.''}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Traditional Sai\n| levelrequired  = 30\n| enchantable    = não\n| vocrequired    = [[Monk]]s\n| itemclass      = Armas\n| primarytype    = Punhos\n| type           = Punho\n| hands          = Duas\n| skillboost     = \n| attack         = 27\n| elemental_bond = Physical\n| defense        = 15\n| weight         = 50.00\n| classificacao  = 2\n| max_tier       = 2\n| imbuement      = 2\n| stackable      = não\n| value          = 16 000 - 20 000\n| droppedby      = [[Adventurer Group]], [[Black Vixen]], [[Choking Fear]], [[Darkfang]], [[Deep Terror]], [[Ethershreck]], [[Frazzlemaw]], [[Guzzlemaw]], [[Hemming]], [[Paiz the Pauperizer]], [[Plagirath]], [[The Bloodweb]], [[Weakened Frazzlemaw]].\n| npcvalue       = 16 500\n| npcprice       = 0\n| buyfrom        = Jogadores.\n| sellto         = Esrik\n| implemented    = 15.00.249ccc\n| perk1          = {{Weapon Perk|Type_Defence||+1 defence}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Fist||+4.00% do seu Fist Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Auto_Atk_Critical_Chance||+1.00% critical hit chance para auto-attacks}}<br/>{{Weapon Perk|Type_Life_On_Kill||+5 hit points on kill}}\n| notes          = O nome desta arma foi alterado de \"Sai\" para \"Traditional Sai\" no [[Monk Update]]. Até então era uma espada incomum para [[Knight]]s, a [[Sai (Espada)]].\nUma nova arma com o mesmo nome antigo, [[Sai]], foi adicionada no mesmo update.<noinclude><p><spoiler>* Para vendê-lo ao NPC é preciso ter entregue 9 [[Tome of Knowledge|tomos]] na [[Tomes of Knowledge Quest]].</spoiler></p></noinclude> \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64555,
+    "ns": 0,
+    "title": "Simple Jo Staff",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Simple Jo Staff\n| levelrequired  = 0\n| vocrequired    = [[Monk]]s\n| enchantable    = não\n| itemclass      = Armas\n| primarytype    = Punhos\n| type           = Punho\n| hands          = Duas\n| skillboost     = [[Fist Fighting]] +1\n| modificadores  = \n| augments       = \n| attack         = 12\n| defense        = 8\n| defensemod     = \n| elemental_bond = Earth\n| weight         = 18.00\n| classificacao  = 1\n| max_tier       = 1\n| value          = \n| npcvalue       = \n| npcprice       = 10\n| droppedby      = [[The Corruptor]], [[Emerald Damselfly]], [[Dawnfly]].\n| droppedRaidby  = \n| buyfrom        = Enpa-Deia Pema\n| sellto         = \n| implemented    = 15.00.249ccc\n| perk1          = {{Weapon Perk|Type_Defence||+1 defence}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Fist||+4.00% do seu Fist Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Auto_Atk_Critical_Chance||+1.00% critical hit chance para auto-attacks}}<br/>{{Weapon Perk|Type_Life_On_Kill||+5 hit points on kill}}\n| notes          =\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 66053,
+    "ns": 0,
+    "title": "Crypt Strike",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Crypt Strike\n| flavortext     = Referred to as Wailing Wrecker in ancient scriptures, this bone-forged staff channels both agony and focus into devastating echoing strikes. One of the creations of the mysterious soul-smith\n| levelrequired  = 450\n| enchantable    = não\n| vocrequired    = [[Monk]]s\n| itemclass      = Armas\n| primarytype    = Punhos\n| type           = Machado\n| hands          = Duas\n| skillboost     = [[Fist Fighting]] +4, [[Magic Level]] +1\n| resist         = \n| modificadores  = \n| imbuement      = 3\n| classificacao  = 4\n| max_tier       = 10\n| attack         = 45\n| elemental_bond = Physical\n| elementattack  = \n| defense        = 20\n| defensemod     = \n| weight         = 68.00\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.20.7a5cc9\n| perk1          = {{Weapon Perk|Type_Armor_Penetration||+15% armor penetration}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Magic||+20.00% do seu Magic Level como extra damage para auto-attacks}}<br/>{{Weapon Perk|Spell_Flurry_of_Blows|Life_Leech|+5% life leech para Flurry of Blows}}<br/>{{Weapon Perk|Type_Armor_Penetration||+20% armor penetration}}\n| perk3          = {{Weapon Perk|Type_Alpha_Dmg||+4.00% damage contra targets above 95% hit points}}<br/>{{Weapon Perk|Spell_Flurry_of_Blows|Mana_Leech|+2% mana leech para Flurry of Blows}}<br/>{{Weapon Perk|Type_Element_Pierce_Physical||+8% Physical pierce}}\n| perk4          = {{Weapon Perk|Type_Alpha_Dmg||+10.00% damage contra targets above 95% hit points}}<br/>{{Weapon Perk|Type_Bestiary_Dmg_Undead||+3.00% damage contra Undead}}<br/>{{Weapon Perk|Type_Omega_Dmg||+2.50% damage contra targets below 30% hit points}}\n| perk5          = {{Weapon Perk|Type_Attack||+1 attack}}<br/>{{Weapon Perk|Type_Perc_Spell_Heal_Magic||+70.00% do seu Magic Level como extra healing para suas spells}}\n| perk6          = {{Weapon Perk|Type_Critical_Dmg||+10.00% critical extra damage}}<br/>{{Weapon Perk|Type_Armor_Penetration||+25% armor penetration}}\n| perk7          = {{Weapon Perk|Type_Element_Pierce_Physical||+12% Physical pierce}}\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 67338,
+    "ns": 0,
+    "title": "Moonsilver Katar",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Moonsilver Katar\n| flavortext     = \n| levelrequired  = 1000\n| enchantable    = não\n| vocrequired    = [[Monk]]s\n| itemclass      = Armas\n| primarytype    = Punhos\n| type           = Punho\n| hands          = Duas\n| skillboost     = [[Fist Fighting]] +6, [[Magic Level]] +2\n| resist         = \n| modificadores  = \n| augments       = \n| imbuement      = 3\n| classificacao  = 4\n| max_tier       = 10\n| attack         = 46\n| elemental_bond = Energy\n| defense        = 22\n| defensemod     = \n| weight         = 72.00\n| value          = \n| droppedby      = [[Phosphorus]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.30.a30dad\n| perk1          = {{Weapon Perk|Type_Critical_Dmg||+8.00% critical extra damage}}\n| perk2          = {{Weapon Perk|Type_Bestiary_Dmg_Human||+3.00% damage contra Human}}<br/>{{Weapon Perk|Type_Skill_Fist||+1 Fist Fighting}}<br/>{{Weapon Perk|Type_Critical_Dmg||+6.00% critical extra damage}}\n| perk3          = {{Weapon Perk|Spell_Thousand_Fist_Blows|Life_Leech|+10% life leech para Thousand Fist Blows}}<br/>{{Weapon Perk|Type_Element_Pierce_Energy||Offensive spells have a 1% chance to fire a homing missile that deals Energy damage equal to 200% do seu level}}<br/>{{Weapon Perk|Spell_Thousand_Fist_Blows|Damage|+9% base damage para Thousand Fist Blows}}\n| perk4          = {{Weapon Perk|Type_Life_Leech||+3.00% life leech}}<br/>{{Weapon Perk|Type_Attack||+1 attack}}<br/>{{Weapon Perk|Type_Critical_Chance||+1.00% critical hit chance}}\n| perk5          = {{Weapon Perk|Spell_Thousand_Fist_Blows|Mana_Leech|+7.5% mana leech para Thousand Fist Blows}}<br/>{{Weapon Perk|Type_Attack||+1 attack}}<br/>{{Weapon Perk|Spell_Thousand_Fist_Blows|Critical_Chance|+5% critical hit chance para Thousand Fist Blows}}\n| perk6          = {{Weapon Perk|Type_Mana_Leech||+2.00% mana leech}}<br/>{{Weapon Perk|Type_Critical_Dmg||+12.00% critical extra damage}}<br/>{{Weapon Perk|Type_Element_Pierce_Energy||+4% Energy pierce}}\n| perk7          = {{Weapon Perk|Type_Omega_Dmg||+6.00% damage contra targets below 30% hit points}}\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 67339,
+    "ns": 0,
+    "title": "Stellar Moonsilver Katar",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Stellar Moonsilver Katar\n| flavortext     = \n| levelrequired  = 1000\n| enchantable    = não\n| vocrequired    = [[Monk]]s\n| itemclass      = Armas\n| primarytype    = Punhos\n| type           = Punho\n| hands          = Duas\n| skillboost     = [[Fist Fighting]] +6, [[Magic Level]] +2\n| resist         = \n| modificadores  = \n| augments       = \n| imbuement      = 3\n| classificacao  = 4\n| max_tier       = 10\n| attack         = 46\n| elemental_bond = Energy\n| defense        = 22\n| defensemod     = \n| weight         = 73.00\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.30.a30dad\n| perk1          = {{Weapon Perk|Type_Critical_Dmg||+12.00% critical extra damage}}\n| perk2          = {{Weapon Perk|Type_Bestiary_Dmg_Human||+3.00% damage contra Human}}<br/>{{Weapon Perk|Type_Skill_Fist||+1 Fist Fighting}}<br/>{{Weapon Perk|Type_Critical_Dmg||+6.00% critical extra damage}}\n| perk3          = {{Weapon Perk|Spell_Thousand_Fist_Blows|Life_Leech|+15% life leech para Thousand Fist Blows}}<br/>{{Weapon Perk|Type_Element_Pierce_Energy||Offensive spells have a 1% chance to fire a homing missile that deals Energy damage equal to 300% do seu level}}<br/>{{Weapon Perk|Spell_Thousand_Fist_Blows|Damage|+13.5% base damage para Thousand Fist Blows}}\n| perk4          = {{Weapon Perk|Type_Life_Leech||+3.00% life leech}}<br/>{{Weapon Perk|Type_Attack||+1 attack}}<br/>{{Weapon Perk|Type_Critical_Chance||+1.00% critical hit chance}}\n| perk5          = {{Weapon Perk|Spell_Thousand_Fist_Blows|Mana_Leech|+7.5% mana leech para Thousand Fist Blows}}<br/>{{Weapon Perk|Type_Attack||+1 attack}}<br/>{{Weapon Perk|Spell_Thousand_Fist_Blows|Critical_Chance|+5% critical hit chance para Thousand Fist Blows}}\n| perk6          = {{Weapon Perk|Type_Mana_Leech||+2.00% mana leech}}<br/>{{Weapon Perk|Type_Critical_Dmg||+12.00% critical extra damage}}<br/>{{Weapon Perk|Type_Element_Pierce_Energy||+4% Energy pierce}}\n| perk7          = {{Weapon Perk|Type_Omega_Dmg||+9.00% damage contra targets below 30% hit points}}\n| notes          =  <spoiler>\n* Para fabricar este item são necessários:\n** [[Arquivo:Auric Moon Sigil.gif]] [[Auric Moon Sigil]]\n** [[Arquivo:Soulkamas.gif]] [[Soulkamas]]\n** [[Arquivo:Sanguine Claws.gif]] [[Sanguine Claws]]\n** [[Arquivo:Moonsilver Katar.gif]] [[Moonsilver Katar]]\n* É necessário ter concluído a [[Make Believe Quest]].\n</spoiler>\n}}"
+       }
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,134 @@
+{
+ "query": {
+  "pages": [
+   {
+    "pageid": 50815,
+    "ns": 0,
+    "title": "Blue Quiver",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Blue Quiver\n| levelrequired  = 0\n| itemclass      = Equipamentos de Corpo \n| primarytype    = Aljavas\n| secondarytype  = Escudos\n| vocrequired    = [[Paladin]]s\n| imbuement      = \n| skillboost     = \n| volume         = 6\n| weight         = 17.00\n| npcprice       = 400 \n| npcvalue       =\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Irea, Dario, Perac, Edoch, Willard, Taegen, Pompan, Rock In A Hard Place, Raffael:350, Eliyas, Gnomerrow, Uzgod, Cedrik, Maun, Mugruu, Brengus, Perod, Silas, Asnarus, Robert, Galuna, Xed, Vincent, Hireling (Trader)\n| sellto         = Jogadores.\n| implemented    = 12.55.10451\n| notes          = Faz parte do [[Paladin Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 50816,
+    "ns": 0,
+    "title": "Quiver",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Quiver\n| levelrequired  = 0\n| itemclass      = Equipamentos de Corpo \n| primarytype    = Aljavas\n| secondarytype  = Escudos\n| vocrequired    = [[Paladin]]s\n| imbuement      = \n| skillboost     = \n| volume         = 6\n| weight         = 17.00\n| value          = \n| npcprice       = 400\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Irea, Dario, Perac, Hireling (Trader), Edoch, Willard, Taegen, Pompan, Gnomerrow, Rock In A Hard Place, Raffael:350, Eliyas, Uzgod, Mugruu, Cedrik, Brengus, Perod, Silas, Asnarus, Maun, Robert, Galuna, Hector the Mentor, Xed, Vincent\n| sellto         = Hector the Mentor:100\n| implemented    = 12.55.10451\n| notes          = Faz parte do [[Paladin Set]].\n<noinclude><p><spoiler>* Pode ser obtida um vez por dia em um baú próximo ao NPC [[Blind Orc]] em [[Rookgaard]], ({{mapa|32100,32127,4:2|aqui}}).</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 50817,
+    "ns": 0,
+    "title": "Red Quiver",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Red Quiver\n| levelrequired  = 0\n| itemclass      = Equipamentos de Corpo \n| primarytype    = Aljavas\n| secondarytype  = Escudos\n| vocrequired    = [[Paladin]]s\n| imbuement      = \n| skillboost     = \n| volume         = 6\n| weight         = 17.00\n| value          = \n| npcprice       = 400\n| npcvalue       = 0\n| droppedby      = [[Adlerauge]].\n| buyfrom        = Irea, Dario, Perac, Edoch, Willard, Taegen, Pompan, Rock In A Hard Place, Raffael:350, Eliyas, Gnomerrow, Uzgod, Cedrik, Maun, Mugruu, Brengus, Perod, Silas, Asnarus, Robert, Galuna, Xed, Vincent, Hireling (Trader)\n| sellto         = Jogadores.\n| implemented    = 12.55.10451\n| notes          = Faz parte do [[Paladin Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 50882,
+    "ns": 0,
+    "title": "Jungle Quiver",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Jungle Quiver\n| levelrequired  = 150\n| itemclass      = Equipamentos de Corpo \n| primarytype    = Aljavas\n| secondarytype  = Escudos\n| vocrequired    = [[Paladin]]s\n| imbuement      = \n| skillboost     = \n| volume         = 8\n| weight         = 18.00\n| npcprice       = \n| npcvalue       = \n| value          = Negociável\n| droppedby      = [[Ratmiral Blackwhiskers]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.60\n| notes          = Faz parte do [[Paladin Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 52300,
+    "ns": 0,
+    "title": "Eldritch Quiver",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Eldritch Quiver\n| levelrequired  = 250\n| itemclass      = Equipamentos de Corpo \n| primarytype    = Aljavas\n| secondarytype  = Escudos\n| vocrequired    = [[Paladin]]s\n| imbuement      = \n| skillboost     = \n| modificadores  = [[Perfect Shot]] +20 at range 4\n| volume         = 8 \n| weight         = 22.00\n| npcprice       = \n| npcvalue       = \n| value          = Negociável\n| droppedby      = [[The Brainstealer]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.70\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 56125,
+    "ns": 0,
+    "title": "Alicorn Quiver",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Alicorn Quiver\n| levelrequired  = 400\n| itemclass      = Equipamentos de Corpo \n| primarytype    = Aljavas\n| secondarytype  = Escudos\n| vocrequired    = [[Paladin]]s\n| imbuement      = \n| skillboost     = [[Magic Level]] +1\n| modificadores  = [[Perfect Shot]] +20 at range 3\n| volume         = 12\n| weight         = 20.00\n| npcprice       = \n| npcvalue       = \n| value          = Negociável\n| droppedby      = [[Magma Bubble]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.90\n| notes          = <noinclude><p><spoiler>* Possibilidade de ser obtido ao usar uma [[Primal Bag]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 56126,
+    "ns": 0,
+    "title": "Naga Quiver",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Naga Quiver\n| levelrequired  = 250\n| itemclass      = Equipamentos de Corpo \n| primarytype    = Aljavas\n| secondarytype  = Escudos\n| vocrequired    = [[Paladin]]s\n| imbuement      = \n| skillboost     = \n| resist         = [[Ice Damage|Ice]] +2%\n| modificadores  = \n| volume         = 8\n| weight         = 19.00\n| npcprice       = \n| npcvalue       = \n| value          = Negociável\n| droppedby      = [[Timira the Many-Headed]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.90\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 62184,
+    "ns": 0,
+    "title": "Candy-Coated Quiver",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Candy-Coated Quiver\n| flavortext     = This quiver may run out of arrows, but it will never run out of treats.\n| levelrequired  = 200\n| itemclass      = Equipamentos de Corpo \n| primarytype    = Aljavas\n| secondarytype  = Escudos\n| vocrequired    = [[Paladin]]s\n| imbuement      = \n| skillboost     = \n| modificadores  = \n| volume         = 8\n| resist         = [[Fire Damage|Fire]] +2%\n| weight         = 18.00\n| npcprice       = 8 000 [[Milk Chocolate Coin]]s\n| npcvalue       = \n| value          = Negociável\n| droppedby      = [[Sugar Daddy]].\n| buyfrom        = Coco\n| sellto         = Jogadores.\n| implemented    = 13.40.54ea79\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

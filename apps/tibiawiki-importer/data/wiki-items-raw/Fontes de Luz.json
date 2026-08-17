@@ -1,0 +1,1110 @@
+{
+ "query": {
+  "pages": [
+   {
+    "pageid": 6079,
+    "ns": 0,
+    "title": "Fire Sword",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Fire Sword\n| flavortext     = The blade is a magic flame.\n| levelrequired  = 30\n| enchantable    = não\n| itemclass      = Armas\n| primarytype    = Espadas\n| secondarytype  = Fontes de Luz\n| attrib         = Fornece uma pequena quantidade de luz amarelada quando equipado.\n| stackable      = não\n| hands          = Uma\n| type           = Espada\n| attack         = 24\n| elementattack  = 11 [[Fire Damage|Fire]]\n| defense        = 20\n| defensemod     = +1\n| weight         = 23.00\n| classificacao  = 2\n| max_tier       = 2\n| value          = 1 000 - 4 200\n| npcvalue       = 4 000\n| droppedby      = [[Albino Dragon]], [[Amenef The Burning]], [[Arbaziloth]], [[Demodras]], [[Dragon Lord]], [[Guardian Of Tales]], [[Hellfire Fighter]], [[Hellhound]], [[Hero]], [[Honey Elemental]], [[Kerberos]], [[Lava Golem]], [[Magma Crawler]], [[Massive Fire Elemental]], [[Pirat Mate]], [[Renegade Knight]], [[Retching Horror]], [[The Count Of The Core]], [[The Baron from Below]], [[The Duke Of The Depths]], [[Thornfire Wolf]], [[Vile Grandmaster]], [[Vulcongra]], [[Ushuriel]], [[Wandering Pillar]], [[Weeper]].\n| droppedRaidby  = [[Furyosa]], [[Mawhawk]].\n| droppedEventby = [[Kalyassa]].\n| buyfrom        = Jogadores.\n| sellto         = Shanar:1 000, Memech:1 000, Nah'Bob, Rowenna:1 000, Hireling (Trader):1 000, Habdel:1 000, Willard:1 000, Esrik:1 000, Rock In A Hard Place:1 000, Ulrik:1 000, Uzgod:1 000, H.L.:335, Cedrik:1 000, Brengus:1 000, Flint:1 000, Robert:1 000, Gamel:1 000, Sam:1 000, Turvy:1 000, Hardek:1 000, Baltim:1 000, Romella:1 000, Morpel:1 000\n| perk1          = {{Weapon Perk|Type_Shield_Mod||+1 defence modifier}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Sword||+4.00% do seu Sword Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Auto_Atk_Critical_Chance||+1.00% critical hit chance para auto-attacks}}<br/>{{Weapon Perk|Type_Life_On_Kill||+5 hit points on kill}}\n| notes          = Antigamente, era loot de [[Dragon]]s e até o [[Updates/8.1]] infligia, simultaneamente, dois tipos de dano(físico e fogo). Após o referido update, seu dano foi alterado para um dano físico e um dano adicional de fogo. Faz parte do [[Hero Set]] e do [[Light Set]].\n<noinclude><p><spoiler>* 03 podem ser trocados por 01 [[Magic Sulphur]] com os NPCs [[Haroun]] ou [[Yaman]] através da [[Exchange Quests]].\n* Recompensa da [[The Djinn War Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6336,
+    "ns": 0,
+    "title": "Hailstorm Rod",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Hailstorm Rod\n| flavortext     = It grants you the power of striking your foes with furious hailstorms.\n| itemclass      = Armas\n| primarytype    = Rods\n| secondarytype  = Fontes de Luz\n| attrib         = Fornece 3 [[sqm]]s de luz azulada quando equipado.\n| stackable      = não\n| vocrequired    = [[Druid]]s\n| levelrequired  = 33\n| damage         = 65\n| damagetype     = Ice\n| weight         = 27.00\n| classificacao  = 1\n| max_tier       = 1\n| range          = 3\n| trade          = sim\n| buyfrom        = Alexander, Asima, Chuckles, Fenech, Frederik, Hireling (Trader), Mordecai, Nelly, Rabaz, Romir, Siflind, Tandros\n| sellto         = Yaman\n| value          = Negociável\n| npcvalue       = 3 000\n| npcprice       = 15 000\n| droppedby      = [[Adept of the Cult]], [[Animated Feather]], [[Blemished Spawn]], [[Blightwalker]], [[Bluebeak]], [[Burster Spectre]], [[Crazed Winter Rearguard]], [[Crystal Wolf]], [[Dark Carnisylvan]], [[Faceless Bane]], [[Flimsy Lost Soul]], [[Ice Witch]], [[Infernal Phantom]], [[Irgix the Flimsy]], [[Madareth]], [[Marid]], [[Melting Frozen Horror]], [[Priestess]], [[The Sandking]], [[Tremendous Tyrant]], [[Varnished Diremaw]], [[Werehyaena Shaman]].\n| droppedEventby = [[Animated Snowman]], [[Ice Dragon]].\n| implemented    = 8.1\n| perk1          = {{Weapon Perk|Type_Life_On_Hit||+3 hit points on hit}}\n| perk2          = {{Weapon Perk|Spell_Ice_Strike|Life_Leech|+2.5% life leech para Ice Strike}}<br/>{{Weapon Perk|Type_Element_Critical_Chance_Ice||+1.00% critical hit chance para Ice spells e runes}}\n| perk3          = {{Weapon Perk|Spell_Ice_Strike|Life_Leech|+2.5% life leech para Ice Strike}}<br/>{{Weapon Perk|Type_Mana_On_Kill||+20 mana on kill}}\n| perk4          = {{Weapon Perk|Type_Element_Critical_Dmg_Ice||+5.00% critical extra damage para Ice spells e runes}}\n| notes          = Substituiu a [[Tempest Rod]] no Update 8.1. Ótima para ser utilizada contra [[Dragons]]. Faz parte do [[Blue Set]] e [[Mage Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6496,
+    "ns": 0,
+    "title": "Mining Helmet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Mining Helmet\n| flavortext     = This is your personal mining helmet.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Capacetes\n| secondarytype  = Fontes de Luz\n| attrib         = Fornece 5 [[sqm]]s de luz amarelada quando equipado.\n| armor          = 1\n| weight         = 7.00\n| classificacao  = 1\n| max_tier       = 1\n| value          = Negociável\n| npcvalue       = 0\n| stackable      = não\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.1\n| notes          = Faz parte do [[Light Set]].\n<noinclude><p><spoiler>* Recompensa da: [[To Outfox a Fox Quest]] parte dos [[Tibia Tales Quest|Tibia Tales]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6847,
+    "ns": 0,
+    "title": "Necromancer Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Necromancer Shield\n| flavortext     = It is enchanted with unholy, necromantic powers.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| secondarytype  = Fontes de Luz\n| attrib         = Fornece uma pequena quantidade de luz esverdeada quando equipado.\n| stackable      = não\n| imbuement      = 1\n| defense        = 49\n| weight         = 32.00\n| value          = 200 000 - 450 000\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| droppedby      = Ninguém.\n| implemented    = 7.9\n| notes          = Apesar de possuir o mesmo atributo defensivo que o [[Mastermind Shield]] e de ser mais leve, não é tão popular. Faz parte do [[Mage Set]], [[Paladin Set]], [[Unrestricted Set]] e [[Rare Set]].\n<noinclude><p><spoiler>* Pode ser obtido como recompensa da [[Dreamer's Challenge Quest]].\n{{DASH|'''Nota''': Para obtê-lo deve-se jurar fidelidade aos [[Brotherhood of Bones]] e entregar 1000 [[Demonic Essence]]s.}}</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6848,
+    "ns": 0,
+    "title": "Nightmare Shield",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Nightmare Shield\n| flavortext     = It was crafted by the ancient order of the nightmare knights.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Escudos\n| secondarytype  = Fontes de Luz\n| attrib         = Fornece uma pequena quantidade de luz avermelhada quando equipado.\n| stackable      = não\n| imbuement      = 1\n| defense        = 49\n| weight         = 32.00\n| value          = 500 000 - 900 000\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| droppedby      = Ninguém.\n| implemented    = 7.9\n| notes          = Apesar de possuir o mesmo atributo defensivo que o [[Mastermind Shield]] e de ser mais leve, não é tão popular. Faz parte do [[Light Set]], [[Paladin Set]], [[Mage Set]], [[Unrestricted Set]], [[Rare Set]] e [[High Level Knight Basic Set]].\n<noinclude><p><spoiler>* Pode ser obtido como recompensa da [[Dreamer's Challenge Quest]].\n{{DASH|'''Nota''': Para obtê-lo deve-se jurar fidelidade aos [[Nightmare Knights]] e entregar 1000 [[Demonic Essence]]s.}}</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7175,
+    "ns": 0,
+    "title": "Moon Backpack",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Moon Backpack\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| secondarytype  = Fontes de Luz\n| imbuement      = 1\n| attrib         = Fornece 3 [[sqm]]s de luz azulada quando equipado.\n| volume         = 20\n| weight         = 18.00\n| droppedby      = [[Leviathan]], [[Wisp]].\n| stackable      = não\n| value          = 20 000 - 100 000\n| npcvalue       = 0\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.5\n| notes          = Faz parte do [[Blue Set]] e [[Rare Set]]. Devido a grande variedade, backpacks são consideradas itens colecionáveis e também usadas como decoração.\n<noinclude><p><spoiler>* Recompensa do [[Lightbearer|Lightbearer Event]].\n*Possibilidade de ser obtido como presente do NPC [[Santa Claus]].</spoiler></p>\n{{Veja|Backpacks}}</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7337,
+    "ns": 0,
+    "title": "Golden Fafnar Trophy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Golden Fafnar Trophy\n| flavortext     = \"Nome\" kept all ten fire basins burning and is one of the true lightbearers of this world.\n| itemclass      = Itens de Decoração\n| tertiarytype   = Extra Slot\n| primarytype    = Troféus\n| secondarytype  = Fontes de Luz\n| attrib         = Fornece uma pequena quantidade de luz.\n| weight         = 9.00\n| stackable      = não\n| value          = \n| npcvalue       = 10 000\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Gnomission\n| implemented    = 8.5\n| mercado        = não\n| notes          =\n<noinclude><p><spoiler>\n* Se o seu servidor ganhar o evento [[Lightbearer]], os jogadores que tiverem acendido todos os basins ganharão um fafnar trophy de ouro com seu nome.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7597,
+    "ns": 0,
+    "title": "Black Skull (Item)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Essa página é sobre o '''item''' Black Skull. Para a marca do ''Skull System'', veja: [[Black Skull (PvP System)|Black Skull]]. Para outros significados, veja: [[Skull|Skull (Desambiguação)]].}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name            = Black Skull (Item)\n| flavortext      = \n| itemclass       = Itens de Decoração\n| tertiarytype   = Extra Slot\n| primarytype     = Decorações\n| secondarytype   = Fontes de Luz\n| stackable       = não\n| attrib          = Fornece uma pequena quantidade de luz vermelha.\n| weight          = 24.00\n| value           = 4 000 - 25 000\n| npcvalue        = 4 000\n| droppedby       = [[Flameborn]], [[Floating Savant]], [[Hellspawn]], [[Infernalist]].\n| buyfrom         = Jogadores.\n| implemented     = 8.4\n| trade           = sim\n| sellto          = Chondur\n| notes           = Este item é um raro loot de [[Hellspawn]] e [[Infernalist]]. Pode ser usado como decoração ou equipado.<br />\nA luz que vem do item só pode ser vista claramente em lugares escuros como cavernas, assim como as luzes do [[Nightmare Shield]] e [[Necromancer Shield]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7604,
+    "ns": 0,
+    "title": "Christmas Branch",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{event}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Christmas Branch\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Decorações\n| secondarytype  = Fontes de Luz\n| attrib         = Provê um pouco de luz.\n| weight         = 18.00\n| stackable      = não\n| value          = 40\n| npcvalue       = 0\n| npcprice       = 40\n| droppedby      = Ninguém.\n| buyfrom        = Messenger Of Santa\n| sellto         = Jogadores.\n| implemented    = 7.9\n| notes          = É um galho de árvore decorativa, com uma vela sobre ele. Fornece 3 quadrados de luz vermelha.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7660,
+    "ns": 0,
+    "title": "Dracoyle Statue",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name            = Dracoyle Statue\n| flavortext      = This rare treasure can be charged with an enchanted emerald.\n| itemclass       = Itens de Decoração\n| tertiarytype   = Extra Slot\n| primarytype     = Decorações\n| secondarytype   = Fontes de Luz\n| enchantable     = sim\n| attrib          = Quando encantada, fornece uma pequena quantidade de luz verde.\n| stackable       = não\n| weight          = 15.00\n| value           = 5 000 - 10 000\n| npcvalue        = 5 000\n| droppedby       = [[Flameborn]], [[Hellspawn]].\n| buyfrom         = Jogadores.\n| sellto          = Yasir\n| implemented     = 8.4\n| notes           = Use uma [[Small Enchanted Emerald]] sobre ela para ativar uma luz verde. O encantamento dura por algum tempo até que você tenha que encantá-la novamente.\n<noinclude><p><spoiler>*Pode ser obtida na [[Chayenne's Realm Quest]].\n*Possibilidade de ser obtida como presente do NPC [[Santa Claus]].\n*[[Arquivo:Achievement.gif]] Após usar uma [[Small Enchanted Emerald]] na Dracoyle Statue, você receberá o achievement \"'''[[I Like it Fancy (Achievement)|I Like it Fancy]]'''\".</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7697,
+    "ns": 0,
+    "title": "Frozen Starlight",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Frozen Starlight\n| itemclass      = Itens de Decoração\n| tertiarytype   = Extra Slot\n| primarytype    = Fontes de Luz\n| secondarytype  = Decorações\n| attrib         = Fornece uma pequena quantidade de luz azulada.\n| weight         = 0.20\n| stackable      = não\n| value          = 10 000 - 40 000 \n| npcvalue       = 20 000\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Gnomission\n| implemented    = 7.3\n| notes          = Provê uma luz azul permanente como uma magia de [[Utevo Lux]]. Pode ser usado como decoração e também equipado.<br />\nA luz que vem do item só pode ser vista claramente em lugares escuros como cavernas, assim como as luzes do [[Nightmare Shield]] e [[Necromancer Shield]].<br />No [[Updates/10.20|update 10.20]] foram implementados raros itens, que emitem outras cores: [[Eye Of The Storm]], [[Glass of Goo]], [[Sun Mirror]] e [[Trapped Lightning]]. Faz parte do [[Blue Set]] e do [[Light Set]].\n<noinclude><p><spoiler>\n* 01 é necessário para acordar [[Yakchal]].\n* Recompensa da [[Pits of Inferno Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7744,
+    "ns": 0,
+    "title": "Pumpkinhead",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Pumpkinhead\n| flavortext     =\n| itemclass      = Itens de Decoração\n| tertiarytype   = Extra Slot\n| primarytype    = Decorações\n| secondarytype  = Fontes de Luz\n| attrib         = Provê luz\n| weight         = (apagada) 9.50 [[oz]] - (acesa) 12.50\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Pode ser esculpida ao utilizar uma [[Kitchen Knife]] em uma [[pumpkin]] e, para prover luz, utilizar um [[candlestick]].\n<noinclude><p><spoiler>* Pode ser obtida no evento de [[Halloween]] ao derrotar a [[The Mutated Pumpkin]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8925,
+    "ns": 0,
+    "title": "Black Candle",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Black Candle\n| flavortext     = \n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Fontes de Luz\n| stackable      = não\n| secondarytype  = Extra Slot\n| attrib         = Fornece uma pequena quantidade de luz vermelha por 30 minutos.\n| weight         = 22.00\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.54\n| notes          = Pode ser encontrada em [[Zao]] e em diversos lugares de [[Drefia]]. Desaparece assim que o fogo acaba.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8926,
+    "ns": 0,
+    "title": "Black Jade Cobra",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Black Jade Cobra\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Fontes de Luz\n| attrib         = Fornece uma pequena quantidade de luz vermelha.\n| weight         = 6.50\n| stackable      = não\n\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.6\n| notes          = Fornece uma pequena quantidade de luz vermelha.<br />\n<noinclude><p><spoiler>\nRecompensa da [[Wrath of the Emperor Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8927,
+    "ns": 0,
+    "title": "Candelabrum",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Candelabrum\n| flavortext    =\n| itemclass     = Ferramentas e Outros Equipamentos\n| primarytype   = Fontes de Luz\n| stackable     = não\n| secondarytype = \n| attrib        = Fornece uma pequena quantidade de luz.\n| weight        = 50.00\n| value         = 8\n| npcvalue      = 0\n| npcprice      = 8\n| trade         = sim\n| droppedby     = Ninguém.\n| buyfrom       = Bashira, Ahmet, Sarina, Hireling (Trader), Halif, Beatrice, Timur, Rock In A Hard Place, Bezil, Nezil, Red Lilly, Nienna, Asphota, Perod, Maro, Maun, Bertha, Gorn, Lubo, Zora, Shiantis, Gree Dee\n| sellto        = Jogadores.\n| notes         = Não é usado frequentemente devido a seu peso. Pode ser encontrado em todo o [[Tibia]], em lugares como castelos, lojas e casas. Quando usado um candelabrum pesa 45.00 oz.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8928,
+    "ns": 0,
+    "title": "Candlestick",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Candlestick\n| flavortext    = \n| itemclass     = Ferramentas e Outros Equipamentos\n| primarytype   = Fontes de Luz\n| stackable     = não\n| secondarytype = Extra Slot\n| attrib        = Fornece uma pequena quantidade de luz.\n| weight        = 3.00\n| trade         = sim\n| npcvalue      = 0\n| npcprice      = 2\n| value         = 0-2\n| droppedby     = [[Banshee]], [[Elf Arcanist]], [[Warlock]], [[Ink Splash]].\n| buyfrom       = Bashira, Ahmet, Sarina, Hireling (Trader), Halif, Beatrice, Pompan, Timur, Rock In A Hard Place, Gladys, Bezil, Nezil, Tefrit, Red Lilly, Nienna, Asphota, Perod, Maro, Maun, Bertha, Gorn, Lubo, Zora, Shiantis, Gree Dee\n| sellto        = Jogadores.\n| notes         = Raramente usado, fornece luz por um curto período de tempo. Normalmente para este propósito jogadores usam uma [[torch]]. Também é usado para iluminar uma [[pumpkin]] esculpida. Pode ser combinada com uma skull para se fazer uma [[Skull Candle]]. Pode ser colocada em [[cake]]s.<br />\nQuando usada um candlestick pesa 2.50 oz.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8929,
+    "ns": 0,
+    "title": "Lamp",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Lamp\n| itemclass      = Ferramentas e Outros Equipamentos\n| secondarytype  = Extra Slot\n| primarytype    = Fontes de Luz\n| stackable      = não\n| attrib         = Provê luz. Recarregável.\n| weight         = 30.00\n| trade          = sim\n| npcvalue       = 0\n| npcprice       = 8\n| value          = Negociável\n| droppedby      = [[Barbarian Bloodwalker]], [[Dark Monk]], [[Monk]], [[Orc Berserker]].\n| droppedRaidby  = [[Fernfang]].\n| droppedEventby = [[Hacker (Criatura)]].\n| buyfrom        = Beatrice, Pompan\n| sellto         = Jogadores.\n| notes          = Provê luz por um período de tempo. Pode ser recarregado com um [[vial]] de [[oil]], fazendo-a emitir luz por cerca de 33 minutos. O nome do [[item]] muda para '''Lit Lamp''' enquanto está acesa. Faz parte do [[Light Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8930,
+    "ns": 0,
+    "title": "Magic Light Wand",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Magic Light Wand\n| flavortext     =\n| itemclass      = Ferramentas e Outros Equipamentos\n| primarytype    = Fontes de Luz\n| secondarytype  = Extra Slot\n| attrib         = Provê luz.\n| weight         = 15.00\n| value          = [[Rookgaard]]: 10 000 - 50 000 [[gp]], [[Mainland]]: 35\n| npcvalue       = 35\n| npcprice       = 120\n| stackable      = não\n| droppedby      = [[Ancient Scarab]], [[Ancient Spawn of Morgathla]], [[Broken Shaper]], [[Dwarf Geomancer]], [[Elder Mummy]], [[Golgordan]], [[Grim Reaper]], [[Latrivan]], [[Mad Scientist]], [[Merlkin]], [[Mummy]], [[Pixie]].\n| droppedRaidby  = [[Apprentice Sheng]], [[Ghazbaran]], [[Morgaroth]], [[Orshabaal]].\n| droppedEventby = [[Grynch Clan Goblin]].\n| buyfrom        = Haroun\n| sellto         = Haroun\n| notes          = Fornece 8 [[sqm]] de luz por 50 minutos. Considerado raro em [[Rookgaard]].\n<noinclude><p><spoiler>\n* Recompensa da [[Orc Shaman Quest]]. \n* Recompensa da [[The Desert Dungeon Quest]].\n* Recompensa da [[Voodoo Doll Quest]].\n* Possibilidade de ser obtido ao usar um [[Mysterious Remains]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8931,
+    "ns": 0,
+    "title": "Magical Torch",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{event}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Magical Torch\n| flavortext     = Light all important locations given to you by Lucius before one of the basins stops burning.\n| itemclass      = Equipamentos de Corpo\n| tertiarytype   = Extra Slot\n| primarytype    = Itens de Quest\n| secondarytype  = Fontes de Luz\n| skillboost     = [[Speed]] +25\n| attrib         = \n| duration       = 27.360\n| weight         = 18.00\n| stackable      = não\n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.5\n| notes          = O NPC [[Lucius]] pode dar-lhe uma. Tem duração de 19 dias, contando a partir do inicio do evento. Faz parte do [[Haste Set]].\n<noinclude><p><spoiler>* Faz parte do evento [[Lightbearer]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25361,
+    "ns": 0,
+    "title": "Crystal Lamp",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Crystal Lamp\n| itemclass      = Ferramentas e Outros Equipamentos\n| tertiarytype   = Extra Slot\n| primarytype    = Fontes de Luz\n| secondarytype  = Cristais\n| stackable      = não\n| attrib         = Fornece uma pequena quantidade de luz azulada.\n| weight         = 10.00\n| npcvalue       = 0\n| npcprice       = 15 [[Minor Crystalline Token]]\n| droppedby      = Ninguém.\n| buyfrom        = Gnomally\n| sellto         = Jogadores.\n| implemented    = 9.6\n| notes          = Quando acesa, seu nome é '''Lit Crystal Lamp'''. Faz parte do [[Blue Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 25484,
+    "ns": 0,
+    "title": "Glowing Mushroom",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Glowing Mushroom\n| flavortext     = \n| itemclass      = Itens de Decoração\n| tertiarytype   = Extra Slot\n| primarytype    = Decorações\n| secondarytype  = Fontes de Luz\n| stackable      = não\n| weight         = 10.00\n| value          = \n| npcprice       = 0\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.6\n| notes          = Quando aceso, seu nome é '''Lit Glowing Mushroom'''.\n<noinclude><p><spoiler>* Possibilidade de ser obtido ao [[Muck Remover|remover o muco]] de um [[Mucus Plug]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 29330,
+    "ns": 0,
+    "title": "Obsidian Zaoan Rook",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Obsidian Zaoan Rook\n| flavortext     = A zaoan chess figure made of obsidian. It depicts the rook.\n| itemclass      = Outros Itens\n| tertiarytype   = Extra Slot\n| primarytype    = Jogos e Diversão\n| secondarytype  = Fontes de Luz\n| attrib         = Fornece uma pequena quantidade de luz.\n| stackable      = não\n| implemented    = 9.83\n| weight         = 5.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Uma peça estilizada para quem gosta de jogar [[xadrez]].<noinclude><p><spoiler>Este item é a recompensa da [[World Quest]] [[The Colours of Magic]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 29332,
+    "ns": 0,
+    "title": "Obsidian Zaoan Queen",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Obsidian Zaoan Queen\n| flavortext     = A zaoan chess figure made of obsidian. It depicts the queen.\n| itemclass      = Outros Itens\n| tertiarytype   = Extra Slot\n| primarytype    = Jogos e Diversão\n| secondarytype  = Fontes de Luz\n| attrib         = Fornece uma pequena quantidade de luz na cor azul Neon.\n| stackable      = não\n| implemented    = 9.83\n| weight         = 5.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Uma peça estilizada para quem gosta de jogar [[xadrez]].<noinclude><p><spoiler>Este item é a recompensa da [[World Quest]] [[The Colours of Magic]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 29334,
+    "ns": 0,
+    "title": "Obsidian Zaoan Pawn",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Obsidian Zaoan Pawn\n| flavortext     = A zaoan chess figure made of obsidian. It depicts the pawn.\n| itemclass      = Outros Itens\n| tertiarytype   = Extra Slot\n| primarytype    = Jogos e Diversão\n| secondarytype  = Fontes de Luz\n| attrib         = Fornece uma pequena quantidade de luz.\n| stackable      = não\n| implemented    = 9.83\n| weight         = 5.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Uma peça estilizada para quem gosta de jogar [[xadrez]].<noinclude><p><spoiler>Este item é a recompensa da [[World Quest]] [[The Colours of Magic]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 29336,
+    "ns": 0,
+    "title": "Obsidian Zaoan Knight",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Obsidian Zaoan Knight\n| flavortext     = A zaoan chess figure made of obsidian. It depicts the knight.\n| itemclass      = Outros Itens\n| tertiarytype   = Extra Slot\n| primarytype    = Jogos e Diversão\n| secondarytype  = Fontes de Luz\n| attrib         = Fornece uma pequena quantidade de luz.\n| stackable      = não\n| implemented    = 9.83\n| weight         = 5.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Uma peça estilizada para quem gosta de jogar [[xadrez]].<noinclude><p><spoiler>Este item é a recompensa da [[World Quest]] [[The Colours of Magic]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 29338,
+    "ns": 0,
+    "title": "Obsidian Zaoan King",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Obsidian Zaoan King\n| flavortext     = A zaoan chess figure made of obsidian. It depicts the king.\n| itemclass      = Outros Itens\n| tertiarytype   = Extra Slot\n| primarytype    = Jogos e Diversão\n| secondarytype  = Fontes de Luz\n| attrib         = Fornece uma pequena quantidade de luz.\n| stackable      = não\n| implemented    = 9.83\n| weight         = 5.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Uma peça estilizada para quem gosta de jogar [[xadrez]].<noinclude><p><spoiler>Este item é a recompensa da [[World Quest]] [[The Colours of Magic]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 29340,
+    "ns": 0,
+    "title": "Obsidian Zaoan Bishop",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Obsidian Zaoan Bishop\n| flavortext     = A zaoan chess figure made of obsidian. It depicts the bishop.\n| itemclass      = Outros Itens\n| tertiarytype   = Extra Slot\n| primarytype    = Jogos e Diversão\n| secondarytype  = Fontes de Luz\n| attrib         = Fornece uma pequena quantidade de luz.\n| stackable      = não\n| implemented    = 9.83\n| weight         = 5.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Uma peça estilizada para quem gosta de jogar [[xadrez]].<noinclude><p><spoiler>Este item é a recompensa da [[World Quest]] [[The Colours of Magic]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 29342,
+    "ns": 0,
+    "title": "Jade Zaoan Rook",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Jade Zaoan Rook\n| flavortext     = A zaoan chess figure made of jade. It depicts the rook.\n| itemclass      = Outros Itens\n| tertiarytype   = Extra Slot\n| primarytype    = Jogos e Diversão\n| secondarytype  = Fontes de Luz\n| attrib         = Fornece uma pequena quantidade de luz verde.\n| stackable      = não\n| implemented    = 9.83\n| weight         = 5.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Uma peça estilizada para quem gosta de jogar [[xadrez]].<noinclude><p><spoiler>Este item é a recompensa da [[World Quest]] [[The Colours of Magic]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 29348,
+    "ns": 0,
+    "title": "Jade Zaoan Bishop",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Jade Zaoan Bishop\n| flavortext     = A zaoan chess figure made of jade. It depicts the bishop.\n| itemclass      = Outros Itens\n| tertiarytype   = Extra Slot\n| primarytype    = Jogos e Diversão\n| secondarytype  = Fontes de Luz\n| attrib         = Fornece uma pequena quantidade de luz verde.\n| stackable      = não\n| implemented    = 9.83\n| weight         = 5.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Uma peça estilizada para quem gosta de jogar [[xadrez]].<noinclude><p><spoiler>Este item é a recompensa da [[World Quest]] [[The Colours of Magic]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 29349,
+    "ns": 0,
+    "title": "Jade Zaoan King",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Jade Zaoan King\n| flavortext     = A zaoan chess figure made of jade. It depicts the king.\n| itemclass      = Outros Itens\n| tertiarytype   = Extra Slot\n| primarytype    = Jogos e Diversão\n| secondarytype  = Fontes de Luz\n| attrib         = Fornece uma pequena quantidade de luz verde.\n| stackable      = não\n| implemented    = 9.83\n| weight         = 5.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Uma peça estilizada para quem gosta de jogar [[xadrez]].<noinclude><p><spoiler>Este item é a recompensa da [[World Quest]] [[The Colours of Magic]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 29350,
+    "ns": 0,
+    "title": "Jade Zaoan Knight",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Jade Zaoan Knight\n| flavortext     = A zaoan chess figure made of jade. It depicts the knight.\n| itemclass      = Outros Itens\n| tertiarytype   = Extra Slot\n| primarytype    = Jogos e Diversão\n| secondarytype  = Fontes de Luz\n| attrib         = Fornece uma pequena quantidade de luz verde.\n| stackable      = não\n| implemented    = 9.83\n| weight         = 5.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Uma peça estilizada para quem gosta de jogar [[xadrez]].<noinclude><p><spoiler>Este item é a recompensa da [[World Quest]] [[The Colours of Magic]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 29351,
+    "ns": 0,
+    "title": "Jade Zaoan Pawn",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Jade Zaoan Pawn\n| flavortext     = A zaoan chess figure made of jade. It depicts the pawn.\n| itemclass      = Outros Itens\n| tertiarytype   = Extra Slot\n| primarytype    = Jogos e Diversão\n| secondarytype  = Fontes de Luz\n| attrib         = Fornece uma pequena quantidade de luz verde.\n| stackable      = não\n| implemented    = 9.83\n| weight         = 5.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Uma peça estilizada para quem gosta de jogar [[xadrez]].<noinclude><p><spoiler>Este item é a recompensa da [[World Quest]] [[The Colours of Magic]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 29352,
+    "ns": 0,
+    "title": "Jade Zaoan Queen",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Jade Zaoan Queen\n| flavortext     = A zaoan chess figure made of jade. It depicts the queen.\n| itemclass      = Outros Itens\n| tertiarytype   = Extra Slot\n| primarytype    = Jogos e Diversão\n| secondarytype  = Fontes de Luz\n| attrib         = Fornece uma pequena quantidade de luz verde.\n| stackable      = não\n| implemented    = 9.83\n| weight         = 5.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Uma peça estilizada para quem gosta de jogar [[xadrez]].<noinclude><p><spoiler>Este item é a recompensa da [[World Quest]] [[The Colours of Magic]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 30996,
+    "ns": 0,
+    "title": "Eye Of The Storm",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Eye Of The Storm\n| itemclass     = Itens de Decoração\n| tertiarytype   = Extra Slot\n| primarytype   = Fontes de Luz\n| secondarytype = Decorações\n| attrib        = Fornece uma pequena quantidade de luz azul.\n| value         = 80 000 000 - 100 000 000\n| weight        = 1.50\n| stackable     = não\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| implemented   = 10.20\n| droppedRaidby = [[Ocyakao]].\n| notes         = Este item foi criado para ser uma alternativa ao [[Frozen Starlight]] e  por isso pode ser equipado no seu [[Inventário]]. O item foi adicionado na versão 10.20. É um loot muito raro e extremamente valioso de [[Ocyakao]], boss das '''Chakoyas'''.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 31003,
+    "ns": 0,
+    "title": "Glass of Goo",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Glass of Goo\n| itemclass     = Itens de Decoração\n| tertiarytype   = Extra Slot\n| primarytype   = Fontes de Luz\n| secondarytype = Decorações\n| attrib        = Fornece uma pequena quantidade de luz verde.\n| weight        = 1.70\n| stackable     = não\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| implemented   = 10.20\n| value         = 16 000 000 - 20 000 000\n| droppedRaidby = [[Weakened Shlorg]].\n| notes         = Este item foi criado para ser uma alternativa ao [[Frozen Starlight]] e por isso pode ser equipado no seu [[Inventário]].\n<gallery>\nArquivo:Glass on Fortera.jpg|Glass of Goo na casa do jogador {{Character|Blitz Satan}} em Fortera.\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 31764,
+    "ns": 0,
+    "title": "Nightmare Beacon",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Nightmare Beacon\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Fontes de Luz\n| attrib         = Pode ser pendurado em paredes. Fornece uma pequena quantidade de luz.\n| weight         = 5.00\n| stackable      = não\n| value          = 600 000 - 1 500 000\n| npcvalue       = 0\n| droppedRaidby  = [[Gaz'Haragoth]]. \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.30\n| notes          = Após ser pendurado em uma parede, ele pode ser aceso ou apagado quando se dá \"Use\" nela.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 32989,
+    "ns": 0,
+    "title": "Green Light",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Green Light\n| itemclass      = Itens de Decoração\n| tertiarytype   = Extra Slot\n| primarytype    = Fontes de Luz\n| secondarytype  = Decorações\n| attrib         = Fornece uma pequena quantidade de luz verde.\n| weight         = 0.20\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.41\n| notes          = Provê uma luz verde permanente. Pode ser usado como decoração e, também, equipado.<br />\nA luz que vem do item só pode ser vista claramente em lugares escuros como cavernas, assim como as luzes do [[Nightmare Shield]] e [[Necromancer Shield]].<noinclude><p><spoiler>* Esse item podia ser temporariamente obtido com o NPC [[Gaberiel]] em comemoração à entrada do Tibia na Steam.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 36503,
+    "ns": 0,
+    "title": "Enchanted Werewolf Amulet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Enchanted Werewolf Amulet\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Amuletos e Colares\n| secondarytype  = Fontes de Luz\n| enchantable    = \n| enchanted      = sim\n| duration       = 60\n| resist         = [[Physical Damage|Physical]] +6%\n| attrib         = Fornece uma pequena quantidade de luz.\n| stackable      = não\n| weight         = 5.50 \n| armor          = 3\n| value          = \n| npcvalue       = 0\n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.80\n| notes          = Esse item é um [[Werewolf Amulet]] encantado.\n<noinclude></noinclude>\n{{Veja|Itens Recarregáveis}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 38914,
+    "ns": 0,
+    "title": "Devourer Core",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Devourer Core\n| flavortext     = The core of the devourer has the power to provide you with a powerfull charge that allows you to challenge him again immediately.\n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Fontes de Luz\n| attrib         = Ao usar, o item '''reinicia o tempo de espera''' ('''cooldown''') do boss [[World Devourer]]. Fornece uma pequena quantidade de luz verde.\n| weight         = 5.60\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 0\n| droppedby      = [[World Devourer]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.94\n| notes          = Ao ser usado, será transformado em um [[Burnt Out Devourer Core]] e não retornará a forma original.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 38915,
+    "ns": 0,
+    "title": "Burnt Out Devourer Core",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Burnt Out Devourer Core\n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Fontes de Luz\n| attrib         = Fornece uma pequena quantidade de luz vermelha.\n| weight         = 5.60\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.94\n| notes          = <noinclude><p><spoiler>* Pode ser obtido após usar um [[Devourer Core]].</spoiler></p></noinclude>\n<gallery>\nArquivo:Out Devourer Core.png|Um Burnt Out Devourer Core em [[Menera]].\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 39621,
+    "ns": 0,
+    "title": "Ghostsilver Lantern",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ghostsilver Lantern\n| flavortext     = It is made of a filigree silver braces and delicate indigo glass. But it is dark at the moment.\n| itemclass      = Outros Itens\n| tertiarytype   = Extra Slot\n| primarytype    = Itens de Quest\n| secondarytype  = Fontes de Luz\n| attrib         = Fornece uma pequena quantidade de luz.\n| weight         = 6.00\n| stackable      = não\n| value          = Negociável\n| npcprice       = 20 000\n| droppedby      = Ninguém.\n| buyfrom        = Black Bert\n| sellto         = Jogadores.\n| mercado        = não\n| notes          = Quando aceso, a descrição mudará para <font color=\"green\">'''It is made of filigree silver braces and delicate indigo glass. It glows with an otherworldly light.'''</font><br />\n<noinclude><p><spoiler>\n* Obtida e usada na [[Forgotten Knowledge Quest]].\n* 01 é necessária para a [[Dream Courts Quest]].\n</spoiler></p></noinclude>\n| implemented    = 11.02\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 41518,
+    "ns": 0,
+    "title": "Moon Mirror",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Moon Mirror\n| flavortext     = \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Fontes de Luz\n| secondarytype  = Extra Slot\n| attrib         = Fornece uma pequena quantidade de luz branca.\n| stackable      = não\n| armor          = 0\n| weight         = 2.00\n| resist         = [[Death Damage|Death]] +5%\n| value          = \n| mercado        = sim\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.40\n| notes          = <noinclude><p><spoiler>* Recompensa da [[Threatened Dreams Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45574,
+    "ns": 0,
+    "title": "Golden Bell",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Golden Bell\n| itemclass     = Outros Itens\n| tertiarytype   = Extra Slot\n| primarytype   = Fontes de Luz\n| secondarytype = Produtos de Criaturas\n| attrib        = \n| weight        = 1.55\n| resist        = \n| stackable     = não\n| droppedEventby = [[The Percht Queen]].\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| implemented   = 12.02.7746\n| value         = Negociável\n| notes         = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 49503,
+    "ns": 0,
+    "title": "Lit Torch",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Lit Torch\n| flavortext    = It sparkles slightly.\n| itemclass     = Equipamentos de Corpo\n| tertiarytype   = Extra Slot\n| primarytype   = Itens de Quest\n| secondarytype = Fontes de Luz\n| attrib        = \n| armor         = 0\n| weight        = 5.00\n| resist        = [[Holy Damage|Holy]] +2%\n| stackable     = não\n| value         = \n| npcvalue      = 0\n| mercado       = sim\n| droppedby     = Ninguém.\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| implemented   = 12.40\n| notes         = \n<noinclude><p><spoiler>\n* Recompensa da [[Grimvale Quest]].\n* Caso você perca sua '''Lit Torch''' ou queira tochas adicionais para decorações por exemplo, é possível fazer outras tochas infinitamente, para isso siga os passos abaixo:\n<ol>\n<li>Com a task/missão secundária '''Rhargu's Demand''' da [[Grimvale Quest]] completa ou com a mesma quest completa, procure pelo NPC [[Rhargu]] em [[Hyaena Lairs]].</li>\n<li>Sem a tocha na backpack, independente se você a perdeu ou só quer fazer outra tocha, fale '''Hi - Lost Torch'''.</li>\n:2.1. Se você tentar pegar uma nova tocha com a sua [[Lit Torch]] na backpack, o npc dirá que você é um mentiroso.\n:2.2. Para cada tocha adicional que você quiser, não poderá ter nenhuma tocha na backpack.\n<li>Após obter a quantidade desejada de [[Lit Torch (Quest)]] [[Arquivo:Lit Torch (Quest).gif|link=]], você deverá obter a mesma quantidade [[Lion's Mane Flower]]s [[Arquivo:Lion's Mane Flower.gif|link=]]. Utilize um canivete em cada uma, transformando todas em [[Chopped Lion Mane Petals]] [[Arquivo:Chopped Lion Mane Petals.gif|link=]].\n<li>Agora você deve ir até sala com um livro em cima de um altar ({{Mapa|33097,32267,11:2|aqui}}) no [[Lion Sanctum]]. Fique em frente ao altar (atrás do livro e não sob o mosaico) e use a [[Chopped Lion Mane Petals]] em sua [[Lit Torch (Quest)]].</li>\n</ol>\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 50368,
+    "ns": 0,
+    "title": "Lit Torch (Quest)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Lit Torch (Quest)\n| flavortext    = \n| itemclass     = Outros Itens\n| primarytype   = Itens de Quest\n| secondarytype = Fontes de Luz\n| attrib        = \n| weight        = 5.00\n| resist        = \n| stackable     = não\n| mercado       = não\n| value         = \n| droppedby     = Ninguém.\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| implemented   = 12.40\n| notes         = \n<noinclude><p><spoiler>\n* Obtido e usado durante a [[Grimvale Quest]]. \n* É usada para fazer uma [[Lit Torch]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55386,
+    "ns": 0,
+    "title": "Rainbow Torch",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Rainbow Torch\n| flavortext    =\n| itemclass     = Ferramentas e Outros Equipamentos\n| primarytype   = Fontes de Luz\n| secondarytype = Extra Slot\n| attrib        = Fornece uma pequena quantidade de luz.\n| weight        = 5.00\n| resist        = \n| stackable     = não\n| droppedby     = Ninguém.\n| buyfrom       = Theodora\n| npcprice      = 10 000 [[Theon]]s\n| sellto        = Jogadores.\n| implemented   = 12.87.12038\n| mercado       = sim\n| value         = \n| notes         = Podia ser obtida durante as comemorações de 25 Anos do Tibia.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 56355,
+    "ns": 0,
+    "title": "Burning Splint",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name        = Burning Splint\n| itemclass   = Ferramentas e Outros Equipamentos\n| primarytype = Fontes de Luz\n| attrib      = Provê luz.\n| weight      = 0.45\n| stackable   = não\n| value       = \n| npcvalue    = 0\n| npcprice    = 0\n| droppedby   = Ninguém.\n| buyfrom     = Ninguém.\n| sellto      = Jogadores.\n| notes       = <noinclude><p><spoiler>* Obtido e usado na [[Within the Tides Quest]].</spoiler></p></noinclude>\n| implemented = 12.90\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 62744,
+    "ns": 0,
+    "title": "Celestial Torch",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{event}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Celestial Torch\n| flavortext     = Its silver flame never fades.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Itens de Quest\n| secondarytype  = Fontes de Luz\n| tertiarytype   = Extra Slot\n| skillboost     = [[Speed]] +25\n| attrib         = \n| armor          = 0\n| duration       = \n| weight         = 18.00\n| stackable      = não\n| mercado        = sim\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 13.40.e15431\n| notes          = <noinclude><p><spoiler>Recompensa rara encontrada no evento [[Lightbearer]], que pode vir dentro de uma [[Brocade Backpack]]. Faz parte do [[Haste Set]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64951,
+    "ns": 0,
+    "title": "Ink Blade",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ink Blade\n| flavortext     = \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Fontes de Luz\n| secondarytype  = Extra Slot\n| vocrequired    = [[Knight]]s\n| armor          = 0\n| attrib         = \n| weight         = 3.50\n| resist         = [[Energy Damage|Energy]] +2%\n| augments       = Summon Knight Familiar -> -300s cooldown\n| stackable      = não\n| value          = \n| mercado        = sim\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = [[Sir Leonard]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 15.10.46b862\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 66039,
+    "ns": 0,
+    "title": "Bounty Talisman",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bounty Talisman\n| flavortext     = A mysterious talisman, studded with colourful jewels, that can be upgraded to grant bonuses against Bounty Task creatures.\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Fontes de Luz\n| secondarytype  = Extra Slot\n| armor          = \n| attrib         = Fornece uma pequena quantidade de luz branca.\n| weight         = 0.75\n| resist         = \n| stackable      = não\n| value          = \n| mercado        = sim\n| npcvalue       = 0\n| npcprice       = 5 000\n| droppedby      = Ninguém.\n| buyfrom        = Briasol, Tesha, Augustin, Ishina, Iwan, Talila, Valindara, Yonan, Tezila, Chantalle, Giri, Kiru, Gail, Edmund, Jessica, Hanna, Odemara, Oiriz, Carina\n| sellto         = Jogadores.\n| implemented    = 15.20.7a5cc9\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6206,
+    "ns": 0,
+    "title": "Skull Staff",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se este não é item que você procura, veja a página: [[Skull|Skull (Desambiguação)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Skull Staff\n| flavortext     = The staff longs for death. \n| levelrequired  = 30\n| itemclass      = Armas\n| primarytype    = Clavas\n| secondarytype  = Fontes de Luz\n| attrib         = Fornece uma pequena quantidade de luz. \n| hands          = Uma\n| type           = Clava\n| imbuement      = 2\n| classificacao  = 2\n| max_tier       = 2\n| attack         = 36\n| defense        = 12\n| defensemod     = +1\n| enchantable    = não\n| weight         = 17.00\n| stackable      = não\n| value          = \n| npcvalue       = 6 000\n| droppedby      = [[Alptramun]], [[Arbaziloth]], [[Blightwalker]], [[Blood Hand]], [[Blood Priest]], [[Bone Overlord]], [[Brachiodemon]], [[Count Vlarkorth]], [[Court Warlock]], [[Crypt Mage]], [[Dipthrah]], [[Infernalist]], [[Izcandar the Banished]], [[Enlightened of the Cult]], [[Glooth Bandit]], [[Golgordan]], [[Gravedigger]], [[Hand of Cursed Fate]], [[Juvenile Bashmu]], [[Lady Tenebris]], [[Latrivan]], [[Lich]], [[Lost Exile]], [[Lost Husher]], [[Lost Soul]], [[Malofur Mangrinder]], [[Maxxenius]], [[Mean Lost Soul]], [[Necromancer]], [[Necropharus]], [[Plagueroot]], [[Ragiaz]], [[The Last Lore Keeper]], [[The Sandking]], [[The Source Of Corruption]], [[The Time Guardian]], [[Unaz the Mean]], [[Warlock]], [[World Devourer]].\n| droppedRaidby  = [[Ghazbaran]], [[Zarabustor]], [[Zushuka (Mortal)]], [[Yakchal]].\n| droppedEventby = [[The Percht Queen]].\n| buyfrom        = Jogadores.\n| sellto         = Alesar\n| implemented    = 6.6\n| perk1          = {{Weapon Perk|Type_Shield_Mod||+1 defence modifier}}\n| perk2          = {{Weapon Perk|Type_Perc_Auto_Atk_Club||+4.00% do seu Club Fighting como extra damage para auto-attacks}}\n| perk3          = {{Weapon Perk|Type_Auto_Atk_Critical_Chance||+1.00% critical hit chance para auto-attacks}}<br/>{{Weapon Perk|Type_Life_On_Kill||+5 hit points on kill}}\n| notes          = Ótima opção de clava para jogadores de níveis médios por ter um ataque consideravelmente alto e ser leve.\n<noinclude><p><spoiler>* Recompensa da [[Medusa Shield Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7338,
+    "ns": 0,
+    "title": "Silver Fafnar Trophy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Silver Fafnar Trophy\n| flavortext     = \"Nome\" helped to keep the fire basins burning and is one of the lightbearers of this world.\n| itemclass      = Itens de Decoração\n| tertiarytype   = Extra Slot\n| primarytype    = Troféus\n| secondarytype  = Fontes de Luz\n| attrib         = Fornece uma pequena quantidade de luz.\n| weight         = 9.00\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 1 000\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Gnomission\n| implemented    = 8.5\n| mercado        = não\n| notes          = Existe também uma [[Golden Fafnar Trophy|versão de ouro]]\nQuando equipado, este troféu ilumina num raio de 1 quadrado ao redor de seu personagem.\n<noinclude><p><spoiler>\nSe o seu servidor ganhar o evento [[Lightbearer]], cada jogador que acendeu ao menos uma das tochas ganhará um trophy especial com seu nome.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7829,
+    "ns": 0,
+    "title": "Table Lamp",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Table Lamp\n| flavortext    = \n| itemclass     = Ferramentas e Outros Equipamentos\n| primarytype   = Decorações\n| secondarytype = Fontes de Luz\n| attrib        = Provê luz.\n| npcvalue      = 0\n| npcprice      = 35\n| droppedby     = Ninguém.\n| stackable     = não\n| trade         = sim\n| buyfrom       = Eddy, Edvard, Feizuhl, Gamon, Hireling (Apprentice), Hofech, Nydala, Ukea, Vera, Yoem\n| sellto        = Jogadores.\n| notes         = Veja [[Furniture Kit]] para informações de como desembrulhá-lo.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8561,
+    "ns": 0,
+    "title": "Wailing Widow's Necklace",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Wailing Widow's Necklace \n| itemclass      = Ferramentas e Outros Equipamentos \n| primarytype    = Amuletos e Colares   \n| secondarytype  = Fontes de Luz\n| attrib         = Fornece uma pequena quantidade de luz verde.\n| armor          = 0\n| stackable       = não\n| weight         = 5.40 \n| value          = 3 000 - 20 000 \n| npcvalue       = 3 000 \n| droppedby      = [[Wailing Widow]].\n| buyfrom        = Jogadores. \n| sellto         = Esrik\n| implemented    = 8.54 \n| notes          = Faz parte do [[Light Set]].\n<noinclude><p><spoiler>* Para vendê-lo ao NPC é preciso ter entregue 9 [[Tome of Knowledge|tomos]] na [[Tomes of Knowledge Quest]]</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8869,
+    "ns": 0,
+    "title": "Strange Symbol",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name            = Strange Symbol\n| flavortext      =\n| itemclass       = Outros Itens\n| primarytype     = Fontes de Luz\n| attrib          = Fornece uma pequena quantidade de luz.\n| weight          = 2.00\n| stackable       = sim\n| trade           = sim\n| value           = 200\n| npcvalue        = 200\n| droppedby       = [[Arachnophobica]], [[Behemoth]], [[Burster Spectre]], [[Dworc Voodoomaster]].\n| droppedRaidby   = [[Ghazbaran]], [[Morgaroth]], [[Oodok Witchmaster]], [[Orshabaal]].\n| buyfrom         = Jogadores.\n| sellto          = Tothdral, Yasir\n| notes           = Usado principalmente para decoração.\n<noinclude><p><spoiler>\n* Recompensa da [[The Hero Cave Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8932,
+    "ns": 0,
+    "title": "Skull Candle",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se este não é item que você procura, veja a página: [[Skull|Skull (Desambiguação)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Skull Candle\n| itemclass      = Ferramentas e Outros Equipamentos\n| secondarytype  = Extra Slot\n| primarytype    = Fontes de Luz\n| attrib         = Provê luz.\n| weight         = 22.00\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 0\n| droppedby      = [[Pirate Corsair]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.8\n| notes          = Você também pode fazer esta vela combinando uma [[Skull (item)|skull]] com um [[candlestick]]. Após 50 minutos ela se tornará uma skull normal de novo. Faz parte do [[Rook Set]].\n<noinclude><p><spoiler>* Encontrado diariamente na [[Dark Cathedral]] e em uma pirâmide no [[Foreigner Quarter]] em [[Yalahar]].\nTambém pode ser encontrada diariamente na sala de [[Kraknaknork]] em [[Rookgaard]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8933,
+    "ns": 0,
+    "title": "Torch",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Torch\n| itemclass      = Ferramentas e Outros Equipamentos\n| secondarytype  = Extra Slot\n| primarytype    = Fontes de Luz\n| attrib         = Provê luz.\n| weight         = 5.00\n| stackable      = não\n| value          = 2\n| npcvalue       = 0\n| npcprice       = 2\n| droppedby      = [[Amazon]], [[Assassin]], [[Barbarian Headsplitter]], [[Barbarian Skullhunter]], [[Brittle Skeleton]], [[Demon Skeleton]], [[Dworc Fleshhunter]], [[Dworc Venomsniper]], [[Dworc Voodoomaster]], [[Fire Devil]], [[Ghoul]], [[Gnome Pack Crawler]], [[Hunter]], [[Lesser Fire Devil]], [[Lost Gnome]], [[Minotaur Mage]], [[Orc Rider]], [[Pirate Buccaneer]], [[Pirate Gunner]], [[Pirate Marauder]], [[Poacher]], [[Skeleton]], [[Smuggler]], [[Swamp Troll]], [[Undead Prospector]], [[Worm Priestess]], [[Pirate Gunner]], [[Infernoid Soul]].\n| droppedRaidby  = [[Apprentice Sheng]], [[Grorlam]], [[Teleskor]].\n| buyfrom        = Bashira, Zethra, Ahmet, Sarina, Hireling (Trader), Halif, Richard, Beatrice, Pompan, Timur, Rock In A Hard Place, Gladys, Raffael, Bezil, Nezil, Tefrit, Red Lilly, Asphota, Perod, Maro, Al Dee, Lee'Delle, Maun, Bertha, Gorn, Lubo, John:5, Zora, Shiantis, Rafzan, Gree Dee\n| sellto         = Jogadores.\n| notes          = Era muito utilizada antes de a [[CipSoft]] adicionar o sistema de luz no client. Faz parte do [[Set Inicial]] e do [[Light Set]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 17433,
+    "ns": 0,
+    "title": "Shimmer Glower",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Shimmer Glower\n| itemclass      = Ferramentas e Outros Equipamentos\n| secondarytype  = Extra Slot\n| primarytype    = Fontes de Luz\n| attrib         = Provê luz.\n| weight         = 10.00\n| stackable      = não\n| value          = 30 000 - 200 000.\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.1\n| notes          = É uma das duas únicas combinações de itens com um [[Shimmer Swimmer]] que não expira em 7 dias. A outra, que na verdade não é bem uma combinação de itens, é a [[Shimmer Ball]]. Faz parte do [[Light Set]].\n<noinclude><p><spoiler>* Pode ser obtido combinando um Shimmer Swimmer com um [[Eye of a Deepling]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 31005,
+    "ns": 0,
+    "title": "Sun Mirror",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Sun Mirror\n| itemclass     = Itens de Decoração\n| tertiarytype   = Extra Slot\n| primarytype   = Fontes de Luz\n| secondarytype = Decorações\n| attrib        = Fornece uma pequena quantidade de luz amarela.\n| weight        = 1.50\n| stackable     = não\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| implemented   = 10.20\n| droppedRaidby = [[Tyrn]].\n| value         = 30 000 000 - 40 000 000\n| notes         = Este item foi criado para ser uma alternativa ao [[Frozen Starlight]] e  por isso pode ser equipado no seu [[Inventário]].\n<gallery>\nArquivo:sunmirror1.jpg|Sun Mirror em [[Aurera]].\n</gallery>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 31007,
+    "ns": 0,
+    "title": "Trapped Lightning",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Trapped Lightning\n| itemclass     = Itens de Decoração\n| primarytype   = Fontes de Luz\n| secondarytype = Decorações\n| tertiarytype  = Extra Slot\n| attrib        = Fornece uma pequena quantidade de luz roxa.\n| value         = 22 000 000 - 33 000 000\n| weight        = 1.00\n| stackable     = não\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| implemented   = 10.20\n| droppedRaidby = [[Zushuka (Mortal)]].\n| notes         = Este item foi criado para ser uma alternativa ao [[Frozen Starlight]] e por isso pode ser equipado no seu [[Inventário]].\n<noinclude><gallery>Arquivo:Trapped Lighttning.png|Trapped Lightning em [[Aurera]].</gallery></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 31776,
+    "ns": 0,
+    "title": "Snow Globe",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Snow Globe\n| flavortext     = \n| itemclass      = Itens de Decoração\n| tertiarytype   = Extra Slot\n| primarytype    = Decorações\n| secondarytype  = Fontes de Luz\n| attrib         = Fornece uma pequena quantidade de luz azul. Reage ao usar.\n| weight         = 10.00\n| stackable      = não\n| npcprice       = 150 [[Christmas Token]]s\n| droppedby      = Ninguém.\n| buyfrom        = Ruprecht\n| sellto         = Jogadores.\n| implemented    = 10.30\n| notes          = Este item pode ser equipado no slot de munição/fonte de luz no seu [[inventário]], desde o patch 10.31 esse item também fornece 5 sqms de luz azul, equivalente a um [[Frozen Starlight]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 34157,
+    "ns": 0,
+    "title": "Stone of Insight",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Stone of Insight\n| flavortext     = This rare artefact can be traded with Milos or Trimegis for a fraction of their knowledge.\n| itemclass      = Outros Itens\n| tertiarytype   = Extra Slot\n| primarytype    = Valiosos\n| secondarytype  = Fontes de Luz\n| stackable      = não\n| weight         = 9.99\n| attrib         = Fornece uma pequena quantidade de luz roxa.\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.52\n| notes          = Essa stone substituiu a [[Stone of Wisdom]]. Você receberá experiência equivalente a 100 vezes o seu level ao quadrado (level * level * 100) ao entregar para o NPC [[Milos]] em Edron ou NPC [[Trimegis]] em Thais. Você só pode usar esse item uma vez por ano. Se o seu servidor tiver sucesso no evento [[Rise of Devovorga]] você poderá utilizá-la até o server save do dia 30 de setembro, caso contrário, poderá usar enquanto o evento estiver ativo.\n<noinclude><p><spoiler>* Recompensa do evento [[Rise of Devovorga]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 36241,
+    "ns": 0,
+    "title": "Werewolf Amulet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Werewolf Amulet\n| itemclass      = Equipamentos de Corpo\n| primarytype    = Amuletos e Colares\n| secondarytype  = Fontes de Luz\n| enchantable    = sim\n| enchanted      = \n| armor          = 0\n| attrib         = Fornece uma pequena quantidade de luz.\n| stackable      = não\n| weight         = 5.50 \n| value          = \n| npcvalue       = 3 000\n| droppedby      = [[Black Vixen]], [[Werebadger]], [[Werebear]], [[Wereboar]], [[Werefox]]. \n| droppedRaidby  = [[Feroxa (Mortal)]], [[Owin (Criatura)]].\n| buyfrom        = Jogadores.\n| sellto         = Gladys\n| implemented    = 10.80\n| notes          = \n<spoiler>Pode ser transformado em um [[Enchanted Werewolf Amulet]] com o uso de [[Moonlight Crystals]].</spoiler>\n{{Veja|Itens Recarregáveis}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 37798,
+    "ns": 0,
+    "title": "Rift Lamp",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Rift Lamp\n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Fontes de Luz\n| attrib         = Fornece uma pequena quantidade de luz amarela.\n| weight         = 8.00\n| stackable      = não\n| mercado        = sim\n| value          = 70 000 - 200 000\n| npcvalue       = 0\n| droppedby      = [[Ferumbras Mortal Shell]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.90\n| notes          = Ela pode ser aceso ou apagado quando se dá \"Use\" nela.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 40953,
+    "ns": 0,
+    "title": "Starlight Vial",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Starlight Vial\n| flavortext     = \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Fontes de Luz\n| secondarytype  = Extra Slot\n| armor          = 0\n| attrib         = Fornece uma pequena quantidade de luz verde.\n| weight         = 2.00\n| resist         = [[Mana Drain]] +5%\n| stackable      = não\n| value          = \n| mercado        = sim\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.40\n| notes          = <noinclude><p><spoiler>* Recompensa da [[Threatened Dreams Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 40956,
+    "ns": 0,
+    "title": "Sun Catcher",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Sun Catcher\n| flavortext     = \n| itemclass      = Equipamentos de Corpo\n| primarytype    = Fontes de Luz\n| secondarytype  = Extra Slot\n| armor          = 0\n| attrib         = Fornece uma pequena quantidade de luz branca.\n| weight         = 2.00\n| resist         = [[Fire Damage|Fire]] +5%\n| stackable      = não\n| value          = \n| mercado        = sim\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.40\n| notes          = <noinclude><p><spoiler>* Recompensa da [[Threatened Dreams Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 48064,
+    "ns": 0,
+    "title": "Soulforged Lantern",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Soulforged Lantern\n| flavortext     = Forged of tormented souls, this item might grant protection from the powers of the pale worm, but it has a chance to burn out in the process. (Burnout chance 20%)\n| itemclass      = Outros Itens\n| tertiarytype   = Extra Slot\n| primarytype    = Itens de Quest\n| secondarytype  = Fontes de Luz\n| attrib         = Fornece uma pequena quantidade de luz.\n| weight         = 30.00\n| stackable      = não\n| value          = Negociável\n| npcprice       = \n| droppedby      = [[The Dread Maiden]], [[The Fear Feaster]], [[The Unwelcome]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| mercado        = não\n| notes          =\n| implemented    = 12.30\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 48084,
+    "ns": 0,
+    "title": "Ulcer Probe",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ulcer Probe\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Fontes de Luz\n| attrib         = \n| weight         = 0.10\n| stackable      = sim\n| value          = \n| npcprice       = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| mercado        = \n| implemented    = 12.30\n| notes          = Use um [[Scalpel]] [[Arquivo:Scalpel.gif]] em uma [[Slime Fungus Ulcer]].</br>\n<noinclude><p><spoiler>\n* 20 são necessários na [[Feaster of Souls Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 56354,
+    "ns": 0,
+    "title": "Splint",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name        = Splint\n| itemclass   = Ferramentas e Outros Equipamentos\n| primarytype = Fontes de Luz\n| attrib      = Provê luz.\n| weight      = 1.80\n| stackable   = não\n| value       = \n| npcvalue    = 0\n| npcprice    = 0\n| droppedby   = Ninguém.\n| buyfrom     = Ninguém.\n| sellto      = Jogadores.\n| notes       = <noinclude><p><spoiler>* Obtido e usado na [[Within the Tides Quest]].</spoiler></p></noinclude>\n| implemented = 12.90\n}}"
+       }
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

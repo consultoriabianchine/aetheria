@@ -1,0 +1,67 @@
+h1 {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.sub {
+  color: #8aa0b6;
+  margin-bottom: 16px;
+  font-size: 13px;
+}
+
+.toolbar {
+  margin-bottom: 12px;
+}
+
+.error {
+  color: #e06a6a;
+  margin: 12px 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #141a24;
+  border: 1px solid #232c3a;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px 12px;
+  border-bottom: 1px solid #232c3a;
+  font-size: 13px;
+}
+
+th {
+  color: #8aa0b6;
+  font-weight: 600;
+  background: #10151e;
+}
+
+.mono {
+  font-family: monospace;
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 12px;
+  background: #3a2f1f;
+  color: #d8a24a;
+}
+
+.badge.partial {
+  background: #1f2f3a;
+  color: #5a9fd8;
+}
+
+.badge.complete {
+  background: #1f3a2a;
+  color: #5ad88a;
+}
+
+a {
+  color: #7fb3e0;
+}

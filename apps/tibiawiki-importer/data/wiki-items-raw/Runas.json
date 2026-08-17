@@ -1,0 +1,598 @@
+{
+ "query": {
+  "pages": [
+   {
+    "pageid": 10206,
+    "ns": 0,
+    "title": "Cure Poison Rune",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre a '''runa''' Cure Poison. Para a magia, veja [[Cure Poison]]''}}</noinclude>\n{{Infobox_Runas|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name            = Cure Poison Rune\n| Subclass        = Cura\n| cooldowngrupo   = 1\n| cooldownproprio = 1\n| words           = adana pox\n| premium         = não\n| makemana        = 200\n| weight          = 2.10\n| mlrequired      = 0\n| levelrequired   = 15\n| soul            = 1\n| makeqty         = 1\n| makevoc         = [[Druid]]s\n| makelvl         = 15\n| buyfrom         = Shiriel, Fenech, Rachel, Hireling (Trader), Asima, Hamish, Rabaz, Talila, Valindara, Gnomegica, Rock In A Hard Place, Khanna, Sigurd, Ghorza, Frederik, Siflind, Tandros, Mordecai, Nelly, Romir, Topsy, Xodet, Frans, Chuckles, Chartan\n| npcprice        = 65\n| storevalue      = 13\n| effect          = Cura [[poison|envenenamento]].\n| notes           = Substituiu a antiga Antidote Rune apartir do [[Updates/8.7|Update 8.7]]. Certa vez pode ser obtida em [[Rookgaard]] com a NPC [[Lily]], sendo mais tarde substituída pela [[Antidote Potion]]. Este item pode ser considerado um item raro em [[rookgaard]]. Atualmente, está em desuso já que após o level 10 o jogador já pode utilizar a magia [[Cure Poison]]. Contudo, jogadores bondosos podem utilizá-la para curar jogadores de level menor que 10 que tenham sido envenenados.\n| history         = \nNos tempos antigos, quando o mundo ainda era jovem e pessoas não conheciam os perigos da vida selvagem, muitos aventureiros foram vítimas de criaturas venenosas que perambulavam pelas cavernas e florestas. Os druidas, habilidosos com todos os tipos de venenos, queriam ajudar os jovens exploradores que não conseguiam se curar. Após muitos anos de pesquisas eles, finalmente, obtiveram sucesso em alterar o feitiço de curar veneno para vinculá-lo a uma runa. Ao utilizar esta runa era possível parar o efeito de qualquer veneno conhecido. \nDesde então, a confiável runa de curar veneno tem salvo a vida de muitos aventureiros que se encontram sem mana justamente quando mais precisavam.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 10208,
+    "ns": 0,
+    "title": "Chameleon Rune",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Runas|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name            = Chameleon Rune\n| Subclass        = Suporte\n| cooldowngrupo   = 2\n| cooldownproprio = 2\n| words           = adevo ina\n| premium         = não\n| makemana        = 600\n| weight          = 2.10\n| mlrequired      = 4\n| levelrequired   = 27\n| soul            = 2\n| makeqty         = 1\n| makevoc         = [[Druid]]s\n| makelvl         = 27\n| buyfrom         = Shiriel, Fenech, Rachel, Hireling (Trader), Asima, Rabaz, Talila, Valindara, Gnomegica, Rock In A Hard Place, Khanna, Sigurd, Ghorza, Frederik, Siflind, Tandros, Mordecai, Nelly, Romir, Topsy, Xodet, Frans, Chuckles, Chartan\n| npcprice        = 210\n| storevalue      = 42\n| effect          = Transforma você no item no qual utilizou a runa por 200 segundos (3 minutos e 20 segundos).<noinclude> '''Não''' pode ser usada em [[Criatura]]s, [[NPC]]s, em outro jogador ou objetos.</noinclude>\n| notes           = Durante a comemoração do 15ª aniversário do Tibia, sua utilização foi imprescindível para ganhar o presente de Mercutio, o personagem deveria estar transformado em algum instrumento musical e tocar algumas notas ao falar com ele. Este fato, levou os jogadores a questionarem se a existência da Chameleon no jogo seria mesmo apenas para diversão ou haveria alguma outra utilização ainda por ser descoberta...\n| history         = Acredita-se que essa peculiar runa foi descoberta por acidente. Diz a lenda que o famoso druida Ferdo the Forgetful testou uma nova magia em si mesmo, para curar uma dor de dente, mas acabou se transformando em um vaso de flores! A metamorfose causada pela Chameleon é apenas superficial. Embora o usuário possa assumir a forma exterior de objetos inanimados, ele vai sempre manter o seu cheiro e habilidades mentais originais. Esta amostra clara da limitação da magia foi a sorte de Ferdo. Poucas criaturas e só os mais distraídos seres inteligentes são enganados pela Chameleon. Portanto, não há uso prático para ela, fazendo com que grande parte deste encanto seja apenas um divertimento. No entanto, alguns dos principais druidas de hoje ainda pesquisam esse feitiço, por isso, é de se esperar que um dia o feitiço possa ser renovado sem falhas evidentes.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 10210,
+    "ns": 0,
+    "title": "Avalanche Rune",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|''Este artigo é sobre a '''runa''' Avalanche. Para a criatura, veja [[Avalanche (Criatura)]].''}}</noinclude>\n{{Infobox_Runas|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name            = Avalanche Rune\n| Subclass        = Ataque\n| damagetype      = Ice\n| cooldowngrupo   = 2\n| cooldownproprio = 2\n| words           = adori mas frigo\n| premium         = não\n| makemana        = 530\n| weight          = 0.52\n| mlrequired      = 4\n| levelrequired   = 30\n| soul            = 3\n| makeqty         = 4\n| makevoc         = [[Druid]]s\n| makelvl         = 30\n| implemented     = 8.1\n| basePower       = 50\n| buyfrom         = Shiriel, Fenech, Rachel, Hireling (Trader), Asima, Yerga, Talila, Valindara, Rabaz, Gnomegica, Rock In A Hard Place, Khanna, Sigurd, Ghorza, Frederik, Siflind, Tandros, Mordecai, Nelly, Romir, Topsy, Xodet, Frans, Chuckles, Chartan\n| npcprice        = 64\n| storevalue      = 12\n| animation       = Avalanche1.gif\n| effect          = [[Arquivo:Freezing Flash Icon.gif]]  [[Ice Damage|Dano de Gelo]] em uma área de até 37 Sqms. <noinclude> Equivale a [[Great Fireball]].</noinclude>\n| notes           = \n| history         = Como seu nome sugere, seu efeito cai sobre suas vítimas. É tão fria quanto a [[Icicle]], mas afeta uma área muito maior. O dano de gelo que surge a partir desta runa é uma arma útil nas batalhas, principalmente se você luta contra uma horda de criaturas que dominam o elemento fogo. Uma vez que a energia fria é liberada, todos que estão perto sentirão a dor horrível dessa magia congelante! Embora, apenas os [[Druid|druidas]] sejam capazes de criar uma runa com este poderoso feitiço, ela é popular dentre todas as vocações.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 10212,
+    "ns": 0,
+    "title": "Fire Bomb Rune",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Runas|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name            = Fire Bomb Rune\n| Subclass        = Campo\n| damagetype      = Fire\n| cooldowngrupo   = 2\n| cooldownproprio = 2\n| words           = adevo mas flam\n| premium         = não\n| makemana        = 600\n| weight          = 1.05\n| mlrequired      = 5\n| levelrequired   = 27\n| soul            = 4\n| makeqty         = 2\n| makevoc         = [[Druid]]s, [[Sorcerer]]s.\n| makelvl         = 27\n| buyfrom         = Shiriel, Fenech, Rachel, Hireling (Trader), Asima, Rabaz, Talila, Valindara, Gnomegica, Rock In A Hard Place, Khanna, Sigurd, Ghorza, Frederik, Siflind, Tandros, Mordecai, Nelly, Romir, Topsy, Xodet, Frans, Chuckles, Chartan\n| npcprice        = 147\n| storevalue      = 29\n| animation       = Fire Bomb Rune1.gif\n| effect          = [[Arquivo:Burning Flash Icon.gif]] Cria uma barreira 3x3 de [[Fire Field]]s.\n| notes           = \n<span>\n*Duração e danos semelhantes a [[Fire Field Rune]]. \n*Em mundos [[Open PvP]], este feitiço é útil para capturar os jogadores durante a batalha, mas permite que personagens de nível baixo se suicidar o que leva a morte por combate injustificado.</span>\n| history         = \nUma combinação astuta entre [[Fireball Rune]] e [[Fire Field Rune]], é uma arma mortal nas mãos de um aventureiro qualificado. Ao liberá-la, uma área de 9 metros quadrados é coberta por ardentes chamas que queimam todos aqueles que tiverem a infelicidade de serem pegos por elas. Muitos monstros ficam confusos com o incêndio inesperado, e com um pouco de sorte o conjurador consegue prender seus oponentes usando a runa. No entanto, é preciso cautela, pois a maioria dos monstros mais determinados não serão travado pelas chamas por muito tempo.\nSabe-se que em situações desesperadas aventureiros audazes usaram Fire Bomb em si mesmos para manter os inimigos distantes. No entanto, por razões óbvias somente os aventureiros mais fortes ou mais desesperados devem usá-las desta forma.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 10216,
+    "ns": 0,
+    "title": "Convince Creature Rune",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Runas|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name            = Convince Creature Rune\n| Subclass        = Summon\n| cooldowngrupo   = 2\n| cooldownproprio = 2\n| words           = adeta sio\n| premium         = não\n| makemana        = 200 (Irá gastar mais mana para convencer a criatura)\n| weight          = 2.10\n| mlrequired      = 5\n| levelrequired   = 16\n| soul            = 3\n| makeqty         = 1\n| makevoc         = [[Druid]]s\n| makelvl         = 16\n| buyfrom         = Hector the Mentor, Shiriel, Fenech, Rachel, Hireling (Trader), Asima, Rabaz, Talila, Valindara, Gnomegica, Rock In A Hard Place, Sigurd, Ghorza, Frederik, Siflind, Tandros, Mordecai, Nelly, Romir, Topsy, Xodet, Frans, Chuckles, Chartan\n| npcprice        = 80\n| storevalue      = 16\n| effect          = Convence uma criatura a ajudá-lo. <noinclude>(A maioria das criaturas que podem ser [[summon Creature|sumonadas]] também podem ser convencidas, com exceção de [[Monk]]s. [[Sumonando Criaturas|Veja este artigo para maiores informações]]).</noinclude>\n| notes           = \n| history         = Necessita de mana para ser utilizada, a quantidade de energia gasta é determinada pelo poder da criatura que se deseja convencer. Inicialmente, [[Druid|druidas]] a desenvolveram para fazer amizade com animais hostis ao invés de ter que matá-los. Contudo, acabou sendo usada para convencer uma criatura a lutar contra outra mais poderosa, incluindo algumas espécies que eram consideradas inteligentes. O aventureiro que utilizar a runa deve certificar-se com antecedência de que alvo é realmente suscetível a magia (não há nenhum motivo em se tentar convencer um dragão furioso!). Além disso, o aventureiro deve lembrar-se de ficar perto da criatura convencida para que mantenham o vínculo. Criaturas convencidas, ao se separarem de seus mestres, logo vão sumir para nunca mais serem vistas.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 10217,
+    "ns": 0,
+    "title": "Disintegrate Rune",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Runas|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name            = Disintegrate Rune\n| Subclass        = Suporte\n| cooldowngrupo   = 2\n| cooldownproprio = 2\n| words           = adito tera\n| premium         = sim\n| makemana        = 200\n| weight          = 0.70\n| mlrequired      = 4\n| levelrequired   = 21\n| soul            = 3\n| makeqty         = 3\n| makevoc         = [[Druid]]s, [[Sorcerer]]s, [[Paladin]]s e [[Monk]]s\n| makelvl         = 21\n| implemented     = 6.4\n| buyfrom         = Hireling (Trader), Alexander, Talila, Valindara, Rock In A Hard Place, Khanna, Ghorza, Mordecai, Maun, Asnarus\n| npcprice        = 26\n| storevalue      = 5\n| effect          = Desintegra objetos e corpos de criaturas que podem ser movimentados.\n| notes           = Esta runa é mais utilizada em mundos [[Open PvP]] para se livrar de armadinhas de jogadores [[Player Killer|PK]].\n| history         = Não existe nada pior do que ser encurralado ao fugir de um inimigo que você não pode derrotar. Ainda mais se os obstáculos no seu caminho são itens que você poderia remover facilmente se você tivesse o tempo! Contudo, existe uma solução confiável: a runa de desintegração!!! Ela irá instantaneamente destruir até 500 itens movíveis que estiverem no seu caminho, abrindo espaço para uma rápida escapada. Se você precisa correr e não tem tempo para quebrar objetos que estejam em seu caminho, a runa de desintegração é o que você precisa. Tenha sempre algumas delas em sua mochila.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 10218,
+    "ns": 0,
+    "title": "Destroy Field Rune",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Runas|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name            = Destroy Field Rune\n| Subclass        = Suporte\n| cooldowngrupo   = 2\n| cooldownproprio = 2\n| words           = adito grav\n| premium         = não\n| makemana        = 120\n| weight          = 0.70\n| mlrequired      = 3\n| levelrequired   = 17\n| soul            = 2\n| makeqty         = 3\n| makevoc         = [[Druid]]s, [[Sorcerer]]s, [[Paladin]]s e [[Monk]]s\n| makelvl         = 17\n| buyfrom         = Shiriel, Fenech, Rachel, Hireling (Trader), Asima, Hamish, Rabaz, Talila, Valindara, Gnomegica, Rock In A Hard Place, Khanna, Sigurd, Ghorza, Frederik, Siflind, Tandros, Mordecai, Nelly, Romir, Topsy, Xodet, Frans, Chuckles, Chartan\n| npcprice        = 15\n| effect          = Destrói campos de [[Fire Field|fogo]], [[Poison Field|veneno]] e [[Energy Field|energia]], a qualquer distância, desde que não exista nada bloqueando o caminho.\n| notes           = Runa muito útil para abrir caminhos em algumas [[Quests]] e diversos locais, permitindo acessar itens ou objetos que ficam embaixo de campos e escapar de armadilhas de jogadores [[PK]] em mundos [[Open PvP]].\n| history         = No mundo do Tibia, campos mágicos são uma ameaça comum. Não só muitos aventureiros têm a possibilidade de usar runas de campo, como também há uma série de outras possíveis fontes geradoras, incluindo armadilhas, ataques de certas criaturas ou mesmo causas naturais. Ficar preso por esses perigosos campos  é uma experiência desagradável que aventureiros mais experientes já experimentaram em alguma ocasião. Muitos deles simplesmente devem sua sobrevivência às runas de destruir campo que levavam com eles! Um feitiço verdadeiramente indispensável, esta runa não deve faltar na mochila de qualquer aventureiro.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 10219,
+    "ns": 0,
+    "title": "Energy Bomb Rune",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Runas|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name            = Energy Bomb Rune\n| Subclass        = Campo\n| damagetype      = Energy\n| cooldowngrupo   = 2\n| cooldownproprio = 2\n| words           = adevo mas vis\n| premium         = sim\n| makemana        = 880\n| weight          = 1.05\n| mlrequired      = 10\n| levelrequired   = 37\n| soul            = 5\n| makeqty         = 2\n| makevoc         = [[Sorcerer]]s\n| makelvl         = 37\n| implemented     = 6.4\n| buyfrom         = Hireling (Trader), Alexander, Talila, Valindara, Rock In A Hard Place, Khanna, Ghorza, Mordecai, Maun, Asnarus\n| npcprice        = 203\n| storevalue      = 40\n| animation       = Energy Bomb Rune1.gif\n| effect          = [[Arquivo:Electrified Flash Icon.gif]] Cria uma barreira 3x3 de [[Energy Field]]s.\n| notes           = \n<span>\n*Duração dos campos e dano semelhantes a [[Energy Field Rune]].\n*Há relatos de que, em [[Antica]], houve uma época em que esta runa permitia 15 tiros e área atingida era maior.</span>\n| history         = Outro feitiço criado pelos astuciosos feiticeiros da academia mágica de Edron. O desenvolvimento da bomba de energia foi baseado no feitiço de [[Energy Field|campo de energia]], pode ser considerado a melhoria dele. Tal como sua parente mais fraca, a runa criará um campo de energia que causa dano mortal a todos os que passam por ela desavisados. No entanto, sua área de efeito foi muito melhorada, agora abrangendo um total de 9 metros quadrados! Monstros que são apanhados no meio de uma bomba de energia ficam frequentemente confusos devido ao efeito inesperado e alguns podem até mesmo ficar dentro do campo de faíscas mortais por um tempo. Além disso, alguns aventureiros ousados, em situações desesperadas, usam a bomba de energia em si mesmos para impedir que seus inimigos os ataquem. No entanto, por motivos óbvios, somente os mais fortes ou mais desesperados aventureiros devem usar as bombas de energia dessa forma.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 10221,
+    "ns": 0,
+    "title": "Energy Wall Rune",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Runas|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name            = Energy Wall Rune\n| Subclass        = Campo\n| damagetype      = Energy\n| cooldowngrupo   = 2\n| cooldownproprio = 2\n| words           = adevo mas grav vis\n| premium         = não\n| makemana        = 1000\n| weight          = 0.52\n| mlrequired      = 9\n| levelrequired   = 41\n| soul            = 5\n| makeqty         = 4\n| makevoc         = [[Druid]]s, [[Sorcerer]]s\n| makelvl         = 41\n| buyfrom         = Shiriel, Fenech, Rachel, Hireling (Trader), Asima, Rabaz, Talila, Valindara, Gnomegica, Rock In A Hard Place, Khanna, Sigurd, Ghorza, Frederik, Siflind, Tandros, Mordecai, Nelly, Romir, Topsy, Xodet, Frans, Chuckles, Chartan\n| npcprice        = 85\n| storevalue      = 17\n| effect          = [[Arquivo:Electrified Flash Icon.gif]] Cria uma barreira de 1x7 de [[Energy Field]]s.\n| notes           = Duração dos campos e dano semelhantes a [[Energy Field Rune]].\n| history         = Gera uma sólida barreira feito de energia. Essa barreira supera em largura qualquer outro obstáculo magicamente criado, por isso são recomendados para uso em áreas externas para fugir de monstros poderosos. Por esta razão, é sempre uma boa idéia ter essa runa no bolso durante viagem através do deserto. No entanto, estudos recentes têm sugerido que podem existir criaturas capazes de quebrar paredes de energia, por isso esteja sempre preparado para uma fuga rápida!\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 10222,
+    "ns": 0,
+    "title": "Explosion Rune",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Runas|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name            = Explosion Rune\n| Subclass        = Ataque\n| damagetype      = Physical\n| cooldowngrupo   = 2\n| cooldownproprio = 2\n| words           = adevo mas hur\n| premium         = não\n| makemana        = 570\n| weight          = 0.35\n| mlrequired      = 6\n| levelrequired   = 31\n| soul            = 4\n| makeqty         = 6\n| makevoc         = [[Druid]]s, [[Sorcerer]]s.\n| makelvl         = 31\n| buyfrom         = Shiriel, Fenech, Rachel, Hireling (Trader), Asima, Rabaz, Talila, Valindara, Gnomegica, Rock In A Hard Place, Khanna, Sigurd, Ghorza, Frederik, Siflind, Tandros, Mordecai, Nelly, Romir, Topsy, Xodet, Frans, Chuckles, Chartan\n| npcprice        = 31\n| storevalue      = 6\n| animation       = Explosion1.gif\n| effect          = [[Arquivo:Physical Damage Icon.gif]] Dano físico em área atingindo 9 sqm's.\n| notes           = O centro é o [[sqm]] em que você atira, exige mira precisa para ser utilizada. Não perfura a armadura e tem um dano variado.\n| history         = Um pouco incomum, esta runa deve ser destinada a áreas em que criaturas específicas estejam próximas para que a explosão desencadeada atinja o objetivo. Por esta razão, seu uso eficaz requer alguma habilidade. Porém, felizmente, as explosões causam danos substanciais em seu raio de ação de modo que o aventureiro experiente saberá quando e como usar esta magia para alcançar ótimos resultados. Apesar do manuseio complicado ainda é um feitiço muito popular, não só por causar um dano físico considerável mas também por ser uma das poderosas runas de ataque que os druídas podem manipular.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 10223,
+    "ns": 0,
+    "title": "Fire Field Rune",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Essa página é sobre a '''runa''' Fire Field. Para o campo, veja [[Fire Field]].''}}</noinclude>\n{{Infobox_Runas|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name            = Fire Field Rune\n| Subclass        = Campo\n| damagetype      = Fire\n| cooldowngrupo   = 2\n| cooldownproprio = 2\n| words           = adevo grav flam\n| premium         = não\n| makemana        = 240\n| weight          = 0.70\n| mlrequired      = 1\n| levelrequired   = 15\n| soul            = 1\n| makeqty         = 3\n| makevoc         = [[Druid]]s, [[Sorcerer]]s.\n| makelvl         = 15\n| buyfrom         = Shiriel, Fenech, Rachel, Hireling (Trader), Asima, Hamish, Rabaz, Talila, Valindara, Gnomegica, Rock In A Hard Place, Khanna, Sigurd, Ghorza, Frederik, Siflind, Tandros, Mordecai, Nelly, Romir, Topsy, Xodet, Frans, Chuckles, Chartan\n| npcprice        = 28\n| storevalue      = 6\n| effect          = [[Arquivo:Burning Flash Icon.gif]] Cria um [[Fire Field]].\n| notes           = \n<span>\n*A primeira fase do campo de fogo dura 00:03:20, o segundo estágio tem a duração de 00:02:28, a última etapa (que não bloqueia um monstro) dura 00:01:38, assim, o tempo total do fogo que irá bloquear um monstro é :00:05:48.\n*O efeito [[Burning]] (\"queimando\") dura cerca de 00:01:00 e seu dano é de 20 caindo posteriormente para 10, podemos então considerar que o dano nos primeiros 10 segundos é de 30 [[HP]] (essa magia produz um bom dano a longo prazo, se quiser tirar um dano a curto prazo utilize [[Energy Field]]). Dano total de 90 HP. \n*Cada vez que o jogador/criatura passar pelo campo receberá um novo dano. Das magias de fogo é a que produz mais luz. \n*Em mundos [[Optional PvP]] essa magia não tem efeito prejudicial sobre outros personagens, a não ser que os personagens sejam seus adversários de [[War System|guerra]].</span>\n| history         = É claro que um dos primeiros feitiços confiáveis a ser desenvolvido deveria envolver o elemento fogo. Quando a runa é usada, um campo de 1 sqm é coberto pelo fogo abrasador que dura alguns minutos, diminuindo gradualmente como um incêndio que se desgasta. Tal como acontece com todas as magias de campo, ela é bastante útil para bloquear passagens estreitas ou para criar grandes barreiras quando conectados. Utilizar o campo em um adversário também é uma estratégia que funciona bem com monstros mais fracos, embora a maioria das criaturas mais fortes facilmente livram-se do efeito.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 10227,
+    "ns": 0,
+    "title": "Fire Wall Rune",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Runas|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name            = Fire Wall Rune\n| Subclass        = Campo\n| damagetype      = Fire\n| cooldowngrupo   = 2\n| cooldownproprio = 2\n| words           = adevo mas grav flam\n| premium         = não\n| makemana        = 780\n| weight          = 0.52\n| mlrequired      = 6\n| levelrequired   = 33\n| soul            = 4\n| makeqty         = 4\n| makevoc         = [[Druid]]s, [[Sorcerer]]s.\n| makelvl         = 33\n| buyfrom         = Shiriel, Fenech, Rachel, Hireling (Trader), Asima, Rabaz, Talila, Valindara, Gnomegica, Rock In A Hard Place, Khanna, Sigurd, Ghorza, Frederik, Siflind, Tandros, Mordecai, Nelly, Romir, Topsy, Xodet, Frans, Chuckles, Chartan\n| npcprice        = 61\n| storevalue      = 12\n| effect          = [[Arquivo:Burning Flash Icon.gif]] Cria uma barreira 1x5 de [[Fire Field]]s.\n| notes           = Duração e danos semelhantes a [[Fire Field Rune]].\n| history         = É um dos mais antigos encantamentos conhecidos e demonstra seu valor em inúmeras ocasiões. Oferece proteção confiável contra todas as criaturas que temem ao fogo. Muitos aventureiros que viajam pelo deserto usam essa runa para se certificar de que não serão pertubados durante o descanso. A duração excepcionalmente longa do feitiço e a possibilidade de formar barreiras maciças ou círculos de proteção tornam esta  versátil e prática runa um feitiço indispensável ao [[Spellbook]] de qualquer [[Mage|mago]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 10228,
+    "ns": 0,
+    "title": "Fireball Rune",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Runas|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name            = Fireball Rune\n| Subclass        = Ataque\n| damagetype      = Fire\n| cooldowngrupo   = 2\n| cooldownproprio = 2\n| words           = adori flam\n| premium         = sim\n| makemana        = 460\n| weight          = 0.42\n| mlrequired      = 4\n| levelrequired   = 27\n| soul            = 3\n| makeqty         = 5\n| makevoc         = [[Sorcerer]]s\n| makelvl         = 27\n| buyfrom         = Hireling (Trader), Alexander, Talila, Valindara, Rock In A Hard Place, Khanna, Ghorza, Mordecai, Maun, Asnarus\n| npcprice        = 30\n| storevalue      = 6\n| effect          = [[Arquivo:Burning Flash Icon.gif]] [[Fire Damage|Dano fogo]] em um alvo.<noinclude> Equivale a [[Icicle (Rune)|Icicle]].</noinclude>\n| notes           = Após o [[Updates/8.1|Update de Inverno 2007]] passou a ser feita somente por [[Premium Account]]s, o [[Level]] requerido passou do 17 pro 27 e deixou de ser uma runa de área.\n| history         = É uma das runas de ataque mais comuns que existem no Tibia. Desde que sua magia foi desenvolvida, esta runa confiável provou o seu valor em inúmeras batalhas. Quando ela é usada uma grande bola de fogo é liberado e atinge o inimigo com imenso poder. É especialmente eficaz contra os opositores do elemento terra. Por outro lado, criaturas que resistem ao fogo podem facilmente livrar-se os efeitos da magia. Atualmente, esse feitiço não estão mais tão atrativo devido ao desenvolvimento da Great Fireball. No entanto, ainda é uma boa opção devido aos requisitos de mana e level serem menores.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 10229,
+    "ns": 0,
+    "title": "Great Fireball Rune",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Runas|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name            = Great Fireball Rune\n| Subclass        = Ataque\n| damagetype      = Fire\n| cooldowngrupo   = 2\n| cooldownproprio = 2\n| words           = adori mas flam\n| premium         = não\n| makemana        = 530\n| weight          = 0.52\n| mlrequired      = 4\n| levelrequired   = 30\n| soul            = 3\n| makeqty         = 4\n| makevoc         = [[Sorcerer]]s\n| makelvl         = 30\n| basePower       = 50\n| buyfrom         = Shiriel, Fenech, Rachel, Hireling (Trader), Asima, Rabaz, Talila, Valindara, Gnomegica, Rock In A Hard Place, Khanna, Sigurd, Ghorza, Frederik, Siflind, Tandros, Mordecai, Nelly, Romir, Topsy, Xodet, Frans, Chuckles, Chartan\n| npcprice        = 64\n| storevalue      = 12\n| animation       = Great fireball1.gif\n| effect          = [[Arquivo:Burning Flash Icon.gif]] [[Fire Damage|Dano fogo]] em uma área de até 37 Sqms. <noinclude> Equivale a [[Avalanche Rune|Avalanche]].</noinclude>\n| notes           = <noinclude><p><spoiler>Recompensa da [[Barbarian Arena Quest|Barbarian Arena - Scrapper Mode]].</spoiler></p></noinclude>\n| history         = É basicamente uma versão ampliada da [[Fireball Rune]]. Diferente do tiro único, a Great Fireball afeta uma área de até 37 metros quadrados! Desta forma, qualquer sala de tamanho médio é facilmente preenchida com a chama ardente, abrasando todas as criaturas que estão nela, exceto o próprio usuário. Ela é uma das favoritas da maioria dos Tibianos, já que é adequada tanto para atacar hordas inteiras de monstros, quanto criaturas difíceis de detectar.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 10230,
+    "ns": 0,
+    "title": "Heavy Magic Missile Rune",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Runas|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name            = Heavy Magic Missile Rune\n| Subclass        = Ataque\n| damagetype      = Energy\n| cooldowngrupo   = 2\n| cooldownproprio = 2\n| words           = adori vis\n| premium         = não\n| makemana        = 350\n| weight          = 0.21\n| mlrequired      = 3\n| levelrequired   = 25\n| soul            = 2\n| makeqty         = 10\n| makevoc         = [[Druid]]s, [[Sorcerer]]s.\n| makelvl         = 25\n| buyfrom         = Shiriel, Fenech, Rachel, Hireling (Trader), Asima, Rabaz, Talila, Valindara, Gnomegica, Rock In A Hard Place, Khanna, Sigurd, Ghorza, Frederik, Siflind, Tandros, Mordecai, Nelly, Romir, Topsy, Xodet, Frans, Chuckles, Chartan\n| npcprice        = 12\n| effect          = [[Arquivo:Electrified Flash Icon.gif]] [[Energy Damage|Dano de energia]] em um alvo.<noinclude> Equivale a [[Stalagmite Rune]].</noinclude>\n| notes           = \nAté o [[Updates/8.1|Update 8.1]] a [[HMM]] podia ser feita por [[paladin]]s, tinha só 5 cargas, gastava apenas 280 para ser feita e era preciso [[magic level]] 4 pra se poder usá-la. A antiga fórmula para fazê-la era '''adori gran''', mas foi mudada para '''adori vis''' pois é mais adequada ao elemento.\n<noinclude><p><spoiler>Recompensa da [[Barbarian Arena Quest|Barbarian Arena - Scrapper Mode]].</spoiler></p></noinclude>\n| history         = É, talvez, a mais clássica runa de ataque do Tibia. Da mesma forma que com o  [[Light Magic Missile]], neste feitiço cada [[Blank Rune]] possibilita 10 tiros de uma bola maciça de energia concentrada em um ou vários adversários. Uma magia básica que não deve faltar no livro de nenhum conjurador. É popular tanto com iniciantes quanto com mestres da feitiçaria pois o dano que causa é, em grande parte, determinado pela habilidade do feiticeiro e da experiência, tornando este ataque econômico e confiável. Tenha em mente, no entanto, que há uma série de criaturas que são imunes à energia.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 10231,
+    "ns": 0,
+    "title": "Holy Missile Rune",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Runas|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name            = Holy Missile Rune\n| Subclass        = Ataque\n| damagetype      = Holy\n| cooldowngrupo   = 2\n| cooldownproprio = 2\n| words           = adori san\n| premium         = sim\n| makemana        = 300\n| weight          = 0.42\n| mlrequired      = 4\n| levelrequired   = 27\n| vocrequired     = Paladins\n| soul            = 3\n| makeqty         = 5\n| makevoc         = [[Paladin]]s\n| makelvl         = 27\n| implemented     = 8.4\n| buyfrom         = Hireling (Trader), Alexander, Talila, Valindara, Rock In A Hard Place, Khanna, Ghorza, Mordecai, Maun, Asnarus\n| npcprice        = 16\n| effect          = [[Arquivo:Dazzled Flash Icon.gif]] [[Holy Damage|Dano Sagrado]] em um alvo.\n| notes           = \n| history         = Com este feitiço é possível armazenar a  energia sagrada em runas. No entanto, apenas paladinos podem controlar o poder sagrado. Por esta razão, apenas eles podem, não só conjurar runas em branco com 5 cargas da energia sagrada, como também utilizá-las liberando um forte ataque de poder sagrado contra o adversário. O oponente será atingido por uma enorme cruz santa que provoca uma boa quantidade de danos, especialmente útil em lutas contra mortos-vivos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 10232,
+    "ns": 0,
+    "title": "Icicle Rune",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|''Esta página é sobre a '''runa''' Icicle. Para outros tipos de Icicle, veja [[Icicle]]''}}</noinclude>\n{{Infobox_Runas|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name            = Icicle Rune\n| Subclass        = Ataque\n| damagetype      = Ice\n| cooldowngrupo   = 2\n| cooldownproprio = 2\n| words           = adori frigo\n| premium         = sim\n| makemana        = 460\n| weight          = 0.42\n| mlrequired      = 4\n| levelrequired   = 28\n| soul            = 3\n| makeqty         = 5\n| makevoc         = [[Druid]]s\n| makelvl         = 28\n| implemented     = 8.1\n| buyfrom         = Hireling (Trader), Alexander, Talila, Valindara, Rock In A Hard Place, Khanna, Ghorza, Mordecai, Maun, Asnarus\n| npcprice        = 30\n| storevalue      = 6\n| effect          = [[Arquivo:Freezing Flash Icon.gif]] [[Ice Damage|Dano gelo]] em um alvo. <noinclude>Equivale a [[Fireball]].</noinclude>\n| notes           = Alcance e dano 33% maior do que [[Ice Strike]].\n| history         = Como apenas [[Druid|druídas]] são hábeis o suficiente para controlar completamente o elemento gelo, eles desenvolveram esta runa com capacidade para congelar o alvo. É especialmente útil contra criaturas do elemento fogo visto que elas são vulneráveis ao [[Ice Damage]]. Quando a magia desta runa é liberada o alvo é atingido por uma flecha de gelo que perfura seu coração. O frio que permeia o corpo é tão intenso que tira o fôlego. O dano causado por esta runa é muito impressionante tornando-a bastante popular entre os [[Mages|magos]] tibianos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 10239,
+    "ns": 0,
+    "title": "Intense Healing Rune",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre a '''runa''' Intense Healing. Para a magia, veja [[Intense Healing]]''}}</noinclude>\n{{Infobox_Runas|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name            = Intense Healing Rune\n| Subclass        = Cura\n| cooldowngrupo   = 1\n| cooldownproprio = 1\n| words           = adura gran\n| premium         = não\n| makemana        = 120\n| weight          = 2.10\n| mlrequired      = 1\n| levelrequired   = 15\n| soul            = 2\n| makeqty         = 1\n| makevoc         = [[Druid]]s\n| makelvl         = 15\n| buyfrom         = Shiriel, Fenech, Rachel, Hireling (Trader), Asima, Hamish, Rabaz, Talila, Valindara, Gnomegica, Rock In A Hard Place, Khanna, Sigurd, Ghorza, Frederik, Siflind, Tandros, Mordecai, Nelly, Romir, Topsy, Xodet, Frans, Chuckles, Chartan\n| npcprice        = 95\n| storevalue      = 19\n| effect          = [[Cura]] o próprio jogador. Não pode ser utilizada em outros personagens.<noinclude> Mais eficaz que a magia [[Light Healing]].</noinclude>\n| notes           = Útil para ser usada em  [[Summon|criaturas sumonadas]] ou [[Convince Creature|convencidas]]. Em mundos [[Optional PvP]], ela não tem efeito sobre criaturas selvagens.\n| history         = \nFoi o primeiro resultado dos esforços dos druidas para inserir sua magia de cura em uma runa. O principal objetivo era dar um maior grau de independência aos [[Knight]]s, cujas pobres habilidades mágicas raramente são suficientes para curar as feridas recebidas em batalhas. No entanto, houve uma necessidade crescente por magias de cura dentre todas as vocações devido ao perigo de ficar sem mana em situações perigosas. Por esta razão, a Intense Healing Rune foi saudada como uma grande conquista de todos os aventureiros tibianos, e logo foi encontrada na mochila de cada aventureiro. Hoje, porém, a runa não é mais tão popular, uma vez que foi substituída pela [[Ultimate Healing Rune]], muito mais eficiente. No entanto, ainda é comumente usada por jovens aventureiros que não são hábeis o suficiente para usar as antigas e famosas \"runas azuis\". Além disso, uma vez que a eficácia da runa é determinada pela habilidade mágica do usuário ela ainda é popular entre os magos experientes que a usam para obter  cura eficaz a um baixo custo.\n* Após o [[Update do Balanceamento de Vocações]], passou a curar apenas o próprio jogador, não podendo mais ser utilizada em outros personagens.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 10240,
+    "ns": 0,
+    "title": "Light Magic Missile Rune",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Runas|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name            = Light Magic Missile Rune\n| Subclass        = Ataque\n| damagetype      = Energy\n| cooldowngrupo   = 2\n| cooldownproprio = 2\n| words           = adori min vis\n| premium         = não\n| makemana        = 120\n| weight          = 0.21\n| mlrequired      = 0\n| levelrequired   = 15\n| soul            = 1\n| makeqty         = 10\n| makevoc         = [[Druid]]s, [[Sorcerer]]s.\n| makelvl         = 15\n| buyfrom         = Shiriel, Fenech, Rachel, Hireling (Trader), Asima, Rabaz, Talila, Valindara, Gnomegica, Rock In A Hard Place, Khanna, Sigurd, Ghorza, Frederik, Siflind, Tandros, Mordecai, Nelly, Romir, Topsy, Xodet, Frans, Chuckles, Chartan\n| npcprice        = 4\n| effect          = [[Arquivo:Electrified Flash Icon.gif]] [[Energy Damage|Dano de energia]] em um alvo.\n| notes           = Causa cerca de metade do dano da [[Heavy Magic Missile Rune]]. Útil para matar [[Criaturas]] com [[HP]] baixa, evitando assim gasto de runas mais poderosas. Ao combinar seu ataque com [[Wands]] ou [[Rods]] (implementadas no [[Updates e Patches|Update 7.6]]) resultou em uma opção interessante para evitar gastos elevados de maná.\n| history         = É geralmente a primeira  magia de runa de ataque encontrada no livro de feitiços de um novato. Lançando-o em uma [[Blank Rune]], o conjurador criará uma bela runa verde que possibilita infligir 10 tiros contra um oponente. É, em si, é uma explosão de energia que irá causar danos moderados ao alvo. Os [[Mages|magos]] costumam abandonar essa magia tão logo se tornam capazes de criar runas mais poderosas como a [[Heavy Magic Missile Rune]]. No entanto, como o dano causado pela runa é determinado pela habilidade de quem a utiliza,ela pode causar danos surpreendente nas mãos de um especialista.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 10241,
+    "ns": 0,
+    "title": "Magic Wall Rune",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Runas|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name            = Magic Wall Rune\n| Subclass        = Suporte\n| cooldowngrupo   = 2\n| cooldownproprio = 2\n| words           = adevo grav tera\n| premium         = sim\n| makemana        = 750\n| weight          = 0.70\n| mlrequired      = 9\n| levelrequired   = 32\n| soul            = 5\n| makeqty         = 3\n| makevoc         = [[Sorcerer]]s\n| makelvl         = 32\n| implemented     = 6.4\n| buyfrom         = Hireling (Trader), Alexander, Talila, Valindara, Rock In A Hard Place, Khanna, Ghorza, Mordecai, Maun, Asnarus\n| npcprice        = 116\n| storevalue      = 23\n| animation       = Magic Wall2.gif\n| effect          = Cria uma parede mágica<noinclude> temporária, indestrutível e impenetrável</noinclude> de 1 sqm.\n| notes           = \n<span>\n* Em mundos [[optional PvP]], ela entrará em colapso se alguém se colocar em seu sqm. A não ser, se forem lançadas por um de seus adversários de [[War System|guerra]], caso esteja envolvido em uma guerra entre alianças. Neste caso em especial, ela vai durar os 20s normais ou até que algum personagem não envolvido na guerra ande contra ela. \n* Em mundos [[open PvP]] é muito utilizada para '''Wars''' e '''Traps'''.</span>\n| history         = Este feitiço faz com que todas as partículas contidas no ar circundante unam-se rapidamente em um vínculo mágico até formar uma parede sólida de 1 sqm. A barreira formada é impenetrável a qualquer míssil ou luz e nenhuma criatura ou personagem pode atravessá-la. No entanto, dura apenas 20 segundos após os quais ela evapora como se nunca tivesse existido. É sempre uma boa ideia tê-la em sua mochila para o caso de ser perseguido por um monstro no qual você não possa, simplesmente, se defender.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 10242,
+    "ns": 0,
+    "title": "Paralyse Rune",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Runas|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name            = Paralyse Rune\n| Subclass        = Suporte\n| cooldowngrupo   = 2\n| cooldownproprio = 6\n| words           = adana ani\n| premium         = sim\n| makemana        = 1400 (Irá gastar a mesma quantia de mana para paralisar o alvo)\n| weight          = 2.10\n| mlrequired      = 18\n| levelrequired   = 54\n| vocrequired     = [[Druid]]s\n| soul            = 3\n| makeqty         = 1\n| makevoc         = [[Druid]]s\n| makelvl         = 54\n| implemented     = 6.4\n| buyfrom         = Hireling (Trader), Alexander, Talila, Valindara, Rock In A Hard Place, Khanna, Ghorza, Mordecai, Maun, Asnarus\n| npcprice        = 700\n| storevalue      = 140\n| effect          = [[Arquivo:Slowed Flash Icon.gif]] [[Paralisia|Paralisa]] o alvo.\n| notes           = \n<span>\n* '''SÓ PODE SER USADA POR DRUIDAS''' \n* Em mundos [[Optional PvP]] essa magia não tem efeito prejudicial sobre outros personagens, a não ser que os personagens sejam seus adversários de [[War System|guerra]].</span>\n| history         = Feitiço concebido pelo lendário druida Arthiniel, o distraído. Tendo extensamente pesquisado a arte arcaica da alquimia, campo de especialização tradicional do druidas, Arthiniel encontrou uma maneira de solidificar instantaneamente os fluidos usando magia. A procura de uma aplicação prática para sua descoberta, Arthiniel conseguiu ligar o feitiço em uma runa que poderia ser usada contra um adversário desprevenido em combate. O efeito do feitiço faz com que o sangue do alvo coagule rapidamente, deixando-o paralisado e incapaz de lutar ou fugir, a menos que o efeito passe. Hoje em dia, é raramente utilizada por uma série de inconvenientes. Por exemplo, seu efeito pode ser facilmente quebrado por qualquer forma de magia de cura e um grande número de monstruosidades do Tibia são simplesmente imunes a ela. Pior, ela requer o uso maciço de mana, tanto durante a criação quanto durante a utilização, tornando sua confecção e uso extraordinariamente caros. No entanto, apesar das desvantagens o feitiço tem um potencial óbvio, já que é quase certo de poupar seu tempo precioso em um combate.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 10243,
+    "ns": 0,
+    "title": "Poison Bomb Rune",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Runas|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name            = Poison Bomb Rune\n| Subclass        = Campo\n| damagetype      = Earth\n| cooldowngrupo   = 2\n| cooldownproprio = 2\n| words           = adevo mas pox\n| premium         = sim\n| makemana        = 520\n| weight          = 1.05\n| mlrequired      = 4\n| levelrequired   = 25\n| soul            = 2\n| makeqty         = 2\n| makevoc         = [[Druid]]s\n| makelvl         = 25\n| implemented     = 6.6\n| buyfrom         = Hireling (Trader), Alexander, Talila, Valindara, Rock In A Hard Place, Khanna, Ghorza, Mordecai, Maun, Asnarus\n| npcprice        = 85\n| storevalue      = 17\n| animation       = Poison Bomb Rune1.gif\n| effect          = [[Arquivo:Poisoned Flash Icon.gif]] Cria uma barreira 3x3 de [[Poison Gas]]es.\n| notes           = \n<span>\n*Duração e danos semelhantes a [[Poison Field Rune]]. \n*Em mundos [[Open PvP]] é util em batalhas entre jogadores pois possibilita o mesmo efeito de aprisionamento da [[Fire Bomb Rune]] mas não mata personagens com nível baixo e nem atribui ao jogador o status de morte injustificada.</span>\n| history         = Produto das contínuas pesquisas dos druidas na arte das toxinas, esta runa representa um avanço da [[Poison Field Rune]]. Como seu parente menor, esta runa contamina uma área com gás tóxico que vai envenenar qualquer coisa que esteja preso dentro dele sem ser o conjurador. No entanto, a área de ação da runa foi melhorada - agora um total de 9 metros quadrados são contaminados! Aplicações previstas incluem o bloqueio de áreas ou o combate contra alvos em movimento rápido ou invisíveis. Tenha em mente, no entanto, que há uma série de criaturas que são imunes ao veneno.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 10245,
+    "ns": 0,
+    "title": "Poison Wall Rune",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Runas|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name            = Poison Wall Rune\n| Subclass        = Campo\n| damagetype      = Earth\n| cooldowngrupo   = 2\n| cooldownproprio = 2\n| words           = adevo mas grav pox\n| premium         = não\n| makemana        = 640\n| weight          = 0.52\n| mlrequired      = 5\n| levelrequired   = 29\n| soul            = 3\n| makeqty         = 4\n| makevoc         = [[Druid]]s, [[Sorcerer]]s.\n| makelvl         = 29\n| buyfrom         = Shiriel, Fenech, Rachel, Hireling (Trader), Asima, Rabaz, Talila, Valindara, Gnomegica, Rock In A Hard Place, Khanna, Sigurd, Ghorza, Frederik, Siflind, Tandros, Mordecai, Nelly, Romir, Topsy, Xodet, Frans, Chuckles, Chartan\n| npcprice        = 52\n| storevalue      = 10\n| effect          = [[Arquivo:Poisoned Flash Icon.gif]] Cria uma barreira 1x5 de [[Poison Gas]]es.\n| notes           = \n<span>\n*Duração e danos semelhantes a [[Poison Field Rune]]. \n*Não deve ser comprada a menos que você esteja desejando possuir todos as [[Spells|magias]] pois a maioria dos [[Criaturas|monstros]] - em especial aqueles mais fortes - são imunes a [[Poison|veneno]], tornando-se inútil em muitas situações. Sua utilidade se limita a  bloquear um caminho estreito para evitar ataque de monstros.</span>\n| history         = Provavelmente, é o mais básico de todos os feitiços de barreiras. É freqüentemente a primeira a ser estudada por aqueles que acabam de ingressar no estudo da magia. Quando esta runa é usada, uma barreira concentrada de bolsas tóxicas é criada, a qual inflige um [[Poison Damage]] moderado sobre todos aqueles que são tolos o suficiente para entrar. Geralmente, o efeito é impressionante o suficiente para desencorajar os monstros a tentar atravessá-la. Contudo, algumas das monstruosidades mais fortes da terra não vão hesitar caso a barreira esteja entre eles e seu jantar. Por esta razão, é aconselhável não depender apenas desta runa para sua proteção, embora não haja dúvida de que um aventureiro inteligente pode utilizá-la com bastante frequência.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 10246,
+    "ns": 0,
+    "title": "Soulfire Rune",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Runas|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name            = Soulfire Rune\n| Subclass        = Ataque\n| damagetype      = Fire\n| cooldowngrupo   = 2\n| cooldownproprio = 2\n| words           = adevo res flam\n| premium         = sim\n| makemana        = 420\n| weight          = 0.70\n| mlrequired      = 7\n| levelrequired   = 27\n| soul            = 3\n| makeqty         = 3\n| makevoc         = [[Druid]]s, [[Sorcerer]]s.\n| makelvl         = 27\n| implemented     = 6.4\n| buyfrom         = Hireling (Trader), Alexander, Talila, Valindara, Rock In A Hard Place, Khanna, Ghorza, Mordecai, Maun, Asnarus\n| npcprice        = 46\n| storevalue      = 9\n| effect          = [[Arquivo:Burning Flash Icon.gif]] Adiciona efeito [[Burning]] ao alvo.\n| notes           = \n<span>\n* A cada turno o alvo sofrerá dano de 10 HP. O número de turnos dependerá do level e magic level de quem usa a runa. Assim, esta runa pode causar um grande dano a longo prazo.\n* Muito eficaz como primeiro ataque a uma criatura forte, fazendo-a queimar enquanto você a ataca. \n* A pessoa que usou a magia não poderá deslogar enquanto a outra estiver queimando.</span>\n<noinclude><p><spoiler>\n* [[Level]] 27 e [[Magic Level]] 31 irá causar dano por 20 turnos. \n* [[Level]] 39 e [[Magic Level]] 42 irá causar dano por 27 turnos. \n* [[Level]] 61 e [[Magic Level]] 65 irá causar dano por 42 turnos. \n* [[Level]] 82 e [[Magic Level]] 66 irá causar dano por 49 turnos. \n* [[Level]] 105 e [[Magic Level]] 68 irá causar dano por 57 turnos. \n* [[Level]] 173 e [[Magic Level]] 82 irá causar dano por 85 turnos.\n</spoiler></p></noinclude>\n| history         = É um feitiço cruel e maléfico, pois visa diretamente essência da criatura vida. Quando a runa é usada a alma da vítima retira-se de seu corpo, lançando-o em fogo fulgurante do inferno! Desnecessário dizer que, o processo é extremamente doloroso, e as feridas infligidas ao alvo são reais. Note-se que a experiência e a força mental do mago influenciam no dano causado. Nas mãos de um usuário experiente ela pode se tornar uma arma temível.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 10247,
+    "ns": 0,
+    "title": "Stalagmite Rune",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|''Este artigo é sobre a '''runa''' Stalagmite. Para as pedras, veja: [[Stalagmite (Stone)]] e [[Stalagmite (Basalt)]].''}}</noinclude>\n{{Infobox_Runas|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name            = Stalagmite Rune\n| Subclass        = Ataque\n| damagetype      = Earth\n| cooldowngrupo   = 2\n| cooldownproprio = 2\n| words           = adori tera\n| premium         = não\n| makemana        = 350\n| weight          = 0.21\n| mlrequired      = 3\n| levelrequired   = 24\n| soul            = 2\n| makeqty         = 10\n| makevoc         = [[Druid]]s, [[Sorcerer]]s.\n| makelvl         = 24\n| implemented     = 8.1\n| buyfrom         = Shiriel, Fenech, Rachel, Hireling (Trader), Asima, Rabaz, Talila, Valindara, Gnomegica, Rock In A Hard Place, Sigurd, Ghorza, Frederik, Siflind, Tandros, Mordecai, Nelly, Romir, Topsy, Xodet, Frans, Chuckles, Chartan\n| npcprice        = 12\n| effect          = [[Arquivo:Poisoned Flash Icon.gif]] [[Earth Damage|Dano terra]] em um alvo.<noinclude> Equivale a [[Heavy Magic Missile Rune]].</noinclude>\n| notes           = Está é a antiga runa [[Envenom]]\n| history         = Os [[Druid]]as, que ao longo dos séculos desenvolveram o domínio incontestável de todos os tipos de magias do elemento terra, conceberam esta  runa como uma sórdida porém eficaz arma de combate. No entanto, [[Sorcerer]]es têm sido capazes de aprender a conjurá-la já que não exige conhecimentos profundos do elemento terra. Sempre que a runa é usada, uma mistura de lama e pedras atinge o adversário, causando bons danos. Sendo uma runa do elemento terra, o feitiço estalagmite é especialmente eficaz contra criaturas cuja força é o elemento energia.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 10248,
+    "ns": 0,
+    "title": "Stone Shower Rune",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Runas|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name            = Stone Shower Rune\n| Subclass        = Ataque\n| damagetype      = Earth\n| cooldowngrupo   = 2\n| cooldownproprio = 2\n| words           = adori mas tera\n| premium         = sim\n| makemana        = 430\n| weight          = 0.52\n| mlrequired      = 4\n| levelrequired   = 28\n| soul            = 3\n| makeqty         = 4\n| makevoc         = [[Druid]]s\n| makelvl         = 28\n| implemented     = 8.1\n| basePower       = 50\n| buyfrom         = Hireling (Trader), Alexander, Talila, Valindara, Rock In A Hard Place, Khanna, Ghorza, Mordecai, Maun, Asnarus\n| npcprice        = 41\n| storevalue      = 7\n| animation       = Stone shower1.gif\n| effect          = [[Arquivo:Poisoned Flash Icon.gif]] [[Earth Damage|Dano terra]] em uma área de até 37 Sqms. <noinclude> Equivale a [[Thunderstorm Rune]].</noinclude>\n| notes           = \n| history         = Naturalmente, uma poderosa runa capaz de assimilar a potente magia do elemento terra foi pensada e desenvolvida por druidas, a vocação mais talentosa na manipulação deste elemento. As criaturas vão sofrer muito com este poder, em especial as com afinidade a energia. Como o nome já diz, uma chuva de pedras irá rufar sobre os oponentes. Dessa forma, um usuário experiente, armado com essas runas, pode sozinho fazer frente a um pequeno exército.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 10249,
+    "ns": 0,
+    "title": "Wild Growth Rune",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Runas|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name            = Wild Growth Rune\n| Subclass        = Suporte\n| cooldowngrupo   = 2\n| cooldownproprio = 2\n| words           = adevo grav vita\n| premium         = sim\n| makemana        = 600\n| weight          = 1.05\n| mlrequired      = 8\n| levelrequired   = 27\n| vocrequired     = Druids\n| soul            = 5\n| makeqty         = 2\n| makevoc         = [[Druid|Elder Druids]]\n| makelvl         = 27\n| implemented     = 6.6\n| buyfrom         = Hireling (Trader), Alexander, Talila, Valindara, Rock In A Hard Place, Khanna, Ghorza, Mordecai, Maun, Asnarus\n| npcprice        = 160\n| storevalue      = 32\n| animation       = Wild Growth Rune1.gif\n| effect          = Cria uma parede viva<noinclude> temporária e indestrutível</noinclude> de 1 sqm.\n| notes           = \n<span>\n*Em mundos [[optional PvP]], os personagens podem simplesmente caminhar através do crescimento selvagem. A não ser que sejam lançadas por um de seus adversários de [[War System|guerra]], caso esteja envolvido em uma guerra entre alianças. Neste caso em especial, ela vai durar os 45s normais. \n*Eremo, o sábio, ensina essa magia para todos os druidas que mostraram sua dedicação à natureza e à vida através da promoção ao posto de mais velho druida.\n*O que a diferencia da [[Magic Wall]] é que waves e runas a atravessam.</span>\n| history         = [[Druid]]as, os guardas tradicionais da natureza e de tudo o que é vivo, têm domínio sobre o crescimento das plantas. Essa magia é resultado deste conhecimento secreto. Apelando para a natureza, um druida qualificado pode carregar uma [[Blank Rune]] com duas cargas desta útil magia. Ao liberar o feitiço, todas as sementes que estão adormecidas no entorno rapidamente brotam e crescem, formando assim um matagal impenetrável. Infelizmente, a vida vegetal criada dessa forma é de curta duração e entrará em colapso em cerca de 40 segundos, assim esse obstáculo criado magicamente não dura muito. Mesmo assim, pode ser bastante útil para bloquear um monstro que você não pode derrotar, dando-lhe um tempo precioso para a fuga.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 10250,
+    "ns": 0,
+    "title": "Sudden Death Rune",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Runas|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name            = Sudden Death Rune\n| Subclass        = Ataque\n| damagetype      = Death\n| cooldowngrupo   = 2\n| cooldownproprio = 2\n| words           = adori gran mort\n| premium         = não\n| makemana        = 985\n| weight          = 0.70\n| mlrequired      = 15\n| levelrequired   = 45\n| soul            = 5\n| makeqty         = 3\n| makevoc         = [[Sorcerer]]s\n| makelvl         = 45\n| droppedby       = [[Gravedigger]], [[Hand of Cursed Fate]].\n| droppedRaidby   = [[Tyrn]].\n| buyfrom         = Shiriel, Fenech, Rachel, Hireling (Trader), Asima, Rabaz, Talila, Valindara, Gnomegica, Rock In A Hard Place, Khanna, Sigurd, Ghorza, Frederik, Siflind, Tandros, Mordecai, Nelly, Romir, Topsy, Xodet, Frans, Chuckles, Chartan\n| npcprice        = 162\n| storevalue      = 28\n| effect          = [[Arquivo:Cursed Flash Icon.gif]] Dano [[Death Damage|Death]] em um alvo.\n| notes           = É a runa mais poderosa do jogo. Antes do Update de verão de 2007 essa runa causava dano [[Physical Damage|físico]]. Foi também neste update que sua utilização passou a requerer level mínimo 45.<noinclude><p><spoiler>Recompensa da [[Barbarian Arena Quest|Barbarian Arena - Warlord Mode]] com 50 cargas, [[Crystal Wand Quest]] com 6 cargas, [[Iron Helmet Quest]] com 1 carga e [[The Pits of Inferno Quest]] com 10 cargas.</spoiler></p></noinclude>\n| history         = Seu nome e a imagem sinistra do crânio e ossos cruzados falam por si mesmos. Rápida e mortal, a reputação da terrível eficiência dos feiticeiros em combate é em grande parte atribuída ao uso desta devastadora runa. Quase nenhum outro feitiço pode ser comparado a ela quando se trata puramente dos danos. Por esta razão, é imensamente popular, apesar do fato de que apenas um único alvo é afetado. Na verdade, a maioria dos [[mages|magos]] e os paladinos qualificados sempre tem Sudden Death em suas mochilas para o caso de sofrerem uma emboscada. No entanto, um aventureiro cauteloso não deve confiar cegamente apenas em suas runas. Uma vez que o dano causado é de natureza mortal, é inútil contra mortos-vivos.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 10251,
+    "ns": 0,
+    "title": "Thunderstorm Rune",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Runas|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name            = Thunderstorm Rune\n| Subclass        = Ataque\n| damagetype      = Energy\n| cooldowngrupo   = 2\n| cooldownproprio = 2\n| words           = adori mas vis\n| premium         = sim\n| makemana        = 430\n| weight          = 0.52\n| mlrequired      = 4\n| levelrequired   = 28\n| soul            = 3\n| makeqty         = 4\n| makevoc         = [[Sorcerer]]es\n| makelvl         = 28\n| implemented     = 8.1\n| basePower       = 50\n| buyfrom         = Hireling (Trader), Alexander, Talila, Valindara, Rock In A Hard Place, Khanna, Ghorza, Mordecai, Maun, Asnarus\n| npcprice        = 52\n| storevalue      = 9\n| animation       = Thunderstorm1.gif\n| effect          = [[Arquivo:Electrified Flash Icon.gif]] [[Energy Damage|Dano de energia]] em uma área de até 37 Sqms.<noinclude> Equivalente a [[Stone Shower Rune]].</noinclude>\n| notes           = \n| history         = Flashes perigosos de energia abatem o adversário quando esta runa é utilizada. Inventada por [[Sorcerer]]es, mestres de magias de energia, esta runa é especialmente eficaz contra criaturas do elemento gelo. Todas as vocações certamente são aconselhadas a ter dessas runas na mochila quando forem se aventurar pelas [[Ice Islands]]. Cobrindo uma grande área, esta runa é especialmente útil quando você encontra uma horda de adversários.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 10252,
+    "ns": 0,
+    "title": "Ultimate Healing Rune",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Essa página é sobre a '''runa''' Ultimate Healing. Para a magia, veja [[Ultimate Healing]].''}}</noinclude>{{Infobox_Runas|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name            = Ultimate Healing Rune\n| Subclass        = Cura\n| cooldowngrupo   = 1\n| cooldownproprio = 1\n| words           = adura vita\n| premium         = não\n| makemana        = 400\n| weight          = 2.10\n| mlrequired      = 4\n| levelrequired   = 24\n| soul            = 3\n| makeqty         = 1\n| makevoc         = [[Druid]]s\n| makelvl         = 24\n| buyfrom         = Shiriel, Fenech, Rachel, Hireling (Trader), Asima, Rabaz, Talila, Valindara, Gnomegica, Rock In A Hard Place, Khanna, Sigurd, Ghorza, Frederik, Siflind, Tandros, Mordecai, Nelly, Romir, Topsy, Xodet, Frans, Chuckles, Chartan\n| npcprice        = 175\n| storevalue      = 35\n| effect          = [[Cura]] o próprio jogador. Não pode ser utilizada em outros personagens.<noinclude> Mais eficaz que a [[Intense Healing Rune]].</noinclude>\n| notes           = \n<span>\n* Cura no mínimo 250 [[HP]]. A capacidade de cura depende do [[Level]] e [[Magic Level]] de quem a utiliza.\n* Em seus primeiros sprites ela era azul. Sendo conhecida como \"Runa Azul\" ([[Arquivo:Ultimate Healing (Rune) (Old).gif]] e [[Arquivo:Ultimate Healing (Rune) (Old2).gif]]). No update 8.7, seu sprite foi mudado para o atual, acredita-se que para evitar confusões e armadilhas tramadas por jogadores mal intencionados.\n<noinclude><p><spoiler>* Recompensa da [[Barbarian Arena Quest|Barbarian Arena - Warlord Mode]] com 50 cargas.</spoiler></p></noinclude>\n| history         = \nCobiçada, esta runa é uma das preferidas de todas as vocações. Nenhum outro encantamento de cura vinculado a runas pode se comparar ao seu poder curativo. Por esta razão, segredos em torno do conhecimento de como criar esta preciosidade é guardado com zelo pelos druidas. Com certeza, [[Knight]]s e [[paladin]]os em situações críticas particulares utilizarão magias instantâneas de cura, contudo , pelo o risco de ficar sem mana, é aconselhável ter sempre Ultimate Healing Runes à mão.\n* Após o [[Update de Natal 2007|Update de Natal de 2007]], deixou de ser utilizada preferencialmente por [[Knight]]s devido à mudança da fórmula de cura.</span>\n* Após o [[Update do Balanceamento de Vocações]], passou a curar apenas o próprio jogador, não podendo mais ser utilizada em outros personagens.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 10254,
+    "ns": 0,
+    "title": "Energy Field Rune",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Essa página é sobre a '''runa''' Energy Field. Para o campo, veja [[Energy Field]].''}}</noinclude>\n{{Infobox_Runas|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name            = Energy Field Rune\n| Subclass        = Campo\n| damagetype      = Energy\n| cooldowngrupo   = 2\n| cooldownproprio = 2\n| words           = adevo grav vis\n| premium         = não\n| makemana        = 320\n| weight          = 0.70\n| mlrequired      = 3\n| levelrequired   = 18\n| soul            = 2\n| makeqty         = 3\n| makevoc         = [[Druid]]s, [[Sorcerer]]s.\n| makelvl         = 18\n| buyfrom         = Shiriel, Fenech, Rachel, Hireling (Trader), Asima, Hamish, Rabaz, Talila, Valindara, Gnomegica, Rock In A Hard Place, Khanna, Sigurd, Ghorza, Frederik, Siflind, Tandros, Mordecai, Nelly, Romir, Topsy, Xodet, Frans, Chuckles, Chartan\n| npcprice        = 38\n| storevalue      = 8\n| effect          = [[Arquivo:Electrified Flash Icon.gif]] Cria um [[Energy Field]].\n| notes           = \n<span> \n*O campo dura cerca de 00:01:38.\n*O efeito [[Electrified]] (eletrificado) dura cerca de 00:00:10, seu dano inicial é de 30 reduzindo para 25, podemos então considerar que o dano é de 55 [[HP]].\n*Cada vez que o jogador/criatura passar pelo campo receberá um novo dano.\n*Em mundos [[Optional PvP]] essa magia não tem efeito prejudicial sobre outros personagens, a não ser que os personagens sejam seus adversários de [[War System|guerra]]</span>\n| history         = Uma das runas de campo padrão, este feitiço cria uma barreira limitada feita de energia estalante que causa danos elétricos a todos que passam por ela. Tendo em vista que são poucas as criaturas imunes aos efeitos nocivos dessa energia, esta mágica não deve ser subestimada. Na verdade, ao invés de usar a runa para bloquear passagens estreitas, muitos dos tibianos mais inexperientes a usa como um feitiço ofensivo barato, já que criaturas afetadas sofrem pelo menos duas vezes o dano causado pela energia.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 10255,
+    "ns": 0,
+    "title": "Poison Field Rune",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Essa página é sobre a '''runa''' Poison Field, para o campo veja [[Poison Gas]].''}}</noinclude>{{Infobox_Runas|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name            = Poison Field Rune\n| Subclass        = Campo\n| damagetype      = Earth\n| cooldowngrupo   = 2\n| cooldownproprio = 2\n| words           = adevo grav pox\n| premium         = não\n| makemana        = 200\n| weight          = 0.70\n| mlrequired      = 0\n| levelrequired   = 14\n| soul            = 1\n| makeqty         = 3\n| makevoc         = [[Druid]]s, [[Sorcerer]]s.\n| makelvl         = 14\n| buyfrom         = Shiriel, Fenech, Rachel, Hireling (Trader), Asima, Hamish, Rabaz, Talila, Valindara, Gnomegica, Rock In A Hard Place, Khanna, Sigurd, Ghorza, Frederik, Siflind, Tandros, Mordecai, Nelly, Romir, Topsy, Xodet, Frans, Chuckles, Chartan\n| npcprice        = 21\n| effect          = [[Arquivo:Poisoned Flash Icon.gif]] Cria um [[Poison Gas]].\n| notes           = \n<span>\n*A bolsa de veneno dura cerca de 00:04:10.\n*O efeito [[Poisoned]] (\"envenenado\") dura cerca de 00:03:00 e seu dano inicial é de 5HP (por 5 turnos) passando prograssivamente para 4HP (5 turnos), 3HP (7 turnos), 2HP (10 turnos) e 1HP (19 turnos). Se não for curado, o dano total é de 105 [[HP]]. \n*Cada vez que o jogador/criatura passar pelo campo receberá um novo dano.\n*Em mundos [[Optional PvP]] essa magia não tem efeito prejudicial sobre outros personagens, a não ser que os personagens sejam seus adversários de [[War System|guerra]].</span>\n| history         = Após cuidadoso estudo, os druidas vieram com essa contribuição para o arsenal dos feitiços de campo. Fazendo uso do conhecimento prévio de todos os tipos de toxinas eles desenvolveram uma forma de criar pequenos bolsões de gás venenoso, que permanecem estáveis ​​por vários minutos até se dissipar. Qualquer um que entra nestes campos serão afetados por uma toxina venenosa. Consequentemente, muitas criaturas vão evitá-los, a não ser que sejam monstros fortes ou criaturas que são imunes ao veneno. Ainda assim, é uma magia adequada para criar barreiras de proteção. Além disso, a sua utilidade como uma magia de ataque barata para o combate com criaturas mais frágeis não devem ser subestimados.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 14880,
+    "ns": 0,
+    "title": "Animate Dead Rune",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Runas|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name            = Animate Dead Rune\n| Subclass        = Summon\n| cooldowngrupo   = 2\n| cooldownproprio = 2\n| words           = adana mort\n| premium         = sim\n| makemana        = 600\n| weight          = 2.10\n| mlrequired      = 4\n| levelrequired   = 27\n| soul            = 5\n| makeqty         = 1\n| makevoc         = [[Druid]]s, [[Sorcerer]]s.\n| makelvl         = 27\n| implemented     = 6.4\n| buyfrom         = Hireling (Trader), Alexander, Talila, Valindara, Rock In A Hard Place, Khanna, Ghorza, Mordecai, Maun, Asnarus\n| npcprice        = 375\n| storevalue      = 75\n| effect          = Ao utilizá-la em um corpo morto, você terá 1 [[skeleton]] sob seu controle <noinclude>(exceto se você já tiver duas criaturas sumonadas).</noinclude>\n| notes           = \n| history         = É uma runa assustadora! Os magos de [[Edron]], após muito tempo estudando [[Mortos-Vivos]] capturados afim de obter seus segredos, finalmente, conseguiram guardar uma parte da energia viva em uma runa. Porém, quando a energia é canalizada para um corpo, uma criatura morta-viva surge e o usuário da runa se torna capaz de controlá-la mentalmente.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 15475,
+    "ns": 0,
+    "title": "Envenom Rune",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{DASH|img=desambig|Essa página é sobre a '''runa''' Envenom. Para a magia, veja: [[Envenom]].}}\n{{Infobox_Runas|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Envenom Rune\n| Subclass       = Ataque\n| damagetype     = Earth\n| words          = adevo res pox\n| makemana       = 400\n| mlrequired     = 4\n| levelrequired  = 0\n| soul           = 2\n| makevoc        = [[Druid]]s\n| premium        = sim\n| makelvl        = 21\n| mercado        = não\n| learnfrom      = Alexander\n| learncost      = 1 000\n| buyfrom        = Alexander\n| npcprice       = 130\n| removed        = 8.1\n| effect         = [[Arquivo:Poisoned Flash Icon.gif]] Causa envenenamento no alvo.\n| notes          = Foi substituída pela [[Stalagmite Rune]] no [[Update de Natal 2007]].\n| history        = Essa runa envenena o alvo com danos de 70+/-20 mas seu dano é devagar e pode ser healado facilmente com a magica [[Cure Poison]] ou uma [[Cure Poison Rune]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 27578,
+    "ns": 0,
+    "title": "Practise Magic Missile Rune",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Runas|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name            = Practise Magic Missile Rune\n| Subclass        = Ataque\n| damagetype      = Energy\n| cooldowngrupo   = 2\n| cooldownproprio = 2\n| words           = adori dis min vis\n| premium         = não\n| makemana        = 5\n| weight          = 0.21\n| mlrequired      = 0\n| levelrequired   = 1\n| soul            = 0\n| makeqty         = 10\n| makevoc         = [[Knight]]s, [[Paladin]]s, [[Sorcerer]]s, [[Druid]]s, [[Monk]]s.\n| makelvl         = 1\n| implemented     = 9.8\n| buyfrom         = Ninguém.\n| effect          = [[Arquivo:Electrified Flash Icon.gif]] [[Energy Damage|Dano de energia]] em um alvo.\n| notes           = Obtida na [[Isle of Destiny]].<noinclude><p><spoiler>*Este item faz parte da [[Child of Destiny Quest]].</spoiler></p></noinclude>\n| history         = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 34176,
+    "ns": 0,
+    "title": "Lightest Missile Rune",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Runas|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name            = Lightest Missile Rune\n| Subclass        = Ataque\n| damagetype      = Energy\n| cooldowngrupo   = 2\n| cooldownproprio = 2\n| words           = adori infir vis\n| premium         = não\n| makemana        = 0\n| weight          = 2.10\n| mlrequired      = 0\n| levelrequired   = 1\n| vocrequired     = [[Druid]]s, [[Sorcerer]]s and [[Paladin]]s\n| soul            = 0\n| makeqty         = 0\n| makevoc         = [[Druid]]s, [[Sorcerer]]s.\n| makelvl         = 1\n| implemented     = 10.55\n| buyfrom         = Hamish\n| npcprice        = 20\n| animation       = \n| effect          = [[Arquivo:Electrified Flash Icon.gif]] [[Energy Damage|Dano de energia]] em um alvo.\n| notes           = \n| history         = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 34177,
+    "ns": 0,
+    "title": "Light Stone Shower Rune",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Runas|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name            = Light Stone Shower Rune\n| Subclass        = Ataque\n| damagetype      = Earth\n| cooldowngrupo   = 2\n| cooldownproprio = 2\n| words           = adori infir mas tera\n| premium         = não\n| makemana        = 0\n| weight          = 2.10\n| mlrequired      = 0\n| levelrequired   = 1\n| vocrequired     = [[Druid]]s, [[Sorcerer]]s and [[Paladin]]s\n| soul            = 0\n| makeqty         = 0\n| makevoc         = [[Paladin]]s, [[Sorcerer]]s, [[Druid]]s, [[Monk]]s.\n| makelvl         = 1\n| implemented     = 10.55\n| buyfrom         = Hamish\n| npcprice        = 25\n| animation       = \n| effect          = [[Arquivo:Poisoned Flash Icon.gif]] [[Earth Damage|Dano terra]] em uma área de 3x3 Sqms.\n| notes           = \n| history         = \n}}"
+       }
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

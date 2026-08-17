@@ -1,7 +1,7 @@
-import { Injectable, signal } from '@angular/core';
+import { Injectable, computed, signal } from '@angular/core';
 import { Subject } from 'rxjs';
 import { SERVER_EVENTS } from '@aetheria/protocol';
-import type { CharacterInventory, CharacterSummary, MapTile } from '@aetheria/types';
+import type { CharacterInventory, CharacterSummary, HuntListEntry, HuntRunView, MapTile } from '@aetheria/types';
 import { WsService, WsEvent } from '../core/ws.service';
 
 export interface HudStats {
@@ -61,6 +61,11 @@ export class GameState {
   readonly dialog = signal<DialogInfo | null>(null);
   readonly target = signal<TargetInfo | null>(null);
   readonly world = signal<WorldSnapshot | null>(null);
+  readonly gold = signal(0);
+  readonly hunts = signal<HuntListEntry[]>([]);
+  readonly hunt = signal<HuntRunView | null>(null);
+  readonly huntsOpen = signal(false);
+  readonly inArena = computed(() => this.hunt() !== null);
 
   /** Buffer de eventos para a cena Phaser que cria depois da conexão. */
   readonly sceneEvents$ = new Subject<WsEvent>();
@@ -121,6 +126,83 @@ export class GameState {
         this.self.set(w.character);
         this.world.set({ map: w.map, width: w.width, height: w.height });
         this.inGame.set(true);
+        this.hunt.set(null);
+        this.gold.set(w.character.gold);
+        this.requestHunts();
+        break;
+      }
+      case SERVER_EVENTS.ENTER_ARENA: {
+        const w = data as { character: CharacterSummary; map: MapTile[]; width: number; height: number; hunt: HuntRunView };
+        this.self.set(w.character);
+        this.world.set({ map: w.map, width: w.width, height: w.height });
+        this.hunt.set(w.hunt);
+        this.gold.set(w.character.gold);
+        break;
+      }
+      case SERVER_EVENTS.HUNT_LIST: {
+        const r = data as { hunts: HuntListEntry[] };
+        this.hunts.set(r.hunts);
+        break;
+      }
+      case SERVER_EVENTS.HUNT_STARTED: {
+        const r = data as { hunt: HuntRunView };
+        this.hunt.set(r.hunt);
+        break;
+      }
+      case SERVER_EVENTS.HUNT_WAVE: {
+        const r = data as { huntId: string; wave: number; monsterCount: number; isBoss: boolean };
+        this.hunt.update((h) => (h ? { ...h, wave: r.wave, isBoss: r.isBoss, monsterCount: r.monsterCount } : h));
+        break;
+      }
+      case SERVER_EVENTS.HUNT_LOOP_CHANGED: {
+        const r = data as { huntId: string; loopEnabled: boolean };
+        this.hunt.update((h) => (h && h.huntId === r.huntId ? { ...h, loopEnabled: r.loopEnabled } : h));
+        break;
+      }
+      case SERVER_EVENTS.HUNT_COMPLETED: {
+        const r = data as {
+          huntId: string;
+          completionCount: number;
+          clearTimeMs: number;
+          bestClearTimeMs: number | null;
+          loopEnabled: boolean;
+        };
+        this.hunts.update((list) =>
+          list.map((h) =>
+            h.id === r.huntId
+              ? { ...h, completionCount: r.completionCount, bestClearTimeMs: r.bestClearTimeMs }
+              : h,
+          ),
+        );
+        this.addSystemMessage(`Hunt concluída em ${GameState.formatTime(r.clearTimeMs)}!`);
+        break;
+      }
+      case SERVER_EVENTS.HUNT_CLEARED: {
+        const r = data as { huntId: string; wave: number };
+        if (r.wave < 10) {
+          this.addSystemMessage(`Onda ${r.wave} concluída! Preparando a próxima...`);
+        }
+        break;
+      }
+      case SERVER_EVENTS.HUNT_WIPED: {
+        const r = data as { huntId: string; penaltyPaid: number; loopEnabled: boolean; respawnInMs: number | null };
+        this.hunt.update((h) => (h ? { ...h, status: 'wiped' } : h));
+        if (r.penaltyPaid > 0) {
+          this.addSystemMessage(`Você foi derrotado! Penalidade: ${r.penaltyPaid} gold.`);
+        }
+        if (r.loopEnabled && r.respawnInMs != null) {
+          this.addSystemMessage(`Reiniciando em ${Math.round(r.respawnInMs / 1000)}s...`);
+        }
+        break;
+      }
+      case SERVER_EVENTS.HUNT_RETURNED_TO_CITY: {
+        this.hunt.set(null);
+        break;
+      }
+      case SERVER_EVENTS.GOLD_UPDATE: {
+        const g = data as { gold: number };
+        this.gold.set(g.gold);
+        this.self.update((s) => (s ? { ...s, gold: g.gold } : s));
         break;
       }
       case SERVER_EVENTS.STATS_UPDATE: {
@@ -192,10 +274,10 @@ export class GameState {
     this.ws.send({ type: 'auth.login', username, password });
   }
 
-  createCharacter(name: string) {
+  createCharacter(name: string, vocation: 'knight' | 'paladin' | 'sorcerer' | 'druid' = 'knight') {
     const token = this.token();
     if (!token) return;
-    this.ws.send({ type: 'auth.createCharacter', token, name });
+    this.ws.send({ type: 'auth.createCharacter', token, name, vocation });
   }
 
   selectCharacter(characterId: string) {
@@ -214,5 +296,41 @@ export class GameState {
 
   unequip(slot: string) {
     this.ws.send({ type: 'inventory.unequip', slot });
+  }
+
+  requestHunts() {
+    const token = this.token();
+    if (!token) return;
+    this.ws.send({ type: 'hunt.list', token });
+  }
+
+  startHunt(huntId: string, loopEnabled: boolean) {
+    const token = this.token();
+    if (!token) return;
+    this.ws.send({ type: 'hunt.start', token, huntId, loopEnabled });
+  }
+
+  stopHunt() {
+    const token = this.token();
+    if (!token) return;
+    this.ws.send({ type: 'hunt.stop', token });
+  }
+
+  setLoop(enabled: boolean) {
+    const token = this.token();
+    if (!token) return;
+    this.ws.send({ type: 'hunt.setLoop', token, enabled });
+  }
+
+  toggleHunts() {
+    this.huntsOpen.update((v) => !v);
+  }
+
+  static formatTime(ms: number): string {
+    const total = Math.max(0, Math.floor(ms));
+    const mm = Math.floor(total / 60_000);
+    const ss = Math.floor((total % 60_000) / 1000);
+    const mmm = total % 1000;
+    return `${mm}:${String(ss).padStart(2, '0')}.${String(mmm).padStart(3, '0')}`;
   }
 }

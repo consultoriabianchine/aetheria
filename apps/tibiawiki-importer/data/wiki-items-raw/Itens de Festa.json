@@ -1,0 +1,2390 @@
+{
+ "query": {
+  "pages": [
+   {
+    "pageid": 7218,
+    "ns": 0,
+    "title": "Costume Bag (Common)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se este não é item que você procura, veja a página [[Costume Bag|Costume Bag (Desambiguação)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Costume Bag (Common)\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Festa\n| secondarytype  = \n| attrib         = Temporariamente ou até você obter outra fantasia\n| weight         = 8.00\n| stackable      = não\n| npcprice       = 500\n| value          = 500\n| droppedby      = Ninguém\n| buyfrom        = Stan\n| sellto         = Jogadores.\n| notes          = Existem outros dois itens com o mesmo nome de [[Costume Bag]]. Se você usar isso, você irá se transformar em uma dessas 5 criaturas: [[Orc Warrior]], [[Pirate Cutthroat]], [[Dworc Voodoomaster]], [[Dwarf Guard]] ou [[Minotaur Mage]]. Você a perde em aproximadamente 5 horas. Note que você irá perder sua fantasia se: entrar em uma piscina, ficar invisível, usar uma [[Chameleon Rune]], usar a magia [[Creature Illusion]], ou for encantado por alguma criatura que mude sua forma. Bags podem ser encontradas em outros designs.<br />Algumas vezes jogadores usam bags coloridas para decoração de casas. Para saber mais veja a página sobre [[Bags]].\n\n<noinclude><p><spoiler>[[Arquivo:Achievement.gif]] Ao usar um total de 100 de qualquer uma das Costume Bags, você receberá o achievement '''\"{{Achievement|Masquerader}}\"'''.</spoiler></p></noinclude> \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7219,
+    "ns": 0,
+    "title": "Costume Bag (Uncommon)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se este não é item que você procura, veja a página [[Costume Bag|Costume Bag (Desambiguação)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Costume Bag (Uncommon)\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Itens de Festa\n| secondarytype  =\n| weight         = 8.00\n| attrib         = Temporariamente ou até você obter outra fantasia\n| stackable      = não\n| npcprice       = 1 000\n| value          = 1 000\n| droppedby      = Ninguém.\n| buyfrom        = Stan\n| sellto         = Jogadores.\n| notes          = Existem outros dois itens com o mesmo nome de [[Costume Bag]]. Se você usar isto, você ira se transformar em uma dessas 5 criaturas: [[Quara Hydromancer]], [[Diabolic Imp]], [[Banshee]], [[Frost Giant]] ou [[Lich]]. Você a perde em aproximadamente 5 horas. Note que você irá perder sua fantasia se: entrar em uma piscina, ficar invisível, usar uma [[Chameleon Rune]], usar a magia [[Creature Illusion]], ou for encantado por alguma criatura que mude sua forma. Bags podem ser encontradas em outros designs.<br />Algumas vezes jogadores usam bags coloridas para decoração de casas. Para saber mais veja a página sobre [[Bags]].\n\n<noinclude><p><spoiler>* [[Arquivo:Achievement.gif|link=]] Ao usar um total de 100 de qualquer uma das Costume Bags, você receberá o achievement '''\"{{Achievement|Masquerader}}\"'''.</spoiler></p></noinclude> \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7220,
+    "ns": 0,
+    "title": "Costume Bag (Deluxe)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se este não é item que você procura, veja a página [[Costume Bag|Costume Bag (Desambiguação)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Costume Bag (Deluxe)\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Itens de Festa\n| secondarytype  =\n| attrib         = Temporariamente ou até você obter outra fantasia\n| weight         = 8.00\n| stackable      = não\n| npcprice       = 1 500\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Stan\n| sellto         = Jogadores.\n| notes          = Existem outros dois itens com o mesmo nome de [[Costume Bag]]. Se você usar isto, você se transformara em uma dessas 5 criaturas: [[Serpent Spawn]], [[Demon]], [[Juggernaut]], [[Behemoth]] ou [[Rahemos]]. Você a perde em aproximadamente 5 horas. Note que você irá perder sua fantasia se: entrar em uma piscina, ficar invisível, usar uma [[Chameleon Rune]], usar a magia [[Creature Illusion]], ou for encantado por alguma criatura que mude sua forma. Bags podem ser encontradas em outros designs.<br />Algumas vezes jogadores usam bags coloridas para decoração de casas. Para saber mais veja a página sobre [[Bags]].\n\n<noinclude><p><spoiler>* [[Arquivo:Achievement.gif|link=]] Ao usar um total de 100 de qualquer uma das Costume Bags, você receberá o achievement '''\"{{Achievement|Masquerader}}\"'''.</spoiler></p></noinclude> \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8156,
+    "ns": 0,
+    "title": "Cake",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Cake\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Comidas\n| secondarytype  = Itens de Festa\n| attrib         =\n| npcvalue       = 0\n| npcprice       = 50\n| stackable      = sim\n| edible         = sim\n| regenseconds   = 120\n| weight         = 5.00\n| sounds          = Mmmm.\n| droppedby      = Ninguém.\n| buyfrom        = Tanaro, Christine, Toffee\n| sellto         = Jogadores.\n| implemented    = 7.9\n| notes          = Feito em um [[Oven]] com [[Lump of Cake Dough]]. Pode ser decorado para se transformar em um [[Decorated Cake]]. Depois de decorado, pode-se colocar um [[Candlestick]] para fazer um [[Party Cake]].<br />\n<div class=\"toccolours mw-collapsible mw-collapsed\" style=\"width:70%; margin: 4px 0px;\">'''Como fazer um bolo'''<div class=\"mw-collapsible-content\">\n<table><tr><td align=left>\nPara fazer um bolo, você precisa de:\n\n- [[Flour]] (''pode ser obtido colhendo [[wheat]] e usando em um [[millstone]]'')<br />\n- [[Milk]]<br />\n- [[Trough]] ou [[Bucket]]<br />\n- [[Oven]]<br />\n\n1. Coloque o [[Milk]] em um [[Trough]] ou [[Bucket]].<br />\n2. Use o [[flour]] no [[milk]]. Você vai obter um [[Lump of Cake Dough]].<br />\n3. Use o [[Lump of Cake Dough]] no [[Oven]]. Você vai obter seu ''Cake''!!\n</td></tr></table></div></div>\n<noinclude><p><spoiler>*[[Arquivo:Achievement.gif]] Após fazer 30 Cakes, você receberá o achievement '''\"{{Achievement|The Cake's the Truth}}\"'''.\n*[[Arquivo:Achievement.gif]] Após decorar 20 Cakes com frutas, você receberá o achievement '''\"{{Achievement|With a Cherry on Top}}\"'''</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8187,
+    "ns": 0,
+    "title": "Decorated Cake",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Decorated Cake\n| flavortext     = It is nicely decorated with fruits and icing.\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Comidas\n| secondarytype  = Itens de Festa\n| attrib         =\n| npcprice       = 0\n| stackable      = sim\n| edible         = sim\n| regenseconds   = 180\n| weight         = 5.00\n| value          = Negociável\n| sounds         = Mmmm.\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.9\n| notes          = Feito em um [[Oven]] com [[Lump of Cake Dough]]. Depois de decorado, pode-se colocar um [[Candlestick]] para fazer um [[Party Cake]].<br />\n<div class=\"toccolours mw-collapsible mw-collapsed\" style=\"width:70%; margin: 4px 0px;\">'''Como fazer um bolo decorado'''<div class=\"mw-collapsible-content\">\n<table><tr><td align=left>\nPara fazer um bolo decorado, você precisa de:\n\n- [[Flour]] (''pode ser obtido colhendo [[wheat]] e usando em um [[millstone]]'')<br />\n- [[Milk]]<br />\n- [[Trough]] ou [[Bucket]]<br />\n- [[Oven]]<br />\n- [[Kitchen Knife]]<br />\n- Qualquer tipo de fruta<br />\n\n1. Coloque o [[Milk]] em um [[Trough]] ou [[Bucket]].<br />\n2. Use o [[flour]] no [[milk]]. Você vai obter um [[Lump of Cake Dough]].<br />\n3. Use o [[Lump of Cake Dough]] no [[Oven]]. Você vai obter um [[Cake]].<br />\n4. Use uma [[Kitchen Knife]] em alguma fruta enquanto seu bolo estiver na [[Backpack]].<br />\nFeito isto corretamente, decorações vermelhas aparecerão no bolo, transformando-o em um ''Decorated Cake''.\n</td></tr></table></div></div>\n\n<noinclude><p><spoiler>*[[Arquivo:Achievement.gif]] Após decorar 20 [[Cake]]s com frutas, você receberá o achievement '''\"{{Achievement|With a Cherry on Top}}\"'''.\n*[[Arquivo:Achievement.gif]] Após fazer um [[Decorated Cake]] e um [[Chocolate Cake]], você receberá o achievement '''\"{{Achievement|Piece of Cake}}\"'''.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8192,
+    "ns": 0,
+    "title": "Cream Cake",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Cream Cake\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Comidas\n| secondarytype  = Itens de Festa\n| attrib         =\n| npcprice       = 0\n| stackable      = sim\n| edible         = sim\n| regenseconds   = 180\n| weight         = 5.00\n| value          = Negociável\n| sounds         = Mmmm.\n| droppedby      = [[Goggle Cake]], [[Mad Scientist]], [[Sugar Mommy]].\n| droppedEventby = [[Grynch Clan Goblin]], [[Piñata Dragon]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.9\n| notes          = Pode ser obtido também em [[Surprise Bag]]s e [[Suspicious Surprise Bag]].\n<noinclude><p><spoiler>* Um é necessário para a [[Hot Cuisine Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8208,
+    "ns": 0,
+    "title": "Candy Cane",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Candy Cane\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Comidas\n| secondarytype  = Itens de Festa\n| npcvalue       = 0\n| npcprice       = 0\n| edible         = sim\n| regenseconds   = 24\n| stackable      = sim\n| weight         = 0.50\n| sounds         = Mmmm.\n| droppedEventby = [[Grynch Clan Goblin]], [[The Mutated Pumpkin]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = <noinclude><p><spoiler>*03 são necessários para [[Hot Cuisine Quest]].\n*Possibilidade de ser obtido como presente do NPC [[Santa Claus]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8245,
+    "ns": 0,
+    "title": "Candy",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Candy\n| flavortext     =\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Comidas\n| secondarytype  = Itens de Festa\n| attrib         =\n| npcprice       = 0\n| edible         = sim\n| weight         = 0.05\n| stackable      = sim\n| regenseconds   = 12\n| sounds         = Mmmm.\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| droppedEventby = [[Piñata Dragon]], [[The Mutated Pumpkin]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.92\n| notes          = Um dos poucos [[itens]] [[tibia]]nos com menos de 0.10 [[oz]].<br />\n<noinclude><p><spoiler>*03 são necessárias para o [[Eventos e Festividades#Eventos durante o ano|evento]] [[Hot Cuisine Quest]].\n*Possibilidade de ser obtido como recompensa da [[Barbarian Arena Quest]].\n*Possibilidade de ser obtido ao usar uma [[Obsidian Knife]] no corpo de um [[The Mutated Pumpkin]].\n*Possibilidade de ser obtido ao usar um [[Surprise Nest]].\n*Possibilidade de ser obtido ao usar um [[Surprise Bag (Blue)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8246,
+    "ns": 0,
+    "title": "Cookie",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Cookie\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Comidas\n| secondarytype  = Itens de Festa\n| npcvalue       = 1\n| npcprice       = 2\n| edible         = sim\n| regenseconds   = 24\n| stackable      = sim\n| weight         = 0.10\n| value          = 1-2\n| sounds         = Crunch.\n| droppedby      = [[Animated Ogre Brute]], [[Arctic Faun]], [[Cave Rat]], [[Ekatrix]], [[Faun]], [[Goggle Cake]], [[Grynch Clan Goblin]], [[Mad Scientist]], [[Ogre Brute]], [[Ogre Savage]], [[Ogre Shaman]], [[Pooka]], [[Twisted Pooka]], [[Witch]].\n| droppedRaidby  = [[Yaga the Crone]].\n| droppedEventby = [[Grynch Clan Goblin]], [[Piñata Dragon]].\n| buyfrom        = Imalas, Hireling (Apprentice), Bonifacius, The Thaian, Maryza, Larek:7, Tanaro, Clyde, Christine, Relaxed Bartender, Boozer:5, Maria:5, Urkalio:5, Toffee\n| sellto         = Lily, Hector the Mentor\n| implemented    = 7.4\n| notes          = Pode ser considerado raro em [[Rookgaard]]. Mesma aparência de um [[Exploding Cookie]].\n<div class=\"toccolours mw-collapsible mw-collapsed\" style=\"width:70%; margin: 4px 0px;\">'''Como fazer Cookies'''<div class=\"mw-collapsible-content\">\n<table><tr><td align=left>\n'''Ingredientes:'''\n*[[Flour]] (pode ser obtido por colheita de [[wheat|trigo]])\n*[[Milk]]\n*[[Baking Tray]]\n*[[Oven]]\n\n'''Modo de preparo:'''\n#Coloque o [[Milk]] em um [[trough]] ou [[bucket]].\n#Use [[Flour]] com o [[Milk]]. Você vai tar um [[Lump of Cake Dough]].\n#Use o [[Lump of Cake Dough]] com [[Baking Tray]]. Você terá agora um [[Baking Tray (With Dough)|Baking Tray with cookie dough]].\n#Use o [[Baking Tray (With Dough)|Baking Tray with cookie dough]] em um [[Oven]] para fazer 12 Cookies.\n</td></tr></table></div></div>\n\n<noinclude><p><spoiler>*10 são necessários para a [[Hot Cuisine Quest]].\n*Pode ser encontrado em um [[spawn]] na casa de [[Wyda]].\n*Recompensa da [[Emperor's Cookies Quest]].\n*Possibilidade de ser obtido ao usar um [[Shaggy Ogre Bag]].\n*[[Arquivo:Achievement.gif]] Após fazer cookies 20 vezes, você receberá o achievement '''\"{{Achievement|Cookie Monster}}\"'''.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8279,
+    "ns": 0,
+    "title": "Bar of Chocolate",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bar of Chocolate\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Comidas\n| secondarytype  = Itens de Festa\n| attrib         = \n| weight         = 0.10\n| stackable      = sim\n| npcprice       = 0\n| edible         = sim\n| regenseconds   = 60\n| value          = 1 000 - 10 000\n| sounds         = Mmmm.\n| npcvalue       = 0\n| droppedby      = [[Nightmare Scion]].\n| droppedEventby = [[Piñata Dragon]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.92\n| notes          = Usado para fazer um [[Chocolate Cake]].\n<noinclude><p><spoiler>*01 é necessário para a [[The Hidden City of Beregar Quest]].\n*03 são necessários para o [[Eventos e Festividades#Eventos durante o ano|evento]] [[Hot Cuisine Quest]].\n*Possibilidade de ser obtido como recompensa da [[Barbarian Arena Quest]].\n*Possibilidade de ser obtido ao usar um [[Mysterious Remains]].\n*Possibilidade de ser obtido ao usar um [[Surprise Nest]].\n*Possibilidade de ser obtido ao usar um [[Surprise Bag (Red)]].\n*Possibilidade de ser obtido ao usar um [[Surprise Bag (Blue)]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 21008,
+    "ns": 0,
+    "title": "Anniversary Cake",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Anniversary Cake\n| flavortext     = It was created by Tibia's finest bakers for the celebration of 15 years of Tibia.\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Comidas\n| secondarytype  = Itens de Festa\n| stackable      = sim\n| value          = 20 000\n| weight         = 5.00\n| edible         = sim\n| npcvalue       = 0\n| npcprice       = 0\n| regenseconds   = 720\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.44\n| sounds          = Mmmm.\n| notes          = Você podia obter um com [[Knightmare (NPC)|Knightmare]] em [[Thais]], em uma [[Surprise Bag (Red)]] ou clicando no [[Anniversary Remains]] de [[Chayenne (Criatura)|Chayenne]] e do [[Count Tofifti (Criatura)|Count Tofifti]] durante as festividades de [[Aniversário do Tibia|15 anos]] do Tibia. Hoje em dia não pode mais ser obtido, mas ainda existem vários pelo jogo. É uma das melhores comidas do jogo.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 21010,
+    "ns": 0,
+    "title": "Anniversary Backpack",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Anniversary Backpack\n| flavortext     = It was awarded during the festivities of Tibia's 15th anniversary.\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| secondarytype  = Itens de Festa\n| imbuement      = 1\n| weight         = 15.00\n| stackable      = não\n| volume         = 15\n| npcvalue       = 0\n| npcprice       = 0\n| droppedby      = Ninguém.\n| droppedEventby =\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.44\n| value          = 20 000+\n| notes          = É a menor backpack do Tibia, tendo apenas 15 espaços. Devido a grande variedade, backpacks são consideradas itens colecionáveis e também usadas como decoração. \n'''Histórico:''' Durante as festividades de [[Aniversário do Tibia|15 anos]] do Tibia, era obtida com [[Knightmare (NPC)|Knightmare]] em [[Thais]].\n<noinclude>{{Veja|Backpacks}}</noinclude> \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 39886,
+    "ns": 0,
+    "title": "Birthday Cake",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Birthday Cake\n| flavortext     = It was created by Tibia's finest bakers for the celebration of 20 years of Tibia.\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Comidas\n| secondarytype  = Itens de Festa\n| stackable      = sim\n| value          = Negociável\n| weight         = 5.00\n| edible         = sim\n| npcvalue       = 0\n| npcprice       = 0\n| regenseconds   = 720\n| droppedby      = Ninguém.\n| droppedEventby = [[Delany (Criatura)]], [[Mirade (Criatura)]], [[Piñata Dragon]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.02\n| sounds         = \"Mmmm.\"\n| notes          = Bolo comemorativo de 20 anos do Tibia.\n<noinclude><p><spoiler>* Pode ser obtido ficando na colocação ''silver'' no jogo \"Can Knockdown\" na [[Vigintia Island]] durante as comemoração de [[Aniversário do Tibia|20 anos]] do Tibia.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 40067,
+    "ns": 0,
+    "title": "Bottle of Tibian Wine",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bottle of Tibian Wine\n| flavortext     = It was created by Tibia's finest vintagers for the celebration of 20 years of Tibia.\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Comidas\n| secondarytype  = Itens de Festa\n| stackable      = sim\n| value          = Negociável\n| weight         = 1.00\n| edible         = sim\n| npcvalue       = 0\n| npcprice       = 0\n| regenseconds   = 120\n| droppedby      = Ninguém.\n| droppedEventby = [[Piñata Dragon]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.02\n| sounds         = \"Slurp.\"\n| notes          = Bebida comemorativa de 20 anos do Tibia.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 40119,
+    "ns": 0,
+    "title": "Costume Bag (Old)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se este não é item que você procura, veja a página [[Costume Bag|Costume Bag (Desambiguação)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Costume Bag (Old)\n| flavortext     = It looks rather old.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Festa\n| attrib         = Te transforma em uma criatura antiga.\n| weight         = 38.00\n| stackable      = não\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.02\n| droppedEventby = [[Piñata Dragon]].\n| notes          = Após usar o item você poderá se transformar em: [[Wolf (Nostalgia)]], [[Bug (Nostalgia)]], [[Giant Spider (Nostalgia)]], [[3478|Beholder]] ou em um outfit representando o passado do Tibia.\n<noinclude><p><spoiler>* Pode ser obtido ficando na colocação ''bronze'' no jogo \"Can Knockdown\" na [[Vigintia Island]] durante as comemoração de [[Aniversário do Tibia|20 anos]] do Tibia.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45575,
+    "ns": 0,
+    "title": "Blue Fireworks Powder",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Blue Fireworks Powder\n| itemclass      = Outros Itens\n| primarytype    = Itens de Festa\n| secondarytype  = Produtos de Criaturas\n| attrib         = \n| weight         = 1.00\n| resist         = \n| stackable      = sim\n| droppedEventby = [[Percht]], [[Schiach]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.02.7746\n| value          = Negociável\n| notes          = Veja [[Fireworks Powder]] para mais informações.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45578,
+    "ns": 0,
+    "title": "Blue Fireworks Rocket",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Blue Fireworks Rocket\n| flavortext    = It can be disassembled with the right tool.\n| itemclass     = Outros Itens\n| primarytype   = Itens de Festa\n| secondarytype = \n| attrib        = Explode quando usado. Pode ser desmontado.\n| weight        = 1.00\n| resist        = \n| stackable     = não\n| mercado       = não\n| droppedby     = Ninguém.\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| implemented   = 12.02.7746\n| value         = Negociável\n| notes         = Para mais informações de como obter ou como desmontar, acesse [[Fireworks Rocket (Cores)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45579,
+    "ns": 0,
+    "title": "Colourful Fireworks Rocket",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Colourful Fireworks Rocket\n| flavortext    = It can be disassembled with the right tool.\n| itemclass     = Outros Itens\n| primarytype   = Itens de Festa\n| secondarytype = \n| attrib        = Explode quando usado. Pode ser desmontado.\n| weight        = 1.00\n| resist        = \n| stackable     = não\n| mercado       = não\n| droppedby     = Ninguém.\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| implemented   = 12.02.7746\n| value         = Negociável\n| notes         = Para mais informações de como obter ou como desmontar, acesse [[Fireworks Rocket (Cores)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 47959,
+    "ns": 0,
+    "title": "Beer Mug",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Beer Mug\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Líquidos\n| secondarytype  = Itens de Festa\n| attrib         = Use para beber.\n| weight         = 8.00\n| stackable      = não\n| mercado        = sim\n| npcprice       = \n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.20.9066\n| notes          = \n<noinclude><p><spoiler>\n* Obtida ao usar uma [[Empty Beer Mug]] [[Arquivo:Empty Beer Mug.gif]] em um [[Super Cask]] [[Arquivo:Super Cask.gif]], durante a [[Orcsoberfest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53613,
+    "ns": 0,
+    "title": "Colourful Balloons",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Colourful Balloons\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Pode-se dar \"use\".\n| weight         = 0.15\n| npcprice       = 200 [[Theon]]s\n| stackable      = sim\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Pode ser obtido ao usar uma [[Balloon Box]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53615,
+    "ns": 0,
+    "title": "Bonelord Balloon",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bonelord Balloon\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Nenhum.\n| weight         = 0.15\n| npcprice       = 400 [[Theon]]s\n| stackable      = sim\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Pode ser obtido ao usar uma [[Special Balloon Box]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53617,
+    "ns": 0,
+    "title": "Cyclops Head Balloon",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Cyclops Head Balloon\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Nenhum.\n| weight         = 0.15\n| npcprice       = 400 [[Theon]]s\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Pode ser obtido ao usar uma [[Special Balloon Box]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53627,
+    "ns": 0,
+    "title": "Cyclops Balloon",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Cyclops Balloon\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Nenhum.\n| weight         = 0.15\n| npcprice       = 400 [[Theon]]s\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Pode ser obtido ao usar uma [[Special Balloon Box]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53971,
+    "ns": 0,
+    "title": "Bottle of Champagne",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bottle of Champagne\n| flavortext     = It was created by Tibia's finest vintagers for the celebration of 25 years of Tibia\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Comidas\n| secondarytype  = Itens de Festa\n| stackable      = sim\n| value          = \n| weight         = 1.00\n| edible         = sim\n| npcvalue       = 0\n| npcprice       = 10 [[Theon]]s\n| regenseconds   = 120\n| droppedby      = Ninguém.\n| droppedEventby = [[Memory Of A Mammoth]].\n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| sounds         = \"Slurp.\"\n| notes          = Bebida comemorativa de 25 anos do Tibia.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 54006,
+    "ns": 0,
+    "title": "Dazzling Fireworks Rocket",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Dazzling Fireworks Rocket\n| itemclass     = Outros Itens\n| primarytype   = Itens de Decoração\n| secondarytype = Itens de Festa\n| attrib        = Explode quando usado.\n| weight        = 1.00\n| resist        = \n| stackable     = não\n| mercado       = sim\n| npcprice      = 750 [[Theon]]s\n| droppedby     = Ninguém.\n| buyfrom       = Theodora\n| sellto        = Jogadores.\n| implemented   = 12.85.11485\n| notes         = Pode ser obtido em uma [[Special Fx Box]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 54030,
+    "ns": 0,
+    "title": "Birthday Layer Cake",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Birthday Layer Cake\n| flavortext     = It was created by Tibia's finest bakers for the celebration of 25 years of Tibia\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Comidas\n| secondarytype  = Itens de Festa\n| stackable      = sim\n| value          = Negociável\n| weight         = 5.00\n| edible         = sim\n| npcvalue       = 0\n| npcprice       = 10 [[Theon]]s\n| regenseconds   = 720\n| droppedby      = Ninguém\n| droppedEventby = \n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 11.02\n| sounds         = \"Mmmm.\"\n| notes          = Bolo comemorativo de 25 anos do Tibia.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55298,
+    "ns": 0,
+    "title": "Balloon Box",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Balloon Box\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Pode-se dar \"use\".\n| weight         = 0.20\n| npcprice       = 0\n| stackable      = sim\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Podia ser obtido como recompensa durante o evento do 25º [[Aniversário do Tibia]].<br /> Ao dar use, poderá receber, aleatoriamente, um dos seguintes itens: <br />\n{{div col}}\n* [[Arquivo:Colourful Balloons.gif]] [[Colourful Balloons]]\n* [[Arquivo:Blue Balloon.gif]] [[Blue Balloon]]\n* [[Arquivo:Green Balloon.gif]] [[Green Balloon]]\n* [[Arquivo:Orange Balloon.gif]] [[Orange Balloon]]\n* [[Arquivo:Pink Balloon.gif]] [[Pink Balloon]]\n* [[Arquivo:Purple Balloon.gif]] [[Purple Balloon]]\n* [[Arquivo:Red Balloon.gif]] [[Red Balloon]]\n* [[Arquivo:Teal Balloon.gif]] [[Teal Balloon]]\n* [[Arquivo:Yellow Balloon.gif]] [[Yellow Balloon]]\n* [[Arquivo:Green 25 Years Balloon.gif]] [[Green 25 Years Balloon]]\n* [[Arquivo:Orange 25 Years Balloon.gif]] [[Orange 25 Years Balloon]]\n* [[Arquivo:Pink 25 Years Balloon.gif]] [[Pink 25 Years Balloon]]\n* [[Arquivo:Red 25 Years Balloon.gif]] [[Red 25 Years Balloon]]\n* [[Arquivo:Teal 25 Years Balloon.gif]] [[Teal 25 Years Balloon]]\n* [[Arquivo:Yellow 25 Years Balloon.gif]] [[Yellow 25 Years Balloon]]\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55301,
+    "ns": 0,
+    "title": "Blue Balloon",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Blue Balloon\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Nenhum.\n| weight         = 0.15\n| npcprice       = 200 [[Theon]]s\n| stackable      = sim\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Pode ser obtido ao usar uma [[Balloon Box]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55309,
+    "ns": 0,
+    "title": "Big Reward Box",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Big Reward Box\n| flavortext     = It could be exchanged for Theons after the festivities of Tibia's 25th anniversary.\n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Pode-se dar \"use\".\n| weight         = 156.10\n| npcprice       = 0\n| stackable      = sim\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.87.12038\n| notes          = Ao dar use, obtem-se os seguintes itens: <br />\n{{div col|2}}\n* 1 [[Arquivo:25 Years Backpack.gif|link=]] [[25 Years Backpack]]\n* 2 [[Arquivo:Birthday Layer Cake.gif|link=]] [[Birthday Layer Cake]]\n* 2 [[Arquivo:Bottle of Champagne.gif|link=]] [[Bottle of Champagne]]\n* 2 [[Arquivo:Candy Floss (25 Anos).gif|link=]] [[Candy Floss (25 Anos)]]\n* 2 [[Arquivo:Ice Cream Cone (Sprinkles).gif|link=]] [[Ice Cream Cone (Sprinkles)]]\n* 2 [[Arquivo:Balloon Box.gif|link=]] [[Balloon Box]]\n* 2 [[Arquivo:Box Full of Presents.gif|link=]] [[Box Full of Presents]]\n* 2 [[Arquivo:Carpet Box.gif|link=]] [[Carpet Box]]\n* 1 [[Arquivo:Embroidered Box.gif|link=]] [[Embroidered Box]]\n* 1 [[Arquivo:Luminous Box.gif|link=]] [[Luminous Box]]\n* 2 [[Arquivo:Special Balloon Box.gif|link=]] [[Special Balloon Box]]\n* 2 [[Arquivo:Special Carpet Box.gif|link=]] [[Special Carpet Box]]\n* 3 [[Arquivo:Special Fx Box.gif|link=]] [[Special Fx Box]]\n* 1 [[Arquivo:Supernatural Box.gif|link=]] [[Supernatural Box]]\n{{div col end}}\n<noinclude><p><spoiler>\n* Obtido como recompensa após o evento do 25º [[Aniversário do Tibia]], se o jogador tiver 7197 Theons ou mais. Os Theons serão deduzidos do saldo, assim permitindo que o jogador possa negociar com a NPC [[Theodora]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55310,
+    "ns": 0,
+    "title": "25 Years Backpack",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = 25 Years Backpack\n| flavortext     = It could be bought for Theons after the festivities of Tibia's 25th anniversary.\n| itemclass      = Itens de Decoração\n| primarytype    = Recipientes\n| secondarytype  = Itens de Festa\n| imbuement      = 1\n| volume         = 25\n| weight         = 17.00\n| stackable      = não\n| value          = Negociável\n| npcvalue       = 7197\n| npcprice       = 7197 [[Theon]]s\n| droppedby      = Ninguém.\n| droppedEventby = \n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| notes          = Essa é a backpack comemorativa de 25 anos.\n<noinclude>{{Veja|Backpacks}}</noinclude>\n| implemented    = 12.87.12038\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55316,
+    "ns": 0,
+    "title": "Box Full of Decoration",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Box Full of Decoration\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Pode-se dar \"use\".\n| weight         = 0.26\n| npcprice       = 0\n| stackable      = sim\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Podia ser obtido como recompensa durante o evento do 25º Aniversário do Tibia.<br /> Ao dar \"use\", poderá receber, aleatoriamente, um dos seguintes itens: <br />\n* [[Arquivo:Box Full of Presents.gif]] [[Box Full of Presents]]\n* [[Arquivo:Embroidered Box.gif]] [[Embroidered Box]]\n* [[Arquivo:Luminous Box.gif]] [[Luminous Box]]\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55317,
+    "ns": 0,
+    "title": "Box Full of Presents",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Box Full of Presents\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Pode-se dar \"use\".\n| weight         = 25.50\n| npcprice       = 0\n| stackable      = sim\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Podia ser obtido como recompensa durante o evento do 25º Aniversário do Tibia.<br /> Ao dar \"use\", poderá receber, aleatoriamente, um dos seguintes itens: <br />\n* [[Arquivo:Another Yellow Present.gif]] [[Another Yellow Present]]\n* [[Arquivo:Blue and Red Presents.gif]] [[Blue and Red Presents]]\n* [[Arquivo:Blue Present.gif]] [[Blue Present]]\n* [[Arquivo:Green and Blue Presents.gif]] [[Green and Blue Presents]]\n* [[Arquivo:Green and Red Presents.gif]] [[Green and Red Presents]]\n* [[Arquivo:Pile of Presents.gif]] [[Pile of Presents]]\n* [[Arquivo:Pile of Three Presents.gif]] [[Pile of Three Presents]]\n* [[Arquivo:Red Present.gif]] [[Red Present]]\n* [[Arquivo:Small Blue Present.gif]] [[Small Blue Present]]\n* [[Arquivo:Yellow Present.gif]] [[Yellow Present]]\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55318,
+    "ns": 0,
+    "title": "Carpet Box",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Carpet Box\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Pode-se dar \"use\".\n| weight         = 9.10\n| npcprice       = 0\n| stackable      = sim\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Podia ser obtido como recompensa durante o evento do 25º Aniversário do Tibia.<br /> Ao dar \"use\", poderá receber, aleatoriamente, um dos seguintes itens: <br />\n* [[Arquivo:Folded Blue Cake Carpet.gif]] [[Folded Blue Cake Carpet]]\n* [[Arquivo:Folded Blue Tibia Carpet.gif]] [[Folded Blue Tibia Carpet]]\n* [[Arquivo:Folded Dragon Carpet.gif]] [[Folded Dragon Carpet]]\n* [[Arquivo:Folded Dragon Lord Carpet.gif]] [[Folded Dragon Lord Carpet]]\n* [[Arquivo:Folded Elemental Carpet.gif]] [[Folded Elemental Carpet]]\n* [[Arquivo:Folded Ghazbaran Carpet.gif]] [[Folded Ghazbaran Carpet]]\n* [[Arquivo:Folded Green Cake Carpet.gif]] [[Folded Green Cake Carpet]]\n* [[Arquivo:Folded Green Tibia Carpet.gif]] [[Folded Green Tibia Carpet]]\n* [[Arquivo:Folded Morgaroth Carpet.gif]] [[Folded Morgaroth Carpet]]\n* [[Arquivo:Folded Orange Cake Carpet.gif]] [[Folded Orange Cake Carpet]]\n* [[Arquivo:Folded Orange Tibia Carpet.gif]] [[Folded Orange Tibia Carpet]]\n* [[Arquivo:Folded Orshabaal Carpet.gif]] [[Folded Orshabaal Carpet]]\n* [[Arquivo:Folded Pink Cake Carpet.gif]] [[Folded Pink Cake Carpet]]\n* [[Arquivo:Folded Pink Tibia Carpet.gif]] [[Folded Pink Tibia Carpet]]\n* [[Arquivo:Folded Purple Cake Carpet.gif]] [[Folded Purple Cake Carpet]]\n* [[Arquivo:Folded Purple Tibia Carpet.gif]] [[Folded Purple Tibia Carpet]]\n* [[Arquivo:Folded Red Cake Carpet.gif]] [[Folded Red Cake Carpet]]\n* [[Arquivo:Folded Red Tibia Carpet.gif]] [[Folded Red Tibia Carpet]]\n* [[Arquivo:Folded Sky Cake Carpet.gif]] [[Folded Sky Cake Carpet]]\n* [[Arquivo:Folded Sky Tibia Carpet.gif]] [[Folded Sky Tibia Carpet]]\n* [[Arquivo:Folded Yellow Cake Carpet.gif]] [[Folded Yellow Cake Carpet]]\n* [[Arquivo:Folded Yellow Tibia Carpet.gif]] [[Folded Yellow Tibia Carpet]]\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55324,
+    "ns": 0,
+    "title": "Box Full of Balloons",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Box Full of Balloons\n| flavortext     = Use this to get the ballons no.0 to no.9\n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Pode-se dar \"use\".\n| weight         = 1.60\n| npcprice       = 2000 [[Theon]]s\n| stackable      = sim\n| droppedby      = Ninguém.\n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.87.12038\n| notes          = Use para obter os balões de nº 0 a 9:<br>\n{{div col|2}}\n* [[Arquivo:Balloon no.0.gif]] [[Balloon no.0]]\n* [[Arquivo:Balloon no.1.gif]] [[Balloon no.1]]\n* [[Arquivo:Balloon no.2.gif]] [[Balloon no.2]]\n* [[Arquivo:Balloon no.3.gif]] [[Balloon no.3]]\n* [[Arquivo:Balloon no.4.gif]] [[Balloon no.4]]\n* [[Arquivo:Balloon no.5.gif]] [[Balloon no.5]]\n* [[Arquivo:Balloon no.6.gif]] [[Balloon no.6]]\n* [[Arquivo:Balloon no.7.gif]] [[Balloon no.7]]\n* [[Arquivo:Balloon no.8.gif]] [[Balloon no.8]]\n* [[Arquivo:Balloon no.9.gif]] [[Balloon no.9]]\n{{div col end}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55341,
+    "ns": 0,
+    "title": "Balloon no.0",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Balloon no.0\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Nenhum.\n| weight         = 0.15\n| npcprice       = 250 [[Theon]]s\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.87.12038\n| notes          = Nenhuma.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55342,
+    "ns": 0,
+    "title": "Balloon no.1",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Balloon no.1\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Nenhum.\n| weight         = 0.15\n| npcprice       = 250 [[Theon]]s\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.87.12038\n| notes          = Nenhuma.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55343,
+    "ns": 0,
+    "title": "Balloon no.2",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Balloon no.2\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Nenhum.\n| weight         = 0.15\n| npcprice       = 250 [[Theon]]s\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.87.12038\n| notes          = Nenhuma.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55344,
+    "ns": 0,
+    "title": "Balloon no.3",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Balloon no.3\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Nenhum.\n| weight         = 0.15\n| npcprice       = 250 [[Theon]]s\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.87.12038\n| notes          = Nenhuma.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55345,
+    "ns": 0,
+    "title": "Balloon no.4",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Balloon no.4\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Nenhum.\n| weight         = 0.15\n| npcprice       = 250 [[Theon]]s\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.87.12038\n| notes          = Nenhuma.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55346,
+    "ns": 0,
+    "title": "Balloon no.5",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Balloon no.5\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Nenhum.\n| weight         = 0.15\n| npcprice       = 250 [[Theon]]s\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.87.12038\n| notes          = Nenhuma.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55347,
+    "ns": 0,
+    "title": "Balloon no.6",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Balloon no.6\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Nenhum.\n| weight         = 0.15\n| npcprice       = 250 [[Theon]]s\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.87.12038\n| notes          = Nenhuma.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55348,
+    "ns": 0,
+    "title": "Balloon no.7",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Balloon no.7\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Nenhum.\n| weight         = 0.15\n| npcprice       = 250 [[Theon]]s\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.87.12038\n| notes          = Nenhuma.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55349,
+    "ns": 0,
+    "title": "Balloon no.8",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Balloon no.8\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Nenhum.\n| weight         = 0.15\n| npcprice       = 250 [[Theon]]s\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.87.12038\n| notes          = Nenhuma.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55350,
+    "ns": 0,
+    "title": "Balloon no.9",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Balloon no.9\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Nenhum.\n| weight         = 0.15\n| npcprice       = 250 [[Theon]]s\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.87.12038\n| notes          = Nenhuma.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55351,
+    "ns": 0,
+    "title": "Blue 25 Years Balloon",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Blue 25 Years Balloon\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Nenhum.\n| weight         = 0.15\n| npcprice       = 200 [[Theon]]s\n| stackable      = sim\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.87.12038\n| notes          = Nenhuma.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55353,
+    "ns": 0,
+    "title": "Dwarf Balloon",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Dwarf Balloon\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Nenhum.\n| weight         = 0.15\n| npcprice       = 400 [[Theon]]s\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Pode ser obtido ao usar uma [[Special Balloon Box]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55396,
+    "ns": 0,
+    "title": "Another Yellow Present",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Another Yellow Present\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Nenhum.\n| weight         = 25.00\n| npcprice       = 200 [[Theon]]s\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Pode ser reembrulhado. Pode ser obtido ao usar uma [[Box Full of Presents]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55397,
+    "ns": 0,
+    "title": "Blue and Red Presents",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Blue and Red Presents\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Nenhum.\n| weight         = 25.00\n| npcprice       = 200 [[Theon]]s\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Pode ser reembrulhado. Pode ser obtido ao usar uma [[Box Full of Presents]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55398,
+    "ns": 0,
+    "title": "Blue Present",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Blue Present\n| flavortext     = Use it in your house to place a blue present.\n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Pode-se dar \"Use\".\n| weight         = 25.00\n| npcprice       = 200 [[Theon]]s\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Pode ser obtido ao usar uma [[Box Full of Presents]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55405,
+    "ns": 0,
+    "title": "Dragon Pinata",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Dragon Pinata\n| flavortext     = Use it in your house to place a dragon pinata.\n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Pode-se dar \"Use\"\n| weight         = 25.00\n| npcprice       = 10000[[Theon]]s\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Nenhuma.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 6503,
+    "ns": 0,
+    "title": "Party Hat",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Party Hat\n| itemclass      = Outros Itens\n| primarytype    = Itens de Festa\n| secondarytype  = Capacetes\n| weight         = 7.50\n| classificacao  = 1\n| max_tier       = 1\n| stackable      = não\n| npcprice       = 600\n| value          = 600 - 10 000\n| npcvalue       = Nada.\n| armor          = 1\n| droppedEventby = [[Azure Frog]], [[Badger]], [[Bat]], [[Bolfrim (Criatura)]], [[Bonelord]], [[Crystal Spider]], [[Deepling Guard]], [[Deepling Scout]], [[Deepling Spellsinger]], [[Deepling Worker]], [[Dire Penguin]], [[Dragon]], [[Dragon Lord]], [[Dragon Lord Hatchling]], [[Elder Bonelord]], [[Frost Dragon]], [[Frost Dragon Hatchling]], [[Frost Giant]], [[Frost Giantess]], [[Frost Troll]], [[Killer Caiman]], [[Lancer Beetle]], [[Lizard Chosen]], [[Lizard High Guard]], [[Lizard Legionnaire]], [[Mutated Bat]], [[Orchid Frog]], [[Penguin]], [[Polar Bear]], [[Quara Constrictor]], [[Quara Constrictor Scout]], [[Quara Mantassin]], [[Quara Mantassin Scout]], [[Sandcrawler]], [[Squirrel]], [[Terror Bird]], [[Tortoise]], [[Winter Wolf]], [[Yeti]].\n| buyfrom        = Hireling (Apprentice):800, Stan\n| sellto         = Jogadores.\n| implemented    = 7.92\n| notes          = Ao dar \"'''use'''\" no item, quando ele estiver equipado no slot de cabeça do [[Inventário]], confetes cairão sobre o personagem.\n<noinclude><p><spoiler>*[[Arquivo:Achievement.gif]] Ao usar 200 vezes este item ou um [[Party Trumpet]] vocé receberá o achievement '''\"{{Achievement|Party Animal}}\"'''.<br /> \n*Pode ser obtido durante o evento [[The Colours of Magic]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7741,
+    "ns": 0,
+    "title": "Piggy Bank",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Piggy Bank\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Dá [[Platinum Coin|platinum]] ou [[gold coin]]s quando usado.\n| weight         = 7.50 \n| stackable      = não\n| value          = 1 - 600\n| droppedby      = [[Alptramun]], [[Askarak Demon]], [[Black Knight]], [[Cult Believer]], [[Cult Enforcer]], [[Cult Scholar]], [[Enlightened of the Cult]], [[Hero]], [[Infernalist]], [[Izcandar the Banished]], [[Lost Basher]], [[Lost Berserker]], [[Mad Mage]], [[Malofur Mangrinder]], [[Maxxenius]], [[Pirate Corsair]], [[Plagueroot]], [[Priestess]], [[Raging Mage]], [[Reflection Of A Mage]], [[Renegade Knight]], [[Sea Captain]], [[Shaburak Demon]], [[The Nightmare Beast]], [[The Scourge of Oblivion]], [[Twisted Shaper]], [[Vicious Squire]], [[Warlock]].\n| droppedRaidby  = [[Grandfather Tridian]].\n| droppedEventby = [[Grynch Clan Goblin]], [[The Percht Queen]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.3\n| notes          =\n*Aproximadamente 25% deles vão quebrar na primeira tentativa de uso.\n*Entrega uma [[Platinum Coin]] toda vez que é usado.\n*Quando quebra, somente [[Gold Coin|uma moeda de ouro]] é concedida. \n*A quantidade média obtida é 400 gps.\n*Acredita-se que o dinheiro total pode variar de 1 à 2200 gps. \n\n<noinclude><p><spoiler>* Recompensa das [[quest]]s: [[Barbarian Arena Quest|Barbarian Arena - Greenhorn Mode]] e [[Chayenne's Realm Quest]].\n*Possibilidade de ser obtido como presente do NPC [[Santa Claus]].\n*Possibilidade de ser obtido ao usar uma das [[Surprise Bag]]s.\n*Possibilidade de ser obtido ao usar um [[Unrealized Dream]] próximo ao [[The Dreamcatcher Device]].\n*Possibilidade de ser obtido ao usar uma [[Belongings of a Deceased (Ottokar)]].\n*Possibilidade de ser obtido usar um [[Mysterious Remains]].\n*[[Arquivo:Achievement.gif]] Após quebrar 50 Piggy Banks você receberá o achievement \"{{Achievement|Allowance Collector}}\".</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7928,
+    "ns": 0,
+    "title": "Party Trumpet",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Party Trumpet\n| itemclass      = Outros Itens\n| primarytype    = Itens de Festa\n| secondarytype  = Instrumentos Musicais\n| attrib         = Produz notas musicais verdes quando usado.\n| stackable      = não\n| weight         = 0.50\n| npcprice       = 80\n| sounds         = \"TOOOOOOT\"\n| droppedEventby = [[Azure Frog]], [[Badger]], [[Bat]], [[Bolfrim (Criatura)]], [[Bonelord]], [[Crystal Spider]], [[Deepling Guard]], [[Deepling Scout]], [[Deepling Spellsinger]], [[Deepling Worker]], [[Dire Penguin]], [[Dragon]], [[Dragon Lord]], [[Dragon Lord Hatchling]], [[Elder Bonelord]], [[Frost Dragon]], [[Frost Dragon Hatchling]], [[Frost Giant]], [[Frost Giantess]], [[Frost Troll]], [[Killer Caiman]], [[Lancer Beetle]], [[Lizard Chosen]], [[Lizard High Guard]], [[Lizard Legionnaire]], [[Mutated Bat]], [[Orchid Frog]], [[Penguin]], [[Polar Bear]], [[Quara Constrictor]], [[Quara Constrictor Scout]], [[Quara Mantassin]], [[Quara Mantassin Scout]], [[Sandcrawler]], [[Squirrel]], [[Terror Bird]], [[Tortoise]], [[Winter Wolf]], [[Yeti]].\n| buyfrom        = Hireling (Apprentice):500, Stan\n| sellto         = Jogadores.\n| implemented    = 7.92\n| notes          = Pode ser obtido usando a [[Surprise Bag (Blue)]].<noinclude><p><spoiler>*[[Arquivo:Achievement.gif]] Ao usar 200 vezes este item ou um [[Party Hat]] vocé receberá o achievement '''\"{{Achievement|Party Animal}}\"'''.<br />\n*Pode ser obtido durante o evento [[The Colours of Magic]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8148,
+    "ns": 0,
+    "title": "Party Cake",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Party Cake\n| flavortext     = It is nicely decorated with fruits, icing and a candle. Someone cares about you.\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Comidas\n| secondarytype  = Itens de Festa\n| attrib         = \n| stackable      = sim\n| edible         = não\n| regenseconds   = 180\n| npcprice       = 50\n| weight         = 5.00\n| value          = Negociável\n| sounds         = \"-Player- blew out the candle.\" \"Mmmm.\"\n| droppedby      = Ninguém.\n| droppedEventby = [[Piñata Dragon]]\n| buyfrom        = Norma, Relaxed Bartender\n| sellto         = Jogadores.\n| implemented    = 7.9\n| notes          = Feito em um [[Oven]] com [[Lump of Cake Dough]]. Você não pode comê-lo, sem antes apagar a vela.\n<div class=\"toccolours mw-collapsible mw-collapsed\" style=\"width:70%; margin: 4px 0px;\">'''Como fazer um Party Cake'''<div class=\"mw-collapsible-content\">\n<table ><tr><td align=left>Para fazer um ''Bolo de Festa'', você precisará de:\n\n*[[Flour]] (''pode ser obtido por colhendo [[wheat]] e usando em um [[millstone]]'')<br />\n*[[Milk]]\n*[[Trough]] ou [[Bucket]]\n*[[Oven]]\n*[[Kitchen Knife]]\n*Qualquer tipo de fruta\n*[[Candlestick]]\n\n1. Coloque o [[Milk]] em um [[Trough]] ou [[Bucket]].<br />\n2. Use o [[flour]] no [[milk]]. Você vai obter um [[Lump of Cake Dough]].<br />\n3. Use o [[Lump of Cake Dough]] no [[Oven]]. Você vai obter um [[Cake]].<br />\n4. Use uma [[Kitchen Knife]] em alguma fruta enquanto seu bolo estiver na [[Backpack]].<br />\nSe você tiver feito isto corretamente, vai aparecer decorações vermelhas no bolo,<br />transformando-o em um [[Decorated Cake]].<br />\n5. Coloque seu [[Decorated Cake]] em uma superfície e coloque um [[Candlestick]] sobre ele.<br />\n\nUm perfeito ''Party Cake!!.</td></tr></table></div></div>\n\n<noinclude><p><spoiler>* [[Arquivo:Achievement.gif]] Após soprar (''dar use'') 5 velas em um Party Cake, você receberá o achievement '''\"{{Achievement|Make a Wish}}\"'''.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8908,
+    "ns": 0,
+    "title": "Fireworks Rocket",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Fireworks Rocket\n| flavortext     = Do not use in your backpack or while asleep. Keep away from animals or children.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Festa\n| secondarytype  = \n| attrib         = Explode quando usado.\n| weight         = 1.00\n| stackable      = não\n| droppedEventby = [[Azure Frog]], [[Badger]], [[Bat]], [[Bonelord]], [[Crystal Spider]], [[Deepling Guard]], [[Deepling Scout]], [[Deepling Spellsinger]], [[Deepling Worker]], [[Dire Penguin]], [[Dragon]], [[Dragon Lord]], [[Dragon Lord Hatchling]], [[Elder Bonelord]], [[Frost Dragon]], [[Frost Dragon Hatchling]], [[Frost Giant]], [[Frost Giantess]], [[Frost Troll]], [[Killer Caiman]], [[Lancer Beetle]], [[Lizard Chosen]], [[Lizard High Guard]], [[Lizard Legionnaire]], [[Mutated Bat]], [[Orchid Frog]], [[Penguin]], [[Piñata Dragon]], [[Polar Bear]], [[Quara Constrictor]], [[Quara Constrictor Scout]], [[Quara Mantassin]], [[Quara Mantassin Scout]], [[Sandcrawler]], [[Squirrel]], [[Terror Bird]], [[Tortoise]], [[Winter Wolf]], [[Yeti]].\n| npcprice       = 50\n| buyfrom        = Hireling (Apprentice):100, Ned Nobel, Nienna:1 000\n| sellto         = Jogadores.\n| implemented    = 7.92\n| notes          = Também podem ser obtidos através da [[Surprise Bag (Blue)]] ou pela [[Surprise Bag (Red)]]. Se você usá-los enquanto estiverem dentro de um [[Containers|recipiente]], você perde 10 [[hp]].\n<noinclude><p><spoiler>\n* Pode ser obtido durante o evento [[The Colours of Magic]].\n* [[Arquivo:Achievement.gif|link=]] Após usar 3 Fireworks Rocket em sua backpack, você receberá o achievement '''\"{{Achievement|Rocket in Pocket}}\"'''.\n* [[Arquivo:Achievement.gif|link=]] Após usar 250 Fireworks Rockets '''no chão''', você receberá o achievement '''\"{{Achievement|Fireworks in the Sky}}\"''' (não conta se usar na backpack).</spoiler></p></noinclude>\n{{Veja|Fireworks Rocket (Cores)|Fireworks Rocket (Shapes)|Fireworks Rocket (Special FX)}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8911,
+    "ns": 0,
+    "title": "Green Balloons",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se este não é item que você procura, veja a página [[Balloon|Balloon (Desambiguação)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Green Balloons\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Itens de Festa\n| secondarytype  = \n| attrib         = Pode ser pendurado em paredes.\n| weight         = 0.10\n| stackable      = não\n| npcprice       = 500\n| droppedby      = Ninguém.\n| buyfrom        = Hireling (Apprentice)\n| sellto         = Jogadores.\n| implemented    = 7.92\n| notes          = Tem a mesma aparência de [[Red Balloons]] quando não estão pendurados em uma parede. Pode ser obtida usando a [[Surprise Bag (Blue)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 20516,
+    "ns": 0,
+    "title": "Party Lampions (Blue)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se este não é item que você procura, veja a página [[Party Lampions|Party Lampions (Desambiguação)]].}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Party Lampions (Blue)\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Itens de Festa\n| secondarytype  = \n| attrib         = Pode ser pendurado nas paredes.\n| weight         = 10.00\n| stackable      = não\n| npcprice       = 0\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.4\n| notes          = Existem outros [[Party Lampions]]. Apareceu na decoração de Thais durante as festividades de [[Aniversário do Tibia|15 anos]] de Tibia.\n<noinclude><p><spoiler>\n* Pôde ser obtido usando [[Surprise Bag (Blue)|Surprise Bags (Blue)]] que foram distribuídas durante o festival de [[Aniversário do Tibia|15 anos]] do Tibia.\n* Pode dropar dos bichos sumonados na {{mapa|32395,32194,7:2|Arena dos Knights}} em Thais, quando a Mini World Change [[Mini_World_Changes#Thais_Kingsday|Thais Kingsday]] estiver ativa.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 20518,
+    "ns": 0,
+    "title": "Party Lampions (Red)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se este não é item que você procura, veja a página [[Party Lampions|Party Lampions (Desambiguação)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Party Lampions (Red)\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Itens de Festa\n| secondarytype  = \n| attrib         = Pode ser pendurado nas paredes.\n| weight         = 10.00\n| stackable      = não\n| npcprice       = 0\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.4\n| notes          = Existe um outro [[Party Lampions]]. Apareceu na decoração de Thais durante as festividades de [[Aniversário do Tibia|15 anos]] de Tibia.\n<noinclude><p><spoiler>\n* Pôde ser obtido usando [[Surprise Bag (Blue)|Surprise Bags (Blue)]] que foram distribuídas durante o festival de [[Aniversário do Tibia|15 anos]] do Tibia.\n* Pode dropar dos bichos sumonados na {{mapa|32395,32194,7:2|Arena dos Knights}} em Thais, quando a Mini World Change [[Mini_World_Changes#Thais_Kingsday|Thais Kingsday]] estiver ativa.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 20521,
+    "ns": 0,
+    "title": "Party Wall Tinsel",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Party Wall Tinsel\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Itens de Festa\n| secondarytype  = \n| attrib         = Pode ser pendurado nas paredes.\n| weight         = 10.00\n| stackable      = não\n| npcprice       = 0\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.4\n| notes          = Apareceu na decoração de [[Thais]] durante as festividades de [[Aniversário do Tibia|15 anos]] de Tibia.\n<noinclude><p><spoiler>\n* Pode ser obtido usando uma [[Surprise Bag (Red)]] ou [[Surprise Bag (Blue)]]. Pode dropar dos bichos sumonados na {{mapa|32395,32194,7:5|Arena dos Knights}} em Thais, quando a Mini World Change [[Mini_World_Changes#Kingsday|Kingsday]] estiver ativa.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 20522,
+    "ns": 0,
+    "title": "Party Wall Snake",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Party Wall Snake\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Itens de Festa\n| secondarytype  = \n| attrib         = Pode ser pendurado nas paredes.\n| weight         = 10.00\n| stackable      = não\n| npcprice       = 0\n| value          = Negociável\n| droppedby      = energy elemental durante mini world change.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.4\n| notes          = Apareceu na decoração de [[Thais]] durante as festividades de [[Aniversário do Tibia|15 anos]] de Tibia.<br />\n<noinclude><p><spoiler>\n* Pode ser obtido usando uma [[Surprise Bag (Red)]]. Pode dropar dos bichos sumonados na {{mapa|32395,32194,7:5|Arena dos Knights}} em Thais, quando a Mini World Change [[Mini_World_Changes#Kingsday|Kingsday]] estiver ativa.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45545,
+    "ns": 0,
+    "title": "Meringue Cake",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Meringue Cake\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Comidas\n| secondarytype  = Itens de Festa\n| stackable      = sim\n| value          = Negociável\n| weight         = 5.00\n| edible         = sim\n| npcvalue       = 0\n| npcprice       = 0\n| regenseconds   = 480\n| droppedby      = Ninguém.\n| droppedEventby = [[Piñata Dragon]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.02.7746\n| sounds         = \n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45565,
+    "ns": 0,
+    "title": "Pinata",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Pinata\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Itens de Festa\n| secondarytype  =\n| attrib         = Pode ser pendurado em paredes.\n| weight         = 30.00\n| stackable      = não\n| npcvalue       = 0\n| droppedby      = [[Piñata Dragon]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.02.7746\n| notes          = <br>Se pendurar a Pinata, a aparência dela ficará assim: [[Arquivo:Pinata 01.gif]] ou [[Arquivo:Pinata 02.gif]] \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45580,
+    "ns": 0,
+    "title": "Fireworks Capsule",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Fireworks Capsule\n| itemclass      = Outros Itens\n| primarytype    = Itens de Festa\n| secondarytype  = Produtos de Criaturas\n| attrib         = \n| weight         = 20.00\n| resist         = \n| stackable      = sim\n| droppedEventby = [[Percht]], [[Schiach]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.02.7746\n| value          = Negociável\n| notes          = Veja [[Fireworks Powder]] para mais informações.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45581,
+    "ns": 0,
+    "title": "Fireworks in Shape of '0'",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Fireworks in Shape of '0'\n| itemclass     = Outros Itens\n| primarytype   = Itens de Festa\n| secondarytype = \n| attrib        = Explode quando usado. Pode ser desmontado.\n| weight        = 1.00\n| resist        = \n| stackable     = não\n| mercado       = não\n| droppedby     = Ninguém.\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| implemented   = 12.02.7746\n| value         = Negociável\n| notes         = Para mais informações de como obter ou como desmontar, acesse [[Fireworks Rocket (Shapes)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45582,
+    "ns": 0,
+    "title": "Fireworks in Shape of '1'",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Fireworks in Shape of '1'\n| itemclass     = Outros Itens\n| primarytype   = Itens de Festa\n| secondarytype = \n| attrib        = Explode quando usado. Pode ser desmontado.\n| weight        = 1.00\n| resist        = \n| stackable     = não\n| mercado       = não\n| droppedby     = Ninguém.\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| implemented   = 12.02.7746\n| value         = Negociável\n| notes         = Para mais informações de como obter ou como desmontar, acesse [[Fireworks Rocket (Shapes)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45583,
+    "ns": 0,
+    "title": "Fireworks in Shape of '2'",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Fireworks in Shape of '2'\n| itemclass     = Outros Itens\n| primarytype   = Itens de Festa\n| secondarytype = \n| attrib        = Explode quando usado. Pode ser desmontado.\n| weight        = 1.00\n| resist        = \n| stackable     = não\n| mercado       = não\n| droppedby     = Ninguém.\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| implemented   = 12.02.7746\n| value         = Negociável\n| notes         = Para mais informações de como obter ou como desmontar, acesse [[Fireworks Rocket (Shapes)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45588,
+    "ns": 0,
+    "title": "Fireworks in Shape of '3'",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Fireworks in Shape of '3'\n| itemclass     = Outros Itens\n| primarytype   = Itens de Festa\n| secondarytype = \n| attrib        = Explode quando usado. Pode ser desmontado.\n| weight        = 1.00\n| resist        = \n| stackable     = não\n| mercado       = não\n| droppedby     = Ninguém.\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| implemented   = 12.02.7746\n| value         = Negociável\n| notes         = Para mais informações de como obter ou como desmontar, acesse [[Fireworks Rocket (Shapes)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45589,
+    "ns": 0,
+    "title": "Fireworks in Shape of '4'",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Fireworks in Shape of '4'\n| itemclass     = Outros Itens\n| primarytype   = Itens de Festa\n| secondarytype = \n| attrib        = Explode quando usado. Pode ser desmontado.\n| weight        = 1.00\n| resist        = \n| stackable     = não\n| mercado       = não\n| droppedby     = Ninguém.\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| implemented   = 12.02.7746\n| value         = Negociável\n| notes         = Para mais informações de como obter ou como desmontar, acesse [[Fireworks Rocket (Shapes)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45590,
+    "ns": 0,
+    "title": "Fireworks in Shape of '5'",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Fireworks in Shape of '5'\n| itemclass     = Outros Itens\n| primarytype   = Itens de Festa\n| secondarytype = \n| attrib        = Explode quando usado. Pode ser desmontado.\n| weight        = 1.00\n| resist        = \n| stackable     = não\n| mercado       = não\n| droppedby     = Ninguém.\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| implemented   = 12.02.7746\n| value         = Negociável\n| notes         = Para mais informações de como obter ou como desmontar, acesse [[Fireworks Rocket (Shapes)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45591,
+    "ns": 0,
+    "title": "Fireworks in Shape of '6'",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Fireworks in Shape of '6'\n| itemclass     = Outros Itens\n| primarytype   = Itens de Festa\n| secondarytype = \n| attrib        = Explode quando usado. Pode ser desmontado.\n| weight        = 1.00\n| resist        = \n| stackable     = não\n| mercado       = não\n| droppedby     = Ninguém.\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| implemented   = 12.02.7746\n| value         = Negociável\n| notes         = Para mais informações de como obter ou como desmontar, acesse [[Fireworks Rocket (Shapes)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45592,
+    "ns": 0,
+    "title": "Fireworks in Shape of '7'",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Fireworks in Shape of '7'\n| itemclass     = Outros Itens\n| primarytype   = Itens de Festa\n| secondarytype = \n| attrib        = Explode quando usado. Pode ser desmontado.\n| weight        = 1.00\n| resist        = \n| stackable     = não\n| mercado       = não\n| droppedby     = Ninguém.\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| implemented   = 12.02.7746\n| value         = Negociável\n| notes         = Para mais informações de como obter ou como desmontar, acesse [[Fireworks Rocket (Shapes)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45593,
+    "ns": 0,
+    "title": "Fireworks in Shape of '8'",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Fireworks in Shape of '8'\n| itemclass     = Outros Itens\n| primarytype   = Itens de Festa\n| secondarytype = \n| attrib        = Explode quando usado. Pode ser desmontado.\n| weight        = 1.00\n| resist        = \n| stackable     = não\n| mercado       = não\n| droppedby     = Ninguém.\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| implemented   = 12.02.7746\n| value         = Negociável\n| notes         = Para mais informações de como obter ou como desmontar, acesse [[Fireworks Rocket (Shapes)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45594,
+    "ns": 0,
+    "title": "Fireworks in Shape of '9'",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Fireworks in Shape of '9'\n| itemclass     = Outros Itens\n| primarytype   = Itens de Festa\n| secondarytype = \n| attrib        = Explode quando usado. Pode ser desmontado.\n| weight        = 1.00\n| resist        = \n| stackable     = não\n| mercado       = não\n| droppedby     = Ninguém.\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| implemented   = 12.02.7746\n| value         = Negociável\n| notes         = Para mais informações de como obter ou como desmontar, acesse [[Fireworks Rocket (Shapes)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45595,
+    "ns": 0,
+    "title": "Grainy Fireworks Powder",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Grainy Fireworks Powder\n| itemclass      = Outros Itens\n| primarytype    = Itens de Festa\n| secondarytype  = Produtos de Criaturas\n| attrib         = \n| weight         = 1.00\n| resist         = \n| stackable      = sim\n| droppedEventby = [[Percht]], [[Schiach]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.02.7746\n| value          = Negociável\n| notes          = Veja [[Fireworks Powder]] para mais informações.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45596,
+    "ns": 0,
+    "title": "Green Fireworks Powder",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Green Fireworks Powder\n| itemclass      = Outros Itens\n| primarytype    = Itens de Festa\n| secondarytype  = Produtos de Criaturas\n| attrib         = \n| weight         = 1.00\n| resist         = \n| stackable      = sim\n| droppedEventby = [[Percht]], [[Schiach]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.02.7746\n| value          = Negociável\n| notes          = Veja [[Fireworks Powder]] para mais informações.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45597,
+    "ns": 0,
+    "title": "Green Fireworks Rocket",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Green Fireworks Rocket\n| itemclass     = Outros Itens\n| primarytype   = Itens de Festa\n| secondarytype = \n| attrib        = Explode quando usado. Pode ser desmontado.\n| weight        = 1.00\n| resist        = \n| stackable     = não\n| mercado       = não\n| droppedby     = Ninguém.\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| implemented   = 12.02.7746\n| value         = Negociável\n| notes         = Para mais informações de como obter ou como desmontar, acesse [[Fireworks Rocket (Cores)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45598,
+    "ns": 0,
+    "title": "Orange Fireworks Powder",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Orange Fireworks Powder\n| itemclass      = Outros Itens\n| primarytype    = Itens de Festa\n| secondarytype  = Produtos de Criaturas\n| attrib         = \n| weight         = 1.00\n| resist         = \n| stackable      = sim\n| droppedEventby = [[Percht]], [[Schiach]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.02.7746\n| value          = Negociável\n| notes          = Veja [[Fireworks Powder]] para mais informações.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45599,
+    "ns": 0,
+    "title": "Orange Fireworks Rocket",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Orange Fireworks Rocket\n| itemclass     = Outros Itens\n| primarytype   = Itens de Festa\n| secondarytype = \n| attrib        = Explode quando usado. Pode ser desmontado.\n| weight        = 1.00\n| resist        = \n| stackable     = não\n| mercado       = não\n| droppedby     = Ninguém.\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| implemented   = 12.02.7746\n| value         = Negociável\n| notes         = Para mais informações de como obter ou como desmontar, acesse [[Fireworks Rocket (Cores)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53616,
+    "ns": 0,
+    "title": "Orc Head Balloon",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Orc Head Balloon\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Nenhum.\n| weight         = 0.15\n| npcprice       = 400 [[Theon]]s\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Pode ser obtido ao usar uma [[Special Balloon Box]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53618,
+    "ns": 0,
+    "title": "Orc Balloon",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Orc Balloon\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Nenhum.\n| weight         = 0.15\n| npcprice       = 400 [[Theon]]s\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Pode ser obtido ao usar uma [[Special Balloon Box]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53622,
+    "ns": 0,
+    "title": "Hydra Balloon",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Hydra Balloon\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Nenhum.\n| weight         = 0.15\n| npcprice       = 400 [[Theon]]s\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Pode ser obtido ao usar uma [[Special Balloon Box]].\n\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53629,
+    "ns": 0,
+    "title": "Eloise Balloon",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Eloise Balloon\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Nenhum.\n| weight         = 0.15\n| npcprice       = 400 [[Theon]]s\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Pode ser obtido ao usar uma [[Special Balloon Box]].\n\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53715,
+    "ns": 0,
+    "title": "Green 25 Years Balloon",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Green 25 Years Balloon\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Nenhum.\n| weight         = 0.15\n| npcprice       = 200 [[Theon]]s\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Pode ser obtido ao usar uma [[Balloon Box]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53716,
+    "ns": 0,
+    "title": "Orange 25 Years Balloon",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Orange 25 Years Balloon\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Nenhum.\n| weight         = 0.15\n| npcprice       = 200 [[Theon]]s\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Pode ser obtido ao usar uma [[Balloon Box]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53717,
+    "ns": 0,
+    "title": "Pink 25 Years Balloon",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Pink 25 Years Balloon\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Nenhum.\n| weight         = 0.15\n| npcprice       = 200 [[Theon]]s\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Pode ser obtido ao usar uma [[Balloon Box]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 54012,
+    "ns": 0,
+    "title": "Electric Fireworks Rocket",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Electric Fireworks Rocket\n| itemclass     = Outros Itens\n| primarytype   = Itens de Decoração\n| secondarytype = Itens de Festa\n| attrib        = Explode quando usado.\n| weight        = 1.00\n| resist        = \n| stackable     = não\n| mercado       = sim\n| npcprice      = 750 [[Theon]]s\n| droppedby     = Ninguém.\n| buyfrom       = Theodora\n| sellto        = Jogadores.\n| implemented   = 12.85.11485\n| notes         = Pode ser obtido em uma [[Special Fx Box]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 54013,
+    "ns": 0,
+    "title": "Explosive Fireworks Rocket",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Explosive Fireworks Rocket\n| itemclass     = Outros Itens\n| primarytype   = Itens de Decoração\n| secondarytype = Itens de Festa\n| attrib        = Explode quando usado. \n| weight        = 1.00\n| resist        = \n| stackable     = não\n| mercado       = sim\n| npcprice      = 750 [[Theon]]s\n| droppedby     = Ninguém.\n| buyfrom       = Theodora\n| sellto        = Jogadores.\n| implemented   = 12.85.11485\n| notes         = Pode ser obtido em uma [[Special Fx Box]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 54014,
+    "ns": 0,
+    "title": "Fiery Fireworks Rocket",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Fiery Fireworks Rocket\n| itemclass     = Outros Itens\n| primarytype   = Itens de Decoração\n| secondarytype = Itens de Festa\n| attrib        = Explode quando usado.\n| weight        = 1.00\n| resist        = \n| stackable     = não\n| mercado       = sim\n| npcprice      = 750 [[Theon]]s\n| droppedby     = Ninguém.\n| buyfrom       = Theodora\n| sellto        = Jogadores.\n| implemented   = 12.85.11485\n| notes         = Pode ser obtido em uma [[Special Fx Box]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 54015,
+    "ns": 0,
+    "title": "Ghostly Fireworks Rocket",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Ghostly Fireworks Rocket\n| itemclass     = Outros Itens\n| primarytype   = Itens de Decoração\n| secondarytype = Itens de Festa\n| attrib        = Explode quando usado.\n| weight        = 1.00\n| resist        = \n| stackable     = não\n| mercado       = sim\n| npcprice      = 750 [[Theon]]s\n| droppedby     = Ninguém.\n| buyfrom       = Theodora\n| sellto        = Jogadores.\n| implemented   = 12.85.11485\n| notes         = Pode ser obtido em uma [[Special Fx Box]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 54016,
+    "ns": 0,
+    "title": "Godly Fireworks Rocket",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Godly Fireworks Rocket\n| itemclass     = Outros Itens\n| primarytype   = Itens de Decoração\n| secondarytype = Itens de Festa\n| attrib        = Explode quando usado.\n| weight        = 1.00\n| resist        = \n| stackable     = não\n| mercado       = sim\n| npcprice      = 750 [[Theon]]s\n| droppedby     = Ninguém.\n| buyfrom       = Theodora\n| sellto        = Jogadores.\n| implemented   = 12.85.11485\n| notes         = Pode ser obtido em uma [[Special Fx Box]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 54017,
+    "ns": 0,
+    "title": "Lovely Fireworks Rocket",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Lovely Fireworks Rocket\n| itemclass     = Outros Itens\n| primarytype   = Itens de Decoração\n| secondarytype = Itens de Festa\n| attrib        = Explode quando usado.\n| weight        = 1.00\n| resist        = \n| stackable     = não\n| mercado       = sim\n| npcprice      = 750 [[Theon]]s\n| droppedby     = Ninguém.\n| buyfrom       = Theodora\n| sellto        = Jogadores.\n| implemented   = 12.85.11485\n| notes         = Pode ser obtido em uma [[Special Fx Box]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 54018,
+    "ns": 0,
+    "title": "Magical Fireworks Rocket",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Magical Fireworks Rocket\n| itemclass     = Outros Itens\n| primarytype   = Itens de Decoração\n| secondarytype = Itens de Festa\n| attrib        = Explode quando usado.\n| weight        = 1.00\n| resist        = \n| stackable     = não\n| mercado       = sim\n| npcprice      = 750 [[Theon]]s\n| droppedby     = Ninguém.\n| buyfrom       = Theodora\n| sellto        = Jogadores.\n| implemented   = 12.85.11485\n| notes         = Pode ser obtido em uma [[Special Fx Box]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55305,
+    "ns": 0,
+    "title": "Green Balloon",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Green Balloon\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Nenhum.\n| weight         = 0.15\n| npcprice       = 200 [[Theon]]s\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Pode ser obtido ao usar uma [[Balloon Box]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55306,
+    "ns": 0,
+    "title": "Orange Balloon",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Orange Balloon\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Nenhum.\n| weight         = 0.15\n| npcprice       = 200 [[Theon]]s\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Pode ser obtido ao usar uma [[Balloon Box]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55319,
+    "ns": 0,
+    "title": "Embroidered Box",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Embroidered Box\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Pode-se dar \"use\".\n| weight         = 8.20\n| npcprice       = 0\n| stackable      = sim\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Podia ser obtido como recompensa durante o evento do 25º Aniversário do Tibia.<br /> Ao dar \"use\", poderá receber, aleatoriamente, um dos seguintes itens: <br />\n* [[Arquivo:Blue Wallpaper.gif]] [[Blue Wallpaper]]\n* [[Arquivo:Golden Wallpaper.gif]] [[Golden Wallpaper]]\n* [[Arquivo:Green Wallpaper.gif]] [[Green Wallpaper]]\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55320,
+    "ns": 0,
+    "title": "Luminous Box",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Luminous Box\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Pode-se dar \"use\".\n| weight         = 12.50\n| npcprice       = 0\n| stackable      = sim\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Podia ser obtido como recompensa durante o evento do 25º Aniversário do Tibia.<br /> Ao dar \"use\", poderá receber, aleatoriamente, um dos seguintes itens: <br />\n* [[Arquivo:String of Fairy Lights.gif]] [[String of Fairy Lights]]\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55399,
+    "ns": 0,
+    "title": "Green and Blue Presents",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Green and Blue Presents\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Nenhum.\n| weight         = 25.00\n| npcprice       = 200 [[Theon]]s\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Pode ser reembrulhado. Pode ser obtido ao usar uma [[Box Full of Presents]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55400,
+    "ns": 0,
+    "title": "Green and Red Presents",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Green and Red Presents\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Nenhum.\n| weight         = 25.00\n| npcprice       = 200 [[Theon]]s\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Pode ser reembrulhado. Pode ser obtido ao usar uma [[Box Full of Presents]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55401,
+    "ns": 0,
+    "title": "Pile of Three Presents",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Pile of Three Presents\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Nenhum.\n| weight         = 25.00\n| npcprice       = 200 [[Theon]]s\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Pode ser reembrulhado. Pode ser obtido ao usar uma [[Box Full of Presents]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55415,
+    "ns": 0,
+    "title": "Pile of Presents",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Pile of Presents\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Nenhum.\n| weight         = 25.00\n| npcprice       = 200 [[Theon]]s\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Pode ser reembrulhado. Pode ser obtido ao usar uma [[Box Full of Presents]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7216,
+    "ns": 0,
+    "title": "Surprise Bag (Blue)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Surprise Bag (Blue)\n| itemclass      = Outros Itens\n| primarytype    = Itens de Festa\n| attrib         = Nenhum.\n| weight         = 10.00\n| stackable      = não\n| droppedby      = Ninguém.\n| droppedEventby = [[Bolfrim (Criatura)]], [[Delany (Criatura)]], [[Fluffy]], [[Hacker (Criatura)]], [[Lionet (Criatura)]], [[Lyxoph (Criatura)]], [[Minishabaal]], [[Mirade (Criatura)]], [[Penciljack (Criatura)]], [[Piñata Dragon]], [[Rejana (Criatura)]], [[Siramal (Criatura)]], [[Tibia Bug]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.92\n| notes          = Pode-se usá-lo para obter, aleatoriamente, um dos seguintes itens:<br />\n'''Padrão:'''\n{{div col}}\n*01 [[Arquivo:Green Balloons.gif]] [[Green Balloons]]\n*01 [[Arquivo:Red Balloons.gif]] [[Red Balloons]]\n*10 [[Arquivo:Cookie.gif]] [[Cookie|Cookies]]\n*01 [[Arquivo:Cream Cake.gif]] [[Cream Cake]]\n*01 [[Arquivo:Party Trumpet.gif]] [[Party Trumpet]]\n*01 [[Arquivo:Bar of Chocolate.gif]] [[Bar of Chocolate]]\n*03 [[Arquivo:Candy.gif]] [[Candy|Candies]]\n*01 [[Arquivo:Party Hat.gif]] [[Party Hat]]\n*01 [[Arquivo:Party Cake.gif]] [[Party Cake]]\n*01 [[Arquivo:Fireworks Rocket.gif]] [[Fireworks Rocket]]\n*01 [[Arquivo:Piggy Bank.gif]] [[Piggy Bank]]\n\n{{div col end}}\n'''Durante o Aniversario de 15 anos:'''\n{{div col}}\n*01 [[Arquivo:Party Wall Tinsel.gif]] [[Party Wall Tinsel]]\n*01 [[Arquivo:Anniversary Cake.gif]] [[Anniversary Cake]]\n{{div col end}}\n<noinclude><p><spoiler>*Recompensa da: [[Chayenne's Realm Quest]].\n*Possibilidade de ser obtido como recompensa da [[Barbarian Arena Quest|Barbarian Arena - Greenhorn Mode]].\n*Possibilidade de ser obtido ao usar um [[Mysterious Remains]].\n*Possibilidade de ser obtido ao usar um [[Surprise Nest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7222,
+    "ns": 0,
+    "title": "Suspicious Surprise Bag",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Suspicious Surprise Bag\n| flavortext     = It's from an undead jester, so open at own risk.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Festa\n| secondarytype  = \n| attrib         = Nenhum.\n| weight         = 8.00\n| stackable      = não\n| value          = Negociável\n| droppedEventby = [[Undead Jester]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.2\n| notes          = Adicionada como loot de [[Undead Jester]] no Update de Verão 2008. Pode dar um dos seguintes items.\n{{div col}}\n*50 [[Arquivo:Gold Coin.gif]]  [[gp]]\n*01 [[Arquivo:Fish.gif]]  [[Fish]]\n*01 [[Arquivo:Piggy Bank.gif]] [[Piggy Bank]]\n*01 [[Arquivo:Yellow Pillow (Supersoft).gif]] [[Yellow Pillow]]\n*01 [[Arquivo:Spellwand.gif]]  [[Spellwand]]\n*01 [[Arquivo:Present (Explosive).gif]]  [[Present (Explosive)]]\n*01 [[Arquivo:Cream Cake.gif]]  [[Cream Cake]]\n*01 [[Arquivo:Ice Cream Cone (Blue-Barian).gif]]  [[Ice Cream Cone (Blue-Barian)]]\n*01 [[Arquivo:Bar of Chocolate.gif]]  [[Bar of Chocolate]]  (raro) \n*01 [[Arquivo:Toy Mouse.gif]]  [[Toy Mouse]]  (raro)\n*01 [[Arquivo:Jester Doll.gif]] [[Jester Doll]] (muito raro).\ne possivelmente mais.\n{{div col end}}\n\nTem a mesma aparência de uma [[Pirate Bag]] e de uma [[Bag (Ahmet)]]. Bags podem ser encontradas em outros designs.<br />Algumas vezes jogadores usam bags coloridas para decoração de casas. Para saber mais veja a página sobre [[Bags]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8185,
+    "ns": 0,
+    "title": "Valentine's Cake",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Valentine's Cake\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Comidas\n| secondarytype  = Itens de Festa\n| attrib         =\n| npcprice       = 30\n| stackable      = sim\n| edible         = sim\n| regenseconds   = 144\n| weight         = 5.00\n| value          = 100\n| sounds         = \"Mmmm.\"\n| droppedEventby = [[Grynch Clan Goblin]].\n| buyfrom        = Valentina, Tanaro:100, Ariella:100,Maria:100, Toffee:100\n| sellto         = Jogadores.\n| implemented    = 7.9\n| notes          = Apareceu pela primeira vez no jogo como loot de [[Grynch Clan Goblin]] durante eventos de natal. Após uma grande aceitação no jogo passou a ser também vendido em NPCs.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8913,
+    "ns": 0,
+    "title": "Present (Explosive)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Present (Explosive)\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Festa\n| secondarytype  = \n| attrib         = Explode quando usado.\n| sounds         = \"KABOOOOOOOOOOM!\".\n| stackable      = não\n| weight         = 6.00\n| value          = Negociável\n| npcvalue       = 0\n| npcprice       = 199\n| droppedby      = Ninguém.\n| buyfrom        = Hoaxette\n| sellto         = Jogadores.\n| notes          = Item de 1º de Abril. Mesmo sprite de um [[Present]] e um [[Present (Postman)]]. Ao ser usado, ele irá explodir.\n<noinclude><p><spoiler>\n* Pode ser conseguido conversando com o NPC [[Peaceful Pooka]] ou usando uma [[Unrealized Dream]].\n* [[Arquivo:Achievement.gif]] Após usá-lo, você receberá o achievement '''\"{{achievement|Joke's on You}}\"'''.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8914,
+    "ns": 0,
+    "title": "Red Balloons",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se este não é item que você procura, veja a página [[Balloon|Balloon (Desambiguação)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Red Balloons\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Itens de Festa\n| secondarytype  = \n| attrib         = Pode ser pendurado em paredes.\n| weight         = 0.10\n| stackable      = não\n| npcprice       = 500\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Hireling (Apprentice)\n| sellto         = Jogadores.\n| implemented    = 7.92\n| notes          = Tem a mesma aparência de [[Green Balloons]] quando não estão pendurados em uma parede. Pode ser obtido usando uma [[Surprise Bag]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 8915,
+    "ns": 0,
+    "title": "Spellwand",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{event}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Spellwand\n| flavortext     = It might have some strange effects.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Festa\n| weight         = 2.00\n| attrib         = Transforma você ou alguém em [[Rat]], [[Green Frog]] ou [[Chicken]] e às vezes sumona um [[Mad Sheep]].\n| stackable      = não\n| value          = \n| npcprice       = 299\n| npcvalue       = 299\n| buyfrom        = Hoaxette\n| sellto         = Shiriel, Fenech, Rachel, Hireling (Trader), Asima, Alexander, Rabaz, Gnomegica, Khanna, Sigurd, Frederik, Siflind, Tandros, Mordecai, Nelly, Romir, Topsy, Xodet, Frans, Chuckles\n| implemented    = 8.1\n| notes          = Tem a mesma aparência de uma [[Shapechanger]].\n*Com ela é possível transformar qualquer personagem em um [[Rat]], em um [[Green Frog]] ou em uma [[Chicken]] por um curto tempo.\n*Pode ser utilizada várias vezes até sumir.\n*Com ela é possível sumonar uma [[Mad Sheep]], caso isso ocorra a wand desaparecerá e você terá que esperar 12 horas pra poder sumonar outra.\n*Não pode ser utilizada dentro de uma [[Zona de Proteção]].\n<noinclude><p><spoiler>* Possibilidade de ser obtido ao usar um [[Unrealized Dream]] próximo ao [[The Dreamcatcher Device]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 29064,
+    "ns": 0,
+    "title": "Surprise Bag (Red)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Surprise Bag (Red)\n| itemclass      = Outros Itens\n| primarytype    = Itens de Festa\n| attrib         = Nenhum.\n| weight         = 10.00\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| droppedEventby = [[Bolfrim (Criatura)]], [[Craban (Criatura)]], [[Delany (Criatura)]], [[Fluffy]], [[Hacker (Criatura)]], [[Lionet (Criatura)]], [[Lyxoph (Criatura)]], [[Mirade (Criatura)]], [[Penciljack (Criatura)]], [[Piñata Dragon]], [[Rejana (Criatura)]], [[Siramal (Criatura)]], [[Tibia Bug]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.92\n| notes          = Pode-se usá-lo para obter, aleatoriamente, um dos seguintes itens:\n{{div col}}\n*01 [[Arquivo:Bar of Chocolate.gif]] [[Bar of Chocolate]]\n*01 [[Arquivo:Boots of Haste.gif]] [[Boots of Haste]]\n*01 [[Arquivo:Cream Cake.gif]] [[Cream Cake]]\n*01 [[Arquivo:Fireworks Rocket.gif]] [[Fireworks Rocket]]\n*01 [[Arquivo:Party Hat.gif]] [[Party Hat]]\n*01 [[Arquivo:Party Wall Tinsel.gif]] [[Party Wall Tinsel]]\n*01 [[Arquivo:Piggy Bank.gif]] [[Piggy Bank]]\n*01 [[Arquivo:Soul Orb.gif]] [[Soul Orb]]\n*01 [[Arquivo:Violet Gem.gif]] [[Violet Gem]] \n*01 [[Arquivo:Demon Shield.gif]] [[Demon Shield]] (Raro)\n*01 [[Arquivo:Dragon Scale Mail.gif]] [[Dragon Scale Mail]] (Raro)\n*01 [[Arquivo:Panda Teddy.gif]] [[Panda Teddy]] (Raro)\n*01 [[Arquivo:Red Gem.gif]] [[Red Gem]] (raro)\n*01 [[Arquivo:Royal Helmet.gif]] [[Royal Helmet]] (Raro)\n*01 [[Arquivo:Teddy Bear.gif]] [[Teddy Bear]] (Raro)\n*01 [[Arquivo:Amulet of Loss.gif]] [[Amulet of Loss]]  (Muito raro)\n*01 [[Arquivo:Stuffed Dragon.gif]] [[Stuffed Dragon]] (Muito raro)\n{{div col end}}\n'''Durante o Aniversario de 10 anos:'''\n{{div col}}\n*01 [[Arquivo:Red Balloons.gif]] [[Red Balloons]]\n{{div col end}}\n'''Durante o Aniversario de 15 anos:'''\n{{div col}}\n*01 [[Arquivo:Party Wall Snake.gif]] [[Party Wall Snake]]\n*01 [[Arquivo:Anniversary Cake.gif]] [[Anniversary Cake]]\n*05 [[Arquivo:Small Diamond.gif]] [[Small Diamond]]\n*15 [[Arquivo:Platinum Coin.gif]] [[Platinum Coins]]\n*01 [[Arquivo:Gold Ingot.gif]] [[Gold Ingot]]\n{{div col end}}\n\n<noinclude><p><spoiler>\n*Possibilidade de ser obtido ao usar uma [[Obsidian Knife]] no corpo de um [[The Mutated Pumpkin]].\n*Possibilidade de ser obtido ao usar um [[Surprise Nest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 37202,
+    "ns": 0,
+    "title": "Scroll of Ascension",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Scroll of Ascension\n| flavortext     = It is inscribed with faintly glowing ink and sealed with the letter F.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Festa\n| weight         = 8.00\n| stackable      = não\n| npcvalue       = 0\n| droppedby      = [[Ferumbras Mortal Shell]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.90\n| notes          = Ao usá-lo, provavelmente seu personagem se transformará em um [[Demon]] ou, raramente, em um [[Ferumbras]]. Poderá ser usado novamente depois de 1 hora.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45577,
+    "ns": 0,
+    "title": "Turquoise Fireworks Powder",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Turquoise Fireworks Powder\n| itemclass      = Outros Itens\n| primarytype    = Itens de Festa\n| secondarytype  = Produtos de Criaturas\n| attrib         = \n| weight         = 1.00\n| resist         = \n| stackable      = sim\n| droppedEventby = [[Percht]], [[Schiach]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.02.7746\n| value          = Negociável\n| notes          = Veja [[Fireworks Powder]] para mais informações.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45600,
+    "ns": 0,
+    "title": "Purple Fireworks Powder",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Purple Fireworks Powder\n| itemclass      = Outros Itens\n| primarytype    = Itens de Festa\n| secondarytype  = Produtos de Criaturas\n| attrib         = \n| weight         = 1.00\n| resist         = \n| stackable      = sim\n| droppedEventby = [[Percht]], [[Schiach]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.02.7746\n| value          = Negociável\n| notes          = Veja [[Fireworks Powder]] para mais informações.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45601,
+    "ns": 0,
+    "title": "Purple Fireworks Rocket",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Purple Fireworks Rocket\n| itemclass     = Outros Itens\n| primarytype   = Itens de Festa\n| secondarytype = \n| attrib        = Explode quando usado. Pode ser desmontado.\n| weight        = 1.00\n| resist        = \n| stackable     = não\n| mercado       = não\n| droppedby     = Ninguém.\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| implemented   = 12.02.7746\n| value         = Negociável\n| notes         = Para mais informações de como obter ou como desmontar, acesse [[Fireworks Rocket (Cores)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45602,
+    "ns": 0,
+    "title": "Red Fireworks Powder",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Red Fireworks Powder\n| itemclass      = Outros Itens\n| primarytype    = Itens de Festa\n| secondarytype  = Produtos de Criaturas\n| attrib         = \n| weight         = 0.95\n| resist         = \n| stackable      = sim\n| droppedEventby = [[Percht]], [[Schiach]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.02.7746\n| value          = Negociável\n| notes          = Veja [[Fireworks Powder]] para mais informações.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45603,
+    "ns": 0,
+    "title": "Red Fireworks Rocket",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Red Fireworks Rocket\n| itemclass     = Outros Itens\n| primarytype   = Itens de Festa\n| secondarytype = \n| attrib        = Explode quando usado. Pode ser desmontado.\n| weight        = 1.00\n| resist        = \n| stackable     = não\n| mercado       = não\n| droppedby     = Ninguém.\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| implemented   = 12.02.7746\n| value         = Negociável\n| notes         = Para mais informações de como obter ou como desmontar, acesse [[Fireworks Rocket (Cores)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45604,
+    "ns": 0,
+    "title": "Turquoise Fireworks Rocket",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Turquoise Fireworks Rocket\n| itemclass     = Outros Itens\n| primarytype   = Itens de Festa\n| secondarytype = \n| attrib        = Explode quando usado. Pode ser desmontado.\n| weight        = 1.00\n| resist        = \n| stackable     = não\n| mercado       = não\n| droppedby     = Ninguém.\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| implemented   = 12.02.7746\n| value         = Negociável\n| notes         = Para mais informações de como obter ou como desmontar, acesse [[Fireworks Rocket (Cores)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45605,
+    "ns": 0,
+    "title": "Versicolour Fireworks Powder",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Versicolour Fireworks Powder\n| itemclass      = Outros Itens\n| primarytype    = Itens de Festa\n| secondarytype  = Produtos de Criaturas\n| attrib         = \n| weight         = 1.50\n| resist         = \n| stackable      = sim\n| droppedEventby = [[Percht]], [[Schiach]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.02.7746\n| value          = Negociável\n| notes          = Veja [[Fireworks Powder]] para mais informações.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45606,
+    "ns": 0,
+    "title": "Yellow Fireworks Powder",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Yellow Fireworks Powder\n| itemclass      = Outros Itens\n| primarytype    = Itens de Festa\n| secondarytype  = Produtos de Criaturas\n| attrib         = \n| weight         = 0.95\n| resist         = \n| stackable      = sim\n| droppedEventby = [[Percht]], [[Schiach]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.02.7746\n| value          = Negociável\n| notes          = Veja [[Fireworks Powder]] para mais informações.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45607,
+    "ns": 0,
+    "title": "Yellow Fireworks Rocket",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Yellow Fireworks Rocket\n| itemclass     = Outros Itens\n| primarytype   = Itens de Festa\n| secondarytype = \n| attrib        = Explode quando usado. Pode ser desmontado.\n| weight        = 1.00\n| resist        = \n| stackable     = não\n| mercado       = não\n| droppedby     = Ninguém.\n| buyfrom       = Jogadores.\n| sellto        = Jogadores.\n| implemented   = 12.02.7746\n| value         = Negociável\n| notes         = Para mais informações de como obter ou como desmontar, acesse [[Fireworks Rocket (Cores)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45741,
+    "ns": 0,
+    "title": "Surprise Bag (Yellow)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Surprise Bag (Yellow)\n| itemclass      = Outros Itens\n| primarytype    = Itens de Festa\n| attrib         = Nenhum.\n| weight         = 10.00\n| stackable      = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.02.7746\n| notes          = Supõe-se que, inicialmente, este item podia ser obtido no evento de [[Aniversário_do_Tibia#22_anos_.2807_a_10_de_janeiro_de_2019.29|Aniversário de 22 anos]], em janeiro de 2019. Atualmente este item não é obtível no jogo.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45746,
+    "ns": 0,
+    "title": "Winterberry Liquor",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Winterberry Liquor\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Comidas\n| secondarytype  = Itens de Festa\n| stackable      = sim\n| value          = Negociável\n| weight         = 1.50\n| edible         = sim\n| npcvalue       = 0\n| npcprice       = 0\n| regenseconds   = 180\n| droppedEventby = [[Piñata Dragon]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.02.7746\n| sounds         = \"Slurp.\"\n| notes          = Bebida comemorativa do evento de [[Aniversário do Tibia]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53624,
+    "ns": 0,
+    "title": "Tibianus Balloon",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Tibianus Balloon\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Nenhum.\n| weight         = 0.15\n| npcprice       = 400 [[Theon]]s\n| stackable      = sim\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Pode ser obtido ao usar uma [[Special Balloon Box]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53718,
+    "ns": 0,
+    "title": "Red 25 Years Balloon",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Red 25 Years Balloon\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Nenhum.\n| weight         = 0.15\n| npcprice       = 200 [[Theon]]s\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Pode ser obtido ao usar uma [[Balloon Box]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53719,
+    "ns": 0,
+    "title": "Teal 25 Years Balloon",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Teal 25 Years Balloon\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Nenhum.\n| weight         = 0.15\n| npcprice       = 200 [[Theon]]s\n| stackable      = sim\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Pode ser obtido ao usar uma [[Balloon Box]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53720,
+    "ns": 0,
+    "title": "Yellow 25 Years Balloon",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Yellow 25 Years Balloon\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Nenhum.\n| weight         = 0.15\n| npcprice       = 200 [[Theon]]s\n| stackable      = sim\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Pode ser obtido ao usar uma [[Balloon Box]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53981,
+    "ns": 0,
+    "title": "Vessel of Gaz'Haragoth",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Vessel of Gaz'Haragoth\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Some ao ser usado.\n| weight         = 9.00\n| npcprice       = 1250 [[Theon]]s\n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Ao usar o '''vessel''', ele irá sumir, porém antes disso, irá fazer um efeito como este: [[Arquivo:Vessel of Gaz'Haragoth Efeito.gif]]\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53982,
+    "ns": 0,
+    "title": "Vessel of Devovorga",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Vessel of Devovorga\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Some ao ser usado.\n| weight         = 9.00\n| npcprice       = 1250 [[Theon]]s\n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Ao usar o '''vessel''', ele irá sumir, porém antes disso, irá fazer um efeito como este: [[Arquivo:Vessel of Devovorga Efeito.gif]]\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53983,
+    "ns": 0,
+    "title": "Vessel of Ferumbras",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Vessel of Ferumbras\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Some ao ser usado.\n| weight         = 9.00\n| npcprice       = 1250 [[Theon]]s\n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Ao usar o '''vessel''', ele irá sumir porem antes irá fazer um efeito como este: [[Arquivo:Vessel of Ferumbras Efeito.gif]]\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 54000,
+    "ns": 0,
+    "title": "Vessel of Mad Mage",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Vessel of Mad Mage\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Some ao ser usado.\n| weight         = 9.00\n| npcprice       = 1250 [[Theon]]s\n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Ao usar o '''vessel''', ele irá sumir, porém antes disso, irá fazer um efeito como este: [[Arquivo:Vessel of Mad Mage Efeito.gif]]\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 54004,
+    "ns": 0,
+    "title": "Vessel of Horestis",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Vessel of Horestis\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Some ao ser usado.\n| weight         = 9.00\n| npcprice       = 1250 [[Theon]]s\n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Ao usar o '''vessel''', ele irá sumir, porém antes disso, irá fazer um efeito como este: [[Arquivo:Vessel of Horestis Efeito.gif]]\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 54019,
+    "ns": 0,
+    "title": "Snapping Fireworks Rocket",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Snapping Fireworks Rocket\n| itemclass     = Outros Itens\n| primarytype   = Itens de Decoração\n| secondarytype = Itens de Festa\n| attrib        = Explode quando usado. \n| weight        = 1.00\n| resist        = \n| stackable     = não\n| mercado       = sim\n| npcprice      = 750 [[Theon]]s\n| droppedby     = Ninguém.\n| buyfrom       = Theodora\n| sellto        = Jogadores.\n| implemented   = 12.85.11485\n| notes         = Pode ser obtido em uma [[Special Fx Box]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 54020,
+    "ns": 0,
+    "title": "Sparkling Fireworks Rocket",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Sparkling Fireworks Rocket\n| itemclass     = Outros Itens\n| primarytype   = Itens de Decoração\n| secondarytype = Itens de Festa\n| attrib        = Explode quando usado.\n| weight        = 1.00\n| resist        = \n| stackable     = não\n| mercado       = sim\n| npcprice      = 750 [[Theon]]s\n| droppedby     = Ninguém.\n| buyfrom       = Theodora\n| sellto        = Jogadores.\n| implemented   = 12.85.11485\n| notes         = Pode ser obtido em uma [[Special Fx Box]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 54029,
+    "ns": 0,
+    "title": "Splashing Fireworks Rocket",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = Splashing Fireworks Rocket\n| itemclass     = Outros Itens\n| primarytype   = Itens de Decoração\n| secondarytype = Itens de Festa\n| attrib        = Explode quando usado.\n| weight        = 1.00\n| resist        = \n| stackable     = não\n| mercado       = sim\n| npcprice      = 750 [[Theon]]s\n| droppedby     = Ninguém.\n| buyfrom       = Theodora\n| sellto        = Jogadores.\n| implemented   = 12.85.11485\n| notes         = Pode ser obtido em uma [[Special Fx Box]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 54046,
+    "ns": 0,
+    "title": "String of Fairy Lights",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name          = String of Fairy Lights\n| itemclass     = Itens de Decoração\n| primarytype   = Itens de Festa\n| secondarytype = \n| attrib        = Podem ser penduradas na parede.\n| weight        = 12.00\n| resist        = \n| stackable     = não\n| mercado       = sim\n| npcvalue      = 0\n| npcprice      = 225 [[Theon]]s\n| value         =\n| droppedby     = Ninguém.\n| buyfrom       = Theodora\n| sellto        = Jogadores.\n| implemented   = 12.85.11485\n| notes         = Pode ser obtido na [[Luminous Box]] e são encontrados em 3 versões:</br> \n[[Arquivo:String of Fairy Lights (A).gif|Vermelho, Amarelo, Verde]] [[Arquivo:String of Fairy Lights (B).gif|Azul, Vermelho, Verde]] [[Arquivo:String of Fairy Lights (C).gif|Azul, Verde, Amarelo]]\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55299,
+    "ns": 0,
+    "title": "Pink Balloon",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Pink Balloon\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Nenhum.\n| weight         = 0.15\n| npcprice       = 200 [[Theon]]s\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Pode ser obtido ao usar uma [[Balloon Box]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55300,
+    "ns": 0,
+    "title": "Yellow Balloon",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Yellow Balloon\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Nenhum.\n| weight         = 0.15\n| npcprice       = 200 [[Theon]]s\n| stackable      = sim\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Pode ser obtido ao usar uma [[Balloon Box]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55302,
+    "ns": 0,
+    "title": "Teal Balloon",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Teal Balloon\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Nenhum.\n| weight         = 0.15\n| npcprice       = 200 [[Theon]]s\n| stackable      = sim\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Pode ser obtido ao usar uma [[Balloon Box]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55303,
+    "ns": 0,
+    "title": "Red Balloon",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Red Balloon\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Nenhum.\n| weight         = 0.15\n| npcprice       = 200 [[Theon]]s\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Pode ser obtido ao usar uma [[Balloon Box]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55304,
+    "ns": 0,
+    "title": "Purple Balloon",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Purple Balloon\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Nenhum.\n| weight         = 0.15\n| npcprice       = 200 [[Theon]]s\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Pode ser obtido ao usar uma [[Balloon Box]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55307,
+    "ns": 0,
+    "title": "Special Balloon Box",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Special Balloon Box\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Pode-se dar \"use\".\n| weight         = 0.20\n| npcprice       = 0\n| stackable      = sim\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Podia ser obtido como recompensa durante o evento do 25º Aniversário do Tibia.<br /> Ao dar use, poderá receber, aleatoriamente, um dos seguintes itens: <br />\n* [[Arquivo:Bonelord Balloon.gif]] [[Bonelord Balloon]]\n* [[Arquivo:Cyclops Balloon.gif]] [[Cyclops Balloon]]\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55314,
+    "ns": 0,
+    "title": "Rotworm Balloon",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Rotworm Balloon\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Nenhum.\n| weight         = 0.15\n| npcprice       = 400 [[Theon]]s\n| stackable      = sim\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Pode ser obtido ao usar uma [[Special Balloon Box]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55321,
+    "ns": 0,
+    "title": "Special Carpet Box",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Special Carpet Box\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Pode-se dar \"use\".\n| weight         = 9.10\n| npcprice       = 0\n| stackable      = sim\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Podia ser obtido como recompensa durante o evento do 25º Aniversário do Tibia.<br /> Ao dar \"use\", poderá receber, aleatoriamente, um dos seguintes itens: <br />\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55322,
+    "ns": 0,
+    "title": "Special Fx Box",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Special Fx Box\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Pode-se dar \"use\".\n| weight         = 2.00\n| npcprice       = 0\n| stackable      = sim\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Podia ser obtido como recompensa durante o evento do 25º Aniversário do Tibia.<br /> Ao dar \"use\", poderá receber, aleatoriamente, um dos seguintes itens: <br />\n{{div col|2}}\n* [[Arquivo:Dazzling Fireworks Rocket.gif]] [[Dazzling Fireworks Rocket]]\n* [[Arquivo:Electric Fireworks Rocket.gif]] [[Electric Fireworks Rocket]]\n* [[Arquivo:Explosive Fireworks Rocket.gif]] [[Explosive Fireworks Rocket]]\n* [[Arquivo:Fiery Fireworks Rocket.gif]] [[Fiery Fireworks Rocket]]\n* [[Arquivo:Ghostly Fireworks Rocket.gif]] [[Ghostly Fireworks Rocket]]\n* [[Arquivo:Godly Fireworks Rocket.gif]] [[Godly Fireworks Rocket]]\n* [[Arquivo:Lovely Fireworks Rocket.gif]] [[Lovely Fireworks Rocket]]\n* [[Arquivo:Magical Fireworks Rocket.gif]] [[Magical Fireworks Rocket]]\n* [[Arquivo:Snapping Fireworks Rocket.gif]] [[Snapping Fireworks Rocket]]\n* [[Arquivo:Sparkling Fireworks Rocket.gif]] [[Sparkling Fireworks Rocket]]\n* [[Arquivo:Splashing Fireworks Rocket.gif]] [[Splashing Fireworks Rocket]]\n{{div col end}}\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55323,
+    "ns": 0,
+    "title": "Supernatural Box",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Supernatural Box\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Pode-se dar \"use\".\n| weight         = 10.00\n| npcprice       = 0\n| stackable      = sim\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Podia ser obtido como recompensa durante o evento do 25º Aniversário do Tibia.<br /> Ao dar \"use\", poderá receber, aleatoriamente, um dos seguintes itens: <br />\n\n* [[Arquivo:Vessel of Devovorga.gif]] [[Vessel of Devovorga]]\n* [[Arquivo:Vessel of Ferumbras.gif]] [[Vessel of Ferumbras]]\n* [[Arquivo:Vessel of Gaz'Haragoth.gif]] [[Vessel of Gaz'Haragoth]]\n* [[Arquivo:Vessel of Horestis.gif]] [[Vessel of Horestis]]\n* [[Arquivo:Vessel of Mad Mage.gif]] [[Vessel of Mad Mage]]\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55325,
+    "ns": 0,
+    "title": "Reward Box (25 Anos)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Reward Box (25 Anos)\n| flavortext     = It could be exchanged for Theons after the festivities of Tibia's 25th anniversary.\n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Pode-se dar \"use\".\n| weight         = 139.10\n| npcprice       = 0\n| stackable      = sim\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.87.12038\n| notes          = Ao dar use, obtem-se os seguintes itens: <br />\n{{div col|2}}\n* 2 [[Arquivo:Birthday Layer Cake.gif|link=]] [[Birthday Layer Cake]]\n* 2 [[Arquivo:Bottle of Champagne.gif|link=]] [[Bottle of Champagne]]\n* 2 [[Arquivo:Candy Floss (25 Anos).gif|link=]] [[Candy Floss (25 Anos)]]\n* 2 [[Arquivo:Ice Cream Cone (Sprinkles).gif|link=]] [[Ice Cream Cone (Sprinkles)]]\n* 2 [[Arquivo:Balloon Box.gif|link=]] [[Balloon Box]]\n* 2 [[Arquivo:Special Balloon Box.gif|link=]] [[Special Balloon Box]]\n* 1 [[Arquivo:Luminous Box.gif|link=]] [[Luminous Box]]\n* 2 [[Arquivo:Carpet Box.gif|link=]] [[Carpet Box]]\n* 2 [[Arquivo:Special Carpet Box.gif|link=]] [[Special Carpet Box]]\n* 3 [[Arquivo:Special Fx Box.gif|link=]] [[Special Fx Box]]\n* 1 [[Arquivo:Supernatural Box.gif|link=]] [[Supernatural Box]]\n* 1 [[Arquivo:Embroidered Box.gif|link=]] [[Embroidered Box]]\n* 2 [[Arquivo:Box Full of Presents.gif|link=]] [[Box Full of Presents]]\n{{div col end}}\n<noinclude><p><spoiler>* Obtido como recompensa após o evento do 25º [[Aniversário do Tibia]], se o jogador possuir menos de 7197 Theons. Os itens equivalem a 8080 Theons. Todos os Theons serão consumidos.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55326,
+    "ns": 0,
+    "title": "Small Reward Box",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Small Reward Box\n| flavortext     = It could be exchanged for Theons after the festivities of Tibia's 25th anniversary.\n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Pode-se dar \"use\".\n| weight         = 30.90\n| npcprice       = 0\n| stackable      = sim\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.87.12038\n| notes          = Ao dar use, obtem-se os seguintes itens: <br />\n{{div col|2}}\n* 1 [[Arquivo:Birthday Layer Cake.gif|link=]] [[Birthday Layer Cake]]\n* 1 [[Arquivo:Bottle of Champagne.gif|link=]] [[Bottle of Champagne]]\n* 1 [[Arquivo:Candy Floss (25 Anos).gif|link=]] [[Candy Floss (25 Anos)]]\n* 1 [[Arquivo:Ice Cream Cone (Sprinkles).gif|link=]] [[Ice Cream Cone (Sprinkles)]]\n* 1 [[Arquivo:Balloon Box.gif|link=]] [[Balloon Box]]\n* 1 [[Arquivo:Luminous Box.gif|link=]] [[Luminous Box]]\n* 1 [[Arquivo:Carpet Box.gif|link=]] [[Carpet Box]]\n* 1 [[Arquivo:Special Fx Box.gif|link=]] [[Special Fx Box]]\n{{div col end}}\n<noinclude><p><spoiler>* Obtido como recompensa após o evento do 25º [[Aniversário do Tibia]], se o jogador possuir menos de 1000 Theons. Os itens equivalem a 1615 Theons. Todos os Theons serão consumidos.</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55354,
+    "ns": 0,
+    "title": "Purple 25 Years Balloon",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Purple 25 Years Balloon\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Nenhum.\n| weight         = 0.15\n| npcprice       = 200 [[Theon]]s\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.87.12038\n| notes          = Nenhuma.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55355,
+    "ns": 0,
+    "title": "Rotworm Head Balloon",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Rotworm Head Balloon\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Nenhum.\n| weight         = 0.15\n| npcprice       = 400 [[Theon]]s\n| stackable      = sim\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Pode ser obtido ao usar uma [[Special Balloon Box]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55402,
+    "ns": 0,
+    "title": "Red Present",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Red Present\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Nenhum.\n| weight         = 25.00\n| npcprice       = 200 [[Theon]]s\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Pode ser reembrulhado. Pode ser obtido ao usar uma [[Box Full of Presents]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55403,
+    "ns": 0,
+    "title": "Small Blue Present",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Small Blue Present\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Nenhum.\n| weight         = 25.00\n| npcprice       = 200 [[Theon]]s\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Pode ser reembrulhado. Pode ser obtido ao usar uma [[Box Full of Presents]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55404,
+    "ns": 0,
+    "title": "Yellow Present",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Yellow Present\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Decorações\n| secondarytype  = Itens de Festa\n| attrib         = Nenhum.\n| weight         = 25.00\n| npcprice       = 200 [[Theon]]s\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Theodora\n| sellto         = Jogadores.\n| implemented    = 12.85.11485\n| notes          = Pode ser reembrulhado. Pode ser obtido ao usar uma [[Box Full of Presents]].\n}}"
+       }
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

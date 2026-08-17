@@ -1,15 +1,17 @@
 import { randomUUID } from 'node:crypto';
 import { INVENTORY_SIZE } from '@aetheria/config';
-import type { ItemStack } from '@aetheria/types';
-import type { Store, StoredCharacter, AccountRecord } from './store';
+import type { HuntProgress, ItemStack, VocationId } from '@aetheria/types';
+import type { Store, StoredCharacter, AccountRecord, PromotionError } from './store';
+import { validatePromotion, applyPromotion } from '../vocations/promotion.service';
 
-const BASE_SKILLS = { sword: 10, axe: 10, club: 10, distance: 10, magic: 10, defense: 10 };
+const BASE_SKILLS = { sword: 10, axe: 10, club: 10, distance: 10, magic: 10, shielding: 10 };
 
 /** Store em memória — usado quando USE_IN_MEMORY=true (dev sem PostgreSQL). */
 export class MemoryStore implements Store {
   private accounts = new Map<string, AccountRecord>();
   private byUsername = new Map<string, string>();
   private characters = new Map<string, StoredCharacter>();
+  private huntProgress = new Map<string, HuntProgress>();
 
   async findAccountByUsername(username: string): Promise<AccountRecord | null> {
     const id = this.byUsername.get(username.toLowerCase());
@@ -45,9 +47,55 @@ export class MemoryStore implements Store {
     this.characters.set(character.id, { ...character });
   }
 
+  async promoteCharacter(
+    accountId: string,
+    characterId: string,
+  ): Promise<{ ok: true; character: StoredCharacter } | { ok: false; error: PromotionError }> {
+    const character = this.characters.get(characterId);
+    if (!character) return { ok: false, error: 'CHARACTER_NOT_FOUND' };
+    if (character.accountId !== accountId) return { ok: false, error: 'CHARACTER_NOT_OWNED' };
+    const error = validatePromotion(character);
+    if (error) return { ok: false, error };
+    const promoted = applyPromotion(character);
+    this.characters.set(promoted.id, promoted);
+    return { ok: true, character: promoted };
+  }
+
+  async getHuntProgress(characterId: string, huntId: string): Promise<HuntProgress | null> {
+    return this.huntProgress.get(`${characterId}:${huntId}`) ?? null;
+  }
+
+  async listHuntProgress(characterId: string): Promise<HuntProgress[]> {
+    const out: HuntProgress[] = [];
+    for (const [key, value] of this.huntProgress) {
+      if (key.startsWith(`${characterId}:`)) out.push(value);
+    }
+    return out;
+  }
+
+  async recordHuntCompletion(characterId: string, huntId: string, clearTimeMs: number): Promise<HuntProgress> {
+    const key = `${characterId}:${huntId}`;
+    const existing = this.huntProgress.get(key);
+    const now = Date.now();
+    const bestClearTimeMs =
+      existing?.bestClearTimeMs == null || clearTimeMs < existing.bestClearTimeMs ? clearTimeMs : existing.bestClearTimeMs;
+    const isBest = bestClearTimeMs === clearTimeMs;
+    const next: HuntProgress = {
+      huntId,
+      completionCount: (existing?.completionCount ?? 0) + 1,
+      firstClearAt: existing?.firstClearAt ?? now,
+      firstClearTimeMs: existing?.firstClearTimeMs ?? clearTimeMs,
+      bestClearTimeMs,
+      bestClearAt: isBest && existing?.bestClearAt == null ? now : existing?.bestClearAt ?? (isBest ? now : null),
+    };
+    this.huntProgress.set(key, next);
+    return next;
+  }
+
   static blankInventory(): (ItemStack | null)[] {
     return new Array(INVENTORY_SIZE).fill(null);
   }
 }
 
 export { BASE_SKILLS };
+export type { VocationId };

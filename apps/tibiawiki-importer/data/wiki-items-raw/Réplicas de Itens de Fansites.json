@@ -1,0 +1,742 @@
+{
+ "query": {
+  "pages": [
+   {
+    "pageid": 30468,
+    "ns": 0,
+    "title": "Abacus (Réplica)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre a '''Réplica''' do item Abacus. Para o fansite item, veja [[Abacus]].}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Abacus (Réplica)\n| flavortext       = Souvenir from Thais Museum.\n| itemclass        = Itens de Decoração\n| primarytype      = Decorações\n| secondarytype    = Réplicas de Itens de Fansites\n| attrib           = Nenhum.\n| stackable        = não\n| weight           = 12.00\n| mercado          = sim\n| droppedby        = Ninguém.\n| npcprice         = 20 [[Silver Raid Token]]s\n| buyfrom          = Jorge\n| sellto           = Jogadores.\n| implemented      = 10.1\n| notes            = Esse item é uma réplica do [[Abacus]]. É feito e vendido pelo NPC [[Jorge]]. Por ser uma réplica, ele não tem nenhum efeito ao ser usado.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 30469,
+    "ns": 0,
+    "title": "Friendship Amulet (Réplica)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre a '''Réplica''' do item Friendship Amulet. Para o fansite item, veja [[Friendship Amulet]].}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Friendship Amulet (Réplica)\n| flavortext       = Souvenir from Thais Museum.\n| itemclass        = Itens de Decoração\n| primarytype      = Decorações\n| secondarytype    = Réplicas de Itens de Fansites\n| attrib           = Nenhum.\n| stackable        = não\n| weight           = 5.20\n| mercado          = sim\n| droppedby        = Ninguém.\n| npcprice         = 20 [[Silver Raid Token]]s\n| buyfrom          = Jorge\n| sellto           = Jogadores.\n| implemented      = 10.1\n| notes            = Esse item é uma réplica do [[Friendship Amulet]]. É feito e vendido pelo NPC [[Jorge]]. Por ser uma réplica, ele não tem nenhum efeito ao ser usado. Pode ser equipado no slot de amuletos do [[inventário]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 30471,
+    "ns": 0,
+    "title": "Frozen Heart (Réplica)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre a '''Réplica''' do item Frozen Heart. Para o fansite item, veja [[Frozen Heart]].}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Frozen Heart (Réplica)\n| flavortext       = Souvenir from Thais Museum.\n| itemclass        = Itens de Decoração\n| primarytype      = Decorações\n| secondarytype    = Réplicas de Itens de Fansites\n| attrib           = Nenhum.\n| stackable        = não\n| weight           = 20.00\n| mercado          = sim\n| droppedby        = Ninguém.\n| npcprice         = 20 [[Silver Raid Token]]s\n| buyfrom          = Jorge\n| sellto           = Jogadores.\n| implemented      = 10.1\n| notes            = Esse item é uma réplica do [[Frozen Heart]]. É feito e vendido pelo NPC [[Jorge]]. Por ser uma réplica, ele não tem nenhum efeito ao ser usado.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 30473,
+    "ns": 0,
+    "title": "Key of Numerous Locks (Réplica)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre a '''Réplica''' do item Key of Numerous Locks. Para o fansite item, veja [[Key of Numerous Locks]].}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Key of Numerous Locks (Réplica)\n| flavortext       = Unlocks greatness in everyone. Souvenir from Thais Museum.\n| itemclass        = Itens de Decoração\n| primarytype      = Decorações\n| secondarytype    = Réplicas de Itens de Fansites\n| attrib           = Nenhum.\n| stackable        = não\n| weight           = 1.50\n| mercado          = sim\n| droppedby        = Ninguém.\n| npcprice         = 20 [[Silver Raid Token]]s\n| buyfrom          = Jorge\n| sellto           = Jogadores.\n| implemented      = 10.1\n| notes            = Esse item é uma réplica do [[Key of Numerous Locks]]. É feito e vendido pelo NPC [[Jorge]]. Por ser uma réplica, ele não tem nenhum efeito ao ser usado.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 30474,
+    "ns": 0,
+    "title": "Norseman Doll (Réplica)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre a '''Réplica''' do item Norseman Doll. Para o fansite item, veja [[Norseman Doll]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Norseman Doll (Réplica)\n| flavortext       = Souvenir from Thais Museum.\n| itemclass        = Itens de Decoração\n| primarytype      = Decorações\n| secondarytype    = Réplicas de Itens de Fansites\n| attrib           = Nenhum.\n| stackable        = não\n| weight           = 10.00\n| mercado          = sim\n| droppedby        = Ninguém.\n| npcprice         = 20 [[Silver Raid Token]]s\n| buyfrom          = Jorge\n| sellto           = Jogadores.\n| implemented      = 10.1\n| notes            = Esse item é uma réplica do [[Norseman Doll]]. É feito e vendido pelo NPC [[Jorge]]. Por ser uma réplica, ele não tem nenhum efeito ao ser usado.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 30475,
+    "ns": 0,
+    "title": "Orc's Jaw Shredder (Réplica)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre a '''Réplica''' do item Orc's Jaw Shredder. Para o fansite item, veja [[Orc's Jaw Shredder]].}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Orc's Jaw Shredder (Réplica)\n| flavortext       = Souvenir from Thais Museum.\n| itemclass        = Itens de Decoração\n| primarytype      = Decorações\n| secondarytype    = Réplicas de Itens de Fansites\n| attrib           = Nenhum.\n| stackable        = não\n| weight           = 25.00\n| mercado          = sim\n| droppedby        = Ninguém.\n| npcprice         = 20 [[Silver Raid Token]]s\n| buyfrom          = Jorge\n| sellto           = Jogadores.\n| implemented      = 10.1\n| notes            = Esse item é uma réplica do [[Orc's Jaw Shredder]]. É feito e vendido pelo NPC [[Jorge]]. Por ser uma réplica, ele não tem nenhum efeito ao ser usado.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 30476,
+    "ns": 0,
+    "title": "The Mexcalibur (Réplica)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre a '''Réplica''' do item The Mexcalibur. Para o fansite item, veja [[The Mexcalibur]].}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = The Mexcalibur (Réplica)\n| flavortext       = Souvenir from Thais Museum.\n| itemclass        = Itens de Decoração\n| primarytype      = Decorações\n| secondarytype    = Réplicas de Itens de Fansites\n| attrib           = Nenhum.\n| stackable        = não\n| weight           = 12.00\n| mercado          = sim\n| droppedby        = Ninguém.\n| npcprice         = 20 [[Silver Raid Token]]s\n| buyfrom          = Jorge\n| sellto           = Jogadores.\n| implemented      = 10.1\n| notes            = Esse item é uma réplica do [[The Mexcalibur]]. É feito e vendido pelo NPC [[Jorge]]. Por ser uma réplica, ele não tem nenhum efeito ao ser usado.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 36603,
+    "ns": 0,
+    "title": "Phoenix Statue (Réplica)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre a '''Réplica''' do item Phoenix Statue. Para o fansite item, veja [[Phoenix Statue]].}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Phoenix Statue (Réplica)\n| flavortext       = Souvenir from Thais Museum.\n| itemclass        = Itens de Decoração\n| primarytype      = Decorações\n| secondarytype    = Réplicas de Itens de Fansites\n| attrib           = Nenhum.\n| stackable        = não\n| weight           = 20.00\n| mercado          = sim\n| droppedby        = Ninguém.\n| npcprice         = 20 [[Silver Raid Token]]s\n| buyfrom          = Jorge\n| sellto           = Jogadores.\n| implemented      = 10.80\n| notes            = Esse item é uma réplica da [[Phoenix Statue]] feito e vendido pelo NPC [[Jorge]]. Por ser uma réplica, ele não tem nenhum efeito ao ser usado.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 36604,
+    "ns": 0,
+    "title": "Dragon Eye (Réplica)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre a '''Réplica''' do item Dragon Eye. Para o fansite item, veja [[Dragon Eye]].}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Dragon Eye (Réplica)\n| flavortext       = Souvenir from Thais Museum.\n| itemclass        = Itens de Decoração\n| primarytype      = Decorações\n| secondarytype    = Réplicas de Itens de Fansites\n| attrib           = Nenhum.\n| stackable        = não\n| weight           = 28.00\n| mercado          = sim\n| droppedby        = Ninguém.\n| npcprice         = 20 [[Silver Raid Token]]s\n| buyfrom          = Jorge\n| sellto           = Jogadores.\n| implemented      = 10.80\n| notes            = Esse item é uma réplica do [[Dragon Eye]] feito e vendido pelo NPC [[Jorge]]. Por ser uma réplica, ele não tem nenhum efeito ao ser usado.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 36605,
+    "ns": 0,
+    "title": "Noble Sword (Réplica)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre a '''Réplica''' do item Noble Sword. Para o fansite item, veja [[Noble Sword]].}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Noble Sword (Réplica)\n| flavortext       = Souvenir from Thais Museum.\n| itemclass        = Itens de Decoração\n| primarytype      = Decorações\n| secondarytype    = Réplicas de Itens de Fansites\n| attrib           = Nenhum.\n| stackable        = não\n| weight           = 50.00\n| mercado          = sim\n| droppedby        = Ninguém.\n| npcprice         = 20 [[Silver Raid Token]]s\n| buyfrom          = Jorge\n| sellto           = Jogadores.\n| implemented      = 10.80\n| notes            = Esse item é uma réplica do [[Noble Sword]] feito e vendido pelo NPC [[Jorge]]. Por ser uma réplica, ele não tem nenhum efeito ao ser usado.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 39028,
+    "ns": 0,
+    "title": "Medusa Skull (Réplica)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre a '''Réplica''' do item Medusa Skull. Para o fansite item, veja [[Medusa Skull]].}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Medusa Skull (Réplica)\n| flavortext       = Souvenir from Thais Museum.\n| itemclass        = Itens de Decoração\n| primarytype      = Decorações\n| secondarytype    = Réplicas de Itens de Fansites\n| attrib           = Nenhum.\n| stackable        = não\n| weight           = 10.00\n| mercado          = sim\n| droppedby        = Ninguém.\n| npcprice         = 20 [[Silver Raid Token]]s\n| buyfrom          = Jorge\n| sellto           = Jogadores.\n| implemented      = 10.97\n| notes            = Esse item é uma réplica do [[Medusa Skull]]. É feito e vendido pelo NPC [[Jorge]]. Por ser uma réplica, ele não tem nenhum efeito ao ser usado.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 39030,
+    "ns": 0,
+    "title": "Golden Newspaper (Réplica)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre a '''Réplica''' do item Golden Newspaper. Para o fansite item, veja [[Golden Newspaper]].}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Golden Newspaper (Réplica)\n| flavortext       = Souvenir from Thais Museum.\n| itemclass        = Itens de Decoração\n| primarytype      = Decorações\n| secondarytype    = Réplicas de Itens de Fansites\n| attrib           = Nenhum.\n| stackable        = não\n| weight           = 24.00\n| mercado          = sim\n| droppedby        = Ninguém.\n| npcprice         = 20 [[Silver Raid Token]]s\n| buyfrom          = Jorge\n| sellto           = Jogadores.\n| implemented      = 10.97\n| notes            = Esse item é uma réplica do [[Golden Newspaper]]. É feito e vendido pelo NPC [[Jorge]]. Por ser uma réplica, ele não tem nenhum efeito ao ser usado.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 39032,
+    "ns": 0,
+    "title": "Bag of Oriental Spices (Réplica)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre a '''Réplica''' do item Bag of Oriental Spices. Para o fansite item, veja [[Bag of Oriental Spices]].}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Bag of Oriental Spices (Réplica)\n| flavortext       = Souvenir from Thais Museum.\n| itemclass        = Itens de Decoração\n| primarytype      = Decorações\n| secondarytype    = Réplicas de Itens de Fansites\n| attrib           = Nenhum.\n| stackable        = não\n| weight           = 15.08\n| mercado          = sim\n| droppedby        = Ninguém.\n| npcprice         = 20 [[Silver Raid Token]]s\n| buyfrom          = Jorge\n| sellto           = Jogadores.\n| implemented      = 10.97\n| notes            = Esse item é uma réplica do [[Bag of Oriental Spices]]. É feito e vendido pelo NPC [[Jorge]]. Por ser uma réplica, ele não tem nenhum efeito ao ser usado.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 39034,
+    "ns": 0,
+    "title": "Imortus (Réplica)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre a '''Réplica''' do item Imortus. Para o fansite item, veja [[Imortus]].}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Imortus (Réplica)\n| flavortext       = Souvenir from Thais Museum.\n| itemclass        = Itens de Decoração\n| primarytype      = Decorações\n| secondarytype    = Réplicas de Itens de Fansites\n| attrib           = Nenhum.\n| stackable        = não\n| weight           = 46.90\n| mercado          = sim\n| droppedby        = Ninguém.\n| npcprice         = 20 [[Silver Raid Token]]s\n| buyfrom          = Jorge\n| sellto           = Jogadores.\n| implemented      = 10.97\n| notes            = Esse item é uma réplica do [[Imortus]]. É feito e vendido pelo NPC [[Jorge]]. Por ser uma réplica, ele não tem nenhum efeito ao ser usado.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 39037,
+    "ns": 0,
+    "title": "Encyclopedia",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre a '''Réplica''' do item Tibiacity Encyclopedia. Para o fansite item, veja [[Tibiacity Encyclopedia]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Encyclopedia\n| flavortext       = Souvenir from Thais Museum.\n| itemclass        = Itens de Decoração\n| primarytype      = Decorações\n| secondarytype    = Réplicas de Itens de Fansites\n| attrib           = Nenhum.\n| stackable        = não\n| weight           = 13.37\n| mercado          = sim\n| droppedby        = Ninguém.\n| npcprice         = 20 [[Silver Raid Token]]s\n| buyfrom          = Jorge\n| sellto           = Jogadores.\n| implemented      = 10.97\n| notes            = Esse item é uma réplica do [[Tibiacity Encyclopedia]]. É feito e vendido pelo NPC [[Jorge]]. Por ser uma réplica, ele não tem nenhum efeito ao ser usado.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 39044,
+    "ns": 0,
+    "title": "Doll of Durin The Almighty",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre a '''Réplica''' do item Doll of Durin The Almighty. Para o fansite item, veja [[Doll of Durin The Almighty]].}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Doll of Durin The Almighty\n| flavortext       = Souvenir from Thais Museum.\n| itemclass        = Itens de Decoração\n| primarytype      = Decorações\n| secondarytype    = Réplicas de Itens de Fansites\n| attrib           = Nenhum.\n| stackable        = não\n| weight           = 40.00\n| mercado          = sim\n| droppedby        = Ninguém.\n| npcprice         = 20 [[Silver Raid Token]]s\n| buyfrom          = Jorge\n| sellto           = Jogadores.\n| implemented      = 10.97\n| notes            = Esse item é uma réplica do [[Doll of Durin The Almighty]]. É feito e vendido pelo NPC [[Jorge]]. Por ser uma réplica, ele não tem nenhum efeito ao ser usado.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 39052,
+    "ns": 0,
+    "title": "Music Box (Réplica)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre a '''Réplica''' do item Music Box (Tibia Space). Para o fansite item, veja [[Music Box (Tibia Space)]].}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Music Box (Réplica)\n| flavortext       = Souvenir from Thais Museum.\n| itemclass        = Itens de Decoração\n| primarytype      = Decorações\n| secondarytype    = Réplicas de Itens de Fansites\n| attrib           = Nenhum.\n| stackable        = não\n| weight           = 27.00\n| mercado          = sim\n| droppedby        = Ninguém.\n| npcprice         = 20 [[Silver Raid Token]]s\n| buyfrom          = Jorge\n| sellto           = Jogadores.\n| implemented      = 10.97\n| notes            = Esse item é uma réplica do [[Music Box (Tibia Space)]]. É feito e vendido pelo NPC [[Jorge]]. Por ser uma réplica, ele não tem nenhum efeito ao ser usado.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 39057,
+    "ns": 0,
+    "title": "Hand Puppets (Réplica)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre a '''Réplica''' do item Hand Puppets. Para o fansite item, veja [[Hand Puppets]].}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Hand Puppets (Réplica)\n| flavortext       = Souvenir from Thais Museum.\n| itemclass        = Itens de Decoração\n| primarytype      = Decorações\n| secondarytype    = Réplicas de Itens de Fansites\n| attrib           = Nenhum.\n| stackable        = não\n| weight           = 0.05\n| mercado          = sim\n| droppedby        = Ninguém.\n| npcprice         = 20 [[Silver Raid Token]]s\n| buyfrom          = Jorge\n| sellto           = Jogadores.\n| implemented      = 10.97\n| notes            = Esse item é uma réplica do [[Hand Puppets]]. É feito e vendido pelo NPC [[Jorge]]. Por ser uma réplica, ele não tem nenhum efeito ao ser usado.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 41671,
+    "ns": 0,
+    "title": "Crimson Doll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre a '''Réplica''' do item Cateroide's Doll. Para o fansite item, veja [[Cateroide's Doll]].}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Crimson Doll\n| flavortext       = Souvenir from Thais Museum.\n| itemclass        = Itens de Decoração\n| primarytype      = Decorações\n| secondarytype    = Réplicas de Itens de Fansites\n| attrib           = Nenhum.\n| stackable        = não\n| weight           = 15.00\n| mercado          = sim\n| droppedby        = Ninguém.\n| npcprice         = 20 [[Silver Raid Token]]s\n| buyfrom          = Jorge\n| sellto           = Jogadores.\n| implemented      = 11.40\n| notes            = Esse item é uma réplica do [[Cateroide's Doll]]. É feito e vendido pelo NPC [[Jorge]]. Por ser uma réplica, ele não tem nenhum efeito ao ser usado.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 41672,
+    "ns": 0,
+    "title": "Mathmaster Shield (Réplica)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre a '''Réplica''' do item Mathmaster Shield. Para o fansite item, veja [[Mathmaster Shield]].}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Mathmaster Shield (Réplica)\n| flavortext       = Souvenir from Thais Museum.\n| itemclass        = Itens de Decoração\n| primarytype      = Decorações\n| secondarytype    = Réplicas de Itens de Fansites\n| attrib           = Nenhum.\n| stackable        = não\n| weight           = 3.14\n| mercado          = sim\n| droppedby        = Ninguém.\n| npcprice         = 20 [[Silver Raid Token]]s\n| buyfrom          = Jorge\n| sellto           = Jogadores.\n| implemented      = 11.40\n| notes            = Esse item é uma réplica do [[Mathmaster Shield]]. É feito e vendido pelo NPC [[Jorge]]. Por ser uma réplica, ele não tem nenhum efeito ao ser usado. Pode ser equipado no slot de escudos do [[inventário]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 41673,
+    "ns": 0,
+    "title": "Draken Doll (Réplica)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre a '''Réplica''' do item Draken Doll. Para o fansite item, veja [[Draken Doll]].}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Draken Doll (Réplica)\n| flavortext       = Souvenir from Thais Museum.\n| itemclass        = Itens de Decoração\n| primarytype      = Decorações\n| secondarytype    = Réplicas de Itens de Fansites\n| attrib           = Nenhum.\n| stackable        = não\n| weight           = 15.00\n| mercado          = sim\n| droppedby        = Ninguém.\n| npcprice         = 20 [[Silver Raid Token]]s\n| buyfrom          = Jorge\n| sellto           = Jogadores.\n| implemented      = 11.40\n| notes            = Esse item é uma réplica do [[Draken Doll]]. É feito e vendido pelo NPC [[Jorge]]. Por ser uma réplica, ele não tem nenhum efeito ao ser usado.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 41674,
+    "ns": 0,
+    "title": "Emblem (Réplica)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre a '''Réplica''' do item TibiaHispano Emblem. Para o fansite item, veja [[TibiaHispano Emblem]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Emblem (Réplica)\n| flavortext       = Souvenir from Thais Museum.\n| itemclass        = Itens de Decoração\n| primarytype      = Decorações\n| secondarytype    = Réplicas de Itens de Fansites\n| attrib           = Nenhum.\n| stackable        = não\n| weight           = 5.00\n| mercado          = sim\n| droppedby        = Ninguém.\n| npcprice         = 20 [[Silver Raid Token]]s\n| buyfrom          = Jorge\n| sellto           = Jogadores.\n| implemented      = 11.40\n| notes            = Esse item é uma réplica do [[TibiaHispano Emblem]]. É feito e vendido pelo NPC [[Jorge]]. Por ser uma réplica, ele não tem nenhum efeito ao ser usado.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 44725,
+    "ns": 0,
+    "title": "Bookworm Doll (Réplica)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre a '''Réplica''' do item Bookworm Doll. Para o fansite item, veja [[Bookworm Doll]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Bookworm Doll (Réplica)\n| flavortext       = Souvenir from Thais Museum.\n| itemclass        = Itens de Decoração\n| primarytype      = Decorações\n| secondarytype    = Réplicas de Itens de Fansites\n| attrib           = Nenhum.\n| stackable        = não\n| weight           = 19.00\n| mercado          = sim\n| droppedby        = Ninguém.\n| npcprice         = 20 [[Silver Raid Token]]s\n| buyfrom          = Jorge\n| sellto           = Jogadores.\n| implemented      = 11.80\n| notes            = Esse item é uma réplica do [[Bookworm Doll]]. É feito e vendido pelo NPC [[Jorge]]. Por ser uma réplica, ele não tem nenhum efeito ao ser usado.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 44726,
+    "ns": 0,
+    "title": "Golden Falcon (Réplica)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre a '''Réplica''' do item Golden Falcon. Para o fansite item, veja [[Golden Falcon]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Golden Falcon (Réplica)\n| flavortext       = Souvenir from Thais Museum.\n| itemclass        = Itens de Decoração\n| primarytype      = Decorações\n| secondarytype    = Réplicas de Itens de Fansites\n| attrib           = Nenhum.\n| stackable        = não\n| weight           = 20.00\n| mercado          = sim\n| droppedby        = Ninguém.\n| npcprice         = 20 [[Silver Raid Token]]s\n| buyfrom          = Jorge\n| sellto           = Jogadores.\n| implemented      = 11.80\n| notes            = Esse item é uma réplica do [[Golden Falcon]]. É feito e vendido pelo NPC [[Jorge]]. Por ser uma réplica, ele não tem nenhum efeito ao ser usado.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 44727,
+    "ns": 0,
+    "title": "Old Radio (Réplica)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre a '''Réplica''' do item Old Radio. Para o fansite item, veja [[Old Radio]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Old Radio (Réplica)\n| flavortext       = Souvenir from Thais Museum.\n| itemclass        = Itens de Decoração\n| primarytype      = Decorações\n| secondarytype    = Réplicas de Itens de Fansites\n| attrib           = Nenhum.\n| stackable        = não\n| weight           = 40.15\n| mercado          = sim\n| droppedby        = Ninguém.\n| npcprice         = 20 [[Silver Raid Token]]s\n| buyfrom          = Jorge\n| sellto           = Jogadores.\n| implemented      = 11.80\n| notes            = Esse item é uma réplica do [[Old Radio]]. É feito e vendido pelo NPC [[Jorge]]. Por ser uma réplica, ele não tem nenhum efeito ao ser usado.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 44928,
+    "ns": 0,
+    "title": "Assassin Doll (Réplica)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre a '''Réplica''' do item Assassin Doll. Para o fansite item, veja [[Assassin Doll]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Assassin Doll (Réplica)\n| flavortext       = Souvenir from Thais Museum.\n| itemclass        = Itens de Decoração\n| primarytype      = Decorações\n| secondarytype    = Réplicas de Itens de Fansites\n| attrib           = Nenhum.\n| stackable        = não\n| weight           = 25.04\n| mercado          = sim\n| droppedby        = Ninguém.\n| npcprice         = 20 [[Silver Raid Token]]s\n| buyfrom          = Jorge\n| sellto           = Jogadores.\n| implemented      = 11.80\n| notes            = Esse item é uma réplica do [[Assassin Doll]]. É feito e vendido pelo NPC [[Jorge]]. Por ser uma réplica, ele não tem nenhum efeito ao ser usado.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 48507,
+    "ns": 0,
+    "title": "Dragon Goblet (Réplica)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre a '''Réplica''' do item Dragon Goblet. Para o fansite item, veja [[Dragon Goblet]].}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Dragon Goblet (Réplica)\n| flavortext       = Souvenir from Thais Museum.\n| itemclass        = Itens de Decoração\n| primarytype      = Decorações\n| secondarytype    = Réplicas de Itens de Fansites\n| attrib           = Nenhum.\n| stackable        = não\n| weight           = 18.00\n| mercado          = sim\n| droppedby        = Ninguém.\n| npcprice         = 20 [[Silver Raid Token]]s\n| buyfrom          = Jorge\n| sellto           = Jogadores.\n| implemented      = 12.20\n| notes            = Esse item é uma réplica do [[Dragon Goblet]]. É feito e vendido pelo NPC [[Jorge]]. Por ser uma réplica, ele não tem nenhum efeito ao ser usado.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 48508,
+    "ns": 0,
+    "title": "Pigeon Trophy (Réplica)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre a '''Réplica''' do item Pigeon Trophy. Para o fansite item, veja [[Pigeon Trophy]].}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Pigeon Trophy (Réplica)\n| flavortext       = Souvenir from Thais Museum.\n| itemclass        = Itens de Decoração\n| primarytype      = Decorações\n| secondarytype    = Réplicas de Itens de Fansites\n| attrib           = Nenhum.\n| stackable        = não\n| weight           = 4.00\n| mercado          = sim\n| droppedby        = Ninguém.\n| npcprice         = 20 [[Silver Raid Token]]s\n| buyfrom          = Jorge\n| sellto           = Jogadores.\n| implemented      = 12.20\n| notes            = Esse item é uma réplica do [[Pigeon Trophy]]. É feito e vendido pelo NPC [[Jorge]]. Por ser uma réplica, ele não tem nenhum efeito ao ser usado.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 48509,
+    "ns": 0,
+    "title": "Loremaster Doll (Réplica)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre a '''Réplica''' do item Loremaster Doll. Para o fansite item, veja [[Loremaster Doll]].}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Loremaster Doll (Réplica)\n| flavortext       = Souvenir from Thais Museum.\n| itemclass        = Itens de Decoração\n| primarytype      = Decorações\n| secondarytype    = Réplicas de Itens de Fansites\n| attrib           = Nenhum.\n| stackable        = não\n| weight           = 77.00\n| mercado          = sim\n| droppedby        = Ninguém.\n| npcprice         = 20 [[Silver Raid Token]]s\n| buyfrom          = Jorge\n| sellto           = Jogadores.\n| implemented      = 12.20\n| notes            = Esse item é uma réplica do [[Loremaster Doll]]. É feito e vendido pelo NPC [[Jorge]]. Por ser uma réplica, ele não tem nenhum efeito ao ser usado.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 48510,
+    "ns": 0,
+    "title": "Jade Amulet (Réplica)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre a '''Réplica''' do item Jade Amulet. Para o fansite item, veja [[Jade Amulet]].}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Jade Amulet (Réplica)\n| flavortext       = Souvenir from Thais Museum.\n| itemclass        = Itens de Decoração\n| primarytype      = Decorações\n| secondarytype    = Réplicas de Itens de Fansites\n| attrib           = Nenhum.\n| stackable        = não\n| weight           = 4.00\n| mercado          = sim\n| droppedby        = Ninguém.\n| npcprice         = 20 [[Silver Raid Token]]s\n| buyfrom          = Jorge\n| sellto           = Jogadores.\n| implemented      = 12.20\n| notes            = Esse item é uma réplica do [[Jade Amulet]]. É feito e vendido pelo NPC [[Jorge]]. Por ser uma réplica, ele não tem nenhum efeito ao ser usado. Pode ser equipado no slot de amuletos do [[inventário]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 49880,
+    "ns": 0,
+    "title": "Goromaphone (Réplica)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre a '''Réplica''' do item Goromaphone. Para o fansite item, veja [[Goromaphone]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Goromaphone (Réplica)\n| flavortext       = Souvenir from Thais Museum.\n| itemclass        = Itens de Decoração\n| primarytype      = Decorações\n| secondarytype    = Réplicas de Itens de Fansites\n| attrib           = Nenhum.\n| stackable        = não\n| weight           = 66.60\n| mercado          = sim\n| droppedby        = Ninguém.\n| npcprice         = 20 [[Silver Raid Token]]s\n| buyfrom          = Jorge\n| sellto           = Jogadores.\n| implemented      = 12.40\n| notes            = Esse item é uma réplica do [[Goromaphone]]. É feito e vendido pelo NPC [[Jorge]]. Por ser uma réplica, ele não tem nenhum efeito ao ser usado.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53063,
+    "ns": 0,
+    "title": "Shield of Endless Search (Réplica)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre a '''Réplica''' do item Shield of Endless Search. Para o fansite item, veja [[Shield of Endless Search]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Shield of Endless Search (Réplica)\n| flavortext       = Souvenir from Thais Museum.\n| itemclass        = Itens de Decoração\n| primarytype      = Decorações\n| secondarytype    = Réplicas de Itens de Fansites\n| attrib           = Nenhum.\n| stackable        = não\n| weight           = 11.00\n| mercado          = sim\n| droppedby        = Ninguém.\n| npcprice         = 20 [[Silver Raid Token]]s\n| buyfrom          = Jorge\n| sellto           = Jogadores.\n| implemented      = 12.72.11206\n| notes            = Esse item é uma réplica do [[Shield of Endless Search]]. É feito e vendido pelo NPC [[Jorge]]. Por ser uma réplica, ele não tem nenhum efeito ao ser usado. Pode ser equipado no slot de escudos do [[inventário]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53064,
+    "ns": 0,
+    "title": "Lucky Clover Amulet (Réplica)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre a '''Réplica''' do item Lucky Clover Amulet. Para o fansite item, veja [[Lucky Clover Amulet]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Lucky Clover Amulet (Réplica)\n| flavortext       = Souvenir from Thais Museum.\n| itemclass        = Itens de Decoração\n| primarytype      = Decorações\n| secondarytype    = Réplicas de Itens de Fansites\n| attrib           = Nenhum.\n| stackable        = não\n| weight           = 1.50\n| mercado          = sim\n| droppedby        = Ninguém.\n| npcprice         = 20 [[Silver Raid Token]]s\n| buyfrom          = Jorge\n| sellto           = Jogadores.\n| implemented      = 12.72.11206\n| notes            = Esse item é uma réplica do [[Lucky Clover Amulet]]. É feito e vendido pelo NPC [[Jorge]]. Por ser uma réplica, ele não tem nenhum efeito ao ser usado. Pode ser equipado no slot de amuletos do [[inventário]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 53065,
+    "ns": 0,
+    "title": "Little Adventurer Doll (Réplica)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre a '''Réplica''' do item Little Adventurer Doll. Para o fansite item, veja [[Little Adventurer Doll]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Little Adventurer Doll (Réplica)\n| flavortext       = Souvenir from Thais Museum.\n| itemclass        = Itens de Decoração\n| primarytype      = Decorações\n| secondarytype    = Réplicas de Itens de Fansites\n| attrib           = Nenhum.\n| stackable        = não\n| weight           = 26.13\n| mercado          = sim\n| droppedby        = Ninguém.\n| npcprice         = 20 [[Silver Raid Token]]s\n| buyfrom          = Jorge\n| sellto           = Jogadores.\n| implemented      = 12.72.11206\n| notes            = Esse item é uma réplica do [[Little Adventurer Doll]]. É feito e vendido pelo NPC [[Jorge]]. Por ser uma réplica, ele não tem nenhum efeito ao ser usado.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59343,
+    "ns": 0,
+    "title": "Shield of Destiny (Réplica)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre a '''Réplica''' do item Shield of Destiny. Para o fansite item, veja [[Shield of Destiny]].}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Shield of Destiny (Réplica)\n| flavortext       = Souvenir from Thais Museum.\n| itemclass        = Itens de Decoração\n| primarytype      = Decorações\n| secondarytype    = Réplicas de Itens de Fansites\n| attrib           = Nenhum.\n| stackable        = não\n| weight           = 68.00\n| mercado          = sim\n| droppedby        = Ninguém.\n| npcprice         = 20 [[Silver Raid Token]]s\n| buyfrom          = Jorge\n| sellto           = Jogadores.\n| implemented      = 13.16.13209\n| notes            = Esse item é uma réplica do [[Shield of Destiny]]. É feito e vendido pelo NPC [[Jorge]]. Por ser uma réplica, ele não tem nenhum efeito ao ser usado. Pode ser equipado no slot de escudos do [[inventário]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59447,
+    "ns": 0,
+    "title": "Tibiora's Box (Réplica)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre a '''Réplica''' do item Tibiora's Box. Para o fansite item, veja [[Tibiora's Box]].}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Tibiora's Box (Réplica)\n| flavortext       = Souvenir from Thais Museum.\n| itemclass        = Itens de Decoração\n| primarytype      = Decorações\n| secondarytype    = Réplicas de Itens de Fansites\n| attrib           = Nenhum.\n| stackable        = não\n| weight           = 42.00\n| mercado          = sim\n| droppedby        = Ninguém.\n| npcprice         = 20 [[Silver Raid Token]]s\n| buyfrom          = Jorge\n| sellto           = Jogadores.\n| implemented      = 13.16.13209\n| notes            = Esse item é uma réplica da [[Tibiora's Box]]. É feita e vendida pelo NPC [[Jorge]]. Por ser uma réplica, ele não tem nenhum efeito ao ser usado.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59449,
+    "ns": 0,
+    "title": "Citizen Doll (Réplica)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre a '''Réplica''' do item Citizen Doll. Para o fansite item, veja [[Citizen Doll]].}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Citizen Doll (Réplica)\n| flavortext       = Souvenir from Thais Museum.\n| itemclass        = Itens de Decoração\n| primarytype      = Decorações\n| secondarytype    = Réplicas de Itens de Fansites\n| attrib           = Nenhum.\n| stackable        = não\n| weight           = 22.00\n| mercado          = sim\n| droppedby        = Ninguém.\n| npcprice         = 20 [[Silver Raid Token]]s\n| buyfrom          = Jorge\n| sellto           = Jogadores.\n| implemented      = 13.16.13209\n| notes            = Esse item é uma réplica da [[Citizen Doll]]. É feita e vendida pelo NPC [[Jorge]]. Por ser uma réplica, ele não tem nenhum efeito ao ser usado.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 62846,
+    "ns": 0,
+    "title": "Chaos Critical Dice (Réplica)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre a '''Réplica''' do item Chaos Critical Dice. Para o fansite item, veja [[Chaos Critical Dice]].}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Chaos Critical Dice (Réplica)\n| flavortext       = Souvenir from Thais Museum.\n| itemclass        = Itens de Decoração\n| primarytype      = Decorações\n| secondarytype    = Réplicas de Itens de Fansites\n| attrib           = Nenhum.\n| stackable        = não\n| weight           = 0.40\n| mercado          = sim\n| droppedby        = Ninguém.\n| npcprice         = 20 [[Silver Raid Token]]s\n| buyfrom          = Jorge\n| sellto           = Jogadores.\n| implemented      = 13.41.a953fd\n| notes            = Esse item é uma réplica do [[Chaos Critical Dice]]. É feito e vendido pelo NPC [[Jorge]]. Por ser uma réplica, ele não tem nenhum efeito ao ser usado.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 62847,
+    "ns": 0,
+    "title": "Love Elixir (Réplica)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre a '''Réplica''' do item Love Elixir. Para o fansite item, veja [[Love Elixir]].}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Love Elixir (Réplica)\n| flavortext       = Souvenir from Thais Museum.\n| itemclass        = Itens de Decoração\n| primarytype      = Decorações\n| secondarytype    = Réplicas de Itens de Fansites\n| attrib           = Nenhum.\n| stackable        = não\n| weight           = 13.50\n| mercado          = sim\n| droppedby        = Ninguém.\n| npcprice         = 20 [[Silver Raid Token]]s\n| buyfrom          = Jorge\n| sellto           = Jogadores.\n| implemented      = 13.41.a953fd\n| notes            = Esse item é uma réplica do [[Love Elixir]]. É feito e vendido pelo NPC [[Jorge]]. Por ser uma réplica, ele não tem nenhum efeito ao ser usado.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64655,
+    "ns": 0,
+    "title": "Aylie (Réplica)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre a '''Réplica''' do item Aylie. Para o fansite item, veja [[Aylie]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Aylie (Réplica)\n| flavortext       = Souvenir from Thais Museum.\n| itemclass        = Itens de Decoração\n| primarytype      = Decorações\n| secondarytype    = Réplicas de Itens de Fansites\n| attrib           = Nenhum.\n| stackable        = não\n| weight           = 12.06\n| mercado          = sim\n| droppedby        = Ninguém.\n| npcprice         = 20 [[Silver Raid Token]]s\n| buyfrom          = Jorge\n| sellto           = Jogadores.\n| implemented      = 15.01.51b64a\n| notes            = Esse item é uma réplica do [[Aylie]]. É feito e vendido pelo NPC [[Jorge]]. Por ser uma réplica, ele não tem nenhum efeito ao ser usado.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64656,
+    "ns": 0,
+    "title": "Banor Doll (Réplica)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre a '''Réplica''' do item Banor Doll. Para o fansite item, veja [[Banor Doll]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Banor Doll (Réplica)\n| flavortext       = Souvenir from Thais Museum.\n| itemclass        = Itens de Decoração\n| primarytype      = Decorações\n| secondarytype    = Réplicas de Itens de Fansites\n| attrib           = Nenhum.\n| stackable        = não\n| weight           = 38.00\n| mercado          = sim\n| droppedby        = Ninguém.\n| npcprice         = 20 [[Silver Raid Token]]s\n| buyfrom          = Jorge\n| sellto           = Jogadores.\n| implemented      = 15.01.51b64a\n| notes            = Esse item é uma réplica do [[Banor Doll]]. É feito e vendido pelo NPC [[Jorge]]. Por ser uma réplica, ele não tem nenhum efeito ao ser usado.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64657,
+    "ns": 0,
+    "title": "Dread Doll (Réplica)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre a '''Réplica''' do item Dread Doll. Para o fansite item, veja [[Dread Doll]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Dread Doll (Réplica)\n| flavortext       = Souvenir from Thais Museum.\n| itemclass        = Itens de Decoração\n| primarytype      = Decorações\n| secondarytype    = Réplicas de Itens de Fansites\n| attrib           = Nenhum.\n| stackable        = não\n| weight           = 11.00\n| mercado          = sim\n| droppedby        = Ninguém.\n| npcprice         = 20 [[Silver Raid Token]]s\n| buyfrom          = Jorge\n| sellto           = Jogadores.\n| implemented      = 15.01.51b64a\n| notes            = Esse item é uma réplica do [[Dread Doll]]. É feito e vendido pelo NPC [[Jorge]]. Por ser uma réplica, ele não tem nenhum efeito ao ser usado.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64658,
+    "ns": 0,
+    "title": "Magic Hat (Réplica)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre a '''Réplica''' do item Magic Hat. Para o fansite item, veja [[Magic Hat]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Magic Hat (Réplica)\n| flavortext       = Souvenir from Thais Museum.\n| itemclass        = Itens de Decoração\n| primarytype      = Decorações\n| secondarytype    = Réplicas de Itens de Fansites\n| attrib           = Nenhum.\n| stackable        = não\n| weight           = 6.30\n| mercado          = sim\n| droppedby        = Ninguém.\n| npcprice         = 20 [[Silver Raid Token]]s\n| buyfrom          = Jorge\n| sellto           = Jogadores.\n| implemented      = 15.01.51b64a\n| notes            = Esse item é uma réplica do [[Magic Hat]]. É feito e vendido pelo NPC [[Jorge]]. Por ser uma réplica, ele não tem nenhum efeito ao ser usado.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64659,
+    "ns": 0,
+    "title": "The Dragon Spirit (Réplica)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre a '''Réplica''' do item The Dragon Spirit. Para o fansite item, veja [[The Dragon Spirit]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = The Dragon Spirit (Réplica)\n| flavortext       = Souvenir from Thais Museum.\n| itemclass        = Itens de Decoração\n| primarytype      = Decorações\n| secondarytype    = Réplicas de Itens de Fansites\n| attrib           = Nenhum.\n| stackable        = não\n| weight           = 26.02\n| mercado          = sim\n| droppedby        = Ninguém.\n| npcprice         = 20 [[Silver Raid Token]]s\n| buyfrom          = Jorge\n| sellto           = Jogadores.\n| implemented      = 15.01.51b64a\n| notes            = Esse item é uma réplica do [[The Dragon Spirit]]. É feito e vendido pelo NPC [[Jorge]]. Por ser uma réplica, ele não tem nenhum efeito ao ser usado.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64660,
+    "ns": 0,
+    "title": "Aurora's Collection (Réplica)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre a '''Réplica''' do item Aurora's Collection. Para o fansite item, veja [[Aurora's Collection]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Aurora's Collection (Réplica)\n| flavortext       = Souvenir from Thais Museum.\n| itemclass        = Itens de Decoração\n| primarytype      = Decorações\n| secondarytype    = Réplicas de Itens de Fansites\n| attrib           = Nenhum.\n| stackable        = não\n| weight           = 7.09\n| mercado          = sim\n| droppedby        = Ninguém.\n| npcprice         = 20 [[Silver Raid Token]]s\n| buyfrom          = Jorge\n| sellto           = Jogadores.\n| implemented      = 15.01.51b64a\n| notes            = Esse item é uma réplica do [[Aurora's Collection]]. É feito e vendido pelo NPC [[Jorge]]. Por ser uma réplica, ele não tem nenhum efeito ao ser usado. Pode ser equipado no slot extra do [[inventário]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 64661,
+    "ns": 0,
+    "title": "Bard Doll (Réplica)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre a '''Réplica''' do item Bard Doll. Para o fansite item, veja [[Bard Doll]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Bard Doll (Réplica)\n| flavortext       = Souvenir from Thais Museum.\n| itemclass        = Itens de Decoração\n| primarytype      = Decorações\n| secondarytype    = Réplicas de Itens de Fansites\n| attrib           = Nenhum.\n| stackable        = não\n| weight           = 8.50\n| mercado          = sim\n| droppedby        = Ninguém.\n| npcprice         = 20 [[Silver Raid Token]]s\n| buyfrom          = Jorge\n| sellto           = Jogadores.\n| implemented      = 15.01.51b64a\n| notes            = Esse item é uma réplica do [[Bard Doll]]. É feito e vendido pelo NPC [[Jorge]]. Por ser uma réplica, ele não tem nenhum efeito ao ser usado.\n}}"
+       }
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

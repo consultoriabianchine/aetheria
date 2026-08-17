@@ -1,0 +1,15 @@
+<header>
+  <a class="brand" routerLink="/creatures">Aetheria · Central de Comando</a>
+  <nav>
+    <a routerLink="/creatures" routerLinkActive="active">Criaturas</a>
+    <a routerLink="/maps" routerLinkActive="active">Mapas</a>
+    <a routerLink="/hunts" routerLinkActive="active">Hunts</a>
+  </nav>
+  <div class="token">
+    <label for="token">Admin token</label>
+    <input id="token" type="text" [value]="api.token()" (change)="api.setToken($any($event.target).value)" placeholder="dev-admin-token" />
+  </div>
+</header>
+<main>
+  <router-outlet />
+</main>

@@ -1,0 +1,46 @@
+<h1>Criaturas</h1>
+<p class="sub">Central de Comando — editor de sprites, outfits e animação.</p>
+
+<div class="toolbar">
+  <button (click)="load()" [disabled]="loading()">Atualizar</button>
+</div>
+
+@if (error()) {
+  <p class="error">{{ error() }}</p>
+}
+@if (loading()) {
+  <p>Carregando…</p>
+}
+
+@if (!loading() && !error()) {
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Slug</th>
+        <th>Tipo</th>
+        <th>Status</th>
+        <th>Versão</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (c of creatures(); track c.creatureId) {
+        <tr>
+          <td class="mono">#{{ c.creatureId }}</td>
+          <td>{{ c.name }}</td>
+          <td class="mono">{{ c.slug }}</td>
+          <td>{{ c.type }}</td>
+          <td>
+            <span class="badge" [class.complete]="c.status === 'complete'" [class.partial]="c.status === 'partial'">
+              {{ c.status === 'complete' ? 'Completo' : c.status === 'partial' ? 'Parcial' : 'Sem animação' }}
+            </span>
+          </td>
+          <td class="mono">{{ c.animationVersion ?? '—' }}</td>
+          <td><a [routerLink]="['/creatures', c.creatureId, 'animation']">Editar animação</a></td>
+        </tr>
+      }
+    </tbody>
+  </table>
+}

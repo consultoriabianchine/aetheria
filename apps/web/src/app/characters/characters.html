@@ -12,8 +12,11 @@
         <div class="char-row" (click)="enter(c)">
           <div class="char-avatar">{{ c.name.charAt(0) }}</div>
           <div class="char-info">
-            <div class="char-name">{{ c.name }}</div>
-            <div class="char-meta">Nível {{ c.level }} · {{ c.experience }} XP</div>
+            <div class="char-name">
+              {{ c.name }}
+              <span class="vocation-badge" [class]="c.vocation">{{ c.promotedName }}</span>
+            </div>
+            <div class="char-meta">Nível {{ c.level }} · {{ c.experience }} XP · {{ c.gold }} gold</div>
           </div>
           <button class="btn-primary small">Entrar</button>
         </div>
@@ -22,10 +25,32 @@
       }
     </div>
 
+    <div class="divider"></div>
+
     <div class="create">
       <input [(ngModel)]="newName" (keydown.enter)="create()" placeholder="Nome do novo personagem (3-16)" maxlength="16" />
-      <button class="btn-primary" (click)="create()">Criar</button>
     </div>
+
+    <div class="vocation-grid">
+      @for (v of vocations(); track v.id) {
+        <button
+          class="vocation-card"
+          [class.selected]="selectedVocation() === v.id"
+          (click)="selectedVocation.set(v.id)"
+          type="button"
+        >
+          <div class="vc-name">{{ v.name }}</div>
+          <div class="vc-role">{{ v.role }}</div>
+          <div class="vc-tags">
+            @for (t of v.tags; track t) {
+              <span class="vc-tag">{{ t }}</span>
+            }
+          </div>
+        </button>
+      }
+    </div>
+
+    <button class="btn-primary create-btn" (click)="create()">Criar</button>
 
     @if (state.createError(); as err) {
       <div class="error">{{ err }}</div>

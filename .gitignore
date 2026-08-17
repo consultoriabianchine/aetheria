@@ -5,7 +5,7 @@ coverage/
 *.log
 .DS_Store
 apps/web/.angular/
-apps/web/src/assets/items/
+# apps/web/src/assets/items/
 packages/database/generated/
 apps/tibiawiki-importer/assets/
-apps/tibiawiki-importer/exports/
+apps/tibiawiki-importer/exports/apps/tibiawiki-importer/data/wiki-items-raw/

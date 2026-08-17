@@ -1,0 +1,1926 @@
+{
+ "query": {
+  "pages": [
+   {
+    "pageid": 7342,
+    "ns": 0,
+    "title": "Golden Newspaper",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|''Esta página é sobre o '''fansite item''' Golden Newspaper. Para à réplica, veja [[Golden Newspaper (Réplica)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name             = Golden Newspaper\n| flavortext       = Tibia's most amazing news can be read in it. It was awarded for winning a TibiaNews contest\n| itemclass        = Itens de Decoração\n| primarytype      = Itens de Fansites\n| secondarytype    = Documentos e Papéis\n| tertiarytype     = \n| attrib           = Reage ao dar \"Use\".\n| stackable        = não\n| weight           = 24.00\n| mercado          = não\n| sounds           = \"It's news to me!\"; \"News, updated as infrequently as possible!\"; \"Extra!  Extra!  Read all about it!\"; \"Fresh off the press!\".\n| droppedby        = Ninguém.\n| buyfrom          = Jogadores.\n| sellto           = Jogadores.\n| implemented      = 8.2\n| notes            = \n* Item oficial do ex-fansite '''TibiaNews'''.\n* Ao usá-lo, o personagem verá algumas notícias sobre o Tibia. \n* Um pode ser visto na exibição de prêmios de Thais aos domingos.\n\n<noinclude><gallery perrow=\"3\">\nArquivo:Golden_newspaper_1.JPG|'''Golden Newspaper''' na casa do personagem {{character|Lord Mijeman}} no servidor [[Calmera]].\nArquivo:Golden_newspaper_2.jpg|'''Golden Newspaper''' na casa da personagem {{character|Cantinelle}} no servidor [[Calmera]].\n</gallery></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7627,
+    "ns": 0,
+    "title": "Bill",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bill\n| flavortext     = This is a bill for an expensive magicians hat and several rabbits.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| attrib         = Nenhum.\n| weight         = 1.50\n| stackable      = não\n| npcprice       = 8 000\n| droppedby      = Ninguém.\n| buyfrom        = Black Bert\n| sellto         = Jogadores.\n| implemented    = 7.24\n| notes          = Mesmo sprite de um [[document]].\n<noinclude><p><spoiler>\n* Obtido e usado durante a [[The Postman Missions Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7628,
+    "ns": 0,
+    "title": "Blank Paper",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Blank Paper\n| flavortext     = It is rewriteable.\n| itemclass      = Outros Itens\n| primarytype    = \n| secondarytype  = Documentos e Papéis\n| attrib         = Regravável.\n| stackable      = não\n| weight         = 0.50\n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Um pode ser encontrado no [[Yalahar Magician Quarter]].\n<noinclude><p><spoiler>\n* Obtido e usado durante a [[The Cradle of Monsters Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7630,
+    "ns": 0,
+    "title": "Building Plans for a Ship",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Building Plans for a Ship\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = 1.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.1\n| notes          = \n<noinclude><p><spoiler>\n* Obtido e usado durante a [[Secret Service Quest]] (CGB).\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7631,
+    "ns": 0,
+    "title": "Certificate",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Certificate\n| flavortext     = You have mastered the Dream Challenge and may apply for joining the order of the Nightmare Knights.\n| itemclass      = Itens de Decoração\n| primarytype    = Documentos e Papéis\n| secondarytype  = \n| attrib         = Pode ser pendurado em paredes.\n| weight         = 1.50\n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.9\n| notes          = <noinclude><p><spoiler>* Recompensa da [[Dreamer's Challenge Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7632,
+    "ns": 0,
+    "title": "Christmas Card",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Christmas Card\n| flavortext     =  \n| itemclass      = Itens de Decoração\n| primarytype    = Documentos e Papéis\n| secondarytype  = \n| stackable      = não\n| attrib         = Nenhum.\n| weight         = 1.00\n| value          = 10\n| npcvalue       = 0\n| npcprice       = 10\n| sounds         = Merry Christmas, \"Nome do personagem\"\n| droppedby      = Ninguém.\n| buyfrom        = Messenger Of Santa\n| sellto         = Jogadores.\n| implemented    = 7.9\n| notes          = Um bom cartão para dar a seus amigos. Quando você usa ele, aparece uma mensagem em laranja: '''Merry Christmas, \"Nome do personagem\"'''.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7633,
+    "ns": 0,
+    "title": "Document",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Document\n| flavortext     = It is writeable.\n| itemclass      = Outros Itens\n| primarytype    = \n| secondarytype  = Documentos e Papéis\n| stackable      = não\n| attrib         = Pode ser escrito.\n| weight         = 1.50\n| value          = \n| npcvalue       = 0\n| npcprice       = 12\n| droppedby      = Ninguém.\n| buyfrom        = Ahmet, Bashira, Gorn, Sarina, Thomas, Bezil, Nezil, Shiantis, Halif, Timur, Bertha, Perod, Red Lilly, Gree Dee, Zora\n| sellto         = Jogadores.\n| notes          = Tem a mesma aparência de uma [[Bill]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7634,
+    "ns": 0,
+    "title": "Document (Certificate)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Document (Certificate)\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = \n| secondarytype  = Documentos e Papéis\n| stackable      = não\n| attrib         = Não pode ser reescrito.\n| weight         = 2.00\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.2\n| notes          = O local onde [[Fishing Master Certificate (Book)|este documento]] aparece diariamente é na cela de [[Santiago]] em [[Rookgaard]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7635,
+    "ns": 0,
+    "title": "Faded Last Will",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Faded Last Will\n| flavortext     = Supposedly the last will of someone. Whatever may have been written on it is long vanished.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| attrib         = Não pode ser escrito.\n| weight         = 2.00\n| mercado        = não\n| stackable      = não\n| npcprice       = 600\n| droppedby      = Ninguém.\n| buyfrom        = Black Bert\n| sellto         = Jogadores.\n| implemented    = 8.6\n| notes          = Tem a mesma aparência que um [[Deed of Ownership (Book)]], [[Document (Certificate)]] e um [[Tactical Map]].\n<noinclude><p><spoiler>\n* Obtido e usado durante a [[The Spirit Will Get You Quest]].\n* Mesmo que você o compre este item no NPC Black Bert, você precisará ter aberto os baús para poder entregá-los para a NPC Cranky Lizard Crone durante essa quest, então apenas o compre se você o tiver perdido.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7636,
+    "ns": 0,
+    "title": "Gingerbread Recipe",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Gingerbread Recipe\n| flavortext     = Use it to learn how to make Gingerbreadman in the christmas bakery.\n| itemclass      = Outros Itens\n| primarytype    = \n| secondarytype  = Documentos e Papéis\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = 2.00\n| value          = \n| npcprice       = 10 [[Christmas Token]]s\n| sounds         = \"You can now make gingerbread from normal cake dough in Santa's bakery.\"\n| droppedby      = Ninguém.\n| buyfrom        = Ruprecht\n| sellto         = Jogadores.\n| implemented    = 7.9\n| notes          = Mesmo sprite de um [[Parchment|Yellow Parchment]], [[Parchment (Poetry)]] e [[Research Notes]].<br />\n\nSomente uma '''Gingerbread Recipe''' pode ser usado por personagem. [[Gingerbreadman|Gingerbreadmen]] pode ser feito usando um [[scythe]] para cortar [[wheat]] de um [[wheat field]], leve o [[flour]] em um mill, adicione [[milk]] com um [[trough]] ou [[bucket]] para fazer [[Lump of Cake Dough]] e em um forno na [[Christmas Bakery]] localizado em [[Vega]] na Santa's house. Nota: Você pode fazer o gingerbreadmen somente se você usar o '''Gingerbread Recipe''' (ele vai desaparecer).\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7637,
+    "ns": 0,
+    "title": "Golem Blueprint",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Golem Blueprint\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| attrib         = Nenhum.\n| weight         = 1.20\n| value          = \n| stackable      = não\n| droppedby      = Ninguém.\n| npcprice       = 13 500\n| buyfrom        = Black Bert\n| sellto         = Jogadores.\n| implemented    = 8.5\n| notes          = Mesmo sprite de um [[Map (Brown)|Brown Map]].\n<noinclude><p><spoiler>\n* Obtido e usado durante a [[Shadows of Yalahar Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7638,
+    "ns": 0,
+    "title": "Blank Poetry Parchment",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se este não é item que você procura, veja a página [[Parchment|Parchment (Desambiguação)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Blank Poetry Parchment\n| flavortext     = Use your inkwell on it to try writing a poem.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| stackable      = não\n| writable       = não\n| attrib         = Pode ser usado um [[inkwell]] nele.\n| weight         = 2.00\n| value          = \n| npcprice       = 60\n| droppedby      = Ninguém.\n| buyfrom        = Olrik\n| sellto         = Jogadores.\n| implemented    = 8.1\n| notes          = Quando você usa um [[inkwell]] nele, ele vira um [[Parchment (Poetry)]].\n<noinclude><spoiler>\n* Obtido e usado durante a [[Kissing a Pig Quest]].\n* Ao usar um [[inkwell]], um flavortext é exibido:</br><font color=green>'''''It says 'Roses are red...'.'''''</font><br />\n:Duas vezes:</br><font color=green>'''''It says 'Roses are red, violets are blue...' Sounds good, but what now..'''''</font> ou <font color=green>'''''It says 'Roses are red, and so is my blood.' Damn, that sounds stupid. You have to start over.'''''</font><br />\n:Três vezes:</br><font color=green>'''''It says 'Roses are red, violets are blue, sugar is sweet...' Very poetic, now for the final rhyme.'''''</font> ou <font color=green>'''''It says 'Roses are red, violets are blue, I love blood and carnage...' No, no, this is a war poem.'''''</font> <br />\n:Última vez:</br><font color=green>'''''It says 'Roses are red, violets are blue, sugar is sweet and so are you.' Excellent!.'''''</font> ou <font color=green>'''''It says 'Roses are red, violets are blue, sugar is sweet, there's mud on my shoe.' You blew it.'''''</font><br />\n</spoiler></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7639,
+    "ns": 0,
+    "title": "Greeting Card",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Greeting Card\n| flavortext     =  \n| itemclass      = Itens de Decoração\n| primarytype    = Documentos e Papéis\n| secondarytype  = \n| stackable      = não\n| writable       = sim\n| weight         = 1.00\n| value          = Negociável\n| npcprice       = 30\n| droppedby      = Ninguém.\n| buyfrom        = Gorn, Perod, Thomas, Bertha, Shiantis\n| sellto         = Jogadores.\n| implemented    = 7.9\n| notes          = Nenhuma.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7640,
+    "ns": 0,
+    "title": "Julius' Map",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Julius' Map\n| flavortext     = Julius gave it to you to have at least five unusual spots on Vengoth marked.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| attrib         = Não pode ser lido.\n| weight         = 7.90\n| stackable      = não\n| value          = \n| npcprice       = 25 000\n| droppedby      = Ninguém.\n| buyfrom        = Black Bert\n| sellto         = Jogadores.\n| implemented    = 8.4\n| notes          = Tem a mesma aparência de um [[Map (Colour)|Coloured Map]] e um [[Nautical Map]].\n<noinclude><p><spoiler>\n* Obtido e usado durante a [[Blood Brothers Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7641,
+    "ns": 0,
+    "title": "Label",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Label\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Documentos e Papéis\n| secondarytype  = \n| writable       = sim\n| weight         = 0.10\n| value          = 1\n| npcprice       = 1\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        =  Amra, Auron, Benjamin, Chemar, Chrystal, Dove, Ezean, Fyodor, Gnomailion, Herbert, Hireling (Trader), Jakahr, Leonora, Liane, Lokur, Murim, Nelly, Olrik, Ray, Redward, Robson, Rock In A Hard Place, Wally\n| sellto         = Jogadores.\n| notes          = Labels devem ter o nome do jogador que irá receber a [[parcel]] e depois ser colocado dentro do parcel. Pode ser escrito 79 letras nele. \n| stackable      = não\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7642,
+    "ns": 0,
+    "title": "Letter",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Letter\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Documentos e Papéis\n| secondarytype  = \n| stackable      = não\n| writable       = sim\n| weight         = 0.50\n| npcvalue       = 0\n| npcprice       = 8\n| value          = \n| droppedby      = [[Crazed Dwarf]], [[Dwarf]].\n| buyfrom        = Amra, Auron, Benjamin, Chemar, Chrystal, Dove, Fyodor, Gnomailion, Herbert, Hireling (Trader), Jakahr, Leonora, Liane, Lokur, Murim, Nelly, Olrik, Ray, Redward, Robson, Rock In A Hard Place, Wally\n| sellto         = Jogadores.\n| notes          = Seu preço é  5 [[gp]] se você já tiver completado a [[The Postman Missions Quest]]. Pode se escrever mais de 1999 letras em uma letter. Você só pode enviar 20 [[Parcel]]s ou [[Letter]]s em 10 minutos, caso ultrapasse, você ficará impedido de enviar por um tempo. Mesmo sprite do [[Invitation]].\n\n<div class=\"toccolours mw-collapsible mw-collapsed\" style=\"width:70%; margin: 4px 0px;\">'''Enviando Letters'''<div class=\"mw-collapsible-content\">\n<table><tr><td align=left>\n[[Letter]]s são usadas para enviar mensagens de texto para si mesmo ou para outras pessoas. Para enviar uma letter, você deve seguir estas instruções:\n\n* Primeiro, você precisa comprar uma [[letter]] nova de algum dos [[NPC Carteiro|carteiros]] (Geralmente encontrados perto do [[Depot]]). Somente [[Dwarf|Dwarves]] dropam [[letter]]s novas.\n* Para enviar uma carta, a primeira linha deve ter o nome do [[personagem]] para qual você quer enviar. O resto da carta é onde você escreve a mensagem. Exemplo de carta:\n----\n''Nome do Personagem''<br />\n\nOlá meu velho amigo,<br />\n[...]\n----\n\n* Quando você terminar de endereçar e escrever sua carta, simplesmente jogue-a em cima de uma [[mailbox]]. Tenha cuidado com algumas mailboxes especiais em mainland que não podem ser usadas para enviar [[parcel]]s e [[letter]]s. Um exemplo é a mailbox em [[Vega]] na '''Santa's Home''', ela é parte da [[The Postman Missions Quest]].\n</td></tr></table></div></div>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7643,
+    "ns": 0,
+    "title": "Lottery Ticket",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Lottery Ticket\n| flavortext     = It has not been used yet.\n| itemclass      = Itens de Decoração\n| primarytype    = Documentos e Papéis\n| secondarytype  = \n| attrib         = Nenhum\n| weight         = 1.20\n| stackable      = não\n| npcprice       = 100 [[Empty Potion Flask]]s\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Sandra\n| sellto         = Jogadores.\n| implemented    = 7.8\n| notes          = Ele tem a mesma aparência do [[Poem Scroll]].\n<noinclude><p><spoiler>*Este item faz parte da [[Lottery Ticket Quest]].\n*Após usar esse item você tem a chance de receber um [[Winning Lottery Ticket]].\n*[[Arquivo:Achievement.gif]] Usando 500 Lottery Tickets não premiados você irá ganhar o achievement '''\"{{Achievement|Jinx}}\"'''.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7644,
+    "ns": 0,
+    "title": "Map (Brown)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Map (Brown)\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Documentos e Papéis\n| secondarytype  = \n| attrib         = Nenhum.\n| weight         = 8.30\n| stackable      = não\n| mercado        = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Existe um variante deste mapa, o [[Map (Colour)]].\n<noinclude><p><spoiler>\n* Pode ser obtido na [[Demona Quest]] e nas [[Formorgar Mines]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7645,
+    "ns": 0,
+    "title": "Map (Colour)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Map (Colour)\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Documentos e Papéis\n| secondarytype  = \n| attrib         = Pode ser lido.\n| weight         = 7.90\n| stackable      = não\n| mercado        = não\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Existe um variante deste mapa, o [[Map (Brown)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9187,
+    "ns": 0,
+    "title": "Formula for a Memory Potion",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Formula for a Memory Potion\n| flavortext     = Eclesius invented it.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| attrib         = Nenhum.\n| weight         = 1.10\n| value          = \n| npcprice       = 5 000\n| stackable      = não\n| droppedby      = Ninguém.\n| implemented    = 8.5\n| buyfrom        = Black Bert\n| sellto         = Jogadores.\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[The Scatterbrained Sorcerer Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9207,
+    "ns": 0,
+    "title": "Deed of Ownership",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Deed of Ownership\n| flavortext     = It declares the ownership of the dwarf bridge, but is obviously a fake.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| weight         = 1.50\n| value          = \n| npcprice       = 1 000\n| attrib         = Nenhum.\n| stackable      = não\n| droppedby      = Ninguém.\n| sellto         = Jogadores.\n| buyfrom        = Ahmet\n| implemented    = 8.2\n| notes          = Tem o mesmo sprite de um [[Spyreport]].\n<noinclude><p><spoiler>\n* Obtido e usado durante a [[The Thieves Guild Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9379,
+    "ns": 0,
+    "title": "Fan Club Membership Card",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Fan Club Membership Card\n| flavortext     = This king Tibianus fan club premium membership card is issued to 'The Evil Mastermind'.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| attrib         = Nenhum.\n| weight         = 1.50\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| droppedby      = [[Evil Mastermind]].\n| npcprice       = 10 000\n| buyfrom        = Black Bert\n| sellto         = Jogadores.\n| implemented    = 8.5\n| notes          = Use o corpo do [[Evil Mastermind]] quando morto para obtê-lo. É uma prova que você o matou.\n<noinclude><p><spoiler>* Pode ser obtido durante a [[The Isle of Evil Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9418,
+    "ns": 0,
+    "title": "Intelligence Reports",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Intelligence Reports\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| attrib         = Nenhum.\n| weight         = 1.20\n| value          = \n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.1\n| notes          = Mesmo sprite de um [[Parchment]].\n<noinclude><p><spoiler>\n* Obtido e usado durante a [[Secret Service Quest]] (TBI).\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9531,
+    "ns": 0,
+    "title": "Letter from the Wizards",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{event}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Letter from the Wizards\n| flavortext     = A letter from the Three Wizards.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| writable       = não\n| attrib         = Nenhum.\n| mercado        = não\n| weight         = 0.50\n| npcvalue       = 0\n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.7\n| notes          = Mesmo sprite de um [[Greeting Card]]. Pode ser obtido usando um [[Envelope from the Wizards]].\n<noinclude><p><spoiler>\n* Faz parte da [[World Quest]] [[The Colours of Magic]]. \n* Ao dar \"Use\" no item, ele fala as regras do evento.\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9532,
+    "ns": 0,
+    "title": "Letter to Chantalle",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Letter to Chantalle\n| flavortext     = Carina from Venore tells Chantalle that the 'precious necklace' she loved so much is still for sale.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| stackable      = não\n| writable       = não\n| attrib         = Nenhum.\n| weight         = 0.10\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.2\n| notes          = Você pode ler o que está escrito dando look na carta. Mesmo sprite de uma [[Letter to Eremo]], [[Letter to Markwin]], [[Secret Letter]] e [[Stamped Letter]].\n<noinclude><p><spoiler>\n* Obtido e usado durante a [[The Thieves Guild Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9533,
+    "ns": 0,
+    "title": "Letter to Eremo",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Letter to Eremo\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| stackable      = não\n| readable       = não\n| attrib         = Nenhum.\n| weight         = 0.50\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.8\n| notes          = \n<noinclude><p><spoiler>\n* Obtido e usado durante a [[The Shattered Isles Quest]].\n* Caso perca este item, você terá que esperar '''7 dias''' regulares para pedir a carta novamente ao NPC [[Morgan]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9535,
+    "ns": 0,
+    "title": "Letter to Markwin",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Letter to Markwin\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| attrib         = Nenhum.\n| writable       = não\n| weight         = 0.50\n| value          = \n| npcprice       = 8 000\n| npcvalue       = 0\n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Black Bert\n| sellto         = Jogadores.\n| implemented    = 7.24\n| notes          = Você não pode ler o que está escrito. Mesmo sprite de uma [[Letter to Chantalle]], [[Letter to Eremo]], [[Secret Letter]] e [[Stamped Letter]].\n<noinclude><p><spoiler>\n* Obtido e usado na [[The Postman Missions Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9551,
+    "ns": 0,
+    "title": "Map to the Unknown",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Map to the Unknown\n| flavortext     = Treasured by adventurers and explorers alike.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| attrib         = Nenhum.\n| weight         = 6.80\n| stackable      = não\n| value          = \n| npcprice       = 650\n| droppedby      = Ninguém.\n| buyfrom        = Black Bert\n| sellto         = Jogadores.\n| implemented    = 8.54\n| notes          = <noinclude><p><spoiler>* Usado na [[The New Frontier Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 26206,
+    "ns": 0,
+    "title": "Nomad Parchment",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Nomad Parchment\n| flavortext     = It seems to be a list of people to be eliminated. The first name on the list is '[[Arito]]'.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| attrib         = Nenhum.\n| writable       = não\n| stackable      = não\n| weight         = 2.00\n| value          = \n| npcprice       = 0\n| npcvalue       = 0\n| droppedby      = [[Crypt Defiler]], [[Grave Robber]], [[Nomad]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.1\n| notes          = Parece ser uma lista de pessoas para serem eliminadas. O primeiro nome nela é [[Arito]].\n<noinclude><p><spoiler>* 01 é necessário para a [[Arito's Task Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 26463,
+    "ns": 0,
+    "title": "Contract",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Contract\n| flavortext     = It is not signed yet.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| attrib         = Não pode ser escrito.\n| weight         = 2.00\n| stackable      = não\n| droppedby      = Ninguém.\n| trade          = não\n| npcprice       = 600\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.1\n| notes          = Tem a mesma aparência que um [[Deed of Ownership (Book)]], [[Document (Certificate)]] e um [[Tactical Map]].\n<noinclude><p><spoiler>* Obtido e usado durante a [[What a Foolish Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 30096,
+    "ns": 0,
+    "title": "Incantation Fragment",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Incantation Fragment\n| flavortext     = A torn piece of parchment, showing part of an arcane incantation rite.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| attrib         = \n| stackable      = não\n| weight         = 0.10\n| value          = \n| npcvalue       = 0\n| droppedby      = [[Necromancer Servant]].\n| npcprice       = 4 000\n| buyfrom        = Black Bert\n| sellto         = Jogadores.\n| implemented    = 10.1\n| notes          = <noinclude><p><spoiler>* Obtido e usado na [[The Gravedigger of Drefia Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 30122,
+    "ns": 0,
+    "title": "Incantation Scroll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Incantation Scroll\n| flavortext     = A scroll of parchment, inscribed with an arcane incantation rite.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| mercado        = não\n| stackable      = não\n| weight         = 0.10\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.1\n| notes          = <noinclude><p><spoiler>* Obtido e usado na [[The Gravedigger of Drefia Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 30351,
+    "ns": 0,
+    "title": "Crumpled Paper",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Crumpled Paper\n| flavortext     = A crumpled notice showing a recipe. Recipe for .. ck.. soup br... (herbs) celery ... chick... (dead) Use one knife pinch of... Stir.... Boil for... minutes, then Add... for ... taste.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| stackable      = não\n| weight         = 0.10\n| mercado        = não\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.1\n| notes          = <noinclude><p><spoiler>* Obtido e usado na [[The Gravedigger of Drefia Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 38677,
+    "ns": 0,
+    "title": "Arena Certificate",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Arena Certificate\n| flavortext     = An arena certificate.\n| itemclass      = Outros Itens\n| primarytype    = \n| secondarytype  = Documentos e Papéis\n| stackable      = não\n| readable       = sim\n| weight         = 0.50\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.94\n| removed        = 12.70\n| mercado        = não\n| notes          = Mesmo sprite do [[Scroll]]. Vem descrevendo a sua pontuação em uma [[Arena PvE]]. Pode ser obtido usando a [[Arena Certificates]] após lutar na arena.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42818,
+    "ns": 0,
+    "title": "Gnome Chart",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Gnome Chart\n| flavortext     = Used by gnomes to map out details of locations and structures.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| stackable      = não\n| weight         = 1.00\n| value          = \n| mercado        = não\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.50\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[Dangerous Depths Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42939,
+    "ns": 0,
+    "title": "Hastily Scribbled Note",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Hastily Scribbled Note\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| stackable      = não\n| weight         = 2.00\n| value          = \n| mercado        = não\n| droppedby      = Ninguém.\n| npcprice       = 3 000\n| buyfrom        = Black Bert\n| sellto         = Jogadores.\n| implemented    = 11.50\n| notes          = Para ler o conteúdo desde documento veja [[Hastily Scribbled Note (Book)]].\n<noinclude><p><spoiler>* Obtido e usado na [[Grimvale Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45483,
+    "ns": 0,
+    "title": "Birthday Card",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Birthday Card\n| flavortext     =  \n| itemclass      = Itens de Decoração\n| primarytype    = Documentos e Papéis\n| secondarytype  = \n| stackable      = não\n| attrib         = Nenhum.\n| weight         = 1.00\n| sounds         = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.02.7746\n| notes          = <noinclude><p><spoiler>* Possibilidade de ser obtido como recompensa do jogo \"Can Knockdown\" na [[Vigintia Island]] durante as comemorações de [[Aniversário do Tibia]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 47249,
+    "ns": 0,
+    "title": "Narsai's List",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Narsai's List\n| flavortext     = Needed ingredients: ten bottles of cactus milk, two pieces of crocodile leather and five jars of palm honey.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| writable       = não\n| stackable      = não\n| weight         = 0.30\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.20\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[Kilmaresh Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 52044,
+    "ns": 0,
+    "title": "Ancient Notes From The Knight Galthen",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n|  name           = Ancient Notes From The Knight Galthen\n|  flavortext     = \n|  itemclass      = Outros Itens\n|  primarytype    = Itens de Quest\n|  secondarytype  = Documentos e Papéis\n|  attrib         = Nenhum.\n|  writable       = não\n|  stackable      = não\n|  mercado        = não\n|  weight         = 2.00\n|  value          = \n|  droppedby      = Ninguém.\n|  buyfrom        = Jogadores.\n|  sellto         = Jogadores.\n|  implemented    = 12.70\n|  notes          = <noinclude><p><spoiler>* Obtido e usado na [[Adventures of Galthen Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55891,
+    "ns": 0,
+    "title": "Handwritten Message",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Handwritten Message\n| flavortext     = \"My ladies, I was so bold as to take this little treasure for myself. Very pleasing to the eye, indeed. Take this as a warning and stay clear of my territory. Yours sincerely, Sir Valorcrest\".\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| attrib         = Nenhum.\n| writable       = não\n| stackable      = não\n| mercado        = não\n| weight         = 1.00\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.90\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[Within the Tides Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55955,
+    "ns": 0,
+    "title": "Celestial Chart",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Celestial Chart\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| attrib         = \n| weight         = 0.20\n| stackable      = não\n| value          = \n| npcprice       = 10 000\n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Black Bert\n| sellto         = Jogadores.\n| implemented    = 12.90\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[Within the Tides Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 57955,
+    "ns": 0,
+    "title": "Armageddon Plans",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Armageddon Plans\n| flavortext     = \n| itemclass      = Documentos e Papéis\n| primarytype    = Decorações\n| secondarytype  =\n| attrib         = Nenhum.\n| writable       = não\n| stackable      = não\n| mercado        = não\n| weight         = 4.00\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Ninguém.\n| sellto         = Ninguém.\n| implemented    = 9.10\n| notes          = Pode ser visto na [[Isle of Merriment]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 58375,
+    "ns": 0,
+    "title": "Copied Research Notes",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Copied Research Notes\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| writable       = não\n| stackable      = não\n| weight         = 1.00\n| value          = \n| npcprice       = 5 000\n| droppedby      = Ninguém.\n| buyfrom        = Black Bert\n| sellto         = Jogadores.\n| implemented    = 13.10\n| notes          = <noinclude><p><spoiler>* Obtido e usado na [[The Cradle of Monsters Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 58377,
+    "ns": 0,
+    "title": "Crumbled Diary Page",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Crumbled Diary Page\n| flavortext     = The diary page deals with two pieces of an ancient key. One swallowed by a creature near Oramond's coast, one lost to eternal ice. It specifically tells the coordinates of their last known locations.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| attrib         = Nenhum.\n| mercado        = não\n| stackable      = não\n| weight         = 2.00\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 13.10\n| notes          = \n<noinclude><p><spoiler>\n* Obtido e usado durante a [[Adventures of Galthen Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 58502,
+    "ns": 0,
+    "title": "Letter (Ingol)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Letter (Ingol)\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| writable       = não\n| stackable      = não\n| weight         = 0.50\n| value          = \n| npcprice       = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 13.10\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[The Cradle of Monsters Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 58510,
+    "ns": 0,
+    "title": "Blank Parchment",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Blank Parchment\n| flavortext     = It is rewriteable.\n| itemclass      = Outros Itens\n| primarytype    = \n| secondarytype  = Documentos e Papéis\n| stackable      = não\n| writable       = sim\n| weight         = 2.00\n| value          = \n| droppedby      = Ninguém.\n| npcprice       = 8\n| npcvalue       = 0\n| buyfrom        = Fyodor\n| sellto         = Jogadores.\n| notes          = Nenhuma.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 58686,
+    "ns": 0,
+    "title": "Map (Exotic Locations)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Map (Exotic Locations)\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| attrib         = Nenhum.\n| weight         = 8.30\n| stackable      = não\n| mercado        = não\n| value          =\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.40\n| notes          = \n<noinclude><p><spoiler>\n* Obtido e usado na [[The Order of the Lion Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59097,
+    "ns": 0,
+    "title": "Bronze Deed",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Bronze Deed\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Documentos e Papéis\n| attrib         = Pode ser pendurado em paredes.\n| stackable      = não\n| weight         = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.31.9658\n| mercado        = não\n| notes          = Este é um dos prêmios para os personagens classificados entre as posições 51º e 100º no ranking do torneio [[Torneio Triumph|Triumph]]. Esta escritura contêm o nome do personagem criado para o torneio, o ranking, o nome do torneio e é assinado pela Cipsoft.\n{{Veja|Torneios|Torneio Triumph}}\n<noinclude>[[Categoria:Prêmios de Torneios]]</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59099,
+    "ns": 0,
+    "title": "Gold Deed",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Gold Deed\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Documentos e Papéis\n| attrib         = Pode ser pendurado em paredes.\n| stackable      = não\n| weight         = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.31.9658\n| mercado        = não\n| notes          = Este é um dos prêmios para os personagens classificados entre as posições 1º e 10º no ranking do torneio [[Torneio Triumph|Triumph]]. Esta escritura contêm o nome do personagem criado para o torneio, o ranking, o nome do torneio e é assinado pela Cipsoft.\n{{Veja|Torneios|Torneio Triumph}}\n<noinclude>[[Categoria:Prêmios de Torneios]]</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59951,
+    "ns": 0,
+    "title": "Heliodor's Scrolls",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n|  name           = Heliodor's Scrolls\n|  flavortext     = \n|  itemclass      = Outros Itens\n|  primarytype    = Itens de Quest\n|  secondarytype  = Documentos e Papéis\n|  attrib         = Nenhum.\n|  writable       = não\n|  stackable      = não\n|  mercado        = não\n|  weight         = 0.80\n|  value          = \n|  npcprice       = 50000\n|  droppedby      = Ninguém.\n|  buyfrom        = Black Bert\n|  sellto         = Jogadores.\n|  implemented    = 13.20.13560\n|  notes          = <noinclude><p><spoiler>* Obtido e usado na missão ''Paradise Lost'' da [[Grimvale Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7504,
+    "ns": 0,
+    "title": "Scroll of Heroic Deeds",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Scroll of Heroic Deeds\n| flavortext     = \n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Produtos de Criaturas\n| secondarytype  = Documentos e Papéis\n| attrib         = \n| readable = não\n| stackable      = sim\n| weight         = 0.79\n| value          = 230\n| npcvalue       = 230\n| droppedby      = [[Hero]], [[Renegade Knight]], [[Vile Grandmaster]].\n| buyfrom        = Jogadores.\n| sellto         = Todd, Yasir\n| implemented    = 8.6\n| notes          = Nenhuma.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7646,
+    "ns": 0,
+    "title": "Note from the Thieves Guild",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Note from the Thieves Guild\n| flavortext     = It is a warning from the thieves guild.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = 1.50\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.2\n| notes          = Mesmo sprite de um [[Old Piece of Paper]].\n<noinclude><p><spoiler>\n* Obtido e usado durante a [[The Thieves Guild Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7647,
+    "ns": 0,
+    "title": "Old Piece of Paper",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Old Piece of Paper\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| attrib         = Nenhum.\n| stackable      = não\n| readable       = sim\n| weight         = 2.00\n| implemented    = 8.4\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| mercado       = não\n| notes          = Mesmo sprite do [[Note from the Thieves Guild]]. Esta é uma folha de papel de um diário. Para ver o conteúdo, veja  [[Marziel's Diary II (Book)]].\n<noinclude><p><spoiler>\n* Este item faz parte da [[Blood Brothers Quest]]. Existem 06 pedaços de um [[Blood Brothers Quest#Missing Pages|diário vampiro]], todos com o nome de '''Old Piece of Paper''' e podem ser entregues ao NPC [[Julius]] em troca de 1000 pontos de experiência, cada pedaço.\n* Faz parte dos requerimentos para obter o [[Castlemania (Achievement)]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7648,
+    "ns": 0,
+    "title": "Paper",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Paper\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Documentos e Papéis\n| secondarytype  = \n| writable       = sim\n| stackable      = não\n| weight         = 1.00\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7650,
+    "ns": 0,
+    "title": "Parchment (Eclesius)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se este não é item que você procura, veja a página [[Parchment|Parchment (Desambiguação)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Parchment (Eclesius)\n| flavortext     = There's a questionaire for potential lovers on it.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| stackable      = não\n| mercado        = não\n| readable       = sim\n| attrib         = Nenhum.\n| weight         = 2.00\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.5\n| notes          = Você pode encontrar o conteúdo deste documento na página [[Questionaire (Book)]].\n<noinclude><spoiler>\n* Obtido e usado durante a [[The Scatterbrained Sorcerer Quest]].\n</spoiler></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7651,
+    "ns": 0,
+    "title": "Parchment (Poetry)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se este não é item que você procura, veja a página [[Parchment|Parchment (Desambiguação)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Parchment (Poetry)\n| flavortext     = It says 'Roses are red...'.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| attrib         = Nenhum.\n| writable       = não\n| stackable      = não\n| mercado        = não\n| weight         = 2.00\n| value          = \n| npcprice       = 0\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Ninguém.\n| sellto         = Jogadores.\n| implemented    = 8.1\n| notes          = Mesmo sprite de um [[Gingerbread Recipe]], [[Research Notes]] e [[Parchment|Yellow Parchment]].\n<noinclude><p><spoiler>\n* Adquirido ao usar um [[inkwell]] em um [[Blank Poetry Parchment]] durante a [[Kissing a Pig Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7653,
+    "ns": 0,
+    "title": "Plans for a Strange Device",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Plans for a Strange Device\n| flavortext     = You should bring them do Spectulus in Edron.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = 2.50\n| value          =\n| npcprice       = 1 000\n| droppedby      = Ninguém.\n| buyfrom        = Black Bert\n| sellto         = Jogadores.\n| implemented    = 8.54\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[Sea of Light Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7654,
+    "ns": 0,
+    "title": "Research Notes",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Research Notes\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = 2.00\n| value          = \n| npcprice       = 3 000\n| droppedby      = Ninguém.\n| buyfrom        = Black Bert\n| sellto         = Jogadores.\n| implemented    = 8.4\n| notes          = Mesmo sprite de um [[Gingerbread Recipe]], [[Parchment (Poetry)]] e [[Parchment|Yellow Parchment]].\n<noinclude><p><spoiler>\n* Obtido e usado na [[In Service of Yalahar Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7657,
+    "ns": 0,
+    "title": "Scroll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Scroll\n| flavortext     = It is rewriteable.\n| itemclass      = Outros Itens\n| primarytype    = \n| secondarytype  = Documentos e Papéis\n| writable       = sim\n| stackable      = não\n| weight         = 0.50\n| value          = \n| npcvalue       = 0\n| npcprice       = 5\n| droppedby      = [[Dark Monk]], [[Elf Arcanist]], [[Hero]], [[Monk]], [[Renegade Knight]], [[Vicious Squire]], [[Vile Grandmaster]].\n| droppedRaidby  = [[Fernfang]].\n| buyfrom        = Bashira, Ahmet, Sarina, Halif, Beatrice, Pompan, Rock In A Hard Place, Bezil, Nezil, Red Lilly, Nienna, Perod, Obi, Dixi, Al Dee, Lee'Delle, Bertha, Gorn, Lubo, Zora, Shiantis, Gree Dee,Timur:10, Thomas, Rafzan, Zethra\n| sellto         = Jogadores.\n| notes          = <noinclude><p><spoiler>* Recompensa da [[Steel Helmet Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9345,
+    "ns": 0,
+    "title": "Soul Contract",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Soul Contract\n| flavortext     = A contract in which some desperate person has sold his soul.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| attrib         = Nenhum.\n| weight         = 1.50\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| npcprice       = 666\n| buyfrom        = Black Bert\n| sellto         = Jogadores.\n| implemented    = 8.54\n| notes          = \n<noinclude><p><spoiler>* Faz parte da [[The New Frontier Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9470,
+    "ns": 0,
+    "title": "Sheet of Tracing Paper",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Sheet of Tracing Paper \n| flavortext     = It contains some strange symbols of the lizard language.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| stackable      = não\n| attrib         = Nenhum. \n| weight         = 1.00 \n| value          =  \n| droppedby      = Ninguém. \n| npcprice       = 500\n| buyfrom        = Black Bert\n| sellto         = Jogadores.\n| implemented    = 7.6\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[The Explorer Society Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9502,
+    "ns": 0,
+    "title": "Scribbled Sheet of Paper",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Scribbled Sheet of Paper \n| flavortext     = Only a single word is scribbled on the sheet: SOLOSARASATIQUARIUM. \n| itemclass      = Outros Itens \n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = 2.50 \n| value          = \n| droppedby      = Ninguém. \n| buyfrom        = Jogadores. \n| sellto         = Jogadores. \n| implemented    = 8.6 \n| notes          = <noinclude><p><spoiler>* Obtido e usado na [[Wrath of the Emperor Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9611,
+    "ns": 0,
+    "title": "Old Parchment",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Old Parchment\n| flavortext     = It is covered with foreign symbols.\n| itemclass      = Plantas, Produtos de Animais, Comidas e Bebidas\n| primarytype    = Produtos de Criaturas\n| secondarytype  = Documentos e Papéis\n| attrib         = Nenhum.\n| stackable      = sim\n| weight         = 2.00\n| npcvalue       = 500\n| droppedby      = [[Serpent Spawn]].\n| buyfrom        = Jogadores.\n| sellto         = Angus, Mortimer\n| implemented    = 7.6\n| notes          = Tem a mesma aparência de um [[Old Parchment (Tiquanda)]], [[Parchment]], [[Nomad Parchment]] e um [[Parchment (Grey)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 11913,
+    "ns": 0,
+    "title": "Parchment (Yellow)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se este não é item que você procura, veja a página [[Parchment|Parchment (Desambiguação)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Parchment (Yellow)\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Documentos e Papéis\n| writable       = sim\n| weight         = 2.00\n| stackable      = não\n| value          = 8 - 30\n| npcvalue       = 0\n| npcprice       = 8\n| droppedby      = Ninguém.\n| buyfrom        = Ahmet, Halif, Thomas, Timur, Bezil, Nezil, Perod, Bertha, Gorn, Sarina, Shiantis, Red Lilly, Gree Dee, Zora, Bashira\n| sellto         = Jogadores.\n| notes          = Você pode encontrar pergaminhos amarelo ao redor do Tibia, alguns deles são regraváveis​​. Qualquer coisa escrita em um pergaminho '''não''' regravável será permanente e '''não''' poderá ser alterado.\nEle se parece com um [[Gingerbread Recipe]], [[Research Notes]] e [[Parchment (Poetry)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 11915,
+    "ns": 0,
+    "title": "Parchment (Grey)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se este não é item que você procura, veja a página [[Parchment|Parchment (Desambiguação)]].}}</noinclude>\n{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Parchment (Grey)\n| flavortext     = It is rewritable.\n| itemclass      = Itens de Decoração\n| primarytype    = Documentos e Papéis\n| writable       = sim\n| stackable      = não\n| weight         = 2.00\n| value          = \n| npcvalue       = 5\n| npcprice       = 8\n| droppedby      = [[Pirate Ghost]]\n| buyfrom        = Thomas, Perod, Bertha, Gorn, Shiantis\n| sellto         = Perod, Gorn, Thomas, Bertha, Shiantis\n| notes          = \n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 20334,
+    "ns": 0,
+    "title": "Notes and Coordinates",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Notes and Coordinates\n| flavortext     = These scribblings are almost unreadable.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| stackable      = não\n| mercado        = não\n| attrib         = Nenhum.\n| weight         = 2.00\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 9.4\n| notes          = \n<noinclude><p><spoiler>\n* Obtido e usado durante a [[Liquid Black Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 23291,
+    "ns": 0,
+    "title": "Sheet of Tracing Paper (Blank)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Sheet of Tracing Paper (Blank)\n| flavortext     = It is Blank. \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| stackable      = não\n| attrib         = Nenhum. \n| weight         = 1.00 \n| value          =  \n| droppedby      = Ninguém. \n| npcprice       = 500\n| buyfrom        = Black Bert\n| sellto         = Jogadores.\n| implemented    = 7.6\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[The Explorer Society Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 23760,
+    "ns": 0,
+    "title": "Old Pirate Poem",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Old Pirate Poem\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| attrib         = Nenhum.\n| weight         = 2.00\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.5\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[Treasure Hunt Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 26497,
+    "ns": 0,
+    "title": "Signed Contract",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Signed Contract\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| attrib         = Não pode ser escrito.\n| weight         = 2.00\n| value          = \n| npcvalue       = 0\n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.1\n| notes          = Tem a mesma aparência de um [[Contract]].\n<noinclude><p><spoiler>\n* Obtido e usado durante a [[What a Foolish Quest]].\n* É obtido após você usar o [[Magical Inkwell]] no [[Contract]] para ser entregue ao NPC [[Sam]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 26506,
+    "ns": 0,
+    "title": "Old Encrypted Text",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Old Encrypted Text\n| flavortext     = Maybe a sorcerer can help you with the decryption.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| attrib         = Nenhum.\n| weight         = 2.00\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.5\n| notes          = Mesma aparência de um [[Old Piece of Paper]].\n<noinclude><p><spoiler>* Obtido e usado durante a [[Treasure Hunt Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 29069,
+    "ns": 0,
+    "title": "Old Parchment (Tiquanda)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Old Parchment (Tiquanda)\n| flavortext     = It is covered with foreign symbols.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = 2.00\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.6\n| notes          = Tem a mesma aparência de um [[Old Parchment]] que é loot de criaturas. Este item é obtido somente durante uma quest.\n<noinclude><p><spoiler>\n* Obtido e usado durante a [[The Ape City Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 30107,
+    "ns": 0,
+    "title": "Old Parchment (Drefia)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Old Parchment (Drefia)\n| flavortext     = This parchment is greasy from candle wax. It classifies candles by light, weight, smell, and danger.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| mercado        = não\n| stackable      = não\n| weight         = 2.00\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.1\n| notes          = <noinclude><p><spoiler>* Obtido e usado na [[The Gravedigger of Drefia Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 35107,
+    "ns": 0,
+    "title": "Receipt",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Receipt\n| flavortext     = This receipt serves as a reference to a successful guild bank transfer.\n| itemclass      = Outros Itens\n| primarytype    = Documentos e Papéis\n| weight         = 0.25\n| mercado        = não\n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.70\n| notes          = Registra uma transferência para uma conta bancária de uma guild. Pode ser encontrado em uma outra versão, caso a transferência tenha dado erro: <br />\n[[Arquivo:Unsuccessful Receipt.gif]]\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 37898,
+    "ns": 0,
+    "title": "Rolled-up Parchment",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Rolled-up Parchment\n| flavortext     = This parchment has been rolled-up and sealed.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| mercado        = não\n| stackable      = não\n| weight         = 0.20\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.90\n| notes          = \n<noinclude><p><spoiler>\n* Obtido e usado durante a [[Opticording Sphere Quest]].\n* Pode ser obtido ao abrir um [[Mysterious Metal Egg]]. Ao usar este item vemos uma mensagem que aparenta ser um número binário. A conversão deste número binário para decimal equivale a '2012'.\n<gallery>\nArquivo:Use_rolled-up_parchment.jpeg|Mensagem codificada.\n</gallery>\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42828,
+    "ns": 0,
+    "title": "Piece of Parchment (Gold)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se esse não é o Piece of Parchment que você procure, [[Piece of Parchment|clique aqui]].}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Piece of Parchment (Gold)\n| flavortext     = Underneath the circle with the dot inside you read: \"The alchemical symbol for gold.\".\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| stackable      = não\n| mercado        = não\n| weight         = 2.00\n| value          = \n| npcvalue       = 0\n| droppedby      = Ninguém.\n| npcprice       = 1 500\n| buyfrom        = Black Bert\n| sellto         = Jogadores.\n| implemented    = 11.50\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[Grimvale Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42942,
+    "ns": 0,
+    "title": "Piece of Parchment (Shadow Bite)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se esse não é o Piece of Parchment que você procure, [[Piece of Parchment|clique aqui]].}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Piece of Parchment (Shadow Bite)\n| flavortext     = Underneath the plant drawing you read: \"Shadow Bite Plant, grows only subterranean, underneath Edron.\".\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| stackable      = não\n| mercado        = não\n| weight         = 2.00\n| value          = \n| npcvalue       = 0\n| npcprice       = 1 500\n| buyfrom        = Black Bert\n| sellto         = Jogadores.\n| implemented    = 11.50\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[Grimvale Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 42943,
+    "ns": 0,
+    "title": "Piece of Parchment (Silver)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "<noinclude>{{DASH|img=desambig|Se esse não é o Piece of Parchment que você procure, [[Piece of Parchment|clique aqui]].}}</noinclude>{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}} \n| name           = Piece of Parchment (Silver)\n| flavortext     = Underneath the moon you read: \"The alchemical symbol for silver.\".\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| stackable      = não\n| mercado        = não\n| weight         = 2.00\n| value          = \n| npcvalue       = 0\n| npcprice       = 1 500\n| buyfrom        = Black Bert\n| sellto         = Jogadores.\n| implemented    = 11.50\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[Grimvale Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 44054,
+    "ns": 0,
+    "title": "Scribbled Notes",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Scribbled Notes\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| weight         = 1.00\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| mercado        = não\n| droppedby      = Ninguém.\n| location       = [[Asura Palace]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.80\n| notes          = <noinclude><p><spoiler>* Obtido e usado na [[The Secret Library Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 45147,
+    "ns": 0,
+    "title": "Recipe for Magical Paint",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Recipe for Magical Paint\n| flavortext     = It says: Mix sun fruit juice with sapphire dust and dream essence to create a magical paint. This paint may transform imagination into reality.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| attrib         = Nenhum\n| weight         = 1.00\n| stackable      = não\n| npcvalue       = \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.00\n| notes          = <noinclude><p><spoiler>* Obtido e usado na [[The Dream Courts Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 46763,
+    "ns": 0,
+    "title": "Secret Instruction (Silver Mask)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Secret Instruction (Silver Mask)\n| flavortext     = The silver mask is hidden in the ruins of Nuur.\n| itemclass      = Itens de Decoração\n| primarytype    = Documentos e Papéis\n| attrib         = \n| weight         = 0.20\n| stackable      = não\n| npcprice       = \n| mercado        = \n| droppedby      = [[Burning Gladiator]], [[Priestess Of The Wild Sun]].\n| implemented    = 12.20\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = <noinclude><p><spoiler>* Faz parte da [[Kilmaresh Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 47251,
+    "ns": 0,
+    "title": "Shimun's List",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Shimun's List\n| flavortext     = Needed ingredients: one lizard heart, twelve snake maws and five vials of ink.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| writable       = não\n| stackable      = não\n| weight         = 0.30\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.20\n| notes          = <noinclude><p><spoiler>* Obtido e usado na [[Kilmaresh Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 47318,
+    "ns": 0,
+    "title": "Secret Instruction (Gryphon Mask)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Secret Instruction (Gryphon Mask)\n| flavortext     = You can find the gryphon mask high in the mountains. It will open the gryphon-guarded door.\n| itemclass      = Itens de Decoração\n| primarytype    = Documentos e Papéis\n| attrib         = \n| weight         = 0.20\n| stackable      = não\n| npcprice       = \n| droppedby      = [[Burning Gladiator]], [[Priestess Of The Wild Sun]].\n| implemented    = 12.20\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = <noinclude><p><spoiler>* Faz parte da [[Kilmaresh Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 47319,
+    "ns": 0,
+    "title": "Secret Instruction (Ivory Mask)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Secret Instruction (Ivory Mask)\n| flavortext     = The ivory mask is under the ankh mosaic in the library. Put the missing emerald in the tile to open the hidden compartment. This mask will open the ivory-adorned doors.\n| itemclass      = Itens de Decoração\n| primarytype    = Documentos e Papéis\n| attrib         = \n| weight         = 0.20\n| stackable      = não\n| npcprice       = \n| droppedby      = Ninguém.\n| implemented    = 12.20\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = \n<noinclude><p><spoiler>\n* Faz parte da [[Kilmaresh Quest]].\n* É possível obter essa instrução secreta '''apenas''' se você não pegou a Ivory Mask ainda, ela (a instrução) fica localizada dentro de uma garrafa ao noroeste de Issavi ({{Mapa|33740,31531,7:1|aqui}}).\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 47320,
+    "ns": 0,
+    "title": "Secret Instruction (Mirror Mask)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Secret Instruction (Mirror Mask)\n| flavortext     = The mirror mask is hidden in a tomb near the northern oasis. It will open the mirror-behung door.\n| itemclass      = Itens de Decoração\n| primarytype    = Documentos e Papéis\n| attrib         = \n| weight         = 0.20\n| stackable      = não\n| npcprice       = \n| droppedby      = [[Burning Gladiator]], [[Priestess Of The Wild Sun]].\n| implemented    = 12.20\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = <noinclude><p><spoiler>* Faz parte da [[Kilmaresh Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 47531,
+    "ns": 0,
+    "title": "Recipe",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Recipe\n| flavortext     = To make a salve or balm waterproof, the use of lanolin, or wool fat, proved to be the best practice.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| attrib         = Nenhum\n| weight         = 0.50\n| stackable      = não\n| npcvalue       = \n| mercado        = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.20\n| notes          = <noinclude><p><spoiler>* Pode ser obtido em um livro durante a missão ''A Shark in Need'' da  [[Kilmaresh Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 50701,
+    "ns": 0,
+    "title": "Rita's Letter",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Rita's Letter\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| attrib         = Nenhum.\n| writable       = não\n| stackable      = não\n| mercado        = não\n| weight         = 0.50\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.60\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[A Pirate's Tail Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 52042,
+    "ns": 0,
+    "title": "Ritual Notes",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Ritual Notes\n| flavortext     = You see ritual notes. These written notes from the knight Galthen contain information about an ancient ritual as well as blessings to counter it. The words DEMIHBOULDR, SOMMBHA and WITHER have been marked.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| attrib         = Nenhum.\n| mercado        = não\n| stackable      = não\n| weight         = 2.00\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.70\n| notes          = \n<noinclude><p><spoiler>\n* Obtido e usado durante a [[Adventures of Galthen Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 52314,
+    "ns": 0,
+    "title": "Parchment (Black Knight)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Parchment (Black Knight)\n| flavortext     = You see a parchment. It is rewriteable.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| attrib         = Nenhum.\n| npcprice       = 0\n| npcvalue       = 0\n| writable       = não\n| stackable      = não\n| weight         = 2.00\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.1\n| notes          = Um carta do Black Knight demonstrando seu desprezo por Thais e o TBI.\n<noinclude><p><spoiler>* Obtido e usado durante a [[Secret Service Quest]] (TBI).</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 57699,
+    "ns": 0,
+    "title": "Secret Map",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Secret Map\n| flavortext     = Several spots on it are marked with the letter Z.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| attrib         = Nenhum.\n| weight         = 8.30\n| stackable      = não\n| mercado        = não\n| value          =\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.80\n| notes          = \n<noinclude><p><spoiler>\n* Obtido e usado durante a [[The Secret Library Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 58389,
+    "ns": 0,
+    "title": "Research Records",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Research Records\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| attrib         = \n| readable       = não\n| writable       = não\n| stackable      = não\n| weight         = 1.00\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Ninguém.\n| sellto         = Jogadores.\n| implemented    = 13.10\n| notes          = <noinclude><p><spoiler>* Faz parte da [[The Cradle of Monsters Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 58513,
+    "ns": 0,
+    "title": "Parchment (Crumpled)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Parchment (Crumpled)\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = \n| secondarytype  = Documentos e Papéis\n| stackable      = não\n| writable       = não\n| weight         = 2.00\n| value          = \n| droppedby      = Ninguém.\n| npcprice       = 0\n| npcvalue       = 0\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Nenhuma.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 58515,
+    "ns": 0,
+    "title": "Piece of Paper (Crumpled)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Piece of Paper (Crumpled)\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Documentos e Papéis\n| secondarytype  = \n| stackable      = não\n| writable       = não\n| weight         = 2.00\n| value          = \n| droppedby      = Ninguém.\n| npcprice       = 0\n| npcvalue       = 0\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Nenhuma.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 58551,
+    "ns": 0,
+    "title": "Sheet of Paper (Hoist)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Sheet of Paper (Hoist)\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| writable       = sim\n| stackable      = não\n| weight         = 1.00\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.0\n| notes          = Encontrado na [[Formorgar Mines]]. Para ler o conteúdo deste documento veja [[Instructions to the Formorgar Mines Hoist (Book)]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 58554,
+    "ns": 0,
+    "title": "Parchment (Peacock Ballad)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Parchment (Peacock Ballad)\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| weight         = 0.50\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| mercado        = não\n| droppedby      = Ninguém.\n| location       = [[Asura Palace]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.80\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[The Secret Library Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 58593,
+    "ns": 0,
+    "title": "Parchment of Interest",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Parchment of Interest\n| flavortext     = Once there was an extraordinary place where the magic entities lived peacefully and in harmony. It was a stronghold of knowledge.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| stackable      = não\n| mercado        = não\n| attrib         = Nenhum.\n| weight         = 0.60\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.80\n| notes          = \n<noinclude><p><spoiler>\n* Obtido e usado na [[The Secret Library Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 58683,
+    "ns": 0,
+    "title": "Parchment (The Ledger)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Parchment (The Ledger)\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| weight         = 2.00\n| stackable      = não\n| value          = \n| npcvalue       = 0\n| mercado        = não\n| droppedby      = Ninguém.\n| location       = [[Bounac]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.40\n| notes          = <noinclude><p><spoiler>* Obtido e usado na [[The Order of the Lion Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 58755,
+    "ns": 0,
+    "title": "Old Letter",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Old Letter\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| weight         = 0.50\n| stackable      = não\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 11.80\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[The Secret Library Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 58764,
+    "ns": 0,
+    "title": "Old Parchment (Lion's Rock)",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Old Parchment (Lion's Rock)\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| attrib         = Nenhum.\n| mercado        = não\n| stackable      = não\n| weight         = 2.00\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.70\n| notes          = Para ver o conteúdo deste documento veja: [[Lion's Rock Three Tests (Book)]].\n<noinclude><p><spoiler>\n* Obtido e usado na [[Lion's Rock Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59098,
+    "ns": 0,
+    "title": "Silver Deed",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Silver Deed\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Documentos e Papéis\n| attrib         = Pode ser pendurado em paredes.\n| stackable      = não\n| weight         = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.31.9658\n| mercado        = não\n| notes          = Este é um dos prêmios para os personagens classificados entre as posições 11º e 50º no ranking do torneio [[Torneio Triumph|Triumph]]. Esta escritura contêm o nome do personagem criado para o torneio, o ranking, o nome do torneio e é assinado pela Cipsoft.\n{{Veja|Torneios|Torneio Triumph}}\n<noinclude>[[Categoria:Prêmios de Torneios]]</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 59100,
+    "ns": 0,
+    "title": "Papyrus Deed",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Papyrus Deed\n| flavortext     = \n| itemclass      = Itens de Decoração\n| primarytype    = Prêmios de Eventos\n| secondarytype  = Documentos e Papéis\n| attrib         = Pode ser pendurado em paredes.\n| stackable      = não\n| weight         = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.31.9658\n| mercado        = não\n| notes          = Este é um dos prêmios para os personagens classificados entre as posições 101º e 9999º no ranking do torneio [[Torneio Triumph|Triumph]]. Esta escritura contêm o nome do personagem criado para o torneio, o ranking, o nome do torneio e é assinado pela Cipsoft.\n{{Veja|Torneios|Torneio Triumph}}\n<noinclude>[[Categoria:Prêmios de Torneios]]</noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7624,
+    "ns": 0,
+    "title": "Tactical Map",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Tactical Map\n| flavortext     = A map showing recent troop movements and tactical instructions of parts of the Emperor's army.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = 2.00\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.54\n| trade          = não\n| notes          = \n<noinclude><p><spoiler>\n* Obtido e usado durante a [[Children of the Revolution Quest]].\n* Pode ser obtido em uma estante dentro acampamento do Exército de Zao em Muggy Plains.\n<gallery>\nArquivo:Children of the Revolution Quest 0-3.png\n</gallery>\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7659,
+    "ns": 0,
+    "title": "Stamped Letter",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Stamped Letter\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Documentos e Papéis\n| secondarytype  = \n| writable       = não\n| stackable      = não\n| attrib         = Nenhum\n| weight         = 0.50\n| value          = Negociável\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| notes          = Como [[parcel]]s, quando você envia para alguém, ele não pode ser re-usado.<br />\nMesma aparência que uma [[Secret Letter]] e [[Letter to Markwin]].\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7661,
+    "ns": 0,
+    "title": "Suspicious Documents",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Suspicious Documents\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| attrib         = Nenhum.\n| stackable      = não\n| weight         = 1.50\n| value          = \n| npcprice       = 2 000\n| droppedby      = Ninguém.\n| buyfrom        = Black Bert\n| sellto         = Jogadores.\n| implemented    = 8.1\n| notes          = Tem a mesma aparência de uma [[Note]], [[Old Piece of Paper]] e [[Old Pirate Poem (Book)]].\n<noinclude><p><spoiler>\n* Obtido e usado durante a [[Secret Service Quest]] (CGB).\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 7664,
+    "ns": 0,
+    "title": "Valentine's Card",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Valentine's Card\n| flavortext     =\n| itemclass      = Itens de Decoração\n| primarytype    = Documentos e Papéis\n| secondarytype  = \n| attrib         = Pode ser escrito.\n| weight         = 1.00\n| stackable      = não\n| value          = 30\n| npcvalue       = 0\n| npcprice       = 5\n| droppedby      = Ninguém.\n| buyfrom        = Thomas:30, Gorn:30, Shiantis:30, Perod:30, Valentina, Bertha:30\n| sellto         = Jogadores.\n| implemented    = 7.9\n| notes          = Uma vez escrito, seu conteúdo não pode ser modificado.\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9259,
+    "ns": 0,
+    "title": "Wrinkled Parchment",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Wrinkled Parchment\n| flavortext     = It is covered with strange numbers.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| stackable      = não\n| attrib         = Nenhum.\n| readable       = não\n| weight         = 2.00\n| droppedby      = Ninguém.\n| npcprice       = 4 000\n| trade          = sim\n| buyfrom        = Black Bert\n| sellto         = Jogadores.\n| implemented    = 7.6\n| notes          = Esse documento foi escrito em 469, a linguagem dos Bonelords. Mesmo sprite de um [[Parchment]].\n<noinclude><p><spoiler>\n* Obtido e usado durante a [[The Explorer Society Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9282,
+    "ns": 0,
+    "title": "Very Old Piece of Paper",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Very Old Piece of Paper\n| flavortext     = You have the slight impression that it bears a secret.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| attrib         = Nenhum.\n| weight         = 2.00\n| stackable      = não\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| droppedRaidby  = [[Brutus Bloodbeard]], [[Deadeye Devious]], [[Lethal Lissy]], [[Ron The Ripper]].\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.5\n| notes          = Pode ser obtido apenas em [[invasões]] de piratas em Liberty Bay. Tornou-se muito menos raro em {{OfficialNewsArchive|1235|17 de fevereiro}}.\n<noinclude><p><spoiler>\n* 01 é necessário para a [[Treasure Hunt Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9307,
+    "ns": 0,
+    "title": "The Alchemists' Formulas",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = The Alchemists' Formulas\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| attrib         = Nenhum.\n| weight         = 2.00\n| value          = \n| stackable      = não\n| npcprice       = 8 000\n| droppedby      = Ninguém.\n| buyfrom        = Black Bert\n| sellto         = Jogadores.\n| implemented    = 8.4\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[In Service of Yalahar Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 9334,
+    "ns": 0,
+    "title": "Spyreport",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Spyreport\n| flavortext     = The report is written in some coded language.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| stackable      = não\n| attrib         = Nenhum.\n| weight         = 1.50\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 7.4\n| notes          = \n<noinclude><p><spoiler>\n* Obtido e usado durante a [[The Djinn War Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 26598,
+    "ns": 0,
+    "title": "The Top Left Part of a Map",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = The Top Left Part of a Map\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| attrib         = Nenhum.\n| weight         = 7.90\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.5\n| notes          = Tem a mesma aparência de um [[Map (Colour)]]. \n<noinclude><p><spoiler>\n* Obtido e usado durante a [[Treasure Hunt Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 26599,
+    "ns": 0,
+    "title": "The Top Right Part of a Map",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = The Top Right Part of a Map\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| attrib         = Nenhum.\n| weight         = 7.90\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.5\n| notes          = Tem a mesma aparência de um [[Map (Colour)]]. \n<noinclude><p><spoiler> \n* Obtido e usado durante a [[Treasure Hunt Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 26600,
+    "ns": 0,
+    "title": "The Lower Right Part of a Map",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = The Lower Right Part of a Map\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| attrib         = Nenhum.\n| weight         = 7.90\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.5\n| notes          = Tem a mesma aparência de um [[Map (Colour)]].\n<noinclude><p><spoiler>\n* Obtido e usado durante a [[Treasure Hunt Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 26601,
+    "ns": 0,
+    "title": "The Lower Left Part of a Map",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = The Lower Left Part of a Map\n| flavortext     =\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| attrib         = Nenhum.\n| weight         = 7.90\n| stackable      = não\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.5\n| notes          = Tem a mesma aparência de um [[Map (Colour)]]. \n<noinclude><p><spoiler>\n* Obtido e usado durante a [[Treasure Hunt Quest]].\n</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 30049,
+    "ns": 0,
+    "title": "Torn Incantation Fragment",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Torn Incantation Fragment\n| flavortext     = This piece of the incantation scroll is incomplete.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| attrib         =\n| weight         = 0.10\n| value          = \n| npcvalue       = 0\n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.1\n| notes          = <noinclude><p><spoiler>* Obtido e usado na [[The Gravedigger of Drefia Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 34910,
+    "ns": 0,
+    "title": "Translation Scroll",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Translation Scroll\n| flavortext     = With this scroll you might be able to translate the old temple inscriptions.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| weight         = 2.00\n| attrib         = \n| mercado        = não\n| stackable      = não\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.70\n| notes          = <noinclude><p><spoiler>* Obtido e usado na [[Lion's Rock Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 37139,
+    "ns": 0,
+    "title": "The Rite of Eternal Night",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = The Rite of Eternal Night\n| flavortext     = It is a disturbing invocation of dark and heinous powers.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| weight         = 0.50\n| stackable      = não\n| npcvalue       = 0\n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 10.90\n| notes          = <noinclude><p><spoiler>* Obtido e usado na [[Ferumbras' Ascendant Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 47248,
+    "ns": 0,
+    "title": "Yonan's List",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Yonan's List\n| flavortext     = Needed ingredients: three scorpion tails, twelve veldt flowers and ten nuggets of tagralt ore.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| writable       = não\n| stackable      = não\n| weight         = 0.30\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.20\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[Kilmaresh Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 47250,
+    "ns": 0,
+    "title": "Tefrit's List",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Tefrit's List\n| flavortext     = Needed ingredients: five crab pincers, twenty pieces of honey palm bark, twenty five shreads of spiderweb clouds and fifteen wild desert roses.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| writable       = não\n| stackable      = não\n| weight         = 0.30\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.20\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[Kilmaresh Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 51571,
+    "ns": 0,
+    "title": "Tylaf's Letter",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Tylaf's Letter\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| attrib         = Nenhum.\n| writable       = não\n| stackable      = não\n| mercado        = não\n| weight         = 1.00\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.0\n| notes          = <noinclude><p><spoiler>* Obtido e usado durante a [[The Ice Islands Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 55890,
+    "ns": 0,
+    "title": "The Moonlight Aster's Letter",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = The Moonlight Aster's Letter\n| flavortext     = \n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| attrib         = Nenhum.\n| writable       = não\n| stackable      = não\n| mercado        = não\n| weight         = 2.00\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 12.90\n| notes          = <noinclude><p><spoiler>* Obtido e usado na [[Within the Tides Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   },
+   {
+    "pageid": 58607,
+    "ns": 0,
+    "title": "Theatre Script",
+    "revisions": [
+     {
+      "slots": {
+       "main": {
+        "contentmodel": "wikitext",
+        "contentformat": "text/x-wiki",
+        "content": "{{Infobox_Item|List={{{1|}}}|GetValue={{{GetValue|}}}\n| name           = Theatre Script\n| flavortext     = It contains the script to a piece performed in the theatre of Carlin.\n| itemclass      = Outros Itens\n| primarytype    = Itens de Quest\n| secondarytype  = Documentos e Papéis\n| attrib         = Nenhum.\n| writable       = não\n| stackable      = não\n| mercado        = não\n| weight         = 13.00\n| value          = \n| droppedby      = Ninguém.\n| buyfrom        = Jogadores.\n| sellto         = Jogadores.\n| implemented    = 8.2\n| notes          = <noinclude><p><spoiler>* Obtido e usado na [[The Thieves Guild Quest]].</spoiler></p></noinclude>\n}}"
+       }
+      }
+     }
+    ]
+   }
+  ]
+ }
+}

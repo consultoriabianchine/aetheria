@@ -3,7 +3,7 @@
 
   <!-- stats -->
   <div class="hud hud-stats">
-    <div class="player-name">{{ state.self()?.name }}</div>
+    <div class="player-name">{{ state.self()?.name }} <span class="gold">· {{ state.gold() }} gold</span></div>
     <div class="bar">
       <span class="bar-label">HP</span>
       <div class="bar-track"><div class="bar-fill hp" [style.width.%]="hpPct()"></div></div>
@@ -46,9 +46,51 @@
 
   <!-- controles -->
   <div class="hud hud-controls">
+    @if (!state.inArena()) {
+      <button class="btn" (click)="toggleHunts()">{{ state.huntsOpen() ? 'Fechar Hunts' : 'Hunts' }}</button>
+    }
     <button class="btn" (click)="invOpen.set(!invOpen())">{{ invOpen() ? 'Fechar' : 'Inventário' }}</button>
     <button class="btn" (click)="exit()">Sair</button>
   </div>
+
+  <!-- seleção de hunts (hub) -->
+  @if (state.huntsOpen() && !state.inArena()) {
+    <div class="hud hud-hunts">
+      <h3>Hunts <span class="sub">escolha uma arena</span></h3>
+      @for (h of state.hunts(); track h.id) {
+        <div class="hunt-card">
+          <div class="hunt-top">
+            <b>{{ h.ladderPosition }}. {{ h.name }}</b>
+            <span class="hunt-lvl">Nv {{ h.suggestedLevel }}</span>
+          </div>
+          <div class="hunt-monsters">{{ h.monsters.map((m) => m.name).join(', ') }} → Boss: {{ h.boss.name }}</div>
+          <div class="hunt-meta">
+            <span>10 waves</span>
+            <span>Clears: {{ h.completionCount }}</span>
+            <span>Best: {{ fmtTime(h.bestClearTimeMs) }}</span>
+          </div>
+          <div class="hunt-actions">
+            <button class="btn" (click)="startHunt(h.id)">Entrar</button>
+            <button class="btn" (click)="startLoop(h.id)">Loop</button>
+          </div>
+        </div>
+      }
+    </div>
+  }
+
+  <!-- run de hunt em andamento -->
+  @if (state.hunt(); as run) {
+    <div class="hud hud-run">
+      <div class="run-top">
+        <b>{{ run.huntName }}</b>
+        <span class="run-wave" [class.boss]="run.isBoss">Wave {{ run.wave }}/10{{ run.isBoss ? ' · BOSS' : '' }}</span>
+      </div>
+      <div class="run-actions">
+        <button class="btn" (click)="toggleLoop()">{{ run.loopEnabled ? 'Loop ON' : 'Loop OFF' }}</button>
+        <button class="btn danger" (click)="stopHunt()">Sair</button>
+      </div>
+    </div>
+  }
 
   <!-- inventário -->
   @if (invOpen()) {
@@ -103,5 +145,11 @@
     </div>
   }
 
-  <div class="hud hud-hint">WASD / Setas: mover · Clique em um monstro para atacar · Clique em um NPC para conversar</div>
+  <div class="hud hud-hint">
+    @if (state.inArena()) {
+      Combate automático · Clique em um monstro para focar o alvo · Loot cai no chão
+    } @else {
+      WASD / Setas: mover · Clique em um monstro para atacar · Clique em um NPC para conversar
+    }
+  </div>
 </div>
