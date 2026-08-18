@@ -68,8 +68,27 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
       scale: { mode: Phaser.Scale.RESIZE },
       scene: [],
     });
+    this.setupHiDpi();
     this.phaser.scene.add('World', WorldScene, false);
     this.phaser.scene.start('World', { ws: this.ws, state: this.state, assets: this.creatureAssets, outfits: this.outfitAssets });
+  }
+
+  /** Renderiza em device-pixel-ratio para sprites nítidas em telas HiDPI. */
+  private setupHiDpi() {
+    const game = this.phaser;
+    if (!game) return;
+    const dpr = window.devicePixelRatio || 1;
+    if (dpr <= 1) return;
+    const apply = () => {
+      const w = game.scale.gameSize.width;
+      const h = game.scale.gameSize.height;
+      if (!w || !h) return;
+      game.canvas.width = Math.round(w * dpr);
+      game.canvas.height = Math.round(h * dpr);
+      game.renderer.resize(Math.round(w * dpr), Math.round(h * dpr));
+    };
+    game.scale.on(Phaser.Scale.Events.RESIZE, apply);
+    apply();
   }
 
   ngOnDestroy() {
@@ -93,6 +112,10 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
     const s = this.state.stats();
     const needed = s.level * 100;
     return needed > 0 ? (s.experience / needed) * 100 : 0;
+  }
+
+  zoomPct(): string {
+    return `${Math.round(this.state.zoom() * 100)}%`;
   }
 
   inventory(): InvEntry[] {

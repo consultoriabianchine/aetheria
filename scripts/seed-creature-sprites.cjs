@@ -40,6 +40,11 @@ async function upsertAsset(slug, fileName, cellSize) {
     console.log(`SKIP ${slug} (não encontrada)`);
     return null;
   }
+  const existing = await prisma.creatureSpriteAsset.findUnique({ where: { creature_id: def.creature_id } });
+  if (existing) {
+    console.log(`SPRITE ${slug} já existe — mantido (configurado na Central de Comando)`);
+    return { creatureId: def.creature_id, width: existing.image_width, height: existing.image_height };
+  }
   const src = decodePng(fs.readFileSync(path.join(CREATURES_DIR, fileName)));
   const centered = centerSheet(src, cellSize);
   const data = centered ? centered.png : fs.readFileSync(path.join(CREATURES_DIR, fileName));
@@ -47,10 +52,8 @@ async function upsertAsset(slug, fileName, cellSize) {
   const checksum = crypto.createHash('sha256').update(data).digest('hex');
   const width = src.width;
   const height = src.height;
-  await prisma.creatureSpriteAsset.upsert({
-    where: { creature_id: def.creature_id },
-    create: { creature_id: def.creature_id, file_name: fileName, mime_type: mime, file_size: data.length, image_width: width, image_height: height, data, checksum, uploaded_by: 'migration' },
-    update: { file_name: fileName, mime_type: mime, file_size: data.length, image_width: width, image_height: height, data, checksum, uploaded_by: 'migration' },
+  await prisma.creatureSpriteAsset.create({
+    data: { creature_id: def.creature_id, file_name: fileName, mime_type: mime, file_size: data.length, image_width: width, image_height: height, data, checksum, uploaded_by: 'migration' },
   });
   console.log(`UPLOAD ${slug} (creature_id=${def.creature_id}) ${width}x${height}`);
   return { creatureId: def.creature_id, width, height };
@@ -58,13 +61,14 @@ async function upsertAsset(slug, fileName, cellSize) {
 
 async function upsertConfig(creatureId, config) {
   const existing = await prisma.creatureAnimationConfig.findUnique({ where: { creature_id: creatureId } });
-  const version = (existing?.version ?? 0) + 1;
-  await prisma.creatureAnimationConfig.upsert({
-    where: { creature_id: creatureId },
-    create: { creature_id: creatureId, version, config },
-    update: { version, config },
+  if (existing) {
+    console.log(`CONFIG creature_id=${creatureId} já existe (v${existing.version}) — mantido, configure na Central de Comando`);
+    return;
+  }
+  const created = await prisma.creatureAnimationConfig.create({
+    data: { creature_id: creatureId, version: 1, config },
   });
-  console.log(`CONFIG creature_id=${creatureId} version=${version} seqs=${config.animations.length}`);
+  console.log(`CONFIG creature_id=${creatureId} criado version=${created.version} seqs=${config.animations.length}`);
 }
 
 (async () => {

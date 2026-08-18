@@ -124,13 +124,18 @@ function generateMask(basePng) {
   const config = { spriteWidth: 32, spriteHeight: 32, sheetColumns: 4, sheetRows: 9, animations: standardConfig(4) };
   let set = await prisma.animationSet.findFirst({ where: { name: 'Humanoid 4-dir (8 frames)' } });
   if (!set) set = await prisma.animationSet.create({ data: { name: 'Humanoid 4-dir (8 frames)', config } });
-  else set = await prisma.animationSet.update({ where: { animation_set_id: set.animation_set_id }, data: { config } });
+  else console.log('animation set já existe — mantido');
   console.log('animation_set_id', set.animation_set_id);
 
-  const outfit = await prisma.outfit.upsert({
-    where: { slug: 'druid' },
-    update: { sprite_asset_id: asset.sprite_asset_id, animation_set_id: set.animation_set_id, color_mask_asset_id: mask.sprite_asset_id, available_by_default: true },
-    create: {
+  const existingOutfit = await prisma.outfit.findUnique({ where: { slug: 'druid' } });
+  if (existingOutfit) {
+    console.log('outfit druid já existe — pulando, configure na Central de Comando');
+    await prisma.$disconnect();
+    console.log('OK');
+    return;
+  }
+  const outfit = await prisma.outfit.create({
+    data: {
       slug: 'druid', name: 'Druida', description: 'Outfit padrão do jogador.',
       sprite_asset_id: asset.sprite_asset_id, animation_set_id: set.animation_set_id, color_mask_asset_id: mask.sprite_asset_id,
       category: 'default', body_type: 'unisex', supports_colors: true, supports_addons: false,

@@ -90,6 +90,34 @@ export class GameState {
   readonly hdSmooth = signal(localStorage.getItem('aetheria_hd_smooth') !== '0');
   readonly hdSmooth$ = new Subject<boolean>();
 
+  /** Zoom do canvas do jogo (afeta apenas a cena Phaser, não a UI DOM). */
+  readonly zoom = signal(parseFloat(localStorage.getItem('aetheria_zoom') ?? '1'));
+  readonly zoom$ = new Subject<number>();
+
+  private static readonly ZOOM_MIN_HD = 0.5;
+  private static readonly ZOOM_MAX_HD = 2;
+  private static readonly ZOOM_MIN_PIXEL = 1;
+  private static readonly ZOOM_MAX_PIXEL = 4;
+
+  zoomIn() {
+    this.setZoom(this.zoom() + (this.hdSmooth() ? 0.25 : 1));
+  }
+
+  zoomOut() {
+    this.setZoom(this.zoom() - (this.hdSmooth() ? 0.25 : 1));
+  }
+
+  setZoom(z: number) {
+    const integer = !this.hdSmooth();
+    const v = integer ? Math.round(z) : Math.round(z * 100) / 100;
+    const next = integer
+      ? Math.max(GameState.ZOOM_MIN_PIXEL, Math.min(GameState.ZOOM_MAX_PIXEL, v))
+      : Math.max(GameState.ZOOM_MIN_HD, Math.min(GameState.ZOOM_MAX_HD, v));
+    this.zoom.set(next);
+    localStorage.setItem('aetheria_zoom', String(next));
+    this.zoom$.next(next);
+  }
+
   /** Buffer de eventos para a cena Phaser que cria depois da conexão. */
   readonly sceneEvents$ = new Subject<WsEvent>();
   private buffer: WsEvent[] = [];
@@ -99,6 +127,7 @@ export class GameState {
   readonly selectResult$ = new Subject<boolean>();
 
   constructor(private readonly ws: WsService) {
+    this.setZoom(this.zoom());
     this.ws.events$.subscribe((e) => {
       if (this.buffer.length > 1000) this.buffer.shift();
       this.buffer.push(e);
@@ -366,6 +395,7 @@ export class GameState {
     this.hdSmooth.set(next);
     localStorage.setItem('aetheria_hd_smooth', next ? '1' : '0');
     this.hdSmooth$.next(next);
+    this.setZoom(this.zoom());
   }
 
   openAppearance() {

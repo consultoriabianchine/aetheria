@@ -52,6 +52,9 @@
     <button class="btn" (click)="invOpen.set(!invOpen())">{{ invOpen() ? 'Fechar' : 'Inventário' }}</button>
     <button class="btn" (click)="openAppearance()">Aparência</button>
     <button class="btn" (click)="state.toggleHdSmooth()">{{ state.hdSmooth() ? 'HD ON' : 'HD OFF' }}</button>
+    <button class="btn zoom-btn" (click)="state.zoomOut()" title="Diminuir zoom">−</button>
+    <span class="zoom-val">{{ zoomPct() }}</span>
+    <button class="btn zoom-btn" (click)="state.zoomIn()" title="Aumentar zoom">+</button>
     <button class="btn" (click)="exit()">Sair</button>
   </div>
 

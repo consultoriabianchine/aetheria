@@ -76,6 +76,7 @@ export class WorldScene extends Phaser.Scene {
   private loadingTextures = new Set<string>();
   private debugVisible = false;
   private debugOverlay!: Phaser.GameObjects.Text;
+  private mapBounds: { width?: number; height?: number } = {};
 
   constructor() {
     super('World');
@@ -102,6 +103,8 @@ export class WorldScene extends Phaser.Scene {
 
     this.cameras.main.setBackgroundColor('#17202a');
     this.cameras.main.setZoom(1);
+    this.applyZoom(this.state.zoom());
+    this.state.zoom$.subscribe((z) => this.applyZoom(z));
     this.applySmoothing(this.state.hdSmooth());
     this.state.hdSmooth$.subscribe((smooth) => this.applySmoothing(smooth));
     this.textures.on('addtexture', () => this.applySmoothing(this.state.hdSmooth()));
@@ -279,14 +282,34 @@ export class WorldScene extends Phaser.Scene {
     this.loot.clear();
     this.selfEntity = null;
     this.selfId = selfId;
+    this.mapBounds = { width, height };
     this.state.clearTarget();
     this.buildMap(map);
     this.spawnSelf(selfId, selfName, selfPosition, appearance);
-    this.applyCameraBounds(width, height);
+    this.applyCameraBounds();
   }
 
-  private applyCameraBounds(width?: number, height?: number) {
+  private applyZoom(z: number) {
+    this.cameras.main.setZoom(z);
+    this.applyCameraBounds();
+    this.applyTextResolution();
+  }
+
+  /** Resolução interna dos textos do mundo (mantém nítido ao dar zoom). */
+  private textResolution(): number {
+    return Math.max(1, Math.ceil(this.cameras.main.zoom * (window.devicePixelRatio || 1)));
+  }
+
+  private applyTextResolution() {
+    const res = this.textResolution();
+    for (const [, ent] of this.entities) ent.label.setResolution(res);
+    this.debugOverlay?.setResolution(res);
+  }
+
+  private applyCameraBounds() {
     const cam = this.cameras.main;
+    const width = this.mapBounds.width;
+    const height = this.mapBounds.height;
     if (width && height) {
       const w = width * TILE_SIZE;
       const h = height * TILE_SIZE;
@@ -296,6 +319,8 @@ export class WorldScene extends Phaser.Scene {
       if (w < viewW || h < viewH) {
         cam.stopFollow();
         cam.centerOn(w / 2, h / 2);
+      } else if (this.selfEntity) {
+        cam.startFollow(this.selfEntity.image, false, 0.1, 0.1);
       }
     } else {
       cam.setBounds(0, 0, Number.MAX_SAFE_INTEGER, Number.MAX_SAFE_INTEGER);
@@ -405,6 +430,7 @@ export class WorldScene extends Phaser.Scene {
         color: '#ffffff',
         stroke: '#000000',
         strokeThickness: 3,
+        resolution: this.textResolution(),
       })
       .setOrigin(0.5);
     const depth = position.y * 0.01 + 1;
@@ -644,6 +670,7 @@ export class WorldScene extends Phaser.Scene {
         color: '#9be0ff',
         backgroundColor: 'rgba(0,0,0,0.55)',
         padding: { x: 6, y: 4 },
+        resolution: this.textResolution(),
       })
       .setDepth(500)
       .setScrollFactor(0)
@@ -726,6 +753,7 @@ export class WorldScene extends Phaser.Scene {
         color: critical ? '#ffcf3f' : '#ff6b6b',
         stroke: '#1a1a1a',
         strokeThickness: 3,
+        resolution: this.textResolution(),
       })
       .setOrigin(0.5)
       .setDepth(100);

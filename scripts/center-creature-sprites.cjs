@@ -17,13 +17,13 @@ const CREATURES_DIR = path.resolve(__dirname, '../apps/web/src/assets/creatures'
     if (!res) { console.log(t.slug, 'sem arte'); continue; }
     const def = await prisma.creatureDefinition.findUnique({ where: { slug: t.slug } });
     if (!def) { console.log(t.slug, 'não encontrada'); continue; }
+    const existing = await prisma.creatureSpriteAsset.findUnique({ where: { creature_id: def.creature_id } });
+    if (existing) { console.log(t.slug, 'sprite já existe — mantido'); continue; }
     const checksum = crypto.createHash('sha256').update(res.png).digest('hex');
-    await prisma.creatureSpriteAsset.upsert({
-      where: { creature_id: def.creature_id },
-      create: { creature_id: def.creature_id, file_name: t.fileName, mime_type: 'image/png', file_size: res.png.length, image_width: src.width, image_height: src.height, data: res.png, checksum, uploaded_by: 'migration' },
-      update: { file_name: t.fileName, mime_type: 'image/png', file_size: res.png.length, image_width: src.width, image_height: src.height, data: res.png, checksum, uploaded_by: 'migration' },
+    await prisma.creatureSpriteAsset.create({
+      data: { creature_id: def.creature_id, file_name: t.fileName, mime_type: 'image/png', file_size: res.png.length, image_width: src.width, image_height: src.height, data: res.png, checksum, uploaded_by: 'migration' },
     });
-    console.log(`${t.slug}: shiftX=${res.shiftX} ${src.width}x${src.height} atualizado`);
+    console.log(`${t.slug}: shiftX=${res.shiftX} ${src.width}x${src.height} criado`);
   }
   await prisma.$disconnect();
   console.log('OK');

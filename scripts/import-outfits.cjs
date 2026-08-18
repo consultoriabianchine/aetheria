@@ -114,6 +114,11 @@ function buildConfig(cols, rows) {
 (async () => {
   const names = { 128: 'Outfit 128', 129: 'Outfit 129', 130: 'Outfit 130', 131: 'Outfit 131' };
   for (const id of [128, 129, 130, 131]) {
+    const existing = await prisma.outfit.findUnique({ where: { slug: `outfit_${id}` } });
+    if (existing) {
+      console.log(`outfit_${id}: já existe (set=${existing.animation_set_id}) — pulando, configure na Central de Comando`);
+      continue;
+    }
     const p = `doc/outfit_${id}_.png`;
     if (!fs.existsSync(p)) { console.log(id, 'MISSING'); continue; }
     const src = decodePng(fs.readFileSync(p));
@@ -129,27 +134,17 @@ function buildConfig(cols, rows) {
     const config = buildConfig(cols, rows);
     let set = await prisma.animationSet.findFirst({ where: { name: `Outfit ${id} (4-dir)` } });
     if (!set) set = await prisma.animationSet.create({ data: { name: `Outfit ${id} (4-dir)`, config } });
-    else set = await prisma.animationSet.update({ where: { animation_set_id: set.animation_set_id }, data: { config } });
 
-    const existing = await prisma.outfit.findUnique({ where: { slug: `outfit_${id}` } });
-    if (existing) {
-      await prisma.outfit.update({
-        where: { slug: `outfit_${id}` },
-        data: { sprite_asset_id: baseAsset, color_mask_asset_id: maskAsset },
-      });
-      console.log(`outfit_${id}: ASSETS atualizados (base=${baseAsset} mask=${maskAsset}) set mantido=${existing.animation_set_id}`);
-    } else {
-      await prisma.outfit.create({
-        data: {
-          slug: `outfit_${id}`, name: names[id], description: `Outfit importado do fixture ${id}.`,
-          sprite_asset_id: baseAsset, animation_set_id: set.animation_set_id, color_mask_asset_id: maskAsset,
-          category: 'default', body_type: 'unisex', supports_colors: true, supports_addons: false,
-          default_head_color: 6, default_primary_color: 11, default_secondary_color: 18, default_detail_color: 0,
-          available_by_default: true, enabled: true, published: true,
-        },
-      });
-      console.log(`outfit_${id}: criado (base=${baseAsset} mask=${maskAsset} set=${set.animation_set_id})`);
-    }
+    await prisma.outfit.create({
+      data: {
+        slug: `outfit_${id}`, name: names[id], description: `Outfit importado do fixture ${id}.`,
+        sprite_asset_id: baseAsset, animation_set_id: set.animation_set_id, color_mask_asset_id: maskAsset,
+        category: 'default', body_type: 'unisex', supports_colors: true, supports_addons: false,
+        default_head_color: 6, default_primary_color: 11, default_secondary_color: 18, default_detail_color: 0,
+        available_by_default: true, enabled: true, published: true,
+      },
+    });
+    console.log(`outfit_${id}: criado (base=${baseAsset} mask=${maskAsset} set=${set.animation_set_id})`);
   }
   await prisma.$disconnect();
   console.log('OK');
