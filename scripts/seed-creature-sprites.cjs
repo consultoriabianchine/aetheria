@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
 const { PrismaClient } = require('../packages/database/generated');
+const { decodePng, centerSheet } = require('./lib/png.cjs');
 
 const prisma = new PrismaClient();
 
@@ -33,17 +34,19 @@ function standardConfig(columns) {
   return animations;
 }
 
-async function upsertAsset(slug, fileName) {
+async function upsertAsset(slug, fileName, cellSize) {
   const def = await prisma.creatureDefinition.findUnique({ where: { slug } });
   if (!def) {
     console.log(`SKIP ${slug} (não encontrada)`);
     return null;
   }
-  const data = fs.readFileSync(path.join(CREATURES_DIR, fileName));
+  const src = decodePng(fs.readFileSync(path.join(CREATURES_DIR, fileName)));
+  const centered = centerSheet(src, cellSize);
+  const data = centered ? centered.png : fs.readFileSync(path.join(CREATURES_DIR, fileName));
   const mime = 'image/png';
   const checksum = crypto.createHash('sha256').update(data).digest('hex');
-  const width = data.readUInt32BE(16);
-  const height = data.readUInt32BE(20);
+  const width = src.width;
+  const height = src.height;
   await prisma.creatureSpriteAsset.upsert({
     where: { creature_id: def.creature_id },
     create: { creature_id: def.creature_id, file_name: fileName, mime_type: mime, file_size: data.length, image_width: width, image_height: height, data, checksum, uploaded_by: 'migration' },
@@ -66,11 +69,11 @@ async function upsertConfig(creatureId, config) {
 
 (async () => {
   // dwarf: 128x288 = 4 colunas x 9 linhas (32x32)
-  const dwarf = await upsertAsset('dwarf', 'dwarf_todos_movimentos.png');
+  const dwarf = await upsertAsset('dwarf', 'dwarf_todos_movimentos.png', 32);
   if (dwarf) await upsertConfig(dwarf.creatureId, sheetConfig(32, 32, 4, 9, standardConfig(4)));
 
   // troll: 256x576 = 4 colunas x 9 linhas (64x64)
-  const troll = await upsertAsset('troll', 'troll_todos_movimentos.png');
+  const troll = await upsertAsset('troll', 'troll_todos_movimentos.png', 64);
   if (troll) await upsertConfig(troll.creatureId, sheetConfig(64, 64, 4, 9, standardConfig(4)));
 
   await prisma.$disconnect();

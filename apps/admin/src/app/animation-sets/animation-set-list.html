@@ -1,0 +1,35 @@
+<h1>Animation Sets</h1>
+<p class="sub">Central de Comando — como os frames de uma spritesheet são interpretados (idle/walk/attack × direções).</p>
+
+<div class="toolbar">
+  <button class="primary" (click)="create()">+ Novo animation set</button>
+  <button (click)="load()" [disabled]="loading()">Atualizar</button>
+</div>
+
+@if (error()) {
+  <p class="error">{{ error() }}</p>
+}
+@if (loading()) {
+  <p>Carregando…</p>
+}
+
+@if (!loading() && !error()) {
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (s of sets(); track s.id) {
+        <tr>
+          <td class="mono">#{{ s.id }}</td>
+          <td>{{ s.name }}</td>
+          <td><a [routerLink]="['/animation-sets', s.id]">Editar</a></td>
+        </tr>
+      }
+    </tbody>
+  </table>
+}

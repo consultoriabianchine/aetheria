@@ -6,6 +6,7 @@ import {
   CHAT_CHANNELS,
   CHAT_MAX_LENGTH,
   CHAT_MIN_INTERVAL_MS,
+  DEFAULT_PLAYER_OUTFIT_ID,
   HUNT_CATALOG,
   HUNT_CONFIG,
   INVENTORY_SIZE,
@@ -46,6 +47,7 @@ import { MovementService } from '../creature/movement.service';
 import { HuntEngine, HuntRun } from '../hunts/hunt-engine';
 import { MapRegistry } from '../map/map-registry.service';
 import { HuntRegistry } from '../hunts/hunt-registry.service';
+import { OutfitRegistry } from '../outfit/outfit-registry.service';
 import { calculateMaxHp, calculateMaxMana, applyVocationDamageReduction, computeCoreStats } from '../stats/stat-engine';
 import { calculateRegeneration } from '../regeneration/regeneration-engine';
 import { trainSkill } from '../skills/skill-engine';
@@ -83,13 +85,18 @@ export class GameEngine implements OnModuleDestroy {
   private creatureData: CreatureDataService;
   private creatureDefinitions = new Map<string, import('@aetheria/types').CreatureDefinition>();
   private hunts: HuntEngine;
+  private readonly prisma: PrismaService | undefined;
+  private readonly outfitRegistry: OutfitRegistry | undefined;
 
   constructor(
     @Inject(STORE) private readonly store: Store,
     @Optional() prisma?: PrismaService,
     @Optional() mapRegistry?: MapRegistry,
     @Optional() huntRegistry?: HuntRegistry,
+    @Optional() outfitRegistry?: OutfitRegistry,
   ) {
+    this.prisma = prisma;
+    this.outfitRegistry = outfitRegistry;
     this.creatureData = new CreatureDataService(prisma ?? null);
     this.movement = new MovementService(this.world, (position, exceptIds) => this.isOccupied(position, exceptIds));
     this.creatures = new CreatureManager(this.movement);
@@ -398,6 +405,50 @@ export class GameEngine implements OnModuleDestroy {
     });
   }
 
+  async handleAppearanceList(socketId: string, token: string) {
+    const session = await this.verifySession(socketId, token);
+    if (!session) return;
+    const outfits = await this.availableOutfits(session.player.id);
+    this.emitTo(socketId, 'appearance.list', { outfits });
+  }
+
+  async handleAppearanceSave(socketId: string, token: string, outfitId: number, addonMask: number, colors: { head: number; primary: number; secondary: number; detail: number }) {
+    const session = await this.verifySession(socketId, token);
+    if (!session) return;
+    const player = session.player;
+    const outfits = await this.availableOutfits(player.id);
+    const target = outfits.find((o) => o.outfitId === outfitId);
+    if (!target) {
+      this.emitTo(socketId, 'error', { message: 'Outfit não disponível para este personagem.' });
+      return;
+    }
+    const appearance = { outfitId, addonMask: target.supportsAddons ? (addonMask & 3) : 0, colors };
+    player.appearance = appearance;
+    await this.persistPlayer(player);
+    const payload = { entityId: player.id, outfitId: appearance.outfitId, addonMask: appearance.addonMask, colors: appearance.colors };
+    this.emitTo(socketId, 'appearance.changed', payload);
+    this.emitOthers(socketId, 'appearance.changed', payload);
+    this.logger.log(`Jogador ${player.name} mudou a aparência para o outfit ${outfitId}.`);
+  }
+
+  private async availableOutfits(characterId: string) {
+    const registry = this.outfitRegistry;
+    if (!registry) return [];
+    const all = registry.listOutfits().filter((o) => o.enabled && o.published);
+    let grantedIds = new Set<number>();
+    if (this.prisma) {
+      try {
+        const granted = await this.prisma.characterOutfit.findMany({ where: { character_id: characterId } });
+        grantedIds = new Set(granted.map((g) => g.outfit_id));
+      } catch {
+        grantedIds = new Set();
+      }
+    }
+    return all
+      .filter((o) => o.availableByDefault || grantedIds.has(o.outfitId))
+      .map((o) => ({ outfitId: o.outfitId, name: o.name, slug: o.slug, category: o.category, supportsColors: o.supportsColors, supportsAddons: o.supportsAddons }));
+  }
+
   private huntErrorLabel(error: string): string {
     switch (error) {
       case 'HUNT_NOT_FOUND':
@@ -623,6 +674,9 @@ export class GameEngine implements OnModuleDestroy {
       maxMana: c.maxMana,
       position: { ...c.position },
       skills: { ...c.skills },
+      appearance: c.appearance
+        ? { ...c.appearance }
+        : { outfitId: DEFAULT_PLAYER_OUTFIT_ID, addonMask: 0, colors: { head: 0, primary: 0, secondary: 0, detail: 0 } },
     };
   }
 

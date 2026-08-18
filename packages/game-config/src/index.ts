@@ -19,8 +19,9 @@ export const TILE = {
 export const VIEW_DISTANCE_X = 15;
 export const VIEW_DISTANCE_Y = 11;
 
-/** Intervalo de movimento (ms por tile). */
-export const MOVE_INTERVAL_MS = 250;
+/** Intervalo de movimento do jogador (ms por tile). Múltiplo do TICK_MS para
+ *  passos uniformes (sem "anda-e-para"): um passo a cada tick do servidor. */
+export const MOVE_INTERVAL_MS = 200;
 
 /** Tick do servidor (ms). */
 export const TICK_MS = 200;
@@ -179,6 +180,24 @@ export const SPRITE_CONFIG = {
   /** Ancoragem default (centro-inferior do tile). */
   defaultAnchor: { x: 16, y: 32 },
 } as const;
+
+// ---------------------------------------------------------------------------
+// Outfits / aparência do jogador
+
+/** Paleta central de cores (índice estável — não reordenar após uso). */
+export const APPEARANCE_PALETTE = [
+  '#d8e0ea', '#f0f0f0', '#c0c0c0', '#808080', '#404040', '#1a1a1a',
+  '#7f3f2f', '#c96f4a', '#e8b48a', '#f0d8b0', '#d8b060', '#b08840',
+  '#c02020', '#e06040', '#f0a060', '#f0e060', '#e0c020', '#b0a020',
+  '#40a040', '#60c060', '#a0e080', '#208040', '#206060', '#40a0c0',
+  '#80d0e0', '#4060c0', '#3040a0', '#6040a0', '#a060c0', '#e080c0',
+  '#c04080', '#e0a0a0',
+] as const;
+
+export const APPEARANCE_COLOR_SLOTS = ['head', 'primary', 'secondary', 'detail'] as const;
+
+/** Outfit padrão global (fallback quando o atual é desativado). */
+export const DEFAULT_PLAYER_OUTFIT_ID = 1;
 
 // ---------------------------------------------------------------------------
 // IA de criaturas

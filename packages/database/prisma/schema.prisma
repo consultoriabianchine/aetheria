@@ -37,6 +37,8 @@ model Character {
   quests         CharacterQuest[]
   huntProgress   HuntProgress[]
   account        Account                  @relation(fields: [accountId], references: [id], onDelete: Cascade)
+  appearance     CharacterAppearance?
+  outfits        CharacterOutfit[]
   createdAt      DateTime                 @default(now())
 
   @@index([vocation])
@@ -444,6 +446,103 @@ model Hunt {
   updated_at     DateTime @updatedAt @map("updated_at")
 
   @@map("hunts")
+}
+
+// ---------------------------------------------------------------------------
+// Outfits (Central de Comando). Separam SPIRIT ASSET (imagem) de ANIMATION SET
+// (interpretação dos frames) — criaturas e players compartilham o motor.
+// ---------------------------------------------------------------------------
+
+model SpriteAsset {
+  sprite_asset_id Int      @id @default(autoincrement()) @map("sprite_asset_id")
+  file_name       String   @map("file_name")
+  mime_type       String   @map("mime_type")
+  file_size       Int      @map("file_size")
+  image_width     Int      @map("image_width")
+  image_height    Int      @map("image_height")
+  data            Bytes
+  checksum        String   @map("checksum")
+  created_at      DateTime @default(now()) @map("created_at")
+  updated_at      DateTime @updatedAt @map("updated_at")
+  outfits         Outfit[]
+  outfit_color_masks Outfit[] @relation("OutfitColorMask")
+
+  @@map("sprite_assets")
+}
+
+model AnimationSet {
+  animation_set_id Int      @id @default(autoincrement()) @map("animation_set_id")
+  name             String
+  sprite_asset_id  Int?     @map("sprite_asset_id")
+  config           Json
+  version          Int      @default(1)
+  created_at       DateTime @default(now()) @map("created_at")
+  updated_at       DateTime @updatedAt @map("updated_at")
+  outfits          Outfit[]
+
+  @@map("animation_sets")
+}
+
+model Outfit {
+  id                     String      @id @default(cuid())
+  outfit_id              Int         @unique @default(autoincrement()) @map("outfit_id")
+  slug                   String      @unique
+  name                   String
+  description            String      @default("")
+  sprite_asset_id        Int         @map("sprite_asset_id")
+  animation_set_id       Int         @map("animation_set_id")
+  color_mask_asset_id    Int?        @map("color_mask_asset_id")
+  category               String      @default("default")
+  body_type              String      @default("unisex")
+  supports_colors        Boolean     @default(true) @map("supports_colors")
+  supports_addons        Boolean     @default(false) @map("supports_addons")
+  default_head_color     Int         @default(0) @map("default_head_color")
+  default_primary_color  Int         @default(0) @map("default_primary_color")
+  default_secondary_color Int        @default(0) @map("default_secondary_color")
+  default_detail_color   Int         @default(0) @map("default_detail_color")
+  available_by_default   Boolean     @default(false) @map("available_by_default")
+  premium_only           Boolean     @default(false) @map("premium_only")
+  enabled                Boolean     @default(true)
+  published              Boolean     @default(true)
+  version                Int         @default(1)
+  created_at             DateTime    @default(now()) @map("created_at")
+  updated_at             DateTime    @updatedAt @map("updated_at")
+  sprite_asset           SpriteAsset @relation(fields: [sprite_asset_id], references: [sprite_asset_id], onDelete: Cascade)
+  animation_set          AnimationSet @relation(fields: [animation_set_id], references: [animation_set_id], onDelete: Cascade)
+  color_mask_asset       SpriteAsset? @relation("OutfitColorMask", fields: [color_mask_asset_id], references: [sprite_asset_id], onDelete: SetNull)
+
+  @@index([category])
+  @@index([sprite_asset_id])
+  @@index([animation_set_id])
+  @@map("outfits")
+}
+
+model CharacterAppearance {
+  id              String    @id @default(cuid())
+  character_id    String    @unique @map("character_id")
+  outfit_id       Int       @map("outfit_id")
+  addon_mask      Int       @default(0) @map("addon_mask")
+  head_color      Int       @default(0) @map("head_color")
+  primary_color   Int       @default(0) @map("primary_color")
+  secondary_color Int       @default(0) @map("secondary_color")
+  detail_color    Int       @default(0) @map("detail_color")
+  updated_at      DateTime  @updatedAt @map("updated_at")
+  character       Character @relation(fields: [character_id], references: [id], onDelete: Cascade)
+
+  @@map("character_appearance")
+}
+
+model CharacterOutfit {
+  id           String    @id @default(cuid())
+  character_id String    @map("character_id")
+  outfit_id    Int       @map("outfit_id")
+  addon_mask   Int       @default(0) @map("addon_mask")
+  unlocked_at  DateTime  @default(now()) @map("unlocked_at")
+  source       String    @default("admin")
+  character    Character @relation(fields: [character_id], references: [id], onDelete: Cascade)
+
+  @@unique([character_id, outfit_id])
+  @@map("character_outfits")
 }
 
 model Quest {

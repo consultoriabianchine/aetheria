@@ -105,4 +105,14 @@ export class GameGateway implements OnGatewayConnection, OnGatewayDisconnect {
   async onHuntSetLoop(socket: Socket, payload: { token: string; enabled: boolean }) {
     await this.engine.handleHuntSetLoop(socket.id, payload.token, payload.enabled);
   }
+
+  @SubscribeMessage('appearance.list')
+  async onAppearanceList(socket: Socket, payload: { token: string }) {
+    await this.engine.handleAppearanceList(socket.id, payload.token);
+  }
+
+  @SubscribeMessage('appearance.save')
+  async onAppearanceSave(socket: Socket, payload: { token: string; outfitId: number; addonMask: number; colors: { head: number; primary: number; secondary: number; detail: number } }) {
+    await this.engine.handleAppearanceSave(socket.id, payload.token, payload.outfitId, payload.addonMask, payload.colors);
+  }
 }

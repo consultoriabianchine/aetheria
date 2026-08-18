@@ -1,0 +1,133 @@
+<div class="editor-head">
+  <a routerLink="/animation-sets">← Animation Sets</a>
+  <h1>{{ id === 'new' ? 'Novo animation set' : name() }}</h1>
+  @if (dirty()) {
+    <span class="unsaved">Alterações não salvas</span>
+  }
+  @if (saved()) {
+    <span class="saved">Salvo ✓</span>
+  }
+  <div class="actions">
+    <button class="primary" (click)="save()" [disabled]="saving() || !dirty()">Salvar</button>
+  </div>
+</div>
+
+@if (error()) {
+  <p class="error">{{ error() }}</p>
+}
+
+<div class="editor-grid">
+  <section class="panel">
+    <h2>Spritesheet</h2>
+    <div class="row">
+      <div class="field">
+        <label>Nome</label>
+        <input type="text" [value]="name()" (input)="name.set($any($event.target).value); dirty.set(true)" />
+      </div>
+      <div class="field">
+        <label>Sprite asset</label>
+        <input type="number" [value]="spriteAssetId()" (input)="spriteAssetId.set(+$any($event.target).value); loadSheet(); redraw(); dirty.set(true)" min="1" />
+      </div>
+    </div>
+    <input type="file" accept="image/png,image/webp" (change)="onAssetFile($event)" />
+
+    <div class="inspector">
+      <div class="field"><label>W</label><input type="number" [value]="spriteWidth()" (input)="spriteWidth.set(+$any($event.target).value); onGridChange()" min="1" /></div>
+      <div class="field"><label>H</label><input type="number" [value]="spriteHeight()" (input)="spriteHeight.set(+$any($event.target).value); onGridChange()" min="1" /></div>
+      <div class="field"><label>Colunas</label><input type="number" [value]="sheetColumns()" (input)="sheetColumns.set(+$any($event.target).value); onGridChange()" min="1" /></div>
+      <div class="field"><label>Linhas</label><input type="number" [value]="sheetRows()" (input)="sheetRows.set(+$any($event.target).value); onGridChange()" min="1" /></div>
+    </div>
+
+    <p class="hint">{{ sheetColumns() }}×{{ sheetRows() }} = <b>{{ totalFrames }}</b> frames · Clique para selecionar (shift = multi)</p>
+
+    <div class="sheet-wrap">
+      <canvas #sheetCanvas (click)="onSheetClick($event)" class="sprite-preview"></canvas>
+    </div>
+    <div class="row">
+      <button (click)="clearSelection()">Limpar seleção</button>
+      <span class="hint">Selecionados: {{ selectedFrames().join(', ') || '—' }}</span>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Preview</h2>
+    <div class="preview-box">
+      <canvas #previewCanvas class="sprite-preview"></canvas>
+    </div>
+    <div class="row">
+      <button (click)="togglePlay()">{{ playing() ? 'Pausar' : 'Play' }}</button>
+      <button (click)="stop()">Stop</button>
+      <div class="field">
+        <label>Zoom</label>
+        <select [value]="zoom()" (change)="zoom.set(+$any($event.target).value); drawPreview()">
+          <option [value]="1">1×</option>
+          <option [value]="2">2×</option>
+          <option [value]="4">4×</option>
+          <option [value]="8">8×</option>
+        </select>
+      </div>
+      <label class="check"><input type="checkbox" [checked]="showGrid()" (change)="showGrid.set($any($event.target).checked); redraw()" /> Grade</label>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Animações</h2>
+    <div class="row">
+      <div class="field">
+        <label>Animação</label>
+        <select [value]="newAnim()" (change)="newAnim.set($any($event.target).value)">
+          @for (a of animations; track a) { <option [value]="a">{{ a }}</option> }
+        </select>
+      </div>
+      <div class="field">
+        <label>Direção</label>
+        <select [value]="newDir()" (change)="newDir.set($any($event.target).value)">
+          @for (d of directions; track d) { <option [value]="d">{{ directionLabel[d] }}</option> }
+        </select>
+      </div>
+      <button (click)="addSequence()">+ Nova</button>
+    </div>
+
+    <ul class="seq-list">
+      @for (s of sequences(); track $index; let i = $index) {
+        <li [class.active]="i === selectedSeq()" (click)="selectSequence(i)">
+          <span>{{ s.animation }} · {{ directionLabel[s.direction] }}</span>
+          <span class="mono">{{ s.frames.length }} frames</span>
+          <button class="danger" (click)="removeSequence(i); $event.stopPropagation()">✕</button>
+        </li>
+      }
+    </ul>
+    @if (sequences().length === 0) {
+      <p class="hint">Nenhuma sequência. Clique em “+ Nova”.</p>
+    }
+
+    @if (currentSequence; as seq) {
+      <h3>{{ seq.animation }} · {{ directionLabel[seq.direction] }}</h3>
+      <div class="timeline">
+        @for (f of seq.frames; track $index; let i = $index) {
+          <span class="frame-chip">
+            <button class="mini" (click)="moveFrame(i, -1)">←</button>
+            <span class="mono">{{ f }}</span>
+            <button class="mini" (click)="moveFrame(i, 1)">→</button>
+            <button class="mini" (click)="duplicateFrame(i)">+</button>
+            <button class="mini danger" (click)="removeFrame(i)">✕</button>
+          </span>
+        }
+        @if (seq.frames.length === 0) {
+          <span class="hint">Sem frames — selecione na grade e clique em “Adicionar seleção”.</span>
+        }
+      </div>
+      <div class="row">
+        <button (click)="addSelectedToTimeline()">Adicionar seleção</button>
+        <button (click)="setTimelineFrames([])">Limpar</button>
+      </div>
+      <div class="props">
+        <div class="field">
+          <label>Duração (ms)</label>
+          <input type="number" [value]="seq.frameDurationMs" (input)="setSeqProp({ frameDurationMs: +$any($event.target).value })" min="1" />
+        </div>
+        <label class="check"><input type="checkbox" [checked]="seq.loop" (change)="setSeqProp({ loop: $any($event.target).checked })" /> Loop</label>
+      </div>
+    }
+  </section>
+</div>

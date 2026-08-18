@@ -41,6 +41,14 @@ interface CharacterRow {
     ring?: unknown;
     amulet?: unknown;
   } | null;
+  appearance: {
+    outfit_id: number;
+    addon_mask: number;
+    head_color: number;
+    primary_color: number;
+    secondary_color: number;
+    detail_color: number;
+  } | null;
 }
 
 function clampInt(value: unknown, fallback: number): number {
@@ -54,6 +62,7 @@ const INCLUDE = {
   skills: true,
   inventory: true,
   equipment: true,
+  appearance: true,
 } as const;
 
 /** Store persistente em PostgreSQL via Prisma. */
@@ -149,6 +158,28 @@ export class PrismaStore implements Store {
         skills: { update: { ...character.skills } },
         inventory: { update: { slots: character.inventory as unknown as Prisma.InputJsonValue } },
         equipment: { update: this.toEquipmentData(character.equipment) as unknown as Prisma.CharacterEquipmentUpdateWithoutCharacterInput },
+        appearance: character.appearance
+          ? {
+              upsert: {
+                create: {
+                  outfit_id: character.appearance.outfitId,
+                  addon_mask: character.appearance.addonMask,
+                  head_color: character.appearance.colors.head,
+                  primary_color: character.appearance.colors.primary,
+                  secondary_color: character.appearance.colors.secondary,
+                  detail_color: character.appearance.colors.detail,
+                },
+                update: {
+                  outfit_id: character.appearance.outfitId,
+                  addon_mask: character.appearance.addonMask,
+                  head_color: character.appearance.colors.head,
+                  primary_color: character.appearance.colors.primary,
+                  secondary_color: character.appearance.colors.secondary,
+                  detail_color: character.appearance.colors.detail,
+                },
+              },
+            }
+          : undefined,
       },
     });
   }
@@ -291,6 +322,18 @@ export class PrismaStore implements Store {
         ring: eq.ring ? this.stack(eq.ring) : undefined,
         amulet: eq.amulet ? this.stack(eq.amulet) : undefined,
       },
+      appearance: row.appearance
+        ? {
+            outfitId: clampInt(row.appearance.outfit_id, 1),
+            addonMask: clampInt(row.appearance.addon_mask, 0),
+            colors: {
+              head: clampInt(row.appearance.head_color, 0),
+              primary: clampInt(row.appearance.primary_color, 0),
+              secondary: clampInt(row.appearance.secondary_color, 0),
+              detail: clampInt(row.appearance.detail_color, 0),
+            },
+          }
+        : undefined,
     };
   }
 

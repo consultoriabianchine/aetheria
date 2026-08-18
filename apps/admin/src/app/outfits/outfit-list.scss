@@ -1,0 +1,51 @@
+h1 {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.sub {
+  color: #8aa0b6;
+  margin-bottom: 16px;
+  font-size: 13px;
+}
+
+.toolbar {
+  margin-bottom: 12px;
+  display: flex;
+  gap: 8px;
+}
+
+.error {
+  color: #e06a6a;
+  margin: 12px 0;
+  white-space: pre-wrap;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #141a24;
+  border: 1px solid #232c3a;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px 12px;
+  border-bottom: 1px solid #232c3a;
+  font-size: 13px;
+}
+
+.mono {
+  font-family: monospace;
+}
+
+a {
+  color: #7fb3e0;
+  margin-right: 8px;
+}
+
+.danger {
+  color: #e06a6a;
+  border-color: #5a3030;
+}

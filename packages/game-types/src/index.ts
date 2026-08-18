@@ -1,3 +1,5 @@
+import type { PlayerAppearance } from './outfit';
+
 /** Posição no mundo em coordenadas de tile. */
 export interface Position {
   x: number;
@@ -180,6 +182,7 @@ export interface CharacterSummary {
   maxMana: number;
   position: Position;
   skills: CharacterSkills;
+  appearance?: PlayerAppearance;
 }
 
 export type MonsterState = 'IDLE' | 'WANDER' | 'CHASE' | 'ATTACK' | 'RETURN' | 'DEAD';
@@ -354,3 +357,4 @@ export interface HuntRunView {
 }
 
 export * from './animation';
+export * from './outfit';

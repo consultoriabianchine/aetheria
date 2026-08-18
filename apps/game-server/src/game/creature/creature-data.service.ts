@@ -1,8 +1,14 @@
 import { Injectable, Logger } from '@nestjs/common';
 import type { CreatureType } from '@aetheria/types';
+import { TICK_MS } from '@aetheria/config';
 import { CREATURE_SEED, CREATURE_SPAWN_SEED } from '../../../data/creature-seed';
 import { PrismaService } from '../../prisma/prisma.service';
 import type { CreatureData, CreatureDefinition, CreatureSpawnDefinition } from './creature-definition';
+
+/** Arredonda a velocidade para múltiplo do TICK_MS (passos uniformes, sem "anda-e-para"). */
+function snapToTick(ms: number): number {
+  return Math.max(TICK_MS, Math.round(ms / TICK_MS) * TICK_MS);
+}
 
 /**
  * Carrega definições, loot e spawns de criaturas do PostgreSQL
@@ -38,7 +44,7 @@ export class CreatureDataService {
           attack: d.game_attack ?? Math.max(1, Math.round(gameLevel * 1.5)),
           defense: d.game_defense ?? 0,
           experience: d.game_experience ?? d.source_experience ?? 0,
-          movementSpeed: d.game_speed ?? 400,
+          movementSpeed: snapToTick(d.game_speed ?? 400),
           attackSpeed: d.game_attack_speed ?? 1200,
           attackRange: d.game_attack_range ?? 1,
           viewRange: d.game_view_range ?? 8,
@@ -79,7 +85,9 @@ export class CreatureDataService {
   }
 
   private fallback(): CreatureData {
-    const definitions = new Map<string, CreatureDefinition>(CREATURE_SEED.map((c) => [c.id, c]));
+    const definitions = new Map<string, CreatureDefinition>(
+      CREATURE_SEED.map((c) => [c.id, c.movementSpeed === snapToTick(c.movementSpeed) ? c : { ...c, movementSpeed: snapToTick(c.movementSpeed) }]),
+    );
     return { definitions, spawns: CREATURE_SPAWN_SEED };
   }
 }

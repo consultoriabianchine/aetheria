@@ -26,5 +26,21 @@ export const routes: Routes = [
     path: 'hunts/:id',
     loadComponent: () => import('./hunts/hunt-editor').then((m) => m.HuntEditor),
   },
+  {
+    path: 'outfits',
+    loadComponent: () => import('./outfits/outfit-list').then((m) => m.OutfitList),
+  },
+  {
+    path: 'outfits/:id',
+    loadComponent: () => import('./outfits/outfit-editor').then((m) => m.OutfitEditor),
+  },
+  {
+    path: 'animation-sets',
+    loadComponent: () => import('./animation-sets/animation-set-list').then((m) => m.AnimationSetList),
+  },
+  {
+    path: 'animation-sets/:id',
+    loadComponent: () => import('./animation-sets/animation-set-editor').then((m) => m.AnimationSetEditor),
+  },
   { path: '**', redirectTo: 'creatures' },
 ];

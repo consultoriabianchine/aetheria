@@ -1,5 +1,5 @@
 import { Injectable, signal } from '@angular/core';
-import type { CreatureAnimationConfig, CreatureAnimationConfigInput, HuntDefinition } from '@aetheria/types';
+import type { CreatureAnimationConfig, CreatureAnimationConfigInput, HuntDefinition, OutfitDefinition } from '@aetheria/types';
 
 export interface AdminCreatureSummary {
   creatureId: number;
@@ -154,5 +154,62 @@ export class ApiService {
 
   deleteHunt(id: string): Promise<{ ok: boolean }> {
     return this.request(`/admin/hunts/${id}`, { method: 'DELETE', headers: this.headers() });
+  }
+
+  listOutfits(): Promise<OutfitDefinition[]> {
+    return this.request('/admin/outfits', { headers: this.headers() });
+  }
+
+  getOutfit(outfitId: number): Promise<OutfitDefinition> {
+    return this.request(`/admin/outfits/${outfitId}`, { headers: this.headers() });
+  }
+
+  saveOutfit(input: Omit<OutfitDefinition, 'outfitId' | 'version'> & { outfitId?: number }): Promise<{ ok: boolean; outfitId: number }> {
+    return this.request('/admin/outfits', {
+      method: 'POST',
+      headers: this.headers(),
+      body: JSON.stringify(input),
+    });
+  }
+
+  deleteOutfit(outfitId: number): Promise<{ ok: boolean }> {
+    return this.request(`/admin/outfits/${outfitId}`, { method: 'DELETE', headers: this.headers() });
+  }
+
+  listAnimationSets(): Promise<{ id: number; name: string }[]> {
+    return this.request('/admin/animation-sets', { headers: this.headers() });
+  }
+
+  getAnimationSet(id: number): Promise<{ name: string; spriteAssetId: number | null; config: { spriteWidth: number; spriteHeight: number; sheetColumns: number; sheetRows: number; animations: unknown[] } }> {
+    return this.request(`/admin/animation-sets/${id}`, { headers: this.headers() });
+  }
+
+  saveAnimationSet(input: { id?: number; name: string; spriteAssetId?: number; config: Record<string, unknown> }): Promise<{ ok: boolean; animationSetId: number }> {
+    return this.request('/admin/animation-sets', {
+      method: 'POST',
+      headers: this.headers(),
+      body: JSON.stringify(input),
+    });
+  }
+
+  uploadSpriteAsset(file: File): Promise<{ ok: boolean; spriteAssetId: number }> {
+    return file
+      .arrayBuffer()
+      .then((buf) => {
+        const bytes = new Uint8Array(buf);
+        let binary = '';
+        const chunk = 0x8000;
+        for (let i = 0; i < bytes.length; i += chunk) {
+          binary += String.fromCharCode(...bytes.subarray(i, i + chunk));
+        }
+        return btoa(binary);
+      })
+      .then((dataBase64) =>
+        this.request('/admin/sprite-assets', {
+          method: 'POST',
+          headers: this.headers(),
+          body: JSON.stringify({ fileName: file.name, mimeType: file.type || 'image/png', dataBase64 }),
+        }),
+      );
   }
 }

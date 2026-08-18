@@ -27,7 +27,9 @@ export type ClientMessage =
   | { type: 'hunt.list'; token: string }
   | { type: 'hunt.start'; token: string; huntId: string; loopEnabled: boolean }
   | { type: 'hunt.stop'; token: string }
-  | { type: 'hunt.setLoop'; token: string; enabled: boolean };
+  | { type: 'hunt.setLoop'; token: string; enabled: boolean }
+  | { type: 'appearance.list'; token: string }
+  | { type: 'appearance.save'; token: string; outfitId: number; addonMask: number; colors: { head: number; primary: number; secondary: number; detail: number } };
 
 export type ServerMessage =
   | { type: 'auth.loginResult'; ok: boolean; error?: string; token?: string; accountId?: string; characters?: CharacterSummary[] }
@@ -66,7 +68,9 @@ export type ServerMessage =
   | { type: 'hunt.wiped'; huntId: string; penaltyPaid: number; loopEnabled: boolean; respawnInMs: number | null }
   | { type: 'hunt.loopChanged'; huntId: string; loopEnabled: boolean }
   | { type: 'hunt.returnedToCity' }
-  | { type: 'gold.update'; gold: number };
+  | { type: 'gold.update'; gold: number }
+  | { type: 'appearance.list'; outfits: { outfitId: number; name: string; slug: string; category: string; supportsColors: boolean; supportsAddons: boolean }[] }
+  | { type: 'appearance.changed'; entityId: string; outfitId: number; addonMask: number; colors: { head: number; primary: number; secondary: number; detail: number } };
 
 export interface WsEnvelope {
   event: string;
@@ -118,6 +122,8 @@ export const SERVER_EVENTS = {
   HUNT_LOOP_CHANGED: 'hunt.loopChanged',
   HUNT_RETURNED_TO_CITY: 'hunt.returnedToCity',
   GOLD_UPDATE: 'gold.update',
+  APPEARANCE_LIST: 'appearance.list',
+  APPEARANCE_CHANGED: 'appearance.changed',
 } as const;
 
 export const CLIENT_EVENTS = {
@@ -137,6 +143,8 @@ export const CLIENT_EVENTS = {
   HUNT_START: 'hunt.start',
   HUNT_STOP: 'hunt.stop',
   HUNT_SET_LOOP: 'hunt.setLoop',
+  APPEARANCE_LIST: 'appearance.list',
+  APPEARANCE_SAVE: 'appearance.save',
 } as const;
 
 export type { CreatureState, Direction, Position };

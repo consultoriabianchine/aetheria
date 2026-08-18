@@ -50,6 +50,8 @@
       <button class="btn" (click)="toggleHunts()">{{ state.huntsOpen() ? 'Fechar Hunts' : 'Hunts' }}</button>
     }
     <button class="btn" (click)="invOpen.set(!invOpen())">{{ invOpen() ? 'Fechar' : 'Inventário' }}</button>
+    <button class="btn" (click)="openAppearance()">Aparência</button>
+    <button class="btn" (click)="state.toggleHdSmooth()">{{ state.hdSmooth() ? 'HD ON' : 'HD OFF' }}</button>
     <button class="btn" (click)="exit()">Sair</button>
   </div>
 
@@ -142,6 +144,58 @@
         <p>{{ line }}</p>
       }
       <button class="btn" (click)="closeDialog()">Fechar</button>
+    </div>
+  }
+
+  <!-- aparência -->
+  @if (state.appearanceOpen()) {
+    <div class="hud hud-appearance">
+      <h3>Aparência <span class="sub">{{ state.self()?.name }}</span></h3>
+      <div class="app-outfits">
+        @for (o of state.availableOutfits(); track o.outfitId) {
+          <div
+            class="app-card"
+            [class.active]="state.appearanceDraft()?.outfitId === o.outfitId"
+            (click)="selectOutfit(o.outfitId)"
+          >
+            <outfit-thumb [outfitId]="o.outfitId"></outfit-thumb>
+            <span>{{ o.name }}</span>
+          </div>
+        }
+      </div>
+
+      @if (draftOutfit(); as o) {
+        @if (o.supportsColors) {
+          <div class="app-colors">
+            @for (slot of colorSlots; track slot) {
+              <div class="app-color">
+                <label>{{ slot }}</label>
+                <div class="app-palette">
+                  @for (c of palette; track c; let i = $index) {
+                    <span
+                      class="app-swatch"
+                      [style.background]="c"
+                      [class.active]="state.appearanceDraft()!.colors[slot] === i"
+                      (click)="setDraftColor(slot, i)"
+                    ></span>
+                  }
+                </div>
+              </div>
+            }
+          </div>
+        }
+        @if (o.supportsAddons) {
+          <div class="app-addons">
+            <label class="check"><input type="checkbox" [checked]="hasAddon(state.appearanceDraft()!.addonMask, 1)" (change)="toggleAddon(1)" /> Addon 1</label>
+            <label class="check"><input type="checkbox" [checked]="hasAddon(state.appearanceDraft()!.addonMask, 2)" (change)="toggleAddon(2)" /> Addon 2</label>
+          </div>
+        }
+      }
+
+      <div class="app-actions">
+        <button class="btn primary" (click)="state.saveAppearance()">Salvar</button>
+        <button class="btn" (click)="state.closeAppearance()">Cancelar</button>
+      </div>
     </div>
   }
 

@@ -1,0 +1,46 @@
+<h1>Outfits</h1>
+<p class="sub">Central de Comando — roupas dos jogadores (sprite + animation set + cores).</p>
+
+<div class="toolbar">
+  <button class="primary" (click)="create()">+ Novo outfit</button>
+  <button (click)="load()" [disabled]="loading()">Atualizar</button>
+</div>
+
+@if (error()) {
+  <p class="error">{{ error() }}</p>
+}
+@if (loading()) {
+  <p>Carregando…</p>
+}
+
+@if (!loading() && !error()) {
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Categoria</th>
+        <th>Cores</th>
+        <th>Padrão</th>
+        <th>Status</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (o of outfits(); track o.outfitId) {
+        <tr>
+          <td class="mono">#{{ o.outfitId }}</td>
+          <td>{{ o.name }}</td>
+          <td>{{ o.category }}</td>
+          <td>{{ o.supportsColors ? 'sim' : 'não' }}</td>
+          <td>{{ o.availableByDefault ? 'sim' : '—' }}</td>
+          <td>{{ o.published ? (o.enabled ? 'Publicado' : 'Desativado') : 'Rascunho' }}</td>
+          <td>
+            <a [routerLink]="['/outfits', o.outfitId]">Editar</a>
+            <button class="danger" (click)="remove(o.outfitId)">Excluir</button>
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+}

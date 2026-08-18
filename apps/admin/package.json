@@ -11,6 +11,7 @@
   "private": true,
   "packageManager": "npm@11.16.0",
   "dependencies": {
+    "@aetheria/config": "*",
     "@aetheria/types": "*",
     "@angular/common": "^22.1.0",
     "@angular/compiler": "^22.1.0",

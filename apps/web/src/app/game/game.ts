@@ -3,10 +3,13 @@ import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import Phaser from 'phaser';
 import type { CharacterEquipment, ItemStack } from '@aetheria/types';
+import { APPEARANCE_PALETTE } from '@aetheria/config';
 import { WsService } from '../core/ws.service';
 import { GameState } from './game-state';
 import { ItemCatalogService } from './item-catalog.service';
 import { CreatureAssetService } from './creature-asset.service';
+import { OutfitAssetService } from './outfit-asset.service';
+import { OutfitThumb } from './outfit-thumb';
 import { WorldScene } from './scenes/world-scene';
 
 interface InvEntry {
@@ -22,7 +25,7 @@ interface EqEntry {
 
 @Component({
   selector: 'app-game',
-  imports: [FormsModule],
+  imports: [FormsModule, OutfitThumb],
   templateUrl: './game.html',
   styleUrl: './game.scss',
 })
@@ -30,11 +33,14 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   readonly state = inject(GameState);
   readonly chatInput = signal('');
   readonly invOpen = signal(false);
+  readonly colorSlots = ['head', 'primary', 'secondary', 'detail'] as const;
+  readonly palette = APPEARANCE_PALETTE;
 
   private readonly el = inject(ElementRef);
   private readonly ws = inject(WsService);
   private readonly itemCatalog = inject(ItemCatalogService);
   private readonly creatureAssets = inject(CreatureAssetService);
+  private readonly outfitAssets = inject(OutfitAssetService);
   private readonly router = inject(Router);
   private phaser: Phaser.Game | null = null;
 
@@ -63,7 +69,7 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
       scene: [],
     });
     this.phaser.scene.add('World', WorldScene, false);
-    this.phaser.scene.start('World', { ws: this.ws, state: this.state, assets: this.creatureAssets });
+    this.phaser.scene.start('World', { ws: this.ws, state: this.state, assets: this.creatureAssets, outfits: this.outfitAssets });
   }
 
   ngOnDestroy() {
@@ -164,6 +170,41 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
 
   toggleHunts() {
     this.state.toggleHunts();
+  }
+
+  openAppearance() {
+    this.state.openAppearance();
+  }
+
+  draftOutfit() {
+    const id = this.state.appearanceDraft()?.outfitId;
+    return this.state.availableOutfits().find((o) => o.outfitId === id) ?? null;
+  }
+
+  outfitThumbUrl(outfitId: number) {
+    return this.outfitAssets.textureUrl(outfitId);
+  }
+
+  selectOutfit(outfitId: number) {
+    this.state.selectOutfit(outfitId);
+  }
+
+  setDraftColor(slot: 'head' | 'primary' | 'secondary' | 'detail', index: number) {
+    this.state.setDraftColor(slot, index);
+  }
+
+  setDraftAddon(mask: number) {
+    this.state.setDraftAddonMask(mask);
+  }
+
+  hasAddon(mask: number, bit: number): boolean {
+    return (mask & bit) !== 0;
+  }
+
+  toggleAddon(bit: number) {
+    const d = this.state.appearanceDraft();
+    if (!d) return;
+    this.state.setDraftAddonMask(d.addonMask ^ bit);
   }
 
   exit() {

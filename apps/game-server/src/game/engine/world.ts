@@ -4,6 +4,7 @@ import type {
   Direction,
   ItemStack,
   NpcDialogue,
+  PlayerAppearance,
   Position,
   VocationId,
 } from '@aetheria/types';
@@ -44,6 +45,7 @@ export class GamePlayer {
   skillProgress: { skillType: keyof CharacterSkills; level: number; experience: number }[] = [];
   inventory: (ItemStack | null)[];
   equipment: CharacterEquipment;
+  appearance: PlayerAppearance | undefined;
   attackBase: number;
   defenseBase: number;
   moveDir: Direction | null = null;
@@ -87,6 +89,7 @@ export class GamePlayer {
       ring: character.equipment.ring ? { ...character.equipment.ring } : undefined,
       amulet: character.equipment.amulet ? { ...character.equipment.amulet } : undefined,
     };
+    this.appearance = character.appearance ? { ...character.appearance } : undefined;
     this.attackBase = character.level + 8;
     this.defenseBase = 5 + Math.floor(character.level / 2);
     this.lastRegenAt = Date.now();
@@ -111,6 +114,7 @@ export class GamePlayer {
       skills: { ...this.skills },
       inventory: this.inventory.map((s) => (s ? { ...s } : null)),
       equipment: this.toEquipment(),
+      appearance: this.appearance ? { ...this.appearance } : undefined,
     };
   }
 

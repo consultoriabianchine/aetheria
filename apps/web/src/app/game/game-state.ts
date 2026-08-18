@@ -37,6 +37,21 @@ export interface DialogInfo {
   lines: string[];
 }
 
+export interface AvailableOutfit {
+  outfitId: number;
+  name: string;
+  slug: string;
+  category: string;
+  supportsColors: boolean;
+  supportsAddons: boolean;
+}
+
+export interface AppearanceDraft {
+  outfitId: number;
+  addonMask: number;
+  colors: { head: number; primary: number; secondary: number; detail: number };
+}
+
 @Injectable({ providedIn: 'root' })
 export class GameState {
   readonly connected = signal(false);
@@ -66,6 +81,14 @@ export class GameState {
   readonly hunt = signal<HuntRunView | null>(null);
   readonly huntsOpen = signal(false);
   readonly inArena = computed(() => this.hunt() !== null);
+
+  readonly appearanceOpen = signal(false);
+  readonly availableOutfits = signal<AvailableOutfit[]>([]);
+  readonly appearanceDraft = signal<AppearanceDraft | null>(null);
+
+  /** Renderização HD com anti-aliasing (default) vs pixel art nítido. */
+  readonly hdSmooth = signal(localStorage.getItem('aetheria_hd_smooth') !== '0');
+  readonly hdSmooth$ = new Subject<boolean>();
 
   /** Buffer de eventos para a cena Phaser que cria depois da conexão. */
   readonly sceneEvents$ = new Subject<WsEvent>();
@@ -205,6 +228,18 @@ export class GameState {
         this.self.update((s) => (s ? { ...s, gold: g.gold } : s));
         break;
       }
+      case SERVER_EVENTS.APPEARANCE_LIST: {
+        const r = data as { outfits: AvailableOutfit[] };
+        this.availableOutfits.set(r.outfits);
+        break;
+      }
+      case SERVER_EVENTS.APPEARANCE_CHANGED: {
+        const r = data as { entityId: string; outfitId: number; addonMask: number; colors: { head: number; primary: number; secondary: number; detail: number } };
+        this.self.update((s) =>
+          s && s.id === r.entityId ? { ...s, appearance: { outfitId: r.outfitId, addonMask: r.addonMask, colors: r.colors } } : s,
+        );
+        break;
+      }
       case SERVER_EVENTS.STATS_UPDATE: {
         const s = data as unknown as HudStats;
         this.stats.set(s);
@@ -324,6 +359,52 @@ export class GameState {
 
   toggleHunts() {
     this.huntsOpen.update((v) => !v);
+  }
+
+  toggleHdSmooth() {
+    const next = !this.hdSmooth();
+    this.hdSmooth.set(next);
+    localStorage.setItem('aetheria_hd_smooth', next ? '1' : '0');
+    this.hdSmooth$.next(next);
+  }
+
+  openAppearance() {
+    const self = this.self();
+    if (!self) return;
+    const app = self.appearance ?? { outfitId: 1, addonMask: 0, colors: { head: 0, primary: 0, secondary: 0, detail: 0 } };
+    this.appearanceDraft.set({ outfitId: app.outfitId, addonMask: app.addonMask, colors: { ...app.colors } });
+    this.appearanceOpen.set(true);
+    this.requestAppearanceList();
+  }
+
+  closeAppearance() {
+    this.appearanceOpen.set(false);
+  }
+
+  selectOutfit(outfitId: number) {
+    this.appearanceDraft.update((d) => (d ? { ...d, outfitId } : d));
+  }
+
+  setDraftColor(slot: 'head' | 'primary' | 'secondary' | 'detail', index: number) {
+    this.appearanceDraft.update((d) => (d ? { ...d, colors: { ...d.colors, [slot]: index } } : d));
+  }
+
+  setDraftAddonMask(mask: number) {
+    this.appearanceDraft.update((d) => (d ? { ...d, addonMask: mask } : d));
+  }
+
+  saveAppearance() {
+    const d = this.appearanceDraft();
+    const token = this.token();
+    if (!d || !token) return;
+    this.ws.send({ type: 'appearance.save', token, outfitId: d.outfitId, addonMask: d.addonMask, colors: d.colors });
+    this.appearanceOpen.set(false);
+  }
+
+  private requestAppearanceList() {
+    const token = this.token();
+    if (!token) return;
+    this.ws.send({ type: 'appearance.list', token });
   }
 
   static formatTime(ms: number): string {

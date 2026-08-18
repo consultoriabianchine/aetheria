@@ -1,15 +1,15 @@
 import Phaser from 'phaser';
 import { SERVER_EVENTS } from '@aetheria/protocol';
-import { TILE } from '@aetheria/config';
-import type { CreatureState, Direction, MapTile, Position } from '@aetheria/types';
+import { APPEARANCE_PALETTE, MOVE_INTERVAL_MS, TILE } from '@aetheria/config';
+import type { CreatureState, Direction, MapTile, PlayerAppearance, Position } from '@aetheria/types';
 import { WsService } from '../../core/ws.service';
 import { GameState } from '../game-state';
 import { CreatureAnimator, type AnimConfig, type AnimDirection, type AnimType } from '../creature-animator';
 import { CreatureAssetService } from '../creature-asset.service';
+import { OutfitAssetService, type OutfitAnimData } from '../outfit-asset.service';
+import { recolorCanvas } from '../outfit-recolor';
 
 const TILE_SIZE = 32;
-const CREATURE_SIZE = 64;
-const MOVE_DURATION_MS = 235;
 
 interface EntityInfo {
   name: string;
@@ -23,6 +23,7 @@ interface RenderedEntity {
   label: Phaser.GameObjects.Text;
   healthBack?: Phaser.GameObjects.Image;
   healthFront?: Phaser.GameObjects.Image;
+  spriteHeight: number;
 }
 
 interface CreatureAnimState {
@@ -59,12 +60,14 @@ export class WorldScene extends Phaser.Scene {
   private ws!: WsService;
   private state!: GameState;
   private assets!: CreatureAssetService;
+  private outfits!: OutfitAssetService;
   private tileImages: Phaser.GameObjects.Image[] = [];
   private entities = new Map<string, RenderedEntity>();
   private entityInfo = new Map<string, EntityInfo>();
   private loot = new Map<string, Phaser.GameObjects.Image>();
   private selfId = '';
   private selfEntity: RenderedEntity | null = null;
+  private selfAnim: CreatureAnimState | null = null;
   private lastSeq = -1;
   private moveDir: Direction | null = null;
   private keys!: Record<string, Phaser.Input.Keyboard.Key>;
@@ -78,10 +81,12 @@ export class WorldScene extends Phaser.Scene {
     super('World');
   }
 
-  create(data: { ws: WsService; state: GameState; assets: CreatureAssetService }) {
+  create(data: { ws: WsService; state: GameState; assets: CreatureAssetService; outfits: OutfitAssetService }) {
     this.ws = data.ws;
     this.state = data.state;
     this.assets = data.assets;
+    this.outfits = data.outfits;
+    this.load.setCORS('anonymous');
     this.buildTextures();
 
     this.state.sceneEvents$.subscribe((e) => {
@@ -96,7 +101,10 @@ export class WorldScene extends Phaser.Scene {
     }
 
     this.cameras.main.setBackgroundColor('#17202a');
-    this.cameras.main.setZoom(1.5);
+    this.cameras.main.setZoom(1);
+    this.applySmoothing(this.state.hdSmooth());
+    this.state.hdSmooth$.subscribe((smooth) => this.applySmoothing(smooth));
+    this.textures.on('addtexture', () => this.applySmoothing(this.state.hdSmooth()));
     this.setupKeyboard();
     this.setupDebug();
     this.input.on('pointerdown', (pointer: Phaser.Input.Pointer) => this.onPointerDown(pointer));
@@ -107,13 +115,13 @@ export class WorldScene extends Phaser.Scene {
   private handleEvent(event: string, data: unknown) {
     switch (event) {
       case SERVER_EVENTS.ENTER_WORLD: {
-        const w = data as { character: { id: string; name: string; position: Position }; map: MapTile[]; width: number; height: number };
-        this.resetScene(w.map, w.character.id, w.character.name, w.character.position, w.width, w.height);
+        const w = data as { character: { id: string; name: string; position: Position; appearance?: PlayerAppearance }; map: MapTile[]; width: number; height: number };
+        this.resetScene(w.map, w.character.id, w.character.name, w.character.position, w.width, w.height, w.character.appearance);
         break;
       }
       case SERVER_EVENTS.ENTER_ARENA: {
-        const w = data as { character: { id: string; name: string; position: Position }; map: MapTile[]; width: number; height: number };
-        this.resetScene(w.map, w.character.id, w.character.name, w.character.position, w.width, w.height);
+        const w = data as { character: { id: string; name: string; position: Position; appearance?: PlayerAppearance }; map: MapTile[]; width: number; height: number };
+        this.resetScene(w.map, w.character.id, w.character.name, w.character.position, w.width, w.height, w.character.appearance);
         break;
       }
       case SERVER_EVENTS.ENTITY_SPAWNED: {
@@ -155,7 +163,7 @@ export class WorldScene extends Phaser.Scene {
           maxHealth: number;
           movementSpeed?: number;
         };
-        this.addCreature(c.creatureId, c.slug, c.name, c.position, c.health, c.maxHealth, c.definitionCreatureId, c.facing, c.state, c.movementSpeed ?? MOVE_DURATION_MS);
+        this.addCreature(c.creatureId, c.slug, c.name, c.position, c.health, c.maxHealth, c.definitionCreatureId, c.facing, c.state, c.movementSpeed ?? MOVE_INTERVAL_MS);
         break;
       }
       case SERVER_EVENTS.CREATURE_MOVE: {
@@ -176,7 +184,7 @@ export class WorldScene extends Phaser.Scene {
         const rendered = this.entities.get(d.creatureId);
         const x = rendered?.image.x ?? 0;
         const y = rendered?.image.y ?? 0;
-        this.showDamage(x, y, d.amount, d.critical);
+        this.showDamage(x, y, d.amount, d.critical, rendered?.spriteHeight ?? TILE_SIZE);
         break;
       }
       case SERVER_EVENTS.CREATURE_DEATH: {
@@ -202,6 +210,13 @@ export class WorldScene extends Phaser.Scene {
         this.removeEntity((data as { creatureId: string }).creatureId);
         break;
       }
+      case SERVER_EVENTS.APPEARANCE_CHANGED: {
+        const r = data as { entityId: string; outfitId: number; addonMask: number; colors: { head: number; primary: number; secondary: number; detail: number } };
+        if (r.entityId === this.selfId) {
+          void this.setupPlayerOutfit(this.selfId, { outfitId: r.outfitId, addonMask: r.addonMask, colors: r.colors });
+        }
+        break;
+      }
       case SERVER_EVENTS.COMBAT_DAMAGE: {
         const d = data as { attackerId: string; targetId: string; amount: number; critical: boolean };
         const info = this.entityInfo.get(d.targetId);
@@ -209,7 +224,8 @@ export class WorldScene extends Phaser.Scene {
           const ent = this.entities.get(d.targetId);
           const x = ent?.image.x ?? (this.selfEntity && d.targetId === this.selfId ? this.selfEntity.image.x : 0);
           const y = ent?.image.y ?? (this.selfEntity && d.targetId === this.selfId ? this.selfEntity.image.y : 0);
-          this.showDamage(x, y, d.amount, d.critical);
+          const h = ent?.spriteHeight ?? (this.selfEntity && d.targetId === this.selfId ? this.selfEntity.spriteHeight : TILE_SIZE);
+          this.showDamage(x, y, d.amount, d.critical, h);
         }
         break;
       }
@@ -246,7 +262,7 @@ export class WorldScene extends Phaser.Scene {
 
   // ------------------------------------------------------------------ world
 
-  private resetScene(map: MapTile[], selfId: string, selfName: string, selfPosition: Position, width?: number, height?: number) {
+  private resetScene(map: MapTile[], selfId: string, selfName: string, selfPosition: Position, width?: number, height?: number, appearance?: PlayerAppearance) {
     for (const [id, ent] of this.entities) {
       ent.image.destroy();
       ent.label.destroy();
@@ -258,13 +274,14 @@ export class WorldScene extends Phaser.Scene {
     this.entityInfo.clear();
     this.creatureAnims.clear();
     this.definitionCreatureIds.clear();
+    this.selfAnim = null;
     for (const img of this.loot.values()) img.destroy();
     this.loot.clear();
     this.selfEntity = null;
     this.selfId = selfId;
     this.state.clearTarget();
     this.buildMap(map);
-    this.spawnSelf(selfId, selfName, selfPosition);
+    this.spawnSelf(selfId, selfName, selfPosition, appearance);
     this.applyCameraBounds(width, height);
   }
 
@@ -296,11 +313,75 @@ export class WorldScene extends Phaser.Scene {
     }
   }
 
-  private spawnSelf(id: string, name: string, position: Position) {
+  private spawnSelf(id: string, name: string, position: Position, appearance?: PlayerAppearance) {
     this.selfEntity = this.createRendered('player', name, position);
     this.entities.set(id, this.selfEntity);
     this.entityInfo.set(id, { name, health: 0, maxHealth: 0 });
     this.cameras.main.startFollow(this.selfEntity.image, false, 0.1, 0.1);
+    if (appearance) void this.setupPlayerOutfit(id, appearance);
+  }
+
+  private async setupPlayerOutfit(id: string, appearance: PlayerAppearance) {
+    const data = await this.outfits.loadConfig(appearance.outfitId);
+    if (!data) return;
+    const frameW = data.config.spriteWidth;
+    const frameH = data.config.spriteHeight;
+    const recolored = data.supportsColors && data.colorMaskAssetId;
+    const textureKey = recolored
+      ? `outfit_${appearance.outfitId}_${appearance.colors.head}_${appearance.colors.primary}_${appearance.colors.secondary}_${appearance.colors.detail}`
+      : `outfit_sheet_${appearance.outfitId}`;
+
+    if (!this.textures.exists(textureKey)) {
+      if (recolored) await this.buildRecoloredOutfit(textureKey, data, appearance.colors);
+      else await this.loadSheet(textureKey, this.outfits.textureUrl(appearance.outfitId), frameW, frameH);
+    }
+
+    const rendered = this.entities.get(id);
+    if (!rendered || !this.textures.exists(textureKey)) return;
+    const animator = new CreatureAnimator(data.config, 'south');
+    animator.play('idle', this.time.now);
+    this.selfAnim = { animator, textureKey, moveSpeed: MOVE_INTERVAL_MS, lastMoveAt: this.time.now };
+    rendered.spriteHeight = frameH;
+    rendered.image.setTexture(textureKey).setTint(0xffffff).setScale(1).setFrame(animator.frameIndex(this.time.now));
+    this.repositionWorldUi(rendered);
+  }
+
+  private loadSheet(key: string, url: string, frameWidth: number, frameHeight: number): Promise<void> {
+    if (this.textures.exists(key)) return Promise.resolve();
+    return new Promise((resolve) => {
+      this.load.spritesheet(key, url, { frameWidth, frameHeight });
+      this.load.once(Phaser.Loader.Events.COMPLETE, () => resolve());
+      this.load.once(Phaser.Loader.Events.FILE_LOAD_ERROR, () => resolve());
+      this.load.start();
+    });
+  }
+
+  private loadImages(entries: { key: string; url: string }[]): Promise<void> {
+    const missing = entries.filter((e) => !this.textures.exists(e.key));
+    if (missing.length === 0) return Promise.resolve();
+    for (const e of missing) this.load.image(e.key, e.url);
+    return new Promise((resolve) => {
+      this.load.once(Phaser.Loader.Events.COMPLETE, () => resolve());
+      this.load.once(Phaser.Loader.Events.FILE_LOAD_ERROR, () => resolve());
+      this.load.start();
+    });
+  }
+
+  private async buildRecoloredOutfit(textureKey: string, data: OutfitAnimData, colors: PlayerAppearance['colors']): Promise<void> {
+    const baseKey = `outfit_base_${data.outfitId}`;
+    const maskKey = `outfit_mask_${data.outfitId}`;
+    await this.loadImages([
+      { key: baseKey, url: this.outfits.textureUrl(data.outfitId) },
+      { key: maskKey, url: this.outfits.maskUrl(data.outfitId) },
+    ]);
+    const base = this.textures.get(baseKey).getSourceImage() as HTMLImageElement;
+    const mask = this.textures.get(maskKey).getSourceImage() as HTMLImageElement;
+    if (!base || !mask) return;
+    const canvas = recolorCanvas(base, mask, base.width, base.height, colors, APPEARANCE_PALETTE);
+    const img = new Image();
+    img.src = canvas.toDataURL('image/png');
+    await new Promise<void>((resolve) => { img.onload = () => resolve(); });
+    this.textures.addSpriteSheet(textureKey, img, { frameWidth: data.config.spriteWidth, frameHeight: data.config.spriteHeight });
   }
 
   private addEntity(id: string, kind: string, name: string, position: Position, health?: number, maxHealth?: number) {
@@ -316,9 +397,9 @@ export class WorldScene extends Phaser.Scene {
     const x = position.x * TILE_SIZE + TILE_SIZE / 2;
     const y = position.y * TILE_SIZE + TILE_SIZE / 2;
     const color = kind === 'monster' ? 0xe04d4d : kind === 'npc' ? 0xf0c14b : 0x4d86ff;
-    const image = this.add.image(x, y, 'circle').setTint(color).setOrigin(0.5).setDisplaySize(CREATURE_SIZE, CREATURE_SIZE);
+    const image = this.add.image(x, y, 'circle').setTint(color).setOrigin(0.5, 1).setDisplaySize(TILE_SIZE, TILE_SIZE);
     const label = this.add
-      .text(x, y - CREATURE_SIZE / 2 - 18, name, {
+      .text(x, y - TILE_SIZE - 6, name, {
         fontFamily: 'Arial',
         fontSize: '11px',
         color: '#ffffff',
@@ -329,16 +410,26 @@ export class WorldScene extends Phaser.Scene {
     const depth = position.y * 0.01 + 1;
     image.setDepth(depth);
     label.setDepth(depth + 0.01);
-    return { kind, image, label };
+    return { kind, image, label, spriteHeight: TILE_SIZE };
   }
 
   private attachHealthBar(rendered: RenderedEntity, health: number, maxHealth: number) {
     const depth = rendered.image.depth;
-    const back = this.add.image(rendered.image.x, rendered.image.y - CREATURE_SIZE / 2 - 10, 'barBack').setOrigin(0.5).setDepth(depth + 0.02);
-    const front = this.add.image(rendered.image.x, rendered.image.y - CREATURE_SIZE / 2 - 10, 'barFront').setOrigin(0.5).setDepth(depth + 0.03);
+    const back = this.add.image(rendered.image.x, rendered.image.y - rendered.spriteHeight - 4, 'barBack').setOrigin(0.5).setDepth(depth + 0.02);
+    const front = this.add.image(rendered.image.x, rendered.image.y - rendered.spriteHeight - 4, 'barFront').setOrigin(0.5).setDepth(depth + 0.03);
     rendered.healthBack = back;
     rendered.healthFront = front;
     this.setBar(front, health, maxHealth);
+  }
+
+  /** Reposiciona nome/barra de vida acima do sprite (altura pode variar). */
+  private repositionWorldUi(rendered: RenderedEntity) {
+    const top = rendered.image.y - rendered.spriteHeight;
+    rendered.label.setPosition(rendered.image.x, top - 6);
+    if (rendered.healthBack && rendered.healthFront) {
+      rendered.healthBack.setPosition(rendered.image.x, top - 4);
+      rendered.healthFront.setPosition(rendered.image.x, top - 4);
+    }
   }
 
   private addCreature(
@@ -351,7 +442,7 @@ export class WorldScene extends Phaser.Scene {
     definitionCreatureId?: number,
     facing?: Direction,
     state?: CreatureState,
-    moveSpeed = MOVE_DURATION_MS,
+    moveSpeed = MOVE_INTERVAL_MS,
   ) {
     const rendered = this.createRendered('monster', name, position);
     this.attachHealthBar(rendered, health, maxHealth);
@@ -390,8 +481,9 @@ export class WorldScene extends Phaser.Scene {
     const animator = new CreatureAnimator(config, toAnimDirection(facing));
     animator.play(animForState(state), this.time.now);
     this.creatureAnims.set(id, { animator, textureKey, moveSpeed, lastMoveAt: this.time.now });
-    const scale = CREATURE_SIZE / config.spriteWidth;
-    rendered.image.setTexture(textureKey).setTint(0xffffff).setScale(scale).setFrame(animator.frameIndex(this.time.now));
+    rendered.spriteHeight = config.spriteHeight;
+    rendered.image.setTexture(textureKey).setTint(0xffffff).setScale(1).setFrame(animator.frameIndex(this.time.now));
+    this.repositionWorldUi(rendered);
   }
 
   private updateCreatureAnim(id: string, facing: Direction, state: CreatureState) {
@@ -417,6 +509,9 @@ export class WorldScene extends Phaser.Scene {
         anim.animator.play('idle', time);
       }
     }
+    if (this.selfAnim && this.selfEntity) {
+      this.selfEntity.image.setFrame(this.selfAnim.animator.frameIndex(time));
+    }
   }
 
   private flashEntity(rendered: RenderedEntity) {
@@ -439,11 +534,11 @@ export class WorldScene extends Phaser.Scene {
   private moveCreature(id: string, position: Position, facing: Direction, state: CreatureState) {
     const anim = this.creatureAnims.get(id);
     const rendered = this.entities.get(id);
-    if (rendered) this.moveRendered(rendered, position, anim?.moveSpeed ?? MOVE_DURATION_MS);
+    if (rendered) this.moveRendered(rendered, position, anim?.moveSpeed ?? MOVE_INTERVAL_MS);
     this.updateCreatureAnim(id, facing, state);
   }
 
-  private moveRendered(rendered: RenderedEntity, position: Position, duration = MOVE_DURATION_MS) {
+  private moveRendered(rendered: RenderedEntity, position: Position, duration = MOVE_INTERVAL_MS) {
     const x = position.x * TILE_SIZE + TILE_SIZE / 2;
     const y = position.y * TILE_SIZE + TILE_SIZE / 2;
     const depth = position.y * 0.01 + 1;
@@ -453,11 +548,14 @@ export class WorldScene extends Phaser.Scene {
       rendered.healthBack.setDepth(depth + 0.02);
       rendered.healthFront?.setDepth(depth + 0.03);
     }
-    const targets: (Phaser.GameObjects.Image | Phaser.GameObjects.Text)[] = [rendered.image, rendered.label];
-    if (rendered.healthBack && rendered.healthFront) {
-      targets.push(rendered.healthBack, rendered.healthFront);
-    }
-    this.tweens.add({ targets, x, y, duration, ease: 'Linear' });
+    this.tweens.add({
+      targets: rendered.image,
+      x,
+      y,
+      duration,
+      ease: 'Linear',
+      onUpdate: () => this.repositionWorldUi(rendered),
+    });
   }
 
   private removeEntity(id: string) {
@@ -489,7 +587,7 @@ export class WorldScene extends Phaser.Scene {
 
   private setBar(front: Phaser.GameObjects.Image, health: number, maxHealth: number) {
     const ratio = Math.max(0, Math.min(1, health / Math.max(1, maxHealth)));
-    front.setDisplaySize(Math.max(1, ratio * CREATURE_SIZE * 0.75), 5);
+    front.setDisplaySize(Math.max(1, ratio * TILE_SIZE), 5);
   }
 
   // ------------------------------------------------------------------ input
@@ -521,10 +619,21 @@ export class WorldScene extends Phaser.Scene {
       if (dir !== this.moveDir) {
         this.moveDir = dir;
         this.ws.send({ type: 'game.input', direction: dir });
+        this.updateSelfAnim(dir);
       }
     };
     this.input.keyboard!.on('keydown', check);
     this.input.keyboard!.on('keyup', check);
+  }
+
+  private updateSelfAnim(dir: Direction | null) {
+    if (!this.selfAnim) return;
+    if (dir) {
+      this.selfAnim.animator.setDirection(toAnimDirection(dir));
+      this.selfAnim.animator.play('walk', this.time.now);
+    } else {
+      this.selfAnim.animator.play('idle', this.time.now);
+    }
   }
 
   private setupDebug() {
@@ -609,9 +718,9 @@ export class WorldScene extends Phaser.Scene {
     this.ws.send({ type: 'game.attack', targetId: id });
   }
 
-  private showDamage(x: number, y: number, amount: number, critical: boolean) {
+  private showDamage(x: number, y: number, amount: number, critical: boolean, spriteHeight = TILE_SIZE) {
     const text = this.add
-      .text(x, y - CREATURE_SIZE / 2 - 8, String(amount), {
+      .text(x, y - spriteHeight - 8, String(amount), {
         fontFamily: 'Arial',
         fontSize: critical ? '20px' : '15px',
         color: critical ? '#ffcf3f' : '#ff6b6b',
@@ -622,7 +731,7 @@ export class WorldScene extends Phaser.Scene {
       .setDepth(100);
     this.tweens.add({
       targets: text,
-      y: y - CREATURE_SIZE / 2 - 24,
+      y: y - spriteHeight - 24,
       alpha: 0,
       duration: 700,
       onComplete: () => text.destroy(),
@@ -644,6 +753,15 @@ export class WorldScene extends Phaser.Scene {
     this.makeLoot();
     this.makeBar('barBack', '#3a3f45');
     this.makeBar('barFront', '#e0413f');
+  }
+
+  /** Aplica HD (linear/anti-aliasing) ou pixel art (nearest) a todas as texturas. */
+  private applySmoothing(smooth: boolean) {
+    const filter = smooth ? Phaser.Textures.FilterMode.LINEAR : Phaser.Textures.FilterMode.NEAREST;
+    for (const key of this.textures.getTextureKeys()) {
+      this.textures.get(key)?.setFilter(filter);
+    }
+    this.cameras.main.setRoundPixels(!smooth);
   }
 
   private makeTile(type: number, base: string, light: string, dark: string) {

@@ -1,0 +1,103 @@
+<div class="editor-head">
+  <a routerLink="/outfits">← Outfits</a>
+  <h1>{{ id === 'new' ? 'Novo outfit' : draft()?.name }}</h1>
+  @if (dirty()) {
+    <span class="unsaved">Alterações não salvas</span>
+  }
+  <div class="actions">
+    <button class="primary" (click)="save()" [disabled]="saving() || !dirty()">Salvar outfit</button>
+  </div>
+</div>
+
+@if (error()) {
+  <p class="error">{{ error() }}</p>
+}
+
+@if (draft(); as o) {
+  <div class="form">
+    <section class="panel">
+      <h2>Geral</h2>
+      <div class="field">
+        <label>Nome</label>
+        <input type="text" [value]="o.name" (input)="patch({ name: $any($event.target).value })" />
+      </div>
+      <div class="field">
+        <label>Slug</label>
+        <input type="text" [value]="o.slug" (input)="patch({ slug: $any($event.target).value })" />
+      </div>
+      <div class="field">
+        <label>Descrição</label>
+        <input type="text" [value]="o.description" (input)="patch({ description: $any($event.target).value })" />
+      </div>
+      <div class="row">
+        <div class="field">
+          <label>Categoria</label>
+          <select [value]="o.category" (change)="patch({ category: $any($event.target).value })">
+            @for (c of categories; track c) {
+              <option [value]="c">{{ c }}</option>
+            }
+          </select>
+        </div>
+        <div class="field">
+          <label>Body type</label>
+          <select [value]="o.bodyType" (change)="patch({ bodyType: $any($event.target).value })">
+            @for (b of bodyTypes; track b) {
+              <option [value]="b">{{ b }}</option>
+            }
+          </select>
+        </div>
+      </div>
+      <label class="check"><input type="checkbox" [checked]="o.supportsColors" (change)="patch({ supportsColors: $any($event.target).checked })" /> Suporta cores</label>
+      <label class="check"><input type="checkbox" [checked]="o.supportsAddons" (change)="patch({ supportsAddons: $any($event.target).checked })" /> Suporta addons</label>
+      <label class="check"><input type="checkbox" [checked]="o.availableByDefault" (change)="patch({ availableByDefault: $any($event.target).checked })" /> Disponível por padrão</label>
+      <label class="check"><input type="checkbox" [checked]="o.premiumOnly" (change)="patch({ premiumOnly: $any($event.target).checked })" /> Premium</label>
+      <label class="check"><input type="checkbox" [checked]="o.enabled" (change)="patch({ enabled: $any($event.target).checked })" /> Ativo</label>
+      <label class="check"><input type="checkbox" [checked]="o.published" (change)="patch({ published: $any($event.target).checked })" /> Publicado</label>
+    </section>
+
+    <section class="panel">
+      <h2>Sprite</h2>
+      <div class="field">
+        <label>Sprite asset (base)</label>
+        <span class="mono">#{{ o.spriteAssetId || '—' }}</span>
+        <input type="file" accept="image/png,image/webp" (change)="onBaseFile($event)" />
+      </div>
+      <div class="field">
+        <label>Color mask (opcional)</label>
+        <span class="mono">#{{ o.colorMaskAssetId || '—' }}</span>
+        <input type="file" accept="image/png,image/webp" (change)="onMaskFile($event)" />
+      </div>
+      <div class="field">
+        <label>Animation set</label>
+        <select [value]="o.animationSetId" (change)="patch({ animationSetId: +$any($event.target).value })">
+          @for (s of animationSets(); track s.id) {
+            <option [value]="s.id">#{{ s.id }} {{ s.name }}</option>
+          }
+        </select>
+        <a [routerLink]="['/animation-sets', o.animationSetId]" [queryParams]="{ spriteAssetId: o.spriteAssetId }">Editar animação</a>
+      </div>
+    </section>
+
+    <section class="panel wide">
+      <h2>Cores padrão</h2>
+      <div class="slots">
+        @for (slot of slots; track slot) {
+          <div class="slot">
+            <label>{{ slot }}</label>
+            <span class="swatch-big" [style.background]="palette[o.defaultColors[slot]]"></span>
+            <div class="palette">
+              @for (c of palette; track c; let i = $index) {
+                <span
+                  class="swatch"
+                  [style.background]="c"
+                  [class.active]="o.defaultColors[slot] === i"
+                  (click)="setColor(slot, i)"
+                ></span>
+              }
+            </div>
+          </div>
+        }
+      </div>
+    </section>
+  </div>
+}
