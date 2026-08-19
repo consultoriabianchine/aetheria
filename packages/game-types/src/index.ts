@@ -105,9 +105,7 @@ export interface ArchetypeDefinition {
   name: string;
   hpPerLevel: number;
   manaPerLevel: number;
-  initialWeapon: string;
-  initialOffhand?: string;
-  initialAmmo?: string;
+  initialEquipment: CharacterEquipment;
   primarySkill: SkillType;
   allowedWeapons: WeaponType[];
   regeneration: RegenerationConfig;

@@ -260,10 +260,9 @@ export class GameEngine implements OnModuleDestroy {
     }
     const maxHp = calculateMaxHp(1, archetype);
     const maxMana = calculateMaxMana(1, archetype);
-    const initialWeapon = archetype.initialWeapon;
-    const equipment: CharacterEquipment = { weapon: { itemId: initialWeapon, quantity: 1 } };
-    if (archetype.initialOffhand) equipment.offhand = { itemId: archetype.initialOffhand, quantity: 1 };
-    if (archetype.initialAmmo) equipment.ammo = { itemId: archetype.initialAmmo, quantity: 1 };
+    const equipment = Object.fromEntries(
+      Object.entries(archetype.initialEquipment).map(([slot, stack]) => [slot, stack ? { ...stack } : undefined]),
+    ) as CharacterEquipment;
     const skills = { ...BASE_SKILLS };
     const character = await this.store.createCharacter(session.accountId, {
       name: trimmed,
