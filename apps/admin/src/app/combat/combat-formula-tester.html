@@ -1,0 +1,55 @@
+<h1>Combat Formula Tester</h1>
+<p class="sub">Calcula o dano usando o mesmo motor matemático do servidor.</p>
+
+<div class="grid">
+  <label>Archetype
+    <select [ngModel]="model().archetype" (ngModelChange)="update('archetype', $event)">
+      @for (a of archetypes; track a) { <option [value]="a">{{ a }}</option> }
+    </select>
+  </label>
+  <label>Level <input type="number" [ngModel]="model().level" (ngModelChange)="update('level', +$event)" /></label>
+  <label>Melee <input type="number" [ngModel]="model().melee" (ngModelChange)="update('melee', +$event)" /></label>
+  <label>Distance <input type="number" [ngModel]="model().distance" (ngModelChange)="update('distance', +$event)" /></label>
+  <label>Magic <input type="number" [ngModel]="model().magic" (ngModelChange)="update('magic', +$event)" /></label>
+  <label>Weapon Power <input type="number" [ngModel]="model().weaponPower" (ngModelChange)="update('weaponPower', +$event)" /></label>
+  <label>Staff Power <input type="number" [ngModel]="model().staffPower" (ngModelChange)="update('staffPower', +$event)" /></label>
+  <label>Ammo Power <input type="number" [ngModel]="model().ammoPower" (ngModelChange)="update('ammoPower', +$event)" /></label>
+  <label>Target Level <input type="number" [ngModel]="model().targetLevel" (ngModelChange)="update('targetLevel', +$event)" /></label>
+  <label>Armor <input type="number" [ngModel]="model().armor" (ngModelChange)="update('armor', +$event)" /></label>
+  <label>Defense <input type="number" [ngModel]="model().defense" (ngModelChange)="update('defense', +$event)" /></label>
+  <label>Damage Type
+    <select [ngModel]="model().damageType" (ngModelChange)="update('damageType', $event)">
+      @for (d of damageTypes; track d) { <option [value]="d">{{ d }}</option> }
+    </select>
+  </label>
+  <label>Resistance <input type="number" step="0.01" [ngModel]="model().resistance" (ngModelChange)="update('resistance', +$event)" /></label>
+  <label>Ability Multiplier <input type="number" step="0.1" [ngModel]="model().abilityMultiplier" (ngModelChange)="update('abilityMultiplier', +$event)" /></label>
+  <label>Flat Power <input type="number" [ngModel]="model().flatPower" (ngModelChange)="update('flatPower', +$event)" /></label>
+</div>
+
+<button (click)="calculate()">Calcular</button>
+
+@if (error()) { <p class="error">{{ error() }}</p> }
+@if (result(); as r) {
+  @if (!r.ok) { <p class="error">Inválido: {{ r.reason }}</p> }
+  @if (r.ok) {
+    <div class="cards">
+      <div class="card">Base Power<div class="value">{{ r.basePower }}</div></div>
+      <div class="card">Raw<div class="value">{{ r.rawDamage?.toFixed(2) }}</div></div>
+      <div class="card">Mitigation<div class="value">{{ ((r.mitigation ?? 0) * 100).toFixed(2) }}%</div></div>
+      <div class="card">Normal<div class="value">{{ r.normalDamage }}</div></div>
+      <div class="card">Critical<div class="value">{{ r.criticalDamage }}</div></div>
+      <div class="card">Min / Avg / Max<div class="value">{{ r.min }} / {{ r.average }} / {{ r.max }}</div></div>
+    </div>
+  }
+}
+
+<h2>Curvas</h2>
+<table>
+  <thead><tr><th>Level</th><th>Skill</th><th>Weak</th><th>Medium</th><th>Strong</th></tr></thead>
+  <tbody>
+    @for (row of simulations(); track row.level + '-' + row.skill) {
+      <tr><td>{{ row.level }}</td><td>{{ row.skill }}</td><td>{{ row.weak }}</td><td>{{ row.medium }}</td><td>{{ row.strong }}</td></tr>
+    }
+  </tbody>
+</table>

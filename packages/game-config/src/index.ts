@@ -1,4 +1,4 @@
-import type { NpcTemplate, VocationDefinition, VocationId } from '@aetheria/types';
+import type { ArchetypeDefinition, CombatArchetype, NpcTemplate } from '@aetheria/types';
 
 /** Dimensões e andar inicial do mundo. */
 export const MAP_WIDTH = 64;
@@ -43,11 +43,6 @@ export const BASE_PLAYER = {
 export const GAME_CONFIG = {
   baseHp: 100,
   baseMana: 50,
-  promotion: {
-    requiredLevel: 20,
-    goldCost: 20_000,
-    regenerationMultiplier: 1.5,
-  },
   combatDistance: {
     melee: 1,
     close: 3,
@@ -55,84 +50,66 @@ export const GAME_CONFIG = {
   },
 } as const;
 
-/** Definições das quatro vocações (data-driven, fonte única de verdade). */
-export const VOCATIONS: Record<VocationId, VocationDefinition> = {
-  knight: {
-    id: 'knight',
-    name: 'Knight',
-    promotedName: 'Elite Knight',
-    role: 'tank',
+/** Arquétipos oficiais do Aetheria Idle. */
+export const ARCHETYPES: Record<CombatArchetype, ArchetypeDefinition> = {
+  mage: {
+    id: 'mage',
+    name: 'Mage',
+    hpPerLevel: 5,
+    manaPerLevel: 30,
+    initialWeapon: 'apprentice-staff',
+    primarySkill: 'magic',
+    allowedWeapons: ['staff'],
+    regeneration: { hpPerSecond: 1, manaPerSecond: 3 },
+  },
+  warrior: {
+    id: 'warrior',
+    name: 'Warrior',
     hpPerLevel: 15,
     manaPerLevel: 5,
-    damageReduction: 0.1,
-    initialWeapon: 'hand-axe',
-    initialOffhand: 'wooden-shield',
-    primarySkill: 'axe',
-    canUseShield: true,
-    preferredDistance: 'melee',
+    initialWeapon: 'iron-sword',
+    primarySkill: 'melee',
     allowedWeapons: ['sword', 'axe', 'club'],
-    trainingRates: { magic: 0.35, melee: 1.0, distance: 0.3, shielding: 1.0 },
     regeneration: { hpPerSecond: 2, manaPerSecond: 1 },
-    promotion: { ...GAME_CONFIG.promotion },
   },
-  paladin: {
-    id: 'paladin',
-    name: 'Paladin',
-    promotedName: 'Royal Paladin',
-    role: 'ranged',
+  archer: {
+    id: 'archer',
+    name: 'Archer',
     hpPerLevel: 10,
     manaPerLevel: 15,
-    damageReduction: 0,
-    initialWeapon: 'bow',
+    initialWeapon: 'hunter-bow',
+    initialAmmo: 'iron-arrow',
     primarySkill: 'distance',
-    canUseShield: false,
-    preferredDistance: 'ranged',
     allowedWeapons: ['bow', 'crossbow'],
-    trainingRates: { magic: 0.6, melee: 0.45, distance: 1.0, shielding: 0.4 },
     regeneration: { hpPerSecond: 1.5, manaPerSecond: 2 },
-    promotion: { ...GAME_CONFIG.promotion },
-  },
-  sorcerer: {
-    id: 'sorcerer',
-    name: 'Sorcerer',
-    promotedName: 'Master Sorcerer',
-    role: 'caster',
-    hpPerLevel: 5,
-    manaPerLevel: 30,
-    damageReduction: 0,
-    initialWeapon: 'wand-of-vortex',
-    primarySkill: 'magic',
-    canUseShield: false,
-    preferredDistance: 'ranged',
-    allowedWeapons: ['wand'],
-    trainingRates: { magic: 1.0, melee: 0.2, distance: 0.2, shielding: 0.2 },
-    regeneration: { hpPerSecond: 1, manaPerSecond: 3 },
-    promotion: { ...GAME_CONFIG.promotion },
-  },
-  druid: {
-    id: 'druid',
-    name: 'Druid',
-    promotedName: 'Elder Druid',
-    role: 'support',
-    hpPerLevel: 5,
-    manaPerLevel: 30,
-    damageReduction: 0.1,
-    initialWeapon: 'snakebite-rod',
-    primarySkill: 'magic',
-    canUseShield: false,
-    preferredDistance: 'ranged',
-    allowedWeapons: ['rod'],
-    trainingRates: { magic: 1.0, melee: 0.2, distance: 0.2, shielding: 0.2 },
-    regeneration: { hpPerSecond: 1, manaPerSecond: 3 },
-    promotion: { ...GAME_CONFIG.promotion },
   },
 };
 
-/** Nome de exibição da vocação (promovido usa o nome promovido). */
-export function getVocationDisplayName(vocationId: VocationId, promoted: boolean): string {
-  const def = VOCATIONS[vocationId];
-  return promoted ? def.promotedName : def.name;
-}
+export const COMBAT_FORMULA_CONFIG = {
+  levelScalingPerLevel: 0.005,
+  meleeScalingPerSkill: 0.01,
+  distanceScalingPerSkill: 0.01,
+  magicScalingPerLevel: 0.015,
+  physicalDefenseBaseConstant: 100,
+  physicalDefenseLevelConstant: 10,
+  baseCriticalChance: 0.05,
+  baseCriticalDamage: 1.5,
+  maxCriticalChance: 0.8,
+  baseHitChance: 0.95,
+  minHitChance: 0.05,
+  maxHitChance: 1,
+  maxResistance: 0.75,
+  damageVarianceMin: 0.95,
+  damageVarianceMax: 1.05,
+  consumableAmmo: false,
+  baseAttackGroupMs: 2000,
+} as const;
+
+export const SKILL_PROGRESSION_CONFIG = {
+  melee: { base: 100, quadratic: 25, actionGain: 1 },
+  distance: { base: 100, quadratic: 25, actionGain: 1 },
+  magic: { base: 150, quadratic: 40, manaGainMultiplier: 0.1, minimumGain: 1 },
+} as const;
 
 /** Número de slots do inventário. */
 export const INVENTORY_SIZE = 24;
@@ -197,7 +174,8 @@ export const APPEARANCE_PALETTE = [
 export const APPEARANCE_COLOR_SLOTS = ['head', 'primary', 'secondary', 'detail'] as const;
 
 /** Outfit padrão global (fallback quando o atual é desativado). */
-export const DEFAULT_PLAYER_OUTFIT_ID = 1;
+export const DEFAULT_PLAYER_OUTFIT_SLUG = 'outfit_128';
+export const DEFAULT_PLAYER_OUTFIT_ID = 2;
 
 // ---------------------------------------------------------------------------
 // IA de criaturas

@@ -28,7 +28,7 @@ import {
 // helpers
 // ---------------------------------------------------------------------------
 
-const DEFAULT_SKILLS: CharacterSkills = { attack: 10, defense: 10, magic: 10, shielding: 10, fishing: 10 };
+const DEFAULT_SKILLS: CharacterSkills = { melee: 10, distance: 10, magic: 10 };
 
 function makeDefinition(overrides: Partial<CreatureDefinition> = {}): CreatureDefinition {
   return {
@@ -63,9 +63,7 @@ function makePlayer(overrides: Partial<GamePlayer> = {}): GamePlayer {
     id: 'p1',
     accountId: 'a1',
     name: 'Tester',
-    vocation: 'knight' as const,
-    promoted: false,
-    promotedAt: null,
+    archetype: 'warrior' as const,
     gold: 1000,
     level: 1,
     experience: 0,
@@ -75,6 +73,11 @@ function makePlayer(overrides: Partial<GamePlayer> = {}): GamePlayer {
     maxMana: 50,
     position: { x: 0, y: 0, z: 0 } as Position,
     skills: { ...DEFAULT_SKILLS },
+    skillProgress: Object.keys(DEFAULT_SKILLS).map((skillType) => ({
+      skillType: skillType as keyof CharacterSkills,
+      level: DEFAULT_SKILLS[skillType as keyof CharacterSkills],
+      experience: 0,
+    })),
     inventory: [],
     equipment: {} as CharacterEquipment,
   };
@@ -104,9 +107,7 @@ function makeHuntEngine(): {
     id: p.id,
     accountId: p.accountId,
     name: p.name,
-    vocation: p.vocation,
-    promoted: p.promoted,
-    promotedName: p.promoted ? 'Elite' : '',
+    archetype: p.archetype,
     gold: p.gold,
     level: p.level,
     experience: p.experience,

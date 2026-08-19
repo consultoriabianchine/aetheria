@@ -27,6 +27,14 @@ export const routes: Routes = [
     loadComponent: () => import('./hunts/hunt-editor').then((m) => m.HuntEditor),
   },
   {
+    path: 'combat',
+    loadComponent: () => import('./combat/combat-formula-tester').then((m) => m.CombatFormulaTester),
+  },
+  {
+    path: 'items',
+    loadComponent: () => import('./items/item-editor').then((m) => m.ItemEditor),
+  },
+  {
     path: 'outfits',
     loadComponent: () => import('./outfits/outfit-list').then((m) => m.OutfitList),
   },

@@ -30,3 +30,292 @@ a {
   width: 100%;
   height: 100%;
 }
+
+app-game .modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  background: rgba(0, 0, 0, 0.58);
+}
+
+app-game .inventory-modal {
+  width: min(920px, 94vw);
+  max-height: 88vh;
+  overflow: auto;
+  padding: 12px;
+}
+
+app-game .modal-inventory-layout {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr) 210px;
+  gap: 12px;
+}
+
+app-game .modal-inventory-layout h3 {
+  color: #d7b94f;
+  font-size: 12px;
+  margin: 8px 0 7px;
+}
+
+app-game .eq-grid {
+  display: grid;
+  gap: 5px;
+}
+
+app-game .eq-row {
+  min-height: 34px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 4px 6px;
+  text-align: left;
+}
+
+app-game .eq-slot {
+  width: 68px;
+  color: #8f9aa6;
+  font-size: 11px;
+}
+
+app-game .eq-name,
+app-game .eq-empty {
+  color: #e2e9ef;
+  font-size: 11px;
+}
+
+app-game .item-tooltip {
+  position: fixed;
+  z-index: 200;
+  min-width: 210px;
+  max-width: 280px;
+  padding: 9px 10px;
+  background: rgba(7, 9, 12, 0.98);
+  border: 1px solid rgba(215, 185, 79, 0.48);
+  border-radius: 8px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+  color: #cdd6df;
+  font-size: 11px;
+  line-height: 1.45;
+  pointer-events: none;
+}
+
+app-game .tip-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+}
+
+app-game .tip-title {
+  color: #d7b94f;
+  font-weight: 800;
+  font-size: 12px;
+}
+
+app-game .simple-dialog,
+app-game .appearance-modal {
+  width: min(560px, 92vw);
+  max-height: 86vh;
+  overflow: auto;
+  padding: 16px;
+}
+
+app-game .simple-dialog p {
+  margin: 8px 0;
+  color: #d6dde5;
+  font-size: 13px;
+}
+
+app-game .app-outfits {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin: 12px 0;
+}
+
+app-game .app-card {
+  display: grid;
+  place-items: center;
+  gap: 4px;
+  padding: 8px;
+  font-size: 11px;
+}
+
+app-game .app-card.active {
+  border-color: rgba(81, 201, 117, 0.65);
+}
+
+app-game .app-colors {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+app-game .app-color label {
+  display: block;
+  color: #9eaab5;
+  font-size: 11px;
+  margin-bottom: 4px;
+  text-transform: capitalize;
+}
+
+app-game .app-palette {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+}
+
+app-game .app-swatch {
+  width: 15px;
+  height: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.45);
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+app-game .app-swatch.active {
+  outline: 2px solid #51c975;
+}
+
+app-game .app-addons {
+  display: grid;
+  gap: 4px;
+  margin: 12px 0;
+  color: #d8e0ea;
+  font-size: 12px;
+}
+
+app-game .app-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+app-game .app-actions .primary {
+  border-color: rgba(81, 201, 117, 0.6);
+  color: #9ff0b5;
+}
+
+app-game .hunt-drawer {
+  position: absolute;
+  top: 62px;
+  left: 50%;
+  z-index: 20;
+  width: min(520px, 90%);
+  max-height: 64vh;
+  overflow-y: auto;
+  transform: translateX(-50%);
+  padding: 10px;
+}
+
+app-game .hunt-card {
+  padding: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 7px;
+  background: rgba(10, 12, 15, 0.6);
+  margin-bottom: 7px;
+}
+
+app-game .hunt-card > div,
+app-game .hunt-card footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+app-game .hunt-card strong {
+  color: #ecf1f5;
+  font-size: 13px;
+}
+
+app-game .hunt-card p {
+  margin: 4px 0 7px;
+}
+
+@media (max-width: 1600px) {
+  app-game .game-page {
+    --left-sidebar-width: 230px;
+    --right-sidebar-width: 280px;
+  }
+
+  app-game .game-topbar {
+    grid-template-columns: 210px 150px minmax(0, 1fr) auto;
+  }
+
+  app-game .top-nav-item {
+    width: 58px;
+  }
+}
+
+@media (max-width: 1450px) {
+  app-game .game-page {
+    --left-sidebar-width: 220px;
+    --right-sidebar-width: 270px;
+  }
+
+  app-game .game-topbar {
+    gap: 8px;
+  }
+
+  app-game .top-nav-item {
+    width: 50px;
+  }
+
+  app-game .top-nav-item small {
+    display: none;
+  }
+
+  app-game .hunt-header {
+    grid-template-columns: minmax(130px, 1fr) 150px auto auto;
+  }
+}
+
+@media (max-width: 1366px) {
+  app-game .game-page {
+    --topbar-height: 60px;
+    --left-sidebar-width: 212px;
+    --right-sidebar-width: 256px;
+    --panel-gap: 6px;
+  }
+
+  app-game .game-topbar {
+    padding: 6px 8px;
+    grid-template-columns: 180px 115px minmax(0, 1fr) auto;
+  }
+
+  app-game .brand-mark {
+    width: 36px;
+    height: 36px;
+  }
+
+  app-game .top-nav {
+    gap: 4px;
+  }
+
+  app-game .top-nav-item {
+    width: 36px;
+    height: 42px;
+  }
+
+  app-game .chip {
+    padding: 4px 6px;
+  }
+
+  app-game .hunt-header {
+    min-height: 46px;
+    grid-template-columns: minmax(120px, 1fr) 130px auto auto;
+    gap: 6px;
+  }
+
+  app-game .wave-strip span {
+    width: 15px;
+    height: 15px;
+  }
+
+  app-game .chat-log {
+    height: 44px;
+  }
+}

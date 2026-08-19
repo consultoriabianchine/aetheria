@@ -7,6 +7,101 @@ import { CREATURE_SEED, CREATURE_SPAWN_SEED } from '../data/creature-seed';
 
 const prisma = new PrismaClient();
 
+const INITIAL_ITEM_DEFINITIONS = [
+  {
+    id: 'apprentice-staff',
+    name: 'Apprentice Staff',
+    description: 'Cajado inicial para magos aprendizes.',
+    type: 'weapon',
+    slot: 'weapon',
+    imagePath: null,
+    stackable: false,
+    weight: 18,
+    category: 'Staff',
+    attackPower: 0,
+    magicPower: 12,
+    armor: 0,
+    defense: 0,
+    maxHp: 0,
+    maxMana: 0,
+    criticalChance: 0,
+    criticalDamage: 0,
+    accuracy: 0,
+    dodge: 0,
+    weapon: { itemId: 'apprentice-staff', weaponType: 'staff', attackPower: 0, magicPower: 12, damageType: 'arcane', range: 5 },
+    ammo: undefined,
+  },
+  {
+    id: 'iron-sword',
+    name: 'Iron Sword',
+    description: 'Espada inicial simples e confiável.',
+    type: 'weapon',
+    slot: 'weapon',
+    imagePath: null,
+    stackable: false,
+    weight: 35,
+    category: 'Sword',
+    attackPower: 18,
+    magicPower: 0,
+    armor: 0,
+    defense: 0,
+    maxHp: 0,
+    maxMana: 0,
+    criticalChance: 0,
+    criticalDamage: 0,
+    accuracy: 0,
+    dodge: 0,
+    weapon: { itemId: 'iron-sword', weaponType: 'sword', attackPower: 18, damageType: 'physical', range: 1 },
+    ammo: undefined,
+  },
+  {
+    id: 'hunter-bow',
+    name: 'Hunter Bow',
+    description: 'Arco inicial para combate à distância.',
+    type: 'weapon',
+    slot: 'weapon',
+    imagePath: null,
+    stackable: false,
+    weight: 31,
+    category: 'Bow',
+    attackPower: 10,
+    magicPower: 0,
+    armor: 0,
+    defense: 0,
+    maxHp: 0,
+    maxMana: 0,
+    criticalChance: 0,
+    criticalDamage: 0,
+    accuracy: 0,
+    dodge: 0,
+    weapon: { itemId: 'hunter-bow', weaponType: 'bow', attackPower: 10, damageType: 'physical', range: 6, allowedAmmoType: 'arrow' },
+    ammo: undefined,
+  },
+  {
+    id: 'iron-arrow',
+    name: 'Iron Arrow',
+    description: 'Munição inicial para arcos.',
+    type: 'ammo',
+    slot: 'ammo',
+    imagePath: null,
+    stackable: true,
+    weight: 0.7,
+    category: 'Arrow',
+    attackPower: 8,
+    magicPower: 0,
+    armor: 0,
+    defense: 0,
+    maxHp: 0,
+    maxMana: 0,
+    criticalChance: 0,
+    criticalDamage: 0,
+    accuracy: 0,
+    dodge: 0,
+    weapon: undefined,
+    ammo: { itemId: 'iron-arrow', ammoType: 'arrow', attackPower: 8, damageType: 'physical' },
+  },
+] as const;
+
 async function seed() {
   const items = JSON.parse(readFileSync(path.join(__dirname, '..', 'data', 'items.json'), 'utf8')) as {
     items: {
@@ -24,11 +119,11 @@ async function seed() {
   };
   const itemNameById = new Map(items.items.map((i) => [i.id, i.name]));
 
-  for (const item of items.items) {
-    await prisma.item.upsert({
+  for (const item of INITIAL_ITEM_DEFINITIONS) {
+    await prisma.itemDefinition.upsert({
       where: { id: item.id },
-      update: { ...item, slot: item.slot ?? null },
-      create: { ...item, slot: item.slot ?? null },
+      update: item,
+      create: item,
     });
   }
 
@@ -123,8 +218,8 @@ async function seed() {
 
   console.log(
     'Seed concluído:',
-    items.items.length,
-    'itens,',
+    INITIAL_ITEM_DEFINITIONS.length,
+    'item_definitions,',
     world.tiles.length,
     'tiles,',
     CREATURE_SEED.length,

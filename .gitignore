@@ -9,3 +9,6 @@ apps/web/.angular/
 packages/database/generated/
 apps/tibiawiki-importer/assets/
 apps/tibiawiki-importer/exports/apps/tibiawiki-importer/data/wiki-items-raw/
+
+doc/tibia_dat/Tibia.spr
+doc/tibia_dat/Tibia.dat

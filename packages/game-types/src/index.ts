@@ -50,30 +50,49 @@ export interface CharacterStats {
   speed: number;
 }
 
-export type SkillType = 'sword' | 'axe' | 'club' | 'distance' | 'magic' | 'shielding';
+export type CombatArchetype = 'mage' | 'warrior' | 'archer';
+
+export type DamageType = 'physical' | 'fire' | 'ice' | 'energy' | 'earth' | 'holy' | 'death' | 'arcane';
+
+export type CombatSkill = 'melee' | 'distance' | 'magic';
+
+export type SkillType = CombatSkill;
 
 export interface CharacterSkills {
-  sword: number;
-  axe: number;
-  club: number;
-  distance: number;
-  magic: number;
-  shielding: number;
-}
-
-export type VocationId = 'knight' | 'paladin' | 'sorcerer' | 'druid';
-
-export type CombatRole = 'tank' | 'ranged' | 'caster' | 'support';
-
-export type CombatDistance = 'melee' | 'close' | 'ranged';
-
-export type WeaponType = 'sword' | 'axe' | 'club' | 'bow' | 'crossbow' | 'wand' | 'rod';
-
-export interface TrainingRates {
-  magic: number;
   melee: number;
   distance: number;
-  shielding: number;
+  magic: number;
+}
+
+export type WeaponType = 'staff' | 'sword' | 'axe' | 'club' | 'bow' | 'crossbow';
+
+export type AmmoType = 'arrow' | 'bolt';
+
+export type ProjectileDirection = 'north' | 'northEast' | 'east' | 'southEast' | 'south' | 'southWest' | 'west' | 'northWest';
+
+export interface ItemProjectileVisual {
+  sprite: string;
+  spriteAssetId?: number;
+  frameWidth: number;
+  frameHeight: number;
+  frames: Record<ProjectileDirection, number>;
+  speedPxPerSecond?: number;
+  offsetX?: number;
+  offsetY?: number;
+}
+
+export interface ItemImpactVisual {
+  sprite: string;
+  spriteAssetId?: number;
+  frameWidth: number;
+  frameHeight: number;
+  frames: number[];
+  fps?: number;
+}
+
+export interface ItemVisualEffects {
+  projectile?: ItemProjectileVisual;
+  impact?: ItemImpactVisual;
 }
 
 export interface RegenerationConfig {
@@ -81,40 +100,30 @@ export interface RegenerationConfig {
   manaPerSecond: number;
 }
 
-export interface PromotionConfig {
-  requiredLevel: number;
-  goldCost: number;
-  regenerationMultiplier: number;
-}
-
-export interface VocationDefinition {
-  id: VocationId;
+export interface ArchetypeDefinition {
+  id: CombatArchetype;
   name: string;
-  promotedName: string;
-  role: CombatRole;
   hpPerLevel: number;
   manaPerLevel: number;
-  damageReduction: number;
   initialWeapon: string;
   initialOffhand?: string;
+  initialAmmo?: string;
   primarySkill: SkillType;
-  canUseShield: boolean;
-  preferredDistance: CombatDistance;
   allowedWeapons: WeaponType[];
-  trainingRates: TrainingRates;
   regeneration: RegenerationConfig;
-  promotion: PromotionConfig;
 }
 
 export type EquipmentSlot =
-  | 'head'
+  | 'helmet'
   | 'armor'
   | 'legs'
   | 'boots'
-  | 'weapon'
-  | 'shield'
   | 'ring'
-  | 'amulet';
+  | 'necklace'
+  | 'relic'
+  | 'weapon'
+  | 'offhand'
+  | 'ammo';
 
 export type ItemType =
   | 'helmet'
@@ -122,9 +131,11 @@ export type ItemType =
   | 'legs'
   | 'boots'
   | 'weapon'
-  | 'shield'
   | 'ring'
-  | 'amulet'
+  | 'necklace'
+  | 'relic'
+  | 'offhand'
+  | 'ammo'
   | 'consumable'
   | 'loot'
   | 'other';
@@ -141,6 +152,46 @@ export interface ItemDefinition {
   image: string;
   category: string;
   slot?: EquipmentSlot;
+  combatStats?: ItemCombatStats;
+  weapon?: WeaponDefinition;
+  ammo?: AmmoDefinition;
+  visual?: ItemVisualEffects;
+}
+
+export interface ItemCombatStats {
+  attackPower?: number;
+  magicPower?: number;
+  armor?: number;
+  defense?: number;
+  maxHp?: number;
+  maxMana?: number;
+  criticalChance?: number;
+  criticalDamage?: number;
+  accuracy?: number;
+  dodge?: number;
+  attackSpeedModifier?: number;
+  skillBonuses?: Partial<Record<CombatSkill, number>>;
+  resistances?: Partial<Record<DamageType, number>>;
+}
+
+export interface WeaponDefinition {
+  itemId: string;
+  weaponType: WeaponType;
+  attackPower: number;
+  magicPower?: number;
+  damageType?: DamageType;
+  range: number;
+  attackIntervalMs?: number;
+  twoHanded?: boolean;
+  allowedAmmoType?: AmmoType;
+}
+
+export interface AmmoDefinition {
+  itemId: string;
+  ammoType: AmmoType;
+  attackPower: number;
+  elementalPower?: number;
+  damageType?: DamageType;
 }
 
 /** Item dentro do inventário. */
@@ -150,14 +201,55 @@ export interface ItemStack {
 }
 
 export interface CharacterEquipment {
-  head?: ItemStack;
+  helmet?: ItemStack;
   armor?: ItemStack;
   legs?: ItemStack;
   boots?: ItemStack;
-  weapon?: ItemStack;
-  shield?: ItemStack;
   ring?: ItemStack;
-  amulet?: ItemStack;
+  necklace?: ItemStack;
+  relic?: ItemStack;
+  weapon?: ItemStack;
+  offhand?: ItemStack;
+  ammo?: ItemStack;
+}
+
+export interface CharacterCombatStats {
+  level: number;
+  maxHp: number;
+  maxMana: number;
+  armor: number;
+  defense: number;
+  meleeSkill: number;
+  distanceSkill: number;
+  magicLevel: number;
+  criticalChance: number;
+  criticalDamage: number;
+  accuracy: number;
+  dodge: number;
+  resistances: Record<DamageType, number>;
+}
+
+export interface CombatFormulaProfile {
+  basePowerSource: 'weapon' | 'weapon_plus_ammo' | 'magic_weapon';
+  scalingSkill: CombatSkill;
+  skillCoefficient: number;
+  levelCoefficient: number;
+}
+
+export interface DamageComponent {
+  damageType: DamageType;
+  amount: number;
+}
+
+export interface DamageEvent {
+  sourceId: string;
+  targetId: string;
+  damageType: DamageType;
+  rawDamage: number;
+  mitigatedDamage: number;
+  finalDamage: number;
+  critical: boolean;
+  timestamp: number;
 }
 
 /** Resumo do personagem (inventário + equipamento). */
@@ -170,9 +262,7 @@ export interface CharacterSummary {
   id: string;
   accountId: string;
   name: string;
-  vocation: VocationId;
-  promoted: boolean;
-  promotedName: string;
+  archetype: CombatArchetype;
   gold: number;
   level: number;
   experience: number;

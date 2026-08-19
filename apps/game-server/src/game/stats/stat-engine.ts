@@ -1,54 +1,33 @@
-import { GAME_CONFIG, VOCATIONS } from '@aetheria/config';
-import type { VocationDefinition, VocationId } from '@aetheria/types';
+import { ARCHETYPES, GAME_CONFIG } from '@aetheria/config';
+import type { ArchetypeDefinition, CombatArchetype } from '@aetheria/types';
 
 export interface CharacterCoreStats {
   maxHp: number;
   maxMana: number;
-  damageReduction: number;
   hpRegeneration: number;
   manaRegeneration: number;
-  regenerationMultiplier: number;
 }
 
 /** MaxHP = baseHp + (hpPerLevel × level). */
-export function calculateMaxHp(level: number, vocation: VocationDefinition): number {
-  return GAME_CONFIG.baseHp + vocation.hpPerLevel * level;
+export function calculateMaxHp(level: number, archetype: ArchetypeDefinition): number {
+  return GAME_CONFIG.baseHp + archetype.hpPerLevel * level;
 }
 
 /** MaxMana = baseMana + (manaPerLevel × level). */
-export function calculateMaxMana(level: number, vocation: VocationDefinition): number {
-  return GAME_CONFIG.baseMana + vocation.manaPerLevel * level;
-}
-
-/** Redução de dano da vocação como multiplicador (1 = sem redução). */
-export function damageReductionMultiplier(vocation: VocationDefinition): number {
-  return 1 - vocation.damageReduction;
-}
-
-/** Aplica a redução de dano da vocação, garantindo mínimo 1 de dano. */
-export function applyVocationDamageReduction(rawDamage: number, vocation: VocationDefinition): number {
-  return Math.max(1, Math.round(rawDamage * damageReductionMultiplier(vocation)));
-}
-
-/** Calcula o multiplicador de regeneração (promovido = 1.5×). */
-export function regenerationMultiplier(promoted: boolean): number {
-  return promoted ? GAME_CONFIG.promotion.regenerationMultiplier : 1;
+export function calculateMaxMana(level: number, archetype: ArchetypeDefinition): number {
+  return GAME_CONFIG.baseMana + archetype.manaPerLevel * level;
 }
 
 /** Compõe os atributos derivados do personagem. */
 export function computeCoreStats(
   level: number,
-  vocationId: VocationId,
-  promoted: boolean,
+  archetypeId: CombatArchetype,
 ): CharacterCoreStats {
-  const vocation = VOCATIONS[vocationId];
-  const multiplier = regenerationMultiplier(promoted);
+  const archetype = ARCHETYPES[archetypeId];
   return {
-    maxHp: calculateMaxHp(level, vocation),
-    maxMana: calculateMaxMana(level, vocation),
-    damageReduction: vocation.damageReduction,
-    hpRegeneration: vocation.regeneration.hpPerSecond * multiplier,
-    manaRegeneration: vocation.regeneration.manaPerSecond * multiplier,
-    regenerationMultiplier: multiplier,
+    maxHp: calculateMaxHp(level, archetype),
+    maxMana: calculateMaxMana(level, archetype),
+    hpRegeneration: archetype.regeneration.hpPerSecond,
+    manaRegeneration: archetype.regeneration.manaPerSecond,
   };
 }

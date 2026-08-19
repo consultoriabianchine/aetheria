@@ -1,7 +1,7 @@
 import { Injectable, computed, signal } from '@angular/core';
 import { Subject } from 'rxjs';
 import { SERVER_EVENTS } from '@aetheria/protocol';
-import type { CharacterInventory, CharacterSummary, HuntListEntry, HuntRunView, MapTile } from '@aetheria/types';
+import type { CharacterInventory, CharacterSkills, CharacterSummary, CombatArchetype, HuntListEntry, HuntRunView, MapTile } from '@aetheria/types';
 import { WsService, WsEvent } from '../core/ws.service';
 
 export interface HudStats {
@@ -11,6 +11,8 @@ export interface HudStats {
   maxMana: number;
   level: number;
   experience: number;
+  skills?: CharacterSkills;
+  skillProgress?: { skillType: keyof CharacterSkills; level: number; experience: number }[];
 }
 
 export interface ChatLine {
@@ -272,6 +274,25 @@ export class GameState {
       case SERVER_EVENTS.STATS_UPDATE: {
         const s = data as unknown as HudStats;
         this.stats.set(s);
+        this.self.update((current) =>
+          current
+            ? {
+                ...current,
+                health: s.health,
+                maxHealth: s.maxHealth,
+                mana: s.mana,
+                maxMana: s.maxMana,
+                level: s.level,
+                experience: s.experience,
+                skills: s.skills ?? current.skills,
+              }
+            : current,
+        );
+        break;
+      }
+      case SERVER_EVENTS.SKILLS_UPDATE: {
+        const s = data as { skills: CharacterSkills };
+        this.self.update((current) => (current ? { ...current, skills: s.skills } : current));
         break;
       }
       case SERVER_EVENTS.INVENTORY_UPDATE: {
@@ -338,10 +359,10 @@ export class GameState {
     this.ws.send({ type: 'auth.login', username, password });
   }
 
-  createCharacter(name: string, vocation: 'knight' | 'paladin' | 'sorcerer' | 'druid' = 'knight') {
+  createCharacter(name: string, archetype: CombatArchetype = 'warrior') {
     const token = this.token();
     if (!token) return;
-    this.ws.send({ type: 'auth.createCharacter', token, name, vocation });
+    this.ws.send({ type: 'auth.createCharacter', token, name, archetype });
   }
 
   selectCharacter(characterId: string) {

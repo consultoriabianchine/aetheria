@@ -1,8 +1,9 @@
 import Phaser from 'phaser';
 import { SERVER_EVENTS } from '@aetheria/protocol';
 import { APPEARANCE_PALETTE, MOVE_INTERVAL_MS, TILE } from '@aetheria/config';
-import type { CreatureState, Direction, MapTile, PlayerAppearance, Position } from '@aetheria/types';
+import type { CreatureState, Direction, ItemImpactVisual, ItemProjectileVisual, MapTile, PlayerAppearance, Position, ProjectileDirection } from '@aetheria/types';
 import { WsService } from '../../core/ws.service';
+import { WS_URL } from '../../core/ws.service';
 import { GameState } from '../game-state';
 import { CreatureAnimator, type AnimConfig, type AnimDirection, type AnimType } from '../creature-animator';
 import { CreatureAssetService } from '../creature-asset.service';
@@ -221,15 +222,15 @@ export class WorldScene extends Phaser.Scene {
         break;
       }
       case SERVER_EVENTS.COMBAT_DAMAGE: {
-        const d = data as { attackerId: string; targetId: string; amount: number; critical: boolean };
-        const info = this.entityInfo.get(d.targetId);
-        if (info) {
-          const ent = this.entities.get(d.targetId);
-          const x = ent?.image.x ?? (this.selfEntity && d.targetId === this.selfId ? this.selfEntity.image.x : 0);
-          const y = ent?.image.y ?? (this.selfEntity && d.targetId === this.selfId ? this.selfEntity.image.y : 0);
-          const h = ent?.spriteHeight ?? (this.selfEntity && d.targetId === this.selfId ? this.selfEntity.spriteHeight : TILE_SIZE);
-          this.showDamage(x, y, d.amount, d.critical, h);
-        }
+        const d = data as { attackerId: string; targetId: string; amount: number; critical: boolean; delayMs?: number };
+        const show = () => this.showCombatDamage(d.targetId, d.amount, d.critical);
+        if (d.delayMs && d.delayMs > 0) this.time.delayedCall(d.delayMs, show);
+        else show();
+        break;
+      }
+      case SERVER_EVENTS.COMBAT_PROJECTILE: {
+        const d = data as { attackerId: string; targetId: string; from: Position; to: Position; projectile: ItemProjectileVisual; impact?: ItemImpactVisual; travelTimeMs: number };
+        this.playProjectile(d.attackerId, d.targetId, d.from, d.to, d.projectile, d.impact, d.travelTimeMs);
         break;
       }
       case SERVER_EVENTS.COMBAT_DEATH: {
@@ -764,6 +765,93 @@ export class WorldScene extends Phaser.Scene {
       duration: 700,
       onComplete: () => text.destroy(),
     });
+  }
+
+  private showCombatDamage(targetId: string, amount: number, critical: boolean) {
+    const info = this.entityInfo.get(targetId);
+    if (!info && targetId !== this.selfId) return;
+    const ent = this.entities.get(targetId);
+    const x = ent?.image.x ?? (this.selfEntity && targetId === this.selfId ? this.selfEntity.image.x : 0);
+    const y = ent?.image.y ?? (this.selfEntity && targetId === this.selfId ? this.selfEntity.image.y : 0);
+    const h = ent?.spriteHeight ?? (this.selfEntity && targetId === this.selfId ? this.selfEntity.spriteHeight : TILE_SIZE);
+    this.showDamage(x, y, amount, critical, h);
+  }
+
+  private playProjectile(attackerId: string, targetId: string, from: Position, to: Position, projectile: ItemProjectileVisual, impact: ItemImpactVisual | undefined, travelTimeMs: number) {
+    if (!projectile.sprite && !projectile.spriteAssetId) return;
+    const textureKey = this.effectTextureKey('projectile', projectile.sprite || String(projectile.spriteAssetId ?? ''), projectile.frameWidth, projectile.frameHeight);
+    const start = this.entityCenter(attackerId, from);
+    const end = this.entityCenter(targetId, to);
+    const frame = projectile.frames[this.projectileDirection(from, to)] ?? 0;
+    const run = () => {
+      if (!this.textures.exists(textureKey)) return;
+      const shot = this.add.image(start.x + (projectile.offsetX ?? 0), start.y + (projectile.offsetY ?? 0), textureKey, frame).setDepth(90).setOrigin(0.5);
+      this.tweens.add({
+        targets: shot,
+        x: end.x,
+        y: end.y,
+        duration: Math.max(80, travelTimeMs),
+        onComplete: () => {
+          shot.destroy();
+          if (impact?.sprite || impact?.spriteAssetId) this.playImpact(end.x, end.y, impact);
+        },
+      });
+    };
+    if (this.textures.exists(textureKey)) run();
+    else {
+      this.load.spritesheet(textureKey, this.assetPath(projectile.sprite, projectile.spriteAssetId), { frameWidth: projectile.frameWidth, frameHeight: projectile.frameHeight });
+      this.load.once(Phaser.Loader.Events.COMPLETE, run);
+      this.load.start();
+    }
+  }
+
+  private playImpact(x: number, y: number, impact: ItemImpactVisual) {
+    const textureKey = this.effectTextureKey('impact', impact.sprite || String(impact.spriteAssetId ?? ''), impact.frameWidth, impact.frameHeight);
+    const run = () => {
+      if (!this.textures.exists(textureKey)) return;
+      const key = `${textureKey}:anim:${impact.frames.join('-')}:${impact.fps ?? 12}`;
+      if (!this.anims.exists(key)) {
+        this.anims.create({ key, frames: impact.frames.map((frame) => ({ key: textureKey, frame })), frameRate: impact.fps ?? 12, repeat: 0 });
+      }
+      const sprite = this.add.sprite(x, y, textureKey, impact.frames[0] ?? 0).setDepth(95).setOrigin(0.5);
+      sprite.play(key);
+      sprite.once(Phaser.Animations.Events.ANIMATION_COMPLETE, () => sprite.destroy());
+      this.time.delayedCall(Math.max(120, ((impact.frames.length || 1) / (impact.fps ?? 12)) * 1000 + 80), () => sprite.destroy());
+    };
+    if (this.textures.exists(textureKey)) run();
+    else {
+      this.load.spritesheet(textureKey, this.assetPath(impact.sprite, impact.spriteAssetId), { frameWidth: impact.frameWidth, frameHeight: impact.frameHeight });
+      this.load.once(Phaser.Loader.Events.COMPLETE, run);
+      this.load.start();
+    }
+  }
+
+  private entityCenter(entityId: string, fallback: Position): { x: number; y: number } {
+    const ent = this.entities.get(entityId) ?? (entityId === this.selfId ? this.selfEntity : null);
+    return ent ? { x: ent.image.x, y: ent.image.y } : { x: fallback.x * TILE_SIZE + TILE_SIZE / 2, y: fallback.y * TILE_SIZE + TILE_SIZE / 2 };
+  }
+
+  private projectileDirection(from: Position, to: Position): ProjectileDirection {
+    const dx = Math.sign(to.x - from.x);
+    const dy = Math.sign(to.y - from.y);
+    if (dx === 0 && dy < 0) return 'north';
+    if (dx > 0 && dy < 0) return 'northEast';
+    if (dx > 0 && dy === 0) return 'east';
+    if (dx > 0 && dy > 0) return 'southEast';
+    if (dx === 0 && dy > 0) return 'south';
+    if (dx < 0 && dy > 0) return 'southWest';
+    if (dx < 0 && dy === 0) return 'west';
+    return 'northWest';
+  }
+
+  private effectTextureKey(kind: string, sprite: string, frameWidth: number, frameHeight: number): string {
+    return `${kind}:${sprite}:${frameWidth}x${frameHeight}`.replace(/[^a-zA-Z0-9:_-]+/g, '_');
+  }
+
+  private assetPath(sprite: string, spriteAssetId?: number): string {
+    if (spriteAssetId) return `${WS_URL}/assets/sprite-assets/${spriteAssetId}`;
+    if (/^https?:\/\//.test(sprite) || sprite.startsWith('/') || sprite.startsWith('assets/')) return sprite;
+    return `assets/effects/${sprite}`;
   }
 
   // ------------------------------------------------------------------ textures

@@ -1,5 +1,99 @@
 import { Injectable, signal } from '@angular/core';
-import type { CreatureAnimationConfig, CreatureAnimationConfigInput, HuntDefinition, OutfitDefinition } from '@aetheria/types';
+import type { AmmoType, CombatArchetype, CreatureAnimationConfig, CreatureAnimationConfigInput, DamageType, EquipmentSlot, HuntDefinition, ItemType, ItemVisualEffects, OutfitDefinition, WeaponType } from '@aetheria/types';
+
+export interface AdminItemDefinition {
+  id: string;
+  name: string;
+  description?: string;
+  type: ItemType;
+  slot?: EquipmentSlot;
+  image: string;
+  weight: number;
+  stackable: boolean;
+  category: string;
+  enabled?: boolean;
+  combatStats?: {
+    attackPower?: number;
+    magicPower?: number;
+    armor?: number;
+    defense?: number;
+    maxHp?: number;
+    maxMana?: number;
+    criticalChance?: number;
+    criticalDamage?: number;
+    accuracy?: number;
+    dodge?: number;
+  };
+  weapon?: { weaponType: WeaponType; range: number; damageType?: DamageType; allowedAmmoType?: AmmoType };
+  ammo?: { ammoType: AmmoType; attackPower: number; damageType?: DamageType };
+  visual?: ItemVisualEffects;
+  specialModifiers?: Record<string, unknown> | null;
+}
+
+export interface AdminItemInput {
+  id?: string;
+  name: string;
+  description?: string;
+  type: ItemType;
+  slot?: EquipmentSlot | null;
+  imagePath?: string | null;
+  stackable?: boolean;
+  weight?: number;
+  category?: string;
+  attackPower?: number;
+  magicPower?: number;
+  armor?: number;
+  defense?: number;
+  maxHp?: number;
+  maxMana?: number;
+  criticalChance?: number;
+  criticalDamage?: number;
+  accuracy?: number;
+  dodge?: number;
+  weaponType?: WeaponType | null;
+  ammoType?: AmmoType | null;
+  damageType?: DamageType | null;
+  range?: number;
+  allowedAmmoType?: AmmoType | null;
+  visual?: ItemVisualEffects | null;
+  specialModifiers?: Record<string, unknown> | null;
+  enabled?: boolean;
+}
+
+export interface CombatFormulaTestInput {
+  archetype: CombatArchetype;
+  level: number;
+  melee: number;
+  distance: number;
+  magic: number;
+  weaponPower: number;
+  staffPower: number;
+  ammoPower: number;
+  targetLevel: number;
+  armor: number;
+  defense: number;
+  damageType: DamageType;
+  resistance: number;
+  critical: boolean;
+  abilityMultiplier: number;
+  flatPower: number;
+}
+
+export interface CombatFormulaTestResult {
+  ok: boolean;
+  reason?: string;
+  basePower?: number;
+  skill?: string;
+  skillLevel?: number;
+  damageType?: DamageType;
+  rawDamage?: number;
+  mitigation?: number;
+  normalDamage?: number;
+  criticalDamage?: number;
+  min?: number;
+  average?: number;
+  max?: number;
+}
 
 export interface AdminCreatureSummary {
   creatureId: number;
@@ -192,6 +286,30 @@ export class ApiService {
     });
   }
 
+  listItems(): Promise<AdminItemDefinition[]> {
+    return this.request('/admin/items', { headers: this.headers() });
+  }
+
+  getItem(id: string): Promise<AdminItemDefinition | null> {
+    return this.request(`/admin/items/${id}`, { headers: this.headers() });
+  }
+
+  createItem(input: AdminItemInput): Promise<{ ok: boolean; item: AdminItemDefinition }> {
+    return this.request('/admin/items', {
+      method: 'POST',
+      headers: this.headers(),
+      body: JSON.stringify(input),
+    });
+  }
+
+  updateItem(id: string, input: AdminItemInput): Promise<{ ok: boolean; item: AdminItemDefinition }> {
+    return this.request(`/admin/items/${id}`, {
+      method: 'PUT',
+      headers: this.headers(),
+      body: JSON.stringify(input),
+    });
+  }
+
   uploadSpriteAsset(file: File): Promise<{ ok: boolean; spriteAssetId: number }> {
     return file
       .arrayBuffer()
@@ -211,5 +329,13 @@ export class ApiService {
           body: JSON.stringify({ fileName: file.name, mimeType: file.type || 'image/png', dataBase64 }),
         }),
       );
+  }
+
+  testCombatFormula(input: CombatFormulaTestInput): Promise<CombatFormulaTestResult> {
+    return this.request('/admin/combat/formula-test', {
+      method: 'POST',
+      headers: this.headers(),
+      body: JSON.stringify(input),
+    });
   }
 }

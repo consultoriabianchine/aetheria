@@ -20,6 +20,9 @@ FROM node:22-alpine AS runtime
 WORKDIR /app
 ENV NODE_ENV=production
 COPY --from=build /app/node_modules ./node_modules
+COPY --from=build /app/apps/game-server/package.json ./apps/game-server/package.json
+COPY --from=build /app/apps/game-server/tsconfig.json ./apps/game-server/tsconfig.json
+COPY --from=build /app/apps/game-server/src ./apps/game-server/src
 COPY --from=build /app/apps/game-server/dist ./apps/game-server/dist
 COPY --from=build /app/apps/game-server/data ./apps/game-server/data
 COPY --from=build /app/apps/game-server/prisma ./apps/game-server/prisma
@@ -27,4 +30,4 @@ COPY --from=build /app/packages ./packages
 COPY apps/game-server/entrypoint.sh ./entrypoint.sh
 RUN chmod +x ./entrypoint.sh
 EXPOSE 4000
-CMD ["./entrypoint.sh"]
+CMD ["/app/entrypoint.sh"]

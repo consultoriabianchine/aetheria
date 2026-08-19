@@ -23,6 +23,7 @@ services:
       context: .
       dockerfile: apps/game-server/Dockerfile
     container_name: aetheria-server
+    working_dir: /app/apps/game-server
     restart: unless-stopped
     depends_on:
       postgres:

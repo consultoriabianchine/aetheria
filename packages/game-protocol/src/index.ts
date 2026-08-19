@@ -8,12 +8,14 @@ import type {
   HuntRunView,
   MapTile,
   Position,
-  VocationId,
+  CombatArchetype,
+  ItemImpactVisual,
+  ItemProjectileVisual,
 } from '@aetheria/types';
 
 export type ClientMessage =
   | { type: 'auth.login'; username: string; password: string }
-  | { type: 'auth.createCharacter'; token: string; name: string; vocation: VocationId }
+  | { type: 'auth.createCharacter'; token: string; name: string; archetype: CombatArchetype }
   | { type: 'auth.selectCharacter'; token: string; characterId: string }
   | { type: 'game.input'; direction?: Direction | null; attack?: boolean }
   | { type: 'game.move'; direction: Direction }
@@ -21,7 +23,6 @@ export type ClientMessage =
   | { type: 'game.pickup'; entityId: string }
   | { type: 'inventory.equip'; slot: number }
   | { type: 'inventory.unequip'; slot: string }
-  | { type: 'promotion.promote'; token: string }
   | { type: 'chat.send'; channel: string; message: string }
   | { type: 'npc.interact'; npcId: string }
   | { type: 'hunt.list'; token: string }
@@ -47,13 +48,12 @@ export type ServerMessage =
   | { type: 'creature.damage'; creatureId: string; attackerId: string; amount: number; critical: boolean; health: number; maxHealth: number }
   | { type: 'creature.death'; creatureId: string; experience: number }
   | { type: 'creature.remove'; creatureId: string }
-  | { type: 'combat.damage'; attackerId: string; targetId: string; amount: number; critical: boolean; targetHealth: number }
+  | { type: 'combat.projectile'; attackerId: string; targetId: string; from: Position; to: Position; projectile: ItemProjectileVisual; impact?: ItemImpactVisual; travelTimeMs: number }
+  | { type: 'combat.damage'; attackerId: string; targetId: string; amount: number; critical: boolean; targetHealth: number; delayMs?: number }
   | { type: 'combat.death'; entityId: string; experience?: number }
-  | { type: 'stats.update'; health: number; maxHealth: number; mana: number; maxMana: number; level: number; experience: number; skills: CharacterSkills }
+  | { type: 'stats.update'; health: number; maxHealth: number; mana: number; maxMana: number; level: number; experience: number; skills: CharacterSkills; skillProgress?: { skillType: keyof CharacterSkills; level: number; experience: number }[] }
   | { type: 'skills.update'; skills: CharacterSkills }
   | { type: 'inventory.update'; inventory: CharacterInventory }
-  | { type: 'character.promoted'; character: CharacterSummary }
-  | { type: 'promotion.error'; error: string }
   | { type: 'loot.spawned'; entityId: string; itemId: string; name: string; quantity: number; position: Position }
   | { type: 'loot.removed'; entityId: string }
   | { type: 'chat.message'; channel: string; from: string; text: string }
@@ -101,12 +101,11 @@ export const SERVER_EVENTS = {
   CREATURE_DEATH: 'creature.death',
   CREATURE_REMOVE: 'creature.remove',
   COMBAT_DAMAGE: 'combat.damage',
+  COMBAT_PROJECTILE: 'combat.projectile',
   COMBAT_DEATH: 'combat.death',
   STATS_UPDATE: 'stats.update',
   SKILLS_UPDATE: 'skills.update',
   INVENTORY_UPDATE: 'inventory.update',
-  CHARACTER_PROMOTED: 'character.promoted',
-  PROMOTION_ERROR: 'promotion.error',
   LOOT_SPAWNED: 'loot.spawned',
   LOOT_REMOVED: 'loot.removed',
   CHAT_MESSAGE: 'chat.message',
@@ -136,7 +135,6 @@ export const CLIENT_EVENTS = {
   PICKUP: 'game.pickup',
   EQUIP: 'inventory.equip',
   UNEQUIP: 'inventory.unequip',
-  PROMOTE: 'promotion.promote',
   CHAT: 'chat.send',
   NPC_INTERACT: 'npc.interact',
   HUNT_LIST: 'hunt.list',

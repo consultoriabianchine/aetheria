@@ -1,212 +1,322 @@
-<div class="game-root">
-  <div id="game-canvas" class="game-canvas"></div>
-
-  <!-- stats -->
-  <div class="hud hud-stats">
-    <div class="player-name">{{ state.self()?.name }} <span class="gold">· {{ state.gold() }} gold</span></div>
-    <div class="bar">
-      <span class="bar-label">HP</span>
-      <div class="bar-track"><div class="bar-fill hp" [style.width.%]="hpPct()"></div></div>
-      <span class="bar-num">{{ state.stats().health }}/{{ state.stats().maxHealth }}</span>
-    </div>
-    <div class="bar">
-      <span class="bar-label">MP</span>
-      <div class="bar-track"><div class="bar-fill mp" [style.width.%]="mpPct()"></div></div>
-      <span class="bar-num">{{ state.stats().mana }}/{{ state.stats().maxMana }}</span>
-    </div>
-    <div class="bar xp">
-      <div class="bar-track"><div class="bar-fill xp" [style.width.%]="xpPct()"></div></div>
-      <span class="bar-num">Nv {{ state.stats().level }} · {{ state.stats().experience }}/{{ state.stats().level * 100 }} XP</span>
-    </div>
-  </div>
-
-  <!-- alvo -->
-  @if (state.target(); as t) {
-    <div class="hud hud-target">
-      <div class="target-name">{{ t.name }}</div>
-      <div class="bar">
-        <div class="bar-track"><div class="bar-fill hp" [style.width.%]="t.maxHealth > 0 ? (t.health / t.maxHealth) * 100 : 0"></div></div>
-        <span class="bar-num">{{ t.health }}/{{ t.maxHealth }}</span>
+<div class="game-page" [class.left-collapsed]="leftCollapsed()" [class.right-collapsed]="rightCollapsed()">
+  <header class="game-topbar">
+    <section class="brand-block" aria-label="Aetheria Idle">
+      <div class="brand-mark">A</div>
+      <div>
+        <strong>aetheria idle</strong>
+        <span>{{ state.self()?.name || 'aetheria' }}</span>
       </div>
-    </div>
-  }
+    </section>
 
-  <!-- chat -->
-  <div class="hud hud-chat">
-    <div class="chat-log">
-      @for (line of state.chat(); track $index) {
-        <div class="chat-line">
-          <b>{{ line.from }}</b>
-          <span>{{ line.text }}</span>
-        </div>
+    <section class="wallet-block" aria-label="Moedas">
+      <span>Gold <b>{{ formatGold(state.gold()) }}</b></span>
+      <span>Premium <b>0</b></span>
+    </section>
+
+    <nav class="top-nav" aria-label="Navegacao principal">
+      @for (item of ['Helper', 'Codex', 'Arena', 'Progress', 'Daily', 'Storage', 'Trade', 'Social']; track item) {
+        <button class="top-nav-item" type="button" [attr.aria-label]="item">
+          <span>{{ item.charAt(0) }}</span>
+          <small>{{ item }}</small>
+        </button>
       }
-    </div>
-    <input class="chat-input" [(ngModel)]="chatInput" (keydown.enter)="sendChat()" placeholder="Falar (Enter)…" maxlength="120" />
-  </div>
+    </nav>
 
-  <!-- controles -->
-  <div class="hud hud-controls">
-    @if (!state.inArena()) {
-      <button class="btn" (click)="toggleHunts()">{{ state.huntsOpen() ? 'Fechar Hunts' : 'Hunts' }}</button>
-    }
-    <button class="btn" (click)="invOpen.set(!invOpen())">{{ invOpen() ? 'Fechar' : 'Inventário' }}</button>
-    <button class="btn" (click)="openAppearance()">Aparência</button>
-    <button class="btn" (click)="state.toggleHdSmooth()">{{ state.hdSmooth() ? 'HD ON' : 'HD OFF' }}</button>
-    <button class="btn zoom-btn" (click)="state.zoomOut()" title="Diminuir zoom">−</button>
-    <span class="zoom-val">{{ zoomPct() }}</span>
-    <button class="btn zoom-btn" (click)="state.zoomIn()" title="Aumentar zoom">+</button>
-    <button class="btn" (click)="exit()">Sair</button>
-  </div>
+    <section class="account-controls" aria-label="Conta e configuracoes">
+      <button class="chip active" type="button" aria-label="Idioma Portugues Brasil">BR</button>
+      <button class="chip" type="button" aria-label="Idioma Ingles">EN</button>
+      <button class="chip" type="button" (click)="openAppearance()">Aparência</button>
+      <button class="chip" type="button" (click)="state.toggleHdSmooth()">{{ state.hdSmooth() ? 'HD ON' : 'HD OFF' }}</button>
+      <button class="chip square" type="button" (click)="state.zoomOut()" aria-label="Diminuir zoom">−</button>
+      <span class="zoom-val">{{ zoomPct() }}</span>
+      <button class="chip square" type="button" (click)="state.zoomIn()" aria-label="Aumentar zoom">+</button>
+      <button class="chip danger" type="button" (click)="exit()">Sair</button>
+    </section>
+  </header>
 
-  <!-- seleção de hunts (hub) -->
-  @if (state.huntsOpen() && !state.inArena()) {
-    <div class="hud hud-hunts">
-      <h3>Hunts <span class="sub">escolha uma arena</span></h3>
-      @for (h of state.hunts(); track h.id) {
-        <div class="hunt-card">
-          <div class="hunt-top">
-            <b>{{ h.ladderPosition }}. {{ h.name }}</b>
-            <span class="hunt-lvl">Nv {{ h.suggestedLevel }}</span>
+  <main class="game-layout">
+    <aside class="left-sidebar" aria-label="Personagem e status">
+      <button class="collapse-tab left" type="button" (click)="leftCollapsed.set(false)" aria-label="Restaurar sidebar esquerda">›</button>
+      <div class="sidebar-scroll">
+        <section class="game-panel character-sticky">
+          <div class="panel-header">
+            <h2>Personagem</h2>
+            <button class="panel-action" type="button" (click)="leftCollapsed.set(true)" aria-label="Colapsar sidebar esquerda">‹</button>
           </div>
-          <div class="hunt-monsters">{{ h.monsters.map((m) => m.name).join(', ') }} → Boss: {{ h.boss.name }}</div>
-          <div class="hunt-meta">
-            <span>10 waves</span>
-            <span>Clears: {{ h.completionCount }}</span>
-            <span>Best: {{ fmtTime(h.bestClearTimeMs) }}</span>
+          <div class="character-summary">
+            <div>
+              <strong>{{ state.self()?.name || 'Gryllo' }}</strong>
+              <span>{{ archetypeLabel() }}</span>
+            </div>
+            <div class="level-badge">Lv {{ state.stats().level }}</div>
           </div>
-          <div class="hunt-actions">
-            <button class="btn" (click)="startHunt(h.id)">Entrar</button>
-            <button class="btn" (click)="startLoop(h.id)">Loop</button>
+          <div class="resource-list">
+            <div class="resource-row" [class.low]="hpPct() < 25">
+              <div><span>Vida</span><b>{{ state.stats().health }} / {{ state.stats().maxHealth }}</b></div>
+              <div class="bar-track"><div class="bar-fill hp" [style.width.%]="hpPct()"></div></div>
+            </div>
+            <div class="resource-row">
+              <div><span>Mana</span><b>{{ state.stats().mana }} / {{ state.stats().maxMana }}</b></div>
+              <div class="bar-track"><div class="bar-fill mp" [style.width.%]="mpPct()"></div></div>
+            </div>
+            <div class="resource-row" title="Level atual: {{ state.stats().level }} | XP total: {{ state.stats().experience }} | XP para o proximo: {{ state.stats().level * 100 }}">
+              <div><span>Experiência</span><b>{{ xpPct().toFixed(1) }}%</b></div>
+              <div class="bar-track"><div class="bar-fill xp" [style.width.%]="xpPct()"></div></div>
+            </div>
           </div>
+        </section>
+
+        <section class="game-panel compact-panel">
+          <div class="panel-header"><h2>Stamina</h2></div>
+          <div class="metric-row"><span>Tempo</span><b>32:04</b></div>
+          <div class="metric-row"><span>Energia</span><b>76%</b></div>
+          <div class="bar-track slim"><div class="bar-fill stamina" style="width: 76%"></div></div>
+        </section>
+
+        <section class="game-panel compact-panel">
+          <button class="panel-header panel-toggle" type="button" (click)="boostsCollapsed.set(!boostsCollapsed())">
+            <h2>Boosts</h2><span>{{ boostsCollapsed() ? '+' : '−' }}</span>
+          </button>
+          @if (!boostsCollapsed()) {
+            <div class="metric-row"><span>XP Boost</span><b>+20%</b></div>
+            <div class="metric-row"><span>Loot Boost</span><b>+20%</b></div>
+            <div class="metric-row"><span>Remaining</span><b>5h 30m</b></div>
+          }
+        </section>
+
+        <section class="game-panel">
+          <div class="panel-header"><h2>Skills</h2><span class="panel-pill">{{ archetypeLabel() }}</span></div>
+          <div class="skill-picker"><button class="selected" type="button">{{ state.self()?.name || 'Gryllo' }}</button><button type="button" disabled>Party</button></div>
+          <div class="metric-row"><span>Nível</span><b>{{ state.stats().level }}</b></div>
+          <div class="metric-row"><span>XP</span><b>{{ formatGold(state.stats().experience) }}</b></div>
+          <div class="metric-row"><span>HP</span><b>{{ state.stats().maxHealth }}</b></div>
+          <div class="metric-row"><span>Mana</span><b>{{ state.stats().maxMana }}</b></div>
+          @for (skill of relevantSkills(); track skill.label) {
+            <div class="skill-line" title="{{ skill.xp }}/{{ skill.required }} XP">
+              <div><span>{{ skill.label }}</span><b>{{ skill.value }}</b></div>
+              <div class="bar-track slim"><div class="bar-fill xp" [style.width.%]="skill.pct"></div></div>
+            </div>
+          }
+        </section>
+
+        <section class="game-panel compact-panel">
+          <div class="panel-header"><h2>Attributes</h2></div>
+          <div class="metric-grid">
+            <div><span>Cap</span><b>1.092</b></div>
+            <div><span>Armor</span><b>{{ equippedCount() }}</b></div>
+            <div><span>Crit</span><b>5%</b></div>
+            <div><span>Dodge</span><b>0%</b></div>
+          </div>
+        </section>
+
+        <section class="game-panel compact-panel">
+          <button class="panel-header panel-toggle" type="button" (click)="analyzerCollapsed.set(!analyzerCollapsed())">
+            <h2>Hunt Analyzer</h2><span>{{ analyzerCollapsed() ? '+' : '−' }}</span>
+          </button>
+          @if (!analyzerCollapsed()) {
+            <div class="metric-row"><span>Session</span><b>09:55:48</b></div>
+            <div class="metric-row"><span>XP/h</span><b>—</b></div>
+            <div class="metric-row"><span>XP Gain</span><b>{{ state.hunt() ? state.stats().experience : '—' }}</b></div>
+            <div class="metric-row"><span>Kills</span><b>—</b></div>
+            <div class="metric-row"><span>Balance</span><b>{{ formatGold(state.gold()) }}</b></div>
+          }
+        </section>
+
+        <section class="game-panel compact-panel">
+          <button class="panel-header panel-toggle" type="button" (click)="damageCollapsed.set(!damageCollapsed())">
+            <h2>Damage</h2><span>{{ damageCollapsed() ? '+' : '−' }}</span>
+          </button>
+          @if (!damageCollapsed()) {
+            <div class="damage-member"><strong>{{ state.self()?.name || 'Gryllo' }}</strong><span>—/s</span></div>
+            @for (type of ['Ice', 'Death', 'Physical', 'Earth', 'Fire']; track type) {
+              <div class="element-row"><span>{{ type }}</span><b>—</b><em>0%</em></div>
+            }
+          }
+        </section>
+
+        <section class="game-panel compact-panel">
+          <button class="panel-header panel-toggle" type="button" (click)="damageTakenCollapsed.set(!damageTakenCollapsed())">
+            <h2>Damage Taken</h2><span>{{ damageTakenCollapsed() ? '+' : '−' }}</span>
+          </button>
+          @if (!damageTakenCollapsed()) {
+            <div class="metric-row"><span>Session</span><b>—</b></div>
+            <div class="metric-row"><span>Physical</span><b>—</b></div>
+            <div class="metric-row"><span>Elemental</span><b>—</b></div>
+          }
+        </section>
+      </div>
+    </aside>
+
+    <section class="game-center" aria-label="Hunt e mundo">
+      <header class="hunt-header" [class.boss]="state.hunt()?.isBoss">
+        <div class="hunt-title">
+          <span>{{ state.hunt()?.isBoss ? 'BOSS WAVE' : 'Current Hunt' }}</span>
+          <strong>{{ currentHuntName() }}</strong>
         </div>
+        <select class="hunt-select" [disabled]="state.inArena()" (change)="onHuntSelect($any($event.target).value)" aria-label="Selecionar Hunt">
+          <option value="">{{ state.inArena() ? state.hunt()?.huntName : 'Escolher Hunt' }}</option>
+          @for (h of state.hunts(); track h.id) {
+            <option [value]="h.id">{{ h.name }}</option>
+          }
+        </select>
+        <div class="wave-strip" aria-label="Progresso da wave">
+          @for (cell of waveCells(); track cell.index) {
+            <span [class.filled]="cell.filled" [class.boss]="cell.boss">{{ cell.boss ? 'B' : '' }}</span>
+          }
+        </div>
+        <div class="hunt-actions">
+          @if (state.hunt(); as run) {
+            <button class="loop-button" type="button" [class.enabled]="run.loopEnabled" (click)="toggleLoop()">{{ run.loopEnabled ? 'Loop ON' : 'Loop OFF' }}</button>
+            <button class="danger-button" type="button" (click)="stopHunt()">Parar</button>
+          } @else {
+            <button class="loop-button" type="button" (click)="toggleHunts()">Hunts</button>
+          }
+        </div>
+      </header>
+
+      @if (state.huntsOpen() && !state.inArena()) {
+        <section class="hunt-drawer">
+          <div class="panel-header"><h2>Hunts</h2><button class="panel-action" type="button" (click)="toggleHunts()">×</button></div>
+          @for (h of state.hunts(); track h.id) {
+            <article class="hunt-card">
+              <div><strong>{{ h.ladderPosition }}. {{ h.name }}</strong><span>Nv {{ h.suggestedLevel }}</span></div>
+              <p>{{ h.monsters.map(m => m.name).join(', ') }} · Boss: {{ h.boss.name }}</p>
+              <footer><span>Clears {{ h.completionCount }}</span><span>Best {{ fmtTime(h.bestClearTimeMs) }}</span><button type="button" (click)="startHunt(h.id)">Entrar</button><button type="button" (click)="startLoop(h.id)">Loop</button></footer>
+            </article>
+          }
+        </section>
       }
-    </div>
-  }
 
-  <!-- run de hunt em andamento -->
-  @if (state.hunt(); as run) {
-    <div class="hud hud-run">
-      <div class="run-top">
-        <b>{{ run.huntName }}</b>
-        <span class="run-wave" [class.boss]="run.isBoss">Wave {{ run.wave }}/10{{ run.isBoss ? ' · BOSS' : '' }}</span>
-      </div>
-      <div class="run-actions">
-        <button class="btn" (click)="toggleLoop()">{{ run.loopEnabled ? 'Loop ON' : 'Loop OFF' }}</button>
-        <button class="btn danger" (click)="stopHunt()">Sair</button>
-      </div>
-    </div>
-  }
+      <section class="game-viewport">
+        <div class="map-frame">
+          <div id="game-canvas" class="game-canvas"></div>
+          @if (state.target(); as t) {
+            <div class="target-overlay">
+              <strong>{{ t.name }}</strong>
+              <div class="bar-track slim"><div class="bar-fill hp" [style.width.%]="t.maxHealth > 0 ? (t.health / t.maxHealth) * 100 : 0"></div></div>
+              <span>{{ t.health }} / {{ t.maxHealth }}</span>
+            </div>
+          }
+          @if (state.hunt()?.status === 'wiped') {
+            <div class="wipe-overlay"><strong>PARTY WIPED</strong><span>Restarting...</span></div>
+          }
+        </div>
+      </section>
 
-  <!-- inventário -->
+      <section class="bottom-interface">
+        <div class="chat-panel" [class.collapsed]="chatCollapsed()">
+          <div class="chat-tabs">
+            <button type="button" [class.active]="chatTab() === 'general'" (click)="chatTab.set('general')">Geral</button>
+            <button type="button" [class.active]="chatTab() === 'combat'" (click)="chatTab.set('combat')">Combate</button>
+            <button type="button" [class.active]="chatTab() === 'system'" (click)="chatTab.set('system')">Sistema</button>
+            <button type="button" aria-label="Novo canal">+</button>
+            <button type="button" class="collapse-chat" (click)="chatCollapsed.set(!chatCollapsed())">{{ chatCollapsed() ? 'Abrir' : 'Fechar' }}</button>
+          </div>
+          @if (!chatCollapsed()) {
+            <div class="chat-log">
+              @for (line of visibleChat(); track $index) {
+                <div class="chat-line"><b>{{ line.from }}</b><span>{{ line.text }}</span></div>
+              }
+            </div>
+            <input class="chat-input" [(ngModel)]="chatInput" (keydown.enter)="sendChat()" placeholder="Falar (Enter)..." maxlength="120" />
+          }
+        </div>
+
+        <div class="hotbar" aria-label="Hotbar">
+          <div class="hotbar-presets">
+            <button type="button" [class.active]="hotbarPreset() === 'hunt'" (click)="hotbarPreset.set('hunt')">HUNT</button>
+            <button type="button" [class.active]="hotbarPreset() === 'boss'" (click)="hotbarPreset.set('boss')">BOSS</button>
+            <button type="button" [class.active]="hotbarPreset() === 'helper'" (click)="hotbarPreset.set('helper')">HELPER</button>
+          </div>
+          <span class="hotbar-group">Attack Group · 2s</span>
+          @for (slot of hotbarSlots(); track slot.key) {
+            <button class="hotbar-slot" type="button" [class.ready]="slot.ready" aria-label="Hotbar slot {{ slot.key }}">
+              <span>{{ slot.key }}</span>
+              <strong>{{ slot.name }}</strong>
+              <em>{{ slot.cd }}</em>
+              <i [style.width.%]="slot.groupPct"></i>
+            </button>
+          }
+        </div>
+      </section>
+    </section>
+
+    <aside class="right-sidebar" aria-label="Party e inventario">
+      <button class="collapse-tab right" type="button" (click)="rightCollapsed.set(false)" aria-label="Restaurar sidebar direita">‹</button>
+      <div class="sidebar-scroll">
+        <section class="game-panel party-panel">
+          <div class="panel-header"><h2>Party</h2><button class="panel-action" type="button" (click)="rightCollapsed.set(true)" aria-label="Colapsar sidebar direita">›</button></div>
+          <article class="party-member">
+            <span class="role-badge sup">SUP</span>
+            <div class="party-info"><strong>{{ state.self()?.name || 'Gryllo' }}</strong><span>{{ archetypeLabel() }} · Lv {{ state.stats().level }}</span><div class="mini-bars"><i class="hp" [style.width.%]="hpPct()"></i><i class="mp" [style.width.%]="mpPct()"></i></div></div>
+          </article>
+          <article class="party-member"><span class="role-badge tank">TANK</span><div class="party-info"><strong>Slot bloqueado</strong><span>Party futura</span><button type="button">Desbloquear</button></div></article>
+          <button class="wide-action" type="button">Config</button>
+        </section>
+
+        <section class="game-panel inventory-preview">
+          <div class="panel-header"><h2>Backpack</h2><button class="panel-action" type="button" (click)="invOpen.set(true)">Inventário</button></div>
+          <div class="inventory-meta"><span>Slots</span><b>{{ backpackCount() }} / 8</b></div>
+          <div class="slot-grid backpack-grid">
+            @for (entry of backpackPreview(); track entry.index) {
+              <button class="item-slot" type="button" (click)="entry.stack ? onEquip(entry.index) : null" (mouseenter)="entry.stack ? showItemTooltip(entry.stack.itemId, $event) : null" (mousemove)="entry.stack ? moveItemTooltip($event) : null" (mouseleave)="hideItemTooltip()">
+                @if (entry.stack; as st) {
+                  @if (iconFor(st.itemId); as src) { <img [src]="src" alt="" /> } @else { <span class="inv-ph">{{ nameFor(st.itemId).charAt(0) }}</span> }
+                  @if (st.quantity > 1) { <span class="qty">{{ st.quantity }}</span> }
+                }
+              </button>
+            }
+          </div>
+        </section>
+
+        <section class="game-panel inventory-preview">
+          <div class="panel-header"><h2>Bolsa de Loot</h2><button class="panel-action" type="button" disabled>Vender Tudo</button></div>
+          <div class="inventory-meta"><span>Slots</span><b>{{ lootPouchCount() }} / 10</b></div>
+          @if (lootPouchCount() >= 10) { <div class="loot-warning" title="A Bolsa de Loot está cheia. Novos itens que precisarem de slot não serão coletados.">CHEIA</div> }
+          <div class="slot-grid loot-grid">
+            @for (entry of lootPouchPreview(); track entry.index) {
+              <button class="item-slot" type="button" disabled></button>
+            }
+          </div>
+        </section>
+
+        <section class="game-panel compact-panel">
+          <div class="panel-header"><h2>Supply Pouch</h2><button class="panel-action" type="button">Config</button></div>
+          <div class="supply-row"><span>Potions</span><b>—</b></div>
+          <div class="supply-row"><span>Runes</span><b>—</b></div>
+          <div class="supply-row"><span>Ammo</span><b>—</b></div>
+        </section>
+      </div>
+    </aside>
+  </main>
+
   @if (invOpen()) {
-    <div class="hud hud-inventory">
-      <h3>Inventário</h3>
-      <div class="inv-grid">
-        @for (entry of inventory(); track entry.index) {
-          <div class="inv-slot" [title]="entry.stack ? nameFor(entry.stack.itemId) : ''" (click)="entry.stack ? onEquip(entry.index) : null">
-            @if (entry.stack; as st) {
-              @if (iconFor(st.itemId); as src) {
-                <img [src]="src" alt="" />
-              } @else {
-                <div class="inv-ph">{{ nameFor(st.itemId).charAt(0) }}</div>
-              }
-              @if (st.quantity > 1) {
-                <span class="qty">{{ st.quantity }}</span>
-              }
-            }
-          </div>
-        }
-      </div>
+    <div class="modal-backdrop" (click)="invOpen.set(false)">
+      <section class="inventory-modal" (click)="$event.stopPropagation()">
+        <div class="panel-header"><h2>Inventário</h2><button class="panel-action" type="button" (click)="invOpen.set(false)">×</button></div>
+        <div class="modal-inventory-layout">
+          <div><h3>Equipamentos</h3><div class="eq-grid">@for (entry of equipment(); track entry.slot) { <button class="eq-row" type="button" (click)="entry.stack ? onUnequip(entry.slot) : null" (mouseenter)="entry.stack ? showItemTooltip(entry.stack.itemId, $event) : null" (mousemove)="entry.stack ? moveItemTooltip($event) : null" (mouseleave)="hideItemTooltip()"><span class="eq-slot">{{ entry.label }}</span>@if (entry.stack; as st) { @if (iconFor(st.itemId); as src) { <img [src]="src" alt="" /> }<span class="eq-name">{{ nameFor(st.itemId) }}</span> } @else { <span class="eq-empty">—</span> }</button> }</div></div>
+          <div><h3>Mochila</h3><div class="inv-grid">@for (entry of inventory(); track entry.index) { <button class="item-slot" type="button" (click)="entry.stack ? onEquip(entry.index) : null" (mouseenter)="entry.stack ? showItemTooltip(entry.stack.itemId, $event) : null" (mousemove)="entry.stack ? moveItemTooltip($event) : null" (mouseleave)="hideItemTooltip()">@if (entry.stack; as st) { @if (iconFor(st.itemId); as src) { <img [src]="src" alt="" /> } @else { <span class="inv-ph">{{ nameFor(st.itemId).charAt(0) }}</span> } @if (st.quantity > 1) { <span class="qty">{{ st.quantity }}</span> } }</button> }</div></div>
+          <div><h3>Bolsa de Loot</h3><div class="slot-grid loot-grid">@for (entry of lootPouchPreview(); track entry.index) { <button class="item-slot" type="button" disabled></button> }</div></div>
+        </div>
+      </section>
+    </div>
+  }
 
-      <h3>Equipamento</h3>
-      <div class="eq-grid">
-        @for (entry of equipment(); track entry.slot) {
-          <div class="eq-row" (click)="entry.stack ? onUnequip(entry.slot) : null">
-            <span class="eq-slot">{{ entry.label }}</span>
-            @if (entry.stack; as st) {
-              @if (iconFor(st.itemId); as src) {
-                <img [src]="src" alt="" />
-              } @else {
-                <div class="inv-ph">{{ nameFor(st.itemId).charAt(0) }}</div>
-              }
-              <span class="eq-name">{{ nameFor(st.itemId) }}</span>
-            } @else {
-              <span class="eq-empty">—</span>
-            }
-          </div>
-        }
+  @if (hoveredItemId(); as itemId) {
+    <div class="item-tooltip floating-item-tooltip" [style.left.px]="itemTooltipX()" [style.top.px]="itemTooltipY()">
+      <div class="tip-head">
+        @if (iconFor(itemId); as src) { <img class="tip-icon" [src]="src" alt="" /> }
+        <div>@for (line of itemTooltip(itemId); track line) { <div [class.tip-title]="$first">{{ line }}</div> }</div>
       </div>
     </div>
   }
 
-  <!-- diálogo NPC -->
   @if (state.dialog(); as d) {
-    <div class="hud hud-dialog">
-      <h3>{{ d.title }}</h3>
-      @for (line of d.lines; track $index) {
-        <p>{{ line }}</p>
-      }
-      <button class="btn" (click)="closeDialog()">Fechar</button>
-    </div>
+    <div class="modal-backdrop"><section class="simple-dialog"><h2>{{ d.title }}</h2>@for (line of d.lines; track $index) { <p>{{ line }}</p> }<button type="button" (click)="closeDialog()">Fechar</button></section></div>
   }
 
-  <!-- aparência -->
   @if (state.appearanceOpen()) {
-    <div class="hud hud-appearance">
-      <h3>Aparência <span class="sub">{{ state.self()?.name }}</span></h3>
-      <div class="app-outfits">
-        @for (o of state.availableOutfits(); track o.outfitId) {
-          <div
-            class="app-card"
-            [class.active]="state.appearanceDraft()?.outfitId === o.outfitId"
-            (click)="selectOutfit(o.outfitId)"
-          >
-            <outfit-thumb [outfitId]="o.outfitId"></outfit-thumb>
-            <span>{{ o.name }}</span>
-          </div>
-        }
-      </div>
-
-      @if (draftOutfit(); as o) {
-        @if (o.supportsColors) {
-          <div class="app-colors">
-            @for (slot of colorSlots; track slot) {
-              <div class="app-color">
-                <label>{{ slot }}</label>
-                <div class="app-palette">
-                  @for (c of palette; track c; let i = $index) {
-                    <span
-                      class="app-swatch"
-                      [style.background]="c"
-                      [class.active]="state.appearanceDraft()!.colors[slot] === i"
-                      (click)="setDraftColor(slot, i)"
-                    ></span>
-                  }
-                </div>
-              </div>
-            }
-          </div>
-        }
-        @if (o.supportsAddons) {
-          <div class="app-addons">
-            <label class="check"><input type="checkbox" [checked]="hasAddon(state.appearanceDraft()!.addonMask, 1)" (change)="toggleAddon(1)" /> Addon 1</label>
-            <label class="check"><input type="checkbox" [checked]="hasAddon(state.appearanceDraft()!.addonMask, 2)" (change)="toggleAddon(2)" /> Addon 2</label>
-          </div>
-        }
-      }
-
-      <div class="app-actions">
-        <button class="btn primary" (click)="state.saveAppearance()">Salvar</button>
-        <button class="btn" (click)="state.closeAppearance()">Cancelar</button>
-      </div>
-    </div>
+    <div class="modal-backdrop"><section class="appearance-modal"><h2>Aparência <span>{{ state.self()?.name }}</span></h2><div class="app-outfits">@for (o of state.availableOutfits(); track o.outfitId) { <button class="app-card" type="button" [class.active]="state.appearanceDraft()?.outfitId === o.outfitId" (click)="selectOutfit(o.outfitId)"><outfit-thumb [outfitId]="o.outfitId"></outfit-thumb><span>{{ o.name }}</span></button> }</div>@if (draftOutfit(); as o) { @if (o.supportsColors) { <div class="app-colors">@for (slot of colorSlots; track slot) { <div class="app-color"><label>{{ slot }}</label><div class="app-palette">@for (c of palette; track c; let i = $index) { <span class="app-swatch" [style.background]="c" [class.active]="state.appearanceDraft()!.colors[slot] === i" (click)="setDraftColor(slot, i)"></span> }</div></div> }</div> } @if (o.supportsAddons) { <div class="app-addons"><label><input type="checkbox" [checked]="hasAddon(state.appearanceDraft()!.addonMask, 1)" (change)="toggleAddon(1)" /> Addon 1</label><label><input type="checkbox" [checked]="hasAddon(state.appearanceDraft()!.addonMask, 2)" (change)="toggleAddon(2)" /> Addon 2</label></div> } }<div class="app-actions"><button type="button" class="primary" (click)="state.saveAppearance()">Salvar</button><button type="button" (click)="state.closeAppearance()">Cancelar</button></div></section></div>
   }
-
-  <div class="hud hud-hint">
-    @if (state.inArena()) {
-      Combate automático · Clique em um monstro para focar o alvo · Loot cai no chão
-    } @else {
-      WASD / Setas: mover · Clique em um monstro para atacar · Clique em um NPC para conversar
-    }
-  </div>
 </div>

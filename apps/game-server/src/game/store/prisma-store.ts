@@ -1,17 +1,14 @@
 import { Injectable } from '@nestjs/common';
 import { Prisma } from '@aetheria/database';
 import { PrismaService } from '../../prisma/prisma.service';
-import type { CharacterEquipment, HuntProgress, ItemStack, VocationId } from '@aetheria/types';
-import type { AccountRecord, PromotionError, StoredCharacter, Store } from './store';
-import { validatePromotion, applyPromotion } from '../vocations/promotion.service';
+import type { CharacterEquipment, CombatArchetype, HuntProgress, ItemStack } from '@aetheria/types';
+import type { AccountRecord, StoredCharacter, Store } from './store';
 
 interface CharacterRow {
   id: string;
   accountId: string;
   name: string;
-  vocation: string;
-  promoted: boolean;
-  promotedAt: Date | null;
+  archetype: string;
   gold: number;
   position: { x: number; y: number; z: number } | null;
   stats: {
@@ -23,23 +20,23 @@ interface CharacterRow {
     maxMana: number;
   } | null;
   skills: {
-    sword: number;
-    axe: number;
-    club: number;
+    melee: number;
     distance: number;
     magic: number;
-    shielding: number;
   } | null;
+  skillProgress: { skillType: string; level: number; experience: number }[];
   inventory: { slots: unknown } | null;
   equipment: {
-    head?: unknown;
+    helmet?: unknown;
     armor?: unknown;
     legs?: unknown;
     boots?: unknown;
     weapon?: unknown;
-    shield?: unknown;
     ring?: unknown;
-    amulet?: unknown;
+    necklace?: unknown;
+    relic?: unknown;
+    offhand?: unknown;
+    ammo?: unknown;
   } | null;
   appearance: {
     outfit_id: number;
@@ -60,6 +57,7 @@ const INCLUDE = {
   position: true,
   stats: true,
   skills: true,
+  skillProgress: true,
   inventory: true,
   equipment: true,
   appearance: true,
@@ -94,9 +92,7 @@ export class PrismaStore implements Store {
       data: {
         accountId,
         name: data.name,
-        vocation: data.vocation,
-        promoted: data.promoted,
-        promotedAt: data.promotedAt ? new Date(data.promotedAt) : null,
+        archetype: data.archetype,
         gold: data.gold,
         position: { create: { x: data.position.x, y: data.position.y, z: data.position.z } },
         stats: {
@@ -107,20 +103,39 @@ export class PrismaStore implements Store {
             maxHealth: data.maxHealth,
             mana: data.mana,
             maxMana: data.maxMana,
-            attack: data.skills.sword,
-            defense: data.skills.shielding,
+            attack: data.skills.melee,
+            defense: 0,
           },
         },
         skills: { create: { ...data.skills } },
         skillProgress: {
-          create: (Object.keys(data.skills) as (keyof typeof data.skills)[]).map((skillType) => ({
-            skillType,
-            level: data.skills[skillType],
-            experience: 0,
+          create: (data.skillProgress.length > 0
+            ? data.skillProgress
+            : (Object.keys(data.skills) as (keyof typeof data.skills)[]).map((skillType) => ({
+                skillType,
+                level: data.skills[skillType],
+                experience: 0,
+              }))
+          ).map((progress) => ({
+            skillType: progress.skillType,
+            level: progress.level,
+            experience: progress.experience,
           })),
         },
         inventory: { create: { slots: data.inventory as unknown as Prisma.InputJsonValue } },
         equipment: { create: this.toEquipmentData(data.equipment) as unknown as Prisma.CharacterEquipmentCreateWithoutCharacterInput },
+        appearance: data.appearance
+          ? {
+              create: {
+                outfit_id: data.appearance.outfitId,
+                addon_mask: data.appearance.addonMask,
+                head_color: data.appearance.colors.head,
+                primary_color: data.appearance.colors.primary,
+                secondary_color: data.appearance.colors.secondary,
+                detail_color: data.appearance.colors.detail,
+              },
+            }
+          : undefined,
       },
       include: INCLUDE,
     })) as unknown as CharacterRow;
@@ -140,8 +155,6 @@ export class PrismaStore implements Store {
       where: { id: character.id },
       data: {
         gold: character.gold,
-        promoted: character.promoted,
-        promotedAt: character.promotedAt ? new Date(character.promotedAt) : null,
         position: { update: { x: character.position.x, y: character.position.y, z: character.position.z } },
         stats: {
           update: {
@@ -151,11 +164,18 @@ export class PrismaStore implements Store {
             maxHealth: character.maxHealth,
             mana: character.mana,
             maxMana: character.maxMana,
-            attack: character.skills.sword,
-            defense: character.skills.shielding,
+            attack: character.skills.melee,
+            defense: 0,
           },
         },
         skills: { update: { ...character.skills } },
+        skillProgress: {
+          upsert: character.skillProgress.map((progress) => ({
+            where: { characterId_skillType: { characterId: character.id, skillType: progress.skillType } },
+            create: { skillType: progress.skillType, level: progress.level, experience: progress.experience },
+            update: { level: progress.level, experience: progress.experience },
+          })),
+        },
         inventory: { update: { slots: character.inventory as unknown as Prisma.InputJsonValue } },
         equipment: { update: this.toEquipmentData(character.equipment) as unknown as Prisma.CharacterEquipmentUpdateWithoutCharacterInput },
         appearance: character.appearance
@@ -181,29 +201,6 @@ export class PrismaStore implements Store {
             }
           : undefined,
       },
-    });
-  }
-
-  async promoteCharacter(
-    accountId: string,
-    characterId: string,
-  ): Promise<{ ok: true; character: StoredCharacter } | { ok: false; error: PromotionError }> {
-    return this.prisma.$transaction(async (tx) => {
-      const locked = await tx.character.findFirst({
-        where: { id: characterId },
-        include: INCLUDE,
-      });
-      if (!locked) return { ok: false, error: 'CHARACTER_NOT_FOUND' };
-      if (locked.accountId !== accountId) return { ok: false, error: 'CHARACTER_NOT_OWNED' };
-      const stored = this.toStored(locked as unknown as CharacterRow);
-      const error = validatePromotion(stored);
-      if (error) return { ok: false, error };
-      const promoted = applyPromotion(stored);
-      await tx.character.update({
-        where: { id: characterId },
-        data: { gold: promoted.gold, promoted: true, promotedAt: new Date() },
-      });
-      return { ok: true, character: promoted };
     });
   }
 
@@ -273,7 +270,7 @@ export class PrismaStore implements Store {
 
   private toEquipmentData(equipment: CharacterEquipment): Record<string, Prisma.InputJsonValue | undefined> {
     const out: Record<string, Prisma.InputJsonValue | undefined> = {};
-    for (const slot of ['head', 'armor', 'legs', 'boots', 'weapon', 'shield', 'ring', 'amulet'] as const) {
+    for (const slot of ['helmet', 'armor', 'legs', 'boots', 'ring', 'necklace', 'relic', 'weapon', 'offhand', 'ammo'] as const) {
       const item = equipment[slot];
       out[slot] = item ? (item as unknown as Prisma.InputJsonValue) : undefined;
     }
@@ -286,9 +283,7 @@ export class PrismaStore implements Store {
       id: row.id,
       accountId: row.accountId,
       name: row.name,
-      vocation: (row.vocation ?? 'knight') as VocationId,
-      promoted: row.promoted ?? false,
-      promotedAt: row.promotedAt ? row.promotedAt.getTime() : null,
+      archetype: (row.archetype ?? 'warrior') as CombatArchetype,
       gold: clampInt(row.gold, 0),
       level: clampInt(row.stats?.level, 1),
       experience: clampInt(row.stats?.experience, 0),
@@ -302,25 +297,31 @@ export class PrismaStore implements Store {
         z: clampInt(row.position?.z, 7),
       },
       skills: {
-        sword: clampInt(row.skills?.sword, 10),
-        axe: clampInt(row.skills?.axe, 10),
-        club: clampInt(row.skills?.club, 10),
+        melee: clampInt(row.skills?.melee, 10),
         distance: clampInt(row.skills?.distance, 10),
         magic: clampInt(row.skills?.magic, 10),
-        shielding: clampInt(row.skills?.shielding, 10),
       },
+      skillProgress: Array.isArray(row.skillProgress)
+        ? row.skillProgress.map((p) => ({
+            skillType: String(p.skillType) as keyof StoredCharacter['skills'],
+            level: clampInt(p.level, 10),
+            experience: clampInt(p.experience, 0),
+          }))
+        : [],
       inventory: Array.isArray(row.inventory?.slots)
         ? ((row.inventory.slots as (ItemStack | null)[]).map((s) => (s ? { itemId: s.itemId, quantity: s.quantity } : null)) as (ItemStack | null)[])
         : [],
       equipment: {
-        head: eq.head ? this.stack(eq.head) : undefined,
+        helmet: eq.helmet ? this.stack(eq.helmet) : undefined,
         armor: eq.armor ? this.stack(eq.armor) : undefined,
         legs: eq.legs ? this.stack(eq.legs) : undefined,
         boots: eq.boots ? this.stack(eq.boots) : undefined,
-        weapon: eq.weapon ? this.stack(eq.weapon) : undefined,
-        shield: eq.shield ? this.stack(eq.shield) : undefined,
         ring: eq.ring ? this.stack(eq.ring) : undefined,
-        amulet: eq.amulet ? this.stack(eq.amulet) : undefined,
+        necklace: eq.necklace ? this.stack(eq.necklace) : undefined,
+        relic: eq.relic ? this.stack(eq.relic) : undefined,
+        weapon: eq.weapon ? this.stack(eq.weapon) : undefined,
+        offhand: eq.offhand ? this.stack(eq.offhand) : undefined,
+        ammo: eq.ammo ? this.stack(eq.ammo) : undefined,
       },
       appearance: row.appearance
         ? {

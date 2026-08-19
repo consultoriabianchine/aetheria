@@ -1,5 +1,6 @@
 import { BadRequestException, Injectable, NotFoundException } from '@nestjs/common';
 import { createHash } from 'node:crypto';
+import type { AppearanceColors, OutfitBodyType, OutfitCategory, OutfitDefinition } from '@aetheria/types';
 import type { Prisma } from '@aetheria/database';
 import { PrismaService } from '../../prisma/prisma.service';
 import { OutfitRegistry } from './outfit-registry.service';
@@ -37,6 +38,28 @@ export class OutfitAdminService {
     private readonly prisma: PrismaService,
     private readonly registry: OutfitRegistry,
   ) {}
+
+  async listOutfits(): Promise<OutfitDefinition[]> {
+    const rows = await this.prisma.outfit.findMany({ orderBy: { outfit_id: 'asc' } });
+    return rows.map((row) => this.toDefinition(row));
+  }
+
+  async getOutfit(outfitId: number): Promise<OutfitDefinition> {
+    const row = await this.prisma.outfit.findUnique({ where: { outfit_id: outfitId } });
+    if (!row) throw new NotFoundException('Outfit não encontrado');
+    return this.toDefinition(row);
+  }
+
+  async listAnimationSets(): Promise<{ id: number; name: string }[]> {
+    const rows = await this.prisma.animationSet.findMany({ orderBy: { animation_set_id: 'asc' } });
+    return rows.map((row) => ({ id: row.animation_set_id, name: row.name }));
+  }
+
+  async getAnimationSet(id: number): Promise<{ name: string; spriteAssetId: number | null; config: Record<string, unknown> }> {
+    const row = await this.prisma.animationSet.findUnique({ where: { animation_set_id: id } });
+    if (!row) throw new NotFoundException('AnimationSet não encontrado');
+    return { name: row.name, spriteAssetId: row.sprite_asset_id, config: row.config as Record<string, unknown> };
+  }
 
   async saveOutfit(input: OutfitSaveInput) {
     if (!input.name?.trim()) throw new BadRequestException('Nome é obrigatório');
@@ -142,5 +165,33 @@ export class OutfitAdminService {
   async revokeOutfit(characterId: string, outfitId: number) {
     await this.prisma.characterOutfit.deleteMany({ where: { character_id: characterId, outfit_id: outfitId } });
     return { ok: true };
+  }
+
+  private toDefinition(o: Prisma.OutfitGetPayload<object>): OutfitDefinition {
+    const defaultColors: AppearanceColors = {
+      head: o.default_head_color,
+      primary: o.default_primary_color,
+      secondary: o.default_secondary_color,
+      detail: o.default_detail_color,
+    };
+    return {
+      outfitId: o.outfit_id,
+      slug: o.slug,
+      name: o.name,
+      description: o.description,
+      spriteAssetId: o.sprite_asset_id,
+      animationSetId: o.animation_set_id,
+      colorMaskAssetId: o.color_mask_asset_id ?? undefined,
+      category: o.category as OutfitCategory,
+      bodyType: o.body_type as OutfitBodyType,
+      supportsColors: o.supports_colors,
+      supportsAddons: o.supports_addons,
+      defaultColors,
+      availableByDefault: o.available_by_default,
+      premiumOnly: o.premium_only,
+      enabled: o.enabled,
+      published: o.published,
+      version: o.version,
+    };
   }
 }

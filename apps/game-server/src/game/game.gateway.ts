@@ -37,18 +37,13 @@ export class GameGateway implements OnGatewayConnection, OnGatewayDisconnect {
   }
 
   @SubscribeMessage('auth.createCharacter')
-  async onCreateCharacter(socket: Socket, payload: { token: string; name: string; vocation: string }) {
-    await this.engine.handleCreateCharacter(socket.id, payload.token, payload.name, payload.vocation as never);
+  async onCreateCharacter(socket: Socket, payload: { token: string; name: string; archetype: string }) {
+    await this.engine.handleCreateCharacter(socket.id, payload.token, payload.name, payload.archetype as never);
   }
 
   @SubscribeMessage('auth.selectCharacter')
   async onSelectCharacter(socket: Socket, payload: { token: string; characterId: string }) {
     await this.engine.handleSelectCharacter(socket.id, payload.token, payload.characterId);
-  }
-
-  @SubscribeMessage('promotion.promote')
-  async onPromote(socket: Socket, payload: { token: string }) {
-    await this.engine.handlePromote(socket.id, payload.token);
   }
 
   @SubscribeMessage('game.input')

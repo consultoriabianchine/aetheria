@@ -1,0 +1,146 @@
+<h1>Items</h1>
+<p class="sub">Catálogo jogável em <code>item_definitions</code>. A tabela <code>items</code> continua reservada para dados raw da Wiki.</p>
+
+@if (error()) { <p class="error">{{ error() }}</p> }
+
+<div class="layout">
+  <section class="panel">
+    <div class="toolbar">
+      <button class="primary" (click)="createNew()">+ Novo item</button>
+      <button (click)="load()">Atualizar</button>
+    </div>
+    <div class="item-list">
+      @for (item of items(); track item.id) {
+        <button class="item-row" [class.active]="selectedId() === item.id" (click)="select(item)">
+          <span>{{ item.name }}<br /><small>{{ item.id }}</small></span>
+          <small>{{ item.type }} {{ item.enabled === false ? '· off' : '' }}</small>
+        </button>
+      }
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>{{ selectedId() ? 'Editar item' : 'Novo item' }}</h2>
+    <div class="form">
+      <label>ID <input [value]="draft().id ?? ''" [disabled]="!!selectedId()" (input)="patch({ id: $any($event.target).value })" /></label>
+      <label>Nome <input [value]="draft().name" (input)="patch({ name: $any($event.target).value })" /></label>
+      <label class="wide">Descrição <textarea [value]="draft().description ?? ''" (input)="patch({ description: $any($event.target).value })"></textarea></label>
+      <label>Tipo
+        <select [value]="draft().type" (change)="patch({ type: $any($event.target).value })">
+          @for (type of itemTypes; track type) { <option [value]="type">{{ type }}</option> }
+        </select>
+      </label>
+      <label>Slot
+        <select [value]="draft().slot ?? ''" (change)="patch({ slot: $any($event.target).value || null })">
+          <option value="">nenhum</option>
+          @for (slot of slots; track slot) { <option [value]="slot">{{ slot }}</option> }
+        </select>
+      </label>
+      <label>Categoria <input [value]="draft().category ?? ''" (input)="patch({ category: $any($event.target).value })" /></label>
+      <label>Imagem/path
+        <input [value]="draft().imagePath ?? ''" placeholder="Iron_Sword.gif ou https://.../item.png" (input)="patch({ imagePath: $any($event.target).value })" />
+      </label>
+      <label>Peso <input type="number" [value]="draft().weight ?? 0" (input)="patch({ weight: +$any($event.target).value })" /></label>
+      <label><span>Ativo</span><input type="checkbox" [checked]="draft().enabled" (change)="patch({ enabled: $any($event.target).checked })" /></label>
+      <label><span>Stackable</span><input type="checkbox" [checked]="draft().stackable" (change)="patch({ stackable: $any($event.target).checked })" /></label>
+
+      <label>Attack Power <input type="number" [value]="draft().attackPower ?? 0" (input)="patch({ attackPower: +$any($event.target).value })" /></label>
+      <label>Magic Power <input type="number" [value]="draft().magicPower ?? 0" (input)="patch({ magicPower: +$any($event.target).value })" /></label>
+      <label>Armor <input type="number" [value]="draft().armor ?? 0" (input)="patch({ armor: +$any($event.target).value })" /></label>
+      <label>Defense <input type="number" [value]="draft().defense ?? 0" (input)="patch({ defense: +$any($event.target).value })" /></label>
+      <label>Max HP <input type="number" [value]="draft().maxHp ?? 0" (input)="patch({ maxHp: +$any($event.target).value })" /></label>
+      <label>Max Mana <input type="number" [value]="draft().maxMana ?? 0" (input)="patch({ maxMana: +$any($event.target).value })" /></label>
+      <label>Crit Chance <input type="number" step="0.01" [value]="draft().criticalChance ?? 0" (input)="patch({ criticalChance: +$any($event.target).value })" /></label>
+      <label>Crit Damage <input type="number" step="0.01" [value]="draft().criticalDamage ?? 0" (input)="patch({ criticalDamage: +$any($event.target).value })" /></label>
+      <label>Accuracy <input type="number" step="0.01" [value]="draft().accuracy ?? 0" (input)="patch({ accuracy: +$any($event.target).value })" /></label>
+      <label>Dodge <input type="number" step="0.01" [value]="draft().dodge ?? 0" (input)="patch({ dodge: +$any($event.target).value })" /></label>
+
+      <label>Weapon Type
+        <select [value]="draft().weaponType ?? ''" (change)="patch({ weaponType: $any($event.target).value || null })">
+          <option value="">não é arma</option>
+          @for (type of weaponTypes; track type) { <option [value]="type">{{ type }}</option> }
+        </select>
+      </label>
+      <label>Ammo Type
+        <select [value]="draft().ammoType ?? ''" (change)="patch({ ammoType: $any($event.target).value || null })">
+          <option value="">não é munição</option>
+          @for (type of ammoTypes; track type) { <option [value]="type">{{ type }}</option> }
+        </select>
+      </label>
+      <label>Damage Type
+        <select [value]="draft().damageType ?? 'physical'" (change)="patch({ damageType: $any($event.target).value })">
+          @for (type of damageTypes; track type) { <option [value]="type">{{ type }}</option> }
+        </select>
+      </label>
+      <label>Range <input type="number" [value]="draft().range ?? 1" (input)="patch({ range: +$any($event.target).value })" /></label>
+      <label>Allowed Ammo
+        <select [value]="draft().allowedAmmoType ?? ''" (change)="patch({ allowedAmmoType: $any($event.target).value || null })">
+          <option value="">nenhuma</option>
+          @for (type of ammoTypes; track type) { <option [value]="type">{{ type }}</option> }
+        </select>
+      </label>
+
+      <div class="wide">
+        <h3>Visual de combate</h3>
+        @if (visualHint(); as hint) {
+          <p class="sub">{{ hint }}</p>
+        }
+        @if (canEditVisual()) {
+          <div class="form">
+            <label class="wide">Projectile sprite/path
+              <input [value]="projectile().sprite" placeholder="assets/effects/projectiles/arrow.png" (input)="patchProjectile({ sprite: $any($event.target).value })" (change)="loadProjectileSheet()" />
+            </label>
+            <label class="wide">Importar projectile spritesheet para o banco
+              <input type="file" accept="image/png,image/webp" (change)="onProjectileAssetFile($event)" />
+              <span class="mini-hint">Sprite asset atual: #{{ projectile().spriteAssetId || 'nenhum' }}</span>
+            </label>
+            <label>Projectile frame width <input type="number" [value]="projectile().frameWidth" (input)="patchProjectile({ frameWidth: +$any($event.target).value })" /></label>
+            <label>Projectile frame height <input type="number" [value]="projectile().frameHeight" (input)="patchProjectile({ frameHeight: +$any($event.target).value })" /></label>
+            <label>Projectile speed <input type="number" [value]="projectile().speedPxPerSecond ?? 520" (input)="patchProjectile({ speedPxPerSecond: +$any($event.target).value })" /></label>
+
+            <div class="wide visual-editor">
+              <div>
+                <p class="mini-hint">Selecione uma direção e clique no frame correto da spritesheet.</p>
+                <div class="sheet-box">
+                  <canvas #projectileCanvas (click)="onProjectileSheetClick($event)"></canvas>
+                </div>
+              </div>
+              <div>
+                <p class="mini-hint">Direções do projétil</p>
+                <div class="dir-grid">
+                  @for (direction of projectileDirections; track direction) {
+                    <button type="button" class="dir-btn" [class.active]="selectedProjectileDirection() === direction" (click)="selectProjectileDirection(direction)">
+                      <span>{{ projectileDirectionLabel[direction] }}</span>
+                      <b>#{{ projectile().frames[direction] }}</b>
+                    </button>
+                  }
+                </div>
+              </div>
+            </div>
+
+            <label class="wide">Impact sprite/path
+              <input [value]="impact().sprite" placeholder="assets/effects/impacts/arrow-hit.png" (input)="patchImpact({ sprite: $any($event.target).value })" (change)="loadImpactSheet()" />
+            </label>
+            <label class="wide">Importar impact spritesheet para o banco
+              <input type="file" accept="image/png,image/webp" (change)="onImpactAssetFile($event)" />
+              <span class="mini-hint">Sprite asset atual: #{{ impact().spriteAssetId || 'nenhum' }}</span>
+            </label>
+            <label>Impact frame width <input type="number" [value]="impact().frameWidth" (input)="patchImpact({ frameWidth: +$any($event.target).value })" /></label>
+            <label>Impact frame height <input type="number" [value]="impact().frameHeight" (input)="patchImpact({ frameHeight: +$any($event.target).value })" /></label>
+            <label>Impact FPS <input type="number" [value]="impact().fps ?? 12" (input)="patchImpact({ fps: +$any($event.target).value })" /></label>
+            <label class="wide">Impact frames <input [value]="impact().frames.join(',')" placeholder="0,1,2,3" (input)="setImpactFrames($any($event.target).value)" /></label>
+            <div class="wide">
+              <p class="mini-hint">Clique para definir o impacto. Use shift+clique para selecionar vários frames.</p>
+              <div class="sheet-box">
+                <canvas #impactCanvas (click)="onImpactSheetClick($event)"></canvas>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+    <div class="actions">
+      <button class="primary" (click)="save()" [disabled]="saving()">Salvar</button>
+    </div>
+  </section>
+</div>

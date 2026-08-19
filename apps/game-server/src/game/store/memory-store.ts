@@ -1,10 +1,9 @@
 import { randomUUID } from 'node:crypto';
 import { INVENTORY_SIZE } from '@aetheria/config';
-import type { HuntProgress, ItemStack, VocationId } from '@aetheria/types';
-import type { Store, StoredCharacter, AccountRecord, PromotionError } from './store';
-import { validatePromotion, applyPromotion } from '../vocations/promotion.service';
+import type { HuntProgress, ItemStack } from '@aetheria/types';
+import type { Store, StoredCharacter, AccountRecord } from './store';
 
-const BASE_SKILLS = { sword: 10, axe: 10, club: 10, distance: 10, magic: 10, shielding: 10 };
+const BASE_SKILLS = { melee: 10, distance: 10, magic: 10 };
 
 /** Store em memória — usado quando USE_IN_MEMORY=true (dev sem PostgreSQL). */
 export class MemoryStore implements Store {
@@ -47,20 +46,6 @@ export class MemoryStore implements Store {
     this.characters.set(character.id, { ...character });
   }
 
-  async promoteCharacter(
-    accountId: string,
-    characterId: string,
-  ): Promise<{ ok: true; character: StoredCharacter } | { ok: false; error: PromotionError }> {
-    const character = this.characters.get(characterId);
-    if (!character) return { ok: false, error: 'CHARACTER_NOT_FOUND' };
-    if (character.accountId !== accountId) return { ok: false, error: 'CHARACTER_NOT_OWNED' };
-    const error = validatePromotion(character);
-    if (error) return { ok: false, error };
-    const promoted = applyPromotion(character);
-    this.characters.set(promoted.id, promoted);
-    return { ok: true, character: promoted };
-  }
-
   async getHuntProgress(characterId: string, huntId: string): Promise<HuntProgress | null> {
     return this.huntProgress.get(`${characterId}:${huntId}`) ?? null;
   }
@@ -98,4 +83,3 @@ export class MemoryStore implements Store {
 }
 
 export { BASE_SKILLS };
-export type { VocationId };

@@ -1,12 +1,12 @@
 import type {
   CharacterEquipment,
   CharacterSkills,
+  CombatArchetype,
   Direction,
   ItemStack,
   NpcDialogue,
   PlayerAppearance,
   Position,
-  VocationId,
 } from '@aetheria/types';
 import type { StoredCharacter } from '../store/store';
 
@@ -30,9 +30,7 @@ export class GamePlayer {
   id: string;
   accountId: string;
   name: string;
-  vocation: VocationId;
-  promoted: boolean;
-  promotedAt: number | null;
+  archetype: CombatArchetype;
   gold: number;
   position: Position;
   level = 1;
@@ -61,9 +59,7 @@ export class GamePlayer {
     this.id = character.id;
     this.accountId = character.accountId;
     this.name = character.name;
-    this.vocation = character.vocation;
-    this.promoted = character.promoted;
-    this.promotedAt = character.promotedAt;
+    this.archetype = character.archetype;
     this.gold = character.gold;
     this.position = { ...character.position };
     this.level = character.level;
@@ -73,21 +69,19 @@ export class GamePlayer {
     this.maxMana = character.maxMana;
     this.mana = character.mana;
     this.skills = { ...character.skills };
-    this.skillProgress = Object.keys(character.skills).map((skillType) => ({
-      skillType: skillType as keyof CharacterSkills,
-      level: character.skills[skillType as keyof CharacterSkills],
-      experience: 0,
-    }));
+    this.skillProgress = character.skillProgress.map((progress) => ({ ...progress }));
     this.inventory = character.inventory.map((s) => (s ? { ...s } : null));
     this.equipment = {
-      head: character.equipment.head ? { ...character.equipment.head } : undefined,
+      helmet: character.equipment.helmet ? { ...character.equipment.helmet } : undefined,
       armor: character.equipment.armor ? { ...character.equipment.armor } : undefined,
       legs: character.equipment.legs ? { ...character.equipment.legs } : undefined,
       boots: character.equipment.boots ? { ...character.equipment.boots } : undefined,
-      weapon: character.equipment.weapon ? { ...character.equipment.weapon } : undefined,
-      shield: character.equipment.shield ? { ...character.equipment.shield } : undefined,
       ring: character.equipment.ring ? { ...character.equipment.ring } : undefined,
-      amulet: character.equipment.amulet ? { ...character.equipment.amulet } : undefined,
+      necklace: character.equipment.necklace ? { ...character.equipment.necklace } : undefined,
+      relic: character.equipment.relic ? { ...character.equipment.relic } : undefined,
+      weapon: character.equipment.weapon ? { ...character.equipment.weapon } : undefined,
+      offhand: character.equipment.offhand ? { ...character.equipment.offhand } : undefined,
+      ammo: character.equipment.ammo ? { ...character.equipment.ammo } : undefined,
     };
     this.appearance = character.appearance ? { ...character.appearance } : undefined;
     this.attackBase = character.level + 8;
@@ -100,9 +94,7 @@ export class GamePlayer {
       id: this.id,
       accountId: this.accountId,
       name: this.name,
-      vocation: this.vocation,
-      promoted: this.promoted,
-      promotedAt: this.promotedAt,
+      archetype: this.archetype,
       gold: this.gold,
       level: this.level,
       experience: this.experience,
@@ -112,6 +104,7 @@ export class GamePlayer {
       maxMana: this.maxMana,
       position: { ...this.position },
       skills: { ...this.skills },
+      skillProgress: this.skillProgress.map((progress) => ({ ...progress })),
       inventory: this.inventory.map((s) => (s ? { ...s } : null)),
       equipment: this.toEquipment(),
       appearance: this.appearance ? { ...this.appearance } : undefined,
@@ -120,7 +113,7 @@ export class GamePlayer {
 
   private toEquipment(): CharacterEquipment {
     const eq: CharacterEquipment = {};
-    for (const slot of ['head', 'armor', 'legs', 'boots', 'weapon', 'shield', 'ring', 'amulet'] as const) {
+    for (const slot of ['helmet', 'armor', 'legs', 'boots', 'ring', 'necklace', 'relic', 'weapon', 'offhand', 'ammo'] as const) {
       const item = this.equipment[slot];
       if (item) eq[slot] = { ...item };
     }

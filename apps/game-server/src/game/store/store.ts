@@ -1,4 +1,4 @@
-import type { CharacterEquipment, CharacterSkills, HuntProgress, ItemStack, PlayerAppearance, Position, VocationId } from '@aetheria/types';
+import type { CharacterEquipment, CharacterSkills, CombatArchetype, HuntProgress, ItemStack, PlayerAppearance, Position } from '@aetheria/types';
 
 export interface AccountRecord {
   id: string;
@@ -10,9 +10,7 @@ export interface StoredCharacter {
   id: string;
   accountId: string;
   name: string;
-  vocation: VocationId;
-  promoted: boolean;
-  promotedAt: number | null;
+  archetype: CombatArchetype;
   gold: number;
   level: number;
   experience: number;
@@ -22,6 +20,7 @@ export interface StoredCharacter {
   maxMana: number;
   position: Position;
   skills: CharacterSkills;
+  skillProgress: { skillType: keyof CharacterSkills; level: number; experience: number }[];
   inventory: (ItemStack | null)[];
   equipment: CharacterEquipment;
   appearance?: PlayerAppearance;
@@ -43,8 +42,6 @@ export interface Store {
   createCharacter(accountId: string, data: Omit<StoredCharacter, 'id' | 'accountId'>): Promise<StoredCharacter>;
   findCharacterById(id: string): Promise<StoredCharacter | null>;
   saveCharacter(character: StoredCharacter): Promise<void>;
-  /** Promove o personagem atomicamente (valida, deduz gold, marca promoted). */
-  promoteCharacter(accountId: string, characterId: string): Promise<{ ok: true; character: StoredCharacter } | { ok: false; error: PromotionError }>;
   /** Progresso de uma Hunt para o personagem (ou null se nunca concluída). */
   getHuntProgress(characterId: string, huntId: string): Promise<HuntProgress | null>;
   /** Progresso de todas as Hunts do personagem. */

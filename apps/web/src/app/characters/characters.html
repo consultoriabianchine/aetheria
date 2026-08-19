@@ -14,7 +14,7 @@
           <div class="char-info">
             <div class="char-name">
               {{ c.name }}
-              <span class="vocation-badge" [class]="c.vocation">{{ c.promotedName }}</span>
+              <span class="vocation-badge" [class]="c.archetype">{{ c.archetype }}</span>
             </div>
             <div class="char-meta">Nível {{ c.level }} · {{ c.experience }} XP · {{ c.gold }} gold</div>
           </div>
@@ -32,11 +32,11 @@
     </div>
 
     <div class="vocation-grid">
-      @for (v of vocations(); track v.id) {
+      @for (v of archetypes(); track v.id) {
         <button
           class="vocation-card"
-          [class.selected]="selectedVocation() === v.id"
-          (click)="selectedVocation.set(v.id)"
+          [class.selected]="selectedArchetype() === v.id"
+          (click)="selectedArchetype.set(v.id)"
           type="button"
         >
           <div class="vc-name">{{ v.name }}</div>

@@ -74,6 +74,7 @@
             <option [value]="s.id">#{{ s.id }} {{ s.name }}</option>
           }
         </select>
+        <span class="mono">Atual: #{{ o.animationSetId }}</span>
         <a [routerLink]="['/animation-sets', o.animationSetId]" [queryParams]="{ spriteAssetId: o.spriteAssetId }">Editar animação</a>
       </div>
     </section>

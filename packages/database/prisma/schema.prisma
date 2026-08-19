@@ -24,9 +24,7 @@ model Character {
   id             String                   @id @default(cuid())
   accountId      String
   name           String                   @unique
-  vocation       String                   @default("knight")
-  promoted       Boolean                  @default(false)
-  promotedAt     DateTime?
+  archetype      String                   @default("warrior")
   gold           Int                      @default(0)
   position       CharacterPosition?
   stats          CharacterStats?
@@ -41,7 +39,7 @@ model Character {
   outfits        CharacterOutfit[]
   createdAt      DateTime                 @default(now())
 
-  @@index([vocation])
+  @@index([archetype])
 }
 
 model CharacterPosition {
@@ -72,12 +70,9 @@ model CharacterStats {
 model CharacterSkills {
   id          String    @id @default(cuid())
   characterId String    @unique
-  sword       Int       @default(10)
-  axe         Int       @default(10)
-  club        Int       @default(10)
+  melee       Int       @default(10)
   distance    Int       @default(10)
   magic       Int       @default(10)
-  shielding   Int       @default(10)
   character   Character @relation(fields: [characterId], references: [id], onDelete: Cascade)
 }
 
@@ -112,21 +107,41 @@ model HuntProgress {
   @@map("hunt_progress")
 }
 
-// Itens do jogo (catálogo local em data/items.json). Tabela renomeada para
-// `game_items` para não conflitar com a tabela `items` do importador.
-model Item {
-  id        String @id
-  name      String
-  type      String
-  weight    Float  @default(0)
-  stackable Boolean @default(false)
-  attack    Int    @default(0)
-  defense   Int    @default(0)
-  image     String?
-  category  String @default("outros")
-  slot      String?
+model ItemDefinition {
+  id                String   @id
+  name              String
+  description       String   @default("")
+  type              String
+  slot              String?
+  imagePath         String?  @map("image_path")
+  stackable         Boolean  @default(false)
+  weight            Float    @default(0)
+  category          String   @default("outros")
+  attackPower       Int      @default(0) @map("attack_power")
+  magicPower        Int      @default(0) @map("magic_power")
+  armor             Int      @default(0)
+  defense           Int      @default(0)
+  maxHp             Int      @default(0) @map("max_hp")
+  maxMana           Int      @default(0) @map("max_mana")
+  criticalChance    Float    @default(0) @map("critical_chance")
+  criticalDamage    Float    @default(0) @map("critical_damage")
+  accuracy          Float    @default(0)
+  dodge             Float    @default(0)
+  weapon            Json?
+  ammo              Json?
+  skillBonuses      Json?    @map("skill_bonuses")
+  resistances       Json?
+  requirements      Json?
+  specialModifiers  Json?    @map("special_modifiers")
+  enabled           Boolean  @default(true)
+  sourceItemId      String?  @map("source_item_id")
+  createdAt         DateTime @default(now()) @map("created_at")
+  updatedAt         DateTime @updatedAt @map("updated_at")
 
-  @@map("game_items")
+  @@index([type])
+  @@index([slot])
+  @@index([enabled])
+  @@map("item_definitions")
 }
 
 model CharacterInventory {
@@ -139,14 +154,16 @@ model CharacterInventory {
 model CharacterEquipment {
   id          String    @id @default(cuid())
   characterId String    @unique
-  head        Json?
+  helmet      Json?
   armor       Json?
   legs        Json?
   boots       Json?
-  weapon      Json?
-  shield      Json?
   ring        Json?
-  amulet      Json?
+  necklace    Json?
+  relic       Json?
+  weapon      Json?
+  offhand     Json?
+  ammo        Json?
   character   Character @relation(fields: [characterId], references: [id], onDelete: Cascade)
 }
 
@@ -228,7 +245,7 @@ model CreatureSpawn {
 }
 
 // Loot de uma criatura. `item_name` vem da Wiki; `item_id` (opcional) liga ao
-// catálogo de itens do jogo (game_items) para o drop funcionar em runtime.
+// catálogo jogável (`item_definitions`) para o drop funcionar em runtime.
 model CreatureLoot {
   id          String             @id @default(cuid())
   creature_id String             @map("creature_id")

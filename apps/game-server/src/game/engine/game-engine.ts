@@ -2,11 +2,14 @@ import { createHmac } from 'node:crypto';
 import { Inject, Injectable, Logger, OnModuleDestroy, Optional } from '@nestjs/common';
 import * as bcrypt from 'bcryptjs';
 import {
+  ARCHETYPES,
   BASE_PLAYER,
   CHAT_CHANNELS,
   CHAT_MAX_LENGTH,
   CHAT_MIN_INTERVAL_MS,
+  COMBAT_FORMULA_CONFIG,
   DEFAULT_PLAYER_OUTFIT_ID,
+  DEFAULT_PLAYER_OUTFIT_SLUG,
   HUNT_CATALOG,
   HUNT_CONFIG,
   INVENTORY_SIZE,
@@ -19,8 +22,6 @@ import {
   TICK_MS,
   VIEW_DISTANCE_X,
   VIEW_DISTANCE_Y,
-  VOCATIONS,
-  getVocationDisplayName,
   xpForLevel,
 } from '@aetheria/config';
 import { samePosition, tileDistance, tileKey, uid } from '@aetheria/shared';
@@ -29,11 +30,15 @@ import type {
   CharacterInventory,
   CharacterSkills,
   CharacterSummary,
+  CombatArchetype,
+  CombatSkill,
   Direction,
+  ItemDefinition,
+  ItemVisualEffects,
+  PlayerAppearance,
   Position,
-  VocationId,
 } from '@aetheria/types';
-import { getItemDef } from './item-catalog';
+import { getItemDef, loadItemCatalogFromDatabase } from './item-catalog';
 import { generateWorldMap } from './world-map';
 import { GamePlayer, GroundItem, NpcEntity } from './world';
 import { STORE, Store, StoredCharacter } from '../store/store';
@@ -48,22 +53,24 @@ import { HuntEngine, HuntRun } from '../hunts/hunt-engine';
 import { MapRegistry } from '../map/map-registry.service';
 import { HuntRegistry } from '../hunts/hunt-registry.service';
 import { OutfitRegistry } from '../outfit/outfit-registry.service';
-import { calculateMaxHp, calculateMaxMana, applyVocationDamageReduction, computeCoreStats } from '../stats/stat-engine';
+import { calculateMaxHp, calculateMaxMana } from '../stats/stat-engine';
 import { calculateRegeneration } from '../regeneration/regeneration-engine';
-import { trainSkill } from '../skills/skill-engine';
+import { trainCombatSkill } from '../skills/skill-progression';
+import { aggregateCharacterCombatStats, emptyResistances } from '../combat/character-stat-aggregator';
+import { calculateBasicAttack } from '../combat/basic-attack-calculator';
+import { calculateMitigatedDamage } from '../combat/damage-calculator';
+import { getAmmoDefinition, getWeaponDefinition } from '../combat/item-combat';
 
 export type EmitFn = (socketId: string, event: string, data: unknown) => void;
 
 const BASE_SKILLS: CharacterSkills = {
-  sword: BASE_PLAYER.skill,
-  axe: BASE_PLAYER.skill,
-  club: BASE_PLAYER.skill,
+  melee: BASE_PLAYER.skill,
   distance: BASE_PLAYER.skill,
   magic: BASE_PLAYER.skill,
-  shielding: BASE_PLAYER.skill,
 };
 
 const TOKEN_TTL_MS = 24 * 60 * 60 * 1000;
+const DEFAULT_PROJECTILE_SPEED_PX_PER_SECOND = 520;
 
 @Injectable()
 export class GameEngine implements OnModuleDestroy {
@@ -132,6 +139,7 @@ export class GameEngine implements OnModuleDestroy {
   }
 
   async start() {
+    await loadItemCatalogFromDatabase(this.prisma);
     for (const npcId of Object.keys(NPC_TEMPLATES)) {
       const t = NPC_TEMPLATES[npcId];
       this.npcs.set(t.id, {
@@ -221,7 +229,7 @@ export class GameEngine implements OnModuleDestroy {
     this.emitTo(socketId, 'auth.loginResult', { ok: true, token, accountId: account.id, characters });
   }
 
-  async handleCreateCharacter(socketId: string, token: string, name: string, vocationId: VocationId) {
+  async handleCreateCharacter(socketId: string, token: string, name: string, archetypeId: CombatArchetype) {
     const session = this.verifyToken(token);
     if (!session) {
       this.emitTo(socketId, 'auth.characterCreated', { ok: false, error: 'Sessão inválida.' });
@@ -235,9 +243,9 @@ export class GameEngine implements OnModuleDestroy {
       });
       return;
     }
-    const vocation = VOCATIONS[vocationId];
-    if (!vocation) {
-      this.emitTo(socketId, 'auth.characterCreated', { ok: false, error: 'Vocação inválida.' });
+    const archetype = ARCHETYPES[archetypeId];
+    if (!archetype) {
+      this.emitTo(socketId, 'auth.characterCreated', { ok: false, error: 'Arquétipo inválido.' });
       return;
     }
     const existing = await this.store.listCharacters(session.accountId);
@@ -250,16 +258,16 @@ export class GameEngine implements OnModuleDestroy {
       this.emitTo(socketId, 'auth.characterCreated', { ok: false, error: 'Este nome já está em uso.' });
       return;
     }
-    const maxHp = calculateMaxHp(1, vocation);
-    const maxMana = calculateMaxMana(1, vocation);
-    const initialWeapon = vocation.initialWeapon;
+    const maxHp = calculateMaxHp(1, archetype);
+    const maxMana = calculateMaxMana(1, archetype);
+    const initialWeapon = archetype.initialWeapon;
     const equipment: CharacterEquipment = { weapon: { itemId: initialWeapon, quantity: 1 } };
-    if (vocation.initialOffhand) equipment.shield = { itemId: vocation.initialOffhand, quantity: 1 };
+    if (archetype.initialOffhand) equipment.offhand = { itemId: archetype.initialOffhand, quantity: 1 };
+    if (archetype.initialAmmo) equipment.ammo = { itemId: archetype.initialAmmo, quantity: 1 };
+    const skills = { ...BASE_SKILLS };
     const character = await this.store.createCharacter(session.accountId, {
       name: trimmed,
-      vocation: vocationId,
-      promoted: false,
-      promotedAt: null,
+      archetype: archetypeId,
       gold: 0,
       level: 1,
       experience: 0,
@@ -268,9 +276,15 @@ export class GameEngine implements OnModuleDestroy {
       mana: maxMana,
       maxMana,
       position: { ...SPAWN_POINT },
-      skills: { ...BASE_SKILLS },
+      skills,
+      skillProgress: (Object.keys(skills) as (keyof CharacterSkills)[]).map((skillType) => ({
+        skillType,
+        level: skills[skillType],
+        experience: 0,
+      })),
       inventory: new Array(INVENTORY_SIZE).fill(null),
       equipment,
+      appearance: this.defaultPlayerAppearance(),
     });
     this.emitTo(socketId, 'auth.characterCreated', { ok: true, character: this.toSummary(character) });
   }
@@ -287,6 +301,11 @@ export class GameEngine implements OnModuleDestroy {
       return;
     }
     this.removePlayerFromWorld(socketId);
+
+    if (!stored.appearance) {
+      stored.appearance = this.defaultPlayerAppearance();
+      await this.store.saveCharacter(stored);
+    }
 
     const player = new GamePlayer(stored);
     player.socketId = socketId;
@@ -332,32 +351,6 @@ export class GameEngine implements OnModuleDestroy {
       });
     }
     this.logger.log(`Jogador ${player.name} entrou no mundo.`);
-  }
-
-  async handlePromote(socketId: string, token: string) {
-    const session = this.verifyToken(token);
-    if (!session) {
-      this.emitTo(socketId, 'promotion.error', { error: 'Sessão inválida.' });
-      return;
-    }
-    const characterId = this.playerBySocket.get(socketId);
-    if (!characterId) {
-      this.emitTo(socketId, 'promotion.error', { error: 'Nenhum personagem selecionado.' });
-      return;
-    }
-    const result = await this.store.promoteCharacter(session.accountId, characterId);
-    if (!result.ok) {
-      this.emitTo(socketId, 'promotion.error', { error: result.error });
-      return;
-    }
-    const player = this.players.get(characterId);
-    if (player) {
-      player.promoted = true;
-      player.promotedAt = result.character.promotedAt;
-      player.gold = result.character.gold;
-    }
-    this.emitTo(socketId, 'character.promoted', { character: this.toSummary(result.character) });
-    this.logger.log(`Personagem ${result.character.name} promovido.`);
   }
 
   // ---------------------------------------------------------------- hunts
@@ -662,9 +655,7 @@ export class GameEngine implements OnModuleDestroy {
       id: c.id,
       accountId,
       name: c.name,
-      vocation: c.vocation,
-      promoted: c.promoted,
-      promotedName: getVocationDisplayName(c.vocation, c.promoted),
+      archetype: c.archetype,
       gold: c.gold,
       level: c.level,
       experience: c.experience,
@@ -676,7 +667,16 @@ export class GameEngine implements OnModuleDestroy {
       skills: { ...c.skills },
       appearance: c.appearance
         ? { ...c.appearance }
-        : { outfitId: DEFAULT_PLAYER_OUTFIT_ID, addonMask: 0, colors: { head: 0, primary: 0, secondary: 0, detail: 0 } },
+        : this.defaultPlayerAppearance(),
+    };
+  }
+
+  private defaultPlayerAppearance(): PlayerAppearance {
+    const outfit = this.outfitRegistry?.listOutfits().find((o) => o.slug === DEFAULT_PLAYER_OUTFIT_SLUG);
+    return {
+      outfitId: outfit?.outfitId ?? DEFAULT_PLAYER_OUTFIT_ID,
+      addonMask: 0,
+      colors: outfit?.defaultColors ?? { head: 0, primary: 0, secondary: 0, detail: 0 },
     };
   }
 
@@ -752,6 +752,7 @@ export class GameEngine implements OnModuleDestroy {
       level: player.level,
       experience: player.experience,
       skills: player.skills,
+      skillProgress: player.skillProgress.map((progress) => ({ ...progress })),
     });
   }
 
@@ -763,19 +764,39 @@ export class GameEngine implements OnModuleDestroy {
     this.emitTo(player.socketId ?? '', 'inventory.update', { inventory });
   }
 
-  private attackValue(player: GamePlayer): number {
-    const weapon = player.equipment.weapon ? getItemDef(player.equipment.weapon.itemId) : undefined;
-    return player.attackBase + (weapon?.attack ?? 0);
+  private combatStats(player: GamePlayer) {
+    return aggregateCharacterCombatStats({
+      level: player.level,
+      maxHp: player.maxHealth,
+      maxMana: player.maxMana,
+      skills: player.skills,
+      equipment: player.equipment,
+      getItem: getItemDef,
+    });
+  }
+
+  private targetCombatStats(target: GamePlayer | CreatureEntity) {
+    if (target instanceof GamePlayer) return this.combatStats(target);
+    return {
+      level: target.definition.level,
+      maxHp: target.maxHealth,
+      maxMana: 0,
+      armor: 0,
+      defense: target.definition.defense,
+      meleeSkill: 0,
+      distanceSkill: 0,
+      magicLevel: 0,
+      criticalChance: COMBAT_FORMULA_CONFIG.baseCriticalChance,
+      criticalDamage: COMBAT_FORMULA_CONFIG.baseCriticalDamage,
+      accuracy: 0,
+      dodge: 0,
+      resistances: emptyResistances(),
+    };
   }
 
   private defenseValue(target: GamePlayer | CreatureEntity): number {
-    if (target instanceof CreatureEntity) return target.definition.defense;
-    let def = target.defenseBase;
-    for (const slot of ['head', 'armor', 'legs', 'boots', 'shield', 'ring', 'amulet'] as const) {
-      const item = target.equipment[slot];
-      if (item) def += getItemDef(item.itemId)?.defense ?? 0;
-    }
-    return def;
+    const stats = this.targetCombatStats(target);
+    return stats.armor + stats.defense;
   }
 
   // ---------------------------------------------------------------- combat
@@ -800,34 +821,73 @@ export class GameEngine implements OnModuleDestroy {
     this.emitAll(event, data);
   }
 
-  private dealDamage(
-    attacker: { id: string; attackValue: () => number },
-    target: GamePlayer | CreatureEntity,
-    _now: number,
-  ) {
-    const atk = attacker.attackValue();
-    const def = this.defenseValue(target);
-    const critical = Math.random() < 0.06;
-    let amount = Math.max(1, Math.round((atk - def) * (0.9 + Math.random() * 0.2)));
-    if (critical) amount = Math.round(amount * 1.5);
-    if (target instanceof GamePlayer) amount = applyVocationDamageReduction(amount, VOCATIONS[target.vocation]);
+  private dealDamage(attacker: GamePlayer, target: GamePlayer | CreatureEntity, now: number): boolean {
+    const weaponItem = attacker.equipment.weapon ? getItemDef(attacker.equipment.weapon.itemId) : undefined;
+    const ammoItem = attacker.equipment.ammo ? getItemDef(attacker.equipment.ammo.itemId) : undefined;
+    const attack = calculateBasicAttack({
+      archetype: attacker.archetype,
+      attacker: this.combatStats(attacker),
+      loadout: { weapon: getWeaponDefinition(weaponItem), ammo: getAmmoDefinition(ammoItem) },
+      rng: () => this.nextCombatRandom(attacker, now),
+    });
+    if (!attack.valid) return false;
+    const damage = calculateMitigatedDamage({
+      damage: attack.damageBeforeMitigation,
+      damageType: attack.damageType,
+      target: this.targetCombatStats(target),
+    });
+    const amount = damage.finalDamage;
+    const projectileVisual = this.resolveProjectileVisual(weaponItem, ammoItem);
+    const travelTimeMs = projectileVisual?.projectile ? this.projectileTravelTimeMs(attacker.position, target.position, projectileVisual) : 0;
+    if (projectileVisual?.projectile) {
+      this.emitCombatEvent(target, 'combat.projectile', {
+        attackerId: attacker.id,
+        targetId: target.id,
+        from: { ...attacker.position },
+        to: { ...target.position },
+        projectile: projectileVisual.projectile,
+        impact: projectileVisual.impact,
+        travelTimeMs,
+      });
+    }
     target.health = Math.max(0, target.health - amount);
     this.emitCombatEvent(target, 'combat.damage', {
       attackerId: attacker.id,
       targetId: target.id,
       amount,
-      critical,
+      critical: attack.critical,
       targetHealth: target.health,
+      delayMs: travelTimeMs || undefined,
     });
     this.emitCombatEvent(target, 'entity.health', { id: target.id, health: target.health, maxHealth: target.maxHealth });
+    return true;
+  }
+
+  private resolveProjectileVisual(weaponItem: ItemDefinition | undefined, ammoItem: ItemDefinition | undefined): ItemVisualEffects | null {
+    const weaponType = weaponItem?.weapon?.weaponType;
+    if (weaponType === 'staff') return weaponItem?.visual?.projectile ? weaponItem.visual : null;
+    if (weaponType === 'bow' || weaponType === 'crossbow') return ammoItem?.visual?.projectile ? ammoItem.visual : null;
+    return null;
+  }
+
+  private projectileTravelTimeMs(from: Position, to: Position, visual: ItemVisualEffects): number {
+    const dx = (to.x - from.x) * 32;
+    const dy = (to.y - from.y) * 32;
+    const distance = Math.max(1, Math.hypot(dx, dy));
+    const speed = visual.projectile?.speedPxPerSecond || DEFAULT_PROJECTILE_SPEED_PX_PER_SECOND;
+    return Math.round((distance / speed) * 1000);
   }
 
   private creatureAttackPlayer(creature: CreatureEntity, playerId: string, amount: number, critical: boolean, now: number) {
     const player = this.players.get(playerId);
     if (!player) return;
-    const reduced = applyVocationDamageReduction(amount, VOCATIONS[player.vocation]);
+    const damage = calculateMitigatedDamage({
+      damage: amount,
+      damageType: 'physical',
+      target: this.targetCombatStats(player),
+    });
+    const reduced = damage.finalDamage;
     player.health = Math.max(0, player.health - reduced);
-    this.trainShielding(player, reduced);
     this.emitCombatEvent(player, 'combat.damage', {
       attackerId: creature.id,
       targetId: player.id,
@@ -837,14 +897,6 @@ export class GameEngine implements OnModuleDestroy {
     });
     this.emitCombatEvent(player, 'entity.health', { id: player.id, health: player.health, maxHealth: player.maxHealth });
     if (player.health <= 0) this.playerKilled(player, now);
-  }
-
-  private trainShielding(player: GamePlayer, damageTaken: number) {
-    if (damageTaken <= 0) return;
-    const result = trainSkill(player.skills, player.skillProgress, 'shielding', player.vocation, damageTaken * 0.5);
-    player.skills = result.skills;
-    player.skillProgress = result.progress;
-    this.emitSkillEvents(player, result.events);
   }
 
   private emitSkillEvents(player: GamePlayer, events: { skill: keyof CharacterSkills; oldLevel: number; newLevel: number }[]) {
@@ -857,6 +909,11 @@ export class GameEngine implements OnModuleDestroy {
       });
     }
     this.emitTo(player.socketId ?? '', 'skills.update', { skills: player.skills });
+  }
+
+  private nextCombatRandom(player: GamePlayer, now: number): number {
+    const x = Math.sin(now * 12.9898 + player.id.length * 78.233 + player.experience * 0.37) * 43758.5453;
+    return x - Math.floor(x);
   }
 
   // ---------------------------------------------------------------- tick
@@ -892,8 +949,7 @@ export class GameEngine implements OnModuleDestroy {
     if (elapsedMs < 1000) return;
     player.lastRegenAt = now;
     const result = calculateRegeneration(elapsedMs / 1000, {
-      vocationId: player.vocation,
-      promoted: player.promoted,
+      archetype: player.archetype,
       currentHp: player.health,
       currentMana: player.mana,
       maxHp: player.maxHealth,
@@ -936,10 +992,13 @@ export class GameEngine implements OnModuleDestroy {
       player.targetId = null;
       return;
     }
-    if (tileDistance(player.position, target.position) > 1.5) return;
     if (now < player.attackCooldownUntil) return;
-    player.attackCooldownUntil = now + 700;
-    this.dealDamage({ id: player.id, attackValue: () => this.attackValue(player) }, target, now);
+    const weaponItem = player.equipment.weapon ? getItemDef(player.equipment.weapon.itemId) : undefined;
+    const weapon = getWeaponDefinition(weaponItem);
+    if (!weapon || tileDistance(player.position, target.position) > weapon.range) return;
+    player.attackCooldownUntil = now + (weapon.attackIntervalMs ?? COMBAT_FORMULA_CONFIG.baseAttackGroupMs);
+    const didAttack = this.dealDamage(player, target, now);
+    if (!didAttack) return;
     this.trainAttackSkill(player);
     if (target.health <= 0) {
       if (target instanceof CreatureEntity) this.creatureKilled(player, target, now);
@@ -963,9 +1022,8 @@ export class GameEngine implements OnModuleDestroy {
   }
 
   private trainAttackSkill(player: GamePlayer) {
-    const weapon = player.equipment.weapon ? getItemDef(player.equipment.weapon.itemId) : undefined;
-    const skill: keyof CharacterSkills = weapon?.category === 'Distância' ? 'distance' : 'sword';
-    const result = trainSkill(player.skills, player.skillProgress, skill, player.vocation, 4);
+    const skill: CombatSkill = ARCHETYPES[player.archetype].primarySkill;
+    const result = trainCombatSkill(player.skills, player.skillProgress, skill, 1);
     player.skills = result.skills;
     player.skillProgress = result.progress;
     this.emitSkillEvents(player, result.events);
@@ -1039,12 +1097,12 @@ export class GameEngine implements OnModuleDestroy {
 
   private grantExperience(player: GamePlayer, amount: number) {
     player.experience += amount;
-    const vocation = VOCATIONS[player.vocation];
+      const archetype = ARCHETYPES[player.archetype];
     while (player.experience >= xpForLevel(player.level)) {
       player.experience -= xpForLevel(player.level);
       player.level++;
-      player.maxHealth = calculateMaxHp(player.level, vocation);
-      player.maxMana = calculateMaxMana(player.level, vocation);
+      player.maxHealth = calculateMaxHp(player.level, archetype);
+      player.maxMana = calculateMaxMana(player.level, archetype);
       player.attackBase = player.level + 8;
       player.defenseBase = 5 + Math.floor(player.level / 2);
       player.health = player.maxHealth;
