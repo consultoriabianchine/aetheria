@@ -1,5 +1,5 @@
 import { randomUUID } from 'node:crypto';
-import { INVENTORY_SIZE } from '@aetheria/config';
+import { INVENTORY_SIZE, LOOT_POUCH_SIZE } from '@aetheria/config';
 import type { HuntProgress, ItemStack } from '@aetheria/types';
 import type { Store, StoredCharacter, AccountRecord } from './store';
 
@@ -79,6 +79,10 @@ export class MemoryStore implements Store {
 
   static blankInventory(): (ItemStack | null)[] {
     return new Array(INVENTORY_SIZE).fill(null);
+  }
+
+  static blankLootPouch(): (ItemStack | null)[] {
+    return new Array(LOOT_POUCH_SIZE).fill(null);
   }
 }
 

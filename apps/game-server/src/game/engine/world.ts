@@ -9,6 +9,7 @@ import type {
   Position,
 } from '@aetheria/types';
 import type { StoredCharacter } from '../store/store';
+import { LOOT_POUCH_SIZE } from '@aetheria/config';
 
 export interface NpcEntity {
   id: string;
@@ -42,6 +43,8 @@ export class GamePlayer {
   skills: CharacterSkills;
   skillProgress: { skillType: keyof CharacterSkills; level: number; experience: number }[] = [];
   inventory: (ItemStack | null)[];
+  lootPouchSize: number;
+  lootPouch: (ItemStack | null)[];
   equipment: CharacterEquipment;
   appearance: PlayerAppearance | undefined;
   attackBase: number;
@@ -71,6 +74,11 @@ export class GamePlayer {
     this.skills = { ...character.skills };
     this.skillProgress = character.skillProgress.map((progress) => ({ ...progress }));
     this.inventory = character.inventory.map((s) => (s ? { ...s } : null));
+    this.lootPouchSize = Math.max(LOOT_POUCH_SIZE, character.lootPouchSize ?? LOOT_POUCH_SIZE, character.lootPouch?.length ?? 0);
+    this.lootPouch = Array.from({ length: this.lootPouchSize }, (_, index) => {
+      const stack = character.lootPouch?.[index] ?? null;
+      return stack ? { ...stack } : null;
+    });
     this.equipment = {
       helmet: character.equipment.helmet ? { ...character.equipment.helmet } : undefined,
       armor: character.equipment.armor ? { ...character.equipment.armor } : undefined,
@@ -106,6 +114,8 @@ export class GamePlayer {
       skills: { ...this.skills },
       skillProgress: this.skillProgress.map((progress) => ({ ...progress })),
       inventory: this.inventory.map((s) => (s ? { ...s } : null)),
+      lootPouchSize: this.lootPouchSize,
+      lootPouch: this.lootPouch.map((s) => (s ? { ...s } : null)),
       equipment: this.toEquipment(),
       appearance: this.appearance ? { ...this.appearance } : undefined,
     };

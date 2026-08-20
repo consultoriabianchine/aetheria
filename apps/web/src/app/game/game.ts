@@ -3,7 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import Phaser from 'phaser';
 import type { CharacterEquipment, CharacterSkills, ItemDefinition, ItemStack } from '@aetheria/types';
-import { APPEARANCE_PALETTE, SKILL_PROGRESSION_CONFIG } from '@aetheria/config';
+import { APPEARANCE_PALETTE, LOOT_POUCH_EXPANSION, SKILL_PROGRESSION_CONFIG } from '@aetheria/config';
 import { WsService } from '../core/ws.service';
 import { ChatLine, GameState } from './game-state';
 import { ItemCatalogService } from './item-catalog.service';
@@ -141,7 +141,11 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   }
 
   lootPouchPreview(): InvEntry[] {
-    return this.fixedSlots([], 10);
+    return this.fixedSlots(this.state.inventory().lootPouch ?? [], this.lootPouchSize());
+  }
+
+  lootPouchSize(): number {
+    return Math.max(10, this.state.inventory().lootPouchSize ?? 10, this.state.inventory().lootPouch?.length ?? 0);
   }
 
   private fixedSlots(slots: (ItemStack | null)[], size: number): InvEntry[] {
@@ -154,6 +158,11 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
 
   lootPouchCount(): number {
     return this.lootPouchPreview().filter((entry) => entry.stack).length;
+  }
+
+  lootPouchExpansionCost(): number | null {
+    const size = this.lootPouchSize();
+    return size >= LOOT_POUCH_EXPANSION.maxSize ? null : LOOT_POUCH_EXPANSION.goldCost(size);
   }
 
   equipment(): EqEntry[] {

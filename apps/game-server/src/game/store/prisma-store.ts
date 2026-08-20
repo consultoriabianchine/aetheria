@@ -1,4 +1,5 @@
 import { Injectable } from '@nestjs/common';
+import { INVENTORY_SIZE, LOOT_POUCH_SIZE } from '@aetheria/config';
 import { Prisma } from '@aetheria/database';
 import { PrismaService } from '../../prisma/prisma.service';
 import type { CharacterEquipment, CombatArchetype, HuntProgress, ItemStack } from '@aetheria/types';
@@ -122,7 +123,7 @@ export class PrismaStore implements Store {
             experience: progress.experience,
           })),
         },
-        inventory: { create: { slots: data.inventory as unknown as Prisma.InputJsonValue } },
+        inventory: { create: { slots: this.toInventoryJson(data.inventory, data.lootPouchSize, data.lootPouch) } },
         equipment: { create: this.toEquipmentData(data.equipment) as unknown as Prisma.CharacterEquipmentCreateWithoutCharacterInput },
         appearance: data.appearance
           ? {
@@ -176,7 +177,7 @@ export class PrismaStore implements Store {
             update: { level: progress.level, experience: progress.experience },
           })),
         },
-        inventory: { update: { slots: character.inventory as unknown as Prisma.InputJsonValue } },
+        inventory: { update: { slots: this.toInventoryJson(character.inventory, character.lootPouchSize, character.lootPouch) } },
         equipment: { update: this.toEquipmentData(character.equipment) as unknown as Prisma.CharacterEquipmentUpdateWithoutCharacterInput },
         appearance: character.appearance
           ? {
@@ -308,9 +309,9 @@ export class PrismaStore implements Store {
             experience: clampInt(p.experience, 0),
           }))
         : [],
-      inventory: Array.isArray(row.inventory?.slots)
-        ? ((row.inventory.slots as (ItemStack | null)[]).map((s) => (s ? { itemId: s.itemId, quantity: s.quantity } : null)) as (ItemStack | null)[])
-        : [],
+      inventory: this.inventorySlots(row.inventory?.slots, 'backpack', INVENTORY_SIZE),
+      lootPouchSize: this.lootPouchSize(row.inventory?.slots),
+      lootPouch: this.inventorySlots(row.inventory?.slots, 'lootPouch', this.lootPouchSize(row.inventory?.slots)),
       equipment: {
         helmet: eq.helmet ? this.stack(eq.helmet) : undefined,
         armor: eq.armor ? this.stack(eq.armor) : undefined,
@@ -341,5 +342,39 @@ export class PrismaStore implements Store {
   private stack(value: unknown): ItemStack {
     const v = value as { itemId?: unknown; quantity?: unknown };
     return { itemId: String(v?.itemId ?? ''), quantity: clampInt(v?.quantity, 1) };
+  }
+
+  private inventorySlots(value: unknown, key: 'backpack' | 'lootPouch', size: number): (ItemStack | null)[] {
+    const source = Array.isArray(value)
+      ? key === 'backpack'
+        ? value
+        : []
+      : Array.isArray((value as { [K in typeof key]?: unknown })?.[key])
+        ? ((value as { [K in typeof key]: unknown[] })[key])
+        : [];
+    return Array.from({ length: size }, (_, index) => {
+      const stack = source[index] as ItemStack | null | undefined;
+      return stack ? { itemId: stack.itemId, quantity: stack.quantity } : null;
+    });
+  }
+
+  private lootPouchSize(value: unknown): number {
+    if (Array.isArray(value)) return LOOT_POUCH_SIZE;
+    const v = value as { lootPouch?: unknown; lootPouchSize?: unknown } | null | undefined;
+    const explicit = clampInt(v?.lootPouchSize, LOOT_POUCH_SIZE);
+    const current = Array.isArray(v?.lootPouch) ? v.lootPouch.length : 0;
+    return Math.max(LOOT_POUCH_SIZE, explicit, current);
+  }
+
+  private toInventoryJson(inventory: (ItemStack | null)[], lootPouchSize: number, lootPouch: (ItemStack | null)[]): Prisma.InputJsonValue {
+    const size = Math.max(LOOT_POUCH_SIZE, lootPouchSize, lootPouch.length);
+    return {
+      backpack: inventory.map((s) => (s ? { ...s } : null)),
+      lootPouchSize: size,
+      lootPouch: Array.from({ length: size }, (_, index) => {
+        const stack = lootPouch[index] ?? null;
+        return stack ? { ...stack } : null;
+      }),
+    } as unknown as Prisma.InputJsonValue;
   }
 }

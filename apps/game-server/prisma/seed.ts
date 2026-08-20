@@ -7,6 +7,19 @@ import { CREATURE_SEED, CREATURE_SPAWN_SEED } from '../data/creature-seed';
 
 const prisma = new PrismaClient();
 
+type SourceItem = {
+  id: string;
+  name: string;
+  type: string;
+  weight: number;
+  stackable: boolean;
+  attack: number;
+  defense: number;
+  image: string | null;
+  category: string;
+  slot?: string | null;
+};
+
 const INITIAL_ITEM_DEFINITIONS = [
   {
     id: 'apprentice-staff',
@@ -286,30 +299,128 @@ const INITIAL_ITEM_DEFINITIONS = [
   },
 ] as const;
 
+const INITIAL_ITEM_IMAGE_FALLBACK: Record<string, string> = {
+  'apprentice-staff': 'Staff.gif',
+  'iron-sword': 'Sword.gif',
+  'hunter-bow': 'Bow.gif',
+  'iron-arrow': 'Arrow.gif',
+  'novice-spellbook': 'Spellbook_of_the_Novice.gif',
+  'apprentice-robe': 'Magician\'s_Robe.gif',
+  'cloth-boots': 'Leather_Boots.gif',
+  'training-shield': 'Training_Shield.gif',
+};
+
+function normalizeSlot(slot: string | null | undefined): string | null {
+  if (slot === 'head') return 'helmet';
+  if (slot === 'shield') return 'offhand';
+  return slot ?? null;
+}
+
+function normalizeType(item: SourceItem): string {
+  if (item.type === 'shield') return 'offhand';
+  if (item.id === 'arrow') return 'ammo';
+  return item.type;
+}
+
+function weaponType(item: SourceItem): string {
+  const category = item.category.toLowerCase();
+  if (category.includes('machado')) return 'axe';
+  if (category.includes('clava')) return 'club';
+  if (category.includes('dist')) return 'bow';
+  if (category.includes('espada')) return 'sword';
+  return 'sword';
+}
+
+function itemDefinitionFromSource(item: SourceItem, fallbackName?: string) {
+  const slot = normalizeSlot(item.slot);
+  const type = normalizeType(item);
+  const isWeapon = slot === 'weapon';
+  const isAmmo = item.id === 'arrow' || slot === 'ammo';
+  const isArmorSlot = slot === 'helmet' || slot === 'armor' || slot === 'legs' || slot === 'boots';
+  const isOffhand = slot === 'offhand';
+  return {
+    id: item.id,
+    name: item.name || fallbackName || item.id,
+    description: `Item de loot: ${item.name || fallbackName || item.id}.`,
+    type,
+    slot: isAmmo ? 'ammo' : slot,
+    imagePath: item.image,
+    stackable: item.stackable,
+    weight: item.weight,
+    category: item.category || 'Loot',
+    attackPower: isWeapon || isAmmo ? item.attack : 0,
+    magicPower: 0,
+    armor: isArmorSlot ? item.attack : 0,
+    defense: isWeapon || isOffhand ? item.defense : 0,
+    maxHp: 0,
+    maxMana: 0,
+    criticalChance: 0,
+    criticalDamage: 0,
+    accuracy: 0,
+    dodge: 0,
+    weapon: isWeapon
+      ? {
+          itemId: item.id,
+          weaponType: weaponType(item),
+          attackPower: item.attack,
+          damageType: 'physical',
+          range: weaponType(item) === 'bow' ? 6 : 1,
+          allowedAmmoType: weaponType(item) === 'bow' ? 'arrow' : undefined,
+        }
+      : undefined,
+    ammo: isAmmo ? { itemId: item.id, ammoType: 'arrow', attackPower: item.attack, damageType: 'physical' } : undefined,
+  };
+}
+
+async function seedLootItemDefinitions(items: SourceItem[]) {
+  const sourceById = new Map(items.map((item) => [item.id, item]));
+  const lootById = new Map<string, string>();
+  for (const creature of CREATURE_SEED) {
+    for (const loot of creature.loot) {
+      lootById.set(loot.itemId, sourceById.get(loot.itemId)?.name ?? loot.itemId);
+    }
+  }
+
+  let created = 0;
+  for (const [itemId, fallbackName] of lootById) {
+    const source = sourceById.get(itemId) ?? {
+      id: itemId,
+      name: fallbackName,
+      type: 'loot',
+      weight: 0,
+      stackable: true,
+      attack: 0,
+      defense: 0,
+      image: null,
+      category: 'Loot',
+      slot: null,
+    };
+    const existing = await prisma.itemDefinition.findUnique({ where: { id: itemId }, select: { id: true } });
+    if (existing) continue;
+    await prisma.itemDefinition.create({ data: itemDefinitionFromSource(source, fallbackName) });
+    created++;
+  }
+  return { total: lootById.size, created };
+}
+
 async function seed() {
   const items = JSON.parse(readFileSync(path.join(__dirname, '..', 'data', 'items.json'), 'utf8')) as {
-    items: {
-      id: string;
-      name: string;
-      type: string;
-      weight: number;
-      stackable: boolean;
-      attack: number;
-      defense: number;
-      image: string | null;
-      category: string;
-      slot: string | null;
-    }[];
+    items: SourceItem[];
   };
+  const sourceById = new Map(items.items.map((i) => [i.id, i]));
   const itemNameById = new Map(items.items.map((i) => [i.id, i.name]));
 
   for (const item of INITIAL_ITEM_DEFINITIONS) {
+    const existing = await prisma.itemDefinition.findUnique({ where: { id: item.id }, select: { imagePath: true } });
+    const imagePath = existing?.imagePath ?? sourceById.get(item.id)?.image ?? INITIAL_ITEM_IMAGE_FALLBACK[item.id] ?? item.imagePath;
     await prisma.itemDefinition.upsert({
       where: { id: item.id },
-      update: item,
-      create: item,
+      update: { ...item, imagePath },
+      create: { ...item, imagePath },
     });
   }
+
+  const lootItems = await seedLootItemDefinitions(items.items);
 
   for (const def of CREATURE_SEED) {
     const { loot, ...definition } = def;
@@ -403,7 +514,11 @@ async function seed() {
   console.log(
     'Seed concluído:',
     INITIAL_ITEM_DEFINITIONS.length,
-    'item_definitions,',
+    'item_definitions iniciais,',
+    lootItems.total,
+    'loot item_definitions mapeados,',
+    lootItems.created,
+    'criados,',
     world.tiles.length,
     'tiles,',
     CREATURE_SEED.length,

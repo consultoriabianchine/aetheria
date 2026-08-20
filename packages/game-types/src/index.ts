@@ -253,6 +253,8 @@ export interface DamageEvent {
 /** Resumo do personagem (inventário + equipamento). */
 export interface CharacterInventory {
   slots: (ItemStack | null)[];
+  lootPouchSize: number;
+  lootPouch: (ItemStack | null)[];
   equipment: CharacterEquipment;
 }
 

@@ -270,12 +270,18 @@
         </section>
 
         <section class="game-panel inventory-preview">
-          <div class="panel-header"><h2>Bolsa de Loot</h2><button class="panel-action" type="button" disabled>Vender Tudo</button></div>
-          <div class="inventory-meta"><span>Slots</span><b>{{ lootPouchCount() }} / 10</b></div>
-          @if (lootPouchCount() >= 10) { <div class="loot-warning" title="A Bolsa de Loot está cheia. Novos itens que precisarem de slot não serão coletados.">CHEIA</div> }
+          <div class="panel-header"><h2>Bolsa de Loot</h2><button class="panel-action" type="button" (click)="state.sellLootPouch()" [disabled]="lootPouchCount() <= 0">Vender Tudo</button></div>
+          <div class="inventory-meta"><span>Slots</span><b>{{ lootPouchCount() }} / {{ lootPouchSize() }}</b></div>
+          @if (lootPouchExpansionCost(); as cost) { <button class="wide-action" type="button" (click)="state.expandLootPouch()">Expandir · {{ formatGold(cost) }} gold</button> }
+          @if (lootPouchCount() >= lootPouchSize()) { <div class="loot-warning" title="A Bolsa de Loot está cheia. Novos itens que precisarem de slot não serão coletados.">CHEIA</div> }
           <div class="slot-grid loot-grid">
             @for (entry of lootPouchPreview(); track entry.index) {
-              <button class="item-slot" type="button" disabled></button>
+              <button class="item-slot" type="button" (mouseenter)="entry.stack ? showItemTooltip(entry.stack.itemId, $event) : null" (mousemove)="entry.stack ? moveItemTooltip($event) : null" (mouseleave)="hideItemTooltip()">
+                @if (entry.stack; as st) {
+                  @if (iconFor(st.itemId); as src) { <img [src]="src" alt="" /> } @else { <span class="inv-ph">{{ nameFor(st.itemId).charAt(0) }}</span> }
+                  @if (st.quantity > 1) { <span class="qty">{{ st.quantity }}</span> }
+                }
+              </button>
             }
           </div>
         </section>
@@ -297,7 +303,7 @@
         <div class="modal-inventory-layout">
           <div><h3>Equipamentos</h3><div class="eq-grid">@for (entry of equipment(); track entry.slot) { <button class="eq-row" type="button" (click)="entry.stack ? onUnequip(entry.slot) : null" (mouseenter)="entry.stack ? showItemTooltip(entry.stack.itemId, $event) : null" (mousemove)="entry.stack ? moveItemTooltip($event) : null" (mouseleave)="hideItemTooltip()"><span class="eq-slot">{{ entry.label }}</span>@if (entry.stack; as st) { @if (iconFor(st.itemId); as src) { <img [src]="src" alt="" /> }<span class="eq-name">{{ nameFor(st.itemId) }}</span> } @else { <span class="eq-empty">—</span> }</button> }</div></div>
           <div><h3>Mochila</h3><div class="inv-grid">@for (entry of inventory(); track entry.index) { <button class="item-slot" type="button" (click)="entry.stack ? onEquip(entry.index) : null" (mouseenter)="entry.stack ? showItemTooltip(entry.stack.itemId, $event) : null" (mousemove)="entry.stack ? moveItemTooltip($event) : null" (mouseleave)="hideItemTooltip()">@if (entry.stack; as st) { @if (iconFor(st.itemId); as src) { <img [src]="src" alt="" /> } @else { <span class="inv-ph">{{ nameFor(st.itemId).charAt(0) }}</span> } @if (st.quantity > 1) { <span class="qty">{{ st.quantity }}</span> } }</button> }</div></div>
-          <div><h3>Bolsa de Loot</h3><div class="slot-grid loot-grid">@for (entry of lootPouchPreview(); track entry.index) { <button class="item-slot" type="button" disabled></button> }</div></div>
+          <div><h3>Bolsa de Loot</h3><div class="slot-grid loot-grid">@for (entry of lootPouchPreview(); track entry.index) { <button class="item-slot" type="button" (mouseenter)="entry.stack ? showItemTooltip(entry.stack.itemId, $event) : null" (mousemove)="entry.stack ? moveItemTooltip($event) : null" (mouseleave)="hideItemTooltip()">@if (entry.stack; as st) { @if (iconFor(st.itemId); as src) { <img [src]="src" alt="" /> } @else { <span class="inv-ph">{{ nameFor(st.itemId).charAt(0) }}</span> } @if (st.quantity > 1) { <span class="qty">{{ st.quantity }}</span> } }</button> }</div></div>
         </div>
       </section>
     </div>

@@ -22,6 +22,8 @@ export interface StoredCharacter {
   skills: CharacterSkills;
   skillProgress: { skillType: keyof CharacterSkills; level: number; experience: number }[];
   inventory: (ItemStack | null)[];
+  lootPouchSize: number;
+  lootPouch: (ItemStack | null)[];
   equipment: CharacterEquipment;
   appearance?: PlayerAppearance;
 }

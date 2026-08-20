@@ -133,6 +133,16 @@ export const SKILL_PROGRESSION_CONFIG = {
 /** Número de slots do inventário. */
 export const INVENTORY_SIZE = 24;
 
+/** Número de slots da Bolsa de Loot. */
+export const LOOT_POUCH_SIZE = 10;
+
+/** Configuração de expansão da Bolsa de Loot. */
+export const LOOT_POUCH_EXPANSION = {
+  slotsPerUpgrade: 5,
+  maxSize: 60,
+  goldCost: (currentSize: number) => Math.max(1000, currentSize * 250),
+} as const;
+
 /** XP necessário para subir do nível atual para o próximo. */
 export function xpForLevel(level: number): number {
   return level * 100;

@@ -73,7 +73,7 @@ export class GameState {
     level: 1,
     experience: 0,
   });
-  readonly inventory = signal<CharacterInventory>({ slots: [], equipment: {} });
+  readonly inventory = signal<CharacterInventory>({ slots: [], lootPouchSize: 10, lootPouch: [], equipment: {} });
   readonly chat = signal<ChatLine[]>([]);
   readonly dialog = signal<DialogInfo | null>(null);
   readonly target = signal<TargetInfo | null>(null);
@@ -381,6 +381,14 @@ export class GameState {
 
   unequip(slot: string) {
     this.ws.send({ type: 'inventory.unequip', slot });
+  }
+
+  expandLootPouch() {
+    this.ws.send({ type: 'inventory.expandLootPouch' });
+  }
+
+  sellLootPouch() {
+    this.ws.send({ type: 'inventory.sellLootPouch' });
   }
 
   requestHunts() {

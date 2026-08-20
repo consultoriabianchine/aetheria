@@ -23,6 +23,8 @@ export type ClientMessage =
   | { type: 'game.pickup'; entityId: string }
   | { type: 'inventory.equip'; slot: number }
   | { type: 'inventory.unequip'; slot: string }
+  | { type: 'inventory.expandLootPouch' }
+  | { type: 'inventory.sellLootPouch' }
   | { type: 'chat.send'; channel: string; message: string }
   | { type: 'npc.interact'; npcId: string }
   | { type: 'hunt.list'; token: string }
@@ -135,6 +137,8 @@ export const CLIENT_EVENTS = {
   PICKUP: 'game.pickup',
   EQUIP: 'inventory.equip',
   UNEQUIP: 'inventory.unequip',
+  EXPAND_LOOT_POUCH: 'inventory.expandLootPouch',
+  SELL_LOOT_POUCH: 'inventory.sellLootPouch',
   CHAT: 'chat.send',
   NPC_INTERACT: 'npc.interact',
   HUNT_LIST: 'hunt.list',

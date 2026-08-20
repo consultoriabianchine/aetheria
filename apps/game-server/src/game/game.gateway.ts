@@ -71,6 +71,16 @@ export class GameGateway implements OnGatewayConnection, OnGatewayDisconnect {
     this.engine.handleUnequip(socket.id, payload.slot);
   }
 
+  @SubscribeMessage('inventory.expandLootPouch')
+  onExpandLootPouch(socket: Socket) {
+    this.engine.handleExpandLootPouch(socket.id);
+  }
+
+  @SubscribeMessage('inventory.sellLootPouch')
+  onSellLootPouch(socket: Socket) {
+    this.engine.handleSellLootPouch(socket.id);
+  }
+
   @SubscribeMessage('chat.send')
   onChat(socket: Socket, payload: { channel: string; message: string }) {
     this.engine.handleChat(socket.id, payload.channel, payload.message);

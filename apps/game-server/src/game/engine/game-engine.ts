@@ -13,6 +13,8 @@ import {
   HUNT_CATALOG,
   HUNT_CONFIG,
   INVENTORY_SIZE,
+  LOOT_POUCH_EXPANSION,
+  LOOT_POUCH_SIZE,
   LOOT_LIFETIME_MS,
   MOVE_INTERVAL_MS,
   NPC_INTERACT_RANGE,
@@ -34,6 +36,7 @@ import type {
   CombatSkill,
   Direction,
   ItemDefinition,
+  ItemStack,
   ItemVisualEffects,
   PlayerAppearance,
   Position,
@@ -282,6 +285,8 @@ export class GameEngine implements OnModuleDestroy {
         experience: 0,
       })),
       inventory: new Array(INVENTORY_SIZE).fill(null),
+      lootPouchSize: LOOT_POUCH_SIZE,
+      lootPouch: new Array(LOOT_POUCH_SIZE).fill(null),
       equipment,
       appearance: this.defaultPlayerAppearance(),
     });
@@ -595,6 +600,66 @@ export class GameEngine implements OnModuleDestroy {
     this.emitStats(player);
   }
 
+  handleExpandLootPouch(socketId: string) {
+    const player = this.playerForSocket(socketId);
+    if (!player) return;
+    if (player.lootPouchSize >= LOOT_POUCH_EXPANSION.maxSize) {
+      this.emitTo(socketId, 'error', { message: 'A Bolsa de Loot já está no tamanho máximo.' });
+      return;
+    }
+    const cost = LOOT_POUCH_EXPANSION.goldCost(player.lootPouchSize);
+    if (player.gold < cost) {
+      this.emitTo(socketId, 'error', { message: `Gold insuficiente para expandir a Bolsa de Loot (${cost} gold).` });
+      return;
+    }
+    const nextSize = Math.min(LOOT_POUCH_EXPANSION.maxSize, player.lootPouchSize + LOOT_POUCH_EXPANSION.slotsPerUpgrade);
+    player.gold -= cost;
+    player.lootPouchSize = nextSize;
+    while (player.lootPouch.length < nextSize) player.lootPouch.push(null);
+    this.emitTo(socketId, 'gold.update', { gold: player.gold });
+    this.emitInventory(player);
+    this.emitTo(socketId, 'chat.message', {
+      channel: 'local',
+      from: 'Sistema',
+      text: `Bolsa de Loot expandida para ${nextSize} slots por ${cost} gold.`,
+    });
+  }
+
+  handleSellLootPouch(socketId: string) {
+    const player = this.playerForSocket(socketId);
+    if (!player) return;
+    let total = 0;
+    let sold = 0;
+    player.lootPouch = player.lootPouch.map((stack) => {
+      if (!stack) return null;
+      const def = getItemDef(stack.itemId);
+      const unitValue = this.lootSellValue(def, stack.itemId);
+      total += unitValue * stack.quantity;
+      sold += stack.quantity;
+      return null;
+    });
+    if (sold <= 0) {
+      this.emitTo(socketId, 'chat.message', { channel: 'local', from: 'Sistema', text: 'Bolsa de Loot vazia.' });
+      return;
+    }
+    player.gold += total;
+    this.emitTo(socketId, 'gold.update', { gold: player.gold });
+    this.emitInventory(player);
+    this.emitTo(socketId, 'chat.message', {
+      channel: 'local',
+      from: 'Sistema',
+      text: `Loot vendido: ${sold} item(ns) por ${total} gold.`,
+    });
+  }
+
+  private lootSellValue(def: ItemDefinition | undefined, itemId: string): number {
+    if (!def) return 1;
+    if (itemId === 'gold-coin') return 1;
+    const combatValue = def.attack + def.defense + (def.combatStats?.attackPower ?? 0) + (def.combatStats?.magicPower ?? 0) + (def.combatStats?.armor ?? 0) + (def.combatStats?.defense ?? 0);
+    const typeMultiplier = def.type === 'loot' ? 2 : def.slot ? 8 : 1;
+    return Math.max(1, Math.round((combatValue + Math.max(1, def.weight)) * typeMultiplier));
+  }
+
   handleChat(socketId: string, channel: string, message: string) {
     const player = this.playerForSocket(socketId);
     if (!player) return;
@@ -742,6 +807,29 @@ export class GameEngine implements OnModuleDestroy {
     return true;
   }
 
+  private addToLootPouch(player: GamePlayer, itemId: string, quantity: number): boolean {
+    this.ensureLootPouchCapacity(player);
+    return this.addToContainer(player.lootPouch, itemId, quantity);
+  }
+
+  private addToContainer(container: (ItemStack | null)[], itemId: string, quantity: number): boolean {
+    const def = getItemDef(itemId);
+    const existing = container.find((s) => s && s.itemId === itemId);
+    if (existing && (def?.stackable ?? true)) {
+      existing.quantity += quantity;
+      return true;
+    }
+    const idx = container.findIndex((s) => s === null);
+    if (idx === -1) return false;
+    container[idx] = { itemId, quantity };
+    return true;
+  }
+
+  private ensureLootPouchCapacity(player: GamePlayer) {
+    player.lootPouchSize = Math.max(LOOT_POUCH_SIZE, player.lootPouchSize, player.lootPouch.length);
+    while (player.lootPouch.length < player.lootPouchSize) player.lootPouch.push(null);
+  }
+
   private emitStats(player: GamePlayer) {
     this.emitTo(player.socketId ?? '', 'stats.update', {
       health: player.health,
@@ -756,8 +844,11 @@ export class GameEngine implements OnModuleDestroy {
   }
 
   private emitInventory(player: GamePlayer) {
+    this.ensureLootPouchCapacity(player);
     const inventory: CharacterInventory = {
       slots: player.inventory.map((s) => (s ? { ...s } : null)),
+      lootPouchSize: player.lootPouchSize,
+      lootPouch: player.lootPouch.map((s) => (s ? { ...s } : null)),
       equipment: { ...player.equipment },
     };
     this.emitTo(player.socketId ?? '', 'inventory.update', { inventory });
@@ -1046,7 +1137,7 @@ export class GameEngine implements OnModuleDestroy {
     }
     this.grantExperience(player, creature.definition.experience);
     this.grantKillGold(player, creature, isBoss);
-    this.spawnLoot(creature, run);
+    this.spawnLoot(creature, player, run);
   }
 
   private grantKillGold(player: GamePlayer, creature: CreatureEntity, isBoss: boolean) {
@@ -1111,11 +1202,21 @@ export class GameEngine implements OnModuleDestroy {
     this.emitStats(player);
   }
 
-  private spawnLoot(creature: CreatureEntity, run?: HuntRun | null) {
+  private spawnLoot(creature: CreatureEntity, player?: GamePlayer, run?: HuntRun | null) {
+    const collected: string[] = [];
+    let blocked = false;
     for (const entry of creature.definition.loot) {
       if (Math.random() * 100 >= entry.chance) continue;
       const def = getItemDef(entry.itemId);
       const quantity = entry.minQuantity + Math.floor(Math.random() * (entry.maxQuantity - entry.minQuantity + 1));
+      if (player) {
+        if (this.addToLootPouch(player, entry.itemId, quantity)) {
+          collected.push(`${quantity}x ${def?.name ?? entry.itemId}`);
+        } else {
+          blocked = true;
+        }
+        continue;
+      }
       const item: GroundItem = {
         id: uid('loot'),
         itemId: entry.itemId,
@@ -1137,6 +1238,23 @@ export class GameEngine implements OnModuleDestroy {
         this.emitTo(player?.socketId ?? '', 'loot.spawned', payload);
       } else {
         this.emitAll('loot.spawned', payload);
+      }
+    }
+    if (player && (collected.length > 0 || blocked)) {
+      this.emitInventory(player);
+      if (collected.length > 0) {
+        this.emitTo(player.socketId ?? '', 'chat.message', {
+          channel: 'local',
+          from: 'Sistema',
+          text: `Loot coletado: ${collected.join(', ')}.`,
+        });
+      }
+      if (blocked) {
+        this.emitTo(player.socketId ?? '', 'chat.message', {
+          channel: 'local',
+          from: 'Sistema',
+          text: 'Bolsa de Loot cheia. Alguns itens não foram coletados.',
+        });
       }
     }
   }

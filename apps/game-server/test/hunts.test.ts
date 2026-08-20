@@ -79,6 +79,8 @@ function makePlayer(overrides: Partial<GamePlayer> = {}): GamePlayer {
       experience: 0,
     })),
     inventory: [],
+    lootPouchSize: 10,
+    lootPouch: [],
     equipment: {} as CharacterEquipment,
   };
   const player = new GamePlayer(character);
