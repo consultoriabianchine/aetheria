@@ -15,6 +15,7 @@ interface ItemDefinitionInput {
   stackable?: boolean;
   weight?: number;
   category?: string;
+  sellValue?: number;
   attackPower?: number;
   magicPower?: number;
   armor?: number;
@@ -107,6 +108,7 @@ function toPrismaData(id: string, input: ItemDefinitionInput): Prisma.ItemDefini
     stackable: input.stackable ?? false,
     weight: num(input.weight),
     category: input.category?.trim() || input.type || 'outros',
+    sellValue: int(input.sellValue),
     attackPower,
     magicPower,
     armor: int(input.armor),

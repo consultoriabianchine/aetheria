@@ -15,7 +15,7 @@ export class ItemCatalogService {
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const data = (await res.json()) as { items: ItemDefinition[] };
       for (const item of LOCAL_ITEMS) this.map.set(item.id, item);
-      for (const item of data.items) this.map.set(item.id, item);
+      for (const item of data.items) this.map.set(item.id, withSellValue(item));
       this.loaded = true;
       this.ready.set(true);
     } catch {
@@ -31,7 +31,7 @@ export class ItemCatalogService {
       if (!res.ok) return;
       const data = (await res.json()) as { items: ItemDefinition[] };
       for (const item of LOCAL_ITEMS) this.map.set(item.id, item);
-      for (const item of data.items) this.map.set(item.id, item);
+      for (const item of data.items) this.map.set(item.id, withSellValue(item));
     } catch {
       // Local starter items remain available even without generated assets.
     }
@@ -40,6 +40,10 @@ export class ItemCatalogService {
   get(id: string): ItemDefinition | undefined {
     return this.map.get(id);
   }
+}
+
+function withSellValue(item: ItemDefinition): ItemDefinition {
+  return { ...item, sellValue: item.sellValue ?? 0 };
 }
 
 const LOCAL_ITEMS: ItemDefinition[] = [
@@ -53,6 +57,7 @@ const LOCAL_ITEMS: ItemDefinition[] = [
     defense: 0,
     image: "Geomancer's_Staff.gif",
     category: 'Staff',
+    sellValue: 240,
     slot: 'weapon',
     weapon: { itemId: 'apprentice-staff', weaponType: 'staff', attackPower: 0, magicPower: 12, damageType: 'arcane', range: 5 },
   },
@@ -66,6 +71,7 @@ const LOCAL_ITEMS: ItemDefinition[] = [
     defense: 0,
     image: 'Sword.gif',
     category: 'Sword',
+    sellValue: 424,
     slot: 'weapon',
     weapon: { itemId: 'iron-sword', weaponType: 'sword', attackPower: 18, damageType: 'physical', range: 1 },
   },
@@ -79,6 +85,7 @@ const LOCAL_ITEMS: ItemDefinition[] = [
     defense: 0,
     image: 'Bow.gif',
     category: 'Bow',
+    sellValue: 328,
     slot: 'weapon',
     weapon: { itemId: 'hunter-bow', weaponType: 'bow', attackPower: 10, damageType: 'physical', range: 6, allowedAmmoType: 'arrow' },
   },
@@ -92,6 +99,7 @@ const LOCAL_ITEMS: ItemDefinition[] = [
     defense: 0,
     image: 'Arrow.gif',
     category: 'Arrow',
+    sellValue: 9,
     slot: 'ammo',
     ammo: { itemId: 'iron-arrow', ammoType: 'arrow', attackPower: 8, damageType: 'physical' },
   },

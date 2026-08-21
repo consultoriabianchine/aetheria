@@ -149,6 +149,7 @@ export interface ItemDefinition {
   defense: number;
   image: string;
   category: string;
+  sellValue: number;
   slot?: EquipmentSlot;
   combatStats?: ItemCombatStats;
   weapon?: WeaponDefinition;

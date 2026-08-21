@@ -5,7 +5,7 @@ import type { PrismaService } from '../../prisma/prisma.service';
 
 let catalog: Map<string, ItemDefinition> | null = null;
 
-const LOCAL_ITEMS: ItemDefinition[] = [
+const LOCAL_ITEMS: ItemDefinition[] = ([
   {
     id: 'apprentice-staff',
     name: 'Apprentice Staff',
@@ -162,7 +162,14 @@ const LOCAL_ITEMS: ItemDefinition[] = [
     slot: 'boots',
     combatStats: { armor: 1 },
   },
-];
+] satisfies Omit<ItemDefinition, 'sellValue'>[]).map((item) => ({ ...item, sellValue: estimateSellValue(item) }));
+
+function estimateSellValue(item: Omit<ItemDefinition, 'sellValue'>): number {
+  if (item.id === 'gold') return 1;
+  const combatValue = item.attack + item.defense + (item.combatStats?.attackPower ?? 0) + (item.combatStats?.magicPower ?? 0) + (item.combatStats?.armor ?? 0) + (item.combatStats?.defense ?? 0);
+  const typeMultiplier = item.type === 'loot' ? 2 : item.slot ? 8 : 1;
+  return Math.max(1, Math.round((combatValue + Math.max(1, item.weight)) * typeMultiplier));
+}
 
 type ItemDefinitionRow = {
   id: string;
@@ -174,6 +181,7 @@ type ItemDefinitionRow = {
   stackable: boolean;
   weight: number;
   category: string;
+  sellValue: number;
   attackPower: number;
   magicPower: number;
   armor: number;
@@ -251,6 +259,7 @@ export function rowToItemDefinition(row: ItemDefinitionRow): ItemDefinition {
     defense: row.defense,
     image: row.imagePath ?? '',
     category: row.category,
+    sellValue: row.sellValue,
     slot: (row.slot ?? undefined) as ItemDefinition['slot'],
     combatStats,
     weapon: isObject(row.weapon) ? (row.weapon as unknown as WeaponDefinition) : undefined,

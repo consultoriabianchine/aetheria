@@ -348,6 +348,7 @@ function itemDefinitionFromSource(item: SourceItem, fallbackName?: string) {
     stackable: item.stackable,
     weight: item.weight,
     category: item.category || 'Loot',
+    sellValue: estimateSellValue({ id: item.id, type, slot, weight: item.weight, attack: item.attack, defense: item.defense }),
     attackPower: isWeapon || isAmmo ? item.attack : 0,
     magicPower: 0,
     armor: isArmorSlot ? item.attack : 0,
@@ -370,6 +371,12 @@ function itemDefinitionFromSource(item: SourceItem, fallbackName?: string) {
       : undefined,
     ammo: isAmmo ? { itemId: item.id, ammoType: 'arrow', attackPower: item.attack, damageType: 'physical' } : undefined,
   };
+}
+
+function estimateSellValue(item: { id: string; type: string; slot: string | null; weight: number; attack: number; defense: number }): number {
+  if (item.id === 'gold') return 1;
+  const typeMultiplier = item.type === 'loot' ? 2 : item.slot ? 8 : 1;
+  return Math.max(1, Math.round((item.attack + item.defense + Math.max(1, item.weight)) * typeMultiplier));
 }
 
 async function seedLootItemDefinitions(items: SourceItem[]) {
@@ -395,9 +402,21 @@ async function seedLootItemDefinitions(items: SourceItem[]) {
       category: 'Loot',
       slot: null,
     };
-    const existing = await prisma.itemDefinition.findUnique({ where: { id: itemId }, select: { id: true } });
-    if (existing) continue;
-    await prisma.itemDefinition.create({ data: itemDefinitionFromSource(source, fallbackName) });
+    const data = itemDefinitionFromSource(source, fallbackName);
+    const existing = await prisma.itemDefinition.findUnique({ where: { id: itemId }, select: { id: true, imagePath: true, sellValue: true } });
+    if (existing) {
+      if (existing.sellValue <= 0 || !existing.imagePath) {
+        await prisma.itemDefinition.update({
+          where: { id: itemId },
+          data: {
+            sellValue: existing.sellValue > 0 ? existing.sellValue : data.sellValue,
+            imagePath: existing.imagePath ?? data.imagePath,
+          },
+        });
+      }
+      continue;
+    }
+    await prisma.itemDefinition.create({ data });
     created++;
   }
   return { total: lootById.size, created };
@@ -411,12 +430,23 @@ async function seed() {
   const itemNameById = new Map(items.items.map((i) => [i.id, i.name]));
 
   for (const item of INITIAL_ITEM_DEFINITIONS) {
-    const existing = await prisma.itemDefinition.findUnique({ where: { id: item.id }, select: { imagePath: true } });
+    const existing = await prisma.itemDefinition.findUnique({ where: { id: item.id }, select: { imagePath: true, sellValue: true } });
     const imagePath = existing?.imagePath ?? sourceById.get(item.id)?.image ?? INITIAL_ITEM_IMAGE_FALLBACK[item.id] ?? item.imagePath;
+    const source = sourceById.get(item.id);
+    const sellValue = existing && existing.sellValue > 0
+      ? existing.sellValue
+      : estimateSellValue({
+          id: item.id,
+          type: item.type,
+          slot: item.slot,
+          weight: item.weight,
+          attack: source?.attack ?? item.attackPower + item.magicPower + item.armor,
+          defense: source?.defense ?? item.defense,
+        });
     await prisma.itemDefinition.upsert({
       where: { id: item.id },
-      update: { ...item, imagePath },
-      create: { ...item, imagePath },
+      update: { ...item, imagePath, sellValue },
+      create: { ...item, imagePath, sellValue },
     });
   }
 

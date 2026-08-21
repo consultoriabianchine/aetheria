@@ -117,6 +117,7 @@ model ItemDefinition {
   stackable         Boolean  @default(false)
   weight            Float    @default(0)
   category          String   @default("outros")
+  sellValue         Int      @default(0) @map("sell_value")
   attackPower       Int      @default(0) @map("attack_power")
   magicPower        Int      @default(0) @map("magic_power")
   armor             Int      @default(0)

@@ -653,11 +653,8 @@ export class GameEngine implements OnModuleDestroy {
   }
 
   private lootSellValue(def: ItemDefinition | undefined, itemId: string): number {
-    if (!def) return 1;
-    if (itemId === 'gold-coin') return 1;
-    const combatValue = def.attack + def.defense + (def.combatStats?.attackPower ?? 0) + (def.combatStats?.magicPower ?? 0) + (def.combatStats?.armor ?? 0) + (def.combatStats?.defense ?? 0);
-    const typeMultiplier = def.type === 'loot' ? 2 : def.slot ? 8 : 1;
-    return Math.max(1, Math.round((combatValue + Math.max(1, def.weight)) * typeMultiplier));
+    void itemId;
+    return Math.max(0, def?.sellValue ?? 0);
   }
 
   handleChat(socketId: string, channel: string, message: string) {
