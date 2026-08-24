@@ -1,4 +1,4 @@
-import type { ArchetypeDefinition, CombatArchetype, NpcTemplate } from '@aetheria/types';
+import type { ArchetypeDefinition, CombatArchetype, DamageType, NpcTemplate, PlayerCombatConfig } from '@aetheria/types';
 
 /** Dimensões e andar inicial do mundo. */
 export const MAP_WIDTH = 64;
@@ -19,12 +19,58 @@ export const TILE = {
 export const VIEW_DISTANCE_X = 15;
 export const VIEW_DISTANCE_Y = 11;
 
+export const COMBAT_TEXT_THEME: Record<DamageType | 'healing', string> = {
+  physical: '#E8E8E8',
+  fire: '#FF5A36',
+  ice: '#55DFFF',
+  energy: '#A86CFF',
+  earth: '#7ED957',
+  holy: '#FFD84D',
+  death: '#C65AFF',
+  arcane: '#4FD9FF',
+  healing: '#55FF72',
+};
+
+export const COMBAT_TEXT_ANIMATION = {
+  normalDuration: 800,
+  criticalDuration: 800,
+  normalRise: 35,
+  criticalRise: 45,
+  maxVisiblePerEntity: 8,
+  spawnOffsets: [-12, -6, 0, 6, 12],
+  normalFontSize: 15,
+  criticalFontSize: 18,
+} as const;
+
+/** Intervalo de movimento de referência (ms por tile, com speed = 1). */
+export const BASE_MOVE_INTERVAL_MS = 200;
+
 /** Intervalo de movimento do jogador (ms por tile). Múltiplo do TICK_MS para
- *  passos uniformes (sem "anda-e-para"): um passo a cada tick do servidor. */
-export const MOVE_INTERVAL_MS = 200;
+ *  passos uniformes (sem "anda-e-para"). */
+export const MOVE_INTERVAL_MS = BASE_MOVE_INTERVAL_MS;
 
 /** Tick do servidor (ms). */
-export const TICK_MS = 200;
+export const TICK_MS = 50;
+
+/** Arredonda um intervalo para múltiplo do TICK_MS (passos uniformes). */
+export function snapToTick(ms: number): number {
+  return Math.max(TICK_MS, Math.round(ms / TICK_MS) * TICK_MS);
+}
+
+/** Intervalo de movimento (ms/tile) a partir da velocidade do personagem. */
+export function playerMoveInterval(speed: number): number {
+  return snapToTick(BASE_MOVE_INTERVAL_MS / Math.max(0.5, speed));
+}
+
+/** Velocidade base por vocação (mages/archers mais rápidos que warriors). */
+export const PLAYER_SPEED = {
+  warrior: 0.5,
+  mage: 0.57,
+  archer: 0.55,
+} as const;
+
+/** Bônus de velocidade por nível acima do 1º. */
+export const SPEED_PER_LEVEL = 0.01;
 
 /** Stats base do jogador. */
 export const BASE_PLAYER = {
@@ -104,6 +150,22 @@ export const ARCHETYPES: Record<CombatArchetype, ArchetypeDefinition> = {
   },
 };
 
+// ---------------------------------------------------------------------------
+// IA de combate do personagem (Hunts)
+
+export type CombatAIProfile = PlayerCombatConfig & {
+  engageRange: number;
+  kiteDangerDist: number;
+  kiteSafeDist: number;
+};
+
+/** Comportamento padrão por classe. Pode ser sobrescrito por personagem (combat). */
+export const PLAYER_AI: Record<CombatArchetype, CombatAIProfile> = {
+  warrior: { targeting: 'nearest', movement: 'engage', engageRange: 1, kiteDangerDist: 2, kiteSafeDist: 4 },
+  mage: { targeting: 'lowestHp', movement: 'kite', engageRange: 5, kiteDangerDist: 3, kiteSafeDist: 5 },
+  archer: { targeting: 'nearest', movement: 'kite', engageRange: 6, kiteDangerDist: 3, kiteSafeDist: 6 },
+};
+
 export const COMBAT_FORMULA_CONFIG = {
   levelScalingPerLevel: 0.005,
   meleeScalingPerSkill: 0.01,
@@ -138,7 +200,7 @@ export const LOOT_POUCH_SIZE = 10;
 
 /** Configuração de expansão da Bolsa de Loot. */
 export const LOOT_POUCH_EXPANSION = {
-  slotsPerUpgrade: 5,
+  slotsPerUpgrade: 1,
   maxSize: 60,
   goldCost: (currentSize: number) => Math.max(1000, currentSize * 250),
 } as const;

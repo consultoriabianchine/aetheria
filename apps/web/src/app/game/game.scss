@@ -541,6 +541,17 @@ button {
   padding: 0 8px;
 }
 
+.combat-select {
+  height: 26px;
+  max-width: 130px;
+  border: 1px solid rgba(215, 185, 79, 0.22);
+  border-radius: 6px;
+  background: #111418;
+  color: #e2e9ef;
+  padding: 0 6px;
+  font-size: 11px;
+}
+
 .wave-strip {
   display: flex;
   align-items: center;

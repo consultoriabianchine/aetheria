@@ -42,6 +42,7 @@ export class CombatAdminController {
       criticalDamage: 1.5,
       accuracy: 0,
       dodge: 0,
+      speed: 0,
       resistances: emptyResistances(),
     };
     const targetResistances = emptyResistances();
@@ -59,6 +60,7 @@ export class CombatAdminController {
       criticalDamage: 1.5,
       accuracy: 0,
       dodge: 0,
+      speed: 0,
       resistances: targetResistances,
     };
     const weapon = weaponFor(body);

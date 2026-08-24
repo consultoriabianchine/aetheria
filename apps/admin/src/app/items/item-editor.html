@@ -54,6 +54,7 @@
       <label>Crit Damage <input type="number" step="0.01" [value]="draft().criticalDamage ?? 0" (input)="patch({ criticalDamage: +$any($event.target).value })" /></label>
       <label>Accuracy <input type="number" step="0.01" [value]="draft().accuracy ?? 0" (input)="patch({ accuracy: +$any($event.target).value })" /></label>
       <label>Dodge <input type="number" step="0.01" [value]="draft().dodge ?? 0" (input)="patch({ dodge: +$any($event.target).value })" /></label>
+      <label>Speed <input type="number" step="0.01" [value]="draft().speed ?? 0" (input)="patch({ speed: +$any($event.target).value })" /></label>
 
       <label>Weapon Type
         <select [value]="draft().weaponType ?? ''" (change)="patch({ weaponType: $any($event.target).value || null })">

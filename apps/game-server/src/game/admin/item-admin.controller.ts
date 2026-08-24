@@ -26,6 +26,7 @@ interface ItemDefinitionInput {
   criticalDamage?: number;
   accuracy?: number;
   dodge?: number;
+  speed?: number;
   weaponType?: WeaponType | null;
   ammoType?: AmmoType | null;
   damageType?: DamageType | null;
@@ -119,6 +120,7 @@ function toPrismaData(id: string, input: ItemDefinitionInput): Prisma.ItemDefini
     criticalDamage: num(input.criticalDamage),
     accuracy: num(input.accuracy),
     dodge: num(input.dodge),
+    speed: num(input.speed),
     weapon: weapon as Prisma.InputJsonValue | undefined,
     ammo: ammo as Prisma.InputJsonValue | undefined,
     skillBonuses: input.skillBonuses as Prisma.InputJsonValue | undefined,

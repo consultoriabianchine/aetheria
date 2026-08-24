@@ -1,7 +1,7 @@
 import Phaser from 'phaser';
 import { SERVER_EVENTS } from '@aetheria/protocol';
 import { APPEARANCE_PALETTE, MOVE_INTERVAL_MS, TILE } from '@aetheria/config';
-import type { CreatureState, Direction, ItemImpactVisual, ItemProjectileVisual, MapTile, PlayerAppearance, Position, ProjectileDirection } from '@aetheria/types';
+import type { CreatureState, DamageType, Direction, ItemImpactVisual, ItemProjectileVisual, MapTile, PlayerAppearance, Position, ProjectileDirection } from '@aetheria/types';
 import { WsService } from '../../core/ws.service';
 import { WS_URL } from '../../core/ws.service';
 import { GameState } from '../game-state';
@@ -9,8 +9,11 @@ import { CreatureAnimator, type AnimConfig, type AnimDirection, type AnimType } 
 import { CreatureAssetService } from '../creature-asset.service';
 import { OutfitAssetService, type OutfitAnimData } from '../outfit-asset.service';
 import { recolorCanvas } from '../outfit-recolor';
+import { CombatTextManager } from '../combat-text/combat-text-manager';
 
 const TILE_SIZE = 32;
+const BAR_WIDTH = 30;
+const BAR_HEIGHT = 6;
 
 interface EntityInfo {
   name: string;
@@ -24,7 +27,9 @@ interface RenderedEntity {
   label: Phaser.GameObjects.Text;
   healthBack?: Phaser.GameObjects.Image;
   healthFront?: Phaser.GameObjects.Image;
+  healthBorder?: Phaser.GameObjects.Image;
   spriteHeight: number;
+  headHeight: number;
 }
 
 interface CreatureAnimState {
@@ -57,6 +62,13 @@ function animForState(state: CreatureState): AnimType {
   }
 }
 
+function healthColor(ratio: number): number {
+  if (ratio > 0.5) return 0x46c14a;
+  if (ratio > 0.3) return 0xe8c120;
+  if (ratio > 0.1) return 0xe0403f;
+  return 0x7d1a1a;
+}
+
 export class WorldScene extends Phaser.Scene {
   private ws!: WsService;
   private state!: GameState;
@@ -71,6 +83,7 @@ export class WorldScene extends Phaser.Scene {
   private selfAnim: CreatureAnimState | null = null;
   private lastSeq = -1;
   private moveDir: Direction | null = null;
+  private selfMoveSpeed = MOVE_INTERVAL_MS;
   private keys!: Record<string, Phaser.Input.Keyboard.Key>;
   private creatureAnims = new Map<string, CreatureAnimState>();
   private definitionCreatureIds = new Map<string, number>();
@@ -78,6 +91,7 @@ export class WorldScene extends Phaser.Scene {
   private debugVisible = false;
   private debugOverlay!: Phaser.GameObjects.Text;
   private mapBounds: { width?: number; height?: number } = {};
+  private combatText!: CombatTextManager;
 
   constructor() {
     super('World');
@@ -90,6 +104,10 @@ export class WorldScene extends Phaser.Scene {
     this.outfits = data.outfits;
     this.load.setCORS('anonymous');
     this.buildTextures();
+    this.combatText = new CombatTextManager(this, (entityId) => {
+      const entity = this.entities.get(entityId) ?? (entityId === this.selfId ? this.selfEntity : null);
+      return entity ? { x: entity.image.x, y: entity.image.y, spriteHeight: entity.spriteHeight } : null;
+    });
 
     this.state.sceneEvents$.subscribe((e) => {
       if (e.seq <= this.lastSeq) return;
@@ -119,13 +137,15 @@ export class WorldScene extends Phaser.Scene {
   private handleEvent(event: string, data: unknown) {
     switch (event) {
       case SERVER_EVENTS.ENTER_WORLD: {
-        const w = data as { character: { id: string; name: string; position: Position; appearance?: PlayerAppearance }; map: MapTile[]; width: number; height: number };
-        this.resetScene(w.map, w.character.id, w.character.name, w.character.position, w.width, w.height, w.character.appearance);
+        const w = data as { character: { id: string; name: string; position: Position; appearance?: PlayerAppearance; health: number; maxHealth: number; movementSpeed?: number }; map: MapTile[]; width: number; height: number };
+        this.selfMoveSpeed = w.character.movementSpeed ?? MOVE_INTERVAL_MS;
+        this.resetScene(w.map, w.character.id, w.character.name, w.character.position, w.width, w.height, w.character.appearance, w.character.health, w.character.maxHealth);
         break;
       }
       case SERVER_EVENTS.ENTER_ARENA: {
-        const w = data as { character: { id: string; name: string; position: Position; appearance?: PlayerAppearance }; map: MapTile[]; width: number; height: number };
-        this.resetScene(w.map, w.character.id, w.character.name, w.character.position, w.width, w.height, w.character.appearance);
+        const w = data as { character: { id: string; name: string; position: Position; appearance?: PlayerAppearance; health: number; maxHealth: number; movementSpeed?: number }; map: MapTile[]; width: number; height: number };
+        this.selfMoveSpeed = w.character.movementSpeed ?? MOVE_INTERVAL_MS;
+        this.resetScene(w.map, w.character.id, w.character.name, w.character.position, w.width, w.height, w.character.appearance, w.character.health, w.character.maxHealth);
         break;
       }
       case SERVER_EVENTS.ENTITY_SPAWNED: {
@@ -144,13 +164,26 @@ export class WorldScene extends Phaser.Scene {
         break;
       }
       case SERVER_EVENTS.PLAYER_MOVED: {
-        const m = data as { position: Position };
-        if (this.selfEntity) this.moveRendered(this.selfEntity, m.position);
+        const m = data as { position: Position; facing?: Direction };
+        if (this.selfEntity) this.moveRendered(this.selfEntity, m.position, this.selfMoveSpeed);
+        const facing = m.facing ?? this.moveDir;
+        if (facing) this.updateSelfAnim(facing);
         break;
       }
       case SERVER_EVENTS.ENTITY_HEALTH: {
         const h = data as { id: string; health: number; maxHealth: number };
         this.updateHealth(h.id, h.health, h.maxHealth);
+        break;
+      }
+      case SERVER_EVENTS.STATS_UPDATE: {
+        const s = data as { health: number; maxHealth: number; movementSpeed?: number };
+        if (s.movementSpeed) this.selfMoveSpeed = s.movementSpeed;
+        if (this.selfAnim) {
+          this.selfAnim.moveSpeed = this.selfMoveSpeed;
+          this.selfAnim.animator.setWalkCycleMs(this.selfMoveSpeed);
+        }
+        const rendered = this.entities.get(this.selfId);
+        if (rendered && rendered.healthFront) this.setBar(rendered.healthFront, s.health, s.maxHealth);
         break;
       }
       case SERVER_EVENTS.CREATURE_SPAWN: {
@@ -176,19 +209,20 @@ export class WorldScene extends Phaser.Scene {
         break;
       }
       case SERVER_EVENTS.CREATURE_ATTACK: {
-        const a = data as { creatureId: string; targetId: string; position: Position };
+        const a = data as { creatureId: string; targetId: string; position: Position; facing?: Direction };
         const rendered = this.entities.get(a.creatureId);
         if (rendered) this.flashEntity(rendered);
+        if (a.facing) {
+          const anim = this.creatureAnims.get(a.creatureId);
+          if (anim) anim.animator.setDirection(toAnimDirection(a.facing));
+        }
         this.playCreatureAnim(a.creatureId, 'attack');
         break;
       }
       case SERVER_EVENTS.CREATURE_DAMAGE: {
-        const d = data as { creatureId: string; attackerId: string; amount: number; critical: boolean; health: number; maxHealth: number };
+        const d = data as { creatureId: string; attackerId: string; amount: number; damageType?: DamageType; critical: boolean; health: number; maxHealth: number };
         this.updateHealth(d.creatureId, d.health, d.maxHealth);
-        const rendered = this.entities.get(d.creatureId);
-        const x = rendered?.image.x ?? 0;
-        const y = rendered?.image.y ?? 0;
-        this.showDamage(x, y, d.amount, d.critical, rendered?.spriteHeight ?? TILE_SIZE);
+        this.combatText.spawnDamage({ targetId: d.creatureId, amount: d.amount, damageType: d.damageType, critical: d.critical });
         break;
       }
       case SERVER_EVENTS.CREATURE_DEATH: {
@@ -205,6 +239,7 @@ export class WorldScene extends Phaser.Scene {
             onComplete: () => {
               if (rendered.healthBack) rendered.healthBack.alpha = 0.25;
               if (rendered.healthFront) rendered.healthFront.alpha = 0.25;
+              if (rendered.healthBorder) rendered.healthBorder.alpha = 0.25;
             },
           });
         }
@@ -222,10 +257,13 @@ export class WorldScene extends Phaser.Scene {
         break;
       }
       case SERVER_EVENTS.COMBAT_DAMAGE: {
-        const d = data as { attackerId: string; targetId: string; amount: number; critical: boolean; delayMs?: number };
-        const show = () => this.showCombatDamage(d.targetId, d.amount, d.critical);
-        if (d.delayMs && d.delayMs > 0) this.time.delayedCall(d.delayMs, show);
-        else show();
+const d = data as { attackerId: string; targetId: string; amount: number; damageType?: DamageType; critical: boolean; delayMs?: number };
+        this.combatText.spawnDamage(d);
+        break;
+      }
+      case SERVER_EVENTS.COMBAT_HEAL: {
+        const h = data as { sourceId: string; targetId: string; amount: number; critical: boolean; delayMs?: number };
+        this.combatText.spawnHealing(h);
         break;
       }
       case SERVER_EVENTS.COMBAT_PROJECTILE: {
@@ -266,12 +304,13 @@ export class WorldScene extends Phaser.Scene {
 
   // ------------------------------------------------------------------ world
 
-  private resetScene(map: MapTile[], selfId: string, selfName: string, selfPosition: Position, width?: number, height?: number, appearance?: PlayerAppearance) {
+  private resetScene(map: MapTile[], selfId: string, selfName: string, selfPosition: Position, width?: number, height?: number, appearance?: PlayerAppearance, health = 0, maxHealth = 0) {
     for (const [id, ent] of this.entities) {
       ent.image.destroy();
       ent.label.destroy();
       ent.healthBack?.destroy();
       ent.healthFront?.destroy();
+      ent.healthBorder?.destroy();
       void id;
     }
     this.entities.clear();
@@ -279,6 +318,7 @@ export class WorldScene extends Phaser.Scene {
     this.creatureAnims.clear();
     this.definitionCreatureIds.clear();
     this.selfAnim = null;
+    this.combatText.clear();
     for (const img of this.loot.values()) img.destroy();
     this.loot.clear();
     this.selfEntity = null;
@@ -286,7 +326,7 @@ export class WorldScene extends Phaser.Scene {
     this.mapBounds = { width, height };
     this.state.clearTarget();
     this.buildMap(map);
-    this.spawnSelf(selfId, selfName, selfPosition, appearance);
+    this.spawnSelf(selfId, selfName, selfPosition, appearance, health, maxHealth);
     this.applyCameraBounds();
   }
 
@@ -339,10 +379,12 @@ export class WorldScene extends Phaser.Scene {
     }
   }
 
-  private spawnSelf(id: string, name: string, position: Position, appearance?: PlayerAppearance) {
+  private spawnSelf(id: string, name: string, position: Position, appearance?: PlayerAppearance, health = 0, maxHealth = 0) {
     this.selfEntity = this.createRendered('player', name, position);
     this.entities.set(id, this.selfEntity);
-    this.entityInfo.set(id, { name, health: 0, maxHealth: 0 });
+    this.entityInfo.set(id, { name, health, maxHealth });
+    this.attachHealthBar(this.selfEntity, health, maxHealth);
+    this.repositionWorldUi(this.selfEntity);
     this.cameras.main.startFollow(this.selfEntity.image, false, 0.1, 0.1);
     if (appearance) void this.setupPlayerOutfit(id, appearance);
   }
@@ -365,9 +407,11 @@ export class WorldScene extends Phaser.Scene {
     const rendered = this.entities.get(id);
     if (!rendered || !this.textures.exists(textureKey)) return;
     const animator = new CreatureAnimator(data.config, 'south');
+    animator.setWalkCycleMs(this.selfMoveSpeed);
     animator.play('idle', this.time.now);
-    this.selfAnim = { animator, textureKey, moveSpeed: MOVE_INTERVAL_MS, lastMoveAt: this.time.now };
+    this.selfAnim = { animator, textureKey, moveSpeed: this.selfMoveSpeed, lastMoveAt: this.time.now };
     rendered.spriteHeight = frameH;
+    rendered.headHeight = TILE_SIZE;
     rendered.image.setTexture(textureKey).setTint(0xffffff).setScale(1).setFrame(animator.frameIndex(this.time.now));
     this.repositionWorldUi(rendered);
   }
@@ -415,47 +459,57 @@ export class WorldScene extends Phaser.Scene {
     if (health !== undefined && maxHealth !== undefined) {
       this.attachHealthBar(rendered, health, maxHealth);
     }
+    this.repositionWorldUi(rendered);
     this.entities.set(id, rendered);
     this.entityInfo.set(id, { name, health: health ?? 0, maxHealth: maxHealth ?? 0 });
   }
 
   private createRendered(kind: string, name: string, position: Position): RenderedEntity {
     const x = position.x * TILE_SIZE + TILE_SIZE / 2;
-    const y = position.y * TILE_SIZE + TILE_SIZE / 2;
+    const y = position.y * TILE_SIZE + TILE_SIZE;
     const color = kind === 'monster' ? 0xe04d4d : kind === 'npc' ? 0xf0c14b : 0x4d86ff;
     const image = this.add.image(x, y, 'circle').setTint(color).setOrigin(0.5, 1).setDisplaySize(TILE_SIZE, TILE_SIZE);
     const label = this.add
       .text(x, y - TILE_SIZE - 6, name, {
-        fontFamily: 'Arial',
+        fontFamily: 'Arial, Verdana, Tahoma, sans-serif',
+        fontStyle: 'bold',
         fontSize: '11px',
-        color: '#ffffff',
+        color: '#00ff00',
         stroke: '#000000',
-        strokeThickness: 3,
+        strokeThickness: 1,
         resolution: this.textResolution(),
       })
       .setOrigin(0.5);
     const depth = position.y * 0.01 + 1;
     image.setDepth(depth);
     label.setDepth(depth + 0.01);
-    return { kind, image, label, spriteHeight: TILE_SIZE };
+    return { kind, image, label, spriteHeight: TILE_SIZE, headHeight: TILE_SIZE };
   }
 
   private attachHealthBar(rendered: RenderedEntity, health: number, maxHealth: number) {
     const depth = rendered.image.depth;
-    const back = this.add.image(rendered.image.x, rendered.image.y - rendered.spriteHeight - 4, 'barBack').setOrigin(0.5).setDepth(depth + 0.02);
-    const front = this.add.image(rendered.image.x, rendered.image.y - rendered.spriteHeight - 4, 'barFront').setOrigin(0.5).setDepth(depth + 0.03);
+    const x = rendered.image.x - BAR_WIDTH / 2;
+    const y = rendered.image.y - rendered.headHeight - 3;
+    const back = this.add.image(x, y, 'barBack').setOrigin(0, 0.5).setDepth(depth + 0.02);
+    const front = this.add.image(x, y, 'barFront').setOrigin(0, 0.5).setDepth(depth + 0.03);
+    const border = this.add.image(x, y, 'barBorder').setOrigin(0, 0.5).setDepth(depth + 0.04);
     rendered.healthBack = back;
     rendered.healthFront = front;
+    rendered.healthBorder = border;
     this.setBar(front, health, maxHealth);
   }
 
   /** Reposiciona nome/barra de vida acima do sprite (altura pode variar). */
   private repositionWorldUi(rendered: RenderedEntity) {
-    const top = rendered.image.y - rendered.spriteHeight;
-    rendered.label.setPosition(rendered.image.x, top - 6);
+    const top = rendered.image.y - rendered.headHeight;
     if (rendered.healthBack && rendered.healthFront) {
-      rendered.healthBack.setPosition(rendered.image.x, top - 4);
-      rendered.healthFront.setPosition(rendered.image.x, top - 4);
+      const barY = top - 3;
+      rendered.label.setPosition(rendered.image.x, barY - 11);
+      rendered.healthBack.setPosition(rendered.image.x - BAR_WIDTH / 2, barY);
+      rendered.healthFront.setPosition(rendered.image.x - BAR_WIDTH / 2, barY);
+      rendered.healthBorder?.setPosition(rendered.image.x - BAR_WIDTH / 2, barY);
+    } else {
+      rendered.label.setPosition(rendered.image.x, top - 6);
     }
   }
 
@@ -506,9 +560,11 @@ export class WorldScene extends Phaser.Scene {
 
   private applyCreatureTexture(id: string, rendered: RenderedEntity, textureKey: string, config: AnimConfig, facing: Direction, state: CreatureState, moveSpeed: number) {
     const animator = new CreatureAnimator(config, toAnimDirection(facing));
+    animator.setWalkCycleMs(moveSpeed);
     animator.play(animForState(state), this.time.now);
     this.creatureAnims.set(id, { animator, textureKey, moveSpeed, lastMoveAt: this.time.now });
     rendered.spriteHeight = config.spriteHeight;
+    rendered.headHeight = config.spriteHeight;
     rendered.image.setTexture(textureKey).setTint(0xffffff).setScale(1).setFrame(animator.frameIndex(this.time.now));
     this.repositionWorldUi(rendered);
   }
@@ -528,6 +584,7 @@ export class WorldScene extends Phaser.Scene {
   }
 
   override update(time: number) {
+    this.combatText.update(time);
     for (const [id, anim] of this.creatureAnims) {
       const rendered = this.entities.get(id);
       if (!rendered) continue;
@@ -538,6 +595,9 @@ export class WorldScene extends Phaser.Scene {
     }
     if (this.selfAnim && this.selfEntity) {
       this.selfEntity.image.setFrame(this.selfAnim.animator.frameIndex(time));
+      if (this.selfAnim.animator.currentType === 'walk' && time - this.selfAnim.lastMoveAt > this.selfAnim.moveSpeed + 80) {
+        this.selfAnim.animator.play('idle', time);
+      }
     }
   }
 
@@ -567,14 +627,16 @@ export class WorldScene extends Phaser.Scene {
 
   private moveRendered(rendered: RenderedEntity, position: Position, duration = MOVE_INTERVAL_MS) {
     const x = position.x * TILE_SIZE + TILE_SIZE / 2;
-    const y = position.y * TILE_SIZE + TILE_SIZE / 2;
+    const y = position.y * TILE_SIZE + TILE_SIZE;
     const depth = position.y * 0.01 + 1;
     rendered.image.setDepth(depth);
     rendered.label.setDepth(depth + 0.01);
     if (rendered.healthBack) {
       rendered.healthBack.setDepth(depth + 0.02);
       rendered.healthFront?.setDepth(depth + 0.03);
+      rendered.healthBorder?.setDepth(depth + 0.04);
     }
+    this.tweens.killTweensOf(rendered.image);
     this.tweens.add({
       targets: rendered.image,
       x,
@@ -592,6 +654,7 @@ export class WorldScene extends Phaser.Scene {
       rendered.label.destroy();
       rendered.healthBack?.destroy();
       rendered.healthFront?.destroy();
+      rendered.healthBorder?.destroy();
       this.entities.delete(id);
       this.entityInfo.delete(id);
       this.creatureAnims.delete(id);
@@ -614,7 +677,8 @@ export class WorldScene extends Phaser.Scene {
 
   private setBar(front: Phaser.GameObjects.Image, health: number, maxHealth: number) {
     const ratio = Math.max(0, Math.min(1, health / Math.max(1, maxHealth)));
-    front.setDisplaySize(Math.max(1, ratio * TILE_SIZE), 5);
+    front.setDisplaySize(Math.max(1, ratio * BAR_WIDTH), BAR_HEIGHT);
+    front.setTint(healthColor(ratio));
   }
 
   // ------------------------------------------------------------------ input
@@ -646,7 +710,7 @@ export class WorldScene extends Phaser.Scene {
       if (dir !== this.moveDir) {
         this.moveDir = dir;
         this.ws.send({ type: 'game.input', direction: dir });
-        this.updateSelfAnim(dir);
+        if (dir) this.updateSelfAnim(dir);
       }
     };
     this.input.keyboard!.on('keydown', check);
@@ -658,6 +722,7 @@ export class WorldScene extends Phaser.Scene {
     if (dir) {
       this.selfAnim.animator.setDirection(toAnimDirection(dir));
       this.selfAnim.animator.play('walk', this.time.now);
+      this.selfAnim.lastMoveAt = this.time.now;
     } else {
       this.selfAnim.animator.play('idle', this.time.now);
     }
@@ -746,36 +811,6 @@ export class WorldScene extends Phaser.Scene {
     this.ws.send({ type: 'game.attack', targetId: id });
   }
 
-  private showDamage(x: number, y: number, amount: number, critical: boolean, spriteHeight = TILE_SIZE) {
-    const text = this.add
-      .text(x, y - spriteHeight - 8, String(amount), {
-        fontFamily: 'Arial',
-        fontSize: critical ? '20px' : '15px',
-        color: critical ? '#ffcf3f' : '#ff6b6b',
-        stroke: '#1a1a1a',
-        strokeThickness: 3,
-        resolution: this.textResolution(),
-      })
-      .setOrigin(0.5)
-      .setDepth(100);
-    this.tweens.add({
-      targets: text,
-      y: y - spriteHeight - 24,
-      alpha: 0,
-      duration: 700,
-      onComplete: () => text.destroy(),
-    });
-  }
-
-  private showCombatDamage(targetId: string, amount: number, critical: boolean) {
-    const info = this.entityInfo.get(targetId);
-    if (!info && targetId !== this.selfId) return;
-    const ent = this.entities.get(targetId);
-    const x = ent?.image.x ?? (this.selfEntity && targetId === this.selfId ? this.selfEntity.image.x : 0);
-    const y = ent?.image.y ?? (this.selfEntity && targetId === this.selfId ? this.selfEntity.image.y : 0);
-    const h = ent?.spriteHeight ?? (this.selfEntity && targetId === this.selfId ? this.selfEntity.spriteHeight : TILE_SIZE);
-    this.showDamage(x, y, amount, critical, h);
-  }
 
   private playProjectile(attackerId: string, targetId: string, from: Position, to: Position, projectile: ItemProjectileVisual, impact: ItemImpactVisual | undefined, travelTimeMs: number) {
     if (!projectile.sprite && !projectile.spriteAssetId) return;
@@ -867,8 +902,9 @@ export class WorldScene extends Phaser.Scene {
 
     this.makeCircle('circle', '#ffffff');
     this.makeLoot();
-    this.makeBar('barBack', '#3a3f45');
-    this.makeBar('barFront', '#e0413f');
+    this.makeBar('barBack', '#20242a');
+    this.makeBar('barFront', '#ffffff');
+    this.makeBarBorder('barBorder');
   }
 
   /** Aplica HD (linear/anti-aliasing) ou pixel art (nearest) a todas as texturas. */
@@ -962,11 +998,21 @@ export class WorldScene extends Phaser.Scene {
   }
 
   private makeBar(key: string, color: string) {
-    const tex = this.textures.createCanvas(key, 28, 5);
+    const tex = this.textures.createCanvas(key, BAR_WIDTH, BAR_HEIGHT);
     if (!tex) return;
     const ctx = tex.getContext();
     ctx.fillStyle = color;
-    ctx.fillRect(0, 0, 28, 5);
+    ctx.fillRect(0, 0, BAR_WIDTH, BAR_HEIGHT);
+    tex.refresh();
+  }
+
+  private makeBarBorder(key: string) {
+    const tex = this.textures.createCanvas(key, BAR_WIDTH, BAR_HEIGHT);
+    if (!tex) return;
+    const ctx = tex.getContext();
+    ctx.strokeStyle = '#000000';
+    ctx.lineWidth = 1;
+    ctx.strokeRect(0.5, 0.5, BAR_WIDTH - 1, BAR_HEIGHT - 1);
     tex.refresh();
   }
 }

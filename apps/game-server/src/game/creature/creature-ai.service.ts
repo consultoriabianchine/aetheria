@@ -58,6 +58,13 @@ function clamp(v: number, min: number, max: number): number {
   return Math.max(min, Math.min(max, v));
 }
 
+function angleDiff(a: number, b: number): number {
+  let d = a - b;
+  while (d > Math.PI) d -= Math.PI * 2;
+  while (d < -Math.PI) d += Math.PI * 2;
+  return d;
+}
+
 /**
  * IA das criaturas — exclusivamente no backend.
  * Máquina de estados: IDLE, WANDER, CHASE, ATTACK, FLEE, RETURN, DEAD.
@@ -269,7 +276,7 @@ export class CreatureAIService {
       this.switchState(creature, 'IDLE', now);
       return;
     }
-    this.stepAlongPath(creature, now);
+    this.stepAlongPath(creature, now, this.exceptIds(creature));
   }
 
   // ------------------------------------------------------------ CHASE
@@ -287,6 +294,7 @@ export class CreatureAIService {
 
     const distToTarget = tileDistance(creature.position, target.position);
     if (distToTarget <= creature.definition.attackRange) {
+      this.faceToward(creature, target.position);
       this.switchState(creature, 'ATTACK', now);
       return;
     }
@@ -305,7 +313,7 @@ export class CreatureAIService {
     }
 
     this.ensurePath(creature, target.position, now, this.exceptIds(creature, target));
-    const moved = this.stepAlongPath(creature, now);
+    const moved = this.stepAlongPath(creature, now, this.exceptIds(creature, target));
     if (!moved) this.attemptGreedyStep(creature, target.position, now, this.exceptIds(creature, target));
   }
 
@@ -347,6 +355,7 @@ export class CreatureAIService {
       this.switchState(creature, 'CHASE', now);
       return;
     }
+    this.faceToward(creature, target.position);
     if (now < creature.lastAttackAt + creature.definition.attackSpeed) return;
 
     creature.lastAttackAt = now;
@@ -354,6 +363,7 @@ export class CreatureAIService {
       creatureId: creature.id,
       targetId: target.id,
       position: { ...creature.position },
+      facing: creature.facing,
       timestamp: now,
     });
 
@@ -381,10 +391,15 @@ export class CreatureAIService {
       creature.pathIndex = 0;
       creature.lastPathCalcAt = now;
     }
-    const moved = this.stepAlongPath(creature, now);
+    const moved = this.stepAlongPath(creature, now, this.exceptIds(creature, target));
     if (!moved && creature.path.length === 0) {
-      // Sem caminho para fugir: tenta um passo aleatório para não ficar preso.
-      this.attemptGreedyStep(creature, target.position, now, this.exceptIds(creature, target));
+      // Sem caminho para fugir: tenta um passo para longe da ameaça.
+      const away: Position = {
+        x: clamp(creature.position.x + sign(creature.position.x - target.position.x) * FLEE_PREFERRED_DIST, 1, 62),
+        y: clamp(creature.position.y + sign(creature.position.y - target.position.y) * FLEE_PREFERRED_DIST, 1, 62),
+        z: creature.position.z,
+      };
+      this.attemptGreedyStep(creature, away, now, this.exceptIds(creature, target));
     }
   }
 
@@ -434,7 +449,7 @@ export class CreatureAIService {
       creature.path = path ?? [];
       creature.pathIndex = 0;
     }
-    const moved = this.stepAlongPath(creature, now);
+    const moved = this.stepAlongPath(creature, now, this.exceptIds(creature));
     if (!moved) {
       this.attemptGreedyStep(creature, creature.spawnPosition, now, this.exceptIds(creature));
     }
@@ -442,13 +457,13 @@ export class CreatureAIService {
 
   // ------------------------------------------------------------ movimento
 
-  private stepAlongPath(creature: CreatureEntity, now: number): boolean {
+  private stepAlongPath(creature: CreatureEntity, now: number, exceptIds: Iterable<string>): boolean {
     if (now < creature.lastMoveAt) return false;
     const goal = creature.path[creature.pathIndex];
     if (!goal) return false;
     const dir = directionFromDelta(sign(goal.x - creature.position.x), sign(goal.y - creature.position.y));
     if (!dir) return false;
-    if (this.movement.canMove(creature.position, dir, this.exceptIds(creature))) {
+    if (this.movement.canMove(creature.position, dir, exceptIds)) {
       this.applyMove(creature, dir, now);
       creature.pathIndex++;
       creature.stuckCount = 0;
@@ -466,18 +481,26 @@ export class CreatureAIService {
   /** Movimento greedy de fallback (quando não há caminho calculado). */
   private attemptGreedyStep(creature: CreatureEntity, goal: Position, now: number, exceptIds: Iterable<string>) {
     if (now < creature.lastMoveAt) return;
-    const dx = sign(goal.x - creature.position.x);
-    const dy = sign(goal.y - creature.position.y);
-    const candidates: Direction[] = [];
-    if (dx !== 0) candidates.push(dx > 0 ? Direction.EAST : Direction.WEST);
-    if (dy !== 0) candidates.push(dy > 0 ? Direction.SOUTH : Direction.NORTH);
-    if (dx !== 0 && dy !== 0) candidates.push(directionFromDelta(dx, dy) as Direction);
-    for (const dir of candidates) {
+    const dx = goal.x - creature.position.x;
+    const dy = goal.y - creature.position.y;
+    if (dx === 0 && dy === 0) return;
+    const idealAngle = Math.atan2(dy, dx);
+    const ordered = [...ALL_DIRECTIONS].sort((a, b) => {
+      const da = Math.abs(angleDiff(Math.atan2(DIRECTION_DELTAS[a].dy, DIRECTION_DELTAS[a].dx), idealAngle));
+      const db = Math.abs(angleDiff(Math.atan2(DIRECTION_DELTAS[b].dy, DIRECTION_DELTAS[b].dx), idealAngle));
+      return da - db;
+    });
+    for (const dir of ordered) {
       if (this.movement.canMove(creature.position, dir, exceptIds)) {
         this.applyMove(creature, dir, now);
         return;
       }
     }
+  }
+
+  private faceToward(creature: CreatureEntity, position: Position) {
+    const dir = directionFromDelta(sign(position.x - creature.position.x), sign(position.y - creature.position.y));
+    if (dir) creature.facing = dir;
   }
 
   private applyMove(creature: CreatureEntity, dir: Direction, now: number) {

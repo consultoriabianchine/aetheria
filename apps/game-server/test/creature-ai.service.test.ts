@@ -3,10 +3,11 @@ import type { CreatureTarget } from '../src/game/creature/creature-ai.service';
 import { CreatureAIService } from '../src/game/creature/creature-ai.service';
 import { CreatureEntity } from '../src/game/creature/creature.entity';
 import { MovementService } from '../src/game/creature/movement.service';
+import { findPath } from '../src/game/creature/pathfinding';
 import { Direction } from '../src/game/creature/direction';
 import type { WorldMapData } from '../src/game/engine/world-map';
 import type { CreatureDefinition, MapTile, Position } from '@aetheria/types';
-import { tileKey } from '@aetheria/shared';
+import { tileKey, tileDistance } from '@aetheria/shared';
 
 /** Mundo pequeno e aberto (tudo grama) para testes determinísticos. */
 function makeWorld(width = 10, height = 10, z = 0): WorldMapData {
@@ -202,6 +203,18 @@ describe('CreatureAIService', () => {
     expect(h.creature.state).toBe('CHASE');
   });
 
+  it('foge para longe da ameaça (distância aumenta)', () => {
+    const def = makeDefinition({ canFlee: true, fleeHealthPercent: 50, attackRange: 1, movementSpeed: 1 });
+    const h = makeHarness(def, { x: 5, y: 5, z: 0 }, [makePlayer('p1', { x: 5, y: 6, z: 0 })]);
+    h.creature.health = 30;
+    step(h, 0);
+    expect(h.creature.state).toBe('FLEE');
+    const threat = { x: 5, y: 6, z: 0 };
+    const before = tileDistance(h.creature.position, threat);
+    for (let now = 100; now < 5000 && h.creature.state === 'FLEE'; now += 100) step(h, now);
+    expect(tileDistance(h.creature.position, threat)).toBeGreaterThan(before);
+  });
+
   it('retorna ao spawn (RETURN) e volta a IDLE', () => {
     const h = makeHarness(makeDefinition({ viewRange: 5, chaseRange: 8 }), { x: 5, y: 5, z: 0 }, [
       makePlayer('p1', { x: 9, y: 8, z: 0 }),
@@ -232,6 +245,29 @@ describe('CreatureAIService', () => {
     expect(['south', 'southeast', 'southwest', 'north', 'northeast', 'northwest', 'east', 'west']).toContain(dir);
     expect(move!.data.creatureId).toBe('creature-1');
     expect(move!.data.to).toBeDefined();
+  });
+
+  it('vira para o alvo ao atacar (facing no creature.attack)', () => {
+    const h = makeHarness(makeDefinition({ attackRange: 1, movementSpeed: 1 }), { x: 5, y: 5, z: 0 }, [
+      makePlayer('p1', { x: 3, y: 5, z: 0 }),
+    ]);
+    for (let now = 0; now < 5000 && h.creature.state !== 'ATTACK'; now += 100) step(h, now);
+    expect(h.creature.state).toBe('ATTACK');
+    h.creature.facing = Direction.SOUTH;
+    step(h, 999999);
+    const atk = h.broadcasts.find((b) => b.event === 'creature.attack');
+    expect(atk).toBeDefined();
+    expect(atk!.data.facing).toBe('west');
+  });
+
+  it('para em attackRange sem pisar no tile do jogador', () => {
+    const h = makeHarness(makeDefinition({ attackRange: 1, movementSpeed: 1 }), { x: 5, y: 5, z: 0 }, [
+      makePlayer('p1', { x: 5, y: 8, z: 0 }),
+    ]);
+    for (let now = 0; now < 5000 && h.creature.state !== 'ATTACK'; now += 100) step(h, now);
+    expect(h.creature.state).toBe('ATTACK');
+    expect(h.creature.position).not.toEqual({ x: 5, y: 8, z: 0 });
+    expect(tileDistance(h.creature.position, { x: 5, y: 8, z: 0 })).toBe(1);
   });
 
   describe('modo agressivo (hunts)', () => {
@@ -318,5 +354,17 @@ describe('MovementService', () => {
     const found = m.nearestWalkable({ x: 2, y: 2, z: 0 });
     expect(found).toBeTruthy();
     expect(Math.max(Math.abs(found!.x - 2), Math.abs(found!.y - 2))).toBe(1);
+  });
+
+  it('A* não corta canto na diagonal (não atravessa entre dois obstáculos)', () => {
+    const w = makeWorld(3, 3);
+    const block = (x: number, y: number) => {
+      w.byKey.get(tileKey(x, y, w.z))!.walkable = false;
+    };
+    block(1, 0);
+    block(0, 1);
+    const m = new MovementService(w);
+    const path = findPath(m, { start: { x: 1, y: 1, z: 0 }, goal: { x: 0, y: 0, z: 0 } });
+    expect(path).toBeNull();
   });
 });

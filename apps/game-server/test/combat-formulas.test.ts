@@ -25,6 +25,7 @@ const baseStats: CharacterCombatStats = {
   criticalDamage: 1.5,
   accuracy: 0,
   dodge: 0,
+  speed: 0,
   resistances: emptyResistances(),
 };
 

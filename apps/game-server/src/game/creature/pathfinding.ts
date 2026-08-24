@@ -59,9 +59,8 @@ export function findPath(movement: MovementService, req: PathRequest): Position[
   if (!movement.isWalkable(req.start)) return null;
   if (samePosition(req.start, req.goal)) return [];
 
-  const open: PathNode[] = [];
+  const open = new Map<string, PathNode>();
   const closed = new Set<string>();
-  const bestIndex = new Map<string, number>();
 
   const startNode: PathNode = {
     x: req.start.x,
@@ -73,17 +72,16 @@ export function findPath(movement: MovementService, req: PathRequest): Position[
     parent: null,
   };
   startNode.f = startNode.g + startNode.h;
-  open.push(startNode);
-  bestIndex.set(nodeKey(startNode), 0);
+  open.set(nodeKey(startNode), startNode);
 
-  while (open.length > 0) {
-    if (open.length > maxIter) return null;
-    let bestIdx = 0;
-    for (let i = 1; i < open.length; i++) {
-      if (open[i].f < open[bestIdx].f) bestIdx = i;
+  while (open.size > 0) {
+    if (open.size > maxIter) return null;
+    let best: PathNode | null = null;
+    for (const node of open.values()) {
+      if (!best || node.f < best.f) best = node;
     }
-    const node = open.splice(bestIdx, 1)[0];
-    bestIndex.delete(nodeKey(node));
+    const node = best as PathNode;
+    open.delete(nodeKey(node));
 
     if (closed.has(nodeKey(node))) continue;
     if (samePosition(node, req.goal)) return reconstruct(node);
@@ -94,23 +92,27 @@ export function findPath(movement: MovementService, req: PathRequest): Position[
       const next = { x: node.x + delta.dx, y: node.y + delta.dy, z: node.z };
       if (!movement.isWalkable(next)) continue;
       if (!movement.canOccupy(next, req.exceptIds)) continue;
+      if (delta.dx !== 0 && delta.dy !== 0) {
+        const sideA = { x: node.x + delta.dx, y: node.y, z: node.z };
+        const sideB = { x: node.x, y: node.y + delta.dy, z: node.z };
+        if (!movement.isWalkable(sideA) || !movement.isWalkable(sideB)) continue;
+      }
       const nk = nodeKey(next);
       if (closed.has(nk)) continue;
       const g = node.g + (delta.dx !== 0 && delta.dy !== 0 ? 1.414 : 1);
       if (req.maxCost !== undefined && g > req.maxCost) continue;
       const h = heuristic(next, req.goal);
       const f = g + h;
-      const existingIdx = bestIndex.get(nk);
-      if (existingIdx !== undefined && open[existingIdx]) {
-        if (g < open[existingIdx].g) {
-          open[existingIdx].g = g;
-          open[existingIdx].f = f;
-          open[existingIdx].parent = node;
+      const existing = open.get(nk);
+      if (existing) {
+        if (g < existing.g) {
+          existing.g = g;
+          existing.f = f;
+          existing.parent = node;
         }
         continue;
       }
-      const idx = open.push({ x: next.x, y: next.y, z: next.z, g, h, f, parent: node }) - 1;
-      bestIndex.set(nk, idx);
+      open.set(nk, { x: next.x, y: next.y, z: next.z, g, h, f, parent: node });
     }
   }
   return null;

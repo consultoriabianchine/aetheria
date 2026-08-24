@@ -1,7 +1,7 @@
 import { Injectable, computed, signal } from '@angular/core';
 import { Subject } from 'rxjs';
 import { SERVER_EVENTS } from '@aetheria/protocol';
-import type { CharacterInventory, CharacterSkills, CharacterSummary, CombatArchetype, HuntListEntry, HuntRunView, MapTile } from '@aetheria/types';
+import type { CharacterInventory, CharacterSkills, CharacterSummary, CombatArchetype, HuntListEntry, HuntRunView, MapTile, PlayerCombatConfig } from '@aetheria/types';
 import { WsService, WsEvent } from '../core/ws.service';
 
 export interface HudStats {
@@ -83,6 +83,7 @@ export class GameState {
   readonly hunt = signal<HuntRunView | null>(null);
   readonly huntsOpen = signal(false);
   readonly inArena = computed(() => this.hunt() !== null);
+  readonly combatConfig = signal<PlayerCombatConfig>({ targeting: 'nearest', movement: 'hold' });
 
   readonly appearanceOpen = signal(false);
   readonly availableOutfits = signal<AvailableOutfit[]>([]);
@@ -182,6 +183,7 @@ export class GameState {
         this.inGame.set(true);
         this.hunt.set(null);
         this.gold.set(w.character.gold);
+        if (w.character.combat) this.combatConfig.set(w.character.combat);
         this.requestHunts();
         break;
       }
@@ -191,6 +193,7 @@ export class GameState {
         this.world.set({ map: w.map, width: w.width, height: w.height });
         this.hunt.set(w.hunt);
         this.gold.set(w.character.gold);
+        if (w.character.combat) this.combatConfig.set(w.character.combat);
         break;
       }
       case SERVER_EVENTS.HUNT_LIST: {
@@ -269,6 +272,11 @@ export class GameState {
         this.self.update((s) =>
           s && s.id === r.entityId ? { ...s, appearance: { outfitId: r.outfitId, addonMask: r.addonMask, colors: r.colors } } : s,
         );
+        break;
+      }
+      case SERVER_EVENTS.COMBAT_CONFIG: {
+        const r = data as { combat: PlayerCombatConfig };
+        this.combatConfig.set(r.combat);
         break;
       }
       case SERVER_EVENTS.STATS_UPDATE: {
@@ -413,6 +421,12 @@ export class GameState {
     const token = this.token();
     if (!token) return;
     this.ws.send({ type: 'hunt.setLoop', token, enabled });
+  }
+
+  setCombatConfig(targeting: PlayerCombatConfig['targeting'], movement: PlayerCombatConfig['movement']) {
+    const token = this.token();
+    if (!token) return;
+    this.ws.send({ type: 'combat.config', token, targeting, movement });
   }
 
   toggleHunts() {

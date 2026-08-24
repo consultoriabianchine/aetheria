@@ -36,6 +36,7 @@ model Character {
   huntProgress   HuntProgress[]
   account        Account                  @relation(fields: [accountId], references: [id], onDelete: Cascade)
   appearance     CharacterAppearance?
+  combatConfig   CharacterCombatConfig?
   outfits        CharacterOutfit[]
   createdAt      DateTime                 @default(now())
 
@@ -128,6 +129,7 @@ model ItemDefinition {
   criticalDamage    Float    @default(0) @map("critical_damage")
   accuracy          Float    @default(0)
   dodge             Float    @default(0)
+  speed             Float    @default(0)
   weapon            Json?
   ammo              Json?
   skillBonuses      Json?    @map("skill_bonuses")
@@ -548,6 +550,17 @@ model CharacterAppearance {
   character       Character @relation(fields: [character_id], references: [id], onDelete: Cascade)
 
   @@map("character_appearance")
+}
+
+model CharacterCombatConfig {
+  id           String    @id @default(cuid())
+  character_id String    @unique @map("character_id")
+  targeting    String    @default("nearest")
+  movement     String    @default("hold")
+  updated_at   DateTime  @updatedAt @map("updated_at")
+  character    Character @relation(fields: [character_id], references: [id], onDelete: Cascade)
+
+  @@map("character_combat_config")
 }
 
 model CharacterOutfit {

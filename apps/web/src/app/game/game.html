@@ -254,6 +254,25 @@
           <button class="wide-action" type="button">Config</button>
         </section>
 
+        <section class="game-panel compact-panel">
+          <div class="panel-header"><h2>Combate</h2></div>
+          <div class="metric-row"><span>Alvo</span>
+            <select class="combat-select" (change)="onCombatTargeting($any($event.target).value)">
+              <option value="nearest" [selected]="state.combatConfig().targeting === 'nearest'">Mais perto</option>
+              <option value="furthest" [selected]="state.combatConfig().targeting === 'furthest'">Mais longe</option>
+              <option value="lowestHp" [selected]="state.combatConfig().targeting === 'lowestHp'">Menos HP</option>
+              <option value="highestHp" [selected]="state.combatConfig().targeting === 'highestHp'">Mais HP</option>
+            </select>
+          </div>
+          <div class="metric-row"><span>Movimento</span>
+            <select class="combat-select" (change)="onCombatMovement($any($event.target).value)">
+              <option value="kite" [selected]="state.combatConfig().movement === 'kite'">Correr (kite)</option>
+              <option value="hold" [selected]="state.combatConfig().movement === 'hold'">Parado</option>
+              <option value="engage" [selected]="state.combatConfig().movement === 'engage'">Avançar</option>
+            </select>
+          </div>
+        </section>
+
         <section class="game-panel inventory-preview">
           <div class="panel-header"><h2>Backpack</h2><button class="panel-action" type="button" (click)="invOpen.set(true)">Inventário</button></div>
           <div class="inventory-meta"><span>Slots</span><b>{{ backpackCount() }} / 8</b></div>

@@ -192,6 +192,7 @@ type ItemDefinitionRow = {
   criticalDamage: number;
   accuracy: number;
   dodge: number;
+  speed: number;
   weapon: unknown;
   ammo: unknown;
   skillBonuses: unknown;
@@ -246,6 +247,7 @@ export function rowToItemDefinition(row: ItemDefinitionRow): ItemDefinition {
     criticalDamage: row.criticalDamage || undefined,
     accuracy: row.accuracy || undefined,
     dodge: row.dodge || undefined,
+    speed: row.speed || undefined,
     skillBonuses: isObject(row.skillBonuses) ? row.skillBonuses : undefined,
     resistances: isObject(row.resistances) ? row.resistances : undefined,
   };

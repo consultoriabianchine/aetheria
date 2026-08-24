@@ -27,6 +27,7 @@ export function aggregateCharacterCombatStats(input: {
     criticalDamage: COMBAT_FORMULA_CONFIG.baseCriticalDamage,
     accuracy: 0,
     dodge: 0,
+    speed: 0,
     resistances: emptyResistances(),
   };
 
@@ -43,6 +44,7 @@ export function aggregateCharacterCombatStats(input: {
     stats.criticalDamage += combat?.criticalDamage ?? 0;
     stats.accuracy += combat?.accuracy ?? 0;
     stats.dodge += combat?.dodge ?? 0;
+    stats.speed += combat?.speed ?? 0;
     stats.meleeSkill += combat?.skillBonuses?.melee ?? 0;
     stats.distanceSkill += combat?.skillBonuses?.distance ?? 0;
     stats.magicLevel += combat?.skillBonuses?.magic ?? 0;

@@ -52,6 +52,15 @@ export interface CharacterStats {
 
 export type CombatArchetype = 'mage' | 'warrior' | 'archer';
 
+export type CombatTargetingMode = 'nearest' | 'furthest' | 'lowestHp' | 'highestHp';
+
+export type CombatMovementMode = 'kite' | 'hold' | 'engage';
+
+export interface PlayerCombatConfig {
+  targeting: CombatTargetingMode;
+  movement: CombatMovementMode;
+}
+
 export type DamageType = 'physical' | 'fire' | 'ice' | 'energy' | 'earth' | 'holy' | 'death' | 'arcane';
 
 export type CombatSkill = 'melee' | 'distance' | 'magic';
@@ -169,6 +178,7 @@ export interface ItemCombatStats {
   accuracy?: number;
   dodge?: number;
   attackSpeedModifier?: number;
+  speed?: number;
   skillBonuses?: Partial<Record<CombatSkill, number>>;
   resistances?: Partial<Record<DamageType, number>>;
 }
@@ -225,6 +235,7 @@ export interface CharacterCombatStats {
   criticalDamage: number;
   accuracy: number;
   dodge: number;
+  speed: number;
   resistances: Record<DamageType, number>;
 }
 
@@ -273,7 +284,10 @@ export interface CharacterSummary {
   maxMana: number;
   position: Position;
   skills: CharacterSkills;
+  speed?: number;
+  movementSpeed?: number;
   appearance?: PlayerAppearance;
+  combat?: PlayerCombatConfig;
 }
 
 export type MonsterState = 'IDLE' | 'WANDER' | 'CHASE' | 'ATTACK' | 'RETURN' | 'DEAD';

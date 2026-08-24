@@ -16,10 +16,10 @@ import {
   LOOT_POUCH_EXPANSION,
   LOOT_POUCH_SIZE,
   LOOT_LIFETIME_MS,
-  MOVE_INTERVAL_MS,
   NPC_INTERACT_RANGE,
   NPC_TEMPLATES,
   PICKUP_RANGE,
+  PLAYER_AI,
   SPAWN_POINT,
   TICK_MS,
   VIEW_DISTANCE_X,
@@ -39,6 +39,7 @@ import type {
   ItemStack,
   ItemVisualEffects,
   PlayerAppearance,
+  PlayerCombatConfig,
   Position,
 } from '@aetheria/types';
 import { getItemDef, loadItemCatalogFromDatabase } from './item-catalog';
@@ -47,6 +48,7 @@ import { GamePlayer, GroundItem, NpcEntity } from './world';
 import { STORE, Store, StoredCharacter } from '../store/store';
 import { PrismaService } from '../../prisma/prisma.service';
 import { CreatureAIHooks, CreatureAIService, CreatureTarget } from '../creature/creature-ai.service';
+import { PlayerCombatAIService } from '../combat/player-combat-ai';
 import { CreatureDataService } from '../creature/creature-data.service';
 import { CreatureEntity } from '../creature/creature.entity';
 import { CreatureManager } from '../creature/creature-manager.service';
@@ -91,6 +93,7 @@ export class GameEngine implements OnModuleDestroy {
   private movement: MovementService;
   private creatures: CreatureManager;
   private ai: CreatureAIService;
+  private playerAI = new PlayerCombatAIService();
   private loop: GameLoop;
   private creatureData: CreatureDataService;
   private creatureDefinitions = new Map<string, import('@aetheria/types').CreatureDefinition>();
@@ -313,6 +316,7 @@ export class GameEngine implements OnModuleDestroy {
 
     const player = new GamePlayer(stored);
     player.socketId = socketId;
+    player.recomputeSpeed(getItemDef);
     this.players.set(player.id, player);
     this.playerBySocket.set(socketId, player.id);
 
@@ -426,6 +430,21 @@ export class GameEngine implements OnModuleDestroy {
     this.emitTo(socketId, 'appearance.changed', payload);
     this.emitOthers(socketId, 'appearance.changed', payload);
     this.logger.log(`Jogador ${player.name} mudou a aparência para o outfit ${outfitId}.`);
+  }
+
+  handleCombatConfig(socketId: string, token: string, targeting: unknown, movement: unknown) {
+    void this.verifySession(socketId, token).then(async (session) => {
+      if (!session) return;
+      const player = session.player;
+      const t = targeting as PlayerCombatConfig['targeting'];
+      const m = movement as PlayerCombatConfig['movement'];
+      if (!['nearest', 'furthest', 'lowestHp', 'highestHp'].includes(t)) return;
+      if (!['kite', 'hold', 'engage'].includes(m)) return;
+      player.combat = { targeting: t, movement: m };
+      this.playerAI.clear(player.id);
+      await this.persistPlayer(player);
+      this.emitTo(socketId, 'combat.config', { combat: { ...player.combat } });
+    });
   }
 
   private async availableOutfits(characterId: string) {
@@ -580,6 +599,7 @@ export class GameEngine implements OnModuleDestroy {
     }
     player.inventory[slotIndex] = null;
     player.equipment[slot] = { itemId: stack.itemId, quantity: 1 };
+    player.recomputeSpeed(getItemDef);
     this.emitInventory(player);
     this.emitStats(player);
   }
@@ -596,6 +616,7 @@ export class GameEngine implements OnModuleDestroy {
     }
     player.equipment[slot as keyof CharacterEquipment] = undefined;
     player.inventory[idx] = { itemId: stack.itemId, quantity: 1 };
+    player.recomputeSpeed(getItemDef);
     this.emitInventory(player);
     this.emitStats(player);
   }
@@ -726,9 +747,12 @@ export class GameEngine implements OnModuleDestroy {
       maxMana: c.maxMana,
       position: { ...c.position },
       skills: { ...c.skills },
+      speed: 'speed' in c ? c.speed : undefined,
+      movementSpeed: 'moveIntervalMs' in c ? c.moveIntervalMs : undefined,
       appearance: c.appearance
         ? { ...c.appearance }
         : this.defaultPlayerAppearance(),
+      combat: c.combat ? { ...c.combat } : undefined,
     };
   }
 
@@ -836,6 +860,8 @@ export class GameEngine implements OnModuleDestroy {
       level: player.level,
       experience: player.experience,
       skills: player.skills,
+      speed: player.speed,
+      movementSpeed: player.moveIntervalMs,
       skillProgress: player.skillProgress.map((progress) => ({ ...progress })),
     });
   }
@@ -877,6 +903,7 @@ export class GameEngine implements OnModuleDestroy {
       criticalDamage: COMBAT_FORMULA_CONFIG.baseCriticalDamage,
       accuracy: 0,
       dodge: 0,
+      speed: 0,
       resistances: emptyResistances(),
     };
   }
@@ -906,6 +933,16 @@ export class GameEngine implements OnModuleDestroy {
       return;
     }
     this.emitAll(event, data);
+  }
+
+  private emitHeal(sourceId: string, target: GamePlayer, amount: number, critical = false) {
+    this.emitCombatEvent(target, 'combat.heal', {
+      sourceId,
+      targetId: target.id,
+      amount,
+      critical,
+      targetHealth: target.health,
+    });
   }
 
   private dealDamage(attacker: GamePlayer, target: GamePlayer | CreatureEntity, now: number): boolean {
@@ -942,6 +979,7 @@ export class GameEngine implements OnModuleDestroy {
       attackerId: attacker.id,
       targetId: target.id,
       amount,
+      damageType: attack.damageType,
       critical: attack.critical,
       targetHealth: target.health,
       delayMs: travelTimeMs || undefined,
@@ -979,6 +1017,7 @@ export class GameEngine implements OnModuleDestroy {
       attackerId: creature.id,
       targetId: player.id,
       amount: reduced,
+      damageType: 'physical',
       critical,
       targetHealth: player.health,
     });
@@ -1011,6 +1050,7 @@ export class GameEngine implements OnModuleDestroy {
         if (!player.socketId) continue;
         this.regeneratePlayer(player, now);
         this.processPlayerMove(player, now);
+        this.processPlayerCombatAI(player, now);
         this.processPlayerAttack(player, now);
       }
       this.creatures.updateCreatures(this.ai, now);
@@ -1054,7 +1094,7 @@ export class GameEngine implements OnModuleDestroy {
     if (this.hunts.getRun(player.id)) return;
     if (now < player.nextMoveAt) return;
     if (this.tryStep(player, player.moveDir)) {
-      player.nextMoveAt = now + MOVE_INTERVAL_MS;
+      player.nextMoveAt = now + player.moveIntervalMs;
       this.emitTo(player.socketId ?? '', 'player.moved', { position: { ...player.position } });
       this.emitOthers(player.socketId ?? '', 'entity.moved', { id: player.id, position: { ...player.position } });
     } else {
@@ -1062,12 +1102,23 @@ export class GameEngine implements OnModuleDestroy {
     }
   }
 
+  private processPlayerCombatAI(player: GamePlayer, now: number) {
+    const run = this.hunts.getRun(player.id);
+    if (!run || run.status !== 'active') {
+      this.playerAI.clear(player.id);
+      return;
+    }
+    const weaponItem = player.equipment.weapon ? getItemDef(player.equipment.weapon.itemId) : undefined;
+    const attackRange = getWeaponDefinition(weaponItem)?.range ?? 1;
+    if (this.playerAI.update(player, run, now, attackRange)) {
+      this.emitTo(player.socketId ?? '', 'player.moved', { position: { ...player.position }, facing: player.facing });
+    }
+  }
+
   private processPlayerAttack(player: GamePlayer, now: number) {
     const run = this.hunts.getRun(player.id);
     if (run) {
-      if (!player.targetId) {
-        player.targetId = this.nearestArenaCreature(run, player);
-      }
+      player.targetId = this.playerAI.selectTarget(run.creatures.getAll(), player)?.id ?? null;
       if (!player.targetId) return;
     }
     if (!player.targetId) return;
@@ -1091,21 +1142,6 @@ export class GameEngine implements OnModuleDestroy {
       if (target instanceof CreatureEntity) this.creatureKilled(player, target, now);
       else this.playerKilled(target as GamePlayer, now);
     }
-  }
-
-  private nearestArenaCreature(run: HuntRun, player: GamePlayer): string | null {
-    let bestId: string | null = null;
-    let bestDist = Infinity;
-    for (const c of run.creatures.getAll()) {
-      if (c.state === 'DEAD') continue;
-      if (c.position.z !== player.position.z) continue;
-      const d = tileDistance(player.position, c.position);
-      if (d < bestDist) {
-        bestDist = d;
-        bestId = c.id;
-      }
-    }
-    return bestId;
   }
 
   private trainAttackSkill(player: GamePlayer) {
@@ -1192,6 +1228,7 @@ export class GameEngine implements OnModuleDestroy {
       player.maxMana = calculateMaxMana(player.level, archetype);
       player.attackBase = player.level + 8;
       player.defenseBase = 5 + Math.floor(player.level / 2);
+      player.recomputeSpeed(getItemDef);
       player.health = player.maxHealth;
       player.mana = player.maxMana;
       this.emitTo(player.socketId ?? '', 'chat.message', { channel: 'local', from: 'Sistema', text: `Você subiu para o nível ${player.level}!` });

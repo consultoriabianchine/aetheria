@@ -1,4 +1,4 @@
-import type { CharacterEquipment, CharacterSkills, CombatArchetype, HuntProgress, ItemStack, PlayerAppearance, Position } from '@aetheria/types';
+import type { CharacterEquipment, CharacterSkills, CombatArchetype, HuntProgress, ItemStack, PlayerAppearance, PlayerCombatConfig, Position } from '@aetheria/types';
 
 export interface AccountRecord {
   id: string;
@@ -26,6 +26,7 @@ export interface StoredCharacter {
   lootPouch: (ItemStack | null)[];
   equipment: CharacterEquipment;
   appearance?: PlayerAppearance;
+  combat?: PlayerCombatConfig;
 }
 
 export type PromotionError =

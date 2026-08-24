@@ -120,4 +120,9 @@ export class GameGateway implements OnGatewayConnection, OnGatewayDisconnect {
   async onAppearanceSave(socket: Socket, payload: { token: string; outfitId: number; addonMask: number; colors: { head: number; primary: number; secondary: number; detail: number } }) {
     await this.engine.handleAppearanceSave(socket.id, payload.token, payload.outfitId, payload.addonMask, payload.colors);
   }
+
+  @SubscribeMessage('combat.config')
+  onCombatConfig(socket: Socket, payload: { token: string; targeting: string; movement: string }) {
+    this.engine.handleCombatConfig(socket.id, payload.token, payload.targeting, payload.movement);
+  }
 }

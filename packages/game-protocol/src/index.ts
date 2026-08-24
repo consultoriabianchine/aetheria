@@ -11,6 +11,8 @@ import type {
   CombatArchetype,
   ItemImpactVisual,
   ItemProjectileVisual,
+  PlayerCombatConfig,
+  DamageType,
 } from '@aetheria/types';
 
 export type ClientMessage =
@@ -32,7 +34,8 @@ export type ClientMessage =
   | { type: 'hunt.stop'; token: string }
   | { type: 'hunt.setLoop'; token: string; enabled: boolean }
   | { type: 'appearance.list'; token: string }
-  | { type: 'appearance.save'; token: string; outfitId: number; addonMask: number; colors: { head: number; primary: number; secondary: number; detail: number } };
+  | { type: 'appearance.save'; token: string; outfitId: number; addonMask: number; colors: { head: number; primary: number; secondary: number; detail: number } }
+  | { type: 'combat.config'; token: string; targeting: PlayerCombatConfig['targeting']; movement: PlayerCombatConfig['movement'] };
 
 export type ServerMessage =
   | { type: 'auth.loginResult'; ok: boolean; error?: string; token?: string; accountId?: string; characters?: CharacterSummary[] }
@@ -43,17 +46,18 @@ export type ServerMessage =
   | { type: 'entity.moved'; id: string; position: Position }
   | { type: 'entity.removed'; id: string }
   | { type: 'entity.health'; id: string; health: number; maxHealth: number }
-  | { type: 'player.moved'; position: Position }
+  | { type: 'player.moved'; position: Position; facing?: Direction }
   | { type: 'creature.spawn'; creatureId: string; definitionId: string; definitionCreatureId?: number; slug: string; name: string; position: Position; facing: Direction; state: CreatureState; health: number; maxHealth: number; level: number; viewRange?: number; chaseRange?: number; attackRange?: number; movementSpeed?: number; description?: string; isBoss?: boolean }
   | { type: 'creature.move'; creatureId: string; from: Position; to: Position; facing: Direction; state: CreatureState; timestamp: number; path?: Position[] }
-  | { type: 'creature.attack'; creatureId: string; targetId: string; position: Position; timestamp: number }
+  | { type: 'creature.attack'; creatureId: string; targetId: string; position: Position; facing: Direction; timestamp: number }
   | { type: 'creature.damage'; creatureId: string; attackerId: string; amount: number; critical: boolean; health: number; maxHealth: number }
   | { type: 'creature.death'; creatureId: string; experience: number }
   | { type: 'creature.remove'; creatureId: string }
   | { type: 'combat.projectile'; attackerId: string; targetId: string; from: Position; to: Position; projectile: ItemProjectileVisual; impact?: ItemImpactVisual; travelTimeMs: number }
-  | { type: 'combat.damage'; attackerId: string; targetId: string; amount: number; critical: boolean; targetHealth: number; delayMs?: number }
+  | { type: 'combat.damage'; attackerId: string; targetId: string; amount: number; damageType: DamageType; critical: boolean; targetHealth: number; delayMs?: number }
+  | { type: 'combat.heal'; sourceId: string; targetId: string; amount: number; critical: boolean; targetHealth: number; delayMs?: number }
   | { type: 'combat.death'; entityId: string; experience?: number }
-  | { type: 'stats.update'; health: number; maxHealth: number; mana: number; maxMana: number; level: number; experience: number; skills: CharacterSkills; skillProgress?: { skillType: keyof CharacterSkills; level: number; experience: number }[] }
+  | { type: 'stats.update'; health: number; maxHealth: number; mana: number; maxMana: number; level: number; experience: number; skills: CharacterSkills; speed?: number; movementSpeed?: number; skillProgress?: { skillType: keyof CharacterSkills; level: number; experience: number }[] }
   | { type: 'skills.update'; skills: CharacterSkills }
   | { type: 'inventory.update'; inventory: CharacterInventory }
   | { type: 'loot.spawned'; entityId: string; itemId: string; name: string; quantity: number; position: Position }
@@ -72,7 +76,8 @@ export type ServerMessage =
   | { type: 'hunt.returnedToCity' }
   | { type: 'gold.update'; gold: number }
   | { type: 'appearance.list'; outfits: { outfitId: number; name: string; slug: string; category: string; supportsColors: boolean; supportsAddons: boolean }[] }
-  | { type: 'appearance.changed'; entityId: string; outfitId: number; addonMask: number; colors: { head: number; primary: number; secondary: number; detail: number } };
+  | { type: 'appearance.changed'; entityId: string; outfitId: number; addonMask: number; colors: { head: number; primary: number; secondary: number; detail: number } }
+  | { type: 'combat.config'; combat: PlayerCombatConfig };
 
 export interface WsEnvelope {
   event: string;
@@ -103,6 +108,7 @@ export const SERVER_EVENTS = {
   CREATURE_DEATH: 'creature.death',
   CREATURE_REMOVE: 'creature.remove',
   COMBAT_DAMAGE: 'combat.damage',
+  COMBAT_HEAL: 'combat.heal',
   COMBAT_PROJECTILE: 'combat.projectile',
   COMBAT_DEATH: 'combat.death',
   STATS_UPDATE: 'stats.update',
@@ -125,6 +131,7 @@ export const SERVER_EVENTS = {
   GOLD_UPDATE: 'gold.update',
   APPEARANCE_LIST: 'appearance.list',
   APPEARANCE_CHANGED: 'appearance.changed',
+  COMBAT_CONFIG: 'combat.config',
 } as const;
 
 export const CLIENT_EVENTS = {
@@ -147,6 +154,7 @@ export const CLIENT_EVENTS = {
   HUNT_SET_LOOP: 'hunt.setLoop',
   APPEARANCE_LIST: 'appearance.list',
   APPEARANCE_SAVE: 'appearance.save',
+  COMBAT_CONFIG: 'combat.config',
 } as const;
 
 export type { CreatureState, Direction, Position };

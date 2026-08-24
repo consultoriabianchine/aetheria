@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { INVENTORY_SIZE, LOOT_POUCH_SIZE } from '@aetheria/config';
 import { Prisma } from '@aetheria/database';
 import { PrismaService } from '../../prisma/prisma.service';
-import type { CharacterEquipment, CombatArchetype, HuntProgress, ItemStack } from '@aetheria/types';
+import type { CharacterEquipment, CombatArchetype, HuntProgress, ItemStack, PlayerCombatConfig } from '@aetheria/types';
 import type { AccountRecord, StoredCharacter, Store } from './store';
 
 interface CharacterRow {
@@ -47,6 +47,7 @@ interface CharacterRow {
     secondary_color: number;
     detail_color: number;
   } | null;
+  combatConfig: { targeting: string; movement: string } | null;
 }
 
 function clampInt(value: unknown, fallback: number): number {
@@ -62,6 +63,7 @@ const INCLUDE = {
   inventory: true,
   equipment: true,
   appearance: true,
+  combatConfig: true,
 } as const;
 
 /** Store persistente em PostgreSQL via Prisma. */
@@ -137,6 +139,14 @@ export class PrismaStore implements Store {
               },
             }
           : undefined,
+        combatConfig: data.combat
+          ? {
+              create: {
+                targeting: data.combat.targeting,
+                movement: data.combat.movement,
+              },
+            }
+          : undefined,
       },
       include: INCLUDE,
     })) as unknown as CharacterRow;
@@ -197,6 +207,20 @@ export class PrismaStore implements Store {
                   primary_color: character.appearance.colors.primary,
                   secondary_color: character.appearance.colors.secondary,
                   detail_color: character.appearance.colors.detail,
+                },
+              },
+            }
+          : undefined,
+        combatConfig: character.combat
+          ? {
+              upsert: {
+                create: {
+                  targeting: character.combat.targeting,
+                  movement: character.combat.movement,
+                },
+                update: {
+                  targeting: character.combat.targeting,
+                  movement: character.combat.movement,
                 },
               },
             }
@@ -334,6 +358,12 @@ export class PrismaStore implements Store {
               secondary: clampInt(row.appearance.secondary_color, 0),
               detail: clampInt(row.appearance.detail_color, 0),
             },
+          }
+        : undefined,
+      combat: row.combatConfig
+        ? {
+            targeting: (row.combatConfig.targeting as PlayerCombatConfig['targeting']) ?? 'nearest',
+            movement: (row.combatConfig.movement as PlayerCombatConfig['movement']) ?? 'hold',
           }
         : undefined,
     };

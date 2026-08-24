@@ -3,13 +3,15 @@ import type {
   CharacterSkills,
   CombatArchetype,
   Direction,
+  ItemDefinition,
   ItemStack,
   NpcDialogue,
   PlayerAppearance,
+  PlayerCombatConfig,
   Position,
 } from '@aetheria/types';
 import type { StoredCharacter } from '../store/store';
-import { LOOT_POUCH_SIZE } from '@aetheria/config';
+import { LOOT_POUCH_SIZE, PLAYER_AI, PLAYER_SPEED, SPEED_PER_LEVEL, playerMoveInterval } from '@aetheria/config';
 
 export interface NpcEntity {
   id: string;
@@ -47,8 +49,12 @@ export class GamePlayer {
   lootPouch: (ItemStack | null)[];
   equipment: CharacterEquipment;
   appearance: PlayerAppearance | undefined;
+  combat: PlayerCombatConfig;
+  facing: Direction = 'south';
   attackBase: number;
   defenseBase: number;
+  speed: number;
+  moveIntervalMs: number;
   moveDir: Direction | null = null;
   nextMoveAt = 0;
   attackCooldownUntil = 0;
@@ -92,9 +98,24 @@ export class GamePlayer {
       ammo: character.equipment.ammo ? { ...character.equipment.ammo } : undefined,
     };
     this.appearance = character.appearance ? { ...character.appearance } : undefined;
+    const profile = PLAYER_AI[character.archetype];
+    this.combat = character.combat ? { ...character.combat } : { targeting: profile.targeting, movement: profile.movement };
     this.attackBase = character.level + 8;
     this.defenseBase = 5 + Math.floor(character.level / 2);
+    this.speed = PLAYER_SPEED[character.archetype] + SPEED_PER_LEVEL * Math.max(0, character.level - 1);
+    this.moveIntervalMs = playerMoveInterval(this.speed);
     this.lastRegenAt = Date.now();
+  }
+
+  /** Recalcula velocidade (base + level + equipamento) e o intervalo de passo. */
+  recomputeSpeed(getItem: (itemId: string) => ItemDefinition | undefined) {
+    let speed = PLAYER_SPEED[this.archetype] + SPEED_PER_LEVEL * Math.max(0, this.level - 1);
+    for (const stack of Object.values(this.equipment)) {
+      if (!stack) continue;
+      speed += getItem(stack.itemId)?.combatStats?.speed ?? 0;
+    }
+    this.speed = speed;
+    this.moveIntervalMs = playerMoveInterval(speed);
   }
 
   toStored(): StoredCharacter {
@@ -118,6 +139,7 @@ export class GamePlayer {
       lootPouch: this.lootPouch.map((s) => (s ? { ...s } : null)),
       equipment: this.toEquipment(),
       appearance: this.appearance ? { ...this.appearance } : undefined,
+      combat: { ...this.combat },
     };
   }
 

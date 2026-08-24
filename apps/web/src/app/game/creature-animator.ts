@@ -32,6 +32,7 @@ export class CreatureAnimator {
   private fallback: AnimType = 'idle';
   private startedAt = 0;
   private deathLocked = false;
+  private walkCycleMs = 0;
 
   constructor(
     readonly config: AnimConfig,
@@ -47,6 +48,11 @@ export class CreatureAnimator {
 
   get currentType(): AnimType {
     return this.current;
+  }
+
+  /** Duração do ciclo completo da caminhada (ms). 0 = usa frameDurationMs do config. */
+  setWalkCycleMs(ms: number) {
+    this.walkCycleMs = ms;
   }
 
   /** Troca de animação sem reiniciar se for a mesma (ex.: walk contínuo). */
@@ -96,7 +102,10 @@ export class CreatureAnimator {
 
   private computeIndex(seq: AnimSequence, now: number): number {
     const len = seq.frames.length;
-    const dur = Math.max(1, seq.frameDurationMs);
+    const dur =
+      seq.animation === 'walk' && this.walkCycleMs > 0
+        ? this.walkCycleMs / len
+        : Math.max(1, seq.frameDurationMs);
     const raw = Math.floor((now - this.startedAt) / dur);
     if (seq.playbackMode === 'pingpong') {
       const period = Math.max(1, len * 2 - 2);

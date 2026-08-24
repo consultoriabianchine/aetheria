@@ -23,6 +23,7 @@ export interface AdminItemDefinition {
     criticalDamage?: number;
     accuracy?: number;
     dodge?: number;
+    speed?: number;
   };
   weapon?: { weaponType: WeaponType; range: number; damageType?: DamageType; allowedAmmoType?: AmmoType };
   ammo?: { ammoType: AmmoType; attackPower: number; damageType?: DamageType };
@@ -50,6 +51,7 @@ export interface AdminItemInput {
   criticalDamage?: number;
   accuracy?: number;
   dodge?: number;
+  speed?: number;
   weaponType?: WeaponType | null;
   ammoType?: AmmoType | null;
   damageType?: DamageType | null;

@@ -2,7 +2,7 @@ import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, inject, signal
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import Phaser from 'phaser';
-import type { CharacterEquipment, CharacterSkills, ItemDefinition, ItemStack } from '@aetheria/types';
+import type { CharacterEquipment, CharacterSkills, ItemDefinition, ItemStack, PlayerCombatConfig } from '@aetheria/types';
 import { APPEARANCE_PALETTE, LOOT_POUCH_EXPANSION, SKILL_PROGRESSION_CONFIG } from '@aetheria/config';
 import { WsService } from '../core/ws.service';
 import { ChatLine, GameState } from './game-state';
@@ -413,6 +413,14 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
 
   toggleHunts() {
     this.state.toggleHunts();
+  }
+
+  onCombatTargeting(value: string) {
+    this.state.setCombatConfig(value as PlayerCombatConfig['targeting'], this.state.combatConfig().movement);
+  }
+
+  onCombatMovement(value: string) {
+    this.state.setCombatConfig(this.state.combatConfig().targeting, value as PlayerCombatConfig['movement']);
   }
 
   openAppearance() {

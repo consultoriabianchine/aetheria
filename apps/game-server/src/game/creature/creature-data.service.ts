@@ -1,14 +1,9 @@
 import { Injectable, Logger } from '@nestjs/common';
 import type { CreatureType } from '@aetheria/types';
-import { TICK_MS } from '@aetheria/config';
+import { snapToTick } from '@aetheria/config';
 import { CREATURE_SEED, CREATURE_SPAWN_SEED } from '../../../data/creature-seed';
 import { PrismaService } from '../../prisma/prisma.service';
 import type { CreatureData, CreatureDefinition, CreatureSpawnDefinition } from './creature-definition';
-
-/** Arredonda a velocidade para múltiplo do TICK_MS (passos uniformes, sem "anda-e-para"). */
-function snapToTick(ms: number): number {
-  return Math.max(TICK_MS, Math.round(ms / TICK_MS) * TICK_MS);
-}
 
 /**
  * Carrega definições, loot e spawns de criaturas do PostgreSQL
