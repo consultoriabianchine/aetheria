@@ -8,10 +8,13 @@ import { CreatureRegistry } from './creature-registry.service';
 import { CombatAdminController } from './combat-admin.controller';
 import { ItemAdminController } from './item-admin.controller';
 import { ItemCatalogController } from '../engine/item-catalog.controller';
+import { AbilityAdminController } from './ability-admin.controller';
+import { AbilityRegistry } from '../combat/ability-registry';
+import { MonsterAbilityAdminController } from './monster-ability-admin.controller';
 
 @Module({
-  controllers: [AdminController, CreatureAssetController, CombatAdminController, ItemAdminController, ItemCatalogController],
-  providers: [AdminAuthGuard, CreatureAssetService, CreatureAnimationService, CreatureRegistry],
+  controllers: [AdminController, CreatureAssetController, CombatAdminController, ItemAdminController, ItemCatalogController, AbilityAdminController, MonsterAbilityAdminController],
+  providers: [AdminAuthGuard, CreatureAssetService, CreatureAnimationService, CreatureRegistry, AbilityRegistry],
   exports: [CreatureRegistry],
 })
 export class AdminModule {}

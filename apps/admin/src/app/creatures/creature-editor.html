@@ -1,4 +1,10 @@
 <div class="editor-head">
+  <nav class="editor-tabs">
+    <button type="button" [class.active]="activeTab() === 'overview'" (click)="activeTab.set('overview')">Dados</button>
+    <button type="button" [class.active]="activeTab() === 'elements'" (click)="activeTab.set('elements')">Resistências e fraquezas</button>
+    <button type="button" [class.active]="activeTab() === 'loot'" (click)="activeTab.set('loot')">Loot</button>
+    <button type="button" [class.active]="activeTab() === 'animation'" (click)="activeTab.set('animation')">Animação</button>
+  </nav>
   <a routerLink="/creatures">← Criaturas</a>
   @if (creature(); as c) {
     <h1>#{{ c.creatureId }} {{ c.name }}</h1>
@@ -19,10 +25,63 @@
   <p class="error">{{ error() }}</p>
 }
 
-<div class="editor-grid">
-  <!-- Coluna esquerda: spritesheet -->
-  <section class="panel">
-    <h2>Spritesheet</h2>
+@if (activeTab() === 'overview') {
+  <section class="panel creature-stats-panel">
+    <h2>Dados de combate</h2>
+    <div class="inspector">
+      @for (field of ['level', 'health', 'attack', 'defense', 'experience', 'attackSpeed', 'attackRange', 'viewRange', 'chaseRange']; track field) {
+        <div class="field"><label>{{ field }}</label><input type="number" [value]="stats()[field]" (change)="setStat(field, +$any($event.target).value)" min="0" /></div>
+      }
+    </div>
+    <button class="primary" type="button" (click)="saveStats()" [disabled]="saving()">Salvar dados</button>
+  </section>
+}
+@if (activeTab() === 'loot') {
+  <section class="panel creature-loot-panel">
+    <h2>Loot</h2>
+    @for (entry of loot(); track $index) {
+      <div class="loot-row">
+        <input [value]="entry.itemName" (input)="updateLoot($index, { itemName: $any($event.target).value })" />
+        <input type="number" min="0" max="100" [value]="entry.chance" (change)="updateLoot($index, { chance: +$any($event.target).value })" />
+        <input type="number" min="1" [value]="entry.minQuantity" (change)="updateLoot($index, { minQuantity: +$any($event.target).value })" />
+        <input type="number" min="1" [value]="entry.maxQuantity" (change)="updateLoot($index, { maxQuantity: +$any($event.target).value })" />
+        <button type="button" (click)="removeLoot($index)">Remover</button>
+      </div>
+    }
+    <div class="row"><button type="button" (click)="addLoot()">Adicionar loot</button><button class="primary" type="button" (click)="saveLoot()" [disabled]="saving()">Salvar loot</button></div>
+  </section>
+}
+
+@if (activeTab() === 'elements') {
+  <div class="section-block elements-block">
+    <div class="section-heading"><span>Combate elemental</span><strong>Resistências e fraquezas</strong></div>
+    <section class="panel">
+      <h2>Resistências e fraquezas</h2>
+    <div class="affinity-table">
+      @for (type of damageTypes; track type) {
+        <div class="affinity-row">
+          <b>{{ type }}</b>
+          <input type="number" min="-100" max="200" step="1" [value]="(affinities()[type]?.modifier ?? 0) * 100" (change)="setAffinity(type, +$any($event.target).value / 100, affinities()[type]?.immune ?? false)" />
+          <span>{{ affinityState(type) }}</span>
+          <label><input type="checkbox" [checked]="affinities()[type]?.immune" (change)="setAffinity(type, affinities()[type]?.modifier ?? 0, $any($event.target).checked)" /> Imune</label>
+        </div>
+      }
+    </div>
+    <div class="row">
+      <button (click)="resetAffinities()">Resetar para neutro</button>
+      <button class="primary" (click)="saveAffinities()" [disabled]="saving()">Salvar elementos</button>
+    </div>
+    </section>
+  </div>
+}
+
+@if (activeTab() === 'animation') {
+  <div class="section-block animation-block">
+    <div class="section-heading"><span>Atelier visual</span><strong>Animações</strong></div>
+    <div class="editor-grid">
+      <!-- Coluna esquerda: spritesheet -->
+      <section class="panel">
+        <h2>Spritesheet</h2>
     <label class="upload">
       <span>Arraste/importe a spritesheet (PNG/WEBP)</span>
       <input type="file" accept="image/png,image/webp" (change)="onFileSelected($event)" />
@@ -169,5 +228,7 @@
         </div>
       </div>
     }
-  </section>
-</div>
+      </section>
+    </div>
+  </div>
+}

@@ -39,6 +39,15 @@ interface CreatureAnimState {
   lastMoveAt: number;
 }
 
+interface CreatureVisualMove {
+  fromX: number;
+  fromY: number;
+  toX: number;
+  toY: number;
+  startedAt: number;
+  durationMs: number;
+}
+
 function toAnimDirection(facing: Direction): AnimDirection {
   if (facing === 'north' || facing === 'northeast' || facing === 'northwest') return 'north';
   if (facing === 'south' || facing === 'southeast' || facing === 'southwest') return 'south';
@@ -86,6 +95,7 @@ export class WorldScene extends Phaser.Scene {
   private selfMoveSpeed = MOVE_INTERVAL_MS;
   private keys!: Record<string, Phaser.Input.Keyboard.Key>;
   private creatureAnims = new Map<string, CreatureAnimState>();
+  private creatureMoves = new Map<string, CreatureVisualMove>();
   private definitionCreatureIds = new Map<string, number>();
   private loadingTextures = new Set<string>();
   private debugVisible = false;
@@ -165,7 +175,7 @@ export class WorldScene extends Phaser.Scene {
       }
       case SERVER_EVENTS.PLAYER_MOVED: {
         const m = data as { position: Position; facing?: Direction };
-        if (this.selfEntity) this.moveRendered(this.selfEntity, m.position, this.selfMoveSpeed);
+        if (this.selfEntity) this.movePlayerRendered(m.position, this.selfMoveSpeed);
         const facing = m.facing ?? this.moveDir;
         if (facing) this.updateSelfAnim(facing);
         break;
@@ -316,6 +326,7 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
     this.entities.clear();
     this.entityInfo.clear();
     this.creatureAnims.clear();
+    this.creatureMoves.clear();
     this.definitionCreatureIds.clear();
     this.selfAnim = null;
     this.combatText.clear();
@@ -573,8 +584,9 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
     const anim = this.creatureAnims.get(id);
     if (anim) {
       anim.animator.setDirection(toAnimDirection(facing));
-      anim.animator.play(animForState(state), this.time.now);
-      anim.lastMoveAt = this.time.now;
+      const nextType = animForState(state);
+      if (anim.animator.currentType !== nextType) anim.animator.play(nextType, this.time.now);
+      if (nextType === 'walk') anim.lastMoveAt = this.time.now;
     }
   }
 
@@ -588,8 +600,18 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
     for (const [id, anim] of this.creatureAnims) {
       const rendered = this.entities.get(id);
       if (!rendered) continue;
+      const move = this.creatureMoves.get(id);
+      if (move) {
+        const t = Math.min(1, Math.max(0, (time - move.startedAt) / Math.max(1, move.durationMs)));
+        rendered.image.setPosition(
+          Phaser.Math.Linear(move.fromX, move.toX, t),
+          Phaser.Math.Linear(move.fromY, move.toY, t),
+        );
+        this.repositionWorldUi(rendered);
+        if (t >= 1) this.creatureMoves.delete(id);
+      }
       rendered.image.setFrame(anim.animator.frameIndex(time));
-      if (anim.animator.currentType === 'walk' && time - anim.lastMoveAt > anim.moveSpeed + 80) {
+      if (!this.creatureMoves.has(id) && anim.animator.currentType === 'walk' && time - anim.lastMoveAt > anim.moveSpeed + 80) {
         anim.animator.play('idle', time);
       }
     }
@@ -621,8 +643,50 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
   private moveCreature(id: string, position: Position, facing: Direction, state: CreatureState) {
     const anim = this.creatureAnims.get(id);
     const rendered = this.entities.get(id);
-    if (rendered) this.moveRendered(rendered, position, anim?.moveSpeed ?? MOVE_INTERVAL_MS);
+    if (rendered) this.moveCreatureRendered(id, rendered, position, anim?.moveSpeed ?? MOVE_INTERVAL_MS);
     this.updateCreatureAnim(id, facing, state);
+  }
+
+  private moveCreatureRendered(id: string, rendered: RenderedEntity, position: Position, duration: number) {
+    const toX = position.x * TILE_SIZE + TILE_SIZE / 2;
+    const toY = position.y * TILE_SIZE + TILE_SIZE;
+    const depth = position.y * 0.01 + 1;
+    rendered.image.setDepth(depth);
+    rendered.label.setDepth(depth + 0.01);
+    if (rendered.healthBack) {
+      rendered.healthBack.setDepth(depth + 0.02);
+      rendered.healthFront?.setDepth(depth + 0.03);
+      rendered.healthBorder?.setDepth(depth + 0.04);
+    }
+    const dx = Math.abs(rendered.image.x - toX);
+    const dy = Math.abs(rendered.image.y - toY);
+    if (dx > TILE_SIZE * 2 || dy > TILE_SIZE * 2) {
+      rendered.image.setPosition(toX, toY);
+      this.creatureMoves.delete(id);
+      this.repositionWorldUi(rendered);
+      return;
+    }
+    this.creatureMoves.set(id, {
+      fromX: rendered.image.x,
+      fromY: rendered.image.y,
+      toX,
+      toY,
+      startedAt: this.time.now,
+      durationMs: Math.max(80, duration),
+    });
+  }
+
+  private movePlayerRendered(position: Position, duration: number) {
+    if (!this.selfEntity) return;
+    const activeTween = this.tweens.getTweensOf(this.selfEntity.image)[0];
+    if (activeTween) activeTween.stop();
+    this.moveRenderedImmediateTween(this.selfEntity, position, duration);
+  }
+
+  private moveRenderedImmediateTween(rendered: RenderedEntity, position: Position, duration: number) {
+    const x = position.x * TILE_SIZE + TILE_SIZE / 2;
+    const y = position.y * TILE_SIZE + TILE_SIZE;
+    this.tweens.add({ targets: rendered.image, x, y, duration, ease: 'Linear', onUpdate: () => this.repositionWorldUi(rendered) });
   }
 
   private moveRendered(rendered: RenderedEntity, position: Position, duration = MOVE_INTERVAL_MS) {
@@ -658,6 +722,7 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
       this.entities.delete(id);
       this.entityInfo.delete(id);
       this.creatureAnims.delete(id);
+      this.creatureMoves.delete(id);
       this.definitionCreatureIds.delete(id);
       if (id === this.selfId) this.selfEntity = null;
     }

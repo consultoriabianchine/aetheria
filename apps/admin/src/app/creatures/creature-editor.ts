@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild, signal } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
-import type { AnimationDirection, AnimationSequence, CreatureAnimationConfig, CreatureAnimationType } from '@aetheria/types';
+import { DAMAGE_TYPES, type AnimationDirection, type AnimationSequence, type CreatureAnimationConfig, type CreatureAnimationType, type DamageAffinities, type DamageType } from '@aetheria/types';
 import { ApiService, type CreatureDetail } from '../core/api.service';
 
 const ANIMATION_TYPES: CreatureAnimationType[] = ['idle', 'walk', 'attack', 'cast', 'hit', 'death', 'spawn'];
@@ -21,6 +21,9 @@ export class CreatureEditor implements OnInit, AfterViewInit, OnDestroy {
   readonly creature = signal<CreatureDetail | null>(null);
   readonly error = signal<string | null>(null);
   readonly saving = signal(false);
+  readonly affinities = signal<DamageAffinities>({} as DamageAffinities);
+  readonly damageTypes = DAMAGE_TYPES;
+  readonly activeTab = signal<'overview' | 'elements' | 'loot' | 'animation'>('overview');
 
   readonly spriteWidth = signal(32);
   readonly spriteHeight = signal(32);
@@ -47,6 +50,8 @@ export class CreatureEditor implements OnInit, AfterViewInit, OnDestroy {
   readonly playing = signal(false);
   readonly showGrid = signal(true);
   readonly previewSpeed = signal(1);
+  readonly stats = signal<Record<string, number>>({});
+  readonly loot = signal<CreatureDetail['loot']>([]);
 
   private sheetImage: HTMLImageElement | null = null;
   private sheetUrl: string | null = null;
@@ -94,6 +99,9 @@ export class CreatureEditor implements OnInit, AfterViewInit, OnDestroy {
     try {
       const detail = await this.api.getCreature(this.id);
       this.creature.set(detail);
+      this.affinities.set(structuredClone(detail.damageAffinities));
+      this.stats.set({ level: detail.level, health: detail.health, attack: detail.attack, defense: detail.defense, experience: detail.experience, attackSpeed: detail.attackSpeed, attackRange: detail.attackRange, viewRange: detail.viewRange, chaseRange: detail.chaseRange });
+      this.loot.set(structuredClone(detail.loot));
       this.version.set(detail.animationVersion);
 
       if (detail.animation) {
@@ -317,6 +325,59 @@ export class CreatureEditor implements OnInit, AfterViewInit, OnDestroy {
     } finally {
       this.saving.set(false);
     }
+  }
+
+  async saveStats() {
+    this.saving.set(true);
+    try { await this.api.saveCreatureStats(this.id, this.stats()); } catch (e) { this.error.set((e as Error).message); } finally { this.saving.set(false); }
+  }
+
+  async saveLoot() {
+    this.saving.set(true);
+    try { await this.api.saveCreatureLoot(this.id, this.loot()); } catch (e) { this.error.set((e as Error).message); } finally { this.saving.set(false); }
+  }
+
+  setStat(key: string, value: number) {
+    this.stats.update((stats) => ({ ...stats, [key]: Math.max(0, Math.round(value)) }));
+  }
+
+  addLoot() {
+    this.loot.update((loot) => [...loot, { id: '', itemId: null, itemName: 'Novo item', chance: 1, minQuantity: 1, maxQuantity: 1 }]);
+  }
+
+  removeLoot(index: number) {
+    this.loot.update((loot) => loot.filter((_, i) => i !== index));
+  }
+
+  updateLoot(index: number, patch: Partial<CreatureDetail['loot'][number]>) {
+    this.loot.update((loot) => loot.map((entry, i) => i === index ? { ...entry, ...patch } : entry));
+  }
+
+  async saveAffinities() {
+    this.error.set(null);
+    this.saving.set(true);
+    try {
+      const res = await this.api.saveCreatureAffinities(this.id, this.affinities());
+      this.affinities.set(res.affinities);
+      this.creature.update((c) => (c ? { ...c, damageAffinities: res.affinities } : c));
+    } catch (e) {
+      this.error.set((e as Error).message);
+    } finally {
+      this.saving.set(false);
+    }
+  }
+
+  setAffinity(type: DamageType, modifier: number, immune: boolean) {
+    this.affinities.update((value) => ({ ...value, [type]: { modifier: Math.max(-1, Math.min(2, modifier)), immune } }));
+  }
+
+  resetAffinities() {
+    this.affinities.update((value) => Object.fromEntries(this.damageTypes.map((type) => [type, { modifier: 0, immune: false }])) as DamageAffinities);
+  }
+
+  affinityState(type: DamageType): string {
+    const value = this.affinities()[type]?.modifier ?? 0;
+    return value < 0 ? 'Fraqueza' : value > 0 ? 'Resistência' : 'Neutro';
   }
 
   async discard() {

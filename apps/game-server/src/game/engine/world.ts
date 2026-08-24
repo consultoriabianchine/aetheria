@@ -9,6 +9,7 @@ import type {
   PlayerAppearance,
   PlayerCombatConfig,
   Position,
+  WeaponElementOverride,
 } from '@aetheria/types';
 import type { StoredCharacter } from '../store/store';
 import { LOOT_POUCH_SIZE, PLAYER_AI, PLAYER_SPEED, SPEED_PER_LEVEL, playerMoveInterval } from '@aetheria/config';
@@ -63,6 +64,7 @@ export class GamePlayer {
   lastChatAt = 0;
   lastSavedAt = 0;
   lastRegenAt = 0;
+  weaponElementOverride: WeaponElementOverride | undefined;
 
   constructor(character: StoredCharacter) {
     this.id = character.id;

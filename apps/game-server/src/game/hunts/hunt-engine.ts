@@ -88,6 +88,10 @@ export class HuntEngine {
     return this.runs.get(characterId) ?? null;
   }
 
+  hasRun(characterId: string): boolean {
+    return this.runs.has(characterId);
+  }
+
   /** Encontra a run que contém uma criatura (para rotear eventos). */
   findRunByCreature(creatureId: string): HuntRun | null {
     for (const run of this.runs.values()) {
@@ -186,31 +190,45 @@ export class HuntEngine {
 
   update(now: number) {
     for (const run of this.runs.values()) {
-      try {
-        if (run.status === 'returning_to_city') continue;
+      this.updateRun(run.characterId, now);
+    }
+  }
 
-        run.creatures.updateCreatures(run.ai, now);
+  nextUpdateAt(characterId: string, now: number): number {
+    const run = this.runs.get(characterId);
+    if (!run) return now + 1000;
+    if (run.respawnAt !== null) return Math.min(run.respawnAt, now + 1000);
+    if (run.transitionAt !== null) return Math.min(run.transitionAt, now + 1000);
+    return run.creatures.nextUpdateAt(now);
+  }
 
-        if (run.respawnAt !== null && now >= run.respawnAt) {
-          run.respawnAt = null;
-          this.restartLoop(run, now);
-          continue;
-        }
+  updateRun(characterId: string, now: number) {
+    const run = this.runs.get(characterId);
+    if (!run) return;
+    try {
+      if (run.status === 'returning_to_city') return;
 
-        if (run.status !== 'active') continue;
+      run.creatures.updateCreatures(run.ai, now);
 
-        if (run.waveState === 'transitioning' && run.transitionAt !== null && now >= run.transitionAt) {
-          run.transitionAt = null;
-          this.startWave(run, run.wave + 1, now);
-          continue;
-        }
-
-        if (run.waveState === 'combat' && run.creatures.size === 0) {
-          this.completeWave(run, now);
-        }
-      } catch {
-        // run individual não deve derrubar o tick global
+      if (run.respawnAt !== null && now >= run.respawnAt) {
+        run.respawnAt = null;
+        this.restartLoop(run, now);
+        return;
       }
+
+      if (run.status !== 'active') return;
+
+      if (run.waveState === 'transitioning' && run.transitionAt !== null && now >= run.transitionAt) {
+        run.transitionAt = null;
+        this.startWave(run, run.wave + 1, now);
+        return;
+      }
+
+      if (run.waveState === 'combat' && run.creatures.size === 0) {
+        this.completeWave(run, now);
+      }
+    } catch {
+      // run individual não deve derrubar o tick global
     }
   }
 

@@ -4,6 +4,13 @@
   height: 100%;
 }
 
+.rotation-config-button { margin-left: 8px; color: #d7b94f; background: transparent; border: 1px solid rgba(215,185,79,.5); border-radius: 4px; padding: 4px 8px; }
+.rotation-modal { position: absolute; z-index: 20; right: 16px; bottom: 78px; width: 280px; padding: 12px; background: #121519; border: 1px solid rgba(215,185,79,.45); box-shadow: 0 8px 24px #0008; }
+.rotation-modal-header, .rotation-tabs, .rotation-slot-editor { display: flex; align-items: center; gap: 8px; }
+.rotation-modal-header { justify-content: space-between; color: #e7d487; }
+.rotation-tabs { margin: 10px 0; } .rotation-tabs button.active { color: #e7d487; border-bottom: 1px solid #d7b94f; }
+.rotation-slot-editor { margin: 6px 0; } .rotation-slot-editor span { width: 20px; color: #d7b94f; } .rotation-slot-editor select { flex: 1; }
+.rotation-save { width: 100%; margin-top: 10px; color: #17130a; background: #d7b94f; }
 .game-page {
   --topbar-height: 68px;
   --left-sidebar-width: 250px;
@@ -770,8 +777,23 @@ button {
   content: '';
   position: absolute;
   inset: 0;
-  background: conic-gradient(rgba(76, 121, 181, 0.34) 0.35turn, rgba(0, 0, 0, 0.32) 0.35turn);
+  background: conic-gradient(rgba(215, 185, 79, 0.46) calc(var(--cooldown-pct, 0) * 1%), rgba(0, 0, 0, 0.52) 0);
+  transition: background 100ms linear;
   z-index: -1;
+}
+
+.hotbar-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  image-rendering: pixelated;
+  border-radius: 3px;
+  transition: filter 100ms linear, opacity 100ms linear;
+}
+
+.hotbar-slot:not(.ready) .hotbar-icon {
+  filter: grayscale(0.8) brightness(0.55);
+  opacity: 0.75;
 }
 
 .hotbar-slot strong {

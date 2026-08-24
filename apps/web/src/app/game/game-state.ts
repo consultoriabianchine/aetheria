@@ -65,6 +65,12 @@ export class GameState {
 
   readonly inGame = signal(false);
   readonly self = signal<CharacterSummary | null>(null);
+  readonly abilities = signal<import('@aetheria/types').CombatAbilityDefinition[]>([]);
+  readonly attackRotations = signal<Record<string, number[]>>({ HUNT: [0, 0, 0, 0], BOSS: [0, 0, 0, 0], HELPER: [0, 0, 0, 0] });
+  readonly healingRotations = signal<Record<string, number[]>>({ HUNT: [0, 0, 0, 0], BOSS: [0, 0, 0, 0], HELPER: [0, 0, 0, 0] });
+  readonly abilityReadyAt = signal<Record<number, number>>({});
+  readonly attackGroupReadyAt = signal(0);
+  readonly healingGroupReadyAt = signal(0);
   readonly stats = signal<HudStats>({
     health: 0,
     maxHealth: 0,
@@ -142,6 +148,19 @@ export class GameState {
   private route(e: WsEvent) {
     const data = e.data as Record<string, unknown>;
     switch (e.event) {
+      case 'abilities.update':
+        this.abilities.set((data['abilities'] ?? []) as import('@aetheria/types').CombatAbilityDefinition[]);
+        break;
+      case 'rotation.state': {
+        const r = data as { preset?: string; attack?: { ability_id?: number }[]; healing?: { ability_id?: number }[]; cooldowns?: { attackGroupReadyAt?: number; healingGroupReadyAt?: number; abilityReadyAt?: Record<number, number> } };
+        const preset = r.preset ?? 'HUNT';
+        if (r.attack) this.attackRotations.update((all) => ({ ...all, [preset]: [0, 1, 2, 3].map((index) => r.attack?.[index]?.ability_id ?? 0) }));
+        if (r.healing) this.healingRotations.update((all) => ({ ...all, [preset]: [0, 1, 2, 3].map((index) => r.healing?.[index]?.ability_id ?? 0) }));
+        if (r.cooldowns?.abilityReadyAt) this.abilityReadyAt.set(r.cooldowns.abilityReadyAt);
+        if (r.cooldowns?.attackGroupReadyAt !== undefined) this.attackGroupReadyAt.set(r.cooldowns.attackGroupReadyAt);
+        if (r.cooldowns?.healingGroupReadyAt !== undefined) this.healingGroupReadyAt.set(r.cooldowns.healingGroupReadyAt);
+        break;
+      }
       case 'system.connected':
         this.connected.set(true);
         break;

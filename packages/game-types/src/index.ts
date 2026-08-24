@@ -63,6 +63,143 @@ export interface PlayerCombatConfig {
 
 export type DamageType = 'physical' | 'fire' | 'ice' | 'energy' | 'earth' | 'holy' | 'death' | 'arcane';
 
+export const DAMAGE_TYPES: readonly DamageType[] = ['physical', 'fire', 'ice', 'energy', 'earth', 'holy', 'death', 'arcane'] as const;
+
+export type AbilityOwnerType = 'player' | 'monster' | 'both';
+export type PlayerAbilityClass = CombatArchetype | 'all';
+export type AbilityCategory = 'attack' | 'area' | 'rune' | 'heal' | 'support';
+export type AbilityTargetMode = 'self' | 'single_enemy' | 'single_ally' | 'area_enemy' | 'area_ally' | 'directional' | 'ground';
+export type AbilityPowerSource = 'fixed' | 'weapon' | 'weapon_ammo' | 'magic_weapon' | 'monster_parameters';
+export type AbilityCooldownGroup = 'attack' | 'healing' | 'support';
+export type AbilityAreaShape = 'square' | 'circle' | 'wave' | 'cone' | 'cross' | 'line';
+
+export interface AbilityAreaConfig {
+  shape: AbilityAreaShape;
+  width: number;
+  height: number;
+  supportsOverride?: boolean;
+}
+
+export interface AbilityParameterDefinition {
+  key: string;
+  label: string;
+  min?: number;
+  max?: number;
+  defaultValue?: number;
+}
+
+export interface AbilityUseConditions {
+  minTargets?: number;
+  selfHpBelowPercent?: number;
+  targetHpBelowPercent?: number;
+  minDistance?: number;
+  maxDistance?: number;
+}
+
+export interface CombatAbilityDefinition {
+  abilityId: number;
+  slug: string;
+  name: string;
+  description?: string;
+  icon?: string;
+  ownerType: AbilityOwnerType;
+  playerClass?: PlayerAbilityClass;
+  category: AbilityCategory;
+  targetMode: AbilityTargetMode;
+  damageType?: DamageType;
+  powerSource: AbilityPowerSource;
+  cooldownMs: number;
+  cooldownGroup: AbilityCooldownGroup;
+  rangeTiles: number;
+  manaCost?: number;
+  levelRequirement?: number;
+  areaConfig?: AbilityAreaConfig;
+  projectileId?: number;
+  impactEffectId?: number;
+  animationId?: number;
+  formulaProfileId?: number;
+  allowedParameters: AbilityParameterDefinition[];
+  defaultParameters?: Record<string, number>;
+  conditions?: AbilityUseConditions;
+  enabled: boolean;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+export interface MonsterAbilityAssignment {
+  monsterId: number;
+  abilityId: number;
+  enabled: boolean;
+  priority: number;
+  chance: number;
+  cooldownOverrideMs?: number;
+  parameters?: Record<string, number>;
+  conditions?: AbilityUseConditions;
+}
+
+export interface AttackRotationSlot {
+  position: 1 | 2 | 3 | 4;
+  abilityId?: number;
+  enabled: boolean;
+  minTargets?: number;
+}
+
+export interface HealingTrigger {
+  target: 'self' | 'lowest_party_member' | 'specific_party_role';
+  hpBelowPercent: number;
+}
+
+export interface HealingRotationSlot {
+  position: 1 | 2 | 3 | 4;
+  abilityId?: number;
+  enabled: boolean;
+  trigger: HealingTrigger;
+}
+
+export interface AbilityCooldownState {
+  attackGroupReadyAt: number;
+  healingGroupReadyAt: number;
+  abilityReadyAt: Record<number, number>;
+}
+
+export interface DamageAffinity {
+  modifier: number;
+  immune: boolean;
+}
+
+export type DamageAffinities = Record<DamageType, DamageAffinity>;
+
+export type DamageTypeSource = 'fixed' | 'weapon' | 'weapon_ammo';
+
+export interface WeaponElementOverride {
+  damageType: DamageType;
+  appliedAt: number;
+  expiresAt: number;
+  paused?: boolean;
+  remainingMs?: number;
+}
+
+export function emptyDamageAffinities(): DamageAffinities {
+  return Object.fromEntries(DAMAGE_TYPES.map((damageType) => [damageType, { modifier: 0, immune: false }])) as DamageAffinities;
+}
+
+export function normalizeDamageAffinities(value: unknown): DamageAffinities {
+  const result = emptyDamageAffinities();
+  if (!value || typeof value !== 'object') return result;
+  for (const damageType of DAMAGE_TYPES) {
+    const affinity = (value as Record<string, unknown>)[damageType];
+    if (typeof affinity === 'number' && Number.isFinite(affinity)) result[damageType].modifier = affinity;
+    else if (affinity && typeof affinity === 'object') {
+      const modifier = (affinity as Record<string, unknown>).modifier;
+      const immune = (affinity as Record<string, unknown>).immune;
+      if (typeof modifier === 'number' && Number.isFinite(modifier)) result[damageType].modifier = modifier;
+      if (typeof immune === 'boolean') result[damageType].immune = immune;
+    }
+  }
+  return result;
+}
+
+
 export type CombatSkill = 'melee' | 'distance' | 'magic';
 
 export type SkillType = CombatSkill;
@@ -237,6 +374,7 @@ export interface CharacterCombatStats {
   dodge: number;
   speed: number;
   resistances: Record<DamageType, number>;
+  damageAffinities?: DamageAffinities;
 }
 
 export interface CombatFormulaProfile {
@@ -332,6 +470,7 @@ export interface CreatureDefinition {
   canFlee: boolean;
   returnToSpawn: boolean;
   loot: CreatureLootDefinition[];
+  damageAffinities?: DamageAffinities;
 }
 
 /** Ponto de spawn de uma criatura (persistido em creature_spawns). */

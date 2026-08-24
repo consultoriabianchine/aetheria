@@ -42,9 +42,25 @@ export class MemoryStore implements Store {
     return this.characters.get(id) ?? null;
   }
 
+  private readonly weaponOverrides = new Map<string, import('@aetheria/types').WeaponElementOverride>();
+
   async saveCharacter(character: StoredCharacter): Promise<void> {
-    this.characters.set(character.id, { ...character });
+    this.characters.set(character.id, structuredClone(character));
   }
+
+  async getWeaponElementOverride(characterId: string) {
+    const override = this.weaponOverrides.get(characterId);
+    return override && (override.paused || override.expiresAt > Date.now()) ? { ...override } : null;
+  }
+
+  async saveWeaponElementOverride(characterId: string, override: import('@aetheria/types').WeaponElementOverride): Promise<void> {
+    this.weaponOverrides.set(characterId, { ...override });
+  }
+
+  async clearWeaponElementOverride(characterId: string): Promise<void> {
+    this.weaponOverrides.delete(characterId);
+  }
+
 
   async getHuntProgress(characterId: string, huntId: string): Promise<HuntProgress | null> {
     return this.huntProgress.get(`${characterId}:${huntId}`) ?? null;

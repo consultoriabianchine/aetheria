@@ -31,6 +31,14 @@ export const routes: Routes = [
     loadComponent: () => import('./combat/combat-formula-tester').then((m) => m.CombatFormulaTester),
   },
   {
+    path: 'abilities',
+    loadComponent: () => import('./abilities/ability-list').then((m) => m.AbilityList),
+  },
+  {
+    path: 'monster-abilities',
+    loadComponent: () => import('./abilities/monster-abilities').then((m) => m.MonsterAbilities),
+  },
+  {
     path: 'items',
     loadComponent: () => import('./items/item-editor').then((m) => m.ItemEditor),
   },

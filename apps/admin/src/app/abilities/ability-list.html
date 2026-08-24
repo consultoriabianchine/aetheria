@@ -1,0 +1,24 @@
+<div class="row"><h2>Abilities</h2><button class="primary" (click)="newAbility()">New Ability</button></div>
+@if (error()) { <p>{{ error() }}</p> }
+<div class="layout">
+  <section class="panel list">
+    @for (ability of abilities(); track ability.abilityId) { <button (click)="edit(ability)">#{{ ability.abilityId }} {{ ability.name }}<br><small>{{ ability.ownerType }} / {{ ability.category }} / {{ ability.damageType || 'heal' }}</small></button> }
+  </section>
+  @if (selected(); as draft) {
+    <section class="panel">
+      <div class="form">
+        <label>Name<input [(ngModel)]="draft.name"></label><label>Slug<input [(ngModel)]="draft.slug"></label>
+        <label>Owner<select [(ngModel)]="draft.ownerType">@for (owner of owners; track owner) { <option [value]="owner">{{ owner }}</option> }</select></label>
+        <label>Category<select [(ngModel)]="draft.category">@for (category of categories; track category) { <option [value]="category">{{ category }}</option> }</select></label>
+        <label>Damage Type<select [(ngModel)]="draft.damageType"><option [ngValue]="undefined">None</option>@for (type of damageTypes; track type) { <option [value]="type">{{ type }}</option> }</select></label>
+        <label>Target Mode<select [(ngModel)]="draft.targetMode"><option value="self">Self</option><option value="single_enemy">Single Enemy</option><option value="single_ally">Single Ally</option><option value="area_enemy">Area Enemy</option><option value="area_ally">Area Ally</option><option value="directional">Directional</option><option value="ground">Ground</option></select></label>
+        <label>Power Source<select [(ngModel)]="draft.powerSource"><option value="fixed">Fixed</option><option value="weapon">Weapon</option><option value="weapon_ammo">Weapon + Ammo</option><option value="magic_weapon">Magic Weapon</option><option value="monster_parameters">Monster Parameters</option></select></label>
+        <label>Cooldown ms<input type="number" [(ngModel)]="draft.cooldownMs"></label><label>Range<input type="number" [(ngModel)]="draft.rangeTiles"></label>
+        <label>Cooldown Group<select [(ngModel)]="draft.cooldownGroup"><option value="attack">Attack · 2s</option><option value="healing">Healing · 1s</option><option value="support">Support</option></select></label><label>Mana Cost<input type="number" [(ngModel)]="draft.manaCost"></label>
+        <label>Level Requirement<input type="number" [(ngModel)]="draft.levelRequirement"></label><label>Enabled<input type="checkbox" [(ngModel)]="draft.enabled"></label>
+        <label class="wide">Description<textarea [(ngModel)]="draft.description"></textarea></label>
+        @if (draft.category === 'area') { <label>Area Shape<select [(ngModel)]="draft.areaConfig!.shape"><option value="square">Square</option><option value="circle">Circle</option><option value="wave">Wave</option><option value="cone">Cone</option><option value="cross">Cross</option><option value="line">Line</option></select></label><label>Area Width<input type="number" [(ngModel)]="draft.areaConfig!.width"></label> }
+      </div><label>Icon 32x32<input type="file" accept="image/png" (change)="uploadIcon($event)"></label>@if (draft.icon) { <img [src]="draft.icon" width="32" height="32"> }<button class="primary" (click)="save()">Save</button>
+    </section>
+  }
+</div>

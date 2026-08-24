@@ -62,15 +62,29 @@
             <div class="resource-row" title="Level atual: {{ state.stats().level }} | XP total: {{ state.stats().experience }} | XP para o proximo: {{ state.stats().level * 100 }}">
               <div><span>Experiência</span><b>{{ xpPct().toFixed(1) }}%</b></div>
               <div class="bar-track"><div class="bar-fill xp" [style.width.%]="xpPct()"></div></div>
-            </div>
-          </div>
-        </section>
+           </div>
+         </div>
+       </section>
 
         <section class="game-panel compact-panel">
           <div class="panel-header"><h2>Stamina</h2></div>
           <div class="metric-row"><span>Tempo</span><b>32:04</b></div>
           <div class="metric-row"><span>Energia</span><b>76%</b></div>
           <div class="bar-track slim"><div class="bar-fill stamina" style="width: 76%"></div></div>
+        </section>
+
+        <section class="game-panel compact-panel elemental-test">
+          <div class="panel-header"><h2>Teste Elemental</h2></div>
+          <div class="metric-row"><span>Elemento atual</span><b>{{ weaponOverride()?.damageType || 'physical' }}</b></div>
+          @if (weaponOverride()) {
+            <div class="metric-row"><span>Restante</span><b>{{ overrideTime() }}</b></div>
+            <button class="panel-action wide" type="button" (click)="removeWeaponOverride()">Remover</button>
+          }
+          <div class="element-buttons">
+            @for (type of damageTypes; track type) {
+              <button type="button" [class.active]="weaponOverride()?.damageType === type" (click)="applyWeaponOverride(type)">{{ type }}</button>
+            }
+          </div>
         </section>
 
         <section class="game-panel compact-panel">
@@ -224,24 +238,29 @@
 
         <div class="hotbar" aria-label="Hotbar">
           <div class="hotbar-presets">
-            <button type="button" [class.active]="hotbarPreset() === 'hunt'" (click)="hotbarPreset.set('hunt')">HUNT</button>
-            <button type="button" [class.active]="hotbarPreset() === 'boss'" (click)="hotbarPreset.set('boss')">BOSS</button>
-            <button type="button" [class.active]="hotbarPreset() === 'helper'" (click)="hotbarPreset.set('helper')">HELPER</button>
+            <button type="button" [class.active]="hotbarPreset() === 'hunt'" (click)="selectHotbarPreset('hunt')">HUNT</button>
+            <button type="button" [class.active]="hotbarPreset() === 'boss'" (click)="selectHotbarPreset('boss')">BOSS</button>
+            <button type="button" [class.active]="hotbarPreset() === 'helper'" (click)="selectHotbarPreset('helper')">HELPER</button>
           </div>
           <span class="hotbar-group">Attack Group · 2s</span>
           @for (slot of hotbarSlots(); track slot.key) {
-            <button class="hotbar-slot" type="button" [class.ready]="slot.ready" aria-label="Hotbar slot {{ slot.key }}">
-              <span>{{ slot.key }}</span>
-              <strong>{{ slot.name }}</strong>
+<button class="hotbar-slot" type="button" draggable="true" (dragstart)="startSlotDrag($index, $event)" (dragover)="allowSlotDrop($event)" (drop)="dropSlot($index, $event)" [style.--cooldown-pct]="slot.groupPct" [class.ready]="slot.ready" (click)="useHotbarSlot(slot)" aria-label="Hotbar slot {{ slot.key }}">
+               <span>{{ slot.key }}</span>
+               @if (state.abilities().find((ability) => ability.abilityId === slot.abilityId)?.icon; as icon) { <img class="hotbar-icon" [src]="icon" alt=""> }
+               <strong>{{ slot.name }}</strong>
               <em>{{ slot.cd }}</em>
               <i [style.width.%]="slot.groupPct"></i>
             </button>
-          }
-        </div>
-      </section>
-    </section>
-
-    <aside class="right-sidebar" aria-label="Party e inventario">
+           }
+           <button class="rotation-config-button" type="button" (click)="toggleRotation()">Rotation</button>
+           @if (rotationOpen()) {
+             <div class="rotation-modal"><div class="rotation-modal-header"><strong>{{ rotationMode() === 'attack' ? 'Attack Rotation' : 'Healing Rotation' }}</strong><button type="button" (click)="rotationOpen.set(false)">×</button></div><div class="rotation-tabs"><button [class.active]="rotationMode() === 'attack'" (click)="rotationMode.set('attack')">Attack</button><button [class.active]="rotationMode() === 'healing'" (click)="rotationMode.set('healing')">Healing</button></div>@if (rotationMode() === 'healing') { <div class="heal-thresholds"><span>Heal below:</span><button (click)="healingThreshold.set(50)">50%</button><button (click)="healingThreshold.set(80)">80%</button><button (click)="healingThreshold.set(85)">85%</button><button (click)="healingThreshold.set(90)">90%</button><button (click)="healingThreshold.set(95)">95%</button><input type="number" min="1" max="100" [(ngModel)]="healingThreshold">%</div>}@for (slot of (rotationMode() === 'attack' ? attackRotation() : healingRotation()); track $index) { <label class="rotation-slot-editor"><span>{{ $index + 1 }}</span><select [ngModel]="slot" (ngModelChange)="setRotationAbility($index, +$event)"><option [ngValue]="0">Empty</option>@for (ability of state.abilities(); track ability.abilityId) { <option [ngValue]="ability.abilityId">{{ ability.name }}</option> }</select></label> }<button class="rotation-save" type="button" (click)="saveRotation()">Save Rotation</button></div>
+           }
+         </div>
+       </section>
+     </section>
+ 
+     <aside class="right-sidebar" aria-label="Party e inventario">
       <button class="collapse-tab right" type="button" (click)="rightCollapsed.set(false)" aria-label="Restaurar sidebar direita">‹</button>
       <div class="sidebar-scroll">
         <section class="game-panel party-panel">

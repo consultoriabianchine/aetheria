@@ -97,6 +97,11 @@ export interface CombatFormulaTestResult {
   max?: number;
 }
 
+export interface AdminCreatureAffinity {
+  modifier: number;
+  immune: boolean;
+}
+
 export interface AdminCreatureSummary {
   creatureId: number;
   slug: string;
@@ -118,6 +123,17 @@ export interface CreatureAssetMeta {
 }
 
 export interface CreatureDetail extends AdminCreatureSummary {
+  damageAffinities: Record<DamageType, AdminCreatureAffinity>;
+  level: number;
+  health: number;
+  attack: number;
+  defense: number;
+  experience: number;
+  attackSpeed: number;
+  attackRange: number;
+  viewRange: number;
+  chaseRange: number;
+  loot: { id: string; itemId: string | null; itemName: string; chance: number; minQuantity: number; maxQuantity: number }[];
   animation: CreatureAnimationConfig | null;
   asset: CreatureAssetMeta | null;
 }
@@ -175,6 +191,25 @@ export class ApiService {
     return res.json() as Promise<T>;
   }
 
+  getAttackRotation(characterId: string, preset: string) { return this.request(`/characters/${characterId}/attack-rotation/${preset}`, { headers: this.headers() }); }
+  saveAttackRotation(characterId: string, preset: string, slots: import('@aetheria/types').AttackRotationSlot[]) { return this.request(`/characters/${characterId}/attack-rotation/${preset}`, { method: 'PUT', headers: this.headers(), body: JSON.stringify({ slots }) }); }
+  getHealingRotation(characterId: string, preset: string) { return this.request(`/characters/${characterId}/healing-rotation/${preset}`, { headers: this.headers() }); }
+  saveHealingRotation(characterId: string, preset: string, slots: import('@aetheria/types').HealingRotationSlot[]) { return this.request(`/characters/${characterId}/healing-rotation/${preset}`, { method: 'PUT', headers: this.headers(), body: JSON.stringify({ slots }) }); }
+
+  getMonsterAbilities(monsterId: number): Promise<any[]> { return this.request(`/admin/monsters/${monsterId}/abilities`, { headers: this.headers() }); }
+  saveMonsterAbilities(monsterId: number, abilities: unknown[]): Promise<any[]> { return this.request(`/admin/monsters/${monsterId}/abilities`, { method: 'PUT', headers: this.headers(), body: JSON.stringify({ abilities }) }); }
+
+  listAbilities(): Promise<import('@aetheria/types').CombatAbilityDefinition[]> {
+    return this.request('/admin/abilities', { headers: this.headers() });
+  }
+
+  uploadAbilityIcon(id: number, file: File): Promise<import('@aetheria/types').CombatAbilityDefinition> { return new Promise((resolve, reject) => { const image = new Image(); image.onload = () => { if (image.width !== 32 || image.height !== 32) { reject(new Error('Ícone deve ter 32x32 pixels')); return; } void file.arrayBuffer().then((buffer) => { let binary = ''; for (const byte of new Uint8Array(buffer)) binary += String.fromCharCode(byte); return this.request(`/admin/abilities/${id}/icon`, { method: 'POST', headers: this.headers(), body: JSON.stringify({ dataBase64: btoa(binary), mimeType: file.type }) }); }).then((result) => resolve(result as import('@aetheria/types').CombatAbilityDefinition)).catch(reject); }; image.onerror = () => reject(new Error('Imagem inválida')); image.src = URL.createObjectURL(file); }); }
+
+  saveAbility(input: import('@aetheria/types').CombatAbilityDefinition): Promise<import('@aetheria/types').CombatAbilityDefinition> {
+    const path = input.abilityId ? `/admin/abilities/${input.abilityId}` : '/admin/abilities';
+    return this.request(path, { method: input.abilityId ? 'PUT' : 'POST', headers: this.headers(), body: JSON.stringify(input) });
+  }
+
   listCreatures(): Promise<AdminCreatureSummary[]> {
     return this.request('/admin/creatures', { headers: this.headers() });
   }
@@ -202,6 +237,22 @@ export class ApiService {
           body: JSON.stringify({ fileName: file.name, mimeType: file.type || 'image/png', dataBase64 }),
         }),
       );
+  }
+
+  saveCreatureStats(id: number, stats: Record<string, number>): Promise<{ ok: boolean }> {
+    return this.request(`/admin/creatures/${id}/stats`, { method: 'PUT', headers: this.headers(), body: JSON.stringify(stats) });
+  }
+
+  saveCreatureLoot(id: number, loot: CreatureDetail['loot']): Promise<{ ok: boolean }> {
+    return this.request(`/admin/creatures/${id}/loot`, { method: 'PUT', headers: this.headers(), body: JSON.stringify({ loot }) });
+  }
+
+  saveCreatureAffinities(id: number, affinities: Record<DamageType, AdminCreatureAffinity>): Promise<{ ok: boolean; affinities: Record<DamageType, AdminCreatureAffinity> }> {
+    return this.request(`/admin/creatures/${id}/affinities`, {
+      method: 'PUT',
+      headers: this.headers(),
+      body: JSON.stringify({ affinities }),
+    });
   }
 
   saveAnimation(id: number, config: CreatureAnimationConfigInput, version?: number): Promise<{ ok: boolean; animation: CreatureAnimationConfig }> {

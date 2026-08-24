@@ -1,9 +1,11 @@
+import { Prisma } from '@aetheria/database';
 import { BadRequestException, Body, Controller, Get, NotFoundException, Param, ParseIntPipe, Post, Put, UseGuards } from '@nestjs/common';
 import { PrismaService } from '../../prisma/prisma.service';
 import { AdminAuthGuard } from './admin-auth.guard';
 import { CreatureAnimationService } from './creature-animation.service';
 import { CreatureAssetService } from './creature-asset.service';
 import { CreatureRegistry } from './creature-registry.service';
+import { normalizeDamageAffinities } from '@aetheria/types';
 
 @Controller('admin/creatures')
 @UseGuards(AdminAuthGuard)
@@ -40,6 +42,40 @@ export class AdminController {
           }
         : null,
     };
+  }
+
+  @Put(':id/stats')
+  async putStats(@Param('id', ParseIntPipe) id: number, @Body() body: Record<string, unknown>) {
+    const creature = await this.prisma.creatureDefinition.findUnique({ where: { creature_id: id } });
+    if (!creature) throw new NotFoundException('Criatura não encontrada');
+    const fields = ['game_level', 'game_max_health', 'game_attack', 'game_defense', 'game_experience', 'game_attack_speed', 'game_attack_range', 'game_view_range', 'game_chase_range'] as const;
+    const data = Object.fromEntries(fields.filter((field) => body[field] !== undefined).map((field) => [field, Math.max(0, Math.round(Number(body[field])))]));
+    await this.prisma.creatureDefinition.update({ where: { creature_id: id }, data });
+    await this.audit('CREATURE_STATS_UPDATED', id, null, data);
+    return { ok: true };
+  }
+
+  @Put(':id/loot')
+  async putLoot(@Param('id', ParseIntPipe) id: number, @Body() body: { loot?: { id?: string; itemId?: string | null; itemName: string; chance: number; minQuantity: number; maxQuantity: number }[] }) {
+    const creature = await this.prisma.creatureDefinition.findUnique({ where: { creature_id: id } });
+    if (!creature) throw new NotFoundException('Criatura não encontrada');
+    const definitionId = creature.id;
+    await this.prisma.$transaction(async (tx) => {
+      await tx.creatureLoot.deleteMany({ where: { creature_id: definitionId } });
+      for (const loot of body.loot ?? []) await tx.creatureLoot.create({ data: { creature_id: definitionId, item_id: loot.itemId ?? null, item_name: loot.itemName, chance: loot.chance, min_quantity: loot.minQuantity, max_quantity: loot.maxQuantity, rarity: 'CUSTOM' } });
+    });
+    await this.audit('CREATURE_LOOT_UPDATED', id, null, body.loot ?? []);
+    return { ok: true };
+  }
+
+  @Put(':id/affinities')
+  async putAffinities(@Param('id', ParseIntPipe) id: number, @Body() body: { affinities?: unknown }) {
+    const creature = await this.prisma.creatureDefinition.findUnique({ where: { creature_id: id } });
+    if (!creature) throw new NotFoundException('Criatura não encontrada');
+    const affinities = normalizeDamageAffinities(body.affinities);
+    await this.prisma.creatureDefinition.update({ where: { creature_id: id }, data: { damage_affinities: affinities as unknown as Prisma.InputJsonValue } });
+    await this.audit('CREATURE_AFFINITIES_UPDATED', id, creature.damage_affinities, affinities);
+    return { ok: true, affinities };
   }
 
   @Post(':id/spritesheet')

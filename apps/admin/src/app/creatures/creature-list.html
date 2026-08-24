@@ -1,5 +1,5 @@
 <h1>Criaturas</h1>
-<p class="sub">Central de Comando — editor de sprites, outfits e animação.</p>
+<p class="sub">Central de Comando — dados, combate, elementos, loot e animações.</p>
 
 <div class="toolbar">
   <button (click)="load()" [disabled]="loading()">Atualizar</button>
@@ -38,7 +38,7 @@
             </span>
           </td>
           <td class="mono">{{ c.animationVersion ?? '—' }}</td>
-          <td><a [routerLink]="['/creatures', c.creatureId, 'animation']">Editar animação</a></td>
+          <td><a [routerLink]="['/creatures', c.creatureId, 'animation']">Abrir central</a></td>
         </tr>
       }
     </tbody>

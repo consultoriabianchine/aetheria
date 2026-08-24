@@ -13,6 +13,11 @@ import type {
   ItemProjectileVisual,
   PlayerCombatConfig,
   DamageType,
+  WeaponElementOverride,
+  CombatAbilityDefinition,
+  AttackRotationSlot,
+  HealingRotationSlot,
+  AbilityCooldownState,
 } from '@aetheria/types';
 
 export type ClientMessage =
@@ -35,7 +40,13 @@ export type ClientMessage =
   | { type: 'hunt.setLoop'; token: string; enabled: boolean }
   | { type: 'appearance.list'; token: string }
   | { type: 'appearance.save'; token: string; outfitId: number; addonMask: number; colors: { head: number; primary: number; secondary: number; detail: number } }
-  | { type: 'combat.config'; token: string; targeting: PlayerCombatConfig['targeting']; movement: PlayerCombatConfig['movement'] };
+  | { type: 'combat.config'; token: string; targeting: PlayerCombatConfig['targeting']; movement: PlayerCombatConfig['movement'] }
+  | { type: 'combat.weaponElementOverride.apply'; damageType: DamageType }
+  | { type: 'combat.weaponElementOverride.remove' }
+  | { type: 'ability.cast'; abilityId: number; targetId?: string }
+  | { type: 'rotation.attack.set'; preset: string; slots: AttackRotationSlot[] }
+  | { type: 'rotation.healing.set'; preset: string; slots: HealingRotationSlot[] }
+  | { type: 'rotation.load'; preset: string };
 
 export type ServerMessage =
   | { type: 'auth.loginResult'; ok: boolean; error?: string; token?: string; accountId?: string; characters?: CharacterSummary[] }
@@ -77,7 +88,13 @@ export type ServerMessage =
   | { type: 'gold.update'; gold: number }
   | { type: 'appearance.list'; outfits: { outfitId: number; name: string; slug: string; category: string; supportsColors: boolean; supportsAddons: boolean }[] }
   | { type: 'appearance.changed'; entityId: string; outfitId: number; addonMask: number; colors: { head: number; primary: number; secondary: number; detail: number } }
-  | { type: 'combat.config'; combat: PlayerCombatConfig };
+  | { type: 'combat.config'; combat: PlayerCombatConfig }
+  | { type: 'combat.weaponElementOverride.applied'; override: WeaponElementOverride }
+  | { type: 'combat.weaponElementOverride.removed'; reason: 'manual' | 'expired' }
+  | { type: 'abilities.update'; abilities: CombatAbilityDefinition[] }
+  | { type: 'rotation.state'; attack: AttackRotationSlot[]; healing: HealingRotationSlot[]; cooldowns: AbilityCooldownState }
+  | { type: 'ability.castFailed'; abilityId: number; reason: string }
+  | { type: 'ability.cast'; abilityId: number; attackerId: string; targetId?: string };
 
 export interface WsEnvelope {
   event: string;
@@ -132,6 +149,8 @@ export const SERVER_EVENTS = {
   APPEARANCE_LIST: 'appearance.list',
   APPEARANCE_CHANGED: 'appearance.changed',
   COMBAT_CONFIG: 'combat.config',
+  WEAPON_ELEMENT_OVERRIDE_APPLIED: 'combat.weaponElementOverride.applied',
+  WEAPON_ELEMENT_OVERRIDE_REMOVED: 'combat.weaponElementOverride.removed',
 } as const;
 
 export const CLIENT_EVENTS = {
@@ -155,6 +174,8 @@ export const CLIENT_EVENTS = {
   APPEARANCE_LIST: 'appearance.list',
   APPEARANCE_SAVE: 'appearance.save',
   COMBAT_CONFIG: 'combat.config',
+  WEAPON_ELEMENT_OVERRIDE_APPLIED: 'combat.weaponElementOverride.applied',
+  WEAPON_ELEMENT_OVERRIDE_REMOVED: 'combat.weaponElementOverride.removed',
 } as const;
 
 export type { CreatureState, Direction, Position };

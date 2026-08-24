@@ -38,9 +38,27 @@ model Character {
   appearance     CharacterAppearance?
   combatConfig   CharacterCombatConfig?
   outfits        CharacterOutfit[]
+  effects        CharacterEffect[]
+  attackRotationSlots CharacterAttackRotationSlot[]
+  healingRotationSlots CharacterHealingRotationSlot[]
   createdAt      DateTime                 @default(now())
 
   @@index([archetype])
+}
+
+model CharacterEffect {
+  id          String    @id @default(cuid())
+  characterId String
+  type        String
+  payload     Json
+  expiresAt   DateTime  @map("expires_at")
+  character   Character @relation(fields: [characterId], references: [id], onDelete: Cascade)
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime  @updatedAt @map("updated_at")
+
+  @@unique([characterId, type])
+  @@index([expiresAt])
+  @@map("character_effects")
 }
 
 model CharacterPosition {
@@ -170,6 +188,84 @@ model CharacterEquipment {
   character   Character @relation(fields: [characterId], references: [id], onDelete: Cascade)
 }
 
+model CombatAbility {
+  id                  Int      @id @default(autoincrement())
+  slug                String   @unique
+  name                String
+  description         String?
+  icon_path           String?  @map("icon_path")
+  owner_type          String   @map("owner_type")
+  player_class        String?  @map("player_class")
+  category            String
+  target_mode         String   @map("target_mode")
+  damage_type         String?  @map("damage_type")
+  power_source        String   @map("power_source")
+  cooldown_ms         Int      @map("cooldown_ms")
+  cooldown_group      String   @map("cooldown_group")
+  range_tiles         Int      @map("range_tiles")
+  mana_cost           Int?     @map("mana_cost")
+  level_requirement   Int?     @map("level_requirement")
+  area_config         Json?    @map("area_config")
+  projectile_id       Int?     @map("projectile_id")
+  impact_effect_id    Int?     @map("impact_effect_id")
+  allowed_parameters  Json     @default("[]") @map("allowed_parameters")
+  default_parameters  Json?    @map("default_parameters")
+  conditions          Json?
+  enabled             Boolean  @default(true)
+  created_at          DateTime @default(now()) @map("created_at")
+  updated_at          DateTime @updatedAt @map("updated_at")
+
+  monster_assignments MonsterAbilityAssignment[]
+  attack_slots        CharacterAttackRotationSlot[]
+  healing_slots       CharacterHealingRotationSlot[]
+
+  @@index([owner_type, category, enabled])
+  @@map("combat_abilities")
+}
+
+model MonsterAbilityAssignment {
+  id                    String         @id @default(cuid())
+  monster_id            Int            @map("monster_id")
+  ability_id            Int            @map("ability_id")
+  enabled               Boolean        @default(true)
+  priority              Int            @default(1)
+  chance                Float          @default(1)
+  cooldown_override_ms  Int?           @map("cooldown_override_ms")
+  parameters            Json?
+  conditions            Json?
+  ability               CombatAbility  @relation(fields: [ability_id], references: [id], onDelete: Cascade)
+  @@index([monster_id, priority])
+  @@map("monster_abilities")
+}
+
+model CharacterAttackRotationSlot {
+  id           String        @id @default(cuid())
+  character_id String        @map("character_id")
+  preset       String        @default("HUNT")
+  slot_position Int          @map("slot_position")
+  ability_id   Int?          @map("ability_id")
+  min_targets  Int?          @map("min_targets")
+  enabled      Boolean       @default(true)
+  character    Character     @relation(fields: [character_id], references: [id], onDelete: Cascade)
+  ability      CombatAbility? @relation(fields: [ability_id], references: [id], onDelete: SetNull)
+  @@unique([character_id, preset, slot_position])
+  @@map("character_attack_rotation_slots")
+}
+
+model CharacterHealingRotationSlot {
+  id           String        @id @default(cuid())
+  character_id String        @map("character_id")
+  preset       String        @default("HUNT")
+  slot_position Int          @map("slot_position")
+  ability_id   Int?          @map("ability_id")
+  trigger      Json
+  enabled      Boolean       @default(true)
+  character    Character     @relation(fields: [character_id], references: [id], onDelete: Cascade)
+  ability      CombatAbility? @relation(fields: [ability_id], references: [id], onDelete: SetNull)
+  @@unique([character_id, preset, slot_position])
+  @@map("character_healing_rotation_slots")
+}
+
 // ---------------------------------------------------------------------------
 // Criaturas
 //
@@ -216,6 +312,7 @@ model CreatureDefinition {
   game_can_chase            Boolean?        @default(true) @map("game_can_chase")
   game_can_flee             Boolean?        @default(false) @map("game_can_flee")
   game_return_to_spawn      Boolean?        @default(true) @map("game_return_to_spawn")
+  damage_affinities         Json            @default("{}") @map("damage_affinities")
 
   loots                     CreatureLoot[]
   sources                   CreatureSource[]

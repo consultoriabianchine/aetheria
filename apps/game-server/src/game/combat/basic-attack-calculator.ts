@@ -1,4 +1,5 @@
-import type { AmmoDefinition, CharacterCombatStats, CombatArchetype, CombatSkill, DamageType, WeaponDefinition } from '@aetheria/types';
+import type { AmmoDefinition, CharacterCombatStats, CombatArchetype, CombatSkill, DamageType, WeaponDefinition, WeaponElementOverride } from '@aetheria/types';
+import { resolveEffectiveWeaponDamageType } from './weapon-damage-type-resolver';
 import { COMBAT_FORMULA_PROFILES } from './combat-profiles';
 import { calculateCritical, calculateRawDamage, rollCritical, rollVariance } from './combat-formulas';
 
@@ -28,6 +29,8 @@ export function calculateBasicAttack(input: {
   rng: () => number;
   abilityMultiplier?: number;
   flatPower?: number;
+  now?: number;
+  weaponElementOverride?: WeaponElementOverride;
 }): BasicAttackResult {
   const profile = COMBAT_FORMULA_PROFILES[input.archetype];
   const weapon = input.loadout.weapon;
@@ -51,6 +54,13 @@ export function calculateBasicAttack(input: {
     basePower = weapon.attackPower + ammo.attackPower;
     damageType = ammo.damageType ?? weapon.damageType ?? 'physical';
   }
+
+  damageType = resolveEffectiveWeaponDamageType({
+    weapon,
+    ammoDamageType: input.loadout.ammo?.damageType,
+    override: input.weaponElementOverride,
+    now: input.now ?? Date.now(),
+  });
 
   const skillLevel =
     profile.scalingSkill === 'magic'

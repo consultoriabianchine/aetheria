@@ -51,6 +51,20 @@ export class GameGateway implements OnGatewayConnection, OnGatewayDisconnect {
     this.engine.handleInput(socket.id, (payload.direction as never) ?? null);
   }
 
+  @SubscribeMessage('ability.cast')
+  onAbilityCast(socket: Socket, payload: { abilityId: number; targetId?: string }) {
+    void this.engine.handleAbilityCast(socket.id, payload.abilityId, payload.targetId);
+  }
+
+  @SubscribeMessage('rotation.load')
+  onRotationLoad(socket: Socket, payload: { preset: string }) { void this.engine.handleRotationLoad(socket.id, payload.preset); }
+
+  @SubscribeMessage('rotation.attack.set')
+  onAttackRotation(socket: Socket, payload: { preset: string; slots: { position: 1 | 2 | 3 | 4; abilityId?: number; enabled: boolean; minTargets?: number }[] }) { this.engine.handleAttackRotation(socket.id, payload.preset, payload.slots); }
+
+  @SubscribeMessage('rotation.healing.set')
+  onHealingRotation(socket: Socket, payload: { preset: string; slots: { position: 1 | 2 | 3 | 4; abilityId?: number; enabled: boolean; trigger: { target: 'self' | 'lowest_party_member' | 'specific_party_role'; hpBelowPercent: number } }[] }) { this.engine.handleHealingRotation(socket.id, payload.preset, payload.slots); }
+
   @SubscribeMessage('game.attack')
   onAttack(socket: Socket, payload: { targetId: string }) {
     this.engine.handleAttack(socket.id, payload.targetId);
@@ -124,5 +138,15 @@ export class GameGateway implements OnGatewayConnection, OnGatewayDisconnect {
   @SubscribeMessage('combat.config')
   onCombatConfig(socket: Socket, payload: { token: string; targeting: string; movement: string }) {
     this.engine.handleCombatConfig(socket.id, payload.token, payload.targeting, payload.movement);
+  }
+
+  @SubscribeMessage('combat.weaponElementOverride.apply')
+  onWeaponElementOverride(socket: Socket, payload: { damageType: import('@aetheria/types').DamageType }) {
+    this.engine.handleWeaponElementOverride(socket.id, payload.damageType);
+  }
+
+  @SubscribeMessage('combat.weaponElementOverride.remove')
+  onWeaponElementOverrideRemove(socket: Socket) {
+    this.engine.handleWeaponElementOverrideRemove(socket.id);
   }
 }

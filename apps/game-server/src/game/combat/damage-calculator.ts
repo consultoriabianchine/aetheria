@@ -6,6 +6,7 @@ export interface DamageCalculationResult {
   mitigatedDamage: number;
   finalDamage: number;
   mitigation: number;
+  immune: boolean;
 }
 
 export function calculateMitigatedDamage(input: {
@@ -13,21 +14,27 @@ export function calculateMitigatedDamage(input: {
   damageType: DamageType;
   target: CharacterCombatStats;
   minimumDamage?: number;
+  immune?: boolean;
+  damageTakenModifier?: number;
 }): DamageCalculationResult {
   const rawDamage = Math.max(0, input.damage);
+  const immune = input.immune ?? false;
   const mitigation =
     input.damageType === 'physical'
       ? calculatePhysicalMitigation(input.target.armor + input.target.defense, input.target.level)
       : input.target.resistances[input.damageType] ?? 0;
-  const mitigatedDamage =
-    input.damageType === 'physical'
+  const beforeElement = immune
+    ? 0
+    : input.damageType === 'physical'
       ? applyPhysicalMitigation(rawDamage, input.target.armor + input.target.defense, input.target.level)
       : applyResistanceMitigation(rawDamage, mitigation);
+  const mitigatedDamage = beforeElement * (1 - (input.damageTakenModifier ?? 0));
   const rounded = Math.round(mitigatedDamage);
   return {
     rawDamage,
     mitigatedDamage,
-    finalDamage: Math.max(input.minimumDamage ?? 1, rounded),
+    finalDamage: immune ? 0 : Math.max(input.minimumDamage ?? 1, rounded),
     mitigation,
+    immune,
   };
 }

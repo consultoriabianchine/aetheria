@@ -71,6 +71,15 @@ export class CreatureManager {
   }
 
   /** Atualiza a IA de todas as criaturas vivas. */
+  nextUpdateAt(now: number): number {
+    let next = now + 1000;
+    for (const creature of this.creatures.values()) {
+      if (creature.state === 'DEAD') { if (creature.respawnAt !== null) next = Math.min(next, creature.respawnAt); continue; }
+      next = Math.min(next, Math.max(now + 50, creature.lastMoveAt));
+    }
+    return next;
+  }
+
   updateCreatures(ai: CreatureAIService, now: number) {
     for (const c of this.creatures.values()) {
       if (c.state === 'DEAD') continue;

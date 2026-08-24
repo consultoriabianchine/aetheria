@@ -1,9 +1,14 @@
-import type { CharacterEquipment, CharacterSkills, CombatArchetype, HuntProgress, ItemStack, PlayerAppearance, PlayerCombatConfig, Position } from '@aetheria/types';
+import type { CharacterEquipment, CharacterSkills, CombatArchetype, HuntProgress, ItemStack, PlayerAppearance, PlayerCombatConfig, Position, WeaponElementOverride } from '@aetheria/types';
 
 export interface AccountRecord {
   id: string;
   username: string;
   passwordHash: string;
+}
+
+export interface StoredCharacterEffect {
+  type: 'weapon_element_override';
+  override: WeaponElementOverride;
 }
 
 export interface StoredCharacter {
@@ -45,6 +50,9 @@ export interface Store {
   createCharacter(accountId: string, data: Omit<StoredCharacter, 'id' | 'accountId'>): Promise<StoredCharacter>;
   findCharacterById(id: string): Promise<StoredCharacter | null>;
   saveCharacter(character: StoredCharacter): Promise<void>;
+  getWeaponElementOverride(characterId: string): Promise<WeaponElementOverride | null>;
+  saveWeaponElementOverride(characterId: string, override: WeaponElementOverride): Promise<void>;
+  clearWeaponElementOverride(characterId: string): Promise<void>;
   /** Progresso de uma Hunt para o personagem (ou null se nunca concluída). */
   getHuntProgress(characterId: string, huntId: string): Promise<HuntProgress | null>;
   /** Progresso de todas as Hunts do personagem. */

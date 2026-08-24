@@ -10,6 +10,8 @@ import {
 import { calculateBasicAttack } from '../src/game/combat/basic-attack-calculator';
 import { aggregateCharacterCombatStats, emptyResistances } from '../src/game/combat/character-stat-aggregator';
 import { calculateCritical } from '../src/game/combat/combat-formulas';
+import { calculateMitigatedDamage } from '../src/game/combat/damage-calculator';
+import { resolveDamageAffinity } from '../src/game/combat/damage-affinity-resolver';
 import { skillXpRequired, trainCombatSkill } from '../src/game/skills/skill-progression';
 
 const baseStats: CharacterCombatStats = {
@@ -58,6 +60,14 @@ describe('combat formulas', () => {
 
   it('aplica crítico', () => {
     expect(calculateCritical(100, 1.5)).toBe(150);
+  });
+
+  it('aplica afinidade elemental, fraqueza, resistência e imunidade', () => {
+    const target = { ...baseStats };
+    expect(calculateMitigatedDamage({ damage: 100, damageType: 'fire', target, damageTakenModifier: -0.5 }).finalDamage).toBe(150);
+    expect(calculateMitigatedDamage({ damage: 100, damageType: 'fire', target, damageTakenModifier: 0.5 }).finalDamage).toBe(50);
+    expect(calculateMitigatedDamage({ damage: 100, damageType: 'fire', target, immune: true }).finalDamage).toBe(0);
+    expect(resolveDamageAffinity(undefined, 'fire')).toEqual({ modifier: 0, immune: false });
   });
 
   it('valida basic archer sem ammo e ammo errada', () => {

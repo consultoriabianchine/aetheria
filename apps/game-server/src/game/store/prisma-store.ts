@@ -161,6 +161,29 @@ export class PrismaStore implements Store {
     return character ? this.toStored(character as unknown as CharacterRow) : null;
   }
 
+  async getWeaponElementOverride(characterId: string) {
+    const effect = await this.prisma.characterEffect.findUnique({ where: { characterId_type: { characterId, type: 'weapon_element_override' } } });
+    if (!effect || effect.expiresAt.getTime() <= Date.now()) {
+      if (effect) await this.prisma.characterEffect.delete({ where: { id: effect.id } });
+      return null;
+    }
+    const payload = effect.payload as { damageType?: string; appliedAt?: number; expiresAt?: number };
+    if (!payload.damageType || !payload.appliedAt || !payload.expiresAt) return null;
+    return { damageType: payload.damageType as import('@aetheria/types').DamageType, appliedAt: payload.appliedAt, expiresAt: payload.expiresAt };
+  }
+
+  async saveWeaponElementOverride(characterId: string, override: import('@aetheria/types').WeaponElementOverride): Promise<void> {
+    await this.prisma.characterEffect.upsert({
+      where: { characterId_type: { characterId, type: 'weapon_element_override' } },
+      create: { characterId, type: 'weapon_element_override', payload: override as unknown as Prisma.InputJsonValue, expiresAt: new Date(override.expiresAt) },
+      update: { payload: override as unknown as Prisma.InputJsonValue, expiresAt: new Date(override.expiresAt) },
+    });
+  }
+
+  async clearWeaponElementOverride(characterId: string): Promise<void> {
+    await this.prisma.characterEffect.deleteMany({ where: { characterId, type: 'weapon_element_override' } });
+  }
+
   async saveCharacter(character: StoredCharacter): Promise<void> {
     await this.prisma.character.update({
       where: { id: character.id },

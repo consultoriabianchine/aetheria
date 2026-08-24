@@ -166,6 +166,11 @@ export const PLAYER_AI: Record<CombatArchetype, CombatAIProfile> = {
   archer: { targeting: 'nearest', movement: 'kite', engageRange: 6, kiteDangerDist: 3, kiteSafeDist: 6 },
 };
 
+export const WEAPON_ELEMENT_OVERRIDE_CONFIG = {
+  defaultDurationMs: 180_000,
+  enabled: true,
+} as const;
+
 export const COMBAT_FORMULA_CONFIG = {
   levelScalingPerLevel: 0.005,
   meleeScalingPerSkill: 0.01,
@@ -180,6 +185,8 @@ export const COMBAT_FORMULA_CONFIG = {
   minHitChance: 0.05,
   maxHitChance: 1,
   maxResistance: 0.75,
+  minDamageTakenModifier: -1,
+  maxDamageTakenModifier: 2,
   damageVarianceMin: 0.95,
   damageVarianceMax: 1.05,
   consumableAmmo: false,

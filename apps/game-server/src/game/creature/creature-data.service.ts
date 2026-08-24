@@ -1,5 +1,5 @@
 import { Injectable, Logger } from '@nestjs/common';
-import type { CreatureType } from '@aetheria/types';
+import { normalizeDamageAffinities, type CreatureType } from '@aetheria/types';
 import { snapToTick } from '@aetheria/config';
 import { CREATURE_SEED, CREATURE_SPAWN_SEED } from '../../../data/creature-seed';
 import { PrismaService } from '../../prisma/prisma.service';
@@ -48,8 +48,9 @@ export class CreatureDataService {
           canWander: d.game_can_wander ?? true,
           canChase: d.game_can_chase ?? true,
           canFlee: d.game_can_flee ?? false,
-          returnToSpawn: d.game_return_to_spawn ?? true,
-          loot: d.loots
+           returnToSpawn: d.game_return_to_spawn ?? true,
+           damageAffinities: normalizeDamageAffinities(d.damage_affinities),
+           loot: d.loots
             .filter((l) => l.item_id)
             .map((l) => ({
               itemId: l.item_id as string,

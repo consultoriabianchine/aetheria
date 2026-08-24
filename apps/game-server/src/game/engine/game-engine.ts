@@ -24,6 +24,7 @@ import {
   TICK_MS,
   VIEW_DISTANCE_X,
   VIEW_DISTANCE_Y,
+  WEAPON_ELEMENT_OVERRIDE_CONFIG,
   xpForLevel,
 } from '@aetheria/config';
 import { samePosition, tileDistance, tileKey, uid } from '@aetheria/shared';
@@ -33,6 +34,7 @@ import type {
   CharacterSkills,
   CharacterSummary,
   CombatArchetype,
+  DamageType,
   CombatSkill,
   Direction,
   ItemDefinition,
@@ -58,13 +60,17 @@ import { HuntEngine, HuntRun } from '../hunts/hunt-engine';
 import { MapRegistry } from '../map/map-registry.service';
 import { HuntRegistry } from '../hunts/hunt-registry.service';
 import { OutfitRegistry } from '../outfit/outfit-registry.service';
+import { ReadyQueue } from './ready-queue';
 import { calculateMaxHp, calculateMaxMana } from '../stats/stat-engine';
 import { calculateRegeneration } from '../regeneration/regeneration-engine';
 import { trainCombatSkill } from '../skills/skill-progression';
 import { aggregateCharacterCombatStats, emptyResistances } from '../combat/character-stat-aggregator';
 import { calculateBasicAttack } from '../combat/basic-attack-calculator';
 import { calculateMitigatedDamage } from '../combat/damage-calculator';
+import { calculateRawDamage, calculateCritical, rollCritical, rollVariance } from '../combat/combat-formulas';
+import { resolveDamageAffinity } from '../combat/damage-affinity-resolver';
 import { getAmmoDefinition, getWeaponDefinition } from '../combat/item-combat';
+import { AbilityRegistry } from '../combat/ability-registry';
 
 export type EmitFn = (socketId: string, event: string, data: unknown) => void;
 
@@ -100,6 +106,29 @@ export class GameEngine implements OnModuleDestroy {
   private hunts: HuntEngine;
   private readonly prisma: PrismaService | undefined;
   private readonly outfitRegistry: OutfitRegistry | undefined;
+  private readonly abilityRegistry: AbilityRegistry;
+  private abilityCooldowns = new Map<string, Map<number, number>>();
+  private attackRotations = new Map<string, { abilityId?: number; enabled: boolean; minTargets?: number }[]>();
+  private attackGroupReadyAt = new Map<string, number>();
+  private healingRotations = new Map<string, { abilityId?: number; enabled: boolean; hpBelowPercent: number }[]>();
+  private healingGroupReadyAt = new Map<string, number>();
+  private monsterAbilities = new Map<number, { abilityId: number; priority: number; chance: number; cooldownOverrideMs?: number; parameters?: Record<string, number> }[]>();
+  private monsterAbilityReadyAt = new Map<string, Map<number, number>>();
+  private activeAbilityCasts = new Set<string>();
+  private combatEvents = new ReadyQueue<{ key: string; playerId: string; type: 'attack' | 'heal'; readyAt: number }>();
+  private combatEventReadyAt = new Map<string, number>();
+  private processingCombatEvents = false;
+  private huntEvents = new ReadyQueue<{ characterId: string; readyAt: number }>();
+  private huntEventReadyAt = new Map<string, number>();
+  private processingHuntEvents = false;
+  private regenEvents = new ReadyQueue<{ playerId: string; readyAt: number }>();
+  private regenEventReadyAt = new Map<string, number>();
+  private moveEvents = new ReadyQueue<{ playerId: string; readyAt: number }>();
+  private moveEventReadyAt = new Map<string, number>();
+  private groundItemEvents = new ReadyQueue<{ itemId: string; readyAt: number }>();
+  private groundItemEventReadyAt = new Map<string, number>();
+  private saveEvents = new ReadyQueue<{ playerId: string; readyAt: number }>();
+  private saveEventReadyAt = new Map<string, number>();
 
   constructor(
     @Inject(STORE) private readonly store: Store,
@@ -107,8 +136,10 @@ export class GameEngine implements OnModuleDestroy {
     @Optional() mapRegistry?: MapRegistry,
     @Optional() huntRegistry?: HuntRegistry,
     @Optional() outfitRegistry?: OutfitRegistry,
+    @Optional() abilityRegistry?: AbilityRegistry,
   ) {
     this.prisma = prisma;
+    this.abilityRegistry = abilityRegistry ?? new AbilityRegistry(prisma as never);
     this.outfitRegistry = outfitRegistry;
     this.creatureData = new CreatureDataService(prisma ?? null);
     this.movement = new MovementService(this.world, (position, exceptIds) => this.isOccupied(position, exceptIds));
@@ -118,8 +149,9 @@ export class GameEngine implements OnModuleDestroy {
       getPlayers: () => this.playerSnapshots(),
       getPlayerById: (id) => this.playerSnapshot(id),
       broadcast: (event, data) => this.emitAll(event, data),
-      onAttackPlayer: (creature, target, amount, critical, now) =>
-        this.creatureAttackPlayer(creature, target.id, amount, critical, now),
+      onAttackPlayer: (creature, target, amount, critical, now) => {
+        void this.creatureAttackWithAbility(creature, target.id, amount, critical, now);
+      },
     };
     this.ai = new CreatureAIService(hooks);
     this.loop = new GameLoop(TICK_MS, (_delta, now) => this.tick(now));
@@ -220,14 +252,14 @@ export class GameEngine implements OnModuleDestroy {
     const uname = username.trim();
     if (!uname || !password) {
       this.emitTo(socketId, 'auth.loginResult', { ok: false, error: 'Informe usuário e senha.' });
-      return;
+      return false;
     }
     let account = await this.store.findAccountByUsername(uname);
     if (!account) {
       account = await this.store.createAccount(uname, bcrypt.hashSync(password, 10));
     } else if (!bcrypt.compareSync(password, account.passwordHash)) {
       this.emitTo(socketId, 'auth.loginResult', { ok: false, error: 'Senha incorreta.' });
-      return;
+      return false;
     }
     const characters = (await this.store.listCharacters(account.id)).map((c) => this.toSummary(c));
     const token = this.signToken(account.id, account.username);
@@ -239,7 +271,7 @@ export class GameEngine implements OnModuleDestroy {
     const session = this.verifyToken(token);
     if (!session) {
       this.emitTo(socketId, 'auth.characterCreated', { ok: false, error: 'Sessão inválida.' });
-      return;
+      return false;
     }
     const trimmed = name.trim();
     if (trimmed.length < 3 || trimmed.length > 16 || !/^[A-Za-zÀ-ÿ0-9 ]+$/.test(trimmed)) {
@@ -247,7 +279,7 @@ export class GameEngine implements OnModuleDestroy {
         ok: false,
         error: 'Nome deve ter entre 3 e 16 caracteres (letras, números e espaços).',
       });
-      return;
+      return false;
     }
     const archetype = ARCHETYPES[archetypeId];
     if (!archetype) {
@@ -305,7 +337,7 @@ export class GameEngine implements OnModuleDestroy {
     const stored = await this.store.findCharacterById(characterId);
     if (!stored || stored.accountId !== session.accountId) {
       this.emitTo(socketId, 'auth.selectResult', { ok: false, error: 'Personagem não encontrado.' });
-      return;
+      return false;
     }
     this.removePlayerFromWorld(socketId);
 
@@ -319,8 +351,25 @@ export class GameEngine implements OnModuleDestroy {
     player.recomputeSpeed(getItemDef);
     this.players.set(player.id, player);
     this.playerBySocket.set(socketId, player.id);
+    if (this.prisma) {
+      const slots = await this.prisma.characterAttackRotationSlot.findMany({ where: { character_id: player.id, preset: 'HUNT' }, orderBy: { slot_position: 'asc' } });
+      this.attackRotations.set(player.id, slots.map((slot) => ({ abilityId: slot.ability_id ?? undefined, enabled: slot.enabled, minTargets: slot.min_targets ?? undefined })));
+      const heals = await this.prisma.characterHealingRotationSlot.findMany({ where: { character_id: player.id, preset: 'HUNT' }, orderBy: { slot_position: 'asc' } });
+      this.healingRotations.set(player.id, heals.map((slot) => ({ abilityId: slot.ability_id ?? undefined, enabled: slot.enabled, hpBelowPercent: Number((slot.trigger as { hpBelowPercent?: number }).hpBelowPercent ?? 100) })));
+      this.emitTo(socketId, 'rotation.state', { preset: 'HUNT', attack: slots, healing: heals, cooldowns: { attackGroupReadyAt: 0, healingGroupReadyAt: 0, abilityReadyAt: {} } });
+    }
+    const override = await this.store.getWeaponElementOverride(player.id);
+    if (override) {
+      player.weaponElementOverride = override;
+      this.emitTo(socketId, 'combat.weaponElementOverride.applied', { override });
+    }
+    this.schedulePlayerRegen(player.id, Date.now() + 1000);
+    this.schedulePlayerSave(player.id, Date.now() + 10_000);
+    this.schedulePlayerAttackCheck(player, Date.now());
+    this.schedulePlayerHealCheck(player, Date.now());
 
     this.emitTo(socketId, 'auth.selectResult', { ok: true });
+    this.emitTo(socketId, 'abilities.update', { abilities: await this.abilityRegistry.list() });
     this.emitTo(socketId, 'game.enterWorld', {
       character: this.toSummary(player),
       map: this.world.tiles,
@@ -387,6 +436,11 @@ export class GameEngine implements OnModuleDestroy {
       return;
     }
     this.emitOthers(socketId, 'entity.removed', { id: player.id });
+    player.moveDir = null;
+    this.moveEventReadyAt.delete(player.id);
+    this.schedulePlayerAttackCheck(player, Date.now());
+    this.schedulePlayerHealCheck(player, Date.now());
+    this.scheduleHuntUpdate(player.id, Date.now());
     this.logger.log(`Jogador ${player.name} entrou na hunt ${huntId}.`);
   }
 
@@ -394,6 +448,7 @@ export class GameEngine implements OnModuleDestroy {
     void this.verifySession(socketId, token).then((session) => {
       if (!session) return;
       if (this.hunts.stopHunt(session.player.id)) {
+        this.huntEventReadyAt.delete(session.player.id);
         this.logger.log(`Jogador ${session.player.name} abandonou a hunt.`);
       }
     });
@@ -498,6 +553,7 @@ export class GameEngine implements OnModuleDestroy {
   private handleRunFinished(characterId: string, reason: 'completed' | 'wiped' | 'stopped') {
     const run = this.hunts.getRun(characterId);
     this.hunts.removeRun(characterId);
+    this.huntEventReadyAt.delete(characterId);
     const player = this.players.get(characterId);
     if (!player) return;
     player.position = { ...SPAWN_POINT };
@@ -505,6 +561,7 @@ export class GameEngine implements OnModuleDestroy {
     player.mana = player.maxMana;
     player.targetId = null;
     player.moveDir = null;
+    this.moveEventReadyAt.delete(player.id);
     const socketId = player.socketId ?? '';
     this.emitTo(socketId, 'game.enterWorld', {
       character: this.toSummary(player),
@@ -542,6 +599,10 @@ export class GameEngine implements OnModuleDestroy {
     if (player) {
       this.players.delete(characterId);
       this.hunts.removeRun(characterId);
+      this.huntEventReadyAt.delete(characterId);
+      this.regenEventReadyAt.delete(characterId);
+      this.moveEventReadyAt.delete(characterId);
+      this.saveEventReadyAt.delete(characterId);
       this.emitAll('entity.removed', { id: characterId });
       await this.persistPlayer(player);
       this.logger.log(`Jogador ${player.name} saiu.`);
@@ -553,15 +614,131 @@ export class GameEngine implements OnModuleDestroy {
     if (!player) return;
     if (this.hunts.getRun(player.id)) {
       player.moveDir = null;
+      this.moveEventReadyAt.delete(player.id);
       return;
     }
     player.moveDir = direction ?? null;
+    if (player.moveDir) this.schedulePlayerMove(player, Math.max(Date.now(), player.nextMoveAt));
+    else this.moveEventReadyAt.delete(player.id);
+  }
+
+  async handleAbilityCast(socketId: string, abilityId: number, targetId?: string): Promise<boolean> {
+    const playerId = this.playerBySocket.get(socketId);
+    const player = playerId ? this.players.get(playerId) : undefined;
+    const ability = await this.abilityRegistry.get(abilityId);
+    if (!player || !ability || !ability.enabled || !['player', 'both'].includes(ability.ownerType)) {
+      this.emitTo(socketId, 'ability.castFailed', { abilityId, reason: 'ABILITY_UNAVAILABLE' });
+      return false;
+    }
+    const now = Date.now();
+    const castKey = `${player.id}:${abilityId}`;
+    if (this.activeAbilityCasts.has(castKey)) return false;
+    this.activeAbilityCasts.add(castKey);
+    const cooldowns = this.abilityCooldowns.get(player.id) ?? new Map<number, number>();
+    if ((cooldowns.get(abilityId) ?? 0) > now) {
+      this.emitTo(socketId, 'ability.castFailed', { abilityId, reason: 'COOLDOWN' });
+      this.activeAbilityCasts.delete(castKey);
+      return false;
+    }
+    const groupReadyAt = ability.cooldownGroup === 'healing' ? (this.healingGroupReadyAt.get(player.id) ?? 0) : (this.attackGroupReadyAt.get(player.id) ?? 0);
+    if (groupReadyAt > now) { this.activeAbilityCasts.delete(castKey); this.emitTo(socketId, 'ability.castFailed', { abilityId, reason: 'GROUP_COOLDOWN' }); return false; }
+    if ((ability.manaCost ?? 0) > player.mana) {
+      this.activeAbilityCasts.delete(castKey);
+      this.emitTo(socketId, 'ability.castFailed', { abilityId, reason: 'MANA' });
+      return false;
+    }
+    const resolvedTargetId = targetId ?? player.targetId ?? undefined;
+    const run = this.hunts.getRun(player.id);
+    const target = resolvedTargetId
+      ? (run?.creatures.getCreature(resolvedTargetId) ?? this.creatures.getCreature(resolvedTargetId) ?? this.players.get(resolvedTargetId))
+      : undefined;
+    if (ability.category !== 'heal' && (!target || tileDistance(player.position, target.position) > ability.rangeTiles)) {
+      this.activeAbilityCasts.delete(castKey);
+      this.emitTo(socketId, 'ability.castFailed', { abilityId, reason: 'INVALID_TARGET' });
+      return false;
+    }
+    if (ability.cooldownGroup === 'healing') this.healingGroupReadyAt.set(player.id, now + 1000);
+    else this.attackGroupReadyAt.set(player.id, now + 2000);
+    player.mana -= ability.manaCost ?? 0;
+    cooldowns.set(abilityId, now + ability.cooldownMs);
+    this.abilityCooldowns.set(player.id, cooldowns);
+    this.emitTo(socketId, 'ability.cast', { abilityId, attackerId: player.id, targetId });
+    if (ability.category === 'heal') {
+      const amount = Math.max(1, ability.defaultParameters?.power ?? 30);
+      player.health = Math.min(player.maxHealth, player.health + amount);
+      this.emitHeal(player.id, player, amount);
+      this.emitStats(player);
+    } else if (target) {
+      this.dealAbilityDamage(player, target, ability, now);
+      this.emitStats(player);
+    } else {
+      this.emitStats(player);
+    }
+    this.activeAbilityCasts.delete(castKey);
+    return true;
+  }
+
+  async handleRotationLoad(socketId: string, preset: string) {
+    const player = this.playerForSocket(socketId);
+    if (!player || !['HUNT', 'BOSS', 'HELPER'].includes(preset) || !this.prisma) return;
+    const [attack, healing] = await Promise.all([
+      this.prisma.characterAttackRotationSlot.findMany({ where: { character_id: player.id, preset }, orderBy: { slot_position: 'asc' } }),
+      this.prisma.characterHealingRotationSlot.findMany({ where: { character_id: player.id, preset }, orderBy: { slot_position: 'asc' } }),
+    ]);
+    this.attackRotations.set(player.id, attack.map((slot) => ({ abilityId: slot.ability_id ?? undefined, enabled: slot.enabled, minTargets: slot.min_targets ?? undefined })));
+    this.healingRotations.set(player.id, healing.map((slot) => ({ abilityId: slot.ability_id ?? undefined, enabled: slot.enabled, hpBelowPercent: Number((slot.trigger as { hpBelowPercent?: number }).hpBelowPercent ?? 80) })));
+    this.emitTo(socketId, 'rotation.state', { preset, attack, healing, saved: true, cooldowns: { attackGroupReadyAt: this.attackGroupReadyAt.get(player.id) ?? 0, healingGroupReadyAt: this.healingGroupReadyAt.get(player.id) ?? 0, abilityReadyAt: Object.fromEntries(this.abilityCooldowns.get(player.id) ?? []) } });
+    this.schedulePlayerAttackCheck(player, Date.now());
+    this.schedulePlayerHealCheck(player, Date.now());
+  }
+
+  handleAttackRotation(socketId: string, preset: string, slots: { position: number; abilityId?: number; enabled: boolean; minTargets?: number }[]) {
+    const player = this.playerForSocket(socketId); if (!player || !['HUNT', 'BOSS', 'HELPER'].includes(preset)) return;
+    const ordered = slots.sort((a, b) => a.position - b.position);
+    this.attackRotations.set(player.id, ordered);
+    this.schedulePlayerAttackCheck(player, Date.now());
+    if (this.prisma) void this.prisma.$transaction(async (tx) => { await tx.characterAttackRotationSlot.deleteMany({ where: { character_id: player.id, preset } }); await tx.characterAttackRotationSlot.createMany({ data: ordered.map((slot) => ({ character_id: player.id, preset, slot_position: slot.position, ability_id: slot.abilityId ?? null, enabled: slot.enabled, min_targets: slot.minTargets ?? null })) }); return tx.characterAttackRotationSlot.findMany({ where: { character_id: player.id, preset }, orderBy: { slot_position: 'asc' } }); }).then((attack) => this.emitTo(socketId, 'rotation.state', { preset, attack, cooldowns: { attackGroupReadyAt: this.attackGroupReadyAt.get(player.id) ?? 0, healingGroupReadyAt: this.healingGroupReadyAt.get(player.id) ?? 0, abilityReadyAt: Object.fromEntries(this.abilityCooldowns.get(player.id) ?? []) } })).catch((error) => this.emitTo(socketId, 'error', { message: `Falha ao salvar rotação: ${error instanceof Error ? error.message : String(error)}` }));
+  }
+
+  handleHealingRotation(socketId: string, preset: string, slots: { position: number; abilityId?: number; enabled: boolean; trigger: { hpBelowPercent: number } }[]) {
+    const player = this.playerForSocket(socketId); if (!player || !['HUNT', 'BOSS', 'HELPER'].includes(preset)) return;
+    const ordered = slots.sort((a, b) => a.position - b.position);
+    this.healingRotations.set(player.id, ordered.map((slot) => ({ abilityId: slot.abilityId, enabled: slot.enabled, hpBelowPercent: slot.trigger.hpBelowPercent })));
+    this.schedulePlayerHealCheck(player, Date.now());
+    if (this.prisma) void this.prisma.$transaction(async (tx) => { await tx.characterHealingRotationSlot.deleteMany({ where: { character_id: player.id, preset } }); await tx.characterHealingRotationSlot.createMany({ data: ordered.map((slot) => ({ character_id: player.id, preset, slot_position: slot.position, ability_id: slot.abilityId ?? null, enabled: slot.enabled, trigger: slot.trigger })) }); return tx.characterHealingRotationSlot.findMany({ where: { character_id: player.id, preset }, orderBy: { slot_position: 'asc' } }); }).then((healing) => this.emitTo(socketId, 'rotation.state', { preset, healing, cooldowns: { attackGroupReadyAt: this.attackGroupReadyAt.get(player.id) ?? 0, healingGroupReadyAt: this.healingGroupReadyAt.get(player.id) ?? 0, abilityReadyAt: Object.fromEntries(this.abilityCooldowns.get(player.id) ?? []) } })).catch((error) => this.emitTo(socketId, 'error', { message: `Falha ao salvar cura: ${error instanceof Error ? error.message : String(error)}` }));
   }
 
   handleAttack(socketId: string, targetId: string) {
     const player = this.playerForSocket(socketId);
     if (!player) return;
     player.targetId = targetId;
+    this.schedulePlayerAttackCheck(player, Date.now());
+  }
+
+  handleWeaponElementOverride(socketId: string, damageType: DamageType) {
+    const player = this.playerForSocket(socketId);
+    if (!player || !WEAPON_ELEMENT_OVERRIDE_CONFIG.enabled) return;
+    const validTypes: DamageType[] = ['physical', 'fire', 'ice', 'energy', 'earth', 'holy', 'death', 'arcane'];
+    if (!validTypes.includes(damageType)) return;
+    const now = Date.now();
+    const equipped = Boolean(player.equipment.weapon);
+    player.weaponElementOverride = {
+      damageType,
+      appliedAt: now,
+      expiresAt: equipped ? now + WEAPON_ELEMENT_OVERRIDE_CONFIG.defaultDurationMs : now,
+      paused: !equipped,
+      remainingMs: equipped ? WEAPON_ELEMENT_OVERRIDE_CONFIG.defaultDurationMs : WEAPON_ELEMENT_OVERRIDE_CONFIG.defaultDurationMs,
+    };
+    void this.store.saveWeaponElementOverride(player.id, player.weaponElementOverride);
+    this.emitTo(socketId, 'combat.weaponElementOverride.applied', { override: player.weaponElementOverride });
+  }
+
+  handleWeaponElementOverrideRemove(socketId: string) {
+    const player = this.playerForSocket(socketId);
+    if (!player || !player.weaponElementOverride) return;
+    player.weaponElementOverride = undefined;
+    void this.store.clearWeaponElementOverride(player.id);
+    this.emitTo(socketId, 'combat.weaponElementOverride.removed', { reason: 'manual' });
   }
 
   async handlePickup(socketId: string, entityId: string) {
@@ -581,6 +758,7 @@ export class GameEngine implements OnModuleDestroy {
       return;
     }
     this.groundItems.delete(entityId);
+    this.groundItemEventReadyAt.delete(entityId);
     this.emitAll('loot.removed', { entityId });
     this.emitInventory(player);
   }
@@ -599,6 +777,7 @@ export class GameEngine implements OnModuleDestroy {
     }
     player.inventory[slotIndex] = null;
     player.equipment[slot] = { itemId: stack.itemId, quantity: 1 };
+    if (slot === 'weapon') this.resumeWeaponElementOverride(player);
     player.recomputeSpeed(getItemDef);
     this.emitInventory(player);
     this.emitStats(player);
@@ -614,6 +793,7 @@ export class GameEngine implements OnModuleDestroy {
       this.emitTo(socketId, 'error', { message: 'Inventário cheio.' });
       return;
     }
+    if (slot === 'weapon') this.pauseWeaponElementOverride(player);
     player.equipment[slot as keyof CharacterEquipment] = undefined;
     player.inventory[idx] = { itemId: stack.itemId, quantity: 1 };
     player.recomputeSpeed(getItemDef);
@@ -621,17 +801,34 @@ export class GameEngine implements OnModuleDestroy {
     this.emitStats(player);
   }
 
+  private pauseWeaponElementOverride(player: GamePlayer) {
+    const override = player.weaponElementOverride;
+    if (!override || override.paused) return;
+    override.remainingMs = Math.max(0, override.expiresAt - Date.now());
+    override.paused = true;
+    override.expiresAt = Date.now();
+    void this.store.saveWeaponElementOverride(player.id, override);
+  }
+
+  private resumeWeaponElementOverride(player: GamePlayer) {
+    const override = player.weaponElementOverride;
+    if (!override || !override.paused || (override.remainingMs ?? 0) <= 0) return;
+    override.paused = false;
+    override.expiresAt = Date.now() + (override.remainingMs ?? 0);
+    void this.store.saveWeaponElementOverride(player.id, override);
+  }
+
   handleExpandLootPouch(socketId: string) {
     const player = this.playerForSocket(socketId);
     if (!player) return;
     if (player.lootPouchSize >= LOOT_POUCH_EXPANSION.maxSize) {
       this.emitTo(socketId, 'error', { message: 'A Bolsa de Loot já está no tamanho máximo.' });
-      return;
+      return false;
     }
     const cost = LOOT_POUCH_EXPANSION.goldCost(player.lootPouchSize);
     if (player.gold < cost) {
       this.emitTo(socketId, 'error', { message: `Gold insuficiente para expandir a Bolsa de Loot (${cost} gold).` });
-      return;
+      return false;
     }
     const nextSize = Math.min(LOOT_POUCH_EXPANSION.maxSize, player.lootPouchSize + LOOT_POUCH_EXPANSION.slotsPerUpgrade);
     player.gold -= cost;
@@ -661,7 +858,7 @@ export class GameEngine implements OnModuleDestroy {
     });
     if (sold <= 0) {
       this.emitTo(socketId, 'chat.message', { channel: 'local', from: 'Sistema', text: 'Bolsa de Loot vazia.' });
-      return;
+      return false;
     }
     player.gold += total;
     this.emitTo(socketId, 'gold.update', { gold: player.gold });
@@ -905,8 +1102,10 @@ export class GameEngine implements OnModuleDestroy {
       dodge: 0,
       speed: 0,
       resistances: emptyResistances(),
+      damageAffinities: target.definition.damageAffinities,
     };
   }
+
 
   private defenseValue(target: GamePlayer | CreatureEntity): number {
     const stats = this.targetCombatStats(target);
@@ -945,20 +1144,47 @@ export class GameEngine implements OnModuleDestroy {
     });
   }
 
+  private dealAbilityDamage(attacker: GamePlayer, target: GamePlayer | CreatureEntity, ability: import('@aetheria/types').CombatAbilityDefinition, now: number): boolean {
+    const stats = this.combatStats(attacker);
+    const weapon = attacker.equipment.weapon ? getWeaponDefinition(getItemDef(attacker.equipment.weapon.itemId)) : undefined;
+    const ammo = attacker.equipment.ammo ? getAmmoDefinition(getItemDef(attacker.equipment.ammo.itemId)) : undefined;
+    const sourcePower = ability.powerSource === 'weapon_ammo' ? (weapon?.attackPower ?? 0) + (ammo?.attackPower ?? 0) : ability.powerSource === 'weapon' ? (weapon?.attackPower ?? 0) : ability.powerSource === 'magic_weapon' ? (weapon?.magicPower ?? 0) : ability.defaultParameters?.power ?? 20;
+    const skill = attacker.archetype === 'mage' ? stats.magicLevel : attacker.archetype === 'archer' ? stats.distanceSkill : stats.meleeSkill;
+    const raw = calculateRawDamage({ basePower: sourcePower, flatPower: ability.defaultParameters?.flatPower, skill: attacker.archetype === 'mage' ? 'magic' : attacker.archetype === 'archer' ? 'distance' : 'melee', skillLevel: skill, level: stats.level, abilityMultiplier: ability.defaultParameters?.powerMultiplier ?? 1, variance: rollVariance(() => this.nextCombatRandom(attacker, now)) });
+    const critical = rollCritical(stats.criticalChance, () => this.nextCombatRandom(attacker, now + 1));
+    const damage = calculateMitigatedDamage({ damage: critical ? calculateCritical(raw, stats.criticalDamage) : raw, damageType: ability.damageType ?? 'physical', target: this.targetCombatStats(target), damageTakenModifier: resolveDamageAffinity(this.targetCombatStats(target).damageAffinities, ability.damageType ?? 'physical').modifier, immune: resolveDamageAffinity(this.targetCombatStats(target).damageAffinities, ability.damageType ?? 'physical').immune });
+    target.health = Math.max(0, target.health - damage.finalDamage);
+    this.emitCombatEvent(target, 'combat.damage', { attackerId: attacker.id, targetId: target.id, amount: damage.finalDamage, damageType: ability.damageType ?? 'physical', critical, targetHealth: target.health });
+    this.emitCombatEvent(target, 'entity.health', { id: target.id, health: target.health, maxHealth: target.maxHealth });
+    if (target.health <= 0 && target instanceof CreatureEntity) this.creatureKilled(attacker, target, now);
+    return true;
+  }
+
   private dealDamage(attacker: GamePlayer, target: GamePlayer | CreatureEntity, now: number): boolean {
+    if (attacker.weaponElementOverride && now >= attacker.weaponElementOverride.expiresAt) {
+      attacker.weaponElementOverride = undefined;
+      void this.store.clearWeaponElementOverride(attacker.id);
+      this.emitTo(attacker.socketId ?? '', 'combat.weaponElementOverride.removed', { reason: 'expired' });
+    }
     const weaponItem = attacker.equipment.weapon ? getItemDef(attacker.equipment.weapon.itemId) : undefined;
     const ammoItem = attacker.equipment.ammo ? getItemDef(attacker.equipment.ammo.itemId) : undefined;
     const attack = calculateBasicAttack({
       archetype: attacker.archetype,
       attacker: this.combatStats(attacker),
       loadout: { weapon: getWeaponDefinition(weaponItem), ammo: getAmmoDefinition(ammoItem) },
+      weaponElementOverride: attacker.weaponElementOverride,
+      now,
       rng: () => this.nextCombatRandom(attacker, now),
     });
     if (!attack.valid) return false;
+    const targetStats = this.targetCombatStats(target);
+    const affinity = resolveDamageAffinity(targetStats.damageAffinities, attack.damageType);
     const damage = calculateMitigatedDamage({
       damage: attack.damageBeforeMitigation,
       damageType: attack.damageType,
-      target: this.targetCombatStats(target),
+      target: targetStats,
+      immune: affinity.immune,
+      damageTakenModifier: affinity.modifier,
     });
     const amount = damage.finalDamage;
     const projectileVisual = this.resolveProjectileVisual(weaponItem, ammoItem);
@@ -1003,13 +1229,41 @@ export class GameEngine implements OnModuleDestroy {
     return Math.round((distance / speed) * 1000);
   }
 
-  private creatureAttackPlayer(creature: CreatureEntity, playerId: string, amount: number, critical: boolean, now: number) {
+  private async creatureAttackWithAbility(creature: CreatureEntity, playerId: string, amount: number, critical: boolean, now: number) {
+    const creatureId = creature.definition.creatureId;
+    if (!creatureId || !this.prisma) { this.creatureAttackPlayer(creature, playerId, amount, critical, now); return; }
+    let assignments = this.monsterAbilities.get(creatureId);
+    if (!assignments) {
+      const rows = await this.prisma.monsterAbilityAssignment.findMany({ where: { monster_id: creatureId, enabled: true }, orderBy: { priority: 'asc' } });
+      assignments = rows.map((row) => ({ abilityId: row.ability_id, priority: row.priority, chance: row.chance, cooldownOverrideMs: row.cooldown_override_ms ?? undefined, parameters: (row.parameters as Record<string, number> | null) ?? undefined }));
+      this.monsterAbilities.set(creatureId, assignments);
+    }
+    const ready = this.monsterAbilityReadyAt.get(creature.id) ?? new Map<number, number>();
+    for (const assignment of assignments) {
+      const ability = await this.abilityRegistry.get(assignment.abilityId);
+      if (!ability || now < (ready.get(ability.abilityId) ?? 0)) continue;
+      if (this.nextCombatRandomForId(creature.id, now) >= assignment.chance) continue;
+      ready.set(ability.abilityId, now + (assignment.cooldownOverrideMs ?? ability.cooldownMs));
+      this.monsterAbilityReadyAt.set(creature.id, ready);
+      const power = assignment.parameters?.power ?? amount;
+      this.creatureAttackPlayer(creature, playerId, power, critical, now, ability.damageType ?? 'physical');
+      return;
+    }
+    this.creatureAttackPlayer(creature, playerId, amount, critical, now);
+  }
+
+  private nextCombatRandomForId(id: string, now: number): number {
+    const x = Math.sin(now * 12.9898 + id.length * 78.233) * 43758.5453;
+    return x - Math.floor(x);
+  }
+
+  private creatureAttackPlayer(creature: CreatureEntity, playerId: string, amount: number, critical: boolean, now: number, damageType: DamageType = 'physical') {
     const player = this.players.get(playerId);
     if (!player) return;
     const damage = calculateMitigatedDamage({
       damage: amount,
-      damageType: 'physical',
-      target: this.targetCombatStats(player),
+      damageType,
+       target: this.targetCombatStats(player),
     });
     const reduced = damage.finalDamage;
     player.health = Math.max(0, player.health - reduced);
@@ -1017,8 +1271,8 @@ export class GameEngine implements OnModuleDestroy {
       attackerId: creature.id,
       targetId: player.id,
       amount: reduced,
-      damageType: 'physical',
-      critical,
+       damageType,
+       critical,
       targetHealth: player.health,
     });
     this.emitCombatEvent(player, 'entity.health', { id: player.id, health: player.health, maxHealth: player.maxHealth });
@@ -1044,27 +1298,178 @@ export class GameEngine implements OnModuleDestroy {
 
   // ---------------------------------------------------------------- tick
 
+  private schedulePlayerCombat(playerId: string, type: 'attack' | 'heal', readyAt: number) {
+    const key = `${playerId}:${type}`;
+    const normalizedReadyAt = Math.max(0, Math.round(readyAt));
+    if ((this.combatEventReadyAt.get(key) ?? -1) <= normalizedReadyAt && this.combatEventReadyAt.has(key)) return;
+    this.combatEventReadyAt.set(key, normalizedReadyAt);
+    this.combatEvents.push({ key, playerId, type, readyAt: normalizedReadyAt });
+  }
+
+  private schedulePlayerAttackCheck(player: GamePlayer, now: number) {
+    const run = this.hunts.getRun(player.id);
+    if (!run && !player.targetId) return;
+    if (run && !player.targetId) {
+      this.schedulePlayerCombat(player.id, 'attack', now + 250);
+      return;
+    }
+    const magicReadyAt = this.attackGroupReadyAt.get(player.id) ?? now;
+    const basicReadyAt = player.attackCooldownUntil || now;
+    this.schedulePlayerCombat(player.id, 'attack', Math.min(magicReadyAt, basicReadyAt));
+  }
+
+  private schedulePlayerHealCheck(player: GamePlayer, now: number) {
+    if ((this.healingRotations.get(player.id) ?? []).length === 0) return;
+    this.schedulePlayerCombat(player.id, 'heal', this.healingGroupReadyAt.get(player.id) ?? now);
+  }
+
+  private async processCombatEvents(now: number) {
+    if (this.processingCombatEvents) return;
+    this.processingCombatEvents = true;
+    try {
+    if (this.combatEvents.size === 0) return;
+    let processed = 0;
+    while (this.combatEvents.peek() && this.combatEvents.peek()!.readyAt <= now && processed < 10_000) {
+      const event = this.combatEvents.pop()!;
+      if (this.combatEventReadyAt.get(event.key) !== event.readyAt) continue;
+      this.combatEventReadyAt.delete(event.key);
+      const player = this.players.get(event.playerId);
+      if (!player?.socketId) continue;
+      if (event.type === 'heal') {
+        await this.processPlayerHealing(player, now);
+        this.schedulePlayerHealCheck(player, Date.now());
+      } else {
+        await this.processPlayerAttack(player, now);
+        this.schedulePlayerAttackCheck(player, Date.now());
+      }
+      processed++;
+    }
+    } finally {
+      this.processingCombatEvents = false;
+    }
+  }
+
+  private scheduleHuntUpdate(characterId: string, readyAt: number) {
+    const normalizedReadyAt = Math.max(0, Math.round(readyAt));
+    if ((this.huntEventReadyAt.get(characterId) ?? -1) <= normalizedReadyAt && this.huntEventReadyAt.has(characterId)) return;
+    this.huntEventReadyAt.set(characterId, normalizedReadyAt);
+    this.huntEvents.push({ characterId, readyAt: normalizedReadyAt });
+  }
+
+  private processHuntEvents(now: number) {
+    if (this.processingHuntEvents) return;
+    this.processingHuntEvents = true;
+    try {
+      if (this.huntEvents.size === 0) return;
+      let processed = 0;
+      while (this.huntEvents.peek() && this.huntEvents.peek()!.readyAt <= now && processed < 10_000) {
+        const event = this.huntEvents.pop()!;
+        if (this.huntEventReadyAt.get(event.characterId) !== event.readyAt) continue;
+        this.huntEventReadyAt.delete(event.characterId);
+        if (!this.hunts.hasRun(event.characterId)) continue;
+        const player = this.players.get(event.characterId);
+        if (player?.socketId) this.processPlayerCombatAI(player, now);
+        this.hunts.updateRun(event.characterId, now);
+        if (player?.socketId) this.schedulePlayerAttackCheck(player, now);
+        if (this.hunts.hasRun(event.characterId)) this.scheduleHuntUpdate(event.characterId, this.hunts.nextUpdateAt(event.characterId, now));
+        processed++;
+      }
+    } finally {
+      this.processingHuntEvents = false;
+    }
+  }
+
+  private schedulePlayerRegen(playerId: string, readyAt: number) {
+    const normalizedReadyAt = Math.max(0, Math.round(readyAt));
+    if ((this.regenEventReadyAt.get(playerId) ?? -1) <= normalizedReadyAt && this.regenEventReadyAt.has(playerId)) return;
+    this.regenEventReadyAt.set(playerId, normalizedReadyAt);
+    this.regenEvents.push({ playerId, readyAt: normalizedReadyAt });
+  }
+
+  private processRegenEvents(now: number) {
+    let processed = 0;
+    while (this.regenEvents.peek() && this.regenEvents.peek()!.readyAt <= now && processed < 10_000) {
+      const event = this.regenEvents.pop()!;
+      if (this.regenEventReadyAt.get(event.playerId) !== event.readyAt) continue;
+      this.regenEventReadyAt.delete(event.playerId);
+      const player = this.players.get(event.playerId);
+      if (!player?.socketId) continue;
+      this.regeneratePlayer(player, now);
+      this.schedulePlayerRegen(player.id, now + 1000);
+      processed++;
+    }
+  }
+
+  private schedulePlayerMove(player: GamePlayer, readyAt: number) {
+    if (!player.moveDir || this.hunts.getRun(player.id)) return;
+    const normalizedReadyAt = Math.max(0, Math.round(readyAt));
+    if ((this.moveEventReadyAt.get(player.id) ?? -1) <= normalizedReadyAt && this.moveEventReadyAt.has(player.id)) return;
+    this.moveEventReadyAt.set(player.id, normalizedReadyAt);
+    this.moveEvents.push({ playerId: player.id, readyAt: normalizedReadyAt });
+  }
+
+  private processMoveEvents(now: number) {
+    let processed = 0;
+    while (this.moveEvents.peek() && this.moveEvents.peek()!.readyAt <= now && processed < 10_000) {
+      const event = this.moveEvents.pop()!;
+      if (this.moveEventReadyAt.get(event.playerId) !== event.readyAt) continue;
+      this.moveEventReadyAt.delete(event.playerId);
+      const player = this.players.get(event.playerId);
+      if (!player?.socketId || !player.moveDir) continue;
+      this.processPlayerMove(player, now);
+      this.schedulePlayerMove(player, player.nextMoveAt);
+      processed++;
+    }
+  }
+
+  private scheduleGroundItem(item: GroundItem) {
+    if ((this.groundItemEventReadyAt.get(item.id) ?? -1) <= item.expiresAt && this.groundItemEventReadyAt.has(item.id)) return;
+    this.groundItemEventReadyAt.set(item.id, item.expiresAt);
+    this.groundItemEvents.push({ itemId: item.id, readyAt: item.expiresAt });
+  }
+
+  private processGroundItemEvents(now: number) {
+    let processed = 0;
+    while (this.groundItemEvents.peek() && this.groundItemEvents.peek()!.readyAt <= now && processed < 10_000) {
+      const event = this.groundItemEvents.pop()!;
+      if (this.groundItemEventReadyAt.get(event.itemId) !== event.readyAt) continue;
+      this.groundItemEventReadyAt.delete(event.itemId);
+      const item = this.groundItems.get(event.itemId);
+      if (!item || item.expiresAt > now) continue;
+      this.groundItems.delete(event.itemId);
+      this.emitAll('loot.removed', { entityId: event.itemId });
+      processed++;
+    }
+  }
+
+  private schedulePlayerSave(playerId: string, readyAt: number) {
+    const normalizedReadyAt = Math.max(0, Math.round(readyAt));
+    if ((this.saveEventReadyAt.get(playerId) ?? -1) <= normalizedReadyAt && this.saveEventReadyAt.has(playerId)) return;
+    this.saveEventReadyAt.set(playerId, normalizedReadyAt);
+    this.saveEvents.push({ playerId, readyAt: normalizedReadyAt });
+  }
+
+  private processSaveEvents(now: number) {
+    let processed = 0;
+    while (this.saveEvents.peek() && this.saveEvents.peek()!.readyAt <= now && processed < 10_000) {
+      const event = this.saveEvents.pop()!;
+      if (this.saveEventReadyAt.get(event.playerId) !== event.readyAt) continue;
+      this.saveEventReadyAt.delete(event.playerId);
+      const player = this.players.get(event.playerId);
+      if (!player?.socketId) continue;
+      void this.persistPlayer(player).finally(() => { if (this.players.has(player.id)) this.schedulePlayerSave(player.id, Date.now() + 10_000); });
+      processed++;
+    }
+  }
+
   private tick(now: number) {
     try {
-      for (const player of this.players.values()) {
-        if (!player.socketId) continue;
-        this.regeneratePlayer(player, now);
-        this.processPlayerMove(player, now);
-        this.processPlayerCombatAI(player, now);
-        this.processPlayerAttack(player, now);
-      }
-      this.creatures.updateCreatures(this.ai, now);
-      this.hunts.update(now);
-      this.processGroundItems(now);
-      this.creatures.processRespawns(
-        now,
-        (id) => this.emitAll('creature.remove', { creatureId: id }),
-        (entity) => this.emitAll('creature.spawn', this.creatureSpawnPayload(entity)),
-      );
-      if (now - this.lastSaveAt > 10_000) {
-        this.lastSaveAt = now;
-        for (const player of this.players.values()) void this.persistPlayer(player).catch(() => undefined);
-      }
+      this.processMoveEvents(now);
+      this.processRegenEvents(now);
+      void this.processCombatEvents(now);
+      this.processHuntEvents(now);
+      this.processGroundItemEvents(now);
+      this.processSaveEvents(now);
     } catch (err) {
       this.logger.error('Erro no tick do jogo', err instanceof Error ? err.stack : String(err));
     }
@@ -1115,7 +1520,19 @@ export class GameEngine implements OnModuleDestroy {
     }
   }
 
-  private processPlayerAttack(player: GamePlayer, now: number) {
+  private async processPlayerHealing(player: GamePlayer, now: number) {
+    if (now < (this.healingGroupReadyAt.get(player.id) ?? 0)) return;
+    const hpPercent = player.maxHealth > 0 ? (player.health / player.maxHealth) * 100 : 100;
+    for (const slot of this.healingRotations.get(player.id) ?? []) {
+      if (!slot.enabled || slot.abilityId === undefined || hpPercent > slot.hpBelowPercent) continue;
+      const ability = await this.abilityRegistry.get(slot.abilityId);
+      const readyAt = this.abilityCooldowns.get(player.id)?.get(slot.abilityId) ?? 0;
+      if (!ability || ability.category !== 'heal' || now < readyAt) continue;
+      if (await this.handleAbilityCast(player.socketId ?? '', ability.abilityId, player.id)) return;
+    }
+  }
+
+  private async processPlayerAttack(player: GamePlayer, now: number) {
     const run = this.hunts.getRun(player.id);
     if (run) {
       player.targetId = this.playerAI.selectTarget(run.creatures.getAll(), player)?.id ?? null;
@@ -1129,6 +1546,17 @@ export class GameEngine implements OnModuleDestroy {
     if (!target || target.health <= 0 || target.position.z !== player.position.z) {
       player.targetId = null;
       return;
+    }
+    const groupReadyAt = this.attackGroupReadyAt.get(player.id) ?? 0;
+    if (now >= groupReadyAt) {
+      const rotation = this.attackRotations.get(player.id) ?? [];
+      for (const slot of rotation) {
+        if (!slot.enabled || slot.abilityId === undefined || (slot.minTargets ?? 0) > 1) continue;
+        const ability = await this.abilityRegistry.get(slot.abilityId);
+        const readyAt = this.abilityCooldowns.get(player.id)?.get(slot.abilityId) ?? 0;
+        if (!ability || ability.category === 'heal' || now < readyAt || tileDistance(player.position, target.position) > ability.rangeTiles) continue;
+        if (await this.handleAbilityCast(player.socketId ?? '', ability.abilityId, target.id)) return;
+      }
     }
     if (now < player.attackCooldownUntil) return;
     const weaponItem = player.equipment.weapon ? getItemDef(player.equipment.weapon.itemId) : undefined;
@@ -1260,6 +1688,7 @@ export class GameEngine implements OnModuleDestroy {
         expiresAt: Date.now() + LOOT_LIFETIME_MS,
       };
       this.groundItems.set(item.id, item);
+      this.scheduleGroundItem(item);
       const payload = {
         entityId: item.id,
         itemId: item.itemId,

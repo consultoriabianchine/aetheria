@@ -1,8 +1,9 @@
-import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, inject, signal } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, computed, inject, signal } from '@angular/core';
+import { Subscription, interval } from 'rxjs';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import Phaser from 'phaser';
-import type { CharacterEquipment, CharacterSkills, ItemDefinition, ItemStack, PlayerCombatConfig } from '@aetheria/types';
+import type { CharacterEquipment, CharacterSkills, DamageType, ItemDefinition, ItemStack, PlayerCombatConfig, WeaponElementOverride } from '@aetheria/types';
 import { APPEARANCE_PALETTE, LOOT_POUCH_EXPANSION, SKILL_PROGRESSION_CONFIG } from '@aetheria/config';
 import { WsService } from '../core/ws.service';
 import { ChatLine, GameState } from './game-state';
@@ -43,6 +44,12 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   readonly chatCollapsed = signal(false);
   readonly chatTab = signal<'general' | 'combat' | 'system'>('general');
   readonly hotbarPreset = signal<'hunt' | 'boss' | 'helper'>('hunt');
+  readonly rotationOpen = signal(false);
+  readonly attackRotation = computed(() => this.state.attackRotations()[this.hotbarPreset().toUpperCase()] ?? [0, 0, 0, 0]);
+  readonly healingRotation = computed(() => this.state.healingRotations()[this.hotbarPreset().toUpperCase()] ?? [0, 0, 0, 0]);
+  readonly rotationMode = signal<'attack' | 'healing'>('attack');
+  readonly healingThreshold = signal(80);
+  readonly now = signal(Date.now());
   readonly hoveredItemId = signal<string | null>(null);
   readonly itemTooltipX = signal(0);
   readonly itemTooltipY = signal(0);
@@ -56,6 +63,12 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   private readonly outfitAssets = inject(OutfitAssetService);
   private readonly router = inject(Router);
   private phaser: Phaser.Game | null = null;
+  private overrideSub?: Subscription;
+  private timerSub?: Subscription;
+  private visibilityHandler = () => { if (!document.hidden) this.resyncAfterResume(); };
+  readonly weaponOverride = signal<WeaponElementOverride | null>(null);
+  readonly overrideRemaining = signal(0);
+  readonly damageTypes: DamageType[] = ['physical', 'fire', 'ice', 'energy', 'earth', 'holy', 'death', 'arcane'];
 
   ngOnInit() {
     if (!this.state.token()) {
@@ -67,6 +80,42 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
     if (!this.state.inGame()) {
       void this.router.navigate(['/characters']);
     }
+    document.addEventListener('visibilitychange', this.visibilityHandler);
+    this.overrideSub = this.ws.events$.subscribe((event) => {
+      if (event.event === 'system.connected') {
+        this.resyncAfterResume();
+      } else if (event.event === 'combat.weaponElementOverride.applied') {
+        const data = event.data as { override: WeaponElementOverride };
+        this.weaponOverride.set(data.override);
+      } else if (event.event === 'ability.cast') {
+        const data = event.data as { abilityId: number };
+        const ability = this.state.abilities().find((item) => item.abilityId === data.abilityId);
+        if (ability) {
+          const now = Date.now();
+          this.state.attackGroupReadyAt.set(now + 2000);
+          this.state.abilityReadyAt.update((ready) => ({ ...ready, [ability.abilityId]: now + ability.cooldownMs }));
+        }
+      } else if (event.event === 'combat.weaponElementOverride.removed') {
+        this.weaponOverride.set(null);
+        this.overrideRemaining.set(0);
+      }
+    });
+    this.timerSub = interval(100).subscribe(() => {
+      this.now.set(Date.now());
+      const override = this.weaponOverride();
+      const remaining = override ? Math.max(0, override.expiresAt - Date.now()) : 0;
+      this.overrideRemaining.set(remaining);
+      if (override && remaining === 0) this.weaponOverride.set(null);
+    });
+    queueMicrotask(() => this.resyncAfterResume());
+  }
+
+  private resyncAfterResume() {
+    if (!this.ws.connected) { this.ws.connect(); return; }
+    this.state.requestHunts();
+    this.ws.send({ type: 'rotation.load', preset: this.hotbarPreset().toUpperCase() });
+    this.now.set(Date.now());
+    this.phaser?.scale.refresh();
   }
 
   ngAfterViewInit() {
@@ -105,6 +154,9 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnDestroy() {
+    document.removeEventListener('visibilitychange', this.visibilityHandler);
+    this.overrideSub?.unsubscribe();
+    this.timerSub?.unsubscribe();
     this.phaser?.destroy(true);
     this.phaser = null;
     this.state.dialog.set(null);
@@ -333,14 +385,49 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
     return this.state.chat();
   }
 
-  hotbarSlots(): Array<{ key: number; name: string; cd: string; ready: boolean; groupPct: number }> {
-    return [
-      { key: 1, name: 'Arc Burst', cd: 'READY', ready: true, groupPct: 100 },
-      { key: 2, name: 'Rune Wave', cd: '1.2', ready: false, groupPct: 42 },
-      { key: 3, name: 'Storm', cd: 'READY', ready: true, groupPct: 100 },
-      { key: 4, name: 'Basic', cd: '2.0', ready: false, groupPct: 12 },
-    ];
+  hotbarSlots(): Array<{ key: number; abilityId?: number; name: string; cd: string; ready: boolean; groupPct: number }> {
+    const ids = this.attackRotation();
+    const now = this.now();
+    const groupRemaining = Math.max(0, this.state.attackGroupReadyAt() - now);
+    return [0, 1, 2, 3].map((index) => {
+      const ability = this.state.abilities().find((item) => item.abilityId === ids[index]);
+      if (!ability) return { key: index + 1, name: 'Empty', cd: '—', ready: false, groupPct: 0 };
+      const abilityRemaining = Math.max(0, (this.state.abilityReadyAt()[ability.abilityId] ?? 0) - now);
+      const remaining = Math.max(groupRemaining, abilityRemaining);
+      const duration = Math.max(1, Math.max(ability.cooldownMs, 2000));
+      return { key: index + 1, abilityId: ability.abilityId, name: ability.name, cd: remaining > 0 ? (remaining / 1000).toFixed(1) : 'READY', ready: remaining === 0, groupPct: Math.max(0, Math.min(100, 100 - (remaining / duration) * 100)) };
+    });
   }
+
+  useHotbarSlot(slot: { abilityId?: number }) {
+    const targetId = this.state.target()?.id;
+    if (slot.abilityId) this.ws.send({ type: 'ability.cast', abilityId: slot.abilityId, targetId });
+  }
+
+  private draggedSlot: number | null = null;
+  startSlotDrag(index: number, event: DragEvent) {
+    this.draggedSlot = index;
+    event.dataTransfer?.setData('text/plain', String(index));
+    if (event.dataTransfer) event.dataTransfer.effectAllowed = 'move';
+  }
+  allowSlotDrop(event: DragEvent) { event.preventDefault(); if (event.dataTransfer) event.dataTransfer.dropEffect = 'move'; }
+  dropSlot(index: number, event: DragEvent) {
+    event.preventDefault();
+    const source = this.draggedSlot ?? Number(event.dataTransfer?.getData('text/plain'));
+    this.draggedSlot = null;
+    if (!Number.isInteger(source) || source < 0 || source > 3 || source === index) return;
+    const slots = [...this.attackRotation()];
+    [slots[source], slots[index]] = [slots[index], slots[source]];
+    this.state.attackRotations.update((all) => ({ ...all, [this.hotbarPreset().toUpperCase()]: slots }));
+    this.saveAttackRotationSlots(slots);
+  }
+  private saveAttackRotationSlots(ids: number[]) {
+    const preset = this.hotbarPreset().toUpperCase();
+    const slots = ids.map((abilityId, index) => ({ position: (index + 1) as 1 | 2 | 3 | 4, abilityId: abilityId || undefined, enabled: abilityId > 0 }));
+    this.ws.send({ type: 'rotation.attack.set', preset, slots });
+  }
+
+  selectHotbarPreset(preset: 'hunt' | 'boss' | 'helper') { this.hotbarPreset.set(preset); this.ws.send({ type: 'rotation.load', preset: preset.toUpperCase() }); }
 
   onHuntSelect(huntId: string) {
     if (!huntId) return;
@@ -421,6 +508,31 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
 
   onCombatMovement(value: string) {
     this.state.setCombatConfig(this.state.combatConfig().targeting, value as PlayerCombatConfig['movement']);
+  }
+
+  toggleRotation() { this.rotationOpen.update((value) => !value); }
+  setRotationAbility(index: number, abilityId: number) { const preset = this.hotbarPreset().toUpperCase(); const target = this.rotationMode() === 'attack' ? this.state.attackRotations : this.state.healingRotations; target.update((all) => ({ ...all, [preset]: all[preset].map((value, i) => i === index ? abilityId : value) })); }
+  rotationAbilityName(id: number) { return this.state.abilities().find((ability) => ability.abilityId === id)?.name ?? 'Empty'; }
+  rotationAbilityIcon(id: number) { return this.state.abilities().find((ability) => ability.abilityId === id)?.icon; }
+  saveRotation() {
+    const characterId = this.state.self()?.id;
+    if (!characterId) return;
+    const slots = (this.rotationMode() === 'attack' ? this.attackRotation() : this.healingRotation()).map((abilityId, index) => ({ position: (index + 1) as 1 | 2 | 3 | 4, abilityId: abilityId || undefined, enabled: abilityId > 0 }));
+    this.ws.send(this.rotationMode() === 'attack' ? { type: 'rotation.attack.set', preset: this.hotbarPreset().toUpperCase(), slots } : { type: 'rotation.healing.set', preset: this.hotbarPreset().toUpperCase(), slots: slots.map((slot) => ({ ...slot, trigger: { target: 'self' as const, hpBelowPercent: this.healingThreshold() } })) });
+    this.rotationOpen.set(false);
+  }
+
+  applyWeaponOverride(damageType: DamageType) {
+    this.ws.send({ type: 'combat.weaponElementOverride.apply', damageType });
+  }
+
+  removeWeaponOverride() {
+    this.ws.send({ type: 'combat.weaponElementOverride.remove' });
+  }
+
+  overrideTime(): string {
+    const total = Math.ceil(this.overrideRemaining() / 1000);
+    return `${Math.floor(total / 60).toString().padStart(2, '0')}:${(total % 60).toString().padStart(2, '0')}`;
   }
 
   openAppearance() {

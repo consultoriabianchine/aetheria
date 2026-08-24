@@ -20,7 +20,14 @@ export class WsService {
   connect(url: string = WS_URL) {
     if (this.socket?.connected) return;
     this.socket?.disconnect();
-    this.socket = io(url, { transports: ['websocket', 'polling'] });
+    this.socket = io(url, {
+      transports: ['websocket', 'polling'],
+      reconnection: true,
+      reconnectionAttempts: Infinity,
+      reconnectionDelay: 500,
+      reconnectionDelayMax: 5000,
+      timeout: 10000,
+    });
     this.socket.onAny((event: string, data: unknown) => {
       this.events$.next({ event, data, seq: this.seq++ });
     });
