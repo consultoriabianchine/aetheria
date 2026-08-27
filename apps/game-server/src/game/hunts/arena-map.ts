@@ -49,6 +49,21 @@ export function partySpawnPosition(arena: ArenaDefinition, z: number): { x: numb
   return { x, y: Math.floor(arena.height / 2), z };
 }
 
+/** Posições de spawn da party (uma por membro, empilhadas verticalmente). */
+export function partySpawnPositions(arena: ArenaDefinition, z: number, count: number): { x: number; y: number; z: number }[] {
+  const x = arena.partySpawnSide === 'left' ? 1 : arena.width - 2;
+  const mid = Math.floor(arena.height / 2);
+  const positions: { x: number; y: number; z: number }[] = [];
+  for (let i = 0; i < count; i++) {
+    const offset = i - Math.floor((count - 1) / 2);
+    let y = mid + offset;
+    if (y < 1) y = 1;
+    if (y > arena.height - 2) y = arena.height - 2;
+    positions.push({ x, y, z });
+  }
+  return positions;
+}
+
 /** Gera posições de spawn dos monstros do pack (lado oposto, espaçados). */
 export function monsterSpawnPositions(arena: ArenaDefinition, z: number, count: number): { x: number; y: number; z: number }[] {
   const x = arena.monsterSpawnSide === 'right' ? arena.width - 2 : 1;

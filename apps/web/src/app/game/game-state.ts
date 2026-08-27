@@ -59,6 +59,7 @@ export class GameState {
   readonly connected = signal(false);
   readonly token = signal<string | null>(localStorage.getItem('aetheria_token'));
   readonly accountId = signal<string | null>(localStorage.getItem('aetheria_account'));
+  readonly characterId = signal<string | null>(localStorage.getItem('aetheria_character'));
   readonly characters = signal<CharacterSummary[]>([]);
   readonly loginError = signal('');
   readonly createError = signal('');
@@ -66,11 +67,12 @@ export class GameState {
   readonly inGame = signal(false);
   readonly self = signal<CharacterSummary | null>(null);
   readonly abilities = signal<import('@aetheria/types').CombatAbilityDefinition[]>([]);
-  readonly attackRotations = signal<Record<string, number[]>>({ HUNT: [0, 0, 0, 0], BOSS: [0, 0, 0, 0], HELPER: [0, 0, 0, 0] });
-  readonly healingRotations = signal<Record<string, number[]>>({ HUNT: [0, 0, 0, 0], BOSS: [0, 0, 0, 0], HELPER: [0, 0, 0, 0] });
-  readonly abilityReadyAt = signal<Record<number, number>>({});
-  readonly attackGroupReadyAt = signal(0);
-  readonly healingGroupReadyAt = signal(0);
+  readonly attackRotations = signal<Record<string, number[]>>({});
+  readonly healingRotations = signal<Record<string, number[]>>({});
+  readonly combatConfigs = signal<Record<string, PlayerCombatConfig>>({});
+  readonly abilityReadyByChar = signal<Record<string, Record<number, number>>>({});
+  readonly attackGroupReadyByChar = signal<Record<string, number>>({});
+  readonly healingGroupReadyByChar = signal<Record<string, number>>({});
   readonly stats = signal<HudStats>({
     health: 0,
     maxHealth: 0,
@@ -89,7 +91,8 @@ export class GameState {
   readonly hunt = signal<HuntRunView | null>(null);
   readonly huntsOpen = signal(false);
   readonly inArena = computed(() => this.hunt() !== null);
-  readonly combatConfig = signal<PlayerCombatConfig>({ targeting: 'nearest', movement: 'hold' });
+
+  readonly party = signal<{ unlockedSlots: number; maxSlots: number; unlockCost: number | null; members: import('@aetheria/protocol').PartyMember[] }>({ unlockedSlots: 1, maxSlots: 3, unlockCost: 5000, members: [] });
 
   readonly appearanceOpen = signal(false);
   readonly availableOutfits = signal<AvailableOutfit[]>([]);
@@ -152,13 +155,18 @@ export class GameState {
         this.abilities.set((data['abilities'] ?? []) as import('@aetheria/types').CombatAbilityDefinition[]);
         break;
       case 'rotation.state': {
-        const r = data as { preset?: string; attack?: { ability_id?: number }[]; healing?: { ability_id?: number }[]; cooldowns?: { attackGroupReadyAt?: number; healingGroupReadyAt?: number; abilityReadyAt?: Record<number, number> } };
-        const preset = r.preset ?? 'HUNT';
-        if (r.attack) this.attackRotations.update((all) => ({ ...all, [preset]: [0, 1, 2, 3].map((index) => r.attack?.[index]?.ability_id ?? 0) }));
-        if (r.healing) this.healingRotations.update((all) => ({ ...all, [preset]: [0, 1, 2, 3].map((index) => r.healing?.[index]?.ability_id ?? 0) }));
-        if (r.cooldowns?.abilityReadyAt) this.abilityReadyAt.set(r.cooldowns.abilityReadyAt);
-        if (r.cooldowns?.attackGroupReadyAt !== undefined) this.attackGroupReadyAt.set(r.cooldowns.attackGroupReadyAt);
-        if (r.cooldowns?.healingGroupReadyAt !== undefined) this.healingGroupReadyAt.set(r.cooldowns.healingGroupReadyAt);
+        const r = data as { preset?: string; characterId?: string; attack?: { ability_id?: number }[]; healing?: { ability_id?: number }[]; cooldowns?: { attackGroupReadyAt?: number; healingGroupReadyAt?: number; abilityReadyAt?: Record<number, number> } };
+        const characterId = r.characterId ?? this.self()?.id;
+        if (characterId) {
+          if (r.attack) this.attackRotations.update((all) => ({ ...all, [characterId]: [0, 1, 2, 3].map((index) => r.attack?.[index]?.ability_id ?? 0) }));
+          if (r.healing) this.healingRotations.update((all) => ({ ...all, [characterId]: [0, 1, 2, 3].map((index) => r.healing?.[index]?.ability_id ?? 0) }));
+          if (r.cooldowns) this.applyCooldowns(characterId, r.cooldowns);
+        }
+        break;
+      }
+      case SERVER_EVENTS.COOLDOWNS_UPDATE: {
+        const r = data as { characterId: string; attackGroupReadyAt: number; healingGroupReadyAt: number; abilityReadyAt: Record<number, number> };
+        this.applyCooldowns(r.characterId, r);
         break;
       }
       case 'system.connected':
@@ -177,6 +185,8 @@ export class GameState {
           localStorage.setItem('aetheria_token', r.token);
           if (r.accountId) localStorage.setItem('aetheria_account', r.accountId);
           this.characters.set(r.characters ?? []);
+          this.characterId.set(null);
+          localStorage.removeItem('aetheria_character');
         }
         break;
       }
@@ -192,27 +202,37 @@ export class GameState {
       case SERVER_EVENTS.SELECT_RESULT: {
         const r = data as { ok: boolean };
         this.inGame.set(r.ok);
+        if (!r.ok) {
+          this.characterId.set(null);
+          localStorage.removeItem('aetheria_character');
+        }
         this.selectResult$.next(r.ok);
         break;
       }
       case SERVER_EVENTS.ENTER_WORLD: {
         const w = data as { character: CharacterSummary; map: MapTile[]; width: number; height: number };
         this.self.set(w.character);
+        this.characterId.set(w.character.id);
+        localStorage.setItem('aetheria_character', w.character.id);
         this.world.set({ map: w.map, width: w.width, height: w.height });
         this.inGame.set(true);
         this.hunt.set(null);
         this.gold.set(w.character.gold);
-        if (w.character.combat) this.combatConfig.set(w.character.combat);
+        const combat = w.character.combat;
+        if (combat) this.combatConfigs.update((all) => ({ ...all, [w.character.id]: combat }));
         this.requestHunts();
         break;
       }
       case SERVER_EVENTS.ENTER_ARENA: {
         const w = data as { character: CharacterSummary; map: MapTile[]; width: number; height: number; hunt: HuntRunView };
         this.self.set(w.character);
+        this.characterId.set(w.character.id);
+        localStorage.setItem('aetheria_character', w.character.id);
         this.world.set({ map: w.map, width: w.width, height: w.height });
         this.hunt.set(w.hunt);
         this.gold.set(w.character.gold);
-        if (w.character.combat) this.combatConfig.set(w.character.combat);
+        const combat = w.character.combat;
+        if (combat) this.combatConfigs.update((all) => ({ ...all, [w.character.id]: combat }));
         break;
       }
       case SERVER_EVENTS.HUNT_LIST: {
@@ -275,6 +295,16 @@ export class GameState {
         this.hunt.set(null);
         break;
       }
+      case SERVER_EVENTS.PARTY_STATE: {
+        const r = data as { unlockedSlots: number; maxSlots: number; unlockCost: number | null; members: import('@aetheria/protocol').PartyMember[] };
+        this.party.set({ unlockedSlots: r.unlockedSlots, maxSlots: r.maxSlots, unlockCost: r.unlockCost, members: r.members ?? [] });
+        for (const m of r.members ?? []) {
+          const combat = m.combat;
+          if (combat) this.combatConfigs.update((all) => ({ ...all, [m.id]: combat }));
+        }
+        for (const m of r.members ?? []) this.ws.send({ type: 'rotation.load', preset: 'HUNT', characterId: m.id });
+        break;
+      }
       case SERVER_EVENTS.GOLD_UPDATE: {
         const g = data as { gold: number };
         this.gold.set(g.gold);
@@ -294,8 +324,10 @@ export class GameState {
         break;
       }
       case SERVER_EVENTS.COMBAT_CONFIG: {
-        const r = data as { combat: PlayerCombatConfig };
-        this.combatConfig.set(r.combat);
+        const r = data as { characterId: string; combat: PlayerCombatConfig };
+        this.combatConfigs.update((all) => ({ ...all, [r.characterId]: r.combat }));
+        this.self.update((s) => (s && s.id === r.characterId ? { ...s, combat: r.combat } : s));
+        this.party.update((p) => ({ ...p, members: p.members.map((m) => (m.id === r.characterId ? { ...m, combat: r.combat } : m)) }));
         break;
       }
       case SERVER_EVENTS.STATS_UPDATE: {
@@ -402,12 +434,12 @@ export class GameState {
     this.ws.send({ type: 'chat.send', channel: 'local', message: text });
   }
 
-  equip(slot: number) {
-    this.ws.send({ type: 'inventory.equip', slot });
+  equip(slot: number, characterId?: string) {
+    this.ws.send({ type: 'inventory.equip', slot, characterId });
   }
 
-  unequip(slot: string) {
-    this.ws.send({ type: 'inventory.unequip', slot });
+  unequip(slot: string, characterId?: string) {
+    this.ws.send({ type: 'inventory.unequip', slot, characterId });
   }
 
   expandLootPouch() {
@@ -442,10 +474,54 @@ export class GameState {
     this.ws.send({ type: 'hunt.setLoop', token, enabled });
   }
 
-  setCombatConfig(targeting: PlayerCombatConfig['targeting'], movement: PlayerCombatConfig['movement']) {
+  unlockPartySlot() {
     const token = this.token();
     if (!token) return;
-    this.ws.send({ type: 'combat.config', token, targeting, movement });
+    this.ws.send({ type: 'party.unlockSlot', token });
+  }
+
+  summonPartyMember(characterId: string) {
+    const token = this.token();
+    if (!token) return;
+    this.ws.send({ type: 'party.summon', token, characterId });
+  }
+
+  dismissPartyMember(characterId: string) {
+    const token = this.token();
+    if (!token) return;
+    this.ws.send({ type: 'party.dismiss', token, characterId });
+  }
+
+  setCombatConfig(characterId: string, targeting: PlayerCombatConfig['targeting'], movement: PlayerCombatConfig['movement'], attackRange?: number) {
+    const token = this.token();
+    if (!token) return;
+    this.ws.send({ type: 'combat.config', token, characterId, targeting, movement, attackRange });
+  }
+
+  loadRotation(characterId: string) {
+    this.ws.send({ type: 'rotation.load', preset: 'HUNT', characterId });
+  }
+
+  combatFor(characterId: string): PlayerCombatConfig {
+    return this.combatConfigs()[characterId] ?? { targeting: 'nearest', movement: 'hold' };
+  }
+
+  attackGroupReadyFor(characterId: string): number {
+    return this.attackGroupReadyByChar()[characterId] ?? 0;
+  }
+
+  healingGroupReadyFor(characterId: string): number {
+    return this.healingGroupReadyByChar()[characterId] ?? 0;
+  }
+
+  abilityReadyFor(characterId: string, abilityId: number): number {
+    return this.abilityReadyByChar()[characterId]?.[abilityId] ?? 0;
+  }
+
+  private applyCooldowns(characterId: string, cooldowns: { attackGroupReadyAt?: number; healingGroupReadyAt?: number; abilityReadyAt?: Record<number, number> }) {
+    if (cooldowns.attackGroupReadyAt !== undefined) this.attackGroupReadyByChar.update((all) => ({ ...all, [characterId]: cooldowns.attackGroupReadyAt! }));
+    if (cooldowns.healingGroupReadyAt !== undefined) this.healingGroupReadyByChar.update((all) => ({ ...all, [characterId]: cooldowns.healingGroupReadyAt! }));
+    if (cooldowns.abilityReadyAt) this.abilityReadyByChar.update((all) => ({ ...all, [characterId]: cooldowns.abilityReadyAt! }));
   }
 
   toggleHunts() {

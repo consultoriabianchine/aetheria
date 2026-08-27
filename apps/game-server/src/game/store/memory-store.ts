@@ -1,7 +1,7 @@
 import { randomUUID } from 'node:crypto';
 import { INVENTORY_SIZE, LOOT_POUCH_SIZE } from '@aetheria/config';
 import type { HuntProgress, ItemStack } from '@aetheria/types';
-import type { Store, StoredCharacter, AccountRecord } from './store';
+import type { Store, StoredAccountStorage, StoredCharacter, AccountRecord } from './store';
 
 const BASE_SKILLS = { melee: 10, distance: 10, magic: 10 };
 
@@ -11,6 +11,7 @@ export class MemoryStore implements Store {
   private byUsername = new Map<string, string>();
   private characters = new Map<string, StoredCharacter>();
   private huntProgress = new Map<string, HuntProgress>();
+  private accountStorage = new Map<string, StoredAccountStorage>();
 
   async findAccountByUsername(username: string): Promise<AccountRecord | null> {
     const id = this.byUsername.get(username.toLowerCase());
@@ -40,6 +41,14 @@ export class MemoryStore implements Store {
 
   async findCharacterById(id: string): Promise<StoredCharacter | null> {
     return this.characters.get(id) ?? null;
+  }
+
+  async getAccountStorage(accountId: string): Promise<StoredAccountStorage | null> {
+    return this.accountStorage.get(accountId) ?? null;
+  }
+
+  async saveAccountStorage(storage: StoredAccountStorage): Promise<void> {
+    this.accountStorage.set(storage.accountId, structuredClone(storage));
   }
 
   private readonly weaponOverrides = new Map<string, import('@aetheria/types').WeaponElementOverride>();
@@ -99,6 +108,18 @@ export class MemoryStore implements Store {
 
   static blankLootPouch(): (ItemStack | null)[] {
     return new Array(LOOT_POUCH_SIZE).fill(null);
+  }
+
+  static blankAccountStorage(accountId: string): StoredAccountStorage {
+    return {
+      accountId,
+      gold: 0,
+      inventory: MemoryStore.blankInventory(),
+      lootPouchSize: LOOT_POUCH_SIZE,
+      lootPouch: MemoryStore.blankLootPouch(),
+      unlockedPartySlots: 1,
+      party: [],
+    };
   }
 }
 

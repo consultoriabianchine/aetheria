@@ -16,7 +16,6 @@ export interface StoredCharacter {
   accountId: string;
   name: string;
   archetype: CombatArchetype;
-  gold: number;
   level: number;
   experience: number;
   health: number;
@@ -26,12 +25,21 @@ export interface StoredCharacter {
   position: Position;
   skills: CharacterSkills;
   skillProgress: { skillType: keyof CharacterSkills; level: number; experience: number }[];
-  inventory: (ItemStack | null)[];
-  lootPouchSize: number;
-  lootPouch: (ItemStack | null)[];
   equipment: CharacterEquipment;
   appearance?: PlayerAppearance;
   combat?: PlayerCombatConfig;
+}
+
+/** Storage compartilhado da conta (gold + inventário + loot pouch + party). */
+export interface StoredAccountStorage {
+  accountId: string;
+  gold: number;
+  inventory: (ItemStack | null)[];
+  lootPouchSize: number;
+  lootPouch: (ItemStack | null)[];
+  unlockedPartySlots: number;
+  /** IDs dos personagens convocados (formação persistida). */
+  party: string[];
 }
 
 export type PromotionError =
@@ -50,6 +58,8 @@ export interface Store {
   createCharacter(accountId: string, data: Omit<StoredCharacter, 'id' | 'accountId'>): Promise<StoredCharacter>;
   findCharacterById(id: string): Promise<StoredCharacter | null>;
   saveCharacter(character: StoredCharacter): Promise<void>;
+  getAccountStorage(accountId: string): Promise<StoredAccountStorage | null>;
+  saveAccountStorage(storage: StoredAccountStorage): Promise<void>;
   getWeaponElementOverride(characterId: string): Promise<WeaponElementOverride | null>;
   saveWeaponElementOverride(characterId: string, override: WeaponElementOverride): Promise<void>;
   clearWeaponElementOverride(characterId: string): Promise<void>;

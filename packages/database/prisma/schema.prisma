@@ -13,11 +13,12 @@ datasource db {
 // ---------------------------------------------------------------------------
 
 model Account {
-  id           String      @id @default(cuid())
-  username     String      @unique
+  id           String         @id @default(cuid())
+  username     String         @unique
   passwordHash String
-  createdAt    DateTime    @default(now())
+  createdAt    DateTime       @default(now())
   characters   Character[]
+  storage      AccountStorage?
 }
 
 model Character {
@@ -25,12 +26,10 @@ model Character {
   accountId      String
   name           String                   @unique
   archetype      String                   @default("warrior")
-  gold           Int                      @default(0)
   position       CharacterPosition?
   stats          CharacterStats?
   skills         CharacterSkills?
   skillProgress  CharacterSkillProgress[]
-  inventory      CharacterInventory?
   equipment      CharacterEquipment?
   quests         CharacterQuest[]
   huntProgress   HuntProgress[]
@@ -165,11 +164,20 @@ model ItemDefinition {
   @@map("item_definitions")
 }
 
-model CharacterInventory {
-  id          String     @id @default(cuid())
-  characterId String     @unique
-  slots       Json
-  character   Character  @relation(fields: [characterId], references: [id], onDelete: Cascade)
+// Storage compartilhado da conta: gold, backpack e loot pouch são únicos por
+// conta (usados por todos os personagens). Equipamento continua por personagem.
+model AccountStorage {
+  id                String   @id @default(cuid())
+  accountId         String   @unique
+  gold              Int      @default(0)
+  backpack          Json
+  lootPouchSize     Int      @default(10) @map("loot_pouch_size")
+  lootPouch         Json
+  unlockedPartySlots Int     @default(1) @map("unlocked_party_slots")
+  party             Json     @default("[]")
+  account           Account  @relation(fields: [accountId], references: [id], onDelete: Cascade)
+
+  @@map("account_storage")
 }
 
 model CharacterEquipment {
@@ -654,6 +662,7 @@ model CharacterCombatConfig {
   character_id String    @unique @map("character_id")
   targeting    String    @default("nearest")
   movement     String    @default("hold")
+  attack_range Int?      @map("attack_range")
   updated_at   DateTime  @updatedAt @map("updated_at")
   character    Character @relation(fields: [character_id], references: [id], onDelete: Cascade)
 

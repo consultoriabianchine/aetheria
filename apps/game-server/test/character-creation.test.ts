@@ -28,10 +28,14 @@ describe('character creation', () => {
     const characters = await store.listCharacters(login.accountId);
     expect(characters).toHaveLength(1);
     expect(characters[0].equipment).toMatchObject(ARCHETYPES[archetype].initialEquipment);
-    expect(characters[0].inventory).toHaveLength(INVENTORY_SIZE);
-    expect(characters[0].inventory.every((slot) => slot === null)).toBe(true);
-    expect(characters[0].lootPouchSize).toBe(LOOT_POUCH_SIZE);
-    expect(characters[0].lootPouch).toHaveLength(LOOT_POUCH_SIZE);
-    expect(characters[0].lootPouch.every((slot) => slot === null)).toBe(true);
+
+    const storage = await store.getAccountStorage(login.accountId);
+    expect(storage).not.toBeNull();
+    expect(storage!.gold).toBe(0);
+    expect(storage!.inventory).toHaveLength(INVENTORY_SIZE);
+    expect(storage!.inventory.every((slot) => slot === null)).toBe(true);
+    expect(storage!.lootPouchSize).toBe(LOOT_POUCH_SIZE);
+    expect(storage!.lootPouch).toHaveLength(LOOT_POUCH_SIZE);
+    expect(storage!.lootPouch.every((slot) => slot === null)).toBe(true);
   });
 });

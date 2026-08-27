@@ -16,7 +16,7 @@ import { CreatureEntity } from '../creature/creature.entity';
 import { CreatureManager } from '../creature/creature-manager.service';
 import { MovementService } from '../creature/movement.service';
 import type { GamePlayer } from '../engine/world';
-import { generateArenaMap, monsterSpawnPositions, partySpawnPosition } from './arena-map';
+import { generateArenaMap, monsterSpawnPositions, partySpawnPositions } from './arena-map';
 import { calculateBossStats } from './boss-engine';
 import { generatePack, RandomSource } from './pack-generator';
 import { calculateWipePenalty } from './wipe-engine';
@@ -25,6 +25,10 @@ import { buildWorldMapData, type WorldMapData } from '../engine/world-map';
 export interface HuntRun {
   id: string;
   characterId: string;
+  /** IDs de todos os membros da party na run (líder primeiro). */
+  memberIds: string[];
+  /** Subconjunto de memberIds ainda vivos na wave atual. */
+  aliveMemberIds: string[];
   hunt: HuntDefinition;
   arena: ArenaDefinition;
   wave: number;
@@ -52,6 +56,8 @@ export interface HuntEngineHooks {
   getMap(id: string): { width: number; height: number; tiles: import('@aetheria/types').MapTile[] } | null;
   getHunts(): HuntDefinition[];
   emitTo(socketId: string, event: string, data: unknown): void;
+  getGold(characterId: string): number;
+  deductGold(characterId: string, amount: number): number;
   onCreatureAttackPlayer(creature: CreatureEntity, playerId: string, amount: number, critical: boolean, now: number): void;
   onRunFinished(characterId: string, reason: 'completed' | 'wiped' | 'stopped'): void;
   onHuntCompleted(characterId: string, huntId: string, suggestedLevel: number): void;
@@ -80,16 +86,20 @@ function resolveArena(hunt: HuntDefinition): ArenaDefinition {
  */
 export class HuntEngine {
   private runs = new Map<string, HuntRun>();
+  private memberIndex = new Map<string, string>();
   private nextZ = 100;
 
   constructor(private readonly hooks: HuntEngineHooks) {}
 
   getRun(characterId: string): HuntRun | null {
-    return this.runs.get(characterId) ?? null;
+    const direct = this.runs.get(characterId);
+    if (direct) return direct;
+    const leaderId = this.memberIndex.get(characterId);
+    return leaderId ? this.runs.get(leaderId) ?? null : null;
   }
 
   hasRun(characterId: string): boolean {
-    return this.runs.has(characterId);
+    return this.getRun(characterId) !== null;
   }
 
   /** Encontra a run que contém uma criatura (para rotear eventos). */
@@ -102,7 +112,10 @@ export class HuntEngine {
 
   /** Remove a run (disconnect / parada) sem penalidade. */
   removeRun(characterId: string): void {
-    this.runs.delete(characterId);
+    const run = this.getRun(characterId);
+    if (!run) return;
+    for (const id of run.memberIds) this.memberIndex.delete(id);
+    this.runs.delete(run.characterId);
   }
 
   findHunt(huntId: string): HuntDefinition | null {
@@ -135,7 +148,7 @@ export class HuntEngine {
     };
   }
 
-  startHunt(characterId: string, huntId: string, loopEnabled: boolean, now: number): StartHuntResult {
+  startHunt(characterId: string, memberIds: string[], huntId: string, loopEnabled: boolean, now: number): StartHuntResult {
     const existing = this.runs.get(characterId);
     if (existing && existing.status === 'active') return { ok: false, error: 'CHARACTER_ALREADY_IN_HUNT' };
     const hunt = this.findHunt(huntId);
@@ -144,7 +157,10 @@ export class HuntEngine {
     const arena = resolveArena(hunt);
     if (!ARENAS[hunt.arenaId]) return { ok: false, error: 'HUNT_NOT_FOUND' };
 
-    const run = this.createRun(characterId, hunt, arena, loopEnabled, now);    this.runs.set(characterId, run);
+    const members = memberIds.includes(characterId) ? memberIds : [characterId, ...memberIds];
+    const run = this.createRun(characterId, members, hunt, arena, loopEnabled, now);
+    this.runs.set(characterId, run);
+    for (const id of members) this.memberIndex.set(id, characterId);
     this.enterArena(run);
     this.startWave(run, 1, now);
     return { ok: true, run };
@@ -181,11 +197,12 @@ export class HuntEngine {
     };
   }
 
-  /** Evento chamado pelo GameEngine quando o jogador morre. */
+  /** Evento chamado pelo GameEngine quando um membro da party morre. */
   onPlayerDied(characterId: string, now: number) {
-    const run = this.runs.get(characterId);
+    const run = this.getRun(characterId);
     if (!run || run.status !== 'active') return;
-    this.handleWipe(run, now);
+    run.aliveMemberIds = run.aliveMemberIds.filter((id) => id !== characterId);
+    if (run.aliveMemberIds.length === 0) this.handleWipe(run, now);
   }
 
   update(now: number) {
@@ -234,7 +251,7 @@ export class HuntEngine {
 
   // ------------------------------------------------------------ internos
 
-  private createRun(characterId: string, hunt: HuntDefinition, arena: ArenaDefinition, loopEnabled: boolean, now: number): HuntRun {
+  private createRun(characterId: string, memberIds: string[], hunt: HuntDefinition, arena: ArenaDefinition, loopEnabled: boolean, now: number): HuntRun {
     const z = this.nextZ++;
     const map = this.resolveMap(hunt, arena, z);
     const effectiveArena: ArenaDefinition = { ...arena, width: map.width, height: map.height };
@@ -242,6 +259,8 @@ export class HuntEngine {
     const run: HuntRun = {
       id: uid('hunt'),
       characterId,
+      memberIds: [...memberIds],
+      aliveMemberIds: [...memberIds],
       hunt,
       arena: effectiveArena,
       wave: 0,
@@ -259,8 +278,8 @@ export class HuntEngine {
         {
           movement,
           getPlayers: () => this.playersInRun(run),
-          getPlayerById: (id) => (id === characterId ? this.hooks.playerSnapshot(characterId) : null),
-          broadcast: (event, data) => this.emitCreature(run, event, data),
+          getPlayerById: (id) => (memberIds.includes(id) ? this.hooks.playerSnapshot(id) : null),
+          broadcast: (event, data) => this.emitToMembers(run, event, data),
           onAttackPlayer: (creature, target, amount, critical, now) =>
             this.hooks.onCreatureAttackPlayer(creature, target.id, amount, critical, now),
         },
@@ -274,8 +293,12 @@ export class HuntEngine {
   }
 
   private playersInRun(run: HuntRun): CreatureTarget[] {
-    const snap = this.hooks.playerSnapshot(run.characterId);
-    return snap ? [snap] : [];
+    const out: CreatureTarget[] = [];
+    for (const id of run.aliveMemberIds) {
+      const snap = this.hooks.playerSnapshot(id);
+      if (snap) out.push(snap);
+    }
+    return out;
   }
 
   /** Mapa da masmorra: custom (mapId) se existir, senão arena procedural. */
@@ -297,26 +320,36 @@ export class HuntEngine {
     return false;
   }
 
-  private emitCreature(run: HuntRun, event: string, data: unknown) {
-    const player = this.hooks.getPlayer(run.characterId);
-    this.hooks.emitTo(player?.socketId ?? '', event, data);
+  private emitToMembers(run: HuntRun, event: string, data: unknown) {
+    for (const id of run.memberIds) {
+      const member = this.hooks.getPlayer(id);
+      if (member?.socketId) this.hooks.emitTo(member.socketId, event, data);
+    }
   }
 
   private emit(run: HuntRun, event: string, data: unknown) {
-    const player = this.hooks.getPlayer(run.characterId);
-    this.hooks.emitTo(player?.socketId ?? '', event, data);
+    this.emitToMembers(run, event, data);
   }
 
   private enterArena(run: HuntRun) {
-    const player = this.hooks.getPlayer(run.characterId);
-    if (!player) return;
-    player.position = { ...partySpawnPosition(run.arena, run.z) };
-    player.moveDir = null;
-    player.targetId = null;
-    player.health = player.maxHealth;
-    player.mana = player.maxMana;
+    const leader = this.hooks.getPlayer(run.characterId);
+    if (!leader) return;
+    const positions = partySpawnPositions(run.arena, run.z, run.memberIds.length);
+    run.memberIds.forEach((id, i) => {
+      const member = this.hooks.getPlayer(id);
+      if (!member) return;
+      member.position = { ...(positions[i] ?? positions[positions.length - 1]) };
+      member.moveDir = null;
+      member.targetId = null;
+      member.health = member.maxHealth;
+      member.mana = member.maxMana;
+    });
     this.emit(run, 'game.enterArena', {
-      character: this.hooks.summarize(player),
+      character: this.hooks.summarize(leader),
+      members: run.memberIds
+        .map((id) => this.hooks.getPlayer(id))
+        .filter((p): p is GamePlayer => !!p)
+        .map((p) => this.hooks.summarize(p)),
       map: run.map.tiles,
       width: run.arena.width,
       height: run.arena.height,
@@ -447,21 +480,33 @@ export class HuntEngine {
     run.startedAt = now;
     run.transitionAt = null;
     run.respawnAt = null;
-    const player = this.hooks.getPlayer(run.characterId);
-    if (player) {
-      player.health = player.maxHealth;
-      player.mana = player.maxMana;
-      player.position = { ...partySpawnPosition(run.arena, run.z) };
-    }
+    run.aliveMemberIds = [...run.memberIds];
+    this.repositionMembers(run);
     this.startWave(run, 1, now);
   }
 
+  private repositionMembers(run: HuntRun) {
+    const positions = partySpawnPositions(run.arena, run.z, run.memberIds.length);
+    run.memberIds.forEach((id, i) => {
+      const member = this.hooks.getPlayer(id);
+      if (!member) return;
+      member.health = member.maxHealth;
+      member.mana = member.maxMana;
+      member.position = { ...(positions[i] ?? positions[positions.length - 1]) };
+      member.targetId = null;
+      member.moveDir = null;
+    });
+  }
+
   private handleWipe(run: HuntRun, now: number) {
-    const player = this.hooks.getPlayer(run.characterId);
-    const penalty = player ? calculateWipePenalty([player.level], player.gold) : 0;
-    if (player) {
-      player.gold -= penalty;
-      this.emit(run, 'gold.update', { gold: player.gold });
+    const levels = run.memberIds
+      .map((id) => this.hooks.getPlayer(id))
+      .filter((p): p is GamePlayer => !!p)
+      .map((p) => p.level);
+    const gold = this.hooks.getGold(run.characterId);
+    const penalty = levels.length > 0 ? calculateWipePenalty(levels, gold) : 0;
+    if (penalty > 0) {
+      this.hooks.deductGold(run.characterId, penalty);
     }
     run.creatures.clear();
     run.status = 'wiped';

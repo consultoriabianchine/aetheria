@@ -3,14 +3,23 @@ import { INVENTORY_SIZE, LOOT_POUCH_SIZE } from '@aetheria/config';
 import { Prisma } from '@aetheria/database';
 import { PrismaService } from '../../prisma/prisma.service';
 import type { CharacterEquipment, CombatArchetype, HuntProgress, ItemStack, PlayerCombatConfig } from '@aetheria/types';
-import type { AccountRecord, StoredCharacter, Store } from './store';
+import type { AccountRecord, StoredAccountStorage, StoredCharacter, Store } from './store';
+
+interface AccountStorageRow {
+  accountId: string;
+  gold: number;
+  backpack: unknown;
+  lootPouchSize: number;
+  lootPouch: unknown;
+  unlockedPartySlots: number;
+  party: unknown;
+}
 
 interface CharacterRow {
   id: string;
   accountId: string;
   name: string;
   archetype: string;
-  gold: number;
   position: { x: number; y: number; z: number } | null;
   stats: {
     level: number;
@@ -26,7 +35,6 @@ interface CharacterRow {
     magic: number;
   } | null;
   skillProgress: { skillType: string; level: number; experience: number }[];
-  inventory: { slots: unknown } | null;
   equipment: {
     helmet?: unknown;
     armor?: unknown;
@@ -47,7 +55,7 @@ interface CharacterRow {
     secondary_color: number;
     detail_color: number;
   } | null;
-  combatConfig: { targeting: string; movement: string } | null;
+  combatConfig: { targeting: string; movement: string; attack_range: number | null } | null;
 }
 
 function clampInt(value: unknown, fallback: number): number {
@@ -60,7 +68,6 @@ const INCLUDE = {
   stats: true,
   skills: true,
   skillProgress: true,
-  inventory: true,
   equipment: true,
   appearance: true,
   combatConfig: true,
@@ -96,7 +103,6 @@ export class PrismaStore implements Store {
         accountId,
         name: data.name,
         archetype: data.archetype,
-        gold: data.gold,
         position: { create: { x: data.position.x, y: data.position.y, z: data.position.z } },
         stats: {
           create: {
@@ -125,7 +131,6 @@ export class PrismaStore implements Store {
             experience: progress.experience,
           })),
         },
-        inventory: { create: { slots: this.toInventoryJson(data.inventory, data.lootPouchSize, data.lootPouch) } },
         equipment: { create: this.toEquipmentData(data.equipment) as unknown as Prisma.CharacterEquipmentCreateWithoutCharacterInput },
         appearance: data.appearance
           ? {
@@ -144,6 +149,7 @@ export class PrismaStore implements Store {
               create: {
                 targeting: data.combat.targeting,
                 movement: data.combat.movement,
+                attack_range: data.combat.attackRange ?? null,
               },
             }
           : undefined,
@@ -188,7 +194,6 @@ export class PrismaStore implements Store {
     await this.prisma.character.update({
       where: { id: character.id },
       data: {
-        gold: character.gold,
         position: { update: { x: character.position.x, y: character.position.y, z: character.position.z } },
         stats: {
           update: {
@@ -210,7 +215,6 @@ export class PrismaStore implements Store {
             update: { level: progress.level, experience: progress.experience },
           })),
         },
-        inventory: { update: { slots: this.toInventoryJson(character.inventory, character.lootPouchSize, character.lootPouch) } },
         equipment: { update: this.toEquipmentData(character.equipment) as unknown as Prisma.CharacterEquipmentUpdateWithoutCharacterInput },
         appearance: character.appearance
           ? {
@@ -240,14 +244,44 @@ export class PrismaStore implements Store {
                 create: {
                   targeting: character.combat.targeting,
                   movement: character.combat.movement,
+                  attack_range: character.combat.attackRange ?? null,
                 },
                 update: {
                   targeting: character.combat.targeting,
                   movement: character.combat.movement,
+                  attack_range: character.combat.attackRange ?? null,
                 },
               },
             }
           : undefined,
+      },
+    });
+  }
+
+  async getAccountStorage(accountId: string): Promise<StoredAccountStorage | null> {
+    const row = await this.prisma.accountStorage.findUnique({ where: { accountId } });
+    return row ? this.toAccountStorage(row as unknown as AccountStorageRow) : null;
+  }
+
+  async saveAccountStorage(storage: StoredAccountStorage): Promise<void> {
+    await this.prisma.accountStorage.upsert({
+      where: { accountId: storage.accountId },
+      create: {
+        accountId: storage.accountId,
+        gold: storage.gold,
+        backpack: this.toSlotsJson(storage.inventory),
+        lootPouchSize: this.normalizedLootPouchSize(storage),
+        lootPouch: this.toSlotsJson(this.paddedLootPouch(storage)),
+        unlockedPartySlots: storage.unlockedPartySlots,
+        party: storage.party as unknown as Prisma.InputJsonValue,
+      },
+      update: {
+        gold: storage.gold,
+        backpack: this.toSlotsJson(storage.inventory),
+        lootPouchSize: this.normalizedLootPouchSize(storage),
+        lootPouch: this.toSlotsJson(this.paddedLootPouch(storage)),
+        unlockedPartySlots: storage.unlockedPartySlots,
+        party: storage.party as unknown as Prisma.InputJsonValue,
       },
     });
   }
@@ -332,7 +366,6 @@ export class PrismaStore implements Store {
       accountId: row.accountId,
       name: row.name,
       archetype: (row.archetype ?? 'warrior') as CombatArchetype,
-      gold: clampInt(row.gold, 0),
       level: clampInt(row.stats?.level, 1),
       experience: clampInt(row.stats?.experience, 0),
       health: clampInt(row.stats?.health, 150),
@@ -356,9 +389,6 @@ export class PrismaStore implements Store {
             experience: clampInt(p.experience, 0),
           }))
         : [],
-      inventory: this.inventorySlots(row.inventory?.slots, 'backpack', INVENTORY_SIZE),
-      lootPouchSize: this.lootPouchSize(row.inventory?.slots),
-      lootPouch: this.inventorySlots(row.inventory?.slots, 'lootPouch', this.lootPouchSize(row.inventory?.slots)),
       equipment: {
         helmet: eq.helmet ? this.stack(eq.helmet) : undefined,
         armor: eq.armor ? this.stack(eq.armor) : undefined,
@@ -387,6 +417,7 @@ export class PrismaStore implements Store {
         ? {
             targeting: (row.combatConfig.targeting as PlayerCombatConfig['targeting']) ?? 'nearest',
             movement: (row.combatConfig.movement as PlayerCombatConfig['movement']) ?? 'hold',
+            attackRange: row.combatConfig.attack_range ?? undefined,
           }
         : undefined,
     };
@@ -397,37 +428,39 @@ export class PrismaStore implements Store {
     return { itemId: String(v?.itemId ?? ''), quantity: clampInt(v?.quantity, 1) };
   }
 
-  private inventorySlots(value: unknown, key: 'backpack' | 'lootPouch', size: number): (ItemStack | null)[] {
-    const source = Array.isArray(value)
-      ? key === 'backpack'
-        ? value
-        : []
-      : Array.isArray((value as { [K in typeof key]?: unknown })?.[key])
-        ? ((value as { [K in typeof key]: unknown[] })[key])
-        : [];
+  private toAccountStorage(row: AccountStorageRow): StoredAccountStorage {
+    const lootPouchSize = Math.max(LOOT_POUCH_SIZE, clampInt(row.lootPouchSize, LOOT_POUCH_SIZE));
+    return {
+      accountId: row.accountId,
+      gold: clampInt(row.gold, 0),
+      inventory: this.slotsFromJson(row.backpack, INVENTORY_SIZE),
+      lootPouchSize,
+      lootPouch: this.slotsFromJson(row.lootPouch, lootPouchSize),
+      unlockedPartySlots: clampInt(row.unlockedPartySlots, 1),
+      party: Array.isArray(row.party) ? row.party.map((id) => String(id)) : [],
+    };
+  }
+
+  private slotsFromJson(value: unknown, size: number): (ItemStack | null)[] {
+    const source = Array.isArray(value) ? value : [];
     return Array.from({ length: size }, (_, index) => {
       const stack = source[index] as ItemStack | null | undefined;
-      return stack ? { itemId: stack.itemId, quantity: stack.quantity } : null;
+      return stack && typeof stack.itemId === 'string'
+        ? { itemId: stack.itemId, quantity: clampInt(stack.quantity, 1) }
+        : null;
     });
   }
 
-  private lootPouchSize(value: unknown): number {
-    if (Array.isArray(value)) return LOOT_POUCH_SIZE;
-    const v = value as { lootPouch?: unknown; lootPouchSize?: unknown } | null | undefined;
-    const explicit = clampInt(v?.lootPouchSize, LOOT_POUCH_SIZE);
-    const current = Array.isArray(v?.lootPouch) ? v.lootPouch.length : 0;
-    return Math.max(LOOT_POUCH_SIZE, explicit, current);
+  private toSlotsJson(slots: (ItemStack | null)[]): Prisma.InputJsonValue {
+    return slots.map((s) => (s ? { itemId: s.itemId, quantity: s.quantity } : null)) as unknown as Prisma.InputJsonValue;
   }
 
-  private toInventoryJson(inventory: (ItemStack | null)[], lootPouchSize: number, lootPouch: (ItemStack | null)[]): Prisma.InputJsonValue {
-    const size = Math.max(LOOT_POUCH_SIZE, lootPouchSize, lootPouch.length);
-    return {
-      backpack: inventory.map((s) => (s ? { ...s } : null)),
-      lootPouchSize: size,
-      lootPouch: Array.from({ length: size }, (_, index) => {
-        const stack = lootPouch[index] ?? null;
-        return stack ? { ...stack } : null;
-      }),
-    } as unknown as Prisma.InputJsonValue;
+  private normalizedLootPouchSize(storage: StoredAccountStorage): number {
+    return Math.max(LOOT_POUCH_SIZE, storage.lootPouchSize, storage.lootPouch.length);
+  }
+
+  private paddedLootPouch(storage: StoredAccountStorage): (ItemStack | null)[] {
+    const size = this.normalizedLootPouchSize(storage);
+    return Array.from({ length: size }, (_, index) => storage.lootPouch[index] ?? null);
   }
 }

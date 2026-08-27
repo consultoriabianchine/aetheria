@@ -20,6 +20,11 @@ export class AbilityRegistry {
   }
 
   async reload(): Promise<void> {
+    if (!this.prisma) {
+      this.abilities = new Map();
+      this.loaded = true;
+      return;
+    }
     const rows = await this.prisma.combatAbility.findMany({ where: { enabled: true } });
     this.abilities = new Map(rows.map((row) => [row.id, this.toDefinition(row)]));
     this.loaded = true;

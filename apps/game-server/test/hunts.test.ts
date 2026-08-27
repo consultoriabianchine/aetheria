@@ -64,7 +64,6 @@ function makePlayer(overrides: Partial<GamePlayer> = {}): GamePlayer {
     accountId: 'a1',
     name: 'Tester',
     archetype: 'warrior' as const,
-    gold: 1000,
     level: 1,
     experience: 0,
     health: 100,
@@ -78,9 +77,6 @@ function makePlayer(overrides: Partial<GamePlayer> = {}): GamePlayer {
       level: DEFAULT_SKILLS[skillType as keyof CharacterSkills],
       experience: 0,
     })),
-    inventory: [],
-    lootPouchSize: 10,
-    lootPouch: [],
     equipment: {} as CharacterEquipment,
   };
   const player = new GamePlayer(character);
@@ -98,19 +94,21 @@ function makeHuntEngine(): {
   finished: { characterId: string; reason: string }[];
   completed: { characterId: string; huntId: string }[];
   completions: { characterId: string; huntId: string; clearTimeMs: number }[];
+  getGold: () => number;
 } {
   const player = makePlayer();
   const emits: { socketId: string; event: string; data: unknown }[] = [];
   const finished: { characterId: string; reason: string }[] = [];
   const completed: { characterId: string; huntId: string }[] = [];
   const completions: { characterId: string; huntId: string; clearTimeMs: number }[] = [];
+  let gold = 1000;
 
   const summarize = (p: GamePlayer): CharacterSummary => ({
     id: p.id,
     accountId: p.accountId,
     name: p.name,
     archetype: p.archetype,
-    gold: p.gold,
+    gold,
     level: p.level,
     experience: p.experience,
     health: p.health,
@@ -134,6 +132,11 @@ function makeHuntEngine(): {
     getMap: () => null,
     getHunts: () => HUNT_CATALOG,
     emitTo: (socketId, event, data) => emits.push({ socketId, event, data }),
+    getGold: () => gold,
+    deductGold: (_characterId, amount) => {
+      gold = Math.max(0, gold - amount);
+      return gold;
+    },
     onCreatureAttackPlayer: () => undefined,
     onRunFinished: (characterId, reason) => finished.push({ characterId, reason }),
     onHuntCompleted: (characterId, huntId) => completed.push({ characterId, huntId }),
@@ -152,7 +155,7 @@ function makeHuntEngine(): {
     getProgress: async () => new Map(),
   };
 
-  return { engine: new HuntEngine(hooks), player, emits, finished, completed, completions };
+  return { engine: new HuntEngine(hooks), player, emits, finished, completed, completions, getGold: () => gold };
 }
 
 function clearWaveCreatures(runCreatures: { removeCreature(id: string): boolean; getAll(): Iterable<{ id: string }> }) {
@@ -309,7 +312,7 @@ describe('difficulty', () => {
 describe('hunt-engine', () => {
   it('startHunt cria run, entra na arena e inicia a wave 1', () => {
     const { engine, player, emits } = makeHuntEngine();
-    const result = engine.startHunt(player.id, 'goblin_warren', false, 0);
+    const result = engine.startHunt(player.id, [player.id], 'goblin_warren', false, 0);
     expect(result.ok).toBe(true);
     const run = engine.getRun(player.id)!;
     expect(run.wave).toBe(1);
@@ -328,9 +331,9 @@ describe('hunt-engine', () => {
 
   it('rejeita hunt inexistente ou personagem já em hunt', () => {
     const { engine, player } = makeHuntEngine();
-    expect(engine.startHunt(player.id, 'hunt_inexistente', false, 10)).toEqual({ ok: false, error: 'HUNT_NOT_FOUND' });
-    engine.startHunt(player.id, 'goblin_warren', false, 0);
-    expect(engine.startHunt(player.id, 'goblin_warren', false, 10)).toEqual({
+    expect(engine.startHunt(player.id, [player.id], 'hunt_inexistente', false, 10)).toEqual({ ok: false, error: 'HUNT_NOT_FOUND' });
+    engine.startHunt(player.id, [player.id], 'goblin_warren', false, 0);
+    expect(engine.startHunt(player.id, [player.id], 'goblin_warren', false, 10)).toEqual({
       ok: false,
       error: 'CHARACTER_ALREADY_IN_HUNT',
     });
@@ -338,7 +341,7 @@ describe('hunt-engine', () => {
 
   it('progressa waves após limpar os monstros (transição com delay)', () => {
     const { engine, player, emits } = makeHuntEngine();
-    engine.startHunt(player.id, 'goblin_warren', false, 0);
+    engine.startHunt(player.id, [player.id], 'goblin_warren', false, 0);
     const run = engine.getRun(player.id)!;
 
     clearWaveCreatures(run.creatures);
@@ -355,7 +358,7 @@ describe('hunt-engine', () => {
 
   it('boss aparece na wave 10 e a conclusão encerra a run sem loop', async () => {
     const { engine, player, emits, finished, completed, completions } = makeHuntEngine();
-    engine.startHunt(player.id, 'goblin_warren', false, 0);
+    engine.startHunt(player.id, [player.id], 'goblin_warren', false, 0);
     let run = engine.getRun(player.id)!;
 
     for (let wave = 1; wave <= 9; wave++) {
@@ -388,7 +391,7 @@ describe('hunt-engine', () => {
 
   it('com loop, o clear reinicia na wave 1 automaticamente', async () => {
     const { engine, player, emits, finished } = makeHuntEngine();
-    engine.startHunt(player.id, 'goblin_warren', true, 0);
+    engine.startHunt(player.id, [player.id], 'goblin_warren', true, 0);
     let run = engine.getRun(player.id)!;
 
     for (let wave = 1; wave <= 10; wave++) {
@@ -409,17 +412,17 @@ describe('hunt-engine', () => {
   });
 
   it('wipe aplica penalidade, limpa a arena e (com loop) respawna', () => {
-    const { engine, player, emits } = makeHuntEngine();
-    engine.startHunt(player.id, 'goblin_warren', true, 0);
+    const { engine, player, emits, getGold } = makeHuntEngine();
+    engine.startHunt(player.id, [player.id], 'goblin_warren', true, 0);
     const run = engine.getRun(player.id)!;
-    const goldBefore = player.gold;
+    const goldBefore = getGold();
 
     engine.onPlayerDied(player.id, 5_000);
     const wiped = emits.filter((e) => e.event === 'hunt.wiped');
     expect(wiped.length).toBe(1);
     expect(run.status).toBe('wiped');
     expect(run.creatures.size).toBe(0);
-    expect(player.gold).toBe(goldBefore); // nível baixo → sem penalidade
+    expect(getGold()).toBe(goldBefore); // nível baixo → sem penalidade
     expect(run.respawnAt).toBe(5_000 + HUNT_CONFIG.wipe.respawnMs);
 
     engine.update(run.respawnAt! + 1);
@@ -430,7 +433,7 @@ describe('hunt-engine', () => {
 
   it('wipe sem loop retorna à cidade', () => {
     const { engine, player, finished } = makeHuntEngine();
-    engine.startHunt(player.id, 'goblin_warren', false, 0);
+    engine.startHunt(player.id, [player.id], 'goblin_warren', false, 0);
     engine.onPlayerDied(player.id, 5_000);
     expect(finished).toEqual([{ characterId: player.id, reason: 'wiped' }]);
     expect(engine.getRun(player.id)!.status).toBe('returning_to_city');
@@ -438,7 +441,7 @@ describe('hunt-engine', () => {
 
   it('stopHunt finaliza com motivo stopped', () => {
     const { engine, player, finished } = makeHuntEngine();
-    engine.startHunt(player.id, 'goblin_warren', false, 0);
+    engine.startHunt(player.id, [player.id], 'goblin_warren', false, 0);
     expect(engine.stopHunt(player.id)).toBe(true);
     expect(finished).toEqual([{ characterId: player.id, reason: 'stopped' }]);
     expect(engine.stopHunt(player.id)).toBe(false);
@@ -446,7 +449,7 @@ describe('hunt-engine', () => {
 
   it('removeRun limpa a run sem penalidade', () => {
     const { engine, player } = makeHuntEngine();
-    engine.startHunt(player.id, 'goblin_warren', false, 0);
+    engine.startHunt(player.id, [player.id], 'goblin_warren', false, 0);
     engine.removeRun(player.id);
     expect(engine.getRun(player.id)).toBeNull();
   });

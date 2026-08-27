@@ -11,8 +11,8 @@ import type {
   Position,
   WeaponElementOverride,
 } from '@aetheria/types';
-import type { StoredCharacter } from '../store/store';
-import { LOOT_POUCH_SIZE, PLAYER_AI, PLAYER_SPEED, SPEED_PER_LEVEL, playerMoveInterval } from '@aetheria/config';
+import type { StoredAccountStorage, StoredCharacter } from '../store/store';
+import { INVENTORY_SIZE, LOOT_POUCH_SIZE, PLAYER_AI, PLAYER_SPEED, SPEED_PER_LEVEL, playerMoveInterval } from '@aetheria/config';
 
 export interface NpcEntity {
   id: string;
@@ -35,7 +35,6 @@ export class GamePlayer {
   accountId: string;
   name: string;
   archetype: CombatArchetype;
-  gold: number;
   position: Position;
   level = 1;
   experience = 0;
@@ -45,9 +44,6 @@ export class GamePlayer {
   maxMana: number;
   skills: CharacterSkills;
   skillProgress: { skillType: keyof CharacterSkills; level: number; experience: number }[] = [];
-  inventory: (ItemStack | null)[];
-  lootPouchSize: number;
-  lootPouch: (ItemStack | null)[];
   equipment: CharacterEquipment;
   appearance: PlayerAppearance | undefined;
   combat: PlayerCombatConfig;
@@ -71,7 +67,6 @@ export class GamePlayer {
     this.accountId = character.accountId;
     this.name = character.name;
     this.archetype = character.archetype;
-    this.gold = character.gold;
     this.position = { ...character.position };
     this.level = character.level;
     this.experience = character.experience;
@@ -81,12 +76,6 @@ export class GamePlayer {
     this.mana = character.mana;
     this.skills = { ...character.skills };
     this.skillProgress = character.skillProgress.map((progress) => ({ ...progress }));
-    this.inventory = character.inventory.map((s) => (s ? { ...s } : null));
-    this.lootPouchSize = Math.max(LOOT_POUCH_SIZE, character.lootPouchSize ?? LOOT_POUCH_SIZE, character.lootPouch?.length ?? 0);
-    this.lootPouch = Array.from({ length: this.lootPouchSize }, (_, index) => {
-      const stack = character.lootPouch?.[index] ?? null;
-      return stack ? { ...stack } : null;
-    });
     this.equipment = {
       helmet: character.equipment.helmet ? { ...character.equipment.helmet } : undefined,
       armor: character.equipment.armor ? { ...character.equipment.armor } : undefined,
@@ -126,7 +115,6 @@ export class GamePlayer {
       accountId: this.accountId,
       name: this.name,
       archetype: this.archetype,
-      gold: this.gold,
       level: this.level,
       experience: this.experience,
       health: this.health,
@@ -136,9 +124,6 @@ export class GamePlayer {
       position: { ...this.position },
       skills: { ...this.skills },
       skillProgress: this.skillProgress.map((progress) => ({ ...progress })),
-      inventory: this.inventory.map((s) => (s ? { ...s } : null)),
-      lootPouchSize: this.lootPouchSize,
-      lootPouch: this.lootPouch.map((s) => (s ? { ...s } : null)),
       equipment: this.toEquipment(),
       appearance: this.appearance ? { ...this.appearance } : undefined,
       combat: { ...this.combat },
@@ -152,5 +137,53 @@ export class GamePlayer {
       if (item) eq[slot] = { ...item };
     }
     return eq;
+  }
+}
+
+/** Storage compartilhado da conta (gold + backpack + loot pouch) em memória. */
+export class AccountStorageState {
+  accountId: string;
+  gold: number;
+  inventory: (ItemStack | null)[];
+  lootPouchSize: number;
+  lootPouch: (ItemStack | null)[];
+  unlockedPartySlots: number;
+  party: string[];
+
+  constructor(storage: StoredAccountStorage) {
+    this.accountId = storage.accountId;
+    this.gold = storage.gold;
+    this.inventory = storage.inventory.map((s) => (s ? { ...s } : null));
+    this.lootPouchSize = Math.max(LOOT_POUCH_SIZE, storage.lootPouchSize ?? LOOT_POUCH_SIZE, storage.lootPouch?.length ?? 0);
+    this.lootPouch = Array.from({ length: this.lootPouchSize }, (_, index) => {
+      const stack = storage.lootPouch?.[index] ?? null;
+      return stack ? { ...stack } : null;
+    });
+    this.unlockedPartySlots = storage.unlockedPartySlots ?? 1;
+    this.party = [...(storage.party ?? [])];
+  }
+
+  static blank(accountId: string): AccountStorageState {
+    return new AccountStorageState({
+      accountId,
+      gold: 0,
+      inventory: new Array(INVENTORY_SIZE).fill(null),
+      lootPouchSize: LOOT_POUCH_SIZE,
+      lootPouch: new Array(LOOT_POUCH_SIZE).fill(null),
+      unlockedPartySlots: 1,
+      party: [],
+    });
+  }
+
+  toStored(): StoredAccountStorage {
+    return {
+      accountId: this.accountId,
+      gold: this.gold,
+      inventory: this.inventory.map((s) => (s ? { ...s } : null)),
+      lootPouchSize: this.lootPouchSize,
+      lootPouch: this.lootPouch.map((s) => (s ? { ...s } : null)),
+      unlockedPartySlots: this.unlockedPartySlots,
+      party: [...this.party],
+    };
   }
 }

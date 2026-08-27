@@ -90,6 +90,7 @@ export class WorldScene extends Phaser.Scene {
   private selfId = '';
   private selfEntity: RenderedEntity | null = null;
   private selfAnim: CreatureAnimState | null = null;
+  private playerAnims = new Map<string, CreatureAnimState>();
   private lastSeq = -1;
   private moveDir: Direction | null = null;
   private selfMoveSpeed = MOVE_INTERVAL_MS;
@@ -153,9 +154,13 @@ export class WorldScene extends Phaser.Scene {
         break;
       }
       case SERVER_EVENTS.ENTER_ARENA: {
-        const w = data as { character: { id: string; name: string; position: Position; appearance?: PlayerAppearance; health: number; maxHealth: number; movementSpeed?: number }; map: MapTile[]; width: number; height: number };
+        const w = data as { character: { id: string; name: string; position: Position; appearance?: PlayerAppearance; health: number; maxHealth: number; movementSpeed?: number }; members?: { id: string; name: string; position: Position; appearance?: PlayerAppearance; health: number; maxHealth: number; movementSpeed?: number }[]; map: MapTile[]; width: number; height: number };
         this.selfMoveSpeed = w.character.movementSpeed ?? MOVE_INTERVAL_MS;
         this.resetScene(w.map, w.character.id, w.character.name, w.character.position, w.width, w.height, w.character.appearance, w.character.health, w.character.maxHealth);
+        for (const member of w.members ?? []) {
+          if (member.id === this.selfId) continue;
+          this.spawnPlayerEntity(member.id, member.name, member.position, member.appearance, member.health, member.maxHealth, member.movementSpeed ?? MOVE_INTERVAL_MS);
+        }
         break;
       }
       case SERVER_EVENTS.ENTITY_SPAWNED: {
@@ -165,8 +170,9 @@ export class WorldScene extends Phaser.Scene {
         break;
       }
       case SERVER_EVENTS.ENTITY_MOVED: {
-        const m = data as { id: string; position: Position };
+        const m = data as { id: string; position: Position; facing?: Direction };
         this.moveEntity(m.id, m.position);
+        if (m.facing) this.updatePlayerAnimDirection(m.id, m.facing);
         break;
       }
       case SERVER_EVENTS.ENTITY_REMOVED: {
@@ -327,6 +333,7 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
     this.entityInfo.clear();
     this.creatureAnims.clear();
     this.creatureMoves.clear();
+    this.playerAnims.clear();
     this.definitionCreatureIds.clear();
     this.selfAnim = null;
     this.combatText.clear();
@@ -400,7 +407,7 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
     if (appearance) void this.setupPlayerOutfit(id, appearance);
   }
 
-  private async setupPlayerOutfit(id: string, appearance: PlayerAppearance) {
+  private async setupPlayerOutfit(id: string, appearance: PlayerAppearance, moveSpeed = this.selfMoveSpeed) {
     const data = await this.outfits.loadConfig(appearance.outfitId);
     if (!data) return;
     const frameW = data.config.spriteWidth;
@@ -418,13 +425,26 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
     const rendered = this.entities.get(id);
     if (!rendered || !this.textures.exists(textureKey)) return;
     const animator = new CreatureAnimator(data.config, 'south');
-    animator.setWalkCycleMs(this.selfMoveSpeed);
+    animator.setWalkCycleMs(moveSpeed);
     animator.play('idle', this.time.now);
-    this.selfAnim = { animator, textureKey, moveSpeed: this.selfMoveSpeed, lastMoveAt: this.time.now };
+    if (id === this.selfId) {
+      this.selfAnim = { animator, textureKey, moveSpeed, lastMoveAt: this.time.now };
+    } else {
+      this.playerAnims.set(id, { animator, textureKey, moveSpeed, lastMoveAt: this.time.now });
+    }
     rendered.spriteHeight = frameH;
     rendered.headHeight = TILE_SIZE;
     rendered.image.setTexture(textureKey).setTint(0xffffff).setScale(1).setFrame(animator.frameIndex(this.time.now));
     this.repositionWorldUi(rendered);
+  }
+
+  private spawnPlayerEntity(id: string, name: string, position: Position, appearance?: PlayerAppearance, health = 0, maxHealth = 0, moveSpeed = MOVE_INTERVAL_MS) {
+    const rendered = this.createRendered('player', name, position);
+    this.attachHealthBar(rendered, health, maxHealth);
+    this.repositionWorldUi(rendered);
+    this.entities.set(id, rendered);
+    this.entityInfo.set(id, { name, health, maxHealth });
+    if (appearance) void this.setupPlayerOutfit(id, appearance, moveSpeed);
   }
 
   private loadSheet(key: string, url: string, frameWidth: number, frameHeight: number): Promise<void> {
@@ -590,6 +610,14 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
     }
   }
 
+  private updatePlayerAnimDirection(id: string, facing: Direction) {
+    const anim = this.playerAnims.get(id);
+    if (!anim) return;
+    anim.animator.setDirection(toAnimDirection(facing));
+    if (anim.animator.currentType !== 'walk') anim.animator.play('walk', this.time.now);
+    anim.lastMoveAt = this.time.now;
+  }
+
   private playCreatureAnim(id: string, type: AnimType) {
     const anim = this.creatureAnims.get(id);
     if (anim) anim.animator.playOnce(type, this.time.now);
@@ -612,6 +640,14 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
       }
       rendered.image.setFrame(anim.animator.frameIndex(time));
       if (!this.creatureMoves.has(id) && anim.animator.currentType === 'walk' && time - anim.lastMoveAt > anim.moveSpeed + 80) {
+        anim.animator.play('idle', time);
+      }
+    }
+    for (const [id, anim] of this.playerAnims) {
+      const rendered = this.entities.get(id);
+      if (!rendered) continue;
+      rendered.image.setFrame(anim.animator.frameIndex(time));
+      if (anim.animator.currentType === 'walk' && time - anim.lastMoveAt > anim.moveSpeed + 80) {
         anim.animator.play('idle', time);
       }
     }
@@ -723,6 +759,7 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
       this.entityInfo.delete(id);
       this.creatureAnims.delete(id);
       this.creatureMoves.delete(id);
+      this.playerAnims.delete(id);
       this.definitionCreatureIds.delete(id);
       if (id === this.selfId) this.selfEntity = null;
     }

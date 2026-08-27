@@ -2,6 +2,7 @@ import type {
   CharacterInventory,
   CharacterSkills,
   CharacterSummary,
+  CharacterEquipment,
   CreatureState,
   Direction,
   HuntListEntry,
@@ -20,6 +21,8 @@ import type {
   AbilityCooldownState,
 } from '@aetheria/types';
 
+export type PartyMember = CharacterSummary & { equipment: CharacterEquipment };
+
 export type ClientMessage =
   | { type: 'auth.login'; username: string; password: string }
   | { type: 'auth.createCharacter'; token: string; name: string; archetype: CombatArchetype }
@@ -28,8 +31,8 @@ export type ClientMessage =
   | { type: 'game.move'; direction: Direction }
   | { type: 'game.attack'; targetId: string }
   | { type: 'game.pickup'; entityId: string }
-  | { type: 'inventory.equip'; slot: number }
-  | { type: 'inventory.unequip'; slot: string }
+  | { type: 'inventory.equip'; slot: number; characterId?: string }
+  | { type: 'inventory.unequip'; slot: string; characterId?: string }
   | { type: 'inventory.expandLootPouch' }
   | { type: 'inventory.sellLootPouch' }
   | { type: 'chat.send'; channel: string; message: string }
@@ -38,15 +41,18 @@ export type ClientMessage =
   | { type: 'hunt.start'; token: string; huntId: string; loopEnabled: boolean }
   | { type: 'hunt.stop'; token: string }
   | { type: 'hunt.setLoop'; token: string; enabled: boolean }
+  | { type: 'party.unlockSlot'; token: string }
+  | { type: 'party.summon'; token: string; characterId: string }
+  | { type: 'party.dismiss'; token: string; characterId: string }
   | { type: 'appearance.list'; token: string }
   | { type: 'appearance.save'; token: string; outfitId: number; addonMask: number; colors: { head: number; primary: number; secondary: number; detail: number } }
-  | { type: 'combat.config'; token: string; targeting: PlayerCombatConfig['targeting']; movement: PlayerCombatConfig['movement'] }
+  | { type: 'combat.config'; token: string; characterId?: string; targeting: PlayerCombatConfig['targeting']; movement: PlayerCombatConfig['movement']; attackRange?: number }
   | { type: 'combat.weaponElementOverride.apply'; damageType: DamageType }
   | { type: 'combat.weaponElementOverride.remove' }
   | { type: 'ability.cast'; abilityId: number; targetId?: string }
-  | { type: 'rotation.attack.set'; preset: string; slots: AttackRotationSlot[] }
-  | { type: 'rotation.healing.set'; preset: string; slots: HealingRotationSlot[] }
-  | { type: 'rotation.load'; preset: string };
+  | { type: 'rotation.attack.set'; preset: string; characterId?: string; slots: AttackRotationSlot[] }
+  | { type: 'rotation.healing.set'; preset: string; characterId?: string; slots: HealingRotationSlot[] }
+  | { type: 'rotation.load'; preset: string; characterId?: string };
 
 export type ServerMessage =
   | { type: 'auth.loginResult'; ok: boolean; error?: string; token?: string; accountId?: string; characters?: CharacterSummary[] }
@@ -54,7 +60,7 @@ export type ServerMessage =
   | { type: 'auth.selectResult'; ok: boolean; error?: string }
   | { type: 'game.enterWorld'; character: CharacterSummary; map: MapTile[]; width: number; height: number }
   | { type: 'entity.spawned'; id: string; kind: 'player' | 'npc'; name: string; position: Position; health?: number; maxHealth?: number; level?: number }
-  | { type: 'entity.moved'; id: string; position: Position }
+  | { type: 'entity.moved'; id: string; position: Position; facing?: Direction }
   | { type: 'entity.removed'; id: string }
   | { type: 'entity.health'; id: string; health: number; maxHealth: number }
   | { type: 'player.moved'; position: Position; facing?: Direction }
@@ -78,21 +84,23 @@ export type ServerMessage =
   | { type: 'error'; message: string }
   | { type: 'hunt.list'; hunts: HuntListEntry[] }
   | { type: 'hunt.started'; hunt: HuntRunView }
-  | { type: 'game.enterArena'; character: CharacterSummary; map: MapTile[]; width: number; height: number; hunt: HuntRunView }
+  | { type: 'game.enterArena'; character: CharacterSummary; members: CharacterSummary[]; map: MapTile[]; width: number; height: number; hunt: HuntRunView }
   | { type: 'hunt.wave'; huntId: string; wave: number; monsterCount: number; isBoss: boolean }
   | { type: 'hunt.cleared'; huntId: string; wave: number }
   | { type: 'hunt.completed'; huntId: string; completionCount: number; clearTimeMs: number; bestClearTimeMs: number | null; loopEnabled: boolean }
   | { type: 'hunt.wiped'; huntId: string; penaltyPaid: number; loopEnabled: boolean; respawnInMs: number | null }
   | { type: 'hunt.loopChanged'; huntId: string; loopEnabled: boolean }
   | { type: 'hunt.returnedToCity' }
+  | { type: 'party.state'; unlockedSlots: number; maxSlots: number; unlockCost: number | null; members: PartyMember[] }
   | { type: 'gold.update'; gold: number }
   | { type: 'appearance.list'; outfits: { outfitId: number; name: string; slug: string; category: string; supportsColors: boolean; supportsAddons: boolean }[] }
   | { type: 'appearance.changed'; entityId: string; outfitId: number; addonMask: number; colors: { head: number; primary: number; secondary: number; detail: number } }
-  | { type: 'combat.config'; combat: PlayerCombatConfig }
+  | { type: 'combat.config'; characterId: string; combat: PlayerCombatConfig }
   | { type: 'combat.weaponElementOverride.applied'; override: WeaponElementOverride }
   | { type: 'combat.weaponElementOverride.removed'; reason: 'manual' | 'expired' }
   | { type: 'abilities.update'; abilities: CombatAbilityDefinition[] }
-  | { type: 'rotation.state'; attack: AttackRotationSlot[]; healing: HealingRotationSlot[]; cooldowns: AbilityCooldownState }
+  | { type: 'rotation.state'; preset: string; characterId?: string; attack: AttackRotationSlot[]; healing: HealingRotationSlot[]; cooldowns: AbilityCooldownState }
+  | { type: 'cooldowns.update'; characterId: string; attackGroupReadyAt: number; healingGroupReadyAt: number; abilityReadyAt: Record<number, number> }
   | { type: 'ability.castFailed'; abilityId: number; reason: string }
   | { type: 'ability.cast'; abilityId: number; attackerId: string; targetId?: string };
 
@@ -145,10 +153,12 @@ export const SERVER_EVENTS = {
   HUNT_WIPED: 'hunt.wiped',
   HUNT_LOOP_CHANGED: 'hunt.loopChanged',
   HUNT_RETURNED_TO_CITY: 'hunt.returnedToCity',
+  PARTY_STATE: 'party.state',
   GOLD_UPDATE: 'gold.update',
   APPEARANCE_LIST: 'appearance.list',
   APPEARANCE_CHANGED: 'appearance.changed',
   COMBAT_CONFIG: 'combat.config',
+  COOLDOWNS_UPDATE: 'cooldowns.update',
   WEAPON_ELEMENT_OVERRIDE_APPLIED: 'combat.weaponElementOverride.applied',
   WEAPON_ELEMENT_OVERRIDE_REMOVED: 'combat.weaponElementOverride.removed',
 } as const;
@@ -171,6 +181,9 @@ export const CLIENT_EVENTS = {
   HUNT_START: 'hunt.start',
   HUNT_STOP: 'hunt.stop',
   HUNT_SET_LOOP: 'hunt.setLoop',
+  PARTY_UNLOCK_SLOT: 'party.unlockSlot',
+  PARTY_SUMMON: 'party.summon',
+  PARTY_DISMISS: 'party.dismiss',
   APPEARANCE_LIST: 'appearance.list',
   APPEARANCE_SAVE: 'appearance.save',
   COMBAT_CONFIG: 'combat.config',

@@ -59,6 +59,8 @@ export type CombatMovementMode = 'kite' | 'hold' | 'engage';
 export interface PlayerCombatConfig {
   targeting: CombatTargetingMode;
   movement: CombatMovementMode;
+  /** Distância de ataque desejada (tiles). Sobrescreve o alcance de kite/engage. */
+  attackRange?: number;
 }
 
 export type DamageType = 'physical' | 'fire' | 'ice' | 'energy' | 'earth' | 'holy' | 'death' | 'arcane';

@@ -199,6 +199,16 @@ export const SKILL_PROGRESSION_CONFIG = {
   magic: { base: 150, quadratic: 40, manaGainMultiplier: 0.1, minimumGain: 1 },
 } as const;
 
+/** Número máximo de personagens por conta. */
+export const MAX_CHARACTERS_PER_ACCOUNT = 3;
+
+/** Configuração do sistema de party (personagens da conta no campo de batalha). */
+export const PARTY_CONFIG = {
+  baseSlots: 1,
+  maxSlots: 3,
+  unlockCost: (currentSlots: number) => (currentSlots >= 2 ? 20_000 : 5_000),
+} as const;
+
 /** Número de slots do inventário. */
 export const INVENTORY_SIZE = 24;
 

@@ -1,5 +1,5 @@
-import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, computed, inject, signal } from '@angular/core';
-import { Subscription, interval } from 'rxjs';
+import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, inject, signal } from '@angular/core';
+import { Subscription, first, interval } from 'rxjs';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import Phaser from 'phaser';
@@ -33,7 +33,6 @@ interface EqEntry {
 export class Game implements OnInit, AfterViewInit, OnDestroy {
   readonly state = inject(GameState);
   readonly chatInput = signal('');
-  readonly invOpen = signal(false);
   readonly statusOpen = signal(false);
   readonly leftCollapsed = signal(false);
   readonly rightCollapsed = signal(false);
@@ -43,12 +42,13 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   readonly damageTakenCollapsed = signal(true);
   readonly chatCollapsed = signal(false);
   readonly chatTab = signal<'general' | 'combat' | 'system'>('general');
-  readonly hotbarPreset = signal<'hunt' | 'boss' | 'helper'>('hunt');
   readonly rotationOpen = signal(false);
-  readonly attackRotation = computed(() => this.state.attackRotations()[this.hotbarPreset().toUpperCase()] ?? [0, 0, 0, 0]);
-  readonly healingRotation = computed(() => this.state.healingRotations()[this.hotbarPreset().toUpperCase()] ?? [0, 0, 0, 0]);
+  readonly rotationCharacterId = signal<string | null>(null);
   readonly rotationMode = signal<'attack' | 'healing'>('attack');
   readonly healingThreshold = signal(80);
+  readonly healTarget = signal<'self' | 'lowest_party_member' | 'specific_party_role'>('self');
+  readonly manageOpen = signal(false);
+  readonly manageMemberId = signal<string | null>(null);
   readonly now = signal(Date.now());
   readonly hoveredItemId = signal<string | null>(null);
   readonly itemTooltipX = signal(0);
@@ -78,23 +78,25 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
     if (!this.ws.connected) this.ws.connect();
     void this.itemCatalog.ensureLoaded();
     if (!this.state.inGame()) {
-      void this.router.navigate(['/characters']);
+      const saved = this.state.characterId();
+      if (saved) {
+        this.state.selectCharacter(saved);
+        this.state.selectResult$.pipe(first()).subscribe((ok) => {
+          if (!ok) void this.router.navigate(['/characters']);
+        });
+      } else {
+        void this.router.navigate(['/characters']);
+        return;
+      }
     }
     document.addEventListener('visibilitychange', this.visibilityHandler);
     this.overrideSub = this.ws.events$.subscribe((event) => {
       if (event.event === 'system.connected') {
         this.resyncAfterResume();
+        this.rejoinCharacter();
       } else if (event.event === 'combat.weaponElementOverride.applied') {
         const data = event.data as { override: WeaponElementOverride };
         this.weaponOverride.set(data.override);
-      } else if (event.event === 'ability.cast') {
-        const data = event.data as { abilityId: number };
-        const ability = this.state.abilities().find((item) => item.abilityId === data.abilityId);
-        if (ability) {
-          const now = Date.now();
-          this.state.attackGroupReadyAt.set(now + 2000);
-          this.state.abilityReadyAt.update((ready) => ({ ...ready, [ability.abilityId]: now + ability.cooldownMs }));
-        }
       } else if (event.event === 'combat.weaponElementOverride.removed') {
         this.weaponOverride.set(null);
         this.overrideRemaining.set(0);
@@ -113,9 +115,18 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   private resyncAfterResume() {
     if (!this.ws.connected) { this.ws.connect(); return; }
     this.state.requestHunts();
-    this.ws.send({ type: 'rotation.load', preset: this.hotbarPreset().toUpperCase() });
+    for (const m of this.state.party().members) this.state.loadRotation(m.id);
     this.now.set(Date.now());
     this.phaser?.scale.refresh();
+  }
+
+  /** Reconecta o personagem ativo após o WebSocket ser restabelecido. */
+  private rejoinCharacter() {
+    const self = this.state.self();
+    const token = this.state.token();
+    if (self?.id && token) {
+      this.state.selectCharacter(self.id);
+    }
   }
 
   ngAfterViewInit() {
@@ -218,7 +229,12 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   }
 
   equipment(): EqEntry[] {
-    const eq: CharacterEquipment = this.state.inventory().equipment;
+    return this.equipmentFor(this.state.self()?.id ?? '');
+  }
+
+  equipmentFor(memberId: string): EqEntry[] {
+    const member = this.state.party().members.find((m) => m.id === memberId);
+    const eq: CharacterEquipment = member?.equipment ?? this.state.inventory().equipment;
     const labels: Record<string, string> = {
       helmet: 'Capacete',
       armor: 'Armadura',
@@ -385,18 +401,37 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
     return this.state.chat();
   }
 
-  hotbarSlots(): Array<{ key: number; abilityId?: number; name: string; cd: string; ready: boolean; groupPct: number }> {
-    const ids = this.attackRotation();
+  partySlots(): (import('@aetheria/protocol').PartyMember | null)[] {
+    const members = this.state.party().members;
+    return [0, 1, 2].map((i) => members[i] ?? null);
+  }
+
+  attackRotationFor(characterId: string): number[] {
+    return this.state.attackRotations()[characterId] ?? [0, 0, 0, 0];
+  }
+
+  healingRotationFor(characterId: string): number[] {
+    return this.state.healingRotations()[characterId] ?? [0, 0, 0, 0];
+  }
+
+  hotbarSlotsFor(characterId: string): Array<{ key: number; abilityId?: number; name: string; cd: string; ready: boolean; groupPct: number }> {
+    const ids = this.attackRotationFor(characterId);
     const now = this.now();
-    const groupRemaining = Math.max(0, this.state.attackGroupReadyAt() - now);
+    const groupRemaining = Math.max(0, this.state.attackGroupReadyFor(characterId) - now);
     return [0, 1, 2, 3].map((index) => {
       const ability = this.state.abilities().find((item) => item.abilityId === ids[index]);
       if (!ability) return { key: index + 1, name: 'Empty', cd: '—', ready: false, groupPct: 0 };
-      const abilityRemaining = Math.max(0, (this.state.abilityReadyAt()[ability.abilityId] ?? 0) - now);
+      const abilityRemaining = Math.max(0, this.state.abilityReadyFor(characterId, ability.abilityId) - now);
       const remaining = Math.max(groupRemaining, abilityRemaining);
       const duration = Math.max(1, Math.max(ability.cooldownMs, 2000));
       return { key: index + 1, abilityId: ability.abilityId, name: ability.name, cd: remaining > 0 ? (remaining / 1000).toFixed(1) : 'READY', ready: remaining === 0, groupPct: Math.max(0, Math.min(100, 100 - (remaining / duration) * 100)) };
     });
+  }
+
+  healSlotFor(characterId: string): { abilityId?: number; name: string; icon?: string } {
+    const id = this.healingRotationFor(characterId)[0];
+    const ability = this.state.abilities().find((a) => a.abilityId === id);
+    return { abilityId: ability?.abilityId, name: ability?.name ?? 'Cura', icon: ability?.icon };
   }
 
   useHotbarSlot(slot: { abilityId?: number }) {
@@ -404,30 +439,31 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
     if (slot.abilityId) this.ws.send({ type: 'ability.cast', abilityId: slot.abilityId, targetId });
   }
 
-  private draggedSlot: number | null = null;
-  startSlotDrag(index: number, event: DragEvent) {
-    this.draggedSlot = index;
+  private dragged: { characterId: string; index: number } | null = null;
+  startSlotDrag(characterId: string, index: number, event: DragEvent) {
+    this.dragged = { characterId, index };
     event.dataTransfer?.setData('text/plain', String(index));
     if (event.dataTransfer) event.dataTransfer.effectAllowed = 'move';
   }
   allowSlotDrop(event: DragEvent) { event.preventDefault(); if (event.dataTransfer) event.dataTransfer.dropEffect = 'move'; }
-  dropSlot(index: number, event: DragEvent) {
+  dropSlot(characterId: string, index: number, event: DragEvent) {
     event.preventDefault();
-    const source = this.draggedSlot ?? Number(event.dataTransfer?.getData('text/plain'));
-    this.draggedSlot = null;
+    const source = this.dragged?.index ?? Number(event.dataTransfer?.getData('text/plain'));
+    this.dragged = null;
     if (!Number.isInteger(source) || source < 0 || source > 3 || source === index) return;
-    const slots = [...this.attackRotation()];
+    const slots = [...this.attackRotationFor(characterId)];
     [slots[source], slots[index]] = [slots[index], slots[source]];
-    this.state.attackRotations.update((all) => ({ ...all, [this.hotbarPreset().toUpperCase()]: slots }));
-    this.saveAttackRotationSlots(slots);
+    this.state.attackRotations.update((all) => ({ ...all, [characterId]: slots }));
+    this.saveAttackRotationSlots(characterId, slots);
   }
-  private saveAttackRotationSlots(ids: number[]) {
-    const preset = this.hotbarPreset().toUpperCase();
+  private saveAttackRotationSlots(characterId: string, ids: number[]) {
     const slots = ids.map((abilityId, index) => ({ position: (index + 1) as 1 | 2 | 3 | 4, abilityId: abilityId || undefined, enabled: abilityId > 0 }));
-    this.ws.send({ type: 'rotation.attack.set', preset, slots });
+    this.ws.send({ type: 'rotation.attack.set', preset: 'HUNT', characterId, slots });
   }
 
-  selectHotbarPreset(preset: 'hunt' | 'boss' | 'helper') { this.hotbarPreset.set(preset); this.ws.send({ type: 'rotation.load', preset: preset.toUpperCase() }); }
+  hotbarMemberName(characterId: string): string {
+    return this.state.party().members.find((m) => m.id === characterId)?.name ?? this.state.self()?.name ?? 'Personagem';
+  }
 
   onHuntSelect(huntId: string) {
     if (!huntId) return;
@@ -502,23 +538,72 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
     this.state.toggleHunts();
   }
 
-  onCombatTargeting(value: string) {
-    this.state.setCombatConfig(value as PlayerCombatConfig['targeting'], this.state.combatConfig().movement);
+  partyMembers() {
+    return this.state.party().members;
   }
 
-  onCombatMovement(value: string) {
-    this.state.setCombatConfig(this.state.combatConfig().targeting, value as PlayerCombatConfig['movement']);
+  partyUnlockCost(): number | null {
+    return this.state.party().unlockCost;
   }
 
-  toggleRotation() { this.rotationOpen.update((value) => !value); }
-  setRotationAbility(index: number, abilityId: number) { const preset = this.hotbarPreset().toUpperCase(); const target = this.rotationMode() === 'attack' ? this.state.attackRotations : this.state.healingRotations; target.update((all) => ({ ...all, [preset]: all[preset].map((value, i) => i === index ? abilityId : value) })); }
+  summonableCharacters(): import('@aetheria/types').CharacterSummary[] {
+    const self = this.state.self();
+    const memberIds = new Set(this.state.party().members.map((m) => m.id));
+    return this.state.characters().filter((c) => !memberIds.has(c.id) && c.id !== self?.id);
+  }
+
+  // ---- gerenciamento por personagem ----
+  openManage() {
+    this.manageMemberId.set(this.state.self()?.id ?? this.state.party().members[0]?.id ?? null);
+    this.manageOpen.set(true);
+  }
+  closeManage() { this.manageOpen.set(false); }
+  selectManageMember(id: string) { this.manageMemberId.set(id); }
+  manageMember(): import('@aetheria/protocol').PartyMember | null {
+    const id = this.manageMemberId();
+    return this.state.party().members.find((m) => m.id === id) ?? this.state.party().members[0] ?? null;
+  }
+  combatFor(memberId: string): PlayerCombatConfig {
+    return this.state.combatFor(memberId);
+  }
+  onManageTargeting(memberId: string, value: string) {
+    const c = this.combatFor(memberId);
+    this.state.setCombatConfig(memberId, value as PlayerCombatConfig['targeting'], c.movement, c.attackRange);
+  }
+  onManageMovement(memberId: string, value: string) {
+    const c = this.combatFor(memberId);
+    this.state.setCombatConfig(memberId, c.targeting, value as PlayerCombatConfig['movement'], c.attackRange);
+  }
+  onManageAttackRange(memberId: string, value: number | null) {
+    const c = this.combatFor(memberId);
+    this.state.setCombatConfig(memberId, c.targeting, c.movement, value ?? undefined);
+  }
+  onEquipFor(memberId: string, index: number) { this.state.equip(index, memberId); }
+  onUnequipFor(memberId: string, slot: string) { this.state.unequip(slot, memberId); }
+
+  // ---- rotação ----
+  openRotationFor(characterId: string) { this.rotationCharacterId.set(characterId); this.rotationOpen.set(true); }
+  rotationCharacterName(): string { return this.rotationCharacterId() ? this.hotbarMemberName(this.rotationCharacterId()!) : ''; }
+  attackRotationForModal(): number[] { return this.attackRotationFor(this.rotationCharacterId() ?? ''); }
+  healingRotationForModal(): number[] { return this.healingRotationFor(this.rotationCharacterId() ?? ''); }
+  setRotationAbility(index: number, abilityId: number) {
+    const id = this.rotationCharacterId();
+    if (!id) return;
+    const target = this.rotationMode() === 'attack' ? this.state.attackRotations : this.state.healingRotations;
+    target.update((all) => ({ ...all, [id]: (all[id] ?? [0, 0, 0, 0]).map((value, i) => (i === index ? abilityId : value)) }));
+  }
   rotationAbilityName(id: number) { return this.state.abilities().find((ability) => ability.abilityId === id)?.name ?? 'Empty'; }
   rotationAbilityIcon(id: number) { return this.state.abilities().find((ability) => ability.abilityId === id)?.icon; }
   saveRotation() {
-    const characterId = this.state.self()?.id;
+    const characterId = this.rotationCharacterId();
     if (!characterId) return;
-    const slots = (this.rotationMode() === 'attack' ? this.attackRotation() : this.healingRotation()).map((abilityId, index) => ({ position: (index + 1) as 1 | 2 | 3 | 4, abilityId: abilityId || undefined, enabled: abilityId > 0 }));
-    this.ws.send(this.rotationMode() === 'attack' ? { type: 'rotation.attack.set', preset: this.hotbarPreset().toUpperCase(), slots } : { type: 'rotation.healing.set', preset: this.hotbarPreset().toUpperCase(), slots: slots.map((slot) => ({ ...slot, trigger: { target: 'self' as const, hpBelowPercent: this.healingThreshold() } })) });
+    if (this.rotationMode() === 'attack') {
+      const slots = this.attackRotationForModal().map((abilityId, index) => ({ position: (index + 1) as 1 | 2 | 3 | 4, abilityId: abilityId || undefined, enabled: abilityId > 0 }));
+      this.ws.send({ type: 'rotation.attack.set', preset: 'HUNT', characterId, slots });
+    } else {
+      const slots = this.healingRotationForModal().map((abilityId, index) => ({ position: (index + 1) as 1 | 2 | 3 | 4, abilityId: abilityId || undefined, enabled: abilityId > 0, trigger: { target: this.healTarget(), hpBelowPercent: this.healingThreshold() } }));
+      this.ws.send({ type: 'rotation.healing.set', preset: 'HUNT', characterId, slots });
+    }
     this.rotationOpen.set(false);
   }
 

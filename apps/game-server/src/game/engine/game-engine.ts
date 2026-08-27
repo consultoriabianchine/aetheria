@@ -16,8 +16,10 @@ import {
   LOOT_POUCH_EXPANSION,
   LOOT_POUCH_SIZE,
   LOOT_LIFETIME_MS,
+  MAX_CHARACTERS_PER_ACCOUNT,
   NPC_INTERACT_RANGE,
   NPC_TEMPLATES,
+  PARTY_CONFIG,
   PICKUP_RANGE,
   PLAYER_AI,
   SPAWN_POINT,
@@ -46,7 +48,7 @@ import type {
 } from '@aetheria/types';
 import { getItemDef, loadItemCatalogFromDatabase } from './item-catalog';
 import { generateWorldMap } from './world-map';
-import { GamePlayer, GroundItem, NpcEntity } from './world';
+import { AccountStorageState, GamePlayer, GroundItem, NpcEntity } from './world';
 import { STORE, Store, StoredCharacter } from '../store/store';
 import { PrismaService } from '../../prisma/prisma.service';
 import { CreatureAIHooks, CreatureAIService, CreatureTarget } from '../creature/creature-ai.service';
@@ -91,6 +93,7 @@ export class GameEngine implements OnModuleDestroy {
   private world = generateWorldMap();
   private players = new Map<string, GamePlayer>();
   private playerBySocket = new Map<string, string>();
+  private accountStorage = new Map<string, AccountStorageState>();
   private npcs = new Map<string, NpcEntity>();
   private groundItems = new Map<string, GroundItem>();
   private tokens = new Map<string, { accountId: string; username: string; exp: number }>();
@@ -110,7 +113,7 @@ export class GameEngine implements OnModuleDestroy {
   private abilityCooldowns = new Map<string, Map<number, number>>();
   private attackRotations = new Map<string, { abilityId?: number; enabled: boolean; minTargets?: number }[]>();
   private attackGroupReadyAt = new Map<string, number>();
-  private healingRotations = new Map<string, { abilityId?: number; enabled: boolean; hpBelowPercent: number }[]>();
+  private healingRotations = new Map<string, { abilityId?: number; enabled: boolean; hpBelowPercent: number; target: 'self' | 'lowest_party_member' | 'specific_party_role' }[]>();
   private healingGroupReadyAt = new Map<string, number>();
   private monsterAbilities = new Map<number, { abilityId: number; priority: number; chance: number; cooldownOverrideMs?: number; parameters?: Record<string, number> }[]>();
   private monsterAbilityReadyAt = new Map<string, Map<number, number>>();
@@ -163,6 +166,18 @@ export class GameEngine implements OnModuleDestroy {
       getMap: (id) => mapRegistry?.getMap(id) ?? null,
       getHunts: () => huntRegistry?.getAll() ?? HUNT_CATALOG,
       emitTo: (socketId, event, data) => this.emitTo(socketId, event, data),
+      getGold: (characterId) => {
+        const p = this.players.get(characterId);
+        return p ? this.accountGold(p.accountId) : 0;
+      },
+      deductGold: (characterId, amount) => {
+        const p = this.players.get(characterId);
+        if (!p) return 0;
+        const storage = this.storageFor(p);
+        storage.gold = Math.max(0, storage.gold - amount);
+        this.emitGold(p, storage.gold);
+        return storage.gold;
+      },
       onCreatureAttackPlayer: (creature, playerId, amount, critical, now) =>
         this.creatureAttackPlayer(creature, playerId, amount, critical, now),
       onRunFinished: (characterId, reason) => this.handleRunFinished(characterId, reason),
@@ -261,6 +276,7 @@ export class GameEngine implements OnModuleDestroy {
       this.emitTo(socketId, 'auth.loginResult', { ok: false, error: 'Senha incorreta.' });
       return false;
     }
+    await this.ensureAccountStorage(account.id);
     const characters = (await this.store.listCharacters(account.id)).map((c) => this.toSummary(c));
     const token = this.signToken(account.id, account.username);
     this.tokens.set(token, { accountId: account.id, username: account.username, exp: Date.now() + TOKEN_TTL_MS });
@@ -287,8 +303,8 @@ export class GameEngine implements OnModuleDestroy {
       return;
     }
     const existing = await this.store.listCharacters(session.accountId);
-    if (existing.length >= 3) {
-      this.emitTo(socketId, 'auth.characterCreated', { ok: false, error: 'Máximo de 3 personagens por conta.' });
+    if (existing.length >= MAX_CHARACTERS_PER_ACCOUNT) {
+      this.emitTo(socketId, 'auth.characterCreated', { ok: false, error: `Máximo de ${MAX_CHARACTERS_PER_ACCOUNT} personagens por conta.` });
       return;
     }
     const all = await Promise.all(existing.map((c) => this.store.findCharacterById(c.id)));
@@ -302,10 +318,10 @@ export class GameEngine implements OnModuleDestroy {
       Object.entries(archetype.initialEquipment).map(([slot, stack]) => [slot, stack ? { ...stack } : undefined]),
     ) as CharacterEquipment;
     const skills = { ...BASE_SKILLS };
+    await this.ensureAccountStorage(session.accountId);
     const character = await this.store.createCharacter(session.accountId, {
       name: trimmed,
       archetype: archetypeId,
-      gold: 0,
       level: 1,
       experience: 0,
       health: maxHp,
@@ -319,9 +335,6 @@ export class GameEngine implements OnModuleDestroy {
         level: skills[skillType],
         experience: 0,
       })),
-      inventory: new Array(INVENTORY_SIZE).fill(null),
-      lootPouchSize: LOOT_POUCH_SIZE,
-      lootPouch: new Array(LOOT_POUCH_SIZE).fill(null),
       equipment,
       appearance: this.defaultPlayerAppearance(),
     });
@@ -341,11 +354,21 @@ export class GameEngine implements OnModuleDestroy {
     }
     this.removePlayerFromWorld(socketId);
 
+    const reconnecting = this.players.get(characterId);
+    if (reconnecting && reconnecting.accountId === session.accountId) {
+      reconnecting.socketId = socketId;
+      this.playerBySocket.set(socketId, reconnecting.id);
+      await this.emitWorldSnapshot(reconnecting);
+      this.logger.log(`Jogador ${reconnecting.name} reconectou (retomando estado).`);
+      return;
+    }
+
     if (!stored.appearance) {
       stored.appearance = this.defaultPlayerAppearance();
       await this.store.saveCharacter(stored);
     }
 
+    await this.ensureAccountStorage(stored.accountId);
     const player = new GamePlayer(stored);
     player.socketId = socketId;
     player.recomputeSpeed(getItemDef);
@@ -355,8 +378,8 @@ export class GameEngine implements OnModuleDestroy {
       const slots = await this.prisma.characterAttackRotationSlot.findMany({ where: { character_id: player.id, preset: 'HUNT' }, orderBy: { slot_position: 'asc' } });
       this.attackRotations.set(player.id, slots.map((slot) => ({ abilityId: slot.ability_id ?? undefined, enabled: slot.enabled, minTargets: slot.min_targets ?? undefined })));
       const heals = await this.prisma.characterHealingRotationSlot.findMany({ where: { character_id: player.id, preset: 'HUNT' }, orderBy: { slot_position: 'asc' } });
-      this.healingRotations.set(player.id, heals.map((slot) => ({ abilityId: slot.ability_id ?? undefined, enabled: slot.enabled, hpBelowPercent: Number((slot.trigger as { hpBelowPercent?: number }).hpBelowPercent ?? 100) })));
-      this.emitTo(socketId, 'rotation.state', { preset: 'HUNT', attack: slots, healing: heals, cooldowns: { attackGroupReadyAt: 0, healingGroupReadyAt: 0, abilityReadyAt: {} } });
+      this.healingRotations.set(player.id, heals.map((slot) => this.healingSlot(slot.ability_id ?? undefined, slot.enabled, slot.trigger, 100)));
+      this.emitTo(socketId, 'rotation.state', { preset: 'HUNT', characterId: player.id, attack: slots, healing: heals, cooldowns: { attackGroupReadyAt: 0, healingGroupReadyAt: 0, abilityReadyAt: {} } });
     }
     const override = await this.store.getWeaponElementOverride(player.id);
     if (override) {
@@ -378,6 +401,7 @@ export class GameEngine implements OnModuleDestroy {
     });
     this.emitStats(player);
     this.emitInventory(player);
+    await this.emitPartyState(player);
 
     this.emitOthers(socketId, 'entity.spawned', {
       id: player.id,
@@ -410,6 +434,60 @@ export class GameEngine implements OnModuleDestroy {
     this.logger.log(`Jogador ${player.name} entrou no mundo.`);
   }
 
+  /** Reenvia o estado completo do mundo para um personagem que reconectou. */
+  private async emitWorldSnapshot(player: GamePlayer) {
+    const socketId = player.socketId ?? '';
+    const run = this.hunts.getRun(player.id);
+    this.emitTo(socketId, 'auth.selectResult', { ok: true });
+    this.emitTo(socketId, 'abilities.update', { abilities: await this.abilityRegistry.list() });
+    if (run) {
+      const members = run.memberIds
+        .map((id) => this.players.get(id))
+        .filter((p): p is GamePlayer => !!p)
+        .map((p) => this.toSummary(p));
+      this.emitTo(socketId, 'game.enterArena', {
+        character: this.toSummary(player),
+        members,
+        map: run.map.tiles,
+        width: run.arena.width,
+        height: run.arena.height,
+        hunt: this.hunts.view(run),
+      });
+      for (const creature of run.creatures.getAll()) {
+        if (creature.state === 'DEAD') continue;
+        this.emitTo(socketId, 'creature.spawn', this.creatureSpawnPayload(creature));
+      }
+    } else {
+      this.emitTo(socketId, 'game.enterWorld', {
+        character: this.toSummary(player),
+        map: this.world.tiles,
+        width: this.world.width,
+        height: this.world.height,
+      });
+      for (const creature of this.creatures.getAll()) {
+        if (creature.state === 'DEAD' || !this.inView(player.position, creature.position)) continue;
+        this.emitTo(socketId, 'creature.spawn', this.creatureSpawnPayload(creature));
+      }
+      for (const npc of this.npcs.values()) {
+        if (!this.inView(player.position, npc.position)) continue;
+        this.emitTo(socketId, 'entity.spawned', { id: npc.id, kind: 'npc', name: npc.name, position: npc.position });
+      }
+      for (const item of this.groundItems.values()) {
+        if (!this.inView(player.position, item.position)) continue;
+        this.emitTo(socketId, 'loot.spawned', {
+          entityId: item.id,
+          itemId: item.itemId,
+          name: item.name,
+          quantity: item.quantity,
+          position: item.position,
+        });
+      }
+    }
+    this.emitStats(player);
+    this.emitInventory(player);
+    await this.emitPartyState(player);
+  }
+
   // ---------------------------------------------------------------- hunts
 
   private async verifySession(socketId: string, token: string): Promise<{ player: GamePlayer } | null> {
@@ -430,18 +508,30 @@ export class GameEngine implements OnModuleDestroy {
     const session = await this.verifySession(socketId, token);
     if (!session) return;
     const player = session.player;
-    const result = this.hunts.startHunt(player.id, huntId, loopEnabled, Date.now());
+    const storage = this.storageFor(player);
+    const companionIds = (storage.party ?? []).filter((id) => id !== player.id);
+    for (const id of companionIds) {
+      if (this.players.has(id)) continue;
+      const stored = await this.store.findCharacterById(id);
+      if (stored && stored.accountId === player.accountId) this.materializeCompanion(stored);
+    }
+    const memberIds = [player.id, ...companionIds.filter((id) => this.players.has(id))];
+    const result = this.hunts.startHunt(player.id, memberIds, huntId, loopEnabled, Date.now());
     if (!result.ok) {
       this.emitTo(socketId, 'error', { message: this.huntErrorLabel(result.error) });
       return;
     }
-    this.emitOthers(socketId, 'entity.removed', { id: player.id });
-    player.moveDir = null;
-    this.moveEventReadyAt.delete(player.id);
-    this.schedulePlayerAttackCheck(player, Date.now());
-    this.schedulePlayerHealCheck(player, Date.now());
+    for (const id of result.run.memberIds) this.emitOthers(socketId, 'entity.removed', { id });
+    for (const id of result.run.memberIds) {
+      const member = this.players.get(id);
+      if (!member) continue;
+      member.moveDir = null;
+      this.moveEventReadyAt.delete(id);
+      this.schedulePlayerAttackCheck(member, Date.now());
+      this.schedulePlayerHealCheck(member, Date.now());
+    }
     this.scheduleHuntUpdate(player.id, Date.now());
-    this.logger.log(`Jogador ${player.name} entrou na hunt ${huntId}.`);
+    this.logger.log(`Jogador ${player.name} entrou na hunt ${huntId} com ${memberIds.length} membro(s).`);
   }
 
   handleHuntStop(socketId: string, token: string) {
@@ -487,19 +577,152 @@ export class GameEngine implements OnModuleDestroy {
     this.logger.log(`Jogador ${player.name} mudou a aparência para o outfit ${outfitId}.`);
   }
 
-  handleCombatConfig(socketId: string, token: string, targeting: unknown, movement: unknown) {
+  handleCombatConfig(socketId: string, token: string, targeting: unknown, movement: unknown, attackRange?: number, characterId?: string) {
     void this.verifySession(socketId, token).then(async (session) => {
       if (!session) return;
-      const player = session.player;
+      const leader = session.player;
       const t = targeting as PlayerCombatConfig['targeting'];
       const m = movement as PlayerCombatConfig['movement'];
       if (!['nearest', 'furthest', 'lowestHp', 'highestHp'].includes(t)) return;
       if (!['kite', 'hold', 'engage'].includes(m)) return;
-      player.combat = { targeting: t, movement: m };
-      this.playerAI.clear(player.id);
-      await this.persistPlayer(player);
-      this.emitTo(socketId, 'combat.config', { combat: { ...player.combat } });
+      const range = attackRange == null ? undefined : Math.max(1, Math.min(15, Math.round(attackRange)));
+      const combat: PlayerCombatConfig = { targeting: t, movement: m, attackRange: range };
+      const targetId = characterId && characterId !== leader.id && this.partyMemberIds(leader).includes(characterId) ? characterId : leader.id;
+      const live = this.players.get(targetId);
+      if (live) {
+        live.combat = { ...combat };
+        this.playerAI.clear(live.id);
+        await this.persistPlayer(live);
+      } else {
+        const stored = await this.store.findCharacterById(targetId);
+        if (!stored || stored.accountId !== leader.accountId) return;
+        stored.combat = { ...combat };
+        await this.store.saveCharacter(stored);
+      }
+      this.emitTo(socketId, 'combat.config', { characterId: targetId, combat });
+      await this.emitPartyState(leader);
     });
+  }
+
+  // ---------------------------------------------------------------- party
+
+  private partyMemberIds(player: GamePlayer): string[] {
+    const storage = this.storageFor(player);
+    return [player.id, ...(storage.party ?? []).filter((id) => id !== player.id)];
+  }
+
+  private async emitPartyState(player: GamePlayer) {
+    const storage = this.storageFor(player);
+    const ids = [player.id, ...(storage.party ?? []).filter((id) => id !== player.id)];
+    const members: (CharacterSummary & { equipment: CharacterEquipment })[] = [];
+    for (const id of ids) {
+      const member = this.players.get(id) ?? (await this.store.findCharacterById(id));
+      if (member) members.push({ ...this.toSummary(member), equipment: member.equipment });
+    }
+    this.emitTo(player.socketId ?? '', 'party.state', {
+      unlockedSlots: storage.unlockedPartySlots,
+      maxSlots: PARTY_CONFIG.maxSlots,
+      unlockCost: storage.unlockedPartySlots >= PARTY_CONFIG.maxSlots ? null : PARTY_CONFIG.unlockCost(storage.unlockedPartySlots),
+      members,
+    });
+  }
+
+  async handlePartyUnlockSlot(socketId: string, token: string) {
+    const session = await this.verifySession(socketId, token);
+    if (!session) return;
+    const player = session.player;
+    const storage = this.storageFor(player);
+    if (storage.unlockedPartySlots >= PARTY_CONFIG.maxSlots) {
+      this.emitTo(socketId, 'error', { message: 'Todos os slots de party já foram desbloqueados.' });
+      return;
+    }
+    const cost = PARTY_CONFIG.unlockCost(storage.unlockedPartySlots);
+    if (storage.gold < cost) {
+      this.emitTo(socketId, 'error', { message: `Gold insuficiente para desbloquear o slot (${cost} gold).` });
+      return;
+    }
+    storage.gold -= cost;
+    storage.unlockedPartySlots += 1;
+    await this.store.saveAccountStorage(storage.toStored());
+    this.emitGold(player, storage.gold);
+    await this.emitPartyState(player);
+    this.emitTo(socketId, 'chat.message', { channel: 'local', from: 'Sistema', text: `Slot de party desbloqueado! Agora você pode convocar até ${storage.unlockedPartySlots} personagem(ns).` });
+  }
+
+  async handlePartySummon(socketId: string, token: string, characterId: string) {
+    const session = await this.verifySession(socketId, token);
+    if (!session) return;
+    const player = session.player;
+    if (characterId === player.id) {
+      this.emitTo(socketId, 'error', { message: 'Este personagem já está ativo.' });
+      return;
+    }
+    const storage = this.storageFor(player);
+    const companions = storage.party ?? [];
+    if (companions.includes(characterId)) {
+      this.emitTo(socketId, 'error', { message: 'Personagem já convocado.' });
+      return;
+    }
+    if (companions.length + 1 >= storage.unlockedPartySlots) {
+      this.emitTo(socketId, 'error', { message: 'Nenhum slot de party disponível. Desbloqueie um novo slot.' });
+      return;
+    }
+    const stored = await this.store.findCharacterById(characterId);
+    if (!stored || stored.accountId !== player.accountId) {
+      this.emitTo(socketId, 'error', { message: 'Personagem não encontrado.' });
+      return;
+    }
+    storage.party = [...companions, characterId];
+    await this.store.saveAccountStorage(storage.toStored());
+    await this.emitPartyState(player);
+    this.emitTo(socketId, 'chat.message', { channel: 'local', from: 'Sistema', text: `${stored.name} foi convocado para a party!` });
+  }
+
+  handlePartyDismiss(socketId: string, token: string, characterId: string) {
+    void this.verifySession(socketId, token).then(async (session) => {
+      if (!session) return;
+      const player = session.player;
+      const storage = this.storageFor(player);
+      storage.party = (storage.party ?? []).filter((id) => id !== characterId);
+      await this.store.saveAccountStorage(storage.toStored());
+      const companion = this.players.get(characterId);
+      if (companion && companion.accountId === player.accountId && !companion.socketId) {
+        this.removeCompanionFromWorld(characterId);
+      }
+      await this.emitPartyState(player);
+    });
+  }
+
+  /** Materializa um companheiro (GamePlayer sem socket) para a hunt, sem exibir no hub. */
+  private materializeCompanion(stored: StoredCharacter): GamePlayer {
+    const companion = new GamePlayer(stored);
+    companion.socketId = null;
+    companion.position = { ...SPAWN_POINT };
+    companion.recomputeSpeed(getItemDef);
+    this.players.set(companion.id, companion);
+    this.schedulePlayerRegen(companion.id, Date.now() + 1000);
+    this.schedulePlayerSave(companion.id, Date.now() + 10_000);
+    if (this.prisma) {
+      void this.prisma.characterAttackRotationSlot.findMany({ where: { character_id: companion.id, preset: 'HUNT' }, orderBy: { slot_position: 'asc' } }).then((slots) => {
+        this.attackRotations.set(companion.id, slots.map((slot) => ({ abilityId: slot.ability_id ?? undefined, enabled: slot.enabled, minTargets: slot.min_targets ?? undefined })));
+        this.schedulePlayerAttackCheck(companion, Date.now());
+      });
+      void this.prisma.characterHealingRotationSlot.findMany({ where: { character_id: companion.id, preset: 'HUNT' }, orderBy: { slot_position: 'asc' } }).then((heals) => {
+        this.healingRotations.set(companion.id, heals.map((slot) => this.healingSlot(slot.ability_id ?? undefined, slot.enabled, slot.trigger, 100)));
+        this.schedulePlayerHealCheck(companion, Date.now());
+      });
+    }
+    return companion;
+  }
+
+  private removeCompanionFromWorld(characterId: string) {
+    this.players.delete(characterId);
+    this.hunts.removeRun(characterId);
+    this.regenEventReadyAt.delete(characterId);
+    this.moveEventReadyAt.delete(characterId);
+    this.saveEventReadyAt.delete(characterId);
+    this.clearPlayerCombatState(characterId);
+    this.emitAll('entity.removed', { id: characterId });
   }
 
   private async availableOutfits(characterId: string) {
@@ -539,8 +762,9 @@ export class GameEngine implements OnModuleDestroy {
     if (!player) return;
     const bonus = HUNT_CONFIG.gold.clearBonus(suggestedLevel);
     if (bonus <= 0) return;
-    player.gold += bonus;
-    this.emitTo(player.socketId ?? '', 'gold.update', { gold: player.gold });
+    const storage = this.storageFor(player);
+    storage.gold += bonus;
+    this.emitGold(player, storage.gold);
     this.emitTo(player.socketId ?? '', 'chat.message', {
       channel: 'local',
       from: 'Sistema',
@@ -549,63 +773,111 @@ export class GameEngine implements OnModuleDestroy {
     void huntId;
   }
 
-  /** Finaliza a run no motor e devolve o jogador ao hub. */
+  /** Finaliza a run no motor: líder volta ao hub; companheiros são desmaterializados. */
   private handleRunFinished(characterId: string, reason: 'completed' | 'wiped' | 'stopped') {
     const run = this.hunts.getRun(characterId);
+    const memberIds = run ? [...run.memberIds] : [characterId];
     this.hunts.removeRun(characterId);
     this.huntEventReadyAt.delete(characterId);
-    const player = this.players.get(characterId);
-    if (!player) return;
-    player.position = { ...SPAWN_POINT };
-    player.health = player.maxHealth;
-    player.mana = player.maxMana;
-    player.targetId = null;
-    player.moveDir = null;
-    this.moveEventReadyAt.delete(player.id);
-    const socketId = player.socketId ?? '';
-    this.emitTo(socketId, 'game.enterWorld', {
-      character: this.toSummary(player),
-      map: this.world.tiles,
-      width: this.world.width,
-      height: this.world.height,
-    });
-    this.emitStats(player);
-    this.emitInventory(player);
-    this.emitTo(socketId, 'hunt.returnedToCity', {});
-    this.emitOthers(socketId, 'entity.spawned', {
-      id: player.id,
-      kind: 'player',
-      name: player.name,
-      position: player.position,
-      health: player.health,
-      maxHealth: player.maxHealth,
-      level: player.level,
-    });
-    this.logger.log(`Jogador ${player.name} retornou ao hub (${reason}).`);
+    const leader = this.players.get(characterId);
+    const socketId = leader?.socketId ?? '';
+    for (const id of memberIds) {
+      const player = this.players.get(id);
+      if (!player) continue;
+      if (player.socketId) {
+        player.position = { ...SPAWN_POINT };
+        player.health = player.maxHealth;
+        player.mana = player.maxMana;
+        player.targetId = null;
+        player.moveDir = null;
+        this.moveEventReadyAt.delete(player.id);
+        this.emitTo(player.socketId, 'game.enterWorld', {
+          character: this.toSummary(player),
+          map: this.world.tiles,
+          width: this.world.width,
+          height: this.world.height,
+        });
+        this.emitStats(player);
+        this.emitInventory(player);
+        this.emitTo(player.socketId, 'hunt.returnedToCity', {});
+        this.emitOthers(socketId, 'entity.spawned', {
+          id: player.id,
+          kind: 'player',
+          name: player.name,
+          position: player.position,
+          health: player.health,
+          maxHealth: player.maxHealth,
+          level: player.level,
+        });
+        this.logger.log(`Jogador ${player.name} retornou ao hub (${reason}).`);
+      } else {
+        void this.persistPlayer(player);
+        this.removeCompanionFromWorld(id);
+      }
+    }
     void run;
   }
 
   // ---------------------------------------------------------------- actions
 
   handleDisconnect(socketId: string) {
-    void this.removePlayerFromWorld(socketId);
+    const characterId = this.playerBySocket.get(socketId);
+    if (!characterId) return;
+    const player = this.players.get(characterId);
+    this.playerBySocket.delete(socketId);
+    if (!player) return;
+    // Desconexão de um socket antigo após o personagem já ter reanexado em um
+    // socket novo (ex.: F5) não deve zerar o socketId atual.
+    if (player.socketId !== socketId) return;
+    // Jogador em hunt ativa não é removido: continua caçando no servidor e o
+    // cliente apenas reanexa ao reconectar.
+    const run = this.hunts.getRun(player.id);
+    if (run && run.status === 'active') {
+      player.socketId = null;
+      return;
+    }
+    void this.removePlayerByCharacterId(characterId);
   }
 
   private async removePlayerFromWorld(socketId: string) {
     const characterId = this.playerBySocket.get(socketId);
     if (!characterId) return;
-    const player = this.players.get(characterId);
     this.playerBySocket.delete(socketId);
-    if (player) {
-      this.players.delete(characterId);
-      this.hunts.removeRun(characterId);
-      this.huntEventReadyAt.delete(characterId);
-      this.regenEventReadyAt.delete(characterId);
-      this.moveEventReadyAt.delete(characterId);
-      this.saveEventReadyAt.delete(characterId);
-      this.emitAll('entity.removed', { id: characterId });
-      await this.persistPlayer(player);
-      this.logger.log(`Jogador ${player.name} saiu.`);
+    await this.removePlayerByCharacterId(characterId);
+  }
+
+  private async removePlayerByCharacterId(characterId: string) {
+    const player = this.players.get(characterId);
+    if (!player) return;
+    this.players.delete(characterId);
+    this.hunts.removeRun(characterId);
+    this.huntEventReadyAt.delete(characterId);
+    this.regenEventReadyAt.delete(characterId);
+    this.moveEventReadyAt.delete(characterId);
+    this.saveEventReadyAt.delete(characterId);
+    this.clearPlayerCombatState(characterId);
+    this.emitAll('entity.removed', { id: characterId });
+    await this.persistPlayer(player);
+    // Remove os companheiros materializados da conta do mundo (mantendo a formação persistida).
+    for (const companion of [...this.players.values()]) {
+      if (companion.accountId !== player.accountId || companion.socketId) continue;
+      await this.persistPlayer(companion);
+      this.removeCompanionFromWorld(companion.id);
+    }
+    this.logger.log(`Jogador ${player.name} saiu.`);
+  }
+
+  /** Remove o estado de combate agendado/mapas de um personagem (evita vazamento). */
+  private clearPlayerCombatState(characterId: string) {
+    this.combatEventReadyAt.delete(`${characterId}:attack`);
+    this.combatEventReadyAt.delete(`${characterId}:heal`);
+    this.attackGroupReadyAt.delete(characterId);
+    this.healingGroupReadyAt.delete(characterId);
+    this.abilityCooldowns.delete(characterId);
+    this.attackRotations.delete(characterId);
+    this.healingRotations.delete(characterId);
+    for (const key of this.activeAbilityCasts) {
+      if (key.startsWith(`${characterId}:`)) this.activeAbilityCasts.delete(key);
     }
   }
 
@@ -625,8 +897,16 @@ export class GameEngine implements OnModuleDestroy {
   async handleAbilityCast(socketId: string, abilityId: number, targetId?: string): Promise<boolean> {
     const playerId = this.playerBySocket.get(socketId);
     const player = playerId ? this.players.get(playerId) : undefined;
+    if (!player) {
+      this.emitTo(socketId, 'ability.castFailed', { abilityId, reason: 'ABILITY_UNAVAILABLE' });
+      return false;
+    }
+    return this.castAbility(player, abilityId, targetId, socketId);
+  }
+
+  private async castAbility(player: GamePlayer, abilityId: number, targetId?: string, socketId = player.socketId ?? ''): Promise<boolean> {
     const ability = await this.abilityRegistry.get(abilityId);
-    if (!player || !ability || !ability.enabled || !['player', 'both'].includes(ability.ownerType)) {
+    if (!ability || !ability.enabled || !['player', 'both'].includes(ability.ownerType)) {
       this.emitTo(socketId, 'ability.castFailed', { abilityId, reason: 'ABILITY_UNAVAILABLE' });
       return false;
     }
@@ -663,10 +943,12 @@ export class GameEngine implements OnModuleDestroy {
     cooldowns.set(abilityId, now + ability.cooldownMs);
     this.abilityCooldowns.set(player.id, cooldowns);
     this.emitTo(socketId, 'ability.cast', { abilityId, attackerId: player.id, targetId });
+    this.emitCooldowns(player);
     if (ability.category === 'heal') {
+      const healTarget = (target instanceof GamePlayer ? target : player);
       const amount = Math.max(1, ability.defaultParameters?.power ?? 30);
-      player.health = Math.min(player.maxHealth, player.health + amount);
-      this.emitHeal(player.id, player, amount);
+      healTarget.health = Math.min(healTarget.maxHealth, healTarget.health + amount);
+      this.emitHeal(player.id, healTarget, amount);
       this.emitStats(player);
     } else if (target) {
       this.dealAbilityDamage(player, target, ability, now);
@@ -678,34 +960,47 @@ export class GameEngine implements OnModuleDestroy {
     return true;
   }
 
-  async handleRotationLoad(socketId: string, preset: string) {
+  private rotationTarget(player: GamePlayer, characterId?: string): string {
+    if (characterId && characterId !== player.id && this.partyMemberIds(player).includes(characterId)) return characterId;
+    return player.id;
+  }
+
+  async handleRotationLoad(socketId: string, preset: string, characterId?: string) {
     const player = this.playerForSocket(socketId);
     if (!player || !['HUNT', 'BOSS', 'HELPER'].includes(preset) || !this.prisma) return;
+    const targetId = this.rotationTarget(player, characterId);
     const [attack, healing] = await Promise.all([
-      this.prisma.characterAttackRotationSlot.findMany({ where: { character_id: player.id, preset }, orderBy: { slot_position: 'asc' } }),
-      this.prisma.characterHealingRotationSlot.findMany({ where: { character_id: player.id, preset }, orderBy: { slot_position: 'asc' } }),
+      this.prisma.characterAttackRotationSlot.findMany({ where: { character_id: targetId, preset }, orderBy: { slot_position: 'asc' } }),
+      this.prisma.characterHealingRotationSlot.findMany({ where: { character_id: targetId, preset }, orderBy: { slot_position: 'asc' } }),
     ]);
-    this.attackRotations.set(player.id, attack.map((slot) => ({ abilityId: slot.ability_id ?? undefined, enabled: slot.enabled, minTargets: slot.min_targets ?? undefined })));
-    this.healingRotations.set(player.id, healing.map((slot) => ({ abilityId: slot.ability_id ?? undefined, enabled: slot.enabled, hpBelowPercent: Number((slot.trigger as { hpBelowPercent?: number }).hpBelowPercent ?? 80) })));
-    this.emitTo(socketId, 'rotation.state', { preset, attack, healing, saved: true, cooldowns: { attackGroupReadyAt: this.attackGroupReadyAt.get(player.id) ?? 0, healingGroupReadyAt: this.healingGroupReadyAt.get(player.id) ?? 0, abilityReadyAt: Object.fromEntries(this.abilityCooldowns.get(player.id) ?? []) } });
-    this.schedulePlayerAttackCheck(player, Date.now());
-    this.schedulePlayerHealCheck(player, Date.now());
+    this.attackRotations.set(targetId, attack.map((slot) => ({ abilityId: slot.ability_id ?? undefined, enabled: slot.enabled, minTargets: slot.min_targets ?? undefined })));
+    this.healingRotations.set(targetId, healing.map((slot) => this.healingSlot(slot.ability_id ?? undefined, slot.enabled, slot.trigger, 80)));
+    this.emitTo(socketId, 'rotation.state', { preset, characterId: targetId, attack, healing, saved: true, cooldowns: { attackGroupReadyAt: this.attackGroupReadyAt.get(targetId) ?? 0, healingGroupReadyAt: this.healingGroupReadyAt.get(targetId) ?? 0, abilityReadyAt: Object.fromEntries(this.abilityCooldowns.get(targetId) ?? []) } });
+    const target = this.players.get(targetId);
+    if (target) {
+      this.schedulePlayerAttackCheck(target, Date.now());
+      this.schedulePlayerHealCheck(target, Date.now());
+    }
   }
 
-  handleAttackRotation(socketId: string, preset: string, slots: { position: number; abilityId?: number; enabled: boolean; minTargets?: number }[]) {
+  handleAttackRotation(socketId: string, preset: string, slots: { position: number; abilityId?: number; enabled: boolean; minTargets?: number }[], characterId?: string) {
     const player = this.playerForSocket(socketId); if (!player || !['HUNT', 'BOSS', 'HELPER'].includes(preset)) return;
+    const targetId = this.rotationTarget(player, characterId);
     const ordered = slots.sort((a, b) => a.position - b.position);
-    this.attackRotations.set(player.id, ordered);
-    this.schedulePlayerAttackCheck(player, Date.now());
-    if (this.prisma) void this.prisma.$transaction(async (tx) => { await tx.characterAttackRotationSlot.deleteMany({ where: { character_id: player.id, preset } }); await tx.characterAttackRotationSlot.createMany({ data: ordered.map((slot) => ({ character_id: player.id, preset, slot_position: slot.position, ability_id: slot.abilityId ?? null, enabled: slot.enabled, min_targets: slot.minTargets ?? null })) }); return tx.characterAttackRotationSlot.findMany({ where: { character_id: player.id, preset }, orderBy: { slot_position: 'asc' } }); }).then((attack) => this.emitTo(socketId, 'rotation.state', { preset, attack, cooldowns: { attackGroupReadyAt: this.attackGroupReadyAt.get(player.id) ?? 0, healingGroupReadyAt: this.healingGroupReadyAt.get(player.id) ?? 0, abilityReadyAt: Object.fromEntries(this.abilityCooldowns.get(player.id) ?? []) } })).catch((error) => this.emitTo(socketId, 'error', { message: `Falha ao salvar rotação: ${error instanceof Error ? error.message : String(error)}` }));
+    this.attackRotations.set(targetId, ordered);
+    const target = this.players.get(targetId);
+    if (target) this.schedulePlayerAttackCheck(target, Date.now());
+    if (this.prisma) void this.prisma.$transaction(async (tx) => { await tx.characterAttackRotationSlot.deleteMany({ where: { character_id: targetId, preset } }); await tx.characterAttackRotationSlot.createMany({ data: ordered.map((slot) => ({ character_id: targetId, preset, slot_position: slot.position, ability_id: slot.abilityId ?? null, enabled: slot.enabled, min_targets: slot.minTargets ?? null })) }); return tx.characterAttackRotationSlot.findMany({ where: { character_id: targetId, preset }, orderBy: { slot_position: 'asc' } }); }).then((attack) => this.emitTo(socketId, 'rotation.state', { preset, characterId: targetId, attack, cooldowns: { attackGroupReadyAt: this.attackGroupReadyAt.get(targetId) ?? 0, healingGroupReadyAt: this.healingGroupReadyAt.get(targetId) ?? 0, abilityReadyAt: Object.fromEntries(this.abilityCooldowns.get(targetId) ?? []) } })).catch((error) => this.emitTo(socketId, 'error', { message: `Falha ao salvar rotação: ${error instanceof Error ? error.message : String(error)}` }));
   }
 
-  handleHealingRotation(socketId: string, preset: string, slots: { position: number; abilityId?: number; enabled: boolean; trigger: { hpBelowPercent: number } }[]) {
+  handleHealingRotation(socketId: string, preset: string, slots: { position: number; abilityId?: number; enabled: boolean; trigger: { target?: 'self' | 'lowest_party_member' | 'specific_party_role'; hpBelowPercent: number } }[], characterId?: string) {
     const player = this.playerForSocket(socketId); if (!player || !['HUNT', 'BOSS', 'HELPER'].includes(preset)) return;
+    const targetId = this.rotationTarget(player, characterId);
     const ordered = slots.sort((a, b) => a.position - b.position);
-    this.healingRotations.set(player.id, ordered.map((slot) => ({ abilityId: slot.abilityId, enabled: slot.enabled, hpBelowPercent: slot.trigger.hpBelowPercent })));
-    this.schedulePlayerHealCheck(player, Date.now());
-    if (this.prisma) void this.prisma.$transaction(async (tx) => { await tx.characterHealingRotationSlot.deleteMany({ where: { character_id: player.id, preset } }); await tx.characterHealingRotationSlot.createMany({ data: ordered.map((slot) => ({ character_id: player.id, preset, slot_position: slot.position, ability_id: slot.abilityId ?? null, enabled: slot.enabled, trigger: slot.trigger })) }); return tx.characterHealingRotationSlot.findMany({ where: { character_id: player.id, preset }, orderBy: { slot_position: 'asc' } }); }).then((healing) => this.emitTo(socketId, 'rotation.state', { preset, healing, cooldowns: { attackGroupReadyAt: this.attackGroupReadyAt.get(player.id) ?? 0, healingGroupReadyAt: this.healingGroupReadyAt.get(player.id) ?? 0, abilityReadyAt: Object.fromEntries(this.abilityCooldowns.get(player.id) ?? []) } })).catch((error) => this.emitTo(socketId, 'error', { message: `Falha ao salvar cura: ${error instanceof Error ? error.message : String(error)}` }));
+    this.healingRotations.set(targetId, ordered.map((slot) => this.healingSlot(slot.abilityId, slot.enabled, slot.trigger, 80)));
+    const target = this.players.get(targetId);
+    if (target) this.schedulePlayerHealCheck(target, Date.now());
+    if (this.prisma) void this.prisma.$transaction(async (tx) => { await tx.characterHealingRotationSlot.deleteMany({ where: { character_id: targetId, preset } }); await tx.characterHealingRotationSlot.createMany({ data: ordered.map((slot) => ({ character_id: targetId, preset, slot_position: slot.position, ability_id: slot.abilityId ?? null, enabled: slot.enabled, trigger: slot.trigger })) }); return tx.characterHealingRotationSlot.findMany({ where: { character_id: targetId, preset }, orderBy: { slot_position: 'asc' } }); }).then((healing) => this.emitTo(socketId, 'rotation.state', { preset, characterId: targetId, healing, cooldowns: { attackGroupReadyAt: this.attackGroupReadyAt.get(targetId) ?? 0, healingGroupReadyAt: this.healingGroupReadyAt.get(targetId) ?? 0, abilityReadyAt: Object.fromEntries(this.abilityCooldowns.get(targetId) ?? []) } })).catch((error) => this.emitTo(socketId, 'error', { message: `Falha ao salvar cura: ${error instanceof Error ? error.message : String(error)}` }));
   }
 
   handleAttack(socketId: string, targetId: string) {
@@ -753,7 +1048,7 @@ export class GameEngine implements OnModuleDestroy {
       this.emitTo(socketId, 'error', { message: 'Item fora de alcance.' });
       return;
     }
-    if (!this.addToInventory(player, item.itemId, item.quantity)) {
+    if (!this.addToInventory(this.storageFor(player), item.itemId, item.quantity)) {
       this.emitTo(socketId, 'error', { message: 'Inventário cheio.' });
       return;
     }
@@ -763,42 +1058,84 @@ export class GameEngine implements OnModuleDestroy {
     this.emitInventory(player);
   }
 
-  handleEquip(socketId: string, slotIndex: number) {
-    const player = this.playerForSocket(socketId);
-    if (!player) return;
-    const stack = player.inventory[slotIndex];
+  async handleEquip(socketId: string, slotIndex: number, characterId?: string) {
+    const leader = this.playerForSocket(socketId);
+    if (!leader) return;
+    const targetId = characterId && characterId !== leader.id && this.partyMemberIds(leader).includes(characterId) ? characterId : leader.id;
+    const storage = this.storageFor(leader);
+    const stack = storage.inventory[slotIndex];
     if (!stack) return;
     const def = getItemDef(stack.itemId);
     if (!def || !def.slot) return;
     const slot = def.slot;
-    if (player.equipment[slot]) {
-      this.emitTo(socketId, 'error', { message: `Já existe item equipado em ${slot}.` });
-      return;
+    const live = this.players.get(targetId);
+    if (live) {
+      if (live.equipment[slot]) {
+        this.emitTo(socketId, 'error', { message: `Já existe item equipado em ${slot}.` });
+        return;
+      }
+      storage.inventory[slotIndex] = null;
+      live.equipment[slot] = { itemId: stack.itemId, quantity: 1 };
+      if (slot === 'weapon' && live.id === leader.id) this.resumeWeaponElementOverride(live);
+      live.recomputeSpeed(getItemDef);
+      await this.persistPlayer(live);
+      await this.store.saveAccountStorage(storage.toStored());
+      if (live.id === leader.id) {
+        this.emitInventory(leader);
+        this.emitStats(leader);
+      }
+    } else {
+      const stored = await this.store.findCharacterById(targetId);
+      if (!stored || stored.accountId !== leader.accountId) return;
+      if (stored.equipment[slot]) {
+        this.emitTo(socketId, 'error', { message: `Já existe item equipado em ${slot}.` });
+        return;
+      }
+      storage.inventory[slotIndex] = null;
+      stored.equipment[slot] = { itemId: stack.itemId, quantity: 1 };
+      await this.store.saveCharacter(stored);
+      await this.store.saveAccountStorage(storage.toStored());
     }
-    player.inventory[slotIndex] = null;
-    player.equipment[slot] = { itemId: stack.itemId, quantity: 1 };
-    if (slot === 'weapon') this.resumeWeaponElementOverride(player);
-    player.recomputeSpeed(getItemDef);
-    this.emitInventory(player);
-    this.emitStats(player);
+    this.emitInventory(leader);
+    await this.emitPartyState(leader);
   }
 
-  handleUnequip(socketId: string, slot: string) {
-    const player = this.playerForSocket(socketId);
-    if (!player) return;
-    const stack = player.equipment[slot as keyof CharacterEquipment];
-    if (!stack) return;
-    const idx = player.inventory.findIndex((s) => s === null);
+  async handleUnequip(socketId: string, slot: string, characterId?: string) {
+    const leader = this.playerForSocket(socketId);
+    if (!leader) return;
+    const targetId = characterId && characterId !== leader.id && this.partyMemberIds(leader).includes(characterId) ? characterId : leader.id;
+    const storage = this.storageFor(leader);
+    const idx = storage.inventory.findIndex((s) => s === null);
     if (idx === -1) {
       this.emitTo(socketId, 'error', { message: 'Inventário cheio.' });
       return;
     }
-    if (slot === 'weapon') this.pauseWeaponElementOverride(player);
-    player.equipment[slot as keyof CharacterEquipment] = undefined;
-    player.inventory[idx] = { itemId: stack.itemId, quantity: 1 };
-    player.recomputeSpeed(getItemDef);
-    this.emitInventory(player);
-    this.emitStats(player);
+    const live = this.players.get(targetId);
+    if (live) {
+      const stack = live.equipment[slot as keyof CharacterEquipment];
+      if (!stack) return;
+      if (slot === 'weapon' && live.id === leader.id) this.pauseWeaponElementOverride(live);
+      live.equipment[slot as keyof CharacterEquipment] = undefined;
+      storage.inventory[idx] = { itemId: stack.itemId, quantity: 1 };
+      live.recomputeSpeed(getItemDef);
+      await this.persistPlayer(live);
+      await this.store.saveAccountStorage(storage.toStored());
+      if (live.id === leader.id) {
+        this.emitInventory(leader);
+        this.emitStats(leader);
+      }
+    } else {
+      const stored = await this.store.findCharacterById(targetId);
+      if (!stored || stored.accountId !== leader.accountId) return;
+      const stack = stored.equipment[slot as keyof CharacterEquipment];
+      if (!stack) return;
+      stored.equipment[slot as keyof CharacterEquipment] = undefined;
+      storage.inventory[idx] = { itemId: stack.itemId, quantity: 1 };
+      await this.store.saveCharacter(stored);
+      await this.store.saveAccountStorage(storage.toStored());
+    }
+    this.emitInventory(leader);
+    await this.emitPartyState(leader);
   }
 
   private pauseWeaponElementOverride(player: GamePlayer) {
@@ -821,20 +1158,21 @@ export class GameEngine implements OnModuleDestroy {
   handleExpandLootPouch(socketId: string) {
     const player = this.playerForSocket(socketId);
     if (!player) return;
-    if (player.lootPouchSize >= LOOT_POUCH_EXPANSION.maxSize) {
+    const storage = this.storageFor(player);
+    if (storage.lootPouchSize >= LOOT_POUCH_EXPANSION.maxSize) {
       this.emitTo(socketId, 'error', { message: 'A Bolsa de Loot já está no tamanho máximo.' });
       return false;
     }
-    const cost = LOOT_POUCH_EXPANSION.goldCost(player.lootPouchSize);
-    if (player.gold < cost) {
+    const cost = LOOT_POUCH_EXPANSION.goldCost(storage.lootPouchSize);
+    if (storage.gold < cost) {
       this.emitTo(socketId, 'error', { message: `Gold insuficiente para expandir a Bolsa de Loot (${cost} gold).` });
       return false;
     }
-    const nextSize = Math.min(LOOT_POUCH_EXPANSION.maxSize, player.lootPouchSize + LOOT_POUCH_EXPANSION.slotsPerUpgrade);
-    player.gold -= cost;
-    player.lootPouchSize = nextSize;
-    while (player.lootPouch.length < nextSize) player.lootPouch.push(null);
-    this.emitTo(socketId, 'gold.update', { gold: player.gold });
+    const nextSize = Math.min(LOOT_POUCH_EXPANSION.maxSize, storage.lootPouchSize + LOOT_POUCH_EXPANSION.slotsPerUpgrade);
+    storage.gold -= cost;
+    storage.lootPouchSize = nextSize;
+    while (storage.lootPouch.length < nextSize) storage.lootPouch.push(null);
+    this.emitGold(player, storage.gold);
     this.emitInventory(player);
     this.emitTo(socketId, 'chat.message', {
       channel: 'local',
@@ -846,9 +1184,10 @@ export class GameEngine implements OnModuleDestroy {
   handleSellLootPouch(socketId: string) {
     const player = this.playerForSocket(socketId);
     if (!player) return;
+    const storage = this.storageFor(player);
     let total = 0;
     let sold = 0;
-    player.lootPouch = player.lootPouch.map((stack) => {
+    storage.lootPouch = storage.lootPouch.map((stack) => {
       if (!stack) return null;
       const def = getItemDef(stack.itemId);
       const unitValue = this.lootSellValue(def, stack.itemId);
@@ -860,8 +1199,8 @@ export class GameEngine implements OnModuleDestroy {
       this.emitTo(socketId, 'chat.message', { channel: 'local', from: 'Sistema', text: 'Bolsa de Loot vazia.' });
       return false;
     }
-    player.gold += total;
-    this.emitTo(socketId, 'gold.update', { gold: player.gold });
+    storage.gold += total;
+    this.emitGold(player, storage.gold);
     this.emitInventory(player);
     this.emitTo(socketId, 'chat.message', {
       channel: 'local',
@@ -906,6 +1245,36 @@ export class GameEngine implements OnModuleDestroy {
     return characterId ? this.players.get(characterId) ?? null : null;
   }
 
+  private async ensureAccountStorage(accountId: string): Promise<AccountStorageState> {
+    let storage = this.accountStorage.get(accountId);
+    if (storage) return storage;
+    const stored = await this.store.getAccountStorage(accountId);
+    storage = stored ? new AccountStorageState(stored) : AccountStorageState.blank(accountId);
+    this.accountStorage.set(accountId, storage);
+    if (!stored) await this.store.saveAccountStorage(storage.toStored());
+    return storage;
+  }
+
+  private storageFor(player: GamePlayer): AccountStorageState {
+    let storage = this.accountStorage.get(player.accountId);
+    if (!storage) {
+      storage = AccountStorageState.blank(player.accountId);
+      this.accountStorage.set(player.accountId, storage);
+    }
+    return storage;
+  }
+
+  private accountGold(accountId: string): number {
+    return this.accountStorage.get(accountId)?.gold ?? 0;
+  }
+
+  private healingSlot(abilityId: number | undefined, enabled: boolean, trigger: unknown, hpFallback: number): { abilityId?: number; enabled: boolean; hpBelowPercent: number; target: 'self' | 'lowest_party_member' | 'specific_party_role' } {
+    const t = (trigger as { target?: string } | undefined)?.target;
+    const target: 'self' | 'lowest_party_member' | 'specific_party_role' = t === 'lowest_party_member' || t === 'specific_party_role' ? t : 'self';
+    const hpBelowPercent = Number((trigger as { hpBelowPercent?: number } | undefined)?.hpBelowPercent ?? hpFallback);
+    return { abilityId, enabled, hpBelowPercent, target };
+  }
+
   private playerSnapshots(): CreatureTarget[] {
     const out: CreatureTarget[] = [];
     for (const player of this.players.values()) {
@@ -918,7 +1287,7 @@ export class GameEngine implements OnModuleDestroy {
 
   private playerSnapshot(id: string) {
     const player = this.players.get(id);
-    if (!player || !player.socketId) return null;
+    if (!player) return null;
     return {
       id: player.id,
       position: { ...player.position },
@@ -929,13 +1298,13 @@ export class GameEngine implements OnModuleDestroy {
   }
 
   private toSummary(c: StoredCharacter | GamePlayer): CharacterSummary {
-    const accountId = 'accountId' in c ? c.accountId : (c as StoredCharacter).accountId;
+    const accountId = c.accountId;
     return {
       id: c.id,
       accountId,
       name: c.name,
       archetype: c.archetype,
-      gold: c.gold,
+      gold: this.accountGold(accountId),
       level: c.level,
       experience: c.experience,
       health: c.health,
@@ -1009,25 +1378,25 @@ export class GameEngine implements OnModuleDestroy {
     };
   }
 
-  private addToInventory(player: GamePlayer, itemId: string, quantity: number): boolean {
+  private addToInventory(storage: AccountStorageState, itemId: string, quantity: number): boolean {
     const def = getItemDef(itemId);
     if (!def) return false;
     if (def.stackable) {
-      const existing = player.inventory.find((s) => s && s.itemId === itemId);
+      const existing = storage.inventory.find((s) => s && s.itemId === itemId);
       if (existing) {
         existing.quantity += quantity;
         return true;
       }
     }
-    const idx = player.inventory.findIndex((s) => s === null);
+    const idx = storage.inventory.findIndex((s) => s === null);
     if (idx === -1) return false;
-    player.inventory[idx] = { itemId, quantity };
+    storage.inventory[idx] = { itemId, quantity };
     return true;
   }
 
-  private addToLootPouch(player: GamePlayer, itemId: string, quantity: number): boolean {
-    this.ensureLootPouchCapacity(player);
-    return this.addToContainer(player.lootPouch, itemId, quantity);
+  private addToLootPouch(storage: AccountStorageState, itemId: string, quantity: number): boolean {
+    this.ensureLootPouchCapacity(storage);
+    return this.addToContainer(storage.lootPouch, itemId, quantity);
   }
 
   private addToContainer(container: (ItemStack | null)[], itemId: string, quantity: number): boolean {
@@ -1043,9 +1412,9 @@ export class GameEngine implements OnModuleDestroy {
     return true;
   }
 
-  private ensureLootPouchCapacity(player: GamePlayer) {
-    player.lootPouchSize = Math.max(LOOT_POUCH_SIZE, player.lootPouchSize, player.lootPouch.length);
-    while (player.lootPouch.length < player.lootPouchSize) player.lootPouch.push(null);
+  private ensureLootPouchCapacity(storage: AccountStorageState) {
+    storage.lootPouchSize = Math.max(LOOT_POUCH_SIZE, storage.lootPouchSize, storage.lootPouch.length);
+    while (storage.lootPouch.length < storage.lootPouchSize) storage.lootPouch.push(null);
   }
 
   private emitStats(player: GamePlayer) {
@@ -1063,12 +1432,36 @@ export class GameEngine implements OnModuleDestroy {
     });
   }
 
+  private emitGold(player: GamePlayer, gold: number) {
+    this.emitTo(player.socketId ?? '', 'gold.update', { gold });
+  }
+
+  /** Emite o estado de cooldown de um personagem para todos os sockets da party. */
+  private emitCooldowns(player: GamePlayer) {
+    const payload = {
+      characterId: player.id,
+      attackGroupReadyAt: this.attackGroupReadyAt.get(player.id) ?? 0,
+      healingGroupReadyAt: this.healingGroupReadyAt.get(player.id) ?? 0,
+      abilityReadyAt: Object.fromEntries(this.abilityCooldowns.get(player.id) ?? []),
+    };
+    const run = this.hunts.getRun(player.id);
+    if (run) {
+      for (const id of run.memberIds) {
+        const member = this.players.get(id);
+        if (member?.socketId) this.emitTo(member.socketId, 'cooldowns.update', payload);
+      }
+    } else if (player.socketId) {
+      this.emitTo(player.socketId, 'cooldowns.update', payload);
+    }
+  }
+
   private emitInventory(player: GamePlayer) {
-    this.ensureLootPouchCapacity(player);
+    const storage = this.storageFor(player);
+    this.ensureLootPouchCapacity(storage);
     const inventory: CharacterInventory = {
-      slots: player.inventory.map((s) => (s ? { ...s } : null)),
-      lootPouchSize: player.lootPouchSize,
-      lootPouch: player.lootPouch.map((s) => (s ? { ...s } : null)),
+      slots: storage.inventory.map((s) => (s ? { ...s } : null)),
+      lootPouchSize: storage.lootPouchSize,
+      lootPouch: storage.lootPouch.map((s) => (s ? { ...s } : null)),
       equipment: { ...player.equipment },
     };
     this.emitTo(player.socketId ?? '', 'inventory.update', { inventory });
@@ -1119,7 +1512,10 @@ export class GameEngine implements OnModuleDestroy {
     if (target instanceof GamePlayer) {
       const run = this.hunts.getRun(target.id);
       if (run) {
-        this.emitTo(target.socketId ?? '', event, data);
+        for (const id of run.memberIds) {
+          const member = this.players.get(id);
+          if (member?.socketId) this.emitTo(member.socketId, event, data);
+        }
         return;
       }
       this.emitAll(event, data);
@@ -1127,8 +1523,10 @@ export class GameEngine implements OnModuleDestroy {
     }
     const run = this.hunts.findRunByCreature(target.id);
     if (run) {
-      const p = this.players.get(run.characterId);
-      this.emitTo(p?.socketId ?? '', event, data);
+      for (const id of run.memberIds) {
+        const member = this.players.get(id);
+        if (member?.socketId) this.emitTo(member.socketId, event, data);
+      }
       return;
     }
     this.emitAll(event, data);
@@ -1315,12 +1713,12 @@ export class GameEngine implements OnModuleDestroy {
     }
     const magicReadyAt = this.attackGroupReadyAt.get(player.id) ?? now;
     const basicReadyAt = player.attackCooldownUntil || now;
-    this.schedulePlayerCombat(player.id, 'attack', Math.min(magicReadyAt, basicReadyAt));
+    this.schedulePlayerCombat(player.id, 'attack', Math.max(now, Math.min(magicReadyAt, basicReadyAt)));
   }
 
   private schedulePlayerHealCheck(player: GamePlayer, now: number) {
     if ((this.healingRotations.get(player.id) ?? []).length === 0) return;
-    this.schedulePlayerCombat(player.id, 'heal', this.healingGroupReadyAt.get(player.id) ?? now);
+    this.schedulePlayerCombat(player.id, 'heal', Math.max(now, this.healingGroupReadyAt.get(player.id) ?? now));
   }
 
   private async processCombatEvents(now: number) {
@@ -1334,7 +1732,7 @@ export class GameEngine implements OnModuleDestroy {
       if (this.combatEventReadyAt.get(event.key) !== event.readyAt) continue;
       this.combatEventReadyAt.delete(event.key);
       const player = this.players.get(event.playerId);
-      if (!player?.socketId) continue;
+      if (!player) continue;
       if (event.type === 'heal') {
         await this.processPlayerHealing(player, now);
         this.schedulePlayerHealCheck(player, Date.now());
@@ -1366,11 +1764,17 @@ export class GameEngine implements OnModuleDestroy {
         const event = this.huntEvents.pop()!;
         if (this.huntEventReadyAt.get(event.characterId) !== event.readyAt) continue;
         this.huntEventReadyAt.delete(event.characterId);
-        if (!this.hunts.hasRun(event.characterId)) continue;
-        const player = this.players.get(event.characterId);
-        if (player?.socketId) this.processPlayerCombatAI(player, now);
+        const run = this.hunts.getRun(event.characterId);
+        if (!run) continue;
+        for (const memberId of run.memberIds) {
+          const member = this.players.get(memberId);
+          if (member) this.processPlayerCombatAI(member, now);
+        }
         this.hunts.updateRun(event.characterId, now);
-        if (player?.socketId) this.schedulePlayerAttackCheck(player, now);
+        for (const memberId of run.memberIds) {
+          const member = this.players.get(memberId);
+          if (member) this.schedulePlayerAttackCheck(member, now);
+        }
         if (this.hunts.hasRun(event.characterId)) this.scheduleHuntUpdate(event.characterId, this.hunts.nextUpdateAt(event.characterId, now));
         processed++;
       }
@@ -1393,7 +1797,7 @@ export class GameEngine implements OnModuleDestroy {
       if (this.regenEventReadyAt.get(event.playerId) !== event.readyAt) continue;
       this.regenEventReadyAt.delete(event.playerId);
       const player = this.players.get(event.playerId);
-      if (!player?.socketId) continue;
+      if (!player) continue;
       this.regeneratePlayer(player, now);
       this.schedulePlayerRegen(player.id, now + 1000);
       processed++;
@@ -1456,7 +1860,7 @@ export class GameEngine implements OnModuleDestroy {
       if (this.saveEventReadyAt.get(event.playerId) !== event.readyAt) continue;
       this.saveEventReadyAt.delete(event.playerId);
       const player = this.players.get(event.playerId);
-      if (!player?.socketId) continue;
+      if (!player) continue;
       void this.persistPlayer(player).finally(() => { if (this.players.has(player.id)) this.schedulePlayerSave(player.id, Date.now() + 10_000); });
       processed++;
     }
@@ -1516,20 +1920,48 @@ export class GameEngine implements OnModuleDestroy {
     const weaponItem = player.equipment.weapon ? getItemDef(player.equipment.weapon.itemId) : undefined;
     const attackRange = getWeaponDefinition(weaponItem)?.range ?? 1;
     if (this.playerAI.update(player, run, now, attackRange)) {
-      this.emitTo(player.socketId ?? '', 'player.moved', { position: { ...player.position }, facing: player.facing });
+      if (player.socketId) {
+        this.emitTo(player.socketId, 'player.moved', { position: { ...player.position }, facing: player.facing });
+      } else {
+        for (const id of run.memberIds) {
+          const member = this.players.get(id);
+          if (member?.socketId) this.emitTo(member.socketId, 'entity.moved', { id: player.id, position: { ...player.position }, facing: player.facing });
+        }
+      }
     }
   }
 
   private async processPlayerHealing(player: GamePlayer, now: number) {
     if (now < (this.healingGroupReadyAt.get(player.id) ?? 0)) return;
-    const hpPercent = player.maxHealth > 0 ? (player.health / player.maxHealth) * 100 : 100;
     for (const slot of this.healingRotations.get(player.id) ?? []) {
-      if (!slot.enabled || slot.abilityId === undefined || hpPercent > slot.hpBelowPercent) continue;
+      if (!slot.enabled || slot.abilityId === undefined) continue;
       const ability = await this.abilityRegistry.get(slot.abilityId);
       const readyAt = this.abilityCooldowns.get(player.id)?.get(slot.abilityId) ?? 0;
       if (!ability || ability.category !== 'heal' || now < readyAt) continue;
-      if (await this.handleAbilityCast(player.socketId ?? '', ability.abilityId, player.id)) return;
+      const healTarget = this.resolveHealTarget(player, slot.target);
+      if (!healTarget) continue;
+      const hpPercent = healTarget.maxHealth > 0 ? (healTarget.health / healTarget.maxHealth) * 100 : 100;
+      if (hpPercent > slot.hpBelowPercent) continue;
+      if (await this.castAbility(player, ability.abilityId, healTarget.id)) return;
     }
+  }
+
+  private resolveHealTarget(player: GamePlayer, target: 'self' | 'lowest_party_member' | 'specific_party_role'): GamePlayer | null {
+    if (target === 'self') return player;
+    const run = this.hunts.getRun(player.id);
+    const members = run ? run.aliveMemberIds : [player.id];
+    let best: GamePlayer | null = null;
+    let bestPct = Infinity;
+    for (const id of members) {
+      const member = this.players.get(id);
+      if (!member || member.health >= member.maxHealth) continue;
+      const pct = member.maxHealth > 0 ? member.health / member.maxHealth : 1;
+      if (pct < bestPct) {
+        bestPct = pct;
+        best = member;
+      }
+    }
+    return best ?? (target === 'specific_party_role' ? player : null);
   }
 
   private async processPlayerAttack(player: GamePlayer, now: number) {
@@ -1555,7 +1987,7 @@ export class GameEngine implements OnModuleDestroy {
         const ability = await this.abilityRegistry.get(slot.abilityId);
         const readyAt = this.abilityCooldowns.get(player.id)?.get(slot.abilityId) ?? 0;
         if (!ability || ability.category === 'heal' || now < readyAt || tileDistance(player.position, target.position) > ability.rangeTiles) continue;
-        if (await this.handleAbilityCast(player.socketId ?? '', ability.abilityId, target.id)) return;
+        if (await this.castAbility(player, ability.abilityId, target.id)) return;
       }
     }
     if (now < player.attackCooldownUntil) return;
@@ -1581,13 +2013,18 @@ export class GameEngine implements OnModuleDestroy {
   }
 
   private creatureKilled(player: GamePlayer, creature: CreatureEntity, now: number) {
+    this.monsterAbilityReadyAt.delete(creature.id);
     const run = this.hunts.findRunByCreature(creature.id);
     const isBoss = !!run && run.isBossWave && creature.id === run.bossCreatureId;
     if (run) {
       run.creatures.removeCreature(creature.id);
-      const socketId = player.socketId ?? '';
-      this.emitTo(socketId, 'creature.death', { creatureId: creature.id, experience: creature.definition.experience });
-      this.emitTo(socketId, 'creature.remove', { creatureId: creature.id });
+      for (const id of run.memberIds) {
+        const member = this.players.get(id);
+        if (member?.socketId) {
+          this.emitTo(member.socketId, 'creature.death', { creatureId: creature.id, experience: creature.definition.experience });
+          this.emitTo(member.socketId, 'creature.remove', { creatureId: creature.id });
+        }
+      }
     } else {
       creature.state = 'DEAD';
       creature.health = 0;
@@ -1596,7 +2033,14 @@ export class GameEngine implements OnModuleDestroy {
       creature.path = [];
       this.emitAll('creature.death', { creatureId: creature.id, experience: creature.definition.experience });
     }
-    this.grantExperience(player, creature.definition.experience);
+    if (run) {
+      for (const id of run.aliveMemberIds) {
+        const member = this.players.get(id);
+        if (member) this.grantExperience(member, creature.definition.experience);
+      }
+    } else {
+      this.grantExperience(player, creature.definition.experience);
+    }
     this.grantKillGold(player, creature, isBoss);
     this.spawnLoot(creature, player, run);
   }
@@ -1606,8 +2050,9 @@ export class GameEngine implements OnModuleDestroy {
       ? HUNT_CONFIG.gold.boss(creature.definition.level)
       : HUNT_CONFIG.gold.perKill(creature.definition.level);
     if (amount <= 0) return;
-    player.gold += amount;
-    this.emitTo(player.socketId ?? '', 'gold.update', { gold: player.gold });
+    const storage = this.storageFor(player);
+    storage.gold += amount;
+    this.emitGold(player, storage.gold);
   }
 
   private playerKilled(player: GamePlayer, now: number) {
@@ -1672,7 +2117,7 @@ export class GameEngine implements OnModuleDestroy {
       const def = getItemDef(entry.itemId);
       const quantity = entry.minQuantity + Math.floor(Math.random() * (entry.maxQuantity - entry.minQuantity + 1));
       if (player) {
-        if (this.addToLootPouch(player, entry.itemId, quantity)) {
+        if (this.addToLootPouch(this.storageFor(player), entry.itemId, quantity)) {
           collected.push(`${quantity}x ${def?.name ?? entry.itemId}`);
         } else {
           blocked = true;
@@ -1704,20 +2149,14 @@ export class GameEngine implements OnModuleDestroy {
       }
     }
     if (player && (collected.length > 0 || blocked)) {
-      this.emitInventory(player);
-      if (collected.length > 0) {
-        this.emitTo(player.socketId ?? '', 'chat.message', {
-          channel: 'local',
-          from: 'Sistema',
-          text: `Loot coletado: ${collected.join(', ')}.`,
-        });
-      }
-      if (blocked) {
-        this.emitTo(player.socketId ?? '', 'chat.message', {
-          channel: 'local',
-          from: 'Sistema',
-          text: 'Bolsa de Loot cheia. Alguns itens não foram coletados.',
-        });
+      const viewers = run
+        ? run.memberIds.map((id) => this.players.get(id)).filter((p): p is GamePlayer => !!p && !!p.socketId)
+        : player.socketId ? [player] : [];
+      for (const viewer of viewers) this.emitInventory(viewer);
+      const msg = collected.length > 0 ? `Loot coletado: ${collected.join(', ')}.` : null;
+      for (const viewer of viewers) {
+        if (msg) this.emitTo(viewer.socketId ?? '', 'chat.message', { channel: 'local', from: 'Sistema', text: msg });
+        if (blocked) this.emitTo(viewer.socketId ?? '', 'chat.message', { channel: 'local', from: 'Sistema', text: 'Bolsa de Loot cheia. Alguns itens não foram coletados.' });
       }
     }
   }
@@ -1737,6 +2176,8 @@ export class GameEngine implements OnModuleDestroy {
     player.lastSavedAt = now;
     try {
       await this.store.saveCharacter(player.toStored());
+      const storage = this.accountStorage.get(player.accountId);
+      if (storage) await this.store.saveAccountStorage(storage.toStored());
     } catch (err) {
       this.logger.error(`Falha ao salvar ${player.name}: ${(err as Error).message}`);
     }

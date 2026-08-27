@@ -63,6 +63,7 @@ export class PlayerCombatAIService {
     if (now < player.nextMoveAt) return false;
     const profile = PLAYER_AI[player.archetype];
     const movement = player.combat.movement;
+    const configuredRange = player.combat.attackRange;
     const alive = [...run.creatures.getAll()].filter(
       (c) => c.state !== 'DEAD' && c.position.z === player.position.z,
     );
@@ -80,7 +81,8 @@ export class PlayerCombatAIService {
     if (movement === 'engage') {
       const target = this.selectTarget(alive, player);
       if (!target) return false;
-      if (tileDistance(player.position, target.position) <= profile.engageRange) {
+      const engageRange = configuredRange ?? profile.engageRange;
+      if (tileDistance(player.position, target.position) <= engageRange) {
         this.paths.delete(player.id);
         return false;
       }
@@ -90,7 +92,8 @@ export class PlayerCombatAIService {
     // kite: foge da criatura mais próxima (ameaça) quando dentro da zona de perigo.
     const threat = this.nearestCreature(alive, player);
     if (!threat) return false;
-    const kiteSafe = Math.max(profile.kiteDangerDist + 1, Math.min(profile.kiteSafeDist, attackRange ?? profile.kiteSafeDist));
+    const baseSafe = configuredRange ?? profile.kiteSafeDist;
+    const kiteSafe = Math.max(profile.kiteDangerDist + 1, Math.min(baseSafe, attackRange ?? baseSafe));
     if (tileDistance(player.position, threat.position) >= kiteSafe) {
       this.paths.delete(player.id);
       return false;

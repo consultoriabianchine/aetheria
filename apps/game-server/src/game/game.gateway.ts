@@ -57,13 +57,13 @@ export class GameGateway implements OnGatewayConnection, OnGatewayDisconnect {
   }
 
   @SubscribeMessage('rotation.load')
-  onRotationLoad(socket: Socket, payload: { preset: string }) { void this.engine.handleRotationLoad(socket.id, payload.preset); }
+  onRotationLoad(socket: Socket, payload: { preset: string; characterId?: string }) { void this.engine.handleRotationLoad(socket.id, payload.preset, payload.characterId); }
 
   @SubscribeMessage('rotation.attack.set')
-  onAttackRotation(socket: Socket, payload: { preset: string; slots: { position: 1 | 2 | 3 | 4; abilityId?: number; enabled: boolean; minTargets?: number }[] }) { this.engine.handleAttackRotation(socket.id, payload.preset, payload.slots); }
+  onAttackRotation(socket: Socket, payload: { preset: string; characterId?: string; slots: { position: 1 | 2 | 3 | 4; abilityId?: number; enabled: boolean; minTargets?: number }[] }) { this.engine.handleAttackRotation(socket.id, payload.preset, payload.slots, payload.characterId); }
 
   @SubscribeMessage('rotation.healing.set')
-  onHealingRotation(socket: Socket, payload: { preset: string; slots: { position: 1 | 2 | 3 | 4; abilityId?: number; enabled: boolean; trigger: { target: 'self' | 'lowest_party_member' | 'specific_party_role'; hpBelowPercent: number } }[] }) { this.engine.handleHealingRotation(socket.id, payload.preset, payload.slots); }
+  onHealingRotation(socket: Socket, payload: { preset: string; characterId?: string; slots: { position: 1 | 2 | 3 | 4; abilityId?: number; enabled: boolean; trigger: { target: 'self' | 'lowest_party_member' | 'specific_party_role'; hpBelowPercent: number } }[] }) { this.engine.handleHealingRotation(socket.id, payload.preset, payload.slots, payload.characterId); }
 
   @SubscribeMessage('game.attack')
   onAttack(socket: Socket, payload: { targetId: string }) {
@@ -76,13 +76,13 @@ export class GameGateway implements OnGatewayConnection, OnGatewayDisconnect {
   }
 
   @SubscribeMessage('inventory.equip')
-  onEquip(socket: Socket, payload: { slot: number }) {
-    this.engine.handleEquip(socket.id, payload.slot);
+  onEquip(socket: Socket, payload: { slot: number; characterId?: string }) {
+    void this.engine.handleEquip(socket.id, payload.slot, payload.characterId);
   }
 
   @SubscribeMessage('inventory.unequip')
-  onUnequip(socket: Socket, payload: { slot: string }) {
-    this.engine.handleUnequip(socket.id, payload.slot);
+  onUnequip(socket: Socket, payload: { slot: string; characterId?: string }) {
+    void this.engine.handleUnequip(socket.id, payload.slot, payload.characterId);
   }
 
   @SubscribeMessage('inventory.expandLootPouch')
@@ -125,6 +125,21 @@ export class GameGateway implements OnGatewayConnection, OnGatewayDisconnect {
     await this.engine.handleHuntSetLoop(socket.id, payload.token, payload.enabled);
   }
 
+  @SubscribeMessage('party.unlockSlot')
+  async onPartyUnlockSlot(socket: Socket, payload: { token: string }) {
+    await this.engine.handlePartyUnlockSlot(socket.id, payload.token);
+  }
+
+  @SubscribeMessage('party.summon')
+  async onPartySummon(socket: Socket, payload: { token: string; characterId: string }) {
+    await this.engine.handlePartySummon(socket.id, payload.token, payload.characterId);
+  }
+
+  @SubscribeMessage('party.dismiss')
+  async onPartyDismiss(socket: Socket, payload: { token: string; characterId: string }) {
+    await this.engine.handlePartyDismiss(socket.id, payload.token, payload.characterId);
+  }
+
   @SubscribeMessage('appearance.list')
   async onAppearanceList(socket: Socket, payload: { token: string }) {
     await this.engine.handleAppearanceList(socket.id, payload.token);
@@ -136,8 +151,8 @@ export class GameGateway implements OnGatewayConnection, OnGatewayDisconnect {
   }
 
   @SubscribeMessage('combat.config')
-  onCombatConfig(socket: Socket, payload: { token: string; targeting: string; movement: string }) {
-    this.engine.handleCombatConfig(socket.id, payload.token, payload.targeting, payload.movement);
+  onCombatConfig(socket: Socket, payload: { token: string; characterId?: string; targeting: string; movement: string; attackRange?: number }) {
+    this.engine.handleCombatConfig(socket.id, payload.token, payload.targeting, payload.movement, payload.attackRange, payload.characterId);
   }
 
   @SubscribeMessage('combat.weaponElementOverride.apply')

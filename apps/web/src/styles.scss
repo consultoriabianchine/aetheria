@@ -59,6 +59,31 @@ app-game .modal-inventory-layout h3 {
   margin: 8px 0 7px;
 }
 
+app-game .manage-modal .modal-inventory-layout {
+  grid-template-columns: 280px minmax(0, 1fr);
+}
+
+app-game .manage-tabs {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+app-game .manage-tabs button {
+  padding: 5px 12px;
+  color: #cdd6df;
+}
+
+app-game .manage-tabs button.active {
+  color: #e7d487;
+  border-color: rgba(215, 185, 79, 0.6);
+}
+
+app-game .range-input {
+  width: 70px;
+}
+
 app-game .eq-grid {
   display: grid;
   gap: 5px;
