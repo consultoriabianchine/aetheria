@@ -17,6 +17,14 @@ export interface AnimConfig {
   sheetColumns: number;
   sheetRows: number;
   anchor?: { x: number; y: number };
+  offsetX?: number;
+  offsetY?: number;
+  sockets?: {
+    feet?: { x: number; y: number };
+    center?: { x: number; y: number };
+    head?: { x: number; y: number };
+    projectileOrigin?: { x: number; y: number };
+  };
   animations: AnimSequence[];
 }
 

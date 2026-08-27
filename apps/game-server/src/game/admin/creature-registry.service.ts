@@ -25,6 +25,8 @@ export interface AdminCreatureSummary {
   attackRange: number;
   viewRange: number;
   chaseRange: number;
+  footprintWidth: number;
+  footprintHeight: number;
   loot: { id: string; itemId: string | null; itemName: string; chance: number; minQuantity: number; maxQuantity: number }[];
 }
 
@@ -100,6 +102,8 @@ export class CreatureRegistry {
     game_attack_range: number | null;
     game_view_range: number | null;
     game_chase_range: number | null;
+    game_footprint_width: number | null;
+    game_footprint_height: number | null;
     loots: { id: string; item_id: string | null; item_name: string; chance: number | null; min_quantity: number | null; max_quantity: number | null }[];
   }): AdminCreatureSummary {
     const hasSprite = r.sprite_asset !== null;
@@ -124,6 +128,8 @@ export class CreatureRegistry {
       attackRange: r.game_attack_range ?? 1,
       viewRange: r.game_view_range ?? 8,
       chaseRange: r.game_chase_range ?? 12,
+      footprintWidth: r.game_footprint_width ?? 1,
+      footprintHeight: r.game_footprint_height ?? 1,
       loot: r.loots.map((loot) => ({ id: loot.id, itemId: loot.item_id, itemName: loot.item_name, chance: loot.chance ?? 0, minQuantity: loot.min_quantity ?? 1, maxQuantity: loot.max_quantity ?? 1 })),
     };
   }

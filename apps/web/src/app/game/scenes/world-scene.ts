@@ -1,6 +1,7 @@
 import Phaser from 'phaser';
 import { SERVER_EVENTS } from '@aetheria/protocol';
-import { APPEARANCE_PALETTE, MOVE_INTERVAL_MS, TILE } from '@aetheria/config';
+import { APPEARANCE_PALETTE, MOVE_INTERVAL_MS, TILE, TILE_SIZE_PX } from '@aetheria/config';
+import { anchorOrigin, resolveAnchor, resolveSockets, spriteTopPx, tileBase } from '@aetheria/shared';
 import type { CreatureState, DamageType, Direction, ItemImpactVisual, ItemProjectileVisual, MapTile, PlayerAppearance, Position, ProjectileDirection } from '@aetheria/types';
 import { WsService } from '../../core/ws.service';
 import { WS_URL } from '../../core/ws.service';
@@ -11,7 +12,7 @@ import { OutfitAssetService, type OutfitAnimData } from '../outfit-asset.service
 import { recolorCanvas } from '../outfit-recolor';
 import { CombatTextManager } from '../combat-text/combat-text-manager';
 
-const TILE_SIZE = 32;
+const TILE_SIZE = TILE_SIZE_PX;
 const BAR_WIDTH = 30;
 const BAR_HEIGHT = 6;
 
@@ -21,6 +22,13 @@ interface EntityInfo {
   maxHealth: number;
 }
 
+interface ResolvedSockets {
+  feet: { x: number; y: number };
+  center: { x: number; y: number };
+  head: { x: number; y: number };
+  projectileOrigin: { x: number; y: number };
+}
+
 interface RenderedEntity {
   kind: string;
   image: Phaser.GameObjects.Image;
@@ -28,8 +36,17 @@ interface RenderedEntity {
   healthBack?: Phaser.GameObjects.Image;
   healthFront?: Phaser.GameObjects.Image;
   healthBorder?: Phaser.GameObjects.Image;
+  spriteWidth: number;
   spriteHeight: number;
-  headHeight: number;
+  anchorX: number;
+  anchorY: number;
+  offsetX: number;
+  offsetY: number;
+  footprintWidth: number;
+  footprintHeight: number;
+  baseX: number;
+  baseY: number;
+  sockets: ResolvedSockets;
 }
 
 interface CreatureAnimState {
@@ -101,6 +118,8 @@ export class WorldScene extends Phaser.Scene {
   private loadingTextures = new Set<string>();
   private debugVisible = false;
   private debugOverlay!: Phaser.GameObjects.Text;
+  private entityDebugVisible = (globalThis as { __SHOW_ENTITY_DEBUG__?: boolean }).__SHOW_ENTITY_DEBUG__ === true;
+  private debugGraphics!: Phaser.GameObjects.Graphics;
   private mapBounds: { width?: number; height?: number } = {};
   private combatText!: CombatTextManager;
 
@@ -117,7 +136,7 @@ export class WorldScene extends Phaser.Scene {
     this.buildTextures();
     this.combatText = new CombatTextManager(this, (entityId) => {
       const entity = this.entities.get(entityId) ?? (entityId === this.selfId ? this.selfEntity : null);
-      return entity ? { x: entity.image.x, y: entity.image.y, spriteHeight: entity.spriteHeight } : null;
+      return entity ? { x: entity.baseX + entity.offsetX, y: entity.baseY + entity.offsetY, spriteHeight: entity.spriteHeight } : null;
     });
 
     this.state.sceneEvents$.subscribe((e) => {
@@ -215,8 +234,10 @@ export class WorldScene extends Phaser.Scene {
           health: number;
           maxHealth: number;
           movementSpeed?: number;
+          footprintWidth?: number;
+          footprintHeight?: number;
         };
-        this.addCreature(c.creatureId, c.slug, c.name, c.position, c.health, c.maxHealth, c.definitionCreatureId, c.facing, c.state, c.movementSpeed ?? MOVE_INTERVAL_MS);
+        this.addCreature(c.creatureId, c.slug, c.name, c.position, c.health, c.maxHealth, c.definitionCreatureId, c.facing, c.state, c.movementSpeed ?? MOVE_INTERVAL_MS, c.footprintWidth, c.footprintHeight);
         break;
       }
       case SERVER_EVENTS.CREATURE_MOVE: {
@@ -267,8 +288,8 @@ export class WorldScene extends Phaser.Scene {
       }
       case SERVER_EVENTS.APPEARANCE_CHANGED: {
         const r = data as { entityId: string; outfitId: number; addonMask: number; colors: { head: number; primary: number; secondary: number; detail: number } };
-        if (r.entityId === this.selfId) {
-          void this.setupPlayerOutfit(this.selfId, { outfitId: r.outfitId, addonMask: r.addonMask, colors: r.colors });
+        if (this.entities.has(r.entityId)) {
+          void this.setupPlayerOutfit(r.entityId, { outfitId: r.outfitId, addonMask: r.addonMask, colors: r.colors });
         }
         break;
       }
@@ -432,10 +453,9 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
     } else {
       this.playerAnims.set(id, { animator, textureKey, moveSpeed, lastMoveAt: this.time.now });
     }
-    rendered.spriteHeight = frameH;
-    rendered.headHeight = TILE_SIZE;
+    this.applyEntityVisual(rendered, data.config);
     rendered.image.setTexture(textureKey).setTint(0xffffff).setScale(1).setFrame(animator.frameIndex(this.time.now));
-    this.repositionWorldUi(rendered);
+    this.applyVisualTransform(rendered);
   }
 
   private spawnPlayerEntity(id: string, name: string, position: Position, appearance?: PlayerAppearance, health = 0, maxHealth = 0, moveSpeed = MOVE_INTERVAL_MS) {
@@ -496,12 +516,12 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
   }
 
   private createRendered(kind: string, name: string, position: Position): RenderedEntity {
-    const x = position.x * TILE_SIZE + TILE_SIZE / 2;
-    const y = position.y * TILE_SIZE + TILE_SIZE;
+    const base = tileBase(position, TILE_SIZE);
+    const anchor = resolveAnchor(TILE_SIZE, TILE_SIZE);
     const color = kind === 'monster' ? 0xe04d4d : kind === 'npc' ? 0xf0c14b : 0x4d86ff;
-    const image = this.add.image(x, y, 'circle').setTint(color).setOrigin(0.5, 1).setDisplaySize(TILE_SIZE, TILE_SIZE);
+    const image = this.add.image(base.x, base.y, 'circle').setTint(color).setOrigin(0.5, 1).setDisplaySize(TILE_SIZE, TILE_SIZE);
     const label = this.add
-      .text(x, y - TILE_SIZE - 6, name, {
+      .text(base.x, base.y - TILE_SIZE - 6, name, {
         fontFamily: 'Arial, Verdana, Tahoma, sans-serif',
         fontStyle: 'bold',
         fontSize: '11px',
@@ -514,13 +534,28 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
     const depth = position.y * 0.01 + 1;
     image.setDepth(depth);
     label.setDepth(depth + 0.01);
-    return { kind, image, label, spriteHeight: TILE_SIZE, headHeight: TILE_SIZE };
+    return {
+      kind,
+      image,
+      label,
+      spriteWidth: TILE_SIZE,
+      spriteHeight: TILE_SIZE,
+      anchorX: anchor.x,
+      anchorY: anchor.y,
+      offsetX: 0,
+      offsetY: 0,
+      footprintWidth: 1,
+      footprintHeight: 1,
+      baseX: base.x,
+      baseY: base.y,
+      sockets: resolveSockets(TILE_SIZE, TILE_SIZE),
+    };
   }
 
   private attachHealthBar(rendered: RenderedEntity, health: number, maxHealth: number) {
     const depth = rendered.image.depth;
-    const x = rendered.image.x - BAR_WIDTH / 2;
-    const y = rendered.image.y - rendered.headHeight - 3;
+    const x = rendered.baseX + rendered.offsetX - BAR_WIDTH / 2;
+    const y = spriteTopPx(rendered.baseY, rendered.anchorY, rendered.offsetY) - 3;
     const back = this.add.image(x, y, 'barBack').setOrigin(0, 0.5).setDepth(depth + 0.02);
     const front = this.add.image(x, y, 'barFront').setOrigin(0, 0.5).setDepth(depth + 0.03);
     const border = this.add.image(x, y, 'barBorder').setOrigin(0, 0.5).setDepth(depth + 0.04);
@@ -532,16 +567,37 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
 
   /** Reposiciona nome/barra de vida acima do sprite (altura pode variar). */
   private repositionWorldUi(rendered: RenderedEntity) {
-    const top = rendered.image.y - rendered.headHeight;
+    const top = spriteTopPx(rendered.baseY, rendered.anchorY, rendered.offsetY);
+    const x = rendered.baseX + rendered.offsetX;
     if (rendered.healthBack && rendered.healthFront) {
       const barY = top - 3;
-      rendered.label.setPosition(rendered.image.x, barY - 11);
-      rendered.healthBack.setPosition(rendered.image.x - BAR_WIDTH / 2, barY);
-      rendered.healthFront.setPosition(rendered.image.x - BAR_WIDTH / 2, barY);
-      rendered.healthBorder?.setPosition(rendered.image.x - BAR_WIDTH / 2, barY);
+      rendered.label.setPosition(x, barY - 11);
+      rendered.healthBack.setPosition(x - BAR_WIDTH / 2, barY);
+      rendered.healthFront.setPosition(x - BAR_WIDTH / 2, barY);
+      rendered.healthBorder?.setPosition(x - BAR_WIDTH / 2, barY);
     } else {
-      rendered.label.setPosition(rendered.image.x, top - 6);
+      rendered.label.setPosition(x, top - 6);
     }
+  }
+
+  /** Aplica dimensões/anchor/offset/sockets de um AnimConfig a uma entidade. */
+  private applyEntityVisual(rendered: RenderedEntity, config: AnimConfig) {
+    const anchor = resolveAnchor(config.spriteWidth, config.spriteHeight, config.anchor);
+    rendered.spriteWidth = config.spriteWidth;
+    rendered.spriteHeight = config.spriteHeight;
+    rendered.anchorX = anchor.x;
+    rendered.anchorY = anchor.y;
+    rendered.offsetX = config.offsetX ?? 0;
+    rendered.offsetY = config.offsetY ?? 0;
+    rendered.sockets = resolveSockets(config.spriteWidth, config.spriteHeight, config.sockets);
+    this.applyVisualTransform(rendered);
+  }
+
+  /** Desenha o sprite relativamente à base (anchor + offset) e reposiciona a UI. */
+  private applyVisualTransform(rendered: RenderedEntity) {
+    const origin = anchorOrigin({ x: rendered.anchorX, y: rendered.anchorY }, rendered.spriteWidth, rendered.spriteHeight);
+    rendered.image.setOrigin(origin.x, origin.y).setPosition(rendered.baseX + rendered.offsetX, rendered.baseY + rendered.offsetY);
+    this.repositionWorldUi(rendered);
   }
 
   private addCreature(
@@ -555,8 +611,12 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
     facing?: Direction,
     state?: CreatureState,
     moveSpeed = MOVE_INTERVAL_MS,
+    footprintWidth = 1,
+    footprintHeight = 1,
   ) {
     const rendered = this.createRendered('monster', name, position);
+    rendered.footprintWidth = footprintWidth;
+    rendered.footprintHeight = footprintHeight;
     this.attachHealthBar(rendered, health, maxHealth);
     this.entities.set(id, rendered);
     this.entityInfo.set(id, { name, health, maxHealth });
@@ -594,10 +654,9 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
     animator.setWalkCycleMs(moveSpeed);
     animator.play(animForState(state), this.time.now);
     this.creatureAnims.set(id, { animator, textureKey, moveSpeed, lastMoveAt: this.time.now });
-    rendered.spriteHeight = config.spriteHeight;
-    rendered.headHeight = config.spriteHeight;
+    this.applyEntityVisual(rendered, config);
     rendered.image.setTexture(textureKey).setTint(0xffffff).setScale(1).setFrame(animator.frameIndex(this.time.now));
-    this.repositionWorldUi(rendered);
+    this.applyVisualTransform(rendered);
   }
 
   private updateCreatureAnim(id: string, facing: Direction, state: CreatureState) {
@@ -631,11 +690,9 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
       const move = this.creatureMoves.get(id);
       if (move) {
         const t = Math.min(1, Math.max(0, (time - move.startedAt) / Math.max(1, move.durationMs)));
-        rendered.image.setPosition(
-          Phaser.Math.Linear(move.fromX, move.toX, t),
-          Phaser.Math.Linear(move.fromY, move.toY, t),
-        );
-        this.repositionWorldUi(rendered);
+        rendered.baseX = Phaser.Math.Linear(move.fromX, move.toX, t);
+        rendered.baseY = Phaser.Math.Linear(move.fromY, move.toY, t);
+        this.applyVisualTransform(rendered);
         if (t >= 1) this.creatureMoves.delete(id);
       }
       rendered.image.setFrame(anim.animator.frameIndex(time));
@@ -657,6 +714,7 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
         this.selfAnim.animator.play('idle', time);
       }
     }
+    if (this.entityDebugVisible) this.drawEntityDebug();
   }
 
   private flashEntity(rendered: RenderedEntity) {
@@ -684,8 +742,7 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
   }
 
   private moveCreatureRendered(id: string, rendered: RenderedEntity, position: Position, duration: number) {
-    const toX = position.x * TILE_SIZE + TILE_SIZE / 2;
-    const toY = position.y * TILE_SIZE + TILE_SIZE;
+    const to = tileBase(position, TILE_SIZE);
     const depth = position.y * 0.01 + 1;
     rendered.image.setDepth(depth);
     rendered.label.setDepth(depth + 0.01);
@@ -694,19 +751,20 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
       rendered.healthFront?.setDepth(depth + 0.03);
       rendered.healthBorder?.setDepth(depth + 0.04);
     }
-    const dx = Math.abs(rendered.image.x - toX);
-    const dy = Math.abs(rendered.image.y - toY);
+    const dx = Math.abs(rendered.baseX - to.x);
+    const dy = Math.abs(rendered.baseY - to.y);
     if (dx > TILE_SIZE * 2 || dy > TILE_SIZE * 2) {
-      rendered.image.setPosition(toX, toY);
+      rendered.baseX = to.x;
+      rendered.baseY = to.y;
       this.creatureMoves.delete(id);
-      this.repositionWorldUi(rendered);
+      this.applyVisualTransform(rendered);
       return;
     }
     this.creatureMoves.set(id, {
-      fromX: rendered.image.x,
-      fromY: rendered.image.y,
-      toX,
-      toY,
+      fromX: rendered.baseX,
+      fromY: rendered.baseY,
+      toX: to.x,
+      toY: to.y,
       startedAt: this.time.now,
       durationMs: Math.max(80, duration),
     });
@@ -714,20 +772,18 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
 
   private movePlayerRendered(position: Position, duration: number) {
     if (!this.selfEntity) return;
-    const activeTween = this.tweens.getTweensOf(this.selfEntity.image)[0];
+    const activeTween = this.tweens.getTweensOf(this.selfEntity)[0];
     if (activeTween) activeTween.stop();
     this.moveRenderedImmediateTween(this.selfEntity, position, duration);
   }
 
   private moveRenderedImmediateTween(rendered: RenderedEntity, position: Position, duration: number) {
-    const x = position.x * TILE_SIZE + TILE_SIZE / 2;
-    const y = position.y * TILE_SIZE + TILE_SIZE;
-    this.tweens.add({ targets: rendered.image, x, y, duration, ease: 'Linear', onUpdate: () => this.repositionWorldUi(rendered) });
+    const to = tileBase(position, TILE_SIZE);
+    this.tweens.add({ targets: rendered, baseX: to.x, baseY: to.y, duration, ease: 'Linear', onUpdate: () => this.applyVisualTransform(rendered) });
   }
 
   private moveRendered(rendered: RenderedEntity, position: Position, duration = MOVE_INTERVAL_MS) {
-    const x = position.x * TILE_SIZE + TILE_SIZE / 2;
-    const y = position.y * TILE_SIZE + TILE_SIZE;
+    const to = tileBase(position, TILE_SIZE);
     const depth = position.y * 0.01 + 1;
     rendered.image.setDepth(depth);
     rendered.label.setDepth(depth + 0.01);
@@ -736,15 +792,8 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
       rendered.healthFront?.setDepth(depth + 0.03);
       rendered.healthBorder?.setDepth(depth + 0.04);
     }
-    this.tweens.killTweensOf(rendered.image);
-    this.tweens.add({
-      targets: rendered.image,
-      x,
-      y,
-      duration,
-      ease: 'Linear',
-      onUpdate: () => this.repositionWorldUi(rendered),
-    });
+    this.tweens.killTweensOf(rendered);
+    this.tweens.add({ targets: rendered, baseX: to.x, baseY: to.y, duration, ease: 'Linear', onUpdate: () => this.applyVisualTransform(rendered) });
   }
 
   private removeEntity(id: string) {
@@ -844,11 +893,16 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
       .setScrollFactor(0)
       .setOrigin(0)
       .setVisible(false);
+    this.debugGraphics = this.add.graphics().setDepth(500).setVisible(this.entityDebugVisible);
     this.input.keyboard!.on('keydown', (event: KeyboardEvent) => {
       if (event.key === 'F3') {
         this.debugVisible = !this.debugVisible;
         this.debugOverlay.setVisible(this.debugVisible);
         this.updateDebugOverlay();
+      }
+      if (event.key === 'F4') {
+        this.entityDebugVisible = !this.entityDebugVisible;
+        this.debugGraphics.setVisible(this.entityDebugVisible);
       }
     });
     this.time.addEvent({
@@ -858,6 +912,24 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
         if (this.debugVisible) this.updateDebugOverlay();
       },
     });
+  }
+
+  /** Desenha tile (amarelo), footprint (verde), render bounds (vermelho) e anchor (azul). */
+  private drawEntityDebug() {
+    const g = this.debugGraphics;
+    g.clear();
+    for (const [, ent] of this.entities) {
+      const tileX = Math.floor(ent.baseX / TILE_SIZE) * TILE_SIZE;
+      const tileY = Math.floor(ent.baseY / TILE_SIZE) * TILE_SIZE;
+      const topLeftX = ent.baseX + ent.offsetX - ent.anchorX;
+      const topLeftY = ent.baseY + ent.offsetY - ent.anchorY;
+      g.lineStyle(1, 0xffff00, 0.7).strokeRect(tileX, tileY, TILE_SIZE, TILE_SIZE);
+      g.lineStyle(1, 0x00ff00, 0.9).strokeRect(tileX, tileY, TILE_SIZE * ent.footprintWidth, TILE_SIZE * ent.footprintHeight);
+      g.lineStyle(1, 0xff0000, 0.9).strokeRect(topLeftX, topLeftY, ent.spriteWidth, ent.spriteHeight);
+      g.lineStyle(1, 0x0000ff, 0.9);
+      g.strokeLineShape(new Phaser.Geom.Line(ent.baseX + ent.offsetX - 4, ent.baseY + ent.offsetY, ent.baseX + ent.offsetX + 4, ent.baseY + ent.offsetY));
+      g.strokeLineShape(new Phaser.Geom.Line(ent.baseX + ent.offsetX, ent.baseY + ent.offsetY - 4, ent.baseX + ent.offsetX, ent.baseY + ent.offsetY + 4));
+    }
   }
 
   private updateDebugOverlay() {
@@ -880,8 +952,8 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
 
     for (const [id, ent] of this.entities) {
       if (id === this.selfId) continue;
-      const ex = Math.round(ent.image.x / TILE_SIZE);
-      const ey = Math.round(ent.image.y / TILE_SIZE);
+      const ex = Math.round(ent.baseX / TILE_SIZE);
+      const ey = Math.round(ent.baseY / TILE_SIZE);
       if (ex === tx && ey === ty) {
         if (ent.kind === 'npc') {
           this.ws.send({ type: 'npc.interact', npcId: id });
@@ -917,7 +989,7 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
   private playProjectile(attackerId: string, targetId: string, from: Position, to: Position, projectile: ItemProjectileVisual, impact: ItemImpactVisual | undefined, travelTimeMs: number) {
     if (!projectile.sprite && !projectile.spriteAssetId) return;
     const textureKey = this.effectTextureKey('projectile', projectile.sprite || String(projectile.spriteAssetId ?? ''), projectile.frameWidth, projectile.frameHeight);
-    const start = this.entityCenter(attackerId, from);
+    const start = this.entitySocket(attackerId, from, 'projectileOrigin');
     const end = this.entityCenter(targetId, to);
     const frame = projectile.frames[this.projectileDirection(from, to)] ?? 0;
     const run = () => {
@@ -963,9 +1035,20 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
     }
   }
 
-  private entityCenter(entityId: string, fallback: Position): { x: number; y: number } {
+  private entitySocket(entityId: string, fallback: Position, socket: keyof ResolvedSockets): { x: number; y: number } {
     const ent = this.entities.get(entityId) ?? (entityId === this.selfId ? this.selfEntity : null);
-    return ent ? { x: ent.image.x, y: ent.image.y } : { x: fallback.x * TILE_SIZE + TILE_SIZE / 2, y: fallback.y * TILE_SIZE + TILE_SIZE / 2 };
+    if (ent) {
+      const p = ent.sockets[socket];
+      return {
+        x: ent.baseX + ent.offsetX - ent.anchorX + p.x,
+        y: ent.baseY + ent.offsetY - ent.anchorY + p.y,
+      };
+    }
+    return tileBase(fallback, TILE_SIZE);
+  }
+
+  private entityCenter(entityId: string, fallback: Position): { x: number; y: number } {
+    return this.entitySocket(entityId, fallback, 'center');
   }
 
   private projectileDirection(from: Position, to: Position): ProjectileDirection {

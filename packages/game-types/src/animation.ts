@@ -22,6 +22,23 @@ export interface SpriteAnchor {
   y: number;
 }
 
+/** Ponto de fixação visual (coordenadas locais do sprite, origem topo-esquerdo). */
+export interface SpriteSocket {
+  x: number;
+  y: number;
+}
+
+/**
+ * Sockets opcionais para efeitos: feet (pés), center (centro do corpo),
+ * head (topo) e projectileOrigin (origem de projéteis — default = center).
+ */
+export interface VisualSockets {
+  feet?: SpriteSocket;
+  center?: SpriteSocket;
+  head?: SpriteSocket;
+  projectileOrigin?: SpriteSocket;
+}
+
 /** Retângulo virtual de um frame dentro da spritesheet. */
 export interface SpriteFrame {
   index: number;
@@ -62,6 +79,10 @@ export interface CreatureAnimationConfig {
   sheetColumns: number;
   sheetRows: number;
   anchor?: SpriteAnchor;
+  /** Deslocamento visual do sprite relativo à base (pés). Default 0. */
+  offsetX?: number;
+  offsetY?: number;
+  sockets?: VisualSockets;
   animations: AnimationSequence[];
 }
 
@@ -72,6 +93,18 @@ export interface CreatureAnimationConfig {
 const spriteAnchorSchema = z.object({
   x: z.number(),
   y: z.number(),
+});
+
+const spriteSocketSchema = z.object({
+  x: z.number(),
+  y: z.number(),
+});
+
+const visualSocketsSchema = z.object({
+  feet: spriteSocketSchema.optional(),
+  center: spriteSocketSchema.optional(),
+  head: spriteSocketSchema.optional(),
+  projectileOrigin: spriteSocketSchema.optional(),
 });
 
 export const animationSequenceSchema = z.object({
@@ -91,6 +124,9 @@ export const creatureAnimationConfigSchema = z.object({
   sheetColumns: z.number().int().positive(),
   sheetRows: z.number().int().positive(),
   anchor: spriteAnchorSchema.optional(),
+  offsetX: z.number().int().optional(),
+  offsetY: z.number().int().optional(),
+  sockets: visualSocketsSchema.optional(),
   animations: z.array(animationSequenceSchema),
 });
 

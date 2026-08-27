@@ -559,6 +559,10 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   }
   closeManage() { this.manageOpen.set(false); }
   selectManageMember(id: string) { this.manageMemberId.set(id); }
+  openManageAppearance(memberId: string) {
+    this.closeManage();
+    this.state.openAppearance(memberId);
+  }
   manageMember(): import('@aetheria/protocol').PartyMember | null {
     const id = this.manageMemberId();
     return this.state.party().members.find((m) => m.id === id) ?? this.state.party().members[0] ?? null;

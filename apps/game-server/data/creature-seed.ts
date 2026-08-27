@@ -6,7 +6,7 @@ import { MAP_Z, MONSTER_RESPAWN_MS } from '@aetheria/config';
  * Atributos e loot são persistidos em `creature_definitions`/`creature_loot`/
  * `creature_spawns` e carregados do PostgreSQL em produção.
  */
-export const CREATURE_SEED: CreatureDefinition[] = [
+export const CREATURE_SEED: Omit<CreatureDefinition, 'footprintWidth' | 'footprintHeight'>[] = [
   {
     id: 'goblin',
     name: 'Goblin Rastejador',

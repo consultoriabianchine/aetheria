@@ -381,6 +381,7 @@
               <div class="metric-row"><span>Dist. ataque</span>
                 <input class="range-input" type="number" min="0" max="15" [ngModel]="combatFor(member.id).attackRange ?? 0" (ngModelChange)="onManageAttackRange(member.id, $event || null)" />
               </div>
+              <button class="wide-action" type="button" (click)="openManageAppearance(member.id)">Aparência</button>
             </div>
             <div>
               <h3>Mochila (compartilhada)</h3>

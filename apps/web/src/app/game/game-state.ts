@@ -95,6 +95,7 @@ export class GameState {
   readonly party = signal<{ unlockedSlots: number; maxSlots: number; unlockCost: number | null; members: import('@aetheria/protocol').PartyMember[] }>({ unlockedSlots: 1, maxSlots: 3, unlockCost: 5000, members: [] });
 
   readonly appearanceOpen = signal(false);
+  readonly appearanceCharacterId = signal<string | null>(null);
   readonly availableOutfits = signal<AvailableOutfit[]>([]);
   readonly appearanceDraft = signal<AppearanceDraft | null>(null);
 
@@ -318,9 +319,9 @@ export class GameState {
       }
       case SERVER_EVENTS.APPEARANCE_CHANGED: {
         const r = data as { entityId: string; outfitId: number; addonMask: number; colors: { head: number; primary: number; secondary: number; detail: number } };
-        this.self.update((s) =>
-          s && s.id === r.entityId ? { ...s, appearance: { outfitId: r.outfitId, addonMask: r.addonMask, colors: r.colors } } : s,
-        );
+        const appearance = { outfitId: r.outfitId, addonMask: r.addonMask, colors: r.colors };
+        this.self.update((s) => (s && s.id === r.entityId ? { ...s, appearance } : s));
+        this.party.update((p) => ({ ...p, members: p.members.map((m) => (m.id === r.entityId ? { ...m, appearance } : m)) }));
         break;
       }
       case SERVER_EVENTS.COMBAT_CONFIG: {
@@ -536,17 +537,21 @@ export class GameState {
     this.setZoom(this.zoom());
   }
 
-  openAppearance() {
+  openAppearance(characterId?: string) {
+    const id = characterId ?? this.self()?.id;
+    if (!id) return;
+    const member = this.party().members.find((m) => m.id === id);
     const self = this.self();
-    if (!self) return;
-    const app = self.appearance ?? { outfitId: 1, addonMask: 0, colors: { head: 0, primary: 0, secondary: 0, detail: 0 } };
-    this.appearanceDraft.set({ outfitId: app.outfitId, addonMask: app.addonMask, colors: { ...app.colors } });
+    const base = (member ?? self)?.appearance ?? { outfitId: 1, addonMask: 0, colors: { head: 0, primary: 0, secondary: 0, detail: 0 } };
+    this.appearanceCharacterId.set(id);
+    this.appearanceDraft.set({ outfitId: base.outfitId, addonMask: base.addonMask, colors: { ...base.colors } });
     this.appearanceOpen.set(true);
-    this.requestAppearanceList();
+    this.requestAppearanceList(id);
   }
 
   closeAppearance() {
     this.appearanceOpen.set(false);
+    this.appearanceCharacterId.set(null);
   }
 
   selectOutfit(outfitId: number) {
@@ -565,14 +570,15 @@ export class GameState {
     const d = this.appearanceDraft();
     const token = this.token();
     if (!d || !token) return;
-    this.ws.send({ type: 'appearance.save', token, outfitId: d.outfitId, addonMask: d.addonMask, colors: d.colors });
+    this.ws.send({ type: 'appearance.save', token, characterId: this.appearanceCharacterId() ?? undefined, outfitId: d.outfitId, addonMask: d.addonMask, colors: d.colors });
     this.appearanceOpen.set(false);
+    this.appearanceCharacterId.set(null);
   }
 
-  private requestAppearanceList() {
+  private requestAppearanceList(characterId?: string) {
     const token = this.token();
     if (!token) return;
-    this.ws.send({ type: 'appearance.list', token });
+    this.ws.send({ type: 'appearance.list', token, characterId });
   }
 
   static formatTime(ms: number): string {

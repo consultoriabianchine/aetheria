@@ -551,30 +551,41 @@ export class GameEngine implements OnModuleDestroy {
     });
   }
 
-  async handleAppearanceList(socketId: string, token: string) {
+  async handleAppearanceList(socketId: string, token: string, characterId?: string) {
     const session = await this.verifySession(socketId, token);
     if (!session) return;
-    const outfits = await this.availableOutfits(session.player.id);
+    const targetId = characterId && characterId !== session.player.id && this.partyMemberIds(session.player).includes(characterId) ? characterId : session.player.id;
+    const outfits = await this.availableOutfits(targetId);
     this.emitTo(socketId, 'appearance.list', { outfits });
   }
 
-  async handleAppearanceSave(socketId: string, token: string, outfitId: number, addonMask: number, colors: { head: number; primary: number; secondary: number; detail: number }) {
+  async handleAppearanceSave(socketId: string, token: string, outfitId: number, addonMask: number, colors: { head: number; primary: number; secondary: number; detail: number }, characterId?: string) {
     const session = await this.verifySession(socketId, token);
     if (!session) return;
-    const player = session.player;
-    const outfits = await this.availableOutfits(player.id);
+    const leader = session.player;
+    const targetId = characterId && characterId !== leader.id && this.partyMemberIds(leader).includes(characterId) ? characterId : leader.id;
+    const outfits = await this.availableOutfits(targetId);
     const target = outfits.find((o) => o.outfitId === outfitId);
     if (!target) {
       this.emitTo(socketId, 'error', { message: 'Outfit não disponível para este personagem.' });
       return;
     }
     const appearance = { outfitId, addonMask: target.supportsAddons ? (addonMask & 3) : 0, colors };
-    player.appearance = appearance;
-    await this.persistPlayer(player);
-    const payload = { entityId: player.id, outfitId: appearance.outfitId, addonMask: appearance.addonMask, colors: appearance.colors };
+    const live = this.players.get(targetId);
+    if (live) {
+      live.appearance = appearance;
+      await this.persistPlayer(live);
+    } else {
+      const stored = await this.store.findCharacterById(targetId);
+      if (!stored || stored.accountId !== leader.accountId) return;
+      stored.appearance = appearance;
+      await this.store.saveCharacter(stored);
+    }
+    const payload = { entityId: targetId, outfitId: appearance.outfitId, addonMask: appearance.addonMask, colors: appearance.colors };
     this.emitTo(socketId, 'appearance.changed', payload);
     this.emitOthers(socketId, 'appearance.changed', payload);
-    this.logger.log(`Jogador ${player.name} mudou a aparência para o outfit ${outfitId}.`);
+    await this.emitPartyState(leader);
+    this.logger.log(`Aparência do personagem ${targetId} alterada para o outfit ${outfitId}.`);
   }
 
   handleCombatConfig(socketId: string, token: string, targeting: unknown, movement: unknown, attackRange?: number, characterId?: string) {
@@ -1375,6 +1386,8 @@ export class GameEngine implements OnModuleDestroy {
       attackRange: creature.definition.attackRange,
       movementSpeed: creature.definition.movementSpeed,
       description: creature.definition.description,
+      footprintWidth: creature.definition.footprintWidth,
+      footprintHeight: creature.definition.footprintHeight,
     };
   }
 

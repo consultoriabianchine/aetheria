@@ -48,8 +48,10 @@ export class CreatureDataService {
           canWander: d.game_can_wander ?? true,
           canChase: d.game_can_chase ?? true,
           canFlee: d.game_can_flee ?? false,
-           returnToSpawn: d.game_return_to_spawn ?? true,
-           damageAffinities: normalizeDamageAffinities(d.damage_affinities),
+          returnToSpawn: d.game_return_to_spawn ?? true,
+          footprintWidth: d.game_footprint_width ?? 1,
+          footprintHeight: d.game_footprint_height ?? 1,
+          damageAffinities: normalizeDamageAffinities(d.damage_affinities),
            loot: d.loots
             .filter((l) => l.item_id)
             .map((l) => ({
@@ -82,7 +84,10 @@ export class CreatureDataService {
 
   private fallback(): CreatureData {
     const definitions = new Map<string, CreatureDefinition>(
-      CREATURE_SEED.map((c) => [c.id, c.movementSpeed === snapToTick(c.movementSpeed) ? c : { ...c, movementSpeed: snapToTick(c.movementSpeed) }]),
+      CREATURE_SEED.map((c) => {
+        const base = c.movementSpeed === snapToTick(c.movementSpeed) ? c : { ...c, movementSpeed: snapToTick(c.movementSpeed) };
+        return [c.id, { ...base, footprintWidth: 1, footprintHeight: 1 }];
+      }),
     );
     return { definitions, spawns: CREATURE_SPAWN_SEED };
   }

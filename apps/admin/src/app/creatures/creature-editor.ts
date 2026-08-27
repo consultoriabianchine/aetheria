@@ -17,13 +17,14 @@ const DIRECTION_LABEL: Record<AnimationDirection, string> = { north: '↑', east
 export class CreatureEditor implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('sheetCanvas') sheetCanvas!: ElementRef<HTMLCanvasElement>;
   @ViewChild('previewCanvas') previewCanvas!: ElementRef<HTMLCanvasElement>;
+  @ViewChild('tilePreviewCanvas') tilePreviewCanvas!: ElementRef<HTMLCanvasElement>;
 
   readonly creature = signal<CreatureDetail | null>(null);
   readonly error = signal<string | null>(null);
   readonly saving = signal(false);
   readonly affinities = signal<DamageAffinities>({} as DamageAffinities);
   readonly damageTypes = DAMAGE_TYPES;
-  readonly activeTab = signal<'overview' | 'elements' | 'loot' | 'animation'>('overview');
+  readonly activeTab = signal<'overview' | 'elements' | 'loot' | 'animation' | 'positioning'>('overview');
 
   readonly spriteWidth = signal(32);
   readonly spriteHeight = signal(32);
@@ -52,6 +53,24 @@ export class CreatureEditor implements OnInit, AfterViewInit, OnDestroy {
   readonly previewSpeed = signal(1);
   readonly stats = signal<Record<string, number>>({});
   readonly loot = signal<CreatureDetail['loot']>([]);
+
+  // posicionamento do sprite
+  readonly footprintWidth = signal(1);
+  readonly footprintHeight = signal(1);
+  readonly anchorX = signal(16);
+  readonly anchorY = signal(32);
+  readonly offsetX = signal(0);
+  readonly offsetY = signal(0);
+
+  // preview 5x5
+  readonly showGridPreview = signal(true);
+  readonly showFootprint = signal(true);
+  readonly showRenderBounds = signal(true);
+  readonly showAnchor = signal(true);
+  readonly showProjectileOrigin = signal(true);
+  readonly previewAnim = signal<CreatureAnimationType>('idle');
+  readonly previewBaseX = signal(2);
+  readonly previewBaseY = signal(2);
 
   private sheetImage: HTMLImageElement | null = null;
   private sheetUrl: string | null = null;
@@ -110,10 +129,20 @@ export class CreatureEditor implements OnInit, AfterViewInit, OnDestroy {
         this.spriteHeight.set(c.spriteHeight);
         this.sheetColumns.set(c.sheetColumns);
         this.sheetRows.set(c.sheetRows);
+        this.anchorX.set(c.anchor?.x ?? c.spriteWidth / 2);
+        this.anchorY.set(c.anchor?.y ?? c.spriteHeight);
+        this.offsetX.set(c.offsetX ?? 0);
+        this.offsetY.set(c.offsetY ?? 0);
         this.sequences.set(structuredClone(c.animations));
       } else {
         this.sequences.set([]);
+        this.anchorX.set(this.spriteWidth() / 2);
+        this.anchorY.set(this.spriteHeight());
+        this.offsetX.set(0);
+        this.offsetY.set(0);
       }
+      this.footprintWidth.set(detail.footprintWidth ?? 1);
+      this.footprintHeight.set(detail.footprintHeight ?? 1);
 
       if (detail.asset) {
         await this.loadImage(`${this.api.baseUrl()}/assets/creatures/${this.id}`);
@@ -303,20 +332,25 @@ export class CreatureEditor implements OnInit, AfterViewInit, OnDestroy {
 
   // ---------------------------------------------------------------- save
 
+  private buildConfig(): CreatureAnimationConfig {
+    return {
+      version: this.version() ?? 0,
+      spriteWidth: this.spriteWidth(),
+      spriteHeight: this.spriteHeight(),
+      sheetColumns: this.sheetColumns(),
+      sheetRows: this.sheetRows(),
+      anchor: { x: this.anchorX(), y: this.anchorY() },
+      offsetX: this.offsetX(),
+      offsetY: this.offsetY(),
+      animations: this.sequences(),
+    };
+  }
+
   async save() {
     this.error.set(null);
     this.saving.set(true);
     try {
-      const config: CreatureAnimationConfig = {
-        version: this.version() ?? 0,
-        spriteWidth: this.spriteWidth(),
-        spriteHeight: this.spriteHeight(),
-        sheetColumns: this.sheetColumns(),
-        sheetRows: this.sheetRows(),
-        anchor: { x: this.spriteWidth() / 2, y: this.spriteHeight() },
-        animations: this.sequences(),
-      };
-      const res = await this.api.saveAnimation(this.id, config, this.version() ?? undefined);
+      const res = await this.api.saveAnimation(this.id, this.buildConfig(), this.version() ?? undefined);
       this.version.set(res.animation.version);
       this.creature.update((c) => (c ? { ...c, animation: res.animation, animationVersion: res.animation.version } : c));
       this.dirty.set(false);
@@ -325,6 +359,57 @@ export class CreatureEditor implements OnInit, AfterViewInit, OnDestroy {
     } finally {
       this.saving.set(false);
     }
+  }
+
+  async savePositioning() {
+    this.error.set(null);
+    this.saving.set(true);
+    try {
+      const res = await this.api.saveAnimation(this.id, this.buildConfig(), this.version() ?? undefined);
+      this.version.set(res.animation.version);
+      await this.api.saveCreatureStats(this.id, { game_footprint_width: this.footprintWidth(), game_footprint_height: this.footprintHeight() });
+      this.creature.update((c) => (c ? { ...c, animation: res.animation, animationVersion: res.animation.version, footprintWidth: this.footprintWidth(), footprintHeight: this.footprintHeight() } : c));
+      this.dirty.set(false);
+    } catch (e) {
+      this.error.set((e as Error).message);
+    } finally {
+      this.saving.set(false);
+    }
+  }
+
+  centralizeAnchor() {
+    this.anchorX.set(this.spriteWidth() / 2);
+    this.anchorY.set(this.spriteHeight());
+    this.dirty.set(true);
+    this.drawTilePreview();
+  }
+
+  setFootprintWidth(value: number) {
+    this.footprintWidth.set(Math.max(1, Math.round(value)));
+    this.dirty.set(true);
+    this.drawTilePreview();
+  }
+
+  setFootprintHeight(value: number) {
+    this.footprintHeight.set(Math.max(1, Math.round(value)));
+    this.dirty.set(true);
+    this.drawTilePreview();
+  }
+
+  movePreview(dx: number, dy: number) {
+    this.previewBaseX.set(Math.max(0, Math.min(4, this.previewBaseX() + dx)));
+    this.previewBaseY.set(Math.max(0, Math.min(4, this.previewBaseY() + dy)));
+    this.drawTilePreview();
+  }
+
+  setPreviewAnim(type: CreatureAnimationType) {
+    this.previewAnim.set(type);
+    this.drawTilePreview();
+  }
+
+  openPositioning() {
+    this.activeTab.set('positioning');
+    setTimeout(() => this.drawTilePreview(), 0);
   }
 
   async saveStats() {
@@ -429,6 +514,7 @@ export class CreatureEditor implements OnInit, AfterViewInit, OnDestroy {
   redraw() {
     this.redrawSheet();
     this.drawPreview();
+    this.drawTilePreview();
   }
 
   private redrawSheet() {
@@ -510,6 +596,89 @@ export class CreatureEditor implements OnInit, AfterViewInit, OnDestroy {
     } else {
       ctx.fillStyle = '#10151e';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
+    }
+  }
+
+  private previewFrameIndex(): number {
+    const seq = this.sequences().find((s) => s.animation === this.previewAnim());
+    if (!seq || seq.frames.length === 0) return -1;
+    return seq.frames[0];
+  }
+
+  /** Preview 5x5 tiles com debug (grid/footprint/bounds/anchor/projectile origin). */
+  drawTilePreview() {
+    if (!this.tilePreviewCanvas) return;
+    const canvas = this.tilePreviewCanvas.nativeElement;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+    const TILE = 32;
+    const GRID = 5;
+    const PAD = 70;
+    canvas.width = 300;
+    canvas.height = 300;
+    ctx.imageSmoothingEnabled = false;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = '#10151e';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    for (let ty = 0; ty < GRID; ty++) {
+      for (let tx = 0; tx < GRID; tx++) {
+        ctx.fillStyle = (tx + ty) % 2 === 0 ? '#3f7a35' : '#4a8a3d';
+        ctx.fillRect(PAD + tx * TILE, PAD + ty * TILE, TILE, TILE);
+        if (this.showGridPreview()) {
+          ctx.strokeStyle = 'rgba(255,255,255,0.18)';
+          ctx.lineWidth = 1;
+          ctx.strokeRect(PAD + tx * TILE + 0.5, PAD + ty * TILE + 0.5, TILE, TILE);
+        }
+      }
+    }
+
+    const bx = this.previewBaseX();
+    const by = this.previewBaseY();
+    const basePxX = PAD + bx * TILE + TILE / 2;
+    const basePxY = PAD + by * TILE + TILE;
+
+    ctx.strokeStyle = '#ffff00';
+    ctx.lineWidth = 1;
+    ctx.strokeRect(PAD + bx * TILE, PAD + by * TILE, TILE, TILE);
+
+    if (this.showFootprint()) {
+      ctx.strokeStyle = '#00ff00';
+      ctx.lineWidth = 1;
+      ctx.strokeRect(PAD + bx * TILE, PAD + by * TILE, TILE * this.footprintWidth(), TILE * this.footprintHeight());
+    }
+
+    const drawX = basePxX + this.offsetX() - this.anchorX();
+    const drawY = basePxY + this.offsetY() - this.anchorY();
+
+    if (this.showRenderBounds()) {
+      ctx.strokeStyle = '#ff0000';
+      ctx.lineWidth = 1;
+      ctx.strokeRect(drawX, drawY, this.spriteWidth(), this.spriteHeight());
+    }
+
+    const cellIndex = this.previewFrameIndex();
+    if (this.sheetImage && cellIndex >= 0) {
+      const r = this.frameRect(cellIndex);
+      ctx.drawImage(this.sheetImage, r.sx, r.sy, r.sw, r.sh, drawX, drawY, this.spriteWidth(), this.spriteHeight());
+    }
+
+    if (this.showAnchor()) {
+      ctx.strokeStyle = '#0000ff';
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(basePxX + this.offsetX() - 4, basePxY + this.offsetY());
+      ctx.lineTo(basePxX + this.offsetX() + 4, basePxY + this.offsetY());
+      ctx.moveTo(basePxX + this.offsetX(), basePxY + this.offsetY() - 4);
+      ctx.lineTo(basePxX + this.offsetX(), basePxY + this.offsetY() + 4);
+      ctx.stroke();
+    }
+
+    if (this.showProjectileOrigin()) {
+      const pox = drawX + this.spriteWidth() / 2;
+      const poy = drawY + this.spriteHeight() / 2;
+      ctx.fillStyle = '#ff00ff';
+      ctx.fillRect(pox - 2, poy - 2, 4, 4);
     }
   }
 }

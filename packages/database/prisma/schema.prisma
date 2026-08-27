@@ -320,6 +320,8 @@ model CreatureDefinition {
   game_can_chase            Boolean?        @default(true) @map("game_can_chase")
   game_can_flee             Boolean?        @default(false) @map("game_can_flee")
   game_return_to_spawn      Boolean?        @default(true) @map("game_return_to_spawn")
+  game_footprint_width      Int?            @default(1) @map("game_footprint_width")
+  game_footprint_height     Int?            @default(1) @map("game_footprint_height")
   damage_affinities         Json            @default("{}") @map("damage_affinities")
 
   loots                     CreatureLoot[]

@@ -48,7 +48,7 @@ export class AdminController {
   async putStats(@Param('id', ParseIntPipe) id: number, @Body() body: Record<string, unknown>) {
     const creature = await this.prisma.creatureDefinition.findUnique({ where: { creature_id: id } });
     if (!creature) throw new NotFoundException('Criatura não encontrada');
-    const fields = ['game_level', 'game_max_health', 'game_attack', 'game_defense', 'game_experience', 'game_attack_speed', 'game_attack_range', 'game_view_range', 'game_chase_range'] as const;
+    const fields = ['game_level', 'game_max_health', 'game_attack', 'game_defense', 'game_experience', 'game_attack_speed', 'game_attack_range', 'game_view_range', 'game_chase_range', 'game_footprint_width', 'game_footprint_height'] as const;
     const data = Object.fromEntries(fields.filter((field) => body[field] !== undefined).map((field) => [field, Math.max(0, Math.round(Number(body[field])))]));
     await this.prisma.creatureDefinition.update({ where: { creature_id: id }, data });
     await this.audit('CREATURE_STATS_UPDATED', id, null, data);

@@ -471,6 +471,9 @@ export interface CreatureDefinition {
   canChase: boolean;
   canFlee: boolean;
   returnToSpawn: boolean;
+  /** Footprint em tiles (configuração explícita — nunca inferir do sprite). */
+  footprintWidth: number;
+  footprintHeight: number;
   loot: CreatureLootDefinition[];
   damageAffinities?: DamageAffinities;
 }

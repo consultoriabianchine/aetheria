@@ -4,6 +4,7 @@
     <button type="button" [class.active]="activeTab() === 'elements'" (click)="activeTab.set('elements')">Resistências e fraquezas</button>
     <button type="button" [class.active]="activeTab() === 'loot'" (click)="activeTab.set('loot')">Loot</button>
     <button type="button" [class.active]="activeTab() === 'animation'" (click)="activeTab.set('animation')">Animação</button>
+    <button type="button" [class.active]="activeTab() === 'positioning'" (click)="openPositioning()">Posicionamento</button>
   </nav>
   <a routerLink="/creatures">← Criaturas</a>
   @if (creature(); as c) {
@@ -228,6 +229,57 @@
         </div>
       </div>
     }
+      </section>
+    </div>
+  </div>
+}
+
+@if (activeTab() === 'positioning') {
+  <div class="section-block positioning-block">
+    <div class="section-heading"><span>Atelier visual</span><strong>Posicionamento do Sprite</strong></div>
+    <div class="editor-grid">
+      <section class="panel">
+        <h2>Posicionamento</h2>
+        <div class="inspector">
+          <div class="field"><label>Tile Size</label><input type="number" value="32" disabled /></div>
+          <div class="field"><label>Sprite W</label><input type="number" [value]="spriteWidth()" (input)="spriteWidth.set(+$any($event.target).value); onGridChange(); drawTilePreview()" min="1" /></div>
+          <div class="field"><label>Sprite H</label><input type="number" [value]="spriteHeight()" (input)="spriteHeight.set(+$any($event.target).value); onGridChange(); drawTilePreview()" min="1" /></div>
+          <div class="field"><label>Footprint W</label><input type="number" [value]="footprintWidth()" (input)="setFootprintWidth(+$any($event.target).value)" min="1" /></div>
+          <div class="field"><label>Footprint H</label><input type="number" [value]="footprintHeight()" (input)="setFootprintHeight(+$any($event.target).value)" min="1" /></div>
+          <div class="field"><label>Anchor X</label><input type="number" [value]="anchorX()" (input)="anchorX.set(+$any($event.target).value); dirty.set(true); drawTilePreview()" /></div>
+          <div class="field"><label>Anchor Y</label><input type="number" [value]="anchorY()" (input)="anchorY.set(+$any($event.target).value); dirty.set(true); drawTilePreview()" /></div>
+          <div class="field"><label>Offset X</label><input type="number" [value]="offsetX()" (input)="offsetX.set(+$any($event.target).value); dirty.set(true); drawTilePreview()" /></div>
+          <div class="field"><label>Offset Y</label><input type="number" [value]="offsetY()" (input)="offsetY.set(+$any($event.target).value); dirty.set(true); drawTilePreview()" /></div>
+        </div>
+        <div class="row">
+          <button type="button" (click)="centralizeAnchor()">Centralizar na Base</button>
+          <button class="primary" type="button" (click)="savePositioning()" [disabled]="saving()">Salvar posicionamento</button>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Preview 5×5</h2>
+        <div class="preview-box">
+          <canvas #tilePreviewCanvas class="tile-preview"></canvas>
+        </div>
+        <div class="row">
+          <button (click)="movePreview(0, -1)">↑ Norte</button>
+          <button (click)="movePreview(0, 1)">↓ Sul</button>
+          <button (click)="movePreview(-1, 0)">← Oeste</button>
+          <button (click)="movePreview(1, 0)">→ Leste</button>
+        </div>
+        <div class="row">
+          @for (a of animations; track a) {
+            <button [class.active]="previewAnim() === a" (click)="setPreviewAnim(a)">{{ a }}</button>
+          }
+        </div>
+        <div class="row">
+          <label class="check"><input type="checkbox" [checked]="showGridPreview()" (change)="showGridPreview.set($any($event.target).checked); drawTilePreview()" /> Grid 32×32</label>
+          <label class="check"><input type="checkbox" [checked]="showFootprint()" (change)="showFootprint.set($any($event.target).checked); drawTilePreview()" /> Footprint</label>
+          <label class="check"><input type="checkbox" [checked]="showRenderBounds()" (change)="showRenderBounds.set($any($event.target).checked); drawTilePreview()" /> Render Bounds</label>
+          <label class="check"><input type="checkbox" [checked]="showAnchor()" (change)="showAnchor.set($any($event.target).checked); drawTilePreview()" /> Anchor</label>
+          <label class="check"><input type="checkbox" [checked]="showProjectileOrigin()" (change)="showProjectileOrigin.set($any($event.target).checked); drawTilePreview()" /> Projectile Origin</label>
+        </div>
       </section>
     </div>
   </div>

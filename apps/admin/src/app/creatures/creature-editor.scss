@@ -46,6 +46,10 @@
 .badge.partial { background: rgba(102,174,217,.14); color: #80c8ed; }
 .badge.complete { background: rgba(102,217,208,.14); color: var(--cyan); }
 .creature-stats-panel, .creature-loot-panel { margin-bottom: 16px; }
+.positioning-block .section-heading { border-left-color: var(--cyan); }
+.positioning-block .section-heading span { color: var(--cyan); }
+.tile-preview { width: 300px; height: 300px; image-rendering: pixelated; }
+.row button.active { border-color: var(--cyan); color: var(--cyan); background: rgba(102,217,208,.12); }
 .affinity-table { display: grid; gap: 5px; margin-bottom: 14px; }
 .affinity-row { display: grid; grid-template-columns: 90px 90px 1fr auto; gap: 10px; align-items: center; padding: 7px 9px; background: #0d141c; border: 1px solid #1d2a36; font-size: 12px; }
 .affinity-row span { color: var(--muted); font: 11px 'DM Mono', monospace; }

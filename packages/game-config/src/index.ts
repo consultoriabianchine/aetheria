@@ -264,7 +264,16 @@ export const SPRITE_CONFIG = {
   defaultHeight: 32,
   /** Ancoragem default (centro-inferior do tile). */
   defaultAnchor: { x: 16, y: 32 },
+  /** Footprint default em tiles (1×1). */
+  defaultFootprintWidth: 1,
+  defaultFootprintHeight: 1,
+  /** Offset visual default (sem deslocamento). */
+  defaultOffsetX: 0,
+  defaultOffsetY: 0,
 } as const;
+
+/** Tamanho do tile em pixels (grid fixo do tilemap). */
+export const TILE_SIZE_PX = 32;
 
 // ---------------------------------------------------------------------------
 // Outfits / aparência do jogador

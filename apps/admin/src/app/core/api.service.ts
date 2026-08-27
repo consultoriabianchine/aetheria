@@ -133,6 +133,8 @@ export interface CreatureDetail extends AdminCreatureSummary {
   attackRange: number;
   viewRange: number;
   chaseRange: number;
+  footprintWidth: number;
+  footprintHeight: number;
   loot: { id: string; itemId: string | null; itemName: string; chance: number; minQuantity: number; maxQuantity: number }[];
   animation: CreatureAnimationConfig | null;
   asset: CreatureAssetMeta | null;

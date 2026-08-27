@@ -59,3 +59,11 @@ export function randomItem<T>(items: T[]): T {
 export function tileKey(x: number, y: number, z: number): string {
   return `${x},${y},${z}`;
 }
+
+export {
+  anchorOrigin,
+  resolveAnchor,
+  resolveSockets,
+  spriteTopPx,
+  tileBase,
+} from './entity-anchor';

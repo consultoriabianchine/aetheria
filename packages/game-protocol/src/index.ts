@@ -44,8 +44,8 @@ export type ClientMessage =
   | { type: 'party.unlockSlot'; token: string }
   | { type: 'party.summon'; token: string; characterId: string }
   | { type: 'party.dismiss'; token: string; characterId: string }
-  | { type: 'appearance.list'; token: string }
-  | { type: 'appearance.save'; token: string; outfitId: number; addonMask: number; colors: { head: number; primary: number; secondary: number; detail: number } }
+  | { type: 'appearance.list'; token: string; characterId?: string }
+  | { type: 'appearance.save'; token: string; characterId?: string; outfitId: number; addonMask: number; colors: { head: number; primary: number; secondary: number; detail: number } }
   | { type: 'combat.config'; token: string; characterId?: string; targeting: PlayerCombatConfig['targeting']; movement: PlayerCombatConfig['movement']; attackRange?: number }
   | { type: 'combat.weaponElementOverride.apply'; damageType: DamageType }
   | { type: 'combat.weaponElementOverride.remove' }
@@ -64,7 +64,7 @@ export type ServerMessage =
   | { type: 'entity.removed'; id: string }
   | { type: 'entity.health'; id: string; health: number; maxHealth: number }
   | { type: 'player.moved'; position: Position; facing?: Direction }
-  | { type: 'creature.spawn'; creatureId: string; definitionId: string; definitionCreatureId?: number; slug: string; name: string; position: Position; facing: Direction; state: CreatureState; health: number; maxHealth: number; level: number; viewRange?: number; chaseRange?: number; attackRange?: number; movementSpeed?: number; description?: string; isBoss?: boolean }
+  | { type: 'creature.spawn'; creatureId: string; definitionId: string; definitionCreatureId?: number; slug: string; name: string; position: Position; facing: Direction; state: CreatureState; health: number; maxHealth: number; level: number; viewRange?: number; chaseRange?: number; attackRange?: number; movementSpeed?: number; description?: string; isBoss?: boolean; footprintWidth?: number; footprintHeight?: number }
   | { type: 'creature.move'; creatureId: string; from: Position; to: Position; facing: Direction; state: CreatureState; timestamp: number; path?: Position[] }
   | { type: 'creature.attack'; creatureId: string; targetId: string; position: Position; facing: Direction; timestamp: number }
   | { type: 'creature.damage'; creatureId: string; attackerId: string; amount: number; critical: boolean; health: number; maxHealth: number }
