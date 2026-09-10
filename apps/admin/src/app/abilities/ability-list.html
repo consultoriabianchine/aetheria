@@ -9,6 +9,7 @@
       <div class="form">
         <label>Name<input [(ngModel)]="draft.name"></label><label>Slug<input [(ngModel)]="draft.slug"></label>
         <label>Owner<select [(ngModel)]="draft.ownerType">@for (owner of owners; track owner) { <option [value]="owner">{{ owner }}</option> }</select></label>
+        <label>Player Class<select [(ngModel)]="draft.playerClass">@for (pc of playerClasses; track pc) { <option [value]="pc">{{ pc }}</option> }</select></label>
         <label>Category<select [(ngModel)]="draft.category">@for (category of categories; track category) { <option [value]="category">{{ category }}</option> }</select></label>
         <label>Damage Type<select [(ngModel)]="draft.damageType"><option [ngValue]="undefined">None</option>@for (type of damageTypes; track type) { <option [value]="type">{{ type }}</option> }</select></label>
         <label>Target Mode<select [(ngModel)]="draft.targetMode"><option value="self">Self</option><option value="single_enemy">Single Enemy</option><option value="single_ally">Single Ally</option><option value="area_enemy">Area Enemy</option><option value="area_ally">Area Ally</option><option value="directional">Directional</option><option value="ground">Ground</option></select></label>

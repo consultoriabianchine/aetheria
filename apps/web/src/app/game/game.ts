@@ -3,7 +3,7 @@ import { Subscription, first, interval } from 'rxjs';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import Phaser from 'phaser';
-import type { CharacterEquipment, CharacterSkills, ItemDefinition, ItemStack, PlayerCombatConfig } from '@aetheria/types';
+import type { CharacterEquipment, CharacterSkills, CombatAbilityDefinition, ItemDefinition, ItemStack, PlayerCombatConfig } from '@aetheria/types';
 import { APPEARANCE_PALETTE, INVENTORY_SIZE, LOOT_POUCH_EXPANSION, SKILL_PROGRESSION_CONFIG } from '@aetheria/config';
 import { WsService } from '../core/ws.service';
 import { ChatLine, GameState } from './game-state';
@@ -66,6 +66,13 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   private phaser: Phaser.Game | null = null;
   private timerSub?: Subscription;
   private visibilityHandler = () => { if (!document.hidden) this.resyncAfterResume(); };
+  private sidebarMq?: MediaQueryList;
+  private readonly sidebarMqListener = (e: MediaQueryListEvent | MediaQueryList) => {
+    if (e.matches) {
+      this.leftCollapsed.set(true);
+      this.rightCollapsed.set(true);
+    }
+  };
 
   ngOnInit() {
     if (!this.state.token()) {
@@ -87,6 +94,12 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
       }
     }
     document.addEventListener('visibilitychange', this.visibilityHandler);
+    this.sidebarMq = window.matchMedia('(max-width: 900px)');
+    this.sidebarMq.addEventListener('change', this.sidebarMqListener);
+    if (this.sidebarMq.matches) {
+      this.leftCollapsed.set(true);
+      this.rightCollapsed.set(true);
+    }
     this.ws.events$.subscribe((event) => {
       if (event.event === 'system.connected') {
         this.resyncAfterResume();
@@ -152,6 +165,7 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
 
   ngOnDestroy() {
     document.removeEventListener('visibilitychange', this.visibilityHandler);
+    this.sidebarMq?.removeEventListener('change', this.sidebarMqListener);
     this.timerSub?.unsubscribe();
     this.phaser?.destroy(true);
     this.phaser = null;
@@ -296,11 +310,25 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   showItemTooltip(itemId: string, event: MouseEvent) {
     this.hoveredItemId.set(itemId);
     this.moveItemTooltip(event);
+    requestAnimationFrame(() => this.moveItemTooltip(event));
   }
 
   moveItemTooltip(event: MouseEvent) {
-    this.itemTooltipX.set(event.clientX + 10);
-    this.itemTooltipY.set(event.clientY + 10);
+    const offset = 10;
+    const margin = 12;
+    let x = event.clientX + offset;
+    let y = event.clientY + offset;
+    const tooltip = this.el.nativeElement.querySelector('.floating-item-tooltip') as HTMLElement | null;
+    if (tooltip) {
+      const width = tooltip.offsetWidth;
+      const height = tooltip.offsetHeight;
+      if (width > 0 && x + width > window.innerWidth - margin) x = event.clientX - width - offset;
+      if (height > 0 && y + height > window.innerHeight - margin) y = event.clientY - height - offset;
+      if (x < margin) x = margin;
+      if (y < margin) y = margin;
+    }
+    this.itemTooltipX.set(x);
+    this.itemTooltipY.set(y);
   }
 
   hideItemTooltip() {
@@ -397,6 +425,18 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
 
   healingRotationFor(characterId: string): number[] {
     return this.state.healingRotations()[characterId] ?? [0, 0, 0, 0];
+  }
+
+  /** Habilidades exibíveis para o personagem (filtra por classe e esconde só-monstro). */
+  abilitiesFor(characterId: string): CombatAbilityDefinition[] {
+    const self = this.state.self();
+    const member = this.state.party().members.find((m) => m.id === characterId);
+    const archetype = (characterId === self?.id ? self?.archetype : member?.archetype) ?? self?.archetype;
+    return this.state.abilities().filter((ability) => {
+      if (ability.ownerType === 'monster') return false;
+      if (!ability.playerClass || ability.playerClass === 'all') return true;
+      return ability.playerClass === archetype;
+    });
   }
 
   hotbarSlotsFor(characterId: string): Array<{ key: number; abilityId?: number; name: string; cd: string; ready: boolean; groupPct: number }> {

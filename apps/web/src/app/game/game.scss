@@ -940,15 +940,15 @@ button {
 }
 
 .backpack-grid {
-  grid-template-columns: repeat(4, var(--item-slot-size));
+  grid-template-columns: repeat(6, var(--item-slot-size));
 }
 
 .loot-grid {
-  grid-template-columns: repeat(5, var(--item-slot-size));
+  grid-template-columns: repeat(6, var(--item-slot-size));
 }
 
 .inv-grid {
-  grid-template-columns: repeat(8, var(--item-slot-size));
+  grid-template-columns: repeat(6, var(--item-slot-size));
 }
 
 .item-slot img,
@@ -990,3 +990,240 @@ button {
   font-weight: 800;
   text-align: center;
 }
+
+/* ------------------------------------------------------------------ responsive */
+
+@media (max-width: 1600px) {
+  .game-page {
+    --left-sidebar-width: 230px;
+    --right-sidebar-width: 280px;
+  }
+
+  .game-topbar {
+    grid-template-columns: 210px 150px minmax(0, 1fr) auto;
+  }
+
+  .top-nav-item {
+    width: 58px;
+  }
+}
+
+@media (max-width: 1450px) {
+  .game-page {
+    --left-sidebar-width: 220px;
+    --right-sidebar-width: 270px;
+  }
+
+  .game-topbar {
+    gap: 8px;
+  }
+
+  .top-nav-item {
+    width: 50px;
+  }
+
+  .top-nav-item small {
+    display: none;
+  }
+
+  .hunt-header {
+    grid-template-columns: minmax(130px, 1fr) 150px auto auto;
+  }
+}
+
+@media (max-width: 1366px) {
+  .game-page {
+    --topbar-height: 60px;
+    --left-sidebar-width: 212px;
+    --right-sidebar-width: 256px;
+    --panel-gap: 6px;
+  }
+
+  .game-topbar {
+    padding: 6px 8px;
+    grid-template-columns: 180px 115px minmax(0, 1fr) auto;
+  }
+
+  .brand-mark {
+    width: 36px;
+    height: 36px;
+  }
+
+  .top-nav {
+    gap: 4px;
+  }
+
+  .top-nav-item {
+    width: 36px;
+    height: 42px;
+  }
+
+  .chip {
+    padding: 4px 6px;
+  }
+
+  .hunt-header {
+    min-height: 46px;
+    grid-template-columns: minmax(120px, 1fr) 130px auto auto;
+    gap: 6px;
+  }
+
+  .wave-strip span {
+    width: 15px;
+    height: 15px;
+  }
+
+  .chat-log {
+    height: 44px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .game-page {
+    --left-sidebar-width: 196px;
+    --right-sidebar-width: 232px;
+    --item-slot-size: 32px;
+    --item-icon-size: 30px;
+  }
+
+  .game-topbar {
+    grid-template-columns: 150px 96px minmax(0, 1fr) auto;
+  }
+
+  .brand-block span {
+    display: none;
+  }
+
+  .wallet-block span + span {
+    display: none;
+  }
+
+  .chip[aria-label='Idioma Portugues Brasil'],
+  .chip[aria-label='Idioma Ingles'] {
+    display: none;
+  }
+
+  .hunt-header {
+    grid-template-columns: minmax(110px, 1fr) 120px auto auto;
+  }
+}
+
+@media (max-width: 1024px) {
+  .game-page {
+    --topbar-height: 56px;
+    --panel-gap: 5px;
+  }
+
+  .game-topbar {
+    grid-template-columns: 42px minmax(0, 1fr) auto;
+  }
+
+  .brand-block > div,
+  .wallet-block {
+    display: none;
+  }
+
+  .top-nav {
+    justify-content: flex-start;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .top-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .chip[aria-label='Aparência'],
+  .chip[aria-label='Modo HD'] {
+    display: none;
+  }
+
+  .hunt-header {
+    grid-template-columns: minmax(100px, 1fr) 110px auto auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .game-layout,
+  .game-page.left-collapsed .game-layout,
+  .game-page.right-collapsed .game-layout,
+  .game-page.left-collapsed.right-collapsed .game-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .left-sidebar,
+  .right-sidebar {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 30;
+    background: var(--panel-bg-secondary);
+    border: 1px solid var(--panel-border);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.55);
+  }
+
+  .left-sidebar {
+    left: 0;
+    width: min(230px, 80vw);
+    border-radius: 0 10px 10px 0;
+  }
+
+  .right-sidebar {
+    right: 0;
+    width: min(260px, 85vw);
+    border-radius: 10px 0 0 10px;
+  }
+
+  .game-page.left-collapsed .left-sidebar {
+    width: 18px;
+  }
+
+  .game-page.right-collapsed .right-sidebar {
+    width: 18px;
+  }
+
+  .hotbar {
+    justify-self: stretch;
+    max-width: 100%;
+    justify-content: flex-start;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .hotbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .game-page {
+    --topbar-height: 50px;
+  }
+
+  .game-topbar {
+    padding: 5px 6px;
+  }
+
+  .top-nav-item {
+    width: 32px;
+    height: 36px;
+  }
+
+  .zoom-val {
+    display: none;
+  }
+
+  .hunt-header {
+    grid-template-columns: 1fr;
+  }
+
+  .hunt-select {
+    width: 100%;
+  }
+
+  .hotbar-row-slots .hotbar-slot {
+    width: 40px;
+    height: 30px;
+  }
+}
+

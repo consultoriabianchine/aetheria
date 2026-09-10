@@ -409,10 +409,8 @@ export const HUNT_CONFIG = {
     respawnMs: 2500,
   },
   waveTransitionMs: 1500,
-  /** Recompensas em ouro (moeda do personagem) por kill/boss/clear. */
+  /** Recompensas em ouro (moeda do personagem) por clear de hunt. */
   gold: {
-    perKill: (level: number) => Math.max(1, Math.round(level * 2)),
-    boss: (level: number) => Math.max(1, Math.round(level * 10)),
     clearBonus: (suggestedLevel: number) => 100 + suggestedLevel * 5,
   },
 } as const;

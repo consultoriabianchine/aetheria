@@ -923,6 +923,10 @@ export class GameEngine implements OnModuleDestroy {
       this.emitTo(socketId, 'ability.castFailed', { abilityId, reason: 'ABILITY_UNAVAILABLE' });
       return false;
     }
+    if (ability.playerClass && ability.playerClass !== 'all' && ability.playerClass !== player.archetype) {
+      this.emitTo(socketId, 'ability.castFailed', { abilityId, reason: 'CLASS_MISMATCH' });
+      return false;
+    }
     const now = Date.now();
     const castKey = `${player.id}:${abilityId}`;
     if (this.activeAbilityCasts.has(castKey)) return false;
@@ -2178,7 +2182,6 @@ export class GameEngine implements OnModuleDestroy {
   private creatureKilled(player: GamePlayer, creature: CreatureEntity, now: number) {
     this.monsterAbilityReadyAt.delete(creature.id);
     const run = this.hunts.findRunByCreature(creature.id);
-    const isBoss = !!run && run.isBossWave && creature.id === run.bossCreatureId;
     if (run) {
       run.creatures.removeCreature(creature.id);
       for (const id of run.memberIds) {
@@ -2204,18 +2207,7 @@ export class GameEngine implements OnModuleDestroy {
     } else {
       this.grantExperience(player, creature.definition.experience);
     }
-    this.grantKillGold(player, creature, isBoss);
     this.spawnLoot(creature, player, run);
-  }
-
-  private grantKillGold(player: GamePlayer, creature: CreatureEntity, isBoss: boolean) {
-    const amount = isBoss
-      ? HUNT_CONFIG.gold.boss(creature.definition.level)
-      : HUNT_CONFIG.gold.perKill(creature.definition.level);
-    if (amount <= 0) return;
-    const storage = this.storageFor(player);
-    storage.gold += amount;
-    this.emitGold(player, storage.gold);
   }
 
   private playerKilled(player: GamePlayer, now: number) {
@@ -2275,10 +2267,37 @@ export class GameEngine implements OnModuleDestroy {
   private spawnLoot(creature: CreatureEntity, player?: GamePlayer, run?: HuntRun | null) {
     const collected: string[] = [];
     let blocked = false;
+    let goldCollected = 0;
     for (const entry of creature.definition.loot) {
       if (Math.random() * 100 >= entry.chance) continue;
       const def = getItemDef(entry.itemId);
       const quantity = entry.minQuantity + Math.floor(Math.random() * (entry.maxQuantity - entry.minQuantity + 1));
+      if (entry.itemId === 'gold') {
+        if (player) {
+          const storage = this.storageFor(player);
+          storage.gold += quantity;
+          goldCollected += quantity;
+          this.emitGold(player, storage.gold);
+          continue;
+        }
+        const item: GroundItem = {
+          id: uid('loot'),
+          itemId: entry.itemId,
+          name: def?.name ?? entry.itemId,
+          quantity,
+          position: { ...creature.position },
+          expiresAt: Date.now() + LOOT_LIFETIME_MS,
+        };
+        this.groundItems.set(item.id, item);
+        this.scheduleGroundItem(item);
+        if (run) {
+          const leader = this.players.get(run.characterId);
+          this.emitTo(leader?.socketId ?? '', 'loot.spawned', { entityId: item.id, itemId: item.itemId, name: item.name, quantity: item.quantity, position: item.position });
+        } else {
+          this.emitAll('loot.spawned', { entityId: item.id, itemId: item.itemId, name: item.name, quantity: item.quantity, position: item.position });
+        }
+        continue;
+      }
       if (player) {
         if (this.addToLootPouch(this.storageFor(player), entry.itemId, quantity)) {
           collected.push(`${quantity}x ${def?.name ?? entry.itemId}`);
@@ -2311,13 +2330,14 @@ export class GameEngine implements OnModuleDestroy {
         this.emitAll('loot.spawned', payload);
       }
     }
-    if (player && (collected.length > 0 || blocked)) {
+    if (player && (collected.length > 0 || blocked || goldCollected > 0)) {
       const viewers = run
         ? run.memberIds.map((id) => this.players.get(id)).filter((p): p is GamePlayer => !!p && !!p.socketId)
         : player.socketId ? [player] : [];
       for (const viewer of viewers) this.emitInventory(viewer);
       const msg = collected.length > 0 ? `Loot coletado: ${collected.join(', ')}.` : null;
       for (const viewer of viewers) {
+        if (goldCollected > 0) this.emitTo(viewer.socketId ?? '', 'chat.message', { channel: 'local', from: 'Sistema', text: `Coletado ${goldCollected} gold.` });
         if (msg) this.emitTo(viewer.socketId ?? '', 'chat.message', { channel: 'local', from: 'Sistema', text: msg });
         if (blocked) this.emitTo(viewer.socketId ?? '', 'chat.message', { channel: 'local', from: 'Sistema', text: 'Bolsa de Loot cheia. Alguns itens não foram coletados.' });
       }

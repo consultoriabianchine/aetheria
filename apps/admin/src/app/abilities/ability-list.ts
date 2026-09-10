@@ -1,6 +1,6 @@
 import { Component, OnInit, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import type { AbilityAreaConfig, AbilityCategory, AbilityOwnerType, CombatAbilityDefinition, DamageType, ItemVisualEffects } from '@aetheria/types';
+import type { AbilityAreaConfig, AbilityCategory, AbilityOwnerType, CombatAbilityDefinition, DamageType, ItemVisualEffects, PlayerAbilityClass } from '@aetheria/types';
 import { ApiService } from '../core/api.service';
 import { SpriteVisualEditor } from '../shared/sprite-visual-editor/sprite-visual-editor';
 
@@ -21,13 +21,14 @@ export class AbilityList implements OnInit {
   readonly selected = signal<CombatAbilityDefinition | null>(null);
   readonly error = signal<string | null>(null);
   readonly owners: AbilityOwnerType[] = ['player', 'monster', 'both'];
+  readonly playerClasses: PlayerAbilityClass[] = ['all', 'mage', 'warrior', 'archer'];
   readonly categories: AbilityCategory[] = ['attack', 'area', 'rune', 'heal', 'support'];
   readonly damageTypes: DamageType[] = ['physical', 'fire', 'ice', 'energy', 'earth', 'holy', 'death', 'arcane'];
 
   constructor(private readonly api: ApiService) {}
   async ngOnInit() { await this.load(); }
   async load() { try { this.abilities.set(await this.api.listAbilities()); } catch (error) { this.error.set(String(error)); } }
-  newAbility() { this.selected.set({ abilityId: 0, slug: '', name: '', ownerType: 'both', category: 'attack', targetMode: 'single_enemy', powerSource: 'fixed', cooldownMs: 2000, cooldownGroup: 'attack', rangeTiles: 1, allowedParameters: [], enabled: true, createdAt: new Date(), updatedAt: new Date() }); }
+  newAbility() { this.selected.set({ abilityId: 0, slug: '', name: '', ownerType: 'both', playerClass: 'all', category: 'attack', targetMode: 'single_enemy', powerSource: 'fixed', cooldownMs: 2000, cooldownGroup: 'attack', rangeTiles: 1, allowedParameters: [], enabled: true, createdAt: new Date(), updatedAt: new Date() }); }
   edit(ability: CombatAbilityDefinition) { this.selected.set({ ...ability }); }
   patchVisual(visual: ItemVisualEffects | null) { const draft = this.selected(); if (draft) this.selected.set({ ...draft, visual: visual ?? undefined }); }
   areaConfigDraft(): AbilityAreaConfig { return this.selected()?.areaConfig ?? { shape: 'square', width: 1, height: 1 }; }

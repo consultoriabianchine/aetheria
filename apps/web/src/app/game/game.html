@@ -25,8 +25,8 @@
     <section class="account-controls" aria-label="Conta e configuracoes">
       <button class="chip active" type="button" aria-label="Idioma Portugues Brasil">BR</button>
       <button class="chip" type="button" aria-label="Idioma Ingles">EN</button>
-      <button class="chip" type="button" (click)="openAppearance()">Aparência</button>
-      <button class="chip" type="button" (click)="state.toggleHdSmooth()">{{ state.hdSmooth() ? 'HD ON' : 'HD OFF' }}</button>
+      <button class="chip" type="button" (click)="openAppearance()" aria-label="Aparência">Aparência</button>
+      <button class="chip" type="button" (click)="state.toggleHdSmooth()" aria-label="Modo HD">{{ state.hdSmooth() ? 'HD ON' : 'HD OFF' }}</button>
       <button class="chip square" type="button" (click)="state.zoomOut()" aria-label="Diminuir zoom">−</button>
       <span class="zoom-val">{{ zoomPct() }}</span>
       <button class="chip square" type="button" (click)="state.zoomIn()" aria-label="Aumentar zoom">+</button>
@@ -391,7 +391,7 @@
           <div class="heal-targets"><span>Alvo:</span><button [class.active]="healTarget() === 'self'" (click)="healTarget.set('self')">Self</button><button [class.active]="healTarget() === 'lowest_party_member'" (click)="healTarget.set('lowest_party_member')">Menor HP</button><button [class.active]="healTarget() === 'specific_party_role'" (click)="healTarget.set('specific_party_role')">Líder</button></div>
         }
         @for (slot of (rotationMode() === 'attack' ? attackRotationForModal() : healingRotationForModal()); track $index) {
-          <label class="rotation-slot-editor"><span>{{ $index + 1 }}</span><select [ngModel]="slot" (ngModelChange)="setRotationAbility($index, +$event)"><option [ngValue]="0">Empty</option>@for (ability of state.abilities(); track ability.abilityId) { <option [ngValue]="ability.abilityId">{{ ability.name }}</option> }</select></label>
+          <label class="rotation-slot-editor"><span>{{ $index + 1 }}</span><select [ngModel]="slot" (ngModelChange)="setRotationAbility($index, +$event)"><option [ngValue]="0">Empty</option>@for (ability of abilitiesFor(rotationCharacterId() ?? ''); track ability.abilityId) { <option [ngValue]="ability.abilityId">{{ ability.name }}</option> }</select></label>
         }
         <button class="rotation-save" type="button" (click)="saveRotation()">Save Rotation</button>
       </section>
