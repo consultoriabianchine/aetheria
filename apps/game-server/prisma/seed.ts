@@ -1,11 +1,146 @@
 import { PrismaClient } from '@aetheria/database';
 import { readFileSync } from 'node:fs';
 import path from 'node:path';
-import { NPC_TEMPLATES } from '@aetheria/config';
+import { createHash } from 'node:crypto';
+import { deflateSync } from 'node:zlib';
+import { NPC_TEMPLATES, DEFAULT_TILESET_SLUG, TILE } from '@aetheria/config';
 import { generateWorldMap } from '../src/game/engine/world-map';
 import { CREATURE_SEED, CREATURE_SPAWN_SEED } from '../data/creature-seed';
 
 const prisma = new PrismaClient();
+
+// ---------------------------------------------------------------------------
+// PNG encoder mínimo (para o Default Tileset, sem dependência de canvas).
+// ---------------------------------------------------------------------------
+
+function crc32(buf: Buffer): number {
+  let crc = 0xffffffff;
+  for (let i = 0; i < buf.length; i++) {
+    crc ^= buf[i];
+    for (let j = 0; j < 8; j++) crc = (crc >>> 1) ^ (0xedb88320 & -(crc & 1));
+  }
+  return (crc ^ 0xffffffff) >>> 0;
+}
+
+function pngChunk(type: string, data: Buffer): Buffer {
+  const len = Buffer.alloc(4);
+  len.writeUInt32BE(data.length);
+  const typeBuf = Buffer.from(type, 'ascii');
+  const crc = Buffer.alloc(4);
+  crc.writeUInt32BE(crc32(Buffer.concat([typeBuf, data])));
+  return Buffer.concat([len, typeBuf, data, crc]);
+}
+
+function encodePng(width: number, height: number, rgba: Buffer): Buffer {
+  const ihdr = Buffer.alloc(13);
+  ihdr.writeUInt32BE(width, 0);
+  ihdr.writeUInt32BE(height, 4);
+  ihdr[8] = 8; // bit depth
+  ihdr[9] = 6; // color type RGBA
+  const raw = Buffer.alloc((width * 4 + 1) * height);
+  for (let y = 0; y < height; y++) {
+    raw[y * (width * 4 + 1)] = 0; // filter: none
+    rgba.copy(raw, y * (width * 4 + 1) + 1, y * width * 4, (y + 1) * width * 4);
+  }
+  const idat = deflateSync(raw, { level: 9 });
+  return Buffer.concat([
+    Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]),
+    pngChunk('IHDR', ihdr),
+    pngChunk('IDAT', idat),
+    pngChunk('IEND', Buffer.alloc(0)),
+  ]);
+}
+
+const DEFAULT_TILES = [
+  { tile: TILE.GRASS, name: 'Grass', category: 'ground', layer: 'ground', color: [74, 138, 61, 255] },
+  { tile: TILE.PATH, name: 'Path', category: 'path', layer: 'ground', color: [179, 160, 108, 255] },
+  { tile: TILE.WATER, name: 'Water', category: 'water', layer: 'ground', color: [61, 111, 163, 255] },
+  { tile: TILE.TREE, name: 'Tree', category: 'vegetation', layer: 'object', color: [47, 107, 47, 255] },
+  { tile: TILE.ROCK, name: 'Rock', category: 'rock', layer: 'object', color: [138, 141, 146, 255] },
+  { tile: TILE.WALL, name: 'Wall', category: 'wall', layer: 'object', color: [86, 90, 96, 255] },
+] as const;
+
+/** Gera uma strip 6×1 (192×32) com os tiles base e dá seed do tileset padrão. */
+async function seedDefaultTileset() {
+  const existing = await prisma.tileset.findUnique({ where: { slug: DEFAULT_TILESET_SLUG } });
+  if (existing) return existing;
+
+  const tileSize = 32;
+  const width = DEFAULT_TILES.length * tileSize;
+  const height = tileSize;
+  const rgba = Buffer.alloc(width * height * 4);
+  for (let t = 0; t < DEFAULT_TILES.length; t++) {
+    const [r, g, b, a] = DEFAULT_TILES[t].color;
+    for (let py = 0; py < tileSize; py++) {
+      for (let px = 0; px < tileSize; px++) {
+        const idx = (py * width + (t * tileSize + px)) * 4;
+        // leve ruído determinístico para textura
+        const n = ((px * 7 + py * 13 + t * 17) % 9) - 4;
+        rgba[idx] = Math.max(0, Math.min(255, r + n));
+        rgba[idx + 1] = Math.max(0, Math.min(255, g + n));
+        rgba[idx + 2] = Math.max(0, Math.min(255, b + n));
+        rgba[idx + 3] = a;
+      }
+    }
+  }
+  const png = encodePng(width, height, rgba);
+  const checksum = createHash('sha256').update(png).digest('hex');
+
+  const asset = await prisma.spriteAsset.create({
+    data: {
+      file_name: `tileset_default.png`,
+      mime_type: 'image/png',
+      file_size: png.length,
+      image_width: width,
+      image_height: height,
+      data: new Uint8Array(png),
+      checksum,
+    },
+  });
+
+  const tileset = await prisma.tileset.create({
+    data: {
+      name: 'aetheria Default Tiles',
+      slug: DEFAULT_TILESET_SLUG,
+      sprite_asset_id: asset.sprite_asset_id,
+      tile_width: tileSize,
+      tile_height: tileSize,
+      columns: DEFAULT_TILES.length,
+      rows: 1,
+    },
+  });
+
+  await prisma.tileDefinition.createMany({
+    data: DEFAULT_TILES.map((d, index) => {
+      const isWall = d.tile === TILE.WALL;
+      const isWater = d.tile === TILE.WATER;
+      const isTree = d.tile === TILE.TREE;
+      const isRock = d.tile === TILE.ROCK;
+      const isWalkable = d.tile === TILE.GRASS || d.tile === TILE.PATH;
+      const blocksMovement = isWall || isWater || isTree || isRock;
+      const blocksVision = isWall || isTree || isRock;
+      return {
+        tileset_id: tileset.tileset_id,
+        index,
+        source_x: index * tileSize,
+        source_y: 0,
+        width: tileSize,
+        height: tileSize,
+        name: d.name,
+        category: d.category,
+        layer_type: d.layer,
+        walkable: isWalkable,
+        blocks_movement: blocksMovement,
+        blocks_projectiles: blocksMovement && !isWater,
+        blocks_vision: blocksVision,
+        is_water: isWater,
+        tags: [],
+      };
+    }),
+  });
+
+  return tileset;
+}
 
 const INITIAL_ABILITIES = [
   { slug: 'fire-strike', name: 'Fire Strike', owner_type: 'player', player_class: 'mage', category: 'attack', target_mode: 'single_enemy', damage_type: 'fire', power_source: 'magic_weapon', cooldown_ms: 4000, cooldown_group: 'attack', range_tiles: 5, mana_cost: 25, allowed_parameters: [], enabled: true },
@@ -433,6 +568,7 @@ async function seedLootItemDefinitions(items: SourceItem[]) {
 }
 
 async function seed() {
+  await seedDefaultTileset();
   const items = JSON.parse(readFileSync(path.join(__dirname, '..', 'data', 'items.json'), 'utf8')) as {
     items: SourceItem[];
   };

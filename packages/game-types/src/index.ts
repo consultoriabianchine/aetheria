@@ -606,4 +606,5 @@ export interface HuntRunView {
 }
 
 export * from './animation';
+export * from './tileset';
 export * from './outfit';

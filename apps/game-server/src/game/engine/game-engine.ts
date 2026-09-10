@@ -164,6 +164,7 @@ export class GameEngine implements OnModuleDestroy {
       summarize: (player) => this.toSummary(player),
       getCreatureDefinition: (id) => this.creatureDefinitions.get(id) ?? null,
       getMap: (id) => mapRegistry?.getMap(id) ?? null,
+      getMapRender: (id) => mapRegistry?.getMapRender(id) ?? null,
       getHunts: () => huntRegistry?.getAll() ?? HUNT_CATALOG,
       emitTo: (socketId, event, data) => this.emitTo(socketId, event, data),
       getGold: (characterId) => {

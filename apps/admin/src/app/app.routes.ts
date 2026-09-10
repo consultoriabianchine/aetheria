@@ -19,6 +19,14 @@ export const routes: Routes = [
     loadComponent: () => import('./maps/map-editor').then((m) => m.MapEditor),
   },
   {
+    path: 'tilesets',
+    loadComponent: () => import('./tilesets/tileset-list').then((m) => m.TilesetList),
+  },
+  {
+    path: 'tilesets/:id',
+    loadComponent: () => import('./tilesets/tileset-editor').then((m) => m.TilesetEditor),
+  },
+  {
     path: 'hunts',
     loadComponent: () => import('./hunts/hunt-list').then((m) => m.HuntList),
   },

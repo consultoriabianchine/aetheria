@@ -1,0 +1,10 @@
+.sub { color: var(--muted); margin: 4px 0 18px; }
+.toolbar { display: flex; gap: 8px; margin-bottom: 16px; }
+.error { color: var(--red); margin-bottom: 12px; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--line); }
+th { color: var(--muted); font-weight: 500; }
+.mono { font-family: 'DM Mono', monospace; }
+td a { margin-right: 10px; }
+button.danger { border-color: var(--red); color: var(--red); }
+button.danger:hover { background: rgba(239, 107, 104, .12); border-color: var(--red); }

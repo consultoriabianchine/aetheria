@@ -1,52 +1,114 @@
 <div class="editor-head">
   <a routerLink="/maps">← Mapas</a>
   <h1>{{ id === 'new' ? 'Novo mapa' : name() }}</h1>
-  @if (dirty()) {
-    <span class="unsaved">Alterações não salvas</span>
-  }
+  @if (dirty()) { <span class="unsaved">Alterações não salvas</span> }
+  <select [value]="status()" (change)="status.set($any($event.target).value)">
+    <option value="draft">Draft</option>
+    <option value="published">Published</option>
+    <option value="disabled">Disabled</option>
+  </select>
   <div class="actions">
+    <button (click)="exportJson()">Export JSON</button>
+    <label class="file-btn">
+      Import JSON
+      <input type="file" accept=".json" (change)="importJson($event)" />
+    </label>
+    <button (click)="startTest()">Testar mapa</button>
     <button class="primary" (click)="save()" [disabled]="saving() || !dirty()">Salvar mapa</button>
   </div>
 </div>
 
-@if (error()) {
-  <p class="error">{{ error() }}</p>
+@if (error()) { <p class="error">{{ error() }}</p> }
+
+@if (testMode()) {
+  <div class="test-banner">
+    <strong>Modo teste</strong> — mova com WASD/setas ou clique num tile para teleportar.
+    <button (click)="stopTest()">Sair do teste</button>
+  </div>
 }
 
 <div class="map-layout">
   <section class="panel palette">
     <h2>Tiles</h2>
-    <div class="palette-grid">
-      @for (t of tiles; track t.id) {
-        <div class="tile-btn" [class.active]="selectedTile() === t.id" (click)="selectedTile.set(t.id)">
-          <span class="swatch" [style.background]="t.color"></span>
-          {{ t.name }}
-        </div>
-      }
-    </div>
-    <button (click)="fill()">Preencher tudo</button>
+    <input type="text" [value]="search()" (input)="search.set($any($event.target).value)" placeholder="Buscar (ID, nome, tag)…" />
 
-    <h2>Dimensões</h2>
-    <div class="field">
-      <label>Nome</label>
-      <input type="text" [value]="name()" (input)="name.set($any($event.target).value); dirty.set(true)" />
-    </div>
     <div class="row">
-      <div class="field">
-        <label>Largura</label>
-        <input type="number" [value]="width()" (input)="width.set(+$any($event.target).value)" min="4" max="256" />
-      </div>
-      <div class="field">
-        <label>Altura</label>
-        <input type="number" [value]="height()" (input)="height.set(+$any($event.target).value)" min="4" max="256" />
-      </div>
-      <button (click)="resize()">Redimensionar</button>
+      <select [value]="activeTilesetId() ?? 0" (change)="selectTileset(+$any($event.target).value)">
+        @for (t of tilesets(); track t.tilesetId) {
+          <option [value]="t.tilesetId">#{{ t.tilesetId }} {{ t.name }}</option>
+        }
+      </select>
+      <select [value]="categoryFilter()" (change)="categoryFilter.set($any($event.target).value)">
+        <option value="">Todas</option>
+        <option value="ground">ground</option>
+        <option value="path">path</option>
+        <option value="water">water</option>
+        <option value="wall">wall</option>
+        <option value="rock">rock</option>
+        <option value="vegetation">vegetation</option>
+        <option value="decoration">decoration</option>
+        <option value="structure">structure</option>
+        <option value="stairs">stairs</option>
+        <option value="portal">portal</option>
+        <option value="other">other</option>
+      </select>
     </div>
-    <p class="hint">Dica: pinte paredes (borda) e interior caminhável. Salve e aponte <code>mapId</code> numa hunt.</p>
+
+    <label class="check"><input type="checkbox" [checked]="showIds()" (change)="toggleShowIds()" /> Mostrar IDs</label>
+
+    <div class="palette-tabs">
+      <button [class.active]="mode() === 'tiles'" (click)="setMode('tiles')">Tiles</button>
+      <button [class.active]="mode() === 'entities'" (click)="setMode('entities')">Entidades</button>
+      <button (click)="toggleFavorites()" [class.active]="showFavorites()">Favoritos</button>
+      <button (click)="toggleRecents()" [class.active]="showRecents()">Recentes</button>
+    </div>
+
+    @if (mode() === 'tiles') {
+      <div class="tile-grid">
+        @for (t of showFavorites() ? favoritesTiles : showRecents() ? recentTiles : filteredTiles; track t.tileId) {
+          <div class="tile-thumb" [class.active]="selectedTileId() === t.tileId" [title]="tileTooltip(t)" (click)="selectTile(t.tileId)" (contextmenu)="$event.preventDefault(); toggleFavorite(t.tileId); false">
+            <span class="thumb-img" [style]="tileThumbStyle(t)"></span>
+            @if (showIds()) { <span class="tid">{{ t.tileId }}</span> }
+            @if (isFavorite(t.tileId)) { <span class="fav">★</span> }
+          </div>
+        }
+      </div>
+    }
+
+    @if (mode() === 'entities') {
+      <div class="entity-list">
+        <select [value]="entityType()" (change)="setEntityType($any($event.target).value)">
+          @for (et of entityTypes; track et) { <option [value]="et">{{ entityLabels[et] }}</option> }
+        </select>
+        @for (et of entityTypes; track et) {
+          <button [class.active]="entityType() === et" (click)="setEntityType(et)" [style.borderColor]="entityColor(et)">
+            {{ entityLabels[et] }}
+          </button>
+        }
+      </div>
+    }
   </section>
 
   <section class="panel canvas-panel">
-    <div class="canvas-wrap">
+    <div class="canvas-toolbar">
+      @for (t of tools; track t) {
+        <button [class.active]="tool() === t" (click)="setTool(t)" [title]="toolLabel(t)">{{ shortcut(t) }} {{ toolLabel(t) }}</button>
+      }
+      <span class="sep"></span>
+      @for (b of brushSizes; track b) {
+        <button [class.active]="brush() === b" (click)="setBrush(b)">{{ b }}×{{ b }}</button>
+      }
+      <span class="sep"></span>
+      <button (click)="zoomBy(-0.25)">−</button>
+      <span class="mono">{{ zoomPercent() }}%</span>
+      <button (click)="zoomBy(0.25)">+</button>
+      <button (click)="toggleGrid()" [class.active]="gridVisible()">Grid</button>
+      <button (click)="toggleCollision()" [class.active]="collisionVisible()">Colisão</button>
+      <button (click)="undo()">↺ Undo</button>
+      <button (click)="redo()">↻ Redo</button>
+    </div>
+
+    <div class="canvas-scroll" (wheel)="onWheel($event)">
       <canvas
         #canvas
         class="sprite-preview"
@@ -56,5 +118,55 @@
         (pointerleave)="onPointerUp()"
       ></canvas>
     </div>
+  </section>
+
+  <section class="panel settings">
+    <h2>Mapa</h2>
+    <div class="field">
+      <label>Nome</label>
+      <input type="text" [value]="name()" (input)="name.set($any($event.target).value); dirty.set(true)" />
+    </div>
+    <div class="row">
+      <div class="field">
+        <label>Largura</label>
+        <input type="number" [value]="width()" (input)="width.set(+$any($event.target).value)" min="4" max="128" />
+      </div>
+      <div class="field">
+        <label>Altura</label>
+        <input type="number" [value]="height()" (input)="height.set(+$any($event.target).value)" min="4" max="128" />
+      </div>
+      <button (click)="resize()">Resize</button>
+    </div>
+
+    <h2>Layers</h2>
+    <div class="layer-list">
+      <button [class.active]="activeLayer() === 'ground'" (click)="setLayer('ground')">Ground</button>
+      <button [class.active]="activeLayer() === 'groundDetail'" (click)="setLayer('groundDetail')">Ground Detail</button>
+      <button [class.active]="activeLayer() === 'objects'" (click)="setLayer('objects')">Objects</button>
+      <button [class.active]="activeLayer() === 'objectsAbove'" (click)="setLayer('objectsAbove')">Objects Above</button>
+    </div>
+
+    <h2>Entidades ({{ entityList().length }})</h2>
+    <ul class="entity-tags">
+      @for (en of entityList(); track en.id) {
+        <li>{{ entityLabels[en.type] }} @ ({{ en.x }},{{ en.y }})</li>
+      }
+    </ul>
+
+    @if (selectedTileId(); as tid) {
+      <h2>Tile selecionado</h2>
+      <div class="tile-info">
+        @if (tileDefsById.get(tid); as t) {
+          <p>#{{ t.tileId }} — {{ t.name ?? 'Tile' }}</p>
+          <p>Tileset: #{{ t.tilesetId }}</p>
+          <p>Categoria: {{ t.category }}</p>
+          <p>Walkable: {{ t.physics.walkable ? 'Sim' : 'Não' }}</p>
+          <p>Layer: {{ t.layerType }}</p>
+        }
+      </div>
+    }
+
+    <button (click)="fillAll()" [disabled]="selectedTileId() == null">Preencher camada</button>
+    <p class="hint">Dica: pinte paredes (borda) e interior caminhável. Salve e aponte <code>mapId</code> numa hunt.</p>
   </section>
 </div>

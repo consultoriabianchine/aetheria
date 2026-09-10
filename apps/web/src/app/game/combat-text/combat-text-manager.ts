@@ -22,7 +22,6 @@ export interface CombatTextHealEvent {
 interface WorldPosition {
   x: number;
   y: number;
-  spriteHeight: number;
 }
 
 export class CombatTextManager {
@@ -78,7 +77,7 @@ export class CombatTextManager {
       this.entityStacks.set(entityId, stack + 1);
       const item: FloatingCombatText = {
         id: this.nextId++, entityId, value, type, damageType, critical,
-        worldX: position.x, worldY: position.y - position.spriteHeight * 0.5,
+        worldX: position.x, worldY: position.y,
         offsetX: offset, offsetY: stack % 3 * 4, createdAt: this.scene.time.now,
         duration: critical ? COMBAT_TEXT_ANIMATION.criticalDuration : COMBAT_TEXT_ANIMATION.normalDuration,
         riseDistance: critical ? COMBAT_TEXT_ANIMATION.criticalRise : COMBAT_TEXT_ANIMATION.normalRise,

@@ -1,6 +1,6 @@
 import { MAP_HEIGHT, MAP_SEED, MAP_WIDTH, MAP_Z, TILE } from '@aetheria/config';
 import { mulberry32, tileKey } from '@aetheria/shared';
-import type { MapTile } from '@aetheria/types';
+import type { MapRenderData, MapTile } from '@aetheria/types';
 
 export interface WorldMapData {
   tiles: MapTile[];
@@ -8,14 +8,15 @@ export interface WorldMapData {
   height: number;
   z: number;
   byKey: Map<string, MapTile>;
+  render?: MapRenderData;
 }
 
 /** Constrói um WorldMapData a partir de tiles (re-zona para o andar dado). */
-export function buildWorldMapData(tiles: MapTile[], width: number, height: number, z: number): WorldMapData {
+export function buildWorldMapData(tiles: MapTile[], width: number, height: number, z: number, render?: MapRenderData): WorldMapData {
   const reZed = tiles.map((t) => ({ ...t, z }));
   const byKey = new Map<string, MapTile>();
   for (const t of reZed) byKey.set(tileKey(t.x, t.y, z), t);
-  return { tiles: reZed, width, height, z, byKey };
+  return { tiles: reZed, width, height, z, byKey, render };
 }
 
 function clamp(v: number, min: number, max: number): number {

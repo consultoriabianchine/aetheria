@@ -54,6 +54,7 @@ export interface HuntEngineHooks {
   summarize(player: GamePlayer): CharacterSummary;
   getCreatureDefinition(id: string): CreatureDefinition | null;
   getMap(id: string): { width: number; height: number; tiles: import('@aetheria/types').MapTile[] } | null;
+  getMapRender(id: string): import('@aetheria/types').MapRenderData | null;
   getHunts(): HuntDefinition[];
   emitTo(socketId: string, event: string, data: unknown): void;
   getGold(characterId: string): number;
@@ -305,7 +306,10 @@ export class HuntEngine {
   private resolveMap(hunt: HuntDefinition, arena: ArenaDefinition, z: number): WorldMapData {
     if (hunt.mapId) {
       const custom = this.hooks.getMap(hunt.mapId);
-      if (custom) return buildWorldMapData(custom.tiles, custom.width, custom.height, z);
+      if (custom) {
+        const render = this.hooks.getMapRender(hunt.mapId);
+        return buildWorldMapData(custom.tiles, custom.width, custom.height, z, render ?? undefined);
+      }
     }
     return generateArenaMap(arena, z);
   }
@@ -353,6 +357,7 @@ export class HuntEngine {
       map: run.map.tiles,
       width: run.arena.width,
       height: run.arena.height,
+      render: run.map.render ?? undefined,
       hunt: this.view(run),
     });
     this.emit(run, 'hunt.started', { hunt: this.view(run) });

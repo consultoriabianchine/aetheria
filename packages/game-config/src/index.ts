@@ -15,6 +15,20 @@ export const TILE = {
   WALL: 5,
 } as const;
 
+/** Tileset padrão (seed) — ids reservados 1..6 para os tiles base. */
+export const DEFAULT_TILESET_ID = 1;
+export const DEFAULT_TILESET_SLUG = 'aetheria-default-tiles';
+
+/** Mapeia o código legado (0..5) para o tileId do tileset padrão. */
+export const LEGACY_TILE_TO_DEFAULT_ID: Record<number, number> = {
+  [TILE.GRASS]: 1,
+  [TILE.PATH]: 2,
+  [TILE.WATER]: 3,
+  [TILE.TREE]: 4,
+  [TILE.ROCK]: 5,
+  [TILE.WALL]: 6,
+} as const;
+
 /** Área de interesse transmitida para o cliente. */
 export const VIEW_DISTANCE_X = 15;
 export const VIEW_DISTANCE_Y = 11;
@@ -41,6 +55,38 @@ export const COMBAT_TEXT_ANIMATION = {
   normalFontSize: 15,
   criticalFontSize: 18,
 } as const;
+
+// ---------------------------------------------------------------------------
+// HUD de criaturas (nome, barra de vida, floating text)
+
+/**
+ * Posicionamento/animação do HUD que acompanha criaturas (nome, HP, dano).
+ * Fonte única — não espalhar valores mágicos pelo renderer.
+ * O HUD ancora no "render bounds" visual do sprite, nunca no footprint lógico.
+ */
+export const CREATURE_HUD_CONFIG = {
+  /** Distância vertical do nome acima do topo do sprite (px). */
+  nameMargin: 12,
+  /** Distância da barra de vida acima do topo do sprite (px). */
+  healthBarMargin: 4,
+  /** Distância da barra de vida acima do topo do corpo real (px). */
+  bodyTopMargin: 5,
+  /** Altura da barra de vida (px). */
+  healthBarHeight: 4,
+  /** Largura mínima/máxima da barra de vida de criaturas normais (px). */
+  minHealthBarWidth: 28,
+  maxHealthBarWidth: 80,
+  /** Largura máxima da barra de vida de bosses (px) — regra explícita. */
+  bossMaxHealthBarWidth: 120,
+  /** Fração da altura do corpo onde o dano/cura "nasce" (0=topo, 1=base). */
+  damageTextHeightRatio: 0.35,
+} as const;
+
+/** Largura da barra de vida proporcional ao sprite, limitada por min/max. */
+export function calculateCreatureHealthBarWidth(spriteWidth: number, isBoss = false): number {
+  const max = isBoss ? CREATURE_HUD_CONFIG.bossMaxHealthBarWidth : CREATURE_HUD_CONFIG.maxHealthBarWidth;
+  return Math.min(max, Math.max(CREATURE_HUD_CONFIG.minHealthBarWidth, Math.round(spriteWidth * 0.75)));
+}
 
 /** Intervalo de movimento de referência (ms por tile, com speed = 1). */
 export const BASE_MOVE_INTERVAL_MS = 200;

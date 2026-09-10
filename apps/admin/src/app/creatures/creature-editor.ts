@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild, signal } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
-import { DAMAGE_TYPES, type AnimationDirection, type AnimationSequence, type CreatureAnimationConfig, type CreatureAnimationType, type DamageAffinities, type DamageType } from '@aetheria/types';
+import { DAMAGE_TYPES, type AnimationDirection, type AnimationSequence, type CreatureAnimationConfig, type CreatureAnimationType, type CreatureVisualBounds, type DamageAffinities, type DamageType } from '@aetheria/types';
 import { ApiService, type CreatureDetail } from '../core/api.service';
 
 const ANIMATION_TYPES: CreatureAnimationType[] = ['idle', 'walk', 'attack', 'cast', 'hit', 'death', 'spawn'];
@@ -61,11 +61,20 @@ export class CreatureEditor implements OnInit, AfterViewInit, OnDestroy {
   readonly anchorY = signal(32);
   readonly offsetX = signal(0);
   readonly offsetY = signal(0);
+  readonly visualBoundsWidth = signal(32);
+  readonly visualBoundsHeight = signal(32);
+  readonly bodyWidth = signal(32);
+  readonly bodyHeight = signal(32);
+  readonly bodyOffsetX = signal(0);
+  readonly bodyOffsetY = signal(0);
 
   // preview 5x5
   readonly showGridPreview = signal(true);
   readonly showFootprint = signal(true);
   readonly showRenderBounds = signal(true);
+  readonly showVisualBounds = signal(true);
+  readonly showBody = signal(true);
+  readonly showHudAnchor = signal(true);
   readonly showAnchor = signal(true);
   readonly showProjectileOrigin = signal(true);
   readonly previewAnim = signal<CreatureAnimationType>('idle');
@@ -133,6 +142,12 @@ export class CreatureEditor implements OnInit, AfterViewInit, OnDestroy {
         this.anchorY.set(c.anchor?.y ?? c.spriteHeight);
         this.offsetX.set(c.offsetX ?? 0);
         this.offsetY.set(c.offsetY ?? 0);
+        this.visualBoundsWidth.set(c.visualBounds?.width ?? c.spriteWidth);
+        this.visualBoundsHeight.set(c.visualBounds?.height ?? c.spriteHeight);
+        this.bodyWidth.set(c.bodyWidth ?? c.visualBounds?.width ?? c.spriteWidth);
+        this.bodyHeight.set(c.bodyHeight ?? c.visualBounds?.height ?? c.spriteHeight);
+        this.bodyOffsetX.set(c.bodyOffsetX ?? 0);
+        this.bodyOffsetY.set(c.bodyOffsetY ?? 0);
         this.sequences.set(structuredClone(c.animations));
       } else {
         this.sequences.set([]);
@@ -140,6 +155,12 @@ export class CreatureEditor implements OnInit, AfterViewInit, OnDestroy {
         this.anchorY.set(this.spriteHeight());
         this.offsetX.set(0);
         this.offsetY.set(0);
+        this.visualBoundsWidth.set(this.spriteWidth());
+        this.visualBoundsHeight.set(this.spriteHeight());
+        this.bodyWidth.set(this.spriteWidth());
+        this.bodyHeight.set(this.spriteHeight());
+        this.bodyOffsetX.set(0);
+        this.bodyOffsetY.set(0);
       }
       this.footprintWidth.set(detail.footprintWidth ?? 1);
       this.footprintHeight.set(detail.footprintHeight ?? 1);
@@ -333,7 +354,7 @@ export class CreatureEditor implements OnInit, AfterViewInit, OnDestroy {
   // ---------------------------------------------------------------- save
 
   private buildConfig(): CreatureAnimationConfig {
-    return {
+    const config: CreatureAnimationConfig = {
       version: this.version() ?? 0,
       spriteWidth: this.spriteWidth(),
       spriteHeight: this.spriteHeight(),
@@ -344,6 +365,15 @@ export class CreatureEditor implements OnInit, AfterViewInit, OnDestroy {
       offsetY: this.offsetY(),
       animations: this.sequences(),
     };
+    const visualBounds: CreatureVisualBounds = { width: this.visualBoundsWidth(), height: this.visualBoundsHeight() };
+    if (visualBounds.width !== config.spriteWidth || visualBounds.height !== config.spriteHeight) {
+      config.visualBounds = visualBounds;
+    }
+    if (this.bodyWidth() !== config.spriteWidth) config.bodyWidth = this.bodyWidth();
+    if (this.bodyHeight() !== config.spriteHeight) config.bodyHeight = this.bodyHeight();
+    if (this.bodyOffsetX() !== 0) config.bodyOffsetX = this.bodyOffsetX();
+    if (this.bodyOffsetY() !== 0) config.bodyOffsetY = this.bodyOffsetY();
+    return config;
   }
 
   async save() {
@@ -380,6 +410,42 @@ export class CreatureEditor implements OnInit, AfterViewInit, OnDestroy {
   centralizeAnchor() {
     this.anchorX.set(this.spriteWidth() / 2);
     this.anchorY.set(this.spriteHeight());
+    this.dirty.set(true);
+    this.drawTilePreview();
+  }
+
+  setVisualBoundsWidth(value: number) {
+    this.visualBoundsWidth.set(Math.max(1, Math.round(value)));
+    this.dirty.set(true);
+    this.drawTilePreview();
+  }
+
+  setVisualBoundsHeight(value: number) {
+    this.visualBoundsHeight.set(Math.max(1, Math.round(value)));
+    this.dirty.set(true);
+    this.drawTilePreview();
+  }
+
+  setBodyWidth(value: number) {
+    this.bodyWidth.set(Math.max(1, Math.round(value)));
+    this.dirty.set(true);
+    this.drawTilePreview();
+  }
+
+  setBodyHeight(value: number) {
+    this.bodyHeight.set(Math.max(1, Math.round(value)));
+    this.dirty.set(true);
+    this.drawTilePreview();
+  }
+
+  setBodyOffsetX(value: number) {
+    this.bodyOffsetX.set(Math.round(value));
+    this.dirty.set(true);
+    this.drawTilePreview();
+  }
+
+  setBodyOffsetY(value: number) {
+    this.bodyOffsetY.set(Math.round(value));
     this.dirty.set(true);
     this.drawTilePreview();
   }
@@ -657,10 +723,46 @@ export class CreatureEditor implements OnInit, AfterViewInit, OnDestroy {
       ctx.strokeRect(drawX, drawY, this.spriteWidth(), this.spriteHeight());
     }
 
+    if (this.showVisualBounds() && (this.visualBoundsWidth() !== this.spriteWidth() || this.visualBoundsHeight() !== this.spriteHeight())) {
+      ctx.strokeStyle = '#aa00ff';
+      ctx.lineWidth = 1;
+      ctx.strokeRect(drawX, drawY, this.visualBoundsWidth(), this.visualBoundsHeight());
+    }
+
+    const bodyX = basePxX + this.offsetX() + this.bodyOffsetX() - this.bodyWidth() / 2;
+    const bodyY = basePxY + this.offsetY() + this.bodyOffsetY() - this.bodyHeight();
+
+    if (this.showBody() && (this.bodyWidth() !== this.spriteWidth() || this.bodyHeight() !== this.spriteHeight() || this.bodyOffsetX() !== 0 || this.bodyOffsetY() !== 0)) {
+      ctx.strokeStyle = '#ff8c00';
+      ctx.lineWidth = 1;
+      ctx.strokeRect(bodyX, bodyY, this.bodyWidth(), this.bodyHeight());
+    }
+
     const cellIndex = this.previewFrameIndex();
     if (this.sheetImage && cellIndex >= 0) {
       const r = this.frameRect(cellIndex);
       ctx.drawImage(this.sheetImage, r.sx, r.sy, r.sw, r.sh, drawX, drawY, this.spriteWidth(), this.spriteHeight());
+    }
+
+    if (this.showHudAnchor()) {
+      const bodyCenterX = basePxX + this.offsetX() + this.bodyOffsetX();
+      const hasBody = this.bodyHeight() !== this.spriteHeight();
+      const barMargin = hasBody ? 5 : 4;
+      const nameMargin = 12;
+      const barHeight = 4;
+      const barY = bodyY - barMargin;
+      const nameY = barY - barHeight - nameMargin;
+      const halfW = this.bodyWidth() / 2;
+      ctx.strokeStyle = '#00ffff';
+      ctx.lineWidth = 1;
+      ctx.setLineDash([3, 2]);
+      ctx.beginPath();
+      ctx.moveTo(bodyCenterX - halfW, barY);
+      ctx.lineTo(bodyCenterX + halfW, barY);
+      ctx.moveTo(bodyCenterX - halfW, nameY);
+      ctx.lineTo(bodyCenterX + halfW, nameY);
+      ctx.stroke();
+      ctx.setLineDash([]);
     }
 
     if (this.showAnchor()) {

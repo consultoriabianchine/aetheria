@@ -1,0 +1,150 @@
+<div class="editor-head">
+  <a routerLink="/tilesets">← Tilesets</a>
+  @if (detail(); as d) {
+    <h1>#{{ d.tilesetId }} {{ d.name }}</h1>
+  } @else if (isNew) {
+    <h1>Importar Tileset</h1>
+  }
+</div>
+
+@if (error()) {
+  <p class="error">{{ error() }}</p>
+}
+
+@if (isNew) {
+  <section class="panel upload-panel">
+    <h2>Importar spritesheet</h2>
+    <p class="hint">PNG (preferido para pixel art) ou WEBP. A imagem é recortada automaticamente em tiles de {{ tileSize() }}×{{ tileSize() }}px.</p>
+    <div class="field">
+      <label>Nome</label>
+      <input type="text" [value]="uploadName()" (input)="uploadName.set($any($event.target).value)" placeholder="Dungeon Red" />
+    </div>
+    <div class="field">
+      <label>Tamanho do tile</label>
+      <input type="number" [value]="tileSize()" (input)="tileSize.set(+$any($event.target).value)" min="8" max="256" step="16" />
+    </div>
+    <div class="row">
+      <input type="file" accept="image/png,image/webp" (change)="onFileSelected($event)" />
+      @if (saving()) { <span class="hint">Importando…</span> }
+    </div>
+  </section>
+}
+
+@if (!isNew && detail(); as d) {
+  <div class="tileset-layout">
+    <section class="panel grid-panel">
+      <div class="grid-toolbar">
+        <h2>Tiles ({{ d.tiles.length }})</h2>
+        <label class="check"><input type="checkbox" [checked]="showIds()" (change)="toggleShowIds()" /> Mostrar IDs</label>
+        <button (click)="zoomBy(-0.25)">−</button>
+        <span class="mono">{{ zoomPercent() }}%</span>
+        <button (click)="zoomBy(0.25)">+</button>
+        <button (click)="selectAll()">Selecionar todos</button>
+        <button (click)="clearSelection()">Limpar seleção</button>
+      </div>
+      <canvas #grid class="sprite-preview" (click)="onCanvasClick($event)"></canvas>
+      <p class="hint">Clique para selecionar; Shift+click para múltiplos. Dica: use Ctrl+rolagem no zoom externo se necessário.</p>
+    </section>
+
+    <section class="panel props-panel">
+      <h2>Propriedades</h2>
+      <p class="hint">{{ selectedCount() === 0 ? 'Nenhum tile selecionado.' : selectedCount() === 1 ? '1 tile selecionado.' : selectedCount() + ' tiles selecionados.' }}</p>
+
+      <div class="presets">
+        @for (p of presetList; track p.label) {
+          <button (click)="applyPreset(p)">{{ p.label }}</button>
+        }
+      </div>
+
+      <div class="field">
+        <label>Nome</label>
+        <input type="text" [value]="fName()" (input)="fName.set($any($event.target).value)" placeholder="(manter)" />
+      </div>
+      <div class="row">
+        <div class="field">
+          <label>Categoria</label>
+          <select [value]="fCategory()" (change)="fCategory.set($any($event.target).value)">
+            <option value="">(manter)</option>
+            @for (c of categories; track c) { <option [value]="c">{{ c }}</option> }
+          </select>
+        </div>
+        <div class="field">
+          <label>Layer</label>
+          <select [value]="fLayerType()" (change)="fLayerType.set($any($event.target).value)">
+            <option value="">(manter)</option>
+            @for (l of layerTypes; track l) { <option [value]="l">{{ l }}</option> }
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="field">
+          <label>Walkable</label>
+          <select [value]="fWalkable()" (change)="fWalkable.set($any($event.target).value)">
+            <option value="">(manter)</option><option value="true">Sim</option><option value="false">Não</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Blocks Movement</label>
+          <select [value]="fBlocksMovement()" (change)="fBlocksMovement.set($any($event.target).value)">
+            <option value="">(manter)</option><option value="true">Sim</option><option value="false">Não</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="field">
+          <label>Blocks Projectiles</label>
+          <select [value]="fBlocksProjectiles()" (change)="fBlocksProjectiles.set($any($event.target).value)">
+            <option value="">(manter)</option><option value="true">Sim</option><option value="false">Não</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Blocks Vision</label>
+          <select [value]="fBlocksVision()" (change)="fBlocksVision.set($any($event.target).value)">
+            <option value="">(manter)</option><option value="true">Sim</option><option value="false">Não</option>
+          </select>
+        </div>
+      </div>
+      <div class="field">
+        <label>Movement cost</label>
+        <input type="number" [value]="fMovementCost()" (input)="fMovementCost.set($any($event.target).value)" step="0.1" min="0.1" placeholder="(manter)" />
+      </div>
+      <div class="field">
+        <label>Tags (separadas por vírgula)</label>
+        <input type="text" [value]="fTags()" (input)="fTags.set($any($event.target).value)" placeholder="wall, dungeon, red" />
+      </div>
+      <div class="row">
+        <div class="field">
+          <label>Water</label>
+          <select [value]="fIsWater()" (change)="fIsWater.set($any($event.target).value)">
+            <option value="">(manter)</option><option value="true">Sim</option><option value="false">Não</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Hazard</label>
+          <select [value]="fIsHazard()" (change)="fIsHazard.set($any($event.target).value)">
+            <option value="">(manter)</option><option value="true">Sim</option><option value="false">Não</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="field">
+          <label>Stairs</label>
+          <select [value]="fIsStairs()" (change)="fIsStairs.set($any($event.target).value)">
+            <option value="">(manter)</option><option value="true">Sim</option><option value="false">Não</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Portal</label>
+          <select [value]="fIsPortal()" (change)="fIsPortal.set($any($event.target).value)">
+            <option value="">(manter)</option><option value="true">Sim</option><option value="false">Não</option>
+          </select>
+        </div>
+      </div>
+
+      @if (savedNotice()) {
+        <p class="saved">Propriedades salvas.</p>
+      }
+      <button class="primary" (click)="saveProperties()" [disabled]="saving() || selectedCount() === 0">Aplicar aos selecionados ({{ selectedCount() }})</button>
+    </section>
+  </div>
+}

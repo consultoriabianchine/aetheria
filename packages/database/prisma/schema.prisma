@@ -530,6 +530,10 @@ model Map {
   name      String
   width     Int
   height    Int
+  status    String            @default("draft")
+  version   Int               @default(1)
+  layers    Json              @default("{}")
+  entities  Json              @default("[]")
   tiles     MapTile[]
   spawns    CreatureSpawn[]
 }
@@ -546,6 +550,65 @@ model MapTile {
   map          Map    @relation(fields: [mapId], references: [id], onDelete: Cascade)
 
   @@unique([mapId, x, y, z])
+}
+
+// ---------------------------------------------------------------------------
+// Tilesets e TileDefinitions (Central de Comando). A imagem (atlas) fica em
+// SpriteAsset (BYTEA); o Tileset referencia o asset e o TileDefinition aponta
+// para um retângulo (sourceX/Y) dentro desse atlas — sem duplicar a imagem.
+// ---------------------------------------------------------------------------
+
+model Tileset {
+  tileset_id     Int              @id @default(autoincrement()) @map("tileset_id")
+  name           String
+  slug           String           @unique
+  sprite_asset_id Int             @map("sprite_asset_id")
+  tile_width     Int              @default(32) @map("tile_width")
+  tile_height    Int              @default(32) @map("tile_height")
+  columns        Int
+  rows           Int
+  enabled        Boolean          @default(true)
+  version        Int              @default(1)
+  created_at     DateTime         @default(now()) @map("created_at")
+  updated_at     DateTime         @updatedAt @map("updated_at")
+  sprite_asset   SpriteAsset      @relation(fields: [sprite_asset_id], references: [sprite_asset_id], onDelete: Cascade)
+  tiles          TileDefinition[]
+
+  @@index([enabled])
+  @@map("tilesets")
+}
+
+model TileDefinition {
+  tile_id          Int      @id @default(autoincrement()) @map("tile_id")
+  tileset_id       Int      @map("tileset_id")
+  index            Int      @map("index")
+  source_x         Int      @map("source_x")
+  source_y         Int      @map("source_y")
+  width            Int      @default(32)
+  height           Int      @default(32)
+  name             String?
+  category         String   @default("other")
+  layer_type       String   @default("ground") @map("layer_type")
+  walkable         Boolean  @default(true)
+  blocks_movement  Boolean  @default(false) @map("blocks_movement")
+  blocks_projectiles Boolean @default(false) @map("blocks_projectiles")
+  blocks_vision    Boolean  @default(false) @map("blocks_vision")
+  movement_cost    Float    @default(1) @map("movement_cost")
+  tags             Json     @default("[]")
+  is_water         Boolean  @default(false) @map("is_water")
+  is_hazard        Boolean  @default(false) @map("is_hazard")
+  is_stairs        Boolean  @default(false) @map("is_stairs")
+  is_portal        Boolean  @default(false) @map("is_portal")
+  animation        Json?
+  enabled          Boolean  @default(true)
+  created_at       DateTime @default(now()) @map("created_at")
+  updated_at       DateTime @updatedAt @map("updated_at")
+  tileset          Tileset  @relation(fields: [tileset_id], references: [tileset_id], onDelete: Cascade)
+
+  @@unique([tileset_id, index])
+  @@index([tileset_id])
+  @@index([enabled])
+  @@map("tile_definitions")
 }
 
 // ---------------------------------------------------------------------------
@@ -593,6 +656,7 @@ model SpriteAsset {
   updated_at      DateTime @updatedAt @map("updated_at")
   outfits         Outfit[]
   outfit_color_masks Outfit[] @relation("OutfitColorMask")
+  tilesets        Tileset[]
 
   @@map("sprite_assets")
 }

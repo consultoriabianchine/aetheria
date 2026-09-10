@@ -250,6 +250,12 @@
           <div class="field"><label>Anchor Y</label><input type="number" [value]="anchorY()" (input)="anchorY.set(+$any($event.target).value); dirty.set(true); drawTilePreview()" /></div>
           <div class="field"><label>Offset X</label><input type="number" [value]="offsetX()" (input)="offsetX.set(+$any($event.target).value); dirty.set(true); drawTilePreview()" /></div>
           <div class="field"><label>Offset Y</label><input type="number" [value]="offsetY()" (input)="offsetY.set(+$any($event.target).value); dirty.set(true); drawTilePreview()" /></div>
+          <div class="field"><label>Visual Bounds W</label><input type="number" [value]="visualBoundsWidth()" (input)="setVisualBoundsWidth(+$any($event.target).value)" min="1" /></div>
+          <div class="field"><label>Visual Bounds H</label><input type="number" [value]="visualBoundsHeight()" (input)="setVisualBoundsHeight(+$any($event.target).value)" min="1" /></div>
+          <div class="field"><label>Corpo (Body) W</label><input type="number" [value]="bodyWidth()" (input)="setBodyWidth(+$any($event.target).value)" min="1" /></div>
+          <div class="field"><label>Corpo (Body) H</label><input type="number" [value]="bodyHeight()" (input)="setBodyHeight(+$any($event.target).value)" min="1" /></div>
+          <div class="field"><label>Corpo Offset X</label><input type="number" [value]="bodyOffsetX()" (input)="setBodyOffsetX(+$any($event.target).value)" /></div>
+          <div class="field"><label>Corpo Offset Y</label><input type="number" [value]="bodyOffsetY()" (input)="setBodyOffsetY(+$any($event.target).value)" /></div>
         </div>
         <div class="row">
           <button type="button" (click)="centralizeAnchor()">Centralizar na Base</button>
@@ -277,6 +283,9 @@
           <label class="check"><input type="checkbox" [checked]="showGridPreview()" (change)="showGridPreview.set($any($event.target).checked); drawTilePreview()" /> Grid 32×32</label>
           <label class="check"><input type="checkbox" [checked]="showFootprint()" (change)="showFootprint.set($any($event.target).checked); drawTilePreview()" /> Footprint</label>
           <label class="check"><input type="checkbox" [checked]="showRenderBounds()" (change)="showRenderBounds.set($any($event.target).checked); drawTilePreview()" /> Render Bounds</label>
+          <label class="check"><input type="checkbox" [checked]="showVisualBounds()" (change)="showVisualBounds.set($any($event.target).checked); drawTilePreview()" /> Visual Bounds</label>
+          <label class="check"><input type="checkbox" [checked]="showBody()" (change)="showBody.set($any($event.target).checked); drawTilePreview()" /> Corpo (Body)</label>
+          <label class="check"><input type="checkbox" [checked]="showHudAnchor()" (change)="showHudAnchor.set($any($event.target).checked); drawTilePreview()" /> Nome / HP Bar</label>
           <label class="check"><input type="checkbox" [checked]="showAnchor()" (change)="showAnchor.set($any($event.target).checked); drawTilePreview()" /> Anchor</label>
           <label class="check"><input type="checkbox" [checked]="showProjectileOrigin()" (change)="showProjectileOrigin.set($any($event.target).checked); drawTilePreview()" /> Projectile Origin</label>
         </div>

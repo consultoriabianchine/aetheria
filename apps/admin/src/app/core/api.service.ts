@@ -1,5 +1,5 @@
 import { Injectable, signal } from '@angular/core';
-import type { AmmoType, CombatArchetype, CreatureAnimationConfig, CreatureAnimationConfigInput, DamageType, EquipmentSlot, HuntDefinition, ItemType, ItemVisualEffects, OutfitDefinition, WeaponType } from '@aetheria/types';
+import type { AmmoType, CombatArchetype, CreatureAnimationConfig, CreatureAnimationConfigInput, DamageType, EquipmentSlot, HuntDefinition, ItemType, ItemVisualEffects, MapData, MapEntity, MapLayerId, MapStatus, OutfitDefinition, TileCategory, TileDefinition, TileLayerType, TilesetDefinition, WeaponType } from '@aetheria/types';
 
 export interface AdminItemDefinition {
   id: string;
@@ -170,6 +170,37 @@ export interface MapTileInput {
   type: number;
 }
 
+export interface AdminTileset extends TilesetDefinition {
+  usage: number;
+}
+
+export interface AdminTilesetDetail extends TilesetDefinition {
+  asset: { fileName: string; mimeType: string; imageWidth: number; imageHeight: number } | null;
+  tiles: TileDefinition[];
+}
+
+export interface AdminStoredMap extends MapData {
+  id: string;
+}
+
+export interface TileUpdateInput {
+  tileId: number;
+  name?: string;
+  category?: TileCategory;
+  layerType?: TileLayerType;
+  walkable?: boolean;
+  blocksMovement?: boolean;
+  blocksProjectiles?: boolean;
+  blocksVision?: boolean;
+  movementCost?: number;
+  tags?: string[];
+  isWater?: boolean;
+  isHazard?: boolean;
+  isStairs?: boolean;
+  isPortal?: boolean;
+  enabled?: boolean;
+}
+
 @Injectable({ providedIn: 'root' })
 export class ApiService {
   readonly baseUrl = signal(localStorage.getItem('admin.baseUrl') ?? 'http://localhost:4000');
@@ -269,11 +300,11 @@ export class ApiService {
     return this.request('/admin/maps', { headers: this.headers() });
   }
 
-  getMap(id: string): Promise<StoredMap> {
+  getMap(id: string): Promise<AdminStoredMap> {
     return this.request(`/admin/maps/${id}`, { headers: this.headers() });
   }
 
-  saveMap(input: { id?: string; name: string; width: number; height: number; tiles: MapTileInput[] }): Promise<MapSummary> {
+  saveMap(input: { id?: string; name: string; width: number; height: number; status?: MapStatus; layers: Record<MapLayerId, (number | null)[]>; entities: MapEntity[] }): Promise<MapSummary> {
     return this.request('/admin/maps', {
       method: 'POST',
       headers: this.headers(),
@@ -283,6 +314,62 @@ export class ApiService {
 
   deleteMap(id: string): Promise<{ ok: boolean }> {
     return this.request(`/admin/maps/${id}`, { method: 'DELETE', headers: this.headers() });
+  }
+
+  listTilesets(): Promise<AdminTileset[]> {
+    return this.request('/admin/tilesets', { headers: this.headers() });
+  }
+
+  getTileset(id: number): Promise<AdminTilesetDetail> {
+    return this.request(`/admin/tilesets/${id}`, { headers: this.headers() });
+  }
+
+  uploadTileset(file: File, name: string, tileWidth = 32, tileHeight = 32): Promise<AdminTilesetDetail> {
+    return new Promise((resolve, reject) => {
+      const image = new Image();
+      image.onload = () => {
+        void file.arrayBuffer().then((buffer) => {
+          let binary = '';
+          const bytes = new Uint8Array(buffer);
+          const chunk = 0x8000;
+          for (let i = 0; i < bytes.length; i += chunk) {
+            binary += String.fromCharCode(...bytes.subarray(i, i + chunk));
+          }
+          return this.request('/admin/tilesets', {
+            method: 'POST',
+            headers: this.headers(),
+            body: JSON.stringify({
+              name,
+              fileName: file.name,
+              mimeType: file.type || 'image/png',
+              width: image.width,
+              height: image.height,
+              tileWidth,
+              tileHeight,
+              dataBase64: btoa(binary),
+            }),
+          });
+        }).then((result) => resolve(result as AdminTilesetDetail)).catch(reject);
+      };
+      image.onerror = () => reject(new Error('Imagem inválida'));
+      image.src = URL.createObjectURL(file);
+    });
+  }
+
+  updateTileset(id: number, input: { name?: string; enabled?: boolean }): Promise<AdminTilesetDetail> {
+    return this.request(`/admin/tilesets/${id}`, { method: 'PUT', headers: this.headers(), body: JSON.stringify(input) });
+  }
+
+  deleteTileset(id: number): Promise<{ ok: boolean }> {
+    return this.request(`/admin/tilesets/${id}`, { method: 'DELETE', headers: this.headers() });
+  }
+
+  updateTiles(tilesetId: number, tiles: TileUpdateInput[]): Promise<TileDefinition[]> {
+    return this.request(`/admin/tilesets/${tilesetId}/tiles`, { method: 'PUT', headers: this.headers(), body: JSON.stringify({ tiles }) });
+  }
+
+  tilesetImageUrl(tilesetId: number): string {
+    return `${this.baseUrl()}/assets/tilesets/${tilesetId}`;
   }
 
   listHunts(): Promise<HuntDefinition[]> {

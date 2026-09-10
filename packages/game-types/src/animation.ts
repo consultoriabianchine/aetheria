@@ -60,6 +60,17 @@ export interface AnimationFrameReference {
   durationMs?: number;
 }
 
+/**
+ * Caixa visual estável da criatura (máximo das animações), distinta do frame
+ * atual da spritesheet e do footprint lógico. Usada como âncora do HUD
+ * (nome, barra de vida, status, floating text) para evitar "jitter" quando
+ * animações têm tamanhos diferentes (ex.: walk 64×64, attack 96×64).
+ */
+export interface CreatureVisualBounds {
+  width: number;
+  height: number;
+}
+
 /** Sequência de uma animação para uma direção. */
 export interface AnimationSequence {
   animation: CreatureAnimationType;
@@ -83,6 +94,20 @@ export interface CreatureAnimationConfig {
   offsetX?: number;
   offsetY?: number;
   sockets?: VisualSockets;
+  /** Caixa visual estável (máximo das animações) para ancorar o HUD. */
+  visualBounds?: CreatureVisualBounds;
+  /**
+   * Corpo real visível da criatura (exclui pixels transparentes do frame).
+   * Ancora nome/HP/dano. Ex.: sprite 64×64 com corpo de 40×40.
+   */
+  bodyWidth?: number;
+  bodyHeight?: number;
+  /**
+   * Deslocamento fino do HUD (nome/HP/dano) relativo ao corpo, para alinhar
+   * com a cabeça/corpo visível. Em px, assinado: X>0 = direita, Y>0 = baixo.
+   */
+  bodyOffsetX?: number;
+  bodyOffsetY?: number;
   animations: AnimationSequence[];
 }
 
@@ -107,6 +132,11 @@ const visualSocketsSchema = z.object({
   projectileOrigin: spriteSocketSchema.optional(),
 });
 
+const creatureVisualBoundsSchema = z.object({
+  width: z.number().int().positive(),
+  height: z.number().int().positive(),
+});
+
 export const animationSequenceSchema = z.object({
   animation: z.enum(CREATURE_ANIMATION_TYPES),
   direction: z.enum(ANIMATION_DIRECTIONS),
@@ -127,6 +157,11 @@ export const creatureAnimationConfigSchema = z.object({
   offsetX: z.number().int().optional(),
   offsetY: z.number().int().optional(),
   sockets: visualSocketsSchema.optional(),
+  visualBounds: creatureVisualBoundsSchema.optional(),
+  bodyWidth: z.number().int().positive().optional(),
+  bodyHeight: z.number().int().positive().optional(),
+  bodyOffsetX: z.number().int().optional(),
+  bodyOffsetY: z.number().int().optional(),
   animations: z.array(animationSequenceSchema),
 });
 

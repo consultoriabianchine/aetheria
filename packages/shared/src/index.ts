@@ -67,3 +67,5 @@ export {
   spriteTopPx,
   tileBase,
 } from './entity-anchor';
+
+export { createMapLayers, createTileLayer, resizeTileLayer, tileIndex } from './tilemap';

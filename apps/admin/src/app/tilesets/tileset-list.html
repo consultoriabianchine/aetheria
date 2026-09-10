@@ -1,0 +1,46 @@
+<h1>Tilesets</h1>
+<p class="sub">Central de Comando — biblioteca de spritesheets/tilesets para o Tilemap Editor.</p>
+
+<div class="toolbar">
+  <button class="primary" (click)="create()">+ Importar Tileset</button>
+  <button (click)="load()" [disabled]="loading()">Atualizar</button>
+</div>
+
+@if (error()) {
+  <p class="error">{{ error() }}</p>
+}
+@if (loading()) {
+  <p>Carregando…</p>
+}
+
+@if (!loading() && !error()) {
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Nome</th>
+        <th>Dimensão</th>
+        <th>Tiles</th>
+        <th>Uso em mapas</th>
+        <th>Enabled</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (t of tilesets(); track t.tilesetId) {
+        <tr>
+          <td class="mono">#{{ t.tilesetId }}</td>
+          <td>{{ t.name }}</td>
+          <td class="mono">{{ t.columns * t.tileWidth }}×{{ t.rows * t.tileHeight }}</td>
+          <td class="mono">{{ t.columns * t.rows }}</td>
+          <td class="mono">{{ t.usage }}</td>
+          <td>{{ t.enabled ? 'Sim' : 'Não' }}</td>
+          <td>
+            <a [routerLink]="['/tilesets', t.tilesetId]">Editar</a>
+            <button class="danger" (click)="remove(t.tilesetId, t.name)">Excluir</button>
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+}

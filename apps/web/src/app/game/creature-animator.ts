@@ -19,6 +19,11 @@ export interface AnimConfig {
   anchor?: { x: number; y: number };
   offsetX?: number;
   offsetY?: number;
+  visualBounds?: { width: number; height: number };
+  bodyWidth?: number;
+  bodyHeight?: number;
+  bodyOffsetX?: number;
+  bodyOffsetY?: number;
   sockets?: {
     feet?: { x: number; y: number };
     center?: { x: number; y: number };

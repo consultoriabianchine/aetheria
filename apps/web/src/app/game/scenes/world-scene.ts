@@ -1,8 +1,8 @@
 import Phaser from 'phaser';
 import { SERVER_EVENTS } from '@aetheria/protocol';
-import { APPEARANCE_PALETTE, MOVE_INTERVAL_MS, TILE, TILE_SIZE_PX } from '@aetheria/config';
-import { anchorOrigin, resolveAnchor, resolveSockets, spriteTopPx, tileBase } from '@aetheria/shared';
-import type { CreatureState, DamageType, Direction, ItemImpactVisual, ItemProjectileVisual, MapTile, PlayerAppearance, Position, ProjectileDirection } from '@aetheria/types';
+import { APPEARANCE_PALETTE, CREATURE_HUD_CONFIG, MOVE_INTERVAL_MS, TILE, TILE_SIZE_PX, calculateCreatureHealthBarWidth } from '@aetheria/config';
+import { anchorOrigin, resolveAnchor, resolveSockets, tileBase } from '@aetheria/shared';
+import type { CreatureState, DamageType, Direction, ItemImpactVisual, ItemProjectileVisual, MapRenderData, MapTile, PlayerAppearance, Position, ProjectileDirection, TileRenderDef } from '@aetheria/types';
 import { WsService } from '../../core/ws.service';
 import { WS_URL } from '../../core/ws.service';
 import { GameState } from '../game-state';
@@ -13,8 +13,7 @@ import { recolorCanvas } from '../outfit-recolor';
 import { CombatTextManager } from '../combat-text/combat-text-manager';
 
 const TILE_SIZE = TILE_SIZE_PX;
-const BAR_WIDTH = 30;
-const BAR_HEIGHT = 6;
+const BAR_HEIGHT = CREATURE_HUD_CONFIG.healthBarHeight;
 
 interface EntityInfo {
   name: string;
@@ -29,6 +28,18 @@ interface ResolvedSockets {
   projectileOrigin: { x: number; y: number };
 }
 
+/** Corpo visual atual/estável da criatura (âncora do HUD, não o footprint). */
+interface RenderBounds {
+  left: number;
+  top: number;
+  right: number;
+  bottom: number;
+  width: number;
+  height: number;
+  centerX: number;
+  centerY: number;
+}
+
 interface RenderedEntity {
   kind: string;
   image: Phaser.GameObjects.Image;
@@ -36,8 +47,18 @@ interface RenderedEntity {
   healthBack?: Phaser.GameObjects.Image;
   healthFront?: Phaser.GameObjects.Image;
   healthBorder?: Phaser.GameObjects.Image;
+  healthBarWidth: number;
+  health: number;
+  maxHealth: number;
   spriteWidth: number;
   spriteHeight: number;
+  visualBoundsWidth: number;
+  visualBoundsHeight: number;
+  bodyWidth: number;
+  bodyHeight: number;
+  bodyOffsetX: number;
+  bodyOffsetY: number;
+  hasBody: boolean;
   anchorX: number;
   anchorY: number;
   offsetX: number;
@@ -95,12 +116,35 @@ function healthColor(ratio: number): number {
   return 0x7d1a1a;
 }
 
+/**
+ * Corpo real visível da criatura (bodyWidth/bodyHeight), alinhado pelos pés.
+ * Âncora de nome, barra de HP e dano. Exclui pixels transparentes do frame
+ * (ex.: sprite 64×64 com corpo 40×40). Fallback: caixa do sprite.
+ */
+function bodyBoundsOf(ent: RenderedEntity): RenderBounds {
+  const width = ent.bodyWidth > 0 ? ent.bodyWidth : ent.spriteWidth;
+  const height = ent.bodyHeight > 0 ? ent.bodyHeight : ent.spriteHeight;
+  const centerX = ent.baseX + ent.offsetX + ent.bodyOffsetX;
+  const top = ent.baseY + ent.offsetY - height + ent.bodyOffsetY;
+  return {
+    left: centerX - width / 2,
+    top,
+    right: centerX + width / 2,
+    bottom: top + height,
+    width,
+    height,
+    centerX,
+    centerY: top + height / 2,
+  };
+}
+
 export class WorldScene extends Phaser.Scene {
   private ws!: WsService;
   private state!: GameState;
   private assets!: CreatureAssetService;
   private outfits!: OutfitAssetService;
   private tileImages: Phaser.GameObjects.Image[] = [];
+  private tileRenderDefs = new Map<number, TileRenderDef>();
   private entities = new Map<string, RenderedEntity>();
   private entityInfo = new Map<string, EntityInfo>();
   private loot = new Map<string, Phaser.GameObjects.Image>();
@@ -136,7 +180,12 @@ export class WorldScene extends Phaser.Scene {
     this.buildTextures();
     this.combatText = new CombatTextManager(this, (entityId) => {
       const entity = this.entities.get(entityId) ?? (entityId === this.selfId ? this.selfEntity : null);
-      return entity ? { x: entity.baseX + entity.offsetX, y: entity.baseY + entity.offsetY, spriteHeight: entity.spriteHeight } : null;
+      if (!entity) return null;
+      const bounds = bodyBoundsOf(entity);
+      return {
+        x: bounds.centerX,
+        y: bounds.top + bounds.height * CREATURE_HUD_CONFIG.damageTextHeightRatio,
+      };
     });
 
     this.state.sceneEvents$.subscribe((e) => {
@@ -167,15 +216,15 @@ export class WorldScene extends Phaser.Scene {
   private handleEvent(event: string, data: unknown) {
     switch (event) {
       case SERVER_EVENTS.ENTER_WORLD: {
-        const w = data as { character: { id: string; name: string; position: Position; appearance?: PlayerAppearance; health: number; maxHealth: number; movementSpeed?: number }; map: MapTile[]; width: number; height: number };
+        const w = data as { character: { id: string; name: string; position: Position; appearance?: PlayerAppearance; health: number; maxHealth: number; movementSpeed?: number }; map: MapTile[]; width: number; height: number; render?: MapRenderData };
         this.selfMoveSpeed = w.character.movementSpeed ?? MOVE_INTERVAL_MS;
-        this.resetScene(w.map, w.character.id, w.character.name, w.character.position, w.width, w.height, w.character.appearance, w.character.health, w.character.maxHealth);
+        this.resetScene(w.map, w.character.id, w.character.name, w.character.position, w.width, w.height, w.character.appearance, w.character.health, w.character.maxHealth, w.render);
         break;
       }
       case SERVER_EVENTS.ENTER_ARENA: {
-        const w = data as { character: { id: string; name: string; position: Position; appearance?: PlayerAppearance; health: number; maxHealth: number; movementSpeed?: number }; members?: { id: string; name: string; position: Position; appearance?: PlayerAppearance; health: number; maxHealth: number; movementSpeed?: number }[]; map: MapTile[]; width: number; height: number };
+        const w = data as { character: { id: string; name: string; position: Position; appearance?: PlayerAppearance; health: number; maxHealth: number; movementSpeed?: number }; members?: { id: string; name: string; position: Position; appearance?: PlayerAppearance; health: number; maxHealth: number; movementSpeed?: number }[]; map: MapTile[]; width: number; height: number; render?: MapRenderData };
         this.selfMoveSpeed = w.character.movementSpeed ?? MOVE_INTERVAL_MS;
-        this.resetScene(w.map, w.character.id, w.character.name, w.character.position, w.width, w.height, w.character.appearance, w.character.health, w.character.maxHealth);
+        this.resetScene(w.map, w.character.id, w.character.name, w.character.position, w.width, w.height, w.character.appearance, w.character.health, w.character.maxHealth, w.render);
         for (const member of w.members ?? []) {
           if (member.id === this.selfId) continue;
           this.spawnPlayerEntity(member.id, member.name, member.position, member.appearance, member.health, member.maxHealth, member.movementSpeed ?? MOVE_INTERVAL_MS);
@@ -218,7 +267,7 @@ export class WorldScene extends Phaser.Scene {
           this.selfAnim.animator.setWalkCycleMs(this.selfMoveSpeed);
         }
         const rendered = this.entities.get(this.selfId);
-        if (rendered && rendered.healthFront) this.setBar(rendered.healthFront, s.health, s.maxHealth);
+        if (rendered && rendered.healthFront) this.setBar(rendered.healthFront, s.health, s.maxHealth, rendered.healthBarWidth);
         break;
       }
       case SERVER_EVENTS.CREATURE_SPAWN: {
@@ -341,7 +390,7 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
 
   // ------------------------------------------------------------------ world
 
-  private resetScene(map: MapTile[], selfId: string, selfName: string, selfPosition: Position, width?: number, height?: number, appearance?: PlayerAppearance, health = 0, maxHealth = 0) {
+  private resetScene(map: MapTile[], selfId: string, selfName: string, selfPosition: Position, width?: number, height?: number, appearance?: PlayerAppearance, health = 0, maxHealth = 0, render?: MapRenderData) {
     for (const [id, ent] of this.entities) {
       ent.image.destroy();
       ent.label.destroy();
@@ -364,7 +413,7 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
     this.selfId = selfId;
     this.mapBounds = { width, height };
     this.state.clearTarget();
-    this.buildMap(map);
+    this.buildMap(map, width, height, render);
     this.spawnSelf(selfId, selfName, selfPosition, appearance, health, maxHealth);
     this.applyCameraBounds();
   }
@@ -407,14 +456,61 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
     }
   }
 
-  private buildMap(map: MapTile[]) {
+  private buildMap(map: MapTile[], width?: number, height?: number, render?: MapRenderData) {
     for (const img of this.tileImages) img.destroy();
     this.tileImages = [];
+    this.tileRenderDefs.clear();
+    if (render?.layers && width) {
+      void this.buildTilesetMap(render, width);
+      return;
+    }
     for (const tile of map) {
       const x = tile.x * TILE_SIZE + TILE_SIZE / 2;
       const y = tile.y * TILE_SIZE + TILE_SIZE / 2;
       const img = this.add.image(x, y, `tile_${tile.type}`).setDepth(0).setOrigin(0.5);
       this.tileImages.push(img);
+    }
+    void height;
+  }
+
+  private async buildTilesetMap(render: MapRenderData, width: number) {
+    for (const def of render.tiles) this.tileRenderDefs.set(def.tileId, def);
+    const tilesetMeta = new Map<number, { columns: number; tileWidth: number; tileHeight: number }>();
+    await this.loadTilesetSheets(
+      render.tilesets.map((t) => {
+        tilesetMeta.set(t.tilesetId, { columns: t.columns, tileWidth: t.tileWidth, tileHeight: t.tileHeight });
+        return { key: `tileset_${t.tilesetId}`, url: `${WS_URL}${t.imageUrl}`, frameWidth: t.tileWidth, frameHeight: t.tileHeight };
+      }),
+    );
+
+    const layerDepth: Record<'ground' | 'groundDetail' | 'objects' | 'objectsAbove', (y: number) => number> = {
+      ground: () => 0,
+      groundDetail: () => 0.01,
+      objects: (y) => y * 0.01 + 1,
+      objectsAbove: () => 1000,
+    };
+
+    const layers = render.layers;
+    for (const layerId of ['ground', 'groundDetail', 'objects', 'objectsAbove'] as const) {
+      const arr = layers[layerId];
+      if (!Array.isArray(arr)) continue;
+      for (let i = 0; i < arr.length; i++) {
+        const tileId = arr[i];
+        if (tileId == null) continue;
+        const def = this.tileRenderDefs.get(tileId);
+        if (!def) continue;
+        const meta = tilesetMeta.get(def.tilesetId);
+        if (!meta) continue;
+        const frame = (def.sourceY / meta.tileHeight) * meta.columns + def.sourceX / meta.tileWidth;
+        const cy = Math.floor(i / width);
+        const x = (i % width) * TILE_SIZE;
+        const y = cy * TILE_SIZE;
+        const img = this.add
+          .image(x, y, `tileset_${def.tilesetId}`, frame)
+          .setOrigin(0, 0)
+          .setDepth(layerDepth[layerId](cy));
+        this.tileImages.push(img);
+      }
     }
   }
 
@@ -488,6 +584,17 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
     });
   }
 
+  private loadTilesetSheets(entries: { key: string; url: string; frameWidth: number; frameHeight: number }[]): Promise<void> {
+    const missing = entries.filter((e) => !this.textures.exists(e.key));
+    if (missing.length === 0) return Promise.resolve();
+    for (const e of missing) this.load.spritesheet(e.key, e.url, { frameWidth: e.frameWidth, frameHeight: e.frameHeight });
+    return new Promise((resolve) => {
+      this.load.once(Phaser.Loader.Events.COMPLETE, () => resolve());
+      this.load.once(Phaser.Loader.Events.FILE_LOAD_ERROR, () => resolve());
+      this.load.start();
+    });
+  }
+
   private async buildRecoloredOutfit(textureKey: string, data: OutfitAnimData, colors: PlayerAppearance['colors']): Promise<void> {
     const baseKey = `outfit_base_${data.outfitId}`;
     const maskKey = `outfit_mask_${data.outfitId}`;
@@ -521,7 +628,7 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
     const color = kind === 'monster' ? 0xe04d4d : kind === 'npc' ? 0xf0c14b : 0x4d86ff;
     const image = this.add.image(base.x, base.y, 'circle').setTint(color).setOrigin(0.5, 1).setDisplaySize(TILE_SIZE, TILE_SIZE);
     const label = this.add
-      .text(base.x, base.y - TILE_SIZE - 6, name, {
+      .text(base.x, base.y, name, {
         fontFamily: 'Arial, Verdana, Tahoma, sans-serif',
         fontStyle: 'bold',
         fontSize: '11px',
@@ -529,6 +636,7 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
         stroke: '#000000',
         strokeThickness: 1,
         resolution: this.textResolution(),
+        align: 'center',
       })
       .setOrigin(0.5);
     const depth = position.y * 0.01 + 1;
@@ -538,8 +646,18 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
       kind,
       image,
       label,
+      healthBarWidth: calculateCreatureHealthBarWidth(TILE_SIZE),
+      health: 0,
+      maxHealth: 0,
       spriteWidth: TILE_SIZE,
       spriteHeight: TILE_SIZE,
+      visualBoundsWidth: TILE_SIZE,
+      visualBoundsHeight: TILE_SIZE,
+      bodyWidth: TILE_SIZE,
+      bodyHeight: TILE_SIZE,
+      bodyOffsetX: 0,
+      bodyOffsetY: 0,
+      hasBody: false,
       anchorX: anchor.x,
       anchorY: anchor.y,
       offsetX: 0,
@@ -553,44 +671,74 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
   }
 
   private attachHealthBar(rendered: RenderedEntity, health: number, maxHealth: number) {
+    rendered.health = health;
+    rendered.maxHealth = maxHealth;
     const depth = rendered.image.depth;
-    const x = rendered.baseX + rendered.offsetX - BAR_WIDTH / 2;
-    const y = spriteTopPx(rendered.baseY, rendered.anchorY, rendered.offsetY) - 3;
-    const back = this.add.image(x, y, 'barBack').setOrigin(0, 0.5).setDepth(depth + 0.02);
-    const front = this.add.image(x, y, 'barFront').setOrigin(0, 0.5).setDepth(depth + 0.03);
-    const border = this.add.image(x, y, 'barBorder').setOrigin(0, 0.5).setDepth(depth + 0.04);
+    const bounds = bodyBoundsOf(rendered);
+    const w = rendered.healthBarWidth;
+    const x = bounds.centerX - w / 2;
+    const y = bounds.top - this.barTopMargin(rendered);
+    const back = this.add.image(x, y, this.barTexture('barBack', w)).setOrigin(0, 0.5).setDepth(depth + 0.02);
+    const front = this.add.image(x, y, this.barTexture('barFront', w)).setOrigin(0, 0.5).setDepth(depth + 0.03);
+    const border = this.add.image(x, y, this.barTexture('barBorder', w)).setOrigin(0, 0.5).setDepth(depth + 0.04);
     rendered.healthBack = back;
     rendered.healthFront = front;
     rendered.healthBorder = border;
-    this.setBar(front, health, maxHealth);
+    this.setBar(rendered.healthFront, health, maxHealth, w);
   }
 
-  /** Reposiciona nome/barra de vida acima do sprite (altura pode variar). */
+  /** Margem entre o topo do corpo e a barra de HP (body vs sprite). */
+  private barTopMargin(rendered: RenderedEntity): number {
+    return rendered.hasBody ? CREATURE_HUD_CONFIG.bodyTopMargin : CREATURE_HUD_CONFIG.healthBarMargin;
+  }
+
+  /** Reposiciona nome/barra de vida acima do corpo real usando o body bounds. */
   private repositionWorldUi(rendered: RenderedEntity) {
-    const top = spriteTopPx(rendered.baseY, rendered.anchorY, rendered.offsetY);
-    const x = rendered.baseX + rendered.offsetX;
-    if (rendered.healthBack && rendered.healthFront) {
-      const barY = top - 3;
-      rendered.label.setPosition(x, barY - 11);
-      rendered.healthBack.setPosition(x - BAR_WIDTH / 2, barY);
-      rendered.healthFront.setPosition(x - BAR_WIDTH / 2, barY);
-      rendered.healthBorder?.setPosition(x - BAR_WIDTH / 2, barY);
+    const bounds = bodyBoundsOf(rendered);
+    const x = bounds.centerX;
+    if (rendered.healthBack && rendered.healthFront && rendered.healthBorder) {
+      const w = rendered.healthBarWidth;
+      const barY = bounds.top - this.barTopMargin(rendered);
+      const nameY = barY - CREATURE_HUD_CONFIG.healthBarHeight - CREATURE_HUD_CONFIG.nameMargin;
+      rendered.label.setPosition(x, nameY);
+      rendered.healthBack.setPosition(x - w / 2, barY);
+      rendered.healthFront.setPosition(x - w / 2, barY);
+      rendered.healthBorder.setPosition(x - w / 2, barY);
     } else {
-      rendered.label.setPosition(x, top - 6);
+      rendered.label.setPosition(x, bounds.top - CREATURE_HUD_CONFIG.nameMargin);
     }
   }
 
-  /** Aplica dimensões/anchor/offset/sockets de um AnimConfig a uma entidade. */
+  /** Aplica dimensões/anchor/offset/sockets/bounds de um AnimConfig a uma entidade. */
   private applyEntityVisual(rendered: RenderedEntity, config: AnimConfig) {
     const anchor = resolveAnchor(config.spriteWidth, config.spriteHeight, config.anchor);
     rendered.spriteWidth = config.spriteWidth;
     rendered.spriteHeight = config.spriteHeight;
+    rendered.visualBoundsWidth = config.visualBounds?.width ?? config.spriteWidth;
+    rendered.visualBoundsHeight = config.visualBounds?.height ?? config.spriteHeight;
+    rendered.bodyWidth = config.bodyWidth ?? rendered.visualBoundsWidth;
+    rendered.bodyHeight = config.bodyHeight ?? rendered.visualBoundsHeight;
+    rendered.bodyOffsetX = config.bodyOffsetX ?? 0;
+    rendered.bodyOffsetY = config.bodyOffsetY ?? 0;
+    rendered.hasBody = config.bodyHeight !== undefined;
+    rendered.healthBarWidth = calculateCreatureHealthBarWidth(rendered.bodyWidth);
     rendered.anchorX = anchor.x;
     rendered.anchorY = anchor.y;
     rendered.offsetX = config.offsetX ?? 0;
     rendered.offsetY = config.offsetY ?? 0;
     rendered.sockets = resolveSockets(config.spriteWidth, config.spriteHeight, config.sockets);
+    this.refitHealthBar(rendered);
     this.applyVisualTransform(rendered);
+  }
+
+  /** Atualiza a textura/preenchimento da barra quando a largura muda. */
+  private refitHealthBar(rendered: RenderedEntity) {
+    if (!rendered.healthBack || !rendered.healthFront || !rendered.healthBorder) return;
+    const w = rendered.healthBarWidth;
+    rendered.healthBack.setTexture(this.barTexture('barBack', w));
+    rendered.healthFront.setTexture(this.barTexture('barFront', w));
+    rendered.healthBorder.setTexture(this.barTexture('barBorder', w));
+    this.setBar(rendered.healthFront, rendered.health, rendered.maxHealth, w);
   }
 
   /** Desenha o sprite relativamente à base (anchor + offset) e reposiciona a UI. */
@@ -821,14 +969,18 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
       info.maxHealth = maxHealth;
     }
     const rendered = this.entities.get(id);
+    if (rendered) {
+      rendered.health = health;
+      rendered.maxHealth = maxHealth;
+    }
     if (rendered && rendered.healthFront) {
-      this.setBar(rendered.healthFront, health, maxHealth);
+      this.setBar(rendered.healthFront, health, maxHealth, rendered.healthBarWidth);
     }
   }
 
-  private setBar(front: Phaser.GameObjects.Image, health: number, maxHealth: number) {
+  private setBar(front: Phaser.GameObjects.Image, health: number, maxHealth: number, width: number) {
     const ratio = Math.max(0, Math.min(1, health / Math.max(1, maxHealth)));
-    front.setDisplaySize(Math.max(1, ratio * BAR_WIDTH), BAR_HEIGHT);
+    front.setDisplaySize(Math.max(1, ratio * width), BAR_HEIGHT);
     front.setTint(healthColor(ratio));
   }
 
@@ -914,7 +1066,11 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
     });
   }
 
-  /** Desenha tile (amarelo), footprint (verde), render bounds (vermelho) e anchor (azul). */
+  /**
+   * Debug: tile (amarelo), footprint (verde), render bounds (vermelho),
+   * visual bounds estável (roxo), corpo real (laranja), anchor (azul) e
+   * âncoras do HUD (nome/HP) a partir do topo do corpo.
+   */
   private drawEntityDebug() {
     const g = this.debugGraphics;
     g.clear();
@@ -923,12 +1079,24 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
       const tileY = Math.floor(ent.baseY / TILE_SIZE) * TILE_SIZE;
       const topLeftX = ent.baseX + ent.offsetX - ent.anchorX;
       const topLeftY = ent.baseY + ent.offsetY - ent.anchorY;
+      const body = bodyBoundsOf(ent);
       g.lineStyle(1, 0xffff00, 0.7).strokeRect(tileX, tileY, TILE_SIZE, TILE_SIZE);
       g.lineStyle(1, 0x00ff00, 0.9).strokeRect(tileX, tileY, TILE_SIZE * ent.footprintWidth, TILE_SIZE * ent.footprintHeight);
       g.lineStyle(1, 0xff0000, 0.9).strokeRect(topLeftX, topLeftY, ent.spriteWidth, ent.spriteHeight);
+      if (ent.visualBoundsWidth !== ent.spriteWidth || ent.visualBoundsHeight !== ent.spriteHeight) {
+        g.lineStyle(1, 0xaa00ff, 0.9).strokeRect(ent.baseX + ent.offsetX - ent.visualBoundsWidth / 2, ent.baseY + ent.offsetY - ent.visualBoundsHeight, ent.visualBoundsWidth, ent.visualBoundsHeight);
+      }
+      if (ent.bodyWidth !== ent.spriteWidth || ent.bodyHeight !== ent.spriteHeight || ent.bodyOffsetX !== 0 || ent.bodyOffsetY !== 0) {
+        g.lineStyle(1, 0xff8c00, 0.9).strokeRect(body.left, body.top, body.width, body.height);
+      }
       g.lineStyle(1, 0x0000ff, 0.9);
       g.strokeLineShape(new Phaser.Geom.Line(ent.baseX + ent.offsetX - 4, ent.baseY + ent.offsetY, ent.baseX + ent.offsetX + 4, ent.baseY + ent.offsetY));
       g.strokeLineShape(new Phaser.Geom.Line(ent.baseX + ent.offsetX, ent.baseY + ent.offsetY - 4, ent.baseX + ent.offsetX, ent.baseY + ent.offsetY + 4));
+      g.lineStyle(1, 0x00ffff, 0.7);
+      const barY = body.top - this.barTopMargin(ent);
+      const nameY = barY - CREATURE_HUD_CONFIG.healthBarHeight - CREATURE_HUD_CONFIG.nameMargin;
+      g.strokeLineShape(new Phaser.Geom.Line(body.left, barY, body.right, barY));
+      g.strokeLineShape(new Phaser.Geom.Line(body.left, nameY, body.right, nameY));
     }
   }
 
@@ -1087,9 +1255,6 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
 
     this.makeCircle('circle', '#ffffff');
     this.makeLoot();
-    this.makeBar('barBack', '#20242a');
-    this.makeBar('barFront', '#ffffff');
-    this.makeBarBorder('barBorder');
   }
 
   /** Aplica HD (linear/anti-aliasing) ou pixel art (nearest) a todas as texturas. */
@@ -1182,22 +1347,31 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
     tex.refresh();
   }
 
-  private makeBar(key: string, color: string) {
-    const tex = this.textures.createCanvas(key, BAR_WIDTH, BAR_HEIGHT);
-    if (!tex) return;
-    const ctx = tex.getContext();
-    ctx.fillStyle = color;
-    ctx.fillRect(0, 0, BAR_WIDTH, BAR_HEIGHT);
-    tex.refresh();
-  }
-
-  private makeBarBorder(key: string) {
-    const tex = this.textures.createCanvas(key, BAR_WIDTH, BAR_HEIGHT);
-    if (!tex) return;
-    const ctx = tex.getContext();
-    ctx.strokeStyle = '#000000';
-    ctx.lineWidth = 1;
-    ctx.strokeRect(0.5, 0.5, BAR_WIDTH - 1, BAR_HEIGHT - 1);
-    tex.refresh();
+  /**
+   * Retorna a textura da barra de vida para uma largura (cacheada por tipo+largura).
+   * A barra de vida escala proporcionalmente ao sprite, então a textura é
+   * gerada sob demanda em vez de fixa.
+   */
+  private barTexture(kind: 'barBack' | 'barFront' | 'barBorder', width: number): string {
+    const w = Math.max(1, Math.round(width));
+    const key = `${kind}_${w}`;
+    if (this.textures.exists(key)) return key;
+    const tex = this.textures.createCanvas(key, w, BAR_HEIGHT);
+    if (tex) {
+      const ctx = tex.getContext();
+      if (kind === 'barBack') {
+        ctx.fillStyle = '#20242a';
+        ctx.fillRect(0, 0, w, BAR_HEIGHT);
+      } else if (kind === 'barFront') {
+        ctx.fillStyle = '#ffffff';
+        ctx.fillRect(0, 0, w, BAR_HEIGHT);
+      } else {
+        ctx.strokeStyle = '#000000';
+        ctx.lineWidth = 1;
+        ctx.strokeRect(0.5, 0.5, w - 1, BAR_HEIGHT - 1);
+      }
+      tex.refresh();
+    }
+    return key;
   }
 }
