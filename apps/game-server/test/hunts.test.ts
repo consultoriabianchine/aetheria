@@ -121,7 +121,7 @@ function makeHuntEngine(): {
 
   const snapshot = (p: GamePlayer | null): CreatureTarget | null =>
     p
-      ? { id: p.id, position: p.position, socketId: p.socketId, health: p.health, defense: p.defenseBase }
+      ? { id: p.id, position: p.position, socketId: p.socketId, health: p.health, defense: p.defenseBase, archetype: p.archetype }
       : null;
 
   const hooks: HuntEngineHooks = {

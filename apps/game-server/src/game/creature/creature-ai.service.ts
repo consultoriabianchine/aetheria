@@ -1,10 +1,16 @@
 import {
+  BLOCKED_RETARGET_THRESHOLD_MS,
   CREATURE_REGENERATION_PER_TICK,
   CREATURE_STUCK_LIMIT,
   FLEE_PREFERRED_DIST,
   PATH_RECALC_TARGET_DELTA,
   PATH_RECALCULATION_INTERVAL,
+  RANGED_PREFERRED_MIN,
+  TARGET_PRIORITY,
+  TARGET_STICKINESS_BONUS,
+  TARGET_UNREACHABLE_PENALTY,
   TICK_MS,
+  TILE_RESERVE_TTL_MS,
   WANDER_CHANCE_PER_TICK,
   WANDER_MAX_DIST,
   WANDER_MAX_STEPS,
@@ -12,7 +18,7 @@ import {
   debugCreatures,
 } from '@aetheria/config';
 import { samePosition, tileDistance } from '@aetheria/shared';
-import type { CreatureState, Position } from '@aetheria/types';
+import type { CombatArchetype, CreatureState, Position } from '@aetheria/types';
 import { CreatureEntity } from './creature.entity';
 import { ALL_DIRECTIONS, DIRECTION_DELTAS, Direction, directionFromDelta } from './direction';
 import { MovementService } from './movement.service';
@@ -25,6 +31,7 @@ export interface CreatureTarget {
   socketId: string | null;
   health: number;
   defense: number;
+  archetype: CombatArchetype;
 }
 
 export interface CreatureAIHooks {
@@ -88,6 +95,14 @@ export class CreatureAIService {
     const ids = [creature.id];
     if (target) ids.push(target.id);
     return ids;
+  }
+
+  /** Footprint lógico da criatura (default 1×1). */
+  private fp(creature: CreatureEntity): { w: number; h: number } {
+    return {
+      w: Math.max(1, creature.definition.footprintWidth ?? 1),
+      h: Math.max(1, creature.definition.footprintHeight ?? 1),
+    };
   }
 
   // ------------------------------------------------------------ estado
@@ -156,42 +171,53 @@ export class CreatureAIService {
 
   // ------------------------------------------------------------ detecção
 
-  /** Jogadores no mesmo andar dentro de viewRange (distância Chebyshev). */
-  playersInView(creature: CreatureEntity, range: number): CreatureTarget[] {
-    const out: CreatureTarget[] = [];
+  /** true se a criatura ataca à distância (ranged). */
+  private isRanged(creature: CreatureEntity): boolean {
+    return creature.definition.attackRange > 1;
+  }
+
+  /** Semente de tie-break estável por criatura (varia caminhos de custo igual). */
+  private tieBreakSeed(creature: CreatureEntity): number {
+    let h = 0;
+    for (let i = 0; i < creature.id.length; i++) h = (h * 31 + creature.id.charCodeAt(i)) | 0;
+    return h + creature.preferredSide;
+  }
+
+  /** true se há caminho (ou alcance) para atacar o alvo. */
+  private canReach(creature: CreatureEntity, target: CreatureTarget): boolean {
+    if (tileDistance(creature.position, target.position) <= creature.definition.attackRange) return true;
+    const path = findPath(this.movement, {
+      start: creature.position,
+      goal: target.position,
+      exceptIds: [creature.id, target.id],
+      maxCost: this.aggressive ? 1000 : creature.definition.chaseRange + creature.definition.viewRange,
+      tieBreak: this.tieBreakSeed(creature),
+      footprint: this.fp(creature),
+    });
+    return path !== null && path.length > 0;
+  }
+
+  /** Seleciona o melhor alvo por score (prioridade de classe + alcance + stickiness). */
+  private selectBestTarget(creature: CreatureEntity): CreatureTarget | null {
+    let best: CreatureTarget | null = null;
+    let bestScore = -Infinity;
     for (const p of this.hooks.getPlayers()) {
       if (p.health <= 0) continue;
       if (p.position.z !== creature.position.z) continue;
-      if (tileDistance(creature.position, p.position) <= range) out.push(p);
-    }
-    return out;
-  }
-
-  private nearestPlayerInView(creature: CreatureEntity, range: number): CreatureTarget | null {
-    let best: CreatureTarget | null = null;
-    let bestDist = Infinity;
-    for (const p of this.playersInView(creature, range)) {
-      const d = tileDistance(creature.position, p.position);
-      if (d < bestDist) {
-        bestDist = d;
+      if (!this.aggressive && tileDistance(creature.position, p.position) > creature.definition.viewRange) continue;
+      const priority = TARGET_PRIORITY[p.archetype] ?? 0;
+      const distance = tileDistance(creature.position, p.position);
+      const stickiness = p.id === creature.targetId ? TARGET_STICKINESS_BONUS : 0;
+      const reachable = this.canReach(creature, p);
+      const score = priority + stickiness - distance - (reachable ? 0 : TARGET_UNREACHABLE_PENALTY);
+      if (score > bestScore) {
+        bestScore = score;
         best = p;
       }
     }
-    return best;
-  }
-
-  /** Jogador mais próximo no mesmo andar, sem limite de alcance (modo agressivo). */
-  private nearestPlayer(creature: CreatureEntity): CreatureTarget | null {
-    let best: CreatureTarget | null = null;
-    let bestDist = Infinity;
-    for (const p of this.hooks.getPlayers()) {
-      if (p.health <= 0) continue;
-      if (p.position.z !== creature.position.z) continue;
-      const d = tileDistance(creature.position, p.position);
-      if (d < bestDist) {
-        bestDist = d;
-        best = p;
-      }
+    if (best) {
+      creature.debugScore = bestScore;
+      creature.debugTargetPos = { ...best.position };
     }
     return best;
   }
@@ -206,18 +232,16 @@ export class CreatureAIService {
       target = null;
       creature.targetId = null;
     }
-    if (!target) {
-      const detected = this.aggressive
-        ? this.nearestPlayer(creature)
-        : creature.definition.canChase
-          ? this.nearestPlayerInView(creature, creature.definition.viewRange)
-          : null;
-      if (detected) {
-        creature.targetId = detected.id;
-        return detected;
-      }
+    if (target) return target;
+
+    // Sem alvo atual (ou morto): seleciona o melhor candidato.
+    const detected = this.aggressive || creature.definition.canChase ? this.selectBestTarget(creature) : null;
+    if (detected) {
+      creature.targetId = detected.id;
+      return detected;
     }
-    return target;
+    void now;
+    return null;
   }
 
   // ------------------------------------------------------------ IDLE
@@ -248,6 +272,7 @@ export class CreatureAIService {
         goal,
         exceptIds: this.exceptIds(creature),
         maxCost: WANDER_MAX_DIST * 3,
+        footprint: this.fp(creature),
       });
       if (path && path.length > 0) {
         creature.state = 'WANDER';
@@ -293,28 +318,88 @@ export class CreatureAIService {
     }
 
     const distToTarget = tileDistance(creature.position, target.position);
-    if (distToTarget <= creature.definition.attackRange) {
-      this.faceToward(creature, target.position);
-      this.switchState(creature, 'ATTACK', now);
+
+    if (this.isRanged(creature)) {
+      this.updateChaseRanged(creature, target, now, distToTarget);
       return;
     }
 
-    if (!this.aggressive) {
-      const distToSpawn = tileDistance(creature.position, creature.spawnPosition);
-      if (distToSpawn > creature.definition.chaseRange) {
-        creature.targetId = null;
-        if (creature.definition.returnToSpawn) {
-          this.switchState(creature, 'RETURN', now);
-        } else {
-          this.switchState(creature, 'IDLE', now);
-        }
-        return;
+    if (distToTarget <= creature.definition.attackRange) {
+      this.faceToward(creature, target.position);
+      this.switchState(creature, 'ATTACK', now);
+      creature.blockedSince = 0;
+      return;
+    }
+
+    if (!this.aggressive && tileDistance(creature.position, creature.spawnPosition) > creature.definition.chaseRange) {
+      creature.targetId = null;
+      if (creature.definition.returnToSpawn) {
+        this.switchState(creature, 'RETURN', now);
+      } else {
+        this.switchState(creature, 'IDLE', now);
       }
+      return;
     }
 
     this.ensurePath(creature, target.position, now, this.exceptIds(creature, target));
-    const moved = this.stepAlongPath(creature, now, this.exceptIds(creature, target));
-    if (!moved) this.attemptGreedyStep(creature, target.position, now, this.exceptIds(creature, target));
+    this.stepAndHandleBlock(creature, target, now);
+  }
+
+  /** Chase de criaturas ranged: mantém distância preferida (não cola no alvo). */
+  private updateChaseRanged(creature: CreatureEntity, target: CreatureTarget, now: number, distToTarget: number) {
+    if (distToTarget > creature.definition.attackRange) {
+      this.ensurePath(creature, target.position, now, this.exceptIds(creature, target));
+      this.stepAndHandleBlock(creature, target, now);
+      return;
+    }
+    if (distToTarget < RANGED_PREFERRED_MIN) {
+      this.retreatStep(creature, target.position, now, this.exceptIds(creature, target));
+      return;
+    }
+    this.faceToward(creature, target.position);
+    this.switchState(creature, 'ATTACK', now);
+    creature.blockedSince = 0;
+  }
+
+  /** Um passo no path; rastreia bloqueio persistente e reavalia o alvo. */
+  private stepAndHandleBlock(creature: CreatureEntity, target: CreatureTarget, now: number) {
+    const exceptIds = this.exceptIds(creature, target);
+    const moved = this.stepAlongPath(creature, now, exceptIds);
+    if (moved) {
+      creature.blockedSince = 0;
+      return;
+    }
+    if (!creature.blockedSince) creature.blockedSince = now;
+    this.attemptGreedyStep(creature, target.position, now, exceptIds);
+    if (now - creature.blockedSince > BLOCKED_RETARGET_THRESHOLD_MS) {
+      creature.targetId = null;
+      creature.blockedSince = 0;
+      creature.path = [];
+      creature.pathIndex = 0;
+    }
+  }
+
+  /** Passo greedy para longe da ameaça (ranged perto demais). */
+  private retreatStep(creature: CreatureEntity, threat: Position, now: number, exceptIds: Iterable<string>): boolean {
+    if (now < creature.lastMoveAt) return false;
+    const fp = this.fp(creature);
+    const cur = Math.hypot(creature.position.x - threat.x, creature.position.y - threat.y);
+    let bestDir: Direction | null = null;
+    let bestGain = 0;
+    for (const dir of ALL_DIRECTIONS) {
+      if (!this.movement.canMove(creature.position, dir, exceptIds, fp)) continue;
+      const next = this.movement.step(creature.position, dir);
+      const gain = Math.hypot(next.x - threat.x, next.y - threat.y) - cur;
+      if (gain > bestGain) {
+        bestGain = gain;
+        bestDir = dir;
+      }
+    }
+    if (!bestDir) return false;
+    const goal = this.movement.step(creature.position, bestDir);
+    this.movement.reserve(goal, creature.id, TILE_RESERVE_TTL_MS, fp);
+    this.applyMove(creature, bestDir, now);
+    return true;
   }
 
   /** Recalcula o caminho apenas quando necessário. */
@@ -322,7 +407,7 @@ export class CreatureAIService {
     const needRecalc =
       creature.path.length === 0 ||
       creature.pathIndex >= creature.path.length ||
-      now - creature.lastPathCalcAt > PATH_RECALCULATION_INTERVAL ||
+      now - creature.lastPathCalcAt > PATH_RECALCULATION_INTERVAL + creature.repathJitterMs ||
       (creature.lastChaseTargetPos &&
         tileDistance(creature.lastChaseTargetPos, goal) >= PATH_RECALC_TARGET_DELTA) ||
       creature.stuckCount >= CREATURE_STUCK_LIMIT;
@@ -334,6 +419,8 @@ export class CreatureAIService {
       goal,
       exceptIds,
       maxCost: this.aggressive ? 1000 : creature.definition.chaseRange + creature.definition.viewRange,
+      tieBreak: this.tieBreakSeed(creature),
+      footprint: this.fp(creature),
     });
     creature.path = path ?? [];
     creature.pathIndex = 0;
@@ -352,6 +439,10 @@ export class CreatureAIService {
     }
     const dist = tileDistance(creature.position, target.position);
     if (dist > creature.definition.attackRange) {
+      this.switchState(creature, 'CHASE', now);
+      return;
+    }
+    if (this.isRanged(creature) && dist < RANGED_PREFERRED_MIN) {
       this.switchState(creature, 'CHASE', now);
       return;
     }
@@ -426,6 +517,7 @@ export class CreatureAIService {
         goal,
         exceptIds: this.exceptIds(creature),
         maxCost: FLEE_PREFERRED_DIST * 3,
+        footprint: this.fp(creature),
       });
       if (path && path.length > 0) return path;
     }
@@ -445,6 +537,7 @@ export class CreatureAIService {
         goal: creature.spawnPosition,
         exceptIds: this.exceptIds(creature),
         maxCost: creature.definition.chaseRange * 2,
+        footprint: this.fp(creature),
       });
       creature.path = path ?? [];
       creature.pathIndex = 0;
@@ -463,19 +556,30 @@ export class CreatureAIService {
     if (!goal) return false;
     const dir = directionFromDelta(sign(goal.x - creature.position.x), sign(goal.y - creature.position.y));
     if (!dir) return false;
-    if (this.movement.canMove(creature.position, dir, exceptIds)) {
+    const fp = this.fp(creature);
+    if (!this.movement.reserve(goal, creature.id, TILE_RESERVE_TTL_MS, fp)) {
+      creature.stuckCount++;
+      this.giveUpPathIfStuck(creature);
+      return false;
+    }
+    if (this.movement.canMove(creature.position, dir, exceptIds, fp)) {
       this.applyMove(creature, dir, now);
       creature.pathIndex++;
       creature.stuckCount = 0;
       return true;
     }
+    this.movement.releaseReservation(goal, creature.id, fp);
     creature.stuckCount++;
+    this.giveUpPathIfStuck(creature);
+    return false;
+  }
+
+  private giveUpPathIfStuck(creature: CreatureEntity) {
     if (creature.stuckCount >= CREATURE_STUCK_LIMIT) {
       creature.path = [];
       creature.pathIndex = 0;
       creature.stuckCount = 0;
     }
-    return false;
   }
 
   /** Movimento greedy de fallback (quando não há caminho calculado). */
@@ -490,11 +594,13 @@ export class CreatureAIService {
       const db = Math.abs(angleDiff(Math.atan2(DIRECTION_DELTAS[b].dy, DIRECTION_DELTAS[b].dx), idealAngle));
       return da - db;
     });
+    const fp = this.fp(creature);
     for (const dir of ordered) {
-      if (this.movement.canMove(creature.position, dir, exceptIds)) {
-        this.applyMove(creature, dir, now);
-        return;
-      }
+      const next = this.movement.step(creature.position, dir);
+      if (!this.movement.canMove(creature.position, dir, exceptIds, fp)) continue;
+      this.movement.reserve(next, creature.id, TILE_RESERVE_TTL_MS, fp);
+      this.applyMove(creature, dir, now);
+      return;
     }
   }
 
@@ -505,7 +611,9 @@ export class CreatureAIService {
 
   private applyMove(creature: CreatureEntity, dir: Direction, now: number) {
     const from = { ...creature.position };
-    creature.position = this.movement.step(from, dir);
+    const to = this.movement.step(from, dir);
+    this.movement.commitMove(creature.id, from, to, this.fp(creature));
+    creature.position = to;
     creature.facing = dir;
     creature.lastMoveAt = now + creature.definition.movementSpeed;
     const payload: Record<string, unknown> = {
@@ -516,7 +624,13 @@ export class CreatureAIService {
       state: creature.state,
       timestamp: now,
     };
-    if (debugCreatures()) payload.path = creature.path.slice(creature.pathIndex);
+    if (debugCreatures()) {
+      payload.path = creature.path.slice(creature.pathIndex);
+      payload.targetId = creature.targetId;
+      payload.blocked = creature.blockedSince > 0;
+      payload.targetPosition = creature.debugTargetPos;
+      payload.score = creature.debugScore;
+    }
     this.hooks.broadcast('creature.move', payload);
   }
 }

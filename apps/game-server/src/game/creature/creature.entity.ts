@@ -30,10 +30,21 @@ export class CreatureEntity {
   lastAttackAt = 0;
   lastPathCalcAt = 0;
 
+  /** Offset individual de decisão (ms) — quebra a sincronização do pack. */
+  decisionOffsetMs = 0;
+  /** Jitter individual do intervalo de repath (ms). */
+  repathJitterMs = 0;
+  /** Tendência de contorno (-1 esquerda, 0 neutro, +1 direita). */
+  preferredSide: -1 | 0 | 1 = 0;
+
   wanderSteps = 0;
   wanderStartedAt = 0;
   stuckCount = 0;
   lastChaseTargetPos: Position | null = null;
+  blockedSince = 0;
+
+  debugScore = 0;
+  debugTargetPos: Position | null = null;
 
   respawnAt: number | null = null;
   respawnTimeMs = MONSTER_RESPAWN_MS;

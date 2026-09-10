@@ -53,6 +53,7 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   readonly hoveredItemId = signal<string | null>(null);
   readonly itemTooltipX = signal(0);
   readonly itemTooltipY = signal(0);
+  readonly itemContextMenu = signal<{ x: number; y: number; itemIndex: number } | null>(null);
   readonly colorSlots = ['head', 'primary', 'secondary', 'detail'] as const;
   readonly palette = APPEARANCE_PALETTE;
   readonly backpackSize = INVENTORY_SIZE;
@@ -486,6 +487,26 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
     this.ws.send({ type: 'rotation.attack.set', preset: 'HUNT', characterId, slots });
   }
 
+  private draggedItem: { container: 'backpack' | 'loot'; index: number } | null = null;
+  onItemDragStart(event: DragEvent, container: 'backpack' | 'loot', index: number) {
+    this.hideItemTooltip();
+    this.draggedItem = { container, index };
+    event.dataTransfer?.setData('text/plain', `${container}:${index}`);
+    if (event.dataTransfer) event.dataTransfer.effectAllowed = 'move';
+  }
+  onItemDrop(event: DragEvent, container: 'backpack' | 'loot', index: number) {
+    event.preventDefault();
+    this.hideItemTooltip();
+    const source = this.draggedItem;
+    this.draggedItem = null;
+    if (!source || (source.container === container && source.index === index)) return;
+    this.state.moveInventory(source.container, source.index, container, index);
+  }
+  onItemDragEnd() {
+    this.hideItemTooltip();
+    this.draggedItem = null;
+  }
+
   hotbarMemberName(characterId: string): string {
     return this.state.party().members.find((m) => m.id === characterId)?.name ?? this.state.self()?.name ?? 'Personagem';
   }
@@ -532,6 +553,30 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
 
   onUnequip(slot: string) {
     this.state.unequip(slot);
+  }
+
+  openItemContextMenu(event: MouseEvent, itemIndex: number, itemId: string) {
+    event.preventDefault();
+    event.stopPropagation();
+    const def = this.itemCatalog.get(itemId);
+    if (!def?.slot) return;
+    const members = Math.max(1, this.partyMembers().length);
+    const menuWidth = 220;
+    const menuHeight = 36 + members * 34;
+    const x = Math.max(8, Math.min(event.clientX, window.innerWidth - menuWidth - 8));
+    const y = Math.max(8, Math.min(event.clientY, window.innerHeight - menuHeight - 8));
+    this.itemContextMenu.set({ x, y, itemIndex });
+  }
+
+  closeItemContextMenu() {
+    this.itemContextMenu.set(null);
+  }
+
+  equipToMember(characterId: string) {
+    const menu = this.itemContextMenu();
+    if (!menu) return;
+    this.state.equip(menu.itemIndex, characterId);
+    this.closeItemContextMenu();
   }
 
   closeDialog() {

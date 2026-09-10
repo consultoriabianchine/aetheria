@@ -1,7 +1,7 @@
 import { tileKey } from '@aetheria/shared';
 import type { Position } from '@aetheria/types';
 import { ALL_DIRECTIONS, DIRECTION_DELTAS, Direction } from './direction';
-import { MovementService } from './movement.service';
+import { MovementService, type Footprint, UNIT_FOOTPRINT } from './movement.service';
 
 /** Nó do A*: posição em grade + custos + pai para reconstrução do caminho. */
 export interface PathNode {
@@ -23,6 +23,10 @@ export interface PathRequest {
   maxIterations?: number;
   /** Custo máximo aceitável (distância ~ Chebyshev). */
   maxCost?: number;
+  /** Semente de tie-break: varia a escolha entre caminhos de custo igual. */
+  tieBreak?: number;
+  /** Footprint lógico do agente (default 1×1). */
+  footprint?: Footprint;
 }
 
 function heuristic(a: Position, b: Position): number {
@@ -49,6 +53,17 @@ function reconstruct(node: PathNode): Position[] {
 }
 
 const ALL_DIRECTIONS_LIST: Direction[] = ALL_DIRECTIONS;
+
+/** Chave de tie-break determinística por nó + semente (varia caminhos de custo igual). */
+function tieValue(node: { x: number; y: number }, seed: number): number {
+  return ((node.x * 73856093) ^ (node.y * 19349663) ^ (seed * 83492791)) >>> 0;
+}
+
+/** true se `a` é estritamente melhor que `b` (menor f, desempate por tie-break). */
+function isBetter(a: PathNode, b: PathNode, seed: number): boolean {
+  if (a.f !== b.f) return a.f < b.f;
+  return tieValue(a, seed) < tieValue(b, seed);
+}
 
 /**
  * A* sobre a grade x,y,z. Considera paredes, obstáculos, criaturas e jogadores
@@ -78,7 +93,7 @@ export function findPath(movement: MovementService, req: PathRequest): Position[
     if (open.size > maxIter) return null;
     let best: PathNode | null = null;
     for (const node of open.values()) {
-      if (!best || node.f < best.f) best = node;
+      if (!best || isBetter(node, best, req.tieBreak ?? 0)) best = node;
     }
     const node = best as PathNode;
     open.delete(nodeKey(node));
@@ -90,8 +105,7 @@ export function findPath(movement: MovementService, req: PathRequest): Position[
     for (const dir of ALL_DIRECTIONS_LIST) {
       const delta = DIRECTION_DELTAS[dir];
       const next = { x: node.x + delta.dx, y: node.y + delta.dy, z: node.z };
-      if (!movement.isWalkable(next)) continue;
-      if (!movement.canOccupy(next, req.exceptIds)) continue;
+      if (!movement.canOccupy(next, req.exceptIds, req.footprint ?? UNIT_FOOTPRINT)) continue;
       if (delta.dx !== 0 && delta.dy !== 0) {
         const sideA = { x: node.x + delta.dx, y: node.y, z: node.z };
         const sideB = { x: node.x, y: node.y + delta.dy, z: node.z };

@@ -6,7 +6,7 @@ import { MovementService } from '../src/game/creature/movement.service';
 import { findPath } from '../src/game/creature/pathfinding';
 import { Direction } from '../src/game/creature/direction';
 import type { WorldMapData } from '../src/game/engine/world-map';
-import type { CreatureDefinition, MapTile, Position } from '@aetheria/types';
+import type { CreatureDefinition, CombatArchetype, MapTile, Position } from '@aetheria/types';
 import { tileKey, tileDistance } from '@aetheria/shared';
 
 /** Mundo pequeno e aberto (tudo grama) para testes determinísticos. */
@@ -51,8 +51,8 @@ function makeDefinition(overrides: Partial<CreatureDefinition> = {}): CreatureDe
   };
 }
 
-function makePlayer(id: string, position: Position, health = 100): CreatureTarget {
-  return { id, position, socketId: id + '-sock', health, defense: 0 };
+function makePlayer(id: string, position: Position, health = 100, archetype: CombatArchetype = 'warrior'): CreatureTarget {
+  return { id, position, socketId: id + '-sock', health, defense: 0, archetype };
 }
 
 interface Harness {
@@ -68,9 +68,9 @@ function makeHarness(
   def: CreatureDefinition,
   position: Position,
   players: CreatureTarget[] = [],
-  options: { aggressive?: boolean } = {},
+  options: { aggressive?: boolean; world?: WorldMapData } = {},
 ): Harness {
-  const world = makeWorld();
+  const world = options.world ?? makeWorld();
   const movement = new MovementService(world);
   const creatures: CreatureEntity[] = [];
   const broadcasts: { event: string; data: Record<string, unknown> }[] = [];
@@ -309,6 +309,72 @@ describe('CreatureAIService', () => {
       for (let now = 0; now < 20000 && h.creature.state !== 'ATTACK'; now += 100) step(h, now);
       expect(h.creature.state).toBe('ATTACK');
       expect(h.creature.state).not.toBe('RETURN');
+    });
+  });
+
+  describe('prioridade de alvo', () => {
+    it('prioriza Warrior sobre Archer e Mage (mesma distância)', () => {
+      const h = makeHarness(makeDefinition(), { x: 5, y: 5, z: 0 }, [
+        makePlayer('mage', { x: 2, y: 5, z: 0 }, 100, 'mage'),
+        makePlayer('archer', { x: 8, y: 5, z: 0 }, 100, 'archer'),
+        makePlayer('warrior', { x: 5, y: 8, z: 0 }, 100, 'warrior'),
+      ], { aggressive: true });
+      step(h, 0);
+      expect(h.creature.targetId).toBe('warrior');
+    });
+
+    it('troca para Archer quando Warrior é inacessível', () => {
+      const world = makeWorld(9, 9);
+      for (let y = 0; y < 9; y++) world.byKey.get(tileKey(7, y, 0))!.walkable = false;
+      const h = makeHarness(makeDefinition(), { x: 2, y: 4, z: 0 }, [
+        makePlayer('warrior', { x: 8, y: 4, z: 0 }, 100, 'warrior'),
+        makePlayer('archer', { x: 2, y: 8, z: 0 }, 100, 'archer'),
+      ], { aggressive: true, world });
+      step(h, 0);
+      expect(h.creature.targetId).toBe('archer');
+    });
+
+    it('troca para Mage quando Warrior e Archer são inacessíveis', () => {
+      const world = makeWorld(9, 9);
+      for (let y = 0; y < 9; y++) world.byKey.get(tileKey(7, y, 0))!.walkable = false;
+      for (let x = 0; x < 9; x++) world.byKey.get(tileKey(x, 1, 0))!.walkable = false;
+      const h = makeHarness(makeDefinition(), { x: 2, y: 4, z: 0 }, [
+        makePlayer('warrior', { x: 8, y: 4, z: 0 }, 100, 'warrior'),
+        makePlayer('archer', { x: 2, y: 0, z: 0 }, 100, 'archer'),
+        makePlayer('mage', { x: 2, y: 6, z: 0 }, 100, 'mage'),
+      ], { aggressive: true, world });
+      step(h, 0);
+      expect(h.creature.targetId).toBe('mage');
+    });
+
+    it('mantém o alvo atual (stickiness) enquanto ele continua válido', () => {
+      const h = makeHarness(makeDefinition(), { x: 5, y: 5, z: 0 }, [
+        makePlayer('archer', { x: 8, y: 5, z: 0 }, 100, 'archer'),
+        makePlayer('warrior', { x: 5, y: 9, z: 0 }, 100, 'warrior'),
+      ], { aggressive: true });
+      h.creature.targetId = 'archer';
+      step(h, 0);
+      expect(h.creature.targetId).toBe('archer');
+    });
+  });
+
+  describe('ranged positioning', () => {
+    it('ranged mantém distância preferida em vez de colar no alvo', () => {
+      const h = makeHarness(makeDefinition({ attackRange: 5, movementSpeed: 1 }), { x: 5, y: 5, z: 0 }, [
+        makePlayer('p1', { x: 5, y: 6, z: 0 }),
+      ], { aggressive: true });
+      for (let now = 0; now < 5000 && h.creature.state !== 'ATTACK'; now += 100) step(h, now);
+      expect(h.creature.state).toBe('ATTACK');
+      expect(tileDistance(h.creature.position, { x: 5, y: 6, z: 0 })).toBeGreaterThanOrEqual(3);
+    });
+
+    it('melee aproxima até ficar adjacente ao alvo', () => {
+      const h = makeHarness(makeDefinition({ attackRange: 1, movementSpeed: 1 }), { x: 5, y: 5, z: 0 }, [
+        makePlayer('p1', { x: 5, y: 9, z: 0 }),
+      ], { aggressive: true });
+      for (let now = 0; now < 5000 && h.creature.state !== 'ATTACK'; now += 100) step(h, now);
+      expect(h.creature.state).toBe('ATTACK');
+      expect(tileDistance(h.creature.position, { x: 5, y: 9, z: 0 })).toBe(1);
     });
   });
 });

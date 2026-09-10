@@ -85,6 +85,11 @@ export class GameGateway implements OnGatewayConnection, OnGatewayDisconnect {
     void this.engine.handleUnequip(socket.id, payload.slot, payload.characterId);
   }
 
+  @SubscribeMessage('inventory.move')
+  onInventoryMove(socket: Socket, payload: { from: 'backpack' | 'loot'; fromIndex: number; to: 'backpack' | 'loot'; toIndex: number }) {
+    void this.engine.handleInventoryMove(socket.id, payload.from, payload.fromIndex, payload.to, payload.toIndex);
+  }
+
   @SubscribeMessage('inventory.expandLootPouch')
   onExpandLootPouch(socket: Socket) {
     this.engine.handleExpandLootPouch(socket.id);

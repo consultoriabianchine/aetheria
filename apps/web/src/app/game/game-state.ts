@@ -443,6 +443,10 @@ export class GameState {
     this.ws.send({ type: 'inventory.unequip', slot, characterId });
   }
 
+  moveInventory(from: 'backpack' | 'loot', fromIndex: number, to: 'backpack' | 'loot', toIndex: number) {
+    this.ws.send({ type: 'inventory.move', from, fromIndex, to, toIndex });
+  }
+
   expandLootPouch() {
     this.ws.send({ type: 'inventory.expandLootPouch' });
   }

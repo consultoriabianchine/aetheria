@@ -59,6 +59,7 @@ import { CreatureEntity } from '../creature/creature.entity';
 import { CreatureManager } from '../creature/creature-manager.service';
 import { GameLoop } from '../creature/game-loop';
 import { MovementService } from '../creature/movement.service';
+import { OccupancyGrid } from '../creature/occupancy-grid';
 import { HuntEngine, HuntRun } from '../hunts/hunt-engine';
 import { MapRegistry } from '../map/map-registry.service';
 import { HuntRegistry } from '../hunts/hunt-registry.service';
@@ -101,6 +102,7 @@ export class GameEngine implements OnModuleDestroy {
   private lastSaveAt = Date.now();
 
   private movement: MovementService;
+  private occupancy = new OccupancyGrid();
   private creatures: CreatureManager;
   private ai: CreatureAIService;
   private playerAI = new PlayerCombatAIService();
@@ -146,7 +148,11 @@ export class GameEngine implements OnModuleDestroy {
     this.abilityRegistry = abilityRegistry ?? new AbilityRegistry(prisma as never);
     this.outfitRegistry = outfitRegistry;
     this.creatureData = new CreatureDataService(prisma ?? null);
-    this.movement = new MovementService(this.world, (position, exceptIds) => this.isOccupied(position, exceptIds));
+    this.movement = new MovementService(
+      this.world,
+      (position, exceptIds) => this.occupancy.isOccupied(position, exceptIds),
+      this.occupancy,
+    );
     this.creatures = new CreatureManager(this.movement);
     const hooks: CreatureAIHooks = {
       movement: this.movement,
@@ -376,6 +382,7 @@ export class GameEngine implements OnModuleDestroy {
     player.recomputeSpeed(getItemDef);
     this.players.set(player.id, player);
     this.playerBySocket.set(socketId, player.id);
+    this.movement.occupy(player.position, player.id);
     if (this.prisma) {
       const slots = await this.prisma.characterAttackRotationSlot.findMany({ where: { character_id: player.id, preset: 'HUNT' }, orderBy: { slot_position: 'asc' } });
       this.attackRotations.set(player.id, slots.map((slot) => ({ abilityId: slot.ability_id ?? undefined, enabled: slot.enabled, minTargets: slot.min_targets ?? undefined })));
@@ -518,6 +525,7 @@ export class GameEngine implements OnModuleDestroy {
       if (stored && stored.accountId === player.accountId) this.materializeCompanion(stored);
     }
     const memberIds = [player.id, ...companionIds.filter((id) => this.players.has(id))];
+    for (const id of memberIds) this.movement.releaseEntity(id);
     const result = this.hunts.startHunt(player.id, memberIds, huntId, loopEnabled, Date.now());
     if (!result.ok) {
       this.emitTo(socketId, 'error', { message: this.huntErrorLabel(result.error) });
@@ -730,6 +738,7 @@ export class GameEngine implements OnModuleDestroy {
 
   private removeCompanionFromWorld(characterId: string) {
     this.players.delete(characterId);
+    this.movement.releaseEntity(characterId);
     this.hunts.removeRun(characterId);
     this.regenEventReadyAt.delete(characterId);
     this.moveEventReadyAt.delete(characterId);
@@ -804,6 +813,7 @@ export class GameEngine implements OnModuleDestroy {
         player.targetId = null;
         player.moveDir = null;
         this.moveEventReadyAt.delete(player.id);
+        this.movement.occupy(player.position, player.id);
         this.emitTo(player.socketId, 'game.enterWorld', {
           character: this.toSummary(player),
           map: this.world.tiles,
@@ -863,6 +873,7 @@ export class GameEngine implements OnModuleDestroy {
     const player = this.players.get(characterId);
     if (!player) return;
     this.players.delete(characterId);
+    this.movement.releaseEntity(characterId);
     this.hunts.removeRun(characterId);
     this.huntEventReadyAt.delete(characterId);
     this.regenEventReadyAt.delete(characterId);
@@ -1162,6 +1173,48 @@ export class GameEngine implements OnModuleDestroy {
     await this.emitPartyState(leader);
   }
 
+  async handleInventoryMove(socketId: string, from: 'backpack' | 'loot', fromIndex: number, to: 'backpack' | 'loot', toIndex: number) {
+    const player = this.playerForSocket(socketId);
+    if (!player) return;
+    if (fromIndex < 0 || toIndex < 0 || !Number.isInteger(fromIndex) || !Number.isInteger(toIndex)) return;
+    const storage = this.storageFor(player);
+    this.ensureLootPouchCapacity(storage);
+    const source = from === 'loot' ? storage.lootPouch : storage.inventory;
+    const target = to === 'loot' ? storage.lootPouch : storage.inventory;
+    if (fromIndex >= source.length || toIndex >= target.length) return;
+    if (from === 'loot' && fromIndex >= storage.lootPouchSize) return;
+    if (to === 'loot' && toIndex >= storage.lootPouchSize) return;
+    const srcStack = source[fromIndex];
+    if (!srcStack) return;
+    const dstStack = target[toIndex];
+    const def = getItemDef(srcStack.itemId);
+    if (dstStack && dstStack.itemId === srcStack.itemId && (def?.stackable ?? true)) {
+      dstStack.quantity += srcStack.quantity;
+      source[fromIndex] = null;
+    } else {
+      source[fromIndex] = dstStack ?? null;
+      target[toIndex] = srcStack;
+    }
+    this.compactContainer(source);
+    if (target !== source) this.compactContainer(target);
+    await this.store.saveAccountStorage(storage.toStored());
+    this.emitInventory(player);
+  }
+
+  /** Remove lacunas de um container, alinhando os itens para o início. */
+  private compactContainer(container: (ItemStack | null)[]) {
+    let write = 0;
+    for (let read = 0; read < container.length; read++) {
+      const stack = container[read];
+      if (!stack) continue;
+      if (write !== read) {
+        container[write] = stack;
+        container[read] = null;
+      }
+      write++;
+    }
+  }
+
   private pauseWeaponElementOverride(player: GamePlayer) {
     const override = player.weaponElementOverride;
     if (!override || override.paused) return;
@@ -1318,6 +1371,7 @@ export class GameEngine implements OnModuleDestroy {
       socketId: player.socketId,
       health: player.health,
       defense: this.defenseValue(player),
+      archetype: player.archetype,
     };
   }
 
@@ -1359,23 +1413,11 @@ export class GameEngine implements OnModuleDestroy {
     return a.z === b.z && Math.abs(a.x - b.x) <= VIEW_DISTANCE_X && Math.abs(a.y - b.y) <= VIEW_DISTANCE_Y;
   }
 
-  private isOccupied(position: Position, exceptIds?: Iterable<string>): boolean {
-    const except = new Set(exceptIds ?? []);
-    for (const player of this.players.values()) {
-      if (except.has(player.id)) continue;
-      if (samePosition(player.position, position)) return true;
-    }
-    for (const creature of this.creatures.getAll()) {
-      if (creature.state === 'DEAD') continue;
-      if (except.has(creature.id)) continue;
-      if (samePosition(creature.position, position)) return true;
-    }
-    return false;
-  }
-
   private tryStep(entity: GamePlayer, direction: Direction): boolean {
     if (this.movement.canMove(entity.position, direction, [entity.id])) {
+      const from = { ...entity.position };
       entity.position = this.movement.step(entity.position, direction);
+      this.movement.commitMove(entity.id, from, entity.position);
       entity.facing = direction;
       return true;
     }
@@ -2197,6 +2239,7 @@ export class GameEngine implements OnModuleDestroy {
       creature.respawnAt = now + creature.respawnTimeMs;
       creature.targetId = null;
       creature.path = [];
+      this.movement.releaseEntity(creature.id);
       this.emitAll('creature.death', { creatureId: creature.id, experience: creature.definition.experience });
     }
     if (run) {

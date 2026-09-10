@@ -86,6 +86,14 @@ interface CreatureVisualMove {
   durationMs: number;
 }
 
+interface CreatureDebugInfo {
+  path?: Position[];
+  targetId?: string;
+  blocked?: boolean;
+  targetPosition?: Position;
+  score?: number;
+}
+
 function toAnimDirection(facing: Direction): AnimDirection {
   if (facing === 'north' || facing === 'northeast' || facing === 'northwest') return 'north';
   if (facing === 'south' || facing === 'southeast' || facing === 'southwest') return 'south';
@@ -158,6 +166,7 @@ export class WorldScene extends Phaser.Scene {
   private keys!: Record<string, Phaser.Input.Keyboard.Key>;
   private creatureAnims = new Map<string, CreatureAnimState>();
   private creatureMoves = new Map<string, CreatureVisualMove>();
+  private creatureDebug = new Map<string, CreatureDebugInfo>();
   private definitionCreatureIds = new Map<string, number>();
   private loadingTextures = new Set<string>();
   private debugVisible = false;
@@ -291,8 +300,9 @@ export class WorldScene extends Phaser.Scene {
         break;
       }
       case SERVER_EVENTS.CREATURE_MOVE: {
-        const m = data as { creatureId: string; from: Position; to: Position; facing: Direction; state: CreatureState; timestamp: number };
+        const m = data as { creatureId: string; from: Position; to: Position; facing: Direction; state: CreatureState; timestamp: number; path?: Position[]; targetId?: string; blocked?: boolean; targetPosition?: Position; score?: number };
         this.moveCreature(m.creatureId, m.to, m.facing, m.state);
+        if (m.path) this.creatureDebug.set(m.creatureId, { path: m.path, targetId: m.targetId, blocked: m.blocked, targetPosition: m.targetPosition, score: m.score });
         break;
       }
       case SERVER_EVENTS.CREATURE_ATTACK: {
@@ -404,6 +414,7 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
     this.entityInfo.clear();
     this.creatureAnims.clear();
     this.creatureMoves.clear();
+    this.creatureDebug.clear();
     this.playerAnims.clear();
     this.definitionCreatureIds.clear();
     this.selfAnim = null;
@@ -845,7 +856,7 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
         if (t >= 1) this.creatureMoves.delete(id);
       }
       rendered.image.setFrame(anim.animator.frameIndex(time));
-      if (!this.creatureMoves.has(id) && anim.animator.currentType === 'walk' && time - anim.lastMoveAt > anim.moveSpeed + 80) {
+      if (!this.creatureMoves.has(id) && anim.animator.currentType === 'walk' && time - anim.lastMoveAt > anim.moveSpeed * 2.5 + 200) {
         anim.animator.play('idle', time);
       }
     }
@@ -853,13 +864,13 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
       const rendered = this.entities.get(id);
       if (!rendered) continue;
       rendered.image.setFrame(anim.animator.frameIndex(time));
-      if (anim.animator.currentType === 'walk' && time - anim.lastMoveAt > anim.moveSpeed + 80) {
+      if (anim.animator.currentType === 'walk' && time - anim.lastMoveAt > anim.moveSpeed * 2.5 + 200) {
         anim.animator.play('idle', time);
       }
     }
     if (this.selfAnim && this.selfEntity) {
       this.selfEntity.image.setFrame(this.selfAnim.animator.frameIndex(time));
-      if (this.selfAnim.animator.currentType === 'walk' && time - this.selfAnim.lastMoveAt > this.selfAnim.moveSpeed + 80) {
+      if (this.selfAnim.animator.currentType === 'walk' && time - this.selfAnim.lastMoveAt > this.selfAnim.moveSpeed * 2.5 + 200) {
         this.selfAnim.animator.play('idle', time);
       }
     }
@@ -957,6 +968,7 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
       this.entityInfo.delete(id);
       this.creatureAnims.delete(id);
       this.creatureMoves.delete(id);
+      this.creatureDebug.delete(id);
       this.playerAnims.delete(id);
       this.definitionCreatureIds.delete(id);
       if (id === this.selfId) this.selfEntity = null;
@@ -1098,6 +1110,27 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
       const nameY = barY - CREATURE_HUD_CONFIG.healthBarHeight - CREATURE_HUD_CONFIG.nameMargin;
       g.strokeLineShape(new Phaser.Geom.Line(body.left, barY, body.right, barY));
       g.strokeLineShape(new Phaser.Geom.Line(body.left, nameY, body.right, nameY));
+    }
+    for (const [id, info] of this.creatureDebug) {
+      const ent = this.entities.get(id);
+      if (!ent) continue;
+      const path = info.path ?? [];
+      for (let i = 0; i < path.length; i++) {
+        const p = tileBase(path[i], TILE_SIZE);
+        if (i === 0) {
+          g.lineStyle(1, 0xffff00, 0.95).strokeRect(p.x - TILE_SIZE / 2, p.y - TILE_SIZE, TILE_SIZE, TILE_SIZE);
+        } else {
+          g.lineStyle(1, 0x00aaff, 0.8).strokeRect(p.x - TILE_SIZE / 2, p.y - TILE_SIZE, TILE_SIZE, TILE_SIZE);
+        }
+      }
+      if (info.blocked) {
+        g.lineStyle(2, 0xff0000, 0.95).strokeRect(ent.baseX - TILE_SIZE / 2, ent.baseY - TILE_SIZE, TILE_SIZE, TILE_SIZE);
+      }
+      if (info.targetPosition) {
+        const tp = tileBase(info.targetPosition, TILE_SIZE);
+        g.lineStyle(1, 0x00ffff, 0.85);
+        g.strokeLineShape(new Phaser.Geom.Line(ent.baseX, ent.baseY, tp.x, tp.y));
+      }
     }
   }
 

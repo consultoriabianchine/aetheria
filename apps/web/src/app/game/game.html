@@ -290,7 +290,7 @@
           <div class="inventory-meta"><span>Slots</span><b>{{ backpackCount() }} / {{ backpackSize }}</b></div>
           <div class="slot-grid backpack-grid">
             @for (entry of backpackPreview(); track entry.index) {
-              <button class="item-slot" type="button" (click)="entry.stack ? onEquip(entry.index) : null" (mouseenter)="entry.stack ? showItemTooltip(entry.stack.itemId, $event) : null" (mousemove)="entry.stack ? moveItemTooltip($event) : null" (mouseleave)="hideItemTooltip()">
+              <button class="item-slot" type="button" [attr.draggable]="entry.stack ? 'true' : 'false'" (click)="entry.stack ? onEquip(entry.index) : null" (contextmenu)="entry.stack ? openItemContextMenu($event, entry.index, entry.stack.itemId) : $event.preventDefault()" (dragstart)="entry.stack ? onItemDragStart($event, 'backpack', entry.index) : null" (dragover)="allowSlotDrop($event)" (drop)="onItemDrop($event, 'backpack', entry.index)" (dragend)="onItemDragEnd()" (mouseenter)="entry.stack ? showItemTooltip(entry.stack.itemId, $event) : null" (mousemove)="entry.stack ? moveItemTooltip($event) : null" (mouseleave)="hideItemTooltip()">
                 @if (entry.stack; as st) {
                   @if (iconFor(st.itemId); as src) { <img [src]="src" alt="" /> } @else { <span class="inv-ph">{{ nameFor(st.itemId).charAt(0) }}</span> }
                   @if (st.quantity > 1) { <span class="qty">{{ st.quantity }}</span> }
@@ -307,7 +307,7 @@
           @if (lootPouchCount() >= lootPouchSize()) { <div class="loot-warning" title="A Bolsa de Loot está cheia. Novos itens que precisarem de slot não serão coletados.">CHEIA</div> }
           <div class="slot-grid loot-grid">
             @for (entry of lootPouchPreview(); track entry.index) {
-              <button class="item-slot" type="button" (mouseenter)="entry.stack ? showItemTooltip(entry.stack.itemId, $event) : null" (mousemove)="entry.stack ? moveItemTooltip($event) : null" (mouseleave)="hideItemTooltip()">
+              <button class="item-slot" type="button" [attr.draggable]="entry.stack ? 'true' : 'false'" (contextmenu)="$event.preventDefault()" (dragstart)="entry.stack ? onItemDragStart($event, 'loot', entry.index) : null" (dragover)="allowSlotDrop($event)" (drop)="onItemDrop($event, 'loot', entry.index)" (dragend)="onItemDragEnd()" (mouseenter)="entry.stack ? showItemTooltip(entry.stack.itemId, $event) : null" (mousemove)="entry.stack ? moveItemTooltip($event) : null" (mouseleave)="hideItemTooltip()">
                 @if (entry.stack; as st) {
                   @if (iconFor(st.itemId); as src) { <img [src]="src" alt="" /> } @else { <span class="inv-ph">{{ nameFor(st.itemId).charAt(0) }}</span> }
                   @if (st.quantity > 1) { <span class="qty">{{ st.quantity }}</span> }
@@ -371,9 +371,9 @@
             </div>
             <div>
               <h3>Mochila (compartilhada)</h3>
-              <div class="inv-grid">@for (entry of inventory(); track entry.index) { <button class="item-slot" type="button" (click)="entry.stack ? onEquipFor(member.id, entry.index) : null" (mouseenter)="entry.stack ? showItemTooltip(entry.stack.itemId, $event) : null" (mousemove)="entry.stack ? moveItemTooltip($event) : null" (mouseleave)="hideItemTooltip()">@if (entry.stack; as st) { @if (iconFor(st.itemId); as src) { <img [src]="src" alt="" /> } @else { <span class="inv-ph">{{ nameFor(st.itemId).charAt(0) }}</span> } @if (st.quantity > 1) { <span class="qty">{{ st.quantity }}</span> } }</button> }</div>
+              <div class="inv-grid">@for (entry of inventory(); track entry.index) { <button class="item-slot" type="button" [attr.draggable]="entry.stack ? 'true' : 'false'" (click)="entry.stack ? onEquipFor(member.id, entry.index) : null" (contextmenu)="entry.stack ? openItemContextMenu($event, entry.index, entry.stack.itemId) : $event.preventDefault()" (dragstart)="entry.stack ? onItemDragStart($event, 'backpack', entry.index) : null" (dragover)="allowSlotDrop($event)" (drop)="onItemDrop($event, 'backpack', entry.index)" (dragend)="onItemDragEnd()" (mouseenter)="entry.stack ? showItemTooltip(entry.stack.itemId, $event) : null" (mousemove)="entry.stack ? moveItemTooltip($event) : null" (mouseleave)="hideItemTooltip()">@if (entry.stack; as st) { @if (iconFor(st.itemId); as src) { <img [src]="src" alt="" /> } @else { <span class="inv-ph">{{ nameFor(st.itemId).charAt(0) }}</span> } @if (st.quantity > 1) { <span class="qty">{{ st.quantity }}</span> } }</button> }</div>
               <h3>Bolsa de Loot (compartilhada)</h3>
-              <div class="slot-grid loot-grid">@for (entry of lootPouchPreview(); track entry.index) { <button class="item-slot" type="button" (mouseenter)="entry.stack ? showItemTooltip(entry.stack.itemId, $event) : null" (mousemove)="entry.stack ? moveItemTooltip($event) : null" (mouseleave)="hideItemTooltip()">@if (entry.stack; as st) { @if (iconFor(st.itemId); as src) { <img [src]="src" alt="" /> } @else { <span class="inv-ph">{{ nameFor(st.itemId).charAt(0) }}</span> } @if (st.quantity > 1) { <span class="qty">{{ st.quantity }}</span> } }</button> }</div>
+              <div class="slot-grid loot-grid">@for (entry of lootPouchPreview(); track entry.index) { <button class="item-slot" type="button" [attr.draggable]="entry.stack ? 'true' : 'false'" (contextmenu)="$event.preventDefault()" (dragstart)="entry.stack ? onItemDragStart($event, 'loot', entry.index) : null" (dragover)="allowSlotDrop($event)" (drop)="onItemDrop($event, 'loot', entry.index)" (dragend)="onItemDragEnd()" (mouseenter)="entry.stack ? showItemTooltip(entry.stack.itemId, $event) : null" (mousemove)="entry.stack ? moveItemTooltip($event) : null" (mouseleave)="hideItemTooltip()">@if (entry.stack; as st) { @if (iconFor(st.itemId); as src) { <img [src]="src" alt="" /> } @else { <span class="inv-ph">{{ nameFor(st.itemId).charAt(0) }}</span> } @if (st.quantity > 1) { <span class="qty">{{ st.quantity }}</span> } }</button> }</div>
             </div>
           </div>
         }
@@ -404,6 +404,16 @@
         @if (iconFor(itemId); as src) { <img class="tip-icon" [src]="src" alt="" /> }
         <div>@for (line of itemTooltip(itemId); track line) { <div [class.tip-title]="$first">{{ line }}</div> }</div>
       </div>
+    </div>
+  }
+
+  @if (itemContextMenu(); as menu) {
+    <div class="ctx-backdrop" (click)="closeItemContextMenu()" (contextmenu)="closeItemContextMenu()"></div>
+    <div class="item-context-menu" [style.left.px]="menu.x" [style.top.px]="menu.y">
+      <div class="ctx-title">Equipar em</div>
+      @for (member of partyMembers(); track member.id) {
+        <button type="button" (click)="equipToMember(member.id)">{{ member.name }}<small>{{ member.archetype }} · Lv {{ member.level }}</small></button>
+      }
     </div>
   }
 

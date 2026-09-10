@@ -362,6 +362,35 @@ export const FLEE_PREFERRED_DIST = 6;
 /** Limite de passos presos consecutivos antes de forçar recálculo do caminho. */
 export const CREATURE_STUCK_LIMIT = 2;
 
+/** TTL da reserva temporária de tile (segurança contra deadlock de reserva). */
+export const TILE_RESERVE_TTL_MS = 1000;
+
+/** Jitter máximo (ms) do offset de decisão por criatura no spawn. */
+export const DECISION_JITTER_MS = 80;
+
+/** Jitter máximo (ms) do intervalo de repath por criatura. */
+export const REPATH_JITTER_MS = 80;
+
+/** Prioridade base de alvo por classe (Warrior > Archer > Mage). */
+export const TARGET_PRIORITY: Record<CombatArchetype, number> = {
+  warrior: 300,
+  archer: 200,
+  mage: 100,
+};
+
+/** Bônus de stickiness aplicado ao alvo atual (evita troca nervosa). */
+export const TARGET_STICKINESS_BONUS = 150;
+
+/** Penalidade aplicada a alvos sem caminho alcançável. */
+export const TARGET_UNREACHABLE_PENALTY = 400;
+
+/** Tempo (ms) bloqueado antes de reavaliar o alvo atual. */
+export const BLOCKED_RETARGET_THRESHOLD_MS = 800;
+
+/** Distância preferida (mín/máx, tiles) para criaturas ranged. */
+export const RANGED_PREFERRED_MIN = 3;
+export const RANGED_PREFERRED_MAX = 5;
+
 /** Quantos tiles o alvo precisa se mover para forçar recálculo do caminho. */
 export const PATH_RECALC_TARGET_DELTA = 3;
 

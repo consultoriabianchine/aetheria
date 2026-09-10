@@ -33,6 +33,7 @@ export type ClientMessage =
   | { type: 'game.pickup'; entityId: string }
   | { type: 'inventory.equip'; slot: number; characterId?: string }
   | { type: 'inventory.unequip'; slot: string; characterId?: string }
+  | { type: 'inventory.move'; from: 'backpack' | 'loot'; fromIndex: number; to: 'backpack' | 'loot'; toIndex: number }
   | { type: 'inventory.expandLootPouch' }
   | { type: 'inventory.sellLootPouch' }
   | { type: 'chat.send'; channel: string; message: string }

@@ -15,6 +15,7 @@ import { CreatureAIService, CreatureTarget } from '../creature/creature-ai.servi
 import { CreatureEntity } from '../creature/creature.entity';
 import { CreatureManager } from '../creature/creature-manager.service';
 import { MovementService } from '../creature/movement.service';
+import { OccupancyGrid } from '../creature/occupancy-grid';
 import type { GamePlayer } from '../engine/world';
 import { generateArenaMap, monsterSpawnPositions, partySpawnPositions } from './arena-map';
 import { calculateBossStats } from './boss-engine';
@@ -41,6 +42,7 @@ export interface HuntRun {
   z: number;
   map: WorldMapData;
   movement: MovementService;
+  occupancy: OccupancyGrid;
   creatures: CreatureManager;
   ai: CreatureAIService;
   rng: RandomSource;
@@ -203,6 +205,7 @@ export class HuntEngine {
     const run = this.getRun(characterId);
     if (!run || run.status !== 'active') return;
     run.aliveMemberIds = run.aliveMemberIds.filter((id) => id !== characterId);
+    run.movement.releaseEntity(characterId);
     if (run.aliveMemberIds.length === 0) this.handleWipe(run, now);
   }
 
@@ -256,7 +259,12 @@ export class HuntEngine {
     const z = this.nextZ++;
     const map = this.resolveMap(hunt, arena, z);
     const effectiveArena: ArenaDefinition = { ...arena, width: map.width, height: map.height };
-    const movement = new MovementService(map, (position, exceptIds) => this.isOccupied(run, position, exceptIds));
+    const occupancy = new OccupancyGrid();
+    const movement = new MovementService(
+      map,
+      (position, exceptIds) => occupancy.isOccupied(position, exceptIds),
+      occupancy,
+    );
     const run: HuntRun = {
       id: uid('hunt'),
       characterId,
@@ -274,6 +282,7 @@ export class HuntEngine {
       z,
       map,
       movement,
+      occupancy,
       creatures: new CreatureManager(movement),
       ai: new CreatureAIService(
         {
@@ -314,16 +323,6 @@ export class HuntEngine {
     return generateArenaMap(arena, z);
   }
 
-  private isOccupied(run: HuntRun, position: { x: number; y: number; z: number }, exceptIds?: Iterable<string>): boolean {
-    const except = new Set(exceptIds ?? []);
-    for (const c of run.creatures.getAll()) {
-      if (c.state === 'DEAD') continue;
-      if (except.has(c.id)) continue;
-      if (c.position.x === position.x && c.position.y === position.y && c.position.z === position.z) return true;
-    }
-    return false;
-  }
-
   private emitToMembers(run: HuntRun, event: string, data: unknown) {
     for (const id of run.memberIds) {
       const member = this.hooks.getPlayer(id);
@@ -342,7 +341,9 @@ export class HuntEngine {
     run.memberIds.forEach((id, i) => {
       const member = this.hooks.getPlayer(id);
       if (!member) return;
+      run.movement.releaseEntity(id);
       member.position = { ...(positions[i] ?? positions[positions.length - 1]) };
+      run.movement.occupy(member.position, id);
       member.moveDir = null;
       member.targetId = null;
       member.health = member.maxHealth;
@@ -391,7 +392,7 @@ export class HuntEngine {
     pack.monsterIds.forEach((monsterId, i) => {
       const def = this.hooks.getCreatureDefinition(monsterId);
       if (!def) return;
-      const entity = run.creatures.spawnCreature(def, positions[i] ?? positions[positions.length - 1]);
+      const entity = run.creatures.spawnCreature(def, positions[i] ?? positions[positions.length - 1], undefined, run.rng.next);
       entity.respawnTimeMs = -1;
       this.emitCreatureSpawn(run, entity, false);
     });
@@ -417,7 +418,7 @@ export class HuntEngine {
     };
     const arena = run.arena;
     const pos = monsterSpawnPositions(arena, run.z, 1)[0];
-    const entity = run.creatures.spawnCreature(bossDef, pos);
+    const entity = run.creatures.spawnCreature(bossDef, pos, undefined, run.rng.next);
     entity.respawnTimeMs = -1;
     run.bossCreatureId = entity.id;
     this.emitCreatureSpawn(run, entity, true);
@@ -497,7 +498,9 @@ export class HuntEngine {
       if (!member) return;
       member.health = member.maxHealth;
       member.mana = member.maxMana;
+      run.movement.releaseEntity(id);
       member.position = { ...(positions[i] ?? positions[positions.length - 1]) };
+      run.movement.occupy(member.position, id);
       member.targetId = null;
       member.moveDir = null;
     });

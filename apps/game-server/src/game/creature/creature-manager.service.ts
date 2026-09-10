@@ -1,3 +1,4 @@
+import { DECISION_JITTER_MS, REPATH_JITTER_MS } from '@aetheria/config';
 import { tileDistance, uid } from '@aetheria/shared';
 import type { CreatureDefinition, CreatureSpawnDefinition, Position } from '@aetheria/types';
 import { CreatureAIService } from './creature-ai.service';
@@ -35,18 +36,30 @@ export class CreatureManager {
     return out;
   }
 
-  spawnCreature(definition: CreatureDefinition, position: Position, id = uid('c')): CreatureEntity {
+  spawnCreature(definition: CreatureDefinition, position: Position, id = uid('c'), rng?: () => number): CreatureEntity {
     const entity = new CreatureEntity(id, definition, position);
+    const next = rng ?? Math.random;
+    entity.decisionOffsetMs = Math.floor(next() * DECISION_JITTER_MS);
+    entity.repathJitterMs = Math.floor(next() * REPATH_JITTER_MS * 2) - REPATH_JITTER_MS;
+    entity.preferredSide = next() < 0.5 ? -1 : 1;
+    entity.lastMoveAt = Date.now() + entity.decisionOffsetMs;
     this.creatures.set(entity.id, entity);
+    this.movement.occupy(position, entity.id, {
+      w: Math.max(1, definition.footprintWidth ?? 1),
+      h: Math.max(1, definition.footprintHeight ?? 1),
+    });
     return entity;
   }
 
   removeCreature(id: string): boolean {
-    return this.creatures.delete(id);
+    const removed = this.creatures.delete(id);
+    if (removed) this.movement.releaseEntity(id);
+    return removed;
   }
 
   /** Remove todas as criaturas (usado entre waves de uma hunt). */
   clear(): void {
+    for (const id of this.creatures.keys()) this.movement.releaseEntity(id);
     this.creatures.clear();
   }
 
@@ -94,7 +107,7 @@ export class CreatureManager {
   processRespawns(now: number, onRemove: (id: string) => void, onSpawn: (entity: CreatureEntity) => void) {
     for (const [id, c] of this.creatures) {
       if (c.state !== 'DEAD' || !c.respawnAt || c.respawnAt > now) continue;
-      this.creatures.delete(id);
+      this.removeCreature(id);
       onRemove(id);
       const entity = this.spawnCreature(c.definition, c.spawnPosition);
       onSpawn(entity);

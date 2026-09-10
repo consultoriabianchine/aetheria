@@ -180,7 +180,9 @@ export class PlayerCombatAIService {
       return false;
     }
     if (movement.canMove(player.position, dir, exceptIds)) {
+      const from = { ...player.position };
       player.position = movement.step(player.position, dir);
+      movement.commitMove(player.id, from, player.position);
       player.facing = dir;
       player.nextMoveAt = now + player.moveIntervalMs;
       state.index++;
@@ -206,7 +208,9 @@ export class PlayerCombatAIService {
       }
     }
     if (!bestDir) return false;
+    const from = { ...player.position };
     player.position = movement.step(player.position, bestDir);
+    movement.commitMove(player.id, from, player.position);
     player.facing = bestDir;
     player.nextMoveAt = now + player.moveIntervalMs;
     return true;
