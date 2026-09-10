@@ -1,8 +1,9 @@
 import { Body, Controller, Get, Param, Post, Put, UseGuards } from '@nestjs/common';
 import { Prisma } from '@aetheria/database';
-import type { AmmoType, DamageType, EquipmentSlot, ItemImpactVisual, ItemProjectileVisual, ItemType, ItemVisualEffects, WeaponType } from '@aetheria/types';
+import type { AmmoType, DamageType, EquipmentSlot, ItemType, ItemVisualEffects, WeaponType } from '@aetheria/types';
 import { PrismaService } from '../../prisma/prisma.service';
 import { AdminAuthGuard } from './admin-auth.guard';
+import { isImpactVisual, isProjectileVisual } from './visual-validation';
 import { loadItemCatalogFromDatabase, rowToItemDefinition } from '../engine/item-catalog';
 
 interface ItemDefinitionInput {
@@ -143,18 +144,6 @@ function withVisual(value: Record<string, unknown> | null | undefined, visual: I
     delete next['visual'];
   }
   return Object.keys(next).length ? next : undefined;
-}
-
-function isProjectileVisual(value: unknown): value is ItemProjectileVisual {
-  if (typeof value !== 'object' || value === null) return false;
-  const visual = value as { sprite?: unknown; spriteAssetId?: unknown };
-  return (typeof visual.sprite === 'string' && visual.sprite.trim().length > 0) || (typeof visual.spriteAssetId === 'number' && visual.spriteAssetId > 0);
-}
-
-function isImpactVisual(value: unknown): value is ItemImpactVisual {
-  if (typeof value !== 'object' || value === null) return false;
-  const visual = value as { sprite?: unknown; spriteAssetId?: unknown };
-  return (typeof visual.sprite === 'string' && visual.sprite.trim().length > 0) || (typeof visual.spriteAssetId === 'number' && visual.spriteAssetId > 0);
 }
 
 function normalizeId(value: string): string {

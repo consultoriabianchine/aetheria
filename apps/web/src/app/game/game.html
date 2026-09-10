@@ -74,20 +74,6 @@
           <div class="bar-track slim"><div class="bar-fill stamina" style="width: 76%"></div></div>
         </section>
 
-        <section class="game-panel compact-panel elemental-test">
-          <div class="panel-header"><h2>Teste Elemental</h2></div>
-          <div class="metric-row"><span>Elemento atual</span><b>{{ weaponOverride()?.damageType || 'physical' }}</b></div>
-          @if (weaponOverride()) {
-            <div class="metric-row"><span>Restante</span><b>{{ overrideTime() }}</b></div>
-            <button class="panel-action wide" type="button" (click)="removeWeaponOverride()">Remover</button>
-          }
-          <div class="element-buttons">
-            @for (type of damageTypes; track type) {
-              <button type="button" [class.active]="weaponOverride()?.damageType === type" (click)="applyWeaponOverride(type)">{{ type }}</button>
-            }
-          </div>
-        </section>
-
         <section class="game-panel compact-panel">
           <button class="panel-header panel-toggle" type="button" (click)="boostsCollapsed.set(!boostsCollapsed())">
             <h2>Boosts</h2><span>{{ boostsCollapsed() ? '+' : '−' }}</span>
@@ -301,7 +287,7 @@
 
         <section class="game-panel inventory-preview">
           <div class="panel-header"><h2>Backpack</h2><button class="panel-action" type="button" (click)="openManage()">Inventário</button></div>
-          <div class="inventory-meta"><span>Slots</span><b>{{ backpackCount() }} / 8</b></div>
+          <div class="inventory-meta"><span>Slots</span><b>{{ backpackCount() }} / {{ backpackSize }}</b></div>
           <div class="slot-grid backpack-grid">
             @for (entry of backpackPreview(); track entry.index) {
               <button class="item-slot" type="button" (click)="entry.stack ? onEquip(entry.index) : null" (mouseenter)="entry.stack ? showItemTooltip(entry.stack.itemId, $event) : null" (mousemove)="entry.stack ? moveItemTooltip($event) : null" (mouseleave)="hideItemTooltip()">

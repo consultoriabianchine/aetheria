@@ -88,54 +88,7 @@
         }
         @if (canEditVisual()) {
           <div class="form">
-            <label class="wide">Projectile sprite/path
-              <input [value]="projectile().sprite" placeholder="assets/effects/projectiles/arrow.png" (input)="patchProjectile({ sprite: $any($event.target).value })" (change)="loadProjectileSheet()" />
-            </label>
-            <label class="wide">Importar projectile spritesheet para o banco
-              <input type="file" accept="image/png,image/webp" (change)="onProjectileAssetFile($event)" />
-              <span class="mini-hint">Sprite asset atual: #{{ projectile().spriteAssetId || 'nenhum' }}</span>
-            </label>
-            <label>Projectile frame width <input type="number" [value]="projectile().frameWidth" (input)="patchProjectile({ frameWidth: +$any($event.target).value })" /></label>
-            <label>Projectile frame height <input type="number" [value]="projectile().frameHeight" (input)="patchProjectile({ frameHeight: +$any($event.target).value })" /></label>
-            <label>Projectile speed <input type="number" [value]="projectile().speedPxPerSecond ?? 520" (input)="patchProjectile({ speedPxPerSecond: +$any($event.target).value })" /></label>
-
-            <div class="wide visual-editor">
-              <div>
-                <p class="mini-hint">Selecione uma direção e clique no frame correto da spritesheet.</p>
-                <div class="sheet-box">
-                  <canvas #projectileCanvas (click)="onProjectileSheetClick($event)"></canvas>
-                </div>
-              </div>
-              <div>
-                <p class="mini-hint">Direções do projétil</p>
-                <div class="dir-grid">
-                  @for (direction of projectileDirections; track direction) {
-                    <button type="button" class="dir-btn" [class.active]="selectedProjectileDirection() === direction" (click)="selectProjectileDirection(direction)">
-                      <span>{{ projectileDirectionLabel[direction] }}</span>
-                      <b>#{{ projectile().frames[direction] }}</b>
-                    </button>
-                  }
-                </div>
-              </div>
-            </div>
-
-            <label class="wide">Impact sprite/path
-              <input [value]="impact().sprite" placeholder="assets/effects/impacts/arrow-hit.png" (input)="patchImpact({ sprite: $any($event.target).value })" (change)="loadImpactSheet()" />
-            </label>
-            <label class="wide">Importar impact spritesheet para o banco
-              <input type="file" accept="image/png,image/webp" (change)="onImpactAssetFile($event)" />
-              <span class="mini-hint">Sprite asset atual: #{{ impact().spriteAssetId || 'nenhum' }}</span>
-            </label>
-            <label>Impact frame width <input type="number" [value]="impact().frameWidth" (input)="patchImpact({ frameWidth: +$any($event.target).value })" /></label>
-            <label>Impact frame height <input type="number" [value]="impact().frameHeight" (input)="patchImpact({ frameHeight: +$any($event.target).value })" /></label>
-            <label>Impact FPS <input type="number" [value]="impact().fps ?? 12" (input)="patchImpact({ fps: +$any($event.target).value })" /></label>
-            <label class="wide">Impact frames <input [value]="impact().frames.join(',')" placeholder="0,1,2,3" (input)="setImpactFrames($any($event.target).value)" /></label>
-            <div class="wide">
-              <p class="mini-hint">Clique para definir o impacto. Use shift+clique para selecionar vários frames.</p>
-              <div class="sheet-box">
-                <canvas #impactCanvas (click)="onImpactSheetClick($event)"></canvas>
-              </div>
-            </div>
+            <admin-sprite-visual-editor [visual]="draft().visual" (visualChange)="patch({ visual: $event })"></admin-sprite-visual-editor>
           </div>
         }
       </div>

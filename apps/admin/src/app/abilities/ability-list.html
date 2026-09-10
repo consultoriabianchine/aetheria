@@ -17,8 +17,17 @@
         <label>Cooldown Group<select [(ngModel)]="draft.cooldownGroup"><option value="attack">Attack · 2s</option><option value="healing">Healing · 1s</option><option value="support">Support</option></select></label><label>Mana Cost<input type="number" [(ngModel)]="draft.manaCost"></label>
         <label>Level Requirement<input type="number" [(ngModel)]="draft.levelRequirement"></label><label>Enabled<input type="checkbox" [(ngModel)]="draft.enabled"></label>
         <label class="wide">Description<textarea [(ngModel)]="draft.description"></textarea></label>
-        @if (draft.category === 'area') { <label>Area Shape<select [(ngModel)]="draft.areaConfig!.shape"><option value="square">Square</option><option value="circle">Circle</option><option value="wave">Wave</option><option value="cone">Cone</option><option value="cross">Cross</option><option value="line">Line</option></select></label><label>Area Width<input type="number" [(ngModel)]="draft.areaConfig!.width"></label> }
-      </div><label>Icon 32x32<input type="file" accept="image/png" (change)="uploadIcon($event)"></label>@if (draft.icon) { <img [src]="draft.icon" width="32" height="32"> }<button class="primary" (click)="save()">Save</button>
+        @if (draft.category === 'area' || draft.targetMode === 'directional' || draft.targetMode === 'ground') {
+          <label>Area Shape<select [value]="areaConfigDraft().shape" (change)="patchAreaConfig({ shape: $any($event.target).value })"><option value="square">Square</option><option value="circle">Circle</option><option value="wave">Wave</option><option value="cone">Cone</option><option value="cross">Cross</option><option value="line">Line</option></select></label><label>Area Width<input type="number" [value]="areaConfigDraft().width" (input)="patchAreaConfig({ width: +$any($event.target).value })"></label>
+        }
+      </div>
+      <div class="wide">
+        <h3>Visual (projétil/impacto)</h3>
+        <div class="form">
+          <admin-sprite-visual-editor [visual]="draft.visual" (visualChange)="patchVisual($event)"></admin-sprite-visual-editor>
+        </div>
+      </div>
+      <label>Icon 32x32<input type="file" accept="image/png" (change)="uploadIcon($event)"></label>@if (draft.icon) { <img [src]="draft.icon" width="32" height="32"> }<button class="primary" (click)="save()">Save</button>
     </section>
   }
 </div>

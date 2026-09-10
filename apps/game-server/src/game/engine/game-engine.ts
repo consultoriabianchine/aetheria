@@ -29,12 +29,13 @@ import {
   WEAPON_ELEMENT_OVERRIDE_CONFIG,
   xpForLevel,
 } from '@aetheria/config';
-import { samePosition, tileDistance, tileKey, uid } from '@aetheria/shared';
+import { DIRECTION_DELTAS, samePosition, tileDistance, tileKey, uid } from '@aetheria/shared';
 import type {
   CharacterEquipment,
   CharacterInventory,
   CharacterSkills,
   CharacterSummary,
+  CombatAbilityDefinition,
   CombatArchetype,
   DamageType,
   CombatSkill,
@@ -906,17 +907,17 @@ export class GameEngine implements OnModuleDestroy {
     else this.moveEventReadyAt.delete(player.id);
   }
 
-  async handleAbilityCast(socketId: string, abilityId: number, targetId?: string): Promise<boolean> {
+  async handleAbilityCast(socketId: string, abilityId: number, targetId?: string, direction?: Direction, position?: Position): Promise<boolean> {
     const playerId = this.playerBySocket.get(socketId);
     const player = playerId ? this.players.get(playerId) : undefined;
     if (!player) {
       this.emitTo(socketId, 'ability.castFailed', { abilityId, reason: 'ABILITY_UNAVAILABLE' });
       return false;
     }
-    return this.castAbility(player, abilityId, targetId, socketId);
+    return this.castAbility(player, abilityId, targetId, socketId, direction, position);
   }
 
-  private async castAbility(player: GamePlayer, abilityId: number, targetId?: string, socketId = player.socketId ?? ''): Promise<boolean> {
+  private async castAbility(player: GamePlayer, abilityId: number, targetId?: string, socketId = player.socketId ?? '', direction?: Direction, position?: Position): Promise<boolean> {
     const ability = await this.abilityRegistry.get(abilityId);
     if (!ability || !ability.enabled || !['player', 'both'].includes(ability.ownerType)) {
       this.emitTo(socketId, 'ability.castFailed', { abilityId, reason: 'ABILITY_UNAVAILABLE' });
@@ -944,7 +945,8 @@ export class GameEngine implements OnModuleDestroy {
     const target = resolvedTargetId
       ? (run?.creatures.getCreature(resolvedTargetId) ?? this.creatures.getCreature(resolvedTargetId) ?? this.players.get(resolvedTargetId))
       : undefined;
-    if (ability.category !== 'heal' && (!target || tileDistance(player.position, target.position) > ability.rangeTiles)) {
+    const needsTarget = ability.category !== 'heal' && ability.targetMode !== 'directional' && ability.targetMode !== 'ground';
+    if (needsTarget && (!target || tileDistance(player.position, target.position) > ability.rangeTiles)) {
       this.activeAbilityCasts.delete(castKey);
       this.emitTo(socketId, 'ability.castFailed', { abilityId, reason: 'INVALID_TARGET' });
       return false;
@@ -961,6 +963,12 @@ export class GameEngine implements OnModuleDestroy {
       const amount = Math.max(1, ability.defaultParameters?.power ?? 30);
       healTarget.health = Math.min(healTarget.maxHealth, healTarget.health + amount);
       this.emitHeal(player.id, healTarget, amount);
+      this.emitStats(player);
+    } else if (ability.targetMode === 'directional') {
+      this.dealDirectionalAbility(player, ability, direction ?? player.facing, now);
+      this.emitStats(player);
+    } else if (ability.targetMode === 'ground') {
+      this.dealGroundAbility(player, ability, position ?? target?.position, direction ?? player.facing, now);
       this.emitStats(player);
     } else if (target) {
       this.dealAbilityDamage(player, target, ability, now);
@@ -1364,6 +1372,7 @@ export class GameEngine implements OnModuleDestroy {
   private tryStep(entity: GamePlayer, direction: Direction): boolean {
     if (this.movement.canMove(entity.position, direction, [entity.id])) {
       entity.position = this.movement.step(entity.position, direction);
+      entity.facing = direction;
       return true;
     }
     return false;
@@ -1556,7 +1565,49 @@ export class GameEngine implements OnModuleDestroy {
     });
   }
 
-  private dealAbilityDamage(attacker: GamePlayer, target: GamePlayer | CreatureEntity, ability: import('@aetheria/types').CombatAbilityDefinition, now: number): boolean {
+  private dealAbilityDamage(attacker: GamePlayer, target: GamePlayer | CreatureEntity, ability: CombatAbilityDefinition, now: number): boolean {
+    const delayMs = this.emitAbilityProjectile(attacker, attacker.position, target.position, ability);
+    this.applyAbilityDamage(attacker, target, ability, now, delayMs);
+    return true;
+  }
+
+  private dealDirectionalAbility(attacker: GamePlayer, ability: CombatAbilityDefinition, direction: Direction, now: number) {
+    const delta = DIRECTION_DELTAS[direction] ?? DIRECTION_DELTAS.south;
+    const to: Position = { x: attacker.position.x + delta.dx * ability.rangeTiles, y: attacker.position.y + delta.dy * ability.rangeTiles, z: attacker.position.z };
+    const delayMs = this.emitAbilityProjectile(attacker, attacker.position, to, ability);
+    for (const enemy of this.enemiesInTiles(attacker, this.directionalTiles(attacker.position, direction, ability.rangeTiles, ability.areaConfig))) {
+      this.applyAbilityDamage(attacker, enemy, ability, now, delayMs);
+    }
+  }
+
+  private dealGroundAbility(attacker: GamePlayer, ability: CombatAbilityDefinition, position: Position | undefined, direction: Direction, now: number) {
+    const origin = position ? { x: position.x, y: position.y, z: attacker.position.z } : (() => { const delta = DIRECTION_DELTAS[direction] ?? DIRECTION_DELTAS.south; return { x: attacker.position.x + delta.dx * ability.rangeTiles, y: attacker.position.y + delta.dy * ability.rangeTiles, z: attacker.position.z }; })();
+    if (tileDistance(attacker.position, origin) > ability.rangeTiles + 1) return;
+    const delayMs = this.emitAbilityProjectile(attacker, attacker.position, origin, ability);
+    for (const enemy of this.enemiesInTiles(attacker, this.groundTiles(origin, ability.areaConfig))) {
+      this.applyAbilityDamage(attacker, enemy, ability, now, delayMs);
+    }
+  }
+
+  /** Emite combat.projectile (se a habilidade tiver visual) e retorna o tempo de viagem em ms. */
+  private emitAbilityProjectile(attacker: GamePlayer, from: Position, to: Position, ability: CombatAbilityDefinition): number {
+    const visual = ability.visual;
+    if (!visual?.projectile) return 0;
+    const travelTimeMs = this.projectileTravelTimeMs(from, to, visual);
+    this.emitCombatEventForPlayer(attacker, 'combat.projectile', {
+      attackerId: attacker.id,
+      targetId: '',
+      from: { ...from },
+      to: { ...to },
+      projectile: visual.projectile,
+      impact: visual.impact,
+      travelTimeMs,
+    });
+    return travelTimeMs;
+  }
+
+  /** Aplica dano de habilidade a um único alvo (sem reemitir o projétil). */
+  private applyAbilityDamage(attacker: GamePlayer, target: GamePlayer | CreatureEntity, ability: CombatAbilityDefinition, now: number, delayMs = 0): number {
     const stats = this.combatStats(attacker);
     const weapon = attacker.equipment.weapon ? getWeaponDefinition(getItemDef(attacker.equipment.weapon.itemId)) : undefined;
     const ammo = attacker.equipment.ammo ? getAmmoDefinition(getItemDef(attacker.equipment.ammo.itemId)) : undefined;
@@ -1566,10 +1617,93 @@ export class GameEngine implements OnModuleDestroy {
     const critical = rollCritical(stats.criticalChance, () => this.nextCombatRandom(attacker, now + 1));
     const damage = calculateMitigatedDamage({ damage: critical ? calculateCritical(raw, stats.criticalDamage) : raw, damageType: ability.damageType ?? 'physical', target: this.targetCombatStats(target), damageTakenModifier: resolveDamageAffinity(this.targetCombatStats(target).damageAffinities, ability.damageType ?? 'physical').modifier, immune: resolveDamageAffinity(this.targetCombatStats(target).damageAffinities, ability.damageType ?? 'physical').immune });
     target.health = Math.max(0, target.health - damage.finalDamage);
-    this.emitCombatEvent(target, 'combat.damage', { attackerId: attacker.id, targetId: target.id, amount: damage.finalDamage, damageType: ability.damageType ?? 'physical', critical, targetHealth: target.health });
+    this.emitCombatEvent(target, 'combat.damage', { attackerId: attacker.id, targetId: target.id, amount: damage.finalDamage, damageType: ability.damageType ?? 'physical', critical, targetHealth: target.health, delayMs: delayMs || undefined });
     this.emitCombatEvent(target, 'entity.health', { id: target.id, health: target.health, maxHealth: target.maxHealth });
     if (target.health <= 0 && target instanceof CreatureEntity) this.creatureKilled(attacker, target, now);
-    return true;
+    return damage.finalDamage;
+  }
+
+  /** Broadcast de evento de combate a partir do escopo do caster (party da hunt ou mundo). */
+  private emitCombatEventForPlayer(player: GamePlayer, event: string, data: unknown) {
+    const run = this.hunts.getRun(player.id);
+    if (run) {
+      for (const id of run.memberIds) {
+        const member = this.players.get(id);
+        if (member?.socketId) this.emitTo(member.socketId, event, data);
+      }
+      return;
+    }
+    this.emitAll(event, data);
+  }
+
+  private enemiesInTiles(player: GamePlayer, tiles: Position[]): CreatureEntity[] {
+    const set = new Set(tiles.map((t) => tileKey(t.x, t.y, t.z)));
+    const run = this.hunts.getRun(player.id);
+    const manager = run ? run.creatures : this.creatures;
+    const out: CreatureEntity[] = [];
+    for (const creature of manager.getAll()) {
+      if (creature.state === 'DEAD') continue;
+      if (set.has(tileKey(creature.position.x, creature.position.y, creature.position.z))) out.push(creature);
+    }
+    return out;
+  }
+
+  /** Tiles afetados por uma habilidade direcional (linha ou cone na direção). */
+  private directionalTiles(origin: Position, direction: Direction, range: number, areaConfig: CombatAbilityDefinition['areaConfig']): Position[] {
+    const delta = DIRECTION_DELTAS[direction] ?? DIRECTION_DELTAS.south;
+    const shape = areaConfig?.shape ?? 'line';
+    const baseWidth = Math.max(1, areaConfig?.width ?? 1);
+    const tiles: Position[] = [];
+    const seen = new Set<string>();
+    for (let t = 1; t <= Math.max(1, range); t++) {
+      const half = shape === 'cone' ? Math.max(0, Math.floor((baseWidth * t) / 2)) : Math.floor((baseWidth - 1) / 2);
+      for (let s = -half; s <= half; s++) {
+        const x = origin.x + delta.dx * t + -delta.dy * s;
+        const y = origin.y + delta.dy * t + delta.dx * s;
+        const key = `${x},${y}`;
+        if (seen.has(key)) continue;
+        seen.add(key);
+        tiles.push({ x, y, z: origin.z });
+      }
+    }
+    return tiles;
+  }
+
+  /** Tiles afetados por uma habilidade de área em torno de um ponto (square/circle/cross). */
+  private groundTiles(origin: Position, areaConfig: CombatAbilityDefinition['areaConfig']): Position[] {
+    const shape = areaConfig?.shape ?? 'square';
+    const width = Math.max(1, areaConfig?.width ?? 1);
+    const height = Math.max(1, areaConfig?.height ?? width);
+    const tiles: Position[] = [];
+    if (shape === 'cross') {
+      tiles.push({ x: origin.x, y: origin.y, z: origin.z });
+      const r = Math.max(1, Math.floor(width / 2));
+      for (let i = 1; i <= r; i++) {
+        tiles.push({ x: origin.x + i, y: origin.y, z: origin.z });
+        tiles.push({ x: origin.x - i, y: origin.y, z: origin.z });
+        tiles.push({ x: origin.x, y: origin.y + i, z: origin.z });
+        tiles.push({ x: origin.x, y: origin.y - i, z: origin.z });
+      }
+      return tiles;
+    }
+    if (shape === 'circle') {
+      const radius = Math.max(1, Math.floor(width / 2));
+      for (let dy = -radius; dy <= radius; dy++) {
+        for (let dx = -radius; dx <= radius; dx++) {
+          if (Math.hypot(dx, dy) > radius + 0.01) continue;
+          tiles.push({ x: origin.x + dx, y: origin.y + dy, z: origin.z });
+        }
+      }
+      return tiles;
+    }
+    const offsetX = Math.floor((width - 1) / 2);
+    const offsetY = Math.floor((height - 1) / 2);
+    for (let dy = 0; dy < height; dy++) {
+      for (let dx = 0; dx < width; dx++) {
+        tiles.push({ x: origin.x + dx - offsetX, y: origin.y + dy - offsetY, z: origin.z });
+      }
+    }
+    return tiles;
   }
 
   private dealDamage(attacker: GamePlayer, target: GamePlayer | CreatureEntity, now: number): boolean {
@@ -1658,7 +1792,21 @@ export class GameEngine implements OnModuleDestroy {
       ready.set(ability.abilityId, now + (assignment.cooldownOverrideMs ?? ability.cooldownMs));
       this.monsterAbilityReadyAt.set(creature.id, ready);
       const power = assignment.parameters?.power ?? amount;
-      this.creatureAttackPlayer(creature, playerId, power, critical, now, ability.damageType ?? 'physical');
+      const player = this.players.get(playerId);
+      let delayMs = 0;
+      if (player && ability.visual?.projectile) {
+        delayMs = this.projectileTravelTimeMs(creature.position, player.position, ability.visual);
+        this.emitCombatEvent(player, 'combat.projectile', {
+          attackerId: creature.id,
+          targetId: playerId,
+          from: { ...creature.position },
+          to: { ...player.position },
+          projectile: ability.visual.projectile,
+          impact: ability.visual.impact,
+          travelTimeMs: delayMs,
+        });
+      }
+      this.creatureAttackPlayer(creature, playerId, power, critical, now, ability.damageType ?? 'physical', delayMs);
       return;
     }
     this.creatureAttackPlayer(creature, playerId, amount, critical, now);
@@ -1669,7 +1817,7 @@ export class GameEngine implements OnModuleDestroy {
     return x - Math.floor(x);
   }
 
-  private creatureAttackPlayer(creature: CreatureEntity, playerId: string, amount: number, critical: boolean, now: number, damageType: DamageType = 'physical') {
+  private creatureAttackPlayer(creature: CreatureEntity, playerId: string, amount: number, critical: boolean, now: number, damageType: DamageType = 'physical', delayMs = 0) {
     const player = this.players.get(playerId);
     if (!player) return;
     const damage = calculateMitigatedDamage({
@@ -1684,8 +1832,9 @@ export class GameEngine implements OnModuleDestroy {
       targetId: player.id,
       amount: reduced,
        damageType,
-       critical,
+        critical,
       targetHealth: player.health,
+      delayMs: delayMs || undefined,
     });
     this.emitCombatEvent(player, 'entity.health', { id: player.id, health: player.health, maxHealth: player.maxHealth });
     if (player.health <= 0) this.playerKilled(player, now);

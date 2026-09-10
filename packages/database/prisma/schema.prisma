@@ -216,6 +216,7 @@ model CombatAbility {
   area_config         Json?    @map("area_config")
   projectile_id       Int?     @map("projectile_id")
   impact_effect_id    Int?     @map("impact_effect_id")
+  visual              Json?    @map("visual")
   allowed_parameters  Json     @default("[]") @map("allowed_parameters")
   default_parameters  Json?    @map("default_parameters")
   conditions          Json?

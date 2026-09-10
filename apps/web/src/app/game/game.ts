@@ -3,8 +3,8 @@ import { Subscription, first, interval } from 'rxjs';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import Phaser from 'phaser';
-import type { CharacterEquipment, CharacterSkills, DamageType, ItemDefinition, ItemStack, PlayerCombatConfig, WeaponElementOverride } from '@aetheria/types';
-import { APPEARANCE_PALETTE, LOOT_POUCH_EXPANSION, SKILL_PROGRESSION_CONFIG } from '@aetheria/config';
+import type { CharacterEquipment, CharacterSkills, ItemDefinition, ItemStack, PlayerCombatConfig } from '@aetheria/types';
+import { APPEARANCE_PALETTE, INVENTORY_SIZE, LOOT_POUCH_EXPANSION, SKILL_PROGRESSION_CONFIG } from '@aetheria/config';
 import { WsService } from '../core/ws.service';
 import { ChatLine, GameState } from './game-state';
 import { ItemCatalogService } from './item-catalog.service';
@@ -55,6 +55,7 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   readonly itemTooltipY = signal(0);
   readonly colorSlots = ['head', 'primary', 'secondary', 'detail'] as const;
   readonly palette = APPEARANCE_PALETTE;
+  readonly backpackSize = INVENTORY_SIZE;
 
   private readonly el = inject(ElementRef);
   private readonly ws = inject(WsService);
@@ -63,12 +64,8 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   private readonly outfitAssets = inject(OutfitAssetService);
   private readonly router = inject(Router);
   private phaser: Phaser.Game | null = null;
-  private overrideSub?: Subscription;
   private timerSub?: Subscription;
   private visibilityHandler = () => { if (!document.hidden) this.resyncAfterResume(); };
-  readonly weaponOverride = signal<WeaponElementOverride | null>(null);
-  readonly overrideRemaining = signal(0);
-  readonly damageTypes: DamageType[] = ['physical', 'fire', 'ice', 'energy', 'earth', 'holy', 'death', 'arcane'];
 
   ngOnInit() {
     if (!this.state.token()) {
@@ -90,24 +87,14 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
       }
     }
     document.addEventListener('visibilitychange', this.visibilityHandler);
-    this.overrideSub = this.ws.events$.subscribe((event) => {
+    this.ws.events$.subscribe((event) => {
       if (event.event === 'system.connected') {
         this.resyncAfterResume();
         this.rejoinCharacter();
-      } else if (event.event === 'combat.weaponElementOverride.applied') {
-        const data = event.data as { override: WeaponElementOverride };
-        this.weaponOverride.set(data.override);
-      } else if (event.event === 'combat.weaponElementOverride.removed') {
-        this.weaponOverride.set(null);
-        this.overrideRemaining.set(0);
       }
     });
     this.timerSub = interval(100).subscribe(() => {
       this.now.set(Date.now());
-      const override = this.weaponOverride();
-      const remaining = override ? Math.max(0, override.expiresAt - Date.now()) : 0;
-      this.overrideRemaining.set(remaining);
-      if (override && remaining === 0) this.weaponOverride.set(null);
     });
     queueMicrotask(() => this.resyncAfterResume());
   }
@@ -150,9 +137,8 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   private setupHiDpi() {
     const game = this.phaser;
     if (!game) return;
-    const dpr = window.devicePixelRatio || 1;
-    if (dpr <= 1) return;
     const apply = () => {
+      const dpr = window.devicePixelRatio || 1;
       const w = game.scale.gameSize.width;
       const h = game.scale.gameSize.height;
       if (!w || !h) return;
@@ -166,7 +152,6 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
 
   ngOnDestroy() {
     document.removeEventListener('visibilitychange', this.visibilityHandler);
-    this.overrideSub?.unsubscribe();
     this.timerSub?.unsubscribe();
     this.phaser?.destroy(true);
     this.phaser = null;
@@ -200,7 +185,7 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   }
 
   backpackPreview(): InvEntry[] {
-    return this.fixedSlots(this.state.inventory().slots.slice(0, 8), 8);
+    return this.fixedSlots(this.state.inventory().slots, INVENTORY_SIZE);
   }
 
   lootPouchPreview(): InvEntry[] {
@@ -609,19 +594,6 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
       this.ws.send({ type: 'rotation.healing.set', preset: 'HUNT', characterId, slots });
     }
     this.rotationOpen.set(false);
-  }
-
-  applyWeaponOverride(damageType: DamageType) {
-    this.ws.send({ type: 'combat.weaponElementOverride.apply', damageType });
-  }
-
-  removeWeaponOverride() {
-    this.ws.send({ type: 'combat.weaponElementOverride.remove' });
-  }
-
-  overrideTime(): string {
-    const total = Math.ceil(this.overrideRemaining() / 1000);
-    return `${Math.floor(total / 60).toString().padStart(2, '0')}:${(total % 60).toString().padStart(2, '0')}`;
   }
 
   openAppearance() {

@@ -52,8 +52,8 @@ export class GameGateway implements OnGatewayConnection, OnGatewayDisconnect {
   }
 
   @SubscribeMessage('ability.cast')
-  onAbilityCast(socket: Socket, payload: { abilityId: number; targetId?: string }) {
-    void this.engine.handleAbilityCast(socket.id, payload.abilityId, payload.targetId);
+  onAbilityCast(socket: Socket, payload: { abilityId: number; targetId?: string; direction?: string; position?: { x: number; y: number; z: number } }) {
+    void this.engine.handleAbilityCast(socket.id, payload.abilityId, payload.targetId, (payload.direction as never) ?? undefined, payload.position);
   }
 
   @SubscribeMessage('rotation.load')

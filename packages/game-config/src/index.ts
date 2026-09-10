@@ -256,7 +256,7 @@ export const PARTY_CONFIG = {
 } as const;
 
 /** Número de slots do inventário. */
-export const INVENTORY_SIZE = 24;
+export const INVENTORY_SIZE = 20;
 
 /** Número de slots da Bolsa de Loot. */
 export const LOOT_POUCH_SIZE = 10;

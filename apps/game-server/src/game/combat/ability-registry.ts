@@ -40,7 +40,8 @@ export class AbilityRegistry {
       cooldownMs: row.cooldown_ms, cooldownGroup: row.cooldown_group, rangeTiles: row.range_tiles,
       manaCost: row.mana_cost ?? undefined, levelRequirement: row.level_requirement ?? undefined,
       areaConfig: row.area_config ?? undefined, projectileId: row.projectile_id ?? undefined,
-      impactEffectId: row.impact_effect_id ?? undefined, allowedParameters: row.allowed_parameters ?? [],
+      impactEffectId: row.impact_effect_id ?? undefined, visual: row.visual ?? undefined,
+      allowedParameters: row.allowed_parameters ?? [],
       defaultParameters: row.default_parameters ?? undefined, conditions: row.conditions ?? undefined,
       enabled: row.enabled, createdAt: row.created_at, updatedAt: row.updated_at,
     };

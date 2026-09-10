@@ -49,7 +49,7 @@ export type ClientMessage =
   | { type: 'combat.config'; token: string; characterId?: string; targeting: PlayerCombatConfig['targeting']; movement: PlayerCombatConfig['movement']; attackRange?: number }
   | { type: 'combat.weaponElementOverride.apply'; damageType: DamageType }
   | { type: 'combat.weaponElementOverride.remove' }
-  | { type: 'ability.cast'; abilityId: number; targetId?: string }
+  | { type: 'ability.cast'; abilityId: number; targetId?: string; direction?: Direction; position?: Position }
   | { type: 'rotation.attack.set'; preset: string; characterId?: string; slots: AttackRotationSlot[] }
   | { type: 'rotation.healing.set'; preset: string; characterId?: string; slots: HealingRotationSlot[] }
   | { type: 'rotation.load'; preset: string; characterId?: string };

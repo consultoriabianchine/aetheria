@@ -104,7 +104,7 @@ export class GameState {
   readonly hdSmooth$ = new Subject<boolean>();
 
   /** Zoom do canvas do jogo (afeta apenas a cena Phaser, não a UI DOM). */
-  readonly zoom = signal(parseFloat(localStorage.getItem('aetheria_zoom') ?? '1'));
+  readonly zoom = signal(parseFloat(localStorage.getItem('aetheria_zoom') ?? '0.8'));
   readonly zoom$ = new Subject<number>();
 
   private static readonly ZOOM_MIN_HD = 0.5;

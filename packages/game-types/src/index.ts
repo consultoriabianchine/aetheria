@@ -118,6 +118,7 @@ export interface CombatAbilityDefinition {
   areaConfig?: AbilityAreaConfig;
   projectileId?: number;
   impactEffectId?: number;
+  visual?: ItemVisualEffects;
   animationId?: number;
   formulaProfileId?: number;
   allowedParameters: AbilityParameterDefinition[];

@@ -3,6 +3,7 @@ import { Body, Controller, Get, NotFoundException, Param, ParseIntPipe, Post, Pu
 import type { CombatAbilityDefinition } from '@aetheria/types';
 import { PrismaService } from '../../prisma/prisma.service';
 import { AdminAuthGuard } from './admin-auth.guard';
+import { normalizeVisual } from './visual-validation';
 
 @Controller('admin/abilities')
 @UseGuards(AdminAuthGuard)
@@ -47,8 +48,9 @@ export class AbilityAdminController {
       damage_type: body.damageType ?? null, power_source: body.powerSource ?? 'fixed',
       cooldown_ms: Math.max(0, Math.round(body.cooldownMs ?? 2000)), cooldown_group: body.cooldownGroup ?? 'attack',
       range_tiles: Math.max(0, Math.round(body.rangeTiles ?? 1)), mana_cost: body.manaCost ?? null,
-      level_requirement: body.levelRequirement ?? null, area_config: body.areaConfig ? (body.areaConfig as unknown as Prisma.InputJsonValue) : undefined,
+      level_requirement: body.levelRequirement ?? null,       area_config: body.areaConfig ? (body.areaConfig as unknown as Prisma.InputJsonValue) : undefined,
       projectile_id: body.projectileId ?? null, impact_effect_id: body.impactEffectId ?? null,
+      visual: normalizeVisual(body.visual) ? (normalizeVisual(body.visual) as unknown as Prisma.InputJsonValue) : undefined,
       allowed_parameters: (body.allowedParameters ?? []) as unknown as Prisma.InputJsonValue, default_parameters: body.defaultParameters ? (body.defaultParameters as unknown as Prisma.InputJsonValue) : undefined,
       conditions: body.conditions ? (body.conditions as unknown as Prisma.InputJsonValue) : undefined, enabled: body.enabled ?? true,
     };
@@ -61,7 +63,8 @@ export class AbilityAdminController {
       cooldownMs: row.cooldown_ms, cooldownGroup: row.cooldown_group, rangeTiles: row.range_tiles,
       manaCost: row.mana_cost ?? undefined, levelRequirement: row.level_requirement ?? undefined,
       areaConfig: row.area_config ?? undefined, projectileId: row.projectile_id ?? undefined,
-      impactEffectId: row.impact_effect_id ?? undefined, allowedParameters: row.allowed_parameters ?? [],
+      impactEffectId: row.impact_effect_id ?? undefined, visual: row.visual ?? undefined,
+      allowedParameters: row.allowed_parameters ?? [],
       defaultParameters: row.default_parameters ?? undefined, conditions: row.conditions ?? undefined,
       enabled: row.enabled, createdAt: row.created_at, updatedAt: row.updated_at };
   }
