@@ -116,8 +116,8 @@ export interface CombatAbilityDefinition {
   manaCost?: number;
   levelRequirement?: number;
   areaConfig?: AbilityAreaConfig;
-  projectileId?: number;
-  impactEffectId?: number;
+  shootTypeId?: number;
+  effectTypeId?: number;
   visual?: ItemVisualEffects;
   animationId?: number;
   formulaProfileId?: number;
@@ -136,8 +136,23 @@ export interface MonsterAbilityAssignment {
   priority: number;
   chance: number;
   cooldownOverrideMs?: number;
+  /**
+   * Parâmetros da magia no contexto da criatura. Para `power_source:
+   * monster_parameters`, as chaves convencionais são `minDamage` e `maxDamage`
+   * (dano bruto base, sorteado uniformemente entre os dois) e opcionalmente
+   * `flatPower`/`powerMultiplier` para escalar o dano.
+   */
   parameters?: Record<string, number>;
   conditions?: AbilityUseConditions;
+}
+
+/** Magia de criatura resolvida para uso em runtime (ability + parâmetros). */
+export interface ResolvedMonsterSpell {
+  ability: CombatAbilityDefinition;
+  priority: number;
+  chance: number;
+  cooldownOverrideMs?: number;
+  parameters?: Record<string, number>;
 }
 
 export interface AttackRotationSlot {
@@ -244,6 +259,30 @@ export interface ItemVisualEffects {
   impact?: ItemImpactVisual;
 }
 
+/** Tipo de tiro registrável (catálogo de projéteis). */
+export interface ShootTypeDefinition {
+  id: number;
+  slug: string;
+  name: string;
+  description?: string;
+  projectile: ItemProjectileVisual;
+  enabled: boolean;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+/** Tipo de efeito registrável (catálogo de impactos ao acertar). */
+export interface EffectTypeDefinition {
+  id: number;
+  slug: string;
+  name: string;
+  description?: string;
+  impact: ItemImpactVisual;
+  enabled: boolean;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
 export interface RegenerationConfig {
   hpPerSecond: number;
   manaPerSecond: number;
@@ -304,6 +343,9 @@ export interface ItemDefinition {
   weapon?: WeaponDefinition;
   ammo?: AmmoDefinition;
   visual?: ItemVisualEffects;
+  /** Referências ao catálogo de tipos de tiro/efeito (fallback: visual inline). */
+  shootTypeId?: number;
+  effectTypeId?: number;
 }
 
 export interface ItemCombatStats {
@@ -538,9 +580,18 @@ export interface HuntTheme {
 export interface HuntDefinition {
   id: string;
   name: string;
+  slug?: string;
   ladderPosition: number;
   suggestedLevel: number;
   combatScore?: number;
+  /** Dificuldade visual (1–5 estrelas), separada do nível recomendado. */
+  difficultyRating?: number | null;
+  /** Indicador de eficiência para farm de XP (0–5); null = sem estimativa. */
+  xpRating?: number | null;
+  /** Indicador de eficiência para farm de loot/gold (0–5); null = sem estimativa. */
+  lootRating?: number | null;
+  /** Tags de busca (elementos, tipo de criatura, bioma, etc.). */
+  tags?: string[];
   basePackSize: number;
   maxPackSize: number;
   monsters: HuntMonsterEntry[];
@@ -572,25 +623,34 @@ export interface HuntProgress {
   firstClearTimeMs: number | null;
   bestClearTimeMs: number | null;
   bestClearAt: number | null;
+  /** Hunt marcada como favorita pelo jogador (persistida por personagem). */
+  favorite: boolean;
 }
 
 /** Entrada do catálogo de Hunts enviada ao cliente (lista do ladder). */
 export interface HuntListEntry {
   id: string;
   name: string;
+  slug?: string;
   ladderPosition: number;
   suggestedLevel: number;
   combatScore?: number;
+  difficultyRating: number | null;
+  xpRating: number | null;
+  lootRating: number | null;
+  tags: string[];
   basePackSize: number;
   maxPackSize: number;
-  monsters: { id: string; name: string }[];
-  boss: { monsterId: string; name: string };
+  monsters: { id: string; creatureId: number | null; slug: string; name: string }[];
+  boss: { monsterId: string; creatureId: number | null; name: string };
   arenaId: string;
   theme?: HuntTheme;
   enabled: boolean;
   completionCount: number;
+  firstClearAt: number | null;
   firstClearTimeMs: number | null;
   bestClearTimeMs: number | null;
+  favorite: boolean;
 }
 
 /** Visão pública de uma run de Hunt em andamento. */

@@ -42,6 +42,11 @@ export interface CreatureAIHooks {
   broadcast(event: string, data: unknown): void;
   /** A criatura acertou um jogador: aplica dano, atualiza HP e trata morte. */
   onAttackPlayer(creature: CreatureEntity, target: CreatureTarget, amount: number, critical: boolean, now: number): void;
+  /**
+   * Alcance de ataque efetivo (tiles). Quando a criatura tem magias atribuídas,
+   * é o maior `rangeTiles` delas; senão, o `attackRange` da definição.
+   */
+  getCreatureAttackRange?(creature: CreatureEntity): number;
 }
 
 /** Opções de comportamento da IA. */
@@ -171,9 +176,14 @@ export class CreatureAIService {
 
   // ------------------------------------------------------------ detecção
 
+  /** Alcance de ataque efetivo (magia atribuída tem precedência sobre a definição). */
+  private effectiveAttackRange(creature: CreatureEntity): number {
+    return Math.max(0, this.hooks.getCreatureAttackRange?.(creature) ?? creature.definition.attackRange);
+  }
+
   /** true se a criatura ataca à distância (ranged). */
   private isRanged(creature: CreatureEntity): boolean {
-    return creature.definition.attackRange > 1;
+    return this.effectiveAttackRange(creature) > 1;
   }
 
   /** Semente de tie-break estável por criatura (varia caminhos de custo igual). */
@@ -185,7 +195,7 @@ export class CreatureAIService {
 
   /** true se há caminho (ou alcance) para atacar o alvo. */
   private canReach(creature: CreatureEntity, target: CreatureTarget): boolean {
-    if (tileDistance(creature.position, target.position) <= creature.definition.attackRange) return true;
+    if (tileDistance(creature.position, target.position) <= this.effectiveAttackRange(creature)) return true;
     const path = findPath(this.movement, {
       start: creature.position,
       goal: target.position,
@@ -324,7 +334,7 @@ export class CreatureAIService {
       return;
     }
 
-    if (distToTarget <= creature.definition.attackRange) {
+    if (distToTarget <= this.effectiveAttackRange(creature)) {
       this.faceToward(creature, target.position);
       this.switchState(creature, 'ATTACK', now);
       creature.blockedSince = 0;
@@ -347,7 +357,7 @@ export class CreatureAIService {
 
   /** Chase de criaturas ranged: mantém distância preferida (não cola no alvo). */
   private updateChaseRanged(creature: CreatureEntity, target: CreatureTarget, now: number, distToTarget: number) {
-    if (distToTarget > creature.definition.attackRange) {
+    if (distToTarget > this.effectiveAttackRange(creature)) {
       this.ensurePath(creature, target.position, now, this.exceptIds(creature, target));
       this.stepAndHandleBlock(creature, target, now);
       return;
@@ -438,7 +448,7 @@ export class CreatureAIService {
       return;
     }
     const dist = tileDistance(creature.position, target.position);
-    if (dist > creature.definition.attackRange) {
+    if (dist > this.effectiveAttackRange(creature)) {
       this.switchState(creature, 'CHASE', now);
       return;
     }

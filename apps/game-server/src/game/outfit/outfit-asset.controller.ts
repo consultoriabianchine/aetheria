@@ -1,4 +1,4 @@
-import { Controller, Get, NotFoundException, Param, ParseIntPipe, Res, StreamableFile } from '@nestjs/common';
+import { Controller, Get, Header, NotFoundException, Param, ParseIntPipe, Res, StreamableFile } from '@nestjs/common';
 import { OutfitRegistry } from './outfit-registry.service';
 
 /** Endpoints públicos de assets de outfits (imagem + config de animação). */
@@ -22,6 +22,7 @@ export class OutfitAssetController {
   }
 
   @Get(':outfitId/animation')
+  @Header('Cache-Control', 'no-store')
   getAnimation(@Param('outfitId', ParseIntPipe) outfitId: number) {
     const outfit = this.registry.getOutfit(outfitId);
     const asset = this.registry.getOutfitAsset(outfitId);

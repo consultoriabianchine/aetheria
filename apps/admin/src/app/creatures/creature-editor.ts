@@ -1,12 +1,31 @@
 import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild, signal } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
-import { DAMAGE_TYPES, type AnimationDirection, type AnimationSequence, type CreatureAnimationConfig, type CreatureAnimationType, type CreatureVisualBounds, type DamageAffinities, type DamageType } from '@aetheria/types';
+import { DAMAGE_TYPES, type AnimationDirection, type AnimationSequence, type CombatAbilityDefinition, type CreatureAnimationConfig, type CreatureAnimationType, type CreatureVisualBounds, type DamageAffinities, type DamageType } from '@aetheria/types';
 import { ApiService, type CreatureDetail } from '../core/api.service';
 
 const ANIMATION_TYPES: CreatureAnimationType[] = ['idle', 'walk', 'attack', 'cast', 'hit', 'death', 'spawn'];
 const DIRECTIONS: AnimationDirection[] = ['north', 'east', 'south', 'west'];
 
 const DIRECTION_LABEL: Record<AnimationDirection, string> = { north: '↑', east: '→', south: '↓', west: '←' };
+
+interface MonsterSpellDraft {
+  abilityId: number | null;
+  enabled: boolean;
+  priority: number;
+  chance: number;
+  cooldownOverrideMs: number | null;
+  minDamage: number | null;
+  maxDamage: number | null;
+}
+
+interface StoredMonsterAbility {
+  ability_id: number;
+  enabled: boolean;
+  priority: number;
+  chance: number;
+  cooldown_override_ms: number | null;
+  parameters: Record<string, number> | null;
+}
 
 @Component({
   selector: 'admin-creature-editor',
@@ -24,7 +43,7 @@ export class CreatureEditor implements OnInit, AfterViewInit, OnDestroy {
   readonly saving = signal(false);
   readonly affinities = signal<DamageAffinities>({} as DamageAffinities);
   readonly damageTypes = DAMAGE_TYPES;
-  readonly activeTab = signal<'overview' | 'elements' | 'loot' | 'animation' | 'positioning'>('overview');
+  readonly activeTab = signal<'overview' | 'elements' | 'loot' | 'animation' | 'positioning' | 'spells'>('overview');
 
   readonly spriteWidth = signal(32);
   readonly spriteHeight = signal(32);
@@ -53,6 +72,8 @@ export class CreatureEditor implements OnInit, AfterViewInit, OnDestroy {
   readonly previewSpeed = signal(1);
   readonly stats = signal<Record<string, number>>({});
   readonly loot = signal<CreatureDetail['loot']>([]);
+  readonly abilities = signal<CombatAbilityDefinition[]>([]);
+  readonly spells = signal<MonsterSpellDraft[]>([]);
 
   // posicionamento do sprite
   readonly footprintWidth = signal(1);
@@ -67,6 +88,8 @@ export class CreatureEditor implements OnInit, AfterViewInit, OnDestroy {
   readonly bodyHeight = signal(32);
   readonly bodyOffsetX = signal(0);
   readonly bodyOffsetY = signal(0);
+  readonly projectileOriginX = signal(0);
+  readonly projectileOriginY = signal(0);
 
   // preview 5x5
   readonly showGridPreview = signal(true);
@@ -132,6 +155,18 @@ export class CreatureEditor implements OnInit, AfterViewInit, OnDestroy {
       this.loot.set(structuredClone(detail.loot));
       this.version.set(detail.animationVersion);
 
+      const [abilities, monsterRows] = await Promise.all([this.api.listAbilities(), this.api.getMonsterAbilities(this.id)]);
+      this.abilities.set(abilities);
+      this.spells.set((monsterRows as StoredMonsterAbility[]).map((row) => ({
+        abilityId: row.ability_id,
+        enabled: row.enabled,
+        priority: row.priority,
+        chance: row.chance,
+        cooldownOverrideMs: row.cooldown_override_ms,
+        minDamage: row.parameters?.['minDamage'] ?? null,
+        maxDamage: row.parameters?.['maxDamage'] ?? null,
+      })));
+
       if (detail.animation) {
         const c = detail.animation;
         this.spriteWidth.set(c.spriteWidth);
@@ -148,6 +183,8 @@ export class CreatureEditor implements OnInit, AfterViewInit, OnDestroy {
         this.bodyHeight.set(c.bodyHeight ?? c.visualBounds?.height ?? c.spriteHeight);
         this.bodyOffsetX.set(c.bodyOffsetX ?? 0);
         this.bodyOffsetY.set(c.bodyOffsetY ?? 0);
+        this.projectileOriginX.set(c.sockets?.projectileOrigin?.x ?? c.spriteWidth / 2);
+        this.projectileOriginY.set(c.sockets?.projectileOrigin?.y ?? c.spriteHeight / 2);
         this.sequences.set(structuredClone(c.animations));
       } else {
         this.sequences.set([]);
@@ -161,6 +198,8 @@ export class CreatureEditor implements OnInit, AfterViewInit, OnDestroy {
         this.bodyHeight.set(this.spriteHeight());
         this.bodyOffsetX.set(0);
         this.bodyOffsetY.set(0);
+        this.projectileOriginX.set(this.spriteWidth() / 2);
+        this.projectileOriginY.set(this.spriteHeight() / 2);
       }
       this.footprintWidth.set(detail.footprintWidth ?? 1);
       this.footprintHeight.set(detail.footprintHeight ?? 1);
@@ -373,6 +412,9 @@ export class CreatureEditor implements OnInit, AfterViewInit, OnDestroy {
     if (this.bodyHeight() !== config.spriteHeight) config.bodyHeight = this.bodyHeight();
     if (this.bodyOffsetX() !== 0) config.bodyOffsetX = this.bodyOffsetX();
     if (this.bodyOffsetY() !== 0) config.bodyOffsetY = this.bodyOffsetY();
+    if (this.projectileOriginX() !== config.spriteWidth / 2 || this.projectileOriginY() !== config.spriteHeight / 2) {
+      config.sockets = { projectileOrigin: { x: this.projectileOriginX(), y: this.projectileOriginY() } };
+    }
     return config;
   }
 
@@ -410,6 +452,46 @@ export class CreatureEditor implements OnInit, AfterViewInit, OnDestroy {
   centralizeAnchor() {
     this.anchorX.set(this.spriteWidth() / 2);
     this.anchorY.set(this.spriteHeight());
+    this.dirty.set(true);
+    this.drawTilePreview();
+  }
+
+  setProjectileOriginX(value: number) {
+    this.projectileOriginX.set(Math.round(value));
+    this.dirty.set(true);
+    this.drawTilePreview();
+  }
+
+  setProjectileOriginY(value: number) {
+    this.projectileOriginY.set(Math.round(value));
+    this.dirty.set(true);
+    this.drawTilePreview();
+  }
+
+  centralizeProjectileOrigin() {
+    this.projectileOriginX.set(this.spriteWidth() / 2);
+    this.projectileOriginY.set(this.spriteHeight() / 2);
+    this.dirty.set(true);
+    this.drawTilePreview();
+  }
+
+  onTilePreviewClick(event: MouseEvent) {
+    const canvas = this.tilePreviewCanvas.nativeElement;
+    const rect = canvas.getBoundingClientRect();
+    const scaleX = canvas.width / rect.width;
+    const scaleY = canvas.height / rect.height;
+    const mx = (event.clientX - rect.left) * scaleX;
+    const my = (event.clientY - rect.top) * scaleY;
+    const TILE = 32;
+    const PAD = 70;
+    const bx = this.previewBaseX();
+    const by = this.previewBaseY();
+    const basePxX = PAD + bx * TILE + TILE / 2;
+    const basePxY = PAD + by * TILE + TILE;
+    const drawX = basePxX + this.offsetX() - this.anchorX();
+    const drawY = basePxY + this.offsetY() - this.anchorY();
+    this.projectileOriginX.set(Math.round(mx - drawX));
+    this.projectileOriginY.set(Math.round(my - drawY));
     this.dirty.set(true);
     this.drawTilePreview();
   }
@@ -502,6 +584,60 @@ export class CreatureEditor implements OnInit, AfterViewInit, OnDestroy {
 
   updateLoot(index: number, patch: Partial<CreatureDetail['loot'][number]>) {
     this.loot.update((loot) => loot.map((entry, i) => i === index ? { ...entry, ...patch } : entry));
+  }
+
+  get monsterAbilities(): CombatAbilityDefinition[] {
+    return this.abilities().filter((ability) => ability.ownerType === 'monster' || ability.ownerType === 'both');
+  }
+
+  abilityName(id: number | null): string {
+    if (id == null) return '—';
+    const ability = this.abilities().find((a) => a.abilityId === id);
+    return ability ? `${ability.name} (${ability.damageType ?? 'heal'} · range ${ability.rangeTiles})` : `#${id}`;
+  }
+
+  spellNumber(value: unknown): number | null {
+    const n = Number(value);
+    return value === '' || value === null || value === undefined || Number.isNaN(n) ? null : n;
+  }
+
+  addSpell() {
+    this.spells.update((spells) => [...spells, { abilityId: null, enabled: true, priority: spells.length + 1, chance: 1, cooldownOverrideMs: null, minDamage: null, maxDamage: null }]);
+  }
+
+  removeSpell(index: number) {
+    this.spells.update((spells) => spells.filter((_, i) => i !== index));
+  }
+
+  updateSpell(index: number, patch: Partial<MonsterSpellDraft>) {
+    this.spells.update((spells) => spells.map((spell, i) => i === index ? { ...spell, ...patch } : spell));
+  }
+
+  async saveSpells() {
+    this.error.set(null);
+    this.saving.set(true);
+    try {
+      const payload = this.spells()
+        .filter((spell) => spell.abilityId != null)
+        .map((spell) => {
+          const parameters: Record<string, number> = {};
+          if (spell.minDamage != null) parameters['minDamage'] = spell.minDamage;
+          if (spell.maxDamage != null) parameters['maxDamage'] = spell.maxDamage;
+          return {
+            abilityId: spell.abilityId as number,
+            enabled: spell.enabled,
+            priority: spell.priority,
+            chance: spell.chance,
+            cooldownOverrideMs: spell.cooldownOverrideMs ?? undefined,
+            parameters: Object.keys(parameters).length > 0 ? parameters : undefined,
+          };
+        });
+      await this.api.saveMonsterAbilities(this.id, payload);
+    } catch (e) {
+      this.error.set((e as Error).message);
+    } finally {
+      this.saving.set(false);
+    }
   }
 
   async saveAffinities() {
@@ -777,10 +913,18 @@ export class CreatureEditor implements OnInit, AfterViewInit, OnDestroy {
     }
 
     if (this.showProjectileOrigin()) {
-      const pox = drawX + this.spriteWidth() / 2;
-      const poy = drawY + this.spriteHeight() / 2;
+      const pox = drawX + this.projectileOriginX();
+      const poy = drawY + this.projectileOriginY();
+      ctx.strokeStyle = '#ff00ff';
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(pox - 6, poy);
+      ctx.lineTo(pox + 6, poy);
+      ctx.moveTo(pox, poy - 6);
+      ctx.lineTo(pox, poy + 6);
+      ctx.stroke();
       ctx.fillStyle = '#ff00ff';
-      ctx.fillRect(pox - 2, poy - 2, 4, 4);
+      ctx.fillRect(pox - 2, poy - 2, 5, 5);
     }
   }
 }

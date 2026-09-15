@@ -151,6 +151,19 @@ const INITIAL_ABILITIES = [
   { slug: 'minor-heal', name: 'Minor Heal', owner_type: 'both', category: 'heal', target_mode: 'self', damage_type: 'holy', power_source: 'fixed', cooldown_ms: 4000, cooldown_group: 'healing', range_tiles: 0, mana_cost: 20, allowed_parameters: [{ key: 'power', label: 'Power', min: 1, max: 10000 }], default_parameters: { power: 30 }, enabled: true },
 ] as const;
 
+const INITIAL_SHOOT_TYPES = [
+  { slug: 'arrow', name: 'Arrow', description: 'Flecha básica para arcos.' },
+  { slug: 'bolt', name: 'Bolt', description: 'Virote para bestas.' },
+  { slug: 'energy-bolt', name: 'Energy Bolt', description: 'Projétil de energia arcana.' },
+  { slug: 'fireball', name: 'Fireball', description: 'Bola de fogo.' },
+] as const;
+
+const INITIAL_EFFECT_TYPES = [
+  { slug: 'impact-default', name: 'Impacto Padrão', description: 'Impacto genérico ao acertar.' },
+  { slug: 'fire-explosion', name: 'Explosão de Fogo', description: 'Explosão ígnea.' },
+  { slug: 'spark', name: 'Faísca', description: 'Faísca de energia.' },
+] as const;
+
 
 type SourceItem = {
   id: string;
@@ -600,6 +613,43 @@ async function seed() {
   for (const ability of INITIAL_ABILITIES) {
     await prisma.combatAbility.upsert({ where: { slug: ability.slug }, update: ability, create: ability });
   }
+  const shootIds: Record<string, number> = {};
+  for (const shoot of INITIAL_SHOOT_TYPES) {
+    const row = await prisma.shootType.upsert({ where: { slug: shoot.slug }, update: { name: shoot.name, description: shoot.description }, create: { slug: shoot.slug, name: shoot.name, description: shoot.description } });
+    shootIds[shoot.slug] = row.id;
+  }
+  const effectIds: Record<string, number> = {};
+  for (const effect of INITIAL_EFFECT_TYPES) {
+    const row = await prisma.effectType.upsert({ where: { slug: effect.slug }, update: { name: effect.name, description: effect.description }, create: { slug: effect.slug, name: effect.name, description: effect.description } });
+    effectIds[effect.slug] = row.id;
+  }
+
+  // Magia de criatura de exemplo: Fire Ball (dano de fogo + projétil + efeito),
+  // com dano base sorteado entre minDamage e maxDamage na atribuição da criatura.
+  const fireball = await prisma.combatAbility.upsert({
+    where: { slug: 'fireball' },
+    update: {
+      name: 'Fire Ball', description: 'Bola de fogo arremessada contra o alvo.', owner_type: 'monster',
+      damage_type: 'fire', power_source: 'monster_parameters', cooldown_ms: 6000, range_tiles: 6,
+      shoot_type_id: shootIds.fireball ?? null, effect_type_id: effectIds['fire-explosion'] ?? null,
+      allowed_parameters: [
+        { key: 'minDamage', label: 'Dano mínimo', min: 1, max: 100000, defaultValue: 40 },
+        { key: 'maxDamage', label: 'Dano máximo', min: 1, max: 100000, defaultValue: 90 },
+      ],
+    },
+    create: {
+      slug: 'fireball', name: 'Fire Ball', description: 'Bola de fogo arremessada contra o alvo.',
+      owner_type: 'monster', player_class: null, category: 'attack', target_mode: 'single_enemy',
+      damage_type: 'fire', power_source: 'monster_parameters', cooldown_ms: 6000, cooldown_group: 'attack',
+      range_tiles: 6, mana_cost: null, level_requirement: null,
+      shoot_type_id: shootIds.fireball ?? null, effect_type_id: effectIds['fire-explosion'] ?? null,
+      allowed_parameters: [
+        { key: 'minDamage', label: 'Dano mínimo', min: 1, max: 100000, defaultValue: 40 },
+        { key: 'maxDamage', label: 'Dano máximo', min: 1, max: 100000, defaultValue: 90 },
+      ],
+      enabled: true,
+    },
+  });
 
 
   for (const def of CREATURE_SEED) {
@@ -645,6 +695,24 @@ async function seed() {
         max_quantity: l.maxQuantity,
         rarity: 'COMMON',
       })),
+    });
+  }
+
+  // Atribui a magia Fire Ball ao Minotauro (demo de criatura melee que ganha um
+  // ataque ranged elemental). O dano base sai entre minDamage e maxDamage.
+  const minotaur = await prisma.creatureDefinition.findUnique({ where: { slug: 'minotaur' }, select: { creature_id: true } });
+  if (minotaur) {
+    await prisma.monsterAbilityAssignment.deleteMany({ where: { monster_id: minotaur.creature_id } });
+    await prisma.monsterAbilityAssignment.create({
+      data: {
+        monster_id: minotaur.creature_id,
+        ability_id: fireball.id,
+        enabled: true,
+        priority: 1,
+        chance: 1,
+        cooldown_override_ms: null,
+        parameters: { minDamage: 40, maxDamage: 90 },
+      },
     });
   }
 

@@ -1,0 +1,206 @@
+@if (browser.open()) {
+<div class="modal-backdrop" (click)="browser.closeBrowser()">
+  <section class="hunt-browser" (click)="$event.stopPropagation()">
+    <header class="hb-header">
+      <h2>Hunts <span>— Escolha onde caçar</span></h2>
+      <button class="hb-close" type="button" (click)="browser.closeBrowser()" aria-label="Fechar">×</button>
+    </header>
+
+    <div class="hb-toolbar">
+      <input
+        class="hb-search"
+        type="text"
+        [ngModel]="browser.search()"
+        (ngModelChange)="onSearch($event)"
+        placeholder="Buscar Hunt ou monstro..."
+        autocomplete="off"
+      />
+      <div class="hb-filters">
+        @for (f of categories; track f.id) {
+          <button class="hb-filter" type="button" [class.active]="isActiveCategory(f.id)" (click)="setCategory(f.id)">{{ f.label }}</button>
+        }
+        <button class="hb-filter star" type="button" [class.active]="isActiveCategory('favorites')" (click)="setCategory('favorites')">★ Favoritas</button>
+      </div>
+    </div>
+
+    <div class="hb-body">
+      <aside class="hb-levels">
+        <h3>Nível recomendado</h3>
+        @for (r of levelRanges(); track r.id) {
+          <button
+            class="hb-level"
+            type="button"
+            [class.active]="browser.levelRange() === r.id"
+            (click)="setLevelRange(r.id)"
+          >
+            <span>{{ r.label }}</span>
+            <b>{{ r.count }}</b>
+          </button>
+        }
+      </aside>
+
+      <div class="hb-grid-scroll">
+        @if (visibleHunts().length === 0) {
+          <div class="hb-empty">Nenhuma Hunt encontrada.</div>
+        }
+        <div class="hb-grid">
+          @for (h of visibleHunts(); track h.id) {
+            <article
+              class="hb-card"
+              [class.selected]="isSelected(h)"
+              (click)="select(h)"
+              (dblclick)="select(h)"
+              (keydown.enter)="select(h)"
+              tabindex="0"
+            >
+              <button
+                class="hb-fav"
+                type="button"
+                [class.on]="h.favorite"
+                (click)="$event.stopPropagation(); toggleFavorite(h)"
+                [attr.aria-label]="h.favorite ? 'Remover dos favoritos' : 'Favoritar'"
+              >{{ h.favorite ? '★' : '☆' }}</button>
+
+              <div class="hb-sprites">
+                @for (m of h.monsters.slice(0, 4); track m.id) {
+                  <creature-thumb [creatureId]="m.creatureId"></creature-thumb>
+                }
+                @if (h.monsters.length > 4) {
+                  <span class="hb-more">+{{ h.monsters.length - 4 }}</span>
+                }
+              </div>
+
+              <strong class="hb-name">{{ h.name }}</strong>
+              <span class="hb-stars" [attr.title]="'Dificuldade ' + (h.difficultyRating ?? '—') + '/5'">
+                @for (on of stars(h.difficultyRating); track $index) { <i [class.on]="on">★</i> }
+              </span>
+
+              <div class="hb-meta">
+                <span class="hb-level-chip">LVL {{ h.suggestedLevel }}</span>
+                <span class="hb-badges">
+                  @if (h.xpRating != null) { <em class="badge xp">XP</em> }
+                  @if (h.lootRating != null) { <em class="badge loot">LOOT</em> }
+                  @if (h.completionCount === 0) { <em class="badge new">NOVA</em> }
+                </span>
+              </div>
+
+              <footer class="hb-card-foot">
+                @if (h.completionCount > 0) { <span class="hb-done">✓ {{ h.completionCount }}</span> }
+                @else { <span class="hb-done none">—</span> }
+                @if (h.bestClearTimeMs != null) { <span class="hb-best">REC {{ fmtTime(h.bestClearTimeMs) }}</span> }
+              </footer>
+            </article>
+          }
+        </div>
+      </div>
+    </div>
+
+    <footer class="hb-footer">
+      <div class="hb-selected">
+        <span>Hunt selecionada:</span>
+        <strong>{{ selectedHunt()?.name ?? '—' }}</strong>
+      </div>
+      <label class="hb-loop" [class.on]="browser.loop()">
+        <input type="checkbox" [ngModel]="browser.loop()" (ngModelChange)="browser.loop.set($event)" />
+        <span>LOOP</span>
+      </label>
+      <button class="hb-enter" type="button" [disabled]="!selectedHunt()" (click)="selectedHunt() && requestStart(selectedHunt()!)">
+        Entrar na Hunt
+      </button>
+    </footer>
+
+    @if (browser.detailsOpen() && selectedHunt(); as h) {
+      <div class="hb-details">
+        <div class="hb-details-head">
+          <div>
+            <span class="hb-details-title">{{ h.name }}</span>
+            <div class="hb-stars">
+              @for (on of stars(h.difficultyRating); track $index) { <i [class.on]="on">★</i> }
+            </div>
+          </div>
+          <button class="hb-close" type="button" (click)="browser.closeDetails()" aria-label="Voltar">×</button>
+        </div>
+
+        <div class="hb-details-metrics">
+          <div class="hb-metric"><span>Nível recomendado</span><b>{{ h.suggestedLevel }}</b></div>
+          <div class="hb-metric"><span>Dificuldade</span><b>{{ h.difficultyRating ?? '—' }}/5</b></div>
+          <div class="hb-metric"><span>Conclusões</span><b>{{ h.completionCount }}</b></div>
+          <div class="hb-metric"><span>Melhor tempo</span><b>{{ fmtTime(h.bestClearTimeMs) }}</b></div>
+          <div class="hb-metric"><span>Primeira conclusão</span><b>{{ fmtDate(h.firstClearAt) }}</b></div>
+        </div>
+
+        <div class="hb-details-monsters">
+          <h4>Monstros</h4>
+          <div class="hb-monster-row">
+            @for (m of h.monsters; track m.id) {
+              <div class="hb-monster">
+                <creature-thumb [creatureId]="m.creatureId"></creature-thumb>
+                <span>{{ m.name }}</span>
+              </div>
+            }
+          </div>
+        </div>
+
+        <div class="hb-details-boss">
+          <h4>Boss — Wave {{ bossWave }}</h4>
+          <div class="hb-monster boss">
+            <creature-thumb [creatureId]="h.boss.creatureId"></creature-thumb>
+            <span>{{ h.boss.name }}</span>
+          </div>
+        </div>
+
+        <div class="hb-details-waves">
+          <h4>Waves</h4>
+          <div class="hb-wave-strip">
+            @for (w of waveCells(); track w) {
+              <div class="hb-wave" [class.boss]="w === bossWave">
+                <b>{{ w }}</b>
+                <span>{{ wavePackLabel(h, w) }}</span>
+              </div>
+            }
+          </div>
+        </div>
+
+        <div class="hb-details-rewards">
+          <h4>Recompensas</h4>
+          <span class="hb-reward">{{ h.xpRating != null ? 'Boa para XP' : '—' }}</span>
+          <span class="hb-reward">{{ h.lootRating != null ? 'Boa para Loot' : '—' }}</span>
+        </div>
+
+        <div class="hb-details-party">
+          <h4>Party</h4>
+          @for (m of partyMembers(); track m.id) {
+            <div class="hb-party-member">
+              <strong>{{ m.name }}</strong>
+              <span>{{ m.archetype }} · Lv {{ m.level }}</span>
+            </div>
+          }
+        </div>
+
+        <div class="hb-details-actions">
+          <label class="hb-loop" [class.on]="browser.loop()">
+            <input type="checkbox" [ngModel]="browser.loop()" (ngModelChange)="browser.loop.set($event)" />
+            <span>LOOP</span>
+          </label>
+          <p class="hb-loop-hint">Ao concluir a wave 10, reiniciar automaticamente esta Hunt.</p>
+          <button class="hb-enter" type="button" (click)="requestStart(h)">Entrar na Hunt</button>
+        </div>
+      </div>
+    }
+
+    @if (browser.levelWarning(); as w) {
+      <div class="hb-warning-backdrop">
+        <div class="hb-warning">
+          <h3>Nível recomendado: {{ w.recommendedLevel }}</h3>
+          <p>Seu nível: {{ w.playerLevel }}</p>
+          <p class="hb-warning-text">Esta Hunt pode ser difícil para sua party.</p>
+          <div class="hb-warning-actions">
+            <button type="button" class="hb-enter" (click)="confirmWarningStart()">Entrar mesmo assim</button>
+            <button type="button" (click)="cancelWarning()">Cancelar</button>
+          </div>
+        </div>
+      </div>
+    }
+  </section>
+</div>
+}

@@ -130,6 +130,11 @@ export class GameGateway implements OnGatewayConnection, OnGatewayDisconnect {
     await this.engine.handleHuntSetLoop(socket.id, payload.token, payload.enabled);
   }
 
+  @SubscribeMessage('hunt.setFavorite')
+  async onHuntSetFavorite(socket: Socket, payload: { token: string; huntId: string; favorite: boolean }) {
+    await this.engine.handleHuntSetFavorite(socket.id, payload.token, payload.huntId, payload.favorite);
+  }
+
   @SubscribeMessage('party.unlockSlot')
   async onPartyUnlockSlot(socket: Socket, payload: { token: string }) {
     await this.engine.handlePartyUnlockSlot(socket.id, payload.token);

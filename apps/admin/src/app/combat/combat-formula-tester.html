@@ -44,6 +44,45 @@
   }
 }
 
+<h2>XP Rate (Party)</h2>
+<div class="xprate">
+  <div class="row">
+    <label>Membros vivos na hunt</label>
+    <select [ngModel]="partySize()" (ngModelChange)="partySize.set(+$event)">
+      @for (n of partySizes; track n) { <option [value]="n">{{ n }}</option> }
+    </select>
+  </div>
+
+  @for (n of partySizes; track n) {
+    <div class="row">
+      <span class="bar-caption" [class.solo]="n === 1">{{ n }} {{ n === 1 ? 'solo' : 'membros' }}</span>
+      <div class="bar"><div class="bar-fill" [style.width]="percent(perMemberRate(n))"></div></div>
+      <span class="bar-caption">{{ percent(perMemberRate(n)) }} /membro</span>
+    </div>
+  }
+
+  <div class="cards">
+    <div class="card">Rate por membro ({{ partySize() }})<div class="value">{{ percent(perMemberRate(partySize())) }}</div></div>
+    <div class="card">Rate total da party<div class="value">{{ percent(totalRate(partySize())) }}</div></div>
+    <div class="card">Criatura de 100 XP → cada membro<div class="value">{{ xpShare(100, partySize()) }} XP</div></div>
+  </div>
+
+  <table>
+    <thead><tr><th>Membros</th><th>Bônus de grupo</th><th>Rate / membro</th><th>Total da party</th><th>XP por membro (100 XP)</th></tr></thead>
+    <tbody>
+      @for (n of partySizes; track n) {
+        <tr>
+          <td>{{ n }}</td>
+          <td>{{ n === 1 ? '—' : '+' + percent(bonusPerExtra * (n - 1)) }}</td>
+          <td>{{ percent(perMemberRate(n)) }}</td>
+          <td>{{ percent(totalRate(n)) }}</td>
+          <td>{{ xpShare(100, n) }} XP</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>
+
 <h2>Curvas</h2>
 <table>
   <thead><tr><th>Level</th><th>Skill</th><th>Weak</th><th>Medium</th><th>Strong</th></tr></thead>

@@ -36,7 +36,10 @@ export class AbilityAdminController {
 
   @Put(':id')
   async update(@Param('id', ParseIntPipe) id: number, @Body() body: Partial<CombatAbilityDefinition>) {
-    return this.toDefinition(await this.prisma.combatAbility.update({ where: { id }, data: this.toData(body) }));
+    const data = this.toData(body) as unknown as Prisma.CombatAbilityUpdateInput;
+    if (body.shootTypeId === null) data.shoot_type = { disconnect: true };
+    if (body.effectTypeId === null) data.effect_type = { disconnect: true };
+    return this.toDefinition(await this.prisma.combatAbility.update({ where: { id }, data }));
   }
 
   private toData(body: Partial<CombatAbilityDefinition>) {
@@ -49,7 +52,8 @@ export class AbilityAdminController {
       cooldown_ms: Math.max(0, Math.round(body.cooldownMs ?? 2000)), cooldown_group: body.cooldownGroup ?? 'attack',
       range_tiles: Math.max(0, Math.round(body.rangeTiles ?? 1)), mana_cost: body.manaCost ?? null,
       level_requirement: body.levelRequirement ?? null,       area_config: body.areaConfig ? (body.areaConfig as unknown as Prisma.InputJsonValue) : undefined,
-      projectile_id: body.projectileId ?? null, impact_effect_id: body.impactEffectId ?? null,
+      shoot_type: body.shootTypeId ? { connect: { id: body.shootTypeId } } : undefined,
+      effect_type: body.effectTypeId ? { connect: { id: body.effectTypeId } } : undefined,
       visual: normalizeVisual(body.visual) ? (normalizeVisual(body.visual) as unknown as Prisma.InputJsonValue) : undefined,
       allowed_parameters: (body.allowedParameters ?? []) as unknown as Prisma.InputJsonValue, default_parameters: body.defaultParameters ? (body.defaultParameters as unknown as Prisma.InputJsonValue) : undefined,
       conditions: body.conditions ? (body.conditions as unknown as Prisma.InputJsonValue) : undefined, enabled: body.enabled ?? true,
@@ -62,8 +66,8 @@ export class AbilityAdminController {
       targetMode: row.target_mode, damageType: row.damage_type ?? undefined, powerSource: row.power_source,
       cooldownMs: row.cooldown_ms, cooldownGroup: row.cooldown_group, rangeTiles: row.range_tiles,
       manaCost: row.mana_cost ?? undefined, levelRequirement: row.level_requirement ?? undefined,
-      areaConfig: row.area_config ?? undefined, projectileId: row.projectile_id ?? undefined,
-      impactEffectId: row.impact_effect_id ?? undefined, visual: row.visual ?? undefined,
+      areaConfig: row.area_config ?? undefined, shootTypeId: row.shoot_type_id ?? undefined,
+      effectTypeId: row.effect_type_id ?? undefined, visual: row.visual ?? undefined,
       allowedParameters: row.allowed_parameters ?? [],
       defaultParameters: row.default_parameters ?? undefined, conditions: row.conditions ?? undefined,
       enabled: row.enabled, createdAt: row.created_at, updatedAt: row.updated_at };

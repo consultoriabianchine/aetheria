@@ -27,7 +27,7 @@ export class OutfitAssetService {
   loadConfig(outfitId: number): Promise<OutfitAnimData | null> {
     const existing = this.pending.get(outfitId);
     if (existing) return existing;
-    const promise = fetch(`${WS_URL}/assets/outfits/${outfitId}/animation`)
+    const promise = fetch(`${WS_URL}/assets/outfits/${outfitId}/animation`, { cache: 'no-store' })
       .then((res) => (res.ok ? (res.json() as Promise<OutfitAnimData>) : null))
       .catch(() => null)
       .then((config) => {

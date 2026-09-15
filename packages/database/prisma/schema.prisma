@@ -116,6 +116,7 @@ model HuntProgress {
   firstClearTimeMs Int?
   bestClearTimeMs  Int?
   bestClearAt      DateTime?
+  favorite         Boolean   @default(false)
   character        Character @relation(fields: [characterId], references: [id], onDelete: Cascade)
   createdAt        DateTime  @default(now())
   updatedAt        DateTime  @updatedAt
@@ -155,8 +156,12 @@ model ItemDefinition {
   specialModifiers  Json?    @map("special_modifiers")
   enabled           Boolean  @default(true)
   sourceItemId      String?  @map("source_item_id")
+  shootTypeId       Int?     @map("shoot_type_id")
+  effectTypeId      Int?     @map("effect_type_id")
   createdAt         DateTime @default(now()) @map("created_at")
   updatedAt         DateTime @updatedAt @map("updated_at")
+  shootType         ShootType? @relation(fields: [shootTypeId], references: [id], onDelete: SetNull)
+  effectType        EffectType? @relation(fields: [effectTypeId], references: [id], onDelete: SetNull)
 
   @@index([type])
   @@index([slot])
@@ -214,8 +219,8 @@ model CombatAbility {
   mana_cost           Int?     @map("mana_cost")
   level_requirement   Int?     @map("level_requirement")
   area_config         Json?    @map("area_config")
-  projectile_id       Int?     @map("projectile_id")
-  impact_effect_id    Int?     @map("impact_effect_id")
+  shoot_type_id       Int?     @map("shoot_type_id")
+  effect_type_id      Int?     @map("effect_type_id")
   visual              Json?    @map("visual")
   allowed_parameters  Json     @default("[]") @map("allowed_parameters")
   default_parameters  Json?    @map("default_parameters")
@@ -227,6 +232,8 @@ model CombatAbility {
   monster_assignments MonsterAbilityAssignment[]
   attack_slots        CharacterAttackRotationSlot[]
   healing_slots       CharacterHealingRotationSlot[]
+  shoot_type          ShootType? @relation(fields: [shoot_type_id], references: [id], onDelete: SetNull)
+  effect_type         EffectType? @relation(fields: [effect_type_id], references: [id], onDelete: SetNull)
 
   @@index([owner_type, category, enabled])
   @@map("combat_abilities")
@@ -273,6 +280,58 @@ model CharacterHealingRotationSlot {
   ability      CombatAbility? @relation(fields: [ability_id], references: [id], onDelete: SetNull)
   @@unique([character_id, preset, slot_position])
   @@map("character_healing_rotation_slots")
+}
+
+// ---------------------------------------------------------------------------
+// Tipos de tiro e de efeito (catálogos registráveis). Itens e habilidades
+// apenas referenciam estes tipos (shoot_type_id / effect_type_id) em vez de
+// repetir a config de sprite. O servidor resolve e emite combat.projectile.
+// ---------------------------------------------------------------------------
+
+model ShootType {
+  id               Int      @id @default(autoincrement())
+  slug             String   @unique
+  name             String
+  description      String   @default("")
+  sprite           String   @default("")
+  spriteAssetId    Int?     @map("sprite_asset_id")
+  frameWidth       Int      @default(32) @map("frame_width")
+  frameHeight      Int      @default(32) @map("frame_height")
+  frames           Json     @default("{}")
+  speedPxPerSecond Int      @default(520) @map("speed_px_per_second")
+  offsetX          Int      @default(0) @map("offset_x")
+  offsetY          Int      @default(0) @map("offset_y")
+  enabled          Boolean  @default(true)
+  createdAt        DateTime @default(now()) @map("created_at")
+  updatedAt        DateTime @updatedAt @map("updated_at")
+  items            ItemDefinition[]
+  abilities        CombatAbility[]
+  spriteAsset      SpriteAsset? @relation(fields: [spriteAssetId], references: [sprite_asset_id], onDelete: SetNull)
+
+  @@index([enabled])
+  @@map("shoot_types")
+}
+
+model EffectType {
+  id            Int      @id @default(autoincrement())
+  slug          String   @unique
+  name          String
+  description   String   @default("")
+  sprite        String   @default("")
+  spriteAssetId Int?     @map("sprite_asset_id")
+  frameWidth    Int      @default(32) @map("frame_width")
+  frameHeight   Int      @default(32) @map("frame_height")
+  frames        Json     @default("[]")
+  fps           Int      @default(12)
+  enabled       Boolean  @default(true)
+  createdAt     DateTime @default(now()) @map("created_at")
+  updatedAt     DateTime @updatedAt @map("updated_at")
+  items         ItemDefinition[]
+  abilities     CombatAbility[]
+  spriteAsset   SpriteAsset? @relation(fields: [spriteAssetId], references: [sprite_asset_id], onDelete: SetNull)
+
+  @@index([enabled])
+  @@map("effect_types")
 }
 
 // ---------------------------------------------------------------------------
@@ -618,23 +677,28 @@ model TileDefinition {
 // ---------------------------------------------------------------------------
 
 model Hunt {
-  id             String   @id
-  name           String
-  ladderPosition Int
-  suggestedLevel Int
-  combatScore    Int?
-  basePackSize   Int
-  maxPackSize    Int
-  monsters       Json
-  boss           Json
-  arenaId        String
-  arenaWidth     Int?
-  arenaHeight    Int?
-  mapId          String?
-  theme          Json?
-  enabled        Boolean  @default(true)
-  created_at     DateTime @default(now()) @map("created_at")
-  updated_at     DateTime @updatedAt @map("updated_at")
+  id               String   @id
+  name             String
+  slug             String?
+  ladderPosition   Int
+  suggestedLevel   Int
+  combatScore      Int?
+  difficultyRating Int?
+  xpRating         Int?
+  lootRating       Int?
+  tags             Json?
+  basePackSize     Int
+  maxPackSize      Int
+  monsters         Json
+  boss             Json
+  arenaId          String
+  arenaWidth       Int?
+  arenaHeight      Int?
+  mapId            String?
+  theme            Json?
+  enabled          Boolean  @default(true)
+  created_at       DateTime @default(now()) @map("created_at")
+  updated_at       DateTime @updatedAt @map("updated_at")
 
   @@map("hunts")
 }
@@ -658,6 +722,8 @@ model SpriteAsset {
   outfits         Outfit[]
   outfit_color_masks Outfit[] @relation("OutfitColorMask")
   tilesets        Tileset[]
+  shootTypes      ShootType[]
+  effectTypes     EffectType[]
 
   @@map("sprite_assets")
 }

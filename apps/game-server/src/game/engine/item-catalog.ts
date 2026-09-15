@@ -198,6 +198,8 @@ type ItemDefinitionRow = {
   skillBonuses: unknown;
   resistances: unknown;
   specialModifiers: unknown;
+  shootTypeId: number | null;
+  effectTypeId: number | null;
   enabled: boolean;
 };
 
@@ -267,6 +269,8 @@ export function rowToItemDefinition(row: ItemDefinitionRow): ItemDefinition {
     weapon: isObject(row.weapon) ? (row.weapon as unknown as WeaponDefinition) : undefined,
     ammo: isObject(row.ammo) ? (row.ammo as unknown as AmmoDefinition) : undefined,
     visual: visualFromSpecialModifiers(row.specialModifiers),
+    shootTypeId: row.shootTypeId ?? undefined,
+    effectTypeId: row.effectTypeId ?? undefined,
   };
 }
 

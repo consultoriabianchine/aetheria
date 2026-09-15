@@ -60,7 +60,7 @@
               <div><span>Mana</span><b>{{ state.stats().mana }} / {{ state.stats().maxMana }}</b></div>
               <div class="bar-track"><div class="bar-fill mp" [style.width.%]="mpPct()"></div></div>
             </div>
-            <div class="resource-row" title="Level atual: {{ state.stats().level }} | XP total: {{ state.stats().experience }} | XP para o proximo: {{ state.stats().level * 100 }}">
+            <div class="resource-row" title="Level atual: {{ state.stats().level }} | XP total: {{ state.stats().experience }} | XP para o proximo: {{ xpNeeded() }}">
               <div><span>Experiência</span><b>{{ xpPct().toFixed(1) }}%</b></div>
               <div class="bar-track"><div class="bar-fill xp" [style.width.%]="xpPct()"></div></div>
            </div>
@@ -170,23 +170,10 @@
             <button class="loop-button" type="button" [class.enabled]="run.loopEnabled" (click)="toggleLoop()">{{ run.loopEnabled ? 'Loop ON' : 'Loop OFF' }}</button>
             <button class="danger-button" type="button" (click)="stopHunt()">Parar</button>
           } @else {
-            <button class="loop-button" type="button" (click)="toggleHunts()">Hunts</button>
+            <button class="loop-button" type="button" (click)="openHuntBrowser()">Hunt</button>
           }
         </div>
       </header>
-
-      @if (state.huntsOpen() && !state.inArena()) {
-        <section class="hunt-drawer">
-          <div class="panel-header"><h2>Hunts</h2><button class="panel-action" type="button" (click)="toggleHunts()">×</button></div>
-          @for (h of state.hunts(); track h.id) {
-            <article class="hunt-card">
-              <div><strong>{{ h.ladderPosition }}. {{ h.name }}</strong><span>Nv {{ h.suggestedLevel }}</span></div>
-              <p>{{ h.monsters.map(m => m.name).join(', ') }} · Boss: {{ h.boss.name }}</p>
-              <footer><span>Clears {{ h.completionCount }}</span><span>Best {{ fmtTime(h.bestClearTimeMs) }}</span><button type="button" (click)="startHunt(h.id)">Entrar</button><button type="button" (click)="startLoop(h.id)">Loop</button></footer>
-            </article>
-          }
-        </section>
-      }
 
       <section class="game-viewport">
         <div class="map-frame">
@@ -424,4 +411,6 @@
   @if (state.appearanceOpen()) {
     <div class="modal-backdrop"><section class="appearance-modal"><h2>Aparência <span>{{ state.self()?.name }}</span></h2><div class="app-outfits">@for (o of state.availableOutfits(); track o.outfitId) { <button class="app-card" type="button" [class.active]="state.appearanceDraft()?.outfitId === o.outfitId" (click)="selectOutfit(o.outfitId)"><outfit-thumb [outfitId]="o.outfitId"></outfit-thumb><span>{{ o.name }}</span></button> }</div>@if (draftOutfit(); as o) { @if (o.supportsColors) { <div class="app-colors">@for (slot of colorSlots; track slot) { <div class="app-color"><label>{{ slot }}</label><div class="app-palette">@for (c of palette; track c; let i = $index) { <span class="app-swatch" [style.background]="c" [class.active]="state.appearanceDraft()!.colors[slot] === i" (click)="setDraftColor(slot, i)"></span> }</div></div> }</div> } @if (o.supportsAddons) { <div class="app-addons"><label><input type="checkbox" [checked]="hasAddon(state.appearanceDraft()!.addonMask, 1)" (change)="toggleAddon(1)" /> Addon 1</label><label><input type="checkbox" [checked]="hasAddon(state.appearanceDraft()!.addonMask, 2)" (change)="toggleAddon(2)" /> Addon 2</label></div> } }<div class="app-actions"><button type="button" class="primary" (click)="state.saveAppearance()">Salvar</button><button type="button" (click)="state.closeAppearance()">Cancelar</button></div></section></div>
   }
+
+  <hunt-browser />
 </div>

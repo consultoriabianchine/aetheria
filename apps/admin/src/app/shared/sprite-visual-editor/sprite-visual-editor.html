@@ -1,4 +1,5 @@
 @if (error()) { <p class="mini-hint">{{ error() }}</p> }
+@if (showProjectile) {
 <label class="wide">Projectile sprite/path
   <input [value]="projectile().sprite" placeholder="assets/effects/projectiles/arrow.png" (input)="patchProjectile({ sprite: $any($event.target).value })" (change)="loadProjectileSheet()" />
 </label>
@@ -29,7 +30,8 @@
     </div>
   </div>
 </div>
-
+}
+@if (showImpact) {
 <label class="wide">Impact sprite/path
   <input [value]="impact().sprite" placeholder="assets/effects/impacts/arrow-hit.png" (input)="patchImpact({ sprite: $any($event.target).value })" (change)="loadImpactSheet()" />
 </label>
@@ -47,3 +49,4 @@
     <canvas #impactCanvas (click)="onImpactSheetClick($event)"></canvas>
   </div>
 </div>
+}

@@ -25,10 +25,11 @@
       <div class="wide">
         <h3>Visual (projétil/impacto)</h3>
         <div class="form">
-          <admin-sprite-visual-editor [visual]="draft.visual" (visualChange)="patchVisual($event)"></admin-sprite-visual-editor>
+          <label>Tipo de Tiro<select [(ngModel)]="draft.shootTypeId"><option [ngValue]="undefined">None</option>@for (type of shootTypes(); track type.id) { <option [ngValue]="type.id">{{ type.name }}</option> }</select></label>
+          <label>Tipo de Efeito<select [(ngModel)]="draft.effectTypeId"><option [ngValue]="undefined">None</option>@for (type of effectTypes(); track type.id) { <option [ngValue]="type.id">{{ type.name }}</option> }</select></label>
         </div>
       </div>
-      <label>Icon 32x32<input type="file" accept="image/png" (change)="uploadIcon($event)"></label>@if (draft.icon) { <img [src]="draft.icon" width="32" height="32"> }<button class="primary" (click)="save()">Save</button>
+      <button class="primary" (click)="save()">Save</button>
     </section>
   }
 </div>

@@ -29,6 +29,8 @@ export interface AdminItemDefinition {
   ammo?: { ammoType: AmmoType; attackPower: number; damageType?: DamageType };
   visual?: ItemVisualEffects;
   specialModifiers?: Record<string, unknown> | null;
+  shootTypeId?: number;
+  effectTypeId?: number;
 }
 
 export interface AdminItemInput {
@@ -59,6 +61,8 @@ export interface AdminItemInput {
   allowedAmmoType?: AmmoType | null;
   visual?: ItemVisualEffects | null;
   specialModifiers?: Record<string, unknown> | null;
+  shootTypeId?: number | null;
+  effectTypeId?: number | null;
   enabled?: boolean;
 }
 
@@ -199,6 +203,23 @@ export interface TileUpdateInput {
   isStairs?: boolean;
   isPortal?: boolean;
   enabled?: boolean;
+}
+
+export interface AdminAnimationSetConfig {
+  spriteWidth: number;
+  spriteHeight: number;
+  sheetColumns: number;
+  sheetRows: number;
+  anchor?: { x: number; y: number };
+  offsetX?: number;
+  offsetY?: number;
+  visualBounds?: { width: number; height: number };
+  bodyWidth?: number;
+  bodyHeight?: number;
+  bodyOffsetX?: number;
+  bodyOffsetY?: number;
+  sockets?: { projectileOrigin?: { x: number; y: number } };
+  animations: unknown[];
 }
 
 @Injectable({ providedIn: 'root' })
@@ -416,11 +437,11 @@ export class ApiService {
     return this.request('/admin/animation-sets', { headers: this.headers() });
   }
 
-  getAnimationSet(id: number): Promise<{ name: string; spriteAssetId: number | null; config: { spriteWidth: number; spriteHeight: number; sheetColumns: number; sheetRows: number; animations: unknown[] } }> {
+  getAnimationSet(id: number): Promise<{ name: string; spriteAssetId: number | null; config: AdminAnimationSetConfig }> {
     return this.request(`/admin/animation-sets/${id}`, { headers: this.headers() });
   }
 
-  saveAnimationSet(input: { id?: number; name: string; spriteAssetId?: number; config: Record<string, unknown> }): Promise<{ ok: boolean; animationSetId: number }> {
+  saveAnimationSet(input: { id?: number; name: string; spriteAssetId?: number; config: AdminAnimationSetConfig }): Promise<{ ok: boolean; animationSetId: number }> {
     return this.request('/admin/animation-sets', {
       method: 'POST',
       headers: this.headers(),
@@ -450,6 +471,24 @@ export class ApiService {
       headers: this.headers(),
       body: JSON.stringify(input),
     });
+  }
+
+  listShootTypes(): Promise<import('@aetheria/types').ShootTypeDefinition[]> {
+    return this.request('/admin/shoot-types', { headers: this.headers() });
+  }
+
+  saveShootType(input: { id?: number; slug: string; name: string; description?: string; sprite?: string; spriteAssetId?: number | null; frameWidth?: number; frameHeight?: number; frames?: Record<string, number>; speedPxPerSecond?: number; offsetX?: number; offsetY?: number; enabled?: boolean }): Promise<{ ok: boolean }> {
+    const path = input.id ? `/admin/shoot-types/${input.id}` : '/admin/shoot-types';
+    return this.request(path, { method: input.id ? 'PUT' : 'POST', headers: this.headers(), body: JSON.stringify(input) });
+  }
+
+  listEffectTypes(): Promise<import('@aetheria/types').EffectTypeDefinition[]> {
+    return this.request('/admin/effect-types', { headers: this.headers() });
+  }
+
+  saveEffectType(input: { id?: number; slug: string; name: string; description?: string; sprite?: string; spriteAssetId?: number | null; frameWidth?: number; frameHeight?: number; frames?: number[]; fps?: number; enabled?: boolean }): Promise<{ ok: boolean }> {
+    const path = input.id ? `/admin/effect-types/${input.id}` : '/admin/effect-types';
+    return this.request(path, { method: input.id ? 'PUT' : 'POST', headers: this.headers(), body: JSON.stringify(input) });
   }
 
   uploadSpriteAsset(file: File): Promise<{ ok: boolean; spriteAssetId: number }> {

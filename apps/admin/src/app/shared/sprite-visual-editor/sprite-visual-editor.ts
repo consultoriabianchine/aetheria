@@ -27,6 +27,9 @@ export class SpriteVisualEditor implements AfterViewInit {
 
   @Output() readonly visualChange = new EventEmitter<ItemVisualEffects | null>();
 
+  @Input() showProjectile = true;
+  @Input() showImpact = true;
+
   private visualState = signal<ItemVisualEffects>({});
   private emitted: ItemVisualEffects | null = null;
 

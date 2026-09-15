@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild, signal } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import type { AnimationDirection, AnimationSequence, CreatureAnimationType } from '@aetheria/types';
-import { ApiService } from '../core/api.service';
+import { ApiService, type AdminAnimationSetConfig } from '../core/api.service';
 
 const ANIMATION_TYPES: CreatureAnimationType[] = ['idle', 'walk', 'attack', 'cast', 'hit', 'death', 'spawn'];
 const DIRECTIONS: AnimationDirection[] = ['north', 'east', 'south', 'west'];
@@ -16,6 +16,7 @@ const DIRECTION_LABEL: Record<AnimationDirection, string> = { north: '↑', east
 export class AnimationSetEditor implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('sheetCanvas') sheetCanvas!: ElementRef<HTMLCanvasElement>;
   @ViewChild('previewCanvas') previewCanvas!: ElementRef<HTMLCanvasElement>;
+  @ViewChild('tilePreviewCanvas') tilePreviewCanvas!: ElementRef<HTMLCanvasElement>;
 
   readonly name = signal('');
   readonly spriteAssetId = signal<number>(0);
@@ -33,6 +34,33 @@ export class AnimationSetEditor implements OnInit, AfterViewInit, OnDestroy {
   readonly zoom = signal(4);
   readonly playing = signal(false);
   readonly showGrid = signal(true);
+
+  // posicionamento do sprite (mesmo modelo do editor de criaturas)
+  readonly activeTab = signal<'animation' | 'positioning'>('animation');
+  readonly anchorX = signal(16);
+  readonly anchorY = signal(32);
+  readonly offsetX = signal(0);
+  readonly offsetY = signal(0);
+  readonly visualBoundsWidth = signal(32);
+  readonly visualBoundsHeight = signal(32);
+  readonly bodyWidth = signal(32);
+  readonly bodyHeight = signal(32);
+  readonly bodyOffsetX = signal(0);
+  readonly bodyOffsetY = signal(0);
+  readonly projectileOriginX = signal(0);
+  readonly projectileOriginY = signal(0);
+
+  // preview 5x5
+  readonly showGridPreview = signal(true);
+  readonly showRenderBounds = signal(true);
+  readonly showVisualBounds = signal(true);
+  readonly showBody = signal(true);
+  readonly showHudAnchor = signal(true);
+  readonly showAnchor = signal(true);
+  readonly showProjectileOrigin = signal(true);
+  readonly previewAnim = signal<CreatureAnimationType>('idle');
+  readonly previewBaseX = signal(2);
+  readonly previewBaseY = signal(2);
 
   readonly animations = ANIMATION_TYPES;
   readonly directions = DIRECTIONS;
@@ -77,6 +105,18 @@ export class AnimationSetEditor implements OnInit, AfterViewInit, OnDestroy {
         this.spriteHeight.set(set.config.spriteHeight);
         this.sheetColumns.set(set.config.sheetColumns);
         this.sheetRows.set(set.config.sheetRows);
+        this.anchorX.set(set.config.anchor?.x ?? set.config.spriteWidth / 2);
+        this.anchorY.set(set.config.anchor?.y ?? set.config.spriteHeight);
+        this.offsetX.set(set.config.offsetX ?? 0);
+        this.offsetY.set(set.config.offsetY ?? 0);
+        this.visualBoundsWidth.set(set.config.visualBounds?.width ?? set.config.spriteWidth);
+        this.visualBoundsHeight.set(set.config.visualBounds?.height ?? set.config.spriteHeight);
+        this.bodyWidth.set(set.config.bodyWidth ?? set.config.spriteWidth);
+        this.bodyHeight.set(set.config.bodyHeight ?? set.config.spriteHeight);
+        this.bodyOffsetX.set(set.config.bodyOffsetX ?? 0);
+        this.bodyOffsetY.set(set.config.bodyOffsetY ?? 0);
+        this.projectileOriginX.set(set.config.sockets?.projectileOrigin?.x ?? set.config.spriteWidth / 2);
+        this.projectileOriginY.set(set.config.sockets?.projectileOrigin?.y ?? set.config.spriteHeight / 2);
         this.sequences.set(structuredClone(set.config.animations as AnimationSequence[]));
       } catch (e) {
         this.error.set((e as Error).message);
@@ -228,19 +268,217 @@ export class AnimationSetEditor implements OnInit, AfterViewInit, OnDestroy {
     this.updateSequence(i, { ...seq, ...patch });
   }
 
+  // ---------------------------------------------------------- positioning
+
+  openPositioning() {
+    this.activeTab.set('positioning');
+    setTimeout(() => this.drawTilePreview(), 0);
+  }
+
+  centralizeAnchor() {
+    this.anchorX.set(this.spriteWidth() / 2);
+    this.anchorY.set(this.spriteHeight());
+    this.dirty.set(true);
+    this.drawTilePreview();
+  }
+
+  setProjectileOriginX(value: number) {
+    this.projectileOriginX.set(Math.round(value));
+    this.dirty.set(true);
+    this.drawTilePreview();
+  }
+
+  setProjectileOriginY(value: number) {
+    this.projectileOriginY.set(Math.round(value));
+    this.dirty.set(true);
+    this.drawTilePreview();
+  }
+
+  centralizeProjectileOrigin() {
+    this.projectileOriginX.set(this.spriteWidth() / 2);
+    this.projectileOriginY.set(this.spriteHeight() / 2);
+    this.dirty.set(true);
+    this.drawTilePreview();
+  }
+
+  onTilePreviewClick(event: MouseEvent) {
+    const canvas = this.tilePreviewCanvas.nativeElement;
+    const rect = canvas.getBoundingClientRect();
+    const scaleX = canvas.width / rect.width;
+    const scaleY = canvas.height / rect.height;
+    const mx = (event.clientX - rect.left) * scaleX;
+    const my = (event.clientY - rect.top) * scaleY;
+    const TILE = 32;
+    const PAD = 70;
+    const bx = this.previewBaseX();
+    const by = this.previewBaseY();
+    const basePxX = PAD + bx * TILE + TILE / 2;
+    const basePxY = PAD + by * TILE + TILE;
+    const drawX = basePxX + this.offsetX() - this.anchorX();
+    const drawY = basePxY + this.offsetY() - this.anchorY();
+    this.projectileOriginX.set(Math.round(mx - drawX));
+    this.projectileOriginY.set(Math.round(my - drawY));
+    this.dirty.set(true);
+    this.drawTilePreview();
+  }
+
+  setVisualBoundsWidth(value: number) { this.visualBoundsWidth.set(Math.max(1, Math.round(value))); this.dirty.set(true); this.drawTilePreview(); }
+  setVisualBoundsHeight(value: number) { this.visualBoundsHeight.set(Math.max(1, Math.round(value))); this.dirty.set(true); this.drawTilePreview(); }
+  setBodyWidth(value: number) { this.bodyWidth.set(Math.max(1, Math.round(value))); this.dirty.set(true); this.drawTilePreview(); }
+  setBodyHeight(value: number) { this.bodyHeight.set(Math.max(1, Math.round(value))); this.dirty.set(true); this.drawTilePreview(); }
+  setBodyOffsetX(value: number) { this.bodyOffsetX.set(Math.round(value)); this.dirty.set(true); this.drawTilePreview(); }
+  setBodyOffsetY(value: number) { this.bodyOffsetY.set(Math.round(value)); this.dirty.set(true); this.drawTilePreview(); }
+
+  movePreview(dx: number, dy: number) {
+    this.previewBaseX.set(Math.max(0, Math.min(4, this.previewBaseX() + dx)));
+    this.previewBaseY.set(Math.max(0, Math.min(4, this.previewBaseY() + dy)));
+    this.drawTilePreview();
+  }
+
+  setPreviewAnim(type: CreatureAnimationType) {
+    this.previewAnim.set(type);
+    this.drawTilePreview();
+  }
+
+  private previewFrameIndex(): number {
+    const seq = this.sequences().find((s) => s.animation === this.previewAnim());
+    if (!seq || seq.frames.length === 0) return -1;
+    return seq.frames[0];
+  }
+
+  /** Preview 5×5 tiles com debug (grid/bounds/body/anchor/projectile origin). */
+  drawTilePreview() {
+    if (!this.tilePreviewCanvas) return;
+    const canvas = this.tilePreviewCanvas.nativeElement;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+    const TILE = 32;
+    const GRID = 5;
+    const PAD = 70;
+    canvas.width = 300;
+    canvas.height = 300;
+    ctx.imageSmoothingEnabled = false;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = '#10151e';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    for (let ty = 0; ty < GRID; ty++) {
+      for (let tx = 0; tx < GRID; tx++) {
+        ctx.fillStyle = (tx + ty) % 2 === 0 ? '#3f7a35' : '#4a8a3d';
+        ctx.fillRect(PAD + tx * TILE, PAD + ty * TILE, TILE, TILE);
+        if (this.showGridPreview()) {
+          ctx.strokeStyle = 'rgba(255,255,255,0.18)';
+          ctx.lineWidth = 1;
+          ctx.strokeRect(PAD + tx * TILE + 0.5, PAD + ty * TILE + 0.5, TILE, TILE);
+        }
+      }
+    }
+
+    const bx = this.previewBaseX();
+    const by = this.previewBaseY();
+    const basePxX = PAD + bx * TILE + TILE / 2;
+    const basePxY = PAD + by * TILE + TILE;
+
+    ctx.strokeStyle = '#ffff00';
+    ctx.lineWidth = 1;
+    ctx.strokeRect(PAD + bx * TILE, PAD + by * TILE, TILE, TILE);
+
+    const drawX = basePxX + this.offsetX() - this.anchorX();
+    const drawY = basePxY + this.offsetY() - this.anchorY();
+
+    if (this.showRenderBounds()) {
+      ctx.strokeStyle = '#ff0000';
+      ctx.lineWidth = 1;
+      ctx.strokeRect(drawX, drawY, this.spriteWidth(), this.spriteHeight());
+    }
+
+    if (this.showVisualBounds() && (this.visualBoundsWidth() !== this.spriteWidth() || this.visualBoundsHeight() !== this.spriteHeight())) {
+      ctx.strokeStyle = '#aa00ff';
+      ctx.lineWidth = 1;
+      ctx.strokeRect(drawX, drawY, this.visualBoundsWidth(), this.visualBoundsHeight());
+    }
+
+    const bodyX = basePxX + this.offsetX() + this.bodyOffsetX() - this.bodyWidth() / 2;
+    const bodyY = basePxY + this.offsetY() + this.bodyOffsetY() - this.bodyHeight();
+
+    if (this.showBody() && (this.bodyWidth() !== this.spriteWidth() || this.bodyHeight() !== this.spriteHeight() || this.bodyOffsetX() !== 0 || this.bodyOffsetY() !== 0)) {
+      ctx.strokeStyle = '#ff8c00';
+      ctx.lineWidth = 1;
+      ctx.strokeRect(bodyX, bodyY, this.bodyWidth(), this.bodyHeight());
+    }
+
+    const cellIndex = this.previewFrameIndex();
+    if (this.sheetImage && cellIndex >= 0) {
+      const r = this.frameRect(cellIndex);
+      ctx.drawImage(this.sheetImage, r.sx, r.sy, r.sw, r.sh, drawX, drawY, this.spriteWidth(), this.spriteHeight());
+    }
+
+    if (this.showHudAnchor()) {
+      const bodyCenterX = basePxX + this.offsetX() + this.bodyOffsetX();
+      const hasBody = this.bodyHeight() !== this.spriteHeight();
+      const barMargin = hasBody ? 5 : 4;
+      const nameMargin = 12;
+      const barHeight = 4;
+      const barY = bodyY - barMargin;
+      const nameY = barY - barHeight - nameMargin;
+      const halfW = this.bodyWidth() / 2;
+      ctx.strokeStyle = '#00ffff';
+      ctx.lineWidth = 1;
+      ctx.setLineDash([3, 2]);
+      ctx.beginPath();
+      ctx.moveTo(bodyCenterX - halfW, barY);
+      ctx.lineTo(bodyCenterX + halfW, barY);
+      ctx.moveTo(bodyCenterX - halfW, nameY);
+      ctx.lineTo(bodyCenterX + halfW, nameY);
+      ctx.stroke();
+      ctx.setLineDash([]);
+    }
+
+    if (this.showAnchor()) {
+      ctx.strokeStyle = '#0000ff';
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(basePxX + this.offsetX() - 4, basePxY + this.offsetY());
+      ctx.lineTo(basePxX + this.offsetX() + 4, basePxY + this.offsetY());
+      ctx.moveTo(basePxX + this.offsetX(), basePxY + this.offsetY() - 4);
+      ctx.lineTo(basePxX + this.offsetX(), basePxY + this.offsetY() + 4);
+      ctx.stroke();
+    }
+
+    if (this.showProjectileOrigin()) {
+      const pox = drawX + this.projectileOriginX();
+      const poy = drawY + this.projectileOriginY();
+      ctx.fillStyle = '#ff00ff';
+      ctx.fillRect(pox - 2, poy - 2, 4, 4);
+    }
+  }
+
   // ---------------------------------------------------------------- save
 
   async save() {
     this.error.set(null);
     this.saving.set(true);
     try {
-      const config = {
+      const config: AdminAnimationSetConfig = {
         spriteWidth: this.spriteWidth(),
         spriteHeight: this.spriteHeight(),
         sheetColumns: this.sheetColumns(),
         sheetRows: this.sheetRows(),
+        anchor: { x: this.anchorX(), y: this.anchorY() },
+        offsetX: this.offsetX(),
+        offsetY: this.offsetY(),
         animations: this.sequences(),
       };
+      if (this.visualBoundsWidth() !== this.spriteWidth() || this.visualBoundsHeight() !== this.spriteHeight()) {
+        config.visualBounds = { width: this.visualBoundsWidth(), height: this.visualBoundsHeight() };
+      }
+      if (this.bodyWidth() !== this.spriteWidth()) config.bodyWidth = this.bodyWidth();
+      if (this.bodyHeight() !== this.spriteHeight()) config.bodyHeight = this.bodyHeight();
+      if (this.bodyOffsetX() !== 0) config.bodyOffsetX = this.bodyOffsetX();
+      if (this.bodyOffsetY() !== 0) config.bodyOffsetY = this.bodyOffsetY();
+      if (this.projectileOriginX() !== this.spriteWidth() / 2 || this.projectileOriginY() !== this.spriteHeight() / 2) {
+        config.sockets = { projectileOrigin: { x: this.projectileOriginX(), y: this.projectileOriginY() } };
+      }
       const res = await this.api.saveAnimationSet({ id: this.id === 'new' ? undefined : Number(this.id), name: this.name().trim() || 'Animation Set', spriteAssetId: this.spriteAssetId() || undefined, config });
       this.dirty.set(false);
       this.saved.set(true);
@@ -292,6 +530,7 @@ export class AnimationSetEditor implements OnInit, AfterViewInit, OnDestroy {
   redraw() {
     this.redrawSheet();
     this.drawPreview();
+    this.drawTilePreview();
   }
 
   private redrawSheet() {

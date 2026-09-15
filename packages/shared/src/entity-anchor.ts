@@ -28,9 +28,9 @@ export function resolveSockets(spriteWidth: number, spriteHeight: number, socket
   const center = { x: spriteWidth / 2, y: spriteHeight / 2 };
   return {
     feet: sockets?.feet ?? { x: spriteWidth / 2, y: spriteHeight },
-    center: sockets?.center ?? center,
+    center: sockets?.center ?? sockets?.projectileOrigin ?? center,
     head: sockets?.head ?? { x: spriteWidth / 2, y: 0 },
-    projectileOrigin: sockets?.projectileOrigin ?? { ...(sockets?.center ?? center) },
+    projectileOrigin: sockets?.projectileOrigin ?? sockets?.center ?? center,
   };
 }
 

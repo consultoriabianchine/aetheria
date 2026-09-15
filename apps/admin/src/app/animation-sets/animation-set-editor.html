@@ -12,10 +12,16 @@
   </div>
 </div>
 
+<nav class="editor-tabs">
+  <button type="button" [class.active]="activeTab() === 'animation'" (click)="activeTab.set('animation')">Animação</button>
+  <button type="button" [class.active]="activeTab() === 'positioning'" (click)="openPositioning()">Posicionamento</button>
+</nav>
+
 @if (error()) {
   <p class="error">{{ error() }}</p>
 }
 
+@if (activeTab() === 'animation') {
 <div class="editor-grid">
   <section class="panel">
     <h2>Spritesheet</h2>
@@ -131,3 +137,61 @@
     }
   </section>
 </div>
+}
+
+@if (activeTab() === 'positioning') {
+  <div class="editor-grid positioning-grid">
+    <section class="panel">
+      <h2>Posicionamento</h2>
+      <div class="inspector">
+        <div class="field"><label>Sprite W</label><input type="number" [value]="spriteWidth()" (input)="spriteWidth.set(+$any($event.target).value); onGridChange(); drawTilePreview()" min="1" /></div>
+        <div class="field"><label>Sprite H</label><input type="number" [value]="spriteHeight()" (input)="spriteHeight.set(+$any($event.target).value); onGridChange(); drawTilePreview()" min="1" /></div>
+        <div class="field"><label>Anchor X</label><input type="number" [value]="anchorX()" (input)="anchorX.set(+$any($event.target).value); dirty.set(true); drawTilePreview()" /></div>
+        <div class="field"><label>Anchor Y</label><input type="number" [value]="anchorY()" (input)="anchorY.set(+$any($event.target).value); dirty.set(true); drawTilePreview()" /></div>
+        <div class="field"><label>Offset X</label><input type="number" [value]="offsetX()" (input)="offsetX.set(+$any($event.target).value); dirty.set(true); drawTilePreview()" /></div>
+        <div class="field"><label>Offset Y</label><input type="number" [value]="offsetY()" (input)="offsetY.set(+$any($event.target).value); dirty.set(true); drawTilePreview()" /></div>
+        <div class="field"><label>Visual Bounds W</label><input type="number" [value]="visualBoundsWidth()" (input)="setVisualBoundsWidth(+$any($event.target).value)" min="1" /></div>
+        <div class="field"><label>Visual Bounds H</label><input type="number" [value]="visualBoundsHeight()" (input)="setVisualBoundsHeight(+$any($event.target).value)" min="1" /></div>
+        <div class="field"><label>Corpo (Body) W</label><input type="number" [value]="bodyWidth()" (input)="setBodyWidth(+$any($event.target).value)" min="1" /></div>
+        <div class="field"><label>Corpo (Body) H</label><input type="number" [value]="bodyHeight()" (input)="setBodyHeight(+$any($event.target).value)" min="1" /></div>
+        <div class="field"><label>Corpo Offset X</label><input type="number" [value]="bodyOffsetX()" (input)="setBodyOffsetX(+$any($event.target).value)" /></div>
+        <div class="field"><label>Corpo Offset Y</label><input type="number" [value]="bodyOffsetY()" (input)="setBodyOffsetY(+$any($event.target).value)" /></div>
+        <div class="field"><label>Projectile Origin X</label><input type="number" [value]="projectileOriginX()" (input)="setProjectileOriginX(+$any($event.target).value)" /></div>
+        <div class="field"><label>Projectile Origin Y</label><input type="number" [value]="projectileOriginY()" (input)="setProjectileOriginY(+$any($event.target).value)" /></div>
+      </div>
+      <div class="row">
+        <button type="button" (click)="centralizeAnchor()">Centralizar na Base</button>
+        <button type="button" (click)="centralizeProjectileOrigin()">Centralizar origem do projétil</button>
+        <button class="primary" type="button" (click)="save()" [disabled]="saving() || !dirty()">Salvar posicionamento</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Preview 5×5</h2>
+      <div class="preview-box">
+        <canvas #tilePreviewCanvas class="tile-preview" (click)="onTilePreviewClick($event)"></canvas>
+      </div>
+      <p class="hint">Clique no preview para posicionar a origem do projétil (ponto magenta).</p>
+      <div class="row">
+        <button (click)="movePreview(0, -1)">↑ Norte</button>
+        <button (click)="movePreview(0, 1)">↓ Sul</button>
+        <button (click)="movePreview(-1, 0)">← Oeste</button>
+        <button (click)="movePreview(1, 0)">→ Leste</button>
+      </div>
+      <div class="row">
+        @for (a of animations; track a) {
+          <button [class.active]="previewAnim() === a" (click)="setPreviewAnim(a)">{{ a }}</button>
+        }
+      </div>
+      <div class="row">
+        <label class="check"><input type="checkbox" [checked]="showGridPreview()" (change)="showGridPreview.set($any($event.target).checked); drawTilePreview()" /> Grid 32×32</label>
+        <label class="check"><input type="checkbox" [checked]="showRenderBounds()" (change)="showRenderBounds.set($any($event.target).checked); drawTilePreview()" /> Render Bounds</label>
+        <label class="check"><input type="checkbox" [checked]="showVisualBounds()" (change)="showVisualBounds.set($any($event.target).checked); drawTilePreview()" /> Visual Bounds</label>
+        <label class="check"><input type="checkbox" [checked]="showBody()" (change)="showBody.set($any($event.target).checked); drawTilePreview()" /> Corpo (Body)</label>
+        <label class="check"><input type="checkbox" [checked]="showHudAnchor()" (change)="showHudAnchor.set($any($event.target).checked); drawTilePreview()" /> Nome / HP Bar</label>
+        <label class="check"><input type="checkbox" [checked]="showAnchor()" (change)="showAnchor.set($any($event.target).checked); drawTilePreview()" /> Anchor</label>
+        <label class="check"><input type="checkbox" [checked]="showProjectileOrigin()" (change)="showProjectileOrigin.set($any($event.target).checked); drawTilePreview()" /> Projectile Origin</label>
+      </div>
+    </section>
+  </div>
+}

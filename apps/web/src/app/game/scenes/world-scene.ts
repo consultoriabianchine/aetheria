@@ -1,6 +1,6 @@
 import Phaser from 'phaser';
 import { SERVER_EVENTS } from '@aetheria/protocol';
-import { APPEARANCE_PALETTE, CREATURE_HUD_CONFIG, MOVE_INTERVAL_MS, TILE, TILE_SIZE_PX, calculateCreatureHealthBarWidth } from '@aetheria/config';
+import { APPEARANCE_PALETTE, CREATURE_HUD_CONFIG, MOVE_INTERVAL_MS, TILE, TILE_SIZE_PX, WORLD_TEXT_COLORS, WORLD_TEXT_FONT, WORLD_TEXT_THEME, calculateCreatureHealthBarWidth } from '@aetheria/config';
 import { anchorOrigin, resolveAnchor, resolveSockets, tileBase } from '@aetheria/shared';
 import type { CreatureState, DamageType, Direction, ItemImpactVisual, ItemProjectileVisual, MapRenderData, MapTile, PlayerAppearance, Position, ProjectileDirection, TileRenderDef } from '@aetheria/types';
 import { WsService } from '../../core/ws.service';
@@ -65,6 +65,7 @@ interface RenderedEntity {
   offsetY: number;
   footprintWidth: number;
   footprintHeight: number;
+  moveSpeed?: number;
   baseX: number;
   baseY: number;
   sockets: ResolvedSockets;
@@ -175,6 +176,10 @@ export class WorldScene extends Phaser.Scene {
   private debugGraphics!: Phaser.GameObjects.Graphics;
   private mapBounds: { width?: number; height?: number } = {};
   private combatText!: CombatTextManager;
+  private panning = false;
+  private panStart = { x: 0, y: 0 };
+  private lastPan = { x: 0, y: 0 };
+  private static readonly PAN_THRESHOLD = 6;
 
   constructor() {
     super('World');
@@ -190,10 +195,10 @@ export class WorldScene extends Phaser.Scene {
     this.combatText = new CombatTextManager(this, (entityId) => {
       const entity = this.entities.get(entityId) ?? (entityId === this.selfId ? this.selfEntity : null);
       if (!entity) return null;
-      const bounds = bodyBoundsOf(entity);
+      const p = entity.sockets.center;
       return {
-        x: bounds.centerX,
-        y: bounds.top + bounds.height * CREATURE_HUD_CONFIG.damageTextHeightRatio,
+        x: entity.baseX + entity.offsetX - entity.anchorX + p.x,
+        y: entity.baseY + entity.offsetY - entity.anchorY + p.y,
       };
     });
 
@@ -219,6 +224,8 @@ export class WorldScene extends Phaser.Scene {
     this.setupKeyboard();
     this.setupDebug();
     this.input.on('pointerdown', (pointer: Phaser.Input.Pointer) => this.onPointerDown(pointer));
+    this.input.on('pointermove', (pointer: Phaser.Input.Pointer) => this.onPointerMove(pointer));
+    this.input.on('pointerup', (pointer: Phaser.Input.Pointer) => this.onPointerUp(pointer));
   }
 
   // ------------------------------------------------------------------ events
@@ -295,8 +302,9 @@ export class WorldScene extends Phaser.Scene {
           movementSpeed?: number;
           footprintWidth?: number;
           footprintHeight?: number;
+          isBoss?: boolean;
         };
-        this.addCreature(c.creatureId, c.slug, c.name, c.position, c.health, c.maxHealth, c.definitionCreatureId, c.facing, c.state, c.movementSpeed ?? MOVE_INTERVAL_MS, c.footprintWidth, c.footprintHeight);
+        this.addCreature(c.creatureId, c.slug, c.name, c.position, c.health, c.maxHealth, c.definitionCreatureId, c.facing, c.state, c.movementSpeed ?? MOVE_INTERVAL_MS, c.footprintWidth, c.footprintHeight, c.isBoss);
         break;
       }
       case SERVER_EVENTS.CREATURE_MOVE: {
@@ -325,7 +333,6 @@ export class WorldScene extends Phaser.Scene {
       case SERVER_EVENTS.CREATURE_DEATH: {
         const de = data as { creatureId: string; experience: number };
         if (this.state.target()?.id === de.creatureId) this.state.clearTarget();
-        if (de.experience) this.state.addSystemMessage(`+${de.experience} XP`);
         this.playCreatureAnim(de.creatureId, 'death');
         const rendered = this.entities.get(de.creatureId);
         if (rendered) {
@@ -364,14 +371,29 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
         break;
       }
       case SERVER_EVENTS.COMBAT_PROJECTILE: {
-        const d = data as { attackerId: string; targetId: string; from: Position; to: Position; projectile: ItemProjectileVisual; impact?: ItemImpactVisual; travelTimeMs: number };
+        const d = data as { attackerId: string; targetId: string; from: Position; to: Position; projectile?: ItemProjectileVisual; impact?: ItemImpactVisual; travelTimeMs: number };
         this.playProjectile(d.attackerId, d.targetId, d.from, d.to, d.projectile, d.impact, d.travelTimeMs);
+        break;
+      }
+      case SERVER_EVENTS.COMBAT_AREA: {
+        const d = data as { attackerId: string; targetId: string; from: Position; center: Position; tiles: Position[]; projectile?: ItemProjectileVisual; impact?: ItemImpactVisual; travelTimeMs: number };
+        this.playArea(d.attackerId, d.targetId, d.from, d.center, d.tiles, d.projectile, d.impact, d.travelTimeMs);
         break;
       }
       case SERVER_EVENTS.COMBAT_DEATH: {
         const de = data as { entityId: string; experience?: number };
         if (this.state.target()?.id === de.entityId) this.state.clearTarget();
         if (de.experience) this.state.addSystemMessage(`+${de.experience} XP`);
+        break;
+      }
+      case SERVER_EVENTS.XP_GAINED: {
+        const xp = data as { amount: number; characterId?: string };
+        this.combatText.spawnXp({ targetId: xp.characterId ?? this.selfId, amount: xp.amount });
+        break;
+      }
+      case SERVER_EVENTS.GOLD_GAINED: {
+        const g = data as { amount: number; position?: Position };
+        this.combatText.spawnGold({ targetId: this.selfId, amount: g.amount, position: g.position ? tileBase(g.position, TILE_SIZE) : undefined });
         break;
       }
       case SERVER_EVENTS.LOOT_SPAWNED: {
@@ -634,19 +656,19 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
     this.entityInfo.set(id, { name, health: health ?? 0, maxHealth: maxHealth ?? 0 });
   }
 
-  private createRendered(kind: string, name: string, position: Position): RenderedEntity {
+  private createRendered(kind: string, name: string, position: Position, isBoss = false): RenderedEntity {
     const base = tileBase(position, TILE_SIZE);
     const anchor = resolveAnchor(TILE_SIZE, TILE_SIZE);
     const color = kind === 'monster' ? 0xe04d4d : kind === 'npc' ? 0xf0c14b : 0x4d86ff;
     const image = this.add.image(base.x, base.y, 'circle').setTint(color).setOrigin(0.5, 1).setDisplaySize(TILE_SIZE, TILE_SIZE);
     const label = this.add
       .text(base.x, base.y, name, {
-        fontFamily: 'Arial, Verdana, Tahoma, sans-serif',
-        fontStyle: 'bold',
-        fontSize: '11px',
-        color: '#00ff00',
-        stroke: '#000000',
-        strokeThickness: 1,
+        fontFamily: WORLD_TEXT_FONT,
+        fontStyle: String(WORLD_TEXT_THEME.fontWeight),
+        fontSize: `${this.nameFontSize(kind, isBoss)}px`,
+        color: this.nameColor(kind, isBoss),
+        stroke: WORLD_TEXT_THEME.stroke.color,
+        strokeThickness: WORLD_TEXT_THEME.stroke.width,
         resolution: this.textResolution(),
         align: 'center',
       })
@@ -680,6 +702,18 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
       baseY: base.y,
       sockets: resolveSockets(TILE_SIZE, TILE_SIZE),
     };
+  }
+
+  private nameFontSize(kind: string, isBoss: boolean): number {
+    if (isBoss) return WORLD_TEXT_THEME.sizes.bossName;
+    return kind === 'monster' ? WORLD_TEXT_THEME.sizes.monsterName : WORLD_TEXT_THEME.sizes.entityName;
+  }
+
+  private nameColor(kind: string, isBoss: boolean): string {
+    if (isBoss) return WORLD_TEXT_COLORS.bossName;
+    if (kind === 'monster') return WORLD_TEXT_COLORS.monsterName;
+    if (kind === 'npc') return WORLD_TEXT_COLORS.npcName;
+    return WORLD_TEXT_COLORS.playerName;
   }
 
   private attachHealthBar(rendered: RenderedEntity, health: number, maxHealth: number) {
@@ -773,10 +807,12 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
     moveSpeed = MOVE_INTERVAL_MS,
     footprintWidth = 1,
     footprintHeight = 1,
+    isBoss = false,
   ) {
-    const rendered = this.createRendered('monster', name, position);
+    const rendered = this.createRendered('monster', name, position, isBoss);
     rendered.footprintWidth = footprintWidth;
     rendered.footprintHeight = footprintHeight;
+    rendered.moveSpeed = moveSpeed;
     this.attachHealthBar(rendered, health, maxHealth);
     this.entities.set(id, rendered);
     this.entityInfo.set(id, { name, health, maxHealth });
@@ -856,7 +892,7 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
         if (t >= 1) this.creatureMoves.delete(id);
       }
       rendered.image.setFrame(anim.animator.frameIndex(time));
-      if (!this.creatureMoves.has(id) && anim.animator.currentType === 'walk' && time - anim.lastMoveAt > anim.moveSpeed * 2.5 + 200) {
+      if (!this.creatureMoves.has(id) && anim.animator.currentType === 'walk' && time - anim.lastMoveAt > anim.moveSpeed + 80) {
         anim.animator.play('idle', time);
       }
     }
@@ -864,13 +900,13 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
       const rendered = this.entities.get(id);
       if (!rendered) continue;
       rendered.image.setFrame(anim.animator.frameIndex(time));
-      if (anim.animator.currentType === 'walk' && time - anim.lastMoveAt > anim.moveSpeed * 2.5 + 200) {
+      if (anim.animator.currentType === 'walk' && time - anim.lastMoveAt > anim.moveSpeed + 80) {
         anim.animator.play('idle', time);
       }
     }
     if (this.selfAnim && this.selfEntity) {
       this.selfEntity.image.setFrame(this.selfAnim.animator.frameIndex(time));
-      if (this.selfAnim.animator.currentType === 'walk' && time - this.selfAnim.lastMoveAt > this.selfAnim.moveSpeed * 2.5 + 200) {
+      if (this.selfAnim.animator.currentType === 'walk' && time - this.selfAnim.lastMoveAt > this.selfAnim.moveSpeed + 80) {
         this.selfAnim.animator.play('idle', time);
       }
     }
@@ -891,13 +927,15 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
 
   private moveEntity(id: string, position: Position) {
     const rendered = this.entities.get(id);
-    if (rendered) this.moveRendered(rendered, position);
+    if (!rendered) return;
+    const anim = this.playerAnims.get(id);
+    this.moveRendered(rendered, position, anim?.moveSpeed ?? rendered.moveSpeed ?? MOVE_INTERVAL_MS);
   }
 
   private moveCreature(id: string, position: Position, facing: Direction, state: CreatureState) {
     const anim = this.creatureAnims.get(id);
     const rendered = this.entities.get(id);
-    if (rendered) this.moveCreatureRendered(id, rendered, position, anim?.moveSpeed ?? MOVE_INTERVAL_MS);
+    if (rendered) this.moveCreatureRendered(id, rendered, position, anim?.moveSpeed ?? rendered.moveSpeed ?? MOVE_INTERVAL_MS);
     this.updateCreatureAnim(id, facing, state);
   }
 
@@ -1026,11 +1064,17 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
       if (dir !== this.moveDir) {
         this.moveDir = dir;
         this.ws.send({ type: 'game.input', direction: dir });
-        if (dir) this.updateSelfAnim(dir);
+        this.updateSelfAnim(dir);
       }
     };
     this.input.keyboard!.on('keydown', check);
     this.input.keyboard!.on('keyup', check);
+    this.input.keyboard!.on('keydown', (event: KeyboardEvent) => {
+      if (event.code === 'Space') {
+        event.preventDefault();
+        if (this.state.inArena()) this.applyCameraBounds();
+      }
+    });
   }
 
   private updateSelfAnim(dir: Direction | null) {
@@ -1149,6 +1193,52 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
   }
 
   private onPointerDown(pointer: Phaser.Input.Pointer) {
+    this.panning = false;
+    this.panStart = { x: pointer.x, y: pointer.y };
+    this.lastPan = { x: pointer.x, y: pointer.y };
+    if (!this.state.inArena()) {
+      this.handlePointerClick(pointer);
+    }
+  }
+
+  private onPointerMove(pointer: Phaser.Input.Pointer) {
+    if (!pointer.isDown || !this.state.inArena()) return;
+    const cam = this.cameras.main;
+    if (!this.panning) {
+      const dx = pointer.x - this.panStart.x;
+      const dy = pointer.y - this.panStart.y;
+      if (Math.abs(dx) + Math.abs(dy) < WorldScene.PAN_THRESHOLD) return;
+      this.panning = true;
+      cam.stopFollow();
+      this.lastPan = { x: pointer.x, y: pointer.y };
+      return;
+    }
+    const dx = pointer.x - this.lastPan.x;
+    const dy = pointer.y - this.lastPan.y;
+    this.lastPan = { x: pointer.x, y: pointer.y };
+    if (dx === 0 && dy === 0) return;
+    const max = this.maxCameraScroll();
+    cam.scrollX = Phaser.Math.Clamp(cam.scrollX - dx / cam.zoom, 0, max.x);
+    cam.scrollY = Phaser.Math.Clamp(cam.scrollY - dy / cam.zoom, 0, max.y);
+  }
+
+  private onPointerUp(pointer: Phaser.Input.Pointer) {
+    if (this.state.inArena() && !this.panning) {
+      this.handlePointerClick(pointer);
+    }
+    this.panning = false;
+  }
+
+  private maxCameraScroll(): { x: number; y: number } {
+    const cam = this.cameras.main;
+    const w = (this.mapBounds.width ?? 0) * TILE_SIZE;
+    const h = (this.mapBounds.height ?? 0) * TILE_SIZE;
+    const viewW = cam.width / cam.zoom;
+    const viewH = cam.height / cam.zoom;
+    return { x: Math.max(0, w - viewW), y: Math.max(0, h - viewH) };
+  }
+
+  private handlePointerClick(pointer: Phaser.Input.Pointer) {
     const tx = Math.round(pointer.worldX / TILE_SIZE);
     const ty = Math.round(pointer.worldY / TILE_SIZE);
 
@@ -1188,11 +1278,15 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
   }
 
 
-  private playProjectile(attackerId: string, targetId: string, from: Position, to: Position, projectile: ItemProjectileVisual, impact: ItemImpactVisual | undefined, travelTimeMs: number) {
-    if (!projectile.sprite && !projectile.spriteAssetId) return;
+  private playProjectile(attackerId: string, targetId: string, from: Position, to: Position, projectile: ItemProjectileVisual | undefined, impact: ItemImpactVisual | undefined, travelTimeMs: number) {
+    const end = this.entityCenter(targetId, to);
+    const impactBase = tileBase(to, TILE_SIZE);
+    if (!projectile?.sprite && !projectile?.spriteAssetId) {
+      if (impact?.sprite || impact?.spriteAssetId) this.playImpact(impactBase.x, impactBase.y, impact);
+      return;
+    }
     const textureKey = this.effectTextureKey('projectile', projectile.sprite || String(projectile.spriteAssetId ?? ''), projectile.frameWidth, projectile.frameHeight);
     const start = this.entitySocket(attackerId, from, 'projectileOrigin');
-    const end = this.entityCenter(targetId, to);
     const frame = projectile.frames[this.projectileDirection(from, to)] ?? 0;
     const run = () => {
       if (!this.textures.exists(textureKey)) return;
@@ -1204,7 +1298,45 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
         duration: Math.max(80, travelTimeMs),
         onComplete: () => {
           shot.destroy();
-          if (impact?.sprite || impact?.spriteAssetId) this.playImpact(end.x, end.y, impact);
+          if (impact?.sprite || impact?.spriteAssetId) this.playImpact(impactBase.x, impactBase.y, impact);
+        },
+      });
+    };
+    if (this.textures.exists(textureKey)) run();
+    else {
+      this.load.spritesheet(textureKey, this.assetPath(projectile.sprite, projectile.spriteAssetId), { frameWidth: projectile.frameWidth, frameHeight: projectile.frameHeight });
+      this.load.once(Phaser.Loader.Events.COMPLETE, run);
+      this.load.start();
+    }
+  }
+
+  private playArea(attackerId: string, targetId: string, from: Position, center: Position, tiles: Position[], projectile: ItemProjectileVisual | undefined, impact: ItemImpactVisual | undefined, travelTimeMs: number) {
+    const end = tileBase(center, TILE_SIZE);
+    const playImpactOnAllTiles = () => {
+      if (!impact?.sprite && !impact?.spriteAssetId) return;
+      for (const tile of tiles) {
+        const p = tileBase(tile, TILE_SIZE);
+        this.playImpact(p.x, p.y, impact);
+      }
+    };
+    if (!projectile?.sprite && !projectile?.spriteAssetId) {
+      playImpactOnAllTiles();
+      return;
+    }
+    const textureKey = this.effectTextureKey('projectile', projectile.sprite || String(projectile.spriteAssetId ?? ''), projectile.frameWidth, projectile.frameHeight);
+    const start = this.entitySocket(attackerId, from, 'projectileOrigin');
+    const frame = projectile.frames[this.projectileDirection(from, center)] ?? 0;
+    const run = () => {
+      if (!this.textures.exists(textureKey)) return;
+      const shot = this.add.image(start.x + (projectile.offsetX ?? 0), start.y + (projectile.offsetY ?? 0), textureKey, frame).setDepth(90).setOrigin(0.5);
+      this.tweens.add({
+        targets: shot,
+        x: end.x,
+        y: end.y,
+        duration: Math.max(80, travelTimeMs),
+        onComplete: () => {
+          shot.destroy();
+          playImpactOnAllTiles();
         },
       });
     };
@@ -1224,7 +1356,7 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
       if (!this.anims.exists(key)) {
         this.anims.create({ key, frames: impact.frames.map((frame) => ({ key: textureKey, frame })), frameRate: impact.fps ?? 12, repeat: 0 });
       }
-      const sprite = this.add.sprite(x, y, textureKey, impact.frames[0] ?? 0).setDepth(95).setOrigin(0.5);
+      const sprite = this.add.sprite(x, y, textureKey, impact.frames[0] ?? 0).setDepth(95).setOrigin(0.5, 1);
       sprite.play(key);
       sprite.once(Phaser.Animations.Events.ANIMATION_COMPLETE, () => sprite.destroy());
       this.time.delayedCall(Math.max(120, ((impact.frames.length || 1) / (impact.fps ?? 12)) * 1000 + 80), () => sprite.destroy());

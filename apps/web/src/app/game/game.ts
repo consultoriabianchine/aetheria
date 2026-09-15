@@ -4,13 +4,15 @@ import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import Phaser from 'phaser';
 import type { CharacterEquipment, CharacterSkills, CombatAbilityDefinition, ItemDefinition, ItemStack, PlayerCombatConfig } from '@aetheria/types';
-import { APPEARANCE_PALETTE, INVENTORY_SIZE, LOOT_POUCH_EXPANSION, SKILL_PROGRESSION_CONFIG } from '@aetheria/config';
+import { APPEARANCE_PALETTE, INVENTORY_SIZE, LOOT_POUCH_EXPANSION, SKILL_PROGRESSION_CONFIG, xpForLevel } from '@aetheria/config';
 import { WsService } from '../core/ws.service';
 import { ChatLine, GameState } from './game-state';
 import { ItemCatalogService } from './item-catalog.service';
 import { CreatureAssetService } from './creature-asset.service';
 import { OutfitAssetService } from './outfit-asset.service';
 import { OutfitThumb } from './outfit-thumb';
+import { HuntBrowser } from './hunt/hunt-browser';
+import { HuntBrowserState } from './hunt/hunt-browser-state';
 import { WorldScene } from './scenes/world-scene';
 
 interface InvEntry {
@@ -26,7 +28,7 @@ interface EqEntry {
 
 @Component({
   selector: 'app-game',
-  imports: [FormsModule, OutfitThumb],
+  imports: [FormsModule, OutfitThumb, HuntBrowser],
   templateUrl: './game.html',
   styleUrl: './game.scss',
 })
@@ -63,6 +65,7 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   private readonly itemCatalog = inject(ItemCatalogService);
   private readonly creatureAssets = inject(CreatureAssetService);
   private readonly outfitAssets = inject(OutfitAssetService);
+  private readonly huntBrowser = inject(HuntBrowserState);
   private readonly router = inject(Router);
   private phaser: Phaser.Game | null = null;
   private timerSub?: Subscription;
@@ -186,8 +189,12 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
 
   xpPct(): number {
     const s = this.state.stats();
-    const needed = s.level * 100;
+    const needed = xpForLevel(s.level);
     return needed > 0 ? (s.experience / needed) * 100 : 0;
+  }
+
+  xpNeeded(): number {
+    return xpForLevel(this.state.stats().level);
   }
 
   zoomPct(): string {
@@ -365,7 +372,7 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
     return [
       { label: 'Arquétipo', value: self?.archetype ?? '—' },
       { label: 'Level', value: stats.level },
-      { label: 'XP', value: `${stats.experience}/${stats.level * 100}` },
+      { label: 'XP', value: `${stats.experience}/${xpForLevel(stats.level)}` },
       { label: 'Gold', value: this.state.gold() },
       { label: 'HP', value: `${stats.health}/${stats.maxHealth}` },
       { label: 'Mana', value: `${stats.mana}/${stats.maxMana}` },
@@ -606,6 +613,10 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
 
   toggleHunts() {
     this.state.toggleHunts();
+  }
+
+  openHuntBrowser() {
+    this.huntBrowser.openBrowser();
   }
 
   partyMembers() {

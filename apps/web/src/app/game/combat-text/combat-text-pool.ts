@@ -1,4 +1,5 @@
 import type Phaser from 'phaser';
+import { WORLD_TEXT_FONT, WORLD_TEXT_THEME } from '@aetheria/config';
 import type { FloatingCombatText } from './floating-combat-text';
 
 export class CombatTextPool {
@@ -8,10 +9,10 @@ export class CombatTextPool {
 
   acquire(): Phaser.GameObjects.Text {
     return this.available.pop() ?? this.scene.add.text(0, 0, '', {
-      fontFamily: 'monospace',
-      fontStyle: 'bold',
-      stroke: '#101010',
-      strokeThickness: 2,
+      fontFamily: WORLD_TEXT_FONT,
+      fontStyle: String(WORLD_TEXT_THEME.fontWeight),
+      stroke: WORLD_TEXT_THEME.stroke.color,
+      strokeThickness: WORLD_TEXT_THEME.stroke.width,
       resolution: Math.max(1, Math.ceil(this.scene.cameras.main.zoom * (window.devicePixelRatio || 1))),
     });
   }

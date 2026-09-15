@@ -42,6 +42,7 @@ export type ClientMessage =
   | { type: 'hunt.start'; token: string; huntId: string; loopEnabled: boolean }
   | { type: 'hunt.stop'; token: string }
   | { type: 'hunt.setLoop'; token: string; enabled: boolean }
+  | { type: 'hunt.setFavorite'; token: string; huntId: string; favorite: boolean }
   | { type: 'party.unlockSlot'; token: string }
   | { type: 'party.summon'; token: string; characterId: string }
   | { type: 'party.dismiss'; token: string; characterId: string }
@@ -71,10 +72,13 @@ export type ServerMessage =
   | { type: 'creature.damage'; creatureId: string; attackerId: string; amount: number; critical: boolean; health: number; maxHealth: number }
   | { type: 'creature.death'; creatureId: string; experience: number }
   | { type: 'creature.remove'; creatureId: string }
-  | { type: 'combat.projectile'; attackerId: string; targetId: string; from: Position; to: Position; projectile: ItemProjectileVisual; impact?: ItemImpactVisual; travelTimeMs: number }
+  | { type: 'combat.projectile'; attackerId: string; targetId: string; from: Position; to: Position; projectile?: ItemProjectileVisual; impact?: ItemImpactVisual; travelTimeMs: number }
+  | { type: 'combat.area'; attackerId: string; targetId: string; from: Position; center: Position; tiles: Position[]; projectile?: ItemProjectileVisual; impact?: ItemImpactVisual; travelTimeMs: number }
   | { type: 'combat.damage'; attackerId: string; targetId: string; amount: number; damageType: DamageType; critical: boolean; targetHealth: number; delayMs?: number }
   | { type: 'combat.heal'; sourceId: string; targetId: string; amount: number; critical: boolean; targetHealth: number; delayMs?: number }
   | { type: 'combat.death'; entityId: string; experience?: number }
+  | { type: 'xp.gained'; amount: number; characterId?: string }
+  | { type: 'gold.gained'; amount: number; position?: Position }
   | { type: 'stats.update'; health: number; maxHealth: number; mana: number; maxMana: number; level: number; experience: number; skills: CharacterSkills; speed?: number; movementSpeed?: number; skillProgress?: { skillType: keyof CharacterSkills; level: number; experience: number }[] }
   | { type: 'skills.update'; skills: CharacterSkills }
   | { type: 'inventory.update'; inventory: CharacterInventory }
@@ -91,6 +95,7 @@ export type ServerMessage =
   | { type: 'hunt.completed'; huntId: string; completionCount: number; clearTimeMs: number; bestClearTimeMs: number | null; loopEnabled: boolean }
   | { type: 'hunt.wiped'; huntId: string; penaltyPaid: number; loopEnabled: boolean; respawnInMs: number | null }
   | { type: 'hunt.loopChanged'; huntId: string; loopEnabled: boolean }
+  | { type: 'hunt.favoriteChanged'; huntId: string; favorite: boolean }
   | { type: 'hunt.returnedToCity' }
   | { type: 'party.state'; unlockedSlots: number; maxSlots: number; unlockCost: number | null; members: PartyMember[] }
   | { type: 'gold.update'; gold: number }
@@ -136,7 +141,10 @@ export const SERVER_EVENTS = {
   COMBAT_DAMAGE: 'combat.damage',
   COMBAT_HEAL: 'combat.heal',
   COMBAT_PROJECTILE: 'combat.projectile',
+  COMBAT_AREA: 'combat.area',
   COMBAT_DEATH: 'combat.death',
+  XP_GAINED: 'xp.gained',
+  GOLD_GAINED: 'gold.gained',
   STATS_UPDATE: 'stats.update',
   SKILLS_UPDATE: 'skills.update',
   INVENTORY_UPDATE: 'inventory.update',
@@ -153,6 +161,7 @@ export const SERVER_EVENTS = {
   HUNT_COMPLETED: 'hunt.completed',
   HUNT_WIPED: 'hunt.wiped',
   HUNT_LOOP_CHANGED: 'hunt.loopChanged',
+  HUNT_FAVORITE_CHANGED: 'hunt.favoriteChanged',
   HUNT_RETURNED_TO_CITY: 'hunt.returnedToCity',
   PARTY_STATE: 'party.state',
   GOLD_UPDATE: 'gold.update',
@@ -182,6 +191,7 @@ export const CLIENT_EVENTS = {
   HUNT_START: 'hunt.start',
   HUNT_STOP: 'hunt.stop',
   HUNT_SET_LOOP: 'hunt.setLoop',
+  HUNT_SET_FAVORITE: 'hunt.setFavorite',
   PARTY_UNLOCK_SLOT: 'party.unlockSlot',
   PARTY_SUMMON: 'party.summon',
   PARTY_DISMISS: 'party.dismiss',

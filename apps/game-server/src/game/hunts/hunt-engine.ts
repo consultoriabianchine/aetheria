@@ -1,4 +1,4 @@
-import { ARENAS, HUNT_CONFIG } from '@aetheria/config';
+import { ARENAS, HUNT_CONFIG, difficultyRatingFromLevel, difficultyRatingFromScore } from '@aetheria/config';
 import { mulberry32, uid } from '@aetheria/shared';
 import type {
   ArenaDefinition,
@@ -62,6 +62,7 @@ export interface HuntEngineHooks {
   getGold(characterId: string): number;
   deductGold(characterId: string, amount: number): number;
   onCreatureAttackPlayer(creature: CreatureEntity, playerId: string, amount: number, critical: boolean, now: number): void;
+  getCreatureAttackRange(creature: CreatureEntity): number;
   onRunFinished(characterId: string, reason: 'completed' | 'wiped' | 'stopped'): void;
   onHuntCompleted(characterId: string, huntId: string, suggestedLevel: number): void;
   recordCompletion(characterId: string, huntId: string, clearTimeMs: number): Promise<HuntProgress>;
@@ -131,23 +132,36 @@ export class HuntEngine {
 
   async toListEntry(hunt: HuntDefinition, characterId: string): Promise<HuntListEntry> {
     const progress = (await this.hooks.getProgress(characterId)).get(hunt.id);
-    const monsterName = (id: string) => this.hooks.getCreatureDefinition(id)?.name ?? id;
+    const monsterInfo = (id: string) => {
+      const def = this.hooks.getCreatureDefinition(id);
+      return { creatureId: def?.creatureId ?? null, slug: def?.slug ?? id, name: def?.name ?? id };
+    };
+    const difficultyRating =
+      hunt.difficultyRating ??
+      (hunt.combatScore != null ? difficultyRatingFromScore(hunt.combatScore) : difficultyRatingFromLevel(hunt.suggestedLevel));
     return {
       id: hunt.id,
       name: hunt.name,
+      slug: hunt.slug,
       ladderPosition: hunt.ladderPosition,
       suggestedLevel: hunt.suggestedLevel,
       combatScore: hunt.combatScore,
+      difficultyRating,
+      xpRating: hunt.xpRating ?? null,
+      lootRating: hunt.lootRating ?? null,
+      tags: hunt.tags ?? [],
       basePackSize: hunt.basePackSize,
       maxPackSize: hunt.maxPackSize,
-      monsters: hunt.monsters.map((m) => ({ id: m.monsterId, name: monsterName(m.monsterId) })),
-      boss: { monsterId: hunt.boss.monsterId, name: hunt.boss.name },
+      monsters: hunt.monsters.map((m) => ({ id: m.monsterId, ...monsterInfo(m.monsterId) })),
+      boss: { monsterId: hunt.boss.monsterId, ...monsterInfo(hunt.boss.monsterId), name: hunt.boss.name },
       arenaId: hunt.arenaId,
       theme: hunt.theme,
       enabled: hunt.enabled,
       completionCount: progress?.completionCount ?? 0,
+      firstClearAt: progress?.firstClearAt ?? null,
       firstClearTimeMs: progress?.firstClearTimeMs ?? null,
       bestClearTimeMs: progress?.bestClearTimeMs ?? null,
+      favorite: progress?.favorite ?? false,
     };
   }
 
@@ -292,6 +306,7 @@ export class HuntEngine {
           broadcast: (event, data) => this.emitToMembers(run, event, data),
           onAttackPlayer: (creature, target, amount, critical, now) =>
             this.hooks.onCreatureAttackPlayer(creature, target.id, amount, critical, now),
+          getCreatureAttackRange: (creature) => this.hooks.getCreatureAttackRange(creature),
         },
         { aggressive: true },
       ),

@@ -1,7 +1,7 @@
 import type Phaser from 'phaser';
 import type { DamageType } from '@aetheria/types';
 
-export type CombatTextType = 'damage' | 'healing';
+export type CombatTextType = 'damage' | 'healing' | 'xp' | 'gold';
 
 export interface FloatingCombatText {
   id: number;
@@ -12,8 +12,6 @@ export interface FloatingCombatText {
   critical: boolean;
   worldX: number;
   worldY: number;
-  offsetX: number;
-  offsetY: number;
   createdAt: number;
   duration: number;
   riseDistance: number;

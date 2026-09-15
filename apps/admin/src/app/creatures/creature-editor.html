@@ -5,6 +5,7 @@
     <button type="button" [class.active]="activeTab() === 'loot'" (click)="activeTab.set('loot')">Loot</button>
     <button type="button" [class.active]="activeTab() === 'animation'" (click)="activeTab.set('animation')">Animação</button>
     <button type="button" [class.active]="activeTab() === 'positioning'" (click)="openPositioning()">Posicionamento</button>
+    <button type="button" [class.active]="activeTab() === 'spells'" (click)="activeTab.set('spells')">Magias</button>
   </nav>
   <a routerLink="/creatures">← Criaturas</a>
   @if (creature(); as c) {
@@ -256,9 +257,12 @@
           <div class="field"><label>Corpo (Body) H</label><input type="number" [value]="bodyHeight()" (input)="setBodyHeight(+$any($event.target).value)" min="1" /></div>
           <div class="field"><label>Corpo Offset X</label><input type="number" [value]="bodyOffsetX()" (input)="setBodyOffsetX(+$any($event.target).value)" /></div>
           <div class="field"><label>Corpo Offset Y</label><input type="number" [value]="bodyOffsetY()" (input)="setBodyOffsetY(+$any($event.target).value)" /></div>
+          <div class="field"><label>Projectile Origin X</label><input type="number" [value]="projectileOriginX()" (input)="setProjectileOriginX(+$any($event.target).value)" /></div>
+          <div class="field"><label>Projectile Origin Y</label><input type="number" [value]="projectileOriginY()" (input)="setProjectileOriginY(+$any($event.target).value)" /></div>
         </div>
         <div class="row">
           <button type="button" (click)="centralizeAnchor()">Centralizar na Base</button>
+          <button type="button" (click)="centralizeProjectileOrigin()">Centralizar origem do projétil</button>
           <button class="primary" type="button" (click)="savePositioning()" [disabled]="saving()">Salvar posicionamento</button>
         </div>
       </section>
@@ -266,8 +270,9 @@
       <section class="panel">
         <h2>Preview 5×5</h2>
         <div class="preview-box">
-          <canvas #tilePreviewCanvas class="tile-preview"></canvas>
+          <canvas #tilePreviewCanvas class="tile-preview" (click)="onTilePreviewClick($event)"></canvas>
         </div>
+        <p class="hint">Clique no preview para posicionar a origem do projétil (ponto magenta).</p>
         <div class="row">
           <button (click)="movePreview(0, -1)">↑ Norte</button>
           <button (click)="movePreview(0, 1)">↓ Sul</button>
@@ -292,4 +297,32 @@
       </section>
     </div>
   </div>
+}
+
+@if (activeTab() === 'spells') {
+  <section class="panel creature-spells-panel">
+    <h2>Magias</h2>
+    <p class="hint">Cada magia é uma ability (tipo de dano + tipo de tiro + efeito). Informe o dano base mínimo e máximo — o servidor sorteia entre os dois a cada disparo.</p>
+    @for (spell of spells(); track $index; let i = $index) {
+      <div class="spell-row">
+        <select [value]="spell.abilityId ?? ''" (change)="updateSpell(i, { abilityId: $any($event.target).value === '' ? null : +$any($event.target).value })">
+          <option value="">Selecione a magia…</option>
+          @for (ability of monsterAbilities; track ability.abilityId) {
+            <option [value]="ability.abilityId">{{ ability.name }} ({{ ability.damageType ?? 'heal' }} · range {{ ability.rangeTiles }})</option>
+          }
+        </select>
+        <label>Dano mín <input type="number" min="1" [value]="spell.minDamage" (change)="updateSpell(i, { minDamage: spellNumber($any($event.target).value) })" /></label>
+        <label>Dano máx <input type="number" min="1" [value]="spell.maxDamage" (change)="updateSpell(i, { maxDamage: spellNumber($any($event.target).value) })" /></label>
+        <label>Chance <input type="number" min="0" max="1" step="0.05" [value]="spell.chance" (change)="updateSpell(i, { chance: spellNumber($any($event.target).value) ?? 1 })" /></label>
+        <label>Cooldown (ms) <input type="number" min="0" [value]="spell.cooldownOverrideMs" (change)="updateSpell(i, { cooldownOverrideMs: spellNumber($any($event.target).value) })" /></label>
+        <label>Prioridade <input type="number" min="1" [value]="spell.priority" (change)="updateSpell(i, { priority: spellNumber($any($event.target).value) ?? 1 })" /></label>
+        <label><input type="checkbox" [checked]="spell.enabled" (change)="updateSpell(i, { enabled: $any($event.target).checked })" /> Ativa</label>
+        <button type="button" (click)="removeSpell(i)">Remover</button>
+      </div>
+    }
+    <div class="row">
+      <button type="button" (click)="addSpell()">Adicionar magia</button>
+      <button class="primary" type="button" (click)="saveSpells()" [disabled]="saving()">Salvar magias</button>
+    </div>
+  </section>
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit, inject, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import type { CombatArchetype, DamageType } from '@aetheria/types';
+import { PARTY_CONFIG, PARTY_XP_CONFIG } from '@aetheria/config';
 import { ApiService, type CombatFormulaTestInput, type CombatFormulaTestResult } from '../core/api.service';
 
 @Component({
@@ -18,6 +19,14 @@ import { ApiService, type CombatFormulaTestInput, type CombatFormulaTestResult }
     table { margin-top: 18px; width: 100%; border-collapse: collapse; }
     th, td { border-bottom: 1px solid #263244; padding: 8px; text-align: left; }
     .error { color: #ff8a8a; }
+    .xprate { margin-top: 26px; max-width: 1100px; }
+    .xprate .row { display: flex; align-items: center; gap: 12px; margin: 10px 0; }
+    .xprate .row label { color: #9db2c8; font-size: 12px; }
+    .xprate select { background: #101620; color: #d9e6f2; border: 1px solid #2b3546; border-radius: 6px; padding: 6px; }
+    .bar { flex: 1; height: 18px; background: #101620; border: 1px solid #263244; border-radius: 6px; overflow: hidden; }
+    .bar-fill { height: 100%; background: linear-gradient(90deg, #1f6feb, #7fd0a0); transition: width 0.2s ease; }
+    .bar-caption { min-width: 88px; font-size: 12px; color: #7fd0a0; text-align: right; }
+    .solo { color: #ffb86b; }
   `,
 })
 export class CombatFormulaTester implements OnInit {
@@ -45,6 +54,26 @@ export class CombatFormulaTester implements OnInit {
   readonly result = signal<CombatFormulaTestResult | null>(null);
   readonly error = signal<string | null>(null);
   readonly simulations = signal<Array<{ level: number; skill: number; weak: number; medium: number; strong: number }>>([]);
+  readonly maxSlots = PARTY_CONFIG.maxSlots;
+  readonly bonusPerExtra = PARTY_XP_CONFIG.bonusPerExtraMember;
+  readonly partySizes = Array.from({ length: PARTY_CONFIG.maxSlots }, (_, i) => i + 1);
+  readonly partySize = signal(1);
+
+  perMemberRate(n: number): number {
+    return (1 + this.bonusPerExtra * (n - 1)) / n;
+  }
+
+  totalRate(n: number): number {
+    return 1 + this.bonusPerExtra * (n - 1);
+  }
+
+  xpShare(baseXp: number, n: number): number {
+    return Math.max(1, Math.round(baseXp * this.perMemberRate(n)));
+  }
+
+  percent(value: number): string {
+    return `${(value * 100).toFixed(0)}%`;
+  }
 
   async ngOnInit() {
     await this.calculate();

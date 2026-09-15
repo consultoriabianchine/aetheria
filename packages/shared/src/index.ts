@@ -51,6 +51,13 @@ export function clamp(value: number, min: number, max: number): number {
   return Math.max(min, Math.min(max, value));
 }
 
+/** Inteiro aleatório uniforme no intervalo fechado [min, max]. */
+export function randomIntInRange(min: number, max: number, rng: () => number = Math.random): number {
+  const lo = Math.ceil(Math.min(min, max));
+  const hi = Math.floor(Math.max(min, max));
+  return Math.min(hi, lo + Math.floor(clamp(rng(), 0, 1) * (hi - lo + 1)));
+}
+
 export function randomItem<T>(items: T[]): T {
   return items[Math.floor(Math.random() * items.length)];
 }

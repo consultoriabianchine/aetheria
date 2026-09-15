@@ -97,6 +97,23 @@ export class MemoryStore implements Store {
       firstClearTimeMs: existing?.firstClearTimeMs ?? clearTimeMs,
       bestClearTimeMs,
       bestClearAt: isBest && existing?.bestClearAt == null ? now : existing?.bestClearAt ?? (isBest ? now : null),
+      favorite: existing?.favorite ?? false,
+    };
+    this.huntProgress.set(key, next);
+    return next;
+  }
+
+  async setHuntFavorite(characterId: string, huntId: string, favorite: boolean): Promise<HuntProgress> {
+    const key = `${characterId}:${huntId}`;
+    const existing = this.huntProgress.get(key);
+    const next: HuntProgress = {
+      huntId,
+      completionCount: existing?.completionCount ?? 0,
+      firstClearAt: existing?.firstClearAt ?? null,
+      firstClearTimeMs: existing?.firstClearTimeMs ?? null,
+      bestClearTimeMs: existing?.bestClearTimeMs ?? null,
+      bestClearAt: existing?.bestClearAt ?? null,
+      favorite,
     };
     this.huntProgress.set(key, next);
     return next;

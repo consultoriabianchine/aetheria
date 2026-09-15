@@ -1,0 +1,41 @@
+<h1>Tipos de Efeito</h1>
+<p class="sub">Catálogo de impactos ao acertar (<code>effect_types</code>). Itens e abilities apenas referenciam estes tipos.</p>
+
+@if (error()) { <p class="error">{{ error() }}</p> }
+
+<div class="layout">
+  <section class="panel">
+    <div class="toolbar">
+      <button class="primary" (click)="createNew()">+ Novo tipo</button>
+      <button (click)="load()">Atualizar</button>
+    </div>
+    <div class="list">
+      @for (item of items(); track item.id) {
+        <button class="row" [class.active]="selectedId() === item.id" (click)="select(item)">
+          <span>{{ item.name }}<br /><small>{{ item.slug }}</small></span>
+          <small>{{ item.enabled === false ? 'off' : '' }}</small>
+        </button>
+      }
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>{{ selectedId() ? 'Editar tipo de efeito' : 'Novo tipo de efeito' }}</h2>
+    <div class="form">
+      <label>Slug <input [value]="draft().slug" (input)="patch({ slug: $any($event.target).value })" /></label>
+      <label>Nome <input [value]="draft().name" (input)="patch({ name: $any($event.target).value })" /></label>
+      <label class="wide">Descrição <textarea [value]="draft().description" (input)="patch({ description: $any($event.target).value })"></textarea></label>
+      <label><span>Ativo</span><input type="checkbox" [checked]="draft().enabled" (change)="patch({ enabled: $any($event.target).checked })" /></label>
+
+      <div class="wide">
+        <h3>Visual do impacto</h3>
+        <div class="form">
+          <admin-sprite-visual-editor [visual]="draft().visual" [showProjectile]="false" (visualChange)="patchVisual($event)"></admin-sprite-visual-editor>
+        </div>
+      </div>
+    </div>
+    <div class="actions">
+      <button class="primary" (click)="save()" [disabled]="saving()">Salvar</button>
+    </div>
+  </section>
+</div>

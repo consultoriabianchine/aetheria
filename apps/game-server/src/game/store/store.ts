@@ -69,4 +69,6 @@ export interface Store {
   listHuntProgress(characterId: string): Promise<HuntProgress[]>;
   /** Registra uma conclusão (idempotente por transação da run): contagem +1 e speedrun. */
   recordHuntCompletion(characterId: string, huntId: string, clearTimeMs: number): Promise<HuntProgress>;
+  /** Marca/desmarca uma Hunt como favorita (persistido por personagem). */
+  setHuntFavorite(characterId: string, huntId: string, favorite: boolean): Promise<HuntProgress>;
 }

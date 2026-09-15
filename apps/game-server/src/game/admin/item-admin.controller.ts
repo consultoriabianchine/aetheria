@@ -38,6 +38,8 @@ interface ItemDefinitionInput {
   requirements?: Record<string, unknown> | null;
   specialModifiers?: Record<string, unknown> | null;
   visual?: ItemVisualEffects | null;
+  shootTypeId?: number | null;
+  effectTypeId?: number | null;
   enabled?: boolean;
   sourceItemId?: string | null;
 }
@@ -70,7 +72,10 @@ export class ItemAdminController {
 
   @Put(':id')
   async update(@Param('id') id: string, @Body() body: ItemDefinitionInput) {
-    const row = await this.prisma.itemDefinition.update({ where: { id }, data: toPrismaData(id, body) });
+    const data = toPrismaData(id, body) as unknown as Prisma.ItemDefinitionUpdateInput;
+    if (body.shootTypeId === null) data.shootType = { disconnect: true };
+    if (body.effectTypeId === null) data.effectType = { disconnect: true };
+    const row = await this.prisma.itemDefinition.update({ where: { id }, data });
     await loadItemCatalogFromDatabase(this.prisma);
     return { ok: true, item: { ...rowToItemDefinition(row as never), enabled: row.enabled, description: row.description, specialModifiers: row.specialModifiers } };
   }
@@ -130,6 +135,8 @@ function toPrismaData(id: string, input: ItemDefinitionInput): Prisma.ItemDefini
     specialModifiers: specialModifiers as Prisma.InputJsonValue | undefined,
     enabled: input.enabled ?? true,
     sourceItemId: input.sourceItemId ?? null,
+    shootType: input.shootTypeId ? { connect: { id: input.shootTypeId } } : undefined,
+    effectType: input.effectTypeId ? { connect: { id: input.effectTypeId } } : undefined,
   };
 }
 

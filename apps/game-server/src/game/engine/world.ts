@@ -12,7 +12,8 @@ import type {
   WeaponElementOverride,
 } from '@aetheria/types';
 import type { StoredAccountStorage, StoredCharacter } from '../store/store';
-import { INVENTORY_SIZE, LOOT_POUCH_SIZE, PLAYER_AI, PLAYER_SPEED, SPEED_PER_LEVEL, playerMoveInterval } from '@aetheria/config';
+import { ARCHETYPES, INVENTORY_SIZE, LOOT_POUCH_SIZE, PLAYER_AI, PLAYER_SPEED, SPEED_PER_LEVEL, playerMoveInterval } from '@aetheria/config';
+import { calculateMaxHp, calculateMaxMana } from '../stats/stat-engine';
 
 export interface NpcEntity {
   id: string;
@@ -42,6 +43,8 @@ export class GamePlayer {
   maxHealth: number;
   mana: number;
   maxMana: number;
+  baseMaxHealth: number;
+  baseMaxMana: number;
   skills: CharacterSkills;
   skillProgress: { skillType: keyof CharacterSkills; level: number; experience: number }[] = [];
   equipment: CharacterEquipment;
@@ -74,6 +77,8 @@ export class GamePlayer {
     this.health = character.health;
     this.maxMana = character.maxMana;
     this.mana = character.mana;
+    this.baseMaxHealth = character.maxHealth;
+    this.baseMaxMana = character.maxMana;
     this.skills = { ...character.skills };
     this.skillProgress = character.skillProgress.map((progress) => ({ ...progress }));
     this.equipment = {
@@ -109,6 +114,27 @@ export class GamePlayer {
     this.moveIntervalMs = playerMoveInterval(speed);
   }
 
+  /** Recalcula vida/mana máximas (base + level + equipamento) e ajusta os valores atuais. */
+  recomputeVitals(getItem: (itemId: string) => ItemDefinition | undefined) {
+    const archetype = ARCHETYPES[this.archetype];
+    const baseMaxHealth = calculateMaxHp(this.level, archetype);
+    const baseMaxMana = calculateMaxMana(this.level, archetype);
+    let maxHealth = baseMaxHealth;
+    let maxMana = baseMaxMana;
+    for (const stack of Object.values(this.equipment)) {
+      if (!stack) continue;
+      const combat = getItem(stack.itemId)?.combatStats;
+      maxHealth += combat?.maxHp ?? 0;
+      maxMana += combat?.maxMana ?? 0;
+    }
+    this.baseMaxHealth = baseMaxHealth;
+    this.baseMaxMana = baseMaxMana;
+    this.maxHealth = Math.max(1, Math.round(maxHealth));
+    this.maxMana = Math.max(0, Math.round(maxMana));
+    this.health = Math.min(this.health, this.maxHealth);
+    this.mana = Math.min(this.mana, this.maxMana);
+  }
+
   toStored(): StoredCharacter {
     return {
       id: this.id,
@@ -118,9 +144,9 @@ export class GamePlayer {
       level: this.level,
       experience: this.experience,
       health: this.health,
-      maxHealth: this.maxHealth,
+      maxHealth: this.baseMaxHealth,
       mana: this.mana,
-      maxMana: this.maxMana,
+      maxMana: this.baseMaxMana,
       position: { ...this.position },
       skills: { ...this.skills },
       skillProgress: this.skillProgress.map((progress) => ({ ...progress })),

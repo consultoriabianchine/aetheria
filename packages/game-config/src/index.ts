@@ -45,15 +45,52 @@ export const COMBAT_TEXT_THEME: Record<DamageType | 'healing', string> = {
   healing: '#55FF72',
 };
 
+export const COMBAT_TEXT_XP_COLOR = '#FFFFFF';
+
 export const COMBAT_TEXT_ANIMATION = {
   normalDuration: 800,
   criticalDuration: 800,
   normalRise: 35,
   criticalRise: 45,
   maxVisiblePerEntity: 8,
-  spawnOffsets: [-12, -6, 0, 6, 12],
-  normalFontSize: 15,
-  criticalFontSize: 18,
+} as const;
+
+// ---------------------------------------------------------------------------
+// Tipografia do mundo (nomes, dano, cura, XP, gold, palavras de magia)
+
+/** Stack de fonte dos textos sobre o mundo (Tahoma → Verdana → Arial → sans-serif). */
+export const WORLD_TEXT_FONT = 'Tahoma, Verdana, Arial, sans-serif';
+
+/** Cores dos textos sobre o mundo (nomes e recompensas). */
+export const WORLD_TEXT_COLORS = {
+  playerName: '#FFFFFF',
+  partyMemberName: '#67E36F',
+  monsterName: '#59E36B',
+  bossName: '#FF4A4A',
+  npcName: '#F0C14B',
+  xp: '#FFFFFF',
+  gold: '#FFD84D',
+} as const;
+
+/** Tema central de tipografia do mundo — fonte única para nome/dano/cura/XP/gold. */
+export const WORLD_TEXT_THEME = {
+  fontFamily: WORLD_TEXT_FONT,
+  fontWeight: 700,
+  stroke: {
+    color: '#000000',
+    width: 3,
+  },
+  sizes: {
+    entityName: 13,
+    monsterName: 12,
+    bossName: 14,
+    damage: 13,
+    criticalDamage: 16,
+    healing: 14,
+    xp: 13,
+    gold: 13,
+    spellWords: 13,
+  },
 } as const;
 
 // ---------------------------------------------------------------------------
@@ -66,18 +103,18 @@ export const COMBAT_TEXT_ANIMATION = {
  */
 export const CREATURE_HUD_CONFIG = {
   /** Distância vertical do nome acima do topo do sprite (px). */
-  nameMargin: 12,
+  nameMargin: 3,
   /** Distância da barra de vida acima do topo do sprite (px). */
-  healthBarMargin: 4,
+  healthBarMargin: 2,
   /** Distância da barra de vida acima do topo do corpo real (px). */
-  bodyTopMargin: 5,
+  bodyTopMargin: 3,
   /** Altura da barra de vida (px). */
   healthBarHeight: 4,
   /** Largura mínima/máxima da barra de vida de criaturas normais (px). */
-  minHealthBarWidth: 28,
-  maxHealthBarWidth: 80,
+  minHealthBarWidth: 22,
+  maxHealthBarWidth: 56,
   /** Largura máxima da barra de vida de bosses (px) — regra explícita. */
-  bossMaxHealthBarWidth: 120,
+  bossMaxHealthBarWidth: 88,
   /** Fração da altura do corpo onde o dano/cura "nasce" (0=topo, 1=base). */
   damageTextHeightRatio: 0.35,
 } as const;
@@ -85,7 +122,7 @@ export const CREATURE_HUD_CONFIG = {
 /** Largura da barra de vida proporcional ao sprite, limitada por min/max. */
 export function calculateCreatureHealthBarWidth(spriteWidth: number, isBoss = false): number {
   const max = isBoss ? CREATURE_HUD_CONFIG.bossMaxHealthBarWidth : CREATURE_HUD_CONFIG.maxHealthBarWidth;
-  return Math.min(max, Math.max(CREATURE_HUD_CONFIG.minHealthBarWidth, Math.round(spriteWidth * 0.75)));
+  return Math.min(max, Math.max(CREATURE_HUD_CONFIG.minHealthBarWidth, Math.round(spriteWidth * 0.6)));
 }
 
 /** Intervalo de movimento de referência (ms por tile, com speed = 1). */
@@ -255,6 +292,11 @@ export const PARTY_CONFIG = {
   unlockCost: (currentSlots: number) => (currentSlots >= 2 ? 20_000 : 5_000),
 } as const;
 
+/** Distribuição de XP entre membros vivos da party. */
+export const PARTY_XP_CONFIG = {
+  bonusPerExtraMember: 0.10,
+} as const;
+
 /** Número de slots do inventário. */
 export const INVENTORY_SIZE = 20;
 
@@ -268,9 +310,9 @@ export const LOOT_POUCH_EXPANSION = {
   goldCost: (currentSize: number) => Math.max(1000, currentSize * 250),
 } as const;
 
-/** XP necessário para subir do nível atual para o próximo. */
+/** XP necessário para subir do nível atual para o próximo (tabela do Tibia: 50L² - 150L + 200). */
 export function xpForLevel(level: number): number {
-  return level * 100;
+  return 50 * level * level - 150 * level + 200;
 }
 
 /** Nome original do jogo/mundo. */
@@ -453,6 +495,47 @@ export function calculatePackSize(basePackSize: number, maxPackSize: number, wav
 export function getStairSide(wave: number): 'left' | 'right' {
   return wave % 2 === 1 ? 'left' : 'right';
 }
+
+/**
+ * Dificuldade visual (1–5 estrelas) derivada do nível recomendado — usada como
+ * fallback quando a Hunt não possui `difficultyRating` explícito.
+ */
+export function difficultyRatingFromLevel(suggestedLevel: number): number {
+  if (suggestedLevel < 5) return 1;
+  if (suggestedLevel < 10) return 2;
+  if (suggestedLevel < 20) return 3;
+  if (suggestedLevel < 35) return 4;
+  return 5;
+}
+
+/**
+ * Dificuldade visual (1–5) derivada do combat score de uma Hunt — alternativa
+ * ao fallback por nível, para catálogos que só possuem `combatScore`.
+ */
+export function difficultyRatingFromScore(score: number): number {
+  if (score <= 0) return 1;
+  if (score < 250_000) return 1;
+  if (score < 1_000_000) return 2;
+  if (score < 5_000_000) return 3;
+  if (score < 20_000_000) return 4;
+  return 5;
+}
+
+/** Faixas de nível recomendado para o filtro lateral da Central de Hunts. */
+export const LEVEL_RANGE_FILTERS: { id: string; label: string; min: number; max: number | null }[] = [
+  { id: 'all', label: 'Todas', min: 0, max: null },
+  { id: '1-19', label: '1–19', min: 1, max: 19 },
+  { id: '20-49', label: '20–49', min: 20, max: 49 },
+  { id: '50-99', label: '50–99', min: 50, max: 99 },
+  { id: '100-149', label: '100–149', min: 100, max: 149 },
+  { id: '150-199', label: '150–199', min: 150, max: 199 },
+  { id: '200-249', label: '200–249', min: 200, max: 249 },
+  { id: '250-299', label: '250–299', min: 250, max: 299 },
+  { id: '300-349', label: '300–349', min: 300, max: 349 },
+  { id: '350-399', label: '350–399', min: 350, max: 399 },
+  { id: '400-499', label: '400–499', min: 400, max: 499 },
+  { id: '500+', label: '500+', min: 500, max: null },
+];
 
 /** Arenas disponíveis (grids determinísticos). */
 export const ARENAS: Record<string, import('@aetheria/types').ArenaDefinition> = {

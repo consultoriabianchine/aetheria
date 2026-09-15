@@ -256,6 +256,11 @@ export class GameState {
         this.hunt.update((h) => (h && h.huntId === r.huntId ? { ...h, loopEnabled: r.loopEnabled } : h));
         break;
       }
+      case SERVER_EVENTS.HUNT_FAVORITE_CHANGED: {
+        const r = data as { huntId: string; favorite: boolean };
+        this.hunts.update((list) => list.map((h) => (h.id === r.huntId ? { ...h, favorite: r.favorite } : h)));
+        break;
+      }
       case SERVER_EVENTS.HUNT_COMPLETED: {
         const r = data as {
           huntId: string;
@@ -477,6 +482,13 @@ export class GameState {
     const token = this.token();
     if (!token) return;
     this.ws.send({ type: 'hunt.setLoop', token, enabled });
+  }
+
+  setFavorite(huntId: string, favorite: boolean) {
+    const token = this.token();
+    if (!token) return;
+    this.hunts.update((list) => list.map((h) => (h.id === huntId ? { ...h, favorite } : h)));
+    this.ws.send({ type: 'hunt.setFavorite', token, huntId, favorite });
   }
 
   unlockPartySlot() {

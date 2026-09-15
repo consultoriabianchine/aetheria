@@ -1,5 +1,5 @@
 import type Phaser from 'phaser';
-import { COMBAT_TEXT_ANIMATION, COMBAT_TEXT_THEME } from '@aetheria/config';
+import { COMBAT_TEXT_ANIMATION, COMBAT_TEXT_THEME, COMBAT_TEXT_XP_COLOR, WORLD_TEXT_COLORS, WORLD_TEXT_THEME } from '@aetheria/config';
 import type { DamageType } from '@aetheria/types';
 import { CombatTextPool } from './combat-text-pool';
 import type { FloatingCombatText } from './floating-combat-text';
@@ -19,6 +19,18 @@ export interface CombatTextHealEvent {
   delayMs?: number;
 }
 
+export interface CombatTextXpEvent {
+  targetId: string;
+  amount: number;
+}
+
+export interface CombatTextGoldEvent {
+  targetId: string;
+  amount: number;
+  /** Posição no mundo (px) — quando presente, ignora o targetId (ex.: gold da criatura morta). */
+  position?: { x: number; y: number };
+}
+
 interface WorldPosition {
   x: number;
   y: number;
@@ -26,7 +38,6 @@ interface WorldPosition {
 
 export class CombatTextManager {
   private readonly active: FloatingCombatText[] = [];
-  private readonly entityStacks = new Map<string, number>();
   private nextId = 1;
   private readonly pool: CombatTextPool;
 
@@ -40,6 +51,14 @@ export class CombatTextManager {
 
   spawnHealing(event: CombatTextHealEvent) {
     this.spawn(event.targetId, event.amount, 'healing', undefined, event.critical, event.delayMs);
+  }
+
+  spawnXp(event: CombatTextXpEvent) {
+    this.spawn(event.targetId, event.amount, 'xp', undefined, false, 0);
+  }
+
+  spawnGold(event: CombatTextGoldEvent) {
+    this.spawn(event.targetId, event.amount, 'gold', undefined, false, 0, event.position);
   }
 
   update(now: number) {
@@ -56,7 +75,7 @@ export class CombatTextManager {
       const scale = item.critical
         ? progress < 0.1 ? 0.7 + progress * 5.5 : progress < 0.225 ? 1.25 - (progress - 0.1) * 2 : 1
         : 1 - progress * 0.05;
-      item.text?.setPosition(item.worldX + item.offsetX, item.worldY - item.offsetY - item.riseDistance * eased)
+      item.text?.setPosition(item.worldX, item.worldY - item.riseDistance * eased)
         .setAlpha(fade)
         .setScale(scale);
     }
@@ -65,29 +84,26 @@ export class CombatTextManager {
   clear() {
     for (const item of this.active) this.pool.release(item);
     this.active.length = 0;
-    this.entityStacks.clear();
   }
 
-  private spawn(entityId: string, value: number, type: 'damage' | 'healing', damageType: DamageType | undefined, critical: boolean, delayMs = 0) {
-    const position = this.positionOf(entityId);
+  private spawn(entityId: string, value: number, type: 'damage' | 'healing' | 'xp' | 'gold', damageType: DamageType | undefined, critical: boolean, delayMs = 0, positionOverride?: WorldPosition) {
+    const position = positionOverride ?? this.positionOf(entityId);
     if (!position || value < 0) return;
     const create = () => {
-      const stack = this.entityStacks.get(entityId) ?? 0;
-      const offset = COMBAT_TEXT_ANIMATION.spawnOffsets[stack % COMBAT_TEXT_ANIMATION.spawnOffsets.length];
-      this.entityStacks.set(entityId, stack + 1);
       const item: FloatingCombatText = {
         id: this.nextId++, entityId, value, type, damageType, critical,
         worldX: position.x, worldY: position.y,
-        offsetX: offset, offsetY: stack % 3 * 4, createdAt: this.scene.time.now,
+        createdAt: this.scene.time.now,
         duration: critical ? COMBAT_TEXT_ANIMATION.criticalDuration : COMBAT_TEXT_ANIMATION.normalDuration,
         riseDistance: critical ? COMBAT_TEXT_ANIMATION.criticalRise : COMBAT_TEXT_ANIMATION.normalRise,
         text: null,
       };
+      const suffix = type === 'xp' ? ' XP' : type === 'gold' ? ' gold' : '';
       const text = this.pool.acquire();
-      text.setText(`${type === 'healing' ? '+' : '-'}${new Intl.NumberFormat('pt-BR').format(value)}`)
-        .setFontSize(`${critical ? COMBAT_TEXT_ANIMATION.criticalFontSize : COMBAT_TEXT_ANIMATION.normalFontSize}px`)
-        .setColor(COMBAT_TEXT_THEME[type === 'healing' ? 'healing' : damageType ?? 'physical'])
-        .setPosition(item.worldX + offset, item.worldY - item.offsetY)
+      text.setText(`${type === 'damage' ? '-' : '+'}${new Intl.NumberFormat('pt-BR').format(value)}${suffix}`)
+        .setFontSize(`${this.fontSize(type, critical)}px`)
+        .setColor(this.color(type, damageType))
+        .setPosition(item.worldX, item.worldY)
         .setOrigin(0.5)
         .setDepth(120)
         .setVisible(true)
@@ -101,5 +117,19 @@ export class CombatTextManager {
     };
     if (delayMs > 0) this.scene.time.delayedCall(delayMs, create);
     else create();
+  }
+
+  private fontSize(type: 'damage' | 'healing' | 'xp' | 'gold', critical: boolean): number {
+    if (type === 'damage') return critical ? WORLD_TEXT_THEME.sizes.criticalDamage : WORLD_TEXT_THEME.sizes.damage;
+    if (type === 'healing') return WORLD_TEXT_THEME.sizes.healing;
+    if (type === 'gold') return WORLD_TEXT_THEME.sizes.gold;
+    return WORLD_TEXT_THEME.sizes.xp;
+  }
+
+  private color(type: 'damage' | 'healing' | 'xp' | 'gold', damageType: DamageType | undefined): string {
+    if (type === 'xp') return COMBAT_TEXT_XP_COLOR;
+    if (type === 'gold') return WORLD_TEXT_COLORS.gold;
+    if (type === 'healing') return COMBAT_TEXT_THEME.healing;
+    return COMBAT_TEXT_THEME[damageType ?? 'physical'];
   }
 }

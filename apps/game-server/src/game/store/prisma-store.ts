@@ -319,6 +319,7 @@ export class PrismaStore implements Store {
           firstClearTimeMs: clearTimeMs,
           bestClearTimeMs,
           bestClearAt: now,
+          favorite: false,
         },
         update: {
           completionCount: (existing?.completionCount ?? 0) + 1,
@@ -332,6 +333,20 @@ export class PrismaStore implements Store {
     });
   }
 
+  async setHuntFavorite(characterId: string, huntId: string, favorite: boolean): Promise<HuntProgress> {
+    const row = await this.prisma.huntProgress.upsert({
+      where: { characterId_huntId: { characterId, huntId } },
+      create: {
+        characterId,
+        huntId,
+        completionCount: 0,
+        favorite,
+      },
+      update: { favorite },
+    });
+    return this.toHuntProgress(row);
+  }
+
   private toHuntProgress(row: {
     huntId: string;
     completionCount: number;
@@ -339,6 +354,7 @@ export class PrismaStore implements Store {
     firstClearTimeMs: number | null;
     bestClearTimeMs: number | null;
     bestClearAt: Date | null;
+    favorite: boolean;
   }): HuntProgress {
     return {
       huntId: row.huntId,
@@ -347,6 +363,7 @@ export class PrismaStore implements Store {
       firstClearTimeMs: row.firstClearTimeMs,
       bestClearTimeMs: row.bestClearTimeMs,
       bestClearAt: row.bestClearAt ? row.bestClearAt.getTime() : null,
+      favorite: row.favorite,
     };
   }
 

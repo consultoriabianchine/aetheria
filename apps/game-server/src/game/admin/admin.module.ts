@@ -11,9 +11,11 @@ import { ItemCatalogController } from '../engine/item-catalog.controller';
 import { AbilityAdminController } from './ability-admin.controller';
 import { AbilityRegistry } from '../combat/ability-registry';
 import { MonsterAbilityAdminController } from './monster-ability-admin.controller';
+import { ShootTypeAdminController } from './shoot-type-admin.controller';
+import { EffectTypeAdminController } from './effect-type-admin.controller';
 
 @Module({
-  controllers: [AdminController, CreatureAssetController, CombatAdminController, ItemAdminController, ItemCatalogController, AbilityAdminController, MonsterAbilityAdminController],
+  controllers: [AdminController, CreatureAssetController, CombatAdminController, ItemAdminController, ItemCatalogController, AbilityAdminController, MonsterAbilityAdminController, ShootTypeAdminController, EffectTypeAdminController],
   providers: [AdminAuthGuard, CreatureAssetService, CreatureAnimationService, CreatureRegistry, AbilityRegistry],
   exports: [CreatureRegistry],
 })

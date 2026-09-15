@@ -1,12 +1,11 @@
 import { Component, OnInit, computed, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import type { AmmoType, DamageType, EquipmentSlot, ItemType, WeaponType } from '@aetheria/types';
+import type { AmmoType, DamageType, EffectTypeDefinition, EquipmentSlot, ItemType, ShootTypeDefinition, WeaponType } from '@aetheria/types';
 import { ApiService, type AdminItemDefinition, type AdminItemInput } from '../core/api.service';
-import { SpriteVisualEditor } from '../shared/sprite-visual-editor/sprite-visual-editor';
 
 @Component({
   selector: 'admin-item-editor',
-  imports: [FormsModule, SpriteVisualEditor],
+  imports: [FormsModule],
   templateUrl: './item-editor.html',
   styles: `
     .layout { display: grid; grid-template-columns: 330px minmax(420px, 1fr); gap: 16px; }
@@ -33,6 +32,8 @@ export class ItemEditor implements OnInit {
   readonly draft = signal<AdminItemInput>(blankItem());
   readonly error = signal<string | null>(null);
   readonly saving = signal(false);
+  readonly shootTypes = signal<ShootTypeDefinition[]>([]);
+  readonly effectTypes = signal<EffectTypeDefinition[]>([]);
 
   readonly itemTypes: ItemType[] = ['helmet', 'armor', 'legs', 'boots', 'weapon', 'ring', 'necklace', 'relic', 'offhand', 'ammo', 'consumable', 'loot', 'other'];
   readonly slots: EquipmentSlot[] = ['helmet', 'armor', 'legs', 'boots', 'ring', 'necklace', 'relic', 'weapon', 'offhand', 'ammo'];
@@ -51,7 +52,14 @@ export class ItemEditor implements OnInit {
   async load() {
     this.error.set(null);
     try {
-      this.items.set(await this.api.listItems());
+      const [items, shootTypes, effectTypes] = await Promise.all([
+        this.api.listItems(),
+        this.api.listShootTypes(),
+        this.api.listEffectTypes(),
+      ]);
+      this.items.set(items);
+      this.shootTypes.set(shootTypes);
+      this.effectTypes.set(effectTypes);
       if (!this.selectedId() && this.items()[0]) this.select(this.items()[0]);
     } catch (e) {
       this.error.set((e as Error).message);
@@ -88,6 +96,8 @@ export class ItemEditor implements OnInit {
       allowedAmmoType: item.weapon?.allowedAmmoType ?? null,
       visual: item.visual ? structuredClone(item.visual) : null,
       specialModifiers: item.specialModifiers ? structuredClone(item.specialModifiers) : null,
+      shootTypeId: item.shootTypeId ?? null,
+      effectTypeId: item.effectTypeId ?? null,
       enabled: item.enabled ?? true,
     });
   }
@@ -99,18 +109,6 @@ export class ItemEditor implements OnInit {
 
   patch(patch: Partial<AdminItemInput>) {
     this.draft.update((draft) => ({ ...draft, ...patch }));
-  }
-
-  canEditVisual(): boolean {
-    const draft = this.draft();
-    return !!draft.ammoType || draft.weaponType === 'staff';
-  }
-
-  visualHint(): string | null {
-    const draft = this.draft();
-    if (draft.weaponType === 'bow' || draft.weaponType === 'crossbow') return 'Visual do disparo vem da munição equipada.';
-    if (draft.weaponType && draft.weaponType !== 'staff') return 'Armas melee não usam projétil.';
-    return null;
   }
 
   async save() {
@@ -160,6 +158,8 @@ function blankItem(): AdminItemInput {
     allowedAmmoType: null,
     visual: null,
     specialModifiers: null,
+    shootTypeId: null,
+    effectTypeId: null,
     enabled: true,
   };
 }

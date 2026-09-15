@@ -1,6 +1,8 @@
 # Build: packages + web (Angular).
 FROM node:22-alpine AS build
 WORKDIR /app
+ENV NODE_OPTIONS=--max-old-space-size=4096 \
+    NG_BUILD_MAX_WORKERS=2
 COPY package.json package-lock.json* ./
 COPY apps/web/package.json apps/web/
 COPY apps/game-server/package.json apps/game-server/

@@ -36,6 +36,45 @@
   white-space: pre-wrap;
 }
 
+.editor-tabs {
+  display: flex;
+  gap: 2px;
+  border-top: 1px solid #232c3a;
+  padding-top: 12px;
+  margin-bottom: 12px;
+}
+
+.editor-tabs button {
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+  border-radius: 0;
+  color: #8aa0b6;
+  font-size: 12px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.editor-tabs button.active {
+  color: #5ad88a;
+  border-bottom-color: #5ad88a;
+}
+
+.positioning-grid {
+  grid-template-columns: repeat(2, minmax(280px, 1fr));
+}
+
+.tile-preview {
+  width: 300px;
+  height: 300px;
+  image-rendering: pixelated;
+}
+
+.row button.active {
+  border-color: #5ad88a;
+  color: #5ad88a;
+}
+
 .editor-grid {
   display: grid;
   grid-template-columns: 360px 1fr 360px;

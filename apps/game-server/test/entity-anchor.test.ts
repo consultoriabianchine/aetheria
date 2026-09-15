@@ -28,6 +28,18 @@ describe('entity-anchor (posicionamento de sprites)', () => {
     expect(sockets.projectileOrigin).toEqual({ x: 32, y: 32 });
   });
 
+  it('usa projectileOrigin como fallback do center (dano/impacto recebido)', () => {
+    const sockets = resolveSockets(64, 64, { projectileOrigin: { x: 40, y: 48 } });
+    expect(sockets.projectileOrigin).toEqual({ x: 40, y: 48 });
+    expect(sockets.center).toEqual({ x: 40, y: 48 });
+  });
+
+  it('center explícito prevalece sobre projectileOrigin', () => {
+    const sockets = resolveSockets(64, 64, { center: { x: 30, y: 40 }, projectileOrigin: { x: 40, y: 48 } });
+    expect(sockets.center).toEqual({ x: 30, y: 40 });
+    expect(sockets.projectileOrigin).toEqual({ x: 40, y: 48 });
+  });
+
   it('calcula o topo visual pelo anchor (healthbar/nome)', () => {
     expect(spriteTopPx(320, 64, 0)).toBe(256);
     expect(spriteTopPx(320, 32, 0)).toBe(288);

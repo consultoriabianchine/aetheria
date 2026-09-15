@@ -1,12 +1,11 @@
 import { Component, OnInit, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import type { AbilityAreaConfig, AbilityCategory, AbilityOwnerType, CombatAbilityDefinition, DamageType, ItemVisualEffects, PlayerAbilityClass } from '@aetheria/types';
+import type { AbilityAreaConfig, AbilityCategory, AbilityOwnerType, CombatAbilityDefinition, DamageType, EffectTypeDefinition, PlayerAbilityClass, ShootTypeDefinition } from '@aetheria/types';
 import { ApiService } from '../core/api.service';
-import { SpriteVisualEditor } from '../shared/sprite-visual-editor/sprite-visual-editor';
 
 @Component({
   selector: 'admin-ability-list',
-  imports: [FormsModule, SpriteVisualEditor],
+  imports: [FormsModule],
   templateUrl: './ability-list.html',
   styles: `
     .layout { display:grid; grid-template-columns:320px 1fr; gap:16px; }
@@ -20,6 +19,8 @@ export class AbilityList implements OnInit {
   readonly abilities = signal<CombatAbilityDefinition[]>([]);
   readonly selected = signal<CombatAbilityDefinition | null>(null);
   readonly error = signal<string | null>(null);
+  readonly shootTypes = signal<ShootTypeDefinition[]>([]);
+  readonly effectTypes = signal<EffectTypeDefinition[]>([]);
   readonly owners: AbilityOwnerType[] = ['player', 'monster', 'both'];
   readonly playerClasses: PlayerAbilityClass[] = ['all', 'mage', 'warrior', 'archer'];
   readonly categories: AbilityCategory[] = ['attack', 'area', 'rune', 'heal', 'support'];
@@ -27,12 +28,17 @@ export class AbilityList implements OnInit {
 
   constructor(private readonly api: ApiService) {}
   async ngOnInit() { await this.load(); }
-  async load() { try { this.abilities.set(await this.api.listAbilities()); } catch (error) { this.error.set(String(error)); } }
+  async load() {
+    try {
+      const [abilities, shootTypes, effectTypes] = await Promise.all([this.api.listAbilities(), this.api.listShootTypes(), this.api.listEffectTypes()]);
+      this.abilities.set(abilities);
+      this.shootTypes.set(shootTypes);
+      this.effectTypes.set(effectTypes);
+    } catch (error) { this.error.set(String(error)); }
+  }
   newAbility() { this.selected.set({ abilityId: 0, slug: '', name: '', ownerType: 'both', playerClass: 'all', category: 'attack', targetMode: 'single_enemy', powerSource: 'fixed', cooldownMs: 2000, cooldownGroup: 'attack', rangeTiles: 1, allowedParameters: [], enabled: true, createdAt: new Date(), updatedAt: new Date() }); }
   edit(ability: CombatAbilityDefinition) { this.selected.set({ ...ability }); }
-  patchVisual(visual: ItemVisualEffects | null) { const draft = this.selected(); if (draft) this.selected.set({ ...draft, visual: visual ?? undefined }); }
   areaConfigDraft(): AbilityAreaConfig { return this.selected()?.areaConfig ?? { shape: 'square', width: 1, height: 1 }; }
   patchAreaConfig(patch: Partial<AbilityAreaConfig>) { const draft = this.selected(); if (draft) this.selected.set({ ...draft, areaConfig: { ...this.areaConfigDraft(), ...patch } }); }
-  async uploadIcon(event: Event) { const draft = this.selected(); const file = (event.target as HTMLInputElement).files?.[0]; if (!draft || !file || !draft.abilityId) return; try { this.selected.set(await this.api.uploadAbilityIcon(draft.abilityId, file)); await this.load(); } catch (error) { this.error.set(String(error)); } }
   async save() { const draft = this.selected(); if (!draft) return; try { const saved = await this.api.saveAbility(draft); this.selected.set(saved); await this.load(); } catch (error) { this.error.set(String(error)); } }
 }

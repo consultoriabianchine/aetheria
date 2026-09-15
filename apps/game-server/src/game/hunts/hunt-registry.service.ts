@@ -57,9 +57,14 @@ export class HuntRegistry implements OnModuleInit {
     return {
       id: h.id,
       name: h.name,
+      slug: h.slug ?? null,
       ladderPosition: h.ladderPosition,
       suggestedLevel: h.suggestedLevel,
       combatScore: h.combatScore ?? null,
+      difficultyRating: h.difficultyRating ?? null,
+      xpRating: h.xpRating ?? null,
+      lootRating: h.lootRating ?? null,
+      tags: h.tags ? (h.tags as unknown as Prisma.InputJsonValue) : undefined,
       basePackSize: h.basePackSize,
       maxPackSize: h.maxPackSize,
       monsters: h.monsters as unknown as Prisma.InputJsonValue,
@@ -76,9 +81,14 @@ export class HuntRegistry implements OnModuleInit {
   private toDefinition(r: {
     id: string;
     name: string;
+    slug: string | null;
     ladderPosition: number;
     suggestedLevel: number;
     combatScore: number | null;
+    difficultyRating: number | null;
+    xpRating: number | null;
+    lootRating: number | null;
+    tags: unknown;
     basePackSize: number;
     maxPackSize: number;
     monsters: unknown;
@@ -93,9 +103,14 @@ export class HuntRegistry implements OnModuleInit {
     return {
       id: r.id,
       name: r.name,
+      slug: r.slug ?? undefined,
       ladderPosition: r.ladderPosition,
       suggestedLevel: r.suggestedLevel,
       combatScore: r.combatScore ?? undefined,
+      difficultyRating: r.difficultyRating ?? null,
+      xpRating: r.xpRating ?? null,
+      lootRating: r.lootRating ?? null,
+      tags: (r.tags as string[] | null) ?? undefined,
       basePackSize: r.basePackSize,
       maxPackSize: r.maxPackSize,
       monsters: r.monsters as HuntMonsterEntry[],

@@ -1,4 +1,4 @@
-import { Controller, Get, NotFoundException, Param, ParseIntPipe, Res, StreamableFile } from '@nestjs/common';
+import { Controller, Get, Header, NotFoundException, Param, ParseIntPipe, Res, StreamableFile } from '@nestjs/common';
 import { CreatureRegistry } from './creature-registry.service';
 
 /** Endpoints públicos de assets de criaturas (imagem + config de animação). */
@@ -22,6 +22,7 @@ export class CreatureAssetController {
   }
 
   @Get(':id/animation')
+  @Header('Cache-Control', 'no-store')
   async getAnimation(@Param('id', ParseIntPipe) id: number) {
     const animation = await this.registry.getAnimation(id);
     if (!animation) throw new NotFoundException('Nenhuma configuração de animação');

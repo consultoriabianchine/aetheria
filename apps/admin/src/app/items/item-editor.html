@@ -83,14 +83,20 @@
 
       <div class="wide">
         <h3>Visual de combate</h3>
-        @if (visualHint(); as hint) {
-          <p class="sub">{{ hint }}</p>
-        }
-        @if (canEditVisual()) {
-          <div class="form">
-            <admin-sprite-visual-editor [visual]="draft().visual" (visualChange)="patch({ visual: $event })"></admin-sprite-visual-editor>
-          </div>
-        }
+        <div class="form">
+          <label>Tipo de Tiro
+            <select [value]="draft().shootTypeId ?? ''" (change)="patch({ shootTypeId: $any($event.target).value ? +$any($event.target).value : null })">
+              <option value="">nenhum (visual inline)</option>
+              @for (type of shootTypes(); track type.id) { <option [value]="type.id">{{ type.name }}</option> }
+            </select>
+          </label>
+          <label>Tipo de Efeito
+            <select [value]="draft().effectTypeId ?? ''" (change)="patch({ effectTypeId: $any($event.target).value ? +$any($event.target).value : null })">
+              <option value="">nenhum (visual inline)</option>
+              @for (type of effectTypes(); track type.id) { <option [value]="type.id">{{ type.name }}</option> }
+            </select>
+          </label>
+        </div>
       </div>
     </div>
     <div class="actions">
