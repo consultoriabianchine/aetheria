@@ -166,6 +166,7 @@ export const SERVER_EVENTS = {
   HUNT_FAVORITE_CHANGED: 'hunt.favoriteChanged',
   HUNT_RETURNED_TO_CITY: 'hunt.returnedToCity',
   PARTY_STATE: 'party.state',
+  CHARACTERS_UPDATE: 'characters.update',
   GOLD_UPDATE: 'gold.update',
   APPEARANCE_LIST: 'appearance.list',
   APPEARANCE_CHANGED: 'appearance.changed',

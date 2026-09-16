@@ -625,7 +625,7 @@ export class GameEngine implements OnModuleDestroy {
     const session = await this.verifySession(socketId, token);
     if (!session) return;
     const leader = session.player;
-    const targetId = characterId && characterId !== leader.id && this.partyMemberIds(leader).includes(characterId) ? characterId : leader.id;
+    const targetId = characterId ?? leader.id;
     const outfits = await this.availableOutfits(targetId);
     const target = outfits.find((o) => o.outfitId === outfitId);
     if (!target) {
@@ -634,6 +634,7 @@ export class GameEngine implements OnModuleDestroy {
     }
     const appearance = { outfitId, addonMask: target.supportsAddons ? (addonMask & 3) : 0, colors };
     const live = this.players.get(targetId);
+    if (live && live.accountId !== leader.accountId) return;
     if (live) {
       live.appearance = appearance;
       await this.persistPlayer(live);
@@ -701,6 +702,11 @@ export class GameEngine implements OnModuleDestroy {
       unlockCost: storage.unlockedPartySlots >= PARTY_CONFIG.maxSlots ? null : PARTY_CONFIG.unlockCost(storage.unlockedPartySlots),
       members,
     });
+  }
+
+  private async emitCharacters(player: GamePlayer) {
+    const characters = (await this.store.listCharacters(player.accountId)).map((c) => this.toSummary(c));
+    this.emitTo(player.socketId ?? '', 'characters.update', { characters });
   }
 
   async handlePartyUnlockSlot(socketId: string, token: string) {
@@ -1156,7 +1162,7 @@ export class GameEngine implements OnModuleDestroy {
   async handleEquip(socketId: string, slotIndex: number, characterId?: string) {
     const leader = this.playerForSocket(socketId);
     if (!leader) return;
-    const targetId = characterId && characterId !== leader.id && this.partyMemberIds(leader).includes(characterId) ? characterId : leader.id;
+    const targetId = characterId ?? leader.id;
     const storage = this.storageFor(leader);
     const stack = storage.inventory[slotIndex];
     if (!stack) return;
@@ -1164,6 +1170,7 @@ export class GameEngine implements OnModuleDestroy {
     if (!def || !def.slot) return;
     const slot = def.slot;
     const live = this.players.get(targetId);
+    if (live && live.accountId !== leader.accountId) return;
     if (live) {
       if (live.equipment[slot]) {
         this.emitTo(socketId, 'error', { message: `Já existe item equipado em ${slot}.` });
@@ -1194,6 +1201,7 @@ export class GameEngine implements OnModuleDestroy {
     }
     this.emitInventory(leader);
     await this.emitPartyState(leader);
+    await this.emitCharacters(leader);
   }
 
   async handleUnequip(socketId: string, slot: string, characterId?: string) {
@@ -1233,6 +1241,7 @@ export class GameEngine implements OnModuleDestroy {
     }
     this.emitInventory(leader);
     await this.emitPartyState(leader);
+    await this.emitCharacters(leader);
   }
 
   async handleInventoryMove(socketId: string, from: 'backpack' | 'loot', fromIndex: number, to: 'backpack' | 'loot', toIndex: number) {
@@ -1460,6 +1469,7 @@ export class GameEngine implements OnModuleDestroy {
         ? { ...c.appearance }
         : this.defaultPlayerAppearance(),
       combat: c.combat ? { ...c.combat } : undefined,
+      equipment: { ...c.equipment },
     };
   }
 

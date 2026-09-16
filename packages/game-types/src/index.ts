@@ -486,6 +486,7 @@ export interface CharacterSummary {
   movementSpeed?: number;
   appearance?: PlayerAppearance;
   combat?: PlayerCombatConfig;
+  equipment?: CharacterEquipment;
 }
 
 export type MonsterState = 'IDLE' | 'WANDER' | 'CHASE' | 'ATTACK' | 'RETURN' | 'DEAD';

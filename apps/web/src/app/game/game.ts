@@ -52,6 +52,7 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   readonly healTarget = signal<'self' | 'lowest_party_member' | 'specific_party_role'>('self');
   readonly manageOpen = signal(false);
   readonly manageMemberId = signal<string | null>(null);
+  readonly manageInventoryTab = signal<'backpack' | 'loot' | 'store'>('backpack');
   readonly selectedCharacterId = signal<string | null>(null);
   readonly now = signal(Date.now());
   readonly hoveredItemId = signal<string | null>(null);
@@ -243,7 +244,8 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
 
   equipmentFor(memberId: string): EqEntry[] {
     const member = this.state.party().members.find((m) => m.id === memberId);
-    const eq: CharacterEquipment = member?.equipment ?? this.state.inventory().equipment;
+    const character = this.state.characters().find((c) => c.id === memberId);
+    const eq: CharacterEquipment = member?.equipment ?? character?.equipment ?? this.state.inventory().equipment;
     const labels: Record<string, string> = {
       helmet: 'Capacete',
       armor: 'Armadura',
@@ -477,6 +479,11 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
     };
     const archetype = this.selectedSummary()?.archetype;
     return archetype ? labels[archetype] ?? archetype : '—';
+  }
+
+  archetypeLabelFor(archetype: CharacterSummary['archetype']): string {
+    const labels: Record<CharacterSummary['archetype'], string> = { warrior: 'Guerreiro', mage: 'Mago', archer: 'Arqueiro' };
+    return labels[archetype] ?? archetype;
   }
 
   currentHuntName(): string {
@@ -725,9 +732,9 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
     this.closeManage();
     this.state.openAppearance(memberId);
   }
-  manageMember(): import('@aetheria/protocol').PartyMember | null {
+  manageMember(): CharacterSummary | null {
     const id = this.manageMemberId();
-    return this.state.party().members.find((m) => m.id === id) ?? this.state.party().members[0] ?? null;
+    return this.state.characters().find((m) => m.id === id) ?? this.state.characters()[0] ?? null;
   }
   combatFor(memberId: string): PlayerCombatConfig {
     return this.state.combatFor(memberId);

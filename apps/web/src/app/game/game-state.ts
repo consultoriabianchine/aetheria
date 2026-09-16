@@ -201,6 +201,11 @@ export class GameState {
         }
         break;
       }
+      case SERVER_EVENTS.CHARACTERS_UPDATE: {
+        const r = data as { characters?: CharacterSummary[] };
+        this.characters.set(r.characters ?? []);
+        break;
+      }
       case SERVER_EVENTS.SELECT_RESULT: {
         const r = data as { ok: boolean };
         this.inGame.set(r.ok);
