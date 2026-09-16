@@ -41,6 +41,7 @@ import type {
   CombatSkill,
   Direction,
   ItemDefinition,
+  ItemImpactVisual,
   ItemStack,
   ItemVisualEffects,
   PlayerAppearance,
@@ -77,7 +78,7 @@ import { resolveDamageAffinity } from '../combat/damage-affinity-resolver';
 import { getAmmoDefinition, getWeaponDefinition } from '../combat/item-combat';
 import { splitPartyExperience } from '../combat/party-xp';
 import { AbilityRegistry } from '../combat/ability-registry';
-import { getEffectType, getShootType, loadShootEffectCatalog } from '../combat/shoot-effect-registry';
+import { getEffectType, getEffectTypeBySlug, getShootType, loadShootEffectCatalog } from '../combat/shoot-effect-registry';
 
 export type EmitFn = (socketId: string, event: string, data: unknown) => void;
 
@@ -689,7 +690,10 @@ export class GameEngine implements OnModuleDestroy {
     const members: (CharacterSummary & { equipment: CharacterEquipment })[] = [];
     for (const id of ids) {
       const member = this.players.get(id) ?? (await this.store.findCharacterById(id));
-      if (member) members.push({ ...this.toSummary(member), equipment: member.equipment });
+      if (member) {
+        members.push({ ...this.toSummary(member), equipment: member.equipment });
+        this.emitTo(player.socketId ?? '', 'stats.combat', this.combatStatsPayload(member));
+      }
     }
     this.emitTo(player.socketId ?? '', 'party.state', {
       unlockedSlots: storage.unlockedPartySlots,
@@ -1596,14 +1600,48 @@ export class GameEngine implements OnModuleDestroy {
   }
 
   private combatStats(player: GamePlayer) {
+    return this.combatStatsFor(player);
+  }
+
+  private combatStatsFor(character: { level: number; maxHealth: number; maxMana: number; skills: CharacterSkills; equipment: CharacterEquipment }) {
     return aggregateCharacterCombatStats({
-      level: player.level,
-      maxHp: player.maxHealth,
-      maxMana: player.maxMana,
-      skills: player.skills,
-      equipment: player.equipment,
+      level: character.level,
+      maxHp: character.maxHealth,
+      maxMana: character.maxMana,
+      skills: character.skills,
+      equipment: character.equipment,
       getItem: getItemDef,
     });
+  }
+
+  private combatStatsPayload(character: { id: string; level: number; maxHealth: number; maxMana: number; skills: CharacterSkills; equipment: CharacterEquipment }) {
+    const stats = this.combatStatsFor(character);
+    return {
+      characterId: character.id,
+      armor: stats.armor,
+      defense: stats.defense,
+      criticalChance: stats.criticalChance,
+      criticalDamage: stats.criticalDamage,
+      accuracy: stats.accuracy,
+      dodge: stats.dodge,
+      speed: stats.speed,
+      resistances: stats.resistances,
+      damageBonuses: stats.damageBonuses,
+    };
+  }
+
+  /** Emite os stats de combate de um personagem (self ou companheiro materializado). */
+  private emitCombatStats(player: GamePlayer) {
+    const payload = this.combatStatsPayload(player);
+    const run = this.hunts.getRun(player.id);
+    if (run) {
+      for (const id of run.memberIds) {
+        const member = this.players.get(id);
+        if (member?.socketId) this.emitTo(member.socketId, 'stats.combat', payload);
+      }
+    } else if (player.socketId) {
+      this.emitTo(player.socketId, 'stats.combat', payload);
+    }
   }
 
   private targetCombatStats(target: GamePlayer | CreatureEntity) {
@@ -1623,6 +1661,7 @@ export class GameEngine implements OnModuleDestroy {
       dodge: 0,
       speed: 0,
       resistances: emptyResistances(),
+      damageBonuses: emptyResistances(),
       damageAffinities: target.definition.damageAffinities,
     };
   }
@@ -1752,7 +1791,7 @@ export class GameEngine implements OnModuleDestroy {
     const critical = rollCritical(stats.criticalChance, () => this.nextCombatRandom(attacker, now + 1));
     const damage = calculateMitigatedDamage({ damage: critical ? calculateCritical(raw, stats.criticalDamage) : raw, damageType: ability.damageType ?? 'physical', target: this.targetCombatStats(target), damageTakenModifier: resolveDamageAffinity(this.targetCombatStats(target).damageAffinities, ability.damageType ?? 'physical').modifier, immune: resolveDamageAffinity(this.targetCombatStats(target).damageAffinities, ability.damageType ?? 'physical').immune });
     target.health = Math.max(0, target.health - damage.finalDamage);
-    this.emitCombatEvent(target, 'combat.damage', { attackerId: attacker.id, targetId: target.id, amount: damage.finalDamage, damageType: ability.damageType ?? 'physical', critical, targetHealth: target.health, delayMs: delayMs || undefined });
+    this.emitCombatEvent(target, 'combat.damage', { attackerId: attacker.id, targetId: target.id, amount: damage.finalDamage, damageType: ability.damageType ?? 'physical', critical, targetHealth: target.health, delayMs: delayMs || undefined, criticalImpact: critical ? this.criticalImpactVisual() : undefined, position: { ...target.position } });
     this.emitCombatEvent(target, 'entity.health', { id: target.id, health: target.health, maxHealth: target.maxHealth });
     if (target.health <= 0 && target instanceof CreatureEntity) this.creatureKilled(attacker, target, now);
     return damage.finalDamage;
@@ -1890,6 +1929,8 @@ export class GameEngine implements OnModuleDestroy {
       critical: attack.critical,
       targetHealth: target.health,
       delayMs: travelTimeMs || undefined,
+      criticalImpact: attack.critical ? this.criticalImpactVisual() : undefined,
+      position: { ...target.position },
     });
     this.emitCombatEvent(target, 'entity.health', { id: target.id, health: target.health, maxHealth: target.maxHealth });
     return true;
@@ -1920,6 +1961,11 @@ export class GameEngine implements OnModuleDestroy {
     const impact = effectType?.impact ?? ability.visual?.impact;
     if (!projectile && !impact) return undefined;
     return { projectile, impact };
+  }
+
+  /** Visual do impacto de dano crítico (catálogo de efeitos, slug `critical`). */
+  private criticalImpactVisual(): ItemImpactVisual | undefined {
+    return getEffectTypeBySlug('critical')?.impact;
   }
 
   private projectileTravelTimeMs(from: Position, to: Position, visual: ItemVisualEffects): number {
@@ -2048,6 +2094,8 @@ export class GameEngine implements OnModuleDestroy {
         critical,
       targetHealth: player.health,
       delayMs: delayMs || undefined,
+      criticalImpact: critical ? this.criticalImpactVisual() : undefined,
+      position: { ...player.position },
     });
     this.emitCombatEvent(player, 'entity.health', { id: player.id, health: player.health, maxHealth: player.maxHealth });
     if (player.health <= 0) this.playerKilled(player, now);
@@ -2483,6 +2531,7 @@ export class GameEngine implements OnModuleDestroy {
       this.emitTo(player.socketId ?? '', 'chat.message', { channel: 'local', from: 'Sistema', text: `Você subiu para o nível ${player.level}!` });
     }
     this.emitStats(player);
+    this.emitCombatStats(player);
   }
 
   private spawnLoot(creature: CreatureEntity, player?: GamePlayer, run?: HuntRun | null) {

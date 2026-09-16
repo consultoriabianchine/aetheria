@@ -1,7 +1,7 @@
 import { Injectable, computed, signal } from '@angular/core';
 import { Subject } from 'rxjs';
 import { SERVER_EVENTS } from '@aetheria/protocol';
-import type { CharacterInventory, CharacterSkills, CharacterSummary, CombatArchetype, HuntListEntry, HuntRunView, MapTile, PlayerCombatConfig } from '@aetheria/types';
+import type { CharacterInventory, CharacterSkills, CharacterSummary, CombatArchetype, CombatStatsView, HuntListEntry, HuntRunView, MapTile, PlayerCombatConfig } from '@aetheria/types';
 import { WsService, WsEvent } from '../core/ws.service';
 
 export interface HudStats {
@@ -82,6 +82,7 @@ export class GameState {
     experience: 0,
   });
   readonly inventory = signal<CharacterInventory>({ slots: [], lootPouchSize: 10, lootPouch: [], equipment: {} });
+  readonly combatStats = signal<Record<string, CombatStatsView>>({});
   readonly chat = signal<ChatLine[]>([]);
   readonly dialog = signal<DialogInfo | null>(null);
   readonly target = signal<TargetInfo | null>(null);
@@ -358,6 +359,11 @@ export class GameState {
       case SERVER_EVENTS.SKILLS_UPDATE: {
         const s = data as { skills: CharacterSkills };
         this.self.update((current) => (current ? { ...current, skills: s.skills } : current));
+        break;
+      }
+      case SERVER_EVENTS.STATS_COMBAT: {
+        const s = data as unknown as CombatStatsView & { characterId: string };
+        this.combatStats.update((all) => ({ ...all, [s.characterId]: s }));
         break;
       }
       case SERVER_EVENTS.INVENTORY_UPDATE: {

@@ -1,7 +1,7 @@
-import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild, signal } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild, computed, signal } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { DAMAGE_TYPES, type AnimationDirection, type AnimationSequence, type CombatAbilityDefinition, type CreatureAnimationConfig, type CreatureAnimationType, type CreatureVisualBounds, type DamageAffinities, type DamageType } from '@aetheria/types';
-import { ApiService, type CreatureDetail } from '../core/api.service';
+import { ApiService, type AdminItemDefinition, type CreatureDetail, type CreatureLootEntry } from '../core/api.service';
 
 const ANIMATION_TYPES: CreatureAnimationType[] = ['idle', 'walk', 'attack', 'cast', 'hit', 'death', 'spawn'];
 const DIRECTIONS: AnimationDirection[] = ['north', 'east', 'south', 'west'];
@@ -71,7 +71,10 @@ export class CreatureEditor implements OnInit, AfterViewInit, OnDestroy {
   readonly showGrid = signal(true);
   readonly previewSpeed = signal(1);
   readonly stats = signal<Record<string, number>>({});
-  readonly loot = signal<CreatureDetail['loot']>([]);
+  readonly loot = signal<CreatureLootEntry[]>([]);
+  readonly items = signal<AdminItemDefinition[]>([]);
+  readonly itemFilter = signal('');
+  readonly lootDirty = signal(false);
   readonly abilities = signal<CombatAbilityDefinition[]>([]);
   readonly spells = signal<MonsterSpellDraft[]>([]);
 
@@ -155,8 +158,9 @@ export class CreatureEditor implements OnInit, AfterViewInit, OnDestroy {
       this.loot.set(structuredClone(detail.loot));
       this.version.set(detail.animationVersion);
 
-      const [abilities, monsterRows] = await Promise.all([this.api.listAbilities(), this.api.getMonsterAbilities(this.id)]);
+      const [abilities, monsterRows, items] = await Promise.all([this.api.listAbilities(), this.api.getMonsterAbilities(this.id), this.api.listItems()]);
       this.abilities.set(abilities);
+      this.items.set(items);
       this.spells.set((monsterRows as StoredMonsterAbility[]).map((row) => ({
         abilityId: row.ability_id,
         enabled: row.enabled,
@@ -210,6 +214,7 @@ export class CreatureEditor implements OnInit, AfterViewInit, OnDestroy {
         this.sheetImage = null;
       }
       this.dirty.set(false);
+      this.lootDirty.set(false);
     } catch (e) {
       this.error.set((e as Error).message);
     }
@@ -566,8 +571,17 @@ export class CreatureEditor implements OnInit, AfterViewInit, OnDestroy {
   }
 
   async saveLoot() {
+    this.error.set(null);
     this.saving.set(true);
-    try { await this.api.saveCreatureLoot(this.id, this.loot()); } catch (e) { this.error.set((e as Error).message); } finally { this.saving.set(false); }
+    try {
+      const res = await this.api.saveCreatureLoot(this.id, this.loot());
+      this.loot.set(res.loot);
+      this.lootDirty.set(false);
+    } catch (e) {
+      this.error.set((e as Error).message);
+    } finally {
+      this.saving.set(false);
+    }
   }
 
   setStat(key: string, value: number) {
@@ -575,15 +589,62 @@ export class CreatureEditor implements OnInit, AfterViewInit, OnDestroy {
   }
 
   addLoot() {
-    this.loot.update((loot) => [...loot, { id: '', itemId: null, itemName: 'Novo item', chance: 1, minQuantity: 1, maxQuantity: 1 }]);
+    this.loot.update((loot) => [...loot, { id: '', itemId: null, itemName: '', chance: 100, minQuantity: 1, maxQuantity: 1 }]);
+    this.lootDirty.set(true);
   }
 
   removeLoot(index: number) {
     this.loot.update((loot) => loot.filter((_, i) => i !== index));
+    this.lootDirty.set(true);
   }
 
-  updateLoot(index: number, patch: Partial<CreatureDetail['loot'][number]>) {
+  updateLoot(index: number, patch: Partial<CreatureLootEntry>) {
     this.loot.update((loot) => loot.map((entry, i) => i === index ? { ...entry, ...patch } : entry));
+    this.lootDirty.set(true);
+  }
+
+  selectLootItem(index: number, itemId: string) {
+    const item = this.items().find((candidate) => candidate.id === itemId);
+    this.updateLoot(index, item ? { itemId: item.id, itemName: item.name } : { itemId: null, itemName: '' });
+  }
+
+  readonly lootOptions = computed(() => {
+    const filter = this.itemFilter().trim().toLowerCase();
+    const items = this.items().filter((item) => item.enabled !== false);
+    const filtered = filter
+      ? items.filter((item) => item.name.toLowerCase().includes(filter) || item.id.toLowerCase().includes(filter) || item.category.toLowerCase().includes(filter))
+      : items;
+    return [...filtered].sort((a, b) => a.name.localeCompare(b.name));
+  });
+
+  lootOptionsFor(itemId: string | null): AdminItemDefinition[] {
+    const options = this.lootOptions();
+    if (!itemId || options.some((item) => item.id === itemId)) return options;
+    const selected = this.lootItem(itemId);
+    return selected ? [selected, ...options] : options;
+  }
+
+  clearItemFilter() {
+    this.itemFilter.set('');
+  }
+
+  lootItem(itemId: string | null): AdminItemDefinition | null {
+    if (!itemId) return null;
+    return this.items().find((item) => item.id === itemId) ?? null;
+  }
+
+  lootEntryError(entry: CreatureLootEntry, index: number): string | null {
+    if (!entry.itemId) return 'Selecione um item do catálogo';
+    if (!(entry.chance >= 0 && entry.chance <= 100)) return 'Chance entre 0 e 100';
+    if (!(entry.minQuantity >= 1)) return 'Qtd. mínima deve ser >= 1';
+    if (!(entry.maxQuantity >= entry.minQuantity)) return 'Qtd. máxima >= mínima';
+    const first = this.loot().findIndex((candidate) => candidate.itemId === entry.itemId);
+    if (first !== -1 && first !== index) return 'Item duplicado';
+    return null;
+  }
+
+  get lootHasErrors(): boolean {
+    return this.loot().some((entry, index) => this.lootEntryError(entry, index) !== null);
   }
 
   get monsterAbilities(): CombatAbilityDefinition[] {

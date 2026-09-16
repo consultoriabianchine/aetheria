@@ -162,6 +162,7 @@ const INITIAL_EFFECT_TYPES = [
   { slug: 'impact-default', name: 'Impacto Padrão', description: 'Impacto genérico ao acertar.' },
   { slug: 'fire-explosion', name: 'Explosão de Fogo', description: 'Explosão ígnea.' },
   { slug: 'spark', name: 'Faísca', description: 'Faísca de energia.' },
+  { slug: 'critical', name: 'Critical', description: 'Impacto de dano crítico.' },
 ] as const;
 
 

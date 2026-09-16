@@ -20,6 +20,7 @@ function targetStats(overrides: Partial<CharacterCombatStats> = {}): CharacterCo
     dodge: 0,
     speed: 0,
     resistances: emptyResistances(),
+    damageBonuses: emptyResistances(),
     ...overrides,
   };
 }

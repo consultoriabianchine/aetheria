@@ -29,6 +29,13 @@ export function getEffectType(id: number | undefined): EffectTypeDefinition | un
   return effectTypes.get(id);
 }
 
+export function getEffectTypeBySlug(slug: string): EffectTypeDefinition | undefined {
+  for (const def of effectTypes.values()) {
+    if (def.slug === slug) return def;
+  }
+  return undefined;
+}
+
 export function listShootTypes(): ShootTypeDefinition[] {
   return [...shootTypes.values()];
 }

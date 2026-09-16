@@ -44,23 +44,28 @@
             <button class="panel-action" type="button" (click)="openManage()">Gerenciar</button>
             <button class="panel-action" type="button" (click)="leftCollapsed.set(true)" aria-label="Colapsar sidebar esquerda">‹</button>
           </div>
+          <select class="character-select" [ngModel]="selectedId()" (ngModelChange)="selectCharacter($event)" aria-label="Selecionar personagem">
+            @for (m of selectableCharacters(); track m.id) {
+              <option [value]="m.id">{{ m.name }}</option>
+            }
+          </select>
           <div class="character-summary">
             <div>
-              <strong>{{ state.self()?.name || 'Gryllo' }}</strong>
+              <strong>{{ selectedName() }}</strong>
               <span>{{ archetypeLabel() }}</span>
             </div>
-            <div class="level-badge">Lv {{ state.stats().level }}</div>
+            <div class="level-badge">Lv {{ selectedResources().level }}</div>
           </div>
           <div class="resource-list">
             <div class="resource-row" [class.low]="hpPct() < 25">
-              <div><span>Vida</span><b>{{ state.stats().health }} / {{ state.stats().maxHealth }}</b></div>
+              <div><span>Vida</span><b>{{ selectedResources().health }} / {{ selectedResources().maxHealth }}</b></div>
               <div class="bar-track"><div class="bar-fill hp" [style.width.%]="hpPct()"></div></div>
             </div>
             <div class="resource-row">
-              <div><span>Mana</span><b>{{ state.stats().mana }} / {{ state.stats().maxMana }}</b></div>
+              <div><span>Mana</span><b>{{ selectedResources().mana }} / {{ selectedResources().maxMana }}</b></div>
               <div class="bar-track"><div class="bar-fill mp" [style.width.%]="mpPct()"></div></div>
             </div>
-            <div class="resource-row" title="Level atual: {{ state.stats().level }} | XP total: {{ state.stats().experience }} | XP para o proximo: {{ xpNeeded() }}">
+            <div class="resource-row" title="Level atual: {{ selectedResources().level }} | XP total: {{ selectedResources().experience }} | XP para o proximo: {{ xpNeeded() }}">
               <div><span>Experiência</span><b>{{ xpPct().toFixed(1) }}%</b></div>
               <div class="bar-track"><div class="bar-fill xp" [style.width.%]="xpPct()"></div></div>
            </div>
@@ -87,11 +92,10 @@
 
         <section class="game-panel">
           <div class="panel-header"><h2>Skills</h2><span class="panel-pill">{{ archetypeLabel() }}</span></div>
-          <div class="skill-picker"><button class="selected" type="button">{{ state.self()?.name || 'Gryllo' }}</button><button type="button" disabled>Party</button></div>
-          <div class="metric-row"><span>Nível</span><b>{{ state.stats().level }}</b></div>
-          <div class="metric-row"><span>XP</span><b>{{ formatGold(state.stats().experience) }}</b></div>
-          <div class="metric-row"><span>HP</span><b>{{ state.stats().maxHealth }}</b></div>
-          <div class="metric-row"><span>Mana</span><b>{{ state.stats().maxMana }}</b></div>
+          <div class="metric-row"><span>Nível</span><b>{{ selectedResources().level }}</b></div>
+          <div class="metric-row"><span>XP</span><b>{{ formatGold(selectedResources().experience) }}</b></div>
+          <div class="metric-row"><span>HP</span><b>{{ selectedResources().maxHealth }}</b></div>
+          <div class="metric-row"><span>Mana</span><b>{{ selectedResources().maxMana }}</b></div>
           @for (skill of relevantSkills(); track skill.label) {
             <div class="skill-line" title="{{ skill.xp }}/{{ skill.required }} XP">
               <div><span>{{ skill.label }}</span><b>{{ skill.value }}</b></div>
@@ -102,12 +106,21 @@
 
         <section class="game-panel compact-panel">
           <div class="panel-header"><h2>Attributes</h2></div>
-          <div class="metric-grid">
-            <div><span>Cap</span><b>1.092</b></div>
-            <div><span>Armor</span><b>{{ equippedCount() }}</b></div>
-            <div><span>Crit</span><b>5%</b></div>
-            <div><span>Dodge</span><b>0%</b></div>
-          </div>
+          @if (selectedCombatStats(); as s) {
+            <div class="metric-grid">
+              <div><span>Armor</span><b>{{ s.armor }}</b></div>
+              <div><span>Defense</span><b>{{ s.defense }}</b></div>
+              <div><span>Crit</span><b>{{ percent(s.criticalChance) }}</b></div>
+              <div><span>Crit Dmg</span><b>×{{ s.criticalDamage.toFixed(2) }}</b></div>
+              <div><span>Dodge</span><b>{{ percent(s.dodge) }}</b></div>
+              <div><span>Accuracy</span><b>{{ percent(s.accuracy) }}</b></div>
+              <div><span>Speed</span><b>{{ s.speed.toFixed(2) }}</b></div>
+            </div>
+            <div class="attrs-subtitle">Dano bônus</div>
+            @for (row of damageRows(); track row.type) {
+              <div class="element-row"><span>{{ row.label }}</span><b>{{ row.bonus > 0 ? '+' + row.bonus : row.bonus < 0 ? row.bonus : '—' }}</b><em>{{ percent(row.resistance) }}</em></div>
+            }
+          }
         </section>
 
         <section class="game-panel compact-panel">
@@ -128,10 +141,9 @@
             <h2>Damage</h2><span>{{ damageCollapsed() ? '+' : '−' }}</span>
           </button>
           @if (!damageCollapsed()) {
-            <div class="damage-member"><strong>{{ state.self()?.name || 'Gryllo' }}</strong><span>—/s</span></div>
-            @for (type of ['Ice', 'Death', 'Physical', 'Earth', 'Fire']; track type) {
-              <div class="element-row"><span>{{ type }}</span><b>—</b><em>0%</em></div>
-            }
+            <div class="damage-member"><strong>Sessão</strong><span>—/s</span></div>
+            <div class="metric-row"><span>DPS</span><b>—</b></div>
+            <div class="metric-row"><span>Dano total</span><b>—</b></div>
           }
         </section>
 

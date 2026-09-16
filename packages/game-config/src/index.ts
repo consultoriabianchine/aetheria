@@ -539,9 +539,9 @@ export const LEVEL_RANGE_FILTERS: { id: string; label: string; min: number; max:
 
 /** Arenas disponíveis (grids determinísticos). */
 export const ARENAS: Record<string, import('@aetheria/types').ArenaDefinition> = {
-  arena_small: { id: 'arena_small', width: 20, height: 16, partySpawnSide: 'left', monsterSpawnSide: 'right' },
-  arena_basic: { id: 'arena_basic', width: 26, height: 20, partySpawnSide: 'left', monsterSpawnSide: 'right' },
-  arena_wide: { id: 'arena_wide', width: 34, height: 18, partySpawnSide: 'left', monsterSpawnSide: 'right' },
+  arena_small: { id: 'arena_small', width: 32, height: 24, partySpawnSide: 'left', monsterSpawnSide: 'right' },
+  arena_basic: { id: 'arena_basic', width: 42, height: 28, partySpawnSide: 'left', monsterSpawnSide: 'right' },
+  arena_wide: { id: 'arena_wide', width: 54, height: 28, partySpawnSide: 'left', monsterSpawnSide: 'right' },
 };
 
 /** Catálogo de Hunts (ladder inicial). IDs estáveis; nomes originais de Aetheria. */

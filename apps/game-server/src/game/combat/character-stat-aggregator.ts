@@ -29,6 +29,7 @@ export function aggregateCharacterCombatStats(input: {
     dodge: 0,
     speed: 0,
     resistances: emptyResistances(),
+    damageBonuses: emptyResistances(),
   };
 
   for (const stack of Object.values(input.equipment)) {
@@ -49,6 +50,7 @@ export function aggregateCharacterCombatStats(input: {
     stats.distanceSkill += combat?.skillBonuses?.distance ?? 0;
     stats.magicLevel += combat?.skillBonuses?.magic ?? 0;
     for (const type of DAMAGE_TYPES) stats.resistances[type] += combat?.resistances?.[type] ?? 0;
+    for (const type of DAMAGE_TYPES) stats.damageBonuses[type] += combat?.damageBonus?.[type] ?? 0;
   }
 
   return stats;

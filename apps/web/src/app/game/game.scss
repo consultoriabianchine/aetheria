@@ -559,6 +559,26 @@ button {
   font-size: 11px;
 }
 
+.character-select {
+  width: 100%;
+  height: 28px;
+  margin-bottom: 7px;
+  border: 1px solid rgba(215, 185, 79, 0.22);
+  border-radius: 6px;
+  background: #111418;
+  color: #e2e9ef;
+  padding: 0 8px;
+  font-size: 12px;
+}
+
+.attrs-subtitle {
+  margin: 8px 0 2px;
+  color: #8995a2;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
 .wave-strip {
   display: flex;
   align-items: center;

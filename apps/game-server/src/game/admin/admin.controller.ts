@@ -7,6 +7,27 @@ import { CreatureAssetService } from './creature-asset.service';
 import { CreatureRegistry } from './creature-registry.service';
 import { normalizeDamageAffinities } from '@aetheria/types';
 
+interface LootEntryInput {
+  id?: string;
+  itemId?: string | null;
+  itemName?: string;
+  chance: number;
+  minQuantity: number;
+  maxQuantity: number;
+}
+
+interface LootEntryResolved {
+  itemId: string;
+  itemName: string;
+  chance: number;
+  minQuantity: number;
+  maxQuantity: number;
+}
+
+function clamp(value: number, min: number, max: number): number {
+  return Math.min(max, Math.max(min, value));
+}
+
 @Controller('admin/creatures')
 @UseGuards(AdminAuthGuard)
 export class AdminController {
@@ -56,16 +77,76 @@ export class AdminController {
   }
 
   @Put(':id/loot')
-  async putLoot(@Param('id', ParseIntPipe) id: number, @Body() body: { loot?: { id?: string; itemId?: string | null; itemName: string; chance: number; minQuantity: number; maxQuantity: number }[] }) {
+  async putLoot(@Param('id', ParseIntPipe) id: number, @Body() body: { loot?: LootEntryInput[] }) {
     const creature = await this.prisma.creatureDefinition.findUnique({ where: { creature_id: id } });
     if (!creature) throw new NotFoundException('Criatura não encontrada');
     const definitionId = creature.id;
-    await this.prisma.$transaction(async (tx) => {
+
+    const entries = await this.resolveLoot(body.loot ?? []);
+
+    const before = await this.prisma.creatureLoot.findMany({ where: { creature_id: definitionId } });
+    const saved = await this.prisma.$transaction(async (tx) => {
       await tx.creatureLoot.deleteMany({ where: { creature_id: definitionId } });
-      for (const loot of body.loot ?? []) await tx.creatureLoot.create({ data: { creature_id: definitionId, item_id: loot.itemId ?? null, item_name: loot.itemName, chance: loot.chance, min_quantity: loot.minQuantity, max_quantity: loot.maxQuantity, rarity: 'CUSTOM' } });
+      const rows: { id: string; item_id: string | null; item_name: string; chance: number | null; min_quantity: number | null; max_quantity: number | null }[] = [];
+      for (const loot of entries) {
+        rows.push(
+          await tx.creatureLoot.create({
+            data: {
+              creature_id: definitionId,
+              item_id: loot.itemId,
+              item_name: loot.itemName,
+              item_slug: loot.itemId,
+              chance: loot.chance,
+              min_quantity: loot.minQuantity,
+              max_quantity: loot.maxQuantity,
+              rarity: 'CUSTOM',
+            },
+          }),
+        );
+      }
+      return rows;
     });
-    await this.audit('CREATURE_LOOT_UPDATED', id, null, body.loot ?? []);
-    return { ok: true };
+    await this.audit('CREATURE_LOOT_UPDATED', id, before, saved);
+    return {
+      ok: true,
+      loot: saved.map((row) => ({
+        id: row.id,
+        itemId: row.item_id,
+        itemName: row.item_name,
+        chance: row.chance ?? 0,
+        minQuantity: row.min_quantity ?? 1,
+        maxQuantity: row.max_quantity ?? 1,
+      })),
+    };
+  }
+
+  private async resolveLoot(entries: LootEntryInput[]): Promise<LootEntryResolved[]> {
+    const requested = new Set(entries.map((loot) => loot.itemId).filter((itemId): itemId is string => !!itemId));
+    const items = requested.size > 0
+      ? await this.prisma.itemDefinition.findMany({ where: { id: { in: [...requested] } } })
+      : [];
+    const itemById = new Map(items.map((item) => [item.id, item]));
+
+    const seen = new Set<string>();
+    return entries.map((loot, index) => {
+      if (!loot.itemId) throw new BadRequestException(`Loot #${index + 1}: selecione um item do catálogo (itemId ausente).`);
+      const item = itemById.get(loot.itemId) ?? (loot.itemId === 'gold' ? { id: 'gold', name: 'Moedas de Ouro', enabled: true } : undefined);
+      if (!item) throw new BadRequestException(`Loot #${index + 1}: item "${loot.itemId}" não existe no catálogo.`);
+      if (!item.enabled) throw new BadRequestException(`Loot #${index + 1}: item "${item.name}" está desabilitado.`);
+      if (seen.has(item.id)) throw new BadRequestException(`Loot #${index + 1}: item "${item.name}" duplicado.`);
+      seen.add(item.id);
+
+      if (!Number.isFinite(Number(loot.chance)) || Number(loot.chance) < 0 || Number(loot.chance) > 100) {
+        throw new BadRequestException(`Loot #${index + 1}: chance deve estar entre 0 e 100.`);
+      }
+      const minQuantity = Math.round(Number(loot.minQuantity));
+      const maxQuantity = Math.round(Number(loot.maxQuantity));
+      if (!Number.isFinite(minQuantity) || !Number.isFinite(maxQuantity) || minQuantity < 1 || maxQuantity < minQuantity) {
+        throw new BadRequestException(`Loot #${index + 1}: quantidades inválidas (mín. >= 1 e máx. >= mín.).`);
+      }
+
+      return { itemId: item.id, itemName: item.name, chance: clamp(Number(loot.chance), 0, 100), minQuantity, maxQuantity };
+    });
   }
 
   @Put(':id/affinities')

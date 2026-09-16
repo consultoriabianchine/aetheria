@@ -363,6 +363,7 @@ export interface ItemCombatStats {
   speed?: number;
   skillBonuses?: Partial<Record<CombatSkill, number>>;
   resistances?: Partial<Record<DamageType, number>>;
+  damageBonus?: Partial<Record<DamageType, number>>;
 }
 
 export interface WeaponDefinition {
@@ -419,7 +420,21 @@ export interface CharacterCombatStats {
   dodge: number;
   speed: number;
   resistances: Record<DamageType, number>;
+  damageBonuses: Record<DamageType, number>;
   damageAffinities?: DamageAffinities;
+}
+
+/** Stats de combate de um personagem, prontos para exibição no cliente. */
+export interface CombatStatsView {
+  armor: number;
+  defense: number;
+  criticalChance: number;
+  criticalDamage: number;
+  accuracy: number;
+  dodge: number;
+  speed: number;
+  resistances: Record<DamageType, number>;
+  damageBonuses: Record<DamageType, number>;
 }
 
 export interface CombatFormulaProfile {

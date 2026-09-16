@@ -44,6 +44,7 @@ export class CombatAdminController {
       dodge: 0,
       speed: 0,
       resistances: emptyResistances(),
+      damageBonuses: emptyResistances(),
     };
     const targetResistances = emptyResistances();
     targetResistances[body.damageType ?? 'physical'] = number(body.resistance, 0);
@@ -62,6 +63,7 @@ export class CombatAdminController {
       dodge: 0,
       speed: 0,
       resistances: targetResistances,
+      damageBonuses: emptyResistances(),
     };
     const weapon = weaponFor(body);
     const ammo = body.archetype === 'archer' ? { itemId: 'ammo', ammoType: weapon.allowedAmmoType ?? 'arrow', attackPower: number(body.ammoPower, 0), damageType: body.damageType ?? 'physical' } as const : null;

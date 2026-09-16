@@ -126,6 +126,15 @@ export interface CreatureAssetMeta {
   checksum: string;
 }
 
+export interface CreatureLootEntry {
+  id: string;
+  itemId: string | null;
+  itemName: string;
+  chance: number;
+  minQuantity: number;
+  maxQuantity: number;
+}
+
 export interface CreatureDetail extends AdminCreatureSummary {
   damageAffinities: Record<DamageType, AdminCreatureAffinity>;
   level: number;
@@ -139,7 +148,7 @@ export interface CreatureDetail extends AdminCreatureSummary {
   chaseRange: number;
   footprintWidth: number;
   footprintHeight: number;
-  loot: { id: string; itemId: string | null; itemName: string; chance: number; minQuantity: number; maxQuantity: number }[];
+  loot: CreatureLootEntry[];
   animation: CreatureAnimationConfig | null;
   asset: CreatureAssetMeta | null;
 }
@@ -297,7 +306,7 @@ export class ApiService {
     return this.request(`/admin/creatures/${id}/stats`, { method: 'PUT', headers: this.headers(), body: JSON.stringify(stats) });
   }
 
-  saveCreatureLoot(id: number, loot: CreatureDetail['loot']): Promise<{ ok: boolean }> {
+  saveCreatureLoot(id: number, loot: CreatureLootEntry[]): Promise<{ ok: boolean; loot: CreatureLootEntry[] }> {
     return this.request(`/admin/creatures/${id}/loot`, { method: 'PUT', headers: this.headers(), body: JSON.stringify({ loot }) });
   }
 

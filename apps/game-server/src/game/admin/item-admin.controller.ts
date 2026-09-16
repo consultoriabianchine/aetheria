@@ -35,6 +35,7 @@ interface ItemDefinitionInput {
   allowedAmmoType?: AmmoType | null;
   skillBonuses?: Record<string, number> | null;
   resistances?: Record<string, number> | null;
+  damageBonuses?: Record<string, number> | null;
   requirements?: Record<string, unknown> | null;
   specialModifiers?: Record<string, unknown> | null;
   visual?: ItemVisualEffects | null;
@@ -52,7 +53,11 @@ export class ItemAdminController {
   @Get()
   async list() {
     const rows = await this.prisma.itemDefinition.findMany({ orderBy: { name: 'asc' } });
-    return rows.map((row) => ({ ...rowToItemDefinition(row as never), enabled: row.enabled, description: row.description, specialModifiers: row.specialModifiers }));
+    const items = rows.map((row) => ({ ...rowToItemDefinition(row as never), enabled: row.enabled, description: row.description, specialModifiers: row.specialModifiers }));
+    if (!items.some((item) => item.id === 'gold')) {
+      items.push({ id: 'gold', name: 'Moedas de Ouro', type: 'loot', weight: 0.1, stackable: true, image: '', category: 'Moeda', attack: 0, defense: 0, sellValue: 1, description: 'Moeda usada como recompensa de criaturas.', specialModifiers: null, enabled: true });
+    }
+    return items.sort((a, b) => a.name.localeCompare(b.name));
   }
 
   @Get(':id')
@@ -131,6 +136,7 @@ function toPrismaData(id: string, input: ItemDefinitionInput): Prisma.ItemDefini
     ammo: ammo as Prisma.InputJsonValue | undefined,
     skillBonuses: input.skillBonuses as Prisma.InputJsonValue | undefined,
     resistances: input.resistances as Prisma.InputJsonValue | undefined,
+    damageBonuses: input.damageBonuses as Prisma.InputJsonValue | undefined,
     requirements: input.requirements as Prisma.InputJsonValue | undefined,
     specialModifiers: specialModifiers as Prisma.InputJsonValue | undefined,
     enabled: input.enabled ?? true,

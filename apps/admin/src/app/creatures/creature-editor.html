@@ -40,17 +40,59 @@
 }
 @if (activeTab() === 'loot') {
   <section class="panel creature-loot-panel">
-    <h2>Loot</h2>
-    @for (entry of loot(); track $index) {
-      <div class="loot-row">
-        <input [value]="entry.itemName" (input)="updateLoot($index, { itemName: $any($event.target).value })" />
-        <input type="number" min="0" max="100" [value]="entry.chance" (change)="updateLoot($index, { chance: +$any($event.target).value })" />
-        <input type="number" min="1" [value]="entry.minQuantity" (change)="updateLoot($index, { minQuantity: +$any($event.target).value })" />
-        <input type="number" min="1" [value]="entry.maxQuantity" (change)="updateLoot($index, { maxQuantity: +$any($event.target).value })" />
-        <button type="button" (click)="removeLoot($index)">Remover</button>
+    <div class="loot-title">
+      <div>
+        <h2>Loot</h2>
+        <p class="hint">Escolha um item do catálogo. O ID e o nome gravados são definidos pelo servidor.</p>
       </div>
-    }
-    <div class="row"><button type="button" (click)="addLoot()">Adicionar loot</button><button class="primary" type="button" (click)="saveLoot()" [disabled]="saving()">Salvar loot</button></div>
+      <span class="loot-count">{{ loot().length }} {{ loot().length === 1 ? 'item' : 'itens' }}</span>
+    </div>
+
+    <div class="loot-toolbar">
+      <label class="loot-search">Buscar item
+        <input type="search" [value]="itemFilter()" (input)="itemFilter.set($any($event.target).value)" placeholder="Nome, ID ou categoria" />
+      </label>
+      <span class="loot-search-count">{{ lootOptions().length }} itens encontrados</span>
+      @if (itemFilter()) { <button type="button" (click)="clearItemFilter()">Limpar busca</button> }
+      <button type="button" (click)="addLoot()">+ Adicionar loot</button>
+    </div>
+
+    <div class="loot-table">
+      <div class="loot-table-head"><span>Item do catálogo</span><span>Chance (%)</span><span>Qtd. mín.</span><span>Qtd. máx.</span><span></span></div>
+      @for (entry of loot(); track $index; let i = $index) {
+        <div class="loot-row" [class.invalid]="lootEntryError(entry, i)">
+          <div class="loot-item-field">
+            <select [value]="entry.itemId ?? ''" (change)="selectLootItem(i, $any($event.target).value)">
+              <option value="">-- Selecione o item --</option>
+              @for (item of lootOptionsFor(entry.itemId); track item.id) {
+                <option [value]="item.id">{{ item.name }} ({{ item.id }})</option>
+              }
+            </select>
+            @if (entry.itemId) {
+              <span class="item-reference mono">{{ entry.itemId }}</span>
+            }
+            @if (lootItem(entry.itemId); as item) {
+              <span class="item-meta">{{ item.type }} · {{ item.category }}</span>
+            }
+          </div>
+          <input type="number" min="0" max="100" step="1" [value]="entry.chance" (change)="updateLoot(i, { chance: +$any($event.target).value })" aria-label="Chance percentual" />
+          <input type="number" min="1" step="1" [value]="entry.minQuantity" (change)="updateLoot(i, { minQuantity: +$any($event.target).value })" aria-label="Quantidade mínima" />
+          <input type="number" min="1" step="1" [value]="entry.maxQuantity" (change)="updateLoot(i, { maxQuantity: +$any($event.target).value })" aria-label="Quantidade máxima" />
+          <button type="button" class="danger" (click)="removeLoot(i)">Remover</button>
+          @if (lootEntryError(entry, i); as message) {
+            <p class="loot-error">{{ message }}</p>
+          }
+        </div>
+      }
+      @if (loot().length === 0) {
+        <p class="hint loot-empty">Nenhum loot configurado. Adicione um item do catálogo.</p>
+      }
+    </div>
+
+    <div class="row loot-actions">
+      <button class="primary" type="button" (click)="saveLoot()" [disabled]="saving() || lootHasErrors">Salvar loot</button>
+      @if (lootDirty()) { <span class="unsaved">Alterações não salvas</span> }
+    </div>
   </section>
 }
 

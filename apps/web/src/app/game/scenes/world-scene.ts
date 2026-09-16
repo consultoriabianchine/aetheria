@@ -361,8 +361,20 @@ export class WorldScene extends Phaser.Scene {
         break;
       }
       case SERVER_EVENTS.COMBAT_DAMAGE: {
-const d = data as { attackerId: string; targetId: string; amount: number; damageType?: DamageType; critical: boolean; delayMs?: number };
+        const d = data as { attackerId: string; targetId: string; amount: number; damageType?: DamageType; critical: boolean; delayMs?: number; criticalImpact?: ItemImpactVisual; position?: Position };
         this.combatText.spawnDamage(d);
+        if (d.critical && d.criticalImpact) {
+          const base = d.position ? tileBase(d.position, TILE_SIZE) : null;
+          const play = () => {
+            if (base) this.playImpact(base.x, base.y, d.criticalImpact!);
+            else {
+              const c = this.entityCenter(d.targetId, { x: 0, y: 0, z: 0 });
+              this.playImpact(c.x, c.y, d.criticalImpact!);
+            }
+          };
+          if (d.delayMs) this.time.delayedCall(d.delayMs, play);
+          else play();
+        }
         break;
       }
       case SERVER_EVENTS.COMBAT_HEAL: {
@@ -1217,9 +1229,8 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
     const dy = pointer.y - this.lastPan.y;
     this.lastPan = { x: pointer.x, y: pointer.y };
     if (dx === 0 && dy === 0) return;
-    const max = this.maxCameraScroll();
-    cam.scrollX = Phaser.Math.Clamp(cam.scrollX - dx / cam.zoom, 0, max.x);
-    cam.scrollY = Phaser.Math.Clamp(cam.scrollY - dy / cam.zoom, 0, max.y);
+    cam.scrollX = cam.clampX(cam.scrollX - dx / cam.zoom);
+    cam.scrollY = cam.clampY(cam.scrollY - dy / cam.zoom);
   }
 
   private onPointerUp(pointer: Phaser.Input.Pointer) {
@@ -1227,15 +1238,6 @@ const d = data as { attackerId: string; targetId: string; amount: number; damage
       this.handlePointerClick(pointer);
     }
     this.panning = false;
-  }
-
-  private maxCameraScroll(): { x: number; y: number } {
-    const cam = this.cameras.main;
-    const w = (this.mapBounds.width ?? 0) * TILE_SIZE;
-    const h = (this.mapBounds.height ?? 0) * TILE_SIZE;
-    const viewW = cam.width / cam.zoom;
-    const viewH = cam.height / cam.zoom;
-    return { x: Math.max(0, w - viewW), y: Math.max(0, h - viewH) };
   }
 
   private handlePointerClick(pointer: Phaser.Input.Pointer) {

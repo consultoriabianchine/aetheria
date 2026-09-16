@@ -152,6 +152,7 @@ model ItemDefinition {
   ammo              Json?
   skillBonuses      Json?    @map("skill_bonuses")
   resistances       Json?
+  damageBonuses     Json?    @map("damage_bonuses")
   requirements      Json?
   specialModifiers  Json?    @map("special_modifiers")
   enabled           Boolean  @default(true)

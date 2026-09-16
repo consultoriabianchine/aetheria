@@ -3,7 +3,8 @@ import { Subscription, first, interval } from 'rxjs';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import Phaser from 'phaser';
-import type { CharacterEquipment, CharacterSkills, CombatAbilityDefinition, ItemDefinition, ItemStack, PlayerCombatConfig } from '@aetheria/types';
+import type { CharacterEquipment, CharacterSkills, CharacterSummary, CombatAbilityDefinition, CombatStatsView, DamageType, ItemDefinition, ItemStack, PlayerCombatConfig } from '@aetheria/types';
+import { DAMAGE_TYPES } from '@aetheria/types';
 import { APPEARANCE_PALETTE, INVENTORY_SIZE, LOOT_POUCH_EXPANSION, SKILL_PROGRESSION_CONFIG, xpForLevel } from '@aetheria/config';
 import { WsService } from '../core/ws.service';
 import { ChatLine, GameState } from './game-state';
@@ -51,6 +52,7 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   readonly healTarget = signal<'self' | 'lowest_party_member' | 'specific_party_role'>('self');
   readonly manageOpen = signal(false);
   readonly manageMemberId = signal<string | null>(null);
+  readonly selectedCharacterId = signal<string | null>(null);
   readonly now = signal(Date.now());
   readonly hoveredItemId = signal<string | null>(null);
   readonly itemTooltipX = signal(0);
@@ -178,23 +180,23 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   }
 
   hpPct(): number {
-    const s = this.state.stats();
+    const s = this.selectedResources();
     return s.maxHealth > 0 ? (s.health / s.maxHealth) * 100 : 0;
   }
 
   mpPct(): number {
-    const s = this.state.stats();
+    const s = this.selectedResources();
     return s.maxMana > 0 ? (s.mana / s.maxMana) * 100 : 0;
   }
 
   xpPct(): number {
-    const s = this.state.stats();
+    const s = this.selectedResources();
     const needed = xpForLevel(s.level);
     return needed > 0 ? (s.experience / needed) * 100 : 0;
   }
 
   xpNeeded(): number {
-    return xpForLevel(this.state.stats().level);
+    return xpForLevel(this.selectedResources().level);
   }
 
   zoomPct(): string {
@@ -344,8 +346,10 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   }
 
   skills(): Array<{ label: string; value: number; xp: number; required: number; pct: number }> {
-    const skills: CharacterSkills = this.state.self()?.skills ?? { melee: 10, distance: 10, magic: 10 };
-    const progress = new Map((this.state.stats().skillProgress ?? []).map((p) => [p.skillType, p]));
+    const skills: CharacterSkills = this.selectedSummary()?.skills ?? { melee: 10, distance: 10, magic: 10 };
+    const progress = this.selectedId() === this.state.self()?.id
+      ? new Map((this.state.stats().skillProgress ?? []).map((p) => [p.skillType, p]))
+      : new Map();
     return [
       { key: 'melee' as const, label: 'Melee', value: skills.melee },
       { key: 'distance' as const, label: 'Distance', value: skills.distance },
@@ -359,7 +363,7 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   }
 
   relevantSkills(): Array<{ label: string; value: number; xp: number; required: number; pct: number }> {
-    const archetype = this.state.self()?.archetype;
+    const archetype = this.selectedSummary()?.archetype;
     const all = this.skills();
     if (archetype === 'mage') return all.filter((s) => s.label === 'Magic');
     if (archetype === 'archer') return all.filter((s) => s.label === 'Distance' || s.label === 'Magic');
@@ -379,8 +383,85 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
     ];
   }
 
-  equippedCount(): number {
-    return Object.values(this.state.inventory().equipment).filter(Boolean).length;
+  private static readonly DAMAGE_TYPE_LABELS: Record<DamageType, string> = {
+    physical: 'Físico',
+    fire: 'Fogo',
+    ice: 'Gelo',
+    energy: 'Raio',
+    earth: 'Terra',
+    holy: 'Sagrado',
+    death: 'Morte',
+    arcane: 'Arcano',
+  };
+
+  damageTypeLabel(type: DamageType): string {
+    return Game.DAMAGE_TYPE_LABELS[type] ?? type;
+  }
+
+  /** Personagem selecionado no painel esquerdo (default: ativo). */
+  selectedId(): string {
+    return this.selectedCharacterId() ?? this.state.self()?.id ?? '';
+  }
+
+  selectedName(): string {
+    const id = this.selectedId();
+    return this.state.party().members.find((m) => m.id === id)?.name ?? this.state.self()?.name ?? '—';
+  }
+
+  selectCharacter(id: string) {
+    this.selectedCharacterId.set(id);
+  }
+
+  selectableCharacters(): Array<{ id: string; name: string }> {
+    const members = this.state.party().members;
+    const self = this.state.self();
+    const entries = self ? [{ id: self.id, name: self.name }] : [];
+    return entries.concat(
+      members.filter((member) => member.id !== self?.id).map((member) => ({ id: member.id, name: member.name })),
+    );
+  }
+
+  /** Summary do personagem selecionado (ativo ou companheiro da party). */
+  selectedSummary(): CharacterSummary | null {
+    const self = this.state.self();
+    if (!self) return null;
+    const id = this.selectedId();
+    if (id === self.id) return self;
+    return this.state.party().members.find((m) => m.id === id) ?? self;
+  }
+
+  /** Vida/mana/XP do personagem selecionado (ativo usa stats ao vivo). */
+  selectedResources(): { health: number; maxHealth: number; mana: number; maxMana: number; level: number; experience: number } {
+    const self = this.state.self();
+    const id = this.selectedId();
+    if (!self || id === self.id) {
+      const s = this.state.stats();
+      return { health: s.health, maxHealth: s.maxHealth, mana: s.mana, maxMana: s.maxMana, level: s.level, experience: s.experience };
+    }
+    const m = this.state.party().members.find((m) => m.id === id);
+    return {
+      health: m?.health ?? 0,
+      maxHealth: m?.maxHealth ?? 0,
+      mana: m?.mana ?? 0,
+      maxMana: m?.maxMana ?? 0,
+      level: m?.level ?? 1,
+      experience: m?.experience ?? 0,
+    };
+  }
+
+  selectedCombatStats(): CombatStatsView | null {
+    const id = this.selectedId();
+    return this.state.combatStats()[id] ?? null;
+  }
+
+  damageRows(): Array<{ type: DamageType; label: string; bonus: number; resistance: number }> {
+    const stats = this.selectedCombatStats();
+    return DAMAGE_TYPES.map((type) => ({
+      type,
+      label: this.damageTypeLabel(type),
+      bonus: stats?.damageBonuses?.[type] ?? 0,
+      resistance: stats?.resistances?.[type] ?? 0,
+    }));
   }
 
   formatGold(value: number | string): string {
@@ -394,7 +475,7 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
       archer: 'Paladin',
       mage: 'Druid',
     };
-    const archetype = this.state.self()?.archetype;
+    const archetype = this.selectedSummary()?.archetype;
     return archetype ? labels[archetype] ?? archetype : '—';
   }
 
@@ -523,7 +604,7 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
     this.startHunt(huntId);
   }
 
-  private percent(value: number): string {
+  percent(value: number): string {
     return `${Math.round(value * 1000) / 10}%`;
   }
 

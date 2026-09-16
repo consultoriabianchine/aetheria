@@ -29,6 +29,7 @@ const baseStats: CharacterCombatStats = {
   dodge: 0,
   speed: 0,
   resistances: emptyResistances(),
+  damageBonuses: emptyResistances(),
 };
 
 describe('combat formulas', () => {

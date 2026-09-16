@@ -74,12 +74,13 @@ export type ServerMessage =
   | { type: 'creature.remove'; creatureId: string }
   | { type: 'combat.projectile'; attackerId: string; targetId: string; from: Position; to: Position; projectile?: ItemProjectileVisual; impact?: ItemImpactVisual; travelTimeMs: number }
   | { type: 'combat.area'; attackerId: string; targetId: string; from: Position; center: Position; tiles: Position[]; projectile?: ItemProjectileVisual; impact?: ItemImpactVisual; travelTimeMs: number }
-  | { type: 'combat.damage'; attackerId: string; targetId: string; amount: number; damageType: DamageType; critical: boolean; targetHealth: number; delayMs?: number }
+  | { type: 'combat.damage'; attackerId: string; targetId: string; amount: number; damageType: DamageType; critical: boolean; targetHealth: number; delayMs?: number; criticalImpact?: ItemImpactVisual; position?: Position }
   | { type: 'combat.heal'; sourceId: string; targetId: string; amount: number; critical: boolean; targetHealth: number; delayMs?: number }
   | { type: 'combat.death'; entityId: string; experience?: number }
   | { type: 'xp.gained'; amount: number; characterId?: string }
   | { type: 'gold.gained'; amount: number; position?: Position }
   | { type: 'stats.update'; health: number; maxHealth: number; mana: number; maxMana: number; level: number; experience: number; skills: CharacterSkills; speed?: number; movementSpeed?: number; skillProgress?: { skillType: keyof CharacterSkills; level: number; experience: number }[] }
+  | { type: 'stats.combat'; characterId: string; armor: number; defense: number; criticalChance: number; criticalDamage: number; accuracy: number; dodge: number; speed: number; resistances: Record<DamageType, number>; damageBonuses: Record<DamageType, number> }
   | { type: 'skills.update'; skills: CharacterSkills }
   | { type: 'inventory.update'; inventory: CharacterInventory }
   | { type: 'loot.spawned'; entityId: string; itemId: string; name: string; quantity: number; position: Position }
@@ -146,6 +147,7 @@ export const SERVER_EVENTS = {
   XP_GAINED: 'xp.gained',
   GOLD_GAINED: 'gold.gained',
   STATS_UPDATE: 'stats.update',
+  STATS_COMBAT: 'stats.combat',
   SKILLS_UPDATE: 'skills.update',
   INVENTORY_UPDATE: 'inventory.update',
   LOOT_SPAWNED: 'loot.spawned',
