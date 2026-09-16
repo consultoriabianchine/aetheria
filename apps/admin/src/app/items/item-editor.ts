@@ -12,7 +12,7 @@ import { ApiService, type AdminItemDefinition, type AdminItemInput } from '../co
     .panel { background: #111926; border: 1px solid #263244; border-radius: 10px; padding: 14px; }
     .toolbar { display: flex; gap: 8px; margin-bottom: 12px; }
     .item-list { display: flex; flex-direction: column; gap: 6px; max-height: 72vh; overflow: auto; }
-    .item-row { display: flex; justify-content: space-between; gap: 8px; padding: 8px; border: 1px solid #263244; border-radius: 7px; background: #172130; color: #d9e6f2; text-align: left; }
+     .item-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px; border: 1px solid #263244; border-radius: 7px; background: #172130; color: #d9e6f2; text-align: left; } .item-thumb, .item-preview { object-fit: contain; image-rendering: pixelated; background: #0a1017; border: 1px solid #34445c; } .item-thumb { width: 32px; height: 32px; flex: none; } .item-preview { width: 64px; height: 64px; } .image-preview { display: flex; align-items: center; gap: 12px; padding: 10px; border: 1px solid #263244; border-radius: 6px; background: #0d141d; } .image-preview p { margin: 0; color: #9aaabd; font-size: 12px; }
     .item-row.active { border-color: #7fd0a0; }
     .item-row small, label { color: #8fa2b5; font-size: 12px; }
     .form { display: grid; grid-template-columns: repeat(2, minmax(160px, 1fr)); gap: 12px; }
@@ -44,6 +44,13 @@ export class ItemEditor implements OnInit {
   readonly selected = computed(() => this.items().find((item) => item.id === this.selectedId()) ?? null);
 
   constructor(private readonly api: ApiService) {}
+
+  imageSource(path: string | null | undefined): string | null {
+    if (!path) return null;
+    if (/^(data:image\/|https?:\/\/)/.test(path) || path.startsWith('/')) return path;
+    if (path.startsWith('assets/')) return path;
+    return path.startsWith('items/') ? `assets/${path}` : `assets/items/${path}`;
+  }
 
   async ngOnInit() {
     await this.load();

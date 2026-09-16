@@ -12,7 +12,7 @@ import { ApiService } from '../core/api.service';
     .panel { background:#111926; border:1px solid #263244; border-radius:10px; padding:14px; }
     .list { display:flex; flex-direction:column; gap:6px; max-height:75vh; overflow:auto; }
     button, input, select, textarea { background:#0d141d; color:#e6eef6; border:1px solid #2b3546; border-radius:6px; padding:8px; }
-    button { cursor:pointer; } .primary { background:#1f6feb; } .row { display:flex; gap:8px; } label { display:flex; flex-direction:column; gap:4px; margin:8px 0; } .form { display:grid; grid-template-columns:repeat(2, 1fr); gap:8px; } .wide { grid-column:1 / -1; }
+     button { cursor:pointer; } .primary { background:#1f6feb; } .row { display:flex; gap:8px; } label { display:flex; flex-direction:column; gap:4px; margin:8px 0; } .form { display:grid; grid-template-columns:repeat(2, 1fr); gap:8px; } .wide { grid-column:1 / -1; } .list button { display:flex; align-items:center; gap:8px; text-align:left; } .ability-thumb { width:32px; height:32px; object-fit:contain; image-rendering:pixelated; background:#070b10; border:1px solid #46556b; } .icon-import { display:flex; align-items:center; gap:12px; padding:10px; border:1px solid #263244; border-radius:6px; background:#0d141d; } .icon-preview { width:64px; height:64px; display:grid; place-items:center; flex:none; border:1px solid #46556b; background:#070b10; color:#607086; font-size:24px; } .icon-preview img { width:64px; height:64px; image-rendering:pixelated; } .icon-import p { margin:0 0 8px; color:#9aaabd; font-size:12px; } .icon-import small { display:block; margin-top:6px; color:#e89a52; }
   `,
 })
 export class AbilityList implements OnInit {
@@ -37,7 +37,10 @@ export class AbilityList implements OnInit {
     } catch (error) { this.error.set(String(error)); }
   }
   newAbility() { this.selected.set({ abilityId: 0, slug: '', name: '', ownerType: 'both', playerClass: 'all', category: 'attack', targetMode: 'single_enemy', powerSource: 'fixed', cooldownMs: 2000, cooldownGroup: 'attack', rangeTiles: 1, allowedParameters: [], enabled: true, createdAt: new Date(), updatedAt: new Date() }); }
-  edit(ability: CombatAbilityDefinition) { this.selected.set({ ...ability }); }
+  edit(ability: CombatAbilityDefinition) { this.selected.set({ ...ability, icon: ability.icon?.startsWith('data:') ? `abilities/${ability.abilityId}.png` : ability.icon || `abilities/${ability.abilityId}.png` }); }
+  iconSource(ability: CombatAbilityDefinition): string {
+    return ability.icon || `http://localhost:4200/assets/abilities/${ability.abilityId}.png`;
+  }
   areaConfigDraft(): AbilityAreaConfig { return this.selected()?.areaConfig ?? { shape: 'square', width: 1, height: 1 }; }
   patchAreaConfig(patch: Partial<AbilityAreaConfig>) { const draft = this.selected(); if (draft) this.selected.set({ ...draft, areaConfig: { ...this.areaConfigDraft(), ...patch } }); }
   async save() { const draft = this.selected(); if (!draft) return; try { const saved = await this.api.saveAbility(draft); this.selected.set(saved); await this.load(); } catch (error) { this.error.set(String(error)); } }

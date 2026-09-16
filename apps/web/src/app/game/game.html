@@ -15,7 +15,7 @@
 
     <nav class="top-nav" aria-label="Navegacao principal">
       @for (item of ['Helper', 'Codex', 'Arena', 'Progress', 'Daily', 'Storage', 'Trade', 'Social']; track item) {
-        <button class="top-nav-item" type="button" [attr.aria-label]="item">
+         <button class="top-nav-item" type="button" [attr.aria-label]="item" (click)="item === 'Helper' ? openHelper() : null">
           <span>{{ item.charAt(0) }}</span>
           <small>{{ item }}</small>
         </button>
@@ -226,25 +226,21 @@
           @for (slot of partySlots(); track $index; let i = $index) {
             <div class="hotbar-row" [class.empty]="!slot">
               @if (slot; as member) {
-                <div class="hotbar-row-head">
+                <div class="hotbar-row-head" (click)="openRotationFor(member.id)" title="Abrir configuração de magias">
                   <strong>{{ member.name }}</strong>
-                  <button type="button" class="mini-action" (click)="selectManageMember(member.id); openManage()">Combate</button>
+                  <button type="button" class="mini-action" (click)="$event.stopPropagation(); selectManageMember(member.id); openManage()">Combate</button>
                   <button type="button" class="mini-action" (click)="openRotationFor(member.id)">Magias</button>
                 </div>
                 <div class="hotbar-row-slots">
                   @for (s of hotbarSlotsFor(member.id); track s.key; let idx = $index) {
                     <button class="hotbar-slot" type="button" draggable="true" (dragstart)="startSlotDrag(member.id, idx, $event)" (dragover)="allowSlotDrop($event)" (drop)="dropSlot(member.id, idx, $event)" [style.--cooldown-pct]="s.groupPct" [class.ready]="s.ready" (click)="member.id === state.self()?.id ? useHotbarSlot(s) : null" aria-label="Hotbar {{ member.name }} slot {{ s.key }}">
-                      <span>{{ s.key }}</span>
-                      @if (state.abilities().find((ability) => ability.abilityId === s.abilityId)?.icon; as icon) { <img class="hotbar-icon" [src]="icon" alt=""> }
-                      <strong>{{ s.name }}</strong>
-                      <em>{{ s.cd }}</em>
-                      <i [style.width.%]="s.groupPct"></i>
+                       @if (rotationAbilityIcon(s.abilityId ?? 0); as icon) { <img class="hotbar-icon" [src]="icon" alt=""> }
+                       <i [style.width.%]="s.groupPct"></i>
                     </button>
                   }
                   @if (healSlotFor(member.id); as heal) {
                     <button class="hotbar-slot heal" type="button" (click)="openRotationFor(member.id)" aria-label="Cura {{ member.name }}">
                       @if (heal.icon; as icon) { <img class="hotbar-icon" [src]="icon" alt=""> }
-                      <strong>{{ heal.name }}</strong>
                     </button>
                   }
                 </div>
@@ -393,19 +389,51 @@
     </div>
   }
 
+  @if (helperOpen()) {
+    <div class="modal-backdrop helper-backdrop" (click)="closeHelper()">
+      <section class="helper-modal" (click)="$event.stopPropagation()">
+        <header class="helper-modal-header"><strong>Helper</strong><span>{{ rotationCharacterName() }}</span><button type="button" (click)="closeHelper()">×</button></header>
+        <div class="helper-layout">
+          <aside class="helper-menu">
+            <button [class.active]="helperSection() === 'healing'" (click)="helperSection.set('healing')">✚ Cura</button>
+            <button [class.active]="helperSection() === 'ally'" (click)="helperSection.set('ally')">♥ Curar aliado</button>
+            <button [class.active]="helperSection() === 'attack'" (click)="helperSection.set('attack')">◉ Atacar</button>
+            <button [class.active]="helperSection() === 'spells'" (click)="helperSection.set('spells')">↗ Magias de Ataque</button>
+          </aside>
+          <main class="helper-panel-content">
+            @if (helperSection() === 'ally') {
+              <h2>Curar aliado</h2><p class="helper-copy">A rotação de cura pode priorizar o personagem com menor vida da party.</p>
+            } @else if (helperSection() === 'attack') {
+              <h2>Atacar</h2><p class="helper-copy">O ataque básico é usado quando nenhuma habilidade da rotação pode ser lançada.</p>
+            } @else {
+              <div class="helper-title-row"><div><h2>{{ helperSection() === 'healing' ? 'Rotação de Cura' : 'Rotação de Ataque' }}</h2><p class="helper-copy">Prioridade: Slot 1 → Slot 2 → Slot 3 → Slot 4. Grupos de cooldown independentes.</p></div><select [ngModel]="rotationCharacterId()" (ngModelChange)="rotationCharacterId.set($event)">@for (member of selectableCharacters(); track member.id) { <option [value]="member.id">{{ member.name }}</option> }</select></div>
+              <div class="helper-slots">
+                @for (slot of (helperSection() === 'healing' ? healingRotationFor(rotationCharacterId() ?? '') : attackRotationFor(rotationCharacterId() ?? '')); track $index) {
+                  <article class="helper-slot-row"><b>{{ $index + 1 }}</b><div class="helper-slot-icon">@if (rotationAbilityIcon(slot); as icon) { <img [src]="icon" alt="" /> } @else { + }</div><div><strong>{{ rotationAbilityName(slot) }}</strong><small>{{ slot && rotationAbility(slot) ? abilityMeta(rotationAbility(slot)!) : 'Slot vazio' }}</small></div><button type="button" (click)="openRotationSlot($index, helperSection() === 'healing' ? 'healing' : 'attack')">Configurar</button></article>
+                }
+              </div>
+            }
+          </main>
+        </div>
+      </section>
+    </div>
+  }
+
   @if (rotationOpen()) {
     <div class="modal-backdrop" (click)="rotationOpen.set(false)">
-      <section class="rotation-modal" (click)="$event.stopPropagation()">
-        <div class="rotation-modal-header"><strong>{{ rotationCharacterName() }} · {{ rotationMode() === 'attack' ? 'Attack Rotation' : 'Healing Rotation' }}</strong><button type="button" (click)="rotationOpen.set(false)">×</button></div>
-        <div class="rotation-tabs"><button [class.active]="rotationMode() === 'attack'" (click)="rotationMode.set('attack')">Attack</button><button [class.active]="rotationMode() === 'healing'" (click)="rotationMode.set('healing')">Healing</button></div>
-        @if (rotationMode() === 'healing') {
-          <div class="heal-thresholds"><span>Heal below:</span><button (click)="healingThreshold.set(50)">50%</button><button (click)="healingThreshold.set(80)">80%</button><button (click)="healingThreshold.set(85)">85%</button><button (click)="healingThreshold.set(90)">90%</button><button (click)="healingThreshold.set(95)">95%</button><input type="number" min="1" max="100" [(ngModel)]="healingThreshold">%</div>
-          <div class="heal-targets"><span>Alvo:</span><button [class.active]="healTarget() === 'self'" (click)="healTarget.set('self')">Self</button><button [class.active]="healTarget() === 'lowest_party_member'" (click)="healTarget.set('lowest_party_member')">Menor HP</button><button [class.active]="healTarget() === 'specific_party_role'" (click)="healTarget.set('specific_party_role')">Líder</button></div>
-        }
-        @for (slot of (rotationMode() === 'attack' ? attackRotationForModal() : healingRotationForModal()); track $index) {
-          <label class="rotation-slot-editor"><span>{{ $index + 1 }}</span><select [ngModel]="slot" (ngModelChange)="setRotationAbility($index, +$event)"><option [ngValue]="0">Empty</option>@for (ability of abilitiesFor(rotationCharacterId() ?? ''); track ability.abilityId) { <option [ngValue]="ability.abilityId">{{ ability.name }}</option> }</select></label>
-        }
-        <button class="rotation-save" type="button" (click)="saveRotation()">Save Rotation</button>
+      <section class="ability-picker" (click)="$event.stopPropagation()">
+        <header><strong>{{ rotationMode() === 'attack' ? 'ROTAÇÃO' : 'CURA' }} — SLOT {{ rotationSlot() }}</strong><span>ORDEM = PRIORIDADE</span><button type="button" (click)="rotationOpen.set(false)">×</button></header>
+        <div class="ability-picker-body">
+          <div class="picker-tabs">@for (tab of (rotationMode() === 'attack' ? ['all', 'attack', 'area', 'rune'] : ['all', 'heal', 'rune']); track tab) { <button [class.active]="abilityCategory() === tab" (click)="abilityCategory.set($any(tab))">{{ tab === 'all' ? 'Todas' : tab === 'area' ? 'Área' : tab === 'rune' ? 'Runas' : tab === 'heal' ? 'Cura' : 'Ataque' }}</button> }</div>
+          @if (rotationMode() === 'healing') { <div class="heal-target-picker"><span>Alvo:</span><button [class.active]="healTarget() === 'self'" (click)="healTarget.set('self')">Self</button><button [class.active]="healTarget() === 'lowest_party_member'" (click)="healTarget.set('lowest_party_member')">Menor HP</button><button [class.active]="healTarget() === 'specific_party_role'" (click)="healTarget.set('specific_party_role')">Líder</button></div> }
+          <div class="picker-search"><input [ngModel]="abilitySearch()" (ngModelChange)="abilitySearch.set($event)" placeholder="Buscar por nome ou palavra..." /><label><input type="checkbox" [ngModel]="releasedOnly()" (ngModelChange)="releasedOnly.set($event)" /> Só liberadas</label></div>
+          <div class="ability-list">
+            @for (ability of filteredAbilities(); track ability.abilityId) {
+              <article class="ability-card" [class.in-use]="slotAbilityId() === ability.abilityId"><div class="ability-card-icon">@if (abilityIcon(ability); as icon) { <img [src]="icon" alt="" /> } @else { ✦ }</div><div><strong>{{ ability.name }}</strong><small>{{ ability.slug }}</small><span>{{ abilityMeta(ability) }}</span>@if (rotationMode() === 'attack' && ability.targetMode === 'area_enemy') { <select [ngModel]="areaMinTargets(rotationCharacterId() ?? '', rotationSlot() - 1)" (ngModelChange)="setAreaMinTargets(rotationSlot() - 1, +$event)"><option [ngValue]="0">auto</option><option [ngValue]="2">2+</option><option [ngValue]="3">3+</option><option [ngValue]="4">4+</option><option [ngValue]="5">5+</option></select> } @if (rotationMode() === 'healing') { <label class="heal-config">HP ≤ <input type="number" min="1" max="100" [ngModel]="healingThreshold()" (ngModelChange)="healingThreshold.set(+$event)" />%</label> }</div><button type="button" (click)="setRotationAbility(rotationSlot() - 1, ability.abilityId)">{{ slotAbilityId() === ability.abilityId ? 'Em uso' : 'Usar' }}</button></article>
+            }
+          </div>
+        </div>
+        <footer><button type="button" (click)="setRotationAbility(rotationSlot() - 1, 0); saveRotation()">Limpar</button><button type="button" (click)="saveRotation()">Salvar</button></footer>
       </section>
     </div>
   }

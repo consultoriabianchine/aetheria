@@ -2421,6 +2421,11 @@ export class GameEngine implements OnModuleDestroy {
         const ability = await this.abilityRegistry.get(slot.abilityId);
         const readyAt = this.abilityCooldowns.get(player.id)?.get(slot.abilityId) ?? 0;
         if (!ability || ability.category === 'heal' || now < readyAt || tileDistance(player.position, target.position) > ability.rangeTiles) continue;
+        if ((slot.minTargets ?? 0) > 0 && ability.targetMode === 'area_enemy') {
+          const tiles = this.groundTiles(target.position, ability.areaConfig);
+          const targets = this.enemiesInTiles(player, tiles).length;
+          if (targets < slot.minTargets!) continue;
+        }
         if (await this.castAbility(player, ability.abilityId, target.id)) return;
       }
     }

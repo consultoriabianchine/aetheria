@@ -266,8 +266,6 @@ export class ApiService {
     return this.request('/admin/abilities', { headers: this.headers() });
   }
 
-  uploadAbilityIcon(id: number, file: File): Promise<import('@aetheria/types').CombatAbilityDefinition> { return new Promise((resolve, reject) => { const image = new Image(); image.onload = () => { if (image.width !== 32 || image.height !== 32) { reject(new Error('Ícone deve ter 32x32 pixels')); return; } void file.arrayBuffer().then((buffer) => { let binary = ''; for (const byte of new Uint8Array(buffer)) binary += String.fromCharCode(byte); return this.request(`/admin/abilities/${id}/icon`, { method: 'POST', headers: this.headers(), body: JSON.stringify({ dataBase64: btoa(binary), mimeType: file.type }) }); }).then((result) => resolve(result as import('@aetheria/types').CombatAbilityDefinition)).catch(reject); }; image.onerror = () => reject(new Error('Imagem inválida')); image.src = URL.createObjectURL(file); }); }
-
   saveAbility(input: import('@aetheria/types').CombatAbilityDefinition): Promise<import('@aetheria/types').CombatAbilityDefinition> {
     const path = input.abilityId ? `/admin/abilities/${input.abilityId}` : '/admin/abilities';
     return this.request(path, { method: input.abilityId ? 'PUT' : 'POST', headers: this.headers(), body: JSON.stringify(input) });

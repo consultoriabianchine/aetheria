@@ -12,7 +12,7 @@
     <div class="item-list">
       @for (item of items(); track item.id) {
         <button class="item-row" [class.active]="selectedId() === item.id" (click)="select(item)">
-          <span>{{ item.name }}<br /><small>{{ item.id }}</small></span>
+          @if (imageSource(item.image); as image) { <img class="item-thumb" [src]="image" alt="" /> }<span>{{ item.name }}<br /><small>{{ item.id }}</small></span>
           <small>{{ item.type }} {{ item.enabled === false ? '· off' : '' }}</small>
         </button>
       }
@@ -40,6 +40,7 @@
       <label>Imagem/path
         <input [value]="draft().imagePath ?? ''" placeholder="Iron_Sword.gif ou https://.../item.png" (input)="patch({ imagePath: $any($event.target).value })" />
       </label>
+      <div class="wide image-preview">@if (imageSource(draft().imagePath); as image) { <img class="item-preview" [src]="image" alt="Prévia de {{ draft().name }}" /> } @else { <span>Sem imagem</span> }<p>Arquivos locais usam <code>assets/items/arquivo.gif</code>.</p></div>
       <label>Peso <input type="number" [value]="draft().weight ?? 0" (input)="patch({ weight: +$any($event.target).value })" /></label>
       <label><span>Ativo</span><input type="checkbox" [checked]="draft().enabled" (change)="patch({ enabled: $any($event.target).checked })" /></label>
       <label><span>Stackable</span><input type="checkbox" [checked]="draft().stackable" (change)="patch({ stackable: $any($event.target).checked })" /></label>

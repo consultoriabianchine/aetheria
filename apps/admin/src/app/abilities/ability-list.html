@@ -2,7 +2,7 @@
 @if (error()) { <p>{{ error() }}</p> }
 <div class="layout">
   <section class="panel list">
-    @for (ability of abilities(); track ability.abilityId) { <button (click)="edit(ability)">#{{ ability.abilityId }} {{ ability.name }}<br><small>{{ ability.ownerType }} / {{ ability.category }} / {{ ability.damageType || 'heal' }}</small></button> }
+    @for (ability of abilities(); track ability.abilityId) { <button (click)="edit(ability)">@if (iconSource(ability); as icon) { <img class="ability-thumb" [src]="icon" alt="" /> }<span>#{{ ability.abilityId }} {{ ability.name }}<br><small>{{ ability.ownerType }} / {{ ability.category }} / {{ ability.damageType || 'heal' }}</small></span></button> }
   </section>
   @if (selected(); as draft) {
     <section class="panel">
@@ -21,6 +21,13 @@
         @if (draft.category === 'area' || draft.targetMode === 'directional' || draft.targetMode === 'ground') {
           <label>Area Shape<select [value]="areaConfigDraft().shape" (change)="patchAreaConfig({ shape: $any($event.target).value })"><option value="square">Square</option><option value="circle">Circle</option><option value="wave">Wave</option><option value="cone">Cone</option><option value="cross">Cross</option><option value="line">Line</option></select></label><label>Area Width<input type="number" [value]="areaConfigDraft().width" (input)="patchAreaConfig({ width: +$any($event.target).value })"></label>
         }
+      </div>
+      <div class="wide">
+        <h3>Icone da magia</h3>
+        <div class="icon-import">
+          <div class="icon-preview">@if (draft.abilityId) { <img [src]="iconSource(draft)" alt="Ícone de {{ draft.name }}" /> } @else { <span>?</span> }</div>
+          <div><p>Os ícones ficam em <code>apps/web/src/assets/abilities/&lt;abilityId&gt;.png</code>, por exemplo <code>1.png</code>. PNG 32×32.</p><label class="wide">Caminho do ícone<input [(ngModel)]="draft.icon" placeholder="abilities/1.png" /></label><small>O arquivo deve ser colocado manualmente na pasta de assets.</small></div>
+        </div>
       </div>
       <div class="wide">
         <h3>Visual (projétil/impacto)</h3>

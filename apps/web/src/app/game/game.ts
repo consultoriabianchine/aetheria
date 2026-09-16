@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, inject, signal } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, OnDestroy, OnInit, inject, signal } from '@angular/core';
 import { Subscription, first, interval } from 'rxjs';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -46,10 +46,16 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   readonly chatCollapsed = signal(false);
   readonly chatTab = signal<'general' | 'combat' | 'system'>('general');
   readonly rotationOpen = signal(false);
+  readonly helperOpen = signal(false);
+  readonly helperSection = signal<'healing' | 'ally' | 'attack' | 'spells'>('spells');
   readonly rotationCharacterId = signal<string | null>(null);
   readonly rotationMode = signal<'attack' | 'healing'>('attack');
   readonly healingThreshold = signal(80);
   readonly healTarget = signal<'self' | 'lowest_party_member' | 'specific_party_role'>('self');
+  readonly rotationSlot = signal(1);
+  readonly abilitySearch = signal('');
+  readonly abilityCategory = signal<'all' | 'attack' | 'area' | 'rune' | 'heal'>('all');
+  readonly releasedOnly = signal(false);
   readonly manageOpen = signal(false);
   readonly manageMemberId = signal<string | null>(null);
   readonly manageInventoryTab = signal<'backpack' | 'loot' | 'store'>('backpack');
@@ -755,23 +761,85 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   onUnequipFor(memberId: string, slot: string) { this.state.unequip(slot, memberId); }
 
   // ---- rotação ----
-  openRotationFor(characterId: string) { this.rotationCharacterId.set(characterId); this.rotationOpen.set(true); }
+  openRotationFor(characterId: string) { this.rotationCharacterId.set(characterId); this.helperSection.set('spells'); this.helperOpen.set(true); }
   rotationCharacterName(): string { return this.rotationCharacterId() ? this.hotbarMemberName(this.rotationCharacterId()!) : ''; }
   attackRotationForModal(): number[] { return this.attackRotationFor(this.rotationCharacterId() ?? ''); }
   healingRotationForModal(): number[] { return this.healingRotationFor(this.rotationCharacterId() ?? ''); }
+  openHelper(section: 'healing' | 'ally' | 'attack' | 'spells' = 'spells') {
+    this.helperSection.set(section);
+    this.rotationCharacterId.set(this.state.self()?.id ?? this.state.party().members[0]?.id ?? null);
+    this.helperOpen.set(true);
+  }
+  closeHelper() { this.helperOpen.set(false); this.rotationOpen.set(false); }
+  @HostListener('document:keydown.escape')
+  onEscape() { if (this.rotationOpen()) this.rotationOpen.set(false); else if (this.helperOpen()) this.closeHelper(); }
+  openRotationSlot(index: number, mode: 'attack' | 'healing') {
+    this.rotationSlot.set(index + 1);
+    this.rotationMode.set(mode);
+    this.abilityCategory.set('all');
+    this.abilitySearch.set('');
+    this.releasedOnly.set(false);
+    if (mode === 'healing') {
+      const trigger = this.state.healingTriggers()[this.rotationCharacterId() ?? '']?.[index];
+      if (trigger) {
+        this.healingThreshold.set(trigger.hpBelowPercent);
+        this.healTarget.set(trigger.target);
+      }
+    }
+    this.rotationOpen.set(true);
+  }
+  areaMinTargets(characterId: string, index: number): number {
+    return this.state.attackMinTargets()[characterId]?.[index] ?? 0;
+  }
+  setAreaMinTargets(index: number, value: number) {
+    const id = this.rotationCharacterId();
+    if (!id) return;
+    const slots = [...(this.state.attackMinTargets()[id] ?? [0, 0, 0, 0])];
+    slots[index] = value;
+    this.state.attackMinTargets.update((all) => ({ ...all, [id]: slots }));
+  }
+  filteredAbilities(): CombatAbilityDefinition[] {
+    const id = this.rotationCharacterId() ?? '';
+    const query = this.abilitySearch().trim().toLowerCase();
+    return this.abilitiesFor(id).filter((ability) => {
+      const category = this.abilityCategory();
+      const matchesCategory = category === 'all' || ability.category === category || (category === 'area' && ability.targetMode === 'area_enemy');
+      const matchesMode = this.rotationMode() === 'attack' ? ability.category !== 'heal' : ability.category === 'heal';
+      const matchesSearch = !query || `${ability.name} ${ability.slug}`.toLowerCase().includes(query);
+      const released = !this.releasedOnly() || ability.enabled;
+      return matchesCategory && matchesMode && matchesSearch && released;
+    });
+  }
+  abilityIcon(ability: CombatAbilityDefinition): string | null {
+    if (!ability.icon) return `assets/abilities/${ability.abilityId}.png`;
+    return /^(data:image\/|https?:\/\/)/.test(ability.icon) || ability.icon.startsWith('/') || ability.icon.startsWith('assets/') ? ability.icon : `assets/${ability.icon}`;
+  }
+  abilityMeta(ability: CombatAbilityDefinition): string {
+    const level = ability.levelRequirement ?? 1;
+    const mana = ability.manaCost ?? 0;
+    return `lvl ${level} · ${mana} mana · cd ${Math.round(ability.cooldownMs / 100) / 10}s · ${ability.category === 'area' ? 'Área' : ability.category === 'rune' ? 'Runa' : ability.category === 'heal' ? 'Cura' : 'Ataque'}`;
+  }
+  slotAbilityId(): number {
+    const id = this.rotationCharacterId() ?? '';
+    const slots = this.rotationMode() === 'attack' ? this.attackRotationFor(id) : this.healingRotationFor(id);
+    return slots[this.rotationSlot() - 1] ?? 0;
+  }
   setRotationAbility(index: number, abilityId: number) {
     const id = this.rotationCharacterId();
     if (!id) return;
     const target = this.rotationMode() === 'attack' ? this.state.attackRotations : this.state.healingRotations;
     target.update((all) => ({ ...all, [id]: (all[id] ?? [0, 0, 0, 0]).map((value, i) => (i === index ? abilityId : value)) }));
+    if (this.rotationMode() === 'attack') this.setAreaMinTargets(index, 0);
   }
   rotationAbilityName(id: number) { return this.state.abilities().find((ability) => ability.abilityId === id)?.name ?? 'Empty'; }
-  rotationAbilityIcon(id: number) { return this.state.abilities().find((ability) => ability.abilityId === id)?.icon; }
+  rotationAbilityIcon(id: number) { const ability = this.state.abilities().find((item) => item.abilityId === id); return ability ? this.abilityIcon(ability) : null; }
+  rotationAbility(id: number): CombatAbilityDefinition | undefined { return this.state.abilities().find((ability) => ability.abilityId === id); }
   saveRotation() {
     const characterId = this.rotationCharacterId();
     if (!characterId) return;
     if (this.rotationMode() === 'attack') {
-      const slots = this.attackRotationForModal().map((abilityId, index) => ({ position: (index + 1) as 1 | 2 | 3 | 4, abilityId: abilityId || undefined, enabled: abilityId > 0 }));
+      const mins = this.state.attackMinTargets()[characterId] ?? [0, 0, 0, 0];
+      const slots = this.attackRotationForModal().map((abilityId, index) => ({ position: (index + 1) as 1 | 2 | 3 | 4, abilityId: abilityId || undefined, enabled: abilityId > 0, minTargets: mins[index] || undefined }));
       this.ws.send({ type: 'rotation.attack.set', preset: 'HUNT', characterId, slots });
     } else {
       const slots = this.healingRotationForModal().map((abilityId, index) => ({ position: (index + 1) as 1 | 2 | 3 | 4, abilityId: abilityId || undefined, enabled: abilityId > 0, trigger: { target: this.healTarget(), hpBelowPercent: this.healingThreshold() } }));

@@ -25,14 +25,6 @@ export class AbilityAdminController {
     return this.toDefinition(await this.prisma.combatAbility.create({ data: this.toData(body) }));
   }
 
-  @Post(':id/icon')
-  async uploadIcon(@Param('id', ParseIntPipe) id: number, @Body() body: { dataBase64?: string; mimeType?: string }) {
-    if (!body.dataBase64 || body.mimeType !== 'image/png') throw new Error('Ícone deve ser PNG');
-    const bytes = Buffer.from(body.dataBase64, 'base64');
-    if (bytes.length < 24 || bytes.readUInt32BE(16) !== 32 || bytes.readUInt32BE(20) !== 32) throw new Error('Ícone deve ter exatamente 32x32 pixels');
-    const icon = `data:image/png;base64,${body.dataBase64}`;
-    return this.toDefinition(await this.prisma.combatAbility.update({ where: { id }, data: { icon_path: icon } }));
-  }
 
   @Put(':id')
   async update(@Param('id', ParseIntPipe) id: number, @Body() body: Partial<CombatAbilityDefinition>) {
