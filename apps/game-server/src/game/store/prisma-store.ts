@@ -367,11 +367,12 @@ export class PrismaStore implements Store {
     };
   }
 
-  private toEquipmentData(equipment: CharacterEquipment): Record<string, Prisma.InputJsonValue | undefined> {
-    const out: Record<string, Prisma.InputJsonValue | undefined> = {};
+  private toEquipmentData(equipment: CharacterEquipment): Record<string, Prisma.InputJsonValue | null | undefined> {
+    const out: Record<string, Prisma.InputJsonValue | null | undefined> = {};
     for (const slot of ['helmet', 'armor', 'legs', 'boots', 'ring', 'necklace', 'relic', 'weapon', 'offhand', 'ammo'] as const) {
       const item = equipment[slot];
-      out[slot] = item ? (item as unknown as Prisma.InputJsonValue) : undefined;
+      // JSON fields need an explicit null to remove a previously equipped item.
+      out[slot] = item ? (item as unknown as Prisma.InputJsonValue) : null;
     }
     return out;
   }

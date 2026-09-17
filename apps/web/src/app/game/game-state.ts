@@ -137,6 +137,7 @@ export class GameState {
   /** Buffer de eventos para a cena Phaser que cria depois da conexão. */
   readonly sceneEvents$ = new Subject<WsEvent>();
   private buffer: WsEvent[] = [];
+  private lastSystemMessage: { text: string; at: number } | null = null;
 
   readonly loginResult$ = new Subject<boolean>();
   readonly characterCreated$ = new Subject<boolean>();
@@ -291,6 +292,10 @@ export class GameState {
           ),
         );
         this.addSystemMessage(`Hunt concluída em ${GameState.formatTime(r.clearTimeMs)}!`);
+        if (!r.loopEnabled) {
+          this.hunt.set(null);
+          this.target.set(null);
+        }
         break;
       }
       case SERVER_EVENTS.HUNT_CLEARED: {
@@ -313,6 +318,7 @@ export class GameState {
       }
       case SERVER_EVENTS.HUNT_RETURNED_TO_CITY: {
         this.hunt.set(null);
+        this.target.set(null);
         break;
       }
       case SERVER_EVENTS.PARTY_STATE: {
@@ -422,6 +428,9 @@ export class GameState {
   }
 
   addSystemMessage(text: string) {
+    const now = Date.now();
+    if (this.lastSystemMessage?.text === text && now - this.lastSystemMessage.at < 1000) return;
+    this.lastSystemMessage = { text, at: now };
     this.chat.update((list) => {
       const next = [...list, { channel: 'local', from: 'Sistema', text }];
       return next.length > 200 ? next.slice(next.length - 200) : next;

@@ -22,7 +22,7 @@ interface InvEntry {
 }
 
 interface EqEntry {
-  slot: string;
+  slot: keyof CharacterEquipment;
   label: string;
   stack: ItemStack | null;
 }
@@ -290,8 +290,11 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
     if (!item) return [itemId, 'Item sem definição carregada.'];
     const lines = [item.name, `${this.typeLabel(item)}${item.slot ? ` · ${this.slotLabel(item.slot)}` : ''}`];
     if (item.weight > 0) lines.push(`Peso: ${item.weight}`);
-    if (item.attack > 0) lines.push(`Attack: ${item.attack}`);
-    if (item.defense > 0) lines.push(`Defense: ${item.defense}`);
+    if (item.attack > 0) {
+      if (this.isArmorItem(item)) lines.push(`Armor: ${item.attack}`);
+      else if (this.isOffensiveItem(item)) lines.push(`Attack: ${item.attack}`);
+    }
+    if (item.defense > 0 && this.isDefensiveItem(item)) lines.push(`Defense: ${item.defense}`);
     if (item.weapon) {
       lines.push(`Weapon: ${item.weapon.weaponType}`);
       if (item.weapon.attackPower > 0) lines.push(`Attack Power: ${item.weapon.attackPower}`);
@@ -323,6 +326,18 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
     }
     if (item.stackable) lines.push('Stackable');
     return lines;
+  }
+
+  private isArmorItem(item: ItemDefinition): boolean {
+    return item.type === 'helmet' || item.type === 'armor' || item.type === 'legs' || item.type === 'boots';
+  }
+
+  private isOffensiveItem(item: ItemDefinition): boolean {
+    return item.type === 'weapon' || item.type === 'ammo' || !!item.weapon || !!item.ammo;
+  }
+
+  private isDefensiveItem(item: ItemDefinition): boolean {
+    return this.isArmorItem(item) || item.type === 'offhand' || item.type === 'ring' || item.type === 'necklace' || item.type === 'relic';
   }
 
   showItemTooltip(itemId: string, event: MouseEvent) {
@@ -493,7 +508,7 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   }
 
   currentHuntName(): string {
-    return this.state.hunt()?.huntName ?? this.state.hunts()[0]?.name ?? 'Selecione uma Hunt';
+    return this.state.hunt()?.huntName ?? 'Nenhuma hunt ativa';
   }
 
   waveCells(): Array<{ index: number; filled: boolean; boss: boolean }> {
@@ -558,7 +573,7 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   healSlotFor(characterId: string): { abilityId?: number; name: string; icon?: string } {
     const id = this.healingRotationFor(characterId)[0];
     const ability = this.state.abilities().find((a) => a.abilityId === id);
-    return { abilityId: ability?.abilityId, name: ability?.name ?? 'Cura', icon: ability?.icon };
+    return { abilityId: ability?.abilityId, name: ability?.name ?? 'Cura', icon: ability ? this.abilityIcon(ability) ?? undefined : undefined };
   }
 
   useHotbarSlot(slot: { abilityId?: number }) {
@@ -589,6 +604,8 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   }
 
   private draggedItem: { container: 'backpack' | 'loot'; index: number } | null = null;
+  private draggedEquipment: { characterId: string; slot: keyof CharacterEquipment } | null = null;
+  private inventoryActionAt = new Map<string, number>();
   onItemDragStart(event: DragEvent, container: 'backpack' | 'loot', index: number) {
     this.hideItemTooltip();
     this.draggedItem = { container, index };
@@ -600,12 +617,41 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
     this.hideItemTooltip();
     const source = this.draggedItem;
     this.draggedItem = null;
+    if (this.draggedEquipment) {
+      const equipment = this.draggedEquipment;
+      this.draggedEquipment = null;
+      if (container === 'backpack') this.onUnequipFor(equipment.characterId, equipment.slot);
+      return;
+    }
     if (!source || (source.container === container && source.index === index)) return;
     this.state.moveInventory(source.container, source.index, container, index);
   }
   onItemDragEnd() {
     this.hideItemTooltip();
     this.draggedItem = null;
+    this.draggedEquipment = null;
+  }
+
+  onEquipmentDragStart(event: DragEvent, characterId: string, slot: keyof CharacterEquipment) {
+    this.hideItemTooltip();
+    this.draggedEquipment = { characterId, slot };
+    this.draggedItem = null;
+    event.dataTransfer?.setData('text/plain', `equipment:${characterId}:${slot}`);
+    if (event.dataTransfer) event.dataTransfer.effectAllowed = 'move';
+  }
+
+  onEquipmentDrop(event: DragEvent, characterId: string, slot: keyof CharacterEquipment) {
+    event.preventDefault();
+    this.hideItemTooltip();
+    const source = this.draggedItem;
+    this.draggedItem = null;
+    this.draggedEquipment = null;
+    if (!source || source.container !== 'backpack') return;
+    const item = this.backpackPreview()[source.index]?.stack;
+    if (!item) return;
+    const target = this.itemCatalog.get(item.itemId);
+    if (target?.slot !== slot) return;
+    this.onEquipFor(characterId, source.index);
   }
 
   hotbarMemberName(characterId: string): string {
@@ -740,7 +786,14 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   }
   manageMember(): CharacterSummary | null {
     const id = this.manageMemberId();
-    return this.state.characters().find((m) => m.id === id) ?? this.state.characters()[0] ?? null;
+    const self = this.state.self();
+    return (self?.id === id ? self : null)
+      ?? this.state.party().members.find((member) => member.id === id)
+      ?? this.state.characters().find((character) => character.id === id)
+      ?? self
+      ?? this.state.party().members[0]
+      ?? this.state.characters()[0]
+      ?? null;
   }
   combatFor(memberId: string): PlayerCombatConfig {
     return this.state.combatFor(memberId);
@@ -757,8 +810,19 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
     const c = this.combatFor(memberId);
     this.state.setCombatConfig(memberId, c.targeting, c.movement, value ?? undefined);
   }
-  onEquipFor(memberId: string, index: number) { this.state.equip(index, memberId); }
-  onUnequipFor(memberId: string, slot: string) { this.state.unequip(slot, memberId); }
+  private allowInventoryAction(memberId: string, action: string): boolean {
+    const key = `${memberId}:${action}`;
+    const now = Date.now();
+    if (now - (this.inventoryActionAt.get(key) ?? 0) < 500) return false;
+    this.inventoryActionAt.set(key, now);
+    return true;
+  }
+  onEquipFor(memberId: string, index: number) {
+    if (this.allowInventoryAction(memberId, `equip:${index}`)) this.state.equip(index, memberId);
+  }
+  onUnequipFor(memberId: string, slot: string) {
+    if (this.allowInventoryAction(memberId, `unequip:${slot}`)) this.state.unequip(slot, memberId);
+  }
 
   // ---- rotação ----
   openRotationFor(characterId: string) { this.rotationCharacterId.set(characterId); this.helperSection.set('spells'); this.helperOpen.set(true); }
@@ -812,7 +876,9 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   }
   abilityIcon(ability: CombatAbilityDefinition): string | null {
     if (!ability.icon) return `assets/abilities/${ability.abilityId}.png`;
-    return /^(data:image\/|https?:\/\/)/.test(ability.icon) || ability.icon.startsWith('/') || ability.icon.startsWith('assets/') ? ability.icon : `assets/${ability.icon}`;
+    if (/^(data:image\/|https?:\/\/)/.test(ability.icon)) return ability.icon;
+    if (ability.icon.startsWith('/') || ability.icon.startsWith('assets/')) return ability.icon;
+    return ability.icon.startsWith('abilities/') ? `assets/${ability.icon}` : `assets/abilities/${ability.icon}`;
   }
   abilityMeta(ability: CombatAbilityDefinition): string {
     const level = ability.levelRequirement ?? 1;

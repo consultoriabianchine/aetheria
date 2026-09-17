@@ -66,6 +66,14 @@ export interface AdminItemInput {
   enabled?: boolean;
 }
 
+export interface AdminItemPage {
+  items: AdminItemDefinition[];
+  total: number;
+  page: number;
+  pageSize: number;
+  totalPages: number;
+}
+
 export interface CombatFormulaTestInput {
   archetype: CombatArchetype;
   level: number;
@@ -275,11 +283,15 @@ export class ApiService {
     return this.request('/admin/creatures', { headers: this.headers() });
   }
 
+  createCreature(input: { name: string; slug: string; type?: string }): Promise<{ creatureId: number }> {
+    return this.request('/admin/creatures', { method: 'POST', headers: this.headers(), body: JSON.stringify(input) });
+  }
+
   getCreature(id: number): Promise<CreatureDetail> {
     return this.request(`/admin/creatures/${id}`, { headers: this.headers() });
   }
 
-  uploadSpritesheet(id: number, file: File): Promise<{ ok: boolean; asset: CreatureAssetMeta }> {
+  uploadSpritesheet(id: number, file: File, dimensions?: { width: number; height: number }): Promise<{ ok: boolean; asset: CreatureAssetMeta }> {
     return file
       .arrayBuffer()
       .then((buf) => {
@@ -295,7 +307,7 @@ export class ApiService {
         this.request(`/admin/creatures/${id}/spritesheet`, {
           method: 'POST',
           headers: this.headers(),
-          body: JSON.stringify({ fileName: file.name, mimeType: file.type || 'image/png', dataBase64 }),
+          body: JSON.stringify({ fileName: file.name, mimeType: file.type || 'image/png', width: dimensions?.width ?? 0, height: dimensions?.height ?? 0, dataBase64 }),
         }),
       );
   }
@@ -458,6 +470,18 @@ export class ApiService {
 
   listItems(): Promise<AdminItemDefinition[]> {
     return this.request('/admin/items', { headers: this.headers() });
+  }
+
+  listItemsPage(params: { q?: string; type?: string; category?: string; page: number; pageSize: number }): Promise<AdminItemPage> {
+    const query = new URLSearchParams({ page: String(params.page), pageSize: String(params.pageSize) });
+    if (params.q) query.set('q', params.q);
+    if (params.type) query.set('type', params.type);
+    if (params.category) query.set('category', params.category);
+    return this.request(`/admin/items?${query}`, { headers: this.headers() });
+  }
+
+  listItemFilters(): Promise<{ types: string[]; categories: string[] }> {
+    return this.request('/admin/items/filters', { headers: this.headers() });
   }
 
   getItem(id: string): Promise<AdminItemDefinition | null> {

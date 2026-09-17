@@ -166,12 +166,6 @@
           <span>{{ state.hunt()?.isBoss ? 'BOSS WAVE' : 'Current Hunt' }}</span>
           <strong>{{ currentHuntName() }}</strong>
         </div>
-        <select class="hunt-select" [disabled]="state.inArena()" (change)="onHuntSelect($any($event.target).value)" aria-label="Selecionar Hunt">
-          <option value="">{{ state.inArena() ? state.hunt()?.huntName : 'Escolher Hunt' }}</option>
-          @for (h of state.hunts(); track h.id) {
-            <option [value]="h.id">{{ h.name }}</option>
-          }
-        </select>
         <div class="wave-strip" aria-label="Progresso da wave">
           @for (cell of waveCells(); track cell.index) {
             <span [class.filled]="cell.filled" [class.boss]="cell.boss">{{ cell.boss ? 'B' : '' }}</span>
@@ -182,7 +176,7 @@
             <button class="loop-button" type="button" [class.enabled]="run.loopEnabled" (click)="toggleLoop()">{{ run.loopEnabled ? 'Loop ON' : 'Loop OFF' }}</button>
             <button class="danger-button" type="button" (click)="stopHunt()">Parar</button>
           } @else {
-            <button class="loop-button" type="button" (click)="openHuntBrowser()">Hunt</button>
+            <button class="hunt-launch-button" type="button" (click)="openHuntBrowser()"><span>+</span><strong>Hunt</strong><small>Escolher destino</small></button>
           }
         </div>
       </header>
@@ -350,7 +344,7 @@
               <div class="manage-section-title">Equipamentos</div>
               <div class="equipment-board">
                 @for (entry of equipmentFor(member.id); track entry.slot) {
-                  <button class="equipment-tile eq-{{ entry.slot }}" type="button" [class.occupied]="!!entry.stack" (click)="entry.stack ? onUnequipFor(member.id, entry.slot) : null" (mouseenter)="entry.stack ? showItemTooltip(entry.stack.itemId, $event) : null" (mousemove)="entry.stack ? moveItemTooltip($event) : null" (mouseleave)="hideItemTooltip()">
+                  <button class="equipment-tile eq-{{ entry.slot }}" type="button" [class.occupied]="!!entry.stack" [attr.draggable]="entry.stack ? 'true' : 'false'" (click)="entry.stack ? onUnequipFor(member.id, entry.slot) : null" (dragstart)="entry.stack ? onEquipmentDragStart($event, member.id, entry.slot) : null" (dragover)="allowSlotDrop($event)" (drop)="onEquipmentDrop($event, member.id, entry.slot)" (dragend)="onItemDragEnd()" (mouseenter)="entry.stack ? showItemTooltip(entry.stack.itemId, $event) : null" (mousemove)="entry.stack ? moveItemTooltip($event) : null" (mouseleave)="hideItemTooltip()">
                     <span class="equipment-label">{{ entry.label }}</span>
                     @if (entry.stack; as st) { @if (iconFor(st.itemId); as src) { <img [src]="src" alt="" /> } @else { <span class="inv-ph">{{ nameFor(st.itemId).charAt(0) }}</span> } } @else { <span class="equipment-empty">+</span> }
                   </button>

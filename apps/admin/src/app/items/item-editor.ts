@@ -11,6 +11,10 @@ import { ApiService, type AdminItemDefinition, type AdminItemInput } from '../co
     .layout { display: grid; grid-template-columns: 330px minmax(420px, 1fr); gap: 16px; }
     .panel { background: #111926; border: 1px solid #263244; border-radius: 10px; padding: 14px; }
     .toolbar { display: flex; gap: 8px; margin-bottom: 12px; }
+    .filters { display: grid; gap: 8px; margin-bottom: 12px; }
+    .filters .filter-actions { display: flex; gap: 8px; }
+    .pagination { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 12px; color: #9aaabd; font-size: 12px; }
+    .pagination button:disabled { opacity: .45; cursor: not-allowed; }
     .item-list { display: flex; flex-direction: column; gap: 6px; max-height: 72vh; overflow: auto; }
      .item-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px; border: 1px solid #263244; border-radius: 7px; background: #172130; color: #d9e6f2; text-align: left; } .item-thumb, .item-preview { object-fit: contain; image-rendering: pixelated; background: #0a1017; border: 1px solid #34445c; } .item-thumb { width: 32px; height: 32px; flex: none; } .item-preview { width: 64px; height: 64px; } .image-preview { display: flex; align-items: center; gap: 12px; padding: 10px; border: 1px solid #263244; border-radius: 6px; background: #0d141d; } .image-preview p { margin: 0; color: #9aaabd; font-size: 12px; }
     .item-row.active { border-color: #7fd0a0; }
@@ -34,6 +38,14 @@ export class ItemEditor implements OnInit {
   readonly saving = signal(false);
   readonly shootTypes = signal<ShootTypeDefinition[]>([]);
   readonly effectTypes = signal<EffectTypeDefinition[]>([]);
+  readonly search = signal('');
+  readonly typeFilter = signal('');
+  readonly categoryFilter = signal('');
+  readonly categories = signal<string[]>([]);
+  readonly page = signal(1);
+  readonly pageSize = 50;
+  readonly total = signal(0);
+  readonly totalPages = signal(1);
 
   readonly itemTypes: ItemType[] = ['helmet', 'armor', 'legs', 'boots', 'weapon', 'ring', 'necklace', 'relic', 'offhand', 'ammo', 'consumable', 'loot', 'other'];
   readonly slots: EquipmentSlot[] = ['helmet', 'armor', 'legs', 'boots', 'ring', 'necklace', 'relic', 'weapon', 'offhand', 'ammo'];
@@ -59,18 +71,44 @@ export class ItemEditor implements OnInit {
   async load() {
     this.error.set(null);
     try {
-      const [items, shootTypes, effectTypes] = await Promise.all([
-        this.api.listItems(),
+      const [filters, shootTypes, effectTypes] = await Promise.all([
+        this.api.listItemFilters(),
         this.api.listShootTypes(),
         this.api.listEffectTypes(),
       ]);
-      this.items.set(items);
+      this.categories.set(['', ...filters.categories]);
       this.shootTypes.set(shootTypes);
       this.effectTypes.set(effectTypes);
-      if (!this.selectedId() && this.items()[0]) this.select(this.items()[0]);
+      await this.loadPage();
     } catch (e) {
       this.error.set((e as Error).message);
     }
+  }
+
+  async loadPage() {
+    this.error.set(null);
+    try {
+      const result = await this.api.listItemsPage({ q: this.search().trim(), type: this.typeFilter(), category: this.categoryFilter(), page: this.page(), pageSize: this.pageSize });
+      this.items.set(result.items);
+      this.total.set(result.total);
+      this.totalPages.set(result.totalPages);
+      if (this.selectedId() && !result.items.some((item) => item.id === this.selectedId())) this.selectedId.set(null);
+      if (!this.selectedId() && result.items[0]) this.select(result.items[0]);
+    } catch (e) {
+      this.error.set((e as Error).message);
+    }
+  }
+
+  applyFilters() {
+    this.page.set(1);
+    void this.loadPage();
+  }
+
+  changePage(delta: number) {
+    const next = this.page() + delta;
+    if (next < 1 || next > this.totalPages()) return;
+    this.page.set(next);
+    void this.loadPage();
   }
 
   select(item: AdminItemDefinition) {

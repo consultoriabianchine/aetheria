@@ -222,14 +222,14 @@ export class CreatureEditor implements OnInit, AfterViewInit, OnDestroy {
   }
 
   private loadImage(url: string): Promise<void> {
-    return new Promise((resolve) => {
+    return new Promise((resolve, reject) => {
       const img = new Image();
       img.crossOrigin = 'anonymous';
       img.onload = () => {
         this.sheetImage = img;
         resolve();
       };
-      img.onerror = () => resolve();
+      img.onerror = () => reject(new Error('Não foi possível carregar a spritesheet importada.'));
       img.src = url;
     });
   }
@@ -241,7 +241,8 @@ export class CreatureEditor implements OnInit, AfterViewInit, OnDestroy {
     this.error.set(null);
     this.saving.set(true);
     try {
-      const res = await this.api.uploadSpritesheet(this.id, file);
+      const dimensions = await this.fileDimensions(file);
+      const res = await this.api.uploadSpritesheet(this.id, file, dimensions);
       const meta = res.asset;
       await this.reload();
       // define grade a partir das dimensões detectadas (múltiplos do sprite size)
@@ -255,6 +256,17 @@ export class CreatureEditor implements OnInit, AfterViewInit, OnDestroy {
       input.value = '';
       this.redraw();
     }
+  }
+
+  private fileDimensions(file: File): Promise<{ width: number; height: number }> {
+    return new Promise((resolve, reject) => {
+      const url = URL.createObjectURL(file);
+      const image = new Image();
+      image.onload = () => { URL.revokeObjectURL(url); resolve({ width: image.naturalWidth, height: image.naturalHeight }); };
+      image.onerror = () => { URL.revokeObjectURL(url); reject(new Error('Arquivo de imagem inválido.'));
+      };
+      image.src = url;
+    });
   }
 
   // ------------------------------------------------------------------ grid

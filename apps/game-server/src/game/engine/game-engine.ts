@@ -100,6 +100,8 @@ export class GameEngine implements OnModuleDestroy {
   private players = new Map<string, GamePlayer>();
   private playerBySocket = new Map<string, string>();
   private accountStorage = new Map<string, AccountStorageState>();
+  private inventoryMutationLocks = new Map<string, Promise<void>>();
+  private recentInventoryErrors = new Map<string, number>();
   private npcs = new Map<string, NpcEntity>();
   private groundItems = new Map<string, GroundItem>();
   private tokens = new Map<string, { accountId: string; username: string; exp: number }>();
@@ -1029,6 +1031,14 @@ export class GameEngine implements OnModuleDestroy {
       this.emitTo(socketId, 'ability.castFailed', { abilityId, reason: 'INVALID_TARGET' });
       return false;
     }
+    if (ability.targetMode === 'directional') {
+      const tiles = this.directionalTiles(player.position, direction ?? player.facing, ability.rangeTiles, ability.areaConfig);
+      if (this.enemiesInTiles(player, tiles).length === 0) {
+        this.activeAbilityCasts.delete(castKey);
+        this.emitTo(socketId, 'ability.castFailed', { abilityId, reason: 'NO_TARGETS_IN_AREA' });
+        return false;
+      }
+    }
     if (ability.cooldownGroup === 'healing') this.healingGroupReadyAt.set(player.id, now + 1000);
     else this.attackGroupReadyAt.set(player.id, now + 2000);
     player.mana -= ability.manaCost ?? 0;
@@ -1162,10 +1172,16 @@ export class GameEngine implements OnModuleDestroy {
   async handleEquip(socketId: string, slotIndex: number, characterId?: string) {
     const leader = this.playerForSocket(socketId);
     if (!leader) return;
+    return this.withInventoryMutationLock(leader.accountId, () => this.handleEquipLocked(socketId, slotIndex, characterId));
+  }
+
+  private async handleEquipLocked(socketId: string, slotIndex: number, characterId?: string) {
+    const leader = this.playerForSocket(socketId);
+    if (!leader) return;
     const targetId = characterId ?? leader.id;
     const storage = this.storageFor(leader);
     const stack = storage.inventory[slotIndex];
-    if (!stack) return;
+    if (!Number.isInteger(slotIndex) || slotIndex < 0 || slotIndex >= storage.inventory.length || !stack) return;
     const def = getItemDef(stack.itemId);
     if (!def || !def.slot) return;
     const slot = def.slot;
@@ -1173,15 +1189,15 @@ export class GameEngine implements OnModuleDestroy {
     if (live && live.accountId !== leader.accountId) return;
     if (live) {
       if (live.equipment[slot]) {
-        this.emitTo(socketId, 'error', { message: `Já existe item equipado em ${slot}.` });
+          this.emitInventoryError(socketId, `Já existe item equipado em ${slot}.`);
         return;
       }
-      storage.inventory[slotIndex] = null;
+      storage.inventory[slotIndex] = stack.quantity > 1 ? { ...stack, quantity: stack.quantity - 1 } : null;
       live.equipment[slot] = { itemId: stack.itemId, quantity: 1 };
       if (slot === 'weapon' && live.id === leader.id) this.resumeWeaponElementOverride(live);
       live.recomputeSpeed(getItemDef);
       live.recomputeVitals(getItemDef);
-      await this.persistPlayer(live);
+      await this.persistPlayer(live, true);
       await this.store.saveAccountStorage(storage.toStored());
       if (live.id === leader.id) {
         this.emitInventory(leader);
@@ -1191,10 +1207,10 @@ export class GameEngine implements OnModuleDestroy {
       const stored = await this.store.findCharacterById(targetId);
       if (!stored || stored.accountId !== leader.accountId) return;
       if (stored.equipment[slot]) {
-        this.emitTo(socketId, 'error', { message: `Já existe item equipado em ${slot}.` });
+          this.emitInventoryError(socketId, `Já existe item equipado em ${slot}.`);
         return;
       }
-      storage.inventory[slotIndex] = null;
+      storage.inventory[slotIndex] = stack.quantity > 1 ? { ...stack, quantity: stack.quantity - 1 } : null;
       stored.equipment[slot] = { itemId: stack.itemId, quantity: 1 };
       await this.store.saveCharacter(stored);
       await this.store.saveAccountStorage(storage.toStored());
@@ -1207,23 +1223,31 @@ export class GameEngine implements OnModuleDestroy {
   async handleUnequip(socketId: string, slot: string, characterId?: string) {
     const leader = this.playerForSocket(socketId);
     if (!leader) return;
-    const targetId = characterId && characterId !== leader.id && this.partyMemberIds(leader).includes(characterId) ? characterId : leader.id;
+    return this.withInventoryMutationLock(leader.accountId, () => this.handleUnequipLocked(socketId, slot, characterId));
+  }
+
+  private async handleUnequipLocked(socketId: string, slot: string, characterId?: string) {
+    const leader = this.playerForSocket(socketId);
+    if (!leader) return;
+    // O modal de inventário permite gerenciar qualquer personagem da conta,
+    // não apenas os membros atualmente convocados para a party.
+    const targetId = characterId ?? leader.id;
     const storage = this.storageFor(leader);
-    const idx = storage.inventory.findIndex((s) => s === null);
-    if (idx === -1) {
-      this.emitTo(socketId, 'error', { message: 'Inventário cheio.' });
-      return;
-    }
+    const validSlots: (keyof CharacterEquipment)[] = ['helmet', 'armor', 'legs', 'boots', 'ring', 'necklace', 'relic', 'weapon', 'offhand', 'ammo'];
+    if (!validSlots.includes(slot as keyof CharacterEquipment)) return;
     const live = this.players.get(targetId);
     if (live) {
       const stack = live.equipment[slot as keyof CharacterEquipment];
       if (!stack) return;
+      if (!this.addToInventory(storage, stack.itemId, stack.quantity)) {
+        this.emitTo(socketId, 'error', { message: 'Inventário cheio.' });
+        return;
+      }
       if (slot === 'weapon' && live.id === leader.id) this.pauseWeaponElementOverride(live);
       live.equipment[slot as keyof CharacterEquipment] = undefined;
-      storage.inventory[idx] = { itemId: stack.itemId, quantity: 1 };
       live.recomputeSpeed(getItemDef);
       live.recomputeVitals(getItemDef);
-      await this.persistPlayer(live);
+      await this.persistPlayer(live, true);
       await this.store.saveAccountStorage(storage.toStored());
       if (live.id === leader.id) {
         this.emitInventory(leader);
@@ -1234,14 +1258,40 @@ export class GameEngine implements OnModuleDestroy {
       if (!stored || stored.accountId !== leader.accountId) return;
       const stack = stored.equipment[slot as keyof CharacterEquipment];
       if (!stack) return;
+      if (!this.addToInventory(storage, stack.itemId, stack.quantity)) {
+        this.emitTo(socketId, 'error', { message: 'Inventário cheio.' });
+        return;
+      }
       stored.equipment[slot as keyof CharacterEquipment] = undefined;
-      storage.inventory[idx] = { itemId: stack.itemId, quantity: 1 };
       await this.store.saveCharacter(stored);
       await this.store.saveAccountStorage(storage.toStored());
     }
     this.emitInventory(leader);
     await this.emitPartyState(leader);
     await this.emitCharacters(leader);
+  }
+
+  private async withInventoryMutationLock<T>(accountId: string, action: () => Promise<T>): Promise<T> {
+    const previous = this.inventoryMutationLocks.get(accountId) ?? Promise.resolve();
+    let release!: () => void;
+    const current = new Promise<void>((resolve) => { release = resolve; });
+    const queued = previous.then(() => current);
+    this.inventoryMutationLocks.set(accountId, queued);
+    await previous;
+    try {
+      return await action();
+    } finally {
+      release();
+      if (this.inventoryMutationLocks.get(accountId) === queued) this.inventoryMutationLocks.delete(accountId);
+    }
+  }
+
+  private emitInventoryError(socketId: string, message: string) {
+    const key = `${socketId}:${message}`;
+    const now = Date.now();
+    if (now - (this.recentInventoryErrors.get(key) ?? 0) < 750) return;
+    this.recentInventoryErrors.set(key, now);
+    this.emitTo(socketId, 'error', { message });
   }
 
   async handleInventoryMove(socketId: string, from: 'backpack' | 'loot', fromIndex: number, to: 'backpack' | 'loot', toIndex: number) {
@@ -2639,9 +2689,9 @@ export class GameEngine implements OnModuleDestroy {
     }
   }
 
-  private async persistPlayer(player: GamePlayer) {
+  private async persistPlayer(player: GamePlayer, force = false) {
     const now = Date.now();
-    if (now - player.lastSavedAt < 5000) return;
+    if (!force && now - player.lastSavedAt < 5000) return;
     player.lastSavedAt = now;
     try {
       await this.store.saveCharacter(player.toStored());

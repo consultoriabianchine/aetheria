@@ -39,7 +39,10 @@ export class AbilityList implements OnInit {
   newAbility() { this.selected.set({ abilityId: 0, slug: '', name: '', ownerType: 'both', playerClass: 'all', category: 'attack', targetMode: 'single_enemy', powerSource: 'fixed', cooldownMs: 2000, cooldownGroup: 'attack', rangeTiles: 1, allowedParameters: [], enabled: true, createdAt: new Date(), updatedAt: new Date() }); }
   edit(ability: CombatAbilityDefinition) { this.selected.set({ ...ability, icon: ability.icon?.startsWith('data:') ? `abilities/${ability.abilityId}.png` : ability.icon || `abilities/${ability.abilityId}.png` }); }
   iconSource(ability: CombatAbilityDefinition): string {
-    return ability.icon || `http://localhost:4200/assets/abilities/${ability.abilityId}.png`;
+    const icon = ability.icon || `abilities/${ability.abilityId}.png`;
+    if (/^(data:image\/|https?:\/\/)/.test(icon)) return icon;
+    if (icon.startsWith('/')) return icon;
+    return icon.startsWith('assets/') ? icon : icon.startsWith('abilities/') ? `assets/${icon}` : `assets/abilities/${icon}`;
   }
   areaConfigDraft(): AbilityAreaConfig { return this.selected()?.areaConfig ?? { shape: 'square', width: 1, height: 1 }; }
   patchAreaConfig(patch: Partial<AbilityAreaConfig>) { const draft = this.selected(); if (draft) this.selected.set({ ...draft, areaConfig: { ...this.areaConfigDraft(), ...patch } }); }

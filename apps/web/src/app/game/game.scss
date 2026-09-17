@@ -924,7 +924,7 @@ button {
 .hunt-header {
   min-height: 52px;
   display: grid;
-  grid-template-columns: minmax(150px, 1fr) 180px auto auto;
+  grid-template-columns: minmax(150px, 1fr) auto auto;
   align-items: center;
   gap: 10px;
   padding: 8px 10px;
@@ -937,16 +937,6 @@ button {
 .hunt-title strong {
   display: block;
   font-size: 15px;
-}
-
-.hunt-select {
-  min-width: 0;
-  height: 32px;
-  border: 1px solid rgba(215, 185, 79, 0.22);
-  border-radius: 6px;
-  background: #111418;
-  color: #e2e9ef;
-  padding: 0 8px;
 }
 
 .combat-select {
@@ -1018,6 +1008,50 @@ button {
   height: 32px;
   padding: 0 10px;
   font-size: 11px;
+}
+
+.hunt-launch-button {
+  min-width: 112px;
+  min-height: 42px;
+  display: grid;
+  grid-template-columns: 25px 1fr;
+  grid-template-rows: 1fr 1fr;
+  column-gap: 7px;
+  align-items: center;
+  padding: 5px 11px !important;
+  border: 1px solid rgba(215, 185, 79, 0.62) !important;
+  background: linear-gradient(145deg, rgba(215, 185, 79, 0.2), rgba(31, 35, 39, 0.96)) !important;
+  color: #f5df9a;
+  box-shadow: 0 0 18px rgba(215, 185, 79, 0.1);
+}
+
+.hunt-launch-button:hover {
+  border-color: #f0d56d !important;
+  box-shadow: 0 0 22px rgba(215, 185, 79, 0.24);
+}
+
+.hunt-launch-button span {
+  grid-row: 1 / 3;
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border: 1px solid rgba(215, 185, 79, 0.6);
+  border-radius: 50%;
+  font-size: 18px;
+}
+
+.hunt-launch-button strong {
+  align-self: end;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hunt-launch-button small {
+  align-self: start;
+  color: #a8a28e;
+  font-size: 9px;
 }
 
 .loop-button.enabled {
@@ -2068,10 +2102,6 @@ button {
 
   .hunt-header {
     grid-template-columns: 1fr;
-  }
-
-  .hunt-select {
-    width: 100%;
   }
 
   .hotbar-row-slots .hotbar-slot {

@@ -7,7 +7,19 @@
   <section class="panel">
     <div class="toolbar">
       <button class="primary" (click)="createNew()">+ Novo item</button>
-      <button (click)="load()">Atualizar</button>
+      <button (click)="loadPage()">Atualizar</button>
+    </div>
+    <div class="filters">
+      <input [value]="search()" (input)="search.set($any($event.target).value)" (keyup.enter)="applyFilters()" placeholder="Buscar por nome ou ID..." />
+      <select [value]="typeFilter()" (change)="typeFilter.set($any($event.target).value); applyFilters()">
+        <option value="">Todos os tipos</option>
+        @for (type of itemTypes; track type) { <option [value]="type">{{ type }}</option> }
+      </select>
+      <select [value]="categoryFilter()" (change)="categoryFilter.set($any($event.target).value); applyFilters()">
+        <option value="">Todas as categorias</option>
+        @for (category of categories().slice(1); track category) { <option [value]="category">{{ category }}</option> }
+      </select>
+      <div class="filter-actions"><button class="primary" (click)="applyFilters()">Buscar</button><span>{{ total() }} itens</span></div>
     </div>
     <div class="item-list">
       @for (item of items(); track item.id) {
@@ -17,6 +29,7 @@
         </button>
       }
     </div>
+    <div class="pagination"><button (click)="changePage(-1)" [disabled]="page() <= 1">Anterior</button><span>Página {{ page() }} de {{ totalPages() }}</span><button (click)="changePage(1)" [disabled]="page() >= totalPages()">Próxima</button></div>
   </section>
 
   <section class="panel">
@@ -36,7 +49,11 @@
           @for (slot of slots; track slot) { <option [value]="slot">{{ slot }}</option> }
         </select>
       </label>
-      <label>Categoria <input [value]="draft().category ?? ''" (input)="patch({ category: $any($event.target).value })" /></label>
+      <label>Categoria
+        <select [value]="draft().category ?? ''" (change)="patch({ category: $any($event.target).value })">
+          @for (category of categories().slice(1); track category) { <option [value]="category">{{ category }}</option> }
+        </select>
+      </label>
       <label>Imagem/path
         <input [value]="draft().imagePath ?? ''" placeholder="Iron_Sword.gif ou https://.../item.png" (input)="patch({ imagePath: $any($event.target).value })" />
       </label>

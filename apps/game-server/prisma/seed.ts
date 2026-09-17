@@ -541,9 +541,10 @@ function estimateSellValue(item: { id: string; type: string; slot: string | null
 async function seedLootItemDefinitions(items: SourceItem[]) {
   const sourceById = new Map(items.map((item) => [item.id, item]));
   const lootById = new Map<string, string>();
+  const fallbackNames: Record<string, string> = { waterskin: 'Waterskin' };
   for (const creature of CREATURE_SEED) {
     for (const loot of creature.loot) {
-      lootById.set(loot.itemId, sourceById.get(loot.itemId)?.name ?? loot.itemId);
+      lootById.set(loot.itemId, sourceById.get(loot.itemId)?.name ?? fallbackNames[loot.itemId] ?? loot.itemId);
     }
   }
 
@@ -588,6 +589,7 @@ async function seed() {
   };
   const sourceById = new Map(items.items.map((i) => [i.id, i]));
   const itemNameById = new Map(items.items.map((i) => [i.id, i.name]));
+  itemNameById.set('waterskin', 'Waterskin');
 
   for (const item of INITIAL_ITEM_DEFINITIONS) {
     const existing = await prisma.itemDefinition.findUnique({ where: { id: item.id }, select: { imagePath: true, sellValue: true } });
@@ -674,6 +676,7 @@ async function seed() {
       game_can_chase: definition.canChase,
       game_can_flee: definition.canFlee,
       game_return_to_spawn: definition.returnToSpawn,
+      damage_affinities: definition.damageAffinities ?? {},
     };
     await prisma.creatureDefinition.upsert({
       where: { slug: def.slug },

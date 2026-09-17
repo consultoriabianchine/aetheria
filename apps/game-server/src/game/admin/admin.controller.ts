@@ -43,6 +43,23 @@ export class AdminController {
     return this.registry.listCreatures();
   }
 
+  @Post()
+  async create(@Body() body: { name?: string; slug?: string; type?: string }) {
+    const name = body.name?.trim();
+    const slug = body.slug?.trim().toLowerCase();
+    if (!name || !slug) throw new BadRequestException('Nome e slug são obrigatórios.');
+    if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)) throw new BadRequestException('Slug inválido. Use apenas letras, números e hífens.');
+    try {
+      const creature = await this.prisma.creatureDefinition.create({ data: { name, slug, type: body.type?.trim() || 'humanoid' } });
+      this.registry.invalidate(creature.creature_id);
+      await this.audit('CREATURE_CREATED', creature.creature_id, null, { name, slug, type: creature.type });
+      return { creatureId: creature.creature_id };
+    } catch (error) {
+      if (error instanceof Prisma.PrismaClientKnownRequestError && error.code === 'P2002') throw new BadRequestException('Slug já utilizado.');
+      throw error;
+    }
+  }
+
   @Get(':id')
   async detail(@Param('id', ParseIntPipe) id: number) {
     const summary = await this.registry.findCreature(id);

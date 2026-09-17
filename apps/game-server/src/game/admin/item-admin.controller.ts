@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Param, Post, Put, UseGuards } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post, Put, Query, UseGuards } from '@nestjs/common';
 import { Prisma } from '@aetheria/database';
 import type { AmmoType, DamageType, EquipmentSlot, ItemType, ItemVisualEffects, WeaponType } from '@aetheria/types';
 import { PrismaService } from '../../prisma/prisma.service';
@@ -51,13 +51,31 @@ export class ItemAdminController {
   constructor(private readonly prisma: PrismaService) {}
 
   @Get()
-  async list() {
-    const rows = await this.prisma.itemDefinition.findMany({ orderBy: { name: 'asc' } });
+  async list(@Query('q') q?: string, @Query('type') type?: ItemType, @Query('category') category?: string, @Query('page') pageParam?: string, @Query('pageSize') pageSizeParam?: string) {
+    const paginated = pageParam !== undefined || pageSizeParam !== undefined || q !== undefined || type !== undefined || category !== undefined;
+    const page = Math.max(1, Number.parseInt(pageParam ?? '1', 10) || 1);
+    const pageSize = Math.min(100, Math.max(10, Number.parseInt(pageSizeParam ?? '50', 10) || 50));
+    const where = {
+      ...(q?.trim() ? { OR: [{ name: { contains: q.trim(), mode: 'insensitive' as const } }, { id: { contains: q.trim(), mode: 'insensitive' as const } }] } : {}),
+      ...(type ? { type } : {}),
+      ...(category ? { category } : {}),
+    };
+    const [rows, total] = await Promise.all([
+      this.prisma.itemDefinition.findMany({ where, orderBy: { name: 'asc' }, ...(paginated ? { skip: (page - 1) * pageSize, take: pageSize } : {}) }),
+      paginated ? this.prisma.itemDefinition.count({ where }) : Promise.resolve(0),
+    ]);
     const items = rows.map((row) => ({ ...rowToItemDefinition(row as never), enabled: row.enabled, description: row.description, specialModifiers: row.specialModifiers }));
-    if (!items.some((item) => item.id === 'gold')) {
+    if (!paginated && !items.some((item) => item.id === 'gold')) {
       items.push({ id: 'gold', name: 'Moedas de Ouro', type: 'loot', weight: 0.1, stackable: true, image: '', category: 'Moeda', attack: 0, defense: 0, sellValue: 1, description: 'Moeda usada como recompensa de criaturas.', specialModifiers: null, enabled: true });
     }
-    return items.sort((a, b) => a.name.localeCompare(b.name));
+    const sorted = items.sort((a, b) => a.name.localeCompare(b.name));
+    return paginated ? { items: sorted, total, page, pageSize, totalPages: Math.max(1, Math.ceil(total / pageSize)) } : sorted;
+  }
+
+  @Get('filters')
+  async filters() {
+    const rows = await this.prisma.itemDefinition.findMany({ select: { type: true, category: true }, orderBy: [{ category: 'asc' }, { type: 'asc' }] });
+    return { types: [...new Set(rows.map((row) => row.type))].sort(), categories: [...new Set(rows.map((row) => row.category).filter(Boolean))].sort((a, b) => a.localeCompare(b)) };
   }
 
   @Get(':id')
