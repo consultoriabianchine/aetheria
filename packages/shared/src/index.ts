@@ -17,6 +17,8 @@ export const DIRECTION_DELTAS: Record<Direction, { dx: number; dy: number }> = {
   northwest: { dx: -1, dy: -1 },
 };
 
+export * from './outfit-recolor';
+
 export function positionKey(p: Position): string {
   return `${p.x},${p.y},${p.z}`;
 }

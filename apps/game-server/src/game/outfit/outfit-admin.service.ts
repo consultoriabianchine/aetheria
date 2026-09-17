@@ -1,6 +1,6 @@
 import { BadRequestException, Injectable, NotFoundException } from '@nestjs/common';
 import { createHash } from 'node:crypto';
-import type { AppearanceColors, OutfitBodyType, OutfitCategory, OutfitDefinition } from '@aetheria/types';
+import { creatureAnimationConfigSchema, type AppearanceColors, type OutfitBodyType, type OutfitCategory, type OutfitDefinition } from '@aetheria/types';
 import type { Prisma } from '@aetheria/database';
 import { PrismaService } from '../../prisma/prisma.service';
 import { OutfitRegistry } from './outfit-registry.service';
@@ -66,6 +66,15 @@ export class OutfitAdminService {
     if (!input.spriteAssetId) throw new BadRequestException('spriteAssetId é obrigatório');
     if (!input.animationSetId) throw new BadRequestException('animationSetId é obrigatório');
     const slug = input.slug?.trim() || input.name.toLowerCase().replace(/\s+/g, '-');
+    if (input.colorMaskAssetId) {
+      const [sprite, mask] = await Promise.all([
+        this.prisma.spriteAsset.findUnique({ where: { sprite_asset_id: input.spriteAssetId } }),
+        this.prisma.spriteAsset.findUnique({ where: { sprite_asset_id: input.colorMaskAssetId } }),
+      ]);
+      if (!sprite) throw new BadRequestException('spriteAssetId não existe');
+      if (!mask) throw new BadRequestException('colorMaskAssetId não existe');
+      if (sprite.image_width !== mask.image_width || sprite.image_height !== mask.image_height) throw new BadRequestException('Sprite e máscara precisam ter as mesmas dimensões');
+    }
 
     const data = {
       slug,
@@ -133,21 +142,38 @@ export class OutfitAdminService {
 
   async saveAnimationSet(input: { id?: number; name: string; spriteAssetId?: number; config: Record<string, unknown> }) {
     if (!input.name?.trim()) throw new BadRequestException('Nome é obrigatório');
-    if (!input.config || !Array.isArray((input.config as { animations?: unknown[] }).animations)) {
-      throw new BadRequestException('config.animations é obrigatório');
+    const parsed = creatureAnimationConfigSchema.safeParse(input.config);
+    if (!parsed.success) throw new BadRequestException(`Configuração inválida: ${parsed.error.issues.map((issue) => issue.path.join('.') + ' ' + issue.message).join('; ')}`);
+    const config = parsed.data;
+    const totalFrames = config.sheetColumns * config.sheetRows;
+    for (const sequence of config.animations) {
+      for (const frame of sequence.frames) {
+        if (frame.frameIndex >= totalFrames) throw new BadRequestException(`Frame visual ${frame.frameIndex} está fora do atlas`);
+        const maskFrameIndex = 'maskFrameIndex' in frame ? frame.maskFrameIndex : undefined;
+        if (maskFrameIndex !== undefined) {
+          if (maskFrameIndex >= totalFrames) throw new BadRequestException(`Máscara ${maskFrameIndex} está fora do atlas`);
+          if (maskFrameIndex === frame.frameIndex) throw new BadRequestException(`Frame ${frame.frameIndex} não pode usar a si próprio como máscara`);
+        }
+      }
+    }
+    if (config.supportsColorization && config.colorMaskMode === 'paired_frames') {
+      const missing = config.animations.flatMap((sequence) => sequence.frames
+        .filter((frame) => !('maskFrameIndex' in frame) || frame.maskFrameIndex === undefined)
+        .map((frame) => `${sequence.animation}.${sequence.direction}: ${frame.frameIndex}`));
+      if (missing.length > 0) throw new BadRequestException(`${missing.length} frame(s) visual(is) sem máscara: ${missing.slice(0, 12).join(', ')}${missing.length > 12 ? ', ...' : ''}`);
     }
     if (input.id) {
       const existing = await this.prisma.animationSet.findUnique({ where: { animation_set_id: input.id } });
       if (!existing) throw new NotFoundException('AnimationSet não encontrado');
       await this.prisma.animationSet.update({
         where: { animation_set_id: input.id },
-        data: { name: input.name, sprite_asset_id: input.spriteAssetId ?? null, config: input.config as unknown as Prisma.InputJsonValue, version: existing.version + 1 },
+        data: { name: input.name, sprite_asset_id: input.spriteAssetId ?? null, config: config as unknown as Prisma.InputJsonValue, version: existing.version + 1 },
       });
       await this.registry.invalidate();
       return { ok: true, animationSetId: input.id };
     }
     const created = await this.prisma.animationSet.create({
-      data: { name: input.name, sprite_asset_id: input.spriteAssetId ?? null, config: input.config as unknown as Prisma.InputJsonValue },
+      data: { name: input.name, sprite_asset_id: input.spriteAssetId ?? null, config: config as unknown as Prisma.InputJsonValue },
     });
     await this.registry.invalidate();
     return { ok: true, animationSetId: created.animation_set_id };

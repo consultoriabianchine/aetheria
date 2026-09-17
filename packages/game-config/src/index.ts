@@ -46,6 +46,7 @@ export const COMBAT_TEXT_THEME: Record<DamageType | 'healing', string> = {
 };
 
 export const COMBAT_TEXT_XP_COLOR = '#FFFFFF';
+export const COMBAT_TEXT_MANA_COLOR = '#C084FC';
 
 export const COMBAT_TEXT_ANIMATION = {
   normalDuration: 800,

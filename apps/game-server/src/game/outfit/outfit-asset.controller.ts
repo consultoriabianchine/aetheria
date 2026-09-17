@@ -13,12 +13,13 @@ export class OutfitAssetController {
   ): Promise<StreamableFile> {
     const asset = this.registry.getOutfitAsset(outfitId);
     if (!asset) throw new NotFoundException('Outfit não encontrado');
+    const sprite = asset.animation.spriteAssetId ? this.registry.getSpriteAsset(asset.animation.spriteAssetId) ?? asset.sprite : asset.sprite;
     res.set({
-      'Content-Type': asset.sprite.mimeType,
+      'Content-Type': sprite.mimeType,
       'Cache-Control': 'public, max-age=3600',
-      ETag: `"${asset.sprite.checksum}"`,
+      ETag: `"${sprite.checksum}"`,
     });
-    return new StreamableFile(asset.sprite.data, { type: asset.sprite.mimeType });
+    return new StreamableFile(sprite.data, { type: sprite.mimeType });
   }
 
   @Get(':outfitId/animation')
@@ -29,7 +30,8 @@ export class OutfitAssetController {
     if (!outfit || !asset) throw new NotFoundException('Outfit não encontrado');
     return {
       outfitId,
-      spriteAssetId: outfit.spriteAssetId,
+      spriteAssetId: asset.animation.spriteAssetId ?? outfit.spriteAssetId,
+      animationSetId: outfit.animationSetId,
       supportsColors: outfit.supportsColors,
       supportsAddons: outfit.supportsAddons,
       colorMaskAssetId: outfit.colorMaskAssetId,

@@ -68,6 +68,7 @@ export class MapEditor implements OnInit, AfterViewInit, OnDestroy {
   readonly gridVisible = signal(true);
   readonly collisionVisible = signal(false);
   readonly selectedTileId = signal<number | null>(null);
+  readonly selectedTileIds = signal<number[]>([]);
   readonly mode = signal<EditorMode>('tiles');
   readonly entityType = signal<MapEntityType>('player_spawn');
 
@@ -162,6 +163,11 @@ export class MapEditor implements OnInit, AfterViewInit, OnDestroy {
     try {
       const sets = await this.api.listTilesets();
       this.tilesets.set(sets);
+      const details = await Promise.all(sets.map((set) => this.api.getTileset(set.tilesetId)));
+      for (const detail of details) {
+        for (const tile of detail.tiles) this.tileDefsById.set(tile.tileId, tile);
+        await this.ensureTilesetImage(detail.tilesetId);
+      }
       if (sets.length > 0) await this.selectTileset(sets[0].tilesetId);
     } catch (e) {
       this.error.set((e as Error).message);
@@ -175,6 +181,7 @@ export class MapEditor implements OnInit, AfterViewInit, OnDestroy {
       this.tileCatalog.set(detail.tiles);
       for (const t of detail.tiles) this.tileDefsById.set(t.tileId, t);
       await this.ensureTilesetImage(tilesetId);
+      this.redraw();
     } catch (e) {
       this.error.set((e as Error).message);
     }
@@ -217,8 +224,19 @@ export class MapEditor implements OnInit, AfterViewInit, OnDestroy {
     return this.recent().map((id) => this.tileDefsById.get(id)).filter((t): t is TileDefinition => !!t);
   }
 
-  selectTile(tileId: number) {
-    this.selectedTileId.set(tileId);
+  selectTile(tileId: number, multi = false) {
+    const next = multi ? [...this.selectedTileIds()] : [];
+    const index = next.indexOf(tileId);
+    if (multi && index >= 0) next.splice(index, 1);
+    else next.push(tileId);
+    this.selectedTileIds.set(next);
+    this.selectedTileId.set(next.length ? next[next.length - 1] : null);
+    if (!next.length) return;
+    const layerType = this.tileDefsById.get(tileId)?.layerType;
+    if (layerType === 'ground_detail') this.activeLayer.set('groundDetail');
+    else if (layerType === 'object') this.activeLayer.set('objects');
+    else if (layerType === 'object_above') this.activeLayer.set('objectsAbove');
+    else if (layerType === 'ground') this.activeLayer.set('ground');
     this.tool.set('pencil');
     this.mode.set('tiles');
     const recent = [tileId, ...this.recent().filter((id) => id !== tileId)].slice(0, 12);
@@ -434,8 +452,7 @@ export class MapEditor implements OnInit, AfterViewInit, OnDestroy {
     } else if (this.tool() === 'pencil') {
       const tid = this.selectedTileId();
       if (tid == null) return;
-      const cells = this.brushCells(p.x, p.y);
-      this.paintCells(cells, tid);
+      for (const [x, y] of this.brushCells(p.x, p.y)) this.paintPattern(x, y);
     }
     this.redraw();
   }
@@ -460,12 +477,36 @@ export class MapEditor implements OnInit, AfterViewInit, OnDestroy {
   }
 
   private paintCells(cells: [number, number][], tileId: number | null) {
-    const layer = this.layers[this.activeLayer()];
+    const layerId = tileId == null ? this.activeLayer() : this.layerForTile(tileId);
+    const layer = this.layers[layerId];
     for (const [x, y] of cells) {
       if (x < 0 || y < 0 || x >= this.width() || y >= this.height()) continue;
       layer[tileIndex(x, y, this.width())] = tileId;
     }
     this.dirty.set(true);
+  }
+
+  private paintPattern(anchorX: number, anchorY: number) {
+    const tiles = this.selectedTileIds().length ? this.selectedTileIds() : (this.selectedTileId() == null ? [] : [this.selectedTileId()!]);
+    if (tiles.length <= 1) {
+      if (tiles[0] != null) this.paintCells([[anchorX, anchorY]], tiles[0]);
+      return;
+    }
+    const defs = tiles.map((id) => this.tileDefsById.get(id)).filter((tile): tile is TileDefinition => !!tile);
+    const activeSet = this.tilesets().find((set) => set.tilesetId === this.activeTilesetId());
+    if (!defs.length || !activeSet) return;
+    const positions = defs.map((tile) => ({ tile, x: tile.index % activeSet.columns, y: Math.floor(tile.index / activeSet.columns) }));
+    const minX = Math.min(...positions.map((p) => p.x));
+    const minY = Math.min(...positions.map((p) => p.y));
+    for (const position of positions) this.paintCells([[anchorX + position.x - minX, anchorY + position.y - minY]], position.tile.tileId);
+  }
+
+  private layerForTile(tileId: number): MapLayerId {
+    const layerType = this.tileDefsById.get(tileId)?.layerType;
+    if (layerType === 'ground_detail') return 'groundDetail';
+    if (layerType === 'object') return 'objects';
+    if (layerType === 'object_above') return 'objectsAbove';
+    return 'ground';
   }
 
   private fillAt(e: PointerEvent) {
@@ -474,7 +515,7 @@ export class MapEditor implements OnInit, AfterViewInit, OnDestroy {
     const tid = this.selectedTileId();
     if (tid == null) return;
     this.pushUndo();
-    const layer = this.layers[this.activeLayer()];
+    const layer = this.layers[this.layerForTile(tid)];
     const target = layer[tileIndex(p.x, p.y, this.width())];
     if (target === tid) return;
     const w = this.width(), h = this.height();
@@ -500,7 +541,7 @@ export class MapEditor implements OnInit, AfterViewInit, OnDestroy {
     const p = this.cellAt(e);
     if (!p) return;
     const tileId = this.layers[this.activeLayer()][tileIndex(p.x, p.y, this.width())];
-    if (tileId != null) this.selectedTileId.set(tileId);
+    if (tileId != null) this.selectTile(tileId);
     this.setTool('pencil');
   }
 
@@ -573,7 +614,7 @@ export class MapEditor implements OnInit, AfterViewInit, OnDestroy {
     this.pushUndo();
     const tid = this.selectedTileId();
     if (tid == null) return;
-    const layer = this.layers[this.activeLayer()];
+    const layer = this.layers[this.layerForTile(tid)];
     layer.fill(tid);
     this.dirty.set(true);
     this.redraw();
@@ -749,10 +790,21 @@ export class MapEditor implements OnInit, AfterViewInit, OnDestroy {
         status: this.status(),
         layers: this.layers,
         entities: this.entities,
-      });
-      this.savedId = res.id;
-      this.dirty.set(false);
-      if (this.id === 'new') void this.router.navigate(['/maps', res.id]);
+       });
+       this.savedId = res.id;
+       const saved = await this.api.getMap(res.id);
+       this.name.set(saved.name);
+       this.width.set(saved.width);
+       this.height.set(saved.height);
+       this.status.set(saved.status ?? 'draft');
+       this.layers = this.normalizeLayers(saved.layers);
+       this.entities = saved.entities ?? [];
+       this.previousWidth = saved.width;
+       this.previousHeight = saved.height;
+       this.dirty.set(false);
+       this.applyCanvasSize();
+       this.redraw();
+       if (this.id === 'new') void this.router.navigate(['/maps', res.id]);
     } catch (e) {
       this.error.set((e as Error).message);
     } finally {

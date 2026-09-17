@@ -75,7 +75,7 @@ export type ServerMessage =
   | { type: 'combat.projectile'; attackerId: string; targetId: string; from: Position; to: Position; projectile?: ItemProjectileVisual; impact?: ItemImpactVisual; travelTimeMs: number }
   | { type: 'combat.area'; attackerId: string; targetId: string; from: Position; center: Position; tiles: Position[]; projectile?: ItemProjectileVisual; impact?: ItemImpactVisual; travelTimeMs: number }
   | { type: 'combat.damage'; attackerId: string; targetId: string; amount: number; damageType: DamageType; critical: boolean; targetHealth: number; delayMs?: number; criticalImpact?: ItemImpactVisual; position?: Position }
-  | { type: 'combat.heal'; sourceId: string; targetId: string; amount: number; critical: boolean; targetHealth: number; delayMs?: number }
+  | { type: 'combat.heal'; sourceId: string; targetId: string; amount: number; critical: boolean; targetHealth: number; resource?: 'hp' | 'mp'; delayMs?: number }
   | { type: 'combat.death'; entityId: string; experience?: number }
   | { type: 'xp.gained'; amount: number; characterId?: string }
   | { type: 'gold.gained'; amount: number; position?: Position }

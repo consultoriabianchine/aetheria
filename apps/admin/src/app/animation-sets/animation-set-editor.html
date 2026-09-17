@@ -35,7 +35,17 @@
         <input type="number" [value]="spriteAssetId()" (input)="spriteAssetId.set(+$any($event.target).value); loadSheet(); redraw(); dirty.set(true)" min="1" />
       </div>
     </div>
+    <div class="color-test">
+      <b>Color Test</b>
+      @for (slot of ['head', 'primary', 'secondary', 'detail']; track slot) {
+        <label>{{ slot }} <input type="color" [value]="$any(testColors())[slot]" (input)="setTestColor($any(slot), $any($event.target).value)" /></label>
+      }
+    </div>
     <input type="file" accept="image/png,image/webp" (change)="onAssetFile($event)" />
+    <div class="row">
+      <label class="check"><input type="checkbox" [checked]="supportsColorization()" (change)="supportsColorization.set($any($event.target).checked); dirty.set(true)" /> Suporta colorização</label>
+      <div class="field"><label>Modo</label><select [value]="colorMaskMode()" (change)="colorMaskMode.set($any($event.target).value); dirty.set(true)"><option value="none">Nenhum</option><option value="paired_frames">Frames pareados</option><option value="separate_asset">Asset separado (legado)</option></select></div>
+    </div>
 
     <div class="inspector">
       <div class="field"><label>W</label><input type="number" [value]="spriteWidth()" (input)="spriteWidth.set(+$any($event.target).value); onGridChange()" min="1" /></div>
@@ -44,13 +54,14 @@
       <div class="field"><label>Linhas</label><input type="number" [value]="sheetRows()" (input)="sheetRows.set(+$any($event.target).value); onGridChange()" min="1" /></div>
     </div>
 
-    <p class="hint">{{ sheetColumns() }}×{{ sheetRows() }} = <b>{{ totalFrames }}</b> frames · Clique para selecionar (shift = multi)</p>
+    <p class="hint">{{ sheetColumns() }}×{{ sheetRows() }} = <b>{{ totalFrames }}</b> frames · V = visual · M = máscara</p>
 
     <div class="sheet-wrap">
       <canvas #sheetCanvas (click)="onSheetClick($event)" class="sprite-preview"></canvas>
     </div>
     <div class="row">
       <button (click)="clearSelection()">Limpar seleção</button>
+      <button [class.active]="selectionMode() === 'mask'" (click)="selectMask()">Selecionar máscara</button>
       <span class="hint">Selecionados: {{ selectedFrames().join(', ') || '—' }}</span>
     </div>
   </section>
@@ -63,6 +74,9 @@
     <div class="row">
       <button (click)="togglePlay()">{{ playing() ? 'Pausar' : 'Play' }}</button>
       <button (click)="stop()">Stop</button>
+      <button [class.active]="previewMode() === 'visual'" (click)="previewMode.set('visual'); drawPreview()">Visual</button>
+      <button [class.active]="previewMode() === 'mask'" (click)="previewMode.set('mask'); drawPreview()">Mask</button>
+      <button [class.active]="previewMode() === 'colorized'" (click)="previewMode.set('colorized'); drawPreview()">Colorized</button>
       <div class="field">
         <label>Zoom</label>
         <select [value]="zoom()" (change)="zoom.set(+$any($event.target).value); drawPreview()">
@@ -98,7 +112,7 @@
       @for (s of sequences(); track $index; let i = $index) {
         <li [class.active]="i === selectedSeq()" (click)="selectSequence(i)">
           <span>{{ s.animation }} · {{ directionLabel[s.direction] }}</span>
-          <span class="mono">{{ s.frames.length }} frames</span>
+            <span class="mono">{{ s.frames.length }} {{ s.frames.length === 1 ? 'frame' : 'frames' }}</span>
           <button class="danger" (click)="removeSequence(i); $event.stopPropagation()">✕</button>
         </li>
       }
@@ -111,11 +125,13 @@
       <h3>{{ seq.animation }} · {{ directionLabel[seq.direction] }}</h3>
       <div class="timeline">
         @for (f of seq.frames; track $index; let i = $index) {
-          <span class="frame-chip">
+          <span class="frame-chip" [class.active]="selectedTimelineFrame() === i" (click)="selectTimelineFrame(i)">
             <button class="mini" (click)="moveFrame(i, -1)">←</button>
-            <span class="mono">{{ f }}</span>
+            <span class="mono">Visual: {{ frameIndex(f) }}<br />Mask: {{ frameDefinition(f).maskFrameIndex ?? '—' }}</span>
             <button class="mini" (click)="moveFrame(i, 1)">→</button>
             <button class="mini" (click)="duplicateFrame(i)">+</button>
+            <button class="mini" (click)="selectTimelineFrame(i); selectMask()">Mask</button>
+            <button class="mini" (click)="clearMask(i)">×M</button>
             <button class="mini danger" (click)="removeFrame(i)">✕</button>
           </span>
         }
@@ -125,6 +141,8 @@
       </div>
       <div class="row">
         <button (click)="addSelectedToTimeline()">Adicionar seleção</button>
+        <button (click)="autoPairSequence()">Auto associar máscaras (+1)</button>
+        <button (click)="autoPairAllSequences()">Auto associar todas</button>
         <button (click)="setTimelineFrames([])">Limpar</button>
       </div>
       <div class="props">

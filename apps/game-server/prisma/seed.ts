@@ -584,6 +584,14 @@ async function seedLootItemDefinitions(items: SourceItem[]) {
 
 async function seed() {
   await seedDefaultTileset();
+  const potions = [
+    ['health-potion', 'Health Potion', 'HP', 0, 50, 175], ['strong-health-potion', 'Strong Health Potion', 'HP', 50, 115, 300], ['great-health-potion', 'Great Health Potion', 'HP', 80, 225, 500], ['ultimate-health-potion', 'Ultimate Health Potion', 'HP', 130, 379, 750], ['supreme-health-potion', 'Supreme Health Potion', 'HP', 200, 650, 900],
+    ['mana-potion', 'Mana Potion', 'MP', 0, 56, 100], ['strong-mana-potion', 'Strong Mana Potion', 'MP', 50, 108, 150], ['great-mana-potion', 'Great Mana Potion', 'MP', 80, 158, 200], ['superior-mana-potion', 'Superior Mana Potion', 'MP', 100, 254, 300], ['ultimate-mana-potion', 'Ultimate Mana Potion', 'MP', 130, 488, 500],
+    ['distilled-superior-mana-potion', 'Distilled Superior Mana Potion', 'MP', 130, 381, 300], ['distilled-ultimate-mana-potion', 'Distilled Ultimate Mana Potion', 'MP', 200, 732, 500], ['great-spirit-potion', 'Great Spirit Potion', 'HP_MP', 80, 254, 300], ['ultimate-spirit-potion', 'Ultimate Spirit Potion', 'HP_MP', 130, 488, 500],
+  ] as const;
+  for (const [id, name, type, minLevel, goldCost, restoreAmount] of potions) {
+    await prisma.potionDefinition.upsert({ where: { id }, update: { name, type, minLevel, goldCost, restoreAmount, cooldownGroup: 'potion', enabled: true }, create: { id, name, type, minLevel, goldCost, restoreAmount, cooldownGroup: 'potion', enabled: true } });
+  }
   const items = JSON.parse(readFileSync(path.join(__dirname, '..', 'data', 'items.json'), 'utf8')) as {
     items: SourceItem[];
   };

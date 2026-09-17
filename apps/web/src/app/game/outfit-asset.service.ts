@@ -5,6 +5,7 @@ import type { AnimConfig } from './creature-animator';
 export interface OutfitAnimData {
   outfitId: number;
   spriteAssetId: number;
+  animationSetId: number;
   supportsColors: boolean;
   colorMaskAssetId?: number;
   defaultColors?: { head: number; primary: number; secondary: number; detail: number };

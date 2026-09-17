@@ -1,6 +1,8 @@
 import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild, signal } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
-import type { AnimationDirection, AnimationSequence, CreatureAnimationType } from '@aetheria/types';
+import type { AnimationDirection, AnimationFrameDefinition, AnimationSequence, CreatureAnimationType } from '@aetheria/types';
+import { APPEARANCE_PALETTE } from '@aetheria/config';
+import { recolorCanvas } from '@aetheria/shared';
 import { ApiService, type AdminAnimationSetConfig } from '../core/api.service';
 
 const ANIMATION_TYPES: CreatureAnimationType[] = ['idle', 'walk', 'attack', 'cast', 'hit', 'death', 'spawn'];
@@ -24,9 +26,15 @@ export class AnimationSetEditor implements OnInit, AfterViewInit, OnDestroy {
   readonly spriteHeight = signal(32);
   readonly sheetColumns = signal(16);
   readonly sheetRows = signal(45);
+  readonly supportsColorization = signal(false);
+  readonly colorMaskMode = signal<'none' | 'paired_frames' | 'separate_asset'>('none');
   readonly sequences = signal<AnimationSequence[]>([]);
   readonly selectedSeq = signal(-1);
   readonly selectedFrames = signal<number[]>([]);
+  readonly selectedTimelineFrame = signal(-1);
+  readonly selectionMode = signal<'visual' | 'mask'>('visual');
+  readonly previewMode = signal<'visual' | 'mask' | 'colorized'>('visual');
+  readonly testColors = signal({ head: '#f2c14e', primary: '#d94f4f', secondary: '#4f86d9', detail: '#f4f4f4' });
   readonly dirty = signal(false);
   readonly saving = signal(false);
   readonly saved = signal(false);
@@ -65,6 +73,7 @@ export class AnimationSetEditor implements OnInit, AfterViewInit, OnDestroy {
   readonly animations = ANIMATION_TYPES;
   readonly directions = DIRECTIONS;
   readonly directionLabel = DIRECTION_LABEL;
+  readonly palette = APPEARANCE_PALETTE;
   readonly newAnim = signal<CreatureAnimationType>('walk');
   readonly newDir = signal<AnimationDirection>('south');
 
@@ -105,6 +114,8 @@ export class AnimationSetEditor implements OnInit, AfterViewInit, OnDestroy {
         this.spriteHeight.set(set.config.spriteHeight);
         this.sheetColumns.set(set.config.sheetColumns);
         this.sheetRows.set(set.config.sheetRows);
+        this.supportsColorization.set(set.config.supportsColorization ?? false);
+        this.colorMaskMode.set(set.config.colorMaskMode ?? 'none');
         this.anchorX.set(set.config.anchor?.x ?? set.config.spriteWidth / 2);
         this.anchorY.set(set.config.anchor?.y ?? set.config.spriteHeight);
         this.offsetX.set(set.config.offsetX ?? 0);
@@ -117,7 +128,7 @@ export class AnimationSetEditor implements OnInit, AfterViewInit, OnDestroy {
         this.bodyOffsetY.set(set.config.bodyOffsetY ?? 0);
         this.projectileOriginX.set(set.config.sockets?.projectileOrigin?.x ?? set.config.spriteWidth / 2);
         this.projectileOriginY.set(set.config.sockets?.projectileOrigin?.y ?? set.config.spriteHeight / 2);
-        this.sequences.set(structuredClone(set.config.animations as AnimationSequence[]));
+        this.sequences.set((structuredClone(set.config.animations) as AnimationSequence[]).map((seq) => ({ ...seq, frames: seq.frames.map((frame) => this.frameDefinition(frame)) })));
       } catch (e) {
         this.error.set((e as Error).message);
       }
@@ -177,6 +188,16 @@ export class AnimationSetEditor implements OnInit, AfterViewInit, OnDestroy {
     const y = Math.floor((event.clientY - rect.top) / (rect.height / this.sheetRows()));
     const index = y * this.sheetColumns() + x;
     if (index >= this.totalFrames) return;
+    if (this.selectionMode() === 'mask' && this.selectedSeq() >= 0 && this.selectedTimelineFrame() >= 0) {
+      const seq = this.currentSequence;
+      if (seq) {
+        const frames = seq.frames.map((frame, i) => i === this.selectedTimelineFrame() ? { ...this.frameDefinition(frame), maskFrameIndex: index } : this.frameDefinition(frame));
+        this.updateSequence(this.selectedSeq(), { ...seq, frames });
+        this.selectionMode.set('visual');
+        this.redrawSheet();
+        return;
+      }
+    }
     const sel = this.selectedFrames();
     if (event.shiftKey) {
       this.selectedFrames.set(sel.includes(index) ? sel.filter((i) => i !== index) : [...sel, index].sort((a, b) => a - b));
@@ -219,10 +240,10 @@ export class AnimationSetEditor implements OnInit, AfterViewInit, OnDestroy {
     const i = this.selectedSeq();
     const seq = this.currentSequence;
     if (i < 0 || !seq) return;
-    this.updateSequence(i, { ...seq, frames: [...seq.frames, ...this.selectedFrames()] });
+    this.updateSequence(i, { ...seq, frames: [...seq.frames, ...this.selectedFrames().map((frame) => ({ frameIndex: frame }))] });
   }
 
-  setTimelineFrames(frames: number[]) {
+  setTimelineFrames(frames: AnimationFrameDefinition[]) {
     const i = this.selectedSeq();
     const seq = this.currentSequence;
     if (!seq) return;
@@ -255,6 +276,47 @@ export class AnimationSetEditor implements OnInit, AfterViewInit, OnDestroy {
     frames.splice(pos + 1, 0, frames[pos]);
     this.updateSequence(i, { ...seq, frames });
   }
+
+  selectTimelineFrame(pos: number) {
+    this.selectedTimelineFrame.set(pos);
+    this.selectionMode.set('visual');
+    this.redrawSheet();
+    this.drawPreview();
+  }
+
+  selectMask() { if (this.selectedTimelineFrame() >= 0) this.selectionMode.set('mask'); }
+
+  clearMask(pos = this.selectedTimelineFrame()) {
+    const seq = this.currentSequence;
+    if (!seq || pos < 0 || pos >= seq.frames.length) return;
+    this.updateSequence(this.selectedSeq(), { ...seq, frames: seq.frames.map((frame, i) => i === pos ? { ...this.frameDefinition(frame), maskFrameIndex: undefined } : this.frameDefinition(frame)) });
+  }
+
+  autoPairSequence() {
+    const seq = this.currentSequence;
+    if (!seq) return;
+    this.updateSequence(this.selectedSeq(), { ...seq, frames: seq.frames.map((frame) => { const visual = this.frameDefinition(frame); return { ...visual, maskFrameIndex: visual.frameIndex + 1 }; }) });
+  }
+
+  autoPairAllSequences() {
+    this.sequences.update((sequences) => sequences.map((sequence) => ({
+      ...sequence,
+      frames: sequence.frames.map((frame) => {
+        const visual = this.frameDefinition(frame);
+        return { ...visual, maskFrameIndex: visual.frameIndex + 1 };
+      }),
+    })));
+    this.dirty.set(true);
+    this.redraw();
+  }
+
+  setTestColor(slot: 'head' | 'primary' | 'secondary' | 'detail', color: string) {
+    this.testColors.update((colors) => ({ ...colors, [slot]: color }));
+    this.drawPreview();
+  }
+
+  frameDefinition(frame: AnimationFrameDefinition | number): AnimationFrameDefinition { return typeof frame === 'number' ? { frameIndex: frame } : frame; }
+  frameIndex(frame: AnimationFrameDefinition | number): number { return this.frameDefinition(frame).frameIndex; }
 
   updateSequence(i: number, seq: AnimationSequence) {
     this.sequences.update((list) => list.map((s, idx) => (idx === i ? seq : s)));
@@ -343,7 +405,7 @@ export class AnimationSetEditor implements OnInit, AfterViewInit, OnDestroy {
   private previewFrameIndex(): number {
     const seq = this.sequences().find((s) => s.animation === this.previewAnim());
     if (!seq || seq.frames.length === 0) return -1;
-    return seq.frames[0];
+    return this.frameIndex(seq.frames[0]);
   }
 
   /** Preview 5×5 tiles com debug (grid/bounds/body/anchor/projectile origin). */
@@ -466,8 +528,10 @@ export class AnimationSetEditor implements OnInit, AfterViewInit, OnDestroy {
         sheetRows: this.sheetRows(),
         anchor: { x: this.anchorX(), y: this.anchorY() },
         offsetX: this.offsetX(),
-        offsetY: this.offsetY(),
-        animations: this.sequences(),
+         offsetY: this.offsetY(),
+         supportsColorization: this.supportsColorization(),
+         colorMaskMode: this.colorMaskMode(),
+         animations: this.sequences(),
       };
       if (this.visualBoundsWidth() !== this.spriteWidth() || this.visualBoundsHeight() !== this.spriteHeight()) {
         config.visualBounds = { width: this.visualBoundsWidth(), height: this.visualBoundsHeight() };
@@ -548,8 +612,27 @@ export class AnimationSetEditor implements OnInit, AfterViewInit, OnDestroy {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = '#10151e';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
-    if (this.sheetImage) ctx.drawImage(this.sheetImage, 0, 0, canvas.width, canvas.height);
-    for (const idx of this.selectedFrames()) {
+     if (this.sheetImage) ctx.drawImage(this.sheetImage, 0, 0, canvas.width, canvas.height);
+     const visualFrames = new Set(this.sequences().flatMap((seq) => seq.frames.map((frame) => this.frameIndex(frame))));
+     const maskFrames = new Set(this.sequences().flatMap((seq) => seq.frames.map((frame) => this.frameDefinition(frame).maskFrameIndex).filter((frame): frame is number => frame !== undefined)));
+     ctx.font = 'bold 10px monospace';
+     for (const idx of visualFrames) {
+       const r = this.frameRect(idx);
+       ctx.strokeStyle = '#3c9cff';
+       ctx.lineWidth = 2;
+       ctx.strokeRect(r.sx + 1, r.sy + 1, r.sw - 2, r.sh - 2);
+       ctx.fillStyle = '#3c9cff';
+       ctx.fillText('V', r.sx + 2, r.sy + 10);
+     }
+     for (const idx of maskFrames) {
+       const r = this.frameRect(idx);
+       ctx.strokeStyle = '#ff4fc3';
+       ctx.lineWidth = 2;
+       ctx.strokeRect(r.sx + 1, r.sy + 1, r.sw - 2, r.sh - 2);
+       ctx.fillStyle = '#ff4fc3';
+       ctx.fillText('M', r.sx + 2, r.sy + 10);
+     }
+     for (const idx of this.selectedFrames()) {
       const r = this.frameRect(idx);
       ctx.fillStyle = 'rgba(120, 200, 160, 0.25)';
       ctx.fillRect(r.sx, r.sy, r.sw, r.sh);
@@ -585,7 +668,12 @@ export class AnimationSetEditor implements OnInit, AfterViewInit, OnDestroy {
     const seq = this.currentSequence;
     if (seq && seq.frames.length > 0) {
       const pos = this.playing() ? this.computeFrameIndex(seq, this.elapsed) : 0;
-      cellIndex = seq.frames[pos];
+       const frame = this.frameDefinition(seq.frames[pos]);
+       if (this.previewMode() === 'colorized' && frame.maskFrameIndex !== undefined) {
+         this.drawColorizedPreview(ctx, frame.frameIndex, frame.maskFrameIndex, w * zoom, h * zoom);
+         return;
+       }
+       cellIndex = this.previewMode() === 'mask' ? (frame.maskFrameIndex ?? -1) : frame.frameIndex;
     }
     if (this.sheetImage && cellIndex >= 0) {
       const r = this.frameRect(cellIndex);
@@ -593,6 +681,25 @@ export class AnimationSetEditor implements OnInit, AfterViewInit, OnDestroy {
     } else {
       ctx.fillStyle = '#10151e';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
-    }
+     }
+   }
+
+  private drawColorizedPreview(ctx: CanvasRenderingContext2D, visualIndex: number, maskIndex: number, width: number, height: number) {
+    if (!this.sheetImage) return;
+    const frameW = this.spriteWidth();
+    const frameH = this.spriteHeight();
+    const visual = document.createElement('canvas');
+    const mask = document.createElement('canvas');
+    visual.width = mask.width = frameW;
+    visual.height = mask.height = frameH;
+    const visualCtx = visual.getContext('2d')!;
+    const maskCtx = mask.getContext('2d')!;
+    const vr = this.frameRect(visualIndex);
+    const mr = this.frameRect(maskIndex);
+    visualCtx.drawImage(this.sheetImage, vr.sx, vr.sy, frameW, frameH, 0, 0, frameW, frameH);
+    maskCtx.drawImage(this.sheetImage, mr.sx, mr.sy, frameW, frameH, 0, 0, frameW, frameH);
+    const colors = this.testColors();
+    const recolored = recolorCanvas(visual, mask, frameW, frameH, { head: 1, primary: 2, secondary: 3, detail: 4 }, ['#ffffff', colors.head, colors.primary, colors.secondary, colors.detail]);
+    ctx.drawImage(recolored, 0, 0, frameW, frameH, 0, 0, width, height);
   }
 }

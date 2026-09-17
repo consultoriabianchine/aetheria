@@ -54,6 +54,15 @@ export interface AnimationMarker {
   event: AnimationMarkerEvent;
 }
 
+/** Frame visual e sua máscara opcional na mesma spritesheet. */
+export interface AnimationFrameDefinition {
+  frameIndex: number;
+  durationMs?: number;
+  maskFrameIndex?: number;
+  offsetX?: number;
+  offsetY?: number;
+}
+
 /** Referência de frame com duração opcional (futuro). */
 export interface AnimationFrameReference {
   frame: number;
@@ -75,7 +84,7 @@ export interface CreatureVisualBounds {
 export interface AnimationSequence {
   animation: CreatureAnimationType;
   direction: AnimationDirection;
-  frames: number[];
+  frames: AnimationFrameDefinition[];
   frameDurationMs: number;
   loop: boolean;
   playbackMode?: PlaybackMode;
@@ -108,6 +117,8 @@ export interface CreatureAnimationConfig {
    */
   bodyOffsetX?: number;
   bodyOffsetY?: number;
+  supportsColorization?: boolean;
+  colorMaskMode?: 'none' | 'paired_frames' | 'separate_asset';
   animations: AnimationSequence[];
 }
 
@@ -140,7 +151,16 @@ const creatureVisualBoundsSchema = z.object({
 export const animationSequenceSchema = z.object({
   animation: z.enum(CREATURE_ANIMATION_TYPES),
   direction: z.enum(ANIMATION_DIRECTIONS),
-  frames: z.array(z.number().int().nonnegative()),
+  frames: z.array(z.union([
+    z.number().int().nonnegative().transform((frameIndex) => ({ frameIndex })),
+    z.object({
+      frameIndex: z.number().int().nonnegative(),
+      durationMs: z.number().int().positive().optional(),
+      maskFrameIndex: z.number().int().nonnegative().optional(),
+      offsetX: z.number().int().optional(),
+      offsetY: z.number().int().optional(),
+    }),
+  ])),
   frameDurationMs: z.number().int().positive(),
   loop: z.boolean(),
   playbackMode: z.enum(['normal', 'pingpong']).optional(),
@@ -162,6 +182,8 @@ export const creatureAnimationConfigSchema = z.object({
   bodyHeight: z.number().int().positive().optional(),
   bodyOffsetX: z.number().int().optional(),
   bodyOffsetY: z.number().int().optional(),
+  supportsColorization: z.boolean().optional(),
+  colorMaskMode: z.enum(['none', 'paired_frames', 'separate_asset']).optional(),
   animations: z.array(animationSequenceSchema),
 });
 

@@ -76,6 +76,7 @@ export class MapAdminService {
           throw new BadRequestException(`Layer "${layer}" deve ter ${expected} células (recebido ${layers[layer].length})`);
         }
       }
+      this.normalizeLayerTiles(layers);
     } else {
       if (!input.tiles || input.tiles.length !== input.width * input.height) {
         throw new BadRequestException(`São esperados ${input.width * input.height} tiles, recebidos ${input.tiles?.length ?? 0}`);
@@ -137,6 +138,28 @@ export class MapAdminService {
       }
     }
     return out;
+  }
+
+  private normalizeLayerTiles(layers: Record<MapLayerId, (number | null)[]>) {
+    const expectedLayer: Record<MapLayerId, string> = {
+      ground: 'ground',
+      groundDetail: 'ground_detail',
+      objects: 'object',
+      objectsAbove: 'object_above',
+    };
+    for (const layer of MAP_LAYERS) {
+      for (const tileId of layers[layer]) {
+        if (tileId == null) continue;
+        const tile = this.tilesets.getTile(tileId);
+        if (!tile) throw new BadRequestException(`Tile #${tileId} não existe no cadastro de tilesets`);
+        if (tile.layerType === expectedLayer[layer]) continue;
+        const targetLayer = (Object.keys(expectedLayer) as MapLayerId[]).find((candidate) => expectedLayer[candidate] === tile.layerType);
+        if (!targetLayer) throw new BadRequestException(`Tile #${tileId} possui layer cadastrada inválida: "${tile.layerType}"`);
+        const index = layers[layer].indexOf(tileId);
+        layers[layer][index] = null;
+        layers[targetLayer][index] = tileId;
+      }
+    }
   }
 
   private buildTilesFromLegacy(tiles: MapTileInput[]): ResolvedTile[] {

@@ -90,6 +90,23 @@ const BASE_SKILLS: CharacterSkills = {
 
 const TOKEN_TTL_MS = 24 * 60 * 60 * 1000;
 const DEFAULT_PROJECTILE_SPEED_PX_PER_SECOND = 520;
+const POTION_COOLDOWN_MS = 1000;
+const POTIONS: Record<string, { price: number; level: number; hp?: [number, number]; mp?: [number, number] }> = {
+  'health-potion': { price: 50, level: 0, hp: [150, 200] },
+  'strong-health-potion': { price: 115, level: 50, hp: [300, 300] },
+  'great-health-potion': { price: 225, level: 80, hp: [500, 500] },
+  'ultimate-health-potion': { price: 379, level: 130, hp: [750, 750] },
+  'supreme-health-potion': { price: 650, level: 200, hp: [900, 900] },
+  'mana-potion': { price: 56, level: 0, mp: [75, 125] },
+  'strong-mana-potion': { price: 108, level: 50, mp: [115, 185] },
+  'great-mana-potion': { price: 158, level: 80, mp: [150, 250] },
+  'superior-mana-potion': { price: 254, level: 100, mp: [240, 360] },
+  'ultimate-mana-potion': { price: 488, level: 130, mp: [425, 575] },
+  'distilled-superior-mana-potion': { price: 381, level: 130, mp: [240, 360] },
+  'distilled-ultimate-mana-potion': { price: 732, level: 200, mp: [425, 575] },
+  'great-spirit-potion': { price: 254, level: 80, hp: [300, 300], mp: [100, 200] },
+  'ultimate-spirit-potion': { price: 488, level: 130, hp: [500, 500], mp: [150, 250] },
+};
 
 @Injectable()
 export class GameEngine implements OnModuleDestroy {
@@ -122,8 +139,9 @@ export class GameEngine implements OnModuleDestroy {
   private abilityCooldowns = new Map<string, Map<number, number>>();
   private attackRotations = new Map<string, { abilityId?: number; enabled: boolean; minTargets?: number }[]>();
   private attackGroupReadyAt = new Map<string, number>();
-  private healingRotations = new Map<string, { abilityId?: number; enabled: boolean; hpBelowPercent: number; target: 'self' | 'lowest_party_member' | 'specific_party_role' }[]>();
+  private healingRotations = new Map<string, { position: number; abilityId?: number; potionId?: string; enabled: boolean; hpBelowPercent: number; mpBelowPercent: number; target: 'self' | 'lowest_party_member' | 'specific_party_role' }[]>();
   private healingGroupReadyAt = new Map<string, number>();
+  private potionReadyAt = new Map<string, number>();
   private monsterAbilities = new Map<number, ResolvedMonsterSpell[]>();
   private monsterAbilityReadyAt = new Map<string, Map<number, number>>();
   private activeAbilityCasts = new Set<string>();
@@ -431,7 +449,7 @@ export class GameEngine implements OnModuleDestroy {
       const slots = await this.prisma.characterAttackRotationSlot.findMany({ where: { character_id: player.id, preset: 'HUNT' }, orderBy: { slot_position: 'asc' } });
       this.attackRotations.set(player.id, slots.map((slot) => ({ abilityId: slot.ability_id ?? undefined, enabled: slot.enabled, minTargets: slot.min_targets ?? undefined })));
       const heals = await this.prisma.characterHealingRotationSlot.findMany({ where: { character_id: player.id, preset: 'HUNT' }, orderBy: { slot_position: 'asc' } });
-      this.healingRotations.set(player.id, heals.map((slot) => this.healingSlot(slot.ability_id ?? undefined, slot.enabled, slot.trigger, 100)));
+      this.healingRotations.set(player.id, heals.filter((slot) => slot.slot_position >= 1 && slot.slot_position <= 3).map((slot) => this.healingSlot(slot.slot_position, slot.ability_id ?? undefined, slot.enabled, slot.trigger, 100)));
       this.emitTo(socketId, 'rotation.state', { preset: 'HUNT', characterId: player.id, attack: slots, healing: heals, cooldowns: { attackGroupReadyAt: 0, healingGroupReadyAt: 0, abilityReadyAt: {} } });
     }
     const override = await this.store.getWeaponElementOverride(player.id);
@@ -793,7 +811,7 @@ export class GameEngine implements OnModuleDestroy {
         this.schedulePlayerAttackCheck(companion, Date.now());
       });
       void this.prisma.characterHealingRotationSlot.findMany({ where: { character_id: companion.id, preset: 'HUNT' }, orderBy: { slot_position: 'asc' } }).then((heals) => {
-        this.healingRotations.set(companion.id, heals.map((slot) => this.healingSlot(slot.ability_id ?? undefined, slot.enabled, slot.trigger, 100)));
+        this.healingRotations.set(companion.id, heals.filter((slot) => slot.slot_position >= 1 && slot.slot_position <= 3).map((slot) => this.healingSlot(slot.slot_position, slot.ability_id ?? undefined, slot.enabled, slot.trigger, 100)));
         this.schedulePlayerHealCheck(companion, Date.now());
       });
     }
@@ -1085,7 +1103,7 @@ export class GameEngine implements OnModuleDestroy {
       this.prisma.characterHealingRotationSlot.findMany({ where: { character_id: targetId, preset }, orderBy: { slot_position: 'asc' } }),
     ]);
     this.attackRotations.set(targetId, attack.map((slot) => ({ abilityId: slot.ability_id ?? undefined, enabled: slot.enabled, minTargets: slot.min_targets ?? undefined })));
-    this.healingRotations.set(targetId, healing.map((slot) => this.healingSlot(slot.ability_id ?? undefined, slot.enabled, slot.trigger, 80)));
+    this.healingRotations.set(targetId, healing.filter((slot) => slot.slot_position >= 1 && slot.slot_position <= 3).map((slot) => this.healingSlot(slot.slot_position, slot.ability_id ?? undefined, slot.enabled, slot.trigger, 80)));
     this.emitTo(socketId, 'rotation.state', { preset, characterId: targetId, attack, healing, saved: true, cooldowns: { attackGroupReadyAt: this.attackGroupReadyAt.get(targetId) ?? 0, healingGroupReadyAt: this.healingGroupReadyAt.get(targetId) ?? 0, abilityReadyAt: Object.fromEntries(this.abilityCooldowns.get(targetId) ?? []) } });
     const target = this.players.get(targetId);
     if (target) {
@@ -1104,11 +1122,15 @@ export class GameEngine implements OnModuleDestroy {
     if (this.prisma) void this.prisma.$transaction(async (tx) => { await tx.characterAttackRotationSlot.deleteMany({ where: { character_id: targetId, preset } }); await tx.characterAttackRotationSlot.createMany({ data: ordered.map((slot) => ({ character_id: targetId, preset, slot_position: slot.position, ability_id: slot.abilityId ?? null, enabled: slot.enabled, min_targets: slot.minTargets ?? null })) }); return tx.characterAttackRotationSlot.findMany({ where: { character_id: targetId, preset }, orderBy: { slot_position: 'asc' } }); }).then((attack) => this.emitTo(socketId, 'rotation.state', { preset, characterId: targetId, attack, cooldowns: { attackGroupReadyAt: this.attackGroupReadyAt.get(targetId) ?? 0, healingGroupReadyAt: this.healingGroupReadyAt.get(targetId) ?? 0, abilityReadyAt: Object.fromEntries(this.abilityCooldowns.get(targetId) ?? []) } })).catch((error) => this.emitTo(socketId, 'error', { message: `Falha ao salvar rotação: ${error instanceof Error ? error.message : String(error)}` }));
   }
 
-  handleHealingRotation(socketId: string, preset: string, slots: { position: number; abilityId?: number; enabled: boolean; trigger: { target?: 'self' | 'lowest_party_member' | 'specific_party_role'; hpBelowPercent: number } }[], characterId?: string) {
+  handleHealingRotation(socketId: string, preset: string, slots: { position: number; abilityId?: number; enabled: boolean; trigger: { target?: 'self' | 'lowest_party_member' | 'specific_party_role'; hpBelowPercent: number; mpBelowPercent?: number; potionId?: string } }[], characterId?: string) {
     const player = this.playerForSocket(socketId); if (!player || !['HUNT', 'BOSS', 'HELPER'].includes(preset)) return;
     const targetId = this.rotationTarget(player, characterId);
-    const ordered = slots.sort((a, b) => a.position - b.position);
-    this.healingRotations.set(targetId, ordered.map((slot) => this.healingSlot(slot.abilityId, slot.enabled, slot.trigger, 80)));
+    const ordered = slots.filter((slot) => slot.position >= 1 && slot.position <= 3).sort((a, b) => a.position - b.position).map((slot) => ({
+      ...slot,
+      abilityId: slot.position === 1 ? slot.abilityId : undefined,
+      trigger: { ...slot.trigger, potionId: slot.position === 1 ? undefined : slot.trigger.potionId },
+    }));
+    this.healingRotations.set(targetId, ordered.map((slot) => this.healingSlot(slot.position, slot.abilityId, slot.enabled, slot.trigger, 80)));
     const target = this.players.get(targetId);
     if (target) this.schedulePlayerHealCheck(target, Date.now());
     if (this.prisma) void this.prisma.$transaction(async (tx) => { await tx.characterHealingRotationSlot.deleteMany({ where: { character_id: targetId, preset } }); await tx.characterHealingRotationSlot.createMany({ data: ordered.map((slot) => ({ character_id: targetId, preset, slot_position: slot.position, ability_id: slot.abilityId ?? null, enabled: slot.enabled, trigger: slot.trigger })) }); return tx.characterHealingRotationSlot.findMany({ where: { character_id: targetId, preset }, orderBy: { slot_position: 'asc' } }); }).then((healing) => this.emitTo(socketId, 'rotation.state', { preset, characterId: targetId, healing, cooldowns: { attackGroupReadyAt: this.attackGroupReadyAt.get(targetId) ?? 0, healingGroupReadyAt: this.healingGroupReadyAt.get(targetId) ?? 0, abilityReadyAt: Object.fromEntries(this.abilityCooldowns.get(targetId) ?? []) } })).catch((error) => this.emitTo(socketId, 'error', { message: `Falha ao salvar cura: ${error instanceof Error ? error.message : String(error)}` }));
@@ -1467,11 +1489,13 @@ export class GameEngine implements OnModuleDestroy {
     return this.accountStorage.get(accountId)?.gold ?? 0;
   }
 
-  private healingSlot(abilityId: number | undefined, enabled: boolean, trigger: unknown, hpFallback: number): { abilityId?: number; enabled: boolean; hpBelowPercent: number; target: 'self' | 'lowest_party_member' | 'specific_party_role' } {
+  private healingSlot(position: number, abilityId: number | undefined, enabled: boolean, trigger: unknown, hpFallback: number): { position: number; abilityId?: number; potionId?: string; enabled: boolean; hpBelowPercent: number; mpBelowPercent: number; target: 'self' | 'lowest_party_member' | 'specific_party_role' } {
     const t = (trigger as { target?: string } | undefined)?.target;
     const target: 'self' | 'lowest_party_member' | 'specific_party_role' = t === 'lowest_party_member' || t === 'specific_party_role' ? t : 'self';
     const hpBelowPercent = Number((trigger as { hpBelowPercent?: number } | undefined)?.hpBelowPercent ?? hpFallback);
-    return { abilityId, enabled, hpBelowPercent, target };
+    const mpBelowPercent = Number((trigger as { mpBelowPercent?: number } | undefined)?.mpBelowPercent ?? 50);
+    const potionId = typeof (trigger as { potionId?: unknown } | undefined)?.potionId === 'string' ? (trigger as { potionId: string }).potionId : undefined;
+    return { position, abilityId, potionId, enabled, hpBelowPercent, mpBelowPercent, target };
   }
 
   private playerSnapshots(): CreatureTarget[] {
@@ -1759,12 +1783,13 @@ export class GameEngine implements OnModuleDestroy {
     this.emitAll(event, data);
   }
 
-  private emitHeal(sourceId: string, target: GamePlayer, amount: number, critical = false) {
+  private emitHeal(sourceId: string, target: GamePlayer, amount: number, critical = false, resource: 'hp' | 'mp' = 'hp') {
     this.emitCombatEvent(target, 'combat.heal', {
       sourceId,
       targetId: target.id,
       amount,
       critical,
+      resource,
       targetHealth: target.health,
     });
   }
@@ -2015,8 +2040,8 @@ export class GameEngine implements OnModuleDestroy {
 
   /** Resolve o visual de uma habilidade a partir do catálogo (fallback: visual inline). */
   private resolveAbilityVisual(ability: CombatAbilityDefinition): ItemVisualEffects | undefined {
-    const shootType = getShootType(ability.shootTypeId);
-    const effectType = getEffectType(ability.effectTypeId);
+    const shootType = getShootType(ability.shootTypeId ?? undefined);
+    const effectType = getEffectType(ability.effectTypeId ?? undefined);
     const projectile = shootType?.projectile ?? ability.visual?.projectile;
     const impact = effectType?.impact ?? ability.visual?.impact;
     if (!projectile && !impact) return undefined;
@@ -2416,16 +2441,26 @@ export class GameEngine implements OnModuleDestroy {
   }
 
   private async processPlayerHealing(player: GamePlayer, now: number) {
-    if (now < (this.healingGroupReadyAt.get(player.id) ?? 0)) return;
     for (const slot of this.healingRotations.get(player.id) ?? []) {
-      if (!slot.enabled || slot.abilityId === undefined) continue;
-      const ability = await this.abilityRegistry.get(slot.abilityId);
-      const readyAt = this.abilityCooldowns.get(player.id)?.get(slot.abilityId) ?? 0;
-      if (!ability || ability.category !== 'heal' || now < readyAt) continue;
+      if (!slot.enabled) continue;
       const healTarget = this.resolveHealTarget(player, slot.target);
       if (!healTarget) continue;
       const hpPercent = healTarget.maxHealth > 0 ? (healTarget.health / healTarget.maxHealth) * 100 : 100;
-      if (hpPercent > slot.hpBelowPercent) continue;
+       const potion = slot.potionId ? POTIONS[slot.potionId] : undefined;
+       if (slot.position === 1 && potion || slot.position > 1 && slot.abilityId !== undefined) continue;
+       if (slot.position === 2 && (!potion?.mp || potion.hp) || slot.position === 3 && (!potion?.hp || potion.mp)) continue;
+      const mpPercent = healTarget.maxMana > 0 ? (healTarget.mana / healTarget.maxMana) * 100 : 100;
+       const thresholdReached = potion?.mp && !potion.hp
+         ? mpPercent <= slot.mpBelowPercent
+         : potion?.hp && potion.mp
+           ? hpPercent <= slot.hpBelowPercent || mpPercent <= slot.mpBelowPercent
+           : hpPercent <= slot.hpBelowPercent;
+      if (!thresholdReached) continue;
+      if (slot.potionId && await this.usePotion(player, slot.potionId, healTarget)) return;
+      if (slot.abilityId === undefined) continue;
+      const ability = await this.abilityRegistry.get(slot.abilityId);
+      const readyAt = this.abilityCooldowns.get(player.id)?.get(slot.abilityId) ?? 0;
+      if (!ability || ability.category !== 'heal' || now < readyAt) continue;
       if (await this.castAbility(player, ability.abilityId, healTarget.id)) return;
     }
   }
@@ -2446,6 +2481,33 @@ export class GameEngine implements OnModuleDestroy {
       }
     }
     return best ?? (target === 'specific_party_role' ? player : null);
+  }
+
+  private async usePotion(player: GamePlayer, potionId: string, target: GamePlayer): Promise<boolean> {
+    const potion = POTIONS[potionId];
+    if (!potion || player.level < potion.level) return false;
+    if (Date.now() < (this.potionReadyAt.get(player.id) ?? 0)) return false;
+    const storage = this.storageFor(player);
+    if (storage.gold < potion.price) return false;
+    const hp = potion.hp ? Math.min(target.maxHealth - target.health, this.randomBetween(potion.hp[0], potion.hp[1])) : 0;
+    const mp = potion.mp && target.id === player.id ? Math.min(player.maxMana - player.mana, this.randomBetween(potion.mp[0], potion.mp[1])) : 0;
+    if (hp <= 0 && mp <= 0) return false;
+    storage.gold -= potion.price;
+     target.health += hp;
+     if (mp) player.mana += mp;
+     if (hp) this.emitHeal(player.id, target, hp, false, 'hp');
+     if (mp) this.emitHeal(player.id, player, mp, false, 'mp');
+     this.potionReadyAt.set(player.id, Date.now() + POTION_COOLDOWN_MS);
+    await this.persistPlayer(player, true);
+    await this.store.saveAccountStorage(storage.toStored());
+    this.emitInventory(player);
+    this.emitGold(player, storage.gold);
+    if (target.id === player.id) this.emitStats(player);
+    return true;
+  }
+
+  private randomBetween(min: number, max: number): number {
+    return Math.floor(min + Math.random() * (max - min + 1));
   }
 
   private async processPlayerAttack(player: GamePlayer, now: number) {

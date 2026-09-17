@@ -9,7 +9,7 @@ import { GameState } from '../game-state';
 import { CreatureAnimator, type AnimConfig, type AnimDirection, type AnimType } from '../creature-animator';
 import { CreatureAssetService } from '../creature-asset.service';
 import { OutfitAssetService, type OutfitAnimData } from '../outfit-asset.service';
-import { recolorCanvas } from '../outfit-recolor';
+import { recolorCanvas, recolorSpriteSheet } from '../outfit-recolor';
 import { CombatTextManager } from '../combat-text/combat-text-manager';
 
 const TILE_SIZE = TILE_SIZE_PX;
@@ -531,9 +531,9 @@ export class WorldScene extends Phaser.Scene {
 
     const layerDepth: Record<'ground' | 'groundDetail' | 'objects' | 'objectsAbove', (y: number) => number> = {
       ground: () => 0,
-      groundDetail: () => 0.01,
-      objects: (y) => y * 0.01 + 1,
-      objectsAbove: () => 1000,
+      groundDetail: () => 1,
+      objects: (y) => y * 0.01 + 10,
+      objectsAbove: (y) => y * 0.01 + 100,
     };
 
     const layers = render.layers;
@@ -575,14 +575,22 @@ export class WorldScene extends Phaser.Scene {
     if (!data) return;
     const frameW = data.config.spriteWidth;
     const frameH = data.config.spriteHeight;
-    const recolored = data.supportsColors && data.colorMaskAssetId;
+    const hasExplicitPairs = data.config.animations.some((sequence) => sequence.frames.some((frame) => typeof frame !== 'number' && frame.maskFrameIndex !== undefined));
+    const pairedMask = data.supportsColors && data.config.supportsColorization !== false && (data.config.colorMaskMode === 'paired_frames' || hasExplicitPairs);
+    const legacyMask = data.supportsColors && data.colorMaskAssetId && data.config.colorMaskMode !== 'paired_frames';
+    const recolored = pairedMask || legacyMask;
     const textureKey = recolored
       ? `outfit_${appearance.outfitId}_${appearance.colors.head}_${appearance.colors.primary}_${appearance.colors.secondary}_${appearance.colors.detail}`
       : `outfit_sheet_${appearance.outfitId}`;
 
     if (!this.textures.exists(textureKey)) {
-      if (recolored) await this.buildRecoloredOutfit(textureKey, data, appearance.colors);
-      else await this.loadSheet(textureKey, this.outfits.textureUrl(appearance.outfitId), frameW, frameH);
+      try {
+        if (recolored) await this.buildRecoloredOutfit(textureKey, data, appearance.colors);
+        else await this.loadSheet(textureKey, this.outfits.textureUrl(appearance.outfitId), frameW, frameH);
+      } catch (error) {
+        console.error('[Appearance] Falha ao montar outfit recolorido', { outfitId: appearance.outfitId, textureKey, error });
+        return;
+      }
     }
 
     const rendered = this.entities.get(id);
@@ -642,20 +650,28 @@ export class WorldScene extends Phaser.Scene {
   }
 
   private async buildRecoloredOutfit(textureKey: string, data: OutfitAnimData, colors: PlayerAppearance['colors']): Promise<void> {
-    const baseKey = `outfit_base_${data.outfitId}`;
-    const maskKey = `outfit_mask_${data.outfitId}`;
-    await this.loadImages([
-      { key: baseKey, url: this.outfits.textureUrl(data.outfitId) },
-      { key: maskKey, url: this.outfits.maskUrl(data.outfitId) },
-    ]);
-    const base = this.textures.get(baseKey).getSourceImage() as HTMLImageElement;
-    const mask = this.textures.get(maskKey).getSourceImage() as HTMLImageElement;
+    const paired = data.config.supportsColorization !== false && (data.config.colorMaskMode === 'paired_frames' || data.config.animations.some((sequence) => sequence.frames.some((frame) => typeof frame !== 'number' && frame.maskFrameIndex !== undefined)));
+    const base = await this.loadOutfitImage(this.outfits.textureUrl(data.outfitId));
+    const mask = paired ? base : await this.loadOutfitImage(this.outfits.maskUrl(data.outfitId));
     if (!base || !mask) return;
-    const canvas = recolorCanvas(base, mask, base.width, base.height, colors, APPEARANCE_PALETTE);
+    const frames = data.config.animations.flatMap((sequence) => sequence.frames.map((frame) => typeof frame === 'number' ? { frameIndex: frame } : frame));
+    const canvas = paired
+      ? recolorSpriteSheet(base, mask, base.width, base.height, data.config.spriteWidth, data.config.spriteHeight, frames, colors, APPEARANCE_PALETTE)
+      : recolorCanvas(base, mask, base.width, base.height, colors, APPEARANCE_PALETTE);
     const img = new Image();
     img.src = canvas.toDataURL('image/png');
     await new Promise<void>((resolve) => { img.onload = () => resolve(); });
     this.textures.addSpriteSheet(textureKey, img, { frameWidth: data.config.spriteWidth, frameHeight: data.config.spriteHeight });
+  }
+
+  private loadOutfitImage(url: string): Promise<HTMLImageElement> {
+    return new Promise((resolve, reject) => {
+      const image = new Image();
+      image.crossOrigin = 'anonymous';
+      image.onload = () => resolve(image);
+      image.onerror = () => reject(new Error(`Não foi possível carregar ${url}`));
+      image.src = url;
+    });
   }
 
   private addEntity(id: string, kind: string, name: string, position: Position, health?: number, maxHealth?: number) {
@@ -685,7 +701,7 @@ export class WorldScene extends Phaser.Scene {
         align: 'center',
       })
       .setOrigin(0.5);
-    const depth = position.y * 0.01 + 1;
+    const depth = position.y * 0.01 + 20;
     image.setDepth(depth);
     label.setDepth(depth + 0.01);
     return {
@@ -953,7 +969,7 @@ export class WorldScene extends Phaser.Scene {
 
   private moveCreatureRendered(id: string, rendered: RenderedEntity, position: Position, duration: number) {
     const to = tileBase(position, TILE_SIZE);
-    const depth = position.y * 0.01 + 1;
+    const depth = position.y * 0.01 + 20;
     rendered.image.setDepth(depth);
     rendered.label.setDepth(depth + 0.01);
     if (rendered.healthBack) {
@@ -994,7 +1010,7 @@ export class WorldScene extends Phaser.Scene {
 
   private moveRendered(rendered: RenderedEntity, position: Position, duration = MOVE_INTERVAL_MS) {
     const to = tileBase(position, TILE_SIZE);
-    const depth = position.y * 0.01 + 1;
+    const depth = position.y * 0.01 + 20;
     rendered.image.setDepth(depth);
     rendered.label.setDepth(depth + 0.01);
     if (rendered.healthBack) {

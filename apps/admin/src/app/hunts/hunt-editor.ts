@@ -39,7 +39,7 @@ export class HuntEditor implements OnInit {
 
       if (this.id !== 'new') {
         const h = await this.api.getHunt(this.id);
-        this.draft.set(structuredClone(h));
+        this.draft.set(this.normalizeDraft(h));
       } else {
         this.draft.set({
           id: '',
@@ -58,6 +58,14 @@ export class HuntEditor implements OnInit {
     } catch (e) {
       this.error.set((e as Error).message);
     }
+  }
+
+  creatureName(slug: string): string {
+    return this.creatures().find((creature) => creature.slug === slug)?.name ?? `${slug} (não encontrada)`;
+  }
+
+  hasCreature(slug: string): boolean {
+    return this.creatures().some((creature) => creature.slug === slug);
   }
 
   patch(p: Partial<HuntDefinition>) {
@@ -105,5 +113,27 @@ export class HuntEditor implements OnInit {
     } finally {
       this.saving.set(false);
     }
+  }
+
+  private normalizeDraft(h: HuntDefinition): HuntDefinition {
+    const monsters = Array.isArray(h.monsters)
+      ? h.monsters.filter((monster) => monster && typeof monster.monsterId === 'string').map((monster) => ({
+          monsterId: monster.monsterId,
+          weight: Number.isFinite(monster.weight) && monster.weight > 0 ? monster.weight : 1,
+        }))
+      : [];
+    return {
+      ...structuredClone(h),
+      monsters,
+      boss: {
+        ...h.boss,
+        monsterId: h.boss?.monsterId ?? monsters[0]?.monsterId ?? '',
+        statMultipliers: {
+          hp: h.boss?.statMultipliers?.hp ?? 3,
+          damage: h.boss?.statMultipliers?.damage ?? 1.5,
+          xp: h.boss?.statMultipliers?.xp ?? 2.5,
+        },
+      },
+    };
   }
 }

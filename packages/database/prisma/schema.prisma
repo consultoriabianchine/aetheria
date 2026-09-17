@@ -40,6 +40,7 @@ model Character {
   effects        CharacterEffect[]
   attackRotationSlots CharacterAttackRotationSlot[]
   healingRotationSlots CharacterHealingRotationSlot[]
+  potionUsage         PotionUsage[]
   createdAt      DateTime                 @default(now())
 
   @@index([archetype])
@@ -281,6 +282,39 @@ model CharacterHealingRotationSlot {
   ability      CombatAbility? @relation(fields: [ability_id], references: [id], onDelete: SetNull)
   @@unique([character_id, preset, slot_position])
   @@map("character_healing_rotation_slots")
+}
+
+model PotionDefinition {
+  id              String   @id
+  name            String
+  type            String
+  minLevel        Int      @map("min_level")
+  goldCost        Int      @map("gold_cost")
+  restoreAmount   Int      @map("restore_amount")
+  restoreMin      Int?     @map("restore_min")
+  restoreMax      Int?     @map("restore_max")
+  cooldownGroup   String   @default("potion") @map("cooldown_group")
+  enabled         Boolean  @default(true)
+  createdAt       DateTime @default(now()) @map("created_at")
+  updatedAt       DateTime @updatedAt @map("updated_at")
+  usage           PotionUsage[]
+  @@map("potions")
+}
+
+model PotionUsage {
+  id              String   @id @default(cuid())
+  characterId     String   @map("character_id")
+  potionId        String   @map("potion_id")
+  type            String
+  amountRestored  Int      @map("amount_restored")
+  goldCost        Int      @map("gold_cost")
+  huntSessionId   String?  @map("hunt_session_id")
+  createdAt       DateTime @default(now()) @map("created_at")
+  character       Character @relation(fields: [characterId], references: [id], onDelete: Cascade)
+  potion          PotionDefinition @relation(fields: [potionId], references: [id])
+  @@index([characterId, createdAt])
+  @@index([huntSessionId])
+  @@map("potion_usage")
 }
 
 // ---------------------------------------------------------------------------

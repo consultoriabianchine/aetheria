@@ -32,8 +32,8 @@
       <div class="wide">
         <h3>Visual (projétil/impacto)</h3>
         <div class="form">
-          <label>Tipo de Tiro<select [(ngModel)]="draft.shootTypeId"><option [ngValue]="undefined">None</option>@for (type of shootTypes(); track type.id) { <option [ngValue]="type.id">{{ type.name }}</option> }</select></label>
-          <label>Tipo de Efeito<select [(ngModel)]="draft.effectTypeId"><option [ngValue]="undefined">None</option>@for (type of effectTypes(); track type.id) { <option [ngValue]="type.id">{{ type.name }}</option> }</select></label>
+          <label>Tipo de Tiro<select [(ngModel)]="draft.shootTypeId"><option [ngValue]="null">None</option>@for (type of shootTypes(); track type.id) { <option [ngValue]="type.id">{{ type.name }}</option> }</select></label>
+          <label>Tipo de Efeito<select [(ngModel)]="draft.effectTypeId"><option [ngValue]="null">None</option>@for (type of effectTypes(); track type.id) { <option [ngValue]="type.id">{{ type.name }}</option> }</select></label>
         </div>
       </div>
       <button class="primary" (click)="save()">Save</button>

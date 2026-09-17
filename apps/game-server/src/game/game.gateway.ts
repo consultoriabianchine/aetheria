@@ -63,7 +63,7 @@ export class GameGateway implements OnGatewayConnection, OnGatewayDisconnect {
   onAttackRotation(socket: Socket, payload: { preset: string; characterId?: string; slots: { position: 1 | 2 | 3 | 4; abilityId?: number; enabled: boolean; minTargets?: number }[] }) { this.engine.handleAttackRotation(socket.id, payload.preset, payload.slots, payload.characterId); }
 
   @SubscribeMessage('rotation.healing.set')
-  onHealingRotation(socket: Socket, payload: { preset: string; characterId?: string; slots: { position: 1 | 2 | 3 | 4; abilityId?: number; enabled: boolean; trigger: { target: 'self' | 'lowest_party_member' | 'specific_party_role'; hpBelowPercent: number } }[] }) { this.engine.handleHealingRotation(socket.id, payload.preset, payload.slots, payload.characterId); }
+  onHealingRotation(socket: Socket, payload: { preset: string; characterId?: string; slots: { position: 1 | 2 | 3 | 4; abilityId?: number; enabled: boolean; trigger: { target: 'self' | 'lowest_party_member' | 'specific_party_role'; hpBelowPercent: number; mpBelowPercent?: number; potionId?: string } }[] }) { this.engine.handleHealingRotation(socket.id, payload.preset, payload.slots, payload.characterId); }
 
   @SubscribeMessage('game.attack')
   onAttack(socket: Socket, payload: { targetId: string }) {

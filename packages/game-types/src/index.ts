@@ -116,8 +116,8 @@ export interface CombatAbilityDefinition {
   manaCost?: number;
   levelRequirement?: number;
   areaConfig?: AbilityAreaConfig;
-  shootTypeId?: number;
-  effectTypeId?: number;
+  shootTypeId?: number | null;
+  effectTypeId?: number | null;
   visual?: ItemVisualEffects;
   animationId?: number;
   formulaProfileId?: number;
@@ -165,6 +165,8 @@ export interface AttackRotationSlot {
 export interface HealingTrigger {
   target: 'self' | 'lowest_party_member' | 'specific_party_role';
   hpBelowPercent: number;
+  mpBelowPercent: number;
+  potionId?: string;
 }
 
 export interface HealingRotationSlot {

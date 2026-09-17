@@ -402,8 +402,8 @@
             } @else {
               <div class="helper-title-row"><div><h2>{{ helperSection() === 'healing' ? 'Rotação de Cura' : 'Rotação de Ataque' }}</h2><p class="helper-copy">Prioridade: Slot 1 → Slot 2 → Slot 3 → Slot 4. Grupos de cooldown independentes.</p></div><select [ngModel]="rotationCharacterId()" (ngModelChange)="rotationCharacterId.set($event)">@for (member of selectableCharacters(); track member.id) { <option [value]="member.id">{{ member.name }}</option> }</select></div>
               <div class="helper-slots">
-                @for (slot of (helperSection() === 'healing' ? healingRotationFor(rotationCharacterId() ?? '') : attackRotationFor(rotationCharacterId() ?? '')); track $index) {
-                  <article class="helper-slot-row"><b>{{ $index + 1 }}</b><div class="helper-slot-icon">@if (rotationAbilityIcon(slot); as icon) { <img [src]="icon" alt="" /> } @else { + }</div><div><strong>{{ rotationAbilityName(slot) }}</strong><small>{{ slot && rotationAbility(slot) ? abilityMeta(rotationAbility(slot)!) : 'Slot vazio' }}</small></div><button type="button" (click)="openRotationSlot($index, helperSection() === 'healing' ? 'healing' : 'attack')">Configurar</button></article>
+                 @for (slot of (helperSection() === 'healing' ? healingRotationFor(rotationCharacterId() ?? '').slice(0, 3) : attackRotationFor(rotationCharacterId() ?? '')); track $index) {
+                   <article class="helper-slot-row"><b>{{ $index + 1 }}</b><div class="helper-slot-icon">@if (helperSection() === 'healing' && healingSlotIcon($index); as icon) { <img [src]="icon" alt="" /> } @else { + }</div><div><strong>{{ helperSection() === 'healing' ? (healingSlotType($index) === 'spell' ? 'Magia de cura' : healingSlotType($index) === 'mp' ? 'Poção de MP' : 'Poção de HP') : rotationAbilityName(slot) }}</strong><small>{{ helperSection() === 'healing' && healingPotionFor($index) ? 'Poção virtual · gold por uso' : (slot && rotationAbility(slot) ? abilityMeta(rotationAbility(slot)!) : 'Slot vazio') }}</small></div><button type="button" (click)="openRotationSlot($index, helperSection() === 'healing' ? 'healing' : 'attack')">Configurar</button></article>
                 }
               </div>
             }
@@ -422,9 +422,22 @@
           @if (rotationMode() === 'healing') { <div class="heal-target-picker"><span>Alvo:</span><button [class.active]="healTarget() === 'self'" (click)="healTarget.set('self')">Self</button><button [class.active]="healTarget() === 'lowest_party_member'" (click)="healTarget.set('lowest_party_member')">Menor HP</button><button [class.active]="healTarget() === 'specific_party_role'" (click)="healTarget.set('specific_party_role')">Líder</button></div> }
           <div class="picker-search"><input [ngModel]="abilitySearch()" (ngModelChange)="abilitySearch.set($event)" placeholder="Buscar por nome ou palavra..." /><label><input type="checkbox" [ngModel]="releasedOnly()" (ngModelChange)="releasedOnly.set($event)" /> Só liberadas</label></div>
           <div class="ability-list">
-            @for (ability of filteredAbilities(); track ability.abilityId) {
-              <article class="ability-card" [class.in-use]="slotAbilityId() === ability.abilityId"><div class="ability-card-icon">@if (abilityIcon(ability); as icon) { <img [src]="icon" alt="" /> } @else { ✦ }</div><div><strong>{{ ability.name }}</strong><small>{{ ability.slug }}</small><span>{{ abilityMeta(ability) }}</span>@if (rotationMode() === 'attack' && ability.targetMode === 'area_enemy') { <select [ngModel]="areaMinTargets(rotationCharacterId() ?? '', rotationSlot() - 1)" (ngModelChange)="setAreaMinTargets(rotationSlot() - 1, +$event)"><option [ngValue]="0">auto</option><option [ngValue]="2">2+</option><option [ngValue]="3">3+</option><option [ngValue]="4">4+</option><option [ngValue]="5">5+</option></select> } @if (rotationMode() === 'healing') { <label class="heal-config">HP ≤ <input type="number" min="1" max="100" [ngModel]="healingThreshold()" (ngModelChange)="healingThreshold.set(+$event)" />%</label> }</div><button type="button" (click)="setRotationAbility(rotationSlot() - 1, ability.abilityId)">{{ slotAbilityId() === ability.abilityId ? 'Em uso' : 'Usar' }}</button></article>
+            @if (rotationMode() === 'healing') {
+              @if (healingSlotType(rotationSlot() - 1) !== 'spell') {
+               <div class="potion-tabs"><button type="button" [class.active]="potionCategory() === 'mp'" (click)="potionCategory.set('mp')">Poções de MP</button><button type="button" [class.active]="potionCategory() === 'hp'" (click)="potionCategory.set('hp')">Poções de HP</button></div>
+                <h3>Poções virtuais · não ocupam a mochila</h3>
+                @for (potion of helperPotionOptions(); track potion[0]) {
+                  @if ((healingSlotType(rotationSlot() - 1) === 'mp' && potion[0].includes('mana')) || (healingSlotType(rotationSlot() - 1) === 'hp' && potion[0].includes('health'))) {
+                    <article class="ability-card" [class.in-use]="healingPotionFor(rotationSlot() - 1) === potion[0]"><div class="ability-card-icon">@if (iconFor(potion[0]); as icon) { <img [src]="icon" alt="" /> } @else { + }</div><div><strong>{{ potion[1] }}</strong><small>{{ potion[3] }}</small><span>Nível {{ potion[2] }} · {{ potion[4] }} gold por uso · Cooldown: 1s</span><div class="heal-config">@if (healingSlotType(rotationSlot() - 1) === 'hp') { <label>HP ≤ <input type="number" min="1" max="100" [ngModel]="healingThreshold()" (ngModelChange)="healingThreshold.set(+$event)" />%</label> } @else { <label>MP ≤ <input type="number" min="1" max="100" [ngModel]="manaThreshold()" (ngModelChange)="manaThreshold.set(+$event)" />%</label> }</div></div><button type="button" (click)="setHealingPotion(rotationSlot() - 1, potion[0])">{{ healingPotionFor(rotationSlot() - 1) === potion[0] ? 'Em uso' : 'Usar' }}</button></article>
+                  }
+                }
+              }
             }
+                @if (rotationMode() === 'attack' || healingSlotType(rotationSlot() - 1) === 'spell') {
+                @for (ability of filteredAbilities(); track ability.abilityId) {
+                  <article class="ability-card" [class.in-use]="slotAbilityId() === ability.abilityId"><div class="ability-card-icon">@if (abilityIcon(ability); as icon) { <img [src]="icon" alt="" /> } @else { ✦ }</div><div><strong>{{ ability.name }}</strong><small>{{ ability.slug }}</small><span>{{ abilityMeta(ability) }} · Cooldown: 1s</span>@if (rotationMode() === 'attack' && ability.targetMode === 'area_enemy') { <select [ngModel]="areaMinTargets(rotationCharacterId() ?? '', rotationSlot() - 1)" (ngModelChange)="setAreaMinTargets(rotationSlot() - 1, +$event)"><option [ngValue]="0">auto</option><option [ngValue]="2">2+</option><option [ngValue]="3">3+</option><option [ngValue]="4">4+</option><option [ngValue]="5">5+</option></select> } @if (rotationMode() === 'healing' && healingSlotType(rotationSlot() - 1) === 'spell') { <div class="heal-config"><label>HP ≤ <input type="number" min="1" max="100" [ngModel]="healingThreshold()" (ngModelChange)="healingThreshold.set(+$event)" />%</label></div> }</div><button type="button" (click)="setRotationAbility(rotationSlot() - 1, ability.abilityId)">{{ slotAbilityId() === ability.abilityId ? 'Em uso' : 'Usar' }}</button></article>
+                }
+                }
           </div>
         </div>
         <footer><button type="button" (click)="setRotationAbility(rotationSlot() - 1, 0); saveRotation()">Limpar</button><button type="button" (click)="saveRotation()">Salvar</button></footer>
@@ -456,7 +469,75 @@
   }
 
   @if (state.appearanceOpen()) {
-    <div class="modal-backdrop"><section class="appearance-modal"><h2>Aparência <span>{{ state.self()?.name }}</span></h2><div class="app-outfits">@for (o of state.availableOutfits(); track o.outfitId) { <button class="app-card" type="button" [class.active]="state.appearanceDraft()?.outfitId === o.outfitId" (click)="selectOutfit(o.outfitId)"><outfit-thumb [outfitId]="o.outfitId"></outfit-thumb><span>{{ o.name }}</span></button> }</div>@if (draftOutfit(); as o) { @if (o.supportsColors) { <div class="app-colors">@for (slot of colorSlots; track slot) { <div class="app-color"><label>{{ slot }}</label><div class="app-palette">@for (c of palette; track c; let i = $index) { <span class="app-swatch" [style.background]="c" [class.active]="state.appearanceDraft()!.colors[slot] === i" (click)="setDraftColor(slot, i)"></span> }</div></div> }</div> } @if (o.supportsAddons) { <div class="app-addons"><label><input type="checkbox" [checked]="hasAddon(state.appearanceDraft()!.addonMask, 1)" (change)="toggleAddon(1)" /> Addon 1</label><label><input type="checkbox" [checked]="hasAddon(state.appearanceDraft()!.addonMask, 2)" (change)="toggleAddon(2)" /> Addon 2</label></div> } }<div class="app-actions"><button type="button" class="primary" (click)="state.saveAppearance()">Salvar</button><button type="button" (click)="state.closeAppearance()">Cancelar</button></div></section></div>
+    <div class="modal-backdrop appearance-backdrop">
+      <section class="appearance-modal" role="dialog" aria-modal="true" aria-label="Aparência">
+        <header class="appearance-header">
+          <h2>Aparência <span>{{ state.self()?.name }}</span></h2>
+          <button type="button" class="appearance-close" (click)="state.closeAppearance()" aria-label="Fechar">×</button>
+        </header>
+        <main class="appearance-body">
+          <nav class="appearance-nav" aria-label="Categorias">
+            <button type="button" class="appearance-nav-btn active">Outfits</button>
+            <button type="button" class="appearance-nav-btn" disabled>Montarias</button>
+            <button type="button" class="appearance-nav-btn" disabled>Presets</button>
+          </nav>
+
+          <section class="appearance-preview-column">
+            <div class="appearance-preview-box">
+              @if (state.appearanceDraft(); as draft) {
+                <outfit-thumb [outfitId]="draft.outfitId" [colors]="draft.colors"></outfit-thumb>
+              }
+            </div>
+            @if (draftOutfit(); as outfit) {
+              <div class="appearance-selected-name">{{ outfit.name }}</div>
+              @if (outfit.supportsAddons) {
+                <div class="appearance-addons">
+                  <label><input type="checkbox" [checked]="hasAddon(state.appearanceDraft()!.addonMask, 1)" (change)="toggleAddon(1)" /> Addon 1</label>
+                  <label><input type="checkbox" [checked]="hasAddon(state.appearanceDraft()!.addonMask, 2)" (change)="toggleAddon(2)" /> Addon 2</label>
+                </div>
+              }
+            }
+            @if (draftOutfit()?.supportsColors) {
+              <div class="appearance-color-editor">
+                <div class="appearance-color-layout">
+                  <div class="appearance-channels">
+                    @for (slot of colorSlots; track slot) {
+                      <button type="button" class="appearance-channel" [class.active]="activeColorSlot() === slot" (click)="setActiveColorSlot(slot)">
+                        <span class="appearance-channel-swatch" [style.background]="palette[state.appearanceDraft()!.colors[slot]]"></span>{{ slot }}
+                      </button>
+                    }
+                    <button type="button" class="appearance-randomize" (click)="randomizeAppearanceColors()">Randomizar<br />cores</button>
+                  </div>
+                  <div class="appearance-palette">
+                    @for (color of palette; track $index) {
+                      <button type="button" class="appearance-swatch" [class.selected]="state.appearanceDraft()!.colors[activeColorSlot()] === $index" [style.background]="color" [attr.aria-label]="'Cor ' + $index" (click)="setDraftColor(activeColorSlot(), $index)"></button>
+                    }
+                  </div>
+                </div>
+              </div>
+            }
+          </section>
+
+          <section class="appearance-outfit-column">
+            <input class="appearance-search" type="search" placeholder="Buscar outfit..." [value]="appearanceSearch()" (input)="appearanceSearch.set($any($event.target).value)" />
+            <div class="appearance-outfit-scroll">
+              <div class="appearance-outfit-grid">
+                @for (o of filteredAppearanceOutfits(); track o.outfitId) {
+                  <button type="button" class="appearance-outfit-card" [class.active]="state.appearanceDraft()?.outfitId === o.outfitId" (click)="selectOutfit(o.outfitId)">
+                    <outfit-thumb [outfitId]="o.outfitId"></outfit-thumb>
+                    <span>{{ o.name }}</span>
+                  </button>
+                }
+              </div>
+            </div>
+          </section>
+        </main>
+        <footer class="appearance-footer">
+          <button type="button" class="appearance-cancel" (click)="state.closeAppearance()">Cancelar</button>
+          <button type="button" class="appearance-save" (click)="state.saveAppearance()">Salvar</button>
+        </footer>
+      </section>
+    </div>
   }
 
   <hunt-browser />

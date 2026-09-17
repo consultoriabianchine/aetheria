@@ -317,3 +317,46 @@ app-game .hunt-card p {
   margin: 4px 0 7px;
 }
 
+/* Appearance studio: compact fantasy wardrobe with a quiet olive metal palette. */
+app-game .appearance-backdrop { padding: 18px; background: radial-gradient(circle at center, rgba(48,67,53,.72), rgba(8,12,10,.9)); }
+app-game .appearance-modal { width: min(710px,95vw); height: min(510px,92vh); max-height: 92vh; display: flex; flex-direction: column; overflow: hidden; padding: 0; color: #e7e7e2; background: linear-gradient(rgba(255,255,255,.015),rgba(0,0,0,.025)),rgba(42,44,42,.98); border-color: #474b47; border-radius: 7px; box-shadow: 0 22px 60px rgba(0,0,0,.58); }
+app-game .appearance-header { height: 58px; flex: 0 0 58px; position: relative; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid rgba(255,255,255,.05); }
+app-game .appearance-header h2 { color: #e4c858; font-family: Georgia,'Times New Roman',serif; font-size: 15px; letter-spacing: .04em; }
+app-game .appearance-header h2 span { color: #a4a6a1; font-family: Tahoma,Verdana,sans-serif; font-size: 11px; font-weight: 400; letter-spacing: 0; text-transform: none; }
+app-game .appearance-close { position: absolute; right: 14px; top: 14px; width: 28px; height: 28px; border: 1px solid #4a4d49; border-radius: 4px; background: #252825; color: #aaa; font-size: 20px; line-height: 1; }
+app-game .appearance-close:hover { color: #fff; border-color: #e4c858; }
+app-game .appearance-body { flex: 1; min-height: 0; display: grid; grid-template-columns: 105px 250px minmax(0,1fr); gap: 14px; padding: 14px 16px; }
+app-game .appearance-nav { display: flex; flex-direction: column; gap: 5px; }
+app-game .appearance-nav-btn { height: 29px; border: 1px solid #4a4d49; border-radius: 4px; background: #252825; color: #a9aaa6; text-align: left; padding: 0 9px; font-size: 10px; font-weight: 700; }
+app-game .appearance-nav-btn.active { background: #efeee7; color: #333; }
+app-game .appearance-nav-btn:disabled { opacity: .42; cursor: not-allowed; }
+app-game .appearance-preview-column { min-width: 0; display: flex; flex-direction: column; }
+app-game .appearance-preview-box { width: 170px; height: 170px; align-self: center; display: grid; place-items: center; border: 1px solid #4c504b; border-radius: 5px; background: radial-gradient(circle at center,rgba(255,255,255,.025),transparent 65%),#151715; }
+app-game .appearance-preview-box .thumb { width: 112px; height: 112px; image-rendering: pixelated; }
+app-game .appearance-selected-name { margin-top: 8px; color: #eee; font-size: 11px; font-weight: 700; text-align: center; }
+app-game .appearance-addons { display: grid; gap: 7px; margin-top: 12px; color: #ddd; font-size: 10px; }
+app-game .appearance-addons input { accent-color: #d8bd55; }
+app-game .appearance-color-editor { margin-top: 12px; }
+app-game .appearance-color-layout { display: grid; grid-template-columns: 95px minmax(0,1fr); gap: 10px; }
+app-game .appearance-channels { display: grid; gap: 5px; align-content: start; }
+app-game .appearance-channel { height: 25px; display: flex; align-items: center; gap: 7px; border: 1px solid #4a4d49; border-radius: 4px; background: #252825; color: #aaa; padding: 0 7px; font-size: 9px; font-weight: 700; text-transform: capitalize; }
+app-game .appearance-channel.active { color: #fff; border-color: #e3e2da; }
+app-game .appearance-channel-swatch { width: 12px; height: 12px; border: 1px solid #111; border-radius: 2px; }
+app-game .appearance-randomize { height: 35px; margin-top: 3px; border: 1px solid #e0dfd7; border-radius: 4px; background: #252825; color: #fff; font-size: 8px; font-weight: 700; }
+app-game .appearance-palette { display: grid; grid-template-columns: repeat(8,12px); gap: 3px; align-content: start; padding-top: 2px; }
+app-game .appearance-swatch { width: 12px; height: 12px; border: 1px solid rgba(0,0,0,.45); border-radius: 1px; padding: 0; cursor: pointer; }
+app-game .appearance-swatch:hover, app-game .appearance-swatch.selected { outline: 2px solid #fff; z-index: 2; }
+app-game .appearance-outfit-column { min-width: 0; min-height: 0; display: flex; flex-direction: column; padding-left: 14px; border-left: 1px solid rgba(255,255,255,.08); }
+app-game .appearance-search { width: 100%; height: 29px; margin-bottom: 7px; padding: 0 9px; border: 1px solid #454945; border-radius: 4px; background: #1a1c1a; color: #ddd; font-size: 10px; }
+app-game .appearance-outfit-scroll { flex: 1; min-height: 0; overflow-y: auto; padding-right: 5px; scrollbar-width: thin; scrollbar-color: #555a55 #1a1c1a; }
+app-game .appearance-outfit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+app-game .appearance-outfit-card { min-height: 88px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; border: 1px solid #464a46; border-radius: 4px; background: #1d1f1d; color: #999; padding: 5px; font-size: 9px; font-weight: 700; }
+app-game .appearance-outfit-card:hover { border-color: #6b706b; color: #fff; }
+app-game .appearance-outfit-card.active { border-color: #e8e8e1; color: #fff; background: #3a3b36; }
+app-game .appearance-outfit-card .thumb { width: 48px; height: 48px; image-rendering: pixelated; }
+app-game .appearance-footer { flex: 0 0 58px; display: flex; align-items: center; justify-content: flex-end; gap: 9px; padding: 0 16px; border-top: 1px solid rgba(255,255,255,.05); }
+app-game .appearance-footer button { min-width: 91px; height: 32px; border: 0; border-radius: 4px; font-weight: 700; font-size: 11px; }
+app-game .appearance-save { background: #eee; color: #333; }
+app-game .appearance-cancel { background: #3a3d39; color: #999; }
+app-game .appearance-footer button:focus-visible, app-game .appearance-swatch:focus-visible, app-game .appearance-outfit-card:focus-visible { outline: 2px solid #e4c858; outline-offset: 2px; }
+@media (max-width: 680px) { app-game .appearance-modal { height: min(650px,94vh); } app-game .appearance-body { grid-template-columns: 78px 1fr; overflow-y: auto; } app-game .appearance-nav { grid-row: span 2; } app-game .appearance-outfit-column { border-left: 0; padding-left: 0; } }

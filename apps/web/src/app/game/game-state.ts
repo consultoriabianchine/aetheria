@@ -69,8 +69,9 @@ export class GameState {
   readonly abilities = signal<import('@aetheria/types').CombatAbilityDefinition[]>([]);
   readonly attackRotations = signal<Record<string, number[]>>({});
   readonly healingRotations = signal<Record<string, number[]>>({});
+  readonly healingPotionRotations = signal<Record<string, Array<string | undefined>>>({});
   readonly attackMinTargets = signal<Record<string, number[]>>({});
-  readonly healingTriggers = signal<Record<string, Array<{ target: 'self' | 'lowest_party_member' | 'specific_party_role'; hpBelowPercent: number }>>>({});
+  readonly healingTriggers = signal<Record<string, Array<{ target: 'self' | 'lowest_party_member' | 'specific_party_role'; hpBelowPercent: number; mpBelowPercent: number }>>>({});
   readonly combatConfigs = signal<Record<string, PlayerCombatConfig>>({});
   readonly abilityReadyByChar = signal<Record<string, Record<number, number>>>({});
   readonly attackGroupReadyByChar = signal<Record<string, number>>({});
@@ -160,7 +161,7 @@ export class GameState {
         this.abilities.set((data['abilities'] ?? []) as import('@aetheria/types').CombatAbilityDefinition[]);
         break;
       case 'rotation.state': {
-        const r = data as { preset?: string; characterId?: string; attack?: { ability_id?: number; min_targets?: number }[]; healing?: { ability_id?: number; trigger?: { target?: 'self' | 'lowest_party_member' | 'specific_party_role'; hpBelowPercent?: number } }[]; cooldowns?: { attackGroupReadyAt?: number; healingGroupReadyAt?: number; abilityReadyAt?: Record<number, number> } };
+        const r = data as { preset?: string; characterId?: string; attack?: { ability_id?: number; min_targets?: number }[]; healing?: { ability_id?: number; trigger?: { target?: 'self' | 'lowest_party_member' | 'specific_party_role'; hpBelowPercent?: number; mpBelowPercent?: number; potionId?: string } }[]; cooldowns?: { attackGroupReadyAt?: number; healingGroupReadyAt?: number; abilityReadyAt?: Record<number, number> } };
         const characterId = r.characterId ?? this.self()?.id;
         if (characterId) {
           if (r.attack) {
@@ -169,7 +170,8 @@ export class GameState {
           }
           if (r.healing) {
             this.healingRotations.update((all) => ({ ...all, [characterId]: [0, 1, 2, 3].map((index) => r.healing?.[index]?.ability_id ?? 0) }));
-            this.healingTriggers.update((all) => ({ ...all, [characterId]: [0, 1, 2, 3].map((index) => ({ target: r.healing?.[index]?.trigger?.target ?? 'self', hpBelowPercent: r.healing?.[index]?.trigger?.hpBelowPercent ?? 80 })) }));
+            this.healingPotionRotations.update((all) => ({ ...all, [characterId]: [0, 1, 2, 3].map((index) => r.healing?.[index]?.trigger?.potionId) }));
+            this.healingTriggers.update((all) => ({ ...all, [characterId]: [0, 1, 2, 3].map((index) => ({ target: r.healing?.[index]?.trigger?.target ?? 'self', hpBelowPercent: r.healing?.[index]?.trigger?.hpBelowPercent ?? 80, mpBelowPercent: r.healing?.[index]?.trigger?.mpBelowPercent ?? 50 })) }));
           }
           if (r.cooldowns) this.applyCooldowns(characterId, r.cooldowns);
         }

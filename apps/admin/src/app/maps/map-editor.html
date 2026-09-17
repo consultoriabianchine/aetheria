@@ -66,13 +66,14 @@
     @if (mode() === 'tiles') {
       <div class="tile-grid">
         @for (t of showFavorites() ? favoritesTiles : showRecents() ? recentTiles : filteredTiles; track t.tileId) {
-          <div class="tile-thumb" [class.active]="selectedTileId() === t.tileId" [title]="tileTooltip(t)" (click)="selectTile(t.tileId)" (contextmenu)="$event.preventDefault(); toggleFavorite(t.tileId); false">
+          <div class="tile-thumb" [class.active]="selectedTileIds().includes(t.tileId)" [title]="tileTooltip(t)" (click)="selectTile(t.tileId, $event.shiftKey)" (contextmenu)="$event.preventDefault(); toggleFavorite(t.tileId); false">
             <span class="thumb-img" [style]="tileThumbStyle(t)"></span>
             @if (showIds()) { <span class="tid">{{ t.tileId }}</span> }
             @if (isFavorite(t.tileId)) { <span class="fav">★</span> }
           </div>
         }
       </div>
+      <p class="selection-status">{{ selectedTileIds().length }} tile(s) selecionado(s). Shift+clique seleciona múltiplos; a composição será pintada mantendo a posição relativa.</p>
     }
 
     @if (mode() === 'entities') {

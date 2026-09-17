@@ -241,7 +241,7 @@
         @for (f of seq.frames; track $index; let i = $index) {
           <span class="frame-chip">
             <button class="mini" (click)="moveFrame(i, -1)">←</button>
-            <span class="mono">{{ f }}</span>
+            <span class="mono">{{ f.frameIndex }}</span>
             <button class="mini" (click)="moveFrame(i, 1)">→</button>
             <button class="mini" (click)="duplicateFrame(i)">+</button>
             <button class="mini danger" (click)="removeFrame(i)">✕</button>

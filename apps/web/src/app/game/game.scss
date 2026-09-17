@@ -356,18 +356,48 @@
   margin-top: 7px;
 }
 
-.heal-config {
+.potion-tabs {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 7px;
+  margin-bottom: 10px;
+}
+
+.heal-config {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
   margin-top: 7px;
   color: #aeb7bf;
   font-size: 10px;
 }
 
 .heal-config input {
-  width: 52px;
+  width: 48px;
   padding: 4px;
+}
+
+.heal-config span {
+  color: #d7bd56;
+  font-size: 10px;
+}
+
+.potion-tabs {
+  border-bottom: 1px solid #46515a;
+}
+
+.potion-tabs button {
+  padding: 7px 10px;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+  color: #9ba6af;
+  cursor: pointer;
+}
+
+.potion-tabs button.active {
+  border-bottom-color: #d7bd56;
+  color: #f0d56d;
 }
 
 .ability-picker footer {

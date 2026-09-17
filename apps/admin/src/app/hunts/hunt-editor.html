@@ -49,6 +49,9 @@
       @for (m of h.monsters; track $index; let i = $index) {
         <div class="row">
           <select [value]="m.monsterId" (change)="setMonster(i, { monsterId: $any($event.target).value })">
+            @if (!hasCreature(m.monsterId)) {
+              <option [value]="m.monsterId">{{ creatureName(m.monsterId) }}</option>
+            }
             @for (c of creatures(); track c.creatureId) {
               <option [value]="c.slug">{{ c.name }}</option>
             }
@@ -68,6 +71,9 @@
       <div class="field">
         <label>Monstro</label>
         <select [value]="h.boss.monsterId" (change)="setBoss({ monsterId: $any($event.target).value })">
+          @if (!hasCreature(h.boss.monsterId)) {
+            <option [value]="h.boss.monsterId">{{ creatureName(h.boss.monsterId) }}</option>
+          }
           @for (c of creatures(); track c.creatureId) {
             <option [value]="c.slug">{{ c.name }}</option>
           }

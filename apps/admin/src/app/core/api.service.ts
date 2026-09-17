@@ -236,7 +236,9 @@ export interface AdminAnimationSetConfig {
   bodyOffsetX?: number;
   bodyOffsetY?: number;
   sockets?: { projectileOrigin?: { x: number; y: number } };
-  animations: unknown[];
+  supportsColorization?: boolean;
+  colorMaskMode?: 'none' | 'paired_frames' | 'separate_asset';
+  animations: import('@aetheria/types').AnimationSequence[];
 }
 
 @Injectable({ providedIn: 'root' })

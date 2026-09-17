@@ -4,11 +4,19 @@ export type AnimDirection = 'north' | 'east' | 'south' | 'west';
 export interface AnimSequence {
   animation: AnimType;
   direction: AnimDirection;
-  frames: number[];
+  frames: AnimFrame[];
   frameDurationMs: number;
   loop: boolean;
   playbackMode?: 'normal' | 'pingpong';
   holdLastFrameMs?: number;
+}
+
+export interface AnimFrame {
+  frameIndex: number;
+  durationMs?: number;
+  maskFrameIndex?: number;
+  offsetX?: number;
+  offsetY?: number;
 }
 
 export interface AnimConfig {
@@ -24,6 +32,8 @@ export interface AnimConfig {
   bodyHeight?: number;
   bodyOffsetX?: number;
   bodyOffsetY?: number;
+  supportsColorization?: boolean;
+  colorMaskMode?: 'none' | 'paired_frames' | 'separate_asset';
   sockets?: {
     feet?: { x: number; y: number };
     center?: { x: number; y: number };
@@ -82,17 +92,20 @@ export class CreatureAnimator {
     this.setCurrent(anim, now);
   }
 
-  /** Índice do frame (célula da spritesheet) atualmente exibido. */
-  frameIndex(now: number): number {
+  /** Definição do frame atualmente exibido; máscaras nunca são inferidas. */
+  frameDefinition(now: number): AnimFrame {
     const seq =
       this.lookup.get(`${this.current}:${this.direction}`) ??
       this.lookup.get(`idle:${this.direction}`) ??
       this.lookup.get(`walk:${this.direction}`);
-    if (!seq || seq.frames.length === 0) return 0;
-    const index = seq.frames[this.computeIndex(seq, now)];
+    if (!seq || seq.frames.length === 0) return { frameIndex: 0 };
+    const raw = seq.frames[this.computeIndex(seq, now)] as AnimFrame | number;
+    const index = typeof raw === 'number' ? { frameIndex: raw } : raw;
     this.revertIfFinished(seq, now);
     return index;
   }
+
+  frameIndex(now: number): number { return this.frameDefinition(now).frameIndex; }
 
   private setCurrent(anim: AnimType, now: number) {
     const seq =

@@ -17,6 +17,21 @@ export class HuntAdminService {
     if (!input.arenaId) throw new BadRequestException('arenaId é obrigatório');
     if (!input.monsters?.length) throw new BadRequestException('Adicione ao menos um monstro');
 
+    const creatureRows = await this.prisma.creatureDefinition.findMany({ select: { id: true, slug: true } });
+    const creatureIds = new Map(creatureRows.flatMap((creature) => [[creature.id, creature.id], [creature.slug, creature.id]]));
+    const resolveCreatureId = (value: string) => creatureIds.get(value.trim());
+    const monsters = input.monsters.map((monster) => ({
+      ...monster,
+      monsterId: resolveCreatureId(monster.monsterId),
+    }));
+    const unresolved = input.monsters
+      .filter((monster) => !resolveCreatureId(monster.monsterId))
+      .map((monster) => monster.monsterId);
+    const bossId = input.boss?.monsterId ? resolveCreatureId(input.boss.monsterId) : undefined;
+    if (unresolved.length || !bossId) {
+      throw new BadRequestException(`Criatura(s) não encontrada(s): ${[...unresolved, ...(bossId ? [] : [input.boss?.monsterId ?? 'boss'])].join(', ')}`);
+    }
+
     const id = input.id ?? `hunt_${Date.now().toString(36)}`;
     const data = {
       id,
@@ -31,8 +46,8 @@ export class HuntAdminService {
       tags: input.tags ? (input.tags as unknown as Prisma.InputJsonValue) : undefined,
       basePackSize: input.basePackSize ?? 4,
       maxPackSize: input.maxPackSize ?? 9,
-      monsters: input.monsters as unknown as Prisma.InputJsonValue,
-      boss: input.boss as unknown as Prisma.InputJsonValue,
+      monsters: monsters as unknown as Prisma.InputJsonValue,
+      boss: { ...input.boss, monsterId: bossId } as unknown as Prisma.InputJsonValue,
       arenaId: input.arenaId,
       arenaWidth: input.arenaWidth ?? null,
       arenaHeight: input.arenaHeight ?? null,

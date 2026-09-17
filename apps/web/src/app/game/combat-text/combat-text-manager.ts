@@ -1,5 +1,5 @@
 import type Phaser from 'phaser';
-import { COMBAT_TEXT_ANIMATION, COMBAT_TEXT_THEME, COMBAT_TEXT_XP_COLOR, WORLD_TEXT_COLORS, WORLD_TEXT_THEME } from '@aetheria/config';
+import { COMBAT_TEXT_ANIMATION, COMBAT_TEXT_MANA_COLOR, COMBAT_TEXT_THEME, COMBAT_TEXT_XP_COLOR, WORLD_TEXT_COLORS, WORLD_TEXT_THEME } from '@aetheria/config';
 import type { DamageType } from '@aetheria/types';
 import { CombatTextPool } from './combat-text-pool';
 import type { FloatingCombatText } from './floating-combat-text';
@@ -16,6 +16,7 @@ export interface CombatTextHealEvent {
   targetId: string;
   amount: number;
   critical: boolean;
+  resource?: 'hp' | 'mp';
   delayMs?: number;
 }
 
@@ -50,7 +51,7 @@ export class CombatTextManager {
   }
 
   spawnHealing(event: CombatTextHealEvent) {
-    this.spawn(event.targetId, event.amount, 'healing', undefined, event.critical, event.delayMs);
+    this.spawn(event.targetId, event.amount, 'healing', undefined, event.critical, event.delayMs, undefined, event.resource);
   }
 
   spawnXp(event: CombatTextXpEvent) {
@@ -86,7 +87,7 @@ export class CombatTextManager {
     this.active.length = 0;
   }
 
-  private spawn(entityId: string, value: number, type: 'damage' | 'healing' | 'xp' | 'gold', damageType: DamageType | undefined, critical: boolean, delayMs = 0, positionOverride?: WorldPosition) {
+  private spawn(entityId: string, value: number, type: 'damage' | 'healing' | 'xp' | 'gold', damageType: DamageType | undefined, critical: boolean, delayMs = 0, positionOverride?: WorldPosition, resource?: 'hp' | 'mp') {
     const position = positionOverride ?? this.positionOf(entityId);
     if (!position || value < 0) return;
     const create = () => {
@@ -102,7 +103,7 @@ export class CombatTextManager {
       const text = this.pool.acquire();
       text.setText(`${type === 'damage' ? '-' : '+'}${new Intl.NumberFormat('pt-BR').format(value)}${suffix}`)
         .setFontSize(`${this.fontSize(type, critical)}px`)
-        .setColor(this.color(type, damageType))
+         .setColor(this.color(type, damageType, resource))
         .setPosition(item.worldX, item.worldY)
         .setOrigin(0.5)
         .setDepth(120)
@@ -126,10 +127,10 @@ export class CombatTextManager {
     return WORLD_TEXT_THEME.sizes.xp;
   }
 
-  private color(type: 'damage' | 'healing' | 'xp' | 'gold', damageType: DamageType | undefined): string {
+  private color(type: 'damage' | 'healing' | 'xp' | 'gold', damageType: DamageType | undefined, resource?: 'hp' | 'mp'): string {
     if (type === 'xp') return COMBAT_TEXT_XP_COLOR;
     if (type === 'gold') return WORLD_TEXT_COLORS.gold;
-    if (type === 'healing') return COMBAT_TEXT_THEME.healing;
+    if (type === 'healing') return resource === 'mp' ? COMBAT_TEXT_MANA_COLOR : COMBAT_TEXT_THEME.healing;
     return COMBAT_TEXT_THEME[damageType ?? 'physical'];
   }
 }

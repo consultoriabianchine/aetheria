@@ -26,7 +26,8 @@ export class CreatureThumb implements AfterViewInit {
       config.animations.find((s) => s.animation === 'idle' && s.direction === 'south') ??
       config.animations.find((s) => s.animation === 'idle') ??
       config.animations[0];
-    const frameIndex = seq?.frames[0] ?? 0;
+    const frame = seq?.frames[0];
+    const frameIndex = typeof frame === 'number' ? frame : frame?.frameIndex ?? 0;
     const cols = Math.max(1, config.sheetColumns);
     const sx = (frameIndex % cols) * config.spriteWidth;
     const sy = Math.floor(frameIndex / cols) * config.spriteHeight;

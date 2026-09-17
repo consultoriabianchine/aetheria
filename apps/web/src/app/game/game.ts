@@ -16,6 +16,12 @@ import { HuntBrowser } from './hunt/hunt-browser';
 import { HuntBrowserState } from './hunt/hunt-browser-state';
 import { WorldScene } from './scenes/world-scene';
 
+const HELPER_POTIONS = [
+  ['health-potion', 'Health Potion', 0, 'HP 150–200', 50], ['strong-health-potion', 'Strong Health Potion', 50, 'HP 300', 115], ['great-health-potion', 'Great Health Potion', 80, 'HP 500', 225], ['ultimate-health-potion', 'Ultimate Health Potion', 130, 'HP 750', 379], ['supreme-health-potion', 'Supreme Health Potion', 200, 'HP 900', 650],
+  ['mana-potion', 'Mana Potion', 0, 'MP 75–125', 56], ['strong-mana-potion', 'Strong Mana Potion', 50, 'MP 115–185', 108], ['great-mana-potion', 'Great Mana Potion', 80, 'MP 150–250', 158], ['superior-mana-potion', 'Superior Mana Potion', 100, 'MP 240–360', 254], ['ultimate-mana-potion', 'Ultimate Mana Potion', 130, 'MP 425–575', 488], ['distilled-superior-mana-potion', 'Distilled Superior Mana Potion', 130, 'MP 240–360', 381], ['distilled-ultimate-mana-potion', 'Distilled Ultimate Mana Potion', 200, 'MP 425–575', 732],
+  ['great-spirit-potion', 'Great Spirit Potion', 80, 'HP 300 + MP 100–200', 254], ['ultimate-spirit-potion', 'Ultimate Spirit Potion', 130, 'HP 500 + MP 150–250', 488],
+] as const;
+
 interface InvEntry {
   index: number;
   stack: ItemStack | null;
@@ -51,7 +57,9 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   readonly rotationCharacterId = signal<string | null>(null);
   readonly rotationMode = signal<'attack' | 'healing'>('attack');
   readonly healingThreshold = signal(80);
+  readonly manaThreshold = signal(50);
   readonly healTarget = signal<'self' | 'lowest_party_member' | 'specific_party_role'>('self');
+  readonly potionCategory = signal<'all' | 'hp' | 'mp' | 'hp_mp'>('all');
   readonly rotationSlot = signal(1);
   readonly abilitySearch = signal('');
   readonly abilityCategory = signal<'all' | 'attack' | 'area' | 'rune' | 'heal'>('all');
@@ -66,6 +74,8 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   readonly itemTooltipY = signal(0);
   readonly itemContextMenu = signal<{ x: number; y: number; itemIndex: number } | null>(null);
   readonly colorSlots = ['head', 'primary', 'secondary', 'detail'] as const;
+  readonly appearanceSearch = signal('');
+  readonly activeColorSlot = signal<(typeof this.colorSlots)[number]>('head');
   readonly palette = APPEARANCE_PALETTE;
   readonly backpackSize = INVENTORY_SIZE;
 
@@ -829,6 +839,14 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   rotationCharacterName(): string { return this.rotationCharacterId() ? this.hotbarMemberName(this.rotationCharacterId()!) : ''; }
   attackRotationForModal(): number[] { return this.attackRotationFor(this.rotationCharacterId() ?? ''); }
   healingRotationForModal(): number[] { return this.healingRotationFor(this.rotationCharacterId() ?? ''); }
+  healingPotionFor(index: number): string | undefined { return this.state.healingPotionRotations()[this.rotationCharacterId() ?? '']?.[index]; }
+  healingSlotType(index: number): 'spell' | 'mp' | 'hp' { return index === 0 ? 'spell' : index === 1 ? 'mp' : 'hp'; }
+  helperPotionOptions() {
+    const category = this.potionCategory();
+    return HELPER_POTIONS.filter(([id]) => category === 'all' || category === 'hp' && id.includes('health') || category === 'mp' && id.includes('mana') || category === 'hp_mp' && id.includes('spirit'));
+  }
+  healingSlotName(index: number) { const potion = this.healingPotionFor(index); return potion ? HELPER_POTIONS.find((item) => item[0] === potion)?.[1] ?? potion : this.rotationAbilityName(this.healingRotationForModal()[index] ?? 0); }
+  healingSlotIcon(index: number) { const potion = this.healingPotionFor(index); return potion ? this.iconFor(potion) : this.rotationAbilityIcon(this.healingRotationForModal()[index] ?? 0); }
   openHelper(section: 'healing' | 'ally' | 'attack' | 'spells' = 'spells') {
     this.helperSection.set(section);
     this.rotationCharacterId.set(this.state.self()?.id ?? this.state.party().members[0]?.id ?? null);
@@ -843,10 +861,14 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
     this.abilityCategory.set('all');
     this.abilitySearch.set('');
     this.releasedOnly.set(false);
+    this.potionCategory.set(mode === 'healing' && index === 1 ? 'mp' : 'hp');
+    this.healingThreshold.set(80);
+    this.manaThreshold.set(50);
     if (mode === 'healing') {
       const trigger = this.state.healingTriggers()[this.rotationCharacterId() ?? '']?.[index];
       if (trigger) {
         this.healingThreshold.set(trigger.hpBelowPercent);
+        this.manaThreshold.set(trigger.mpBelowPercent ?? 50);
         this.healTarget.set(trigger.target);
       }
     }
@@ -893,9 +915,18 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   setRotationAbility(index: number, abilityId: number) {
     const id = this.rotationCharacterId();
     if (!id) return;
+    if (this.rotationMode() === 'healing' && index !== 0) return;
     const target = this.rotationMode() === 'attack' ? this.state.attackRotations : this.state.healingRotations;
     target.update((all) => ({ ...all, [id]: (all[id] ?? [0, 0, 0, 0]).map((value, i) => (i === index ? abilityId : value)) }));
     if (this.rotationMode() === 'attack') this.setAreaMinTargets(index, 0);
+    else this.state.healingPotionRotations.update((all) => ({ ...all, [id]: (all[id] ?? [undefined, undefined, undefined, undefined]).map((value, i) => (i === index ? undefined : value)) }));
+  }
+  setHealingPotion(index: number, potionId: string) {
+    const id = this.rotationCharacterId();
+    if (!id) return;
+    if (this.healingSlotType(index) === 'spell') return;
+    this.state.healingPotionRotations.update((all) => ({ ...all, [id]: (all[id] ?? [undefined, undefined, undefined, undefined]).map((value, i) => (i === index ? potionId : value)) }));
+    this.state.healingRotations.update((all) => ({ ...all, [id]: (all[id] ?? [0, 0, 0, 0]).map((value, i) => (i === index ? 0 : value)) }));
   }
   rotationAbilityName(id: number) { return this.state.abilities().find((ability) => ability.abilityId === id)?.name ?? 'Empty'; }
   rotationAbilityIcon(id: number) { const ability = this.state.abilities().find((item) => item.abilityId === id); return ability ? this.abilityIcon(ability) : null; }
@@ -908,7 +939,7 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
       const slots = this.attackRotationForModal().map((abilityId, index) => ({ position: (index + 1) as 1 | 2 | 3 | 4, abilityId: abilityId || undefined, enabled: abilityId > 0, minTargets: mins[index] || undefined }));
       this.ws.send({ type: 'rotation.attack.set', preset: 'HUNT', characterId, slots });
     } else {
-      const slots = this.healingRotationForModal().map((abilityId, index) => ({ position: (index + 1) as 1 | 2 | 3 | 4, abilityId: abilityId || undefined, enabled: abilityId > 0, trigger: { target: this.healTarget(), hpBelowPercent: this.healingThreshold() } }));
+        const slots = this.healingRotationForModal().slice(0, 3).map((abilityId, index) => ({ position: (index + 1) as 1 | 2 | 3, abilityId: this.healingSlotType(index) === 'spell' ? abilityId || undefined : undefined, enabled: abilityId > 0 || !!this.healingPotionFor(index), trigger: { target: this.healTarget(), hpBelowPercent: this.healingThreshold(), mpBelowPercent: this.manaThreshold(), potionId: this.healingSlotType(index) === 'spell' ? undefined : this.healingPotionFor(index) } }));
       this.ws.send({ type: 'rotation.healing.set', preset: 'HUNT', characterId, slots });
     }
     this.rotationOpen.set(false);
@@ -921,6 +952,20 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   draftOutfit() {
     const id = this.state.appearanceDraft()?.outfitId;
     return this.state.availableOutfits().find((o) => o.outfitId === id) ?? null;
+  }
+
+  filteredAppearanceOutfits() {
+    const query = this.appearanceSearch().trim().toLowerCase();
+    return this.state.availableOutfits().filter((outfit) => !query || outfit.name.toLowerCase().includes(query));
+  }
+
+  setActiveColorSlot(slot: (typeof this.colorSlots)[number]) {
+    this.activeColorSlot.set(slot);
+  }
+
+  randomizeAppearanceColors() {
+    const count = this.palette.length;
+    for (const slot of this.colorSlots) this.state.setDraftColor(slot, Math.floor(Math.random() * count));
   }
 
   outfitThumbUrl(outfitId: number) {

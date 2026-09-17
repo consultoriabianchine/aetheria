@@ -316,8 +316,8 @@ export class CreatureEditor implements OnInit, AfterViewInit, OnDestroy {
       const dir = order[col];
       const walk = [];
       for (let r = 0; r < walkFrames; r++) walk.push(r * cols + col);
-      animations.push({ animation: 'walk', direction: dir, frames: walk, frameDurationMs: 120, loop: true });
-      animations.push({ animation: 'idle', direction: dir, frames: [idleRow * cols + col], frameDurationMs: 400, loop: true });
+      animations.push({ animation: 'walk', direction: dir, frames: walk.map((frame) => ({ frameIndex: frame })), frameDurationMs: 120, loop: true });
+      animations.push({ animation: 'idle', direction: dir, frames: [{ frameIndex: idleRow * cols + col }], frameDurationMs: 400, loop: true });
     }
     this.sequences.set(animations);
     this.selectedSeq.set(0);
@@ -356,11 +356,11 @@ export class CreatureEditor implements OnInit, AfterViewInit, OnDestroy {
     if (i < 0) return;
     const seq = this.currentSequence;
     if (!seq) return;
-    const frames = [...seq.frames, ...this.selectedFrames()];
+    const frames = [...seq.frames, ...this.selectedFrames().map((frame) => ({ frameIndex: frame }))];
     this.updateSequence(i, { ...seq, frames });
   }
 
-  setTimelineFrames(frames: number[]) {
+  setTimelineFrames(frames: import('@aetheria/types').AnimationFrameDefinition[]) {
     const i = this.selectedSeq();
     const seq = this.currentSequence;
     if (!seq) return;
@@ -862,7 +862,7 @@ export class CreatureEditor implements OnInit, AfterViewInit, OnDestroy {
     const seq = this.currentSequence;
     if (seq && seq.frames.length > 0) {
       const pos = this.playing() ? this.computeFrameIndex(seq, this.elapsed) : 0;
-      cellIndex = seq.frames[pos];
+      cellIndex = seq.frames[pos].frameIndex;
     }
 
     if (this.sheetImage && cellIndex >= 0) {
@@ -877,7 +877,7 @@ export class CreatureEditor implements OnInit, AfterViewInit, OnDestroy {
   private previewFrameIndex(): number {
     const seq = this.sequences().find((s) => s.animation === this.previewAnim());
     if (!seq || seq.frames.length === 0) return -1;
-    return seq.frames[0];
+    return seq.frames[0].frameIndex;
   }
 
   /** Preview 5x5 tiles com debug (grid/footprint/bounds/anchor/projectile origin). */
