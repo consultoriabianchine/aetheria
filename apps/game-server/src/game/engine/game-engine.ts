@@ -1086,7 +1086,7 @@ export class GameEngine implements OnModuleDestroy {
     this.emitCooldowns(player);
     if (ability.category === 'heal') {
       const healTarget = (target instanceof GamePlayer ? target : player);
-      const amount = Math.max(1, ability.defaultParameters?.power ?? 30);
+      const amount = this.calculateAbilityHeal(player, ability, healTarget);
       healTarget.health = Math.min(healTarget.maxHealth, healTarget.health + amount);
       this.emitHeal(player.id, healTarget, amount);
       this.emitStats(player);
@@ -2044,6 +2044,16 @@ export class GameEngine implements OnModuleDestroy {
     });
     this.emitCombatEvent(target, 'entity.health', { id: target.id, health: target.health, maxHealth: target.maxHealth });
     return true;
+  }
+
+  private calculateAbilityHeal(player: GamePlayer, ability: CombatAbilityDefinition, target: GamePlayer): number {
+    const parameters = ability.defaultParameters ?? {};
+    const baseHeal = Math.max(0, parameters.healBase ?? parameters.power ?? 30);
+    const scaling = Math.max(0, parameters.healScaling ?? (ability.slug === 'minor-heal' ? 0.1 : 0));
+    const variance = Math.max(0, parameters.healVariance ?? (ability.slug === 'minor-heal' ? 0.1 : 0));
+    const variation = variance > 0 ? 1 + ((this.randomBetween(0, 10_000) / 10_000) * 2 - 1) * variance : 1;
+    const rawAmount = Math.round(baseHeal + player.level * player.skills.magic * scaling * variation);
+    return Math.max(0, Math.min(target.maxHealth - target.health, rawAmount));
   }
 
   private resolveProjectileVisual(weaponItem: ItemDefinition | undefined, ammoItem: ItemDefinition | undefined): ItemVisualEffects | null {

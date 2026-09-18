@@ -4,10 +4,10 @@
   height: 82vh;
   display: grid;
   grid-template-rows: auto auto minmax(0, 1fr) auto;
-  border: 1px solid rgba(215, 185, 79, 0.35);
-  border-radius: 10px;
-  background: linear-gradient(180deg, #1a1c20, #0b0d10);
-  box-shadow: 0 16px 48px #000c;
+  border: 1px solid var(--ui-border-strong);
+  border-radius: var(--ui-radius-lg);
+  background: linear-gradient(180deg, #172131, #0b1018);
+  box-shadow: var(--ui-shadow-modal);
   overflow: hidden;
 }
 
@@ -16,14 +16,14 @@
   align-items: center;
   justify-content: space-between;
   padding: 14px 18px;
-  border-bottom: 1px solid rgba(215, 185, 79, 0.22);
-  background: linear-gradient(180deg, rgba(31, 34, 38, 0.98), rgba(18, 20, 24, 0.98));
+  border-bottom: 1px solid var(--ui-border);
+  background: linear-gradient(180deg, #202b3b, #131b27);
 
   h2 {
     margin: 0;
     font-size: 15px;
     letter-spacing: 0.04em;
-    color: var(--game-gold, #d7b94f);
+    color: var(--ui-gold-bright);
     text-transform: uppercase;
 
     span {
@@ -385,9 +385,9 @@
 .hb-enter {
   margin-left: auto;
   padding: 10px 20px;
-  border: 1px solid #d7b94f;
-  border-radius: 7px;
-  background: linear-gradient(#e7c868, #c9a63a);
+  border: 1px solid var(--ui-gold);
+  border-radius: var(--ui-radius-sm);
+  background: linear-gradient(180deg, var(--ui-gold-bright), var(--ui-gold));
   color: #2b2308;
   font-weight: 700;
   font-size: 13px;

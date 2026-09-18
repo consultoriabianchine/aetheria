@@ -116,7 +116,7 @@
 
 .helper-layout {
   display: grid;
-  grid-template-columns: 165px 1fr;
+  grid-template-columns: 190px 165px minmax(0, 1fr);
   min-height: 430px;
 }
 
@@ -447,21 +447,21 @@
   --panel-gap: 8px;
   --item-slot-size: 34px;
   --item-icon-size: 32px;
-  --panel-bg: rgba(31, 35, 39, 0.94);
-  --panel-bg-secondary: rgba(18, 21, 25, 0.96);
-  --panel-border: rgba(255, 255, 255, 0.08);
-  --game-gold: #d7b94f;
-  --hp-color: #d74d40;
-  --mana-color: #4b8fd5;
-  --xp-color: #d8b448;
-  --stamina-color: #51c975;
+  --panel-bg: var(--ui-surface-soft);
+  --panel-bg-secondary: rgba(12, 17, 25, .96);
+  --panel-border: var(--ui-border);
+  --game-gold: var(--ui-gold);
+  --hp-color: var(--ui-red);
+  --mana-color: var(--ui-blue);
+  --xp-color: var(--ui-gold);
+  --stamina-color: var(--ui-green);
 
   height: 100vh;
   overflow: hidden;
   display: grid;
   grid-template-rows: var(--topbar-height) minmax(0, 1fr);
-  background: linear-gradient(180deg, #101216, #07090c 58%, #050608);
-  color: #d8e0ea;
+  background: radial-gradient(900px 500px at 50% -10%, #182334, #0b1018 58%, var(--ui-bg));
+  color: var(--ui-text);
 }
 
 button,

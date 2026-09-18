@@ -4,7 +4,7 @@ h1 {
 }
 
 .sub {
-  color: #8aa0b6;
+  color: var(--admin-text-muted);
   margin-bottom: 16px;
   font-size: 13px;
 }
@@ -16,7 +16,7 @@ h1 {
 }
 
 .error {
-  color: #e06a6a;
+  color: #ffaaa2;
   margin: 12px 0;
   white-space: pre-wrap;
 }
@@ -24,15 +24,16 @@ h1 {
 table {
   width: 100%;
   border-collapse: collapse;
-  background: #141a24;
-  border: 1px solid #232c3a;
+  background: var(--admin-surface-soft);
+  border: 1px solid var(--admin-border);
+  border-radius: var(--admin-radius-md);
 }
 
 th,
 td {
   text-align: left;
   padding: 8px 12px;
-  border-bottom: 1px solid #232c3a;
+  border-bottom: 1px solid var(--admin-border);
   font-size: 13px;
 }
 
@@ -41,5 +42,5 @@ td {
 }
 
 a {
-  color: #7fb3e0;
+  color: var(--admin-blue);
 }

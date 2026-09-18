@@ -285,8 +285,9 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
     this.itemCatalog.ready();
     const def = this.itemCatalog.get(itemId);
     if (!def?.image) return null;
-    if (/^https?:\/\//.test(def.image) || def.image.startsWith('/') || def.image.startsWith('assets/')) return def.image;
-    return `assets/items/${def.image}`;
+    if (/^https?:\/\//.test(def.image) || def.image.startsWith('/')) return def.image;
+    if (def.image.startsWith('assets/')) return `/${def.image}`;
+    return `/assets/items/${def.image}`;
   }
 
   nameFor(itemId: string): string {
@@ -452,6 +453,11 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
     return entries.concat(
       members.filter((member) => member.id !== self?.id).map((member) => ({ id: member.id, name: member.name })),
     );
+  }
+
+  helperCharacter(id: string): CharacterSummary | null {
+    const self = this.state.self();
+    return (self?.id === id ? self : null) ?? this.state.party().members.find((member) => member.id === id) ?? null;
   }
 
   /** Summary do personagem selecionado (ativo ou companheiro da party). */
@@ -835,7 +841,7 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   }
 
   // ---- rotação ----
-  openRotationFor(characterId: string) { this.rotationCharacterId.set(characterId); this.helperSection.set('spells'); this.helperOpen.set(true); }
+  openRotationFor(characterId: string) { this.openHelperFor(characterId, 'spells'); }
   rotationCharacterName(): string { return this.rotationCharacterId() ? this.hotbarMemberName(this.rotationCharacterId()!) : ''; }
   attackRotationForModal(): number[] { return this.attackRotationFor(this.rotationCharacterId() ?? ''); }
   healingRotationForModal(): number[] { return this.healingRotationFor(this.rotationCharacterId() ?? ''); }
@@ -847,9 +853,13 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   }
   healingSlotName(index: number) { const potion = this.healingPotionFor(index); return potion ? HELPER_POTIONS.find((item) => item[0] === potion)?.[1] ?? potion : this.rotationAbilityName(this.healingRotationForModal()[index] ?? 0); }
   healingSlotIcon(index: number) { const potion = this.healingPotionFor(index); return potion ? this.iconFor(potion) : this.rotationAbilityIcon(this.healingRotationForModal()[index] ?? 0); }
+  helperSlotIcon(index: number, abilityId: number) { return this.helperSection() === 'healing' ? this.healingSlotIcon(index) : this.rotationAbilityIcon(abilityId); }
   openHelper(section: 'healing' | 'ally' | 'attack' | 'spells' = 'spells') {
+    this.openHelperFor(this.state.self()?.id ?? this.state.party().members[0]?.id ?? null, section);
+  }
+  openHelperFor(characterId: string | null, section: 'healing' | 'ally' | 'attack' | 'spells' = 'spells') {
     this.helperSection.set(section);
-    this.rotationCharacterId.set(this.state.self()?.id ?? this.state.party().members[0]?.id ?? null);
+    this.rotationCharacterId.set(characterId);
     this.helperOpen.set(true);
   }
   closeHelper() { this.helperOpen.set(false); this.rotationOpen.set(false); }
@@ -897,10 +907,11 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
     });
   }
   abilityIcon(ability: CombatAbilityDefinition): string | null {
-    if (!ability.icon) return `assets/abilities/${ability.abilityId}.png`;
+    if (!ability.icon) return `/assets/abilities/${ability.abilityId}.png`;
     if (/^(data:image\/|https?:\/\/)/.test(ability.icon)) return ability.icon;
-    if (ability.icon.startsWith('/') || ability.icon.startsWith('assets/')) return ability.icon;
-    return ability.icon.startsWith('abilities/') ? `assets/${ability.icon}` : `assets/abilities/${ability.icon}`;
+    if (ability.icon.startsWith('/')) return ability.icon;
+    if (ability.icon.startsWith('assets/')) return `/${ability.icon}`;
+    return ability.icon.startsWith('abilities/') ? `/assets/${ability.icon}` : `/assets/abilities/${ability.icon}`;
   }
   abilityMeta(ability: CombatAbilityDefinition): string {
     const level = ability.levelRequirement ?? 1;

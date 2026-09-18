@@ -9,16 +9,16 @@ import { ApiService } from '../../core/api.service';
   templateUrl: './sprite-visual-editor.html',
   styles: `
     :host { display: contents; }
-    label { display: flex; flex-direction: column; gap: 4px; margin: 8px 0; color: #8fa2b5; font-size: 12px; }
-    input, textarea, select { background: #0d141d; color: #e6eef6; border: 1px solid #2b3546; border-radius: 6px; padding: 8px; }
+    label { display: flex; flex-direction: column; gap: 4px; margin: 8px 0; color: var(--admin-text-muted); font-size: 12px; }
+    input, textarea, select { background: rgba(8,11,17,.72); color: var(--admin-text); border: 1px solid var(--admin-border); border-radius: var(--admin-radius-sm); padding: 8px; }
     .wide { grid-column: 1 / -1; }
     .visual-editor { display: grid; grid-template-columns: minmax(300px, 1fr) 260px; gap: 12px; align-items: start; }
-    .sheet-box { overflow: auto; max-height: 360px; border: 1px solid #263244; border-radius: 8px; background: #0b111a; }
+    .sheet-box { overflow: auto; max-height: 360px; border: 1px solid var(--admin-border); border-radius: var(--admin-radius-md); background: #0b111a; }
     canvas { display: block; }
     .dir-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px; }
-    .dir-btn { display: flex; justify-content: space-between; padding: 7px 8px; text-align: left; border: 1px solid #34445c; background: #1b2636; color: #d9e6f2; border-radius: 6px; cursor: pointer; }
-    .dir-btn.active { border-color: #7fd0a0; color: #7fd0a0; }
-    .mini-hint { color: #8fa2b5; font-size: 11px; margin: 4px 0 8px; }
+    .dir-btn { display: flex; justify-content: space-between; padding: 7px 8px; text-align: left; border: 1px solid var(--admin-border); background: var(--admin-surface-raised); color: var(--admin-text); border-radius: var(--admin-radius-sm); cursor: pointer; }
+    .dir-btn.active { border-color: var(--admin-violet); color: #c9b8f5; background: rgba(168,137,232,.12); }
+    .mini-hint { color: var(--admin-text-muted); font-size: 11px; margin: 4px 0 8px; }
   `,
 })
 export class SpriteVisualEditor implements AfterViewInit {

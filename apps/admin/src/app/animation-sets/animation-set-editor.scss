@@ -10,7 +10,7 @@
 }
 
 .editor-head a {
-  color: #7fb3e0;
+  color: var(--admin-blue);
 }
 
 .actions {
@@ -20,18 +20,18 @@
 }
 
 .unsaved {
-  color: #e0b95a;
+  color: var(--admin-gold-bright);
   font-size: 12px;
   font-style: italic;
 }
 
 .saved {
-  color: #5ad88a;
+  color: var(--admin-green);
   font-size: 12px;
 }
 
 .error {
-  color: #e06a6a;
+  color: #ffaaa2;
   margin-bottom: 12px;
   white-space: pre-wrap;
 }
@@ -39,7 +39,7 @@
 .editor-tabs {
   display: flex;
   gap: 2px;
-  border-top: 1px solid #232c3a;
+  border-top: 1px solid var(--admin-border);
   padding-top: 12px;
   margin-bottom: 12px;
 }
@@ -49,15 +49,15 @@
   border-bottom: 2px solid transparent;
   background: transparent;
   border-radius: 0;
-  color: #8aa0b6;
+  color: var(--admin-text-muted);
   font-size: 12px;
   padding: 8px 12px;
   cursor: pointer;
 }
 
 .editor-tabs button.active {
-  color: #5ad88a;
-  border-bottom-color: #5ad88a;
+  color: var(--admin-gold-bright);
+  border-bottom-color: var(--admin-gold);
 }
 
 .positioning-grid {
@@ -71,8 +71,8 @@
 }
 
 .row button.active {
-  border-color: #5ad88a;
-  color: #5ad88a;
+  border-color: var(--admin-gold);
+  color: var(--admin-gold-bright);
 }
 
 .color-test {
@@ -96,16 +96,16 @@
 }
 
 .panel {
-  background: #141a24;
-  border: 1px solid #232c3a;
-  border-radius: 6px;
+  background: var(--admin-surface-soft);
+  border: 1px solid var(--admin-border);
+  border-radius: var(--admin-radius-md);
   padding: 14px;
 }
 
 .panel h2 {
   font-size: 14px;
   margin-bottom: 12px;
-  color: #9db2c8;
+  color: var(--admin-text-muted);
 }
 
 .panel h3 {
@@ -126,7 +126,7 @@
   align-items: center;
   gap: 6px;
   font-size: 12px;
-  color: #8aa0b6;
+  color: var(--admin-text-muted);
 }
 
 .field input[type='number'] {

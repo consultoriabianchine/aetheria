@@ -222,8 +222,7 @@
               @if (slot; as member) {
                 <div class="hotbar-row-head" (click)="openRotationFor(member.id)" title="Abrir configuração de magias">
                   <strong>{{ member.name }}</strong>
-                  <button type="button" class="mini-action" (click)="$event.stopPropagation(); selectManageMember(member.id); openManage()">Combate</button>
-                  <button type="button" class="mini-action" (click)="openRotationFor(member.id)">Magias</button>
+                   <button type="button" class="mini-action" (click)="$event.stopPropagation(); openHelperFor(member.id, 'attack')" aria-label="Abrir configuração de combate e magias"><span>Config.</span></button>
                 </div>
                 <div class="hotbar-row-slots">
                   @for (s of hotbarSlotsFor(member.id); track s.key; let idx = $index) {
@@ -353,13 +352,7 @@
               <div class="equipment-metrics"><span>Alma <b>100</b></span><span>Capacidade <b>1.652</b></span></div>
               <button class="wide-action appearance-button" type="button" (click)="openManageAppearance(member.id)">Aparência</button>
 
-              <div class="combat-config">
-                <div class="manage-section-title">Combate</div>
-                <div class="metric-row"><span>Alvo</span><select class="combat-select" [ngModel]="combatFor(member.id).targeting" (ngModelChange)="onManageTargeting(member.id, $event)"><option value="nearest">Mais perto</option><option value="furthest">Mais longe</option><option value="lowestHp">Menos HP</option><option value="highestHp">Mais HP</option></select></div>
-                <div class="metric-row"><span>Movimento</span><select class="combat-select" [ngModel]="combatFor(member.id).movement" (ngModelChange)="onManageMovement(member.id, $event)"><option value="kite">Correr</option><option value="hold">Parado</option><option value="engage">Avançar</option></select></div>
-                <div class="metric-row"><span>Distância</span><input class="range-input" type="number" min="0" max="15" [ngModel]="combatFor(member.id).attackRange ?? 0" (ngModelChange)="onManageAttackRange(member.id, $event || null)" /></div>
-              </div>
-            </section>
+             </section>
 
             <section class="manage-inventory">
               <div class="inventory-tabs">
@@ -388,6 +381,20 @@
       <section class="helper-modal" (click)="$event.stopPropagation()">
         <header class="helper-modal-header"><strong>Helper</strong><span>{{ rotationCharacterName() }}</span><button type="button" (click)="closeHelper()">×</button></header>
         <div class="helper-layout">
+          <aside class="manage-characters helper-characters">
+            <div class="manage-section-title">Personagens</div>
+            <div class="character-list">
+              @for (character of selectableCharacters(); track character.id) {
+                @if (helperCharacter(character.id); as details) {
+                  <button class="manage-character" type="button" [class.active]="rotationCharacterId() === details.id" (click)="rotationCharacterId.set(details.id)">
+                    <span class="character-avatar">{{ details.name.charAt(0).toUpperCase() }}</span>
+                    <span class="character-details"><strong>{{ details.name }}</strong><small>{{ archetypeLabelFor(details.archetype) }}</small></span>
+                    <span class="character-level">Lv {{ details.level }}</span>
+                  </button>
+                }
+              }
+            </div>
+          </aside>
           <aside class="helper-menu">
             <button [class.active]="helperSection() === 'healing'" (click)="helperSection.set('healing')">✚ Cura</button>
             <button [class.active]="helperSection() === 'ally'" (click)="helperSection.set('ally')">♥ Curar aliado</button>
@@ -397,13 +404,21 @@
           <main class="helper-panel-content">
             @if (helperSection() === 'ally') {
               <h2>Curar aliado</h2><p class="helper-copy">A rotação de cura pode priorizar o personagem com menor vida da party.</p>
-            } @else if (helperSection() === 'attack') {
-              <h2>Atacar</h2><p class="helper-copy">O ataque básico é usado quando nenhuma habilidade da rotação pode ser lançada.</p>
+             } @else if (helperSection() === 'attack') {
+               <div class="helper-title-row"><div><h2>Atacar</h2><p class="helper-copy">O ataque básico é usado quando nenhuma habilidade da rotação pode ser lançada.</p></div></div>
+               @if (rotationCharacterId(); as characterId) {
+                 <div class="combat-config helper-combat-config">
+                   <div class="manage-section-title">Combate</div>
+                   <div class="metric-row"><span>Alvo</span><select class="combat-select" [ngModel]="combatFor(characterId).targeting" (ngModelChange)="onManageTargeting(characterId, $event)"><option value="nearest">Mais perto</option><option value="furthest">Mais longe</option><option value="lowestHp">Menos HP</option><option value="highestHp">Mais HP</option></select></div>
+                   <div class="metric-row"><span>Movimento</span><select class="combat-select" [ngModel]="combatFor(characterId).movement" (ngModelChange)="onManageMovement(characterId, $event)"><option value="kite">Correr</option><option value="hold">Parado</option><option value="engage">Avançar</option></select></div>
+                   <div class="metric-row"><span>Distância</span><input class="range-input" type="number" min="0" max="15" [ngModel]="combatFor(characterId).attackRange ?? 0" (ngModelChange)="onManageAttackRange(characterId, $event || null)" /></div>
+                 </div>
+               }
             } @else {
-              <div class="helper-title-row"><div><h2>{{ helperSection() === 'healing' ? 'Rotação de Cura' : 'Rotação de Ataque' }}</h2><p class="helper-copy">Prioridade: Slot 1 → Slot 2 → Slot 3 → Slot 4. Grupos de cooldown independentes.</p></div><select [ngModel]="rotationCharacterId()" (ngModelChange)="rotationCharacterId.set($event)">@for (member of selectableCharacters(); track member.id) { <option [value]="member.id">{{ member.name }}</option> }</select></div>
+               <div class="helper-title-row"><div><h2>{{ helperSection() === 'healing' ? 'Rotação de Cura' : 'Rotação de Ataque' }}</h2><p class="helper-copy">Prioridade: Slot 1 → Slot 2 → Slot 3 → Slot 4. Grupos de cooldown independentes.</p></div></div>
               <div class="helper-slots">
                  @for (slot of (helperSection() === 'healing' ? healingRotationFor(rotationCharacterId() ?? '').slice(0, 3) : attackRotationFor(rotationCharacterId() ?? '')); track $index) {
-                   <article class="helper-slot-row"><b>{{ $index + 1 }}</b><div class="helper-slot-icon">@if (helperSection() === 'healing' && healingSlotIcon($index); as icon) { <img [src]="icon" alt="" /> } @else { + }</div><div><strong>{{ helperSection() === 'healing' ? (healingSlotType($index) === 'spell' ? 'Magia de cura' : healingSlotType($index) === 'mp' ? 'Poção de MP' : 'Poção de HP') : rotationAbilityName(slot) }}</strong><small>{{ helperSection() === 'healing' && healingPotionFor($index) ? 'Poção virtual · gold por uso' : (slot && rotationAbility(slot) ? abilityMeta(rotationAbility(slot)!) : 'Slot vazio') }}</small></div><button type="button" (click)="openRotationSlot($index, helperSection() === 'healing' ? 'healing' : 'attack')">Configurar</button></article>
+                    <article class="helper-slot-row"><b>{{ $index + 1 }}</b><div class="helper-slot-icon">@if (helperSlotIcon($index, slot); as icon) { <img [src]="icon" alt="" /> } @else { + }</div><div><strong>{{ helperSection() === 'healing' ? (healingSlotType($index) === 'spell' ? 'Magia de cura' : healingSlotType($index) === 'mp' ? 'Poção de MP' : 'Poção de HP') : rotationAbilityName(slot) }}</strong><small>{{ helperSection() === 'healing' && healingPotionFor($index) ? 'Poção virtual · gold por uso' : (slot && rotationAbility(slot) ? abilityMeta(rotationAbility(slot)!) : 'Slot vazio') }}</small></div><button type="button" (click)="openRotationSlot($index, helperSection() === 'healing' ? 'healing' : 'attack')">Configurar</button></article>
                 }
               </div>
             }
