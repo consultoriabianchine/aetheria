@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild, computed, signal } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
-import { DAMAGE_TYPES, type AnimationDirection, type AnimationSequence, type CombatAbilityDefinition, type CreatureAnimationConfig, type CreatureAnimationType, type CreatureVisualBounds, type DamageAffinities, type DamageType } from '@aetheria/types';
+import { DAMAGE_TYPES, type AnimationDirection, type AnimationFrameDefinition, type AnimationSequence, type CombatAbilityDefinition, type CreatureAnimationConfig, type CreatureAnimationType, type CreatureVisualBounds, type DamageAffinities, type DamageType } from '@aetheria/types';
 import { ApiService, type AdminItemDefinition, type CreatureDetail, type CreatureLootEntry } from '../core/api.service';
 
 const ANIMATION_TYPES: CreatureAnimationType[] = ['idle', 'walk', 'attack', 'cast', 'hit', 'death', 'spawn'];
@@ -189,7 +189,7 @@ export class CreatureEditor implements OnInit, AfterViewInit, OnDestroy {
         this.bodyOffsetY.set(c.bodyOffsetY ?? 0);
         this.projectileOriginX.set(c.sockets?.projectileOrigin?.x ?? c.spriteWidth / 2);
         this.projectileOriginY.set(c.sockets?.projectileOrigin?.y ?? c.spriteHeight / 2);
-        this.sequences.set(structuredClone(c.animations));
+        this.sequences.set(this.normalizeSequences(c.animations));
       } else {
         this.sequences.set([]);
         this.anchorX.set(this.spriteWidth() / 2);
@@ -232,6 +232,15 @@ export class CreatureEditor implements OnInit, AfterViewInit, OnDestroy {
       img.onerror = () => reject(new Error('Não foi possível carregar a spritesheet importada.'));
       img.src = url;
     });
+  }
+
+  private normalizeSequences(sequences: AnimationSequence[]): AnimationSequence[] {
+    return structuredClone(sequences).map((sequence) => ({
+      ...sequence,
+      frames: (sequence.frames as unknown as (number | AnimationFrameDefinition)[]).map((frame) =>
+        typeof frame === 'number' ? { frameIndex: frame } : frame,
+      ),
+    }));
   }
 
   async onFileSelected(event: Event) {
@@ -578,8 +587,28 @@ export class CreatureEditor implements OnInit, AfterViewInit, OnDestroy {
   }
 
   async saveStats() {
+    this.error.set(null);
     this.saving.set(true);
-    try { await this.api.saveCreatureStats(this.id, this.stats()); } catch (e) { this.error.set((e as Error).message); } finally { this.saving.set(false); }
+    const stats = this.stats();
+    const payload = {
+      game_level: stats['level'],
+      game_max_health: stats['health'],
+      game_attack: stats['attack'],
+      game_defense: stats['defense'],
+      game_experience: stats['experience'],
+      game_attack_speed: stats['attackSpeed'],
+      game_attack_range: stats['attackRange'],
+      game_view_range: stats['viewRange'],
+      game_chase_range: stats['chaseRange'],
+    };
+    try {
+      await this.api.saveCreatureStats(this.id, payload);
+      await this.reload();
+    } catch (e) {
+      this.error.set((e as Error).message);
+    } finally {
+      this.saving.set(false);
+    }
   }
 
   async saveLoot() {

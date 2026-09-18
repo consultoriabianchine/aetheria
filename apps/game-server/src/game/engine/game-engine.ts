@@ -69,7 +69,7 @@ import { OutfitRegistry } from '../outfit/outfit-registry.service';
 import { ReadyQueue } from './ready-queue';
 import { calculateMaxHp, calculateMaxMana } from '../stats/stat-engine';
 import { calculateRegeneration } from '../regeneration/regeneration-engine';
-import { trainCombatSkill } from '../skills/skill-progression';
+import { combatTrainingGain, magicTrainingGain, trainCombatSkill } from '../skills/skill-progression';
 import { aggregateCharacterCombatStats, emptyResistances } from '../combat/character-stat-aggregator';
 import { calculateBasicAttack } from '../combat/basic-attack-calculator';
 import { calculateMitigatedDamage } from '../combat/damage-calculator';
@@ -518,7 +518,7 @@ export class GameEngine implements OnModuleDestroy {
         .map((p) => this.toSummary(p));
       this.emitTo(socketId, 'game.enterArena', {
         character: this.toSummary(player),
-        members,
+       members,
         map: run.map.tiles,
         width: run.arena.width,
         height: run.arena.height,
@@ -705,7 +705,7 @@ export class GameEngine implements OnModuleDestroy {
     return [player.id, ...(storage.party ?? []).filter((id) => id !== player.id)];
   }
 
-  private async emitPartyState(player: GamePlayer) {
+  private async emitPartyState(player: GamePlayer, refreshRotations = true) {
     const storage = this.storageFor(player);
     const ids = [player.id, ...(storage.party ?? []).filter((id) => id !== player.id)];
     const members: (CharacterSummary & { equipment: CharacterEquipment })[] = [];
@@ -721,7 +721,15 @@ export class GameEngine implements OnModuleDestroy {
       maxSlots: PARTY_CONFIG.maxSlots,
       unlockCost: storage.unlockedPartySlots >= PARTY_CONFIG.maxSlots ? null : PARTY_CONFIG.unlockCost(storage.unlockedPartySlots),
       members,
+      refreshRotations,
     });
+  }
+
+  private async emitPartyStateForCharacter(character: GamePlayer) {
+    const viewer = [...this.players.values()].find(
+      (candidate) => candidate.socketId && this.partyMemberIds(candidate).includes(character.id),
+    );
+    if (viewer) await this.emitPartyState(viewer, false);
   }
 
   private async emitCharacters(player: GamePlayer) {
@@ -1060,6 +1068,18 @@ export class GameEngine implements OnModuleDestroy {
     if (ability.cooldownGroup === 'healing') this.healingGroupReadyAt.set(player.id, now + 1000);
     else this.attackGroupReadyAt.set(player.id, now + 2000);
     player.mana -= ability.manaCost ?? 0;
+    if ((ability.manaCost ?? 0) > 0) {
+      const magicResult = trainCombatSkill(
+        player.skills,
+        player.skillProgress,
+        'magic',
+        magicTrainingGain(ability.manaCost ?? 0, ARCHETYPES[player.archetype].magicTrainingMultiplier),
+      );
+      player.skills = magicResult.skills;
+      player.skillProgress = magicResult.progress;
+      this.emitSkillEvents(player, magicResult.events);
+      void this.emitPartyStateForCharacter(player);
+    }
     cooldowns.set(abilityId, now + ability.cooldownMs);
     this.abilityCooldowns.set(player.id, cooldowns);
     this.emitTo(socketId, 'ability.cast', { abilityId, attackerId: player.id, targetId });
@@ -1537,6 +1557,7 @@ export class GameEngine implements OnModuleDestroy {
       maxMana: c.maxMana,
       position: { ...c.position },
       skills: { ...c.skills },
+      skillProgress: c.skillProgress.map((progress) => ({ ...progress })),
       speed: 'speed' in c ? c.speed : undefined,
       movementSpeed: 'moveIntervalMs' in c ? c.moveIntervalMs : undefined,
       appearance: c.appearance
@@ -1821,7 +1842,11 @@ export class GameEngine implements OnModuleDestroy {
   }
 
   private dealGroundAbility(attacker: GamePlayer, ability: CombatAbilityDefinition, position: Position | undefined, direction: Direction, now: number) {
-    const origin = position ? { x: position.x, y: position.y, z: attacker.position.z } : (() => { const delta = DIRECTION_DELTAS[direction] ?? DIRECTION_DELTAS.south; return { x: attacker.position.x + delta.dx * ability.rangeTiles, y: attacker.position.y + delta.dy * ability.rangeTiles, z: attacker.position.z }; })();
+    const origin = ability.areaConfig?.centerOnCaster
+      ? { ...attacker.position }
+      : position
+        ? { x: position.x, y: position.y, z: attacker.position.z }
+        : (() => { const delta = DIRECTION_DELTAS[direction] ?? DIRECTION_DELTAS.south; return { x: attacker.position.x + delta.dx * ability.rangeTiles, y: attacker.position.y + delta.dy * ability.rangeTiles, z: attacker.position.z }; })();
     const tiles = this.groundTiles(origin, ability.areaConfig);
     if (tileDistance(attacker.position, origin) > ability.rangeTiles + 1) return;
     const delayMs = this.emitAbilityArea(attacker, attacker.position, origin, tiles, ability);
@@ -2111,7 +2136,7 @@ export class GameEngine implements OnModuleDestroy {
     const hi = max ?? min!;
     const power = randomIntInRange(lo, hi, () => this.nextCombatRandomForId(creature.id, now + spell.ability.abilityId));
     const flat = params.flatPower ?? 0;
-    const multiplier = params.powerMultiplier ?? 1;
+    const multiplier = params.powerMultiplier ?? spell.ability.defaultParameters?.['powerMultiplier'] ?? 1;
     return Math.max(1, Math.round(power * multiplier) + Math.round(flat));
   }
 
@@ -2514,7 +2539,20 @@ export class GameEngine implements OnModuleDestroy {
     const run = this.hunts.getRun(player.id);
     if (run) {
       player.targetId = this.playerAI.selectTarget(run.creatures.getAll(), player)?.id ?? null;
-      if (!player.targetId) return;
+    }
+    const groupReadyAt = this.attackGroupReadyAt.get(player.id) ?? 0;
+    if (now >= groupReadyAt) {
+      const rotation = this.attackRotations.get(player.id) ?? [];
+      for (const slot of rotation) {
+        if (!slot.enabled || slot.abilityId === undefined) continue;
+        const ability = await this.abilityRegistry.get(slot.abilityId);
+        if (!ability || ability.category === 'heal' || ability.targetMode !== 'ground' || !ability.areaConfig?.centerOnCaster) continue;
+        const readyAt = this.abilityCooldowns.get(player.id)?.get(slot.abilityId) ?? 0;
+        if (now < readyAt) continue;
+        const targets = this.enemiesInTiles(player, this.groundTiles(player.position, ability.areaConfig));
+        if (targets.length < (slot.minTargets ?? 1)) continue;
+        if (await this.castAbility(player, ability.abilityId, targets[0]?.id)) return;
+      }
     }
     if (!player.targetId) return;
     const target: CreatureEntity | GamePlayer | null =
@@ -2525,7 +2563,6 @@ export class GameEngine implements OnModuleDestroy {
       player.targetId = null;
       return;
     }
-    const groupReadyAt = this.attackGroupReadyAt.get(player.id) ?? 0;
     if (now >= groupReadyAt) {
       const rotation = this.attackRotations.get(player.id) ?? [];
       for (const slot of rotation) {
@@ -2557,10 +2594,12 @@ export class GameEngine implements OnModuleDestroy {
 
   private trainAttackSkill(player: GamePlayer) {
     const skill: CombatSkill = ARCHETYPES[player.archetype].primarySkill;
-    const result = trainCombatSkill(player.skills, player.skillProgress, skill, 1);
+    const result = trainCombatSkill(player.skills, player.skillProgress, skill, combatTrainingGain(skill));
     player.skills = result.skills;
     player.skillProgress = result.progress;
     this.emitSkillEvents(player, result.events);
+    this.emitStats(player);
+    void this.emitPartyStateForCharacter(player);
   }
 
   private creatureKilled(player: GamePlayer, creature: CreatureEntity, now: number) {

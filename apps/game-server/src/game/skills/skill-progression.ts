@@ -25,9 +25,13 @@ export function skillXpRequired(skill: CombatSkill, level: number): number {
   return cfg.base + cfg.quadratic * level * level;
 }
 
-export function magicTrainingGain(manaCost: number): number {
+export function magicTrainingGain(manaCost: number, multiplier = 1): number {
   const cfg = SKILL_PROGRESSION_CONFIG.magic;
-  return Math.max(cfg.minimumGain, manaCost * cfg.manaGainMultiplier);
+  return Math.max(cfg.minimumGain, manaCost * cfg.manaGainMultiplier * Math.max(0, multiplier));
+}
+
+export function combatTrainingGain(skill: CombatSkill): number {
+  return SKILL_PROGRESSION_CONFIG[skill].actionGain;
 }
 
 export function trainCombatSkill(

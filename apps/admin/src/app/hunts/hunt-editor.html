@@ -123,10 +123,16 @@
         <label>Mapa custom</label>
         <select [value]="h.mapId ?? ''" (change)="patch({ mapId: $any($event.target).value || undefined })">
           <option value="">(arena procedural)</option>
+          @if (h.mapId && !hasMap(h.mapId)) {
+            <option [value]="h.mapId">{{ h.mapId }} (mapa salvo)</option>
+          }
           @for (m of maps(); track m.id) {
             <option [value]="m.id">{{ m.name }} ({{ m.width }}×{{ m.height }})</option>
           }
         </select>
+        @if (h.mapId && hasMap(h.mapId)) {
+          <span class="hint">Mapa selecionado: {{ mapName(h.mapId) }} ({{ h.mapId }})</span>
+        }
       </div>
       <p class="hint">Se escolher um mapa custom, ele substitui a arena procedural.</p>
     </section>

@@ -39,7 +39,9 @@ export class HuntEditor implements OnInit {
 
       if (this.id !== 'new') {
         const h = await this.api.getHunt(this.id);
-        this.draft.set(this.normalizeDraft(h));
+        const normalized = this.normalizeDraft(h);
+        this.draft.set(normalized);
+        await this.ensureMapOption(normalized.mapId);
       } else {
         this.draft.set({
           id: '',
@@ -66,6 +68,14 @@ export class HuntEditor implements OnInit {
 
   hasCreature(slug: string): boolean {
     return this.creatures().some((creature) => creature.slug === slug);
+  }
+
+  hasMap(id: string | undefined): boolean {
+    return !!id && this.maps().some((map) => map.id === id);
+  }
+
+  mapName(id: string | undefined): string {
+    return this.maps().find((map) => map.id === id)?.name ?? id ?? 'nenhum';
   }
 
   patch(p: Partial<HuntDefinition>) {
@@ -135,5 +145,15 @@ export class HuntEditor implements OnInit {
         },
       },
     };
+  }
+
+  private async ensureMapOption(mapId: string | undefined) {
+    if (!mapId || this.hasMap(mapId)) return;
+    try {
+      const map = await this.api.getMap(mapId);
+      this.maps.update((maps) => maps.some((item) => item.id === map.id) ? maps : [...maps, { id: map.id, name: map.name, width: map.width, height: map.height }]);
+    } catch {
+      // Keep the saved ID visible in the select even if the map endpoint is unavailable.
+    }
   }
 }

@@ -80,6 +80,7 @@ export interface AbilityAreaConfig {
   width: number;
   height: number;
   supportsOverride?: boolean;
+  centerOnCaster?: boolean;
 }
 
 export interface AbilityParameterDefinition {
@@ -297,6 +298,7 @@ export interface ArchetypeDefinition {
   manaPerLevel: number;
   initialEquipment: CharacterEquipment;
   primarySkill: SkillType;
+  magicTrainingMultiplier: number;
   allowedWeapons: WeaponType[];
   regeneration: RegenerationConfig;
 }
@@ -484,6 +486,7 @@ export interface CharacterSummary {
   maxMana: number;
   position: Position;
   skills: CharacterSkills;
+  skillProgress?: { skillType: keyof CharacterSkills; level: number; experience: number }[];
   speed?: number;
   movementSpeed?: number;
   appearance?: PlayerAppearance;

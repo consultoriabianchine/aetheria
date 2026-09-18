@@ -324,13 +324,15 @@ export class GameState {
         break;
       }
       case SERVER_EVENTS.PARTY_STATE: {
-        const r = data as { unlockedSlots: number; maxSlots: number; unlockCost: number | null; members: import('@aetheria/protocol').PartyMember[] };
+        const r = data as { unlockedSlots: number; maxSlots: number; unlockCost: number | null; members: import('@aetheria/protocol').PartyMember[]; refreshRotations?: boolean };
         this.party.set({ unlockedSlots: r.unlockedSlots, maxSlots: r.maxSlots, unlockCost: r.unlockCost, members: r.members ?? [] });
         for (const m of r.members ?? []) {
           const combat = m.combat;
           if (combat) this.combatConfigs.update((all) => ({ ...all, [m.id]: combat }));
         }
-        for (const m of r.members ?? []) this.ws.send({ type: 'rotation.load', preset: 'HUNT', characterId: m.id });
+        if (r.refreshRotations !== false) {
+          for (const m of r.members ?? []) this.ws.send({ type: 'rotation.load', preset: 'HUNT', characterId: m.id });
+        }
         break;
       }
       case SERVER_EVENTS.GOLD_UPDATE: {

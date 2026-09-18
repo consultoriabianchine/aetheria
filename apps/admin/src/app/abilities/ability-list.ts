@@ -46,5 +46,12 @@ export class AbilityList implements OnInit {
   }
   areaConfigDraft(): AbilityAreaConfig { return this.selected()?.areaConfig ?? { shape: 'square', width: 1, height: 1 }; }
   patchAreaConfig(patch: Partial<AbilityAreaConfig>) { const draft = this.selected(); if (draft) this.selected.set({ ...draft, areaConfig: { ...this.areaConfigDraft(), ...patch } }); }
+  powerMultiplier(): number { return this.selected()?.defaultParameters?.['powerMultiplier'] ?? 1; }
+  setPowerMultiplier(value: number) {
+    const draft = this.selected();
+    if (!draft) return;
+    const defaultParameters = { ...(draft.defaultParameters ?? {}), powerMultiplier: Number.isFinite(value) ? Math.max(0, value) : 1 };
+    this.selected.set({ ...draft, defaultParameters });
+  }
   async save() { const draft = this.selected(); if (!draft) return; try { const saved = await this.api.saveAbility(draft); this.selected.set(saved); await this.load(); } catch (error) { this.error.set(String(error)); } }
 }

@@ -382,7 +382,7 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
     const skills: CharacterSkills = this.selectedSummary()?.skills ?? { melee: 10, distance: 10, magic: 10 };
     const progress = this.selectedId() === this.state.self()?.id
       ? new Map((this.state.stats().skillProgress ?? []).map((p) => [p.skillType, p]))
-      : new Map();
+      : new Map((this.selectedSummary()?.skillProgress ?? []).map((p) => [p.skillType, p]));
     return [
       { key: 'melee' as const, label: 'Melee', value: skills.melee },
       { key: 'distance' as const, label: 'Distance', value: skills.distance },

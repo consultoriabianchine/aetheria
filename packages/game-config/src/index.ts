@@ -196,6 +196,7 @@ export const ARCHETYPES: Record<CombatArchetype, ArchetypeDefinition> = {
       boots: { itemId: 'leather-boots', quantity: 1 },
     },
     primarySkill: 'magic',
+    magicTrainingMultiplier: 1,
     allowedWeapons: ['staff'],
     regeneration: { hpPerSecond: 1, manaPerSecond: 3 },
   },
@@ -213,6 +214,7 @@ export const ARCHETYPES: Record<CombatArchetype, ArchetypeDefinition> = {
       boots: { itemId: 'leather-boots', quantity: 1 },
     },
     primarySkill: 'melee',
+    magicTrainingMultiplier: 0.8,
     allowedWeapons: ['sword', 'axe', 'club'],
     regeneration: { hpPerSecond: 2, manaPerSecond: 1 },
   },
@@ -229,6 +231,7 @@ export const ARCHETYPES: Record<CombatArchetype, ArchetypeDefinition> = {
       boots: { itemId: 'leather-boots', quantity: 1 },
     },
     primarySkill: 'distance',
+    magicTrainingMultiplier: 0.9,
     allowedWeapons: ['bow', 'crossbow'],
     regeneration: { hpPerSecond: 1.5, manaPerSecond: 2 },
   },
@@ -278,9 +281,9 @@ export const COMBAT_FORMULA_CONFIG = {
 } as const;
 
 export const SKILL_PROGRESSION_CONFIG = {
-  melee: { base: 100, quadratic: 25, actionGain: 1 },
-  distance: { base: 100, quadratic: 25, actionGain: 1 },
-  magic: { base: 150, quadratic: 40, manaGainMultiplier: 0.1, minimumGain: 1 },
+  melee: { base: 75, quadratic: 15, actionGain: 1.5 },
+  distance: { base: 75, quadratic: 15, actionGain: 1.5 },
+  magic: { base: 100, quadratic: 25, actionGain: 1.5, manaGainMultiplier: 0.15, minimumGain: 1 },
 } as const;
 
 /** Número máximo de personagens por conta. */

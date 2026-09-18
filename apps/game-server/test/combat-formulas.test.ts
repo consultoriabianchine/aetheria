@@ -12,7 +12,7 @@ import { aggregateCharacterCombatStats, emptyResistances } from '../src/game/com
 import { calculateCritical } from '../src/game/combat/combat-formulas';
 import { calculateMitigatedDamage } from '../src/game/combat/damage-calculator';
 import { resolveDamageAffinity } from '../src/game/combat/damage-affinity-resolver';
-import { skillXpRequired, trainCombatSkill } from '../src/game/skills/skill-progression';
+import { combatTrainingGain, magicTrainingGain, skillXpRequired, trainCombatSkill } from '../src/game/skills/skill-progression';
 
 const baseStats: CharacterCombatStats = {
   level: 100,
@@ -114,10 +114,18 @@ describe('combat formulas', () => {
   });
 
   it('calcula XP de skill e suporta múltiplos level-ups', () => {
-    expect(skillXpRequired('melee', 10)).toBe(2600);
+    expect(skillXpRequired('melee', 10)).toBe(1575);
+    expect(combatTrainingGain('melee')).toBe(1.5);
     const current: CharacterSkills = { melee: 10, distance: 10, magic: 10 };
     const result = trainCombatSkill(current, [], 'melee', skillXpRequired('melee', 10) + skillXpRequired('melee', 11));
     expect(result.skills.melee).toBe(12);
     expect(result.events).toHaveLength(2);
+  });
+
+  it('calcula treino mágico pelo custo de mana e multiplicador do arquétipo', () => {
+    expect(skillXpRequired('magic', 10)).toBe(2600);
+    expect(magicTrainingGain(60, 1)).toBe(9);
+    expect(magicTrainingGain(60, 0.8)).toBeCloseTo(7.2);
+    expect(magicTrainingGain(0, 0.8)).toBe(1);
   });
 });
