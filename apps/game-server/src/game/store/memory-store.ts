@@ -1,5 +1,5 @@
 import { randomUUID } from 'node:crypto';
-import { INVENTORY_SIZE, LOOT_POUCH_SIZE } from '@aetheria/config';
+import { ACCOUNT_CONFIG, INVENTORY_SIZE, LOOT_POUCH_SIZE } from '@aetheria/config';
 import type { HuntProgress, ItemStack } from '@aetheria/types';
 import type { Store, StoredAccountStorage, StoredCharacter, AccountRecord } from './store';
 
@@ -130,7 +130,7 @@ export class MemoryStore implements Store {
   static blankAccountStorage(accountId: string): StoredAccountStorage {
     return {
       accountId,
-      gold: 0,
+      gold: ACCOUNT_CONFIG.initialGold,
       inventory: MemoryStore.blankInventory(),
       lootPouchSize: LOOT_POUCH_SIZE,
       lootPouch: MemoryStore.blankLootPouch(),

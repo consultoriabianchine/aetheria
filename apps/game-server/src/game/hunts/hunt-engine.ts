@@ -30,6 +30,8 @@ export interface HuntRun {
   memberIds: string[];
   /** Subconjunto de memberIds ainda vivos na wave atual. */
   aliveMemberIds: string[];
+  /** Companheiros mortos na run atual, que retornam no próximo loop. */
+  deadMemberIds: string[];
   hunt: HuntDefinition;
   arena: ArenaDefinition;
   wave: number;
@@ -64,6 +66,7 @@ export interface HuntEngineHooks {
   onCreatureAttackPlayer(creature: CreatureEntity, playerId: string, amount: number, critical: boolean, now: number): void;
   getCreatureAttackRange(creature: CreatureEntity): number;
   onRunFinished(characterId: string, reason: 'completed' | 'wiped' | 'stopped'): void;
+  onRunLoopRestarted?(characterId: string, memberIds: string[]): void;
   onHuntCompleted(characterId: string, huntId: string, suggestedLevel: number): void;
   recordCompletion(characterId: string, huntId: string, clearTimeMs: number): Promise<HuntProgress>;
   getProgress(characterId: string): Promise<Map<string, HuntProgress>>;
@@ -219,8 +222,30 @@ export class HuntEngine {
     const run = this.getRun(characterId);
     if (!run || run.status !== 'active') return;
     run.aliveMemberIds = run.aliveMemberIds.filter((id) => id !== characterId);
+    this.clearCreatureTarget(run, characterId);
     run.movement.releaseEntity(characterId);
     if (run.aliveMemberIds.length === 0) this.handleWipe(run, now);
+  }
+
+  /** Retira um companheiro morto da wave atual sem removê-lo da run. */
+  removeMember(characterId: string, now: number) {
+    const run = this.getRun(characterId);
+    if (!run || run.status !== 'active') return;
+    run.aliveMemberIds = run.aliveMemberIds.filter((id) => id !== characterId);
+    if (!run.deadMemberIds.includes(characterId)) run.deadMemberIds.push(characterId);
+    this.clearCreatureTarget(run, characterId);
+    run.movement.releaseEntity(characterId);
+    if (run.aliveMemberIds.length === 0) this.handleWipe(run, now);
+  }
+
+  private clearCreatureTarget(run: HuntRun, characterId: string) {
+    for (const creature of run.creatures.getAll()) {
+      if (creature.targetId !== characterId) continue;
+      creature.targetId = null;
+      creature.path = [];
+      creature.pathIndex = 0;
+      if (creature.state === 'ATTACK' || creature.state === 'CHASE') creature.state = 'IDLE';
+    }
   }
 
   update(now: number) {
@@ -284,6 +309,7 @@ export class HuntEngine {
       characterId,
       memberIds: [...memberIds],
       aliveMemberIds: [...memberIds],
+      deadMemberIds: [],
       hunt,
       arena: effectiveArena,
       wave: 0,
@@ -495,14 +521,18 @@ export class HuntEngine {
   }
 
   private restartLoop(run: HuntRun, now: number) {
+    const rejoining = [...run.deadMemberIds];
     run.creatures.clear();
     run.status = 'active';
     run.waveState = 'not_started';
+    run.wave = 0;
     run.startedAt = now;
     run.transitionAt = null;
     run.respawnAt = null;
+    run.deadMemberIds = [];
     run.aliveMemberIds = [...run.memberIds];
-    this.repositionMembers(run);
+    this.enterArena(run);
+    this.hooks.onRunLoopRestarted?.(run.characterId, rejoining);
     this.startWave(run, 1, now);
   }
 

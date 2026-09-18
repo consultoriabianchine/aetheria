@@ -934,7 +934,8 @@ export class WorldScene extends Phaser.Scene {
     }
     if (this.selfAnim && this.selfEntity) {
       this.selfEntity.image.setFrame(this.selfAnim.animator.frameIndex(time));
-      if (this.selfAnim.animator.currentType === 'walk' && time - this.selfAnim.lastMoveAt > this.selfAnim.moveSpeed + 80) {
+      const isMoving = this.tweens.getTweensOf(this.selfEntity).length > 0;
+      if (!isMoving && this.selfAnim.animator.currentType === 'walk' && time - this.selfAnim.lastMoveAt > this.selfAnim.moveSpeed + 80) {
         this.selfAnim.animator.play('idle', time);
       }
     }
@@ -1112,7 +1113,9 @@ export class WorldScene extends Phaser.Scene {
       this.selfAnim.animator.play('walk', this.time.now);
       this.selfAnim.lastMoveAt = this.time.now;
     } else {
-      this.selfAnim.animator.play('idle', this.time.now);
+      if (!this.selfEntity || this.tweens.getTweensOf(this.selfEntity).length === 0) {
+        this.selfAnim.animator.play('idle', this.time.now);
+      }
     }
   }
 

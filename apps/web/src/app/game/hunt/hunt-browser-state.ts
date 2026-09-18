@@ -22,7 +22,7 @@ export class HuntBrowserState {
   readonly levelRange = signal('all');
   readonly category = signal<HuntCategory>('all');
   readonly selectedHuntId = signal<string | null>(null);
-  readonly loop = signal(false);
+  readonly loop = signal(true);
   readonly levelWarning = signal<LevelWarningState | null>(null);
 
   openBrowser() {

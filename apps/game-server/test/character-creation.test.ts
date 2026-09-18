@@ -31,7 +31,7 @@ describe('character creation', () => {
 
     const storage = await store.getAccountStorage(login.accountId);
     expect(storage).not.toBeNull();
-    expect(storage!.gold).toBe(0);
+    expect(storage!.gold).toBe(5_000);
     expect(storage!.inventory).toHaveLength(INVENTORY_SIZE);
     expect(storage!.inventory.every((slot) => slot === null)).toBe(true);
     expect(storage!.lootPouchSize).toBe(LOOT_POUCH_SIZE);

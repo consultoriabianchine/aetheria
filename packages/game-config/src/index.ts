@@ -289,6 +289,11 @@ export const SKILL_PROGRESSION_CONFIG = {
 /** Número máximo de personagens por conta. */
 export const MAX_CHARACTERS_PER_ACCOUNT = 3;
 
+/** Gold recebido uma única vez quando o storage de uma conta é criado. */
+export const ACCOUNT_CONFIG = {
+  initialGold: 5_000,
+} as const;
+
 /** Configuração do sistema de party (personagens da conta no campo de batalha). */
 export const PARTY_CONFIG = {
   baseSlots: 1,

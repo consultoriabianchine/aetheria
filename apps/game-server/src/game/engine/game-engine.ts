@@ -215,6 +215,7 @@ export class GameEngine implements OnModuleDestroy {
         this.creatureAttackWithAbility(creature, playerId, amount, critical, now),
       getCreatureAttackRange: (creature) => this.creatureAttackRange(creature),
       onRunFinished: (characterId, reason) => this.handleRunFinished(characterId, reason),
+      onRunLoopRestarted: (characterId, memberIds) => this.handleRunLoopRestarted(characterId, memberIds),
       onHuntCompleted: (characterId, huntId, suggestedLevel) => this.handleHuntCompleted(characterId, huntId, suggestedLevel),
       recordCompletion: (characterId, huntId, clearTimeMs) =>
         this.store.recordHuntCompletion(characterId, huntId, clearTimeMs),
@@ -826,15 +827,33 @@ export class GameEngine implements OnModuleDestroy {
     return companion;
   }
 
-  private removeCompanionFromWorld(characterId: string) {
+  private removeCompanionFromWorld(characterId: string, removeHunt = true) {
     this.players.delete(characterId);
     this.movement.releaseEntity(characterId);
-    this.hunts.removeRun(characterId);
+    if (removeHunt) this.hunts.removeRun(characterId);
     this.regenEventReadyAt.delete(characterId);
     this.moveEventReadyAt.delete(characterId);
     this.saveEventReadyAt.delete(characterId);
     this.clearPlayerCombatState(characterId);
     this.emitAll('entity.removed', { id: characterId });
+  }
+
+  private withdrawCompanionFromHunt(characterId: string) {
+    this.movement.releaseEntity(characterId);
+    this.regenEventReadyAt.delete(characterId);
+    this.moveEventReadyAt.delete(characterId);
+    this.clearPlayerCombatState(characterId);
+    this.emitAll('entity.removed', { id: characterId });
+  }
+
+  private handleRunLoopRestarted(characterId: string, memberIds: string[]) {
+    for (const id of memberIds) {
+      const member = this.players.get(id);
+      if (!member) continue;
+      this.schedulePlayerRegen(member.id, Date.now() + 1000);
+      this.schedulePlayerAttackCheck(member, Date.now());
+      this.schedulePlayerHealCheck(member, Date.now());
+    }
   }
 
   private async availableOutfits(characterId: string) {
@@ -2198,7 +2217,7 @@ export class GameEngine implements OnModuleDestroy {
 
   private creatureAttackPlayer(creature: CreatureEntity, playerId: string, amount: number, critical: boolean, now: number, damageType: DamageType = 'physical', delayMs = 0) {
     const player = this.players.get(playerId);
-    if (!player) return;
+    if (!player || player.health <= 0) return;
     const damage = calculateMitigatedDamage({
       damage: amount,
       damageType,
@@ -2652,6 +2671,12 @@ export class GameEngine implements OnModuleDestroy {
     const run = this.hunts.getRun(player.id);
     if (run) {
       this.emitTo(player.socketId ?? '', 'combat.death', { entityId: player.id });
+      if (!player.socketId) {
+        this.hunts.removeMember(player.id, now);
+        void this.persistPlayer(player);
+        this.withdrawCompanionFromHunt(player.id);
+        return;
+      }
       this.hunts.onPlayerDied(player.id, now);
       return;
     }

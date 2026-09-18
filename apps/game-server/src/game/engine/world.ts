@@ -12,7 +12,7 @@ import type {
   WeaponElementOverride,
 } from '@aetheria/types';
 import type { StoredAccountStorage, StoredCharacter } from '../store/store';
-import { ARCHETYPES, INVENTORY_SIZE, LOOT_POUCH_SIZE, PLAYER_AI, PLAYER_SPEED, SPEED_PER_LEVEL, playerMoveInterval } from '@aetheria/config';
+import { ACCOUNT_CONFIG, ARCHETYPES, INVENTORY_SIZE, LOOT_POUCH_SIZE, PLAYER_AI, PLAYER_SPEED, SPEED_PER_LEVEL, playerMoveInterval } from '@aetheria/config';
 import { calculateMaxHp, calculateMaxMana } from '../stats/stat-engine';
 
 export interface NpcEntity {
@@ -192,7 +192,7 @@ export class AccountStorageState {
   static blank(accountId: string): AccountStorageState {
     return new AccountStorageState({
       accountId,
-      gold: 0,
+      gold: ACCOUNT_CONFIG.initialGold,
       inventory: new Array(INVENTORY_SIZE).fill(null),
       lootPouchSize: LOOT_POUCH_SIZE,
       lootPouch: new Array(LOOT_POUCH_SIZE).fill(null),

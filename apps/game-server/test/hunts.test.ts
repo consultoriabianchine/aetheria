@@ -411,6 +411,33 @@ describe('hunt-engine', () => {
     expect(emits.filter((e) => e.event === 'hunt.completed').length).toBe(1);
   });
 
+  it('remove membro morto da wave e o retorna no próximo loop', async () => {
+    const { engine, player } = makeHuntEngine();
+    const companion = makePlayer({ id: 'p2', socketId: null });
+    engine.startHunt(player.id, [player.id, companion.id], 'goblin_warren', true, 0);
+    const run = engine.getRun(player.id)!;
+    for (const creature of run.creatures.getAll()) creature.targetId = companion.id;
+
+    engine.removeMember(companion.id, 5_000);
+
+    expect(run.memberIds).toEqual([player.id, companion.id]);
+    expect(run.aliveMemberIds).toEqual([player.id]);
+    expect(run.deadMemberIds).toEqual([companion.id]);
+    expect(engine.getRun(companion.id)).toBe(run);
+    expect([...run.creatures.getAll()].every((creature) => creature.targetId === null)).toBe(true);
+
+    for (let wave = 1; wave <= 10; wave++) {
+      clearWaveCreatures(run.creatures);
+      engine.update(wave * 10_000);
+      if (wave < 10) engine.update((run.transitionAt ?? wave * 10_000) + 1);
+    }
+    await flush();
+
+    expect(run.status).toBe('active');
+    expect(run.aliveMemberIds).toEqual([player.id, companion.id]);
+    expect(run.deadMemberIds).toEqual([]);
+  });
+
   it('wipe aplica penalidade, limpa a arena e (com loop) respawna', () => {
     const { engine, player, emits, getGold } = makeHuntEngine();
     engine.startHunt(player.id, [player.id], 'goblin_warren', true, 0);

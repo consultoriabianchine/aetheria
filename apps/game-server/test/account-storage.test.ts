@@ -29,6 +29,7 @@ describe('account storage (unificado)', () => {
 
     const storage = await store.getAccountStorage(login.accountId);
     expect(storage).not.toBeNull();
+    expect(storage!.gold).toBe(5_000);
     storage!.gold = 999;
     await store.saveAccountStorage(storage!);
 

@@ -50,10 +50,10 @@
         <div class="row">
           <select [value]="m.monsterId" (change)="setMonster(i, { monsterId: $any($event.target).value })">
             @if (!hasCreature(m.monsterId)) {
-              <option [value]="m.monsterId">{{ creatureName(m.monsterId) }}</option>
+              <option [value]="m.monsterId" selected>{{ creatureName(m.monsterId) }}</option>
             }
             @for (c of creatures(); track c.creatureId) {
-              <option [value]="c.slug">{{ c.name }}</option>
+              <option [value]="c.slug" [selected]="c.slug === m.monsterId">{{ c.name }}</option>
             }
           </select>
           <div class="field">
@@ -72,10 +72,10 @@
         <label>Monstro</label>
         <select [value]="h.boss.monsterId" (change)="setBoss({ monsterId: $any($event.target).value })">
           @if (!hasCreature(h.boss.monsterId)) {
-            <option [value]="h.boss.monsterId">{{ creatureName(h.boss.monsterId) }}</option>
+            <option [value]="h.boss.monsterId" selected>{{ creatureName(h.boss.monsterId) }}</option>
           }
           @for (c of creatures(); track c.creatureId) {
-            <option [value]="c.slug">{{ c.name }}</option>
+            <option [value]="c.slug" [selected]="c.slug === h.boss.monsterId">{{ c.name }}</option>
           }
         </select>
       </div>
@@ -105,7 +105,7 @@
         <label>Arena</label>
         <select [value]="h.arenaId" (change)="patch({ arenaId: $any($event.target).value })">
           @for (a of arenas; track a) {
-            <option [value]="a">{{ a }}</option>
+            <option [value]="a" [selected]="a === h.arenaId">{{ a }}</option>
           }
         </select>
       </div>
@@ -122,13 +122,13 @@
       <div class="field">
         <label>Mapa custom</label>
         <select [value]="h.mapId ?? ''" (change)="patch({ mapId: $any($event.target).value || undefined })">
-          <option value="">(arena procedural)</option>
-          @if (h.mapId && !hasMap(h.mapId)) {
-            <option [value]="h.mapId">{{ h.mapId }} (mapa salvo)</option>
-          }
-          @for (m of maps(); track m.id) {
-            <option [value]="m.id">{{ m.name }} ({{ m.width }}×{{ m.height }})</option>
-          }
+           <option value="" [selected]="!h.mapId">(arena procedural)</option>
+           @if (h.mapId && !hasMap(h.mapId)) {
+             <option [value]="h.mapId" selected>{{ h.mapId }} (mapa salvo)</option>
+           }
+           @for (m of maps(); track m.id) {
+             <option [value]="m.id" [selected]="m.id === h.mapId">{{ m.name }} ({{ m.width }}×{{ m.height }})</option>
+           }
         </select>
         @if (h.mapId && hasMap(h.mapId)) {
           <span class="hint">Mapa selecionado: {{ mapName(h.mapId) }} ({{ h.mapId }})</span>
