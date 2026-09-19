@@ -259,7 +259,13 @@ export class HuntEngine {
     if (!run) return now + 1000;
     if (run.respawnAt !== null) return Math.min(run.respawnAt, now + 1000);
     if (run.transitionAt !== null) return Math.min(run.transitionAt, now + 1000);
-    return run.creatures.nextUpdateAt(now);
+    let next = run.creatures.nextUpdateAt(now);
+    for (const id of run.aliveMemberIds) {
+      const player = this.hooks.getPlayer(id);
+      if (!player || player.combat.movement === 'hold') continue;
+      next = Math.min(next, Math.max(now + 50, player.nextMoveAt));
+    }
+    return next;
   }
 
   updateRun(characterId: string, now: number) {

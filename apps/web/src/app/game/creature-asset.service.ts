@@ -22,6 +22,7 @@ export class CreatureAssetService {
     if (cached) return Promise.resolve(cached);
     return new Promise((resolve) => {
       const img = new Image();
+      img.crossOrigin = 'anonymous';
       img.onload = () => {
         this.images.set(creatureId, img);
         resolve(img);

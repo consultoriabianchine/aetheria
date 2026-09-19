@@ -53,7 +53,6 @@ export const COMBAT_TEXT_ANIMATION = {
   criticalDuration: 800,
   normalRise: 35,
   criticalRise: 45,
-  maxVisiblePerEntity: 8,
 } as const;
 
 // ---------------------------------------------------------------------------
@@ -79,17 +78,17 @@ export const WORLD_TEXT_THEME = {
   fontWeight: 700,
   stroke: {
     color: '#000000',
-    width: 3,
+    width: 2,
   },
   sizes: {
-    entityName: 13,
-    monsterName: 12,
-    bossName: 14,
-    damage: 13,
-    criticalDamage: 16,
-    healing: 14,
-    xp: 13,
-    gold: 13,
+    entityName: 11,
+    monsterName: 10,
+    bossName: 12,
+    damage: 11,
+    criticalDamage: 14,
+    healing: 11,
+    xp: 11,
+    gold: 11,
     spellWords: 13,
   },
 } as const;

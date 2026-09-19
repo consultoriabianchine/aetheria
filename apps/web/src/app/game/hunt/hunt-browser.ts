@@ -1,8 +1,9 @@
 import { Component, HostListener, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HUNT_CONFIG, LEVEL_RANGE_FILTERS, calculatePackSize } from '@aetheria/config';
-import type { HuntListEntry } from '@aetheria/types';
+import { DAMAGE_TYPES, type DamageAffinity, type DamageType, type HuntListEntry, type HuntLootEntry } from '@aetheria/types';
 import { GameState } from '../game-state';
+import { ItemCatalogService } from '../item-catalog.service';
 import { CreatureThumb } from './creature-thumb';
 import { HuntBrowserState, type HuntCategory } from './hunt-browser-state';
 
@@ -26,6 +27,7 @@ interface LevelRangeView extends LevelRange {
 export class HuntBrowser {
   readonly state = inject(GameState);
   readonly browser = inject(HuntBrowserState);
+  readonly itemCatalog = inject(ItemCatalogService);
   readonly ranges = LEVEL_RANGE_FILTERS;
   readonly bossWave = HUNT_CONFIG.bossWave;
   readonly categories: { id: HuntCategory; label: string }[] = [
@@ -130,6 +132,7 @@ export class HuntBrowser {
 
   select(h: HuntListEntry) {
     this.browser.select(h.id);
+    this.state.requestHuntDetails(h.id);
   }
 
   isSelected(h: HuntListEntry): boolean {
@@ -209,5 +212,57 @@ export class HuntBrowser {
 
   partyMembers() {
     return this.state.party().members;
+  }
+
+  itemImage(loot: HuntLootEntry): string | null {
+    const image = loot.imagePath ?? (loot.itemId ? this.itemCatalog.get(loot.itemId)?.image : null);
+    if (!image) return null;
+    if (/^https?:\/\//.test(image) || image.startsWith('/')) return image;
+    if (image.startsWith('assets/')) return `/${image}`;
+    if (image.startsWith('items/')) return `/assets/${image}`;
+    return `/assets/items/${image}`;
+  }
+
+  rarityLabel(rarity: string | null): string {
+    if (!rarity || rarity === 'UNKNOWN') return 'Raridade não informada';
+    return rarity;
+  }
+
+  chanceLabel(chance: number | null): string {
+    return chance == null ? 'Chance não informada' : `${chance}%`;
+  }
+
+  quantityLabel(min: number | null, max: number | null): string {
+    if (min == null && max == null) return 'Quantidade não informada';
+    if (min === max || max == null) return `${min ?? max}`;
+    if (min == null) return `${max}`;
+    return `${min}–${max}`;
+  }
+
+  elementEntries(affinities: Partial<Record<DamageType, DamageAffinity>>) {
+    return DAMAGE_TYPES.map((type) => ({ type, affinity: affinities[type] ?? { modifier: 0, immune: false } }));
+  }
+
+  elementName(type: DamageType): string {
+    return { physical: 'Físico', fire: 'Fogo', ice: 'Gelo', energy: 'Energia', earth: 'Terra', holy: 'Sagrado', death: 'Morte', arcane: 'Arcano' }[type];
+  }
+
+  elementGlyph(type: DamageType): string {
+    return { physical: '⚔', fire: '♨', ice: '❄', energy: 'ϟ', earth: '◆', holy: '✦', death: '☠', arcane: '◇' }[type];
+  }
+
+  affinityClass(affinity: DamageAffinity): 'weak' | 'strong' | 'neutral' | 'immune' {
+    if (affinity.immune) return 'immune';
+    if (affinity.modifier > 0.001) return 'weak';
+    if (affinity.modifier < -0.001) return 'strong';
+    return 'neutral';
+  }
+
+  affinityLabel(affinity: DamageAffinity): string {
+    if (affinity.immune) return 'Imune';
+    const percentage = Math.round(Math.abs(affinity.modifier) * 100);
+    if (affinity.modifier > 0.001) return `Fraco +${percentage}%`;
+    if (affinity.modifier < -0.001) return `Forte -${percentage}%`;
+    return 'Neutro';
   }
 }

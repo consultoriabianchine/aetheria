@@ -1,7 +1,7 @@
 import { Injectable, computed, signal } from '@angular/core';
 import { Subject } from 'rxjs';
 import { SERVER_EVENTS } from '@aetheria/protocol';
-import type { CharacterInventory, CharacterSkills, CharacterSummary, CombatArchetype, CombatStatsView, HuntListEntry, HuntRunView, MapTile, PlayerCombatConfig } from '@aetheria/types';
+import type { CharacterInventory, CharacterSkills, CharacterSummary, CombatArchetype, CombatStatsView, HuntDetails, HuntListEntry, HuntRunView, MapTile, PlayerCombatConfig } from '@aetheria/types';
 import { WsService, WsEvent } from '../core/ws.service';
 
 export interface HudStats {
@@ -92,6 +92,7 @@ export class GameState {
   readonly world = signal<WorldSnapshot | null>(null);
   readonly gold = signal(0);
   readonly hunts = signal<HuntListEntry[]>([]);
+  readonly huntDetails = signal<HuntDetails | null>(null);
   readonly hunt = signal<HuntRunView | null>(null);
   readonly huntsOpen = signal(false);
   readonly inArena = computed(() => this.hunt() !== null);
@@ -256,6 +257,11 @@ export class GameState {
       case SERVER_EVENTS.HUNT_LIST: {
         const r = data as { hunts: HuntListEntry[] };
         this.hunts.set(r.hunts);
+        break;
+      }
+      case SERVER_EVENTS.HUNT_DETAILS: {
+        const r = data as { details: HuntDetails };
+        this.huntDetails.set(r.details);
         break;
       }
       case SERVER_EVENTS.HUNT_STARTED: {
@@ -496,6 +502,13 @@ export class GameState {
     const token = this.token();
     if (!token) return;
     this.ws.send({ type: 'hunt.list', token });
+  }
+
+  requestHuntDetails(huntId: string) {
+    const token = this.token();
+    if (!token) return;
+    this.huntDetails.set(null);
+    this.ws.send({ type: 'hunt.details', token, huntId });
   }
 
   startHunt(huntId: string, loopEnabled: boolean) {

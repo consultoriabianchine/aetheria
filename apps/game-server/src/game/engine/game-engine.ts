@@ -40,6 +40,8 @@ import type {
   DamageType,
   CombatSkill,
   Direction,
+  DamageAffinities,
+  HuntDetails,
   ItemDefinition,
   ItemImpactVisual,
   ItemStack,
@@ -63,6 +65,7 @@ import { GameLoop } from '../creature/game-loop';
 import { MovementService } from '../creature/movement.service';
 import { OccupancyGrid } from '../creature/occupancy-grid';
 import { HuntEngine, HuntRun } from '../hunts/hunt-engine';
+import { calculateBossStats } from '../hunts/boss-engine';
 import { MapRegistry } from '../map/map-registry.service';
 import { HuntRegistry } from '../hunts/hunt-registry.service';
 import { OutfitRegistry } from '../outfit/outfit-registry.service';
@@ -574,6 +577,82 @@ export class GameEngine implements OnModuleDestroy {
     if (!session) return;
     const hunts = await Promise.all(this.hunts.listHunts().map((h) => this.hunts.toListEntry(h, session.player.id)));
     this.emitTo(socketId, 'hunt.list', { hunts });
+  }
+
+  async handleHuntDetails(socketId: string, token: string, huntId: string) {
+    const session = await this.verifySession(socketId, token);
+    if (!session) return;
+    const hunt = this.hunts.findHunt(huntId);
+    if (!hunt) {
+      this.emitTo(socketId, 'error', { message: 'Hunt não encontrada.' });
+      return;
+    }
+
+    const monsterIds = [...new Set([...hunt.monsters.map((m) => m.monsterId), hunt.boss.monsterId])];
+    const rows = this.prisma
+      ? await this.prisma.creatureLoot.findMany({ where: { creature_id: { in: monsterIds } } })
+      : [];
+    const wikiItems = this.prisma
+      ? await this.prisma.wikiItem.findMany({ where: { slug: { in: rows.map((row) => row.item_slug).filter((slug): slug is string => Boolean(slug)) } } })
+      : [];
+    const wikiImages = new Map(wikiItems.map((item) => [item.slug, item.image_path]));
+    const lootByCreature = new Map<string, HuntDetails['groups'][number]['loot']>();
+
+    for (const row of rows) {
+      const catalogItem = row.item_id ? getItemDef(row.item_id) : undefined;
+      const loot = lootByCreature.get(row.creature_id) ?? [];
+      loot.push({
+        itemId: row.item_id,
+        itemName: row.item_name,
+        itemSlug: row.item_slug,
+        imagePath: catalogItem?.image ?? (row.item_slug ? wikiImages.get(row.item_slug) ?? null : null),
+        rarity: row.rarity,
+        chance: row.chance,
+        minQuantity: row.min_quantity,
+        maxQuantity: row.max_quantity,
+      });
+      lootByCreature.set(row.creature_id, loot);
+    }
+
+    const fallbackLoot = (monsterId: string) => {
+      const definition = this.creatureDefinitions.get(monsterId);
+      return (definition?.loot ?? []).map((loot) => {
+        const item = getItemDef(loot.itemId);
+        return {
+          itemId: loot.itemId,
+          itemName: item?.name ?? loot.itemId,
+          itemSlug: null,
+          imagePath: item?.image ?? null,
+          rarity: null,
+          chance: loot.chance,
+          minQuantity: loot.minQuantity,
+          maxQuantity: loot.maxQuantity,
+        };
+      });
+    };
+    const creatureStats = (monsterId: string, isBoss: boolean) => {
+      const definition = this.creatureDefinitions.get(monsterId);
+      if (!definition) return { maxHealth: 0, experience: 0, affinities: {} as DamageAffinities };
+      if (isBoss) return { ...calculateBossStats(definition, hunt.boss.statMultipliers), affinities: definition.damageAffinities ?? ({} as DamageAffinities) };
+      return { maxHealth: definition.maxHealth, experience: definition.experience, affinities: definition.damageAffinities ?? ({} as DamageAffinities) };
+    };
+    const groups = [
+      ...hunt.monsters.map((monster) => ({
+        monsterId: monster.monsterId,
+        name: this.creatureDefinitions.get(monster.monsterId)?.name ?? monster.monsterId,
+        isBoss: false,
+        ...creatureStats(monster.monsterId, false),
+        loot: lootByCreature.get(monster.monsterId) ?? fallbackLoot(monster.monsterId),
+      })),
+      {
+        monsterId: hunt.boss.monsterId,
+        name: this.creatureDefinitions.get(hunt.boss.monsterId)?.name ?? hunt.boss.name,
+        isBoss: true,
+        ...creatureStats(hunt.boss.monsterId, true),
+        loot: lootByCreature.get(hunt.boss.monsterId) ?? fallbackLoot(hunt.boss.monsterId),
+      },
+    ];
+    this.emitTo(socketId, 'hunt.details', { details: { huntId, groups } satisfies HuntDetails });
   }
 
   async handleHuntStart(socketId: string, token: string, huntId: string, loopEnabled: boolean) {

@@ -674,6 +674,32 @@ export interface HuntListEntry {
   favorite: boolean;
 }
 
+export interface HuntLootEntry {
+  itemId: string | null;
+  itemName: string;
+  itemSlug: string | null;
+  imagePath: string | null;
+  rarity: string | null;
+  chance: number | null;
+  minQuantity: number | null;
+  maxQuantity: number | null;
+}
+
+export interface HuntLootGroup {
+  monsterId: string;
+  name: string;
+  isBoss: boolean;
+  maxHealth: number;
+  experience: number;
+  affinities: DamageAffinities;
+  loot: HuntLootEntry[];
+}
+
+export interface HuntDetails {
+  huntId: string;
+  groups: HuntLootGroup[];
+}
+
 /** Visão pública de uma run de Hunt em andamento. */
 export interface HuntRunView {
   huntId: string;

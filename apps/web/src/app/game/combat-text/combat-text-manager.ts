@@ -111,10 +111,6 @@ export class CombatTextManager {
         .setActive(true);
       item.text = text;
       this.active.push(item);
-      if (this.active.filter((entry) => entry.entityId === entityId).length > COMBAT_TEXT_ANIMATION.maxVisiblePerEntity) {
-        const oldest = this.active.findIndex((entry) => entry.entityId === entityId);
-        if (oldest >= 0) this.pool.release(this.active.splice(oldest, 1)[0]);
-      }
     };
     if (delayMs > 0) this.scene.time.delayedCall(delayMs, create);
     else create();

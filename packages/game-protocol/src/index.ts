@@ -6,6 +6,7 @@ import type {
   CreatureState,
   Direction,
   HuntListEntry,
+  HuntDetails,
   HuntRunView,
   MapTile,
   Position,
@@ -39,6 +40,7 @@ export type ClientMessage =
   | { type: 'chat.send'; channel: string; message: string }
   | { type: 'npc.interact'; npcId: string }
   | { type: 'hunt.list'; token: string }
+  | { type: 'hunt.details'; token: string; huntId: string }
   | { type: 'hunt.start'; token: string; huntId: string; loopEnabled: boolean }
   | { type: 'hunt.stop'; token: string }
   | { type: 'hunt.setLoop'; token: string; enabled: boolean }
@@ -89,6 +91,7 @@ export type ServerMessage =
   | { type: 'npc.dialog'; npcId: string; title: string; lines: string[] }
   | { type: 'error'; message: string }
   | { type: 'hunt.list'; hunts: HuntListEntry[] }
+  | { type: 'hunt.details'; details: HuntDetails }
   | { type: 'hunt.started'; hunt: HuntRunView }
   | { type: 'game.enterArena'; character: CharacterSummary; members: CharacterSummary[]; map: MapTile[]; width: number; height: number; hunt: HuntRunView }
   | { type: 'hunt.wave'; huntId: string; wave: number; monsterCount: number; isBoss: boolean }
@@ -156,6 +159,7 @@ export const SERVER_EVENTS = {
   NPC_DIALOG: 'npc.dialog',
   ERROR: 'error',
   HUNT_LIST: 'hunt.list',
+  HUNT_DETAILS: 'hunt.details',
   HUNT_STARTED: 'hunt.started',
   ENTER_ARENA: 'game.enterArena',
   HUNT_WAVE: 'hunt.wave',

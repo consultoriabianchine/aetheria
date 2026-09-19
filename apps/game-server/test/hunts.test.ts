@@ -356,6 +356,16 @@ describe('hunt-engine', () => {
     expect(emits.some((e) => e.event === 'hunt.cleared')).toBe(true);
   });
 
+  it('agenda a próxima atualização pelo movimento mais próximo de jogador ou criatura', () => {
+    const { engine, player } = makeHuntEngine();
+    engine.startHunt(player.id, [player.id], 'goblin_warren', false, 0);
+    player.nextMoveAt = 500;
+    const run = engine.getRun(player.id)!;
+    for (const creature of run.creatures.getAll()) creature.lastMoveAt = 10_000;
+
+    expect(engine.nextUpdateAt(player.id, 0)).toBe(500);
+  });
+
   it('boss aparece na wave 10 e a conclusão encerra a run sem loop', async () => {
     const { engine, player, emits, finished, completed, completions } = makeHuntEngine();
     engine.startHunt(player.id, [player.id], 'goblin_warren', false, 0);

@@ -163,8 +163,60 @@
 
         <div class="hb-details-rewards">
           <h4>Recompensas</h4>
-          <span class="hb-reward">{{ h.xpRating != null ? 'Boa para XP' : '—' }}</span>
-          <span class="hb-reward">{{ h.lootRating != null ? 'Boa para Loot' : '—' }}</span>
+          @if (state.huntDetails()?.huntId === h.id) {
+            @if (state.huntDetails(); as details) {
+              <div class="hb-loot-groups">
+                @for (group of details.groups; track group.monsterId) {
+                  <section class="hb-loot-group" [class.boss-loot]="group.isBoss">
+                    <h5>{{ group.isBoss ? 'Boss' : 'Criatura' }}: {{ group.name }}</h5>
+                    <div class="hb-creature-stats">
+                      <span>Vida <b>{{ group.maxHealth }}</b></span>
+                      <span>XP <b>{{ group.experience }}</b></span>
+                    </div>
+                    <div class="hb-affinities" aria-label="Resistências e fraquezas elementais">
+                      @for (entry of elementEntries(group.affinities); track entry.type) {
+                        <span
+                          class="hb-affinity"
+                          [class.weak]="affinityClass(entry.affinity) === 'weak'"
+                          [class.strong]="affinityClass(entry.affinity) === 'strong'"
+                          [class.immune]="affinityClass(entry.affinity) === 'immune'"
+                          [attr.title]="elementName(entry.type) + ': ' + affinityLabel(entry.affinity)"
+                        >
+                          <b>{{ elementGlyph(entry.type) }}</b>
+                          <small>{{ elementName(entry.type) }}</small>
+                          <em>{{ affinityLabel(entry.affinity) }}</em>
+                        </span>
+                      }
+                    </div>
+                    @if (group.loot.length === 0) {
+                      <span class="hb-no-loot">Nenhum loot cadastrado.</span>
+                    } @else {
+                      <div class="hb-loot-list">
+                        @for (loot of group.loot; track $index) {
+                          <div class="hb-loot-item">
+                            <div class="hb-loot-icon">
+                              @if (itemImage(loot); as image) {
+                                <img [src]="image" [alt]="loot.itemName" />
+                              } @else {
+                                <span>?</span>
+                              }
+                            </div>
+                            <div class="hb-loot-info">
+                              <strong>{{ loot.itemName }}</strong>
+                              <span>{{ rarityLabel(loot.rarity) }}</span>
+                              <small>Chance {{ chanceLabel(loot.chance) }} · Qtd. {{ quantityLabel(loot.minQuantity, loot.maxQuantity) }}</small>
+                            </div>
+                          </div>
+                        }
+                      </div>
+                    }
+                  </section>
+                }
+              </div>
+            }
+          } @else {
+            <span class="hb-loading-loot">Carregando loots...</span>
+          }
         </div>
 
         <div class="hb-details-party">
