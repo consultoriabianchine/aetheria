@@ -14,6 +14,7 @@ import type {
   ItemImpactVisual,
   ItemProjectileVisual,
   PlayerCombatConfig,
+  PlayerAppearance,
   DamageType,
   WeaponElementOverride,
   CombatAbilityDefinition,
@@ -63,7 +64,7 @@ export type ServerMessage =
   | { type: 'auth.characterCreated'; ok: boolean; error?: string; character?: CharacterSummary }
   | { type: 'auth.selectResult'; ok: boolean; error?: string }
   | { type: 'game.enterWorld'; character: CharacterSummary; map: MapTile[]; width: number; height: number }
-  | { type: 'entity.spawned'; id: string; kind: 'player' | 'npc'; name: string; position: Position; health?: number; maxHealth?: number; level?: number }
+  | { type: 'entity.spawned'; id: string; kind: 'player' | 'npc'; name: string; position: Position; health?: number; maxHealth?: number; level?: number; movementSpeed?: number; appearance?: PlayerAppearance }
   | { type: 'entity.moved'; id: string; position: Position; facing?: Direction }
   | { type: 'entity.removed'; id: string }
   | { type: 'entity.health'; id: string; health: number; maxHealth: number }

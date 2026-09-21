@@ -303,11 +303,40 @@ export class GameEngine implements OnModuleDestroy {
     for (const socketId of this.playerBySocket.keys()) this.emitTo(socketId, event, data);
   }
 
-  private emitOthers(socketId: string, event: string, data: unknown) {
-    for (const sid of this.playerBySocket.keys()) {
-      if (sid === socketId) continue;
-      this.emitTo(sid, event, data);
+  private sameVisibilityContext(firstId: string, secondId: string): boolean {
+    const firstRun = this.hunts.getRun(firstId);
+    const secondRun = this.hunts.getRun(secondId);
+    return firstRun ? secondRun?.id === firstRun.id : !secondRun;
+  }
+
+  private emitVisiblePlayer(playerId: string, event: string, data: unknown) {
+    for (const viewer of this.players.values()) {
+      if (viewer.id === playerId || !viewer.socketId || !this.sameVisibilityContext(playerId, viewer.id)) continue;
+      this.emitTo(viewer.socketId, event, data);
     }
+  }
+
+  private emitPlayerRemoved(playerId: string, runId: string | null) {
+    for (const viewer of this.players.values()) {
+      if (viewer.id === playerId || !viewer.socketId) continue;
+      const viewerRun = this.hunts.getRun(viewer.id);
+      if (runId ? viewerRun?.id !== runId : viewerRun) continue;
+      this.emitTo(viewer.socketId, 'entity.removed', { id: playerId });
+    }
+  }
+
+  private playerEntityPayload(player: GamePlayer) {
+    return {
+      id: player.id,
+      kind: 'player' as const,
+      name: player.name,
+      position: { ...player.position },
+      health: player.health,
+      maxHealth: player.maxHealth,
+      level: player.level,
+      movementSpeed: player.moveIntervalMs,
+      appearance: player.appearance,
+    };
   }
 
   // ---------------------------------------------------------------- auth
@@ -478,15 +507,11 @@ export class GameEngine implements OnModuleDestroy {
     this.emitInventory(player);
     await this.emitPartyState(player);
 
-    this.emitOthers(socketId, 'entity.spawned', {
-      id: player.id,
-      kind: 'player',
-      name: player.name,
-      position: player.position,
-      health: player.health,
-      maxHealth: player.maxHealth,
-      level: player.level,
-    });
+    for (const existing of this.players.values()) {
+      if (existing.id === player.id || !existing.socketId || !this.sameVisibilityContext(player.id, existing.id)) continue;
+      this.emitTo(socketId, 'entity.spawned', this.playerEntityPayload(existing));
+    }
+    this.emitVisiblePlayer(player.id, 'entity.spawned', this.playerEntityPayload(player));
 
     for (const creature of this.creatures.getAll()) {
       if (creature.state === 'DEAD' || !this.inView(player.position, creature.position)) continue;
@@ -556,6 +581,10 @@ export class GameEngine implements OnModuleDestroy {
           quantity: item.quantity,
           position: item.position,
         });
+      }
+      for (const existing of this.players.values()) {
+        if (existing.id === player.id || !existing.socketId || !this.sameVisibilityContext(player.id, existing.id)) continue;
+        this.emitTo(socketId, 'entity.spawned', this.playerEntityPayload(existing));
       }
     }
     this.emitStats(player);
@@ -668,12 +697,17 @@ export class GameEngine implements OnModuleDestroy {
     }
     const memberIds = [player.id, ...companionIds.filter((id) => this.players.has(id))];
     for (const id of memberIds) this.movement.releaseEntity(id);
+    for (const id of memberIds) {
+      for (const viewer of this.players.values()) {
+        if (memberIds.includes(viewer.id) || !viewer.socketId || this.hunts.getRun(viewer.id)) continue;
+        this.emitTo(viewer.socketId, 'entity.removed', { id });
+      }
+    }
     const result = this.hunts.startHunt(player.id, memberIds, huntId, loopEnabled, Date.now());
     if (!result.ok) {
       this.emitTo(socketId, 'error', { message: this.huntErrorLabel(result.error) });
       return;
     }
-    for (const id of result.run.memberIds) this.emitOthers(socketId, 'entity.removed', { id });
     for (const id of result.run.memberIds) {
       const member = this.players.get(id);
       if (!member) continue;
@@ -746,7 +780,7 @@ export class GameEngine implements OnModuleDestroy {
     }
     const payload = { entityId: targetId, outfitId: appearance.outfitId, addonMask: appearance.addonMask, colors: appearance.colors };
     this.emitTo(socketId, 'appearance.changed', payload);
-    this.emitOthers(socketId, 'appearance.changed', payload);
+    this.emitVisiblePlayer(targetId, 'appearance.changed', payload);
     await this.emitPartyState(leader);
     this.logger.log(`Aparência do personagem ${targetId} alterada para o outfit ${outfitId}.`);
   }
@@ -907,22 +941,24 @@ export class GameEngine implements OnModuleDestroy {
   }
 
   private removeCompanionFromWorld(characterId: string, removeHunt = true) {
+    const runId = this.hunts.getRun(characterId)?.id ?? null;
     this.players.delete(characterId);
     this.movement.releaseEntity(characterId);
+    this.emitPlayerRemoved(characterId, runId);
     if (removeHunt) this.hunts.removeRun(characterId);
     this.regenEventReadyAt.delete(characterId);
     this.moveEventReadyAt.delete(characterId);
     this.saveEventReadyAt.delete(characterId);
     this.clearPlayerCombatState(characterId);
-    this.emitAll('entity.removed', { id: characterId });
   }
 
   private withdrawCompanionFromHunt(characterId: string) {
+    const runId = this.hunts.getRun(characterId)?.id ?? null;
     this.movement.releaseEntity(characterId);
     this.regenEventReadyAt.delete(characterId);
     this.moveEventReadyAt.delete(characterId);
     this.clearPlayerCombatState(characterId);
-    this.emitAll('entity.removed', { id: characterId });
+    this.emitPlayerRemoved(characterId, runId);
   }
 
   private handleRunLoopRestarted(characterId: string, memberIds: string[]) {
@@ -1012,15 +1048,7 @@ export class GameEngine implements OnModuleDestroy {
         this.emitStats(player);
         this.emitInventory(player);
         this.emitTo(player.socketId, 'hunt.returnedToCity', {});
-        this.emitOthers(socketId, 'entity.spawned', {
-          id: player.id,
-          kind: 'player',
-          name: player.name,
-          position: player.position,
-          health: player.health,
-          maxHealth: player.maxHealth,
-          level: player.level,
-        });
+        this.emitVisiblePlayer(player.id, 'entity.spawned', this.playerEntityPayload(player));
         this.logger.log(`Jogador ${player.name} retornou ao hub (${reason}).`);
       } else {
         void this.persistPlayer(player);
@@ -1061,15 +1089,16 @@ export class GameEngine implements OnModuleDestroy {
   private async removePlayerByCharacterId(characterId: string) {
     const player = this.players.get(characterId);
     if (!player) return;
+    const runId = this.hunts.getRun(characterId)?.id ?? null;
     this.players.delete(characterId);
     this.movement.releaseEntity(characterId);
+    this.emitPlayerRemoved(characterId, runId);
     this.hunts.removeRun(characterId);
     this.huntEventReadyAt.delete(characterId);
     this.regenEventReadyAt.delete(characterId);
     this.moveEventReadyAt.delete(characterId);
     this.saveEventReadyAt.delete(characterId);
     this.clearPlayerCombatState(characterId);
-    this.emitAll('entity.removed', { id: characterId });
     await this.persistPlayer(player);
     // Remove os companheiros materializados da conta do mundo (mantendo a formação persistida).
     for (const companion of [...this.players.values()]) {
@@ -2574,7 +2603,7 @@ export class GameEngine implements OnModuleDestroy {
     if (this.tryStep(player, player.moveDir)) {
       player.nextMoveAt = now + player.moveIntervalMs;
       this.emitTo(player.socketId ?? '', 'player.moved', { position: { ...player.position } });
-      this.emitOthers(player.socketId ?? '', 'entity.moved', { id: player.id, position: { ...player.position } });
+      this.emitVisiblePlayer(player.id, 'entity.moved', { id: player.id, position: { ...player.position }, facing: player.facing });
     } else {
       player.nextMoveAt = now + 100;
     }
@@ -2786,8 +2815,8 @@ export class GameEngine implements OnModuleDestroy {
       this.hunts.onPlayerDied(player.id, now);
       return;
     }
-    this.emitAll('combat.death', { entityId: player.id });
-    this.emitAll('entity.removed', { id: player.id });
+    this.emitVisiblePlayer(player.id, 'combat.death', { entityId: player.id });
+    this.emitVisiblePlayer(player.id, 'entity.removed', { id: player.id });
     player.health = player.maxHealth;
     player.mana = player.maxMana;
     player.position = { ...SPAWN_POINT };
@@ -2803,15 +2832,7 @@ export class GameEngine implements OnModuleDestroy {
       experience: player.experience,
       skills: player.skills,
     });
-    this.emitOthers(player.socketId ?? '', 'entity.spawned', {
-      id: player.id,
-      kind: 'player',
-      name: player.name,
-      position: player.position,
-      health: player.health,
-      maxHealth: player.maxHealth,
-      level: player.level,
-    });
+    this.emitVisiblePlayer(player.id, 'entity.spawned', this.playerEntityPayload(player));
     void now;
   }
 

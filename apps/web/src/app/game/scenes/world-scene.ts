@@ -249,9 +249,10 @@ export class WorldScene extends Phaser.Scene {
         break;
       }
       case SERVER_EVENTS.ENTITY_SPAWNED: {
-        const s = data as { id: string; kind: string; name: string; position: Position; health?: number; maxHealth?: number };
+        const s = data as { id: string; kind: string; name: string; position: Position; health?: number; maxHealth?: number; movementSpeed?: number; appearance?: PlayerAppearance };
         if (s.id === this.selfId) return;
-        this.addEntity(s.id, s.kind, s.name, s.position, s.health, s.maxHealth);
+        if (s.kind === 'player') this.spawnPlayerEntity(s.id, s.name, s.position, s.appearance, s.health, s.maxHealth, s.movementSpeed ?? MOVE_INTERVAL_MS);
+        else this.addEntity(s.id, s.kind, s.name, s.position, s.health, s.maxHealth);
         break;
       }
       case SERVER_EVENTS.ENTITY_MOVED: {
