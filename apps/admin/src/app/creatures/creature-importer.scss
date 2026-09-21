@@ -8,7 +8,7 @@ h2 { margin: 0; }
 .panel { margin-bottom: 16px; padding: 20px; background: var(--admin-surface-soft); border: 1px solid var(--admin-border); border-radius: var(--admin-radius-md); box-shadow: var(--admin-shadow-panel); }
 .source-panel label { display: block; margin-bottom: 8px; color: var(--admin-text-muted); font: 11px 'DM Mono', monospace; text-transform: uppercase; }
 .source-row input { flex: 1; min-width: 0; }
-input, textarea { width: 100%; box-sizing: border-box; padding: 9px 10px; color: var(--admin-text); background: rgba(8,11,17,.72); border: 1px solid var(--admin-border); border-radius: var(--admin-radius-sm); }
+input, textarea, select { width: 100%; box-sizing: border-box; padding: 9px 10px; color: var(--admin-text); background: rgba(8,11,17,.72); border: 1px solid var(--admin-border); border-radius: var(--admin-radius-sm); }
 textarea { min-height: 80px; resize: vertical; }
 .error { color: var(--red); }.success { color: var(--admin-green); }
 .edit-grid, .affinity-grid { display: grid; gap: 10px; margin-top: 18px; }
@@ -18,12 +18,8 @@ textarea { min-height: 80px; resize: vertical; }
 .affinity-grid { grid-template-columns: repeat(7, 1fr); }
 .affinity-grid small { display: flex; align-items: center; gap: 5px; text-transform: none; }.affinity-grid small input { width: auto; }
 .new-item { color: var(--admin-red, #ef7d7d); }
-.loot-table { overflow-x: auto; margin-top: 16px; }
-.loot-row { display: grid; grid-template-columns: minmax(170px, 1.5fr) minmax(125px, 1fr) 180px 80px 80px 135px 110px 80px; gap: 8px; align-items: center; min-width: 970px; padding: 10px 0; border-bottom: 1px solid var(--admin-border); }
-.loot-head { color: var(--admin-text-muted); font: 10px 'DM Mono', monospace; text-transform: uppercase; }
-.item-name, .stack, .split { display: flex; gap: 5px; align-items: center; }.item-name { flex-wrap: wrap; }
-.item-name img { width: 32px; height: 32px; image-rendering: pixelated; object-fit: contain; }.item-name small { width: 100%; color: var(--admin-text-muted); }
-.stack { flex-direction: column; align-items: stretch; }.split input { min-width: 0; }.sell { border-color: var(--admin-gold); }
+.analysis-list { display: grid; gap: 8px; margin-top: 16px; }.analysis-list div { display: flex; justify-content: space-between; gap: 12px; padding: 10px 12px; border: 1px solid var(--admin-border); border-radius: var(--admin-radius-sm); background: var(--admin-surface-raised); }.analysis-list span { color: var(--admin-text-muted); }
+.loot-cards { display: grid; gap: 10px; margin-top: 18px; }.loot-card { border: 1px solid var(--admin-border); border-radius: var(--admin-radius-sm); background: var(--admin-surface-raised); }.loot-card[open] { border-color: rgba(226, 173, 80, .55); }.loot-card summary { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px; cursor: pointer; list-style: none; }.loot-card summary::-webkit-details-marker { display: none; }.item-summary, .item-badges { display: flex; align-items: center; gap: 10px; }.item-summary img { width: 40px; height: 40px; object-fit: contain; image-rendering: pixelated; }.item-summary span { display: grid; gap: 4px; }.item-summary small, .item-badges span { color: var(--admin-text-muted); }.item-badges { font: 10px 'DM Mono', monospace; text-transform: uppercase; text-align: right; }.item-badges b { color: var(--admin-gold); }.item-form { display: grid; gap: 16px; padding: 0 12px 14px; border-top: 1px solid var(--admin-border); }.form-group h3 { margin: 14px 0 10px; color: var(--admin-text); font-size: 13px; }.item-grid { display: grid; grid-template-columns: repeat(4, minmax(130px, 1fr)); gap: 10px; }.item-grid label { display: flex; flex-direction: column; gap: 5px; color: var(--admin-text-muted); font: 10px 'DM Mono', monospace; text-transform: uppercase; }.check-label { align-items: flex-start; }.check-label input { width: auto; }.new-item { color: var(--admin-red, #ef7d7d); }
 .confirm-bar { padding: 8px 0 24px; }.warning-panel { border-color: rgba(226, 173, 80, .5); }.warning-panel p { margin: 8px 0; color: var(--admin-gold); }
-@media (max-width: 900px) { .creature-grid { grid-template-columns: repeat(2, 1fr); }.affinity-grid { grid-template-columns: repeat(4, 1fr); } }
-@media (max-width: 560px) { .source-row, .import-head, .confirm-bar { align-items: stretch; flex-direction: column; }.creature-grid, .affinity-grid { grid-template-columns: 1fr 1fr; }.panel { padding: 14px; } }
+@media (max-width: 900px) { .creature-grid { grid-template-columns: repeat(2, 1fr); }.affinity-grid { grid-template-columns: repeat(4, 1fr); }.item-grid { grid-template-columns: repeat(2, minmax(130px, 1fr)); } }
+@media (max-width: 560px) { .source-row, .import-head, .confirm-bar, .item-badges, .analysis-list div { align-items: stretch; flex-direction: column; }.creature-grid, .affinity-grid, .item-grid { grid-template-columns: 1fr 1fr; }.panel { padding: 14px; }.loot-card summary { align-items: flex-start; flex-direction: column; }.item-badges { text-align: left; }.item-grid { grid-template-columns: 1fr; } }

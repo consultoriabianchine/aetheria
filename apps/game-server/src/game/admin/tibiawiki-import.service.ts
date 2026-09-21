@@ -8,6 +8,7 @@ import { randomUUID } from 'node:crypto';
 import { PrismaService } from '../../prisma/prisma.service';
 import { CreatureRegistry } from './creature-registry.service';
 import { loadItemCatalogFromDatabase } from '../engine/item-catalog';
+import { analyzeCreatureCombat, type CreatureCombatAnalysis } from './creature-combat-analyzer';
 
 const CHANCES = { COMMON: 50, UNCOMMON: 25, SEMI_RARE: 6, RARE: 1.5, VERY_RARE: 0.25 } as const;
 const PREVIEW_TTL_MS = 10 * 60 * 1000;
@@ -23,6 +24,9 @@ export interface ImportPreview {
     armor: number | null;
     charms: number | null;
     difficulty: string | null;
+    gameLevel: number;
+    gameAttack: number;
+    combatAnalysis: CreatureCombatAnalysis;
     damageAffinities: Record<string, { modifier: number; immune: boolean }>;
     imageUrl: string | null;
     description: string | null;
@@ -43,7 +47,12 @@ export interface ImportPreview {
     weight: number;
     attackPower: number;
     armor: number;
+    defenseBase: number;
+    defenseModifier: number;
     defense: number;
+    weaponType: string | null;
+    ammoType: string | null;
+    damageType: string | null;
     sellValue: number;
   }>;
   newItems: Array<{ id: string; name: string; image: string | null }>;
@@ -62,6 +71,9 @@ interface CatalogItem {
   category?: string;
   slot?: string;
   sellValue?: number;
+  armor?: number;
+  weapon?: { weaponType?: string; damageType?: string } | null;
+  ammo?: { ammoType?: string; damageType?: string } | null;
 }
 
 type PreviewItem = ImportPreview['loot'][number] & { itemUrl?: string };
@@ -106,6 +118,8 @@ export class TibiaWikiImportService {
         difficulty: preview.creature.difficulty,
         image_url: preview.creature.imageUrl,
         ...(preview.creature.hp !== null ? { game_max_health: preview.creature.hp } : {}),
+        game_level: preview.creature.gameLevel,
+        game_attack: preview.creature.gameAttack,
         ...(preview.creature.experience !== null ? { game_experience: preview.creature.experience } : {}),
         ...(preview.creature.armor !== null ? { game_defense: preview.creature.armor } : {}),
         damage_affinities: preview.creature.damageAffinities as unknown as Prisma.InputJsonValue,
@@ -117,10 +131,12 @@ export class TibiaWikiImportService {
       const itemIds = new Map<string, string>();
       for (const item of preview.loot) {
         const id = item.itemId ?? slugify(item.itemName);
+        const weapon = item.type === 'weapon' ? { itemId: id, weaponType: item.weaponType ?? 'sword', attackPower: item.attackPower, damageType: item.damageType ?? 'physical', range: 1 } : Prisma.JsonNull;
+        const ammo = item.type === 'ammo' ? { itemId: id, ammoType: item.ammoType ?? 'arrow', attackPower: item.attackPower, damageType: item.damageType ?? 'physical' } : Prisma.JsonNull;
         const created = await tx.itemDefinition.upsert({
           where: { id },
-          update: { name: item.itemName, type: item.type, slot: item.slot, imagePath: item.image ?? `${item.itemName.replace(/\s+/g, '_')}.gif`, stackable: item.stackable, weight: item.weight, category: item.category, sellValue: item.sellValue, attackPower: item.attackPower, armor: item.armor, defense: item.defense, enabled: true },
-          create: { id, name: item.itemName, description: `Item de loot: ${item.itemName}.`, type: item.type, slot: item.slot, imagePath: item.image ?? `${item.itemName.replace(/\s+/g, '_')}.gif`, stackable: item.stackable, weight: item.weight, category: item.category, sellValue: item.sellValue, attackPower: item.attackPower, armor: item.armor, defense: item.defense, enabled: true },
+          update: { name: item.itemName, type: item.type, slot: item.slot, imagePath: item.image ?? `${item.itemName.replace(/\s+/g, '_')}.gif`, stackable: item.stackable, weight: item.weight, category: item.category, sellValue: item.sellValue, attackPower: item.attackPower, armor: item.armor, defense: item.defense, weapon: weapon as Prisma.InputJsonValue, ammo: ammo as Prisma.InputJsonValue, enabled: true },
+          create: { id, name: item.itemName, description: `Item de loot: ${item.itemName}.`, type: item.type, slot: item.slot, imagePath: item.image ?? `${item.itemName.replace(/\s+/g, '_')}.gif`, stackable: item.stackable, weight: item.weight, category: item.category, sellValue: item.sellValue, attackPower: item.attackPower, armor: item.armor, defense: item.defense, weapon: weapon as Prisma.InputJsonValue, ammo: ammo as Prisma.InputJsonValue, enabled: true },
         });
         itemIds.set(item.itemName.toLowerCase(), created.id);
       }
@@ -195,9 +211,14 @@ export class TibiaWikiImportService {
           slot: item?.slot ?? null,
           stackable: item?.stackable ?? false,
           weight: item?.weight ?? 0,
-          attackPower: allowsAttack(item?.type) ? (item?.attack ?? 0) : 0,
-          armor: 0,
-          defense: item?.defense ?? 0,
+           attackPower: allowsAttack(item?.type) ? (item?.attack ?? 0) : 0,
+           armor: 0,
+           defenseBase: item?.defense ?? 0,
+           defenseModifier: 0,
+           defense: item?.defense ?? 0,
+           weaponType: null,
+           ammoType: null,
+           damageType: allowsAttack(item?.type) ? 'physical' : null,
           sellValue: item?.sellValue ?? 1,
           itemUrl: this.itemUrl($(link).attr('href'), sourceUrl, itemName),
         });
@@ -207,15 +228,44 @@ export class TibiaWikiImportService {
     const enriched = await this.enrichItems(unique);
     const ids = enriched.map((item) => item.itemId).filter((id): id is string => !!id);
     const names = enriched.map((item) => item.itemName);
-    const existingRows = await this.prisma.itemDefinition.findMany({ where: { OR: [{ id: { in: ids } }, { name: { in: names } }] }, select: { id: true, name: true } });
-    const existingKeys = new Set(existingRows.flatMap((item) => [item.id, item.name.toLowerCase()]));
-    const resolved = enriched.map(({ itemUrl: _itemUrl, ...item }) => ({ ...item, itemExists: existingKeys.has(item.itemId ?? '') || existingKeys.has(item.itemName.toLowerCase()) }));
+    const existingRows = await this.prisma.itemDefinition.findMany({ where: { OR: [{ id: { in: ids } }, { name: { in: names } }] }, select: { id: true, name: true, type: true, slot: true, imagePath: true, stackable: true, weight: true, category: true, sellValue: true, attackPower: true, armor: true, defense: true, weapon: true, ammo: true } });
+    const existingByKey = new Map(existingRows.flatMap((item) => [[item.id, item], [item.name.toLowerCase(), item]]));
+    const resolved = enriched.map(({ itemUrl: _itemUrl, ...item }) => {
+      const local = existingByKey.get(item.itemId ?? '') ?? existingByKey.get(item.itemName.toLowerCase());
+      if (!local) return { ...item, itemExists: false };
+      const weapon = isObject(local.weapon) ? local.weapon : null;
+      const ammo = isObject(local.ammo) ? local.ammo : null;
+      return {
+        ...item,
+        itemId: local.id,
+        itemExists: true,
+        type: local.type,
+        category: local.category,
+        slot: local.slot,
+        image: local.imagePath ?? item.image,
+        stackable: local.stackable,
+        weight: local.weight,
+        attackPower: local.attackPower,
+        armor: local.armor,
+        defenseBase: local.defense,
+        defenseModifier: 0,
+        defense: local.defense,
+        weaponType: typeof weapon?.weaponType === 'string' ? weapon.weaponType : null,
+        ammoType: typeof ammo?.ammoType === 'string' ? ammo.ammoType : null,
+        damageType: typeof weapon?.damageType === 'string' ? weapon.damageType : typeof ammo?.damageType === 'string' ? ammo.damageType : null,
+        sellValue: local.sellValue,
+      };
+    });
+    const combatAnalysis = analyzeCreatureCombat(html, number(/(\d[\d.]*)\s*(?:\[?\s*HP\s*\]?)/i), number(/(\d[\d.]*)\s*(?:\[?\s*XP\s*\]?)/i));
     return {
       sourceUrl,
-      creature: { name, slug: slugify(name), hp: number(/(\d[\d.]*)\s*(?:\[?\s*HP\s*\]?)/i), experience: number(/(\d[\d.]*)\s*(?:\[?\s*XP\s*\]?)/i), armor: number(/(\d[\d.]*)\s+de\s+Armadura/i), charms: number(/(\d[\d.]*)\s*(?:\[?\s*Charms?\s*\]?)/i), difficulty: text.match(/(?:Médio|Medio|Fácil|Facil|Difícil|Dificil|Muito difícil|Muito dificil)/i)?.[0] ?? null, damageAffinities, imageUrl: content.find('img').first().attr('src') ?? null, description: content.find('p').first().text().trim() || null },
+       creature: { name, slug: slugify(name), hp: number(/(\d[\d.]*)\s*(?:\[?\s*HP\s*\]?)/i), experience: number(/(\d[\d.]*)\s*(?:\[?\s*XP\s*\]?)/i), armor: number(/(\d[\d.]*)\s+de\s+Armadura/i), charms: number(/(\d[\d.]*)\s*(?:\[?\s*Charms?\s*\]?)/i), difficulty: text.match(/(?:Médio|Medio|Fácil|Facil|Difícil|Dificil|Muito difícil|Muito dificil)/i)?.[0] ?? null, gameLevel: combatAnalysis.suggestedLevel, gameAttack: combatAnalysis.suggestedAttack, combatAnalysis, damageAffinities, imageUrl: content.find('img').first().attr('src') ?? null, description: content.find('p').first().text().trim() || null },
       loot: resolved,
       newItems: resolved.filter((item) => !item.itemExists).map((item) => ({ id: item.itemId ?? slugify(item.itemName), name: item.itemName, image: item.image })),
-      warnings: resolved.filter((item) => !item.itemId).map((item) => `Item não encontrado no catálogo local: ${item.itemName}`),
+       warnings: [
+         ...resolved.filter((item) => !item.itemId).map((item) => `Item não encontrado no catálogo local: ${item.itemName}`),
+         ...(combatAnalysis.abilities.length === 0 ? ['Nenhuma habilidade foi detectada automaticamente.'] : []),
+       ],
     };
   }
 
@@ -268,7 +318,7 @@ export class TibiaWikiImportService {
   private parseItemPage(html: string, fallback: PreviewItem): Partial<PreviewItem> {
     const $ = cheerio.load(html);
     const text = $('#mw-content-text').text().replace(/\s+/g, ' ');
-    const combat = text.match(/\(\s*Atk\s*:\s*(\d+)\s*,\s*Def\s*:\s*(\d+)\s*\)/i);
+    const combat = text.match(/\(\s*Atk\s*:\s*(\d+)\s*,\s*Def\s*:\s*(\d+)(?:\s*([+-]\d+))?\s*\)/i);
     const armor = text.match(/\bArm\s*:\s*(\d+)/i);
     const weight = text.match(/(?:weighs|pesa)\s+([\d.,]+)\s*(?:oz|onças?)/i);
     const sellHeading = $('b').filter((_, element) => /^Vende\s+para:?$/i.test($(element).text().trim())).first();
@@ -289,6 +339,11 @@ export class TibiaWikiImportService {
     const type = helmet ? 'helmet' : bodyArmor ? 'armor' : legs ? 'legs' : boots ? 'boots' : shield ? 'offhand' : ring ? 'ring' : amulet ? 'amulet' : isWeapon ? 'weapon' : isAmmo ? 'ammo' : fallback.type;
     const slot = helmet ? 'helmet' : bodyArmor ? 'armor' : legs ? 'legs' : boots ? 'boots' : shield ? 'offhand' : ring ? 'ring' : amulet ? 'amulet' : type === 'ammo' ? 'ammo' : type === 'weapon' ? 'weapon' : fallback.slot;
     const image = $('table.infobox img, #mw-content-text img').first().attr('src');
+    const weaponType = type === 'weapon' ? detectWeaponType(itemLabel) : null;
+    const ammoType = type === 'ammo' ? (/\bbolt|besta|crossbow/i.test(itemLabel) ? 'bolt' : 'arrow') : null;
+    const damageType = allowsAttack(type) ? detectDamageType(text) : null;
+    const defenseBase = combat ? Number(combat[2]) : fallback.defenseBase;
+    const defenseModifier = combat?.[3] ? Number(combat[3]) : fallback.defenseModifier;
     return {
       type,
       category: helmet ? 'Capacetes' : bodyArmor ? 'Armaduras' : legs ? 'Calças' : boots ? 'Botas' : shield ? 'Escudos' : isWeapon ? 'Armas' : fallback.category,
@@ -296,8 +351,13 @@ export class TibiaWikiImportService {
       image: image ? decodeURIComponent(image.split('/').pop()?.replace(/\?.*$/, '') ?? '') : fallback.image,
       weight: weight ? Number(weight[1].replace(',', '.')) : fallback.weight,
       attackPower: combat && allowsAttack(type) ? Number(combat[1]) : 0,
-      defense: combat ? Number(combat[2]) : fallback.defense,
+      defenseBase,
+      defenseModifier,
+      defense: defenseBase + defenseModifier,
       armor: armor ? Number(armor[1]) : fallback.armor,
+      weaponType,
+      ammoType,
+      damageType,
       stackable: type === 'ammo' || type === 'consumable' || (type === 'loot' && fallback.itemId === 'gold') ? true : false,
       sellValue: sell ? Number(sell[1].replace('.', '')) : 1,
     };
@@ -343,7 +403,12 @@ function normalizePreview(input: ImportPreview, sourceUrl: string): ImportPrevie
     weight: Math.max(0, numeric(item.weight, 0) ?? 0),
     attackPower: allowsAttack(String(item.type ?? 'loot')) ? Math.max(0, Math.floor(numeric(item.attackPower, 0) ?? 0)) : 0,
     armor: Math.max(0, Math.floor(numeric(item.armor, 0) ?? 0)),
+    defenseBase: Math.max(0, Math.floor(numeric(item.defenseBase, item.defense) ?? 0)),
+    defenseModifier: Math.floor(numeric(item.defenseModifier, 0) ?? 0),
     defense: Math.max(0, Math.floor(numeric(item.defense, 0) ?? 0)),
+    weaponType: item.weaponType ? String(item.weaponType) : null,
+    ammoType: item.ammoType ? String(item.ammoType) : null,
+    damageType: item.damageType ? String(item.damageType) : null,
     sellValue: Math.max(1, Math.floor(numeric(item.sellValue, 1) ?? 1)),
   }));
   for (const item of loot) {
@@ -361,6 +426,8 @@ function normalizePreview(input: ImportPreview, sourceUrl: string): ImportPrevie
       charms: numeric(creature.charms),
       difficulty: creature.difficulty ? String(creature.difficulty) : null,
       damageAffinities: creature.damageAffinities ?? {},
+      gameLevel: Math.max(1, Math.floor(numeric(creature.gameLevel, 1) ?? 1)),
+      gameAttack: Math.max(0, Math.floor(numeric(creature.gameAttack, 1) ?? 1)),
     },
     loot,
     newItems: loot.filter((item) => !item.itemExists).map((item) => ({ id: item.itemId ?? slugify(item.itemName), name: item.itemName, image: item.image })),
@@ -370,6 +437,32 @@ function normalizePreview(input: ImportPreview, sourceUrl: string): ImportPrevie
 
 function allowsAttack(type: string | undefined): boolean {
   return type === 'weapon' || type === 'ammo';
+}
+
+function detectWeaponType(value: string): string {
+  if (/crossbow|besta/i.test(value)) return 'crossbow';
+  if (/bow|arco/i.test(value)) return 'bow';
+  if (/axe|machado/i.test(value)) return 'axe';
+  if (/club|clava|mace|maça|maca/i.test(value)) return 'club';
+  if (/staff|cajado/i.test(value)) return 'staff';
+  if (/wand|varinha/i.test(value)) return 'wand';
+  if (/rod|bastão|bastao/i.test(value)) return 'rod';
+  return 'sword';
+}
+
+function detectDamageType(value: string): string {
+  if (/\b(fire|fogo)\b/i.test(value)) return 'fire';
+  if (/\b(earth|terra)\b/i.test(value)) return 'earth';
+  if (/\b(ice|gelo)\b/i.test(value)) return 'ice';
+  if (/\b(energy|energia)\b/i.test(value)) return 'energy';
+  if (/\b(death|morte)\b/i.test(value)) return 'death';
+  if (/\b(holy|sagrado)\b/i.test(value)) return 'holy';
+  if (/\b(arcane|arcano)\b/i.test(value)) return 'arcane';
+  return 'physical';
+}
+
+function isObject(value: unknown): value is Record<string, unknown> {
+  return typeof value === 'object' && value !== null && !Array.isArray(value);
 }
 
 function slugify(value: string): string {

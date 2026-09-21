@@ -1377,7 +1377,11 @@ export class WorldScene extends Phaser.Scene {
       if (!this.anims.exists(key)) {
         this.anims.create({ key, frames: impact.frames.map((frame) => ({ key: textureKey, frame })), frameRate: impact.fps ?? 12, repeat: 0 });
       }
-      const sprite = this.add.sprite(x, y, textureKey, impact.frames[0] ?? 0).setDepth(95).setOrigin(0.5, 1);
+      const growsFromRight = impact.frameWidth === 64 && impact.frameHeight === 64;
+      const sprite = this.add
+        .sprite(growsFromRight ? x + TILE_SIZE / 2 : x, y, textureKey, impact.frames[0] ?? 0)
+        .setDepth(95)
+        .setOrigin(growsFromRight ? 1 : 0.5, 1);
       sprite.play(key);
       sprite.once(Phaser.Animations.Events.ANIMATION_COMPLETE, () => sprite.destroy());
       this.time.delayedCall(Math.max(120, ((impact.frames.length || 1) / (impact.fps ?? 12)) * 1000 + 80), () => sprite.destroy());

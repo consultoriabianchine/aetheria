@@ -251,6 +251,16 @@ export interface TibiaWikiImportPreview {
     armor: number | null;
     charms: number | null;
     difficulty: string | null;
+    gameLevel: number;
+    gameAttack: number;
+    combatAnalysis: {
+      abilities: Array<{ kind: 'physical' | 'spell' | 'heal'; label: string; min: number; max: number; area: boolean }>;
+      physicalAttackMax: number | null;
+      offensiveMax: number | null;
+      healMax: number | null;
+      suggestedAttack: number;
+      suggestedLevel: number;
+    };
     damageAffinities: Record<string, AdminCreatureAffinity>;
     imageUrl: string | null;
     description: string | null;
@@ -271,7 +281,12 @@ export interface TibiaWikiImportPreview {
     weight: number;
     attackPower: number;
     armor: number;
+    defenseBase: number;
+    defenseModifier: number;
     defense: number;
+    weaponType: string | null;
+    ammoType: string | null;
+    damageType: string | null;
     sellValue: number;
   }>;
   newItems: Array<{ id: string; name: string; image: string | null }>;

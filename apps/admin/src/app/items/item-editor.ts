@@ -1,7 +1,8 @@
 import { Component, OnInit, computed, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import type { AmmoType, DamageType, EffectTypeDefinition, EquipmentSlot, ItemType, ShootTypeDefinition, WeaponType } from '@aetheria/types';
+import type { EffectTypeDefinition, ShootTypeDefinition } from '@aetheria/types';
 import { ApiService, type AdminItemDefinition, type AdminItemInput } from '../core/api.service';
+import { AMMO_TYPES, DAMAGE_TYPES, ITEM_SLOTS, ITEM_TYPES, WEAPON_TYPES } from '../core/item-options';
 
 @Component({
   selector: 'admin-item-editor',
@@ -47,11 +48,11 @@ export class ItemEditor implements OnInit {
   readonly total = signal(0);
   readonly totalPages = signal(1);
 
-  readonly itemTypes: ItemType[] = ['helmet', 'armor', 'legs', 'boots', 'weapon', 'ring', 'necklace', 'relic', 'offhand', 'ammo', 'consumable', 'loot', 'other'];
-  readonly slots: EquipmentSlot[] = ['helmet', 'armor', 'legs', 'boots', 'ring', 'necklace', 'relic', 'weapon', 'offhand', 'ammo'];
-  readonly weaponTypes: WeaponType[] = ['staff', 'sword', 'axe', 'club', 'bow', 'crossbow'];
-  readonly ammoTypes: AmmoType[] = ['arrow', 'bolt'];
-  readonly damageTypes: DamageType[] = ['physical', 'fire', 'ice', 'energy', 'earth', 'holy', 'death', 'arcane'];
+  readonly itemTypes = ITEM_TYPES;
+  readonly slots = ITEM_SLOTS;
+  readonly weaponTypes = WEAPON_TYPES;
+  readonly ammoTypes = AMMO_TYPES;
+  readonly damageTypes = DAMAGE_TYPES;
 
   readonly selected = computed(() => this.items().find((item) => item.id === this.selectedId()) ?? null);
 
