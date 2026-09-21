@@ -36,4 +36,23 @@ describe('CreatureParser', () => {
     expect(raw.hp).toBeNull();
     expect(raw.loot).toEqual([]);
   });
+
+  it('extrai armadura e afinidades elementais do formato atual da Wiki', () => {
+    const html = `
+      <div id="firstHeading">Orc Berserker</div>
+      <div id="mw-content-text">
+        <table class="infobox">
+          <tr><td>210 HP Pontos de Vida</td></tr>
+          <tr><td>195 XP Pontos de Experiência</td></tr>
+          <tr><td>12 de Armadura</td></tr>
+          <tr><td>110%Fraco a Terra</td></tr>
+          <tr><td>85%Forte a Energia</td></tr>
+        </table>
+      </div>`;
+    const raw = new CreatureParser().parse(html, 'https://www.tibiawiki.com.br/wiki/Orc_Berserker', null);
+
+    expect(raw.armor).toBe(12);
+    expect(raw.damageAffinities.earth).toEqual({ modifier: 0.1, immune: false });
+    expect(raw.damageAffinities.energy).toEqual({ modifier: -0.15, immune: false });
+  });
 });

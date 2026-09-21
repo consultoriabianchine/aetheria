@@ -1449,7 +1449,7 @@ export class GameEngine implements OnModuleDestroy {
     if (!srcStack) return;
     const dstStack = target[toIndex];
     const def = getItemDef(srcStack.itemId);
-    if (dstStack && dstStack.itemId === srcStack.itemId && (def?.stackable ?? true)) {
+    if (dstStack && dstStack.itemId === srcStack.itemId && (def?.stackable ?? false)) {
       dstStack.quantity += srcStack.quantity;
       source[fromIndex] = null;
     } else {
@@ -1590,8 +1590,35 @@ export class GameEngine implements OnModuleDestroy {
     const stored = await this.store.getAccountStorage(accountId);
     storage = stored ? new AccountStorageState(stored) : AccountStorageState.blank(accountId);
     this.accountStorage.set(accountId, storage);
-    if (!stored) await this.store.saveAccountStorage(storage.toStored());
+    const repaired = stored ? this.repairNonStackableStacks(storage) : false;
+    if (!stored || repaired) await this.store.saveAccountStorage(storage.toStored());
     return storage;
+  }
+
+  private repairNonStackableStacks(storage: AccountStorageState): boolean {
+    let changed = false;
+    const repair = (container: (ItemStack | null)[]) => {
+      for (let index = 0; index < container.length; index++) {
+        const stack = container[index];
+        const def = stack ? getItemDef(stack.itemId) : undefined;
+        if (!stack || !def || def.stackable || stack.quantity <= 1) continue;
+        let remaining = stack.quantity;
+        stack.quantity = 1;
+        while (remaining > 1) {
+          const empty = container.findIndex((slot) => slot === null);
+          if (empty < 0) {
+            stack.quantity = remaining;
+            break;
+          }
+          container[empty] = { itemId: stack.itemId, quantity: 1 };
+          remaining--;
+          changed = true;
+        }
+      }
+    };
+    repair(storage.inventory);
+    repair(storage.lootPouch);
+    return changed;
   }
 
   private storageFor(player: GamePlayer): AccountStorageState {
@@ -1737,7 +1764,7 @@ export class GameEngine implements OnModuleDestroy {
   private addToContainer(container: (ItemStack | null)[], itemId: string, quantity: number): boolean {
     const def = getItemDef(itemId);
     const existing = container.find((s) => s && s.itemId === itemId);
-    if (existing && (def?.stackable ?? true)) {
+    if (existing && (def?.stackable ?? false)) {
       existing.quantity += quantity;
       return true;
     }

@@ -1,6 +1,6 @@
 import * as cheerio from 'cheerio';
 import { describe, expect, it } from 'vitest';
-import { buildLootEntry, interpretLootCell, looksLikeQuantity, normalizeQuantity, normalizeRarity } from '../src/normalization/loot.normalizer';
+import { buildLootEntry, defaultLootChance, interpretLootCell, looksLikeQuantity, normalizeQuantity, normalizeRarity } from '../src/normalization/loot.normalizer';
 import { LootParser } from '../src/parser/loot.parser';
 
 const BASE = 'https://www.tibiawiki.com.br';
@@ -11,6 +11,7 @@ describe('normalizeRarity', () => {
     expect(normalizeRarity('Raro')).toEqual({ rarity: 'RARE', rarityRaw: 'Raro' });
     expect(normalizeRarity('Uncommon')).toEqual({ rarity: 'UNCOMMON', rarityRaw: 'Uncommon' });
     expect(normalizeRarity('Semi-Raro')).toEqual({ rarity: 'SEMI_RARE', rarityRaw: 'Semi-Raro' });
+    expect(normalizeRarity('Muito Raro')).toEqual({ rarity: 'VERY_RARE', rarityRaw: 'Muito Raro' });
   });
 
   it('retorna UNKNOWN para desconhecido/vazio', () => {
@@ -64,6 +65,7 @@ describe('LootParser', () => {
     expect(meat.rarity).toBe('COMMON');
     expect(meat.minQuantity).toBe(0);
     expect(meat.maxQuantity).toBe(21);
+    expect(meat.chance).toBe(50);
 
     const ham = entries[1];
     expect(ham.rarity).toBe('RARE');
@@ -146,5 +148,15 @@ describe('buildLootEntry', () => {
       rawText: '',
     });
     expect(entry.itemName).toBe('Desconhecido');
+  });
+});
+
+describe('defaultLootChance', () => {
+  it('usa valores dentro das faixas de raridade', () => {
+    expect(defaultLootChance('COMMON')).toBe(50);
+    expect(defaultLootChance('UNCOMMON')).toBe(25);
+    expect(defaultLootChance('SEMI_RARE')).toBe(6);
+    expect(defaultLootChance('RARE')).toBe(1.5);
+    expect(defaultLootChance('VERY_RARE')).toBe(0.25);
   });
 });

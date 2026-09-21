@@ -12,12 +12,13 @@ const RARITY_PATTERNS: Array<{ rarity: Rarity; re: RegExp }> = [
     re: /(^|[\s(])incomum($|[\s)])|(^|[\s(])uncommon($|[\s)])/i,
   },
   { rarity: 'SEMI_RARE', re: /semi[- ]raro|semi[- ]rare/i },
+  { rarity: 'VERY_RARE', re: /muito raro|raríssimo|rarissimo|very rare/i },
   { rarity: 'RARE', re: /(^|[\s(])raro($|[\s)])|(^|[\s(])rare($|[\s)])/i },
   { rarity: 'UNKNOWN', re: /desconhecid|unknown/i },
 ];
 
 /**
- * Normaliza o texto de raridade da Wiki para COMMON/UNCOMMON/SEMI_RARE/RARE/
+ * Normaliza o texto de raridade da Wiki para COMMON/UNCOMMON/SEMI_RARE/RARE/VERY_RARE/
  * UNKNOWN. Preserva o texto original em rarityRaw.
  */
 export function normalizeRarity(text: string | null | undefined): { rarity: Rarity; rarityRaw: string | null } {
@@ -65,6 +66,28 @@ export function interpretLootCell(
   return { rarity, rarityRaw, min: q.min, max: q.max, chance };
 }
 
+/**
+ * A Wiki classifica o loot por raridade, mas normalmente não publica o
+ * percentual numérico. Usa faixas determinísticas nesses casos; percentuais
+ * explícitos da página continuam tendo prioridade.
+ */
+export function defaultLootChance(rarity: Rarity): number {
+  switch (rarity) {
+    case 'COMMON':
+      return 50;
+    case 'UNCOMMON':
+      return 25;
+    case 'SEMI_RARE':
+      return 6;
+    case 'RARE':
+      return 1.5;
+    case 'VERY_RARE':
+      return 0.25;
+    default:
+      return 1;
+  }
+}
+
 /** Monta um LootEntry normalizado a partir dos dados interpretados de uma linha. */
 export function buildLootEntry(args: {
   itemName: string;
@@ -85,7 +108,7 @@ export function buildLootEntry(args: {
     minQuantity: args.min,
     maxQuantity: args.max,
     quantityRaw: args.quantityRaw,
-    chance: args.chance,
+    chance: args.chance ?? defaultLootChance(args.rarity),
     rawText: args.rawText,
   };
 }

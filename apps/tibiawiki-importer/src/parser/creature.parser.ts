@@ -41,6 +41,8 @@ export class CreatureParser {
       gifUrl: assets.gifUrl,
       hp: stats.hp,
       experience: stats.experience,
+      armor: stats.armor,
+      damageAffinities: stats.damageAffinities,
       charms: stats.charms,
       difficulty: stats.difficulty,
       difficultyRaw: stats.difficultyRaw,

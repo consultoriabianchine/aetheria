@@ -2,6 +2,7 @@
 <p class="sub">Central de Comando — dados, combate, elementos, loot e animações.</p>
 
 <div class="toolbar">
+  <a class="primary" routerLink="/creatures/import">+ Importar da TibiaWiki</a>
   <button class="primary" type="button" (click)="includeCreature()">+ Incluir criatura</button>
   <button (click)="load()" [disabled]="loading()">Atualizar</button>
 </div>

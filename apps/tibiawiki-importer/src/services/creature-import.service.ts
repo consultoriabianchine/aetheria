@@ -54,6 +54,8 @@ export class CreatureImportService {
 
       this.logger.info('HP', String(normalized.hp ?? '—'));
       this.logger.info('XP', String(normalized.experience ?? '—'));
+      this.logger.info('Armor', String(normalized.armor ?? '—'));
+      this.logger.info('Affinities', String(Object.keys(normalized.damageAffinities).length));
       this.logger.info('Loot', `${normalized.loot.length} itens`);
       if (opts.verbose) {
         for (const l of normalized.loot) {
@@ -78,15 +80,13 @@ export class CreatureImportService {
 
       if (!opts.dryRun) await this.exportJson(normalized, paths);
 
+      const itemIds = this.config.importItems ? await this.importWikiItems(normalized, opts) : new Map<string, string>();
+
       let outcome: ImportOutcome;
       if (opts.dryRun) {
         outcome = 'updated'; // simulado — nada é persistido
       } else {
-        outcome = await this.creatureRepo.upsertCreature(normalized, paths);
-      }
-
-      if (this.config.importItems && !opts.dryRun) {
-        await this.importWikiItems(normalized, opts);
+        outcome = await this.creatureRepo.upsertCreature(normalized, paths, itemIds);
       }
 
       this.logger.info('Completed', tag);
@@ -120,6 +120,8 @@ export class CreatureImportService {
           sourceUrl: normalized.sourceUrl,
           hp: normalized.hp,
           experience: normalized.experience,
+          armor: normalized.armor,
+          damageAffinities: normalized.damageAffinities,
           imageUrl: normalized.imageUrl,
           gifUrl: normalized.gifUrl,
           imagePath: paths.imagePath,
@@ -132,11 +134,26 @@ export class CreatureImportService {
     );
   }
 
-  private async importWikiItems(normalized: NormalizedCreature, opts: CliOptions) {
+  private async importWikiItems(normalized: NormalizedCreature, opts: CliOptions): Promise<Map<string, string>> {
+    const itemIds = new Map<string, string>();
     for (const l of normalized.loot) {
-      if (!l.itemUrl) continue;
       try {
-        const item = await new ItemScraper(this.http, this.logger).scrape(l.itemUrl);
+        const item = l.itemUrl
+          ? await new ItemScraper(this.http, this.logger).scrape(l.itemUrl)
+          : {
+              name: l.itemName,
+              imageUrl: null,
+              description: null,
+              weight: 0,
+              armor: 0,
+              attack: 0,
+              defense: 0,
+              sellValue: 0,
+               stackable: /gold|moeda/i.test(l.itemName),
+              category: 'Outros',
+              type: 'loot',
+              slot: null,
+            };
         let imagePath: string | null = null;
         if (opts.downloadAssets && item.imageUrl) {
           imagePath = await this.assets.downloadItemAsset(item.imageUrl, slugify(item.name || l.itemName), {
@@ -144,16 +161,31 @@ export class CreatureImportService {
             dryRun: opts.dryRun,
           });
         }
-        await this.lootRepo.upsertWikiItem({
+        const itemData = {
           name: item.name || l.itemName,
-          url: l.itemUrl,
+          url: l.itemUrl ?? `https://www.tibiawiki.com.br/wiki/${slugify(l.itemName)}`,
           imageUrl: item.imageUrl,
           imagePath,
           description: item.description,
-        });
+          weight: item.weight,
+          armor: item.armor,
+          attack: item.attack,
+          defense: item.defense,
+          sellValue: item.sellValue,
+          stackable: item.stackable,
+          category: item.category,
+          type: item.type,
+          slot: item.slot,
+        };
+        if (!opts.dryRun) {
+          const id = await this.lootRepo.upsertItemDefinition(itemData);
+          await this.lootRepo.upsertWikiItem(itemData);
+          itemIds.set(l.itemName.toLowerCase(), id);
+        }
       } catch (err) {
         this.logger.warn('item', `Falha ao importar item ${l.itemName}: ${(err as Error).message}`);
       }
     }
+    return itemIds;
   }
 }

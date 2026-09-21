@@ -1,4 +1,4 @@
-export type Rarity = 'COMMON' | 'UNCOMMON' | 'SEMI_RARE' | 'RARE' | 'UNKNOWN';
+export type Rarity = 'COMMON' | 'UNCOMMON' | 'SEMI_RARE' | 'RARE' | 'VERY_RARE' | 'UNKNOWN';
 
 export type Difficulty = 'EASY' | 'MEDIUM' | 'HARD' | 'VERY_HARD' | 'UNKNOWN';
 
@@ -29,6 +29,8 @@ export interface RawCreatureData {
   gifUrl: string | null;
   hp: number | null;
   experience: number | null;
+  armor: number | null;
+  damageAffinities: Record<string, { modifier: number; immune: boolean }>;
   charms: number | null;
   difficulty: Difficulty | null;
   difficultyRaw: string | null;
@@ -46,6 +48,8 @@ export interface NormalizedCreature {
   gifUrl: string | null;
   hp: number | null;
   experience: number | null;
+  armor: number | null;
+  damageAffinities: Record<string, { modifier: number; immune: boolean }>;
   charms: number | null;
   difficulty: Difficulty | null;
   difficultyRaw: string | null;
@@ -70,6 +74,7 @@ export interface CliOptions {
   verbose: boolean;
   inspect: boolean;
   items: boolean;
+  existing: boolean;
   slug?: string;
   help: boolean;
 }

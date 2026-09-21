@@ -64,6 +64,8 @@ export function parseRarity(value: string | null | undefined): string | null {
 export interface InfoboxStats {
   hp: number | null;
   experience: number | null;
+  armor: number | null;
+  damageAffinities: Record<string, { modifier: number; immune: boolean }>;
   charms: number | null;
   difficulty: Difficulty | null;
   difficultyRaw: string | null;
@@ -96,6 +98,8 @@ export class StatsParser {
     const stats: InfoboxStats = {
       hp: null,
       experience: null,
+      armor: null,
+      damageAffinities: {},
       charms: null,
       difficulty: 'UNKNOWN',
       difficultyRaw: null,
@@ -104,7 +108,39 @@ export class StatsParser {
     this.parseTooltipCells($, infobox, stats);
     // Fallback para o formato clássico com <th>.
     this.parseThCells($, infobox, stats);
+    this.parseCombatProperties($, infobox, stats);
     return stats;
+  }
+
+  private parseCombatProperties($: CheerioAPI, infobox: Cheerio<Element>, stats: InfoboxStats): void {
+    const damageTypes: Record<string, string> = {
+      fisico: 'physical',
+      'físico': 'physical',
+      terra: 'earth',
+      fogo: 'fire',
+      morte: 'death',
+      energia: 'energy',
+      sagrado: 'holy',
+      gelo: 'ice',
+    };
+    const cells = $('#mw-content-text').find('td');
+    (cells.length > 0 ? cells : infobox.find('td')).each((_, td) => {
+      const text = normalizeWhitespace($(td).text());
+      const armor = text.match(/(?:armadura\s*[:：]?\s*(\d[\d.,]*)|(\d[\d.,]*)\s+de\s+armadura)/i);
+      if (stats.armor === null && armor) stats.armor = parseNumber(armor[1] ?? armor[2]);
+
+      const affinity = text.match(/(\d+(?:[.,]\d+)?)\s*%\s*(?:[a-z]+\s+)?(?:a\s+)?([A-Za-zÀ-ÿ]+)/i);
+      if (!affinity) return;
+      const key = normalizeKey(affinity[2]);
+      const damageType = damageTypes[key];
+      if (!damageType) return;
+      const percentage = parseFloat(affinity[1].replace(',', '.'));
+      if (!Number.isFinite(percentage)) return;
+      stats.damageAffinities[damageType] = {
+        modifier: (percentage - 100) / 100,
+        immune: percentage === 0,
+      };
+    });
   }
 
   private parseTooltipCells($: CheerioAPI, infobox: Cheerio<Element>, stats: InfoboxStats): void {

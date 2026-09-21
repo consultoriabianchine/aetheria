@@ -3,7 +3,7 @@ import { z } from 'zod';
 import type { NormalizedCreature, RawCreatureData } from '../types/scraper.types';
 import { slugify } from '../utils/slugify';
 
-export const RaritySchema = z.enum(['COMMON', 'UNCOMMON', 'SEMI_RARE', 'RARE', 'UNKNOWN']);
+export const RaritySchema = z.enum(['COMMON', 'UNCOMMON', 'SEMI_RARE', 'RARE', 'VERY_RARE', 'UNKNOWN']);
 export const DifficultySchema = z.enum(['EASY', 'MEDIUM', 'HARD', 'VERY_HARD', 'UNKNOWN']);
 
 export const LootSchema = z.object({
@@ -26,6 +26,8 @@ export const CreatureSchema = z.object({
   gifUrl: z.string().url().nullable(),
   hp: z.number().int().nonnegative().nullable(),
   experience: z.number().int().nonnegative().nullable(),
+  armor: z.number().int().nonnegative().nullable(),
+  damageAffinities: z.record(z.object({ modifier: z.number(), immune: z.boolean() })),
   charms: z.number().int().nonnegative().nullable(),
   difficulty: DifficultySchema.nullable(),
   difficultyRaw: z.string().nullable(),
@@ -60,6 +62,8 @@ export class CreatureNormalizer {
       name: raw.name,
       hp: raw.hp,
       experience: raw.experience,
+      armor: raw.armor ?? null,
+      damageAffinities: raw.damageAffinities ?? {},
       charms: raw.charms,
       difficulty: raw.difficulty,
       imageUrl: safeUrl(raw.imageUrl),
@@ -68,6 +72,8 @@ export class CreatureNormalizer {
 
     const data: RawCreatureData & { slug: string; sourceHash: string } = {
       ...raw,
+      armor: raw.armor ?? null,
+      damageAffinities: raw.damageAffinities ?? {},
       imageUrl: safeUrl(raw.imageUrl),
       gifUrl: safeUrl(raw.gifUrl),
       loot: raw.loot.map((l) => ({ ...l, itemUrl: safeUrl(l.itemUrl) })),

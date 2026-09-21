@@ -37,20 +37,24 @@ export class ImportOrchestrator {
     this.logger.setVerbose(opts.verbose);
     this.logger.info('Starting', 'TibiaWiki importer');
 
+    const http = new TibiaWikiHttpClient(config, this.logger);
     const categoryUrl = opts.categoryUrl ?? config.categoryUrl;
     const category = categoryFromUrl(categoryUrl);
     this.logger.info('Category', category ?? categoryUrl);
 
-    const http = new TibiaWikiHttpClient(config, this.logger);
-    const categoryScraper = new CategoryScraper(http, undefined, this.logger);
-    const links = await categoryScraper.scrape(categoryUrl);
+    const prisma = new PrismaClient();
+    const links = opts.existing
+      ? (await prisma.creatureDefinition.findMany({ select: { name: true, source_url: true } })).map((row) => ({
+          name: row.name,
+          url: row.source_url ?? `https://www.tibiawiki.com.br/wiki/${encodeURIComponent(row.name.replace(/\s+/g, '_'))}`,
+        }))
+      : await new CategoryScraper(http, undefined, this.logger).scrape(categoryUrl);
     const limited = opts.limit ? links.slice(0, opts.limit) : links;
     this.logger.info(
       'Found',
       `${links.length} criaturas${opts.limit ? ` (processando ${limited.length})` : ''}`,
     );
 
-    const prisma = new PrismaClient();
     const creatureRepo = new CreatureRepository(prisma);
     const lootRepo = new LootRepository(prisma);
     const importRepo = new ImportRepository(prisma);

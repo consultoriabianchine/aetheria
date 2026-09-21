@@ -16,7 +16,8 @@ const RARITY_HEADERS: Array<{ rarity: Rarity; re: RegExp }> = [
   { rarity: 'COMMON', re: /^(comum|common|always|sempre)[:：]?\s*$/i },
   { rarity: 'UNCOMMON', re: /^(incomum|uncommon)[:：]?\s*$/i },
   { rarity: 'SEMI_RARE', re: /^semi[- ]raro|semi[- ]rare[:：]?\s*$/i },
-  { rarity: 'RARE', re: /^(raro|rare)[:：]?\s*$|muito raro|rar[íi]ssimo|very rare/i },
+  { rarity: 'VERY_RARE', re: /^(muito raro|very rare|rar[íi]ssimo)[:：]?\s*$/i },
+  { rarity: 'RARE', re: /^(raro|rare)[:：]?\s*$/i },
 ];
 
 /**

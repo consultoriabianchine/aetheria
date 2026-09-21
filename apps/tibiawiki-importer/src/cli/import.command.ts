@@ -17,6 +17,7 @@ const OPTIONS = {
   verbose: { type: 'boolean' as const, default: false },
   inspect: { type: 'boolean' as const, default: false },
   items: { type: 'boolean' as const, default: false },
+  existing: { type: 'boolean' as const, default: false },
   slug: { type: 'string' as const },
   help: { type: 'boolean' as const, default: false },
 };
@@ -36,6 +37,7 @@ export function parseCliOptions(argv: string[]): CliOptions {
     verbose: values['verbose'] ?? false,
     inspect: values['inspect'] ?? false,
     items: values['items'] ?? false,
+    existing: values['existing'] ?? false,
     slug: values['slug'],
     help: values['help'] ?? false,
   };
@@ -59,6 +61,7 @@ Flags:
   --verbose              Logs detalhados
   --inspect --slug=<x>   Inspeciona uma criatura já importada
   --items                Regenera items.json a partir dos snapshots locais
+  --existing             Sincroniza todas as criaturas já existentes no banco
   --help                 Esta ajuda
 
 Exemplos:

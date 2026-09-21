@@ -241,6 +241,43 @@ export interface AdminAnimationSetConfig {
   animations: import('@aetheria/types').AnimationSequence[];
 }
 
+export interface TibiaWikiImportPreview {
+  sourceUrl: string;
+  creature: {
+    name: string;
+    slug: string;
+    hp: number | null;
+    experience: number | null;
+    armor: number | null;
+    charms: number | null;
+    difficulty: string | null;
+    damageAffinities: Record<string, AdminCreatureAffinity>;
+    imageUrl: string | null;
+    description: string | null;
+  };
+  loot: Array<{
+    itemName: string;
+    itemId: string | null;
+    rarity: string;
+    chance: number;
+    minQuantity: number;
+    maxQuantity: number;
+    image: string | null;
+    itemExists: boolean;
+    type: string;
+    category: string;
+    slot: string | null;
+    stackable: boolean;
+    weight: number;
+    attackPower: number;
+    armor: number;
+    defense: number;
+    sellValue: number;
+  }>;
+  newItems: Array<{ id: string; name: string; image: string | null }>;
+  warnings: string[];
+}
+
 @Injectable({ providedIn: 'root' })
 export class ApiService {
   readonly baseUrl = signal(localStorage.getItem('admin.baseUrl') ?? 'http://localhost:4000');
@@ -472,6 +509,18 @@ export class ApiService {
 
   listItems(): Promise<AdminItemDefinition[]> {
     return this.request('/admin/items', { headers: this.headers() });
+  }
+
+  previewTibiaWikiCreature(url: string): Promise<{ previewId: string; preview: TibiaWikiImportPreview }> {
+    return this.request('/admin/tibiawiki/creature/preview', { method: 'POST', headers: this.headers(), body: JSON.stringify({ url }) });
+  }
+
+  importTibiaWikiCreature(previewId: string): Promise<{ ok: boolean; creatureId: number; itemCount: number }> {
+    return this.request('/admin/tibiawiki/creature/import', { method: 'POST', headers: this.headers(), body: JSON.stringify({ previewId }) });
+  }
+
+  updateTibiaWikiCreaturePreview(previewId: string, preview: TibiaWikiImportPreview): Promise<{ previewId: string; preview: TibiaWikiImportPreview }> {
+    return this.request(`/admin/tibiawiki/creature/preview/${encodeURIComponent(previewId)}`, { method: 'PUT', headers: this.headers(), body: JSON.stringify(preview) });
   }
 
   listItemsPage(params: { q?: string; type?: string; category?: string; page: number; pageSize: number }): Promise<AdminItemPage> {

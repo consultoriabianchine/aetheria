@@ -7,6 +7,10 @@ export const routes: Routes = [
     loadComponent: () => import('./creatures/creature-list').then((m) => m.CreatureList),
   },
   {
+    path: 'creatures/import',
+    loadComponent: () => import('./creatures/creature-importer').then((m) => m.CreatureImporter),
+  },
+  {
     path: 'creatures/:id/animation',
     loadComponent: () => import('./creatures/creature-editor').then((m) => m.CreatureEditor),
   },

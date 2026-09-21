@@ -12,12 +12,15 @@ export type UpsertResult = 'inserted' | 'updated';
 export class CreatureRepository {
   constructor(private readonly prisma: PrismaClient) {}
 
-  async upsertCreature(n: NormalizedCreature, paths: AssetPaths): Promise<UpsertResult> {
+  async upsertCreature(n: NormalizedCreature, paths: AssetPaths, itemIds = new Map<string, string>()): Promise<UpsertResult> {
     let existing = await this.prisma.creatureDefinition.findUnique({
       where: { source_url: n.sourceUrl },
     });
     const bySlug = existing ? null : await this.prisma.creatureDefinition.findUnique({ where: { slug: n.slug } });
-    existing = existing ?? bySlug;
+    const byName = existing || bySlug
+      ? null
+      : await this.prisma.creatureDefinition.findFirst({ where: { name: { equals: n.name, mode: 'insensitive' } } });
+    existing = existing ?? bySlug ?? byName;
 
     const data = {
       name: n.name,
@@ -27,6 +30,10 @@ export class CreatureRepository {
       source_name: n.name,
       source_hp: n.hp,
       source_experience: n.experience,
+      ...(n.hp !== null ? { game_max_health: n.hp } : {}),
+      ...(n.armor !== null ? { game_defense: n.armor } : {}),
+      ...(n.experience !== null ? { game_experience: n.experience } : {}),
+      ...(Object.keys(n.damageAffinities).length > 0 ? { damage_affinities: n.damageAffinities } : {}),
       charms: n.charms,
       difficulty: n.difficulty,
       difficulty_raw: n.difficultyRaw,
@@ -41,19 +48,31 @@ export class CreatureRepository {
       ? await this.prisma.creatureDefinition.update({ where: { id: existing.id }, data })
       : await this.prisma.creatureDefinition.create({ data });
 
-    await this.syncLoot(creature.id, n);
+    await this.syncLoot(creature.id, n, itemIds);
     await this.upsertSource(creature.id, n);
 
     return existing ? 'updated' : 'inserted';
   }
 
-  private async syncLoot(creatureId: string, n: NormalizedCreature) {
-    // Remove apenas loot importado (sem item_id) que não está mais na página.
-    await this.prisma.creatureLoot.deleteMany({ where: { creature_id: creatureId, item_id: null } });
-    if (n.loot.length > 0) {
-      await this.prisma.creatureLoot.createMany({
-        data: n.loot.map((l) => ({
+  private async syncLoot(creatureId: string, n: NormalizedCreature, itemIds: Map<string, string>) {
+    const names = n.loot.map((loot) => loot.itemName);
+    await this.prisma.creatureLoot.deleteMany({ where: { creature_id: creatureId, item_name: { notIn: names } } });
+    for (const l of n.loot) {
+      await this.prisma.creatureLoot.upsert({
+        where: { creature_id_item_name: { creature_id: creatureId, item_name: l.itemName } },
+        update: {
+          item_id: itemIds.get(l.itemName.toLowerCase()) ?? null,
+          item_slug: slugify(l.itemName),
+          item_url: l.itemUrl,
+          rarity: l.rarity,
+          min_quantity: l.minQuantity,
+          max_quantity: l.maxQuantity,
+          chance: l.chance,
+          raw_text: l.rawText,
+        },
+        create: {
           creature_id: creatureId,
+          item_id: itemIds.get(l.itemName.toLowerCase()) ?? null,
           item_name: l.itemName,
           item_slug: slugify(l.itemName),
           item_url: l.itemUrl,
@@ -62,8 +81,7 @@ export class CreatureRepository {
           max_quantity: l.maxQuantity,
           chance: l.chance,
           raw_text: l.rawText,
-        })),
-        skipDuplicates: true,
+        },
       });
     }
   }

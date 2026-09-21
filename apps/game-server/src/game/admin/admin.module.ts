@@ -13,10 +13,12 @@ import { AbilityRegistry } from '../combat/ability-registry';
 import { MonsterAbilityAdminController } from './monster-ability-admin.controller';
 import { ShootTypeAdminController } from './shoot-type-admin.controller';
 import { EffectTypeAdminController } from './effect-type-admin.controller';
+import { TibiaWikiImportController } from './tibiawiki-import.controller';
+import { TibiaWikiImportService } from './tibiawiki-import.service';
 
 @Module({
-  controllers: [AdminController, CreatureAssetController, CombatAdminController, ItemAdminController, ItemCatalogController, AbilityAdminController, MonsterAbilityAdminController, ShootTypeAdminController, EffectTypeAdminController],
-  providers: [AdminAuthGuard, CreatureAssetService, CreatureAnimationService, CreatureRegistry, AbilityRegistry],
+  controllers: [AdminController, TibiaWikiImportController, CreatureAssetController, CombatAdminController, ItemAdminController, ItemCatalogController, AbilityAdminController, MonsterAbilityAdminController, ShootTypeAdminController, EffectTypeAdminController],
+  providers: [AdminAuthGuard, TibiaWikiImportService, CreatureAssetService, CreatureAnimationService, CreatureRegistry, AbilityRegistry],
   exports: [CreatureRegistry],
 })
 export class AdminModule {}
