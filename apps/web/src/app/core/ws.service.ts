@@ -3,7 +3,13 @@ import { io, Socket } from 'socket.io-client';
 import { Subject } from 'rxjs';
 import type { ClientMessage } from '@aetheria/protocol';
 
-export const WS_URL = 'http://localhost:4000';
+export const WS_URL = resolveWsUrl();
+
+function resolveWsUrl(): string {
+  if (typeof window === 'undefined') return 'http://localhost:4000';
+  const localDev = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') && window.location.port === '4200';
+  return localDev ? 'http://localhost:4000' : window.location.origin;
+}
 
 export interface WsEvent {
   event: string;
