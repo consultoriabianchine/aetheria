@@ -19,6 +19,39 @@ model Account {
   createdAt    DateTime       @default(now())
   characters   Character[]
   storage      AccountStorage?
+  abyssMeta    AbyssMetaProgression?
+  abyssRuns    AbyssRunHistory[]
+}
+
+model AbyssMetaProgression {
+  id            String   @id @default(cuid())
+  accountId     String   @unique @map("account_id")
+  fragments     Int      @default(0)
+  unlockedNodes Json     @default("[]") @map("unlocked_nodes")
+  rerolls       Int      @default(0)
+  revives       Int      @default(0)
+  account       Account  @relation(fields: [accountId], references: [id], onDelete: Cascade)
+  updatedAt     DateTime @updatedAt @map("updated_at")
+
+  @@map("abyss_meta_progression")
+}
+
+model AbyssRunHistory {
+  id          String   @id @default(cuid())
+  accountId   String   @map("account_id")
+  characterId String   @map("character_id")
+  result      String
+  durationMs  Int      @map("duration_ms")
+  level       Int
+  torment     Int      @default(1)
+  fragments   Int      @default(0)
+  rewards     Json     @default("[]")
+  seed        Int
+  createdAt   DateTime @default(now()) @map("created_at")
+  account     Account  @relation(fields: [accountId], references: [id], onDelete: Cascade)
+
+  @@index([accountId, createdAt])
+  @@map("abyss_run_history")
 }
 
 model Character {

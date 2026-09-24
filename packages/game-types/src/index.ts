@@ -713,6 +713,75 @@ export interface HuntRunView {
   waveStartedAt: number;
 }
 
+// ---------------------------------------------------------------------------
+// Abismo de Avalon
+
+export type AbyssRunStatus = 'active' | 'level_up' | 'completed' | 'defeated' | 'abandoned';
+export type AbyssUpgradeRarity = 'common' | 'uncommon' | 'rare' | 'epic' | 'legendary';
+
+export interface AbyssAbilityInstance {
+  abilityId: number;
+  level: number;
+  damageMultiplier: number;
+  cooldownMultiplier: number;
+  areaBonus: number;
+  evolutionId?: string;
+}
+
+export interface AbyssUpgradeChoice {
+  id: string;
+  name: string;
+  description: string;
+  rarity: AbyssUpgradeRarity;
+  kind: 'ability' | 'passive' | 'new_ability' | 'evolution';
+  abilityId?: number;
+  stat?: 'damage' | 'speed' | 'max_health' | 'magic_power' | 'area';
+  value?: number;
+  requiresAbilityId?: number;
+}
+
+export interface AbyssRunView {
+  runId: string;
+  status: AbyssRunStatus;
+  startedAt: number;
+  durationMs: number;
+  elapsedMs: number;
+  level: number;
+  experience: number;
+  nextLevelExperience: number;
+  fragments: number;
+  wave: number;
+  wavesCompleted: number;
+  torment: number;
+  activeAbilities: AbyssAbilityInstance[];
+  passiveUpgrades: string[];
+  pendingChoices: AbyssUpgradeChoice[];
+  bossActive: boolean;
+}
+
+export interface AbyssMetaView {
+  fragments: number;
+  unlockedNodes: string[];
+  rerolls: number;
+  revives: number;
+}
+
+export type AbyssMetaBranch = 'offense' | 'defense' | 'arcane' | 'fortune';
+
+export interface AbyssMetaNode {
+  id: string;
+  branch: AbyssMetaBranch;
+  name: string;
+  cost: number;
+  prerequisite?: string;
+}
+
+export interface AbyssFragmentDrop {
+  id: string;
+  amount: number;
+  total: number;
+}
+
 export * from './animation';
 export * from './tileset';
 export * from './outfit';

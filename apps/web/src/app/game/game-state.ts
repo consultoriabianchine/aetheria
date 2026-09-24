@@ -1,7 +1,7 @@
 import { Injectable, computed, signal } from '@angular/core';
 import { Subject } from 'rxjs';
 import { SERVER_EVENTS } from '@aetheria/protocol';
-import type { CharacterInventory, CharacterSkills, CharacterSummary, CombatArchetype, CombatStatsView, HuntDetails, HuntListEntry, HuntRunView, MapTile, PlayerCombatConfig } from '@aetheria/types';
+import type { AbyssFragmentDrop, AbyssMetaView, AbyssRunView, AbyssUpgradeChoice, CharacterInventory, CharacterSkills, CharacterSummary, CombatArchetype, CombatStatsView, HuntDetails, HuntListEntry, HuntRunView, MapTile, PlayerCombatConfig } from '@aetheria/types';
 import { WsService, WsEvent } from '../core/ws.service';
 
 export interface HudStats {
@@ -37,6 +37,15 @@ export interface WorldSnapshot {
 export interface DialogInfo {
   title: string;
   lines: string[];
+}
+
+export interface AbyssResult {
+  status: 'completed' | 'defeated' | 'abandoned';
+  fragments: number;
+  rewards: string[];
+  level: number;
+  wave: number;
+  wavesCompleted: number;
 }
 
 export interface AvailableOutfit {
@@ -94,8 +103,15 @@ export class GameState {
   readonly hunts = signal<HuntListEntry[]>([]);
   readonly huntDetails = signal<HuntDetails | null>(null);
   readonly hunt = signal<HuntRunView | null>(null);
+  readonly abyss = signal<AbyssRunView | null>(null);
+  readonly abyssChoices = signal<AbyssUpgradeChoice[]>([]);
+  readonly abyssMeta = signal<AbyssMetaView | null>(null);
+  readonly abyssResult = signal<AbyssResult | null>(null);
+  readonly abyssFragmentDrops = signal<AbyssFragmentDrop[]>([]);
+  readonly abyssLoading = signal<'entering' | 'returning' | null>(null);
   readonly huntsOpen = signal(false);
   readonly inArena = computed(() => this.hunt() !== null);
+  readonly inInstance = computed(() => this.hunt() !== null || this.abyss() !== null);
 
   readonly party = signal<{ unlockedSlots: number; maxSlots: number; unlockCost: number | null; members: import('@aetheria/protocol').PartyMember[] }>({ unlockedSlots: 1, maxSlots: 3, unlockCost: 5000, members: [] });
 
@@ -140,8 +156,29 @@ export class GameState {
   readonly sceneEvents$ = new Subject<WsEvent>();
   private buffer: WsEvent[] = [];
   private lastSystemMessage: { text: string; at: number } | null = null;
+  private abyssLoadingTimer: ReturnType<typeof setTimeout> | null = null;
+  private abyssLoadingUntil = 0;
 
   readonly loginResult$ = new Subject<boolean>();
+
+  private beginAbyssLoading(status: 'entering' | 'returning') {
+    if (this.abyssLoadingTimer) clearTimeout(this.abyssLoadingTimer);
+    this.abyssLoadingUntil = Date.now() + 450;
+    this.abyssLoading.set(status);
+  }
+
+  private finishAbyssLoading() {
+    const delay = Math.max(0, this.abyssLoadingUntil - Date.now());
+    if (this.abyssLoadingTimer) clearTimeout(this.abyssLoadingTimer);
+    if (delay === 0) {
+      this.abyssLoading.set(null);
+      return;
+    }
+    this.abyssLoadingTimer = setTimeout(() => {
+      this.abyssLoadingTimer = null;
+      this.abyssLoading.set(null);
+    }, delay);
+  }
   readonly characterCreated$ = new Subject<boolean>();
   readonly selectResult$ = new Subject<boolean>();
 
@@ -188,6 +225,10 @@ export class GameState {
         break;
       case 'system.disconnected':
         this.connected.set(false);
+        break;
+      case SERVER_EVENTS.ERROR:
+        if (this.abyssLoadingTimer) clearTimeout(this.abyssLoadingTimer);
+        this.abyssLoading.set(null);
         break;
       case SERVER_EVENTS.LOGIN_RESULT: {
         const r = data as { ok: boolean; error?: string; token?: string; accountId?: string; characters?: CharacterSummary[] };
@@ -236,6 +277,10 @@ export class GameState {
         this.world.set({ map: w.map, width: w.width, height: w.height });
         this.inGame.set(true);
         this.hunt.set(null);
+        this.abyss.set(null);
+        this.abyssChoices.set([]);
+        this.abyssFragmentDrops.set([]);
+        this.finishAbyssLoading();
         this.gold.set(w.character.gold);
         const combat = w.character.combat;
         if (combat) this.combatConfigs.update((all) => ({ ...all, [w.character.id]: combat }));
@@ -249,6 +294,9 @@ export class GameState {
         localStorage.setItem('aetheria_character', w.character.id);
         this.world.set({ map: w.map, width: w.width, height: w.height });
         this.hunt.set(w.hunt);
+        this.abyss.set(null);
+        this.abyssChoices.set([]);
+        this.abyssFragmentDrops.set([]);
         this.gold.set(w.character.gold);
         const combat = w.character.combat;
         if (combat) this.combatConfigs.update((all) => ({ ...all, [w.character.id]: combat }));
@@ -257,6 +305,19 @@ export class GameState {
       case SERVER_EVENTS.HUNT_LIST: {
         const r = data as { hunts: HuntListEntry[] };
         this.hunts.set(r.hunts);
+        break;
+      }
+      case SERVER_EVENTS.ENTER_ABYSS: {
+        const w = data as { character: CharacterSummary; map: MapTile[]; width: number; height: number; abyss: AbyssRunView };
+        this.self.set(w.character);
+        this.characterId.set(w.character.id);
+        this.world.set({ map: w.map, width: w.width, height: w.height });
+        this.abyss.set(w.abyss);
+        this.hunt.set(null);
+        this.abyssResult.set(null);
+        this.abyssFragmentDrops.set([]);
+        this.gold.set(w.character.gold);
+        this.finishAbyssLoading();
         break;
       }
       case SERVER_EVENTS.HUNT_DETAILS: {
@@ -327,6 +388,55 @@ export class GameState {
       case SERVER_EVENTS.HUNT_RETURNED_TO_CITY: {
         this.hunt.set(null);
         this.target.set(null);
+        break;
+      }
+      case SERVER_EVENTS.ABYSS_STARTED:
+      case SERVER_EVENTS.ABYSS_STATE:
+      case SERVER_EVENTS.ABYSS_UPGRADE_SELECTED: {
+        const r = data as { abyss: AbyssRunView };
+        this.abyss.set(r.abyss);
+        this.abyssChoices.set(r.abyss.pendingChoices ?? []);
+        break;
+      }
+      case SERVER_EVENTS.ABYSS_FRAGMENT_DROP: {
+        const r = data as { amount: number; total: number };
+        const drop: AbyssFragmentDrop = { id: `${Date.now()}-${Math.random()}`, amount: r.amount, total: r.total };
+        this.abyssFragmentDrops.update((drops) => [...drops.slice(-3), drop]);
+        setTimeout(() => this.abyssFragmentDrops.update((drops) => drops.filter((entry) => entry.id !== drop.id)), 2200);
+        this.abyss.update((run) => run ? { ...run, fragments: r.total } : run);
+        break;
+      }
+      case SERVER_EVENTS.ABYSS_WAVE_COMPLETED: {
+        const r = data as { abyss: AbyssRunView };
+        this.abyss.set(r.abyss);
+        this.abyssChoices.set(r.abyss.pendingChoices ?? []);
+        this.addSystemMessage(`Onda ${r.abyss.wavesCompleted} concluída. Preparando a onda ${r.abyss.wave}...`);
+        break;
+      }
+      case SERVER_EVENTS.ABYSS_LEVEL_UP: {
+        const r = data as { level: number; choices: AbyssUpgradeChoice[] };
+        this.abyssChoices.set(r.choices);
+        this.abyss.update((run) => run ? { ...run, status: 'level_up', level: r.level, pendingChoices: r.choices } : run);
+        break;
+      }
+      case SERVER_EVENTS.ABYSS_COMPLETED:
+      case SERVER_EVENTS.ABYSS_DEFEATED:
+      case SERVER_EVENTS.ABYSS_ABANDONED: {
+        this.beginAbyssLoading('returning');
+        const r = data as { fragments: number; rewards: string[]; abyss: AbyssRunView };
+        this.abyss.set(r.abyss);
+        this.abyssChoices.set([]);
+        const resultStatus = e.event === SERVER_EVENTS.ABYSS_COMPLETED ? 'completed' : e.event === SERVER_EVENTS.ABYSS_DEFEATED ? 'defeated' : 'abandoned';
+        this.abyssResult.set({ status: resultStatus, fragments: r.abyss.fragments, rewards: r.rewards ?? [], level: r.abyss.level, wave: r.abyss.wave, wavesCompleted: r.abyss.wavesCompleted });
+        if (e.event === SERVER_EVENTS.ABYSS_COMPLETED && r.fragments > 0) {
+          this.abyssMeta.update((meta) => meta ? { ...meta, fragments: meta.fragments + r.fragments } : meta);
+          this.addSystemMessage(`Abismo concluído! +${r.fragments} Fragmentos do Abismo.`);
+        }
+        break;
+      }
+      case SERVER_EVENTS.ABYSS_META_STATE: {
+        const r = data as { meta: AbyssMetaView };
+        this.abyssMeta.set(r.meta);
         break;
       }
       case SERVER_EVENTS.PARTY_STATE: {
@@ -521,6 +631,41 @@ export class GameState {
     const token = this.token();
     if (!token) return;
     this.ws.send({ type: 'hunt.stop', token });
+  }
+
+  startAbyss(torment = 1) {
+    const token = this.token();
+    if (token) {
+      this.beginAbyssLoading('entering');
+      this.ws.send({ type: 'abyss.start', token, torment });
+    }
+  }
+
+  stopAbyss() {
+    const token = this.token();
+    if (token) {
+      this.beginAbyssLoading('returning');
+      this.ws.send({ type: 'abyss.stop', token });
+    }
+  }
+
+  closeAbyssResult() {
+    this.abyssResult.set(null);
+  }
+
+  chooseAbyssUpgrade(choiceId: string) {
+    const token = this.token();
+    if (token) this.ws.send({ type: 'abyss.chooseUpgrade', token, choiceId });
+  }
+
+  requestAbyssMeta() {
+    const token = this.token();
+    if (token) this.ws.send({ type: 'abyss.meta.list', token });
+  }
+
+  unlockAbyssNode(nodeId: string) {
+    const token = this.token();
+    if (token) this.ws.send({ type: 'abyss.meta.unlock', token, nodeId });
   }
 
   setLoop(enabled: boolean) {

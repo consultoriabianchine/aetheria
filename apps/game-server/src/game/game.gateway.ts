@@ -140,6 +140,31 @@ export class GameGateway implements OnGatewayConnection, OnGatewayDisconnect {
     await this.engine.handleHuntSetFavorite(socket.id, payload.token, payload.huntId, payload.favorite);
   }
 
+  @SubscribeMessage('abyss.start')
+  async onAbyssStart(socket: Socket, payload: { token: string; torment?: number }) {
+    await this.engine.handleAbyssStart(socket.id, payload.token, payload.torment);
+  }
+
+  @SubscribeMessage('abyss.stop')
+  async onAbyssStop(socket: Socket, payload: { token: string }) {
+    await this.engine.handleAbyssStop(socket.id, payload.token);
+  }
+
+  @SubscribeMessage('abyss.chooseUpgrade')
+  async onAbyssChoice(socket: Socket, payload: { token: string; choiceId: string }) {
+    await this.engine.handleAbyssChoice(socket.id, payload.token, payload.choiceId);
+  }
+
+  @SubscribeMessage('abyss.meta.list')
+  async onAbyssMetaList(socket: Socket, payload: { token: string }) {
+    await this.engine.handleAbyssMetaList(socket.id, payload.token);
+  }
+
+  @SubscribeMessage('abyss.meta.unlock')
+  async onAbyssMetaUnlock(socket: Socket, payload: { token: string; nodeId: string }) {
+    await this.engine.handleAbyssMetaUnlock(socket.id, payload.token, payload.nodeId);
+  }
+
   @SubscribeMessage('party.unlockSlot')
   async onPartyUnlockSlot(socket: Socket, payload: { token: string }) {
     await this.engine.handlePartyUnlockSlot(socket.id, payload.token);

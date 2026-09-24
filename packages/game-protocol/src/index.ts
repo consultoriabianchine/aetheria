@@ -9,6 +9,7 @@ import type {
   HuntDetails,
   HuntRunView,
   MapTile,
+  MapRenderData,
   Position,
   CombatArchetype,
   ItemImpactVisual,
@@ -21,6 +22,9 @@ import type {
   AttackRotationSlot,
   HealingRotationSlot,
   AbilityCooldownState,
+  AbyssMetaView,
+  AbyssRunView,
+  AbyssUpgradeChoice,
 } from '@aetheria/types';
 
 export type PartyMember = CharacterSummary & { equipment: CharacterEquipment };
@@ -57,7 +61,12 @@ export type ClientMessage =
   | { type: 'ability.cast'; abilityId: number; targetId?: string; direction?: Direction; position?: Position }
   | { type: 'rotation.attack.set'; preset: string; characterId?: string; slots: AttackRotationSlot[] }
   | { type: 'rotation.healing.set'; preset: string; characterId?: string; slots: HealingRotationSlot[] }
-  | { type: 'rotation.load'; preset: string; characterId?: string };
+  | { type: 'rotation.load'; preset: string; characterId?: string }
+  | { type: 'abyss.start'; token: string; torment?: number }
+  | { type: 'abyss.stop'; token: string }
+  | { type: 'abyss.chooseUpgrade'; token: string; choiceId: string }
+  | { type: 'abyss.meta.list'; token: string }
+  | { type: 'abyss.meta.unlock'; token: string; nodeId: string };
 
 export type ServerMessage =
   | { type: 'auth.loginResult'; ok: boolean; error?: string; token?: string; accountId?: string; characters?: CharacterSummary[] }
@@ -113,7 +122,18 @@ export type ServerMessage =
   | { type: 'rotation.state'; preset: string; characterId?: string; attack: AttackRotationSlot[]; healing: HealingRotationSlot[]; cooldowns: AbilityCooldownState }
   | { type: 'cooldowns.update'; characterId: string; attackGroupReadyAt: number; healingGroupReadyAt: number; abilityReadyAt: Record<number, number> }
   | { type: 'ability.castFailed'; abilityId: number; reason: string }
-  | { type: 'ability.cast'; abilityId: number; attackerId: string; targetId?: string };
+  | { type: 'ability.cast'; abilityId: number; attackerId: string; targetId?: string }
+  | { type: 'game.enterAbyss'; character: CharacterSummary; map: MapTile[]; width: number; height: number; render?: MapRenderData; abyss: AbyssRunView }
+  | { type: 'abyss.started'; abyss: AbyssRunView }
+  | { type: 'abyss.state'; abyss: AbyssRunView }
+  | { type: 'abyss.levelUp'; level: number; choices: AbyssUpgradeChoice[] }
+  | { type: 'abyss.upgradeSelected'; abyss: AbyssRunView }
+  | { type: 'abyss.fragmentDrop'; amount: number; total: number; creatureId: string }
+  | { type: 'abyss.waveCompleted'; wave: number; nextWave: number; abyss: AbyssRunView }
+  | { type: 'abyss.completed'; fragments: number; rewards: string[]; abyss: AbyssRunView }
+  | { type: 'abyss.defeated'; fragments: number; rewards: string[]; abyss: AbyssRunView }
+  | { type: 'abyss.abandoned'; fragments: number; rewards: string[]; abyss: AbyssRunView }
+  | { type: 'abyss.metaState'; meta: AbyssMetaView };
 
 export interface WsEnvelope {
   event: string;
@@ -179,6 +199,17 @@ export const SERVER_EVENTS = {
   COOLDOWNS_UPDATE: 'cooldowns.update',
   WEAPON_ELEMENT_OVERRIDE_APPLIED: 'combat.weaponElementOverride.applied',
   WEAPON_ELEMENT_OVERRIDE_REMOVED: 'combat.weaponElementOverride.removed',
+  ENTER_ABYSS: 'game.enterAbyss',
+  ABYSS_STARTED: 'abyss.started',
+  ABYSS_STATE: 'abyss.state',
+  ABYSS_LEVEL_UP: 'abyss.levelUp',
+  ABYSS_UPGRADE_SELECTED: 'abyss.upgradeSelected',
+  ABYSS_FRAGMENT_DROP: 'abyss.fragmentDrop',
+  ABYSS_WAVE_COMPLETED: 'abyss.waveCompleted',
+  ABYSS_COMPLETED: 'abyss.completed',
+  ABYSS_DEFEATED: 'abyss.defeated',
+  ABYSS_ABANDONED: 'abyss.abandoned',
+  ABYSS_META_STATE: 'abyss.metaState',
 } as const;
 
 export const CLIENT_EVENTS = {
@@ -208,6 +239,11 @@ export const CLIENT_EVENTS = {
   COMBAT_CONFIG: 'combat.config',
   WEAPON_ELEMENT_OVERRIDE_APPLIED: 'combat.weaponElementOverride.applied',
   WEAPON_ELEMENT_OVERRIDE_REMOVED: 'combat.weaponElementOverride.removed',
+  ABYSS_START: 'abyss.start',
+  ABYSS_STOP: 'abyss.stop',
+  ABYSS_CHOOSE_UPGRADE: 'abyss.chooseUpgrade',
+  ABYSS_META_LIST: 'abyss.meta.list',
+  ABYSS_META_UNLOCK: 'abyss.meta.unlock',
 } as const;
 
 export type { CreatureState, Direction, Position };

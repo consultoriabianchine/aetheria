@@ -1,7 +1,7 @@
 import { randomUUID } from 'node:crypto';
 import { ACCOUNT_CONFIG, INVENTORY_SIZE, LOOT_POUCH_SIZE } from '@aetheria/config';
 import type { HuntProgress, ItemStack } from '@aetheria/types';
-import type { Store, StoredAccountStorage, StoredCharacter, AccountRecord } from './store';
+import type { AbyssMetaProgression, AbyssRunHistory, Store, StoredAccountStorage, StoredCharacter, AccountRecord } from './store';
 
 const BASE_SKILLS = { melee: 10, distance: 10, magic: 10 };
 
@@ -12,6 +12,8 @@ export class MemoryStore implements Store {
   private characters = new Map<string, StoredCharacter>();
   private huntProgress = new Map<string, HuntProgress>();
   private accountStorage = new Map<string, StoredAccountStorage>();
+  private abyssMeta = new Map<string, AbyssMetaProgression>();
+  private abyssRuns: AbyssRunHistory[] = [];
 
   async findAccountByUsername(username: string): Promise<AccountRecord | null> {
     const id = this.byUsername.get(username.toLowerCase());
@@ -117,6 +119,18 @@ export class MemoryStore implements Store {
     };
     this.huntProgress.set(key, next);
     return next;
+  }
+
+  async getAbyssMeta(accountId: string): Promise<AbyssMetaProgression> {
+    return structuredClone(this.abyssMeta.get(accountId) ?? { accountId, fragments: 0, unlockedNodes: [], rerolls: 0, revives: 0 });
+  }
+
+  async saveAbyssMeta(meta: AbyssMetaProgression): Promise<void> {
+    this.abyssMeta.set(meta.accountId, structuredClone(meta));
+  }
+
+  async recordAbyssRun(history: AbyssRunHistory): Promise<void> {
+    this.abyssRuns.push(structuredClone(history));
   }
 
   static blankInventory(): (ItemStack | null)[] {

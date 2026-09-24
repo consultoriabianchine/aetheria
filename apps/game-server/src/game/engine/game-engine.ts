@@ -52,7 +52,7 @@ import type {
   ResolvedMonsterSpell,
 } from '@aetheria/types';
 import { getItemDef, loadItemCatalogFromDatabase } from './item-catalog';
-import { generateWorldMap } from './world-map';
+import { buildWorldMapData, generateWorldMap } from './world-map';
 import { AccountStorageState, GamePlayer, GroundItem, NpcEntity } from './world';
 import { STORE, Store, StoredCharacter } from '../store/store';
 import { PrismaService } from '../../prisma/prisma.service';
@@ -82,6 +82,7 @@ import { getAmmoDefinition, getWeaponDefinition } from '../combat/item-combat';
 import { splitPartyExperience } from '../combat/party-xp';
 import { AbilityRegistry } from '../combat/ability-registry';
 import { getEffectType, getEffectTypeBySlug, getShootType, loadShootEffectCatalog } from '../combat/shoot-effect-registry';
+import { AbyssEngine } from '../abyss/abyss-engine';
 
 export type EmitFn = (socketId: string, event: string, data: unknown) => void;
 
@@ -139,6 +140,8 @@ export class GameEngine implements OnModuleDestroy {
   private readonly prisma: PrismaService | undefined;
   private readonly outfitRegistry: OutfitRegistry | undefined;
   private readonly abilityRegistry: AbilityRegistry;
+  private readonly abyss: AbyssEngine;
+  private abyssAbilities: CombatAbilityDefinition[] = [];
   private abilityCooldowns = new Map<string, Map<number, number>>();
   private attackRotations = new Map<string, { abilityId?: number; enabled: boolean; minTargets?: number }[]>();
   private attackGroupReadyAt = new Map<string, number>();
@@ -173,6 +176,27 @@ export class GameEngine implements OnModuleDestroy {
   ) {
     this.prisma = prisma;
     this.abilityRegistry = abilityRegistry ?? new AbilityRegistry(prisma as never);
+    this.abyss = new AbyssEngine(store, {
+      getAbilities: () => this.abyssAbilities,
+      emit: (characterId, event, data) => {
+        const player = this.players.get(characterId);
+        if (player?.socketId) this.emitTo(player.socketId, event, data);
+      },
+      onFinished: (characterId) => {
+        const player = this.players.get(characterId);
+        if (player) this.returnPlayerToWorld(player);
+      },
+      getMap: (mapId) => {
+        const custom = mapId ? mapRegistry?.getMap(mapId) : null;
+        if (mapId && !custom) throw new Error(`ABYSS_MAP_NOT_FOUND:${mapId}`);
+        return custom
+          ? buildWorldMapData(custom.tiles, custom.width, custom.height, this.world.z, mapRegistry?.getMapRender(mapId!) ?? undefined)
+          : this.world;
+      },
+      getCreatureDefinitions: () => [...this.creatureDefinitions.values()],
+      getPlayer: (characterId) => this.players.get(characterId) ?? null,
+      onCreatureAttackPlayer: (creature, target, amount, critical, now) => this.creatureAttackWithAbility(creature, target.id, amount, critical, now),
+    });
     this.outfitRegistry = outfitRegistry;
     this.creatureData = new CreatureDataService(prisma ?? null);
     this.movement = new MovementService(
@@ -232,6 +256,7 @@ export class GameEngine implements OnModuleDestroy {
   async start() {
     await loadItemCatalogFromDatabase(this.prisma);
     await loadShootEffectCatalog(this.prisma);
+    this.abyssAbilities = await this.abilityRegistry.list();
     for (const npcId of Object.keys(NPC_TEMPLATES)) {
       const t = NPC_TEMPLATES[npcId];
       this.npcs.set(t.id, {
@@ -538,9 +563,23 @@ export class GameEngine implements OnModuleDestroy {
   private async emitWorldSnapshot(player: GamePlayer) {
     const socketId = player.socketId ?? '';
     const run = this.hunts.getRun(player.id);
+    const abyssRun = this.abyss.getRun(player.id);
     this.emitTo(socketId, 'auth.selectResult', { ok: true });
     this.emitTo(socketId, 'abilities.update', { abilities: await this.abilityRegistry.list() });
-    if (run) {
+    if (abyssRun) {
+      this.emitTo(socketId, 'game.enterAbyss', {
+        character: this.toSummary(player),
+        map: abyssRun.map?.tiles ?? this.world.tiles,
+        width: abyssRun.map?.width ?? this.world.width,
+        height: abyssRun.map?.height ?? this.world.height,
+        render: abyssRun.map?.render,
+        abyss: this.abyss.view(abyssRun),
+      });
+      for (const creature of abyssRun.creatures?.getAll() ?? []) {
+        if (creature.state === 'DEAD') continue;
+        this.emitTo(socketId, 'creature.spawn', this.creatureSpawnPayload(creature));
+      }
+    } else if (run) {
       const members = run.memberIds
         .map((id) => this.players.get(id))
         .filter((p): p is GamePlayer => !!p)
@@ -606,6 +645,87 @@ export class GameEngine implements OnModuleDestroy {
     if (!session) return;
     const hunts = await Promise.all(this.hunts.listHunts().map((h) => this.hunts.toListEntry(h, session.player.id)));
     this.emitTo(socketId, 'hunt.list', { hunts });
+  }
+
+  async handleAbyssStart(socketId: string, token: string, torment = 1) {
+    const session = await this.verifySession(socketId, token);
+    if (!session) return;
+    if (this.hunts.getRun(session.player.id)) {
+      this.emitTo(socketId, 'error', { message: 'Saia da Hunt atual antes de entrar no Abismo.' });
+      return;
+    }
+    try {
+      this.movement.releaseEntity(session.player.id);
+      const run = this.abyss.start(session.player.accountId, session.player.id, torment, session.player.archetype);
+      this.emitTo(socketId, 'game.enterAbyss', {
+        character: this.toSummary(session.player),
+        map: run.map?.tiles ?? this.world.tiles,
+        width: run.map?.width ?? this.world.width,
+        height: run.map?.height ?? this.world.height,
+        render: run.map?.render,
+        abyss: this.abyss.view(run),
+      });
+      this.abyss.spawnInitialWave(session.player.id);
+      session.player.moveDir = null;
+      this.schedulePlayerAttackCheck(session.player, Date.now());
+    } catch (error) {
+      this.emitTo(socketId, 'error', { message: error instanceof Error ? error.message : 'Não foi possível iniciar o Abismo.' });
+    }
+  }
+
+  async handleAbyssStop(socketId: string, token: string) {
+    const session = await this.verifySession(socketId, token);
+    if (!session) return;
+    this.abyss.stop(session.player.id);
+  }
+
+  async handleAbyssChoice(socketId: string, token: string, choiceId: string) {
+    const session = await this.verifySession(socketId, token);
+    if (!session) return;
+    const run = this.abyss.chooseUpgrade(session.player.id, choiceId);
+    if (!run) this.emitTo(socketId, 'error', { message: 'Escolha de upgrade inválida ou expirada.' });
+  }
+
+  async handleAbyssMetaList(socketId: string, token: string) {
+    const session = await this.verifySession(socketId, token);
+    if (!session) return;
+    this.emitTo(socketId, 'abyss.metaState', { meta: await this.abyss.getMeta(session.player.accountId) });
+  }
+
+  async handleAbyssMetaUnlock(socketId: string, token: string, nodeId: string) {
+    const session = await this.verifySession(socketId, token);
+    if (!session) return;
+    const meta = await this.abyss.unlockMeta(session.player.accountId, nodeId);
+    if (!meta) {
+      this.emitTo(socketId, 'error', { message: 'Nó inválido, já desbloqueado ou fragmentos insuficientes.' });
+      return;
+    }
+    this.emitTo(socketId, 'abyss.metaState', { meta });
+  }
+
+  private returnPlayerToWorld(player: GamePlayer) {
+    this.movement.releaseEntity(player.id);
+    player.position = { ...SPAWN_POINT };
+    player.health = player.maxHealth;
+    player.mana = player.maxMana;
+    player.targetId = null;
+    player.moveDir = null;
+    this.moveEventReadyAt.delete(player.id);
+    this.combatEventReadyAt.delete(`${player.id}:attack`);
+    this.combatEventReadyAt.delete(`${player.id}:heal`);
+    this.abilityCooldowns.delete(player.id);
+    this.attackGroupReadyAt.delete(player.id);
+    this.healingGroupReadyAt.delete(player.id);
+    this.movement.occupy(player.position, player.id);
+    if (!player.socketId) return;
+    this.emitTo(player.socketId, 'game.enterWorld', {
+      character: this.toSummary(player),
+      map: this.world.tiles,
+      width: this.world.width,
+      height: this.world.height,
+    });
+    this.emitStats(player);
+    this.emitVisiblePlayer(player.id, 'entity.spawned', this.playerEntityPayload(player));
   }
 
   async handleHuntDetails(socketId: string, token: string, huntId: string) {
@@ -1143,6 +1263,10 @@ export class GameEngine implements OnModuleDestroy {
       this.emitTo(socketId, 'ability.castFailed', { abilityId, reason: 'ABILITY_UNAVAILABLE' });
       return false;
     }
+    if (this.abyss.getRun(player.id)) {
+      this.emitTo(socketId, 'ability.castFailed', { abilityId, reason: 'ABYSS_AUTO_CAST_ONLY' });
+      return false;
+    }
     return this.castAbility(player, abilityId, targetId, socketId, direction, position);
   }
 
@@ -1158,6 +1282,7 @@ export class GameEngine implements OnModuleDestroy {
     }
     const now = Date.now();
     const castKey = `${player.id}:${abilityId}`;
+    const abyssRun = this.abyss.getRun(player.id);
     if (this.activeAbilityCasts.has(castKey)) return false;
     this.activeAbilityCasts.add(castKey);
     const cooldowns = this.abilityCooldowns.get(player.id) ?? new Map<number, number>();
@@ -1167,8 +1292,8 @@ export class GameEngine implements OnModuleDestroy {
       return false;
     }
     const groupReadyAt = ability.cooldownGroup === 'healing' ? (this.healingGroupReadyAt.get(player.id) ?? 0) : (this.attackGroupReadyAt.get(player.id) ?? 0);
-    if (groupReadyAt > now) { this.activeAbilityCasts.delete(castKey); this.emitTo(socketId, 'ability.castFailed', { abilityId, reason: 'GROUP_COOLDOWN' }); return false; }
-    if ((ability.manaCost ?? 0) > player.mana) {
+    if (!abyssRun && groupReadyAt > now) { this.activeAbilityCasts.delete(castKey); this.emitTo(socketId, 'ability.castFailed', { abilityId, reason: 'GROUP_COOLDOWN' }); return false; }
+    if (!abyssRun && (ability.manaCost ?? 0) > player.mana) {
       this.activeAbilityCasts.delete(castKey);
       this.emitTo(socketId, 'ability.castFailed', { abilityId, reason: 'MANA' });
       return false;
@@ -1177,6 +1302,7 @@ export class GameEngine implements OnModuleDestroy {
     const run = this.hunts.getRun(player.id);
     const target = resolvedTargetId
       ? (run?.creatures.getCreature(resolvedTargetId) ?? this.creatures.getCreature(resolvedTargetId) ?? this.players.get(resolvedTargetId))
+        ?? (abyssRun?.creatures?.getCreature(resolvedTargetId) ?? undefined)
       : undefined;
     const needsTarget = ability.category !== 'heal' && ability.targetMode !== 'directional' && ability.targetMode !== 'ground';
     if (needsTarget && (!target || tileDistance(player.position, target.position) > ability.rangeTiles)) {
@@ -1192,10 +1318,12 @@ export class GameEngine implements OnModuleDestroy {
         return false;
       }
     }
-    if (ability.cooldownGroup === 'healing') this.healingGroupReadyAt.set(player.id, now + 1000);
-    else this.attackGroupReadyAt.set(player.id, now + 2000);
-    player.mana -= ability.manaCost ?? 0;
-    if ((ability.manaCost ?? 0) > 0) {
+    if (!abyssRun) {
+      if (ability.cooldownGroup === 'healing') this.healingGroupReadyAt.set(player.id, now + 1000);
+      else this.attackGroupReadyAt.set(player.id, now + 2000);
+    }
+    if (!abyssRun && (ability.manaCost ?? 0) > 0) {
+      player.mana -= ability.manaCost ?? 0;
       const magicResult = trainCombatSkill(
         player.skills,
         player.skillProgress,
@@ -1286,6 +1414,7 @@ export class GameEngine implements OnModuleDestroy {
   handleAttack(socketId: string, targetId: string) {
     const player = this.playerForSocket(socketId);
     if (!player) return;
+    if (this.abyss.getRun(player.id)) return;
     player.targetId = targetId;
     this.schedulePlayerAttackCheck(player, Date.now());
   }
@@ -1736,10 +1865,12 @@ export class GameEngine implements OnModuleDestroy {
   }
 
   private tryStep(entity: GamePlayer, direction: Direction): boolean {
-    if (this.movement.canMove(entity.position, direction, [entity.id])) {
+    const abyssRun = this.abyss.getRun(entity.id);
+    const movement = abyssRun?.movement ?? this.movement;
+    if (movement.canMove(entity.position, direction, [entity.id])) {
       const from = { ...entity.position };
-      entity.position = this.movement.step(entity.position, direction);
-      this.movement.commitMove(entity.id, from, entity.position);
+      entity.position = movement.step(entity.position, direction);
+      movement.commitMove(entity.id, from, entity.position);
       entity.facing = direction;
       return true;
     }
@@ -1944,6 +2075,10 @@ export class GameEngine implements OnModuleDestroy {
         }
         return;
       }
+      if (this.abyss.getRun(target.id)) {
+        this.emitTo(target.socketId ?? '', event, data);
+        return;
+      }
       this.emitAll(event, data);
       return;
     }
@@ -1953,6 +2088,12 @@ export class GameEngine implements OnModuleDestroy {
         const member = this.players.get(id);
         if (member?.socketId) this.emitTo(member.socketId, event, data);
       }
+      return;
+    }
+    const abyssRun = this.abyss.findRunByCreature(target.id);
+    if (abyssRun) {
+      const player = this.players.get(abyssRun.characterId);
+      if (player?.socketId) this.emitTo(player.socketId, event, data);
       return;
     }
     this.emitAll(event, data);
@@ -2049,16 +2190,18 @@ export class GameEngine implements OnModuleDestroy {
     const stats = this.combatStats(attacker);
     const weapon = attacker.equipment.weapon ? getWeaponDefinition(getItemDef(attacker.equipment.weapon.itemId)) : undefined;
     const ammo = attacker.equipment.ammo ? getAmmoDefinition(getItemDef(attacker.equipment.ammo.itemId)) : undefined;
-    const sourcePower = ability.powerSource === 'weapon_ammo' ? (weapon?.attackPower ?? 0) + (ammo?.attackPower ?? 0) : ability.powerSource === 'weapon' ? (weapon?.attackPower ?? 0) : ability.powerSource === 'magic_weapon' ? (weapon?.magicPower ?? 0) : ability.defaultParameters?.power ?? 20;
+    const abyssBasePower = this.abyss.getRun(attacker.id) ? 20 : 0;
+    const sourcePower = ability.powerSource === 'weapon_ammo' ? ((weapon?.attackPower ?? 0) + (ammo?.attackPower ?? 0) || abyssBasePower) : ability.powerSource === 'weapon' ? (weapon?.attackPower || abyssBasePower) : ability.powerSource === 'magic_weapon' ? (weapon?.magicPower || abyssBasePower) : ability.defaultParameters?.power ?? 20;
     const skill = attacker.archetype === 'mage' ? stats.magicLevel : attacker.archetype === 'archer' ? stats.distanceSkill : stats.meleeSkill;
     const raw = calculateRawDamage({ basePower: sourcePower, flatPower: ability.defaultParameters?.flatPower, skill: attacker.archetype === 'mage' ? 'magic' : attacker.archetype === 'archer' ? 'distance' : 'melee', skillLevel: skill, level: stats.level, abilityMultiplier: ability.defaultParameters?.powerMultiplier ?? 1, variance: rollVariance(() => this.nextCombatRandom(attacker, now)) });
     const critical = rollCritical(stats.criticalChance, () => this.nextCombatRandom(attacker, now + 1));
     const damage = calculateMitigatedDamage({ damage: critical ? calculateCritical(raw, stats.criticalDamage) : raw, damageType: ability.damageType ?? 'physical', target: this.targetCombatStats(target), damageTakenModifier: resolveDamageAffinity(this.targetCombatStats(target).damageAffinities, ability.damageType ?? 'physical').modifier, immune: resolveDamageAffinity(this.targetCombatStats(target).damageAffinities, ability.damageType ?? 'physical').immune });
-    target.health = Math.max(0, target.health - damage.finalDamage);
-    this.emitCombatEvent(target, 'combat.damage', { attackerId: attacker.id, targetId: target.id, amount: damage.finalDamage, damageType: ability.damageType ?? 'physical', critical, targetHealth: target.health, delayMs: delayMs || undefined, criticalImpact: critical ? this.criticalImpactVisual() : undefined, position: { ...target.position } });
+    const finalDamage = Math.max(0, Math.round(damage.finalDamage * this.abyss.abilityBonus(attacker.id, ability.abilityId)));
+    target.health = Math.max(0, target.health - finalDamage);
+    this.emitCombatEvent(target, 'combat.damage', { attackerId: attacker.id, targetId: target.id, amount: finalDamage, damageType: ability.damageType ?? 'physical', critical, targetHealth: target.health, delayMs: delayMs || undefined, criticalImpact: critical ? this.criticalImpactVisual() : undefined, position: { ...target.position } });
     this.emitCombatEvent(target, 'entity.health', { id: target.id, health: target.health, maxHealth: target.maxHealth });
     if (target.health <= 0 && target instanceof CreatureEntity) this.creatureKilled(attacker, target, now);
-    return damage.finalDamage;
+    return finalDamage;
   }
 
   /** Broadcast de evento de combate a partir do escopo do caster (party da hunt ou mundo). */
@@ -2071,13 +2214,18 @@ export class GameEngine implements OnModuleDestroy {
       }
       return;
     }
+    if (this.abyss.getRun(player.id)) {
+      if (player.socketId) this.emitTo(player.socketId, event, data);
+      return;
+    }
     this.emitAll(event, data);
   }
 
   private enemiesInTiles(player: GamePlayer, tiles: Position[]): CreatureEntity[] {
     const set = new Set(tiles.map((t) => tileKey(t.x, t.y, t.z)));
     const run = this.hunts.getRun(player.id);
-    const manager = run ? run.creatures : this.creatures;
+    const abyssRun = this.abyss.getRun(player.id);
+    const manager = run?.creatures ?? abyssRun?.creatures ?? this.creatures;
     const out: CreatureEntity[] = [];
     for (const creature of manager.getAll()) {
       if (creature.state === 'DEAD') continue;
@@ -2404,7 +2552,18 @@ export class GameEngine implements OnModuleDestroy {
 
   private schedulePlayerAttackCheck(player: GamePlayer, now: number) {
     const run = this.hunts.getRun(player.id);
-    if (!run && !player.targetId) return;
+    const abyssRun = this.abyss.getRun(player.id);
+    if (!run && !abyssRun && !player.targetId) return;
+    if (abyssRun) {
+      const abilityIds = this.abyss.activeAbilityIds(player.id);
+      if (abilityIds.length === 0) return;
+      const readyAt = abilityIds
+        .map((abilityId) => this.abilityCooldowns.get(player.id)?.get(abilityId) ?? 0)
+        .reduce((next, candidate) => Math.min(next, candidate), Infinity);
+      const nextCheckAt = Number.isFinite(readyAt) && readyAt > now ? readyAt : now + 100;
+      this.schedulePlayerCombat(player.id, 'attack', nextCheckAt);
+      return;
+    }
     if (run && !player.targetId) {
       this.schedulePlayerCombat(player.id, 'attack', now + 250);
       return;
@@ -2566,6 +2725,7 @@ export class GameEngine implements OnModuleDestroy {
 
   private tick(now: number) {
     try {
+      this.abyss.tick(now);
       this.processMoveEvents(now);
       this.processRegenEvents(now);
       void this.processCombatEvents(now);
@@ -2630,6 +2790,7 @@ export class GameEngine implements OnModuleDestroy {
   }
 
   private async processPlayerHealing(player: GamePlayer, now: number) {
+    if (this.abyss.getRun(player.id)) return;
     for (const slot of this.healingRotations.get(player.id) ?? []) {
       if (!slot.enabled) continue;
       const healTarget = this.resolveHealTarget(player, slot.target);
@@ -2701,6 +2862,21 @@ export class GameEngine implements OnModuleDestroy {
 
   private async processPlayerAttack(player: GamePlayer, now: number) {
     const run = this.hunts.getRun(player.id);
+    const abyssRun = this.abyss.getRun(player.id);
+    if (abyssRun) {
+      player.targetId = this.abyss.autoTarget(player.id)?.id ?? null;
+      const target = player.targetId ? abyssRun.creatures?.getCreature(player.targetId) : null;
+      for (const abilityId of this.abyss.activeAbilityIds(player.id)) {
+        const ability = await this.abilityRegistry.get(abilityId);
+        if (!ability) continue;
+        if (ability.category === 'heal') {
+          if (player.health < player.maxHealth && await this.castAbility(player, abilityId, player.id)) return;
+          continue;
+        }
+        if (target && await this.castAbility(player, abilityId, target.id)) return;
+      }
+      return;
+    }
     if (run) {
       player.targetId = this.playerAI.selectTarget(run.creatures.getAll(), player)?.id ?? null;
     }
@@ -2769,6 +2945,11 @@ export class GameEngine implements OnModuleDestroy {
   private creatureKilled(player: GamePlayer, creature: CreatureEntity, now: number) {
     this.monsterAbilityReadyAt.delete(creature.id);
     const run = this.hunts.findRunByCreature(creature.id);
+    const abyssRun = this.abyss.findRunByCreature(creature.id);
+    if (abyssRun) {
+      this.abyss.onCreatureKilled(player.id, creature, now);
+      return;
+    }
     const share = run
       ? splitPartyExperience(creature.definition.experience, run.aliveMemberIds.length)
       : creature.definition.experience;
@@ -2813,6 +2994,11 @@ export class GameEngine implements OnModuleDestroy {
         return;
       }
       this.hunts.onPlayerDied(player.id, now);
+      return;
+    }
+    if (this.abyss.getRun(player.id)) {
+      this.emitTo(player.socketId ?? '', 'combat.death', { entityId: player.id });
+      this.abyss.defeat(player.id, now);
       return;
     }
     this.emitVisiblePlayer(player.id, 'combat.death', { entityId: player.id });

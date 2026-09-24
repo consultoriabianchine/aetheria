@@ -1,4 +1,47 @@
 import type { ArchetypeDefinition, CombatArchetype, DamageType, NpcTemplate, PlayerCombatConfig } from '@aetheria/types';
+import type { AbyssMetaNode } from '@aetheria/types';
+
+export const ABYSS_MAP_ID = 'map_mucxf0oc';
+
+export const ABYSS_SCALING_CONFIG = {
+  waveLevelStep: 0.5,
+  tormentLevelStep: 1,
+  baseHealth: 70,
+  healthPerLevel: 12,
+  baseAttack: 4,
+  attackPerLevel: 0.8,
+  baseDefense: 2,
+  defensePerLevel: 0.35,
+  baseExperience: 20,
+  experiencePerLevel: 8,
+  baseMovementSpeed: 400,
+  movementSpeedReductionPerLevel: 2,
+  baseAttackSpeed: 1800,
+  attackSpeedReductionPerLevel: 8,
+  bossHealthMultiplier: 2,
+  bossAttackMultiplier: 1.3,
+  bossDefenseMultiplier: 1.2,
+  bossExperienceMultiplier: 2,
+} as const;
+
+export const ABYSS_META_NODES = [
+  { id: 'offense.damage', branch: 'offense', name: 'Abyssal Edge', cost: 10, prerequisite: undefined },
+  { id: 'offense.critical', branch: 'offense', name: 'Critical Instinct', cost: 15, prerequisite: 'offense.damage' },
+  { id: 'offense.rare', branch: 'offense', name: 'Rare Omens', cost: 25, prerequisite: 'offense.critical' },
+  { id: 'offense.choice4', branch: 'offense', name: 'Fourth Path', cost: 40, prerequisite: 'offense.rare' },
+  { id: 'defense.hp', branch: 'defense', name: 'Abyssal Vitality', cost: 10, prerequisite: undefined },
+  { id: 'defense.armor', branch: 'defense', name: 'Blackened Armor', cost: 15, prerequisite: 'defense.hp' },
+  { id: 'defense.revive', branch: 'defense', name: 'Second Breath', cost: 35, prerequisite: 'defense.armor' },
+  { id: 'defense.shrine', branch: 'defense', name: 'Healing Shrine', cost: 40, prerequisite: 'defense.revive' },
+  { id: 'arcane.power', branch: 'arcane', name: 'Arcane Core', cost: 10, prerequisite: undefined },
+  { id: 'arcane.elemental', branch: 'arcane', name: 'Elemental Mastery', cost: 15, prerequisite: 'arcane.power' },
+  { id: 'arcane.evolutions', branch: 'arcane', name: 'Evolving Spellcraft', cost: 25, prerequisite: 'arcane.elemental' },
+  { id: 'arcane.element', branch: 'arcane', name: 'Elemental Attunement', cost: 40, prerequisite: 'arcane.evolutions' },
+  { id: 'fortune.gold', branch: 'fortune', name: 'Gilded Fate', cost: 10, prerequisite: undefined },
+  { id: 'fortune.drop', branch: 'fortune', name: 'Abundant Ruin', cost: 15, prerequisite: 'fortune.gold' },
+  { id: 'fortune.eliteChest', branch: 'fortune', name: 'Elite Omen', cost: 25, prerequisite: 'fortune.drop' },
+  { id: 'fortune.reroll', branch: 'fortune', name: 'Fortune Reborn', cost: 40, prerequisite: 'fortune.eliteChest' },
+] as const satisfies readonly AbyssMetaNode[];
 
 /** Dimensões e andar inicial do mundo. */
 export const MAP_WIDTH = 64;

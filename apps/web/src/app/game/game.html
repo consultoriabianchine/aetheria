@@ -1,4 +1,14 @@
 <div class="game-page" [class.left-collapsed]="leftCollapsed()" [class.right-collapsed]="rightCollapsed()">
+  @if (state.abyssLoading(); as loading) {
+    <div class="abyss-loading-overlay" role="status" aria-live="polite">
+      <div class="abyss-loading-card">
+        <span class="abyss-loading-rune" aria-hidden="true">✦</span>
+        <strong>{{ loading === 'entering' ? 'Abrindo o Abismo' : 'Retornando ao mundo' }}</strong>
+        <span>{{ loading === 'entering' ? 'Carregando criaturas e preparando a sala...' : 'Reposicionando seu personagem...' }}</span>
+        <i aria-hidden="true"></i>
+      </div>
+    </div>
+  }
   <header class="game-topbar">
     <section class="brand-block" aria-label="Aetheria Idle">
       <div class="brand-mark">A</div>
@@ -20,6 +30,7 @@
           <small>{{ item }}</small>
         </button>
       }
+      <button class="chip active" type="button" (click)="startAbyss()">Abismo de Avalon</button>
     </nav>
 
     <section class="account-controls" aria-label="Conta e configuracoes">
@@ -161,10 +172,10 @@
     </aside>
 
     <section class="game-center" aria-label="Hunt e mundo">
-      <header class="hunt-header" [class.boss]="state.hunt()?.isBoss">
+      <header class="hunt-header" [class.boss]="state.hunt()?.isBoss || state.abyss()?.bossActive">
         <div class="hunt-title">
-          <span>{{ state.hunt()?.isBoss ? 'BOSS WAVE' : 'Current Hunt' }}</span>
-          <strong>{{ currentHuntName() }}</strong>
+          <span>{{ state.abyss() ? 'ABISMO DE AVALON' : (state.hunt()?.isBoss ? 'BOSS WAVE' : 'Current Hunt') }}</span>
+          <strong>{{ state.abyss() ? ('Tormento ' + state.abyss()?.torment) : currentHuntName() }}</strong>
         </div>
         <div class="wave-strip" aria-label="Progresso da wave">
           @for (cell of waveCells(); track cell.index) {
@@ -172,11 +183,16 @@
           }
         </div>
         <div class="hunt-actions">
+          @if (state.abyss(); as abyss) {
+            <span class="abyss-clock">{{ abyssElapsed() }} / 10:00</span>
+            <button class="danger-button" type="button" (click)="state.stopAbyss()">Sair</button>
+          } @else {
           @if (state.hunt(); as run) {
             <button class="loop-button" type="button" [class.enabled]="run.loopEnabled" (click)="toggleLoop()">{{ run.loopEnabled ? 'Loop ON' : 'Loop OFF' }}</button>
             <button class="danger-button" type="button" (click)="stopHunt()">Parar</button>
           } @else {
             <button class="hunt-launch-button" type="button" (click)="openHuntBrowser()"><span>+</span><strong>Hunt</strong><small>Escolher destino</small></button>
+          }
           }
         </div>
       </header>
@@ -189,6 +205,41 @@
               <strong>{{ t.name }}</strong>
               <div class="bar-track slim"><div class="bar-fill hp" [style.width.%]="t.maxHealth > 0 ? (t.health / t.maxHealth) * 100 : 0"></div></div>
               <span>{{ t.health }} / {{ t.maxHealth }}</span>
+            </div>
+          }
+          @if (state.abyss(); as abyss) {
+            <div class="abyss-hud">
+              <div class="abyss-hud-title"><strong>PROGRESSÃO DO ABISMO</strong><span>Onda {{ abyss.wave }} {{ abyss.bossActive ? '· BOSS' : '' }}</span></div>
+              <div class="abyss-bar"><i [style.width.%]="abyssTimePct()"></i></div>
+              <div class="abyss-xp"><span>Lv {{ abyss.level }}</span><i [style.width.%]="abyssXpPct()"></i></div>
+              <div class="abyss-fragments"><span>Fragmentos da run</span><strong>{{ abyss.fragments }}</strong></div>
+              <div class="abyss-rotation-title"><span>Rotação automática</span><strong>{{ abyss.activeAbilities.length }}/4</strong></div>
+              <div class="abyss-rotation">
+                @for (slot of abyss.activeAbilities; track slot.abilityId) {
+                  <div class="abyss-rotation-slot"><span class="abyss-rotation-index">{{ $index + 1 }}</span><span class="abyss-rotation-icon">@if (abyssAbilityIcon(slot.abilityId); as icon) { <img [src]="icon" alt="" /> } @else { ✦ }</span><span class="abyss-rotation-name"><b>{{ abyssAbilityName(slot.abilityId) }}</b><small>Lv {{ slot.level }}</small></span><em>{{ abyssAbilityCooldown(slot.abilityId) }}</em></div>
+                }
+                @if (abyss.activeAbilities.length === 0) { <span class="abyss-rotation-empty">Nenhuma magia ativa</span> }
+              </div>
+            </div>
+            @for (drop of state.abyssFragmentDrops(); track drop.id) {
+              <div class="abyss-fragment-drop">+{{ drop.amount }} Fragmento do Abismo</div>
+            }
+          }
+          @if (state.abyssChoices().length > 0) {
+            <div class="abyss-choice-modal">
+               <div class="abyss-choice-card" [style.transform]="abyssChoiceTransform()">
+                 <div class="abyss-choice-drag-handle" (pointerdown)="startAbyssChoiceDrag($event)">
+                   <div><span class="eyebrow">LEVEL UP</span><h2>Escolha um poder</h2></div>
+                   <span class="abyss-choice-drag-label">arraste</span>
+                 </div>
+                <div class="abyss-choice-grid">
+                  @for (choice of state.abyssChoices(); track choice.id) {
+                    <button type="button" class="abyss-choice" (click)="chooseAbyssUpgrade(choice.id)">
+                      <small>{{ choice.rarity }}</small><strong>{{ choice.name }}</strong><span>{{ choice.description }}</span>
+                    </button>
+                  }
+                </div>
+              </div>
             </div>
           }
         </div>
@@ -548,6 +599,55 @@
           <button type="button" class="appearance-cancel" (click)="state.closeAppearance()">Cancelar</button>
           <button type="button" class="appearance-save" (click)="state.saveAppearance()">Salvar</button>
         </footer>
+      </section>
+    </div>
+  }
+
+  @if (abyssEntryOpen()) {
+    <div class="modal-backdrop" (click)="closeAbyssPanels()">
+      <section class="abyss-entry-modal" role="dialog" aria-modal="true" aria-labelledby="abyss-entry-title" (click)="$event.stopPropagation()">
+        <header><div><span class="eyebrow">PORTA DE AVALON</span><h2 id="abyss-entry-title">Abismo de Avalon</h2></div><button type="button" (click)="closeAbyssPanels()" aria-label="Fechar">×</button></header>
+        <div class="abyss-entry-body">
+          <p>Uma run solo de combate e escolhas. Derrote criaturas, acumule Fragmentos do Abismo e fortaleça sua árvore.</p>
+          <div class="abyss-entry-stats"><span><b>10:00</b>Duração</span><span><b>Tormento 1</b>Nível inicial</span><span><b>{{ state.abyssMeta()?.fragments ?? 0 }}</b>Fragmentos guardados</span></div>
+           <div class="abyss-entry-note">Os fragmentos coletados são temporários. Ao morrer ou abandonar, todos os fragmentos da run são perdidos.</div>
+           <div class="abyss-entry-note abyss-entry-note-info">Poções de HP/MP e magias de cura adquiridas durante a run estão liberadas. Recursos de presets externos não são usados no Abismo.</div>
+        </div>
+        <footer><button type="button" class="ui-button" (click)="openAbyssTree()">Árvore de Avalon</button><button type="button" class="ui-button ui-button-primary" (click)="beginAbyss()">Iniciar Abismo</button></footer>
+      </section>
+    </div>
+  }
+
+  @if (abyssTreeOpen()) {
+    <div class="modal-backdrop" (click)="closeAbyssPanels()">
+       <section class="abyss-tree-modal" [style.transform]="abyssTreeTransform()" role="dialog" aria-modal="true" aria-labelledby="abyss-tree-title" (click)="$event.stopPropagation()">
+         <header><div class="abyss-tree-drag-handle" (pointerdown)="startAbyssTreeDrag($event)"><span class="eyebrow">PROGRESSÃO PERMANENTE</span><h2 id="abyss-tree-title">Árvore de Avalon</h2><small>Arraste para reposicionar</small></div><button type="button" (click)="closeAbyssPanels()" aria-label="Fechar">×</button></header>
+        <div class="abyss-tree-balance">Saldo disponível: <strong>{{ state.abyssMeta()?.fragments ?? 0 }} Fragmentos</strong></div>
+        <div class="abyss-tree-root"><span>AVALON</span><small>Núcleo do Abismo</small></div>
+        <div class="abyss-tree-grid">
+          @for (branch of abyssTree; track branch.name) {
+            <section class="abyss-branch"><h3><span>{{ branch.icon }}</span>{{ branch.name }}</h3><div class="abyss-branch-line"></div><div class="abyss-node-list">
+              @for (node of branch.nodes; track node.id) {
+                <button type="button" class="abyss-node" [class.unlocked]="state.abyssMeta()?.unlockedNodes?.includes(node.id)" [class.available]="abyssNodeAvailable(node.id)" [disabled]="state.abyssMeta()?.unlockedNodes?.includes(node.id)" (click)="state.unlockAbyssNode(node.id)"><strong>{{ node.name }}</strong><small>{{ node.description }}</small><em>{{ state.abyssMeta()?.unlockedNodes?.includes(node.id) ? 'Desbloqueado' : ('Custo: ' + abyssNodeCost(node.id) + ' Fragmentos') }}</em>@if (abyssNodePrerequisite(node.id) && !state.abyssMeta()?.unlockedNodes?.includes(abyssNodePrerequisite(node.id)!)) { <i>Requer: {{ abyssNodePrerequisite(node.id) }}</i> }</button>
+              }
+            </div></section>
+          }
+        </div>
+      </section>
+    </div>
+  }
+
+  @if (state.abyssResult(); as result) {
+    <div class="modal-backdrop abyss-result-backdrop">
+      <section class="abyss-result-modal" role="dialog" aria-modal="true" aria-labelledby="abyss-result-title">
+        <span class="eyebrow">{{ result.status === 'completed' ? 'RUN CONCLUÍDA' : result.status === 'defeated' ? 'RUN ENCERRADA' : 'RUN ABANDONADA' }}</span>
+        <h2 id="abyss-result-title">{{ result.status === 'completed' ? 'Abismo superado' : result.status === 'defeated' ? 'Você caiu no Abismo' : 'Você deixou o Abismo' }}</h2>
+        <p>{{ result.status === 'completed' ? 'Os fragmentos foram guardados na Árvore de Avalon.' : 'Os fragmentos coletados nesta run foram perdidos.' }}</p>
+        <div class="abyss-result-stats"><span><b>Lv {{ result.level }}</b>Nível final</span><span><b>{{ result.wavesCompleted }}</b>Waves concluídas</span><span><b>{{ result.fragments }}</b>Fragmentos {{ result.status === 'completed' ? 'ganhos' : 'perdidos' }}</span></div>
+        @if (result.rewards.length > 0) {
+          <div class="abyss-result-rewards"><strong>Recompensas</strong>@for (reward of result.rewards; track reward) { <span>{{ reward }}</span> }</div>
+        }
+        <button type="button" class="ui-button ui-button-primary" (click)="state.closeAbyssResult()">Continuar</button>
       </section>
     </div>
   }

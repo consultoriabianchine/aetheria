@@ -153,6 +153,7 @@ export class WorldScene extends Phaser.Scene {
   private assets!: CreatureAssetService;
   private outfits!: OutfitAssetService;
   private tileImages: Phaser.GameObjects.Image[] = [];
+  private mapBuildVersion = 0;
   private tileRenderDefs = new Map<number, TileRenderDef>();
   private entities = new Map<string, RenderedEntity>();
   private entityInfo = new Map<string, EntityInfo>();
@@ -246,6 +247,12 @@ export class WorldScene extends Phaser.Scene {
           if (member.id === this.selfId) continue;
           this.spawnPlayerEntity(member.id, member.name, member.position, member.appearance, member.health, member.maxHealth, member.movementSpeed ?? MOVE_INTERVAL_MS);
         }
+        break;
+      }
+      case SERVER_EVENTS.ENTER_ABYSS: {
+        const w = data as { character: { id: string; name: string; position: Position; appearance?: PlayerAppearance; health: number; maxHealth: number; movementSpeed?: number }; map: MapTile[]; width: number; height: number; render?: MapRenderData };
+        this.selfMoveSpeed = w.character.movementSpeed ?? MOVE_INTERVAL_MS;
+        this.resetScene(w.map, w.character.id, w.character.name, w.character.position, w.width, w.height, w.character.appearance, w.character.health, w.character.maxHealth, w.render);
         break;
       }
       case SERVER_EVENTS.ENTITY_SPAWNED: {
@@ -504,23 +511,28 @@ export class WorldScene extends Phaser.Scene {
   }
 
   private buildMap(map: MapTile[], width?: number, height?: number, render?: MapRenderData) {
+    const buildVersion = ++this.mapBuildVersion;
     for (const img of this.tileImages) img.destroy();
     this.tileImages = [];
     this.tileRenderDefs.clear();
-    if (render?.layers && width) {
-      void this.buildTilesetMap(render, width);
+    if (render?.layers && width && render.tiles.length > 0 && render.tilesets.length > 0) {
+      this.drawBasicMap(map);
+      void this.buildTilesetMap(render, width, buildVersion);
       return;
     }
+    this.drawBasicMap(map);
+  }
+
+  private drawBasicMap(map: MapTile[]) {
     for (const tile of map) {
       const x = tile.x * TILE_SIZE + TILE_SIZE / 2;
       const y = tile.y * TILE_SIZE + TILE_SIZE / 2;
       const img = this.add.image(x, y, `tile_${tile.type}`).setDepth(0).setOrigin(0.5);
       this.tileImages.push(img);
     }
-    void height;
   }
 
-  private async buildTilesetMap(render: MapRenderData, width: number) {
+  private async buildTilesetMap(render: MapRenderData, width: number, buildVersion: number) {
     for (const def of render.tiles) this.tileRenderDefs.set(def.tileId, def);
     const tilesetMeta = new Map<number, { columns: number; tileWidth: number; tileHeight: number }>();
     await this.loadTilesetSheets(
@@ -529,6 +541,8 @@ export class WorldScene extends Phaser.Scene {
         return { key: `tileset_${t.tilesetId}`, url: `${WS_URL}${t.imageUrl}`, frameWidth: t.tileWidth, frameHeight: t.tileHeight };
       }),
     );
+    if (buildVersion !== this.mapBuildVersion) return;
+    if (render.tilesets.some((tileset) => !this.textures.exists(`tileset_${tileset.tilesetId}`))) return;
 
     const layerDepth: Record<'ground' | 'groundDetail' | 'objects' | 'objectsAbove', (y: number) => number> = {
       ground: () => 0,
@@ -1102,7 +1116,7 @@ export class WorldScene extends Phaser.Scene {
     this.input.keyboard!.on('keydown', (event: KeyboardEvent) => {
       if (event.code === 'Space') {
         event.preventDefault();
-        if (this.state.inArena()) this.applyCameraBounds();
+        if (this.state.inInstance()) this.applyCameraBounds();
       }
     });
   }
@@ -1228,13 +1242,13 @@ export class WorldScene extends Phaser.Scene {
     this.panning = false;
     this.panStart = { x: pointer.x, y: pointer.y };
     this.lastPan = { x: pointer.x, y: pointer.y };
-    if (!this.state.inArena()) {
+    if (!this.state.inInstance()) {
       this.handlePointerClick(pointer);
     }
   }
 
   private onPointerMove(pointer: Phaser.Input.Pointer) {
-    if (!pointer.isDown || !this.state.inArena()) return;
+    if (!pointer.isDown || !this.state.inInstance()) return;
     const cam = this.cameras.main;
     if (!this.panning) {
       const dx = pointer.x - this.panStart.x;
@@ -1254,7 +1268,7 @@ export class WorldScene extends Phaser.Scene {
   }
 
   private onPointerUp(pointer: Phaser.Input.Pointer) {
-    if (this.state.inArena() && !this.panning) {
+    if (this.state.inInstance() && !this.panning) {
       this.handlePointerClick(pointer);
     }
     this.panning = false;

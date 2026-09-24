@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 import Phaser from 'phaser';
 import type { CharacterEquipment, CharacterSkills, CharacterSummary, CombatAbilityDefinition, CombatStatsView, DamageType, ItemDefinition, ItemStack, PlayerCombatConfig } from '@aetheria/types';
 import { DAMAGE_TYPES } from '@aetheria/types';
-import { APPEARANCE_PALETTE, INVENTORY_SIZE, LOOT_POUCH_EXPANSION, SKILL_PROGRESSION_CONFIG, xpForLevel } from '@aetheria/config';
+import { ABYSS_META_NODES, APPEARANCE_PALETTE, INVENTORY_SIZE, LOOT_POUCH_EXPANSION, SKILL_PROGRESSION_CONFIG, xpForLevel } from '@aetheria/config';
 import { WsService } from '../core/ws.service';
 import { ChatLine, GameState } from './game-state';
 import { ItemCatalogService } from './item-catalog.service';
@@ -33,6 +33,33 @@ interface EqEntry {
   stack: ItemStack | null;
 }
 
+const ABYSS_TREE = [
+  { name: 'Ofensiva', icon: 'OF', nodes: [
+    { id: 'offense.damage', name: '+3% Attack', description: 'Aumenta o dano dos ataques.' },
+    { id: 'offense.critical', name: '+3% Critical', description: 'Aumenta a chance de acerto crítico.' },
+    { id: 'offense.rare', name: 'Raridades', description: 'Libera upgrades Raros.' },
+    { id: 'offense.choice4', name: 'Quarta opção', description: 'Libera uma quarta escolha no level up.' },
+  ]},
+  { name: 'Defensiva', icon: 'DF', nodes: [
+    { id: 'defense.hp', name: '+3% HP', description: 'Aumenta a vida máxima.' },
+    { id: 'defense.armor', name: '+3% Armor', description: 'Aumenta a armadura.' },
+    { id: 'defense.revive', name: '1 Revive', description: 'Começa a run com uma ressurreição.' },
+    { id: 'defense.shrine', name: 'Healing Shrine', description: 'Libera santuários de cura.' },
+  ]},
+  { name: 'Arcano', icon: 'AR', nodes: [
+    { id: 'arcane.power', name: '+3% Magic Power', description: 'Aumenta o poder mágico.' },
+    { id: 'arcane.elemental', name: '+5% Elemental Damage', description: 'Aumenta o dano elemental.' },
+    { id: 'arcane.evolutions', name: 'Evoluções elementais', description: 'Libera evoluções elementais.' },
+    { id: 'arcane.element', name: 'Escolha de elemento', description: 'Começa com uma escolha de elemento.' },
+  ]},
+  { name: 'Fortuna', icon: 'FT', nodes: [
+    { id: 'fortune.gold', name: '+5% Gold', description: 'Aumenta o ouro obtido.' },
+    { id: 'fortune.drop', name: '+5% Drop', description: 'Aumenta a chance de drop.' },
+    { id: 'fortune.eliteChest', name: 'Elite Chest', description: 'Aumenta a chance de Elite Chest.' },
+    { id: 'fortune.reroll', name: 'Reroll grátis', description: 'Garante um reroll grátis por run.' },
+  ]},
+] as const;
+
 @Component({
   selector: 'app-game',
   imports: [FormsModule, OutfitThumb, HuntBrowser],
@@ -52,6 +79,8 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   readonly chatCollapsed = signal(false);
   readonly chatTab = signal<'general' | 'combat' | 'system'>('general');
   readonly rotationOpen = signal(false);
+  readonly abyssEntryOpen = signal(false);
+  readonly abyssTreeOpen = signal(false);
   readonly helperOpen = signal(false);
   readonly helperSection = signal<'healing' | 'ally' | 'attack' | 'spells'>('spells');
   readonly rotationCharacterId = signal<string | null>(null);
@@ -78,6 +107,9 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   readonly activeColorSlot = signal<(typeof this.colorSlots)[number]>('head');
   readonly palette = APPEARANCE_PALETTE;
   readonly backpackSize = INVENTORY_SIZE;
+  readonly abyssTree = ABYSS_TREE;
+  readonly abyssChoicePosition = signal<{ x: number; y: number } | null>(null);
+  readonly abyssTreePosition = signal<{ x: number; y: number } | null>(null);
 
   private readonly el = inject(ElementRef);
   private readonly ws = inject(WsService);
@@ -88,6 +120,8 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   private readonly router = inject(Router);
   private phaser: Phaser.Game | null = null;
   private timerSub?: Subscription;
+  private abyssChoiceDrag: { startX: number; startY: number; originX: number; originY: number } | null = null;
+  private abyssTreeDrag: { startX: number; startY: number; originX: number; originY: number } | null = null;
   private visibilityHandler = () => { if (!document.hidden) this.resyncAfterResume(); };
   private sidebarMq?: MediaQueryList;
   private readonly sidebarMqListener = (e: MediaQueryListEvent | MediaQueryList) => {
@@ -223,6 +257,138 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   inventory(): InvEntry[] {
     const slots = this.state.inventory().slots;
     return slots.map((stack, index) => ({ index, stack }));
+  }
+
+  abyssElapsed(): string {
+    const run = this.state.abyss();
+    if (!run) return '00:00';
+    const seconds = Math.floor(Math.min(run.durationMs, this.now() - run.startedAt) / 1000);
+    return `${String(Math.floor(seconds / 60)).padStart(2, '0')}:${String(seconds % 60).padStart(2, '0')}`;
+  }
+
+  abyssTimePct(): number {
+    const run = this.state.abyss();
+    return run ? Math.min(100, (Math.max(0, this.now() - run.startedAt) / run.durationMs) * 100) : 0;
+  }
+
+  abyssXpPct(): number {
+    const run = this.state.abyss();
+    return run ? Math.min(100, (run.experience / Math.max(1, run.nextLevelExperience)) * 100) : 0;
+  }
+
+  abyssAbility(abilityId: number): CombatAbilityDefinition | undefined {
+    return this.state.abilities().find((ability) => ability.abilityId === abilityId);
+  }
+
+  abyssAbilityName(abilityId: number): string {
+    return this.abyssAbility(abilityId)?.name ?? `Magia ${abilityId}`;
+  }
+
+  abyssAbilityIcon(abilityId: number): string | null {
+    const ability = this.abyssAbility(abilityId);
+    return ability ? this.abilityIcon(ability) : null;
+  }
+
+  abyssAbilityCooldown(abilityId: number): string {
+    const remaining = Math.max(0, this.state.abilityReadyFor(this.state.self()?.id ?? '', abilityId) - this.now());
+    return remaining > 0 ? `${(remaining / 1000).toFixed(1)}s` : 'Pronta';
+  }
+
+  startAbyss() {
+    this.state.requestAbyssMeta();
+    this.abyssEntryOpen.set(true);
+  }
+
+  beginAbyss() {
+    this.abyssEntryOpen.set(false);
+    this.state.startAbyss();
+  }
+
+  openAbyssTree() {
+    this.abyssEntryOpen.set(false);
+    this.abyssTreeOpen.set(true);
+    this.state.requestAbyssMeta();
+  }
+
+  abyssNodeCost(id: string): number {
+    return ABYSS_META_NODES.find((node) => node.id === id)?.cost ?? 0;
+  }
+
+  abyssNodePrerequisite(id: string): string | undefined {
+    return ABYSS_META_NODES.find((node) => node.id === id)?.prerequisite;
+  }
+
+  abyssNodeAvailable(id: string): boolean {
+    const meta = this.state.abyssMeta();
+    const node = ABYSS_META_NODES.find((entry) => entry.id === id);
+    return !!meta && !!node && meta.fragments >= node.cost && (!node.prerequisite || meta.unlockedNodes.includes(node.prerequisite));
+  }
+
+  closeAbyssPanels() {
+    this.abyssEntryOpen.set(false);
+    this.abyssTreeOpen.set(false);
+    this.abyssTreePosition.set(null);
+  }
+
+  chooseAbyssUpgrade(choiceId: string) {
+    this.abyssChoicePosition.set(null);
+    this.state.chooseAbyssUpgrade(choiceId);
+  }
+
+  abyssChoiceTransform(): string {
+    const position = this.abyssChoicePosition();
+    return position ? `translate(${position.x}px, ${position.y}px)` : 'translate(0, 0)';
+  }
+
+  startAbyssChoiceDrag(event: PointerEvent) {
+    event.preventDefault();
+    const position = this.abyssChoicePosition() ?? { x: 0, y: 0 };
+    this.abyssChoiceDrag = { startX: event.clientX, startY: event.clientY, originX: position.x, originY: position.y };
+  }
+
+  @HostListener('document:pointermove', ['$event'])
+  moveAbyssChoiceDrag(event: PointerEvent) {
+    if (!this.abyssChoiceDrag) return;
+    const card = this.el.nativeElement.querySelector('.abyss-choice-card') as HTMLElement | null;
+    if (!card) return;
+    const maxX = Math.max(0, (window.innerWidth - card.offsetWidth) / 2 - 12);
+    const maxY = Math.max(0, (window.innerHeight - card.offsetHeight) / 2 - 12);
+    const x = this.abyssChoiceDrag.originX + event.clientX - this.abyssChoiceDrag.startX;
+    const y = this.abyssChoiceDrag.originY + event.clientY - this.abyssChoiceDrag.startY;
+    this.abyssChoicePosition.set({ x: Math.max(-maxX, Math.min(maxX, x)), y: Math.max(-maxY, Math.min(maxY, y)) });
+  }
+
+  @HostListener('document:pointerup')
+  endAbyssChoiceDrag() {
+    this.abyssChoiceDrag = null;
+  }
+
+  abyssTreeTransform(): string {
+    const position = this.abyssTreePosition();
+    return position ? `translate(${position.x}px, ${position.y}px)` : 'translate(0, 0)';
+  }
+
+  startAbyssTreeDrag(event: PointerEvent) {
+    event.preventDefault();
+    const position = this.abyssTreePosition() ?? { x: 0, y: 0 };
+    this.abyssTreeDrag = { startX: event.clientX, startY: event.clientY, originX: position.x, originY: position.y };
+  }
+
+  @HostListener('document:pointermove', ['$event'])
+  moveAbyssTreeDrag(event: PointerEvent) {
+    if (!this.abyssTreeDrag) return;
+    const modal = this.el.nativeElement.querySelector('.abyss-tree-modal') as HTMLElement | null;
+    if (!modal) return;
+    const maxX = Math.max(0, (window.innerWidth - modal.offsetWidth) / 2 - 12);
+    const maxY = Math.max(0, (window.innerHeight - modal.offsetHeight) / 2 - 12);
+    const x = this.abyssTreeDrag.originX + event.clientX - this.abyssTreeDrag.startX;
+    const y = this.abyssTreeDrag.originY + event.clientY - this.abyssTreeDrag.startY;
+    this.abyssTreePosition.set({ x: Math.max(-maxX, Math.min(maxX, x)), y: Math.max(-maxY, Math.min(maxY, y)) });
+  }
+
+  @HostListener('document:pointerup')
+  endAbyssTreeDrag() {
+    this.abyssTreeDrag = null;
   }
 
   backpackPreview(): InvEntry[] {

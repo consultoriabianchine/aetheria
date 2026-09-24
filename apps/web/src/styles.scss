@@ -177,6 +177,595 @@ a {
   color: #241b08;
 }
 
+.game-page .abyss-hud {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 10;
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  width: min(300px, calc(100% - 24px));
+  padding: 8px 10px;
+  border: 1px solid var(--ui-border-strong);
+  border-radius: var(--ui-radius-sm);
+  background: rgba(12, 17, 25, .9);
+}
+
+.game-page .abyss-hud-title,
+.game-page .abyss-fragments,
+.game-page .abyss-xp,
+.game-page .abyss-rotation-title {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  color: var(--ui-text-muted);
+  font-size: 10px;
+}
+
+.game-page .abyss-hud-title strong,
+.game-page .abyss-fragments strong,
+.game-page .abyss-rotation-title strong {
+  color: var(--ui-gold-bright);
+}
+
+.game-page .abyss-bar,
+.game-page .abyss-xp i {
+  display: block;
+  height: 5px;
+  overflow: hidden;
+  border-radius: 99px;
+  background: rgba(255, 255, 255, .1);
+}
+
+.game-page .abyss-bar i,
+.game-page .abyss-xp i {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--ui-violet), var(--ui-gold));
+}
+
+.game-page .abyss-fragment-drop {
+  position: absolute;
+  top: 68px;
+  left: 50%;
+  z-index: 4;
+  padding: 6px 10px;
+  border: 1px solid var(--ui-border-strong);
+  border-radius: var(--ui-radius-sm);
+  background: var(--ui-surface-raised);
+  color: var(--ui-gold-bright);
+  font-size: 11px;
+  font-weight: 700;
+  animation: abyss-fragment-float 2.2s ease-out forwards;
+  transform: translateX(-50%);
+}
+
+.game-page .abyss-rotation-title {
+  margin-top: 2px;
+  padding-top: 5px;
+  border-top: 1px solid var(--ui-border);
+}
+
+.game-page .abyss-rotation {
+  display: grid;
+  gap: 3px;
+}
+
+.game-page .abyss-rotation-slot {
+  display: grid;
+  grid-template-columns: 16px 24px minmax(0, 1fr) auto;
+  gap: 5px;
+  align-items: center;
+  min-height: 25px;
+  color: var(--ui-text-muted);
+  font-size: 9px;
+}
+
+.game-page .abyss-rotation-index {
+  color: var(--ui-gold);
+  text-align: center;
+}
+
+.game-page .abyss-rotation-icon {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border: 1px solid var(--ui-border);
+  border-radius: var(--ui-radius-sm);
+  background: rgba(8, 11, 17, .72);
+  color: var(--ui-violet);
+}
+
+.game-page .abyss-rotation-icon img {
+  max-width: 100%;
+  max-height: 100%;
+  image-rendering: pixelated;
+}
+
+.game-page .abyss-rotation-name {
+  display: grid;
+  min-width: 0;
+}
+
+.game-page .abyss-rotation-name b {
+  overflow: hidden;
+  color: var(--ui-text);
+  font-size: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.game-page .abyss-rotation-name small {
+  color: var(--ui-text-subtle);
+}
+
+.game-page .abyss-rotation-slot em {
+  color: var(--ui-gold);
+  font-size: 9px;
+  font-style: normal;
+}
+
+.game-page .abyss-rotation-empty {
+  color: var(--ui-text-subtle);
+  font-size: 10px;
+}
+
+.game-page .abyss-choice-modal {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  background: rgba(3, 6, 10, .64);
+  backdrop-filter: blur(3px);
+}
+
+.game-page .abyss-choice-card {
+  width: min(680px, 100%);
+  padding: 22px;
+  border: 1px solid var(--ui-border-strong);
+  border-radius: var(--ui-radius-lg);
+  background: var(--ui-surface);
+  box-shadow: var(--ui-shadow-modal);
+}
+
+.game-page .abyss-choice-card h2 {
+  margin: 5px 0 0;
+  color: var(--ui-gold-bright);
+}
+
+.game-page .abyss-choice-drag-handle {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+}
+
+.game-page .abyss-choice-drag-handle:active {
+  cursor: grabbing;
+}
+
+.game-page .abyss-choice-drag-label {
+  color: var(--ui-text-subtle);
+  font-size: 10px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.game-page .abyss-choice-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.game-page .abyss-choice {
+  display: grid;
+  gap: 7px;
+  min-height: 132px;
+  padding: 12px;
+  border: 1px solid var(--ui-border);
+  border-radius: var(--ui-radius-md);
+  background: var(--ui-surface-soft);
+  color: var(--ui-text);
+  text-align: left;
+}
+
+.game-page .abyss-choice:hover {
+  border-color: var(--ui-gold);
+  background: var(--ui-surface-raised);
+}
+
+.game-page .abyss-choice small {
+  color: var(--ui-violet);
+  text-transform: uppercase;
+}
+
+.game-page .abyss-choice strong {
+  color: var(--ui-gold-bright);
+}
+
+.game-page .abyss-choice span {
+  color: var(--ui-text-muted);
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+@keyframes abyss-fragment-float {
+  from { opacity: 0; transform: translate(-50%, 10px); }
+  15% { opacity: 1; }
+  to { opacity: 0; transform: translate(-50%, -28px); }
+}
+
+.game-page .abyss-entry-modal,
+.game-page .abyss-tree-modal {
+  width: min(760px, calc(100vw - 28px));
+  max-height: min(720px, calc(100vh - 28px));
+  overflow: auto;
+  border: 1px solid var(--ui-border-strong);
+  border-radius: var(--ui-radius-lg);
+  background: var(--ui-surface);
+  box-shadow: var(--ui-shadow-modal);
+}
+
+.game-page .abyss-entry-modal header,
+.game-page .abyss-tree-modal header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--ui-border);
+  background: linear-gradient(180deg, #202b3b, #131b27);
+}
+
+.game-page .abyss-entry-modal header h2,
+.game-page .abyss-tree-modal header h2 {
+  margin-top: 4px;
+  color: var(--ui-gold-bright);
+}
+
+.game-page .abyss-tree-drag-handle {
+  min-width: 0;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+}
+
+.game-page .abyss-tree-drag-handle:active {
+  cursor: grabbing;
+}
+
+.game-page .abyss-tree-drag-handle small {
+  display: block;
+  margin-top: 7px;
+  color: var(--ui-text-subtle);
+  font-size: 10px;
+}
+
+.game-page .abyss-entry-modal header button,
+.game-page .abyss-tree-modal header button {
+  border: 0;
+  background: transparent;
+  color: var(--ui-text-muted);
+  font-size: 24px;
+}
+
+.game-page .eyebrow {
+  color: var(--ui-violet);
+  font-size: 10px;
+  letter-spacing: .12em;
+}
+
+.game-page .abyss-entry-body,
+.game-page .abyss-tree-balance {
+  padding: 20px;
+  color: var(--ui-text-muted);
+  line-height: 1.5;
+}
+
+.game-page .abyss-entry-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.game-page .abyss-entry-stats span {
+  display: grid;
+  gap: 4px;
+  padding: 10px;
+  border: 1px solid var(--ui-border);
+  border-radius: var(--ui-radius-sm);
+  background: var(--ui-surface-soft);
+  font-size: 10px;
+}
+
+.game-page .abyss-entry-stats b,
+.game-page .abyss-tree-balance strong {
+  color: var(--ui-gold-bright);
+}
+
+.game-page .abyss-entry-note {
+  margin-top: 16px;
+  padding: 10px;
+  border-left: 3px solid var(--ui-red);
+  background: rgba(229, 107, 97, .08);
+  color: var(--ui-text-muted);
+  font-size: 11px;
+}
+
+.game-page .abyss-entry-note-info {
+  border-left-color: var(--ui-blue);
+  background: rgba(76, 151, 217, .08);
+}
+
+.game-page .abyss-entry-modal footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 14px 20px;
+  border-top: 1px solid var(--ui-border);
+}
+
+.game-page .abyss-tree-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  padding: 0 20px 20px;
+}
+
+.game-page .abyss-tree-root {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 112px;
+  height: 68px;
+  margin: 0 auto 22px;
+  border: 2px solid var(--ui-gold);
+  border-radius: 50%;
+  background: radial-gradient(circle, #4a3820, #171b24 72%);
+  color: var(--ui-gold-bright);
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+
+.game-page .abyss-tree-root::after {
+  position: absolute;
+  top: 100%;
+  width: 2px;
+  height: 22px;
+  background: var(--ui-border-strong);
+  content: '';
+}
+
+.game-page .abyss-tree-root small {
+  color: var(--ui-text-muted);
+  font-size: 9px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.game-page .abyss-branch {
+  position: relative;
+  padding: 12px;
+  border: 1px solid var(--ui-border);
+  border-radius: var(--ui-radius-md);
+  background: var(--ui-surface-soft);
+}
+
+.game-page .abyss-branch::before {
+  position: absolute;
+  top: -13px;
+  left: 50%;
+  width: 2px;
+  height: 13px;
+  background: var(--ui-border-strong);
+  content: '';
+}
+
+.game-page .abyss-branch h3 {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 10px;
+  color: var(--ui-gold-bright);
+}
+
+.game-page .abyss-node-list {
+  display: grid;
+  gap: 6px;
+}
+
+.game-page .abyss-node {
+  display: grid;
+  gap: 2px;
+  padding: 9px;
+  border: 1px solid var(--ui-border);
+  border-radius: var(--ui-radius-sm);
+  background: rgba(8, 11, 17, .55);
+  color: var(--ui-text);
+  text-align: left;
+}
+
+.game-page .abyss-node:hover:not(:disabled) {
+  border-color: var(--ui-border-strong);
+  background: var(--ui-surface-raised);
+}
+
+.game-page .abyss-node small {
+  color: var(--ui-text-muted);
+}
+
+.game-page .abyss-node em {
+  color: var(--ui-gold);
+  font-size: 10px;
+  font-style: normal;
+}
+
+.game-page .abyss-node.unlocked {
+  border-color: rgba(98, 211, 148, .5);
+  opacity: .75;
+}
+
+.game-page .abyss-node.available {
+  border-color: var(--ui-gold);
+}
+
+.game-page .abyss-node i {
+  color: var(--ui-red);
+  font-size: 9px;
+  font-style: normal;
+}
+
+.game-page .abyss-loading-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  background: rgba(4, 7, 12, .78);
+  backdrop-filter: blur(5px);
+}
+
+.game-page .abyss-loading-card {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  min-width: 270px;
+  padding: 28px 34px;
+  border: 1px solid var(--ui-border-strong);
+  border-radius: var(--ui-radius-lg);
+  background: var(--ui-surface-raised);
+  box-shadow: var(--ui-shadow-modal);
+  color: var(--ui-text-muted);
+  text-align: center;
+}
+
+.game-page .abyss-loading-card strong {
+  color: var(--ui-gold-bright);
+  font-size: 18px;
+}
+
+.game-page .abyss-loading-rune {
+  color: var(--ui-gold);
+  font-size: 30px;
+  animation: abyss-loading-pulse 1.2s ease-in-out infinite;
+}
+
+.game-page .abyss-loading-card i {
+  width: 92px;
+  height: 3px;
+  margin-top: 8px;
+  overflow: hidden;
+  border-radius: 99px;
+  background: var(--ui-border);
+}
+
+.game-page .abyss-loading-card i::after {
+  display: block;
+  width: 45%;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--ui-gold);
+  content: '';
+  animation: abyss-loading-bar 1.1s ease-in-out infinite;
+}
+
+@keyframes abyss-loading-pulse {
+  50% { transform: scale(1.18); opacity: .65; }
+}
+
+@keyframes abyss-loading-bar {
+  from { transform: translateX(-110%); }
+  to { transform: translateX(230%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .game-page .abyss-loading-rune,
+  .game-page .abyss-loading-card i::after { animation: none; }
+}
+
+.game-page .abyss-result-modal {
+  display: grid;
+  gap: 12px;
+  width: min(440px, calc(100vw - 28px));
+  padding: 24px;
+  border: 1px solid var(--ui-border-strong);
+  border-radius: var(--ui-radius-lg);
+  background: var(--ui-surface);
+  box-shadow: var(--ui-shadow-modal);
+  text-align: center;
+}
+
+.game-page .abyss-result-modal h2 {
+  color: var(--ui-gold-bright);
+}
+
+.game-page .abyss-result-modal p {
+  color: var(--ui-text-muted);
+  font-size: 12px;
+}
+
+.game-page .abyss-result-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.game-page .abyss-result-stats span,
+.game-page .abyss-result-rewards {
+  display: grid;
+  gap: 4px;
+  padding: 10px;
+  border: 1px solid var(--ui-border);
+  border-radius: var(--ui-radius-sm);
+  background: var(--ui-surface-soft);
+  color: var(--ui-text-muted);
+  font-size: 10px;
+}
+
+.game-page .abyss-result-stats b,
+.game-page .abyss-result-rewards strong,
+.game-page .abyss-result-rewards span {
+  color: var(--ui-gold-bright);
+}
+
+.game-page .abyss-result-modal > .ui-button {
+  justify-self: center;
+  min-width: 140px;
+}
+
+@media (max-width: 560px) {
+  .game-page .abyss-entry-stats,
+  .game-page .abyss-tree-grid,
+  .game-page .abyss-result-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .game-page .abyss-choice-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .game-page .abyss-tree-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .game-page .abyss-fragment-drop {
+    animation: none;
+  }
+}
+
 .game-page .item-tooltip,
 .game-page .item-context-menu {
   border-color: var(--ui-border-strong);

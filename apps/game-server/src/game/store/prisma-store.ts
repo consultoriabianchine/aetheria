@@ -3,7 +3,7 @@ import { INVENTORY_SIZE, LOOT_POUCH_SIZE } from '@aetheria/config';
 import { Prisma } from '@aetheria/database';
 import { PrismaService } from '../../prisma/prisma.service';
 import type { CharacterEquipment, CombatArchetype, HuntProgress, ItemStack, PlayerCombatConfig } from '@aetheria/types';
-import type { AccountRecord, StoredAccountStorage, StoredCharacter, Store } from './store';
+import type { AbyssMetaProgression, AbyssRunHistory, AccountRecord, StoredAccountStorage, StoredCharacter, Store } from './store';
 
 interface AccountStorageRow {
   accountId: string;
@@ -345,6 +345,45 @@ export class PrismaStore implements Store {
       update: { favorite },
     });
     return this.toHuntProgress(row);
+  }
+
+  async getAbyssMeta(accountId: string): Promise<AbyssMetaProgression> {
+    const row = await this.prisma.abyssMetaProgression.upsert({
+      where: { accountId },
+      create: { accountId },
+      update: {},
+    });
+    return {
+      accountId: row.accountId,
+      fragments: row.fragments,
+      unlockedNodes: Array.isArray(row.unlockedNodes) ? row.unlockedNodes.filter((v): v is string => typeof v === 'string') : [],
+      rerolls: row.rerolls,
+      revives: row.revives,
+    };
+  }
+
+  async saveAbyssMeta(meta: AbyssMetaProgression): Promise<void> {
+    await this.prisma.abyssMetaProgression.upsert({
+      where: { accountId: meta.accountId },
+      create: { accountId: meta.accountId, fragments: meta.fragments, unlockedNodes: meta.unlockedNodes, rerolls: meta.rerolls, revives: meta.revives },
+      update: { fragments: meta.fragments, unlockedNodes: meta.unlockedNodes, rerolls: meta.rerolls, revives: meta.revives },
+    });
+  }
+
+  async recordAbyssRun(history: AbyssRunHistory): Promise<void> {
+    await this.prisma.abyssRunHistory.create({
+      data: {
+        accountId: history.accountId,
+        characterId: history.characterId,
+        result: history.result,
+        durationMs: history.durationMs,
+        level: history.level,
+        torment: history.torment,
+        fragments: history.fragments,
+        rewards: history.rewards,
+        seed: history.seed,
+      },
+    });
   }
 
   private toHuntProgress(row: {

@@ -42,6 +42,26 @@ export interface StoredAccountStorage {
   party: string[];
 }
 
+export interface AbyssMetaProgression {
+  accountId: string;
+  fragments: number;
+  unlockedNodes: string[];
+  rerolls: number;
+  revives: number;
+}
+
+export interface AbyssRunHistory {
+  accountId: string;
+  characterId: string;
+  result: 'completed' | 'defeated' | 'abandoned';
+  durationMs: number;
+  level: number;
+  torment: number;
+  fragments: number;
+  rewards: string[];
+  seed: number;
+}
+
 export type PromotionError =
   | 'CHARACTER_NOT_FOUND'
   | 'CHARACTER_NOT_OWNED'
@@ -71,4 +91,7 @@ export interface Store {
   recordHuntCompletion(characterId: string, huntId: string, clearTimeMs: number): Promise<HuntProgress>;
   /** Marca/desmarca uma Hunt como favorita (persistido por personagem). */
   setHuntFavorite(characterId: string, huntId: string, favorite: boolean): Promise<HuntProgress>;
+  getAbyssMeta(accountId: string): Promise<AbyssMetaProgression>;
+  saveAbyssMeta(meta: AbyssMetaProgression): Promise<void>;
+  recordAbyssRun(history: AbyssRunHistory): Promise<void>;
 }
