@@ -108,6 +108,7 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   readonly palette = APPEARANCE_PALETTE;
   readonly backpackSize = INVENTORY_SIZE;
   readonly abyssTree = ABYSS_TREE;
+  readonly abyssShopBranch = signal('Ofensiva');
   readonly abyssChoicePosition = signal<{ x: number; y: number } | null>(null);
   readonly abyssTreePosition = signal<{ x: number; y: number } | null>(null);
 
@@ -307,7 +308,32 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   openAbyssTree() {
     this.abyssEntryOpen.set(false);
     this.abyssTreeOpen.set(true);
+    this.abyssShopBranch.set('Ofensiva');
     this.state.requestAbyssMeta();
+  }
+
+  abyssShopNodes() {
+    return this.abyssTree.find((branch) => branch.name === this.abyssShopBranch())?.nodes ?? [];
+  }
+
+  abyssShopBranchIcon() {
+    return this.abyssTree.find((branch) => branch.name === this.abyssShopBranch())?.icon ?? 'AB';
+  }
+
+  abyssNodeUnlocked(id: string): boolean {
+    return this.state.abyssMeta()?.unlockedNodes?.includes(id) ?? false;
+  }
+
+  abyssNodeCanBuy(id: string): boolean {
+    return !this.abyssNodeUnlocked(id) && this.abyssNodeAvailable(id);
+  }
+
+  abyssNodeStatus(id: string): string {
+    if (this.abyssNodeUnlocked(id)) return 'Desbloqueado';
+    const node = ABYSS_META_NODES.find((entry) => entry.id === id);
+    if (node?.prerequisite && !this.abyssNodeUnlocked(node.prerequisite)) return 'Requer outro item';
+    if ((this.state.abyssMeta()?.fragments ?? 0) < (node?.cost ?? 0)) return 'Fragmentos insuficientes';
+    return 'Comprar';
   }
 
   abyssNodeCost(id: string): number {
@@ -377,7 +403,7 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   @HostListener('document:pointermove', ['$event'])
   moveAbyssTreeDrag(event: PointerEvent) {
     if (!this.abyssTreeDrag) return;
-    const modal = this.el.nativeElement.querySelector('.abyss-tree-modal') as HTMLElement | null;
+    const modal = this.el.nativeElement.querySelector('.abyss-shop-modal') as HTMLElement | null;
     if (!modal) return;
     const maxX = Math.max(0, (window.innerWidth - modal.offsetWidth) / 2 - 12);
     const maxY = Math.max(0, (window.innerHeight - modal.offsetHeight) / 2 - 12);

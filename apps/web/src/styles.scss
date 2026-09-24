@@ -404,7 +404,8 @@ a {
 }
 
 .game-page .abyss-entry-modal,
-.game-page .abyss-tree-modal {
+.game-page .abyss-tree-modal,
+.game-page .abyss-shop-modal {
   width: min(760px, calc(100vw - 28px));
   max-height: min(720px, calc(100vh - 28px));
   overflow: auto;
@@ -415,7 +416,8 @@ a {
 }
 
 .game-page .abyss-entry-modal header,
-.game-page .abyss-tree-modal header {
+.game-page .abyss-tree-modal header,
+.game-page .abyss-shop-modal header {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -426,7 +428,8 @@ a {
 }
 
 .game-page .abyss-entry-modal header h2,
-.game-page .abyss-tree-modal header h2 {
+.game-page .abyss-tree-modal header h2,
+.game-page .abyss-shop-modal header h2 {
   margin-top: 4px;
   color: var(--ui-gold-bright);
 }
@@ -450,7 +453,8 @@ a {
 }
 
 .game-page .abyss-entry-modal header button,
-.game-page .abyss-tree-modal header button {
+.game-page .abyss-tree-modal header button,
+.game-page .abyss-shop-modal header button {
   border: 0;
   background: transparent;
   color: var(--ui-text-muted);
@@ -624,6 +628,149 @@ a {
   font-style: normal;
 }
 
+.game-page .abyss-shop-balance {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--ui-border);
+  background: linear-gradient(90deg, rgba(190, 145, 60, .14), transparent);
+}
+
+.game-page .abyss-shop-balance div {
+  display: grid;
+  gap: 3px;
+}
+
+.game-page .abyss-shop-balance span,
+.game-page .abyss-shop-balance small,
+.game-page .abyss-shop-heading > span {
+  color: var(--ui-text-subtle);
+  font-size: 10px;
+}
+
+.game-page .abyss-shop-balance strong {
+  color: var(--ui-gold-bright);
+  font-size: 24px;
+}
+
+.game-page .abyss-shop-tabs {
+  display: flex;
+  gap: 6px;
+  padding: 12px 20px 0;
+  overflow-x: auto;
+}
+
+.game-page .abyss-shop-tabs button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 11px;
+  border: 1px solid var(--ui-border);
+  border-radius: var(--ui-radius-sm) var(--ui-radius-sm) 0 0;
+  background: var(--ui-surface-soft);
+  color: var(--ui-text-muted);
+  white-space: nowrap;
+}
+
+.game-page .abyss-shop-tabs button.active,
+.game-page .abyss-shop-tabs button:hover {
+  border-color: var(--ui-gold);
+  background: var(--ui-surface-raised);
+  color: var(--ui-gold-bright);
+}
+
+.game-page .abyss-shop-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 18px 20px 12px;
+}
+
+.game-page .abyss-shop-heading h3 {
+  margin-top: 4px;
+  color: var(--ui-text);
+}
+
+.game-page .abyss-shop-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  padding: 0 20px 20px;
+}
+
+.game-page .abyss-shop-item {
+  display: grid;
+  gap: 8px;
+  min-height: 142px;
+  padding: 14px;
+  border: 1px solid var(--ui-border);
+  border-radius: var(--ui-radius-md);
+  background: linear-gradient(145deg, var(--ui-surface-soft), rgba(9, 13, 20, .8));
+  color: var(--ui-text);
+  text-align: left;
+}
+
+.game-page .abyss-shop-item.available {
+  border-color: var(--ui-gold);
+  box-shadow: inset 0 0 0 1px rgba(211, 166, 73, .12);
+}
+
+.game-page .abyss-shop-item.available:hover {
+  background: var(--ui-surface-raised);
+  transform: translateY(-1px);
+}
+
+.game-page .abyss-shop-item.unlocked {
+  border-color: rgba(98, 211, 148, .5);
+  opacity: .72;
+}
+
+.game-page .abyss-shop-item-top,
+.game-page .abyss-shop-item-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.game-page .abyss-shop-item-icon {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--ui-gold);
+  border-radius: var(--ui-radius-sm);
+  color: var(--ui-gold-bright);
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.game-page .abyss-shop-item-status,
+.game-page .abyss-shop-item-footer em {
+  color: var(--ui-text-subtle);
+  font-size: 9px;
+  font-style: normal;
+}
+
+.game-page .abyss-shop-item.available .abyss-shop-item-status,
+.game-page .abyss-shop-item-footer span {
+  color: var(--ui-gold);
+}
+
+.game-page .abyss-shop-item strong {
+  color: var(--ui-gold-bright);
+}
+
+.game-page .abyss-shop-item small {
+  min-height: 30px;
+  color: var(--ui-text-muted);
+  font-size: 11px;
+  line-height: 1.4;
+}
+
 .game-page .abyss-loading-overlay {
   position: fixed;
   inset: 0;
@@ -745,6 +892,7 @@ a {
 @media (max-width: 560px) {
   .game-page .abyss-entry-stats,
   .game-page .abyss-tree-grid,
+  .game-page .abyss-shop-grid,
   .game-page .abyss-result-stats {
     grid-template-columns: 1fr;
   }
@@ -755,7 +903,8 @@ a {
 }
 
 @media (max-width: 900px) {
-  .game-page .abyss-tree-grid {
+  .game-page .abyss-tree-grid,
+  .game-page .abyss-shop-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }

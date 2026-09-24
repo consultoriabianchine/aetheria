@@ -14,14 +14,15 @@ export class HuntAdminController {
 
   @Get()
   list() {
-    return this.registry.getAll();
+    return this.hunts.toAdminDefinitions(this.registry.getAll());
   }
 
   @Get(':id')
-  get(@Param('id') id: string) {
+  async get(@Param('id') id: string) {
     const hunt = this.registry.get(id);
     if (!hunt) throw new NotFoundException('Hunt não encontrada');
-    return hunt;
+    const [definition] = await this.hunts.toAdminDefinitions([hunt]);
+    return definition;
   }
 
   @Post()

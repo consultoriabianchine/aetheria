@@ -12,6 +12,20 @@ export class HuntAdminService {
     private readonly registry: HuntRegistry,
   ) {}
 
+  async toAdminDefinitions(hunts: HuntDefinition[]): Promise<HuntDefinition[]> {
+    const creatures = await this.prisma.creatureDefinition.findMany({
+      select: { id: true, slug: true },
+    });
+    const slugsById = new Map(creatures.map((creature) => [creature.id, creature.slug]));
+    const toSlug = (monsterId: string) => slugsById.get(monsterId) ?? monsterId;
+
+    return hunts.map((hunt) => ({
+      ...hunt,
+      monsters: hunt.monsters.map((monster) => ({ ...monster, monsterId: toSlug(monster.monsterId) })),
+      boss: { ...hunt.boss, monsterId: toSlug(hunt.boss.monsterId) },
+    }));
+  }
+
   async save(input: HuntDefinition & { id?: string }) {
     if (!input.name?.trim()) throw new BadRequestException('Nome da hunt é obrigatório');
     if (!input.arenaId) throw new BadRequestException('arenaId é obrigatório');
