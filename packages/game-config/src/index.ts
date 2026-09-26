@@ -2,6 +2,8 @@ import type { ArchetypeDefinition, CombatArchetype, DamageType, NpcTemplate, Pla
 import type { AbyssMetaNode } from '@aetheria/types';
 
 export const ABYSS_MAP_ID = 'map_mucxf0oc';
+export const TRAINING_HUNT_ID = 'hunt_muhu5tbv';
+export const TRAINING_HUNT_ATTACK_SPEED_MULTIPLIER = 2;
 
 export const ABYSS_SCALING_CONFIG = {
   waveLevelStep: 0.5,
@@ -238,7 +240,7 @@ export const ARCHETYPES: Record<CombatArchetype, ArchetypeDefinition> = {
       boots: { itemId: 'leather-boots', quantity: 1 },
     },
     primarySkill: 'magic',
-    magicTrainingMultiplier: 1,
+    magicTrainingMultiplier: 1.2,
     allowedWeapons: ['staff'],
     regeneration: { hpPerSecond: 1, manaPerSecond: 3 },
   },
@@ -256,7 +258,7 @@ export const ARCHETYPES: Record<CombatArchetype, ArchetypeDefinition> = {
       boots: { itemId: 'leather-boots', quantity: 1 },
     },
     primarySkill: 'melee',
-    magicTrainingMultiplier: 0.8,
+    magicTrainingMultiplier: 0.4,
     allowedWeapons: ['sword', 'axe', 'club'],
     regeneration: { hpPerSecond: 2, manaPerSecond: 1 },
   },
@@ -303,6 +305,7 @@ export const COMBAT_FORMULA_CONFIG = {
   meleeScalingPerSkill: 0.01,
   distanceScalingPerSkill: 0.01,
   magicScalingPerLevel: 0.015,
+  manaAbilityMagicContribution: 0.25,
   physicalDefenseBaseConstant: 100,
   physicalDefenseLevelConstant: 10,
   baseCriticalChance: 0.05,

@@ -1,7 +1,7 @@
 import { Injectable, computed, signal } from '@angular/core';
 import { Subject } from 'rxjs';
 import { SERVER_EVENTS } from '@aetheria/protocol';
-import type { AbyssFragmentDrop, AbyssMetaView, AbyssRunView, AbyssUpgradeChoice, CharacterInventory, CharacterSkills, CharacterSummary, CombatArchetype, CombatStatsView, HuntDetails, HuntListEntry, HuntRunView, MapTile, PlayerCombatConfig } from '@aetheria/types';
+import type { AbyssFragmentDrop, AbyssMetaView, AbyssRunView, AbyssUpgradeChoice, CharacterInventory, CharacterSkills, CharacterSummary, CombatArchetype, CombatStatsView, DamageType, HuntDetails, HuntListEntry, HuntRunView, MapTile, PlayerCombatConfig } from '@aetheria/types';
 import { WsService, WsEvent } from '../core/ws.service';
 
 export interface HudStats {
@@ -37,6 +37,26 @@ export interface WorldSnapshot {
 export interface DialogInfo {
   title: string;
   lines: string[];
+}
+
+export interface DamageMeterEntry {
+  totalDamage: number;
+  firstDamageAt: number | null;
+  damageByType: Partial<Record<DamageType, number>>;
+}
+
+export interface HuntAnalyzerState {
+  startedAt: number | null;
+  xpGained: number;
+  kills: number;
+  goldGained: number;
+  goldLost: number;
+}
+
+export interface DamageTakenEntry {
+  total: number;
+  physical: number;
+  elemental: number;
 }
 
 export interface AbyssResult {
@@ -95,6 +115,9 @@ export class GameState {
   });
   readonly inventory = signal<CharacterInventory>({ slots: [], lootPouchSize: 10, lootPouch: [], equipment: {} });
   readonly combatStats = signal<Record<string, CombatStatsView>>({});
+  readonly damageMeter = signal<Record<string, DamageMeterEntry>>({});
+  readonly huntAnalyzer = signal<HuntAnalyzerState>({ startedAt: null, xpGained: 0, kills: 0, goldGained: 0, goldLost: 0 });
+  readonly damageTaken = signal<Record<string, DamageTakenEntry>>({});
   readonly chat = signal<ChatLine[]>([]);
   readonly dialog = signal<DialogInfo | null>(null);
   readonly target = signal<TargetInfo | null>(null);
@@ -281,6 +304,7 @@ export class GameState {
         this.abyssChoices.set([]);
         this.abyssFragmentDrops.set([]);
         this.finishAbyssLoading();
+        this.resetHuntMetrics();
         this.gold.set(w.character.gold);
         const combat = w.character.combat;
         if (combat) this.combatConfigs.update((all) => ({ ...all, [w.character.id]: combat }));
@@ -294,6 +318,9 @@ export class GameState {
         localStorage.setItem('aetheria_character', w.character.id);
         this.world.set({ map: w.map, width: w.width, height: w.height });
         this.hunt.set(w.hunt);
+        this.huntAnalyzer.update((metrics) =>
+          metrics.startedAt === null ? { ...metrics, startedAt: w.hunt.startedAt } : metrics,
+        );
         this.abyss.set(null);
         this.abyssChoices.set([]);
         this.abyssFragmentDrops.set([]);
@@ -305,6 +332,12 @@ export class GameState {
       case SERVER_EVENTS.HUNT_LIST: {
         const r = data as { hunts: HuntListEntry[] };
         this.hunts.set(r.hunts);
+        break;
+      }
+      case SERVER_EVENTS.COMBAT_DAMAGE: {
+        const r = data as { attackerId?: string; targetId?: string; amount?: number; damageType?: string };
+        if (r.attackerId && Number.isFinite(r.amount) && (r.amount ?? 0) > 0) this.recordDamage(r.attackerId, r.amount!, r.damageType as DamageType | undefined);
+        if (r.targetId && Number.isFinite(r.amount) && (r.amount ?? 0) > 0) this.recordDamageTaken(r.targetId, r.amount!, r.damageType);
         break;
       }
       case SERVER_EVENTS.ENTER_ABYSS: {
@@ -376,6 +409,7 @@ export class GameState {
       }
       case SERVER_EVENTS.HUNT_WIPED: {
         const r = data as { huntId: string; penaltyPaid: number; loopEnabled: boolean; respawnInMs: number | null };
+        this.huntAnalyzer.update((metrics) => ({ ...metrics, goldLost: metrics.goldLost + Math.max(0, r.penaltyPaid) }));
         this.hunt.update((h) => (h ? { ...h, status: 'wiped' } : h));
         if (r.penaltyPaid > 0) {
           this.addSystemMessage(`Você foi derrotado! Penalidade: ${r.penaltyPaid} gold.`);
@@ -404,6 +438,16 @@ export class GameState {
         this.abyssFragmentDrops.update((drops) => [...drops.slice(-3), drop]);
         setTimeout(() => this.abyssFragmentDrops.update((drops) => drops.filter((entry) => entry.id !== drop.id)), 2200);
         this.abyss.update((run) => run ? { ...run, fragments: r.total } : run);
+        break;
+      }
+      case SERVER_EVENTS.XP_GAINED: {
+        const r = data as { amount?: number };
+        if (Number.isFinite(r.amount) && (r.amount ?? 0) > 0) this.huntAnalyzer.update((metrics) => ({ ...metrics, xpGained: metrics.xpGained + r.amount! }));
+        break;
+      }
+      case SERVER_EVENTS.GOLD_GAINED: {
+        const r = data as { amount?: number };
+        if (Number.isFinite(r.amount) && (r.amount ?? 0) > 0) this.huntAnalyzer.update((metrics) => ({ ...metrics, goldGained: metrics.goldGained + r.amount! }));
         break;
       }
       case SERVER_EVENTS.ABYSS_WAVE_COMPLETED: {
@@ -535,6 +579,7 @@ export class GameState {
       }
       case SERVER_EVENTS.CREATURE_DEATH: {
         const de = data as { creatureId: string; experience: number };
+        this.huntAnalyzer.update((metrics) => ({ ...metrics, kills: metrics.kills + 1 }));
         this.target.update((t) => (t && t.id === de.creatureId ? null : t));
         break;
       }
@@ -612,6 +657,59 @@ export class GameState {
     const token = this.token();
     if (!token) return;
     this.ws.send({ type: 'hunt.list', token });
+  }
+
+  resetDamageMeter() {
+    this.damageMeter.set({});
+  }
+
+  resetHuntMetrics(startedAt: number | null = null) {
+    this.huntAnalyzer.set({ startedAt, xpGained: 0, kills: 0, goldGained: 0, goldLost: 0 });
+    this.resetDamageMeter();
+    this.damageTaken.set({});
+  }
+
+  resetHuntAnalyzer() {
+    this.huntAnalyzer.set({ startedAt: Date.now(), xpGained: 0, kills: 0, goldGained: 0, goldLost: 0 });
+  }
+
+  resetDamageTaken() {
+    this.damageTaken.set({});
+  }
+
+  private recordDamage(characterId: string, amount: number, damageType?: DamageType) {
+    if (!this.characters().some((character) => character.id === characterId)) return;
+    const now = Date.now();
+    this.damageMeter.update((all) => {
+      const current = all[characterId] ?? { totalDamage: 0, firstDamageAt: null, damageByType: {} };
+      return {
+        ...all,
+        [characterId]: {
+          totalDamage: current.totalDamage + amount,
+          firstDamageAt: current.firstDamageAt ?? now,
+          damageByType: {
+            ...current.damageByType,
+            ...(damageType ? { [damageType]: (current.damageByType[damageType] ?? 0) + amount } : {}),
+          },
+        },
+      };
+    });
+  }
+
+  private recordDamageTaken(characterId: string, amount: number, damageType?: string) {
+    if (!this.characters().some((character) => character.id === characterId)) return;
+    this.damageTaken.update((all) => {
+      const current = all[characterId] ?? { total: 0, physical: 0, elemental: 0 };
+      const physical = damageType === 'physical' ? amount : 0;
+      return {
+        ...all,
+        [characterId]: {
+          total: current.total + amount,
+          physical: current.physical + physical,
+          elemental: current.elemental + (amount - physical),
+        },
+      };
+    });
   }
 
   requestHuntDetails(huntId: string) {

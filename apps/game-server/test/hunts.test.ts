@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { HUNT_CATALOG, HUNT_CONFIG, calculatePackSize } from '@aetheria/config';
+import { HUNT_CATALOG, HUNT_CONFIG, TRAINING_HUNT_ID, calculatePackSize } from '@aetheria/config';
 import { mulberry32 } from '@aetheria/shared';
 import type {
   CharacterEquipment,
@@ -87,7 +87,7 @@ function makePlayer(overrides: Partial<GamePlayer> = {}): GamePlayer {
 const goblinHunt = HUNT_CATALOG.find((h) => h.id === 'goblin_warren');
 if (!goblinHunt) throw new Error('goblin_warren ausente do catálogo');
 
-function makeHuntEngine(): {
+function makeHuntEngine(hunts = HUNT_CATALOG): {
   engine: HuntEngine;
   player: GamePlayer;
   emits: { socketId: string; event: string; data: unknown }[];
@@ -130,7 +130,7 @@ function makeHuntEngine(): {
     summarize,
     getCreatureDefinition: (id) => (id === 'goblin' ? makeDefinition() : null),
     getMap: () => null,
-    getHunts: () => HUNT_CATALOG,
+    getHunts: () => hunts,
     emitTo: (socketId, event, data) => emits.push({ socketId, event, data }),
     getGold: () => gold,
     deductGold: (_characterId, amount) => {
@@ -498,5 +498,12 @@ describe('hunt-engine', () => {
     for (let i = 1; i < hunts.length; i++) {
       expect(hunts[i].ladderPosition).toBeGreaterThan(hunts[i - 1].ladderPosition);
     }
+  });
+
+  it('retira a Hunt de treinamento do catálogo normal', () => {
+    const trainingHunt = { ...HUNT_CATALOG[0], id: TRAINING_HUNT_ID, mode: 'training' as const };
+    const { engine } = makeHuntEngine([HUNT_CATALOG[0], trainingHunt]);
+
+    expect(engine.listHunts().map((hunt) => hunt.id)).toEqual([HUNT_CATALOG[0].id]);
   });
 });

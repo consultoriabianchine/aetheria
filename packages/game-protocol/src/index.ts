@@ -77,6 +77,7 @@ export type ServerMessage =
   | { type: 'entity.moved'; id: string; position: Position; facing?: Direction }
   | { type: 'entity.removed'; id: string }
   | { type: 'entity.health'; id: string; health: number; maxHealth: number }
+  | { type: 'entity.effect'; targetId: string; effectSlug: string; impact: ItemImpactVisual }
   | { type: 'player.moved'; position: Position; facing?: Direction }
   | { type: 'creature.spawn'; creatureId: string; definitionId: string; definitionCreatureId?: number; slug: string; name: string; position: Position; facing: Direction; state: CreatureState; health: number; maxHealth: number; level: number; viewRange?: number; chaseRange?: number; attackRange?: number; movementSpeed?: number; description?: string; isBoss?: boolean; footprintWidth?: number; footprintHeight?: number }
   | { type: 'creature.move'; creatureId: string; from: Position; to: Position; facing: Direction; state: CreatureState; timestamp: number; path?: Position[] }
@@ -156,6 +157,7 @@ export const SERVER_EVENTS = {
   ENTITY_MOVED: 'entity.moved',
   ENTITY_REMOVED: 'entity.removed',
   ENTITY_HEALTH: 'entity.health',
+  ENTITY_EFFECT: 'entity.effect',
   PLAYER_MOVED: 'player.moved',
   CREATURE_SPAWN: 'creature.spawn',
   CREATURE_MOVE: 'creature.move',

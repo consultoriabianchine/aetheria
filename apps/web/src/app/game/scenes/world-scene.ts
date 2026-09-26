@@ -303,6 +303,12 @@ export class WorldScene extends Phaser.Scene {
         this.updateHealth(h.id, h.health, h.maxHealth);
         break;
       }
+      case SERVER_EVENTS.ENTITY_EFFECT: {
+        const effect = data as { targetId: string; effectSlug: string; impact: ItemImpactVisual };
+        const rendered = this.entities.get(effect.targetId) ?? (effect.targetId === this.selfId ? this.selfEntity : null);
+        if (rendered) this.playImpact(rendered.baseX + rendered.offsetX, rendered.baseY + rendered.offsetY, effect.impact);
+        break;
+      }
       case SERVER_EVENTS.STATS_UPDATE: {
         const s = data as { health: number; maxHealth: number; movementSpeed?: number };
         if (s.movementSpeed) this.selfMoveSpeed = s.movementSpeed;

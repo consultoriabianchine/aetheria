@@ -764,6 +764,8 @@ model Hunt {
   arenaHeight      Int?
   mapId            String?
   theme            Json?
+  mode             String   @default("standard")
+  effects          Json?
   enabled          Boolean  @default(true)
   created_at       DateTime @default(now()) @map("created_at")
   updated_at       DateTime @updatedAt @map("updated_at")

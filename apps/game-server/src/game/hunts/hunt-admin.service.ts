@@ -67,6 +67,8 @@ export class HuntAdminService {
       arenaHeight: input.arenaHeight ?? null,
       mapId: input.mapId ?? null,
       theme: input.theme ? (input.theme as unknown as Prisma.InputJsonValue) : undefined,
+      mode: input.mode ?? 'standard',
+      effects: input.effects ? (input.effects as unknown as Prisma.InputJsonValue) : undefined,
       enabled: input.enabled,
     };
     await this.prisma.hunt.upsert({

@@ -1,4 +1,4 @@
-import { ARENAS, HUNT_CONFIG, difficultyRatingFromLevel, difficultyRatingFromScore } from '@aetheria/config';
+import { ARENAS, HUNT_CONFIG, TRAINING_HUNT_ID, difficultyRatingFromLevel, difficultyRatingFromScore } from '@aetheria/config';
 import { mulberry32, uid } from '@aetheria/shared';
 import type {
   ArenaDefinition,
@@ -130,7 +130,7 @@ export class HuntEngine {
   }
 
   listHunts(): HuntDefinition[] {
-    return [...this.hooks.getHunts()].sort((a, b) => a.ladderPosition - b.ladderPosition);
+    return [...this.hooks.getHunts()].filter((hunt) => hunt.mode !== 'training' && hunt.id !== TRAINING_HUNT_ID).sort((a, b) => a.ladderPosition - b.ladderPosition);
   }
 
   async toListEntry(hunt: HuntDefinition, characterId: string): Promise<HuntListEntry> {

@@ -1,6 +1,6 @@
 import { Injectable, Logger, OnModuleInit } from '@nestjs/common';
 import { HUNT_CATALOG } from '@aetheria/config';
-import type { HuntBossDefinition, HuntDefinition, HuntMonsterEntry, HuntTheme } from '@aetheria/types';
+import type { HuntBossDefinition, HuntDefinition, HuntEffects, HuntMode, HuntMonsterEntry, HuntTheme } from '@aetheria/types';
 import type { Prisma } from '@aetheria/database';
 import { PrismaService } from '../../prisma/prisma.service';
 
@@ -74,6 +74,8 @@ export class HuntRegistry implements OnModuleInit {
       arenaHeight: h.arenaHeight ?? null,
       mapId: h.mapId ?? null,
       theme: h.theme ? (h.theme as unknown as Prisma.InputJsonValue) : undefined,
+      mode: h.mode ?? 'standard',
+      effects: h.effects ? (h.effects as unknown as Prisma.InputJsonValue) : undefined,
       enabled: h.enabled,
     };
   }
@@ -98,6 +100,8 @@ export class HuntRegistry implements OnModuleInit {
     arenaHeight: number | null;
     mapId: string | null;
     theme: unknown;
+    mode: string;
+    effects: unknown;
     enabled: boolean;
   }): HuntDefinition {
     return {
@@ -120,6 +124,8 @@ export class HuntRegistry implements OnModuleInit {
       arenaHeight: r.arenaHeight ?? undefined,
       mapId: r.mapId ?? undefined,
       theme: (r.theme as HuntTheme | null) ?? undefined,
+      mode: (r.mode as HuntMode | null) ?? 'standard',
+      effects: (r.effects as HuntEffects | null) ?? undefined,
       enabled: r.enabled,
     };
   }

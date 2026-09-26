@@ -25,6 +25,8 @@ import {
   scaledExperienceForLevel,
   skillExperienceMultiplierForLevel,
   SPAWN_POINT,
+  TRAINING_HUNT_ATTACK_SPEED_MULTIPLIER,
+  TRAINING_HUNT_ID,
   TICK_MS,
   VIEW_DISTANCE_X,
   VIEW_DISTANCE_Y,
@@ -79,7 +81,7 @@ import { combatTrainingGain, magicTrainingGain, trainCombatSkill } from '../skil
 import { aggregateCharacterCombatStats, emptyResistances } from '../combat/character-stat-aggregator';
 import { calculateBasicAttack } from '../combat/basic-attack-calculator';
 import { calculateMitigatedDamage } from '../combat/damage-calculator';
-import { calculateRawDamage, calculateCritical, rollCritical, rollVariance } from '../combat/combat-formulas';
+import { calculateCritical, calculateMagicMultiplier, calculateRawDamage, rollCritical, rollVariance } from '../combat/combat-formulas';
 import { resolveDamageAffinity } from '../combat/damage-affinity-resolver';
 import { getAmmoDefinition, getWeaponDefinition } from '../combat/item-combat';
 import { splitPartyExperience } from '../combat/party-xp';
@@ -1292,6 +1294,7 @@ export class GameEngine implements OnModuleDestroy {
     }
     const now = Date.now();
     const castKey = `${player.id}:${abilityId}`;
+    const run = this.hunts.getRun(player.id);
     const abyssRun = this.abyss.getRun(player.id);
     if (this.activeAbilityCasts.has(castKey)) return false;
     this.activeAbilityCasts.add(castKey);
@@ -1303,13 +1306,13 @@ export class GameEngine implements OnModuleDestroy {
     }
     const groupReadyAt = ability.cooldownGroup === 'healing' ? (this.healingGroupReadyAt.get(player.id) ?? 0) : (this.attackGroupReadyAt.get(player.id) ?? 0);
     if (!abyssRun && groupReadyAt > now) { this.activeAbilityCasts.delete(castKey); this.emitTo(socketId, 'ability.castFailed', { abilityId, reason: 'GROUP_COOLDOWN' }); return false; }
+    if (run && this.isTrainingHunt(run.hunt)) player.mana = player.maxMana;
     if (!abyssRun && (ability.manaCost ?? 0) > player.mana) {
       this.activeAbilityCasts.delete(castKey);
       this.emitTo(socketId, 'ability.castFailed', { abilityId, reason: 'MANA' });
       return false;
     }
     const resolvedTargetId = targetId ?? player.targetId ?? undefined;
-    const run = this.hunts.getRun(player.id);
     const target = resolvedTargetId
       ? (run?.creatures.getCreature(resolvedTargetId) ?? this.creatures.getCreature(resolvedTargetId) ?? this.players.get(resolvedTargetId))
         ?? (abyssRun?.creatures?.getCreature(resolvedTargetId) ?? undefined)
@@ -1330,7 +1333,7 @@ export class GameEngine implements OnModuleDestroy {
     }
     if (!abyssRun) {
       if (ability.cooldownGroup === 'healing') this.healingGroupReadyAt.set(player.id, now + 1000);
-      else this.attackGroupReadyAt.set(player.id, now + 2000);
+      else this.attackGroupReadyAt.set(player.id, now + this.trainingCooldownMs(player, 2000));
     }
     if (!abyssRun && (ability.manaCost ?? 0) > 0) {
       player.mana -= ability.manaCost ?? 0;
@@ -1346,7 +1349,7 @@ export class GameEngine implements OnModuleDestroy {
       this.emitSkillEvents(player, magicResult.events);
       void this.emitPartyStateForCharacter(player);
     }
-    cooldowns.set(abilityId, now + ability.cooldownMs);
+    cooldowns.set(abilityId, now + this.trainingCooldownMs(player, ability.cooldownMs));
     this.abilityCooldowns.set(player.id, cooldowns);
     this.emitTo(socketId, 'ability.cast', { abilityId, attackerId: player.id, targetId });
     this.emitCooldowns(player);
@@ -2136,6 +2139,13 @@ export class GameEngine implements OnModuleDestroy {
       resource,
       targetHealth: target.health,
     });
+    this.emitEntityEffect(target, resource === 'mp' ? 'use_mp' : 'use_hp');
+  }
+
+  private emitEntityEffect(target: GamePlayer | CreatureEntity, effectSlug: 'level_up' | 'use_hp' | 'use_mp') {
+    const effect = getEffectTypeBySlug(effectSlug);
+    if (!effect?.enabled) return;
+    this.emitCombatEvent(target, 'entity.effect', { targetId: target.id, effectSlug, impact: effect.impact });
   }
 
   private dealAbilityDamage(attacker: GamePlayer, target: GamePlayer | CreatureEntity, ability: CombatAbilityDefinition, now: number): boolean {
@@ -2220,15 +2230,25 @@ export class GameEngine implements OnModuleDestroy {
     const ammo = attacker.equipment.ammo ? getAmmoDefinition(getItemDef(attacker.equipment.ammo.itemId)) : undefined;
     const abyssBasePower = this.abyss.getRun(attacker.id) ? 20 : 0;
     const sourcePower = ability.powerSource === 'weapon_ammo' ? ((weapon?.attackPower ?? 0) + (ammo?.attackPower ?? 0) || abyssBasePower) : ability.powerSource === 'weapon' ? (weapon?.attackPower || abyssBasePower) : ability.powerSource === 'magic_weapon' ? (weapon?.magicPower || abyssBasePower) : ability.defaultParameters?.power ?? 20;
-    const skill = attacker.archetype === 'mage' ? stats.magicLevel : attacker.archetype === 'archer' ? stats.distanceSkill : stats.meleeSkill;
-    const raw = calculateRawDamage({ basePower: sourcePower, flatPower: ability.defaultParameters?.flatPower, skill: attacker.archetype === 'mage' ? 'magic' : attacker.archetype === 'archer' ? 'distance' : 'melee', skillLevel: skill, level: stats.level, abilityMultiplier: ability.defaultParameters?.powerMultiplier ?? 1, variance: rollVariance(() => this.nextCombatRandom(attacker, now)) });
+    const combatSkill = attacker.archetype === 'mage' ? 'magic' : attacker.archetype === 'archer' ? 'distance' : 'melee';
+    const skill = combatSkill === 'magic' ? stats.magicLevel : combatSkill === 'distance' ? stats.distanceSkill : stats.meleeSkill;
+    const magicContribution = attacker.archetype !== 'mage' && (ability.manaCost ?? 0) > 0
+      ? 1 + (calculateMagicMultiplier(stats.magicLevel) - 1) * COMBAT_FORMULA_CONFIG.manaAbilityMagicContribution
+      : 1;
+    const raw = calculateRawDamage({ basePower: sourcePower, flatPower: ability.defaultParameters?.flatPower, skill: combatSkill, skillLevel: skill, level: stats.level, abilityMultiplier: ability.defaultParameters?.powerMultiplier ?? 1, otherMultiplier: magicContribution, variance: rollVariance(() => this.nextCombatRandom(attacker, now)) });
     const critical = rollCritical(stats.criticalChance, () => this.nextCombatRandom(attacker, now + 1));
     const damage = calculateMitigatedDamage({ damage: critical ? calculateCritical(raw, stats.criticalDamage) : raw, damageType: ability.damageType ?? 'physical', target: this.targetCombatStats(target), damageTakenModifier: resolveDamageAffinity(this.targetCombatStats(target).damageAffinities, ability.damageType ?? 'physical').modifier, immune: resolveDamageAffinity(this.targetCombatStats(target).damageAffinities, ability.damageType ?? 'physical').immune });
     const finalDamage = Math.max(0, Math.round(damage.finalDamage * this.abyss.abilityBonus(attacker.id, ability.abilityId)));
+    const trainingDummy = target instanceof CreatureEntity && this.isTrainingCreature(target);
     target.health = Math.max(0, target.health - finalDamage);
     this.emitCombatEvent(target, 'combat.damage', { attackerId: attacker.id, targetId: target.id, amount: finalDamage, damageType: ability.damageType ?? 'physical', critical, targetHealth: target.health, delayMs: delayMs || undefined, criticalImpact: critical ? this.criticalImpactVisual() : undefined, position: { ...target.position } });
     this.emitCombatEvent(target, 'entity.health', { id: target.id, health: target.health, maxHealth: target.maxHealth });
-    if (target.health <= 0 && target instanceof CreatureEntity) this.creatureKilled(attacker, target, now);
+    if (trainingDummy) {
+      target.health = target.maxHealth;
+      this.emitCombatEvent(target, 'entity.health', { id: target.id, health: target.health, maxHealth: target.maxHealth });
+    } else if (target.health <= 0 && target instanceof CreatureEntity) {
+      this.creatureKilled(attacker, target, now);
+    }
     return finalDamage;
   }
 
@@ -2373,7 +2393,28 @@ export class GameEngine implements OnModuleDestroy {
       position: { ...target.position },
     });
     this.emitCombatEvent(target, 'entity.health', { id: target.id, health: target.health, maxHealth: target.maxHealth });
+    if (target instanceof CreatureEntity && this.isTrainingCreature(target)) {
+      target.health = target.maxHealth;
+      this.emitCombatEvent(target, 'entity.health', { id: target.id, health: target.health, maxHealth: target.maxHealth });
+    }
     return true;
+  }
+
+  private isTrainingCreature(creature: CreatureEntity): boolean {
+    const hunt = this.hunts.findRunByCreature(creature.id)?.hunt;
+    return !!hunt && this.isTrainingHunt(hunt);
+  }
+
+  private trainingCooldownMs(player: GamePlayer, baseMs: number): number {
+    const hunt = this.hunts.getRun(player.id)?.hunt;
+    const multiplier = hunt && this.isTrainingHunt(hunt)
+      ? hunt.effects?.attackSpeedMultiplier ?? TRAINING_HUNT_ATTACK_SPEED_MULTIPLIER
+      : 1;
+    return Math.max(50, Math.round(baseMs / Math.max(1, multiplier)));
+  }
+
+  private isTrainingHunt(hunt: { id: string; mode?: string }): boolean {
+    return hunt.mode === 'training' || hunt.id === TRAINING_HUNT_ID;
   }
 
   private calculateAbilityHeal(player: GamePlayer, ability: CombatAbilityDefinition, target: GamePlayer): number {
@@ -2502,6 +2543,7 @@ export class GameEngine implements OnModuleDestroy {
       targetHealth: creature.health,
       maxHealth: creature.maxHealth,
     });
+    this.emitEntityEffect(creature, 'use_hp');
     this.emitCombatEvent(creature, 'entity.health', {
       id: creature.id,
       health: creature.health,
@@ -2699,7 +2741,13 @@ export class GameEngine implements OnModuleDestroy {
         if (!run) continue;
         for (const memberId of run.aliveMemberIds) {
           const member = this.players.get(memberId);
-          if (member) this.processPlayerCombatAI(member, now);
+          if (member) {
+            if (this.isTrainingHunt(run.hunt) && (run.hunt.effects?.manaRefill ?? true) && member.mana !== member.maxMana) {
+              member.mana = member.maxMana;
+              this.emitStats(member);
+            }
+            this.processPlayerCombatAI(member, now);
+          }
         }
         this.hunts.updateRun(event.characterId, now);
         for (const memberId of run.aliveMemberIds) {
@@ -2997,7 +3045,7 @@ export class GameEngine implements OnModuleDestroy {
     const weaponItem = player.equipment.weapon ? getItemDef(player.equipment.weapon.itemId) : undefined;
     const weapon = getWeaponDefinition(weaponItem);
     if (!weapon || tileDistance(player.position, target.position) > weapon.range) return;
-    player.attackCooldownUntil = now + (weapon.attackIntervalMs ?? COMBAT_FORMULA_CONFIG.baseAttackGroupMs);
+    player.attackCooldownUntil = now + this.trainingCooldownMs(player, weapon.attackIntervalMs ?? COMBAT_FORMULA_CONFIG.baseAttackGroupMs);
     const didAttack = this.dealDamage(player, target, now);
     if (!didAttack) return;
     this.trainAttackSkill(player);
@@ -3153,6 +3201,7 @@ export class GameEngine implements OnModuleDestroy {
       player.recomputeVitals(getItemDef);
       player.health = player.maxHealth;
       player.mana = player.maxMana;
+      this.emitEntityEffect(player, 'level_up');
       this.emitTo(player.socketId ?? '', 'chat.message', { channel: 'local', from: 'Sistema', text: `Você subiu para o nível ${player.level}!` });
     }
     this.emitStats(player);

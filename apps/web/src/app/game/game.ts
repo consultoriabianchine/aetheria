@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 import Phaser from 'phaser';
 import type { CharacterEquipment, CharacterSkills, CharacterSummary, CombatAbilityDefinition, CombatStatsView, DamageType, ItemDefinition, ItemStack, PlayerCombatConfig } from '@aetheria/types';
 import { DAMAGE_TYPES } from '@aetheria/types';
-import { ABYSS_META_NODES, APPEARANCE_PALETTE, INVENTORY_SIZE, LOOT_POUCH_EXPANSION, SKILL_PROGRESSION_CONFIG, xpForLevel } from '@aetheria/config';
+import { ABYSS_META_NODES, APPEARANCE_PALETTE, INVENTORY_SIZE, LOOT_POUCH_EXPANSION, SKILL_PROGRESSION_CONFIG, TRAINING_HUNT_ID, xpForLevel } from '@aetheria/config';
 import { WsService } from '../core/ws.service';
 import { ChatLine, GameState } from './game-state';
 import { ItemCatalogService } from './item-catalog.service';
@@ -68,6 +68,16 @@ const ABYSS_TREE = [
 })
 export class Game implements OnInit, AfterViewInit, OnDestroy {
   readonly state = inject(GameState);
+  readonly topNavItems = [
+    { label: 'Helper', icon: 'helper.png' },
+    { label: 'Codex', icon: 'codex.png' },
+    { label: 'Arena', icon: 'arena.png' },
+    { label: 'Progress', icon: 'progress.png' },
+    { label: 'Daily', icon: 'daily.png' },
+    { label: 'Storage', icon: 'storage.png' },
+    { label: 'Trade', icon: 'trade.png' },
+    { label: 'Social', icon: 'social.png' },
+  ] as const;
   readonly chatInput = signal('');
   readonly statusOpen = signal(false);
   readonly leftCollapsed = signal(false);
@@ -710,6 +720,87 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
     return archetype ? labels[archetype] ?? archetype : '—';
   }
 
+  damageMeterRows() {
+    const now = this.now();
+    const meter = this.state.damageMeter();
+    return this.state.characters().map((character) => {
+      const entry = meter[character.id];
+      const elapsedMs = entry?.firstDamageAt ? Math.max(1, now - entry.firstDamageAt) : 0;
+      return {
+        id: character.id,
+        name: character.name,
+        archetype: this.archetypeLabelFor(character.archetype),
+        totalDamage: entry?.totalDamage ?? 0,
+        elementalDamage: Object.entries(entry?.damageByType ?? {})
+          .filter(([type]) => type !== 'physical')
+          .reduce((sum, [, amount]) => sum + (amount ?? 0), 0),
+        dps: elapsedMs > 0 ? (entry!.totalDamage * 1000) / elapsedMs : 0,
+      };
+    });
+  }
+
+  damageElementRows(characterId: string) {
+    const damageByType = this.state.damageMeter()[characterId]?.damageByType ?? {};
+    const icons: Record<DamageType, string> = {
+      physical: 'fisico.png',
+      fire: 'fire.gif',
+      ice: 'ice.gif',
+      energy: 'energy.gif',
+      earth: 'tera.gif',
+      holy: 'sagrado.gif',
+      death: 'mort.gif',
+      arcane: 'sagrado.gif',
+    };
+    return DAMAGE_TYPES
+      .filter((type) => (damageByType[type] ?? 0) > 0)
+      .map((type) => ({ type, icon: `/assets/icon-elementos/${icons[type]}`, amount: damageByType[type] ?? 0 }));
+  }
+
+  huntSessionMs(): number {
+    const startedAt = this.state.huntAnalyzer().startedAt;
+    return startedAt ? Math.max(0, this.now() - startedAt) : 0;
+  }
+
+  huntSessionLabel(): string {
+    if (!this.state.huntAnalyzer().startedAt) return '—';
+    const totalSeconds = Math.floor(this.huntSessionMs() / 1000);
+    const hours = Math.floor(totalSeconds / 3600);
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
+    const seconds = totalSeconds % 60;
+    return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+  }
+
+  huntXpPerHour(): number {
+    const elapsed = this.huntSessionMs();
+    return elapsed > 0 ? (this.state.huntAnalyzer().xpGained * 3_600_000) / elapsed : 0;
+  }
+
+  damageTakenRows() {
+    const taken = this.state.damageTaken();
+    return this.state.characters().map((character) => ({
+      id: character.id,
+      name: character.name,
+      archetype: this.archetypeLabelFor(character.archetype),
+      ...(taken[character.id] ?? { total: 0, physical: 0, elemental: 0 }),
+    }));
+  }
+
+  damageTakenTotal(key: 'total' | 'physical' | 'elemental'): number {
+    return this.damageTakenRows().reduce((sum, row) => sum + row[key], 0);
+  }
+
+  resetDamageMeter() {
+    this.state.resetDamageMeter();
+  }
+
+  resetHuntAnalyzer() {
+    this.state.resetHuntAnalyzer();
+  }
+
+  resetDamageTaken() {
+    this.state.resetDamageTaken();
+  }
+
   archetypeLabelFor(archetype: CharacterSummary['archetype']): string {
     const labels: Record<CharacterSummary['archetype'], string> = { warrior: 'Guerreiro', mage: 'Mago', archer: 'Arqueiro' };
     return labels[archetype] ?? archetype;
@@ -946,6 +1037,10 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
     this.state.startHunt(huntId, false);
   }
 
+  startTraining() {
+    this.state.startHunt(TRAINING_HUNT_ID, false);
+  }
+
   startLoop(huntId: string) {
     this.state.startHunt(huntId, true);
   }
@@ -965,6 +1060,10 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
 
   openHuntBrowser() {
     this.huntBrowser.openBrowser();
+  }
+
+  menuIcon(file: string): string {
+    return `/assets/menu_icon/${file}`;
   }
 
   partyMembers() {

@@ -578,6 +578,13 @@ export type HuntRunStatus = 'active' | 'completed' | 'wiped' | 'returning_to_cit
 
 export type WaveState = 'not_started' | 'spawning' | 'combat' | 'cleared' | 'transitioning';
 
+export type HuntMode = 'standard' | 'training';
+
+export interface HuntEffects {
+  manaRefill?: boolean;
+  attackSpeedMultiplier?: number;
+}
+
 export interface HuntMonsterEntry {
   monsterId: string;
   weight: number;
@@ -627,6 +634,8 @@ export interface HuntDefinition {
   /** Mapa custom (criado na Central de Comando) — substitui a arena procedural. */
   mapId?: string;
   theme?: HuntTheme;
+  mode?: HuntMode;
+  effects?: HuntEffects;
   enabled: boolean;
 }
 

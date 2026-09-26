@@ -24,19 +24,19 @@
     </section>
 
     <nav class="top-nav" aria-label="Navegacao principal">
-      @for (item of ['Helper', 'Codex', 'Arena', 'Progress', 'Daily', 'Storage', 'Trade', 'Social']; track item) {
-         <button class="top-nav-item" type="button" [attr.aria-label]="item" (click)="item === 'Helper' ? openHelper() : null">
-          <span>{{ item.charAt(0) }}</span>
-          <small>{{ item }}</small>
+       @for (item of topNavItems; track item.label) {
+         <button class="top-nav-item" type="button" [attr.aria-label]="item.label" (click)="item.label === 'Helper' ? openHelper() : null">
+          <span><img width="22" height="22" [src]="menuIcon(item.icon)" alt="" /></span>
+          <small>{{ item.label }}</small>
         </button>
       }
-      <button class="chip active" type="button" (click)="startAbyss()">Abismo de Avalon</button>
+       <button class="chip active" type="button" (click)="startAbyss()"><img width="18" height="18" [src]="menuIcon('abismo_de_avalon.png')" alt="" />Abismo de Avalon</button>
     </nav>
 
     <section class="account-controls" aria-label="Conta e configuracoes">
       <button class="chip active" type="button" aria-label="Idioma Portugues Brasil">BR</button>
       <button class="chip" type="button" aria-label="Idioma Ingles">EN</button>
-      <button class="chip" type="button" (click)="openAppearance()" aria-label="Aparência">Aparência</button>
+      <button class="chip" type="button" (click)="openAppearance()" aria-label="Aparência"><img width="18" height="18" [src]="menuIcon('aparencia.png')" alt="" />Aparência</button>
       <button class="chip" type="button" (click)="state.toggleHdSmooth()" aria-label="Modo HD">{{ state.hdSmooth() ? 'HD ON' : 'HD OFF' }}</button>
       <button class="chip square" type="button" (click)="state.zoomOut()" aria-label="Diminuir zoom">−</button>
       <span class="zoom-val">{{ zoomPct() }}</span>
@@ -51,7 +51,7 @@
       <div class="sidebar-scroll">
         <section class="game-panel character-sticky">
           <div class="panel-header">
-            <h2>Personagem</h2>
+            <h2><img class="menu-panel-icon" width="20" height="20" [src]="menuIcon('personagem.png')" alt="" />Personagem</h2>
             <button class="panel-action" type="button" (click)="openManage()">Gerenciar</button>
             <button class="panel-action" type="button" (click)="leftCollapsed.set(true)" aria-label="Colapsar sidebar esquerda">‹</button>
           </div>
@@ -102,7 +102,7 @@
         </section>
 
         <section class="game-panel">
-          <div class="panel-header"><h2>Skills</h2><span class="panel-pill">{{ archetypeLabel() }}</span></div>
+          <div class="panel-header"><h2><img class="menu-panel-icon" width="20" height="20" [src]="menuIcon('habilidades.png')" alt="" />Skills</h2><span class="panel-pill">{{ archetypeLabel() }}</span></div>
           <div class="metric-row"><span>Nível</span><b>{{ selectedResources().level }}</b></div>
           <div class="metric-row"><span>XP</span><b>{{ formatGold(selectedResources().experience) }}</b></div>
           <div class="metric-row"><span>HP</span><b>{{ selectedResources().maxHealth }}</b></div>
@@ -116,7 +116,7 @@
         </section>
 
         <section class="game-panel compact-panel">
-          <div class="panel-header"><h2>Attributes</h2></div>
+          <div class="panel-header"><h2><img class="menu-panel-icon" width="20" height="20" [src]="menuIcon('estatisticas.png')" alt="" />Attributes</h2></div>
           @if (selectedCombatStats(); as s) {
             <div class="metric-grid">
               <div><span>Armor</span><b>{{ s.armor }}</b></div>
@@ -136,36 +136,50 @@
 
         <section class="game-panel compact-panel">
           <button class="panel-header panel-toggle" type="button" (click)="analyzerCollapsed.set(!analyzerCollapsed())">
-            <h2>Hunt Analyzer</h2><span>{{ analyzerCollapsed() ? '+' : '−' }}</span>
+            <h2><img class="menu-panel-icon" width="20" height="20" [src]="menuIcon('hunt_analyzer.png')" alt="" />Hunt Analyzer</h2><span>{{ analyzerCollapsed() ? '+' : '−' }}</span>
           </button>
           @if (!analyzerCollapsed()) {
-            <div class="metric-row"><span>Session</span><b>09:55:48</b></div>
-            <div class="metric-row"><span>XP/h</span><b>—</b></div>
-            <div class="metric-row"><span>XP Gain</span><b>{{ state.hunt() ? state.stats().experience : '—' }}</b></div>
-            <div class="metric-row"><span>Kills</span><b>—</b></div>
-            <div class="metric-row"><span>Balance</span><b>{{ formatGold(state.gold()) }}</b></div>
+            <div class="metric-row"><span>Sessão atual</span><button class="rotation-config-button" type="button" (click)="resetHuntAnalyzer()">Resetar</button></div>
+            <div class="metric-row"><span>Session</span><b>{{ huntSessionLabel() }}</b></div>
+            <div class="metric-row"><span>XP/h</span><b>{{ formatGold(huntXpPerHour().toFixed(0)) }}</b></div>
+            <div class="metric-row"><span>XP Gain</span><b>{{ formatGold(state.huntAnalyzer().xpGained) }}</b></div>
+            <div class="metric-row"><span>Kills</span><b>{{ state.huntAnalyzer().kills }}</b></div>
+            <div class="metric-row"><span>Balance</span><b>{{ formatGold(state.huntAnalyzer().goldGained - state.huntAnalyzer().goldLost) }}</b></div>
           }
         </section>
 
         <section class="game-panel compact-panel">
           <button class="panel-header panel-toggle" type="button" (click)="damageCollapsed.set(!damageCollapsed())">
-            <h2>Damage</h2><span>{{ damageCollapsed() ? '+' : '−' }}</span>
+            <h2><img class="menu-panel-icon" width="20" height="20" [src]="menuIcon('estatisticas.png')" alt="" />Damage</h2><span>{{ damageCollapsed() ? '+' : '−' }}</span>
           </button>
           @if (!damageCollapsed()) {
-            <div class="damage-member"><strong>Sessão</strong><span>—/s</span></div>
-            <div class="metric-row"><span>DPS</span><b>—</b></div>
-            <div class="metric-row"><span>Dano total</span><b>—</b></div>
+            <div class="metric-row"><span>Dano desde o primeiro ataque</span><button class="rotation-config-button" type="button" (click)="resetDamageMeter()">Resetar</button></div>
+            @for (row of damageMeterRows(); track row.id) {
+              <div class="damage-member">
+                <div><strong>{{ row.name }}</strong><span>{{ row.archetype }}</span></div>
+                <div class="metric-row"><b>{{ row.dps.toFixed(1) }} DPS</b><small>{{ formatGold(row.totalDamage.toFixed(0)) }} dano · Elem. {{ formatGold(row.elementalDamage.toFixed(0)) }}</small></div>
+              </div>
+              <div class="metric-grid">
+                @for (element of damageElementRows(row.id); track element.type) {
+                  <div title="{{ element.type }}"><span><img width="16" height="16" [src]="element.icon" alt="{{ element.type }}" /> {{ formatGold(element.amount.toFixed(0)) }}</span></div>
+                }
+              </div>
+            }
           }
         </section>
 
         <section class="game-panel compact-panel">
           <button class="panel-header panel-toggle" type="button" (click)="damageTakenCollapsed.set(!damageTakenCollapsed())">
-            <h2>Damage Taken</h2><span>{{ damageTakenCollapsed() ? '+' : '−' }}</span>
+            <h2><img class="menu-panel-icon" width="20" height="20" [src]="menuIcon('elementos.png')" alt="" />Damage Taken</h2><span>{{ damageTakenCollapsed() ? '+' : '−' }}</span>
           </button>
           @if (!damageTakenCollapsed()) {
-            <div class="metric-row"><span>Session</span><b>—</b></div>
-            <div class="metric-row"><span>Physical</span><b>—</b></div>
-            <div class="metric-row"><span>Elemental</span><b>—</b></div>
+            <div class="metric-row"><span>Sessão atual</span><button class="rotation-config-button" type="button" (click)="resetDamageTaken()">Resetar</button></div>
+            <div class="metric-row"><span>Session</span><b>{{ formatGold(damageTakenTotal('total')) }}</b></div>
+            <div class="metric-row"><span>Physical</span><b>{{ formatGold(damageTakenTotal('physical')) }}</b></div>
+            <div class="metric-row"><span>Elemental</span><b>{{ formatGold(damageTakenTotal('elemental')) }}</b></div>
+            @for (row of damageTakenRows(); track row.id) {
+              <div class="damage-member"><div><strong>{{ row.name }}</strong><span>{{ row.archetype }}</span></div><div class="metric-row"><b>{{ formatGold(row.total) }}</b><small>Físico {{ formatGold(row.physical) }} · Elem. {{ formatGold(row.elemental) }}</small></div></div>
+            }
           }
         </section>
       </div>
@@ -192,6 +206,7 @@
             <button class="danger-button" type="button" (click)="stopHunt()">Parar</button>
           } @else {
             <button class="hunt-launch-button" type="button" (click)="openHuntBrowser()"><span>+</span><strong>Hunt</strong><small>Escolher destino</small></button>
+            <button class="hunt-launch-button" type="button" (click)="startTraining()"><span>+</span><strong>Treino</strong><small>Mana + velocidade</small></button>
           }
           }
         </div>
@@ -298,7 +313,7 @@
       <button class="collapse-tab right" type="button" (click)="rightCollapsed.set(false)" aria-label="Restaurar sidebar direita">‹</button>
       <div class="sidebar-scroll">
         <section class="game-panel party-panel">
-          <div class="panel-header"><h2>Party</h2><button class="panel-action" type="button" (click)="rightCollapsed.set(true)" aria-label="Colapsar sidebar direita">›</button></div>
+           <div class="panel-header"><h2><img class="menu-panel-icon" width="20" height="20" [src]="menuIcon('social.png')" alt="" />Party</h2><button class="panel-action" type="button" (click)="rightCollapsed.set(true)" aria-label="Colapsar sidebar direita">›</button></div>
           @for (member of partyMembers(); track member.id) {
             <article class="party-member">
               <span class="role-badge sup">{{ member.id === state.self()?.id ? 'SUP' : 'CPN' }}</span>
@@ -322,7 +337,7 @@
         </section>
 
         <section class="game-panel inventory-preview">
-          <div class="panel-header"><h2>Backpack</h2><button class="panel-action" type="button" (click)="openManage()">Inventário</button></div>
+           <div class="panel-header"><h2><img class="menu-panel-icon" width="20" height="20" [src]="menuIcon('inventario.png')" alt="" />Backpack</h2><button class="panel-action" type="button" (click)="openManage()">Inventário</button></div>
           <div class="inventory-meta"><span>Slots</span><b>{{ backpackCount() }} / {{ backpackSize }}</b></div>
           <div class="slot-grid backpack-grid">
             @for (entry of backpackPreview(); track entry.index) {
@@ -337,7 +352,7 @@
         </section>
 
         <section class="game-panel inventory-preview">
-          <div class="panel-header"><h2>Bolsa de Loot</h2><button class="panel-action" type="button" (click)="state.sellLootPouch()" [disabled]="lootPouchCount() <= 0">Vender Tudo</button></div>
+           <div class="panel-header"><h2><img class="menu-panel-icon" width="20" height="20" [src]="menuIcon('loot.png')" alt="" />Bolsa de Loot</h2><button class="panel-action" type="button" (click)="state.sellLootPouch()" [disabled]="lootPouchCount() <= 0">Vender Tudo</button></div>
           <div class="inventory-meta"><span>Slots</span><b>{{ lootPouchCount() }} / {{ lootPouchSize() }}</b></div>
           @if (lootPouchExpansionCost(); as cost) { <button class="wide-action" type="button" (click)="state.expandLootPouch()">Expandir · {{ formatGold(cost) }} gold</button> }
           @if (lootPouchCount() >= lootPouchSize()) { <div class="loot-warning" title="A Bolsa de Loot está cheia. Novos itens que precisarem de slot não serão coletados.">CHEIA</div> }
