@@ -699,10 +699,10 @@ export class GameState {
     this.ws.send({ type: 'party.dismiss', token, characterId });
   }
 
-  setCombatConfig(characterId: string, targeting: PlayerCombatConfig['targeting'], movement: PlayerCombatConfig['movement'], attackRange?: number) {
+  setCombatConfig(characterId: string, targeting: PlayerCombatConfig['targeting'], movement: PlayerCombatConfig['movement'], attackRange?: number, frontPositioning = false) {
     const token = this.token();
     if (!token) return;
-    this.ws.send({ type: 'combat.config', token, characterId, targeting, movement, attackRange });
+    this.ws.send({ type: 'combat.config', token, characterId, targeting, movement, attackRange, frontPositioning });
   }
 
   loadRotation(characterId: string) {
@@ -710,7 +710,7 @@ export class GameState {
   }
 
   combatFor(characterId: string): PlayerCombatConfig {
-    return this.combatConfigs()[characterId] ?? { targeting: 'nearest', movement: 'hold' };
+    return this.combatConfigs()[characterId] ?? { targeting: 'nearest', movement: 'maintainDistance', frontPositioning: false };
   }
 
   attackGroupReadyFor(characterId: string): number {

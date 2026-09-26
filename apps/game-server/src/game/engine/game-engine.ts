@@ -22,6 +22,7 @@ import {
   PARTY_CONFIG,
   PICKUP_RANGE,
   PLAYER_AI,
+  scaledExperienceForLevel,
   SPAWN_POINT,
   TICK_MS,
   VIEW_DISTANCE_X,
@@ -71,6 +72,7 @@ import { HuntRegistry } from '../hunts/hunt-registry.service';
 import { OutfitRegistry } from '../outfit/outfit-registry.service';
 import { ReadyQueue } from './ready-queue';
 import { calculateMaxHp, calculateMaxMana } from '../stats/stat-engine';
+import { applyDeathExperiencePenalty } from './death-penalty';
 import { calculateRegeneration } from '../regeneration/regeneration-engine';
 import { combatTrainingGain, magicTrainingGain, trainCombatSkill } from '../skills/skill-progression';
 import { aggregateCharacterCombatStats, emptyResistances } from '../combat/character-stat-aggregator';
@@ -165,6 +167,7 @@ export class GameEngine implements OnModuleDestroy {
   private groundItemEventReadyAt = new Map<string, number>();
   private saveEvents = new ReadyQueue<{ playerId: string; readyAt: number }>();
   private saveEventReadyAt = new Map<string, number>();
+  private handledDeaths = new Set<string>();
 
   constructor(
     @Inject(STORE) private readonly store: Store,
@@ -506,6 +509,7 @@ export class GameEngine implements OnModuleDestroy {
     if (this.prisma) {
       const slots = await this.prisma.characterAttackRotationSlot.findMany({ where: { character_id: player.id, preset: 'HUNT' }, orderBy: { slot_position: 'asc' } });
       this.attackRotations.set(player.id, slots.map((slot) => ({ abilityId: slot.ability_id ?? undefined, enabled: slot.enabled, minTargets: slot.min_targets ?? undefined })));
+      await this.refreshPositioningAbilities(player.id);
       const heals = await this.prisma.characterHealingRotationSlot.findMany({ where: { character_id: player.id, preset: 'HUNT' }, orderBy: { slot_position: 'asc' } });
       this.healingRotations.set(player.id, heals.filter((slot) => slot.slot_position >= 1 && slot.slot_position <= 3).map((slot) => this.healingSlot(slot.slot_position, slot.ability_id ?? undefined, slot.enabled, slot.trigger, 100)));
       this.emitTo(socketId, 'rotation.state', { preset: 'HUNT', characterId: player.id, attack: slots, healing: heals, cooldowns: { attackGroupReadyAt: 0, healingGroupReadyAt: 0, abilityReadyAt: {} } });
@@ -905,16 +909,17 @@ export class GameEngine implements OnModuleDestroy {
     this.logger.log(`Aparência do personagem ${targetId} alterada para o outfit ${outfitId}.`);
   }
 
-  handleCombatConfig(socketId: string, token: string, targeting: unknown, movement: unknown, attackRange?: number, characterId?: string) {
+  handleCombatConfig(socketId: string, token: string, targeting: unknown, movement: unknown, attackRange?: number, characterId?: string, frontPositioning = false) {
     void this.verifySession(socketId, token).then(async (session) => {
       if (!session) return;
       const leader = session.player;
       const t = targeting as PlayerCombatConfig['targeting'];
-      const m = movement as PlayerCombatConfig['movement'];
+      const rawMovement = movement as string;
       if (!['nearest', 'furthest', 'lowestHp', 'highestHp'].includes(t)) return;
-      if (!['kite', 'hold', 'engage'].includes(m)) return;
+      if (!['maintainDistance', 'hold', 'kite', 'engage'].includes(rawMovement)) return;
       const range = attackRange == null ? undefined : Math.max(1, Math.min(15, Math.round(attackRange)));
-      const combat: PlayerCombatConfig = { targeting: t, movement: m, attackRange: range };
+      const normalizedMovement: PlayerCombatConfig['movement'] = rawMovement === 'kite' || rawMovement === 'engage' ? 'maintainDistance' : rawMovement as PlayerCombatConfig['movement'];
+      const combat: PlayerCombatConfig = { targeting: t, movement: normalizedMovement, attackRange: range, frontPositioning: !!frontPositioning };
       const targetId = characterId && characterId !== leader.id && this.partyMemberIds(leader).includes(characterId) ? characterId : leader.id;
       const live = this.players.get(targetId);
       if (live) {
@@ -1050,6 +1055,7 @@ export class GameEngine implements OnModuleDestroy {
     if (this.prisma) {
       void this.prisma.characterAttackRotationSlot.findMany({ where: { character_id: companion.id, preset: 'HUNT' }, orderBy: { slot_position: 'asc' } }).then((slots) => {
         this.attackRotations.set(companion.id, slots.map((slot) => ({ abilityId: slot.ability_id ?? undefined, enabled: slot.enabled, minTargets: slot.min_targets ?? undefined })));
+        void this.refreshPositioningAbilities(companion.id);
         this.schedulePlayerAttackCheck(companion, Date.now());
       });
       void this.prisma.characterHealingRotationSlot.findMany({ where: { character_id: companion.id, preset: 'HUNT' }, orderBy: { slot_position: 'asc' } }).then((heals) => {
@@ -1083,6 +1089,7 @@ export class GameEngine implements OnModuleDestroy {
 
   private handleRunLoopRestarted(characterId: string, memberIds: string[]) {
     for (const id of memberIds) {
+      this.handledDeaths.delete(id);
       const member = this.players.get(id);
       if (!member) continue;
       this.schedulePlayerRegen(member.id, Date.now() + 1000);
@@ -1152,6 +1159,7 @@ export class GameEngine implements OnModuleDestroy {
       const player = this.players.get(id);
       if (!player) continue;
       if (player.socketId) {
+        this.handledDeaths.delete(player.id);
         player.position = { ...SPAWN_POINT };
         player.health = player.maxHealth;
         player.mana = player.maxMana;
@@ -1378,6 +1386,7 @@ export class GameEngine implements OnModuleDestroy {
       this.prisma.characterHealingRotationSlot.findMany({ where: { character_id: targetId, preset }, orderBy: { slot_position: 'asc' } }),
     ]);
     this.attackRotations.set(targetId, attack.map((slot) => ({ abilityId: slot.ability_id ?? undefined, enabled: slot.enabled, minTargets: slot.min_targets ?? undefined })));
+    await this.refreshPositioningAbilities(targetId);
     this.healingRotations.set(targetId, healing.filter((slot) => slot.slot_position >= 1 && slot.slot_position <= 3).map((slot) => this.healingSlot(slot.slot_position, slot.ability_id ?? undefined, slot.enabled, slot.trigger, 80)));
     this.emitTo(socketId, 'rotation.state', { preset, characterId: targetId, attack, healing, saved: true, cooldowns: { attackGroupReadyAt: this.attackGroupReadyAt.get(targetId) ?? 0, healingGroupReadyAt: this.healingGroupReadyAt.get(targetId) ?? 0, abilityReadyAt: Object.fromEntries(this.abilityCooldowns.get(targetId) ?? []) } });
     const target = this.players.get(targetId);
@@ -1392,6 +1401,7 @@ export class GameEngine implements OnModuleDestroy {
     const targetId = this.rotationTarget(player, characterId);
     const ordered = slots.sort((a, b) => a.position - b.position);
     this.attackRotations.set(targetId, ordered);
+    void this.refreshPositioningAbilities(targetId);
     const target = this.players.get(targetId);
     if (target) this.schedulePlayerAttackCheck(target, Date.now());
     if (this.prisma) void this.prisma.$transaction(async (tx) => { await tx.characterAttackRotationSlot.deleteMany({ where: { character_id: targetId, preset } }); await tx.characterAttackRotationSlot.createMany({ data: ordered.map((slot) => ({ character_id: targetId, preset, slot_position: slot.position, ability_id: slot.abilityId ?? null, enabled: slot.enabled, min_targets: slot.minTargets ?? null })) }); return tx.characterAttackRotationSlot.findMany({ where: { character_id: targetId, preset }, orderBy: { slot_position: 'asc' } }); }).then((attack) => this.emitTo(socketId, 'rotation.state', { preset, characterId: targetId, attack, cooldowns: { attackGroupReadyAt: this.attackGroupReadyAt.get(targetId) ?? 0, healingGroupReadyAt: this.healingGroupReadyAt.get(targetId) ?? 0, abilityReadyAt: Object.fromEntries(this.abilityCooldowns.get(targetId) ?? []) } })).catch((error) => this.emitTo(socketId, 'error', { message: `Falha ao salvar rotação: ${error instanceof Error ? error.message : String(error)}` }));
@@ -1409,6 +1419,21 @@ export class GameEngine implements OnModuleDestroy {
     const target = this.players.get(targetId);
     if (target) this.schedulePlayerHealCheck(target, Date.now());
     if (this.prisma) void this.prisma.$transaction(async (tx) => { await tx.characterHealingRotationSlot.deleteMany({ where: { character_id: targetId, preset } }); await tx.characterHealingRotationSlot.createMany({ data: ordered.map((slot) => ({ character_id: targetId, preset, slot_position: slot.position, ability_id: slot.abilityId ?? null, enabled: slot.enabled, trigger: slot.trigger })) }); return tx.characterHealingRotationSlot.findMany({ where: { character_id: targetId, preset }, orderBy: { slot_position: 'asc' } }); }).then((healing) => this.emitTo(socketId, 'rotation.state', { preset, characterId: targetId, healing, cooldowns: { attackGroupReadyAt: this.attackGroupReadyAt.get(targetId) ?? 0, healingGroupReadyAt: this.healingGroupReadyAt.get(targetId) ?? 0, abilityReadyAt: Object.fromEntries(this.abilityCooldowns.get(targetId) ?? []) } })).catch((error) => this.emitTo(socketId, 'error', { message: `Falha ao salvar cura: ${error instanceof Error ? error.message : String(error)}` }));
+  }
+
+  private async refreshPositioningAbilities(characterId: string) {
+    const slots = this.attackRotations.get(characterId) ?? [];
+    const abilities = await Promise.all(
+      slots
+        .filter((slot) => slot.enabled && slot.abilityId !== undefined)
+        .map((slot) => this.abilityRegistry.get(slot.abilityId!)),
+    );
+    this.playerAI.setPositioningAbilities(
+      characterId,
+      abilities.filter((ability): ability is CombatAbilityDefinition =>
+        !!ability && ability.targetMode === 'directional',
+      ),
+    );
   }
 
   handleAttack(socketId: string, targetId: string) {
@@ -2551,6 +2576,7 @@ export class GameEngine implements OnModuleDestroy {
   }
 
   private schedulePlayerAttackCheck(player: GamePlayer, now: number) {
+    if (player.health <= 0) return;
     const run = this.hunts.getRun(player.id);
     const abyssRun = this.abyss.getRun(player.id);
     if (!run && !abyssRun && !player.targetId) return;
@@ -2623,12 +2649,12 @@ export class GameEngine implements OnModuleDestroy {
         this.huntEventReadyAt.delete(event.characterId);
         const run = this.hunts.getRun(event.characterId);
         if (!run) continue;
-        for (const memberId of run.memberIds) {
+        for (const memberId of run.aliveMemberIds) {
           const member = this.players.get(memberId);
           if (member) this.processPlayerCombatAI(member, now);
         }
         this.hunts.updateRun(event.characterId, now);
-        for (const memberId of run.memberIds) {
+        for (const memberId of run.aliveMemberIds) {
           const member = this.players.get(memberId);
           if (member) this.schedulePlayerAttackCheck(member, now);
         }
@@ -2775,9 +2801,8 @@ export class GameEngine implements OnModuleDestroy {
       this.playerAI.clear(player.id);
       return;
     }
-    const weaponItem = player.equipment.weapon ? getItemDef(player.equipment.weapon.itemId) : undefined;
-    const attackRange = getWeaponDefinition(weaponItem)?.range ?? 1;
-    if (this.playerAI.update(player, run, now, attackRange)) {
+    const previousFacing = player.facing;
+    if (this.playerAI.update(player, run, now) || previousFacing !== player.facing) {
       if (player.socketId) {
         this.emitTo(player.socketId, 'player.moved', { position: { ...player.position }, facing: player.facing });
       } else {
@@ -2790,6 +2815,7 @@ export class GameEngine implements OnModuleDestroy {
   }
 
   private async processPlayerHealing(player: GamePlayer, now: number) {
+    if (player.health <= 0) return;
     if (this.abyss.getRun(player.id)) return;
     for (const slot of this.healingRotations.get(player.id) ?? []) {
       if (!slot.enabled) continue;
@@ -2861,6 +2887,7 @@ export class GameEngine implements OnModuleDestroy {
   }
 
   private async processPlayerAttack(player: GamePlayer, now: number) {
+    if (player.health <= 0) return;
     const run = this.hunts.getRun(player.id);
     const abyssRun = this.abyss.getRun(player.id);
     if (abyssRun) {
@@ -2960,7 +2987,10 @@ export class GameEngine implements OnModuleDestroy {
         if (!member?.socketId) continue;
         this.emitTo(member.socketId, 'creature.remove', { creatureId: creature.id });
         if (run.aliveMemberIds.includes(id)) {
-          this.emitTo(member.socketId, 'creature.death', { creatureId: creature.id, experience: share });
+          this.emitTo(member.socketId, 'creature.death', {
+            creatureId: creature.id,
+            experience: scaledExperienceForLevel(share, member.level),
+          });
         }
       }
     } else {
@@ -2970,23 +3000,51 @@ export class GameEngine implements OnModuleDestroy {
       creature.targetId = null;
       creature.path = [];
       this.movement.releaseEntity(creature.id);
-      this.emitAll('creature.death', { creatureId: creature.id, experience: creature.definition.experience });
+      this.emitAll('creature.death', {
+        creatureId: creature.id,
+        experience: scaledExperienceForLevel(creature.definition.experience, player.level),
+      });
     }
     if (run) {
       for (const id of run.aliveMemberIds) {
         const member = this.players.get(id);
-        if (member) this.grantExperience(member, share, run.memberIds);
+        if (member) this.grantExperience(member, scaledExperienceForLevel(share, member.level), run.memberIds);
       }
     } else {
-      this.grantExperience(player, creature.definition.experience);
+      this.grantExperience(player, scaledExperienceForLevel(creature.definition.experience, player.level));
     }
     this.spawnLoot(creature, player, run);
   }
 
   private playerKilled(player: GamePlayer, now: number) {
+    if (player.health > 0) return;
     const run = this.hunts.getRun(player.id);
     if (run) {
+      if (this.handledDeaths.has(player.id)) return;
+      this.handledDeaths.add(player.id);
+      const penalty = applyDeathExperiencePenalty(player.level, player.experience);
+      player.level = penalty.level;
+      player.experience = penalty.experience;
+      player.attackBase = player.level + 8;
+      player.defenseBase = 5 + Math.floor(player.level / 2);
+      player.recomputeSpeed(getItemDef);
+      player.recomputeVitals(getItemDef);
+      player.targetId = null;
+      player.moveDir = null;
+      player.attackCooldownUntil = 0;
+      this.combatEventReadyAt.delete(`${player.id}:attack`);
+      this.combatEventReadyAt.delete(`${player.id}:heal`);
+      this.emitTo(player.socketId ?? '', 'chat.message', {
+        channel: 'local',
+        from: 'Sistema',
+        text: penalty.lostLevels > 0
+          ? `Você morreu e perdeu 25% de experiência. Caiu para o nível ${player.level}.`
+          : 'Você morreu e perdeu 25% de experiência.',
+      });
+      this.emitStats(player);
+      void this.persistPlayer(player);
       this.emitTo(player.socketId ?? '', 'combat.death', { entityId: player.id });
+      this.emitVisiblePlayer(player.id, 'entity.removed', { id: player.id });
       if (!player.socketId) {
         this.hunts.removeMember(player.id, now);
         void this.persistPlayer(player);

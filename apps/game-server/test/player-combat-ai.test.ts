@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import type { CreatureDefinition, PlayerCombatConfig, Position } from '@aetheria/types';
+import type { CombatAbilityDefinition, CreatureDefinition, PlayerCombatConfig, Position } from '@aetheria/types';
 import { tileKey, tileDistance } from '@aetheria/shared';
 import { PlayerCombatAIService } from '../src/game/combat/player-combat-ai';
 import { CreatureManager } from '../src/game/creature/creature-manager.service';
@@ -84,10 +84,10 @@ describe('PlayerCombatAIService.selectTarget', () => {
     const far = creatures.spawnCreature(makeDefinition(), { x: 5, y: 10, z: 0 });
     const ai = new PlayerCombatAIService();
 
-    const pNear = makePlayer('warrior', { targeting: 'nearest', movement: 'engage' }, { x: 5, y: 5, z: 0 });
+    const pNear = makePlayer('warrior', { targeting: 'nearest', movement: 'maintainDistance' }, { x: 5, y: 5, z: 0 });
     expect(ai.selectTarget(run.creatures.getAll(), pNear)?.id).toBe(near.id);
 
-    const pFar = makePlayer('warrior', { targeting: 'furthest', movement: 'engage' }, { x: 5, y: 5, z: 0 });
+    const pFar = makePlayer('warrior', { targeting: 'furthest', movement: 'maintainDistance' }, { x: 5, y: 5, z: 0 });
     expect(ai.selectTarget(run.creatures.getAll(), pFar)?.id).toBe(far.id);
   });
 
@@ -99,19 +99,49 @@ describe('PlayerCombatAIService.selectTarget', () => {
     high.health = 90;
     const ai = new PlayerCombatAIService();
 
-    const pLow = makePlayer('mage', { targeting: 'lowestHp', movement: 'kite' }, { x: 5, y: 5, z: 0 });
+    const pLow = makePlayer('mage', { targeting: 'lowestHp', movement: 'maintainDistance' }, { x: 5, y: 5, z: 0 });
     expect(ai.selectTarget(run.creatures.getAll(), pLow)?.id).toBe(low.id);
 
-    const pHigh = makePlayer('mage', { targeting: 'highestHp', movement: 'kite' }, { x: 5, y: 5, z: 0 });
+    const pHigh = makePlayer('mage', { targeting: 'highestHp', movement: 'maintainDistance' }, { x: 5, y: 5, z: 0 });
     expect(ai.selectTarget(run.creatures.getAll(), pHigh)?.id).toBe(high.id);
   });
 });
 
 describe('PlayerCombatAIService.update', () => {
-  it('engage avança até o alcance melee e para', () => {
+  it('no modo parado apenas aponta para a maior concentração frontal', () => {
+    const { run, creatures } = makeRun();
+    creatures.spawnCreature(makeDefinition(), { x: 7, y: 5, z: 0 });
+    creatures.spawnCreature(makeDefinition(), { x: 7, y: 6, z: 0 });
+    creatures.spawnCreature(makeDefinition(), { x: 3, y: 5, z: 0 });
+    const player = makePlayer('mage', { targeting: 'nearest', movement: 'hold', frontPositioning: true }, { x: 5, y: 5, z: 0 });
+    const ability = { targetMode: 'directional', rangeTiles: 4, areaConfig: { shape: 'line', width: 3, height: 1 } } as CombatAbilityDefinition;
+    const ai = new PlayerCombatAIService();
+    ai.setPositioningAbilities(player.id, [ability]);
+
+    ai.update(player, run, 0);
+
+    expect(player.position).toEqual({ x: 5, y: 5, z: 0 });
+    expect(player.facing).toBe('east');
+  });
+
+  it('não aponta diagonalmente ao otimizar o posicionamento frontal', () => {
+    const { run, creatures } = makeRun();
+    creatures.spawnCreature(makeDefinition(), { x: 7, y: 3, z: 0 });
+    creatures.spawnCreature(makeDefinition(), { x: 7, y: 4, z: 0 });
+    const player = makePlayer('mage', { targeting: 'nearest', movement: 'hold', frontPositioning: true }, { x: 5, y: 5, z: 0 });
+    const ability = { targetMode: 'directional', rangeTiles: 4, areaConfig: { shape: 'line', width: 3, height: 1 } } as CombatAbilityDefinition;
+    const ai = new PlayerCombatAIService();
+    ai.setPositioningAbilities(player.id, [ability]);
+
+    ai.update(player, run, 0);
+
+    expect(['north', 'east', 'south', 'west']).toContain(player.facing);
+  });
+
+  it('avança até a distância configurada e para', () => {
     const { run, creatures } = makeRun();
     creatures.spawnCreature(makeDefinition(), { x: 5, y: 8, z: 0 });
-    const player = makePlayer('warrior', { targeting: 'nearest', movement: 'engage' }, { x: 5, y: 5, z: 0 });
+    const player = makePlayer('warrior', { targeting: 'nearest', movement: 'maintainDistance', attackRange: 1 }, { x: 5, y: 5, z: 0 });
     const ai = new PlayerCombatAIService();
 
     for (let now = 0; now < 5000; now += 200) {
@@ -120,10 +150,10 @@ describe('PlayerCombatAIService.update', () => {
     expect(tileDistance(player.position, { x: 5, y: 8, z: 0 })).toBe(1);
   });
 
-  it('kite recua da ameaça quando dentro da zona de perigo', () => {
+  it('recua quando o alvo entra na distância configurada', () => {
     const { run, creatures } = makeRun();
     creatures.spawnCreature(makeDefinition(), { x: 5, y: 6, z: 0 });
-    const player = makePlayer('mage', { targeting: 'nearest', movement: 'kite' }, { x: 5, y: 5, z: 0 });
+    const player = makePlayer('mage', { targeting: 'nearest', movement: 'maintainDistance', attackRange: 5 }, { x: 5, y: 5, z: 0 });
     const ai = new PlayerCombatAIService();
 
     const before = tileDistance(player.position, { x: 5, y: 6, z: 0 });
@@ -148,21 +178,21 @@ describe('PlayerCombatAIService.update', () => {
     const creatures = new CreatureManager(movement);
     creatures.spawnCreature(makeDefinition(), { x: 2, y: 3, z: 0 });
     const run = { movement, creatures } as unknown as HuntRun;
-    const player = makePlayer('mage', { targeting: 'nearest', movement: 'kite' }, { x: 2, y: 2, z: 0 });
+    const player = makePlayer('mage', { targeting: 'nearest', movement: 'maintainDistance', attackRange: 5 }, { x: 2, y: 2, z: 0 });
     const ai = new PlayerCombatAIService();
 
     ai.update(player, run, 0);
     expect(movement.getTile(player.position)?.walkable).toBe(true);
   });
 
-  it('kite desvia de parede (desliza em vez de travar)', () => {
+  it('desvia de parede (desliza em vez de travar)', () => {
     const world = makeWorld(5, 7);
     for (let y = 0; y < 7; y++) world.byKey.get(tileKey(0, y, 0))!.walkable = false; // parede oeste
     const movement = new MovementService(world);
     const creatures = new CreatureManager(movement);
     creatures.spawnCreature(makeDefinition(), { x: 2, y: 3, z: 0 });
     const run = { movement, creatures } as unknown as HuntRun;
-    const player = makePlayer('archer', { targeting: 'nearest', movement: 'kite' }, { x: 1, y: 3, z: 0 });
+    const player = makePlayer('archer', { targeting: 'nearest', movement: 'maintainDistance', attackRange: 5 }, { x: 1, y: 3, z: 0 });
     const ai = new PlayerCombatAIService();
 
     const moved = ai.update(player, run, 0);
@@ -176,28 +206,27 @@ describe('PlayerCombatAIService.update', () => {
     const { run, creatures } = makeRun(3, 3);
     const ring: [number, number][] = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 2], [2, 0], [2, 1], [2, 2]];
     for (const [x, y] of ring) creatures.spawnCreature(makeDefinition(), { x, y, z: 0 });
-    const player = makePlayer('mage', { targeting: 'nearest', movement: 'kite' }, { x: 1, y: 1, z: 0 });
+    const player = makePlayer('mage', { targeting: 'nearest', movement: 'maintainDistance', attackRange: 5 }, { x: 1, y: 1, z: 0 });
     const ai = new PlayerCombatAIService();
 
     expect(ai.update(player, run, 0)).toBe(false);
     expect(player.position).toEqual({ x: 1, y: 1, z: 0 });
   });
 
-  it('kite mantém distância dentro do range de ataque', () => {
+  it('avança e recua para manter a distância configurada', () => {
     const { run, creatures } = makeRun(12, 12);
     creatures.spawnCreature(makeDefinition(), { x: 5, y: 6, z: 0 });
-    const player = makePlayer('mage', { targeting: 'nearest', movement: 'kite' }, { x: 5, y: 5, z: 0 });
+    const player = makePlayer('mage', { targeting: 'nearest', movement: 'maintainDistance', attackRange: 5 }, { x: 5, y: 5, z: 0 });
     const ai = new PlayerCombatAIService();
 
-    for (let now = 0; now < 5000; now += 200) ai.update(player, run, now, 5);
+    for (let now = 0; now < 5000; now += 200) ai.update(player, run, now);
     const d = tileDistance(player.position, { x: 5, y: 6, z: 0 });
-    expect(d).toBeGreaterThan(1);
-    expect(d).toBeLessThanOrEqual(5);
+    expect(d).toBe(5);
   });
 
   it('recentraliza quando não há criaturas', () => {
     const { run } = makeRun(12, 12);
-    const player = makePlayer('archer', { targeting: 'nearest', movement: 'kite' }, { x: 1, y: 1, z: 0 });
+    const player = makePlayer('archer', { targeting: 'nearest', movement: 'maintainDistance' }, { x: 1, y: 1, z: 0 });
     const ai = new PlayerCombatAIService();
     const center = { x: 6, y: 6, z: 0 };
 

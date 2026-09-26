@@ -864,6 +864,7 @@ model CharacterCombatConfig {
   targeting    String    @default("nearest")
   movement     String    @default("hold")
   attack_range Int?      @map("attack_range")
+  front_positioning Boolean @default(false) @map("front_positioning")
   updated_at   DateTime  @updatedAt @map("updated_at")
   character    Character @relation(fields: [character_id], references: [id], onDelete: Cascade)
 

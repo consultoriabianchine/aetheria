@@ -458,8 +458,9 @@
                  <div class="combat-config helper-combat-config">
                    <div class="manage-section-title">Combate</div>
                    <div class="metric-row"><span>Alvo</span><select class="combat-select" [ngModel]="combatFor(characterId).targeting" (ngModelChange)="onManageTargeting(characterId, $event)"><option value="nearest">Mais perto</option><option value="furthest">Mais longe</option><option value="lowestHp">Menos HP</option><option value="highestHp">Mais HP</option></select></div>
-                   <div class="metric-row"><span>Movimento</span><select class="combat-select" [ngModel]="combatFor(characterId).movement" (ngModelChange)="onManageMovement(characterId, $event)"><option value="kite">Correr</option><option value="hold">Parado</option><option value="engage">Avançar</option></select></div>
+                   <div class="metric-row"><span>Movimento</span><select class="combat-select" [ngModel]="combatFor(characterId).movement" (ngModelChange)="onManageMovement(characterId, $event)"><option value="maintainDistance">Manter distância</option><option value="hold">Parado</option></select></div>
                    <div class="metric-row"><span>Distância</span><input class="range-input" type="number" min="0" max="15" [ngModel]="combatFor(characterId).attackRange ?? 0" (ngModelChange)="onManageAttackRange(characterId, $event || null)" /></div>
+                   <div class="metric-row"><span>Posicionamento frontal</span><button type="button" class="loop-button" [class.enabled]="combatFor(characterId).frontPositioning ?? false" (click)="onManageFrontPositioning(characterId, !(combatFor(characterId).frontPositioning ?? false))">{{ (combatFor(characterId).frontPositioning ?? false) ? 'ON' : 'OFF' }}</button></div>
                  </div>
                }
             } @else {

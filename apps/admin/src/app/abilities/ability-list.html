@@ -2,7 +2,7 @@
 @if (error()) { <p>{{ error() }}</p> }
 <div class="layout">
   <section class="panel list">
-    @for (ability of abilities(); track ability.abilityId) { <button (click)="edit(ability)">@if (iconSource(ability); as icon) { <img class="ability-thumb" [src]="icon" alt="" /> }<span>#{{ ability.abilityId }} {{ ability.name }}<br><small>{{ ability.ownerType }} / {{ ability.category }} / {{ ability.damageType || 'heal' }}</small></span></button> }
+    @for (ability of abilities(); track ability.abilityId) { <div class="ability-entry"><button class="ability-open" type="button" (click)="edit(ability)">@if (iconSource(ability); as icon) { <img class="ability-thumb" [src]="icon" alt="" /> }<span>#{{ ability.abilityId }} {{ ability.name }}<br><small>{{ ability.ownerType }} / {{ ability.category }} / {{ ability.damageType || 'heal' }}</small></span></button><button class="copy-button" type="button" title="Copiar magia" (click)="$event.stopPropagation(); copy(ability)">Copy</button></div> }
   </section>
   @if (selected(); as draft) {
     <section class="panel">
@@ -26,7 +26,7 @@
       <div class="wide">
         <h3>Icone da magia</h3>
         <div class="icon-import">
-          <div class="icon-preview">@if (draft.abilityId) { <img [src]="iconSource(draft)" alt="Ícone de {{ draft.name }}" /> } @else { <span>?</span> }</div>
+          <div class="icon-preview">@if (draft.icon) { <img [src]="iconSource(draft)" alt="Ícone de {{ draft.name }}" /> } @else { <span>?</span> }</div>
           <div><p>Os ícones ficam em <code>apps/web/src/assets/abilities/&lt;abilityId&gt;.png</code>, por exemplo <code>1.png</code>. PNG 32×32.</p><label class="wide">Caminho do ícone<input [(ngModel)]="draft.icon" placeholder="abilities/1.png" /></label><small>O arquivo deve ser colocado manualmente na pasta de assets.</small></div>
         </div>
       </div>

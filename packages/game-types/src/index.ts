@@ -54,13 +54,15 @@ export type CombatArchetype = 'mage' | 'warrior' | 'archer';
 
 export type CombatTargetingMode = 'nearest' | 'furthest' | 'lowestHp' | 'highestHp';
 
-export type CombatMovementMode = 'kite' | 'hold' | 'engage';
+export type CombatMovementMode = 'maintainDistance' | 'hold';
 
 export interface PlayerCombatConfig {
   targeting: CombatTargetingMode;
   movement: CombatMovementMode;
-  /** Distância de ataque desejada (tiles). Sobrescreve o alcance de kite/engage. */
+  /** Distância desejada do alvo durante o combate (tiles). */
   attackRange?: number;
+  /** Reposiciona/aponta para maximizar magias frontais na Hunt. */
+  frontPositioning?: boolean;
 }
 
 export type DamageType = 'physical' | 'fire' | 'ice' | 'energy' | 'earth' | 'holy' | 'death' | 'arcane';

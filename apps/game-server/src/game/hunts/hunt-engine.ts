@@ -222,6 +222,7 @@ export class HuntEngine {
     const run = this.getRun(characterId);
     if (!run || run.status !== 'active') return;
     run.aliveMemberIds = run.aliveMemberIds.filter((id) => id !== characterId);
+    if (!run.deadMemberIds.includes(characterId)) run.deadMemberIds.push(characterId);
     this.clearCreatureTarget(run, characterId);
     run.movement.releaseEntity(characterId);
     if (run.aliveMemberIds.length === 0) this.handleWipe(run, now);

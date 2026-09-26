@@ -55,7 +55,7 @@ interface CharacterRow {
     secondary_color: number;
     detail_color: number;
   } | null;
-  combatConfig: { targeting: string; movement: string; attack_range: number | null } | null;
+  combatConfig: { targeting: string; movement: string; attack_range: number | null; front_positioning: boolean } | null;
 }
 
 function clampInt(value: unknown, fallback: number): number {
@@ -150,6 +150,7 @@ export class PrismaStore implements Store {
                 targeting: data.combat.targeting,
                 movement: data.combat.movement,
                 attack_range: data.combat.attackRange ?? null,
+                front_positioning: data.combat.frontPositioning ?? false,
               },
             }
           : undefined,
@@ -245,11 +246,13 @@ export class PrismaStore implements Store {
                   targeting: character.combat.targeting,
                   movement: character.combat.movement,
                   attack_range: character.combat.attackRange ?? null,
+                  front_positioning: character.combat.frontPositioning ?? false,
                 },
                 update: {
                   targeting: character.combat.targeting,
                   movement: character.combat.movement,
                   attack_range: character.combat.attackRange ?? null,
+                  front_positioning: character.combat.frontPositioning ?? false,
                 },
               },
             }
@@ -473,8 +476,11 @@ export class PrismaStore implements Store {
       combat: row.combatConfig
         ? {
             targeting: (row.combatConfig.targeting as PlayerCombatConfig['targeting']) ?? 'nearest',
-            movement: (row.combatConfig.movement as PlayerCombatConfig['movement']) ?? 'hold',
+            movement: row.combatConfig.movement === 'kite' || row.combatConfig.movement === 'engage'
+              ? 'maintainDistance'
+              : (row.combatConfig.movement as PlayerCombatConfig['movement']) ?? 'hold',
             attackRange: row.combatConfig.attack_range ?? undefined,
+            frontPositioning: row.combatConfig.front_positioning ?? false,
           }
         : undefined,
     };

@@ -55,7 +55,7 @@ export type ClientMessage =
   | { type: 'party.dismiss'; token: string; characterId: string }
   | { type: 'appearance.list'; token: string; characterId?: string }
   | { type: 'appearance.save'; token: string; characterId?: string; outfitId: number; addonMask: number; colors: { head: number; primary: number; secondary: number; detail: number } }
-  | { type: 'combat.config'; token: string; characterId?: string; targeting: PlayerCombatConfig['targeting']; movement: PlayerCombatConfig['movement']; attackRange?: number }
+  | { type: 'combat.config'; token: string; characterId?: string; targeting: PlayerCombatConfig['targeting']; movement: PlayerCombatConfig['movement']; attackRange?: number; frontPositioning?: boolean }
   | { type: 'combat.weaponElementOverride.apply'; damageType: DamageType }
   | { type: 'combat.weaponElementOverride.remove' }
   | { type: 'ability.cast'; abilityId: number; targetId?: string; direction?: Direction; position?: Position }

@@ -169,7 +169,7 @@ export function calculateCreatureHealthBarWidth(spriteWidth: number, isBoss = fa
 }
 
 /** Intervalo de movimento de referência (ms por tile, com speed = 1). */
-export const BASE_MOVE_INTERVAL_MS = 200;
+export const BASE_MOVE_INTERVAL_MS = 250;
 
 /** Intervalo de movimento do jogador (ms por tile). Múltiplo do TICK_MS para
  *  passos uniformes (sem "anda-e-para"). */
@@ -283,16 +283,14 @@ export const ARCHETYPES: Record<CombatArchetype, ArchetypeDefinition> = {
 // IA de combate do personagem (Hunts)
 
 export type CombatAIProfile = PlayerCombatConfig & {
-  engageRange: number;
-  kiteDangerDist: number;
-  kiteSafeDist: number;
+  defaultDistance: number;
 };
 
 /** Comportamento padrão por classe. Pode ser sobrescrito por personagem (combat). */
 export const PLAYER_AI: Record<CombatArchetype, CombatAIProfile> = {
-  warrior: { targeting: 'nearest', movement: 'engage', engageRange: 1, kiteDangerDist: 2, kiteSafeDist: 4 },
-  mage: { targeting: 'lowestHp', movement: 'kite', engageRange: 5, kiteDangerDist: 3, kiteSafeDist: 5 },
-  archer: { targeting: 'nearest', movement: 'kite', engageRange: 6, kiteDangerDist: 3, kiteSafeDist: 6 },
+  warrior: { targeting: 'nearest', movement: 'maintainDistance', defaultDistance: 1 },
+  mage: { targeting: 'lowestHp', movement: 'maintainDistance', defaultDistance: 5 },
+  archer: { targeting: 'nearest', movement: 'maintainDistance', defaultDistance: 6 },
 };
 
 export const WEAPON_ELEMENT_OVERRIDE_CONFIG = {
@@ -366,6 +364,25 @@ export function xpForLevel(level: number): number {
   return 50 * level * level - 150 * level + 200;
 }
 
+/** Multiplicadores de XP da progressão permanente por faixa de nível. */
+export const EXPERIENCE_STAGES = [
+  { minLevel: 1, maxLevel: 50, multiplier: 100 },
+  { minLevel: 51, maxLevel: 100, multiplier: 50 },
+  { minLevel: 101, maxLevel: 150, multiplier: 20 },
+  { minLevel: 151, maxLevel: 200, multiplier: 10 },
+  { minLevel: 201, maxLevel: 300, multiplier: 5 },
+  { minLevel: 301, maxLevel: Infinity, multiplier: 2 },
+] as const;
+
+export function experienceMultiplierForLevel(level: number): number {
+  const normalizedLevel = Math.max(1, Math.floor(level));
+  return EXPERIENCE_STAGES.find((stage) => normalizedLevel <= stage.maxLevel)?.multiplier ?? 1;
+}
+
+export function scaledExperienceForLevel(amount: number, level: number): number {
+  return Math.max(0, Math.round(amount * experienceMultiplierForLevel(level)));
+}
+
 /** Nome original do jogo/mundo. */
 export const GAME_NAME = 'Aetheria Online';
 
@@ -375,21 +392,7 @@ export const MAP_SEED = 0xA3E7;
 export const SPAWN_POINT = { x: 32, y: 32, z: MAP_Z };
 
 /** NPCs do MVP. */
-export const NPC_TEMPLATES: Record<string, NpcTemplate> = {
-  guardian: {
-    id: 'guardian',
-    name: 'Guardião Aether',
-    dialogue: {
-      id: 'guardian',
-      title: 'Guardião Aether',
-      lines: [
-        'Bem-vindo a Aetheria, viajante.',
-        'As criaturas ao leste são fracas — o Lobo da Névoa ao sul exige mais coragem.',
-        'Derrote os Goblins Rastejadores para ganhar experiência e saque.',
-      ],
-    },
-  },
-};
+export const NPC_TEMPLATES: Record<string, NpcTemplate> = {};
 
 /** Tempo de respawn padrão de criaturas (ms). */
 export const MONSTER_RESPAWN_MS = 8000;

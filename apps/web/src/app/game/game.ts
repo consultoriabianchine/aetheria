@@ -1008,15 +1008,19 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   }
   onManageTargeting(memberId: string, value: string) {
     const c = this.combatFor(memberId);
-    this.state.setCombatConfig(memberId, value as PlayerCombatConfig['targeting'], c.movement, c.attackRange);
+    this.state.setCombatConfig(memberId, value as PlayerCombatConfig['targeting'], c.movement, c.attackRange, c.frontPositioning);
   }
   onManageMovement(memberId: string, value: string) {
     const c = this.combatFor(memberId);
-    this.state.setCombatConfig(memberId, c.targeting, value as PlayerCombatConfig['movement'], c.attackRange);
+    this.state.setCombatConfig(memberId, c.targeting, value as PlayerCombatConfig['movement'], c.attackRange, c.frontPositioning);
   }
   onManageAttackRange(memberId: string, value: number | null) {
     const c = this.combatFor(memberId);
-    this.state.setCombatConfig(memberId, c.targeting, c.movement, value ?? undefined);
+    this.state.setCombatConfig(memberId, c.targeting, c.movement, value ?? undefined, c.frontPositioning);
+  }
+  onManageFrontPositioning(memberId: string, enabled: boolean) {
+    const c = this.combatFor(memberId);
+    this.state.setCombatConfig(memberId, c.targeting, c.movement, c.attackRange, enabled);
   }
   private allowInventoryAction(memberId: string, action: string): boolean {
     const key = `${memberId}:${action}`;

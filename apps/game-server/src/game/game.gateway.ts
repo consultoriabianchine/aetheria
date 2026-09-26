@@ -191,8 +191,8 @@ export class GameGateway implements OnGatewayConnection, OnGatewayDisconnect {
   }
 
   @SubscribeMessage('combat.config')
-  onCombatConfig(socket: Socket, payload: { token: string; characterId?: string; targeting: string; movement: string; attackRange?: number }) {
-    this.engine.handleCombatConfig(socket.id, payload.token, payload.targeting, payload.movement, payload.attackRange, payload.characterId);
+  onCombatConfig(socket: Socket, payload: { token: string; characterId?: string; targeting: string; movement: string; attackRange?: number; frontPositioning?: boolean }) {
+    this.engine.handleCombatConfig(socket.id, payload.token, payload.targeting, payload.movement, payload.attackRange, payload.characterId, payload.frontPositioning);
   }
 
   @SubscribeMessage('combat.weaponElementOverride.apply')

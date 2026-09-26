@@ -1,8 +1,8 @@
 import { PLAYER_AI } from '@aetheria/config';
 import { tileDistance } from '@aetheria/shared';
-import type { PlayerCombatConfig, Position } from '@aetheria/types';
+import type { CombatAbilityDefinition, PlayerCombatConfig, Position } from '@aetheria/types';
 import { CreatureEntity } from '../creature/creature.entity';
-import { ALL_DIRECTIONS, Direction, directionFromDelta } from '../creature/direction';
+import { ALL_DIRECTIONS, CARDINAL_DIRECTIONS, DIRECTION_DELTAS, Direction, directionFromDelta } from '../creature/direction';
 import { findPath } from '../creature/pathfinding';
 import type { GamePlayer } from '../engine/world';
 import type { HuntRun } from '../hunts/hunt-engine';
@@ -19,11 +19,16 @@ function sign(v: number): number {
 
 /**
  * IA de combate do personagem nas Hunts (arena). Decide alvo e movimento por
- * classe/configuração: warrior engaja melee, mage/archer fazem kite (recuam via
- * A* enquanto atacam), ou ficam parados (hold). Ataque continua independente.
+ * classe/configuração: mantém a distância configurada, ou fica parado (hold).
+ * Ataque continua independente.
  */
 export class PlayerCombatAIService {
   private paths = new Map<string, PlayerPathState>();
+  private positioningAbilities = new Map<string, CombatAbilityDefinition[]>();
+
+  setPositioningAbilities(characterId: string, abilities: CombatAbilityDefinition[]) {
+    this.positioningAbilities.set(characterId, abilities);
+  }
 
   /** Seleciona a criatura-alvo viva (mesmo andar) segundo o modo configurado. */
   selectTarget(creatures: Iterable<CreatureEntity>, player: GamePlayer): CreatureEntity | null {
@@ -59,7 +64,7 @@ export class PlayerCombatAIService {
   }
 
   /** Decide e executa um passo do jogador na arena. Retorna true se moveu. */
-  update(player: GamePlayer, run: HuntRun, now: number, attackRange?: number): boolean {
+  update(player: GamePlayer, run: HuntRun, now: number): boolean {
     if (now < player.nextMoveAt) return false;
     const profile = PLAYER_AI[player.archetype];
     const movement = player.combat.movement;
@@ -68,40 +73,107 @@ export class PlayerCombatAIService {
       (c) => c.state !== 'DEAD' && c.position.z === player.position.z,
     );
 
-    if (movement === 'hold') {
+    if (movement === 'hold' && !player.combat.frontPositioning) {
       this.paths.delete(player.id);
       return false;
     }
 
     if (alive.length === 0) {
+      if (movement === 'hold') {
+        this.paths.delete(player.id);
+        return false;
+      }
       // Sem criaturas: recentraliza no meio da arena em vez de ficar preso na parede.
       return this.recenter(player, run, now);
     }
 
-    if (movement === 'engage') {
-      const target = this.selectTarget(alive, player);
-      if (!target) return false;
-      const engageRange = configuredRange ?? profile.engageRange;
-      if (tileDistance(player.position, target.position) <= engageRange) {
-        this.paths.delete(player.id);
-        return false;
+    const target = this.selectTarget(alive, player);
+    if (!target) return false;
+    const desiredDistance = configuredRange ?? profile.defaultDistance;
+    const distance = tileDistance(player.position, target.position);
+
+    if (player.combat.frontPositioning && (movement === 'hold' || distance === desiredDistance)) {
+      const plan = this.bestFrontPlan(player, run, alive, target, movement === 'hold' ? undefined : desiredDistance);
+      if (plan) {
+        const facingChanged = player.facing !== plan.direction;
+        player.facing = plan.direction;
+        if (movement === 'hold' || plan.position.x === player.position.x && plan.position.y === player.position.y) {
+          this.paths.delete(player.id);
+          return false;
+        }
+        const moved = this.stepTo(player, run, plan.position, now, [player.id, target.id]);
+        if (moved) player.facing = plan.direction;
+        return moved || facingChanged;
       }
-      return this.stepTo(player, run, target.position, now, [player.id, target.id]);
     }
 
-    // kite: foge da criatura mais próxima (ameaça) quando dentro da zona de perigo.
-    const threat = this.nearestCreature(alive, player);
-    if (!threat) return false;
-    const baseSafe = configuredRange ?? profile.kiteSafeDist;
-    const kiteSafe = Math.max(profile.kiteDangerDist + 1, Math.min(baseSafe, attackRange ?? baseSafe));
-    if (tileDistance(player.position, threat.position) >= kiteSafe) {
+    if (distance === desiredDistance) {
       this.paths.delete(player.id);
       return false;
     }
-    const goal = this.retreatGoal(player.position, threat.position, kiteSafe);
-    if (this.stepTo(player, run, goal, now)) return true;
-    // Sem rota A* (parede/obstáculo no caminho) ou cercado: desvia pela parede.
-    return this.stepAwayFrom(player, run, threat.position, now);
+    if (distance > desiredDistance) {
+      return this.stepTo(player, run, target.position, now, [player.id, target.id]);
+    }
+    // Recua um passo por vez para não ultrapassar a distância desejada.
+    return this.stepAwayFrom(player, run, target.position, now);
+  }
+
+  private bestFrontPlan(
+    player: GamePlayer,
+    run: HuntRun,
+    creatures: CreatureEntity[],
+    target: CreatureEntity,
+    desiredDistance?: number,
+  ): { position: Position; direction: Direction; score: number } | null {
+    const abilities = this.positioningAbilities.get(player.id)?.filter((ability) => ability.targetMode === 'directional');
+    if (!abilities || abilities.length === 0) return null;
+
+    const candidates: Position[] = [];
+    const radius = desiredDistance === undefined ? 0 : 4;
+    for (let y = player.position.y - radius; y <= player.position.y + radius; y++) {
+      for (let x = player.position.x - radius; x <= player.position.x + radius; x++) {
+        const position = { x, y, z: player.position.z };
+        if (!run.movement.canOccupy(position, [player.id, target.id])) continue;
+        if (desiredDistance !== undefined && tileDistance(position, target.position) !== desiredDistance) continue;
+        if (x === player.position.x && y === player.position.y) {
+          candidates.push(position);
+          continue;
+        }
+        const path = findPath(run.movement, { start: player.position, goal: position, exceptIds: [player.id, target.id], maxCost: 20 });
+        if (path?.length) candidates.push(position);
+      }
+    }
+
+    let best: { position: Position; direction: Direction; score: number; travel: number } | null = null;
+    for (const position of candidates) {
+      for (const direction of CARDINAL_DIRECTIONS) {
+        const score = this.frontScore(position, direction, creatures, abilities);
+        const travel = tileDistance(player.position, position);
+        if (!best || score > best.score || score === best.score && travel < best.travel) {
+          best = { position, direction, score, travel };
+        }
+      }
+    }
+    return best && best.score > 0 ? best : null;
+  }
+
+  private frontScore(position: Position, direction: Direction, creatures: CreatureEntity[], abilities: CombatAbilityDefinition[]): number {
+    const delta = DIRECTION_DELTAS[direction];
+    const keys = new Set<string>();
+    for (const ability of abilities) {
+      const range = Math.max(1, ability.rangeTiles);
+      const width = Math.max(1, ability.areaConfig?.width ?? 1);
+      const shape = ability.areaConfig?.shape ?? 'line';
+      for (let distance = 1; distance <= range; distance++) {
+        const half = shape === 'cone' ? Math.max(0, Math.floor((width * distance) / 2)) : Math.floor((width - 1) / 2);
+        for (let side = -half; side <= half; side++) {
+          const x = position.x + delta.dx * distance + -delta.dy * side;
+          const y = position.y + delta.dy * distance + delta.dx * side;
+          keys.add(`${x},${y},${position.z}`);
+        }
+      }
+    }
+    return creatures.filter((creature) => keys.has(`${creature.position.x},${creature.position.y},${creature.position.z}`)).length;
   }
 
   private recenter(player: GamePlayer, run: HuntRun, now: number): boolean {
@@ -116,28 +188,6 @@ export class PlayerCombatAIService {
       return false;
     }
     return this.stepTo(player, run, center, now);
-  }
-
-  private retreatGoal(from: Position, threat: Position, dist: number): Position {
-    const dx = sign(from.x - threat.x);
-    const dy = sign(from.y - threat.y);
-    if (dx === 0 && dy === 0) {
-      return { x: from.x, y: from.y - dist, z: from.z };
-    }
-    return { x: from.x + dx * dist, y: from.y + dy * dist, z: from.z };
-  }
-
-  private nearestCreature(creatures: CreatureEntity[], player: GamePlayer): CreatureEntity | null {
-    let best: CreatureEntity | null = null;
-    let bestDist = Infinity;
-    for (const c of creatures) {
-      const d = tileDistance(player.position, c.position);
-      if (d < bestDist) {
-        bestDist = d;
-        best = c;
-      }
-    }
-    return best;
   }
 
   private stepTo(
@@ -218,5 +268,6 @@ export class PlayerCombatAIService {
 
   clear(characterId: string) {
     this.paths.delete(characterId);
+    this.positioningAbilities.delete(characterId);
   }
 }
