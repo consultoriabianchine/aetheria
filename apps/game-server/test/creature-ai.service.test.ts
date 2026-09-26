@@ -5,7 +5,6 @@ import { CreatureEntity } from '../src/game/creature/creature.entity';
 import { MovementService } from '../src/game/creature/movement.service';
 import { findPath } from '../src/game/creature/pathfinding';
 import { Direction } from '../src/game/creature/direction';
-import { RANGED_PREFERRED_MIN } from '@aetheria/config';
 import type { WorldMapData } from '../src/game/engine/world-map';
 import type { CreatureDefinition, CombatArchetype, MapTile, Position } from '@aetheria/types';
 import { tileKey, tileDistance } from '@aetheria/shared';
@@ -379,15 +378,13 @@ describe('CreatureAIService', () => {
       expect(tileDistance(h.creature.position, { x: 5, y: 9, z: 0 })).toBe(1);
     });
 
-    it('usa o alcance da magia (getCreatureAttackRange) em vez do attackRange da definição', () => {
+    it('usa o alcance da magia para atacar sem transformar melee em ranged', () => {
       const h = makeHarness(makeDefinition({ attackRange: 1, movementSpeed: 1 }), { x: 5, y: 5, z: 0 }, [
         makePlayer('p1', { x: 5, y: 6, z: 0 }),
       ], { aggressive: true, getCreatureAttackRange: () => 6 });
       for (let now = 0; now < 5000 && h.creature.state !== 'ATTACK'; now += 100) step(h, now);
       expect(h.creature.state).toBe('ATTACK');
-      // Com a magia de range 6, a criatura se comporta como ranged e mantém a
-      // distância preferida (não cola no alvo, como faria com attackRange = 1).
-      expect(tileDistance(h.creature.position, { x: 5, y: 6, z: 0 })).toBeGreaterThanOrEqual(RANGED_PREFERRED_MIN);
+      expect(tileDistance(h.creature.position, { x: 5, y: 6, z: 0 })).toBe(1);
     });
   });
 });

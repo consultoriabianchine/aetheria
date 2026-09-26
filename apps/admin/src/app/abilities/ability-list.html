@@ -2,7 +2,19 @@
 @if (error()) { <p>{{ error() }}</p> }
 <div class="layout">
   <section class="panel list">
-    @for (ability of abilities(); track ability.abilityId) { <div class="ability-entry"><button class="ability-open" type="button" (click)="edit(ability)">@if (iconSource(ability); as icon) { <img class="ability-thumb" [src]="icon" alt="" /> }<span>#{{ ability.abilityId }} {{ ability.name }}<br><small>{{ ability.ownerType }} / {{ ability.category }} / {{ ability.damageType || 'heal' }}</small></span></button><button class="copy-button" type="button" title="Copiar magia" (click)="$event.stopPropagation(); copy(ability)">Copy</button></div> }
+    <div class="filters">
+      <input placeholder="Buscar ID, nome ou slug" [ngModel]="search()" (ngModelChange)="search.set($event)" />
+      <select [ngModel]="ownerFilter()" (ngModelChange)="ownerFilter.set($event)"><option value="">Todos owners</option>@for (owner of owners; track owner) { <option [value]="owner">{{ owner }}</option> }</select>
+      <select [ngModel]="classFilter()" (ngModelChange)="classFilter.set($event)"><option value="">Todas classes</option>@for (pc of playerClasses; track pc) { <option [value]="pc">{{ pc }}</option> }</select>
+      <select [ngModel]="categoryFilter()" (ngModelChange)="categoryFilter.set($event)"><option value="">Todas categorias</option>@for (category of categories; track category) { <option [value]="category">{{ category }}</option> }</select>
+      <select [ngModel]="targetModeFilter()" (ngModelChange)="targetModeFilter.set($event)"><option value="">Todos alvos</option>@for (mode of targetModes; track mode) { <option [value]="mode">{{ mode }}</option> }</select>
+      <select [ngModel]="damageFilter()" (ngModelChange)="damageFilter.set($event)"><option value="">Todos danos</option>@for (type of damageTypes; track type) { <option [value]="type">{{ type }}</option> }</select>
+      <select [ngModel]="statusFilter()" (ngModelChange)="statusFilter.set($event)"><option value="all">Todos status</option><option value="enabled">Ativas</option><option value="disabled">Desativadas</option></select>
+      <button type="button" (click)="clearFilters()">Limpar</button>
+    </div>
+    <div class="filter-meta">{{ filteredAbilities().length }} de {{ abilities().length }} habilidades</div>
+    @for (ability of filteredAbilities(); track ability.abilityId) { <div class="ability-entry"><button class="ability-open" type="button" (click)="edit(ability)">@if (iconSource(ability); as icon) { <img class="ability-thumb" [src]="icon" alt="" /> }<span>#{{ ability.abilityId }} {{ ability.name }}<br><small>{{ ability.ownerType }} / {{ ability.category }} / {{ ability.damageType || 'heal' }}</small></span></button><button class="copy-button" type="button" title="Copiar magia" (click)="$event.stopPropagation(); copy(ability)">Copy</button></div> }
+    @empty { <p class="filter-meta">Nenhuma habilidade encontrada.</p> }
   </section>
   @if (selected(); as draft) {
     <section class="panel">

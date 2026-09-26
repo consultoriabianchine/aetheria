@@ -42,10 +42,7 @@ export interface CreatureAIHooks {
   broadcast(event: string, data: unknown): void;
   /** A criatura acertou um jogador: aplica dano, atualiza HP e trata morte. */
   onAttackPlayer(creature: CreatureEntity, target: CreatureTarget, amount: number, critical: boolean, now: number): void;
-  /**
-   * Alcance de ataque efetivo (tiles). Quando a criatura tem magias atribuídas,
-   * é o maior `rangeTiles` delas; senão, o `attackRange` da definição.
-   */
+  /** Alcance de posicionamento da criatura (tiles), independente das magias. */
   getCreatureAttackRange?(creature: CreatureEntity): number;
 }
 
@@ -176,14 +173,14 @@ export class CreatureAIService {
 
   // ------------------------------------------------------------ detecção
 
-  /** Alcance de ataque efetivo (magia atribuída tem precedência sobre a definição). */
+  /** Alcance de posicionamento; magias são resolvidas depois que o ataque começa. */
   private effectiveAttackRange(creature: CreatureEntity): number {
-    return Math.max(0, this.hooks.getCreatureAttackRange?.(creature) ?? creature.definition.attackRange);
+    return Math.max(0, creature.definition.attackRange);
   }
 
-  /** true se a criatura ataca à distância (ranged). */
+  /** O posicionamento ranged depende do ataque base, não do alcance de magias. */
   private isRanged(creature: CreatureEntity): boolean {
-    return this.effectiveAttackRange(creature) > 1;
+    return creature.definition.attackRange > 1;
   }
 
   /** Semente de tie-break estável por criatura (varia caminhos de custo igual). */

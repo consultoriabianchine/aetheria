@@ -23,6 +23,7 @@ import {
   PICKUP_RANGE,
   PLAYER_AI,
   scaledExperienceForLevel,
+  skillExperienceMultiplierForLevel,
   SPAWN_POINT,
   TICK_MS,
   VIEW_DISTANCE_X,
@@ -313,6 +314,7 @@ export class GameEngine implements OnModuleDestroy {
           chance: row.chance,
           cooldownOverrideMs: row.cooldown_override_ms ?? undefined,
           parameters: (row.parameters as Record<string, number> | null) ?? undefined,
+          conditions: (row.conditions as import('@aetheria/types').AbilityUseConditions | null) ?? ability.conditions,
         });
         grouped.set(row.monster_id, list);
       }
@@ -1336,7 +1338,8 @@ export class GameEngine implements OnModuleDestroy {
         player.skills,
         player.skillProgress,
         'magic',
-        magicTrainingGain(ability.manaCost ?? 0, ARCHETYPES[player.archetype].magicTrainingMultiplier),
+        magicTrainingGain(ability.manaCost ?? 0, ARCHETYPES[player.archetype].magicTrainingMultiplier) *
+          skillExperienceMultiplierForLevel('magic', player.skills.magic),
       );
       player.skills = magicResult.skills;
       player.skillProgress = magicResult.progress;
@@ -2435,9 +2438,17 @@ export class GameEngine implements OnModuleDestroy {
     for (const spell of assignments) {
       const ability = spell.ability;
       if (now < (ready.get(ability.abilityId) ?? 0)) continue;
-      if (this.nextCombatRandomForId(creature.id, now) >= spell.chance) continue;
+      if (spell.conditions?.selfHpBelowPercent !== undefined) {
+        const hpPercent = creature.maxHealth > 0 ? (creature.health / creature.maxHealth) * 100 : 100;
+        if (hpPercent >= spell.conditions.selfHpBelowPercent) continue;
+      }
+      if (this.nextCombatRandomForId(creature.id, now + ability.abilityId) >= spell.chance) continue;
       ready.set(ability.abilityId, now + (spell.cooldownOverrideMs ?? ability.cooldownMs));
       this.monsterAbilityReadyAt.set(creature.id, ready);
+      if (ability.category === 'heal') {
+        this.healCreatureWithAbility(creature, spell, now);
+        return;
+      }
       const damageType = ability.damageType ?? 'physical';
       const power = this.rollMonsterSpellDamage(creature, spell, amount, now);
       const targets = this.resolveMonsterSpellTargets(creature, ability, primary);
@@ -2446,7 +2457,7 @@ export class GameEngine implements OnModuleDestroy {
         return;
       }
       const center = primary?.position ?? creature.position;
-      const delayMs = this.emitMonsterSpellProjectile(creature, ability, primary, center);
+      const delayMs = this.emitMonsterSpellVisual(creature, ability, primary, center);
       for (const target of targets) {
         this.creatureAttackPlayer(creature, target.id, power, critical, now, damageType, delayMs);
       }
@@ -2455,12 +2466,9 @@ export class GameEngine implements OnModuleDestroy {
     this.creatureAttackPlayer(creature, playerId, amount, critical, now);
   }
 
-  /** Alcance de ataque efetivo da criatura (magia atribuída tem precedência). */
+  /** Alcance de posicionamento da criatura; magias são avaliadas no ataque. */
   private creatureAttackRange(creature: CreatureEntity): number {
-    const creatureId = creature.definition.creatureId;
-    const spells = creatureId ? (this.monsterAbilities.get(creatureId) ?? []) : [];
-    if (spells.length === 0) return creature.definition.attackRange;
-    return Math.max(creature.definition.attackRange, ...spells.map((s) => s.ability.rangeTiles));
+    return creature.definition.attackRange;
   }
 
   /** Sorteia o dano bruto base da magia entre min/max (fallback: dano melee). */
@@ -2473,8 +2481,32 @@ export class GameEngine implements OnModuleDestroy {
     const hi = max ?? min!;
     const power = randomIntInRange(lo, hi, () => this.nextCombatRandomForId(creature.id, now + spell.ability.abilityId));
     const flat = params.flatPower ?? 0;
-    const multiplier = params.powerMultiplier ?? spell.ability.defaultParameters?.['powerMultiplier'] ?? 1;
-    return Math.max(1, Math.round(power * multiplier) + Math.round(flat));
+    return Math.max(1, Math.round(power) + Math.round(flat));
+  }
+
+  private healCreatureWithAbility(creature: CreatureEntity, spell: ResolvedMonsterSpell, now: number) {
+    if (creature.health >= creature.maxHealth) return;
+    const params = spell.parameters ?? {};
+    const min = params.minHeal ?? params.minDamage ?? params.power ?? 1;
+    const max = params.maxHeal ?? params.maxDamage ?? min;
+    const amount = Math.min(
+      creature.maxHealth - creature.health,
+      randomIntInRange(Math.min(min, max), Math.max(min, max), () => this.nextCombatRandomForId(creature.id, now + spell.ability.abilityId)),
+    );
+    if (amount <= 0) return;
+    creature.health += amount;
+    this.emitCombatEvent(creature, 'combat.heal', {
+      sourceId: creature.id,
+      targetId: creature.id,
+      amount,
+      targetHealth: creature.health,
+      maxHealth: creature.maxHealth,
+    });
+    this.emitCombatEvent(creature, 'entity.health', {
+      id: creature.id,
+      health: creature.health,
+      maxHealth: creature.maxHealth,
+    });
   }
 
   /** Resolve os alvos (players) afetados pela magia, conforme o targetMode. */
@@ -2501,11 +2533,27 @@ export class GameEngine implements OnModuleDestroy {
     return out;
   }
 
-  /** Emite o projétil/impacto da magia e retorna o tempo de viagem em ms. */
-  private emitMonsterSpellProjectile(creature: CreatureEntity, ability: CombatAbilityDefinition, primary: GamePlayer | undefined, center: Position): number {
+  /** Emite o visual da magia e retorna o tempo de viagem em ms. */
+  private emitMonsterSpellVisual(creature: CreatureEntity, ability: CombatAbilityDefinition, primary: GamePlayer | undefined, center: Position): number {
     const visual = this.resolveAbilityVisual(ability);
     if ((!visual?.projectile && !visual?.impact) || !primary) return 0;
     const travelTimeMs = visual.projectile ? this.projectileTravelTimeMs(creature.position, center, visual) : 0;
+    if (ability.category === 'area' || ability.targetMode === 'directional' || ability.targetMode === 'area_enemy' || ability.targetMode === 'ground') {
+      const tiles = ability.targetMode === 'directional'
+        ? this.directionalTiles(creature.position, creature.facing as Direction, ability.rangeTiles, ability.areaConfig)
+        : this.groundTiles(center, ability.areaConfig);
+      this.emitCombatEvent(primary, 'combat.area', {
+        attackerId: creature.id,
+        targetId: primary.id,
+        from: { ...creature.position },
+        center: { ...center },
+        tiles,
+        projectile: visual.projectile,
+        impact: visual.impact,
+        travelTimeMs,
+      });
+      return travelTimeMs;
+    }
     this.emitCombatEvent(primary, 'combat.projectile', {
       attackerId: creature.id,
       targetId: primary.id,
@@ -2961,7 +3009,12 @@ export class GameEngine implements OnModuleDestroy {
 
   private trainAttackSkill(player: GamePlayer) {
     const skill: CombatSkill = ARCHETYPES[player.archetype].primarySkill;
-    const result = trainCombatSkill(player.skills, player.skillProgress, skill, combatTrainingGain(skill));
+    const result = trainCombatSkill(
+      player.skills,
+      player.skillProgress,
+      skill,
+      combatTrainingGain(skill) * skillExperienceMultiplierForLevel(skill, player.skills[skill]),
+    );
     player.skills = result.skills;
     player.skillProgress = result.progress;
     this.emitSkillEvents(player, result.events);

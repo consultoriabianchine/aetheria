@@ -143,7 +143,7 @@ export interface MonsterAbilityAssignment {
    * Parâmetros da magia no contexto da criatura. Para `power_source:
    * monster_parameters`, as chaves convencionais são `minDamage` e `maxDamage`
    * (dano bruto base, sorteado uniformemente entre os dois) e opcionalmente
-   * `flatPower`/`powerMultiplier` para escalar o dano.
+   * `flatPower` para adicionar dano fixo.
    */
   parameters?: Record<string, number>;
   conditions?: AbilityUseConditions;
@@ -156,6 +156,7 @@ export interface ResolvedMonsterSpell {
   chance: number;
   cooldownOverrideMs?: number;
   parameters?: Record<string, number>;
+  conditions?: AbilityUseConditions;
 }
 
 export interface AttackRotationSlot {

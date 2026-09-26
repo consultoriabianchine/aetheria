@@ -321,10 +321,39 @@ export const COMBAT_FORMULA_CONFIG = {
 } as const;
 
 export const SKILL_PROGRESSION_CONFIG = {
-  melee: { base: 75, quadratic: 15, actionGain: 1.5 },
-  distance: { base: 75, quadratic: 15, actionGain: 1.5 },
+  melee: { base: 75, quadratic: 15, actionGain: 4.0 },
+  distance: { base: 75, quadratic: 15, actionGain: 4.0 },
   magic: { base: 100, quadratic: 25, actionGain: 1.5, manaGainMultiplier: 0.15, minimumGain: 1 },
 } as const;
+
+/** Multiplicadores de treino por nível da skill. */
+export const SKILL_EXPERIENCE_STAGES = {
+  melee: [
+    { minLevel: 1, maxLevel: 50, multiplier: 10 },
+    { minLevel: 51, maxLevel: 100, multiplier: 5 },
+    { minLevel: 101, maxLevel: 150, multiplier: 3 },
+    { minLevel: 151, maxLevel: 200, multiplier: 2 },
+    { minLevel: 201, maxLevel: Infinity, multiplier: 1 },
+  ],
+  distance: [
+    { minLevel: 1, maxLevel: 50, multiplier: 10 },
+    { minLevel: 51, maxLevel: 100, multiplier: 5 },
+    { minLevel: 101, maxLevel: 150, multiplier: 3 },
+    { minLevel: 151, maxLevel: 200, multiplier: 2 },
+    { minLevel: 201, maxLevel: Infinity, multiplier: 1 },
+  ],
+  magic: [
+    { minLevel: 1, maxLevel: 50, multiplier: 8 },
+    { minLevel: 51, maxLevel: 100, multiplier: 4 },
+    { minLevel: 101, maxLevel: 150, multiplier: 2 },
+    { minLevel: 151, maxLevel: Infinity, multiplier: 1 },
+  ],
+} as const;
+
+export function skillExperienceMultiplierForLevel(skill: 'melee' | 'distance' | 'magic', level: number): number {
+  const normalizedLevel = Math.max(1, Math.floor(level));
+  return SKILL_EXPERIENCE_STAGES[skill].find((stage) => normalizedLevel <= stage.maxLevel)?.multiplier ?? 1;
+}
 
 /** Número máximo de personagens por conta. */
 export const MAX_CHARACTERS_PER_ACCOUNT = 3;

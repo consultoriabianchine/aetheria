@@ -115,7 +115,7 @@ describe('combat formulas', () => {
 
   it('calcula XP de skill e suporta múltiplos level-ups', () => {
     expect(skillXpRequired('melee', 10)).toBe(1575);
-    expect(combatTrainingGain('melee')).toBe(1.5);
+    expect(combatTrainingGain('melee')).toBe(4.0);
     const current: CharacterSkills = { melee: 10, distance: 10, magic: 10 };
     const result = trainCombatSkill(current, [], 'melee', skillXpRequired('melee', 10) + skillXpRequired('melee', 11));
     expect(result.skills.melee).toBe(12);

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { experienceMultiplierForLevel, scaledExperienceForLevel } from '@aetheria/config';
+import { experienceMultiplierForLevel, scaledExperienceForLevel, skillExperienceMultiplierForLevel } from '@aetheria/config';
 
 describe('experience stages', () => {
   it.each([
@@ -27,5 +27,26 @@ describe('experience stages', () => {
 
   it('não produz XP negativa', () => {
     expect(scaledExperienceForLevel(-10, 1)).toBe(0);
+  });
+
+  it.each([
+    ['melee', 1, 10],
+    ['melee', 50, 10],
+    ['melee', 51, 5],
+    ['melee', 101, 3],
+    ['melee', 151, 2],
+    ['melee', 201, 1],
+    ['distance', 50, 10],
+    ['distance', 100, 5],
+    ['distance', 150, 3],
+    ['distance', 200, 2],
+    ['distance', 201, 1],
+    ['magic', 1, 8],
+    ['magic', 50, 8],
+    ['magic', 51, 4],
+    ['magic', 101, 2],
+    ['magic', 151, 1],
+  ] as const)('retorna o estágio de skill correto para %s nível %s', (skill, level, multiplier) => {
+    expect(skillExperienceMultiplierForLevel(skill, level)).toBe(multiplier);
   });
 });

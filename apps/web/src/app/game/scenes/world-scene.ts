@@ -11,6 +11,7 @@ import { CreatureAssetService } from '../creature-asset.service';
 import { OutfitAssetService, type OutfitAnimData } from '../outfit-asset.service';
 import { recolorCanvas, recolorSpriteSheet } from '../outfit-recolor';
 import { CombatTextManager } from '../combat-text/combat-text-manager';
+import type { Subscription } from 'rxjs';
 
 const TILE_SIZE = TILE_SIZE_PX;
 const BAR_HEIGHT = CREATURE_HUD_CONFIG.healthBarHeight;
@@ -177,6 +178,9 @@ export class WorldScene extends Phaser.Scene {
   private debugGraphics!: Phaser.GameObjects.Graphics;
   private mapBounds: { width?: number; height?: number } = {};
   private combatText!: CombatTextManager;
+  private sceneReady = false;
+  private pendingSceneEvents: { seq: number; event: string; data: unknown }[] = [];
+  private sceneEventsSubscription?: Subscription;
   private panning = false;
   private panStart = { x: 0, y: 0 };
   private lastPan = { x: 0, y: 0 };
@@ -203,16 +207,31 @@ export class WorldScene extends Phaser.Scene {
       };
     });
 
-    this.state.sceneEvents$.subscribe((e) => {
+    this.sceneEventsSubscription = this.state.sceneEvents$.subscribe((e) => {
+      if (!this.sceneReady) {
+        this.pendingSceneEvents.push(e);
+        return;
+      }
       if (e.seq <= this.lastSeq) return;
       this.lastSeq = e.seq;
       this.handleEvent(e.event, e.data);
     });
-    for (const e of this.state.drainBuffer()) {
-      if (e.seq <= this.lastSeq) continue;
-      this.lastSeq = e.seq;
-      this.handleEvent(e.event, e.data);
-    }
+    this.events.once(Phaser.Scenes.Events.UPDATE, () => {
+      this.sceneReady = true;
+      const events = [...this.pendingSceneEvents, ...this.state.drainBuffer()].sort((a, b) => a.seq - b.seq);
+      this.pendingSceneEvents = [];
+      for (const e of events) {
+        if (e.seq <= this.lastSeq) continue;
+        this.lastSeq = e.seq;
+        this.handleEvent(e.event, e.data);
+      }
+    });
+    this.events.once(Phaser.Scenes.Events.SHUTDOWN, () => {
+      this.sceneReady = false;
+      this.pendingSceneEvents = [];
+      this.sceneEventsSubscription?.unsubscribe();
+      this.sceneEventsSubscription = undefined;
+    });
 
     this.cameras.main.setBackgroundColor('#17202a');
     this.cameras.main.setZoom(1);
@@ -1315,6 +1334,7 @@ export class WorldScene extends Phaser.Scene {
 
 
   private playProjectile(attackerId: string, targetId: string, from: Position, to: Position, projectile: ItemProjectileVisual | undefined, impact: ItemImpactVisual | undefined, travelTimeMs: number) {
+    if (!this.sys.isActive()) return;
     const end = this.entityCenter(targetId, to);
     const impactBase = tileBase(to, TILE_SIZE);
     if (!projectile?.sprite && !projectile?.spriteAssetId) {
@@ -1385,6 +1405,7 @@ export class WorldScene extends Phaser.Scene {
   }
 
   private playImpact(x: number, y: number, impact: ItemImpactVisual) {
+    if (!this.sys.isActive()) return;
     const textureKey = this.effectTextureKey('impact', impact.sprite || String(impact.spriteAssetId ?? ''), impact.frameWidth, impact.frameHeight);
     const run = () => {
       if (!this.textures.exists(textureKey)) return;
