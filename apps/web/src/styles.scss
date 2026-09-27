@@ -890,6 +890,10 @@ a {
 .game-page .game-canvas canvas {
   width: 100% !important;
   height: 100% !important;
+  image-rendering: auto;
+}
+
+.game-page.pixel-art .game-canvas canvas {
   image-rendering: pixelated;
 }
 

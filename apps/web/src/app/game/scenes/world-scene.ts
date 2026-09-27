@@ -253,7 +253,7 @@ export class WorldScene extends Phaser.Scene {
     this.cameras.main.setZoom(1);
     this.applyZoom(this.state.zoom());
     this.state.zoom$.subscribe((z) => this.applyZoom(z));
-    this.scale.on(Phaser.Scale.Events.RESIZE, () => this.applyTextResolution());
+    this.scale.on(Phaser.Scale.Events.RESIZE, () => this.handleViewportResize());
     this.applySmoothing(this.state.hdSmooth());
     this.state.hdSmooth$.subscribe((smooth) => this.applySmoothing(smooth));
     this.textures.on('addtexture', () => this.applySmoothing(this.state.hdSmooth()));
@@ -274,6 +274,11 @@ export class WorldScene extends Phaser.Scene {
     } else {
       this.game.loop.resetDelta();
     }
+  }
+
+  handleViewportResize() {
+    this.applyCameraBounds();
+    this.applyTextResolution();
   }
 
   // ------------------------------------------------------------------ events

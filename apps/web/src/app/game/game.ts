@@ -151,6 +151,9 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
     if (e.matches) {
       this.leftCollapsed.set(true);
       this.rightCollapsed.set(true);
+    } else {
+      this.leftCollapsed.set(false);
+      this.rightCollapsed.set(false);
     }
   };
 
@@ -244,10 +247,13 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
       width: host.clientWidth || 960,
       height: host.clientHeight || 640,
       backgroundColor: '#141a24',
+      render: {
+        antialias: true,
+        roundPixels: false,
+      },
       scale: { mode: Phaser.Scale.RESIZE },
       scene: [],
     });
-    this.setupHiDpi();
     this.phaser.scene.add('World', WorldScene, false);
     this.phaser.scene.start('World', {
        ws: this.ws,
@@ -265,23 +271,6 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
      window.addEventListener('resize', this.windowResizeHandler);
      this.resizePhaserCanvas();
      (this.phaser.scene.getScene('World') as WorldScene | undefined)?.setBackgrounded(document.hidden);
-  }
-
-  /** Renderiza em device-pixel-ratio para sprites nítidas em telas HiDPI. */
-  private setupHiDpi() {
-    const game = this.phaser;
-    if (!game) return;
-    const apply = () => {
-      const dpr = window.devicePixelRatio || 1;
-      const w = game.scale.gameSize.width;
-      const h = game.scale.gameSize.height;
-      if (!w || !h) return;
-      game.canvas.width = Math.round(w * dpr);
-      game.canvas.height = Math.round(h * dpr);
-      game.renderer.resize(Math.round(w * dpr), Math.round(h * dpr));
-    };
-    game.scale.on(Phaser.Scale.Events.RESIZE, apply);
-    apply();
   }
 
   ngOnDestroy() {
@@ -333,6 +322,20 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
     if (width <= 0 || height <= 0) return;
     this.phaser.scale.resize(width, height);
     this.phaser.scale.refresh();
+    this.syncCanvasResolution(width, height);
+    (this.phaser.scene.getScene('World') as WorldScene | undefined)?.handleViewportResize();
+  }
+
+  private syncCanvasResolution(width: number, height: number) {
+    if (!this.phaser) return;
+    const resolution = Math.min(window.devicePixelRatio || 1, 2);
+    const physicalWidth = Math.round(width * resolution);
+    const physicalHeight = Math.round(height * resolution);
+    if (this.phaser.canvas.width !== physicalWidth || this.phaser.canvas.height !== physicalHeight) {
+      this.phaser.canvas.width = physicalWidth;
+      this.phaser.canvas.height = physicalHeight;
+      this.phaser.renderer.resize(physicalWidth, physicalHeight);
+    }
   }
 
   abyssElapsed(): string {

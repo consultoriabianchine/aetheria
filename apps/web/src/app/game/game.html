@@ -1,4 +1,4 @@
-<div class="game-page" [class.left-collapsed]="leftCollapsed()" [class.right-collapsed]="rightCollapsed()">
+<div class="game-page" [class.left-collapsed]="leftCollapsed()" [class.right-collapsed]="rightCollapsed()" [class.pixel-art]="!state.hdSmooth()">
   @if (initialLoading()) {
     <div class="initial-loading" role="status" aria-live="polite">
       <div class="initial-loading-card">

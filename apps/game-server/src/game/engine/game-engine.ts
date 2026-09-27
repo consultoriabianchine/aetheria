@@ -3283,11 +3283,16 @@ export class GameEngine implements OnModuleDestroy {
       if (entry.itemId === 'gold') {
         if (player) {
           const storage = this.storageFor(player);
-          storage.gold += quantity;
-          goldCollected += quantity;
-          this.emitGold(player, storage.gold);
-          this.emitTo(player.socketId ?? '', 'gold.gained', { amount: quantity, position: { ...creature.position } });
-          continue;
+           storage.gold += quantity;
+           goldCollected += quantity;
+           this.emitGold(player, storage.gold);
+           const goldViewers = run
+             ? run.memberIds.map((id) => this.players.get(id)).filter((member): member is GamePlayer => !!member?.socketId)
+             : player.socketId ? [player] : [];
+           for (const viewer of goldViewers) {
+             this.emitTo(viewer.socketId ?? '', 'gold.gained', { amount: quantity, position: { ...creature.position } });
+           }
+           continue;
         }
         const item: GroundItem = {
           id: uid('loot'),

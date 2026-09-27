@@ -633,6 +633,7 @@ button {
 }
 
 .game-layout {
+  position: relative;
   min-height: 0;
   display: grid;
   grid-template-columns: var(--left-sidebar-width) minmax(0, 1fr) var(--right-sidebar-width);
