@@ -276,6 +276,14 @@ export class HuntEngine {
     try {
       if (run.status === 'returning_to_city') return;
 
+      if (run.status === 'active') {
+        for (const id of [...run.aliveMemberIds]) {
+          const player = this.hooks.getPlayer(id);
+          if (!player || player.health <= 0) this.onPlayerDied(id, now);
+        }
+        if (run.aliveMemberIds.length === 0) return;
+      }
+
       run.creatures.updateCreatures(run.ai, now);
 
       if (run.respawnAt !== null && now >= run.respawnAt) {

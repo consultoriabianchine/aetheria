@@ -540,6 +540,15 @@ export class GameEngine implements OnModuleDestroy {
       await this.store.saveCharacter(stored);
     }
 
+    // Instance positions are process-local. After a server restart, never
+    // rehydrate a character with a stale dungeon position or zero HP.
+    if (stored.position.z >= 100 || stored.health <= 0) {
+      stored.position = { ...SPAWN_POINT };
+      stored.health = stored.maxHealth;
+      stored.mana = stored.maxMana;
+      await this.store.saveCharacter(stored);
+    }
+
     await this.ensureAccountStorage(stored.accountId);
     const player = new GamePlayer(stored);
     player.socketId = socketId;
@@ -765,6 +774,7 @@ export class GameEngine implements OnModuleDestroy {
     this.attackGroupReadyAt.delete(player.id);
     this.healingGroupReadyAt.delete(player.id);
     this.movement.occupy(player.position, player.id);
+    void this.persistPlayer(player);
     if (!player.socketId) return;
     this.emitTo(player.socketId, 'game.enterWorld', {
       character: this.toSummary(player),
@@ -1209,9 +1219,10 @@ export class GameEngine implements OnModuleDestroy {
         player.mana = player.maxMana;
         player.targetId = null;
         player.moveDir = null;
-        this.moveEventReadyAt.delete(player.id);
-        this.movement.occupy(player.position, player.id);
-        this.emitTo(player.socketId, 'game.enterWorld', {
+         this.moveEventReadyAt.delete(player.id);
+         this.movement.occupy(player.position, player.id);
+         void this.persistPlayer(player);
+         this.emitTo(player.socketId, 'game.enterWorld', {
           character: this.toSummary(player),
           map: this.world.tiles,
           width: this.world.width,
@@ -2787,6 +2798,10 @@ export class GameEngine implements OnModuleDestroy {
         if (!run) continue;
         for (const memberId of run.aliveMemberIds) {
           const member = this.players.get(memberId);
+          if (member && member.health <= 0) {
+            this.playerKilled(member, now);
+            continue;
+          }
           if (member) {
             if (this.isTrainingHunt(run.hunt) && (run.hunt.effects?.manaRefill ?? true) && member.mana !== member.maxMana) {
               member.mana = member.maxMana;

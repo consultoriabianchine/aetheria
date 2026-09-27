@@ -134,6 +134,8 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   private readonly huntBrowser = inject(HuntBrowserState);
   private readonly router = inject(Router);
   private phaser: Phaser.Game | null = null;
+  private canvasResizeObserver?: ResizeObserver;
+  private readonly windowResizeHandler = () => this.resizePhaserCanvas();
   private timerSub?: Subscription;
   private abyssChoiceDrag: { startX: number; startY: number; originX: number; originY: number } | null = null;
   private abyssTreeDrag: { startX: number; startY: number; originX: number; originY: number } | null = null;
@@ -247,7 +249,7 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
     });
     this.setupHiDpi();
     this.phaser.scene.add('World', WorldScene, false);
-     this.phaser.scene.start('World', {
+    this.phaser.scene.start('World', {
        ws: this.ws,
        state: this.state,
        assets: this.creatureAssets,
@@ -258,7 +260,11 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
         },
         onHuntAssetsReady: () => this.state.finishHuntLoading(),
       });
-    (this.phaser.scene.getScene('World') as WorldScene | undefined)?.setBackgrounded(document.hidden);
+     this.canvasResizeObserver = new ResizeObserver(() => this.resizePhaserCanvas());
+     this.canvasResizeObserver.observe(host);
+     window.addEventListener('resize', this.windowResizeHandler);
+     this.resizePhaserCanvas();
+     (this.phaser.scene.getScene('World') as WorldScene | undefined)?.setBackgrounded(document.hidden);
   }
 
   /** Renderiza em device-pixel-ratio para sprites nítidas em telas HiDPI. */
@@ -282,6 +288,8 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
     document.removeEventListener('visibilitychange', this.visibilityHandler);
     this.sidebarMq?.removeEventListener('change', this.sidebarMqListener);
     this.timerSub?.unsubscribe();
+    this.canvasResizeObserver?.disconnect();
+    window.removeEventListener('resize', this.windowResizeHandler);
     this.phaser?.destroy(true);
     this.phaser = null;
     this.state.dialog.set(null);
@@ -315,6 +323,16 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   inventory(): InvEntry[] {
     const slots = this.state.inventory().slots;
     return slots.map((stack, index) => ({ index, stack }));
+  }
+
+  private resizePhaserCanvas() {
+    const host = this.el.nativeElement.querySelector('#game-canvas') as HTMLElement | null;
+    if (!host || !this.phaser) return;
+    const width = host.clientWidth;
+    const height = host.clientHeight;
+    if (width <= 0 || height <= 0) return;
+    this.phaser.scale.resize(width, height);
+    this.phaser.scale.refresh();
   }
 
   abyssElapsed(): string {

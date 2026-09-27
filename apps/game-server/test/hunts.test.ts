@@ -476,6 +476,31 @@ describe('hunt-engine', () => {
     expect(engine.getRun(player.id)!.status).toBe('returning_to_city');
   });
 
+  it('encerra a run quando líder e companion estão mortos', () => {
+    const { engine, player, finished } = makeHuntEngine();
+    const companion = makePlayer({ id: 'p2', socketId: null });
+    engine.startHunt(player.id, [player.id, companion.id], 'goblin_warren', false, 0);
+
+    engine.onPlayerDied(player.id, 5_000);
+    engine.removeMember(companion.id, 5_001);
+
+    expect(finished).toEqual([{ characterId: player.id, reason: 'wiped' }]);
+    expect(engine.getRun(player.id)!.status).toBe('returning_to_city');
+  });
+
+  it('reconcilia membros com HP zero antes da IA continuar', () => {
+    const { engine, player, finished } = makeHuntEngine();
+    const companion = makePlayer({ id: 'p2', socketId: null });
+    engine.startHunt(player.id, [player.id, companion.id], 'goblin_warren', false, 0);
+    player.health = 0;
+    companion.health = 0;
+
+    engine.update(5_000);
+
+    expect(finished).toEqual([{ characterId: player.id, reason: 'wiped' }]);
+    expect(engine.getRun(player.id)!.status).toBe('returning_to_city');
+  });
+
   it('stopHunt finaliza com motivo stopped', () => {
     const { engine, player, finished } = makeHuntEngine();
     engine.startHunt(player.id, [player.id], 'goblin_warren', false, 0);

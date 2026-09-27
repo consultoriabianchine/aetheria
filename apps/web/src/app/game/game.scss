@@ -457,6 +457,7 @@
   --stamina-color: var(--ui-green);
 
   height: 100vh;
+  height: 100dvh;
   overflow: hidden;
   display: grid;
   grid-template-rows: var(--topbar-height) minmax(0, 1fr);
@@ -1113,10 +1114,6 @@ button {
 .game-canvas {
   width: 100%;
   height: 100%;
-}
-
-.game-canvas canvas {
-  image-rendering: pixelated;
 }
 
 .target-overlay,
