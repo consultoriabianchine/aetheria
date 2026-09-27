@@ -39,6 +39,13 @@ export interface DialogInfo {
   lines: string[];
 }
 
+export interface BossHealthState {
+  creatureId: string;
+  name: string;
+  health: number;
+  maxHealth: number;
+}
+
 export interface DamageMeterEntry {
   totalDamage: number;
   firstDamageAt: number | null;
@@ -91,9 +98,11 @@ export class GameState {
   readonly characterId = signal<string | null>(localStorage.getItem('aetheria_character'));
   readonly characters = signal<CharacterSummary[]>([]);
   readonly loginError = signal('');
+  readonly registerError = signal('');
   readonly createError = signal('');
 
   readonly inGame = signal(false);
+  readonly snapshotReady = signal(false);
   readonly self = signal<CharacterSummary | null>(null);
   readonly abilities = signal<import('@aetheria/types').CombatAbilityDefinition[]>([]);
   readonly attackRotations = signal<Record<string, number[]>>({});
@@ -126,12 +135,14 @@ export class GameState {
   readonly hunts = signal<HuntListEntry[]>([]);
   readonly huntDetails = signal<HuntDetails | null>(null);
   readonly hunt = signal<HuntRunView | null>(null);
+  readonly bossHealth = signal<BossHealthState | null>(null);
   readonly abyss = signal<AbyssRunView | null>(null);
   readonly abyssChoices = signal<AbyssUpgradeChoice[]>([]);
   readonly abyssMeta = signal<AbyssMetaView | null>(null);
   readonly abyssResult = signal<AbyssResult | null>(null);
   readonly abyssFragmentDrops = signal<AbyssFragmentDrop[]>([]);
   readonly abyssLoading = signal<'entering' | 'returning' | null>(null);
+  readonly huntLoading = signal(false);
   readonly huntsOpen = signal(false);
   readonly inArena = computed(() => this.hunt() !== null);
   readonly inInstance = computed(() => this.hunt() !== null || this.abyss() !== null);
@@ -183,6 +194,7 @@ export class GameState {
   private abyssLoadingUntil = 0;
 
   readonly loginResult$ = new Subject<boolean>();
+  readonly registerResult$ = new Subject<boolean>();
 
   private beginAbyssLoading(status: 'entering' | 'returning') {
     if (this.abyssLoadingTimer) clearTimeout(this.abyssLoadingTimer);
@@ -201,6 +213,10 @@ export class GameState {
       this.abyssLoadingTimer = null;
       this.abyssLoading.set(null);
     }, delay);
+  }
+
+  finishHuntLoading() {
+    this.huntLoading.set(false);
   }
   readonly characterCreated$ = new Subject<boolean>();
   readonly selectResult$ = new Subject<boolean>();
@@ -252,6 +268,7 @@ export class GameState {
       case SERVER_EVENTS.ERROR:
         if (this.abyssLoadingTimer) clearTimeout(this.abyssLoadingTimer);
         this.abyssLoading.set(null);
+        this.huntLoading.set(false);
         break;
       case SERVER_EVENTS.LOGIN_RESULT: {
         const r = data as { ok: boolean; error?: string; token?: string; accountId?: string; characters?: CharacterSummary[] };
@@ -277,6 +294,18 @@ export class GameState {
         }
         break;
       }
+      case SERVER_EVENTS.REGISTER_RESULT: {
+        const r = data as { ok: boolean; error?: string; token?: string; accountId?: string; characters?: CharacterSummary[] };
+        this.registerError.set(r.error ?? '');
+        this.registerResult$.next(!!r.ok);
+        if (r.ok && r.token) {
+          this.setToken(r.token, r.accountId ?? '');
+          this.characters.set(r.characters ?? []);
+          this.characterId.set(null);
+          localStorage.removeItem('aetheria_character');
+        }
+        break;
+      }
       case SERVER_EVENTS.CHARACTERS_UPDATE: {
         const r = data as { characters?: CharacterSummary[] };
         this.characters.set(r.characters ?? []);
@@ -299,7 +328,9 @@ export class GameState {
         localStorage.setItem('aetheria_character', w.character.id);
         this.world.set({ map: w.map, width: w.width, height: w.height });
         this.inGame.set(true);
+        this.snapshotReady.set(false);
         this.hunt.set(null);
+        this.huntLoading.set(false);
         this.abyss.set(null);
         this.abyssChoices.set([]);
         this.abyssFragmentDrops.set([]);
@@ -318,6 +349,8 @@ export class GameState {
         localStorage.setItem('aetheria_character', w.character.id);
         this.world.set({ map: w.map, width: w.width, height: w.height });
         this.hunt.set(w.hunt);
+        this.huntLoading.set(true);
+        this.snapshotReady.set(false);
         this.huntAnalyzer.update((metrics) =>
           metrics.startedAt === null ? { ...metrics, startedAt: w.hunt.startedAt } : metrics,
         );
@@ -346,6 +379,8 @@ export class GameState {
         this.characterId.set(w.character.id);
         this.world.set({ map: w.map, width: w.width, height: w.height });
         this.abyss.set(w.abyss);
+        this.huntLoading.set(false);
+        this.snapshotReady.set(false);
         this.hunt.set(null);
         this.abyssResult.set(null);
         this.abyssFragmentDrops.set([]);
@@ -353,6 +388,9 @@ export class GameState {
         this.finishAbyssLoading();
         break;
       }
+      case SERVER_EVENTS.SNAPSHOT_READY:
+        this.snapshotReady.set(true);
+        break;
       case SERVER_EVENTS.HUNT_DETAILS: {
         const r = data as { details: HuntDetails };
         this.huntDetails.set(r.details);
@@ -361,11 +399,22 @@ export class GameState {
       case SERVER_EVENTS.HUNT_STARTED: {
         const r = data as { hunt: HuntRunView };
         this.hunt.set(r.hunt);
+        this.bossHealth.set(null);
         break;
       }
+      case SERVER_EVENTS.HUNT_SNAPSHOT_READY:
+        break;
       case SERVER_EVENTS.HUNT_WAVE: {
         const r = data as { huntId: string; wave: number; monsterCount: number; isBoss: boolean };
         this.hunt.update((h) => (h ? { ...h, wave: r.wave, isBoss: r.isBoss, monsterCount: r.monsterCount } : h));
+        if (!r.isBoss) this.bossHealth.set(null);
+        break;
+      }
+      case SERVER_EVENTS.CREATURE_SPAWN: {
+        const r = data as { creatureId: string; name: string; health: number; maxHealth: number; isBoss?: boolean };
+        if (r.isBoss && this.hunt()) {
+          this.bossHealth.set({ creatureId: r.creatureId, name: r.name, health: r.health, maxHealth: r.maxHealth });
+        }
         break;
       }
       case SERVER_EVENTS.HUNT_LOOP_CHANGED: {
@@ -394,6 +443,7 @@ export class GameState {
           ),
         );
         this.addSystemMessage(`Hunt concluída em ${GameState.formatTime(r.clearTimeMs)}!`);
+        this.bossHealth.set(null);
         if (!r.loopEnabled) {
           this.hunt.set(null);
           this.target.set(null);
@@ -421,6 +471,8 @@ export class GameState {
       }
       case SERVER_EVENTS.HUNT_RETURNED_TO_CITY: {
         this.hunt.set(null);
+        this.huntLoading.set(false);
+        this.bossHealth.set(null);
         this.target.set(null);
         break;
       }
@@ -570,17 +622,20 @@ export class GameState {
       case SERVER_EVENTS.ENTITY_HEALTH: {
         const h = data as { id: string; health: number; maxHealth: number };
         this.target.update((t) => (t && t.id === h.id ? { ...t, health: h.health, maxHealth: h.maxHealth } : t));
+        this.bossHealth.update((boss) => boss?.creatureId === h.id ? { ...boss, health: h.health, maxHealth: h.maxHealth } : boss);
         break;
       }
       case SERVER_EVENTS.CREATURE_DAMAGE: {
         const d = data as { creatureId: string; health: number; maxHealth: number };
         this.target.update((t) => (t && t.id === d.creatureId ? { ...t, health: d.health, maxHealth: d.maxHealth } : t));
+        this.bossHealth.update((boss) => boss?.creatureId === d.creatureId ? { ...boss, health: d.health, maxHealth: d.maxHealth } : boss);
         break;
       }
       case SERVER_EVENTS.CREATURE_DEATH: {
         const de = data as { creatureId: string; experience: number };
         this.huntAnalyzer.update((metrics) => ({ ...metrics, kills: metrics.kills + 1 }));
         this.target.update((t) => (t && t.id === de.creatureId ? null : t));
+        this.bossHealth.update((boss) => boss?.creatureId === de.creatureId ? null : boss);
         break;
       }
     }
@@ -615,6 +670,10 @@ export class GameState {
 
   login(username: string, password: string) {
     this.ws.send({ type: 'auth.login', username, password });
+  }
+
+  register(username: string, password: string) {
+    this.ws.send({ type: 'auth.register', username, password });
   }
 
   createCharacter(name: string, archetype: CombatArchetype = 'warrior') {

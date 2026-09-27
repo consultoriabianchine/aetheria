@@ -23,6 +23,23 @@ model Account {
   abyssRuns    AbyssRunHistory[]
 }
 
+model News {
+  id          String    @id @default(cuid())
+  title       String
+  slug        String    @unique
+  excerpt     String    @default("")
+  content     String
+  coverImage  String?   @map("cover_image")
+  status      String    @default("draft")
+  author      String?
+  publishedAt DateTime? @map("published_at")
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime  @updatedAt @map("updated_at")
+
+  @@index([status, publishedAt])
+  @@map("news")
+}
+
 model AbyssMetaProgression {
   id            String   @id @default(cuid())
   accountId     String   @unique @map("account_id")

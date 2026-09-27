@@ -439,7 +439,7 @@ describe('hunt-engine', () => {
     for (let wave = 1; wave <= 10; wave++) {
       clearWaveCreatures(run.creatures);
       engine.update(wave * 10_000);
-      if (wave < 10) engine.update((run.transitionAt ?? wave * 10_000) + 1);
+      engine.update((run.transitionAt ?? wave * 10_000) + 1);
     }
     await flush();
 

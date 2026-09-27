@@ -293,6 +293,27 @@ export interface TibiaWikiImportPreview {
   warnings: string[];
 }
 
+export type AdminNewsStatus = 'draft' | 'published' | 'archived';
+
+export interface AdminNews {
+  id: string;
+  title: string;
+  slug: string;
+  excerpt: string;
+  content: string;
+  status: AdminNewsStatus;
+  coverImage?: string | null;
+  author?: string | null;
+  publishedAt?: string | null;
+  createdAt?: string;
+  updatedAt?: string;
+}
+
+export type AdminNewsInput = Omit<AdminNews, 'id' | 'createdAt' | 'updatedAt' | 'publishedAt' | 'status'> & {
+  id?: string;
+  status?: AdminNewsStatus;
+};
+
 @Injectable({ providedIn: 'root' })
 export class ApiService {
   readonly baseUrl = signal(localStorage.getItem('admin.baseUrl') ?? 'http://localhost:4000');
@@ -615,5 +636,34 @@ export class ApiService {
       headers: this.headers(),
       body: JSON.stringify(input),
     });
+  }
+
+  listNews(status?: AdminNewsStatus): Promise<AdminNews[]> {
+    const query = status ? `?status=${encodeURIComponent(status)}` : '';
+    return this.request(`/admin/news${query}`, { headers: this.headers() });
+  }
+
+  getNews(id: string): Promise<AdminNews> {
+    return this.request(`/admin/news/${encodeURIComponent(id)}`, { headers: this.headers() });
+  }
+
+  createNews(input: AdminNewsInput): Promise<{ ok: boolean; news: AdminNews }> {
+    return this.request('/admin/news', { method: 'POST', headers: this.headers(), body: JSON.stringify({ ...input, status: 'draft' }) });
+  }
+
+  updateNews(id: string, input: AdminNewsInput): Promise<{ ok: boolean; news: AdminNews }> {
+    return this.request(`/admin/news/${encodeURIComponent(id)}`, { method: 'PUT', headers: this.headers(), body: JSON.stringify(input) });
+  }
+
+  publishNews(id: string): Promise<{ ok: boolean; news: AdminNews }> {
+    return this.request(`/admin/news/${encodeURIComponent(id)}/publish`, { method: 'POST', headers: this.headers() });
+  }
+
+  archiveNews(id: string): Promise<{ ok: boolean; news: AdminNews }> {
+    return this.request(`/admin/news/${encodeURIComponent(id)}/archive`, { method: 'POST', headers: this.headers() });
+  }
+
+  deleteNews(id: string): Promise<{ ok: boolean }> {
+    return this.request(`/admin/news/${encodeURIComponent(id)}`, { method: 'DELETE', headers: this.headers() });
   }
 }

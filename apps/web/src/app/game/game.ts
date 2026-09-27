@@ -3,6 +3,7 @@ import { Subscription, first, interval } from 'rxjs';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import Phaser from 'phaser';
+import { SERVER_EVENTS } from '@aetheria/protocol';
 import type { CharacterEquipment, CharacterSkills, CharacterSummary, CombatAbilityDefinition, CombatStatsView, DamageType, ItemDefinition, ItemStack, PlayerCombatConfig } from '@aetheria/types';
 import { DAMAGE_TYPES } from '@aetheria/types';
 import { ABYSS_META_NODES, APPEARANCE_PALETTE, INVENTORY_SIZE, LOOT_POUCH_EXPANSION, SKILL_PROGRESSION_CONFIG, TRAINING_HUNT_ID, xpForLevel } from '@aetheria/config';
@@ -68,6 +69,9 @@ const ABYSS_TREE = [
 })
 export class Game implements OnInit, AfterViewInit, OnDestroy {
   readonly state = inject(GameState);
+  readonly initialLoading = signal(true);
+  readonly loadingStage = signal('Conectando ao mundo...');
+  readonly loadingProgress = signal(8);
   readonly topNavItems = [
     { label: 'Helper', icon: 'helper.png' },
     { label: 'Codex', icon: 'codex.png' },
@@ -133,7 +137,13 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   private timerSub?: Subscription;
   private abyssChoiceDrag: { startX: number; startY: number; originX: number; originY: number } | null = null;
   private abyssTreeDrag: { startX: number; startY: number; originX: number; originY: number } | null = null;
-  private visibilityHandler = () => { if (!document.hidden) this.resyncAfterResume(); };
+  private visibilityHandler = () => {
+    const scene = this.phaser?.scene.getScene('World') as WorldScene | undefined;
+    scene?.setBackgrounded(document.hidden);
+    if (!document.hidden) this.resyncAfterResume();
+  };
+  private snapshotReceived = false;
+  private sceneAssetsReady = false;
   private sidebarMq?: MediaQueryList;
   private readonly sidebarMqListener = (e: MediaQueryListEvent | MediaQueryList) => {
     if (e.matches) {
@@ -147,15 +157,37 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
       void this.router.navigate(['/login']);
       return;
     }
+    this.snapshotReceived = this.state.snapshotReady();
     if (!this.ws.connected) this.ws.connect();
-    void this.itemCatalog.ensureLoaded();
+    this.ws.events$.subscribe((event) => {
+      if (event.event === 'system.connected') {
+        this.loadingStage.set('Validando personagem...');
+        this.loadingProgress.set(22);
+        this.resyncAfterResume();
+        this.rejoinCharacter();
+      } else if (event.event === SERVER_EVENTS.SELECT_RESULT) {
+        this.loadingStage.set('Preparando o mundo...');
+        this.loadingProgress.set(38);
+      } else if (event.event === SERVER_EVENTS.ENTER_WORLD || event.event === SERVER_EVENTS.ENTER_ARENA || event.event === SERVER_EVENTS.ENTER_ABYSS) {
+        this.loadingStage.set('Carregando mapa e entidades...');
+        this.loadingProgress.set(62);
+      } else if (event.event === SERVER_EVENTS.SNAPSHOT_READY) {
+        this.snapshotReceived = true;
+        this.loadingStage.set('Finalizando aparências e inventário...');
+        this.loadingProgress.set(88);
+        this.finishInitialLoading();
+      }
+    });
+    void this.itemCatalog.ensureLoaded().then(() => {
+      if (this.snapshotReceived) this.finishInitialLoading();
+    });
     if (!this.state.inGame()) {
       const saved = this.state.characterId();
       if (saved) {
-        this.state.selectCharacter(saved);
         this.state.selectResult$.pipe(first()).subscribe((ok) => {
           if (!ok) void this.router.navigate(['/characters']);
         });
+        if (this.ws.connected) this.state.selectCharacter(saved);
       } else {
         void this.router.navigate(['/characters']);
         return;
@@ -168,20 +200,23 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
       this.leftCollapsed.set(true);
       this.rightCollapsed.set(true);
     }
-    this.ws.events$.subscribe((event) => {
-      if (event.event === 'system.connected') {
-        this.resyncAfterResume();
-        this.rejoinCharacter();
-      }
-    });
     this.timerSub = interval(100).subscribe(() => {
       this.now.set(Date.now());
     });
     queueMicrotask(() => this.resyncAfterResume());
   }
 
+  private finishInitialLoading() {
+    if (!this.initialLoading() || !this.snapshotReceived || !this.itemCatalog.ready() || !this.sceneAssetsReady) return;
+    this.loadingStage.set('Aetheria está pronta.');
+    this.loadingProgress.set(100);
+    requestAnimationFrame(() => this.initialLoading.set(false));
+  }
+
   private resyncAfterResume() {
     if (!this.ws.connected) { this.ws.connect(); return; }
+    const scene = this.phaser?.scene.getScene('World') as WorldScene | undefined;
+    scene?.setBackgrounded(false);
     this.state.requestHunts();
     for (const m of this.state.party().members) this.state.loadRotation(m.id);
     this.now.set(Date.now());
@@ -191,9 +226,10 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   /** Reconecta o personagem ativo após o WebSocket ser restabelecido. */
   private rejoinCharacter() {
     const self = this.state.self();
+    const characterId = self?.id ?? this.state.characterId();
     const token = this.state.token();
-    if (self?.id && token) {
-      this.state.selectCharacter(self.id);
+    if (characterId && token) {
+      this.state.selectCharacter(characterId);
     }
   }
 
@@ -211,7 +247,18 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
     });
     this.setupHiDpi();
     this.phaser.scene.add('World', WorldScene, false);
-    this.phaser.scene.start('World', { ws: this.ws, state: this.state, assets: this.creatureAssets, outfits: this.outfitAssets });
+     this.phaser.scene.start('World', {
+       ws: this.ws,
+       state: this.state,
+       assets: this.creatureAssets,
+       outfits: this.outfitAssets,
+        onInitialAssetsReady: () => {
+          this.sceneAssetsReady = true;
+          this.finishInitialLoading();
+        },
+        onHuntAssetsReady: () => this.state.finishHuntLoading(),
+      });
+    (this.phaser.scene.getScene('World') as WorldScene | undefined)?.setBackgrounded(document.hidden);
   }
 
   /** Renderiza em device-pixel-ratio para sprites nítidas em telas HiDPI. */
@@ -810,6 +857,12 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
     return this.state.hunt()?.huntName ?? 'Nenhuma hunt ativa';
   }
 
+  bossHealthPercent(): number {
+    const boss = this.state.bossHealth();
+    if (!boss || boss.maxHealth <= 0) return 0;
+    return Math.max(0, Math.min(100, (boss.health / boss.maxHealth) * 100));
+  }
+
   waveCells(): Array<{ index: number; filled: boolean; boss: boolean }> {
     const wave = this.state.hunt()?.wave ?? 0;
     return Array.from({ length: 10 }, (_, i) => ({ index: i + 1, filled: wave >= i + 1, boss: i === 9 }));
@@ -1221,7 +1274,15 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   setRotationAbility(index: number, abilityId: number) {
     const id = this.rotationCharacterId();
     if (!id) return;
-    if (this.rotationMode() === 'healing' && index !== 0) return;
+    if (this.rotationMode() === 'healing' && index !== 0) {
+      if (abilityId === 0) {
+        this.state.healingPotionRotations.update((all) => ({
+          ...all,
+          [id]: (all[id] ?? [undefined, undefined, undefined, undefined]).map((value, i) => (i === index ? undefined : value)),
+        }));
+      }
+      return;
+    }
     const target = this.rotationMode() === 'attack' ? this.state.attackRotations : this.state.healingRotations;
     target.update((all) => ({ ...all, [id]: (all[id] ?? [0, 0, 0, 0]).map((value, i) => (i === index ? abilityId : value)) }));
     if (this.rotationMode() === 'attack') this.setAreaMinTargets(index, 0);

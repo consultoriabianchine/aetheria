@@ -1,0 +1,36 @@
+<main class="portal-page">
+  <header class="portal-header">
+    <a class="brand" routerLink="/" aria-label="Aetheria Online início"><span class="brand-mark">✦</span><span><strong>AETHERIA</strong><small>ONLINE</small></span></a>
+    <div class="header-stats" aria-label="Status do servidor">
+      <span class="live"><i></i>{{ stats()?.online === false ? 'Servidor offline' : 'Servidor online' }}</span>
+      <span><b>{{ stats()?.playersOnline ?? '—' }}</b> jogadores online</span>
+      <span><b>{{ stats()?.accountsCreated ?? '—' }}</b> contas criadas</span>
+    </div>
+    <div class="header-actions"><button class="ui-button" type="button" (click)="openAuth('login')">Entrar</button><button class="ui-button ui-button-primary" type="button" (click)="openAuth('register')">Registrar</button></div>
+  </header>
+
+  <div class="portal-layout">
+    <aside class="side-nav left-nav" aria-label="Menu principal">
+      <p class="nav-kicker">Portal da fronteira</p>
+      <a class="active" href="#home">✦ <span>Início</span></a><a href="#news">▣ <span>Notícias</span></a><a href="#ranking">♜ <span>Ranking</span></a><a href="#systems">◇ <span>Sistemas</span></a><a href="#world">⌖ <span>O mundo</span></a>
+      <div class="nav-rule"></div><a routerLink="/register">Criar personagem <b>→</b></a><a routerLink="/login">Suporte <b>→</b></a>
+    </aside>
+
+    <section class="portal-main" id="home">
+      <div class="welcome-panel"><div><p class="eyebrow">A fronteira está aberta</p><h1>Seu próximo capítulo<br /><em>começa agora.</em></h1><p>Explore um mundo persistente, prepare suas caçadas e suba no ranking de Aetheria.</p><div class="welcome-actions"><button class="ui-button ui-button-primary" type="button" (click)="openAuth('register')">Começar a jogar <span>→</span></button><a href="#news">Ver notícias</a></div></div><div class="sigil-art" aria-hidden="true"><span>✦</span><i></i><b></b></div></div>
+
+      <section id="news" class="content-section"><div class="section-heading"><div><p class="eyebrow">Diário da guilda</p><h2>Notícias de Aetheria</h2></div><span>Atualizações do mundo</span></div><div class="news-grid">
+        @if (loading()) { <div class="empty-card">Consultando os escribas...</div> } @else if (!news().length) { <div class="empty-card">Nenhuma notícia publicada ainda.</div> } @else { @for (item of news(); track item.id; let first = $first) { <article class="news-card" [class.featured]="first"><div class="news-cover" [style.background-image]="item.coverImage ? 'url(' + item.coverImage + ')' : ''"><span>{{ first ? 'DESTAQUE' : 'AETHERIA' }}</span></div><div class="news-copy"><small>{{ formatDate(item.publishedAt) }} · {{ item.author || 'Equipe Aetheria' }}</small><h3>{{ item.title }}</h3><p>{{ item.excerpt || item.content }}</p><button type="button">Ler notícia →</button></div></article> } }
+      </div></section>
+      <section id="systems" class="systems-row"><div><span>01</span><strong>Caçadas estratégicas</strong><small>Planeje sua rotação e conquiste cada arena.</small></div><div><span>02</span><strong>Progressão persistente</strong><small>Seu personagem continua evoluindo.</small></div><div><span>03</span><strong>O Abismo</strong><small>Risco, escolhas e recompensas únicas.</small></div></section>
+    </section>
+
+    <aside class="side-column" id="ranking"><section class="side-panel"><div class="panel-title"><div><p class="eyebrow">Hall da fama</p><h2>Top níveis</h2></div><span>Global</span></div>@if (!leaders().length) { <p class="muted">Ainda não há personagens no ranking.</p> } @else { @for (player of leaders(); track player.id; let index = $index) { <div class="leader-row"><b class="rank">{{ (index + 1).toString().padStart(2, '0') }}</b><span class="avatar">✦</span><span class="leader-name"><strong>{{ player.name }}</strong><small>{{ player.archetype }}</small></span><em>{{ player.level }}</em></div> } }</section>
+      <section class="side-panel search-panel"><div class="panel-title"><div><p class="eyebrow">Arquivo público</p><h2>Buscar personagem</h2></div></div><div class="search-box"><input class="ui-input" [ngModel]="search()" (ngModelChange)="search.set($event)" (keyup.enter)="searchCharacters()" placeholder="Nome do personagem" aria-label="Nome do personagem" /><button class="ui-button" type="button" (click)="searchCharacters()" [disabled]="searchLoading()">⌕</button></div>@if (searchError()) { <small class="search-error">{{ searchError() }}</small> } @for (player of searchResults(); track player.id) { <div class="result-row"><span>✦</span><strong>{{ player.name }}</strong><em>Lv. {{ player.level }}</em></div> }</section>
+    </aside>
+  </div>
+
+  <footer class="portal-footer"><span>© Aetheria Online</span><span>Uma nova fronteira espera por você.</span><span>Jogue no navegador · Sem download</span></footer>
+
+  @if (authMode(); as mode) { <div class="auth-backdrop" role="presentation" (click)="closeAuth()"><section class="auth-modal" role="dialog" aria-modal="true" [attr.aria-labelledby]="'auth-title'" (click)="$event.stopPropagation()"><button class="modal-close" type="button" aria-label="Fechar" (click)="closeAuth()">×</button><p class="eyebrow">{{ mode === 'login' ? 'Conta de aventureiro' : 'Novo aventureiro' }}</p><h2 id="auth-title">{{ mode === 'login' ? 'Entrar no mundo' : 'Criar sua conta' }}</h2><p class="modal-lead">{{ mode === 'login' ? 'Continue sua história de onde parou.' : 'Uma conta, todos os seus personagens.' }}</p><form (ngSubmit)="submitAuth()"><label for="home-user">Nome de usuário</label><input id="home-user" class="ui-input" [ngModel]="username()" (ngModelChange)="username.set($event)" name="username" autocomplete="username" required /><label for="home-password">Senha</label><input id="home-password" class="ui-input" [type]="showPassword() ? 'text' : 'password'" [ngModel]="password()" (ngModelChange)="password.set($event)" name="password" autocomplete="current-password" required />@if (mode === 'register') { <label for="home-confirm">Confirmar senha</label><input id="home-confirm" class="ui-input" type="password" [ngModel]="confirmation()" (ngModelChange)="confirmation.set($event)" name="confirmation" autocomplete="new-password" required /> } @if (authError()) { <div class="auth-error" role="alert">{{ authError() }}</div> }<button class="ui-button ui-button-primary auth-submit" type="submit" [disabled]="submitting()">{{ submitting() ? 'Conectando...' : mode === 'login' ? 'Entrar' : 'Criar conta' }} <span>→</span></button></form><button class="switch-auth" type="button" (click)="switchAuth()">{{ mode === 'login' ? 'Ainda não tem conta? Registrar' : 'Já possui uma conta? Entrar' }}</button></section></div> }
+</main>

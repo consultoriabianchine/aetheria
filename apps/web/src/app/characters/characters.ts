@@ -1,6 +1,6 @@
 import { Component, computed, inject, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { first } from 'rxjs';
 import { ARCHETYPES } from '@aetheria/config';
 import type { ArchetypeDefinition, CharacterSummary, CombatArchetype } from '@aetheria/types';
@@ -14,7 +14,7 @@ const ARCHETYPE_ROLE: Record<CombatArchetype, string> = {
 
 @Component({
   selector: 'app-characters',
-  imports: [FormsModule],
+  imports: [FormsModule, RouterLink],
   templateUrl: './characters.html',
   styleUrl: './characters.scss',
 })
@@ -22,6 +22,7 @@ export class Characters {
   readonly state = inject(GameState);
   readonly newName = signal('');
   readonly selectedArchetype = signal<CombatArchetype>('warrior');
+  readonly entering = signal(false);
   private readonly router = inject(Router);
 
   readonly archetypes = computed(() =>
@@ -32,6 +33,18 @@ export class Characters {
     }),
   );
 
+  archetypeName(id: CombatArchetype) {
+    return (ARCHETYPES[id] as ArchetypeDefinition).name;
+  }
+
+  healthPercent(character: CharacterSummary) {
+    return character.maxHealth ? Math.round((character.health / character.maxHealth) * 100) : 0;
+  }
+
+  manaPercent(character: CharacterSummary) {
+    return character.maxMana ? Math.round((character.mana / character.maxMana) * 100) : 0;
+  }
+
   create() {
     this.state.createError.set('');
     this.state.createCharacter(this.newName(), this.selectedArchetype());
@@ -41,10 +54,16 @@ export class Characters {
   }
 
   enter(character: CharacterSummary) {
-    this.state.selectCharacter(character.id);
+    if (this.entering()) return;
+    this.entering.set(true);
     this.state.selectResult$.pipe(first()).subscribe((ok) => {
-      if (ok) void this.router.navigate(['/game']);
+      if (!ok) {
+        this.entering.set(false);
+        return;
+      }
+      void this.router.navigate(['/game']);
     });
+    this.state.selectCharacter(character.id);
   }
 
   back() {

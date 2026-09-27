@@ -63,6 +63,14 @@ export const routes: Routes = [
     loadComponent: () => import('./effect-types/effect-type-editor').then((m) => m.EffectTypeEditor),
   },
   {
+    path: 'news',
+    loadComponent: () => import('./news/news-list').then((m) => m.NewsList),
+  },
+  {
+    path: 'news/:id',
+    loadComponent: () => import('./news/news-editor').then((m) => m.NewsEditor),
+  },
+  {
     path: 'outfits',
     loadComponent: () => import('./outfits/outfit-list').then((m) => m.OutfitList),
   },

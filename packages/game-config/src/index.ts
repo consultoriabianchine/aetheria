@@ -398,11 +398,11 @@ export function xpForLevel(level: number): number {
 
 /** Multiplicadores de XP da progressão permanente por faixa de nível. */
 export const EXPERIENCE_STAGES = [
-  { minLevel: 1, maxLevel: 50, multiplier: 100 },
-  { minLevel: 51, maxLevel: 100, multiplier: 50 },
-  { minLevel: 101, maxLevel: 150, multiplier: 20 },
-  { minLevel: 151, maxLevel: 200, multiplier: 10 },
-  { minLevel: 201, maxLevel: 300, multiplier: 5 },
+  { minLevel: 1, maxLevel: 50, multiplier: 50 },
+  { minLevel: 51, maxLevel: 100, multiplier: 25 },
+  { minLevel: 101, maxLevel: 150, multiplier: 10 },
+  { minLevel: 151, maxLevel: 200, multiplier: 5 },
+  { minLevel: 201, maxLevel: 300, multiplier: 3 },
   { minLevel: 301, maxLevel: Infinity, multiplier: 2 },
 ] as const;
 
@@ -566,6 +566,7 @@ export const HUNT_CONFIG = {
     respawnMs: 2500,
   },
   waveTransitionMs: 1500,
+  bossLoopTransitionMs: 3000,
   /** Recompensas em ouro (moeda do personagem) por clear de hunt. */
   gold: {
     clearBonus: (suggestedLevel: number) => 100 + suggestedLevel * 5,

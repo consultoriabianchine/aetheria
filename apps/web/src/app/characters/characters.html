@@ -1,59 +1,18 @@
-<div class="auth-screen">
-  <div class="auth-card wide">
-    <div class="head">
-      <h1>Personagens</h1>
-      <button class="btn-ghost" (click)="back()">Sair</button>
-    </div>
-
-    <p class="sub">Escolha um personagem para entrar no mundo de Aetheria.</p>
-
-    <div class="char-list">
-      @for (c of state.characters(); track c.id) {
-        <div class="char-row" (click)="enter(c)">
-          <div class="char-avatar">{{ c.name.charAt(0) }}</div>
-          <div class="char-info">
-            <div class="char-name">
-              {{ c.name }}
-              <span class="vocation-badge" [class]="c.archetype">{{ c.archetype }}</span>
-            </div>
-            <div class="char-meta">Nível {{ c.level }} · {{ c.experience }} XP · {{ c.gold }} gold</div>
-          </div>
-          <button class="btn-primary small">Entrar</button>
+<main class="characters-page">
+  <header class="characters-header"><a class="brand" routerLink="/" aria-label="Aetheria Online início"><span class="brand-mark">✦</span><span><strong>AETHERIA</strong><small>ONLINE</small></span></a><div class="account-actions"><span class="account-state"><i></i> Conta conectada</span><button class="ui-button" type="button" (click)="back()">Sair</button></div></header>
+  <section class="characters-content">
+    <div class="page-heading"><div><p class="eyebrow">Salão da conta</p><h1>Escolha seu personagem</h1><p>Todo caminho começa com uma decisão.</p></div><div class="world-mark" aria-hidden="true">◇</div></div>
+    <div class="character-columns">
+      <section class="roster-panel ui-panel"><div class="section-heading"><div><span class="section-kicker">SEU ELENCO</span><h2>Personagens</h2></div><span class="roster-count">{{ state.characters().length }} / 5</span></div>
+        <div class="char-list">
+          @for (c of state.characters(); track c.id) {
+            <article class="char-card" [class.selected]="state.characterId() === c.id" (click)="enter(c)" (keydown.enter)="enter(c)" tabindex="0" role="button" [attr.aria-label]="'Entrar com ' + c.name">
+              <div class="char-sigil" [class]="c.archetype">{{ c.archetype === 'mage' ? '✧' : c.archetype === 'archer' ? '⌁' : '⚔' }}</div><div class="char-info"><div class="char-name"><strong>{{ c.name }}</strong><span class="vocation-badge" [class]="c.archetype">{{ archetypeName(c.archetype) }}</span></div><div class="char-level">Nível {{ c.level }} <span>·</span> {{ c.experience }} XP</div><div class="mini-bars"><i class="health" [style.width.%]="healthPercent(c)"></i><i class="mana" [style.width.%]="manaPercent(c)"></i></div></div><button class="ui-button enter-button" type="button" (click)="$event.stopPropagation(); enter(c)">Entrar <span>→</span></button>
+            </article>
+          } @empty { <div class="empty-roster"><span>✦</span><strong>Nenhuma lenda registrada</strong><p>Crie seu primeiro personagem e dê um nome à sua história.</p></div> }
         </div>
-      } @empty {
-        <div class="empty">Nenhum personagem ainda. Crie o seu abaixo.</div>
-      }
+      </section>
+      <section class="create-panel ui-panel"><div class="section-heading"><div><span class="section-kicker">NOVO CAMINHO</span><h2>Criar personagem</h2></div><span class="creation-step">01 / 02</span></div><p class="create-copy">Escolha um nome e um arquétipo. Você poderá evoluir sua estratégia dentro do mundo.</p><label for="character-name">Nome do personagem</label><input id="character-name" class="ui-input" [(ngModel)]="newName" (keydown.enter)="create()" placeholder="3 a 16 caracteres" maxlength="16" /><div class="archetype-grid">@for (v of archetypes(); track v.id) { <button class="archetype-card" [class.selected]="selectedArchetype() === v.id" (click)="selectedArchetype.set(v.id)" type="button"><span class="archetype-glyph">{{ v.id === 'mage' ? '✧' : v.id === 'archer' ? '⌁' : '⚔' }}</span><strong>{{ v.name }}</strong><small>{{ v.role }}</small><div class="vc-tags">@for (t of v.tags; track t) { <span>{{ t }}</span> }</div></button> }</div><button class="ui-button ui-button-primary create-button" type="button" (click)="create()">Criar personagem <span>→</span></button>@if (state.createError(); as err) { <div class="error" role="alert">{{ err }}</div> }</section>
     </div>
-
-    <div class="divider"></div>
-
-    <div class="create">
-      <input [(ngModel)]="newName" (keydown.enter)="create()" placeholder="Nome do novo personagem (3-16)" maxlength="16" />
-    </div>
-
-    <div class="vocation-grid">
-      @for (v of archetypes(); track v.id) {
-        <button
-          class="vocation-card"
-          [class.selected]="selectedArchetype() === v.id"
-          (click)="selectedArchetype.set(v.id)"
-          type="button"
-        >
-          <div class="vc-name">{{ v.name }}</div>
-          <div class="vc-role">{{ v.role }}</div>
-          <div class="vc-tags">
-            @for (t of v.tags; track t) {
-              <span class="vc-tag">{{ t }}</span>
-            }
-          </div>
-        </button>
-      }
-    </div>
-
-    <button class="btn-primary create-btn" (click)="create()">Criar</button>
-
-    @if (state.createError(); as err) {
-      <div class="error">{{ err }}</div>
-    }
-  </div>
-</div>
+  </section>
+</main>

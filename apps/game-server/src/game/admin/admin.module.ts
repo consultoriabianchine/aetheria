@@ -15,9 +15,10 @@ import { ShootTypeAdminController } from './shoot-type-admin.controller';
 import { EffectTypeAdminController } from './effect-type-admin.controller';
 import { TibiaWikiImportController } from './tibiawiki-import.controller';
 import { TibiaWikiImportService } from './tibiawiki-import.service';
+import { NewsAdminController, PublicNewsController } from './news.controller';
 
 @Module({
-  controllers: [AdminController, TibiaWikiImportController, CreatureAssetController, CombatAdminController, ItemAdminController, ItemCatalogController, AbilityAdminController, MonsterAbilityAdminController, ShootTypeAdminController, EffectTypeAdminController],
+  controllers: [AdminController, NewsAdminController, PublicNewsController, TibiaWikiImportController, CreatureAssetController, CombatAdminController, ItemAdminController, ItemCatalogController, AbilityAdminController, MonsterAbilityAdminController, ShootTypeAdminController, EffectTypeAdminController],
   providers: [AdminAuthGuard, TibiaWikiImportService, CreatureAssetService, CreatureAnimationService, CreatureRegistry, AbilityRegistry],
   exports: [CreatureRegistry],
 })

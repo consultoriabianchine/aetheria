@@ -1,0 +1,30 @@
+<div class="editor-head">
+  <div><a routerLink="/news">← Notícias</a><h1>{{ isNew ? 'Nova notícia' : draft()?.title || 'Editar notícia' }}</h1></div>
+  <div class="actions">
+    @if (draft()?.status === 'published') { <span class="status published">Publicada</span> }
+    @if (draft()?.status === 'archived') { <span class="status archived">Arquivada</span> }
+    @if (!isNew && draft()?.status !== 'archived') { <button (click)="archive()" [disabled]="saving()">Arquivar</button> }
+    @if (!isNew) { <button class="danger" (click)="remove()" [disabled]="saving()">Excluir</button> }
+    <button (click)="saveDraft()" [disabled]="saving()">Salvar rascunho</button>
+    @if (draft()?.status !== 'published') { <button class="primary" (click)="publish()" [disabled]="saving()">Publicar</button> }
+  </div>
+</div>
+
+@if (error()) { <p class="error">{{ error() }}</p> }
+@if (notice()) { <p class="notice">{{ notice() }}</p> }
+@if (draft(); as article) {
+  <div class="form-layout">
+    <section class="panel main-form">
+      <div class="field"><label for="title">Título *</label><input id="title" [value]="article.title" (input)="patch({ title: $any($event.target).value })" placeholder="Título da notícia" /></div>
+      <div class="field"><label for="slug">Slug</label><input id="slug" [value]="article.slug" (input)="patch({ slug: $any($event.target).value })" placeholder="atualizacao-do-servidor" /><span class="hint">Usado na URL pública da notícia.</span></div>
+      <div class="field"><label for="excerpt">Resumo</label><textarea id="excerpt" rows="3" [value]="article.excerpt" (input)="patch({ excerpt: $any($event.target).value })" placeholder="Uma breve chamada para a listagem..."></textarea></div>
+      <div class="field"><label for="content">Conteúdo *</label><textarea id="content" class="content" [value]="article.content" (input)="patch({ content: $any($event.target).value })" placeholder="Escreva o conteúdo da notícia..."></textarea></div>
+    </section>
+    <aside class="panel side-form">
+      <h2>Publicação</h2>
+      <div class="field"><label for="author">Autor</label><input id="author" [value]="article.author || ''" (input)="patch({ author: $any($event.target).value })" placeholder="Equipe Aetheria" /></div>
+      <div class="field"><label for="cover">Imagem de capa</label><input id="cover" [value]="article.coverImage || ''" (input)="patch({ coverImage: $any($event.target).value })" placeholder="/assets/news/update.png" /></div>
+      <p class="hint">Salve como rascunho para continuar editando sem exibir a notícia aos jogadores.</p>
+    </aside>
+  </div>
+}

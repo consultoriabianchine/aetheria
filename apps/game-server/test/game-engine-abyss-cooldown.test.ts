@@ -36,6 +36,23 @@ describe('GameEngine Abismo cooldown scheduling', () => {
     expect(internals.combatEvents.peek().readyAt).toBe(2_000);
   });
 
+  it('does not regenerate a dead player after a Hunt death', () => {
+    const engine = new GameEngine(new MemoryStore());
+    const internals = engine as any;
+    const player = {
+      id: 'character-dead', archetype: 'mage', health: 0, maxHealth: 100,
+      mana: 10, maxMana: 100, lastRegenAt: 0,
+    };
+    internals.players.set(player.id, player);
+    internals.regenEventReadyAt.set(player.id, 1_000);
+    internals.regenEvents.push({ playerId: player.id, readyAt: 1_000 });
+
+    internals.processRegenEvents(2_000);
+
+    expect(player.health).toBe(0);
+    expect(internals.regenEventReadyAt.has(player.id)).toBe(false);
+  });
+
   it('casts Abyss abilities without consuming mana', async () => {
     const tiles = Array.from({ length: 64 * 64 }, (_, index) => ({ x: index % 64, y: Math.floor(index / 64), z: 7, type: 0, walkable: true, blocksVision: false }));
     const mapRegistry = { getMap: () => ({ id: 'map_mucxf0oc', name: 'Abyss', width: 64, height: 64, tiles }), getMapRender: () => null };

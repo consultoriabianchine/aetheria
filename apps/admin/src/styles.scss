@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap');
-
 :root {
   --admin-bg: #080b11;
   --admin-surface: #111722;
@@ -35,7 +33,7 @@
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html, body { min-height: 100%; font-family: 'Space Grotesk', sans-serif; background: var(--admin-bg); color: var(--admin-text); }
+html, body { min-height: 100%; font-family: 'Trebuchet MS', Arial, sans-serif; background: var(--admin-bg); color: var(--admin-text); }
 body { background-image: radial-gradient(800px 420px at 50% -10%, rgba(90, 164, 223, .11), transparent 70%), linear-gradient(rgba(90, 164, 223, .018) 1px, transparent 1px), linear-gradient(90deg, rgba(90, 164, 223, .018) 1px, transparent 1px); background-size: auto, 32px 32px, 32px 32px; }
 button, input, select, textarea { font: inherit; }
 button { cursor: pointer; color: var(--admin-text); background: var(--admin-surface-raised); border: 1px solid var(--admin-border); border-radius: var(--admin-radius-sm); padding: 8px 13px; transition: border-color .16s ease, background .16s ease, color .16s ease, transform .16s ease; }
@@ -61,8 +59,8 @@ admin-root > header { position: sticky; top: 0; z-index: 5; display: flex; align
 admin-root > header nav { display: flex; gap: 3px; flex-wrap: wrap; }
 admin-root > header nav a { color: var(--admin-text-muted); padding: 8px 9px; border-radius: var(--admin-radius-sm); font-size: 12px; }
 admin-root > header nav a.active, admin-root > header nav a:hover { color: var(--admin-gold-bright); background: rgba(220, 174, 77, .1); }
-.token { display: flex; align-items: center; gap: 8px; margin-left: auto; color: var(--admin-text-muted); font: 11px 'DM Mono', monospace; }
-.token input { width: 160px; font: 11px 'DM Mono', monospace; }
+.token { display: flex; align-items: center; gap: 8px; margin-left: auto; color: var(--admin-text-muted); font: 11px monospace; }
+.token input { width: 160px; font: 11px monospace; }
 admin-root > main { width: min(1500px, calc(100% - 48px)); flex: 1; margin: 0 auto; padding: 36px 0 80px; }
 
 @media (max-width: 1100px) { admin-root > header { align-items: flex-start; flex-wrap: wrap; } admin-root > header nav { order: 3; width: 100%; overflow-x: auto; flex-wrap: nowrap; scrollbar-width: thin; } .token { margin-left: 0; } }

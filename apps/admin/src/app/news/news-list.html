@@ -1,0 +1,42 @@
+<div class="page-head">
+  <div>
+    <h1>Notícias</h1>
+    <p class="sub">Gerencie comunicados e atualizações exibidos aos jogadores.</p>
+  </div>
+  <button class="primary" (click)="create()">+ Nova notícia</button>
+</div>
+
+<div class="toolbar panel">
+  <label>Filtrar por status
+    <select [value]="status()" (change)="setStatus($any($event.target).value)">
+      <option value="all">Todas</option>
+      <option value="draft">Rascunhos</option>
+      <option value="published">Publicadas</option>
+      <option value="archived">Arquivadas</option>
+    </select>
+  </label>
+  <button (click)="load()" [disabled]="loading()">Atualizar</button>
+</div>
+
+@if (error()) { <p class="error">{{ error() }}</p> }
+@if (loading()) { <p class="loading">Carregando notícias...</p> }
+@if (!loading() && !error() && !news().length) {
+  <div class="empty panel"><strong>Nenhuma notícia encontrada</strong><span>Crie um rascunho para começar.</span></div>
+}
+@if (!loading() && news().length) {
+  <div class="table-wrap panel">
+    <table>
+      <thead><tr><th>Título</th><th>Status</th><th>Atualizada</th><th></th></tr></thead>
+      <tbody>
+        @for (item of news(); track item.id) {
+          <tr>
+            <td><a [routerLink]="['/news', item.id]" class="title">{{ item.title }}</a><span class="slug">/{{ item.slug }}</span></td>
+            <td><span class="status" [class]="item.status">{{ statusLabel(item.status) }}</span></td>
+            <td class="muted">{{ formatDate(item.updatedAt || item.createdAt) }}</td>
+            <td class="actions"><a [routerLink]="['/news', item.id]">Editar</a><button class="danger" (click)="remove(item)">Excluir</button></td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+}

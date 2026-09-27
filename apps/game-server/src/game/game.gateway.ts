@@ -36,6 +36,11 @@ export class GameGateway implements OnGatewayConnection, OnGatewayDisconnect {
     await this.engine.handleLogin(socket.id, payload.username, payload.password);
   }
 
+  @SubscribeMessage('auth.register')
+  async onRegister(socket: Socket, payload: { username: string; password: string }) {
+    await this.engine.handleRegister(socket.id, payload.username, payload.password);
+  }
+
   @SubscribeMessage('auth.createCharacter')
   async onCreateCharacter(socket: Socket, payload: { token: string; name: string; archetype: string }) {
     await this.engine.handleCreateCharacter(socket.id, payload.token, payload.name, payload.archetype as never);

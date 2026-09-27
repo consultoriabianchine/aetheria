@@ -6,6 +6,14 @@ export interface AccountRecord {
   passwordHash: string;
 }
 
+export interface PublicCharacter {
+  id: string;
+  name: string;
+  archetype: CombatArchetype;
+  level: number;
+  experience: number;
+}
+
 export interface StoredCharacterEffect {
   type: 'weapon_element_override';
   override: WeaponElementOverride;
@@ -72,6 +80,9 @@ export type PromotionError =
 export const STORE = Symbol('STORE');
 
 export interface Store {
+  countAccounts(): Promise<number>;
+  listTopCharacters(limit: number): Promise<PublicCharacter[]>;
+  searchPublicCharacters(query: string, limit: number): Promise<PublicCharacter[]>;
   findAccountByUsername(username: string): Promise<AccountRecord | null>;
   createAccount(username: string, passwordHash: string): Promise<AccountRecord>;
   listCharacters(accountId: string): Promise<StoredCharacter[]>;

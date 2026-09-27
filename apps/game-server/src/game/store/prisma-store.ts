@@ -3,7 +3,7 @@ import { INVENTORY_SIZE, LOOT_POUCH_SIZE } from '@aetheria/config';
 import { Prisma } from '@aetheria/database';
 import { PrismaService } from '../../prisma/prisma.service';
 import type { CharacterEquipment, CombatArchetype, HuntProgress, ItemStack, PlayerCombatConfig } from '@aetheria/types';
-import type { AbyssMetaProgression, AbyssRunHistory, AccountRecord, StoredAccountStorage, StoredCharacter, Store } from './store';
+import type { AbyssMetaProgression, AbyssRunHistory, AccountRecord, StoredAccountStorage, StoredCharacter, Store, PublicCharacter } from './store';
 
 interface AccountStorageRow {
   accountId: string;
@@ -77,6 +77,18 @@ const INCLUDE = {
 @Injectable()
 export class PrismaStore implements Store {
   constructor(private readonly prisma: PrismaService) {}
+
+  async countAccounts(): Promise<number> { return this.prisma.account.count(); }
+
+  async listTopCharacters(limit: number): Promise<PublicCharacter[]> {
+    const rows = await this.prisma.character.findMany({ take: limit, orderBy: [{ stats: { level: 'desc' } }, { stats: { experience: 'desc' } }], include: { stats: true } });
+    return rows.map((row) => ({ id: row.id, name: row.name, archetype: row.archetype as CombatArchetype, level: row.stats?.level ?? 1, experience: row.stats?.experience ?? 0 }));
+  }
+
+  async searchPublicCharacters(query: string, limit: number): Promise<PublicCharacter[]> {
+    const rows = await this.prisma.character.findMany({ where: { name: { contains: query, mode: 'insensitive' } }, take: limit, orderBy: [{ stats: { level: 'desc' } }, { name: 'asc' }], include: { stats: true } });
+    return rows.map((row) => ({ id: row.id, name: row.name, archetype: row.archetype as CombatArchetype, level: row.stats?.level ?? 1, experience: row.stats?.experience ?? 0 }));
+  }
 
   async findAccountByUsername(username: string): Promise<AccountRecord | null> {
     const account = await this.prisma.account.findUnique({ where: { username } });

@@ -1,0 +1,16 @@
+<main class="public-auth">
+  <a class="back-link" routerLink="/">← Voltar para Aetheria</a>
+  <section class="auth-layout">
+    <div class="auth-intro"><span class="sigil">✦</span><p class="eyebrow">A primeira página da sua lenda</p><h1>Abra seu<br /><em>grimório.</em></h1><p>Crie uma conta e atravesse o véu. Seu primeiro personagem espera do outro lado.</p><div class="auth-steps"><span class="active">01 <b>Conta</b></span><span>02 <b>Personagem</b></span><span>03 <b>Mundo</b></span></div></div>
+    <form class="auth-panel" (ngSubmit)="submit()">
+      <div class="panel-heading"><p class="eyebrow">Novo aventureiro</p><h2>Comece sua jornada</h2><p>Uma conta, todos os seus personagens.</p></div>
+      <label for="register-user">Nome de usuário</label><input id="register-user" class="ui-input" [ngModel]="username()" (ngModelChange)="username.set($event)" name="username" autocomplete="username" placeholder="ex.: arcanista_07" required />
+      <small class="field-hint">3 a 20 caracteres · letras, números ou _</small>
+      <label for="register-password">Senha</label><div class="password-field"><input id="register-password" class="ui-input" [type]="showPassword() ? 'text' : 'password'" [ngModel]="password()" (ngModelChange)="password.set($event)" name="password" autocomplete="new-password" placeholder="mínimo de 8 caracteres" required /><button type="button" class="password-toggle" (click)="showPassword.update(v => !v)" [attr.aria-label]="showPassword() ? 'Ocultar senha' : 'Mostrar senha'">{{ showPassword() ? 'Ocultar' : 'Mostrar' }}</button></div>
+      <label for="register-confirm">Confirmar senha</label><input id="register-confirm" class="ui-input" type="password" [ngModel]="confirmation()" (ngModelChange)="confirmation.set($event)" name="confirmation" autocomplete="new-password" placeholder="repita sua senha" required />
+      @if (state.registerError(); as err) { <div class="error" role="alert">{{ err }}</div> }
+      <button class="ui-button ui-button-primary submit-button" type="submit" [disabled]="submitting()">{{ submitting() ? 'Abrindo o grimório...' : 'Criar conta' }} <span aria-hidden="true">→</span></button>
+      <p class="switch-auth">Já possui uma conta? <a routerLink="/login">Entrar</a></p>
+    </form>
+  </section>
+</main>

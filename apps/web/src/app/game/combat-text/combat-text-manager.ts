@@ -39,6 +39,7 @@ interface WorldPosition {
 
 export class CombatTextManager {
   private readonly active: FloatingCombatText[] = [];
+  private readonly delayed = new Set<Phaser.Time.TimerEvent>();
   private nextId = 1;
   private readonly pool: CombatTextPool;
 
@@ -83,6 +84,8 @@ export class CombatTextManager {
   }
 
   clear() {
+    for (const timer of this.delayed) timer.remove(false);
+    this.delayed.clear();
     for (const item of this.active) this.pool.release(item);
     this.active.length = 0;
   }
@@ -112,7 +115,14 @@ export class CombatTextManager {
       item.text = text;
       this.active.push(item);
     };
-    if (delayMs > 0) this.scene.time.delayedCall(delayMs, create);
+    if (delayMs > 0) {
+      let timer: Phaser.Time.TimerEvent;
+      timer = this.scene.time.delayedCall(delayMs, () => {
+        this.delayed.delete(timer);
+        create();
+      });
+      this.delayed.add(timer);
+    }
     else create();
   }
 

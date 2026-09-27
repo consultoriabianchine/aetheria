@@ -31,6 +31,7 @@ export type PartyMember = CharacterSummary & { equipment: CharacterEquipment };
 
 export type ClientMessage =
   | { type: 'auth.login'; username: string; password: string }
+  | { type: 'auth.register'; username: string; password: string }
   | { type: 'auth.createCharacter'; token: string; name: string; archetype: CombatArchetype }
   | { type: 'auth.selectCharacter'; token: string; characterId: string }
   | { type: 'game.input'; direction?: Direction | null; attack?: boolean }
@@ -70,6 +71,7 @@ export type ClientMessage =
 
 export type ServerMessage =
   | { type: 'auth.loginResult'; ok: boolean; error?: string; token?: string; accountId?: string; characters?: CharacterSummary[] }
+  | { type: 'auth.registerResult'; ok: boolean; error?: string; token?: string; accountId?: string; characters?: CharacterSummary[] }
   | { type: 'auth.characterCreated'; ok: boolean; error?: string; character?: CharacterSummary }
   | { type: 'auth.selectResult'; ok: boolean; error?: string }
   | { type: 'game.enterWorld'; character: CharacterSummary; map: MapTile[]; width: number; height: number }
@@ -150,8 +152,10 @@ export type ServerEvent = ServerMessage['type'];
 
 export const SERVER_EVENTS = {
   LOGIN_RESULT: 'auth.loginResult',
+  REGISTER_RESULT: 'auth.registerResult',
   CHARACTER_CREATED: 'auth.characterCreated',
   SELECT_RESULT: 'auth.selectResult',
+  SNAPSHOT_READY: 'game.snapshotReady',
   ENTER_WORLD: 'game.enterWorld',
   ENTITY_SPAWNED: 'entity.spawned',
   ENTITY_MOVED: 'entity.moved',
@@ -184,6 +188,7 @@ export const SERVER_EVENTS = {
   HUNT_LIST: 'hunt.list',
   HUNT_DETAILS: 'hunt.details',
   HUNT_STARTED: 'hunt.started',
+  HUNT_SNAPSHOT_READY: 'hunt.snapshotReady',
   ENTER_ARENA: 'game.enterArena',
   HUNT_WAVE: 'hunt.wave',
   HUNT_CLEARED: 'hunt.cleared',
@@ -216,6 +221,7 @@ export const SERVER_EVENTS = {
 
 export const CLIENT_EVENTS = {
   LOGIN: 'auth.login',
+  REGISTER: 'auth.register',
   CREATE_CHARACTER: 'auth.createCharacter',
   SELECT_CHARACTER: 'auth.selectCharacter',
   INPUT: 'game.input',

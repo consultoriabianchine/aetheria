@@ -1,7 +1,7 @@
 import { randomUUID } from 'node:crypto';
 import { ACCOUNT_CONFIG, INVENTORY_SIZE, LOOT_POUCH_SIZE } from '@aetheria/config';
 import type { HuntProgress, ItemStack } from '@aetheria/types';
-import type { AbyssMetaProgression, AbyssRunHistory, Store, StoredAccountStorage, StoredCharacter, AccountRecord } from './store';
+import type { AbyssMetaProgression, AbyssRunHistory, Store, StoredAccountStorage, StoredCharacter, AccountRecord, PublicCharacter } from './store';
 
 const BASE_SKILLS = { melee: 10, distance: 10, magic: 10 };
 
@@ -14,6 +14,21 @@ export class MemoryStore implements Store {
   private accountStorage = new Map<string, StoredAccountStorage>();
   private abyssMeta = new Map<string, AbyssMetaProgression>();
   private abyssRuns: AbyssRunHistory[] = [];
+
+  async countAccounts(): Promise<number> { return this.accounts.size; }
+
+  async listTopCharacters(limit: number): Promise<PublicCharacter[]> {
+    return [...this.characters.values()].sort((a, b) => b.level - a.level || b.experience - a.experience).slice(0, limit).map((c) => this.toPublic(c));
+  }
+
+  async searchPublicCharacters(query: string, limit: number): Promise<PublicCharacter[]> {
+    const normalized = query.toLowerCase();
+    return [...this.characters.values()].filter((c) => c.name.toLowerCase().includes(normalized)).sort((a, b) => b.level - a.level).slice(0, limit).map((c) => this.toPublic(c));
+  }
+
+  private toPublic(character: StoredCharacter): PublicCharacter {
+    return { id: character.id, name: character.name, archetype: character.archetype, level: character.level, experience: character.experience };
+  }
 
   async findAccountByUsername(username: string): Promise<AccountRecord | null> {
     const id = this.byUsername.get(username.toLowerCase());

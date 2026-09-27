@@ -124,6 +124,10 @@ export class GameEngine implements OnModuleDestroy {
   private emitFn: EmitFn = () => {};
   private world = generateWorldMap();
   private players = new Map<string, GamePlayer>();
+
+  getOnlinePlayerCount(): number {
+    return this.players.size;
+  }
   private playerBySocket = new Map<string, string>();
   private accountStorage = new Map<string, AccountStorageState>();
   private inventoryMutationLocks = new Map<string, Promise<void>>();
@@ -199,7 +203,18 @@ export class GameEngine implements OnModuleDestroy {
           ? buildWorldMapData(custom.tiles, custom.width, custom.height, this.world.z, mapRegistry?.getMapRender(mapId!) ?? undefined)
           : this.world;
       },
-      getCreatureDefinitions: () => [...this.creatureDefinitions.values()],
+      getCreatureDefinitions: () => {
+        const trainingHunt = (huntRegistry?.getAll() ?? HUNT_CATALOG).find((hunt) => hunt.id === TRAINING_HUNT_ID);
+        const excludedIds = new Set(
+          [
+            ...(trainingHunt?.monsters.map((monster) => monster.monsterId) ?? []),
+            trainingHunt?.boss.monsterId,
+          ].filter((id): id is string => !!id),
+        );
+        return [...this.creatureDefinitions.values()].filter((definition) =>
+          !excludedIds.has(definition.id) && !excludedIds.has(String(definition.creatureId)),
+        );
+      },
       getPlayer: (characterId) => this.players.get(characterId) ?? null,
       onCreatureAttackPlayer: (creature, target, amount, critical, now) => this.creatureAttackWithAbility(creature, target.id, amount, critical, now),
     });
@@ -417,6 +432,29 @@ export class GameEngine implements OnModuleDestroy {
     this.emitTo(socketId, 'auth.loginResult', { ok: true, token, accountId: account.id, characters });
   }
 
+  async handleRegister(socketId: string, username: string, password: string) {
+    const uname = username.trim();
+    if (!/^[A-Za-z0-9_]{3,20}$/.test(uname)) {
+      this.emitTo(socketId, 'auth.registerResult', { ok: false, error: 'Usuário deve ter 3 a 20 caracteres: letras, números ou _.' });
+      return false;
+    }
+    if (password.length < 8 || password.length > 72) {
+      this.emitTo(socketId, 'auth.registerResult', { ok: false, error: 'A senha deve ter entre 8 e 72 caracteres.' });
+      return false;
+    }
+    if (await this.store.findAccountByUsername(uname)) {
+      this.emitTo(socketId, 'auth.registerResult', { ok: false, error: 'Este usuário já está em uso.' });
+      return false;
+    }
+    const account = await this.store.createAccount(uname, bcrypt.hashSync(password, 10));
+    await this.ensureAccountStorage(account.id);
+    const characters = (await this.store.listCharacters(account.id)).map((c) => this.toSummary(c));
+    const token = this.signToken(account.id, account.username);
+    this.tokens.set(token, { accountId: account.id, username: account.username, exp: Date.now() + TOKEN_TTL_MS });
+    this.emitTo(socketId, 'auth.registerResult', { ok: true, token, accountId: account.id, characters });
+    return true;
+  }
+
   async handleCreateCharacter(socketId: string, token: string, name: string, archetypeId: CombatArchetype) {
     const session = this.verifyToken(token);
     if (!session) {
@@ -564,6 +602,7 @@ export class GameEngine implements OnModuleDestroy {
         position: item.position,
       });
     }
+    this.emitTo(socketId, 'game.snapshotReady', null);
     this.logger.log(`Jogador ${player.name} entrou no mundo.`);
   }
 
@@ -637,6 +676,7 @@ export class GameEngine implements OnModuleDestroy {
     this.emitStats(player);
     this.emitInventory(player);
     await this.emitPartyState(player);
+    this.emitTo(socketId, 'game.snapshotReady', null);
   }
 
   // ---------------------------------------------------------------- hunts
@@ -1317,6 +1357,12 @@ export class GameEngine implements OnModuleDestroy {
       ? (run?.creatures.getCreature(resolvedTargetId) ?? this.creatures.getCreature(resolvedTargetId) ?? this.players.get(resolvedTargetId))
         ?? (abyssRun?.creatures?.getCreature(resolvedTargetId) ?? undefined)
       : undefined;
+    const healTarget = ability.category === 'heal' ? (target instanceof GamePlayer ? target : player) : null;
+    if (healTarget?.health === 0) {
+      this.activeAbilityCasts.delete(castKey);
+      this.emitTo(socketId, 'ability.castFailed', { abilityId, reason: 'INVALID_TARGET' });
+      return false;
+    }
     const needsTarget = ability.category !== 'heal' && ability.targetMode !== 'directional' && ability.targetMode !== 'ground';
     if (needsTarget && (!target || tileDistance(player.position, target.position) > ability.rangeTiles)) {
       this.activeAbilityCasts.delete(castKey);
@@ -2777,6 +2823,7 @@ export class GameEngine implements OnModuleDestroy {
       this.regenEventReadyAt.delete(event.playerId);
       const player = this.players.get(event.playerId);
       if (!player) continue;
+      if (player.health <= 0) continue;
       this.regeneratePlayer(player, now);
       this.schedulePlayerRegen(player.id, now + 1000);
       processed++;
@@ -2860,6 +2907,7 @@ export class GameEngine implements OnModuleDestroy {
   }
 
   private regeneratePlayer(player: GamePlayer, now: number) {
+    if (player.health <= 0) return;
     if (!player.lastRegenAt) player.lastRegenAt = now;
     const elapsedMs = now - player.lastRegenAt;
     if (elapsedMs < 1000) return;
@@ -2957,7 +3005,7 @@ export class GameEngine implements OnModuleDestroy {
 
   private async usePotion(player: GamePlayer, potionId: string, target: GamePlayer): Promise<boolean> {
     const potion = POTIONS[potionId];
-    if (!potion || player.level < potion.level) return false;
+    if (!potion || player.level < potion.level || target.health <= 0) return false;
     if (Date.now() < (this.potionReadyAt.get(player.id) ?? 0)) return false;
     const storage = this.storageFor(player);
     if (storage.gold < potion.price) return false;
@@ -3135,6 +3183,7 @@ export class GameEngine implements OnModuleDestroy {
       player.attackCooldownUntil = 0;
       this.combatEventReadyAt.delete(`${player.id}:attack`);
       this.combatEventReadyAt.delete(`${player.id}:heal`);
+      this.regenEventReadyAt.delete(player.id);
       this.emitTo(player.socketId ?? '', 'chat.message', {
         channel: 'local',
         from: 'Sistema',

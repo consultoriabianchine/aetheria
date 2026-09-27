@@ -953,9 +953,8 @@ button {
 }
 
 .hunt-header {
-  min-height: 52px;
   display: grid;
-  grid-template-columns: minmax(150px, 1fr) auto auto;
+  grid-template-columns: minmax(150px, 1fr) minmax(220px, 1.35fr) auto auto;
   align-items: center;
   gap: 10px;
   padding: 8px 10px;
@@ -966,7 +965,6 @@ button {
 }
 
 .hunt-title strong {
-  display: block;
   font-size: 15px;
 }
 
@@ -2058,6 +2056,7 @@ button {
   .hunt-header {
     grid-template-columns: minmax(100px, 1fr) 110px auto auto;
   }
+
 }
 
 @media (max-width: 900px) {
@@ -2134,6 +2133,7 @@ button {
   .hunt-header {
     grid-template-columns: 1fr;
   }
+
 
   .hotbar-row-slots .hotbar-slot {
     width: 40px;

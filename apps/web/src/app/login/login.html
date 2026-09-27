@@ -1,20 +1,14 @@
-<div class="auth-screen">
-  <div class="auth-card">
-    <h1>Aetheria <span>Online</span></h1>
-    <p class="sub">MMORPG 2D multiplayer — entre ou crie uma conta (automático).</p>
-
-    <label>Usuário</label>
-    <input [(ngModel)]="username" (keydown.enter)="submit()" placeholder="seu nome de conta" autocomplete="username" />
-
-    <label>Senha</label>
-    <input type="password" [(ngModel)]="password" (keydown.enter)="submit()" placeholder="••••••••" autocomplete="current-password" />
-
-    @if (state.loginError(); as err) {
-      <div class="error">{{ err }}</div>
-    }
-
-    <button class="btn-primary" (click)="submit()">Entrar</button>
-
-    <p class="hint">Contas são criadas automaticamente no primeiro acesso.</p>
-  </div>
-</div>
+<main class="public-auth">
+  <a class="back-link" routerLink="/">← Voltar para Aetheria</a>
+  <section class="auth-layout">
+    <div class="auth-intro"><span class="sigil">✦</span><p class="eyebrow">O portal está aberto</p><h1>Retorne à<br /><em>fronteira.</em></h1><p>Suas caçadas, seus companheiros e tudo o que você conquistou continuam esperando.</p><div class="world-status"><span></span><div><strong>Mundo online</strong><small>Aetheria está pronta para receber você.</small></div></div></div>
+    <form class="auth-panel" (ngSubmit)="submit()">
+      <div class="panel-heading"><p class="eyebrow">Conta de aventureiro</p><h2>Entrar no mundo</h2><p>Continue sua história de onde parou.</p></div>
+      <label for="login-user">Nome de usuário</label><input id="login-user" class="ui-input" [ngModel]="username()" (ngModelChange)="username.set($event)" name="username" placeholder="seu nome de conta" autocomplete="username" required />
+      <label for="login-password">Senha</label><div class="password-field"><input id="login-password" class="ui-input" [type]="showPassword() ? 'text' : 'password'" [ngModel]="password()" (ngModelChange)="password.set($event)" name="password" placeholder="sua senha" autocomplete="current-password" required /><button type="button" class="password-toggle" (click)="showPassword.update(v => !v)" [attr.aria-label]="showPassword() ? 'Ocultar senha' : 'Mostrar senha'">{{ showPassword() ? 'Ocultar' : 'Mostrar' }}</button></div>
+      @if (state.loginError(); as err) { <div class="error" role="alert">{{ err }}</div> }
+      <button class="ui-button ui-button-primary submit-button" type="submit" [disabled]="submitting()">{{ submitting() ? 'Abrindo o portal...' : 'Entrar' }} <span aria-hidden="true">→</span></button>
+      <p class="switch-auth">Ainda não tem uma conta? <a routerLink="/register">Criar conta</a></p>
+    </form>
+  </section>
+</main>

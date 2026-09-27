@@ -183,6 +183,7 @@ export class HuntEngine {
     for (const id of members) this.memberIndex.set(id, characterId);
     this.enterArena(run);
     this.startWave(run, 1, now);
+    this.emit(run, 'hunt.snapshotReady', { huntId: run.hunt.id, wave: run.wave });
     return { ok: true, run };
   }
 
@@ -287,7 +288,11 @@ export class HuntEngine {
 
       if (run.waveState === 'transitioning' && run.transitionAt !== null && now >= run.transitionAt) {
         run.transitionAt = null;
-        this.startWave(run, run.wave + 1, now);
+        if (run.wave >= HUNT_CONFIG.bossWave) {
+          this.completeHunt(run, now);
+        } else {
+          this.startWave(run, run.wave + 1, now);
+        }
         return;
       }
 
@@ -496,7 +501,13 @@ export class HuntEngine {
 
   private completeWave(run: HuntRun, now: number) {
     if (run.wave >= HUNT_CONFIG.bossWave) {
-      this.completeHunt(run, now);
+      if (run.loopEnabled) {
+        run.waveState = 'transitioning';
+        run.transitionAt = now + HUNT_CONFIG.bossLoopTransitionMs;
+        this.emit(run, 'hunt.cleared', { huntId: run.hunt.id, wave: run.wave });
+      } else {
+        this.completeHunt(run, now);
+      }
       return;
     }
     run.waveState = 'transitioning';
@@ -541,6 +552,7 @@ export class HuntEngine {
     this.enterArena(run);
     this.hooks.onRunLoopRestarted?.(run.characterId, rejoining);
     this.startWave(run, 1, now);
+    this.emit(run, 'hunt.snapshotReady', { huntId: run.hunt.id, wave: run.wave });
   }
 
   private repositionMembers(run: HuntRun) {
