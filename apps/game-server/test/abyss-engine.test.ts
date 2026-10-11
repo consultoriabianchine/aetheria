@@ -36,14 +36,28 @@ describe('AbyssEngine', () => {
     expect(engine.getRun('character-2')).toBeNull();
   });
 
-  it('loses temporary fragments when the run is defeated', async () => {
+  it('preserves temporary fragments when the run is defeated', async () => {
     const store = new MemoryStore();
     const engine = new AbyssEngine(store, { getAbilities: () => abilities, emit: () => {} });
     const run = engine.start('account-4', 'character-4', 1, 'mage', 0);
     run.fragments = 9;
     engine.defeat('character-4', 1000);
     await new Promise((resolve) => setTimeout(resolve, 0));
-    expect((await engine.getMeta('account-4')).fragments).toBe(0);
+    expect((await engine.getMeta('account-4')).fragments).toBe(9);
+  });
+
+  it('does not emit a stale state after the run finishes during creature updates', () => {
+    const events: string[] = [];
+    const engine = new AbyssEngine(new MemoryStore(), { getAbilities: () => abilities, emit: (_id, event) => events.push(event) });
+    const run = engine.start('account-5', 'character-5', 1, 'mage', 0);
+    run.creatures = { updateCreatures: () => engine.defeat(run.characterId, 1000) } as never;
+    run.ai = {} as never;
+
+    engine.tick(1000);
+
+    expect(events).toContain('abyss.defeated');
+    expect(events).not.toContain('abyss.state');
+    expect(engine.getRun(run.characterId)).toBeNull();
   });
 
   it('spawns existing creature definitions in an isolated manager', () => {

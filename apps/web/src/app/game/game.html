@@ -663,7 +663,7 @@
         <div class="abyss-entry-body">
            <p>Uma run solo de combate e escolhas. Derrote criaturas, acumule Fragmentos do Abismo e compre melhorias permanentes na loja.</p>
           <div class="abyss-entry-stats"><span><b>10:00</b>Duração</span><span><b>Tormento 1</b>Nível inicial</span><span><b>{{ state.abyssMeta()?.fragments ?? 0 }}</b>Fragmentos guardados</span></div>
-           <div class="abyss-entry-note">Os fragmentos coletados são temporários. Ao morrer ou abandonar, todos os fragmentos da run são perdidos.</div>
+           <div class="abyss-entry-note">Os fragmentos coletados são preservados ao morrer. Ao abandonar a run, eles são perdidos.</div>
            <div class="abyss-entry-note abyss-entry-note-info">Poções de HP/MP e magias de cura adquiridas durante a run estão liberadas. Recursos de presets externos não são usados no Abismo.</div>
         </div>
          <footer><button type="button" class="ui-button" (click)="openAbyssTree()">Loja do Abismo</button><button type="button" class="ui-button ui-button-primary" (click)="beginAbyss()">Iniciar Abismo</button></footer>
@@ -700,8 +700,8 @@
       <section class="abyss-result-modal" role="dialog" aria-modal="true" aria-labelledby="abyss-result-title">
         <span class="eyebrow">{{ result.status === 'completed' ? 'RUN CONCLUÍDA' : result.status === 'defeated' ? 'RUN ENCERRADA' : 'RUN ABANDONADA' }}</span>
         <h2 id="abyss-result-title">{{ result.status === 'completed' ? 'Abismo superado' : result.status === 'defeated' ? 'Você caiu no Abismo' : 'Você deixou o Abismo' }}</h2>
-         <p>{{ result.status === 'completed' ? 'Os fragmentos foram guardados na Loja do Abismo.' : 'Os fragmentos coletados nesta run foram perdidos.' }}</p>
-        <div class="abyss-result-stats"><span><b>Lv {{ result.level }}</b>Nível final</span><span><b>{{ result.wavesCompleted }}</b>Waves concluídas</span><span><b>{{ result.fragments }}</b>Fragmentos {{ result.status === 'completed' ? 'ganhos' : 'perdidos' }}</span></div>
+          <p>{{ result.status === 'abandoned' ? 'Os fragmentos coletados nesta run foram perdidos.' : result.status === 'defeated' ? 'Os fragmentos foram preservados e guardados na Loja do Abismo.' : 'Os fragmentos foram guardados na Loja do Abismo.' }}</p>
+         <div class="abyss-result-stats"><span><b>Lv {{ result.level }}</b>Nível final</span><span><b>{{ result.wavesCompleted }}</b>Waves concluídas</span><span><b>{{ result.fragments }}</b>Fragmentos {{ result.status === 'abandoned' ? 'perdidos' : result.status === 'defeated' ? 'preservados' : 'ganhos' }}</span></div>
         @if (result.rewards.length > 0) {
           <div class="abyss-result-rewards"><strong>Recompensas</strong>@for (reward of result.rewards; track reward) { <span>{{ reward }}</span> }</div>
         }

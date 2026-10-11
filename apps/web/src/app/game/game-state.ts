@@ -485,6 +485,7 @@ export class GameState {
       case SERVER_EVENTS.ABYSS_STARTED:
       case SERVER_EVENTS.ABYSS_STATE:
       case SERVER_EVENTS.ABYSS_UPGRADE_SELECTED: {
+        if (e.event !== SERVER_EVENTS.ABYSS_STARTED && !this.abyss()) break;
         const r = data as { abyss: AbyssRunView };
         this.abyss.set(r.abyss);
         this.abyssChoices.set(r.abyss.pendingChoices ?? []);
@@ -530,9 +531,11 @@ export class GameState {
         this.abyssChoices.set([]);
         const resultStatus = e.event === SERVER_EVENTS.ABYSS_COMPLETED ? 'completed' : e.event === SERVER_EVENTS.ABYSS_DEFEATED ? 'defeated' : 'abandoned';
         this.abyssResult.set({ status: resultStatus, fragments: r.abyss.fragments, rewards: r.rewards ?? [], level: r.abyss.level, wave: r.abyss.wave, wavesCompleted: r.abyss.wavesCompleted });
-        if (e.event === SERVER_EVENTS.ABYSS_COMPLETED && r.fragments > 0) {
+        if ((e.event === SERVER_EVENTS.ABYSS_COMPLETED || e.event === SERVER_EVENTS.ABYSS_DEFEATED) && r.fragments > 0) {
           this.abyssMeta.update((meta) => meta ? { ...meta, fragments: meta.fragments + r.fragments } : meta);
-          this.addSystemMessage(`Abismo concluído! +${r.fragments} Fragmentos do Abismo.`);
+          this.addSystemMessage(e.event === SERVER_EVENTS.ABYSS_DEFEATED
+            ? `Você caiu no Abismo, mas preservou ${r.fragments} Fragmentos do Abismo.`
+            : `Abismo concluído! +${r.fragments} Fragmentos do Abismo.`);
         }
         break;
       }

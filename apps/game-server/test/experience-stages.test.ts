@@ -3,16 +3,16 @@ import { experienceMultiplierForLevel, scaledExperienceForLevel, skillExperience
 
 describe('experience stages', () => {
   it.each([
-    [1, 100],
-    [50, 100],
-    [51, 50],
-    [100, 50],
-    [101, 20],
-    [150, 20],
-    [151, 10],
-    [200, 10],
-    [201, 5],
-    [300, 5],
+    [1, 50],
+    [50, 50],
+    [51, 25],
+    [100, 25],
+    [101, 10],
+    [150, 10],
+    [151, 5],
+    [200, 5],
+    [201, 3],
+    [300, 3],
     [301, 2],
     [999, 2],
   ])('retorna %sx para o nível %s', (level, multiplier) => {
@@ -20,8 +20,8 @@ describe('experience stages', () => {
   });
 
   it('aplica o estágio individualmente ao valor recebido', () => {
-    expect(scaledExperienceForLevel(10, 1)).toBe(1000);
-    expect(scaledExperienceForLevel(10, 51)).toBe(500);
+    expect(scaledExperienceForLevel(10, 1)).toBe(500);
+    expect(scaledExperienceForLevel(10, 51)).toBe(250);
     expect(scaledExperienceForLevel(10, 301)).toBe(20);
   });
 

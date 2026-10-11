@@ -157,6 +157,7 @@ export class AbyssEngine {
       if (run.status !== 'active') continue;
       const elapsed = now - run.startedAt;
       if (run.creatures && run.ai) run.creatures.updateCreatures(run.ai, now);
+      if (run.status !== 'active' || this.runs.get(run.characterId) !== run) continue;
       run.bossActive = elapsed >= run.durationMs - 30_000;
       if (run.nextWaveAt !== null && now >= run.nextWaveAt) {
         run.nextWaveAt = null;
@@ -362,7 +363,7 @@ export class AbyssEngine {
     if (run.status === 'completed' || run.status === 'defeated' || run.status === 'abandoned') return;
     run.status = result;
     this.runs.delete(run.characterId);
-    const fragments = result === 'completed' ? run.fragments : 0;
+    const fragments = result === 'abandoned' ? 0 : run.fragments;
     const rewards = result === 'completed' ? ['abyss-crystal'] : [];
     void this.persistResult(run, result, fragments, rewards, now);
     this.hooks.emit(run.characterId, `abyss.${result}`, { fragments, rewards, abyss: this.view(run, now) });
