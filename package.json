@@ -11,12 +11,11 @@
     "node": ">=20"
   },
   "scripts": {
-    "build": "npm run build:packages && npm run build:server && npm run build:web && npm run build:admin && npm run build:importer",
+    "build": "npm run build:packages && npm run build:server && npm run build:web && npm run build:admin",
     "build:packages": "npm run build -w @aetheria/types -w @aetheria/protocol -w @aetheria/config -w @aetheria/shared -w @aetheria/database",
     "build:server": "npm run build -w aetheria-server",
     "build:web": "npm run build -w aetheria-web",
     "build:admin": "npm run build -w aetheria-admin",
-    "build:importer": "npm run build -w tibiawiki-importer",
     "dev:server": "npm run start:dev -w aetheria-server",
     "dev:web": "npm run start -w aetheria-web",
     "dev:admin": "npm run start -w aetheria-admin",
@@ -25,15 +24,8 @@
     "db:migrate:deploy": "npm run migrate:deploy -w @aetheria/database",
     "db:push": "npm run db:push -w @aetheria/database",
     "db:seed": "npm run prisma:seed -w aetheria-server",
-    "importer": "node apps/tibiawiki-importer/dist/main.js",
-    "importer:dry": "node apps/tibiawiki-importer/dist/main.js --dry-run",
-    "importer:test": "node apps/tibiawiki-importer/dist/main.js --dry-run --limit=3",
-"importer:inspect": "node apps/tibiawiki-importer/dist/main.js --inspect",
-      "importer:items": "node apps/tibiawiki-importer/dist/main.js --items",
-      "importer:integration": "node apps/tibiawiki-importer/dist/main.js --dry-run --limit=1 --verbose",
-    "importer:test-unit": "npm run test -w tibiawiki-importer",
     "server:test": "npm run test -w aetheria-server",
-    "test": "npm run server:test && npm run importer:test-unit",
+    "test": "npm run server:test",
     "postinstall": "npm run db:generate"
   },
   "allowScripts": {

@@ -170,7 +170,7 @@ export class HuntEngine {
 
   startHunt(characterId: string, memberIds: string[], huntId: string, loopEnabled: boolean, now: number): StartHuntResult {
     const existing = this.runs.get(characterId);
-    if (existing && existing.status === 'active') return { ok: false, error: 'CHARACTER_ALREADY_IN_HUNT' };
+    if (existing && (existing.status === 'preparing' || existing.status === 'active')) return { ok: false, error: 'CHARACTER_ALREADY_IN_HUNT' };
     const hunt = this.findHunt(huntId);
     if (!hunt) return { ok: false, error: 'HUNT_NOT_FOUND' };
     if (!hunt.enabled) return { ok: false, error: 'HUNT_DISABLED' };
@@ -182,14 +182,29 @@ export class HuntEngine {
     this.runs.set(characterId, run);
     for (const id of members) this.memberIndex.set(id, characterId);
     this.enterArena(run);
-    this.startWave(run, 1, now);
+    this.startWave(run, 1, now, false);
     this.emit(run, 'hunt.snapshotReady', { huntId: run.hunt.id, wave: run.wave });
     return { ok: true, run };
   }
 
+  activateHunt(characterId: string, now: number): boolean {
+    const run = this.runs.get(characterId);
+    if (!run || run.status !== 'preparing') return false;
+    run.status = 'active';
+    run.startedAt = now;
+    this.emit(run, 'hunt.started', { hunt: this.view(run) });
+    this.emit(run, 'hunt.wave', {
+      huntId: run.hunt.id,
+      wave: run.wave,
+      monsterCount: run.creatures.size,
+      isBoss: run.isBossWave,
+    });
+    return true;
+  }
+
   stopHunt(characterId: string): boolean {
     const run = this.runs.get(characterId);
-    if (!run || run.status !== 'active') return false;
+    if (!run || (run.status !== 'preparing' && run.status !== 'active')) return false;
     run.status = 'returning_to_city';
     this.hooks.onRunFinished(characterId, 'stopped');
     return true;
@@ -274,7 +289,7 @@ export class HuntEngine {
     const run = this.runs.get(characterId);
     if (!run) return;
     try {
-      if (run.status === 'returning_to_city') return;
+      if (run.status === 'returning_to_city' || run.status === 'preparing') return;
 
       if (run.status === 'active') {
         for (const id of [...run.aliveMemberIds]) {
@@ -333,7 +348,7 @@ export class HuntEngine {
       hunt,
       arena: effectiveArena,
       wave: 0,
-      status: 'active',
+      status: 'preparing',
       waveState: 'not_started',
       loopEnabled,
       startedAt: now,
@@ -422,10 +437,9 @@ export class HuntEngine {
       render: run.map.render ?? undefined,
       hunt: this.view(run),
     });
-    this.emit(run, 'hunt.started', { hunt: this.view(run) });
   }
 
-  private startWave(run: HuntRun, wave: number, now: number) {
+  private startWave(run: HuntRun, wave: number, now: number, announce = true) {
     run.wave = wave;
     run.waveState = 'combat';
     run.transitionAt = null;
@@ -435,12 +449,14 @@ export class HuntEngine {
     } else {
       this.spawnPack(run, wave);
     }
-    this.emit(run, 'hunt.wave', {
-      huntId: run.hunt.id,
-      wave,
-      monsterCount: run.creatures.size,
-      isBoss: run.isBossWave,
-    });
+    if (announce) {
+      this.emit(run, 'hunt.wave', {
+        huntId: run.hunt.id,
+        wave,
+        monsterCount: run.creatures.size,
+        isBoss: run.isBossWave,
+      });
+    }
     void now;
   }
 
@@ -549,7 +565,7 @@ export class HuntEngine {
   private restartLoop(run: HuntRun, now: number) {
     const rejoining = [...run.deadMemberIds];
     run.creatures.clear();
-    run.status = 'active';
+    run.status = 'preparing';
     run.waveState = 'not_started';
     run.wave = 0;
     run.startedAt = now;
@@ -559,7 +575,7 @@ export class HuntEngine {
     run.aliveMemberIds = [...run.memberIds];
     this.enterArena(run);
     this.hooks.onRunLoopRestarted?.(run.characterId, rejoining);
-    this.startWave(run, 1, now);
+    this.startWave(run, 1, now, false);
     this.emit(run, 'hunt.snapshotReady', { huntId: run.hunt.id, wave: run.wave });
   }
 

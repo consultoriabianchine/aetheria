@@ -891,11 +891,25 @@ export class GameEngine implements OnModuleDestroy {
       if (!member) continue;
       member.moveDir = null;
       this.moveEventReadyAt.delete(id);
-      this.schedulePlayerAttackCheck(member, Date.now());
-      this.schedulePlayerHealCheck(member, Date.now());
     }
-    this.scheduleHuntUpdate(player.id, Date.now());
     this.logger.log(`Jogador ${player.name} entrou na hunt ${huntId} com ${memberIds.length} membro(s).`);
+  }
+
+  async handleHuntReady(socketId: string, token: string) {
+    const session = await this.verifySession(socketId, token);
+    if (!session) return;
+    const player = session.player;
+    if (player.socketId !== socketId || !this.hunts.activateHunt(player.id, Date.now())) return;
+    const run = this.hunts.getRun(player.id);
+    if (!run) return;
+    const now = Date.now();
+    for (const id of run.memberIds) {
+      const member = this.players.get(id);
+      if (!member) continue;
+      this.schedulePlayerAttackCheck(member, now);
+      this.schedulePlayerHealCheck(member, now);
+    }
+    this.scheduleHuntUpdate(player.id, now);
   }
 
   handleHuntStop(socketId: string, token: string) {
@@ -1147,8 +1161,6 @@ export class GameEngine implements OnModuleDestroy {
       const member = this.players.get(id);
       if (!member) continue;
       this.schedulePlayerRegen(member.id, Date.now() + 1000);
-      this.schedulePlayerAttackCheck(member, Date.now());
-      this.schedulePlayerHealCheck(member, Date.now());
     }
   }
 
@@ -2802,7 +2814,7 @@ export class GameEngine implements OnModuleDestroy {
             this.playerKilled(member, now);
             continue;
           }
-          if (member) {
+          if (member && run.status === 'active') {
             if (this.isTrainingHunt(run.hunt) && (run.hunt.effects?.manaRefill ?? true) && member.mana !== member.maxMana) {
               member.mana = member.maxMana;
               this.emitStats(member);
@@ -2813,7 +2825,7 @@ export class GameEngine implements OnModuleDestroy {
         this.hunts.updateRun(event.characterId, now);
         for (const memberId of run.aliveMemberIds) {
           const member = this.players.get(memberId);
-          if (member) this.schedulePlayerAttackCheck(member, now);
+          if (member && run.status === 'active') this.schedulePlayerAttackCheck(member, now);
         }
         if (this.hunts.hasRun(event.characterId)) this.scheduleHuntUpdate(event.characterId, this.hunts.nextUpdateAt(event.characterId, now));
         processed++;

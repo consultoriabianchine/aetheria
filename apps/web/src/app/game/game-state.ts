@@ -1,6 +1,6 @@
 import { Injectable, computed, signal } from '@angular/core';
 import { Subject } from 'rxjs';
-import { SERVER_EVENTS } from '@aetheria/protocol';
+import { CLIENT_EVENTS, SERVER_EVENTS } from '@aetheria/protocol';
 import type { AbyssFragmentDrop, AbyssMetaView, AbyssRunView, AbyssUpgradeChoice, CharacterInventory, CharacterSkills, CharacterSummary, CombatArchetype, CombatStatsView, DamageType, HuntDetails, HuntListEntry, HuntRunView, MapTile, PlayerCombatConfig } from '@aetheria/types';
 import { WsService, WsEvent } from '../core/ws.service';
 
@@ -190,6 +190,7 @@ export class GameState {
   readonly sceneEvents$ = new Subject<WsEvent>();
   private buffer: WsEvent[] = [];
   private lastSystemMessage: { text: string; at: number } | null = null;
+  private huntReadySent = false;
   private abyssLoadingTimer: ReturnType<typeof setTimeout> | null = null;
   private abyssLoadingUntil = 0;
 
@@ -216,7 +217,9 @@ export class GameState {
   }
 
   finishHuntLoading() {
-    this.huntLoading.set(false);
+    if (this.huntReadySent || !this.token()) return;
+    this.huntReadySent = true;
+    this.ws.send({ type: CLIENT_EVENTS.HUNT_READY, token: this.token()! });
   }
   readonly characterCreated$ = new Subject<boolean>();
   readonly selectResult$ = new Subject<boolean>();
@@ -331,6 +334,7 @@ export class GameState {
         this.snapshotReady.set(false);
         this.hunt.set(null);
         this.huntLoading.set(false);
+        this.huntReadySent = false;
         this.abyss.set(null);
         this.abyssChoices.set([]);
         this.abyssFragmentDrops.set([]);
@@ -350,6 +354,7 @@ export class GameState {
         this.world.set({ map: w.map, width: w.width, height: w.height });
         this.hunt.set(w.hunt);
         this.huntLoading.set(true);
+        this.huntReadySent = false;
         this.snapshotReady.set(false);
         this.huntAnalyzer.update((metrics) =>
           metrics.startedAt === null ? { ...metrics, startedAt: w.hunt.startedAt } : metrics,
@@ -399,6 +404,7 @@ export class GameState {
       case SERVER_EVENTS.HUNT_STARTED: {
         const r = data as { hunt: HuntRunView };
         this.hunt.set(r.hunt);
+        this.huntLoading.set(false);
         this.bossHealth.set(null);
         break;
       }

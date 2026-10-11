@@ -130,6 +130,11 @@ export class GameGateway implements OnGatewayConnection, OnGatewayDisconnect {
     await this.engine.handleHuntStart(socket.id, payload.token, payload.huntId, payload.loopEnabled);
   }
 
+  @SubscribeMessage('hunt.ready')
+  async onHuntReady(socket: Socket, payload: { token: string }) {
+    await this.engine.handleHuntReady(socket.id, payload.token);
+  }
+
   @SubscribeMessage('hunt.stop')
   async onHuntStop(socket: Socket, payload: { token: string }) {
     await this.engine.handleHuntStop(socket.id, payload.token);

@@ -4,8 +4,12 @@ WORKDIR /app
 COPY package.json package-lock.json* ./
 COPY apps/game-server/package.json apps/game-server/
 COPY apps/web/package.json apps/web/
-COPY packages ./packages
-RUN npm install
+COPY packages/game-types/package.json packages/game-types/
+COPY packages/game-protocol/package.json packages/game-protocol/
+COPY packages/game-config/package.json packages/game-config/
+COPY packages/shared/package.json packages/shared/
+COPY packages/database/package.json packages/database/
+RUN npm ci --ignore-scripts
 
 # Build: packages + game-server.
 FROM node:22-alpine AS build

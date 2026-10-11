@@ -322,20 +322,7 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
     if (width <= 0 || height <= 0) return;
     this.phaser.scale.resize(width, height);
     this.phaser.scale.refresh();
-    this.syncCanvasResolution(width, height);
     (this.phaser.scene.getScene('World') as WorldScene | undefined)?.handleViewportResize();
-  }
-
-  private syncCanvasResolution(width: number, height: number) {
-    if (!this.phaser) return;
-    const resolution = Math.min(window.devicePixelRatio || 1, 2);
-    const physicalWidth = Math.round(width * resolution);
-    const physicalHeight = Math.round(height * resolution);
-    if (this.phaser.canvas.width !== physicalWidth || this.phaser.canvas.height !== physicalHeight) {
-      this.phaser.canvas.width = physicalWidth;
-      this.phaser.canvas.height = physicalHeight;
-      this.phaser.renderer.resize(physicalWidth, physicalHeight);
-    }
   }
 
   abyssElapsed(): string {

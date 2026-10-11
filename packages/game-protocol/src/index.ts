@@ -48,6 +48,7 @@ export type ClientMessage =
   | { type: 'hunt.list'; token: string }
   | { type: 'hunt.details'; token: string; huntId: string }
   | { type: 'hunt.start'; token: string; huntId: string; loopEnabled: boolean }
+  | { type: 'hunt.ready'; token: string }
   | { type: 'hunt.stop'; token: string }
   | { type: 'hunt.setLoop'; token: string; enabled: boolean }
   | { type: 'hunt.setFavorite'; token: string; huntId: string; favorite: boolean }
@@ -106,6 +107,7 @@ export type ServerMessage =
   | { type: 'hunt.list'; hunts: HuntListEntry[] }
   | { type: 'hunt.details'; details: HuntDetails }
   | { type: 'hunt.started'; hunt: HuntRunView }
+  | { type: 'hunt.snapshotReady'; huntId: string; wave: number }
   | { type: 'game.enterArena'; character: CharacterSummary; members: CharacterSummary[]; map: MapTile[]; width: number; height: number; hunt: HuntRunView }
   | { type: 'hunt.wave'; huntId: string; wave: number; monsterCount: number; isBoss: boolean }
   | { type: 'hunt.cleared'; huntId: string; wave: number }
@@ -236,6 +238,7 @@ export const CLIENT_EVENTS = {
   NPC_INTERACT: 'npc.interact',
   HUNT_LIST: 'hunt.list',
   HUNT_START: 'hunt.start',
+  HUNT_READY: 'hunt.ready',
   HUNT_STOP: 'hunt.stop',
   HUNT_SET_LOOP: 'hunt.setLoop',
   HUNT_SET_FAVORITE: 'hunt.setFavorite',

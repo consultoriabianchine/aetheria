@@ -1,6 +1,6 @@
 # Aetheria Online
 
-MMORPG 2D multiplayer original, de cima para baixo, construído com **Angular + Phaser** no cliente e **NestJS + Socket.IO** no servidor, com dados populados por um **importer da TibiaWiki** em PostgreSQL.
+MMORPG 2D multiplayer original, de cima para baixo, construído com **Angular + Phaser** no cliente e **NestJS + Socket.IO** no servidor, com dados persistidos em PostgreSQL.
 
 ## Stack
 
@@ -9,7 +9,7 @@ MMORPG 2D multiplayer original, de cima para baixo, construído com **Angular + 
 | Cliente | Angular 22 (standalone/signals) · Phaser 3.90 |
 | Servidor | NestJS 11 · Socket.IO 4 (WebSocket puro, sem REST) |
 | Banco | PostgreSQL 16 · Prisma 6 |
-| Importer | axios · cheerio · zod (scraper estático) |
+| Admin | NestJS · endpoints de importação e gerenciamento |
 
 ## Estrutura do monorepo
 
@@ -17,7 +17,6 @@ MMORPG 2D multiplayer original, de cima para baixo, construído com **Angular + 
 apps/
   game-server/          Servidor autoritativo do jogo (engine, gateway, IA, store)
   web/                  Cliente Angular + WorldScene Phaser + HUD
-  tibiawiki-importer/   Scraper/importador da TibiaWiki (criaturas, loot, itens)
 packages/
   database/             @aetheria/database — schema Prisma compartilhado
   game-config/          @aetheria/config — constantes de jogo (mapa, tick, IA, chat)
@@ -32,7 +31,7 @@ scripts/                Testes de integração socket.io (smoke, kill, origin)
 - **Servidor autoritativo** — posição, dano, inventário e combate são validados no `GameEngine`. O cliente só renderiza o que o servidor emite via Socket.IO.
 - **Auth** — token HMAC-SHA256 (`{a,u,exp}`, TTL 24h); contas criadas automaticamente no primeiro login (bcrypt).
 - **Mundo procedural** — mapa determinístico 64×64 (z=7) gerado por `mulberry32`; IA de criaturas com state machine IDLE→WANDER→CHASE→ATTACK→FLEE→RETURN→DEAD e A*.
-- **Dados de criatura** — separação `source_*` (importer) × `game_*` (balanceamento manual); o jogo faz coalesce com fallback.
+- **Dados de criatura** — separação `source_*` (dados importados) × `game_*` (balanceamento manual); o jogo faz coalesce com fallback.
 
 ## Pré-requisitos
 
@@ -66,11 +65,8 @@ npm run dev:web
 
 | Comando | Descrição |
 |---|---|
-| `npm run build` | Build de packages + server + web + importer |
-| `npm test` | Testes unitários (server + importer, vitest) |
-| `npm run importer:dry` | Dry-run do importer (sem persistir) |
-| `npm run importer:test` | Dry-run limitado a 3 criaturas |
-| `npm run importer:inspect` | Inspeciona uma criatura importada |
+| `npm run build` | Build de packages + server + web + admin |
+| `npm test` | Testes unitários do servidor (vitest) |
 | `node scripts/smoke-test.cjs` | Fluxo completo via WS (login→mundo→movimento) |
 | `node scripts/kill-test.cjs` | Teste de combate e loot (30s) |
 | `node scripts/ws-origin-test.cjs` | Validação de CORS/origin |
@@ -79,12 +75,7 @@ npm run dev:web
 
 ```bash
 docker compose up --build            # postgres + server + web
-docker compose up --build --profile importer   # + job de importação
 ```
-
-## Importer da TibiaWiki
-
-O importer popula criaturas, loot e itens a partir da TibiaWiki (PT-BR), de forma idempotente (upsert por URL + hash de conteúdo). Ele escreve **somente** colunas `source_*` — o balanceamento (`game_*`) é manual. Veja `apps/tibiawiki-importer/README.md`.
 
 ## Testes de integração
 

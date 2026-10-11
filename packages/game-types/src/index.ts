@@ -574,7 +574,7 @@ export interface NpcTemplate {
 
 export type ArenaSide = 'left' | 'right';
 
-export type HuntRunStatus = 'active' | 'completed' | 'wiped' | 'returning_to_city' | 'restarting';
+export type HuntRunStatus = 'preparing' | 'active' | 'completed' | 'wiped' | 'returning_to_city' | 'restarting';
 
 export type WaveState = 'not_started' | 'spawning' | 'combat' | 'cleared' | 'transitioning';
 

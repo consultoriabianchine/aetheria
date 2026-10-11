@@ -162,6 +162,23 @@ function clearWaveCreatures(runCreatures: { removeCreature(id: string): boolean;
   for (const c of [...runCreatures.getAll()]) runCreatures.removeCreature(c.id);
 }
 
+function startActiveHunt(
+  engine: HuntEngine,
+  leaderId: string,
+  memberIds: string[],
+  huntId: string,
+  loop: boolean,
+  now: number,
+) {
+  const result = engine.startHunt(leaderId, memberIds, huntId, loop, now);
+  if (result.ok) engine.activateHunt(leaderId, now);
+  return result;
+}
+
+function activateIfPreparing(engine: HuntEngine, characterId: string, now: number) {
+  if (engine.getRun(characterId)?.status === 'preparing') engine.activateHunt(characterId, now);
+}
+
 async function flush(): Promise<void> {
   await new Promise((r) => setTimeout(r, 0));
 }
@@ -314,6 +331,9 @@ describe('hunt-engine', () => {
     const { engine, player, emits } = makeHuntEngine();
     const result = engine.startHunt(player.id, [player.id], 'goblin_warren', false, 0);
     expect(result.ok).toBe(true);
+    expect(engine.getRun(player.id)!.status).toBe('preparing');
+    expect(emits.map((e) => e.event)).not.toContain('hunt.started');
+    expect(engine.activateHunt(player.id, 0)).toBe(true);
     const run = engine.getRun(player.id)!;
     expect(run.wave).toBe(1);
     expect(run.waveState).toBe('combat');
@@ -332,7 +352,7 @@ describe('hunt-engine', () => {
   it('rejeita hunt inexistente ou personagem já em hunt', () => {
     const { engine, player } = makeHuntEngine();
     expect(engine.startHunt(player.id, [player.id], 'hunt_inexistente', false, 10)).toEqual({ ok: false, error: 'HUNT_NOT_FOUND' });
-    engine.startHunt(player.id, [player.id], 'goblin_warren', false, 0);
+    startActiveHunt(engine, player.id, [player.id], 'goblin_warren', false, 0);
     expect(engine.startHunt(player.id, [player.id], 'goblin_warren', false, 10)).toEqual({
       ok: false,
       error: 'CHARACTER_ALREADY_IN_HUNT',
@@ -341,7 +361,7 @@ describe('hunt-engine', () => {
 
   it('progressa waves após limpar os monstros (transição com delay)', () => {
     const { engine, player, emits } = makeHuntEngine();
-    engine.startHunt(player.id, [player.id], 'goblin_warren', false, 0);
+    startActiveHunt(engine, player.id, [player.id], 'goblin_warren', false, 0);
     const run = engine.getRun(player.id)!;
 
     clearWaveCreatures(run.creatures);
@@ -358,7 +378,7 @@ describe('hunt-engine', () => {
 
   it('agenda a próxima atualização pelo movimento mais próximo de jogador ou criatura', () => {
     const { engine, player } = makeHuntEngine();
-    engine.startHunt(player.id, [player.id], 'goblin_warren', false, 0);
+    startActiveHunt(engine, player.id, [player.id], 'goblin_warren', false, 0);
     player.nextMoveAt = 500;
     const run = engine.getRun(player.id)!;
     for (const creature of run.creatures.getAll()) creature.lastMoveAt = 10_000;
@@ -368,7 +388,7 @@ describe('hunt-engine', () => {
 
   it('boss aparece na wave 10 e a conclusão encerra a run sem loop', async () => {
     const { engine, player, emits, finished, completed, completions } = makeHuntEngine();
-    engine.startHunt(player.id, [player.id], 'goblin_warren', false, 0);
+    startActiveHunt(engine, player.id, [player.id], 'goblin_warren', false, 0);
     let run = engine.getRun(player.id)!;
 
     for (let wave = 1; wave <= 9; wave++) {
@@ -378,6 +398,7 @@ describe('hunt-engine', () => {
       engine.update(wave * 10_000);
       run = engine.getRun(player.id)!;
       engine.update((run.transitionAt ?? wave * 10_000) + 1);
+      activateIfPreparing(engine, player.id, run.transitionAt ?? wave * 10_000);
     }
 
     run = engine.getRun(player.id)!;
@@ -401,7 +422,7 @@ describe('hunt-engine', () => {
 
   it('com loop, o clear reinicia na wave 1 automaticamente', async () => {
     const { engine, player, emits, finished } = makeHuntEngine();
-    engine.startHunt(player.id, [player.id], 'goblin_warren', true, 0);
+    startActiveHunt(engine, player.id, [player.id], 'goblin_warren', true, 0);
     let run = engine.getRun(player.id)!;
 
     for (let wave = 1; wave <= 10; wave++) {
@@ -410,8 +431,10 @@ describe('hunt-engine', () => {
       engine.update(wave * 10_000);
       run = engine.getRun(player.id)!;
       engine.update((run.transitionAt ?? wave * 10_000) + 1);
+      activateIfPreparing(engine, player.id, run.transitionAt ?? wave * 10_000);
     }
     await flush();
+    activateIfPreparing(engine, player.id, Date.now());
 
     run = engine.getRun(player.id)!;
     expect(run.status).toBe('active');
@@ -424,7 +447,7 @@ describe('hunt-engine', () => {
   it('remove membro morto da wave e o retorna no próximo loop', async () => {
     const { engine, player } = makeHuntEngine();
     const companion = makePlayer({ id: 'p2', socketId: null });
-    engine.startHunt(player.id, [player.id, companion.id], 'goblin_warren', true, 0);
+    startActiveHunt(engine, player.id, [player.id, companion.id], 'goblin_warren', true, 0);
     const run = engine.getRun(player.id)!;
     for (const creature of run.creatures.getAll()) creature.targetId = companion.id;
 
@@ -440,8 +463,10 @@ describe('hunt-engine', () => {
       clearWaveCreatures(run.creatures);
       engine.update(wave * 10_000);
       engine.update((run.transitionAt ?? wave * 10_000) + 1);
+      activateIfPreparing(engine, player.id, run.transitionAt ?? wave * 10_000);
     }
     await flush();
+    activateIfPreparing(engine, player.id, Date.now());
 
     expect(run.status).toBe('active');
     expect(run.aliveMemberIds).toEqual([player.id, companion.id]);
@@ -450,7 +475,7 @@ describe('hunt-engine', () => {
 
   it('wipe aplica penalidade, limpa a arena e (com loop) respawna', () => {
     const { engine, player, emits, getGold } = makeHuntEngine();
-    engine.startHunt(player.id, [player.id], 'goblin_warren', true, 0);
+    startActiveHunt(engine, player.id, [player.id], 'goblin_warren', true, 0);
     const run = engine.getRun(player.id)!;
     const goldBefore = getGold();
 
@@ -463,6 +488,7 @@ describe('hunt-engine', () => {
     expect(run.respawnAt).toBe(5_000 + HUNT_CONFIG.wipe.respawnMs);
 
     engine.update(run.respawnAt! + 1);
+    activateIfPreparing(engine, player.id, run.respawnAt! + 1);
     expect(run.status).toBe('active');
     expect(run.wave).toBe(1);
     expect(run.isBossWave).toBe(false);
@@ -470,7 +496,7 @@ describe('hunt-engine', () => {
 
   it('wipe sem loop retorna à cidade', () => {
     const { engine, player, finished } = makeHuntEngine();
-    engine.startHunt(player.id, [player.id], 'goblin_warren', false, 0);
+    startActiveHunt(engine, player.id, [player.id], 'goblin_warren', false, 0);
     engine.onPlayerDied(player.id, 5_000);
     expect(finished).toEqual([{ characterId: player.id, reason: 'wiped' }]);
     expect(engine.getRun(player.id)!.status).toBe('returning_to_city');
@@ -479,7 +505,7 @@ describe('hunt-engine', () => {
   it('encerra a run quando líder e companion estão mortos', () => {
     const { engine, player, finished } = makeHuntEngine();
     const companion = makePlayer({ id: 'p2', socketId: null });
-    engine.startHunt(player.id, [player.id, companion.id], 'goblin_warren', false, 0);
+    startActiveHunt(engine, player.id, [player.id, companion.id], 'goblin_warren', false, 0);
 
     engine.onPlayerDied(player.id, 5_000);
     engine.removeMember(companion.id, 5_001);
@@ -491,7 +517,7 @@ describe('hunt-engine', () => {
   it('reconcilia membros com HP zero antes da IA continuar', () => {
     const { engine, player, finished } = makeHuntEngine();
     const companion = makePlayer({ id: 'p2', socketId: null });
-    engine.startHunt(player.id, [player.id, companion.id], 'goblin_warren', false, 0);
+    startActiveHunt(engine, player.id, [player.id, companion.id], 'goblin_warren', false, 0);
     player.health = 0;
     companion.health = 0;
 
@@ -503,7 +529,7 @@ describe('hunt-engine', () => {
 
   it('stopHunt finaliza com motivo stopped', () => {
     const { engine, player, finished } = makeHuntEngine();
-    engine.startHunt(player.id, [player.id], 'goblin_warren', false, 0);
+    startActiveHunt(engine, player.id, [player.id], 'goblin_warren', false, 0);
     expect(engine.stopHunt(player.id)).toBe(true);
     expect(finished).toEqual([{ characterId: player.id, reason: 'stopped' }]);
     expect(engine.stopHunt(player.id)).toBe(false);
@@ -511,7 +537,7 @@ describe('hunt-engine', () => {
 
   it('removeRun limpa a run sem penalidade', () => {
     const { engine, player } = makeHuntEngine();
-    engine.startHunt(player.id, [player.id], 'goblin_warren', false, 0);
+    startActiveHunt(engine, player.id, [player.id], 'goblin_warren', false, 0);
     engine.removeRun(player.id);
     expect(engine.getRun(player.id)).toBeNull();
   });
