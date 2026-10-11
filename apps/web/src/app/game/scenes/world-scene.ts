@@ -164,6 +164,7 @@ export class WorldScene extends Phaser.Scene {
   private selfAnim: CreatureAnimState | null = null;
   private playerAnims = new Map<string, CreatureAnimState>();
   private lastSeq = -1;
+  private activeProjectiles = new Set<Phaser.GameObjects.Image>();
   private moveDir: Direction | null = null;
   private selfMoveSpeed = MOVE_INTERVAL_MS;
   private keys!: Record<string, Phaser.Input.Keyboard.Key>;
@@ -245,6 +246,7 @@ export class WorldScene extends Phaser.Scene {
     this.events.once(Phaser.Scenes.Events.SHUTDOWN, () => {
       this.sceneReady = false;
       this.pendingSceneEvents = [];
+      this.clearActiveProjectiles();
       this.sceneEventsSubscription?.unsubscribe();
       this.sceneEventsSubscription = undefined;
     });
@@ -270,6 +272,7 @@ export class WorldScene extends Phaser.Scene {
       this.visualGeneration++;
       this.combatText.clear();
       this.tweens.killAll();
+      this.clearActiveProjectiles();
       this.creatureMoves.clear();
     } else {
       this.game.loop.resetDelta();
@@ -1473,6 +1476,7 @@ export class WorldScene extends Phaser.Scene {
 
   private playProjectile(attackerId: string, targetId: string, from: Position, to: Position, projectile: ItemProjectileVisual | undefined, impact: ItemImpactVisual | undefined, travelTimeMs: number) {
     if (!this.sys.isActive()) return;
+    const generation = this.visualGeneration;
     const end = this.entityCenter(targetId, to);
     const impactBase = tileBase(to, TILE_SIZE);
     if (!projectile?.sprite && !projectile?.spriteAssetId) {
@@ -1483,16 +1487,20 @@ export class WorldScene extends Phaser.Scene {
     const start = this.entitySocket(attackerId, from, 'projectileOrigin');
     const frame = projectile.frames[this.projectileDirection(from, to)] ?? 0;
     const run = () => {
-      if (!this.textures.exists(textureKey)) return;
+      if (this.backgrounded || generation !== this.visualGeneration || !this.textures.exists(textureKey)) return;
       const shot = this.add.image(start.x + (projectile.offsetX ?? 0), start.y + (projectile.offsetY ?? 0), textureKey, frame).setDepth(90).setOrigin(0.5);
+      this.activeProjectiles.add(shot);
       this.tweens.add({
         targets: shot,
         x: end.x,
         y: end.y,
         duration: Math.max(80, travelTimeMs),
         onComplete: () => {
+          this.activeProjectiles.delete(shot);
           shot.destroy();
-          if (impact?.sprite || impact?.spriteAssetId) this.playImpact(impactBase.x, impactBase.y, impact);
+          if (generation === this.visualGeneration && !this.backgrounded && (impact?.sprite || impact?.spriteAssetId)) {
+            this.playImpact(impactBase.x, impactBase.y, impact);
+          }
         },
       });
     };
@@ -1505,6 +1513,7 @@ export class WorldScene extends Phaser.Scene {
   }
 
   private playArea(attackerId: string, targetId: string, from: Position, center: Position, tiles: Position[], projectile: ItemProjectileVisual | undefined, impact: ItemImpactVisual | undefined, travelTimeMs: number) {
+    const generation = this.visualGeneration;
     const end = tileBase(center, TILE_SIZE);
     const playImpactOnAllTiles = () => {
       if (!impact?.sprite && !impact?.spriteAssetId) return;
@@ -1521,16 +1530,18 @@ export class WorldScene extends Phaser.Scene {
     const start = this.entitySocket(attackerId, from, 'projectileOrigin');
     const frame = projectile.frames[this.projectileDirection(from, center)] ?? 0;
     const run = () => {
-      if (!this.textures.exists(textureKey)) return;
+      if (this.backgrounded || generation !== this.visualGeneration || !this.textures.exists(textureKey)) return;
       const shot = this.add.image(start.x + (projectile.offsetX ?? 0), start.y + (projectile.offsetY ?? 0), textureKey, frame).setDepth(90).setOrigin(0.5);
+      this.activeProjectiles.add(shot);
       this.tweens.add({
         targets: shot,
         x: end.x,
         y: end.y,
         duration: Math.max(80, travelTimeMs),
         onComplete: () => {
+          this.activeProjectiles.delete(shot);
           shot.destroy();
-          playImpactOnAllTiles();
+          if (generation === this.visualGeneration && !this.backgrounded) playImpactOnAllTiles();
         },
       });
     };
@@ -1566,6 +1577,11 @@ export class WorldScene extends Phaser.Scene {
       this.load.once(Phaser.Loader.Events.COMPLETE, run);
       this.load.start();
     }
+  }
+
+  private clearActiveProjectiles() {
+    for (const projectile of this.activeProjectiles) projectile.destroy();
+    this.activeProjectiles.clear();
   }
 
   private entitySocket(entityId: string, fallback: Position, socket: keyof ResolvedSockets): { x: number; y: number } {
