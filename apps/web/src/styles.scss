@@ -265,7 +265,7 @@ a {
   grid-template-columns:68px minmax(0,1fr);
   grid-template-rows:minmax(68px,auto);
   align-items:center;
-  min-height:82px;
+  min-height:98px;
   width:100%;
   box-sizing:border-box;
 }
@@ -313,6 +313,162 @@ a {
 .characters-page .char-sigil .thumb {
   max-width:100%;
   max-height:100%;
+}
+.game-page .character-grid {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:4px;
+  margin-bottom:7px;
+}
+.game-page .character-grid-card {
+  position:relative;
+  display:grid;
+  justify-items:center;
+  align-content:center;
+  gap:1px;
+  min-width:0;
+  min-height:76px;
+  padding:4px 3px;
+  border:1px solid rgba(215,185,79,.2);
+  border-radius:6px;
+  background:rgba(17,20,24,.72);
+  color:var(--ui-text-muted);
+  cursor:pointer;
+}
+.game-page .character-grid-card:hover,
+.game-page .character-grid-card:focus-visible,
+.game-page .character-grid-card.active {
+  border-color:var(--ui-gold);
+  background:rgba(220,174,77,.12);
+  color:var(--ui-text);
+}
+.game-page .character-grid-avatar {
+  width:46px;
+  height:46px;
+  overflow:hidden;
+  border:1px solid var(--ui-border-strong);
+  border-radius:var(--ui-radius-sm);
+  background:var(--ui-bg);
+}
+.game-page .character-grid-card strong,
+.game-page .character-grid-card small {
+  max-width:100%;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.game-page .character-grid-card strong { font-size:10px; }
+.game-page .character-grid-card small { color:var(--ui-text-subtle); font-size:9px; }
+.game-page .character-grid-check {
+  position:absolute;
+  top:3px;
+  right:4px;
+  display:grid;
+  place-items:center;
+  width:15px;
+  height:15px;
+  border-radius:50%;
+  background:var(--ui-gold);
+  color:var(--ui-bg);
+  font-size:11px;
+  font-weight:900;
+}
+.game-page .header-status {
+  display:flex;
+  align-items:center;
+  gap:6px;
+  min-width:220px;
+}
+.game-page .header-stamina,
+.game-page .header-status-button {
+  border:1px solid var(--ui-border);
+  border-radius:var(--ui-radius-sm);
+  background:linear-gradient(180deg,var(--ui-surface-raised),var(--ui-surface));
+}
+.game-page .header-stamina {
+  display:grid;
+  gap:3px;
+  min-width:136px;
+  padding:5px 8px;
+}
+.game-page .header-stamina > div,
+.game-page .header-status-button {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:6px;
+}
+.game-page .header-stamina span,
+.game-page .header-status-button span {
+  color:var(--ui-text-muted);
+  font-size:10px;
+  text-transform:uppercase;
+}
+.game-page .header-stamina b,
+.game-page .header-status-button b {
+  color:var(--ui-gold-bright);
+  font-size:11px;
+}
+.game-page .header-stamina small {
+  overflow:hidden;
+  color:var(--ui-text-subtle);
+  font-size:9px;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.game-page .header-stamina i {
+  display:block;
+  height:3px;
+  overflow:hidden;
+  border-radius:999px;
+  background:var(--ui-bg);
+}
+.game-page .header-stamina i em {
+  display:block;
+  width:76%;
+  height:100%;
+  border-radius:inherit;
+  background:var(--ui-green);
+}
+.game-page .header-boosts {
+  position:relative;
+}
+.game-page .header-status-button {
+  min-width:76px;
+  min-height:39px;
+  padding:5px 8px;
+  cursor:pointer;
+}
+.game-page .header-status-button:hover,
+.game-page .header-status-button:focus-visible {
+  border-color:var(--ui-gold);
+  background:var(--ui-surface-raised);
+}
+.game-page .header-boosts-popover {
+  position:absolute;
+  top:calc(100% + 6px);
+  right:0;
+  z-index:20;
+  display:grid;
+  gap:5px;
+  width:178px;
+  padding:9px;
+  border:1px solid var(--ui-border-strong);
+  border-radius:var(--ui-radius-sm);
+  background:var(--ui-surface-raised);
+  box-shadow:var(--ui-shadow-modal);
+}
+.game-page .header-boosts-popover .metric-row {
+  margin:0;
+  font-size:10px;
+}
+@media (max-width:1200px) {
+  .game-page .header-status { min-width:190px; }
+  .game-page .header-stamina { min-width:112px; }
+  .game-page .header-stamina small { display:none; }
+}
+@media (max-width:560px) {
+  .game-page .header-status { display:none; }
 }
 .game-page .hunt-kpis { display:flex; align-items:stretch; gap:5px; }
 .game-page .hunt-kpis span { display:grid; min-width:55px; padding:3px 6px; border-left:1px solid var(--ui-border); }

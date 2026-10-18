@@ -478,7 +478,7 @@ button {
 .game-topbar {
   min-width: 0;
   display: grid;
-  grid-template-columns: 230px 180px minmax(0, 1fr) auto;
+  grid-template-columns: 230px 180px auto minmax(0, 1fr) auto;
   gap: 12px;
   align-items: center;
   padding: 8px 12px;
@@ -792,7 +792,7 @@ button {
 
 .character-summary {
   display: grid;
-  grid-template-columns: 34px minmax(0, 1fr) auto;
+  grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
   gap: 10px;
   padding: 7px;
@@ -1400,7 +1400,7 @@ button {
   grid-template-rows: minmax(68px, auto);
   gap: 8px;
   align-items: center;
-  min-height: 82px;
+  min-height: 98px;
   padding: 7px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 7px;
@@ -1949,7 +1949,7 @@ button {
   }
 
   .game-topbar {
-    grid-template-columns: 210px 150px minmax(0, 1fr) auto;
+    grid-template-columns: 210px 150px auto minmax(0, 1fr) auto;
   }
 
   .top-nav-item {
@@ -1965,6 +1965,7 @@ button {
 
   .game-topbar {
     gap: 8px;
+    grid-template-columns: 210px 150px auto minmax(0, 1fr) auto;
   }
 
   .top-nav-item {
@@ -1990,7 +1991,7 @@ button {
 
   .game-topbar {
     padding: 6px 8px;
-    grid-template-columns: 180px 115px minmax(0, 1fr) auto;
+    grid-template-columns: 180px 115px auto minmax(0, 1fr) auto;
   }
 
   .brand-mark {
@@ -2036,7 +2037,7 @@ button {
   }
 
   .game-topbar {
-    grid-template-columns: 150px 96px minmax(0, 1fr) auto;
+    grid-template-columns: 150px 96px auto minmax(0, 1fr) auto;
   }
 
   .brand-block span {
@@ -2062,6 +2063,10 @@ button {
   .game-page {
     --topbar-height: 56px;
     --panel-gap: 5px;
+  }
+
+  .header-status {
+    display: none;
   }
 
   .game-topbar {

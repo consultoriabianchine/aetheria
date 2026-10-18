@@ -45,6 +45,13 @@
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
+            "allowedCommonJsDependencies": [
+              "phaser",
+              "@aetheria/protocol",
+              "@aetheria/types",
+              "@aetheria/config",
+              "@aetheria/shared"
+            ],
             "assets": [
               "public",
               "src/assets"

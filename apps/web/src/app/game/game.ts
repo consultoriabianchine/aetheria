@@ -836,7 +836,7 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   damageMeterRows() {
     const now = this.now();
     const meter = this.state.damageMeter();
-    return this.state.characters().map((character) => {
+    return this.selectableCharacters().map((character) => {
       const entry = meter[character.id];
       const elapsedMs = entry?.firstDamageAt ? Math.max(1, now - entry.firstDamageAt) : 0;
       return {
@@ -890,7 +890,7 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
 
   damageTakenRows() {
     const taken = this.state.damageTaken();
-    return this.state.characters().map((character) => ({
+    return this.selectableCharacters().map((character) => ({
       id: character.id,
       name: character.name,
       archetype: this.archetypeLabelFor(character.archetype),

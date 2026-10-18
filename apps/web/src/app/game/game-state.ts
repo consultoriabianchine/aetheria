@@ -796,7 +796,7 @@ export class GameState {
   }
 
   private recordDamage(characterId: string, amount: number, damageType?: DamageType) {
-    if (!this.characters().some((character) => character.id === characterId)) return;
+    if (!this.knownCharacterIds().has(characterId)) return;
     const now = Date.now();
     this.damageMeter.update((all) => {
       const current = all[characterId] ?? { totalDamage: 0, firstDamageAt: null, damageByType: {} };
@@ -815,7 +815,7 @@ export class GameState {
   }
 
   private recordDamageTaken(characterId: string, amount: number, damageType?: string) {
-    if (!this.characters().some((character) => character.id === characterId)) return;
+    if (!this.knownCharacterIds().has(characterId)) return;
     this.damageTaken.update((all) => {
       const current = all[characterId] ?? { total: 0, physical: 0, elemental: 0 };
       const physical = damageType === 'physical' ? amount : 0;
@@ -828,6 +828,14 @@ export class GameState {
         },
       };
     });
+  }
+
+  private knownCharacterIds(): Set<string> {
+    const ids = new Set(this.characters().map((character) => character.id));
+    const self = this.self();
+    if (self) ids.add(self.id);
+    for (const member of this.party().members) ids.add(member.id);
+    return ids;
   }
 
   requestHuntDetails(huntId: string) {

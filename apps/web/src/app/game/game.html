@@ -42,12 +42,32 @@
       </div>
     </section>
 
-    <section class="wallet-block" aria-label="Moedas">
-      <span>Gold <b>{{ formatGold(state.gold()) }}</b></span>
-      <span>Premium <b>0</b></span>
-    </section>
+     <section class="wallet-block" aria-label="Moedas">
+       <span>Gold <b>{{ formatGold(state.gold()) }}</b></span>
+       <span>Premium <b>0</b></span>
+     </section>
 
-    <nav class="top-nav" aria-label="Navegacao principal">
+     <section class="header-status" aria-label="Stamina e Boosts">
+       <div class="header-stamina">
+         <div><span>Stamina</span><b>76%</b></div>
+         <small>Tempo 32:04 · Energia</small>
+         <i><em></em></i>
+       </div>
+       <div class="header-boosts">
+         <button class="header-status-button" type="button" (click)="boostsCollapsed.set(!boostsCollapsed())" [attr.aria-expanded]="!boostsCollapsed()">
+           <span>Boosts</span><b>{{ boostsCollapsed() ? '+' : '−' }}</b>
+         </button>
+         @if (!boostsCollapsed()) {
+           <div class="header-boosts-popover">
+             <div class="metric-row"><span>XP Boost</span><b>+20%</b></div>
+             <div class="metric-row"><span>Loot Boost</span><b>+20%</b></div>
+             <div class="metric-row"><span>Remaining</span><b>5h 30m</b></div>
+           </div>
+         }
+       </div>
+     </section>
+
+     <nav class="top-nav" aria-label="Navegacao principal">
        @for (item of topNavItems; track item.label) {
           <button class="top-nav-item" type="button" [attr.aria-label]="item.label" (click)="item.label === 'Helper' ? openHelper() : item.label === 'Forja' ? openCrafting() : null">
           <span><img width="22" height="22" [src]="menuIcon(item.icon)" alt="" /></span>
@@ -79,13 +99,17 @@
             <button class="panel-action" type="button" (click)="openManage()">Gerenciar</button>
             <button class="panel-action" type="button" (click)="leftCollapsed.set(true)" aria-label="Colapsar sidebar esquerda">‹</button>
           </div>
-           <select class="character-select" [ngModel]="selectedId()" (ngModelChange)="selectCharacter($event)" aria-label="Selecionar personagem">
+           <div class="character-grid" role="listbox" aria-label="Selecionar personagem">
              @for (m of selectableCharacters(); track m.id) {
-               <option [value]="m.id">{{ m.name }}</option>
+               <button class="character-grid-card" type="button" role="option" [class.active]="selectedId() === m.id" [attr.aria-selected]="selectedId() === m.id" (click)="selectCharacter(m.id)">
+                 <character-avatar class="character-grid-avatar" [appearance]="m.appearance" [name]="m.name" [size]="42"></character-avatar>
+                 @if (selectedId() === m.id) { <span class="character-grid-check" aria-hidden="true">✓</span> }
+                 <strong>{{ m.name }}</strong>
+                 <small>Lv {{ m.level }}</small>
+               </button>
              }
-           </select>
+           </div>
            <div class="character-summary">
-             <character-avatar class="character-portrait" [appearance]="selectedSummary()?.appearance" [name]="selectedName()" [size]="32"></character-avatar>
              <div>
                <strong>{{ selectedName() }}</strong>
                <span>{{ archetypeLabel() }}</span>
@@ -108,43 +132,27 @@
          </div>
        </section>
 
-        <section class="game-panel compact-panel">
-          <div class="panel-header"><h2>Stamina</h2></div>
-          <div class="metric-row"><span>Tempo</span><b>32:04</b></div>
-          <div class="metric-row"><span>Energia</span><b>76%</b></div>
-          <div class="bar-track slim"><div class="bar-fill stamina" style="width: 76%"></div></div>
-        </section>
-
-        <section class="game-panel compact-panel abyss-bonus-panel">
-          <div class="panel-header">
-            <h2>Abismo</h2>
-            <span class="panel-pill">{{ abyssBonuses().length }}</span>
-          </div>
-          @if (abyssBonuses().length > 0) {
-            <div class="abyss-bonus-list">
-              @for (bonus of abyssBonuses(); track bonus.id) {
-                <div class="abyss-bonus-row">
-                  <div class="abyss-bonus-heading"><strong>{{ bonus.name }}</strong><span>{{ abyssBonusBranchLabel(bonus.branch) }}</span></div>
-                  <b>{{ bonus.effect }}</b>
-                  <small>{{ bonus.description }}</small>
-                </div>
-              }
+        @if (selectedId() === state.self()?.id) {
+          <section class="game-panel compact-panel abyss-bonus-panel">
+            <div class="panel-header">
+              <h2>Abismo</h2>
+              <span class="panel-pill">{{ abyssBonuses().length }}</span>
             </div>
-          } @else {
-            <p class="abyss-bonus-empty">Nenhum bônus desbloqueado.</p>
-          }
-        </section>
-
-        <section class="game-panel compact-panel">
-          <button class="panel-header panel-toggle" type="button" (click)="boostsCollapsed.set(!boostsCollapsed())">
-            <h2>Boosts</h2><span>{{ boostsCollapsed() ? '+' : '−' }}</span>
-          </button>
-          @if (!boostsCollapsed()) {
-            <div class="metric-row"><span>XP Boost</span><b>+20%</b></div>
-            <div class="metric-row"><span>Loot Boost</span><b>+20%</b></div>
-            <div class="metric-row"><span>Remaining</span><b>5h 30m</b></div>
-          }
-        </section>
+            @if (abyssBonuses().length > 0) {
+              <div class="abyss-bonus-list">
+                @for (bonus of abyssBonuses(); track bonus.id) {
+                  <div class="abyss-bonus-row">
+                    <div class="abyss-bonus-heading"><strong>{{ bonus.name }}</strong><span>{{ abyssBonusBranchLabel(bonus.branch) }}</span></div>
+                    <b>{{ bonus.effect }}</b>
+                    <small>{{ bonus.description }}</small>
+                  </div>
+                }
+              </div>
+            } @else {
+              <p class="abyss-bonus-empty">Nenhum bônus desbloqueado.</p>
+            }
+          </section>
+        }
 
         <section class="game-panel">
           <div class="panel-header"><h2><img class="menu-panel-icon" width="20" height="20" [src]="menuIcon('habilidades.png')" alt="" />Skills</h2><span class="panel-pill">{{ archetypeLabel() }}</span></div>
@@ -233,7 +241,9 @@
     <section class="game-center" aria-label="Hunt e mundo">
       <header class="hunt-header" [class.boss]="state.hunt()?.isBoss || state.abyss()?.bossActive">
          <div class="hunt-title">
-           <span>{{ state.abyss() ? 'ABISMO DE AVALON' : (state.hunt()?.isBoss ? 'BOSS WAVE' : 'Current Hunt') }}</span>
+           @if (state.abyss() || state.hunt()?.isBoss) {
+             <span>{{ state.abyss() ? 'ABISMO DE AVALON' : 'BOSS WAVE' }}</span>
+           }
            <strong>{{ state.abyss() ? ('Tormento ' + state.abyss()?.torment) : currentHuntName() }}</strong>
          </div>
          <div class="hunt-kpis" aria-label="Resumo da Hunt">
