@@ -104,5 +104,7 @@ export interface Store {
   setHuntFavorite(characterId: string, huntId: string, favorite: boolean): Promise<HuntProgress>;
   getAbyssMeta(characterId: string): Promise<AbyssMetaProgression>;
   saveAbyssMeta(meta: AbyssMetaProgression): Promise<void>;
+  unlockAbyssMeta(characterId: string, nodeId: string, cost: number, prerequisite?: string): Promise<AbyssMetaProgression | null>;
+  addAbyssFragments(characterId: string, amount: number): Promise<AbyssMetaProgression>;
   recordAbyssRun(history: AbyssRunHistory): Promise<void>;
 }

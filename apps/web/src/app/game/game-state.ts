@@ -548,7 +548,8 @@ export class GameState {
         break;
       }
       case SERVER_EVENTS.ABYSS_META_STATE: {
-        const r = data as { meta: AbyssMetaView };
+        const r = data as { characterId: string; meta: AbyssMetaView };
+        if (r.characterId !== this.characterId()) break;
         this.abyssMeta.set(r.meta);
         break;
       }
@@ -702,6 +703,10 @@ export class GameState {
   selectCharacter(characterId: string) {
     const token = this.token();
     if (!token) return;
+    this.abyss.set(null);
+    this.abyssMeta.set(null);
+    this.abyssChoices.set([]);
+    this.abyssFragmentDrops.set([]);
     this.ws.send({ type: 'auth.selectCharacter', token, characterId });
   }
 

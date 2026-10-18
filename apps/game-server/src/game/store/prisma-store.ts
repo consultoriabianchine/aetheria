@@ -385,6 +385,45 @@ export class PrismaStore implements Store {
     });
   }
 
+  async unlockAbyssMeta(characterId: string, nodeId: string, cost: number, prerequisite?: string): Promise<AbyssMetaProgression | null> {
+    return this.prisma.$transaction(async (tx) => {
+      const row = await tx.abyssMetaProgression.upsert({
+        where: { characterId },
+        create: { characterId },
+        update: {},
+      });
+      const unlockedNodes = Array.isArray(row.unlockedNodes) ? row.unlockedNodes.filter((value): value is string => typeof value === 'string') : [];
+      if (unlockedNodes.includes(nodeId) || row.fragments < cost || (prerequisite && !unlockedNodes.includes(prerequisite))) return null;
+      const updated = await tx.abyssMetaProgression.update({
+        where: { characterId },
+        data: { fragments: row.fragments - cost, unlockedNodes: [...unlockedNodes, nodeId] },
+      });
+      return {
+        characterId: updated.characterId,
+        fragments: updated.fragments,
+        unlockedNodes: Array.isArray(updated.unlockedNodes) ? updated.unlockedNodes.filter((value): value is string => typeof value === 'string') : [],
+        rerolls: updated.rerolls,
+        revives: updated.revives,
+      };
+    }, { isolationLevel: Prisma.TransactionIsolationLevel.Serializable });
+  }
+
+  async addAbyssFragments(characterId: string, amount: number): Promise<AbyssMetaProgression> {
+    const increment = Math.max(0, Math.floor(amount));
+    const row = await this.prisma.abyssMetaProgression.upsert({
+      where: { characterId },
+      create: { characterId, fragments: increment },
+      update: { fragments: { increment } },
+    });
+    return {
+      characterId: row.characterId,
+      fragments: row.fragments,
+      unlockedNodes: Array.isArray(row.unlockedNodes) ? row.unlockedNodes.filter((value): value is string => typeof value === 'string') : [],
+      rerolls: row.rerolls,
+      revives: row.revives,
+    };
+  }
+
   async recordAbyssRun(history: AbyssRunHistory): Promise<void> {
     await this.prisma.abyssRunHistory.create({
       data: {

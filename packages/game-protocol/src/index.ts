@@ -140,7 +140,7 @@ export type ServerMessage =
   | { type: 'abyss.completed'; fragments: number; rewards: string[]; abyss: AbyssRunView }
   | { type: 'abyss.defeated'; fragments: number; rewards: string[]; abyss: AbyssRunView }
   | { type: 'abyss.abandoned'; fragments: number; rewards: string[]; abyss: AbyssRunView }
-  | { type: 'abyss.metaState'; meta: AbyssMetaView };
+  | { type: 'abyss.metaState'; characterId: string; meta: AbyssMetaView };
 
 export interface WsEnvelope {
   event: string;

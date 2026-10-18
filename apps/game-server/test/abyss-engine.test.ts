@@ -38,6 +38,34 @@ describe('AbyssEngine', () => {
     expect(engine.view(run).nextLevelExperience).toBe(420);
   });
 
+  it('applies passive upgrades and carries XP overflow into the next choice', () => {
+    const engine = new AbyssEngine(new MemoryStore(), { getAbilities: () => abilities, emit: () => {} });
+    const run = engine.start('account-passives', 'character-passives', 1, 'mage', 0);
+
+    engine.grantExperience(run.characterId, 250, 1);
+    expect(run.level).toBe(2);
+    expect(run.experience).toBe(150);
+    expect(run.status).toBe('level_up');
+
+    const passive = run.choices.find((choice) => choice.kind === 'passive');
+    expect(passive).toBeDefined();
+    engine.chooseUpgrade(run.characterId, passive!.id, 2);
+    expect(run.passiveMaxHealthMultiplier).toBe(1.08);
+    expect(run.level).toBe(3);
+    expect(run.status).toBe('level_up');
+    expect(run.experience).toBe(0);
+  });
+
+  it('keeps fragment persistence and meta purchases atomic in the store', async () => {
+    const store = new MemoryStore();
+    await store.addAbyssFragments('character-atomic', 20);
+    const unlocked = await store.unlockAbyssMeta('character-atomic', 'offense.damage', 10);
+
+    expect(unlocked?.fragments).toBe(10);
+    expect(unlocked?.unlockedNodes).toEqual(['offense.damage']);
+    expect((await store.getAbyssMeta('character-atomic')).fragments).toBe(10);
+  });
+
   it('calculates fragments as a percentage of creature experience', () => {
     const player = {
       id: 'character-fragments',
@@ -178,6 +206,7 @@ describe('AbyssEngine', () => {
     const scaledCreature = [...run.creatures!.getAll()][0];
     expect(scaledCreature.definition.level).toBe(1);
     expect(scaledCreature.definition.health).toBe(82);
+    expect(scaledCreature.definition.experience).toBe(15);
     expect(scaledCreature.definition.loot).toEqual([]);
     expect(run.movement?.isTileOccupied(player.position)).toBe(true);
     expect(engine.autoTarget('character-3')).not.toBeNull();
@@ -203,6 +232,7 @@ describe('AbyssEngine', () => {
     expect(creature.definition.level).toBe(30);
     expect(creature.definition.health).toBe(430);
     expect(creature.definition.attack).toBe(28);
+    expect(creature.definition.experience).toBe(15);
     expect(creature.definition.loot).toEqual([]);
   });
 });

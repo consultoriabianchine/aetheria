@@ -746,7 +746,9 @@ export class GameEngine implements OnModuleDestroy {
       this.emitTo(socketId, 'error', { message: 'Escolha de upgrade inválida ou expirada.' });
       return;
     }
-    this.abyss.spawnInitialWave(session.player.id);
+    this.applyAbyssRunStats(session.player);
+    if (run.wave === 1 && run.wavesCompleted === 0) this.abyss.spawnInitialWave(session.player.id);
+    this.schedulePlayerAttackCheck(session.player, Date.now());
   }
 
   async handleAbyssReroll(socketId: string, token: string) {
@@ -759,7 +761,7 @@ export class GameEngine implements OnModuleDestroy {
   async handleAbyssMetaList(socketId: string, token: string) {
     const session = await this.verifySession(socketId, token);
     if (!session) return;
-    this.emitTo(socketId, 'abyss.metaState', { meta: await this.abyss.getMeta(session.player.id) });
+    this.emitTo(socketId, 'abyss.metaState', { characterId: session.player.id, meta: await this.abyss.getMeta(session.player.id) });
   }
 
   async handleAbyssMetaUnlock(socketId: string, token: string, nodeId: string) {
@@ -774,11 +776,12 @@ export class GameEngine implements OnModuleDestroy {
     session.player.recomputeVitals(getItemDef);
     this.emitStats(session.player);
     this.emitCombatStats(session.player);
-    this.emitTo(socketId, 'abyss.metaState', { meta });
+    this.emitTo(socketId, 'abyss.metaState', { characterId: session.player.id, meta });
   }
 
   private returnPlayerToWorld(player: GamePlayer) {
     this.movement.releaseEntity(player.id);
+    player.recomputeVitals(getItemDef);
     player.position = { ...SPAWN_POINT };
     player.health = player.maxHealth;
     player.mana = player.maxMana;
@@ -801,6 +804,14 @@ export class GameEngine implements OnModuleDestroy {
     });
     this.emitStats(player);
     this.emitVisiblePlayer(player.id, 'entity.spawned', this.playerEntityPayload(player));
+  }
+
+  private applyAbyssRunStats(player: GamePlayer) {
+    player.recomputeVitals(getItemDef);
+    player.maxHealth = Math.max(1, Math.round(player.maxHealth * this.abyss.runMaxHealthMultiplier(player.id)));
+    player.health = Math.min(player.health, player.maxHealth);
+    this.emitStats(player);
+    this.emitCombatStats(player);
   }
 
   async handleHuntDetails(socketId: string, token: string, huntId: string) {
@@ -1377,6 +1388,7 @@ export class GameEngine implements OnModuleDestroy {
     const castKey = `${player.id}:${abilityId}`;
     const run = this.hunts.getRun(player.id);
     const abyssRun = this.abyss.getRun(player.id);
+    if (abyssRun && abyssRun.status !== 'active') return false;
     if (this.activeAbilityCasts.has(castKey)) return false;
     this.activeAbilityCasts.add(castKey);
     const cooldowns = this.abilityCooldowns.get(player.id) ?? new Map<number, number>();
@@ -1411,7 +1423,7 @@ export class GameEngine implements OnModuleDestroy {
       return false;
     }
     if (ability.targetMode === 'directional') {
-      const tiles = this.directionalTiles(player.position, direction ?? player.facing, ability.rangeTiles, ability.areaConfig);
+      const tiles = this.directionalTiles(player.position, direction ?? player.facing, ability.rangeTiles, this.abyssAreaConfig(player, ability.areaConfig));
       if (this.enemiesInTiles(player, tiles).length === 0) {
         this.activeAbilityCasts.delete(castKey);
         this.emitTo(socketId, 'ability.castFailed', { abilityId, reason: 'NO_TARGETS_IN_AREA' });
@@ -2272,10 +2284,16 @@ export class GameEngine implements OnModuleDestroy {
     return true;
   }
 
+  private abyssAreaConfig(player: GamePlayer, areaConfig: CombatAbilityDefinition['areaConfig']): CombatAbilityDefinition['areaConfig'] {
+    const bonus = this.abyss.runAreaBonus(player.id);
+    if (!areaConfig || bonus <= 0) return areaConfig;
+    return { ...areaConfig, width: areaConfig.width + bonus, height: areaConfig.height + bonus };
+  }
+
   /** Dano em área ao redor de um alvo (targetMode area_enemy): aplica a todos os inimigos nos tiles do shape. */
   private dealAreaAbilityDamage(attacker: GamePlayer, target: GamePlayer | CreatureEntity, ability: CombatAbilityDefinition, now: number) {
     const center = target.position;
-    const tiles = this.groundTiles(center, ability.areaConfig);
+    const tiles = this.groundTiles(center, this.abyssAreaConfig(attacker, ability.areaConfig));
     const delayMs = this.emitAbilityArea(attacker, attacker.position, center, tiles, ability, target.id);
     for (const enemy of this.enemiesInTiles(attacker, tiles)) {
       this.applyAbilityDamage(attacker, enemy, ability, now, delayMs);
@@ -2285,7 +2303,7 @@ export class GameEngine implements OnModuleDestroy {
   private dealDirectionalAbility(attacker: GamePlayer, ability: CombatAbilityDefinition, direction: Direction, now: number) {
     const delta = DIRECTION_DELTAS[direction] ?? DIRECTION_DELTAS.south;
     const to: Position = { x: attacker.position.x + delta.dx * ability.rangeTiles, y: attacker.position.y + delta.dy * ability.rangeTiles, z: attacker.position.z };
-    const tiles = this.directionalTiles(attacker.position, direction, ability.rangeTiles, ability.areaConfig);
+    const tiles = this.directionalTiles(attacker.position, direction, ability.rangeTiles, this.abyssAreaConfig(attacker, ability.areaConfig));
     const delayMs = this.emitAbilityArea(attacker, attacker.position, to, tiles, ability);
     for (const enemy of this.enemiesInTiles(attacker, tiles)) {
       this.applyAbilityDamage(attacker, enemy, ability, now, delayMs);
@@ -2298,7 +2316,7 @@ export class GameEngine implements OnModuleDestroy {
       : position
         ? { x: position.x, y: position.y, z: attacker.position.z }
         : (() => { const delta = DIRECTION_DELTAS[direction] ?? DIRECTION_DELTAS.south; return { x: attacker.position.x + delta.dx * ability.rangeTiles, y: attacker.position.y + delta.dy * ability.rangeTiles, z: attacker.position.z }; })();
-    const tiles = this.groundTiles(origin, ability.areaConfig);
+    const tiles = this.groundTiles(origin, this.abyssAreaConfig(attacker, ability.areaConfig));
     if (tileDistance(attacker.position, origin) > ability.rangeTiles + 1) return;
     const delayMs = this.emitAbilityArea(attacker, attacker.position, origin, tiles, ability);
     for (const enemy of this.enemiesInTiles(attacker, tiles)) {
@@ -2343,6 +2361,8 @@ export class GameEngine implements OnModuleDestroy {
 
   /** Aplica dano de habilidade a um único alvo (sem reemitir o projétil). */
   private applyAbilityDamage(attacker: GamePlayer, target: GamePlayer | CreatureEntity, ability: CombatAbilityDefinition, now: number, delayMs = 0): number {
+    const abyssRun = this.abyss.getRun(attacker.id);
+    if (abyssRun && abyssRun.status !== 'active') return 0;
     const stats = this.combatStats(attacker);
     const weapon = attacker.equipment.weapon ? getWeaponDefinition(getItemDef(attacker.equipment.weapon.itemId)) : undefined;
     const ammo = attacker.equipment.ammo ? getAmmoDefinition(getItemDef(attacker.equipment.ammo.itemId)) : undefined;
@@ -2360,7 +2380,7 @@ export class GameEngine implements OnModuleDestroy {
     const affinity = resolveDamageAffinity(targetStats.damageAffinities, damageType);
     const damage = calculateMitigatedDamage({ damage: critical ? calculateCritical(raw, stats.criticalDamage) : raw, damageType, target: targetStats, damageTakenModifier: affinity.modifier, immune: affinity.immune });
     const magicDamage = ability.powerSource === 'magic_weapon' || ability.manaCost != null || damageType === 'arcane';
-    const finalDamage = Math.max(0, Math.round(damage.finalDamage * this.abyss.abilityBonus(attacker.id, ability.abilityId) * this.permanentDamageMultiplier(attacker, damageType, magicDamage)));
+    const finalDamage = Math.max(0, Math.round(damage.finalDamage * this.abyss.abilityBonus(attacker.id, ability.abilityId) * this.abyss.runDamageMultiplier(attacker.id, magicDamage) * this.permanentDamageMultiplier(attacker, damageType, magicDamage)));
     const trainingDummy = target instanceof CreatureEntity && this.isTrainingCreature(target);
     target.health = Math.max(0, target.health - finalDamage);
     this.emitCombatEvent(target, 'combat.damage', { attackerId: attacker.id, targetId: target.id, amount: finalDamage, damageType, critical, targetHealth: target.health, delayMs: delayMs || undefined, criticalImpact: critical ? this.criticalImpactVisual() : undefined, position: { ...target.position } });
@@ -2794,6 +2814,7 @@ export class GameEngine implements OnModuleDestroy {
     const abyssRun = this.abyss.getRun(player.id);
     if (!run && !abyssRun && !player.targetId) return;
     if (abyssRun) {
+      if (abyssRun.status !== 'active') return;
       const abilityIds = this.abyss.activeAbilityIds(player.id);
       if (abilityIds.length === 0) return;
       const readyAt = abilityIds
@@ -3012,7 +3033,8 @@ export class GameEngine implements OnModuleDestroy {
     if (this.hunts.getRun(player.id)) return;
     if (now < player.nextMoveAt) return;
     if (this.tryStep(player, player.moveDir)) {
-      player.nextMoveAt = now + player.moveIntervalMs;
+      const speedMultiplier = this.abyss.runSpeedMultiplier(player.id);
+      player.nextMoveAt = now + Math.max(50, Math.round(player.moveIntervalMs / speedMultiplier));
       this.emitTo(player.socketId ?? '', 'player.moved', { position: { ...player.position } });
       this.emitVisiblePlayer(player.id, 'entity.moved', { id: player.id, position: { ...player.position }, facing: player.facing });
     } else {
@@ -3116,6 +3138,7 @@ export class GameEngine implements OnModuleDestroy {
     const run = this.hunts.getRun(player.id);
     const abyssRun = this.abyss.getRun(player.id);
     if (abyssRun) {
+      if (abyssRun.status !== 'active') return;
       player.targetId = this.abyss.autoTarget(player.id)?.id ?? null;
       const target = player.targetId ? abyssRun.creatures?.getCreature(player.targetId) : null;
       for (const abilityId of this.abyss.activeAbilityIds(player.id)) {
@@ -3141,7 +3164,7 @@ export class GameEngine implements OnModuleDestroy {
         if (!ability || ability.category === 'heal' || ability.targetMode !== 'ground' || !ability.areaConfig?.centerOnCaster) continue;
         const readyAt = this.abilityCooldowns.get(player.id)?.get(slot.abilityId) ?? 0;
         if (now < readyAt) continue;
-        const targets = this.enemiesInTiles(player, this.groundTiles(player.position, ability.areaConfig));
+        const targets = this.enemiesInTiles(player, this.groundTiles(player.position, this.abyssAreaConfig(player, ability.areaConfig)));
         if (targets.length < (slot.minTargets ?? 1)) continue;
         if (await this.castAbility(player, ability.abilityId, targets[0]?.id)) return;
       }
@@ -3163,7 +3186,7 @@ export class GameEngine implements OnModuleDestroy {
         const readyAt = this.abilityCooldowns.get(player.id)?.get(slot.abilityId) ?? 0;
         if (!ability || ability.category === 'heal' || now < readyAt || tileDistance(player.position, target.position) > ability.rangeTiles) continue;
         if ((slot.minTargets ?? 0) > 0 && ability.targetMode === 'area_enemy') {
-          const tiles = this.groundTiles(target.position, ability.areaConfig);
+          const tiles = this.groundTiles(target.position, this.abyssAreaConfig(player, ability.areaConfig));
           const targets = this.enemiesInTiles(player, tiles).length;
           if (targets < slot.minTargets!) continue;
         }

@@ -35,6 +35,11 @@ export interface AbyssRun {
   metaNodes: string[];
   rerollsRemaining: number;
   revivesRemaining: number;
+  passiveDamageMultiplier: number;
+  passiveMagicPowerMultiplier: number;
+  passiveSpeedMultiplier: number;
+  passiveMaxHealthMultiplier: number;
+  passiveAreaBonus: number;
   map?: WorldMapData;
   movement?: MovementService;
   creatures?: CreatureManager;
@@ -75,12 +80,8 @@ export class AbyssEngine {
   async unlockMeta(characterId: string, nodeId: string): Promise<AbyssMetaView | null> {
     const node = META_NODES.find((candidate) => candidate.id === nodeId);
     if (!node) return null;
-    const meta = await this.store.getAbyssMeta(characterId);
-    if (meta.unlockedNodes.includes(nodeId) || meta.fragments < node.cost || (node.prerequisite && !meta.unlockedNodes.includes(node.prerequisite))) return null;
-    meta.fragments -= node.cost;
-    meta.unlockedNodes = [...meta.unlockedNodes, nodeId];
-    await this.store.saveAbyssMeta(meta);
-    return this.toMeta(meta);
+    const meta = await this.store.unlockAbyssMeta(characterId, nodeId, node.cost, node.prerequisite);
+    return meta ? this.toMeta(meta) : null;
   }
 
   start(accountId: string, characterId: string, torment = 1, archetype: CombatArchetype = 'mage', now = Date.now()): AbyssRun {
@@ -111,6 +112,11 @@ export class AbyssEngine {
       metaNodes,
       rerollsRemaining: metaNodes.includes('fortune.reroll') ? 1 : 0,
       revivesRemaining: metaNodes.includes('defense.revive') ? 1 : 0,
+      passiveDamageMultiplier: 1,
+      passiveMagicPowerMultiplier: 1,
+      passiveSpeedMultiplier: 1,
+      passiveMaxHealthMultiplier: 1,
+      passiveAreaBonus: 0,
       map: this.hooks.getMap?.(ABYSS_MAP_ID),
     };
     this.initializeCreatures(run);
@@ -138,7 +144,7 @@ export class AbyssEngine {
 
   spawnInitialWave(characterId: string): void {
     const run = this.runs.get(characterId);
-    if (!run || run.status !== 'active' || run.creatures?.size) return;
+    if (!run || run.status !== 'active' || run.wave !== 1 || run.wavesCompleted !== 0 || run.creatures?.size) return;
     this.spawnWave(run, 1);
   }
 
@@ -161,6 +167,7 @@ export class AbyssEngine {
     run.choices = [];
     run.status = 'active';
     this.hooks.emit(characterId, 'abyss.upgradeSelected', { abyss: this.view(run, now) });
+    this.tryLevelUp(run);
     return run;
   }
 
@@ -206,13 +213,7 @@ export class AbyssEngine {
     const run = this.runs.get(characterId);
     if (!run || run.status !== 'active') return;
     run.experience += Math.max(0, Math.floor(amount));
-    const need = this.experienceFor(run.level, run.wave);
-    if (run.experience < need) return;
-    run.experience -= need;
-    run.level += 1;
-    run.status = 'level_up';
-    run.choices = this.rollChoices(run);
-    this.hooks.emit(characterId, 'abyss.levelUp', { level: run.level, choices: run.choices, rerollsRemaining: run.rerollsRemaining });
+    this.tryLevelUp(run);
     void now;
   }
 
@@ -238,6 +239,24 @@ export class AbyssEngine {
   abilityBonus(characterId: string, abilityId: number): number {
     const run = this.runs.get(characterId);
     return run?.abilities.find((ability) => ability.abilityId === abilityId)?.damageMultiplier ?? 1;
+  }
+
+  runDamageMultiplier(characterId: string, magicDamage = false): number {
+    const run = this.runs.get(characterId);
+    if (!run) return 1;
+    return run.passiveDamageMultiplier * (magicDamage ? run.passiveMagicPowerMultiplier : 1);
+  }
+
+  runSpeedMultiplier(characterId: string): number {
+    return this.runs.get(characterId)?.passiveSpeedMultiplier ?? 1;
+  }
+
+  runMaxHealthMultiplier(characterId: string): number {
+    return this.runs.get(characterId)?.passiveMaxHealthMultiplier ?? 1;
+  }
+
+  runAreaBonus(characterId: string): number {
+    return this.runs.get(characterId)?.passiveAreaBonus ?? 0;
   }
 
   activeAbilityIds(characterId: string): number[] {
@@ -312,6 +331,9 @@ export class AbyssEngine {
     const attackMultiplier = isBoss ? ABYSS_SCALING_CONFIG.bossAttackMultiplier : 1;
     const defenseMultiplier = isBoss ? ABYSS_SCALING_CONFIG.bossDefenseMultiplier : 1;
     const experienceMultiplier = isBoss ? ABYSS_SCALING_CONFIG.bossExperienceMultiplier : 1;
+    const creatureExperience = ABYSS_SCALING_CONFIG.creatureExperienceBase
+      + (wave - 1) * ABYSS_SCALING_CONFIG.creatureExperiencePerWave
+      + (run.torment - 1) * ABYSS_SCALING_CONFIG.creatureExperiencePerTorment;
     return {
       ...base,
       level: scaledLevel,
@@ -319,7 +341,7 @@ export class AbyssEngine {
       maxHealth: Math.round((ABYSS_SCALING_CONFIG.baseHealth + scaledLevel * ABYSS_SCALING_CONFIG.healthPerLevel) * healthMultiplier),
       attack: Math.max(1, Math.round((ABYSS_SCALING_CONFIG.baseAttack + scaledLevel * ABYSS_SCALING_CONFIG.attackPerLevel) * attackMultiplier)),
       defense: Math.max(0, Math.round((ABYSS_SCALING_CONFIG.baseDefense + scaledLevel * ABYSS_SCALING_CONFIG.defensePerLevel) * defenseMultiplier)),
-      experience: Math.max(1, Math.round((ABYSS_SCALING_CONFIG.baseExperience + scaledLevel * ABYSS_SCALING_CONFIG.experiencePerLevel) * experienceMultiplier)),
+      experience: Math.max(1, Math.round(creatureExperience * experienceMultiplier)),
       movementSpeed: Math.max(240, ABYSS_SCALING_CONFIG.baseMovementSpeed - scaledLevel * ABYSS_SCALING_CONFIG.movementSpeedReductionPerLevel),
       attackSpeed: Math.max(600, ABYSS_SCALING_CONFIG.baseAttackSpeed - scaledLevel * ABYSS_SCALING_CONFIG.attackSpeedReductionPerLevel),
       loot: [],
@@ -372,9 +394,11 @@ export class AbyssEngine {
     }
     while (choices.length < choiceLimit) {
       const index = choices.length;
-      const names = ['Arcane Knowledge', 'Swift Casting', 'Vitality', 'Elemental Surge'];
-      const stats: AbyssUpgradeChoice['stat'][] = ['magic_power', 'speed', 'max_health', 'damage'];
-      choices.push({ id: `${run.id}:passive:${index}`, name: names[index], description: '+8% bônus temporário na run.', rarity: run.metaNodes.includes('offense.rare') && index === 0 ? 'rare' : 'common', kind: 'passive', stat: stats[index], value: 0.08 });
+      const names = ['Arcane Knowledge', 'Swift Casting', 'Vitality', 'Expanded Reach'];
+      const stats: AbyssUpgradeChoice['stat'][] = ['magic_power', 'speed', 'max_health', 'area'];
+      const values = [0.08, 0.08, 0.08, 1];
+      const descriptions = ['+8% dano mágico nesta run.', '+8% velocidade nesta run.', '+8% vida máxima nesta run.', '+1 tile de área nesta run.'];
+      choices.push({ id: `${run.id}:passive:${index}`, name: names[index], description: descriptions[index], rarity: run.metaNodes.includes('offense.rare') && index === 0 ? 'rare' : 'common', kind: 'passive', stat: stats[index], value: values[index] });
     }
     return choices;
   }
@@ -398,6 +422,12 @@ export class AbyssEngine {
   private applyChoice(run: AbyssRun, choice: AbyssUpgradeChoice): void {
     if (choice.kind === 'passive') {
       run.passives.push(choice.id);
+      const value = choice.value ?? 0;
+      if (choice.stat === 'damage') run.passiveDamageMultiplier += value;
+      if (choice.stat === 'magic_power') run.passiveMagicPowerMultiplier += value;
+      if (choice.stat === 'speed') run.passiveSpeedMultiplier += value;
+      if (choice.stat === 'max_health') run.passiveMaxHealthMultiplier += value;
+      if (choice.stat === 'area') run.passiveAreaBonus += Math.max(0, Math.round(value));
       return;
     }
     if (choice.abilityId == null) return;
@@ -446,10 +476,20 @@ export class AbyssEngine {
   }
 
   private async persistResult(run: AbyssRun, result: AbyssRunHistory['result'], fragments: number, rewards: string[], now: number) {
-    const meta = await this.store.getAbyssMeta(run.characterId);
-    meta.fragments += fragments;
-    await this.store.saveAbyssMeta(meta);
+    if (fragments > 0) await this.store.addAbyssFragments(run.characterId, fragments);
     await this.store.recordAbyssRun({ accountId: run.accountId, characterId: run.characterId, result, durationMs: Math.max(0, now - run.startedAt), level: run.level, torment: run.torment, fragments, rewards, seed: run.seed });
+  }
+
+  private tryLevelUp(run: AbyssRun): boolean {
+    if (run.status !== 'active') return false;
+    const need = this.experienceFor(run.level, run.wave);
+    if (run.experience < need) return false;
+    run.experience -= need;
+    run.level += 1;
+    run.status = 'level_up';
+    run.choices = this.rollChoices(run);
+    this.hooks.emit(run.characterId, 'abyss.levelUp', { level: run.level, choices: run.choices, rerollsRemaining: run.rerollsRemaining });
+    return true;
   }
 
   view(run: AbyssRun, now = Date.now()): AbyssRunView {

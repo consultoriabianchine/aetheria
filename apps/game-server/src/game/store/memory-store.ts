@@ -144,6 +144,21 @@ export class MemoryStore implements Store {
     this.abyssMeta.set(meta.characterId, structuredClone(meta));
   }
 
+  async unlockAbyssMeta(characterId: string, nodeId: string, cost: number, prerequisite?: string): Promise<AbyssMetaProgression | null> {
+    const meta = this.abyssMeta.get(characterId) ?? { characterId, fragments: 0, unlockedNodes: [], rerolls: 0, revives: 0 };
+    if (meta.unlockedNodes.includes(nodeId) || meta.fragments < cost || (prerequisite && !meta.unlockedNodes.includes(prerequisite))) return null;
+    const next = { ...meta, fragments: meta.fragments - cost, unlockedNodes: [...meta.unlockedNodes, nodeId] };
+    this.abyssMeta.set(characterId, structuredClone(next));
+    return structuredClone(next);
+  }
+
+  async addAbyssFragments(characterId: string, amount: number): Promise<AbyssMetaProgression> {
+    const meta = this.abyssMeta.get(characterId) ?? { characterId, fragments: 0, unlockedNodes: [], rerolls: 0, revives: 0 };
+    const next = { ...meta, fragments: meta.fragments + Math.max(0, Math.floor(amount)) };
+    this.abyssMeta.set(characterId, structuredClone(next));
+    return structuredClone(next);
+  }
+
   async recordAbyssRun(history: AbyssRunHistory): Promise<void> {
     this.abyssRuns.push(structuredClone(history));
   }
