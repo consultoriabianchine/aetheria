@@ -1,7 +1,7 @@
 import { Injectable, computed, signal } from '@angular/core';
 import { Subject } from 'rxjs';
 import { CLIENT_EVENTS, SERVER_EVENTS } from '@aetheria/protocol';
-import type { AbyssFragmentDrop, AbyssMetaView, AbyssRunView, AbyssUpgradeChoice, CharacterInventory, CharacterSkills, CharacterSummary, CombatArchetype, CombatStatsView, DamageType, HuntDetails, HuntListEntry, HuntRunView, MapTile, PlayerCombatConfig } from '@aetheria/types';
+import type { AbyssFragmentDrop, AbyssMetaView, AbyssRunView, AbyssUpgradeChoice, CharacterInventory, CharacterSkills, CharacterSummary, CombatArchetype, CombatStatsView, CraftPreview, CraftRecipe, CraftingIntent, CraftingSkill, DamageType, HuntDetails, HuntListEntry, HuntRunView, MapTile, PlayerCombatConfig } from '@aetheria/types';
 import { WsService, WsEvent } from '../core/ws.service';
 
 export interface HudStats {
@@ -100,6 +100,7 @@ export class GameState {
   readonly loginError = signal('');
   readonly registerError = signal('');
   readonly createError = signal('');
+  readonly lastError = signal('');
 
   readonly inGame = signal(false);
   readonly snapshotReady = signal(false);
@@ -123,6 +124,9 @@ export class GameState {
     experience: 0,
   });
   readonly inventory = signal<CharacterInventory>({ slots: [], lootPouchSize: 10, lootPouch: [], equipment: {} });
+  readonly craftRecipes = signal<CraftRecipe[]>([]);
+  readonly craftSkills = signal<CraftingSkill[]>([]);
+  readonly craftPreview = signal<CraftPreview | null>(null);
   readonly combatStats = signal<Record<string, CombatStatsView>>({});
   readonly damageMeter = signal<Record<string, DamageMeterEntry>>({});
   readonly huntAnalyzer = signal<HuntAnalyzerState>({ startedAt: null, xpGained: 0, kills: 0, goldGained: 0, goldLost: 0 });
@@ -272,6 +276,7 @@ export class GameState {
         if (this.abyssLoadingTimer) clearTimeout(this.abyssLoadingTimer);
         this.abyssLoading.set(null);
         this.huntLoading.set(false);
+        this.lastError.set((data as { message?: string }).message ?? 'Não foi possível concluir a ação.');
         break;
       case SERVER_EVENTS.LOGIN_RESULT: {
         const r = data as { ok: boolean; error?: string; token?: string; accountId?: string; characters?: CharacterSummary[] };
@@ -624,6 +629,22 @@ export class GameState {
         this.inventory.set(i.inventory);
         break;
       }
+      case SERVER_EVENTS.CRAFT_CATALOG: {
+        const craft = data as { recipes: CraftRecipe[]; skills: CraftingSkill[] };
+        this.craftRecipes.set(craft.recipes ?? []);
+        this.craftSkills.set(craft.skills ?? []);
+        break;
+      }
+      case SERVER_EVENTS.CRAFT_PREVIEW:
+        this.lastError.set('');
+        this.craftPreview.set((data as { preview: CraftPreview }).preview);
+        break;
+      case SERVER_EVENTS.CRAFT_COMPLETED: {
+        const result = data as { skill: CraftingSkill };
+        this.craftSkills.update((skills) => [...skills.filter((skill) => skill.profession !== result.skill.profession), result.skill]);
+        this.lastError.set('');
+        break;
+      }
       case SERVER_EVENTS.CHAT_MESSAGE: {
         const c = data as unknown as ChatLine;
         this.chat.update((list) => {
@@ -732,6 +753,22 @@ export class GameState {
 
   sellLootPouch() {
     this.ws.send({ type: 'inventory.sellLootPouch' });
+  }
+
+  requestCraftCatalog() {
+    this.ws.send({ type: 'craft.catalog' });
+  }
+
+  previewCraft(recipeId: string, intent?: CraftingIntent) {
+    this.ws.send({ type: 'craft.preview', recipeId, intent });
+  }
+
+  commitCraft(recipeId: string, intent?: CraftingIntent) {
+    this.ws.send({ type: 'craft.commit', recipeId, intent });
+  }
+
+  clearLastError() {
+    this.lastError.set('');
   }
 
   requestHunts() {

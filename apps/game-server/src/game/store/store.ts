@@ -1,4 +1,4 @@
-import type { CharacterEquipment, CharacterSkills, CombatArchetype, HuntProgress, ItemStack, PlayerAppearance, PlayerCombatConfig, Position, WeaponElementOverride } from '@aetheria/types';
+import type { CharacterEquipment, CharacterSkills, CombatArchetype, CraftingProfession, CraftingSkill, HuntProgress, ItemStack, PlayerAppearance, PlayerCombatConfig, Position, WeaponElementOverride } from '@aetheria/types';
 
 export interface AccountRecord {
   id: string;
@@ -91,6 +91,8 @@ export interface Store {
   saveCharacter(character: StoredCharacter): Promise<void>;
   getAccountStorage(accountId: string): Promise<StoredAccountStorage | null>;
   saveAccountStorage(storage: StoredAccountStorage): Promise<void>;
+  listCraftingSkills(characterId: string): Promise<CraftingSkill[]>;
+  addCraftingExperience(characterId: string, profession: CraftingProfession, amount: number): Promise<CraftingSkill>;
   getWeaponElementOverride(characterId: string): Promise<WeaponElementOverride | null>;
   saveWeaponElementOverride(characterId: string, override: WeaponElementOverride): Promise<void>;
   clearWeaponElementOverride(characterId: string): Promise<void>;

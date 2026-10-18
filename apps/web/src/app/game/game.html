@@ -49,7 +49,7 @@
 
     <nav class="top-nav" aria-label="Navegacao principal">
        @for (item of topNavItems; track item.label) {
-         <button class="top-nav-item" type="button" [attr.aria-label]="item.label" (click)="item.label === 'Helper' ? openHelper() : null">
+          <button class="top-nav-item" type="button" [attr.aria-label]="item.label" (click)="item.label === 'Helper' ? openHelper() : item.label === 'Forja' ? openCrafting() : null">
           <span><img width="22" height="22" [src]="menuIcon(item.icon)" alt="" /></span>
           <small>{{ item.label }}</small>
         </button>
@@ -437,6 +437,30 @@
       </div>
     </aside>
   </main>
+
+  @if (craftOpen()) {
+    <div class="modal-backdrop craft-backdrop" (click)="closeCrafting()">
+      <section class="craft-modal" (click)="$event.stopPropagation()">
+        <header class="manage-header"><div><strong>Forja de Ressonância</strong><span>Use materiais da mochila · estação do hub</span></div><button class="panel-action" type="button" (click)="closeCrafting()" aria-label="Fechar">×</button></header>
+        <div class="craft-layout">
+          <aside class="craft-recipes"><div class="manage-section-title">Projetos publicados</div>@for (recipe of state.craftRecipes(); track recipe.id) { <button type="button" class="craft-recipe" [class.active]="craftRecipeId() === recipe.id" (click)="selectCraftRecipe(recipe.id)"><span class="craft-recipe-art">@if (iconFor(recipe.outputItemId); as image) { <img [src]="image" [alt]="nameFor(recipe.outputItemId)" /> } @else { <span aria-hidden="true">✦</span> }</span><span class="craft-recipe-copy"><strong>{{ recipe.name }}</strong><small>{{ recipe.profession }} · nível {{ recipe.requiredLevel }}</small><small>{{ nameFor(recipe.outputItemId) }}</small></span></button> } @if (state.craftRecipes().length === 0) { <p class="craft-empty">Nenhuma receita publicada.</p> }</aside>
+          <section class="craft-workbench">
+            @if (state.craftPreview(); as preview) {
+              <div class="craft-preview-head"><div><span class="craft-kicker">PROJETO DE RESSONÂNCIA</span><h3>{{ preview.recipe.name }}</h3><p>{{ preview.recipe.description || 'Projeto de ressonância artesanal.' }}</p></div><div class="craft-output-art">@if (iconFor(preview.recipe.outputItemId); as image) { <img [src]="image" [alt]="nameFor(preview.recipe.outputItemId)" /> } @else { <span aria-hidden="true">✦</span> }</div></div>
+              <div class="craft-output-info"><div><span>Resultado</span><strong>{{ nameFor(preview.recipe.outputItemId) }}</strong><small>{{ preview.recipe.outputQuantity }} unidade{{ preview.recipe.outputQuantity === 1 ? '' : 's' }}</small></div><span class="craft-quality">{{ preview.qualityRange[0] }}–{{ preview.qualityRange[1] }}%</span></div>
+              <div class="craft-intents"><span>Intenção</span>@for (intent of ['offense', 'defense', 'arcane', 'utility']; track intent) { <button type="button" [class.active]="craftIntent() === intent" (click)="selectCraftIntent($any(intent))">{{ intent }}</button> }</div>
+              <div class="craft-materials"><strong>Materiais</strong>@for (ingredient of preview.recipe.ingredients; track $index) { <div><span class="craft-material"><span class="craft-material-art">@if (ingredient.itemId && iconFor(ingredient.itemId); as image) { <img [src]="image" [alt]="ingredient.itemId" /> } @else { <span aria-hidden="true">◇</span> }</span><span>{{ ingredient.itemId ? nameFor(ingredient.itemId) : ('Tag: ' + ingredient.tag) }}</span></span><b>{{ ingredient.quantity }}</b></div> }</div>
+              <div class="craft-status"><span>Forja {{ craftSkillLevel(preview.recipe.profession) }}</span><span>Custo {{ formatGold(preview.recipe.goldCost) }} gold</span><span>Ressonância {{ preview.resonance || 'neutra' }}</span></div>
+              @if (preview.missing.length > 0) { <p class="craft-warning">Materiais insuficientes.</p> }
+              @if (state.lastError()) { <p class="craft-warning">{{ state.lastError() }}</p> }
+              <div class="craft-progress-block" [class.is-forging]="craftBusy()" [class.is-success]="craftStatus() === 'success'" [class.is-error]="craftStatus() === 'error'"><div class="craft-progress-heading"><span>{{ craftProgressLabel() }}</span><b>{{ craftProgress() }}%</b></div><div class="craft-progress-track" role="progressbar" [attr.aria-valuenow]="craftProgress()" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso da forja"><span [style.width.%]="craftProgress()"></span></div></div>
+              <button class="wide-action craft-submit" type="button" (click)="commitCraft()" [disabled]="!preview.canCraft || craftBusy()">{{ craftBusy() ? 'Forjando...' : craftStatus() === 'success' ? 'Forjar novamente' : 'Forjar item' }}</button>
+            } @else { <div class="craft-empty large">Selecione um projeto para ver a combinação, a qualidade e a ressonância possíveis.</div> }
+          </section>
+        </div>
+      </section>
+    </div>
+  }
 
   @if (manageOpen()) {
     <div class="modal-backdrop" (click)="closeManage()">

@@ -1,5 +1,5 @@
 import { Injectable, signal } from '@angular/core';
-import type { AmmoType, CombatArchetype, CreatureAnimationConfig, CreatureAnimationConfigInput, DamageType, EquipmentSlot, HuntDefinition, ItemType, ItemVisualEffects, MapData, MapEntity, MapLayerId, MapStatus, OutfitDefinition, TileCategory, TileDefinition, TileLayerType, TilesetDefinition, WeaponType } from '@aetheria/types';
+import type { AmmoType, CombatArchetype, CraftingIntent, CraftingProfession, CreatureAnimationConfig, CreatureAnimationConfigInput, DamageType, EquipmentSlot, HuntDefinition, ItemType, ItemVisualEffects, MapData, MapEntity, MapLayerId, MapStatus, OutfitDefinition, TileCategory, TileDefinition, TileLayerType, TilesetDefinition, WeaponType } from '@aetheria/types';
 
 export interface AdminItemDefinition {
   id: string;
@@ -72,6 +72,62 @@ export interface AdminItemPage {
   page: number;
   pageSize: number;
   totalPages: number;
+}
+
+export interface AdminCraftIngredient {
+  itemId?: string | null;
+  tag?: string | null;
+  quantity: number;
+  role: string;
+}
+
+export interface AdminCraftRecipe {
+  id: string;
+  slug: string;
+  name: string;
+  description: string;
+  profession: CraftingProfession;
+  requiredLevel: number;
+  station: string;
+  outputItemId: string;
+  outputQuantity: number;
+  goldCost: number;
+  experience: number;
+  qualityMin: number;
+  qualityMax: number;
+  allowedIntents: CraftingIntent[];
+  resonanceTags: string[];
+  status: 'draft' | 'published' | 'disabled';
+  version: number;
+  ingredients: AdminCraftIngredient[];
+}
+
+export interface AdminCraftRecipeInput {
+  expectedVersion?: number;
+  slug?: string;
+  name: string;
+  description?: string;
+  profession: CraftingProfession;
+  requiredLevel: number;
+  station: string;
+  outputItemId: string;
+  outputQuantity: number;
+  goldCost: number;
+  experience: number;
+  qualityMin: number;
+  qualityMax: number;
+  allowedIntents: CraftingIntent[];
+  resonanceTags: string[];
+  status: 'draft' | 'published' | 'disabled';
+  ingredients: AdminCraftIngredient[];
+}
+
+export interface AdminCraftRecipeVersion {
+  id: string;
+  version: number;
+  action: string;
+  snapshot: unknown;
+  createdAt: string;
 }
 
 export interface CombatFormulaTestInput {
@@ -636,6 +692,43 @@ export class ApiService {
       headers: this.headers(),
       body: JSON.stringify(input),
     });
+  }
+
+  listCraftRecipes(params: { q?: string; status?: string; profession?: string } = {}): Promise<AdminCraftRecipe[]> {
+    const query = new URLSearchParams();
+    if (params.q) query.set('q', params.q);
+    if (params.status) query.set('status', params.status);
+    if (params.profession) query.set('profession', params.profession);
+    const suffix = query.toString() ? `?${query}` : '';
+    return this.request(`/admin/crafting/recipes${suffix}`, { headers: this.headers() });
+  }
+
+  getCraftRecipe(id: string): Promise<AdminCraftRecipe | null> {
+    return this.request(`/admin/crafting/recipes/${id}`, { headers: this.headers() });
+  }
+
+  getCraftRecipeVersions(id: string): Promise<AdminCraftRecipeVersion[]> {
+    return this.request(`/admin/crafting/recipes/${id}/versions`, { headers: this.headers() });
+  }
+
+  createCraftRecipe(input: AdminCraftRecipeInput): Promise<{ ok: boolean; recipe: AdminCraftRecipe }> {
+    return this.request('/admin/crafting/recipes', { method: 'POST', headers: this.headers(), body: JSON.stringify(input) });
+  }
+
+  updateCraftRecipe(id: string, input: AdminCraftRecipeInput): Promise<{ ok: boolean; recipe: AdminCraftRecipe }> {
+    return this.request(`/admin/crafting/recipes/${id}`, { method: 'PUT', headers: this.headers(), body: JSON.stringify(input) });
+  }
+
+  publishCraftRecipe(id: string, expectedVersion?: number): Promise<{ ok: boolean; recipe: AdminCraftRecipe }> {
+    return this.request(`/admin/crafting/recipes/${id}/publish`, { method: 'POST', headers: this.headers(), body: JSON.stringify({ expectedVersion }) });
+  }
+
+  disableCraftRecipe(id: string, expectedVersion?: number): Promise<{ ok: boolean; recipe: AdminCraftRecipe }> {
+    return this.request(`/admin/crafting/recipes/${id}/disable`, { method: 'POST', headers: this.headers(), body: JSON.stringify({ expectedVersion }) });
+  }
+
+  validateCraftRecipe(input: AdminCraftRecipeInput): Promise<{ ok: boolean; error?: string }> {
+    return this.request('/admin/crafting/recipes/validate', { method: 'POST', headers: this.headers(), body: JSON.stringify(input) });
   }
 
   listNews(status?: AdminNewsStatus): Promise<AdminNews[]> {

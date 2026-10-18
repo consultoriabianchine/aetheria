@@ -1,6 +1,6 @@
 import { randomUUID } from 'node:crypto';
 import { ACCOUNT_CONFIG, INVENTORY_SIZE, LOOT_POUCH_SIZE } from '@aetheria/config';
-import type { HuntProgress, ItemStack } from '@aetheria/types';
+import type { CraftingProfession, CraftingSkill, HuntProgress, ItemStack } from '@aetheria/types';
 import type { AbyssMetaProgression, AbyssRunHistory, Store, StoredAccountStorage, StoredCharacter, AccountRecord, PublicCharacter } from './store';
 
 const BASE_SKILLS = { melee: 10, distance: 10, magic: 10 };
@@ -14,6 +14,7 @@ export class MemoryStore implements Store {
   private accountStorage = new Map<string, StoredAccountStorage>();
   private abyssMeta = new Map<string, AbyssMetaProgression>();
   private abyssRuns: AbyssRunHistory[] = [];
+  private craftingSkills = new Map<string, CraftingSkill>();
 
   async countAccounts(): Promise<number> { return this.accounts.size; }
 
@@ -66,6 +67,24 @@ export class MemoryStore implements Store {
 
   async saveAccountStorage(storage: StoredAccountStorage): Promise<void> {
     this.accountStorage.set(storage.accountId, structuredClone(storage));
+  }
+
+  async listCraftingSkills(characterId: string): Promise<CraftingSkill[]> {
+    return [...this.craftingSkills.entries()]
+      .filter(([key]) => key.startsWith(`${characterId}:`))
+      .map(([, value]) => ({ ...value }));
+  }
+
+  async addCraftingExperience(characterId: string, profession: CraftingProfession, amount: number): Promise<CraftingSkill> {
+    const key = `${characterId}:${profession}`;
+    const current = this.craftingSkills.get(key) ?? { profession, level: 1, experience: 0 };
+    const next = { ...current, experience: current.experience + Math.max(0, Math.floor(amount)) };
+    while (next.experience >= next.level * next.level * 100) {
+      next.experience -= next.level * next.level * 100;
+      next.level++;
+    }
+    this.craftingSkills.set(key, next);
+    return { ...next };
   }
 
   private readonly weaponOverrides = new Map<string, import('@aetheria/types').WeaponElementOverride>();

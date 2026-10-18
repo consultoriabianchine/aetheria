@@ -55,6 +55,10 @@ export const routes: Routes = [
     loadComponent: () => import('./items/item-editor').then((m) => m.ItemEditor),
   },
   {
+    path: 'crafting',
+    loadComponent: () => import('./crafting/crafting-editor').then((m) => m.CraftingEditor),
+  },
+  {
     path: 'shoot-types',
     loadComponent: () => import('./shoot-types/shoot-type-editor').then((m) => m.ShootTypeEditor),
   },

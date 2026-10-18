@@ -37,20 +37,21 @@ export function aggregateCharacterCombatStats(input: {
     const item = input.getItem(stack.itemId);
     const combat = item?.combatStats;
     if (!item && !combat) continue;
-    stats.armor += combat?.armor ?? (item?.slot === 'helmet' || item?.slot === 'armor' || item?.slot === 'legs' || item?.slot === 'boots' ? item.defense : 0);
-    stats.defense += combat?.defense ?? (item?.slot !== 'helmet' && item?.slot !== 'armor' && item?.slot !== 'legs' && item?.slot !== 'boots' ? item?.defense ?? 0 : 0);
-    stats.maxHp += combat?.maxHp ?? 0;
-    stats.maxMana += combat?.maxMana ?? 0;
-    stats.criticalChance += combat?.criticalChance ?? 0;
-    stats.criticalDamage += combat?.criticalDamage ?? 0;
-    stats.accuracy += combat?.accuracy ?? 0;
-    stats.dodge += combat?.dodge ?? 0;
-    stats.speed += combat?.speed ?? 0;
-    stats.meleeSkill += combat?.skillBonuses?.melee ?? 0;
-    stats.distanceSkill += combat?.skillBonuses?.distance ?? 0;
-    stats.magicLevel += combat?.skillBonuses?.magic ?? 0;
-    for (const type of DAMAGE_TYPES) stats.resistances[type] += combat?.resistances?.[type] ?? 0;
-    for (const type of DAMAGE_TYPES) stats.damageBonuses[type] += combat?.damageBonus?.[type] ?? 0;
+    const quality = Math.max(0.5, Math.min(2, (stack.quality ?? 100) / 100));
+    stats.armor += Math.round((combat?.armor ?? (item?.slot === 'helmet' || item?.slot === 'armor' || item?.slot === 'legs' || item?.slot === 'boots' ? item.defense : 0)) * quality);
+    stats.defense += Math.round((combat?.defense ?? (item?.slot !== 'helmet' && item?.slot !== 'armor' && item?.slot !== 'legs' && item?.slot !== 'boots' ? item?.defense ?? 0 : 0)) * quality);
+    stats.maxHp += Math.round((combat?.maxHp ?? 0) * quality);
+    stats.maxMana += Math.round((combat?.maxMana ?? 0) * quality);
+    stats.criticalChance += (combat?.criticalChance ?? 0) * quality;
+    stats.criticalDamage += (combat?.criticalDamage ?? 0) * quality;
+    stats.accuracy += (combat?.accuracy ?? 0) * quality;
+    stats.dodge += (combat?.dodge ?? 0) * quality;
+    stats.speed += (combat?.speed ?? 0) * quality;
+    stats.meleeSkill += Math.round((combat?.skillBonuses?.melee ?? 0) * quality);
+    stats.distanceSkill += Math.round((combat?.skillBonuses?.distance ?? 0) * quality);
+    stats.magicLevel += Math.round((combat?.skillBonuses?.magic ?? 0) * quality);
+    for (const type of DAMAGE_TYPES) stats.resistances[type] += (combat?.resistances?.[type] ?? 0) * quality;
+    for (const type of DAMAGE_TYPES) stats.damageBonuses[type] += (combat?.damageBonus?.[type] ?? 0) * quality;
   }
 
   return stats;

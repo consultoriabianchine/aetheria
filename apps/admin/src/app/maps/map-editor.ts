@@ -67,6 +67,7 @@ export class MapEditor implements OnInit, AfterViewInit, OnDestroy {
   readonly zoom = signal(1);
   readonly gridVisible = signal(true);
   readonly collisionVisible = signal(false);
+  readonly panActive = signal(false);
   readonly selectedTileId = signal<number | null>(null);
   readonly selectedTileIds = signal<number[]>([]);
   readonly mode = signal<EditorMode>('tiles');
@@ -145,11 +146,12 @@ export class MapEditor implements OnInit, AfterViewInit, OnDestroy {
       this.name.set('Nova Masmorra');
       this.initBlank();
     }
+    this.fitView();
     this.redraw();
   }
 
   ngAfterViewInit() {
-    this.applyCanvasSize();
+    this.fitView();
     this.redraw();
   }
 
@@ -175,7 +177,14 @@ export class MapEditor implements OnInit, AfterViewInit, OnDestroy {
   }
 
   async selectTileset(tilesetId: number) {
+    const changed = this.activeTilesetId() !== tilesetId;
     this.activeTilesetId.set(tilesetId);
+    if (changed) {
+      this.selectedTileIds.set([]);
+      this.selectedTileId.set(null);
+      this.showFavorites.set(false);
+      this.showRecents.set(false);
+    }
     try {
       const detail = await this.api.getTileset(tilesetId);
       this.tileCatalog.set(detail.tiles);
@@ -224,7 +233,29 @@ export class MapEditor implements OnInit, AfterViewInit, OnDestroy {
     return this.recent().map((id) => this.tileDefsById.get(id)).filter((t): t is TileDefinition => !!t);
   }
 
+  tilesetColumns(): number {
+    return this.tilesets().find((set) => set.tilesetId === this.activeTilesetId())?.columns ?? 16;
+  }
+
+  tilesetTileWidth(): number {
+    return this.tilesets().find((set) => set.tilesetId === this.activeTilesetId())?.tileWidth ?? 32;
+  }
+
+  tilesetTileHeight(): number {
+    return this.tilesets().find((set) => set.tilesetId === this.activeTilesetId())?.tileHeight ?? 32;
+  }
+
+  tileGridColumn(tile: TileDefinition): number {
+    return (tile.index % this.tilesetColumns()) + 1;
+  }
+
+  tileGridRow(tile: TileDefinition): number {
+    return Math.floor(tile.index / this.tilesetColumns()) + 1;
+  }
+
   selectTile(tileId: number, multi = false) {
+    const tile = this.tileDefsById.get(tileId);
+    if (!tile) return;
     const next = multi ? [...this.selectedTileIds()] : [];
     const index = next.indexOf(tileId);
     if (multi && index >= 0) next.splice(index, 1);
@@ -232,7 +263,7 @@ export class MapEditor implements OnInit, AfterViewInit, OnDestroy {
     this.selectedTileIds.set(next);
     this.selectedTileId.set(next.length ? next[next.length - 1] : null);
     if (!next.length) return;
-    const layerType = this.tileDefsById.get(tileId)?.layerType;
+    const layerType = tile.layerType;
     if (layerType === 'ground_detail') this.activeLayer.set('groundDetail');
     else if (layerType === 'object') this.activeLayer.set('objects');
     else if (layerType === 'object_above') this.activeLayer.set('objectsAbove');
@@ -241,6 +272,14 @@ export class MapEditor implements OnInit, AfterViewInit, OnDestroy {
     this.mode.set('tiles');
     const recent = [tileId, ...this.recent().filter((id) => id !== tileId)].slice(0, 12);
     this.recent.set(recent);
+  }
+
+  onPaletteTileClick(event: MouseEvent, tileId: number) {
+    event.preventDefault();
+    event.stopPropagation();
+    this.showFavorites.set(false);
+    this.showRecents.set(false);
+    this.selectTile(tileId, event.shiftKey);
   }
 
   toggleFavorite(tileId: number) {
@@ -312,9 +351,28 @@ export class MapEditor implements OnInit, AfterViewInit, OnDestroy {
   }
 
   setZoom(z: number) {
-    this.zoom.set(Math.max(0.5, Math.min(4, z)));
+    this.zoom.set(Math.max(0.25, Math.min(4, z)));
     this.applyCanvasSize();
     this.redraw();
+  }
+
+  fitView() {
+    const canvas = this.canvas?.nativeElement;
+    const viewport = canvas?.parentElement;
+    if (!canvas || !viewport) return;
+
+    const availableWidth = Math.max(320, viewport.clientWidth - 20);
+    const availableHeight = Math.max(320, viewport.clientHeight - 20);
+    const fitted = Math.min(
+      4,
+      availableWidth / (this.width() * BASE_CELL),
+      availableHeight / (this.height() * BASE_CELL),
+    );
+    const zoom = Math.max(0.25, Math.floor(fitted * 20) / 20);
+    this.zoom.set(zoom);
+    this.viewX = 0;
+    this.viewY = 0;
+    this.applyCanvasSize();
   }
 
   toggleGrid() {
@@ -335,18 +393,15 @@ export class MapEditor implements OnInit, AfterViewInit, OnDestroy {
 
   onWheel(e: WheelEvent) {
     e.preventDefault();
-    if (e.ctrlKey || e.metaKey) {
-      this.zoomBy(e.deltaY < 0 ? 0.25 : -0.25);
-    } else {
-      this.viewX -= e.deltaX / this.zoom();
-      this.viewY -= e.deltaY / this.zoom();
-      this.redraw();
-    }
+    this.zoomBy(e.deltaY < 0 ? 0.25 : -0.25);
   }
 
   onPointerDown(e: PointerEvent) {
     if (e.button === 1 || (e.button === 0 && (this.tool() === 'move' || this.spacePressed))) {
+      e.preventDefault();
+      (e.currentTarget as HTMLCanvasElement).setPointerCapture(e.pointerId);
       this.panning = true;
+      this.panActive.set(true);
       this.panStart = { x: e.clientX, y: e.clientY };
       this.panOrigin = { x: this.viewX, y: this.viewY };
       return;
@@ -379,18 +434,28 @@ export class MapEditor implements OnInit, AfterViewInit, OnDestroy {
 
   onPointerMove(e: PointerEvent) {
     if (this.panning) {
-      this.viewX = this.panOrigin.x + (this.panStart.x - e.clientX) / this.zoom();
-      this.viewY = this.panOrigin.y + (this.panStart.y - e.clientY) / this.zoom();
+      const cellSize = BASE_CELL * this.zoom();
+      this.viewX = this.panOrigin.x + (this.panStart.x - e.clientX) / cellSize;
+      this.viewY = this.panOrigin.y + (this.panStart.y - e.clientY) / cellSize;
       this.redraw();
       return;
     }
     if (this.painting) this.paintAt(e);
   }
 
-  onPointerUp() {
+  onPointerUp(e?: PointerEvent) {
+    if (e) {
+      const canvas = e.currentTarget as HTMLCanvasElement;
+      if (canvas.hasPointerCapture(e.pointerId)) canvas.releasePointerCapture(e.pointerId);
+    }
     this.painting = false;
     this.panning = false;
+    this.panActive.set(false);
     this.rectStart = null;
+  }
+
+  onPointerLeave(e: PointerEvent) {
+    if (!this.panning) this.onPointerUp(e);
   }
 
   private spacePressed = false;
@@ -892,6 +957,6 @@ export class MapEditor implements OnInit, AfterViewInit, OnDestroy {
     const bx = (t.sourceX / sw) * 100;
     const by = (t.sourceY / img.height) * 100;
     const bs = (t.width / sw) * 100;
-    return `background-image: url(${this.api.tilesetImageUrl(t.tilesetId)}); background-size: ${sw}px ${img.height}px; background-position: ${-t.sourceX}px ${-t.sourceY}px; width: 32px; height: 32px; image-rendering: pixelated;`;
+    return `background-image: url(${this.api.tilesetImageUrl(t.tilesetId)}); background-repeat: no-repeat; background-size: ${sw}px ${img.height}px; background-position: ${-t.sourceX}px ${-t.sourceY}px; width: ${t.width}px; height: ${t.height}px; image-rendering: pixelated;`;
   }
 }

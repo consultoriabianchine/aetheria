@@ -397,6 +397,58 @@ export interface AmmoDefinition {
 export interface ItemStack {
   itemId: string;
   quantity: number;
+  instanceId?: string;
+  quality?: number;
+  resonance?: string;
+  recipeId?: string;
+  crafterId?: string;
+}
+
+export type CraftingProfession = 'forging' | 'alchemy' | 'runecraft';
+export type CraftingIntent = 'offense' | 'defense' | 'arcane' | 'utility';
+
+export interface CraftRecipeIngredient {
+  itemId?: string;
+  tag?: string;
+  quantity: number;
+  role: 'base' | 'essence' | 'catalyst' | 'material';
+}
+
+export interface CraftRecipe {
+  id: string;
+  slug: string;
+  name: string;
+  description: string;
+  profession: CraftingProfession;
+  requiredLevel: number;
+  station: string;
+  outputItemId: string;
+  outputQuantity: number;
+  goldCost: number;
+  experience: number;
+  qualityMin: number;
+  qualityMax: number;
+  allowedIntents: CraftingIntent[];
+  resonanceTags: string[];
+  ingredients: CraftRecipeIngredient[];
+  status: 'draft' | 'published' | 'disabled';
+  version: number;
+}
+
+export interface CraftingSkill {
+  profession: CraftingProfession;
+  level: number;
+  experience: number;
+}
+
+export interface CraftPreview {
+  recipe: CraftRecipe;
+  skills: CraftingSkill;
+  missing: { itemId?: string; tag?: string; required: number; available: number }[];
+  gold: number;
+  canCraft: boolean;
+  qualityRange: [number, number];
+  resonance: string | null;
 }
 
 export interface CharacterEquipment {

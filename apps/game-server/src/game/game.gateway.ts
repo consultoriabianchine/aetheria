@@ -105,6 +105,21 @@ export class GameGateway implements OnGatewayConnection, OnGatewayDisconnect {
     this.engine.handleSellLootPouch(socket.id);
   }
 
+  @SubscribeMessage('craft.catalog')
+  async onCraftCatalog(socket: Socket) {
+    await this.engine.handleCraftCatalog(socket.id);
+  }
+
+  @SubscribeMessage('craft.preview')
+  async onCraftPreview(socket: Socket, payload: { recipeId: string; intent?: import('@aetheria/types').CraftingIntent }) {
+    await this.engine.handleCraftPreview(socket.id, payload.recipeId, payload.intent);
+  }
+
+  @SubscribeMessage('craft.commit')
+  async onCraftCommit(socket: Socket, payload: { recipeId: string; intent?: import('@aetheria/types').CraftingIntent }) {
+    await this.engine.handleCraftCommit(socket.id, payload.recipeId, payload.intent);
+  }
+
   @SubscribeMessage('chat.send')
   onChat(socket: Socket, payload: { channel: string; message: string }) {
     this.engine.handleChat(socket.id, payload.channel, payload.message);

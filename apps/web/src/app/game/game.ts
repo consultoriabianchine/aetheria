@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import Phaser from 'phaser';
 import { SERVER_EVENTS } from '@aetheria/protocol';
-import type { AbyssMetaBonusView, CharacterEquipment, CharacterSkills, CharacterSummary, CombatAbilityDefinition, CombatStatsView, DamageType, ItemDefinition, ItemStack, PlayerCombatConfig } from '@aetheria/types';
+import type { AbyssMetaBonusView, CharacterEquipment, CharacterSkills, CharacterSummary, CombatAbilityDefinition, CombatStatsView, CraftingIntent, DamageType, ItemDefinition, ItemStack, PlayerCombatConfig } from '@aetheria/types';
 import { DAMAGE_TYPES } from '@aetheria/types';
 import { ABYSS_META_NODES, APPEARANCE_PALETTE, INVENTORY_SIZE, LOOT_POUCH_EXPANSION, SKILL_PROGRESSION_CONFIG, TRAINING_HUNT_ID, xpForLevel } from '@aetheria/config';
 import { WsService } from '../core/ws.service';
@@ -79,6 +79,7 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
     { label: 'Progress', icon: 'progress.png' },
     { label: 'Daily', icon: 'daily.png' },
     { label: 'Storage', icon: 'storage.png' },
+    { label: 'Forja', icon: 'forja.png' },
     { label: 'Trade', icon: 'trade.png' },
     { label: 'Social', icon: 'social.png' },
   ] as const;
@@ -108,6 +109,12 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   readonly abilityCategory = signal<'all' | 'attack' | 'area' | 'rune' | 'heal'>('all');
   readonly releasedOnly = signal(false);
   readonly manageOpen = signal(false);
+  readonly craftOpen = signal(false);
+  readonly craftRecipeId = signal<string | null>(null);
+  readonly craftIntent = signal<CraftingIntent>('offense');
+  readonly craftProgress = signal(0);
+  readonly craftBusy = signal(false);
+  readonly craftStatus = signal<'idle' | 'forging' | 'success' | 'error'>('idle');
   readonly manageMemberId = signal<string | null>(null);
   readonly manageInventoryTab = signal<'backpack' | 'loot' | 'store'>('backpack');
   readonly selectedCharacterId = signal<string | null>(null);
@@ -137,6 +144,7 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   private canvasResizeObserver?: ResizeObserver;
   private readonly windowResizeHandler = () => this.resizePhaserCanvas();
   private timerSub?: Subscription;
+  private craftTimer?: ReturnType<typeof setInterval>;
   private abyssChoiceDrag: { startX: number; startY: number; originX: number; originY: number } | null = null;
   private abyssTreeDrag: { startX: number; startY: number; originX: number; originY: number } | null = null;
   private visibilityHandler = () => {
@@ -181,6 +189,10 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
         this.loadingStage.set('Finalizando aparências e inventário...');
         this.loadingProgress.set(88);
         this.finishInitialLoading();
+      } else if (event.event === SERVER_EVENTS.CRAFT_COMPLETED) {
+        this.finishCrafting('success');
+      } else if (event.event === SERVER_EVENTS.ERROR && this.craftBusy()) {
+        this.finishCrafting('error');
       }
     });
     void this.itemCatalog.ensureLoaded().then(() => {
@@ -277,6 +289,7 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
     document.removeEventListener('visibilitychange', this.visibilityHandler);
     this.sidebarMq?.removeEventListener('change', this.sidebarMqListener);
     this.timerSub?.unsubscribe();
+    this.stopCraftTimer();
     this.canvasResizeObserver?.disconnect();
     window.removeEventListener('resize', this.windowResizeHandler);
     this.phaser?.destroy(true);
@@ -1363,6 +1376,86 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   draftOutfit() {
     const id = this.state.appearanceDraft()?.outfitId;
     return this.state.availableOutfits().find((o) => o.outfitId === id) ?? null;
+  }
+
+  openCrafting() {
+    this.craftOpen.set(true);
+    this.craftStatus.set('idle');
+    this.craftProgress.set(0);
+    this.state.clearLastError();
+    this.state.requestCraftCatalog();
+  }
+
+  closeCrafting() {
+    this.craftOpen.set(false);
+    this.stopCraftTimer();
+    this.craftBusy.set(false);
+    this.craftStatus.set('idle');
+    this.craftProgress.set(0);
+    this.state.craftPreview.set(null);
+  }
+
+  selectCraftRecipe(recipeId: string) {
+    this.stopCraftTimer();
+    this.craftBusy.set(false);
+    this.craftStatus.set('idle');
+    this.craftProgress.set(0);
+    this.state.clearLastError();
+    this.craftRecipeId.set(recipeId);
+    this.state.previewCraft(recipeId, this.craftIntent());
+  }
+
+  selectCraftIntent(intent: CraftingIntent) {
+    this.craftIntent.set(intent);
+    const recipeId = this.craftRecipeId();
+    if (recipeId) this.state.previewCraft(recipeId, intent);
+  }
+
+  commitCraft() {
+    const recipeId = this.craftRecipeId();
+    const preview = this.state.craftPreview();
+    if (!recipeId || !preview?.canCraft || this.craftBusy()) return;
+    this.state.clearLastError();
+    this.craftBusy.set(true);
+    this.craftStatus.set('forging');
+    this.craftProgress.set(0);
+    const startedAt = Date.now();
+    const duration = 1800;
+    this.craftTimer = setInterval(() => {
+      const elapsed = Date.now() - startedAt;
+      if (elapsed >= duration) {
+        this.stopCraftTimer();
+        this.craftProgress.set(96);
+        this.state.commitCraft(recipeId, this.craftIntent());
+        return;
+      }
+      this.craftProgress.set(Math.min(94, Math.round((elapsed / duration) * 94)));
+    }, 40);
+  }
+
+  craftProgressLabel(): string {
+    switch (this.craftStatus()) {
+      case 'forging': return 'A ressonância está sendo gravada...';
+      case 'success': return 'Item forjado com sucesso';
+      case 'error': return 'A forja não pôde concluir o projeto';
+      default: return 'Pronto para forjar';
+    }
+  }
+
+  private finishCrafting(status: 'success' | 'error') {
+    this.stopCraftTimer();
+    this.craftBusy.set(false);
+    this.craftStatus.set(status);
+    this.craftProgress.set(status === 'success' ? 100 : 0);
+  }
+
+  private stopCraftTimer() {
+    if (this.craftTimer) clearInterval(this.craftTimer);
+    this.craftTimer = undefined;
+  }
+
+  craftSkillLevel(profession: string): number {
+    return this.state.craftSkills().find((skill) => skill.profession === profession)?.level ?? 1;
   }
 
   filteredAppearanceOutfits() {

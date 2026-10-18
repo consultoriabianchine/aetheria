@@ -1,0 +1,11 @@
+<button #trigger class="trigger" type="button" [class.open]="open()" [disabled]="disabled" [attr.aria-expanded]="open()" [attr.aria-controls]="menuId" aria-haspopup="listbox" (click)="toggle($event)" (keydown)="onTriggerKeydown($event)">
+  <span class="trigger-label" [class.placeholder]="!value">{{ selectedLabel }}</span>
+  <span class="chevron" aria-hidden="true">⌄</span>
+</button>
+@if (open()) {
+  <div #menu class="menu" [id]="menuId" role="listbox" tabindex="-1" [attr.aria-label]="placeholder" (keydown)="onMenuKeydown($event)">
+    @for (option of options; track option.value; let index = $index) {
+      <button class="option" type="button" role="option" [class.active]="activeIndex() === index" [class.selected]="value === option.value" [attr.aria-selected]="value === option.value" (mouseenter)="activeIndex.set(index)" (click)="select(option, $event)">{{ option.label }}</button>
+    }
+  </div>
+}

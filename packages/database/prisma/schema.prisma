@@ -91,6 +91,7 @@ model Character {
   attackRotationSlots CharacterAttackRotationSlot[]
   healingRotationSlots CharacterHealingRotationSlot[]
   potionUsage         PotionUsage[]
+  craftingSkills      CharacterCraftingSkill[]
   createdAt      DateTime                 @default(now())
 
   @@index([archetype])
@@ -221,6 +222,62 @@ model ItemDefinition {
   @@map("item_definitions")
 }
 
+model CraftRecipe {
+  id             String                  @id @default(cuid())
+  slug           String                  @unique
+  name           String
+  description    String                  @default("")
+  profession     String                  @default("forging")
+  requiredLevel  Int                     @default(1) @map("required_level")
+  station        String                  @default("forge")
+  outputItemId   String                  @map("output_item_id")
+  outputQuantity Int                     @default(1) @map("output_quantity")
+  goldCost       Int                     @default(0) @map("gold_cost")
+  experience     Int                     @default(10)
+  qualityMin     Int                     @default(100) @map("quality_min")
+  qualityMax     Int                     @default(100) @map("quality_max")
+  allowedIntents Json                    @default("[]") @map("allowed_intents")
+  resonanceTags  Json                    @default("[]") @map("resonance_tags")
+  status         String                  @default("draft")
+  version        Int                     @default(1)
+  ingredients    CraftRecipeIngredient[]
+  versions       CraftRecipeVersion[]
+  createdAt      DateTime                @default(now()) @map("created_at")
+  updatedAt      DateTime                @updatedAt @map("updated_at")
+
+  @@index([profession, status])
+  @@index([station, status])
+  @@map("craft_recipes")
+}
+
+model CraftRecipeIngredient {
+  id       String      @id @default(cuid())
+  recipeId String      @map("recipe_id")
+  itemId   String?     @map("item_id")
+  tag      String?
+  quantity Int         @default(1)
+  role     String      @default("material")
+  recipe   CraftRecipe @relation(fields: [recipeId], references: [id], onDelete: Cascade)
+
+  @@index([recipeId])
+  @@index([itemId])
+  @@map("craft_recipe_ingredients")
+}
+
+model CraftRecipeVersion {
+  id         String      @id @default(cuid())
+  recipeId   String      @map("recipe_id")
+  version    Int
+  action     String
+  snapshot   Json
+  createdAt  DateTime    @default(now()) @map("created_at")
+  recipe     CraftRecipe @relation(fields: [recipeId], references: [id], onDelete: Cascade)
+
+  @@unique([recipeId, version])
+  @@index([recipeId, createdAt])
+  @@map("craft_recipe_versions")
+}
+
 // Storage compartilhado da conta: gold, backpack e loot pouch são únicos por
 // conta (usados por todos os personagens). Equipamento continua por personagem.
 model AccountStorage {
@@ -332,6 +389,20 @@ model CharacterHealingRotationSlot {
   ability      CombatAbility? @relation(fields: [ability_id], references: [id], onDelete: SetNull)
   @@unique([character_id, preset, slot_position])
   @@map("character_healing_rotation_slots")
+}
+
+model CharacterCraftingSkill {
+  id          String    @id @default(cuid())
+  characterId String    @map("character_id")
+  profession  String
+  level       Int       @default(1)
+  experience  Int       @default(0)
+  character   Character @relation(fields: [characterId], references: [id], onDelete: Cascade)
+  updatedAt   DateTime  @updatedAt @map("updated_at")
+
+  @@unique([characterId, profession])
+  @@index([characterId])
+  @@map("character_crafting_skills")
 }
 
 model PotionDefinition {

@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { INVENTORY_SIZE, LOOT_POUCH_SIZE } from '@aetheria/config';
 import { Prisma } from '@aetheria/database';
 import { PrismaService } from '../../prisma/prisma.service';
-import type { CharacterEquipment, CombatArchetype, HuntProgress, ItemStack, PlayerCombatConfig } from '@aetheria/types';
+import type { CharacterEquipment, CombatArchetype, CraftingProfession, CraftingSkill, HuntProgress, ItemStack, PlayerCombatConfig } from '@aetheria/types';
 import type { AbyssMetaProgression, AbyssRunHistory, AccountRecord, StoredAccountStorage, StoredCharacter, Store, PublicCharacter } from './store';
 
 interface AccountStorageRow {
@@ -362,6 +362,32 @@ export class PrismaStore implements Store {
     return this.toHuntProgress(row);
   }
 
+  async listCraftingSkills(characterId: string): Promise<CraftingSkill[]> {
+    const rows = await this.prisma.characterCraftingSkill.findMany({ where: { characterId } });
+    return rows.map((row) => ({ profession: row.profession as CraftingProfession, level: row.level, experience: row.experience }));
+  }
+
+  async addCraftingExperience(characterId: string, profession: CraftingProfession, amount: number): Promise<CraftingSkill> {
+    return this.prisma.$transaction(async (tx) => {
+      const row = await tx.characterCraftingSkill.upsert({
+        where: { characterId_profession: { characterId, profession } },
+        create: { characterId, profession, level: 1, experience: 0 },
+        update: {},
+      });
+      let level = row.level;
+      let experience = row.experience + Math.max(0, Math.floor(amount));
+      while (experience >= level * level * 100) {
+        experience -= level * level * 100;
+        level++;
+      }
+      const updated = await tx.characterCraftingSkill.update({
+        where: { characterId_profession: { characterId, profession } },
+        data: { level, experience },
+      });
+      return { profession: updated.profession as CraftingProfession, level: updated.level, experience: updated.experience };
+    });
+  }
+
   async getAbyssMeta(characterId: string): Promise<AbyssMetaProgression> {
     const row = await this.prisma.abyssMetaProgression.upsert({
       where: { characterId },
@@ -538,8 +564,16 @@ export class PrismaStore implements Store {
   }
 
   private stack(value: unknown): ItemStack {
-    const v = value as { itemId?: unknown; quantity?: unknown };
-    return { itemId: String(v?.itemId ?? ''), quantity: clampInt(v?.quantity, 1) };
+    const v = value as { itemId?: unknown; quantity?: unknown; instanceId?: unknown; quality?: unknown; resonance?: unknown; recipeId?: unknown; crafterId?: unknown };
+    return {
+      itemId: String(v?.itemId ?? ''),
+      quantity: clampInt(v?.quantity, 1),
+      ...(typeof v?.instanceId === 'string' ? { instanceId: v.instanceId } : {}),
+      ...(Number.isFinite(Number(v?.quality)) ? { quality: clampInt(v.quality, 100) } : {}),
+      ...(typeof v?.resonance === 'string' ? { resonance: v.resonance } : {}),
+      ...(typeof v?.recipeId === 'string' ? { recipeId: v.recipeId } : {}),
+      ...(typeof v?.crafterId === 'string' ? { crafterId: v.crafterId } : {}),
+    };
   }
 
   private toAccountStorage(row: AccountStorageRow): StoredAccountStorage {
@@ -560,13 +594,13 @@ export class PrismaStore implements Store {
     return Array.from({ length: size }, (_, index) => {
       const stack = source[index] as ItemStack | null | undefined;
       return stack && typeof stack.itemId === 'string'
-        ? { itemId: stack.itemId, quantity: clampInt(stack.quantity, 1) }
+        ? this.stack(stack)
         : null;
     });
   }
 
   private toSlotsJson(slots: (ItemStack | null)[]): Prisma.InputJsonValue {
-    return slots.map((s) => (s ? { itemId: s.itemId, quantity: s.quantity } : null)) as unknown as Prisma.InputJsonValue;
+    return slots.map((s) => (s ? { ...s } : null)) as unknown as Prisma.InputJsonValue;
   }
 
   private normalizedLootPouchSize(storage: StoredAccountStorage): number {

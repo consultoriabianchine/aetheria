@@ -43,6 +43,9 @@ export type ClientMessage =
   | { type: 'inventory.move'; from: 'backpack' | 'loot'; fromIndex: number; to: 'backpack' | 'loot'; toIndex: number }
   | { type: 'inventory.expandLootPouch' }
   | { type: 'inventory.sellLootPouch' }
+  | { type: 'craft.catalog' }
+  | { type: 'craft.preview'; recipeId: string; intent?: import('@aetheria/types').CraftingIntent }
+  | { type: 'craft.commit'; recipeId: string; intent?: import('@aetheria/types').CraftingIntent }
   | { type: 'chat.send'; channel: string; message: string }
   | { type: 'npc.interact'; npcId: string }
   | { type: 'hunt.list'; token: string }
@@ -119,6 +122,9 @@ export type ServerMessage =
   | { type: 'hunt.returnedToCity' }
   | { type: 'party.state'; unlockedSlots: number; maxSlots: number; unlockCost: number | null; members: PartyMember[] }
   | { type: 'gold.update'; gold: number }
+  | { type: 'craft.catalog'; recipes: import('@aetheria/types').CraftRecipe[]; skills: import('@aetheria/types').CraftingSkill[] }
+  | { type: 'craft.preview'; preview: import('@aetheria/types').CraftPreview }
+  | { type: 'craft.completed'; recipeId: string; itemId: string; quantity: number; quality: number; resonance: string | null; skill: import('@aetheria/types').CraftingSkill }
   | { type: 'appearance.list'; outfits: { outfitId: number; name: string; slug: string; category: string; supportsColors: boolean; supportsAddons: boolean }[] }
   | { type: 'appearance.changed'; entityId: string; outfitId: number; addonMask: number; colors: { head: number; primary: number; secondary: number; detail: number } }
   | { type: 'combat.config'; characterId: string; combat: PlayerCombatConfig }
@@ -186,6 +192,9 @@ export const SERVER_EVENTS = {
   INVENTORY_UPDATE: 'inventory.update',
   LOOT_SPAWNED: 'loot.spawned',
   LOOT_REMOVED: 'loot.removed',
+  CRAFT_CATALOG: 'craft.catalog',
+  CRAFT_PREVIEW: 'craft.preview',
+  CRAFT_COMPLETED: 'craft.completed',
   CHAT_MESSAGE: 'chat.message',
   NPC_DIALOG: 'npc.dialog',
   ERROR: 'error',
@@ -237,6 +246,9 @@ export const CLIENT_EVENTS = {
   UNEQUIP: 'inventory.unequip',
   EXPAND_LOOT_POUCH: 'inventory.expandLootPouch',
   SELL_LOOT_POUCH: 'inventory.sellLootPouch',
+  CRAFT_CATALOG: 'craft.catalog',
+  CRAFT_PREVIEW: 'craft.preview',
+  CRAFT_COMMIT: 'craft.commit',
   CHAT: 'chat.send',
   NPC_INTERACT: 'npc.interact',
   HUNT_LIST: 'hunt.list',

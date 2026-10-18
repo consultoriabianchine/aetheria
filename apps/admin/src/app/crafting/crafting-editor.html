@@ -1,0 +1,38 @@
+<h1>Crafting · Receitas</h1>
+<p class="sub">Configure projetos, materiais, qualidade e ressonâncias. Apenas receitas publicadas entram no servidor do jogo.</p>
+@if (error()) { <p class="error">{{ error() }}</p> }
+<div class="layout">
+  <section class="panel">
+    <div class="toolbar"><button class="primary" (click)="createNew()">+ Nova receita</button><button (click)="load()">Atualizar</button></div>
+    <div class="filters">
+      <input [value]="search()" (input)="search.set($any($event.target).value)" (keyup.enter)="load()" placeholder="Buscar receita..." />
+      <admin-select [options]="statusOptions" [value]="statusFilter()" placeholder="Filtrar por status" (valueChange)="statusFilter.set($event); load()" />
+      <admin-select [options]="professionFilterOptions" [value]="professionFilter()" placeholder="Filtrar por profissão" (valueChange)="professionFilter.set($event); load()" />
+    </div>
+    <div class="recipe-list">
+      @for (recipe of recipes(); track recipe.id) { <button class="recipe-row" [class.active]="selectedId() === recipe.id" (click)="select(recipe)"><span><strong>{{ recipe.name }}</strong><br /><small>{{ recipe.slug }} · {{ professionLabel(recipe.profession) }}</small></span><span class="status">{{ statusLabel(recipe.status) }} · v{{ recipe.version }}</span></button> }
+    </div>
+  </section>
+  <section class="panel">
+    <h2>{{ selectedId() ? 'Editar receita' : 'Nova receita' }}</h2>
+    <div class="form">
+      <label>Slug <input [value]="draft().slug ?? ''" [disabled]="!!selectedId()" (input)="patch({ slug: $any($event.target).value })" /></label>
+      <label>Nome <input [value]="draft().name" (input)="patch({ name: $any($event.target).value })" /></label>
+      <label class="wide">Descrição <textarea [value]="draft().description ?? ''" (input)="patch({ description: $any($event.target).value })"></textarea></label>
+      <label>Profissão <admin-select [options]="professionOptions" [value]="draft().profession" placeholder="Selecione a profissão" (valueChange)="setProfession($event)" /></label>
+      <label>Estação <input [value]="draft().station" (input)="patch({ station: $any($event.target).value })" /></label>
+      <label>Nível mínimo <input type="number" [value]="draft().requiredLevel" (input)="patch({ requiredLevel: +$any($event.target).value })" /></label>
+      <label>Item de saída <input [value]="draft().outputItemId" (input)="patch({ outputItemId: $any($event.target).value })" placeholder="item-id" /></label>
+      <label>Quantidade <input type="number" [value]="draft().outputQuantity" (input)="patch({ outputQuantity: +$any($event.target).value })" /></label>
+      <label>Custo em gold <input type="number" [value]="draft().goldCost" (input)="patch({ goldCost: +$any($event.target).value })" /></label>
+      <label>XP de craft <input type="number" [value]="draft().experience" (input)="patch({ experience: +$any($event.target).value })" /></label>
+      <label>Qualidade mínima <input type="number" [value]="draft().qualityMin" (input)="patch({ qualityMin: +$any($event.target).value })" /></label>
+      <label>Qualidade máxima <input type="number" [value]="draft().qualityMax" (input)="patch({ qualityMax: +$any($event.target).value })" /></label>
+      <label class="wide">Ressonâncias <input [value]="draft().resonanceTags.join(', ')" (input)="patchTags($any($event.target).value)" placeholder="fogo, abissal" /></label>
+      <div class="wide"><strong>Intenções permitidas</strong><div class="actions">@for (intent of intents; track intent) { <button type="button" [class.primary]="draft().allowedIntents.includes(intent)" (click)="toggleIntent(intent)">{{ intent === 'offense' ? 'Ofensiva' : intent === 'defense' ? 'Defensiva' : intent === 'arcane' ? 'Arcana' : 'Utilidade' }}</button> }</div></div>
+      <div class="wide"><h3>Ingredientes</h3>@for (ingredient of draft().ingredients; track $index) { <div class="ingredient-row"><label>Item ID <input [value]="ingredient.itemId ?? ''" (input)="patchIngredient($index, { itemId: $any($event.target).value, tag: '' })" /></label><label>Tag <input [value]="ingredient.tag ?? ''" (input)="patchIngredient($index, { tag: $any($event.target).value, itemId: '' })" /></label><label>Qtd. <input type="number" [value]="ingredient.quantity" (input)="patchIngredient($index, { quantity: +$any($event.target).value })" /></label><label>Papel <admin-select [options]="roleOptions" [value]="ingredient.role" placeholder="Papel" (valueChange)="patchIngredient($index, { role: $event })" /></label><button type="button" (click)="removeIngredient($index)">×</button></div> }</div>
+    </div>
+    @if (selectedId()) { <div class="versions"><h3>Histórico de versões</h3>@for (version of versions(); track version.id) { <span>v{{ version.version }} · {{ version.action }} · {{ version.createdAt | date:'short' }}</span> }</div> }
+    <div class="actions"><button type="button" (click)="addIngredient()">+ Ingrediente</button><button class="primary" type="button" (click)="save()" [disabled]="saving()">Salvar rascunho</button>@if (selectedId()) { <button type="button" (click)="publish()">Publicar</button><button type="button" (click)="disable()">Desativar</button> }</div>
+  </section>
+</div>

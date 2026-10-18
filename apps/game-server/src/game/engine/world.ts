@@ -131,7 +131,7 @@ export class GamePlayer {
     let speed = PLAYER_SPEED[this.archetype] + SPEED_PER_LEVEL * Math.max(0, this.level - 1);
     for (const stack of Object.values(this.equipment)) {
       if (!stack) continue;
-      speed += getItem(stack.itemId)?.combatStats?.speed ?? 0;
+      speed += Math.round((getItem(stack.itemId)?.combatStats?.speed ?? 0) * Math.max(0.5, Math.min(2, (stack.quality ?? 100) / 100)));
     }
     this.speed = speed;
     this.moveIntervalMs = playerMoveInterval(speed);
@@ -147,8 +147,9 @@ export class GamePlayer {
     for (const stack of Object.values(this.equipment)) {
       if (!stack) continue;
       const combat = getItem(stack.itemId)?.combatStats;
-      maxHealth += combat?.maxHp ?? 0;
-      maxMana += combat?.maxMana ?? 0;
+      const quality = Math.max(0.5, Math.min(2, (stack.quality ?? 100) / 100));
+      maxHealth += Math.round((combat?.maxHp ?? 0) * quality);
+      maxMana += Math.round((combat?.maxMana ?? 0) * quality);
     }
     this.baseMaxHealth = baseMaxHealth;
     this.baseMaxMana = baseMaxMana;

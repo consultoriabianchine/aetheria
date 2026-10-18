@@ -8,6 +8,7 @@ import {
   CHAT_MAX_LENGTH,
   CHAT_MIN_INTERVAL_MS,
   COMBAT_FORMULA_CONFIG,
+  CRAFTING_CONFIG,
   DEFAULT_PLAYER_OUTFIT_ID,
   DEFAULT_PLAYER_OUTFIT_SLUG,
   HUNT_CATALOG,
@@ -39,6 +40,10 @@ import type {
   CharacterInventory,
   CharacterSkills,
   CharacterSummary,
+  CraftPreview,
+  CraftRecipe,
+  CraftingIntent,
+  CraftingSkill,
   CombatAbilityDefinition,
   CombatArchetype,
   DamageType,
@@ -56,6 +61,7 @@ import type {
   ResolvedMonsterSpell,
 } from '@aetheria/types';
 import { getItemDef, loadItemCatalogFromDatabase } from './item-catalog';
+import { getCraftRecipe, getCraftRecipes, loadCraftRecipeCatalog } from './craft-registry';
 import { buildWorldMapData, generateWorldMap } from './world-map';
 import { AccountStorageState, GamePlayer, GroundItem, NpcEntity } from './world';
 import { STORE, Store, StoredCharacter } from '../store/store';
@@ -277,6 +283,7 @@ export class GameEngine implements OnModuleDestroy {
 
   async start() {
     await loadItemCatalogFromDatabase(this.prisma);
+    await loadCraftRecipeCatalog(this.prisma);
     await loadShootEffectCatalog(this.prisma);
     this.abyssAbilities = await this.abilityRegistry.list();
     for (const npcId of Object.keys(NPC_TEMPLATES)) {
@@ -587,6 +594,7 @@ export class GameEngine implements OnModuleDestroy {
     });
     this.emitStats(player);
     this.emitInventory(player);
+    await this.emitCraftingCatalog(player);
     await this.emitPartyState(player);
 
     for (const existing of this.players.values()) {
@@ -686,6 +694,7 @@ export class GameEngine implements OnModuleDestroy {
     }
     this.emitStats(player);
     this.emitInventory(player);
+    await this.emitCraftingCatalog(player);
     await this.emitPartyState(player);
     this.emitTo(socketId, 'game.snapshotReady', null);
   }
@@ -1841,6 +1850,147 @@ export class GameEngine implements OnModuleDestroy {
     return Math.max(0, def?.sellValue ?? 0);
   }
 
+  async handleCraftCatalog(socketId: string) {
+    const player = this.playerForSocket(socketId);
+    if (!player) return;
+    const skills = await this.store.listCraftingSkills(player.id);
+    this.emitTo(socketId, 'craft.catalog', { recipes: getCraftRecipes(), skills });
+  }
+
+  async handleCraftPreview(socketId: string, recipeId: string, intent?: CraftingIntent) {
+    const player = this.playerForSocket(socketId);
+    if (!player) return;
+    const recipe = getCraftRecipe(recipeId);
+    if (!recipe) {
+      this.emitTo(socketId, 'error', { message: 'Receita não encontrada ou não publicada.' });
+      return;
+    }
+    const preview = await this.buildCraftPreview(player, recipe, intent);
+    this.emitTo(socketId, 'craft.preview', { preview });
+  }
+
+  async handleCraftCommit(socketId: string, recipeId: string, intent?: CraftingIntent) {
+    const player = this.playerForSocket(socketId);
+    if (!player) return;
+    await this.withInventoryMutationLock(player.accountId, async () => {
+      const live = this.playerForSocket(socketId);
+      const recipe = getCraftRecipe(recipeId);
+      if (!live || !recipe) {
+        this.emitTo(socketId, 'error', { message: 'Receita não encontrada ou sessão inválida.' });
+        return;
+      }
+      const preview = await this.buildCraftPreview(live, recipe, intent);
+      if (!preview.canCraft) {
+        this.emitTo(socketId, 'error', { message: this.craftError(preview, live, recipe, intent) });
+        return;
+      }
+      const storage = this.storageFor(live);
+      const plan = this.craftConsumptionPlan(storage, recipe);
+      const output = getItemDef(recipe.outputItemId);
+      if (!output) {
+        this.emitTo(socketId, 'error', { message: 'O item de saída desta receita não está disponível.' });
+        return;
+      }
+      const quality = this.rollCraftQuality(recipe, preview.skills.level);
+      const instance = Boolean(output.slot || quality !== 100 || recipe.resonanceTags.length > 0);
+      const resultStack: ItemStack = {
+        itemId: recipe.outputItemId,
+        quantity: recipe.outputQuantity,
+        ...(instance ? { instanceId: uid('crafted'), quality, resonance: preview.resonance ?? undefined, recipeId: recipe.id, crafterId: live.id } : {}),
+      };
+      if (!this.canAddStackToInventory(storage, resultStack)) {
+        this.emitTo(socketId, 'error', { message: 'Não há espaço suficiente na mochila para o item produzido.' });
+        return;
+      }
+      for (const [index, quantity] of plan.consumed) {
+        const stack = storage.inventory[index];
+        if (!stack) continue;
+        stack.quantity -= quantity;
+        if (stack.quantity <= 0) storage.inventory[index] = null;
+      }
+      storage.gold -= recipe.goldCost;
+      this.addStackToInventory(storage, resultStack);
+      const skill = await this.store.addCraftingExperience(live.id, recipe.profession, recipe.experience);
+      await this.store.saveAccountStorage(storage.toStored());
+      this.emitGold(live, storage.gold);
+      this.emitInventory(live);
+      this.emitTo(socketId, 'craft.completed', { recipeId: recipe.id, itemId: resultStack.itemId, quantity: resultStack.quantity, quality, resonance: preview.resonance, skill });
+      this.emitTo(socketId, 'chat.message', { channel: 'local', from: 'Forja', text: `${output.name} produzido com qualidade ${quality}%${preview.resonance ? ` · Ressonância: ${preview.resonance}` : ''}.` });
+    });
+  }
+
+  private async emitCraftingCatalog(player: GamePlayer) {
+    const skills = await this.store.listCraftingSkills(player.id);
+    this.emitTo(player.socketId ?? '', 'craft.catalog', { recipes: getCraftRecipes(), skills });
+  }
+
+  private async buildCraftPreview(player: GamePlayer, recipe: CraftRecipe, intent?: CraftingIntent): Promise<CraftPreview> {
+    const skills = await this.craftingSkill(player.id, recipe.profession);
+    const storage = this.storageFor(player);
+    const plan = this.craftConsumptionPlan(storage, recipe);
+    const skillBonus = Math.min(20, Math.floor(skills.level / 5));
+    const qualityRange: [number, number] = [Math.min(200, recipe.qualityMin + skillBonus), Math.min(200, Math.max(recipe.qualityMin + skillBonus, recipe.qualityMax + skillBonus))];
+    const validIntent = !intent || recipe.allowedIntents.length === 0 || recipe.allowedIntents.includes(intent);
+    const canCraft = this.isAtCraftStation(player, recipe.station) && player.level >= recipe.requiredLevel && skills.level >= recipe.requiredLevel && storage.gold >= recipe.goldCost && plan.missing.length === 0 && validIntent;
+    return { recipe, skills, missing: plan.missing, gold: storage.gold, canCraft, qualityRange, resonance: recipe.resonanceTags[0] ?? null };
+  }
+
+  private craftError(preview: CraftPreview, player: GamePlayer, recipe: CraftRecipe, intent?: CraftingIntent): string {
+    if (!this.isAtCraftStation(player, recipe.station)) return 'Aproxime-se da estação de craft no hub.';
+    if (player.level < recipe.requiredLevel || preview.skills.level < recipe.requiredLevel) return `Nível ${recipe.requiredLevel} necessário para esta receita.`;
+    if (preview.gold < recipe.goldCost) return `Gold insuficiente (${recipe.goldCost} necessários).`;
+    if (intent && recipe.allowedIntents.length > 0 && !recipe.allowedIntents.includes(intent)) return 'Essa intenção não é compatível com a receita.';
+    if (preview.missing.length > 0) return 'Materiais insuficientes para esta receita.';
+    return 'Não foi possível concluir o craft.';
+  }
+
+  private async craftingSkill(characterId: string, profession: CraftRecipe['profession']): Promise<CraftingSkill> {
+    const skills = await this.store.listCraftingSkills(characterId);
+    return skills.find((skill) => skill.profession === profession) ?? { profession, level: 1, experience: 0 };
+  }
+
+  private isAtCraftStation(player: GamePlayer, station: string): boolean {
+    const point = CRAFTING_CONFIG.stations[station as keyof typeof CRAFTING_CONFIG.stations] ?? CRAFTING_CONFIG.stations.forge;
+    return player.position.z === point.z && tileDistance(player.position, point) <= CRAFTING_CONFIG.stationRange && !this.hunts.getRun(player.id) && !this.abyss.getRun(player.id);
+  }
+
+  private craftConsumptionPlan(storage: AccountStorageState, recipe: CraftRecipe): { consumed: Map<number, number>; missing: CraftPreview['missing'] } {
+    const consumed = new Map<number, number>();
+    const missing: CraftPreview['missing'] = [];
+    for (const ingredient of recipe.ingredients) {
+      let required = ingredient.quantity;
+      const candidates = storage.inventory.map((stack, index) => ({ stack, index })).filter(({ stack, index }) => {
+        if (!stack || (consumed.get(index) ?? 0) >= stack.quantity) return false;
+        if (ingredient.itemId) return stack.itemId === ingredient.itemId;
+        return this.itemHasCraftTag(stack.itemId, ingredient.tag ?? '');
+      });
+      for (const candidate of candidates) {
+        if (required <= 0) break;
+        const already = consumed.get(candidate.index) ?? 0;
+        const available = Math.max(0, candidate.stack!.quantity - already);
+        const take = Math.min(required, available);
+        if (take > 0) consumed.set(candidate.index, already + take);
+        required -= take;
+      }
+      if (required > 0) missing.push({ ...(ingredient.itemId ? { itemId: ingredient.itemId } : { tag: ingredient.tag }), required: ingredient.quantity, available: ingredient.quantity - required });
+    }
+    return { consumed, missing };
+  }
+
+  private itemHasCraftTag(itemId: string, tag: string): boolean {
+    const item = getItemDef(itemId);
+    if (!item) return false;
+    const normalized = tag.trim().toLowerCase();
+    return [item.id, item.type, item.category].some((value) => value.toLowerCase() === normalized) || item.id.toLowerCase().includes(normalized);
+  }
+
+  private rollCraftQuality(recipe: CraftRecipe, skillLevel: number): number {
+    const bonus = Math.min(20, Math.floor(skillLevel / 5));
+    const min = Math.min(200, recipe.qualityMin + bonus);
+    const max = Math.min(200, Math.max(min, recipe.qualityMax + bonus));
+    return min + Math.floor(Math.random() * (max - min + 1));
+  }
+
   handleChat(socketId: string, channel: string, message: string) {
     const player = this.playerForSocket(socketId);
     if (!player) return;
@@ -1898,7 +2048,7 @@ export class GameEngine implements OnModuleDestroy {
             stack.quantity = remaining;
             break;
           }
-          container[empty] = { itemId: stack.itemId, quantity: 1 };
+           container[empty] = { ...stack, quantity: 1, ...(stack.instanceId ? { instanceId: uid('repaired') } : {}) };
           remaining--;
           changed = true;
         }
@@ -2031,19 +2181,30 @@ export class GameEngine implements OnModuleDestroy {
   }
 
   private addToInventory(storage: AccountStorageState, itemId: string, quantity: number): boolean {
-    const def = getItemDef(itemId);
-    if (!def) return false;
-    if (def.stackable) {
-      const existing = storage.inventory.find((s) => s && s.itemId === itemId);
+    return this.addStackToInventory(storage, { itemId, quantity });
+  }
+
+  private addStackToInventory(storage: AccountStorageState, stack: ItemStack): boolean {
+    const def = getItemDef(stack.itemId);
+    if (!def || stack.quantity <= 0) return false;
+    if (def.stackable && !stack.instanceId) {
+      const existing = storage.inventory.find((s) => s && s.itemId === stack.itemId && !s.instanceId);
       if (existing) {
-        existing.quantity += quantity;
+        existing.quantity += stack.quantity;
         return true;
       }
     }
     const idx = storage.inventory.findIndex((s) => s === null);
     if (idx === -1) return false;
-    storage.inventory[idx] = { itemId, quantity };
+    storage.inventory[idx] = { ...stack };
     return true;
+  }
+
+  private canAddStackToInventory(storage: AccountStorageState, stack: ItemStack): boolean {
+    const def = getItemDef(stack.itemId);
+    if (!def) return false;
+    if (def.stackable && !stack.instanceId && storage.inventory.some((item) => item?.itemId === stack.itemId && !item.instanceId)) return true;
+    return storage.inventory.some((item) => item === null);
   }
 
   private addToLootPouch(storage: AccountStorageState, itemId: string, quantity: number): boolean {
@@ -2139,6 +2300,18 @@ export class GameEngine implements OnModuleDestroy {
 
   private combatStats(player: GamePlayer) {
     return this.combatStatsFor(player);
+  }
+
+  private qualityWeapon(weapon: ReturnType<typeof getWeaponDefinition>, quality?: number) {
+    if (!weapon || quality == null || quality === 100) return weapon;
+    const multiplier = Math.max(0.5, Math.min(2, quality / 100));
+    return { ...weapon, attackPower: Math.max(0, Math.round(weapon.attackPower * multiplier)), magicPower: weapon.magicPower == null ? undefined : Math.max(0, Math.round(weapon.magicPower * multiplier)) };
+  }
+
+  private qualityAmmo(ammo: ReturnType<typeof getAmmoDefinition>, quality?: number) {
+    if (!ammo || quality == null || quality === 100) return ammo;
+    const multiplier = Math.max(0.5, Math.min(2, quality / 100));
+    return { ...ammo, attackPower: Math.max(0, Math.round(ammo.attackPower * multiplier)), elementalPower: ammo.elementalPower == null ? undefined : Math.max(0, Math.round(ammo.elementalPower * multiplier)) };
   }
 
   private permanentDamageMultiplier(player: GamePlayer, damageType: DamageType, magicDamage = false): number {
@@ -2364,8 +2537,8 @@ export class GameEngine implements OnModuleDestroy {
     const abyssRun = this.abyss.getRun(attacker.id);
     if (abyssRun && abyssRun.status !== 'active') return 0;
     const stats = this.combatStats(attacker);
-    const weapon = attacker.equipment.weapon ? getWeaponDefinition(getItemDef(attacker.equipment.weapon.itemId)) : undefined;
-    const ammo = attacker.equipment.ammo ? getAmmoDefinition(getItemDef(attacker.equipment.ammo.itemId)) : undefined;
+    const weapon = attacker.equipment.weapon ? this.qualityWeapon(getWeaponDefinition(getItemDef(attacker.equipment.weapon.itemId)), attacker.equipment.weapon.quality) : undefined;
+    const ammo = attacker.equipment.ammo ? this.qualityAmmo(getAmmoDefinition(getItemDef(attacker.equipment.ammo.itemId)), attacker.equipment.ammo.quality) : undefined;
     const abyssBasePower = this.abyss.getRun(attacker.id) ? 20 : 0;
     const sourcePower = ability.powerSource === 'weapon_ammo' ? ((weapon?.attackPower ?? 0) + (ammo?.attackPower ?? 0) || abyssBasePower) : ability.powerSource === 'weapon' ? (weapon?.attackPower || abyssBasePower) : ability.powerSource === 'magic_weapon' ? (weapon?.magicPower || abyssBasePower) : ability.defaultParameters?.power ?? 20;
     const combatSkill = attacker.archetype === 'mage' ? 'magic' : attacker.archetype === 'archer' ? 'distance' : 'melee';
@@ -2493,7 +2666,7 @@ export class GameEngine implements OnModuleDestroy {
     const attack = calculateBasicAttack({
       archetype: attacker.archetype,
       attacker: this.combatStats(attacker),
-      loadout: { weapon: getWeaponDefinition(weaponItem), ammo: getAmmoDefinition(ammoItem) },
+       loadout: { weapon: this.qualityWeapon(getWeaponDefinition(weaponItem), attacker.equipment.weapon?.quality), ammo: this.qualityAmmo(getAmmoDefinition(ammoItem), attacker.equipment.ammo?.quality) },
       weaponElementOverride: attacker.weaponElementOverride,
       now,
       rng: () => this.nextCombatRandom(attacker, now),

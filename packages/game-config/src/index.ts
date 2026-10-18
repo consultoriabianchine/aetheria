@@ -58,6 +58,14 @@ export const MAP_WIDTH = 64;
 export const MAP_HEIGHT = 64;
 export const MAP_Z = 7;
 
+export const CRAFTING_CONFIG = {
+  stationRange: 6,
+  stations: {
+    forge: { x: 32, y: 28, z: MAP_Z },
+    alembic: { x: 32, y: 28, z: MAP_Z },
+  },
+} as const;
+
 /** Códigos de tile (compartilhados com o cliente para renderização). */
 export const TILE = {
   GRASS: 0,
