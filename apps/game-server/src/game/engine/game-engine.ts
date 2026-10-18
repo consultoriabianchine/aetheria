@@ -216,6 +216,7 @@ export class GameEngine implements OnModuleDestroy {
         );
       },
       getPlayer: (characterId) => this.players.get(characterId) ?? null,
+      onEliteChest: (characterId) => this.grantAbyssEliteChest(characterId),
       onCreatureAttackPlayer: (creature, target, amount, critical, now) => this.creatureAttackWithAbility(creature, target.id, amount, critical, now),
     });
     this.outfitRegistry = outfitRegistry;
@@ -551,6 +552,7 @@ export class GameEngine implements OnModuleDestroy {
 
     await this.ensureAccountStorage(stored.accountId);
     const player = new GamePlayer(stored);
+    player.applyAbyssMeta({ characterId: player.id, ...(await this.abyss.getMeta(player.id)) });
     player.socketId = socketId;
     player.recomputeSpeed(getItemDef);
     player.recomputeVitals(getItemDef);
@@ -740,23 +742,38 @@ export class GameEngine implements OnModuleDestroy {
     const session = await this.verifySession(socketId, token);
     if (!session) return;
     const run = this.abyss.chooseUpgrade(session.player.id, choiceId);
-    if (!run) this.emitTo(socketId, 'error', { message: 'Escolha de upgrade inválida ou expirada.' });
+    if (!run) {
+      this.emitTo(socketId, 'error', { message: 'Escolha de upgrade inválida ou expirada.' });
+      return;
+    }
+    this.abyss.spawnInitialWave(session.player.id);
+  }
+
+  async handleAbyssReroll(socketId: string, token: string) {
+    const session = await this.verifySession(socketId, token);
+    if (!session) return;
+    const run = this.abyss.rerollChoices(session.player.id);
+    if (!run) this.emitTo(socketId, 'error', { message: 'Reroll indisponível ou sem cargas restantes.' });
   }
 
   async handleAbyssMetaList(socketId: string, token: string) {
     const session = await this.verifySession(socketId, token);
     if (!session) return;
-    this.emitTo(socketId, 'abyss.metaState', { meta: await this.abyss.getMeta(session.player.accountId) });
+    this.emitTo(socketId, 'abyss.metaState', { meta: await this.abyss.getMeta(session.player.id) });
   }
 
   async handleAbyssMetaUnlock(socketId: string, token: string, nodeId: string) {
     const session = await this.verifySession(socketId, token);
     if (!session) return;
-    const meta = await this.abyss.unlockMeta(session.player.accountId, nodeId);
+    const meta = await this.abyss.unlockMeta(session.player.id, nodeId);
     if (!meta) {
       this.emitTo(socketId, 'error', { message: 'Nó inválido, já desbloqueado ou fragmentos insuficientes.' });
       return;
     }
+    session.player.applyAbyssMeta({ characterId: session.player.id, fragments: meta.fragments, unlockedNodes: meta.unlockedNodes, rerolls: meta.rerolls, revives: meta.revives });
+    session.player.recomputeVitals(getItemDef);
+    this.emitStats(session.player);
+    this.emitCombatStats(session.player);
     this.emitTo(socketId, 'abyss.metaState', { meta });
   }
 
@@ -871,7 +888,7 @@ export class GameEngine implements OnModuleDestroy {
     for (const id of companionIds) {
       if (this.players.has(id)) continue;
       const stored = await this.store.findCharacterById(id);
-      if (stored && stored.accountId === player.accountId) this.materializeCompanion(stored);
+      if (stored && stored.accountId === player.accountId) await this.materializeCompanion(stored);
     }
     const memberIds = [player.id, ...companionIds.filter((id) => this.players.has(id))];
     for (const id of memberIds) this.movement.releaseEntity(id);
@@ -1111,8 +1128,9 @@ export class GameEngine implements OnModuleDestroy {
   }
 
   /** Materializa um companheiro (GamePlayer sem socket) para a hunt, sem exibir no hub. */
-  private materializeCompanion(stored: StoredCharacter): GamePlayer {
+  private async materializeCompanion(stored: StoredCharacter): Promise<GamePlayer> {
     const companion = new GamePlayer(stored);
+    companion.applyAbyssMeta({ characterId: companion.id, ...(await this.abyss.getMeta(companion.id)) });
     companion.socketId = null;
     companion.position = { ...SPAWN_POINT };
     companion.recomputeSpeed(getItemDef);
@@ -2089,12 +2107,37 @@ export class GameEngine implements OnModuleDestroy {
     this.emitTo(player.socketId ?? '', 'inventory.update', { inventory });
   }
 
+  private grantAbyssEliteChest(characterId: string): string[] {
+    const player = this.players.get(characterId);
+    if (!player) return ['Elite Chest'];
+    const storage = this.storageFor(player);
+    if (this.addToLootPouch(storage, 'abyss-elite-chest', 1)) {
+      this.emitInventory(player);
+      this.emitTo(player.socketId ?? '', 'chat.message', { channel: 'local', from: 'Abismo', text: 'Você recebeu um Elite Chest na bolsa de loot.' });
+      void this.persistPlayer(player, true);
+      return ['Elite Chest'];
+    }
+    const fallbackGold = 500;
+    storage.gold += fallbackGold;
+    this.emitGold(player, storage.gold);
+    this.emitTo(player.socketId ?? '', 'chat.message', { channel: 'local', from: 'Abismo', text: `A bolsa está cheia. O Elite Chest virou ${fallbackGold} gold.` });
+    void this.persistPlayer(player, true);
+    return [`Elite Chest (${fallbackGold} gold)`];
+  }
+
   private combatStats(player: GamePlayer) {
     return this.combatStatsFor(player);
   }
 
+  private permanentDamageMultiplier(player: GamePlayer, damageType: DamageType, magicDamage = false): number {
+    let multiplier = player.metaDamageMultiplier;
+    if (magicDamage || damageType === 'arcane') multiplier *= player.metaMagicDamageMultiplier;
+    if (!['physical', 'arcane'].includes(damageType)) multiplier *= player.metaElementalDamageMultiplier;
+    return multiplier;
+  }
+
   private combatStatsFor(character: { level: number; maxHealth: number; maxMana: number; skills: CharacterSkills; equipment: CharacterEquipment }) {
-    return aggregateCharacterCombatStats({
+    const stats = aggregateCharacterCombatStats({
       level: character.level,
       maxHp: character.maxHealth,
       maxMana: character.maxMana,
@@ -2102,6 +2145,12 @@ export class GameEngine implements OnModuleDestroy {
       equipment: character.equipment,
       getItem: getItemDef,
     });
+    const player = character as GamePlayer;
+    if (player instanceof GamePlayer) {
+      stats.criticalChance += player.metaCriticalChanceBonus;
+      stats.armor *= player.metaArmorMultiplier;
+    }
+    return stats;
   }
 
   private combatStatsPayload(character: { id: string; level: number; maxHealth: number; maxMana: number; skills: CharacterSkills; equipment: CharacterEquipment }) {
@@ -2306,11 +2355,15 @@ export class GameEngine implements OnModuleDestroy {
       : 1;
     const raw = calculateRawDamage({ basePower: sourcePower, flatPower: ability.defaultParameters?.flatPower, skill: combatSkill, skillLevel: skill, level: stats.level, abilityMultiplier: ability.defaultParameters?.powerMultiplier ?? 1, otherMultiplier: magicContribution, variance: rollVariance(() => this.nextCombatRandom(attacker, now)) });
     const critical = rollCritical(stats.criticalChance, () => this.nextCombatRandom(attacker, now + 1));
-    const damage = calculateMitigatedDamage({ damage: critical ? calculateCritical(raw, stats.criticalDamage) : raw, damageType: ability.damageType ?? 'physical', target: this.targetCombatStats(target), damageTakenModifier: resolveDamageAffinity(this.targetCombatStats(target).damageAffinities, ability.damageType ?? 'physical').modifier, immune: resolveDamageAffinity(this.targetCombatStats(target).damageAffinities, ability.damageType ?? 'physical').immune });
-    const finalDamage = Math.max(0, Math.round(damage.finalDamage * this.abyss.abilityBonus(attacker.id, ability.abilityId)));
+    const damageType = ability.damageType ?? 'physical';
+    const targetStats = this.targetCombatStats(target);
+    const affinity = resolveDamageAffinity(targetStats.damageAffinities, damageType);
+    const damage = calculateMitigatedDamage({ damage: critical ? calculateCritical(raw, stats.criticalDamage) : raw, damageType, target: targetStats, damageTakenModifier: affinity.modifier, immune: affinity.immune });
+    const magicDamage = ability.powerSource === 'magic_weapon' || ability.manaCost != null || damageType === 'arcane';
+    const finalDamage = Math.max(0, Math.round(damage.finalDamage * this.abyss.abilityBonus(attacker.id, ability.abilityId) * this.permanentDamageMultiplier(attacker, damageType, magicDamage)));
     const trainingDummy = target instanceof CreatureEntity && this.isTrainingCreature(target);
     target.health = Math.max(0, target.health - finalDamage);
-    this.emitCombatEvent(target, 'combat.damage', { attackerId: attacker.id, targetId: target.id, amount: finalDamage, damageType: ability.damageType ?? 'physical', critical, targetHealth: target.health, delayMs: delayMs || undefined, criticalImpact: critical ? this.criticalImpactVisual() : undefined, position: { ...target.position } });
+    this.emitCombatEvent(target, 'combat.damage', { attackerId: attacker.id, targetId: target.id, amount: finalDamage, damageType, critical, targetHealth: target.health, delayMs: delayMs || undefined, criticalImpact: critical ? this.criticalImpactVisual() : undefined, position: { ...target.position } });
     this.emitCombatEvent(target, 'entity.health', { id: target.id, health: target.health, maxHealth: target.maxHealth });
     if (trainingDummy) {
       target.health = target.maxHealth;
@@ -2427,15 +2480,16 @@ export class GameEngine implements OnModuleDestroy {
     });
     if (!attack.valid) return false;
     const targetStats = this.targetCombatStats(target);
-    const affinity = resolveDamageAffinity(targetStats.damageAffinities, attack.damageType);
+    const damageType = attack.damageType;
+    const affinity = resolveDamageAffinity(targetStats.damageAffinities, damageType);
     const damage = calculateMitigatedDamage({
       damage: attack.damageBeforeMitigation,
-      damageType: attack.damageType,
+      damageType,
       target: targetStats,
       immune: affinity.immune,
       damageTakenModifier: affinity.modifier,
     });
-    const amount = damage.finalDamage;
+    const amount = Math.max(0, Math.round(damage.finalDamage * this.permanentDamageMultiplier(attacker, damageType, attacker.archetype === 'mage')));
     const projectileVisual = this.resolveProjectileVisual(weaponItem, ammoItem);
     const travelTimeMs = projectileVisual?.projectile ? this.projectileTravelTimeMs(attacker.position, target.position, projectileVisual) : 0;
     if (projectileVisual && (projectileVisual.projectile || projectileVisual.impact)) {
@@ -2454,7 +2508,7 @@ export class GameEngine implements OnModuleDestroy {
       attackerId: attacker.id,
       targetId: target.id,
       amount,
-      damageType: attack.damageType,
+      damageType,
       critical: attack.critical,
       targetHealth: target.health,
       delayMs: travelTimeMs || undefined,
@@ -3232,6 +3286,15 @@ export class GameEngine implements OnModuleDestroy {
       return;
     }
     if (this.abyss.getRun(player.id)) {
+      if (this.abyss.consumeRevive(player.id)) {
+        player.health = Math.max(1, Math.ceil(player.maxHealth * 0.35));
+        player.mana = Math.max(0, Math.ceil(player.maxMana * 0.35));
+        player.targetId = null;
+        player.moveDir = null;
+        this.emitStats(player);
+        this.emitTo(player.socketId ?? '', 'entity.health', { id: player.id, health: player.health, maxHealth: player.maxHealth });
+        return;
+      }
       this.emitTo(player.socketId ?? '', 'combat.death', { entityId: player.id });
       this.abyss.defeat(player.id, now);
       return;
@@ -3289,20 +3352,22 @@ export class GameEngine implements OnModuleDestroy {
     let blocked = false;
     let goldCollected = 0;
     for (const entry of creature.definition.loot) {
-      if (Math.random() * 100 >= entry.chance) continue;
+      const dropChanceMultiplier = player?.metaDropChanceMultiplier ?? 1;
+      if (Math.random() * 100 >= Math.min(100, entry.chance * dropChanceMultiplier)) continue;
       const def = getItemDef(entry.itemId);
       const quantity = entry.minQuantity + Math.floor(Math.random() * (entry.maxQuantity - entry.minQuantity + 1));
       if (entry.itemId === 'gold') {
         if (player) {
           const storage = this.storageFor(player);
-           storage.gold += quantity;
-           goldCollected += quantity;
-           this.emitGold(player, storage.gold);
+            const goldQuantity = Math.max(1, Math.round(quantity * (player.metaGoldMultiplier ?? 1)));
+            storage.gold += goldQuantity;
+            goldCollected += goldQuantity;
+            this.emitGold(player, storage.gold);
            const goldViewers = run
              ? run.memberIds.map((id) => this.players.get(id)).filter((member): member is GamePlayer => !!member?.socketId)
              : player.socketId ? [player] : [];
            for (const viewer of goldViewers) {
-             this.emitTo(viewer.socketId ?? '', 'gold.gained', { amount: quantity, position: { ...creature.position } });
+              this.emitTo(viewer.socketId ?? '', 'gold.gained', { amount: goldQuantity, position: { ...creature.position } });
            }
            continue;
         }

@@ -19,7 +19,6 @@ model Account {
   createdAt    DateTime       @default(now())
   characters   Character[]
   storage      AccountStorage?
-  abyssMeta    AbyssMetaProgression?
   abyssRuns    AbyssRunHistory[]
 }
 
@@ -42,12 +41,12 @@ model News {
 
 model AbyssMetaProgression {
   id            String   @id @default(cuid())
-  accountId     String   @unique @map("account_id")
+  characterId   String   @unique @map("character_id")
   fragments     Int      @default(0)
   unlockedNodes Json     @default("[]") @map("unlocked_nodes")
   rerolls       Int      @default(0)
   revives       Int      @default(0)
-  account       Account  @relation(fields: [accountId], references: [id], onDelete: Cascade)
+  character     Character @relation(fields: [characterId], references: [id], onDelete: Cascade)
   updatedAt     DateTime @updatedAt @map("updated_at")
 
   @@map("abyss_meta_progression")
@@ -88,6 +87,7 @@ model Character {
   combatConfig   CharacterCombatConfig?
   outfits        CharacterOutfit[]
   effects        CharacterEffect[]
+  abyssMeta      AbyssMetaProgression?
   attackRotationSlots CharacterAttackRotationSlot[]
   healingRotationSlots CharacterHealingRotationSlot[]
   potionUsage         PotionUsage[]

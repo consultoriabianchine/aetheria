@@ -7,6 +7,17 @@ let catalog: Map<string, ItemDefinition> | null = null;
 
 const LOCAL_ITEMS: ItemDefinition[] = ([
   {
+    id: 'abyss-elite-chest',
+    name: 'Elite Chest',
+    type: 'loot',
+    weight: 1,
+    stackable: true,
+    attack: 0,
+    defense: 0,
+    image: '',
+    category: 'Abyss',
+  },
+  {
     id: 'apprentice-staff',
     name: 'Apprentice Staff',
     type: 'weapon',

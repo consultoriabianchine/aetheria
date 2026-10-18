@@ -362,14 +362,14 @@ export class PrismaStore implements Store {
     return this.toHuntProgress(row);
   }
 
-  async getAbyssMeta(accountId: string): Promise<AbyssMetaProgression> {
+  async getAbyssMeta(characterId: string): Promise<AbyssMetaProgression> {
     const row = await this.prisma.abyssMetaProgression.upsert({
-      where: { accountId },
-      create: { accountId },
+      where: { characterId },
+      create: { characterId },
       update: {},
     });
     return {
-      accountId: row.accountId,
+      characterId: row.characterId,
       fragments: row.fragments,
       unlockedNodes: Array.isArray(row.unlockedNodes) ? row.unlockedNodes.filter((v): v is string => typeof v === 'string') : [],
       rerolls: row.rerolls,
@@ -379,8 +379,8 @@ export class PrismaStore implements Store {
 
   async saveAbyssMeta(meta: AbyssMetaProgression): Promise<void> {
     await this.prisma.abyssMetaProgression.upsert({
-      where: { accountId: meta.accountId },
-      create: { accountId: meta.accountId, fragments: meta.fragments, unlockedNodes: meta.unlockedNodes, rerolls: meta.rerolls, revives: meta.revives },
+      where: { characterId: meta.characterId },
+      create: { characterId: meta.characterId, fragments: meta.fragments, unlockedNodes: meta.unlockedNodes, rerolls: meta.rerolls, revives: meta.revives },
       update: { fragments: meta.fragments, unlockedNodes: meta.unlockedNodes, rerolls: meta.rerolls, revives: meta.revives },
     });
   }

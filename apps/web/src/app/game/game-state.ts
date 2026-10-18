@@ -336,6 +336,7 @@ export class GameState {
         this.huntLoading.set(false);
         this.huntReadySent = false;
         this.abyss.set(null);
+        this.abyssMeta.set(null);
         this.abyssChoices.set([]);
         this.abyssFragmentDrops.set([]);
         this.finishAbyssLoading();
@@ -343,6 +344,7 @@ export class GameState {
         this.gold.set(w.character.gold);
         const combat = w.character.combat;
         if (combat) this.combatConfigs.update((all) => ({ ...all, [w.character.id]: combat }));
+        this.requestAbyssMeta();
         this.requestHunts();
         break;
       }
@@ -365,6 +367,7 @@ export class GameState {
         this.gold.set(w.character.gold);
         const combat = w.character.combat;
         if (combat) this.combatConfigs.update((all) => ({ ...all, [w.character.id]: combat }));
+        this.requestAbyssMeta();
         break;
       }
       case SERVER_EVENTS.HUNT_LIST: {
@@ -517,9 +520,14 @@ export class GameState {
         break;
       }
       case SERVER_EVENTS.ABYSS_LEVEL_UP: {
-        const r = data as { level: number; choices: AbyssUpgradeChoice[] };
+        const r = data as { level: number; choices: AbyssUpgradeChoice[]; rerollsRemaining: number };
         this.abyssChoices.set(r.choices);
-        this.abyss.update((run) => run ? { ...run, status: 'level_up', level: r.level, pendingChoices: r.choices } : run);
+        this.abyss.update((run) => run ? { ...run, status: 'level_up', level: r.level, pendingChoices: r.choices, rerollsRemaining: r.rerollsRemaining } : run);
+        break;
+      }
+      case SERVER_EVENTS.ABYSS_REVIVED: {
+        const r = data as { revivesRemaining: number };
+        this.abyss.update((run) => run ? { ...run, revivesRemaining: r.revivesRemaining } : run);
         break;
       }
       case SERVER_EVENTS.ABYSS_COMPLETED:
@@ -822,6 +830,11 @@ export class GameState {
   chooseAbyssUpgrade(choiceId: string) {
     const token = this.token();
     if (token) this.ws.send({ type: 'abyss.chooseUpgrade', token, choiceId });
+  }
+
+  rerollAbyssChoices() {
+    const token = this.token();
+    if (token) this.ws.send({ type: 'abyss.reroll', token });
   }
 
   requestAbyssMeta() {

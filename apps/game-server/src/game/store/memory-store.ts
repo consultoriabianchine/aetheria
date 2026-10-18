@@ -136,12 +136,12 @@ export class MemoryStore implements Store {
     return next;
   }
 
-  async getAbyssMeta(accountId: string): Promise<AbyssMetaProgression> {
-    return structuredClone(this.abyssMeta.get(accountId) ?? { accountId, fragments: 0, unlockedNodes: [], rerolls: 0, revives: 0 });
+  async getAbyssMeta(characterId: string): Promise<AbyssMetaProgression> {
+    return structuredClone(this.abyssMeta.get(characterId) ?? { characterId, fragments: 0, unlockedNodes: [], rerolls: 0, revives: 0 });
   }
 
   async saveAbyssMeta(meta: AbyssMetaProgression): Promise<void> {
-    this.abyssMeta.set(meta.accountId, structuredClone(meta));
+    this.abyssMeta.set(meta.characterId, structuredClone(meta));
   }
 
   async recordAbyssRun(history: AbyssRunHistory): Promise<void> {

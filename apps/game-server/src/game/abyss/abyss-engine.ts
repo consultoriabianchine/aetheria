@@ -32,6 +32,9 @@ export interface AbyssRun {
   choices: AbyssUpgradeChoice[];
   bossActive: boolean;
   nextWaveAt: number | null;
+  metaNodes: string[];
+  rerollsRemaining: number;
+  revivesRemaining: number;
   map?: WorldMapData;
   movement?: MovementService;
   creatures?: CreatureManager;
@@ -45,11 +48,11 @@ export interface AbyssEngineHooks {
   getMap?(mapId?: string): WorldMapData;
   getCreatureDefinitions?(): CreatureDefinition[];
   getPlayer?(characterId: string): GamePlayer | null;
+  onEliteChest?(characterId: string): string[];
   onCreatureAttackPlayer?(creature: CreatureEntity, target: CreatureTarget, amount: number, critical: boolean, now: number): void;
 }
 
 const DURATION_MS = 10 * 60 * 1000;
-const XP_BASE = 100;
 const STARTER_CREATURE_SLUGS = ['troll', 'goblin'] as const;
 const STARTER_WAVE_LIMIT = 3;
 
@@ -65,14 +68,14 @@ export class AbyssEngine {
     return this.runs.get(characterId) ?? null;
   }
 
-  async getMeta(accountId: string): Promise<AbyssMetaView> {
-    return this.toMeta(await this.store.getAbyssMeta(accountId));
+  async getMeta(characterId: string): Promise<AbyssMetaView> {
+    return this.toMeta(await this.store.getAbyssMeta(characterId));
   }
 
-  async unlockMeta(accountId: string, nodeId: string): Promise<AbyssMetaView | null> {
+  async unlockMeta(characterId: string, nodeId: string): Promise<AbyssMetaView | null> {
     const node = META_NODES.find((candidate) => candidate.id === nodeId);
     if (!node) return null;
-    const meta = await this.store.getAbyssMeta(accountId);
+    const meta = await this.store.getAbyssMeta(characterId);
     if (meta.unlockedNodes.includes(nodeId) || meta.fragments < node.cost || (node.prerequisite && !meta.unlockedNodes.includes(node.prerequisite))) return null;
     meta.fragments -= node.cost;
     meta.unlockedNodes = [...meta.unlockedNodes, nodeId];
@@ -83,6 +86,7 @@ export class AbyssEngine {
   start(accountId: string, characterId: string, torment = 1, archetype: CombatArchetype = 'mage', now = Date.now()): AbyssRun {
     if (this.runs.has(characterId)) throw new Error('ABYSS_RUN_ALREADY_ACTIVE');
     const player = this.hooks.getPlayer?.(characterId);
+    const metaNodes = [...(player?.abyssMeta?.unlockedNodes ?? [])];
     const run: AbyssRun = {
       id: uid('abyss'),
       accountId,
@@ -104,6 +108,9 @@ export class AbyssEngine {
       choices: [],
       bossActive: false,
       nextWaveAt: null,
+      metaNodes,
+      rerollsRemaining: metaNodes.includes('fortune.reroll') ? 1 : 0,
+      revivesRemaining: metaNodes.includes('defense.revive') ? 1 : 0,
       map: this.hooks.getMap?.(ABYSS_MAP_ID),
     };
     this.initializeCreatures(run);
@@ -119,6 +126,11 @@ export class AbyssEngine {
     }
     const starter = this.hooks.getAbilities().find((ability) => ability.enabled && ['player', 'both'].includes(ability.ownerType) && ability.category === 'attack' && (ability.playerClass === archetype || ability.playerClass === 'all' || ability.playerClass === undefined));
     if (starter) run.abilities.push({ abilityId: starter.abilityId, level: 1, damageMultiplier: 1, cooldownMultiplier: 1, areaBonus: 0 });
+    if (metaNodes.includes('arcane.element')) {
+      run.status = 'level_up';
+      run.choices = this.spellChoices(run);
+      if (run.choices.length === 0) run.status = 'active';
+    }
     this.runs.set(characterId, run);
     this.hooks.emit(characterId, 'abyss.started', { abyss: this.view(run, now) });
     return run;
@@ -152,6 +164,25 @@ export class AbyssEngine {
     return run;
   }
 
+  rerollChoices(characterId: string, now = Date.now()): AbyssRun | null {
+    const run = this.runs.get(characterId);
+    if (!run || run.status !== 'level_up' || run.rerollsRemaining <= 0) return null;
+    run.rerollsRemaining -= 1;
+    run.choices = this.rollChoices(run);
+    this.hooks.emit(characterId, 'abyss.levelUp', { level: run.level, choices: run.choices, rerollsRemaining: run.rerollsRemaining });
+    void now;
+    return run;
+  }
+
+  consumeRevive(characterId: string): boolean {
+    const run = this.runs.get(characterId);
+    if (!run || run.status !== 'active' || run.revivesRemaining <= 0) return false;
+    run.revivesRemaining -= 1;
+    this.hooks.emit(characterId, 'abyss.revived', { revivesRemaining: run.revivesRemaining });
+    this.hooks.emit(characterId, 'chat.message', { channel: 'system', from: 'Abismo', text: 'Second Breath ativado. Você voltou à luta.' });
+    return true;
+  }
+
   tick(now = Date.now()): void {
     for (const run of this.runs.values()) {
       if (run.status !== 'active') continue;
@@ -175,13 +206,13 @@ export class AbyssEngine {
     const run = this.runs.get(characterId);
     if (!run || run.status !== 'active') return;
     run.experience += Math.max(0, Math.floor(amount));
-    const need = this.experienceFor(run.level);
+    const need = this.experienceFor(run.level, run.wave);
     if (run.experience < need) return;
     run.experience -= need;
     run.level += 1;
     run.status = 'level_up';
     run.choices = this.rollChoices(run);
-    this.hooks.emit(characterId, 'abyss.levelUp', { level: run.level, choices: run.choices });
+    this.hooks.emit(characterId, 'abyss.levelUp', { level: run.level, choices: run.choices, rerollsRemaining: run.rerollsRemaining });
     void now;
   }
 
@@ -217,17 +248,21 @@ export class AbyssEngine {
     const run = this.findRunByCreature(creature.id);
     if (!run || !run.creatures) return;
     run.creatures.removeCreature(creature.id);
-    const fragments = Math.max(1, Math.ceil(creature.definition.experience / 25));
-    run.fragments += fragments;
+    const fragmentMultiplier = run.metaNodes.includes('fortune.drop') ? 1.05 : 1;
+    const fragments = Math.max(1, Math.floor(creature.definition.experience * ABYSS_SCALING_CONFIG.fragmentDropPercent * fragmentMultiplier));
     this.emitToRun(run, 'creature.remove', { creatureId: creature.id });
     this.emitToRun(run, 'creature.death', { creatureId: creature.id, experience: creature.definition.experience });
-    this.emitToRun(run, 'abyss.fragmentDrop', { amount: fragments, total: run.fragments, creatureId: creature.id });
+    if (fragments > 0) {
+      run.fragments += fragments;
+      this.emitToRun(run, 'abyss.fragmentDrop', { amount: fragments, total: run.fragments, creatureId: creature.id });
+    }
     this.grantExperience(characterId, creature.definition.experience, now);
     if ((run.status === 'active' || run.status === 'level_up') && run.creatures.size === 0) {
       const completedWave = run.wave;
       run.wavesCompleted += 1;
       run.wave += 1;
       run.nextWaveAt = now + 1500;
+      if (run.metaNodes.includes('defense.shrine')) this.applyShrine(run);
       this.emitToRun(run, 'abyss.waveCompleted', { wave: completedWave, nextWave: run.wave, abyss: this.view(run, now) });
     }
   }
@@ -318,23 +353,39 @@ export class AbyssEngine {
     abilities.sort((left, right) => this.choiceScore(run, left.abilityId) - this.choiceScore(run, right.abilityId));
     const existing = new Set(run.abilities.map((ability) => ability.abilityId));
     const choices: AbyssUpgradeChoice[] = [];
+    const choiceLimit = run.metaNodes.includes('offense.choice4') ? 4 : 3;
     for (const ability of abilities) {
-      if (choices.length >= 3) break;
+      if (choices.length >= choiceLimit) break;
+      const existingAbility = existing.has(ability.abilityId);
+      const evolved = existingAbility && run.metaNodes.includes('arcane.evolutions');
+      const rare = run.metaNodes.includes('offense.rare') && choices.length === 0;
+      const upgradeValue = existingAbility ? (evolved ? 0.3 : rare ? 0.3 : 0.2) : undefined;
       choices.push({
         id: `${run.id}:ability:${ability.abilityId}`,
-        name: existing.has(ability.abilityId) ? `${ability.name} +1` : ability.name,
-        description: existing.has(ability.abilityId) ? '+20% dano temporário nesta run.' : 'Adiciona uma magia existente à run.',
-        rarity: existing.has(ability.abilityId) ? 'common' : 'uncommon',
-        kind: existing.has(ability.abilityId) ? 'ability' : 'new_ability',
+        name: existingAbility ? `${ability.name} +1` : ability.name,
+        description: evolved ? '+30% dano temporário nesta run.' : existingAbility ? `${rare ? '+30%' : '+20%'} dano temporário nesta run.` : `${rare ? '+15% dano inicial.' : 'Adiciona uma magia existente à run.'}`,
+        rarity: rare ? 'rare' : existingAbility ? 'common' : 'uncommon',
+        kind: evolved ? 'evolution' : existingAbility ? 'ability' : 'new_ability',
         abilityId: ability.abilityId,
-        value: existing.has(ability.abilityId) ? 0.2 : undefined,
+        value: upgradeValue,
       });
     }
-    while (choices.length < 3) {
+    while (choices.length < choiceLimit) {
       const index = choices.length;
-      choices.push({ id: `${run.id}:passive:${index}`, name: ['Arcane Knowledge', 'Swift Casting', 'Vitality'][index], description: '+8% bônus temporário na run.', rarity: 'common', kind: 'passive', stat: index === 0 ? 'magic_power' : index === 1 ? 'speed' : 'max_health', value: 0.08 });
+      const names = ['Arcane Knowledge', 'Swift Casting', 'Vitality', 'Elemental Surge'];
+      const stats: AbyssUpgradeChoice['stat'][] = ['magic_power', 'speed', 'max_health', 'damage'];
+      choices.push({ id: `${run.id}:passive:${index}`, name: names[index], description: '+8% bônus temporário na run.', rarity: run.metaNodes.includes('offense.rare') && index === 0 ? 'rare' : 'common', kind: 'passive', stat: stats[index], value: 0.08 });
     }
     return choices;
+  }
+
+  private applyShrine(run: AbyssRun) {
+    const player = this.hooks.getPlayer?.(run.characterId);
+    if (!player || player.health <= 0) return;
+    const amount = Math.max(1, Math.ceil(player.maxHealth * 0.2));
+    player.health = Math.min(player.maxHealth, player.health + amount);
+    this.emitToRun(run, 'stats.update', { health: player.health, maxHealth: player.maxHealth, mana: player.mana, maxMana: player.maxMana, level: player.level, experience: player.experience, skills: player.skills });
+    this.emitToRun(run, 'chat.message', { channel: 'system', from: 'Abismo', text: `Santuário de cura: +${amount} HP.` });
   }
 
   private choiceScore(run: AbyssRun, abilityId: number): number {
@@ -356,7 +407,28 @@ export class AbyssEngine {
       existing.damageMultiplier = Math.round((existing.damageMultiplier + (choice.value ?? 0.2)) * 1000) / 1000;
       return;
     }
-    if (run.abilities.length < 4) run.abilities.push({ abilityId: choice.abilityId, level: 1, damageMultiplier: 1, cooldownMultiplier: 1, areaBonus: 0 });
+    if (run.abilities.length < 4) run.abilities.push({ abilityId: choice.abilityId, level: 1, damageMultiplier: choice.rarity === 'rare' ? 1.15 : 1, cooldownMultiplier: 1, areaBonus: 0 });
+  }
+
+  private spellChoices(run: AbyssRun): AbyssUpgradeChoice[] {
+    const active = new Set(run.abilities.map((ability) => ability.abilityId));
+    const abilities = this.hooks.getAbilities()
+      .filter((ability) => ability.enabled && ['player', 'both'].includes(ability.ownerType) && (ability.playerClass === run.archetype || ability.playerClass === 'all' || ability.playerClass === undefined))
+      .sort((left, right) => Number(active.has(left.abilityId)) - Number(active.has(right.abilityId)) || this.choiceScore(run, left.abilityId) - this.choiceScore(run, right.abilityId));
+    const limit = run.metaNodes.includes('offense.choice4') ? 4 : 3;
+    return abilities.slice(0, limit).map((ability, index) => {
+      const existing = active.has(ability.abilityId);
+      const rare = run.metaNodes.includes('offense.rare') && index === 0;
+      return {
+        id: `${run.id}:spell:${ability.abilityId}`,
+        name: existing ? `${ability.name} +1` : ability.name,
+        description: existing ? `${rare ? '+30%' : '+20%'} dano temporário nesta run.` : `${rare ? '+15% dano inicial.' : 'Adiciona esta magia à run.'}`,
+        rarity: rare ? 'rare' : existing ? 'common' : 'uncommon',
+        kind: existing ? 'ability' : 'new_ability',
+        abilityId: ability.abilityId,
+        value: existing ? (rare ? 0.3 : 0.2) : undefined,
+      };
+    });
   }
 
   private finish(run: AbyssRun, result: 'completed' | 'defeated' | 'abandoned', now: number): void {
@@ -364,29 +436,46 @@ export class AbyssEngine {
     run.status = result;
     this.runs.delete(run.characterId);
     const fragments = result === 'abandoned' ? 0 : run.fragments;
-    const rewards = result === 'completed' ? ['abyss-crystal'] : [];
+    const eliteChest = result === 'completed' && run.metaNodes.includes('fortune.eliteChest') && ((run.seed ^ run.wavesCompleted) >>> 0) % 100 < 20;
+    const rewards = result === 'completed'
+      ? ['abyss-crystal', ...(eliteChest ? this.hooks.onEliteChest?.(run.characterId) ?? ['Elite Chest'] : [])]
+      : [];
     void this.persistResult(run, result, fragments, rewards, now);
     this.hooks.emit(run.characterId, `abyss.${result}`, { fragments, rewards, abyss: this.view(run, now) });
     this.hooks.onFinished?.(run.characterId);
   }
 
   private async persistResult(run: AbyssRun, result: AbyssRunHistory['result'], fragments: number, rewards: string[], now: number) {
-    const meta = await this.store.getAbyssMeta(run.accountId);
+    const meta = await this.store.getAbyssMeta(run.characterId);
     meta.fragments += fragments;
     await this.store.saveAbyssMeta(meta);
     await this.store.recordAbyssRun({ accountId: run.accountId, characterId: run.characterId, result, durationMs: Math.max(0, now - run.startedAt), level: run.level, torment: run.torment, fragments, rewards, seed: run.seed });
   }
 
   view(run: AbyssRun, now = Date.now()): AbyssRunView {
-    return { runId: run.id, status: run.status, startedAt: run.startedAt, durationMs: run.durationMs, elapsedMs: Math.min(run.durationMs, Math.max(0, now - run.startedAt)), level: run.level, experience: run.experience, nextLevelExperience: this.experienceFor(run.level), fragments: run.fragments, wave: run.wave, wavesCompleted: run.wavesCompleted, torment: run.torment, activeAbilities: run.abilities.map((ability) => ({ ...ability })), passiveUpgrades: [...run.passives], pendingChoices: run.choices.map((choice) => ({ ...choice })), bossActive: run.bossActive };
+    return { runId: run.id, status: run.status, startedAt: run.startedAt, durationMs: run.durationMs, elapsedMs: Math.min(run.durationMs, Math.max(0, now - run.startedAt)), level: run.level, experience: run.experience, nextLevelExperience: this.experienceFor(run.level, run.wave), fragments: run.fragments, wave: run.wave, wavesCompleted: run.wavesCompleted, torment: run.torment, activeAbilities: run.abilities.map((ability) => ({ ...ability })), passiveUpgrades: [...run.passives], pendingChoices: run.choices.map((choice) => ({ ...choice })), bossActive: run.bossActive, rerollsRemaining: run.rerollsRemaining, revivesRemaining: run.revivesRemaining };
   }
 
-  private experienceFor(level: number): number {
-    return XP_BASE + (level - 1) * 50;
+  private experienceFor(level: number, wave = 1): number {
+    const progression = this.progressionForWave(wave);
+    return progression.experienceBase + Math.max(0, level - 1) * progression.experiencePerLevel;
+  }
+
+  private progressionForWave(wave: number) {
+    return ABYSS_SCALING_CONFIG.progression.find((entry) => wave <= entry.maxWave) ?? ABYSS_SCALING_CONFIG.progression[ABYSS_SCALING_CONFIG.progression.length - 1];
   }
 
   private toMeta(meta: AbyssMetaProgression): AbyssMetaView {
-    return { fragments: meta.fragments, unlockedNodes: [...meta.unlockedNodes], rerolls: meta.rerolls, revives: meta.revives };
+    const unlocked = new Set(meta.unlockedNodes);
+    return {
+      fragments: meta.fragments,
+      unlockedNodes: [...meta.unlockedNodes],
+      rerolls: meta.rerolls,
+      revives: meta.revives,
+      bonuses: META_NODES
+        .filter((node) => unlocked.has(node.id))
+        .map((node) => ({ id: node.id, branch: node.branch, name: node.name, description: node.description, effect: node.effect })),
+    };
   }
 }
 

@@ -67,6 +67,7 @@ export type ClientMessage =
   | { type: 'abyss.start'; token: string; torment?: number }
   | { type: 'abyss.stop'; token: string }
   | { type: 'abyss.chooseUpgrade'; token: string; choiceId: string }
+  | { type: 'abyss.reroll'; token: string }
   | { type: 'abyss.meta.list'; token: string }
   | { type: 'abyss.meta.unlock'; token: string; nodeId: string };
 
@@ -131,10 +132,11 @@ export type ServerMessage =
   | { type: 'game.enterAbyss'; character: CharacterSummary; map: MapTile[]; width: number; height: number; render?: MapRenderData; abyss: AbyssRunView }
   | { type: 'abyss.started'; abyss: AbyssRunView }
   | { type: 'abyss.state'; abyss: AbyssRunView }
-  | { type: 'abyss.levelUp'; level: number; choices: AbyssUpgradeChoice[] }
+  | { type: 'abyss.levelUp'; level: number; choices: AbyssUpgradeChoice[]; rerollsRemaining: number }
   | { type: 'abyss.upgradeSelected'; abyss: AbyssRunView }
   | { type: 'abyss.fragmentDrop'; amount: number; total: number; creatureId: string }
   | { type: 'abyss.waveCompleted'; wave: number; nextWave: number; abyss: AbyssRunView }
+  | { type: 'abyss.revived'; revivesRemaining: number }
   | { type: 'abyss.completed'; fragments: number; rewards: string[]; abyss: AbyssRunView }
   | { type: 'abyss.defeated'; fragments: number; rewards: string[]; abyss: AbyssRunView }
   | { type: 'abyss.abandoned'; fragments: number; rewards: string[]; abyss: AbyssRunView }
@@ -215,6 +217,7 @@ export const SERVER_EVENTS = {
   ABYSS_UPGRADE_SELECTED: 'abyss.upgradeSelected',
   ABYSS_FRAGMENT_DROP: 'abyss.fragmentDrop',
   ABYSS_WAVE_COMPLETED: 'abyss.waveCompleted',
+  ABYSS_REVIVED: 'abyss.revived',
   ABYSS_COMPLETED: 'abyss.completed',
   ABYSS_DEFEATED: 'abyss.defeated',
   ABYSS_ABANDONED: 'abyss.abandoned',
@@ -253,6 +256,7 @@ export const CLIENT_EVENTS = {
   ABYSS_START: 'abyss.start',
   ABYSS_STOP: 'abyss.stop',
   ABYSS_CHOOSE_UPGRADE: 'abyss.chooseUpgrade',
+  ABYSS_REROLL: 'abyss.reroll',
   ABYSS_META_LIST: 'abyss.meta.list',
   ABYSS_META_UNLOCK: 'abyss.meta.unlock',
 } as const;

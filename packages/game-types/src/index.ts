@@ -769,6 +769,8 @@ export interface AbyssRunView {
   passiveUpgrades: string[];
   pendingChoices: AbyssUpgradeChoice[];
   bossActive: boolean;
+  rerollsRemaining: number;
+  revivesRemaining: number;
 }
 
 export interface AbyssMetaView {
@@ -776,6 +778,7 @@ export interface AbyssMetaView {
   unlockedNodes: string[];
   rerolls: number;
   revives: number;
+  bonuses: AbyssMetaBonusView[];
 }
 
 export type AbyssMetaBranch = 'offense' | 'defense' | 'arcane' | 'fortune';
@@ -786,6 +789,16 @@ export interface AbyssMetaNode {
   name: string;
   cost: number;
   prerequisite?: string;
+  description: string;
+  effect: string;
+}
+
+export interface AbyssMetaBonusView {
+  id: string;
+  branch: AbyssMetaBranch;
+  name: string;
+  description: string;
+  effect: string;
 }
 
 export interface AbyssFragmentDrop {

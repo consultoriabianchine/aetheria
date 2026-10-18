@@ -113,6 +113,26 @@
           <div class="bar-track slim"><div class="bar-fill stamina" style="width: 76%"></div></div>
         </section>
 
+        <section class="game-panel compact-panel abyss-bonus-panel">
+          <div class="panel-header">
+            <h2>Abismo</h2>
+            <span class="panel-pill">{{ abyssBonuses().length }}</span>
+          </div>
+          @if (abyssBonuses().length > 0) {
+            <div class="abyss-bonus-list">
+              @for (bonus of abyssBonuses(); track bonus.id) {
+                <div class="abyss-bonus-row">
+                  <div class="abyss-bonus-heading"><strong>{{ bonus.name }}</strong><span>{{ abyssBonusBranchLabel(bonus.branch) }}</span></div>
+                  <b>{{ bonus.effect }}</b>
+                  <small>{{ bonus.description }}</small>
+                </div>
+              }
+            </div>
+          } @else {
+            <p class="abyss-bonus-empty">Nenhum bônus desbloqueado.</p>
+          }
+        </section>
+
         <section class="game-panel compact-panel">
           <button class="panel-header panel-toggle" type="button" (click)="boostsCollapsed.set(!boostsCollapsed())">
             <h2>Boosts</h2><span>{{ boostsCollapsed() ? '+' : '−' }}</span>
@@ -291,6 +311,9 @@
                     </button>
                   }
                 </div>
+                @if ((state.abyss()?.rerollsRemaining ?? 0) > 0) {
+                  <button type="button" class="abyss-reroll" (click)="state.rerollAbyssChoices()">Reroll grátis <span>{{ state.abyss()?.rerollsRemaining }}</span></button>
+                }
               </div>
             </div>
           }
@@ -674,23 +697,33 @@
   @if (abyssTreeOpen()) {
     <div class="modal-backdrop" (click)="closeAbyssPanels()">
        <section class="abyss-shop-modal" [style.transform]="abyssTreeTransform()" role="dialog" aria-modal="true" aria-labelledby="abyss-shop-title" (click)="$event.stopPropagation()">
-         <header><div class="abyss-tree-drag-handle" (pointerdown)="startAbyssTreeDrag($event)"><span class="eyebrow">MERCADO PERMANENTE</span><h2 id="abyss-shop-title">Loja do Abismo</h2><small>Arraste para reposicionar</small></div><button type="button" (click)="closeAbyssPanels()" aria-label="Fechar">×</button></header>
-         <div class="abyss-shop-balance"><div><span>Saldo disponível</span><strong>{{ state.abyssMeta()?.fragments ?? 0 }}</strong></div><small>Fragmentos permanentes para comprar melhorias.</small></div>
-         <nav class="abyss-shop-tabs" aria-label="Categorias da loja">
-           @for (branch of abyssTree; track branch.name) {
-             <button type="button" [class.active]="abyssShopBranch() === branch.name" (click)="abyssShopBranch.set(branch.name)"><span>{{ branch.icon }}</span>{{ branch.name }}</button>
-           }
-         </nav>
-         <div class="abyss-shop-heading"><div><span class="eyebrow">CATÁLOGO {{ abyssShopBranchIcon() }}</span><h3>Melhorias {{ abyssShopBranch() }}</h3></div><span>{{ abyssShopNodes().length }} ofertas</span></div>
-         <div class="abyss-shop-grid">
-           @for (node of abyssShopNodes(); track node.id) {
-             <button type="button" class="abyss-shop-item" [class.unlocked]="abyssNodeUnlocked(node.id)" [class.available]="abyssNodeCanBuy(node.id)" [disabled]="!abyssNodeCanBuy(node.id)" (click)="state.unlockAbyssNode(node.id)">
-               <div class="abyss-shop-item-top"><span class="abyss-shop-item-icon">{{ abyssShopBranchIcon() }}</span><span class="abyss-shop-item-status">{{ abyssNodeStatus(node.id) }}</span></div>
-               <strong>{{ node.name }}</strong><small>{{ node.description }}</small>
-               <div class="abyss-shop-item-footer"><span>{{ abyssNodeCost(node.id) }} Fragmentos</span><em>{{ abyssNodePrerequisite(node.id) ? 'Pré-requisito ativo' : 'Oferta inicial' }}</em></div>
-             </button>
-           }
-         </div>
+          <header class="abyss-shop-header">
+            <div class="abyss-tree-drag-handle" (pointerdown)="startAbyssTreeDrag($event)">
+              <div class="abyss-shop-title-row"><span class="abyss-shop-sigil" aria-hidden="true">✦</span><div><span class="eyebrow">CÂMARA DE RELÍQUIAS</span><h2 id="abyss-shop-title">Loja do Abismo</h2></div></div>
+              <small>Arraste o cabeçalho para reposicionar</small>
+            </div>
+            <div class="abyss-shop-header-actions"><span class="abyss-shop-header-label">PROGRESSÃO PERMANENTE</span><button type="button" (click)="closeAbyssPanels()" aria-label="Fechar">×</button></div>
+          </header>
+          <div class="abyss-shop-balance">
+            <div class="abyss-fragment-wallet"><span>Fragmentos guardados</span><strong>{{ state.abyssMeta()?.fragments ?? 0 }}</strong><small>Recurso permanente do personagem</small></div>
+            <div class="abyss-shop-progress"><span>Relíquias despertas</span><strong>{{ abyssUnlockedCount() }} <em>/ 16</em></strong><i><b [style.width.%]="abyssUnlockedCount() / 16 * 100"></b></i></div>
+          </div>
+          <nav class="abyss-shop-tabs" aria-label="Categorias da loja">
+            @for (branch of abyssTree; track branch.name) {
+              <button type="button" [class.active]="abyssShopBranch() === branch.name" (click)="abyssShopBranch.set(branch.name)"><span class="abyss-shop-tab-icon">{{ branch.icon }}</span><span>{{ branch.name }}</span><small>{{ branch.nodes.length }} nós</small></button>
+            }
+          </nav>
+          <div class="abyss-shop-heading"><div><span class="eyebrow">CATÁLOGO {{ abyssShopBranchIcon() }} · {{ abyssBranchProgress() }}</span><h3>Melhorias {{ abyssShopBranch() }}</h3><p>{{ abyssShopBranchDescription() }}</p></div><span>{{ abyssShopNodes().length }} relíquias</span></div>
+          <div class="abyss-shop-grid">
+            @for (node of abyssShopNodes(); track node.id) {
+              <button type="button" class="abyss-shop-item" [class.unlocked]="abyssNodeUnlocked(node.id)" [class.available]="abyssNodeCanBuy(node.id)" [class.locked]="!abyssNodeUnlocked(node.id) && !abyssNodeCanBuy(node.id)" [disabled]="!abyssNodeCanBuy(node.id)" (click)="state.unlockAbyssNode(node.id)">
+                <div class="abyss-shop-item-top"><span class="abyss-shop-item-icon">{{ abyssShopBranchIcon() }}</span><span class="abyss-shop-item-index">{{ abyssNodeIndex(node.id) }}</span><span class="abyss-shop-item-status">{{ abyssNodeStatus(node.id) }}</span></div>
+                <div class="abyss-shop-item-copy"><strong>{{ node.name }}</strong><small>{{ node.description }}</small></div>
+                <div class="abyss-shop-item-effect"><span>Efeito permanente</span><b>{{ abyssNodeEffect(node.id) }}</b></div>
+                <div class="abyss-shop-item-footer"><span><i aria-hidden="true">✦</i>{{ abyssNodeCost(node.id) }} Fragmentos</span><em>{{ abyssNodePrerequisite(node.id) ? 'Requer ' + abyssNodePrerequisite(node.id) : 'Nó inicial' }}</em></div>
+              </button>
+            }
+          </div>
       </section>
     </div>
   }

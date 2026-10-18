@@ -11,7 +11,7 @@ import type {
   Position,
   WeaponElementOverride,
 } from '@aetheria/types';
-import type { StoredAccountStorage, StoredCharacter } from '../store/store';
+import type { AbyssMetaProgression, StoredAccountStorage, StoredCharacter } from '../store/store';
 import { ACCOUNT_CONFIG, ARCHETYPES, INVENTORY_SIZE, LOOT_POUCH_SIZE, PLAYER_AI, PLAYER_SPEED, SPEED_PER_LEVEL, playerMoveInterval } from '@aetheria/config';
 import { calculateMaxHp, calculateMaxMana } from '../stats/stat-engine';
 
@@ -64,6 +64,15 @@ export class GamePlayer {
   lastSavedAt = 0;
   lastRegenAt = 0;
   weaponElementOverride: WeaponElementOverride | undefined;
+  abyssMeta: AbyssMetaProgression;
+  metaDamageMultiplier = 1;
+  metaMagicDamageMultiplier = 1;
+  metaElementalDamageMultiplier = 1;
+  metaCriticalChanceBonus = 0;
+  metaArmorMultiplier = 1;
+  metaMaxHealthMultiplier = 1;
+  metaGoldMultiplier = 1;
+  metaDropChanceMultiplier = 1;
 
   constructor(character: StoredCharacter) {
     this.id = character.id;
@@ -101,6 +110,20 @@ export class GamePlayer {
     this.speed = PLAYER_SPEED[character.archetype] + SPEED_PER_LEVEL * Math.max(0, character.level - 1);
     this.moveIntervalMs = playerMoveInterval(this.speed);
     this.lastRegenAt = Date.now();
+    this.abyssMeta = { characterId: character.id, fragments: 0, unlockedNodes: [], rerolls: 0, revives: 0 };
+  }
+
+  applyAbyssMeta(meta: AbyssMetaProgression) {
+    this.abyssMeta = { ...meta, unlockedNodes: [...meta.unlockedNodes] };
+    const nodes = new Set(meta.unlockedNodes);
+    this.metaDamageMultiplier = nodes.has('offense.damage') ? 1.03 : 1;
+    this.metaMagicDamageMultiplier = nodes.has('arcane.power') ? 1.03 : 1;
+    this.metaElementalDamageMultiplier = nodes.has('arcane.elemental') ? 1.05 : 1;
+    this.metaCriticalChanceBonus = nodes.has('offense.critical') ? 0.03 : 0;
+    this.metaArmorMultiplier = nodes.has('defense.armor') ? 1.03 : 1;
+    this.metaMaxHealthMultiplier = nodes.has('defense.hp') ? 1.03 : 1;
+    this.metaGoldMultiplier = nodes.has('fortune.gold') ? 1.05 : 1;
+    this.metaDropChanceMultiplier = nodes.has('fortune.drop') ? 1.05 : 1;
   }
 
   /** Recalcula velocidade (base + level + equipamento) e o intervalo de passo. */
@@ -129,7 +152,7 @@ export class GamePlayer {
     }
     this.baseMaxHealth = baseMaxHealth;
     this.baseMaxMana = baseMaxMana;
-    this.maxHealth = Math.max(1, Math.round(maxHealth));
+    this.maxHealth = Math.max(1, Math.round(maxHealth * this.metaMaxHealthMultiplier));
     this.maxMana = Math.max(0, Math.round(maxMana));
     this.health = Math.min(this.health, this.maxHealth);
     this.mana = Math.min(this.mana, this.maxMana);

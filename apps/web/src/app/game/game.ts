@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import Phaser from 'phaser';
 import { SERVER_EVENTS } from '@aetheria/protocol';
-import type { CharacterEquipment, CharacterSkills, CharacterSummary, CombatAbilityDefinition, CombatStatsView, DamageType, ItemDefinition, ItemStack, PlayerCombatConfig } from '@aetheria/types';
+import type { AbyssMetaBonusView, CharacterEquipment, CharacterSkills, CharacterSummary, CombatAbilityDefinition, CombatStatsView, DamageType, ItemDefinition, ItemStack, PlayerCombatConfig } from '@aetheria/types';
 import { DAMAGE_TYPES } from '@aetheria/types';
 import { ABYSS_META_NODES, APPEARANCE_PALETTE, INVENTORY_SIZE, LOOT_POUCH_EXPANSION, SKILL_PROGRESSION_CONFIG, TRAINING_HUNT_ID, xpForLevel } from '@aetheria/config';
 import { WsService } from '../core/ws.service';
@@ -51,7 +51,7 @@ const ABYSS_TREE = [
     { id: 'arcane.power', name: '+3% Magic Power', description: 'Aumenta o poder mágico.' },
     { id: 'arcane.elemental', name: '+5% Elemental Damage', description: 'Aumenta o dano elemental.' },
     { id: 'arcane.evolutions', name: 'Evoluções elementais', description: 'Libera evoluções elementais.' },
-    { id: 'arcane.element', name: 'Escolha de elemento', description: 'Começa com uma escolha de elemento.' },
+    { id: 'arcane.element', name: 'Escolha arcana', description: 'Começa com uma escolha de magia.' },
   ]},
   { name: 'Fortuna', icon: 'FT', nodes: [
     { id: 'fortune.gold', name: '+5% Gold', description: 'Aumenta o ouro obtido.' },
@@ -383,6 +383,42 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
 
   abyssShopBranchIcon() {
     return this.abyssTree.find((branch) => branch.name === this.abyssShopBranch())?.icon ?? 'AB';
+  }
+
+  abyssShopBranchDescription() {
+    return {
+      Ofensiva: 'Transforme cada escolha em pressão de combate.',
+      Defensiva: 'Permaneça de pé quando a run ficar longa.',
+      Arcano: 'Dê forma permanente ao poder das suas magias.',
+      Fortuna: 'Faça cada Fragmento e cada queda valer mais.',
+    }[this.abyssShopBranch()] ?? '';
+  }
+
+  abyssUnlockedCount(): number {
+    return this.state.abyssMeta()?.unlockedNodes.length ?? 0;
+  }
+
+  abyssBranchProgress(): string {
+    const branch = this.abyssTree.find((entry) => entry.name === this.abyssShopBranch());
+    const unlocked = branch?.nodes.filter((node) => this.abyssNodeUnlocked(node.id)).length ?? 0;
+    return `${unlocked}/${branch?.nodes.length ?? 0}`;
+  }
+
+  abyssNodeEffect(id: string): string {
+    return ABYSS_META_NODES.find((node) => node.id === id)?.effect ?? 'Efeito permanente';
+  }
+
+  abyssNodeIndex(id: string): string {
+    const index = this.abyssShopNodes().findIndex((node) => node.id === id);
+    return String(index + 1).padStart(2, '0');
+  }
+
+  abyssBonuses(): AbyssMetaBonusView[] {
+    return this.state.abyssMeta()?.bonuses ?? [];
+  }
+
+  abyssBonusBranchLabel(branch: AbyssMetaBonusView['branch']): string {
+    return { offense: 'Ofensiva', defense: 'Defensiva', arcane: 'Arcano', fortune: 'Fortuna' }[branch];
   }
 
   abyssNodeUnlocked(id: string): boolean {

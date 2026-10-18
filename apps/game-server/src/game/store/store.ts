@@ -51,7 +51,7 @@ export interface StoredAccountStorage {
 }
 
 export interface AbyssMetaProgression {
-  accountId: string;
+  characterId: string;
   fragments: number;
   unlockedNodes: string[];
   rerolls: number;
@@ -102,7 +102,7 @@ export interface Store {
   recordHuntCompletion(characterId: string, huntId: string, clearTimeMs: number): Promise<HuntProgress>;
   /** Marca/desmarca uma Hunt como favorita (persistido por personagem). */
   setHuntFavorite(characterId: string, huntId: string, favorite: boolean): Promise<HuntProgress>;
-  getAbyssMeta(accountId: string): Promise<AbyssMetaProgression>;
+  getAbyssMeta(characterId: string): Promise<AbyssMetaProgression>;
   saveAbyssMeta(meta: AbyssMetaProgression): Promise<void>;
   recordAbyssRun(history: AbyssRunHistory): Promise<void>;
 }

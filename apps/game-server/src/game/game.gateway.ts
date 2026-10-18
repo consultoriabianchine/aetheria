@@ -165,6 +165,11 @@ export class GameGateway implements OnGatewayConnection, OnGatewayDisconnect {
     await this.engine.handleAbyssChoice(socket.id, payload.token, payload.choiceId);
   }
 
+  @SubscribeMessage('abyss.reroll')
+  async onAbyssReroll(socket: Socket, payload: { token: string }) {
+    await this.engine.handleAbyssReroll(socket.id, payload.token);
+  }
+
   @SubscribeMessage('abyss.meta.list')
   async onAbyssMetaList(socket: Socket, payload: { token: string }) {
     await this.engine.handleAbyssMetaList(socket.id, payload.token);
