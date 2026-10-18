@@ -201,22 +201,33 @@
           }
         </section>
 
-        <section class="game-panel compact-panel">
+        <section class="game-panel compact-panel damage-panel">
           <button class="panel-header panel-toggle" type="button" (click)="damageCollapsed.set(!damageCollapsed())">
             <h2><img class="menu-panel-icon" width="20" height="20" [src]="menuIcon('estatisticas.png')" alt="" />Damage</h2><span>{{ damageCollapsed() ? '+' : '−' }}</span>
           </button>
           @if (!damageCollapsed()) {
-            <div class="metric-row"><span>Dano desde o primeiro ataque</span><button class="rotation-config-button" type="button" (click)="resetDamageMeter()">Resetar</button></div>
+            <div class="damage-panel-toolbar"><span>Dano desde o primeiro ataque</span><button class="rotation-config-button" type="button" (click)="resetDamageMeter()">Resetar</button></div>
             @for (row of damageMeterRows(); track row.id) {
-              <div class="damage-member">
-                <div><strong>{{ row.name }}</strong><span>{{ row.archetype }}</span></div>
-                <div class="metric-row"><b>{{ row.dps.toFixed(1) }} DPS</b><small>{{ formatGold(row.totalDamage.toFixed(0)) }} dano · Elem. {{ formatGold(row.elementalDamage.toFixed(0)) }}</small></div>
-              </div>
-              <div class="metric-grid">
-                @for (element of damageElementRows(row.id); track element.type) {
-                  <div title="{{ element.type }}"><span><img width="16" height="16" [src]="element.icon" alt="{{ element.type }}" /> {{ formatGold(element.amount.toFixed(0)) }}</span></div>
+              <article class="damage-meter-member">
+                <div class="damage-member-head">
+                  <character-avatar class="damage-member-avatar" [appearance]="row.appearance" [name]="row.name" [size]="28"></character-avatar>
+                  <div class="damage-member-name"><strong>{{ row.name }}</strong><span>{{ row.archetype }}</span></div>
+                  <div class="damage-member-dps"><b>{{ row.dps.toFixed(1) }}</b><small>DPS</small></div>
+                </div>
+                <div class="damage-member-summary">
+                  <span><b>{{ formatGold(row.totalDamage.toFixed(0)) }}</b> dano</span>
+                  <span><b>{{ formatGold(row.elementalDamage.toFixed(0)) }}</b> elem.</span>
+                </div>
+                @if (damageElementRows(row.id); as elements) {
+                  @if (elements.length > 0) {
+                    <div class="damage-element-list">
+                      @for (element of elements; track element.type) {
+                        <span class="damage-element-chip" [title]="element.type"><img width="15" height="15" [src]="element.icon" alt="{{ element.type }}" /><b>{{ formatGold(element.amount.toFixed(0)) }}</b></span>
+                      }
+                    </div>
+                  }
                 }
-              </div>
+              </article>
             }
           }
         </section>

@@ -843,6 +843,7 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
         id: character.id,
         name: character.name,
         archetype: this.archetypeLabelFor(character.archetype),
+        appearance: character.appearance,
         totalDamage: entry?.totalDamage ?? 0,
         elementalDamage: Object.entries(entry?.damageByType ?? {})
           .filter(([type]) => type !== 'physical')

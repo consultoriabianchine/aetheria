@@ -462,6 +462,130 @@ a {
   margin:0;
   font-size:10px;
 }
+.game-page .damage-panel-toolbar {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:6px;
+  margin:2px 0 6px;
+  color:var(--ui-text-subtle);
+  font-size:9px;
+  line-height:1.2;
+}
+.game-page .damage-panel-toolbar span {
+  max-width:140px;
+}
+.game-page .damage-meter-member {
+  display:grid;
+  gap:5px;
+  margin-top:5px;
+  padding:7px;
+  border:1px solid var(--ui-border);
+  border-radius:var(--ui-radius-sm);
+  background:linear-gradient(145deg,rgba(24,33,48,.72),rgba(8,11,17,.62));
+}
+.game-page .damage-meter-member:hover {
+  border-color:var(--ui-border-strong);
+  background:var(--ui-surface-raised);
+}
+.game-page .damage-member-head {
+  display:grid;
+  grid-template-columns:30px minmax(0,1fr) auto;
+  align-items:center;
+  gap:6px;
+  min-width:0;
+}
+.game-page .damage-member-avatar {
+  display:grid;
+  place-items:center;
+  width:30px;
+  height:30px;
+  overflow:hidden;
+  border:1px solid var(--ui-border-strong);
+  border-radius:var(--ui-radius-sm);
+  background:var(--ui-bg);
+}
+.game-page .damage-member-name {
+  display:grid;
+  min-width:0;
+  gap:1px;
+}
+.game-page .damage-member-name strong,
+.game-page .damage-member-name span {
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.game-page .damage-member-name strong {
+  color:var(--ui-text);
+  font-size:11px;
+}
+.game-page .damage-member-name span {
+  color:var(--ui-text-subtle);
+  font-size:9px;
+}
+.game-page .damage-member-dps {
+  display:grid;
+  justify-items:end;
+  line-height:1;
+}
+.game-page .damage-member-dps b {
+  color:var(--ui-gold-bright);
+  font-size:13px;
+  font-variant-numeric:tabular-nums;
+}
+.game-page .damage-member-dps small {
+  color:var(--ui-text-subtle);
+  font-size:8px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.game-page .damage-member-summary {
+  display:flex;
+  justify-content:space-between;
+  gap:6px;
+  padding-top:4px;
+  border-top:1px solid rgba(255,255,255,.07);
+  color:var(--ui-text-subtle);
+  font-size:9px;
+}
+.game-page .damage-member-summary span {
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.game-page .damage-member-summary b {
+  color:var(--ui-text);
+  font-size:10px;
+  font-variant-numeric:tabular-nums;
+}
+.game-page .damage-element-list {
+  display:flex;
+  flex-wrap:wrap;
+  gap:3px;
+}
+.game-page .damage-element-chip {
+  display:inline-flex;
+  align-items:center;
+  gap:3px;
+  min-width:0;
+  padding:2px 4px;
+  border:1px solid rgba(168,137,232,.22);
+  border-radius:var(--ui-radius-sm);
+  background:rgba(80,45,140,.14);
+  color:var(--ui-text-muted);
+  font-size:9px;
+}
+.game-page .damage-element-chip img {
+  width:15px;
+  height:15px;
+  object-fit:contain;
+  image-rendering:pixelated;
+}
+.game-page .damage-element-chip b {
+  color:var(--ui-text);
+  font-variant-numeric:tabular-nums;
+}
 @media (max-width:1200px) {
   .game-page .header-status { min-width:190px; }
   .game-page .header-stamina { min-width:112px; }
