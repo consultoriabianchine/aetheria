@@ -256,6 +256,82 @@ a {
   font-size: 10px;
 }
 
+.game-page .character-portrait,
+.game-page .party-avatar { display:grid; place-items:center; flex:0 0 auto; border:1px solid var(--ui-border-strong); background:linear-gradient(145deg,var(--ui-surface-raised),var(--ui-bg)); color:var(--ui-gold-bright); font-family:Georgia,serif; font-weight:800; }
+.game-page .character-portrait { width:34px; height:34px; border-radius:var(--ui-radius-sm); font-size:17px; }
+.game-page .party-avatar { width:30px; height:30px; border-radius:50%; font-size:14px; }
+.game-page .party-member {
+  position:relative;
+  grid-template-columns:68px minmax(0,1fr);
+  grid-template-rows:minmax(68px,auto);
+  align-items:center;
+  min-height:82px;
+  width:100%;
+  box-sizing:border-box;
+}
+.game-page .party-member > .party-avatar {
+  grid-column:1;
+  grid-row:1;
+}
+.game-page .party-member > .party-info {
+  grid-column:2;
+  grid-row:1;
+  display:grid;
+  align-content:center;
+  gap:2px;
+}
+.game-page .party-member > .role-badge {
+  position:absolute;
+  top:7px;
+  right:7px;
+  z-index:2;
+}
+.game-page .party-avatar {
+  display:grid;
+  place-items:center;
+  width:68px;
+  height:68px;
+  border-radius:var(--ui-radius-sm);
+  overflow:hidden;
+}
+.game-page .party-avatar .thumb {
+  display:block;
+  width:64px;
+  height:64px;
+  image-rendering:pixelated;
+}
+.game-page .party-info {
+  min-width:0;
+  align-self:center;
+  padding-right:44px;
+}
+.game-page .character-portrait,
+.game-page .character-avatar,
+.characters-page .char-sigil {
+  overflow:hidden;
+}
+.characters-page .char-sigil .thumb {
+  max-width:100%;
+  max-height:100%;
+}
+.game-page .hunt-kpis { display:flex; align-items:stretch; gap:5px; }
+.game-page .hunt-kpis span { display:grid; min-width:55px; padding:3px 6px; border-left:1px solid var(--ui-border); }
+.game-page .hunt-kpis small { color:var(--ui-text-subtle); font-size:9px; text-transform:uppercase; letter-spacing:.06em; }
+.game-page .hunt-kpis b { color:var(--ui-text); font-size:11px; }
+.game-page .item-slot:hover,
+.game-page .item-slot:focus-visible,
+.game-page .equipment-tile:focus-visible { z-index:2; border-color:var(--ui-gold-bright); background:radial-gradient(circle at 50% 30%,rgba(220,174,77,.28),var(--ui-surface)); box-shadow:0 0 0 1px rgba(240,203,113,.2),0 6px 16px rgba(0,0,0,.35); transform:translateY(-1px); }
+.game-page .floating-item-tooltip { position:fixed; z-index:100; width:min(270px,calc(100vw - 24px)); padding:9px; pointer-events:none; border:1px solid var(--ui-border-strong); border-radius:var(--ui-radius-md); background:linear-gradient(145deg,rgba(24,33,48,.98),rgba(8,11,17,.98)); box-shadow:var(--ui-shadow-modal); color:var(--ui-text-muted); font-size:10px; line-height:1.45; }
+.game-page .tip-head { display:flex; gap:8px; align-items:flex-start; }
+.game-page .tip-icon { flex:0 0 auto; padding:2px; border:1px solid var(--ui-border); border-radius:var(--ui-radius-sm); background:var(--ui-bg); }
+.game-page .tip-title { color:var(--ui-gold-bright); font-weight:800; font-size:12px; }
+.game-page .floating-item-tooltip .tip-title + .tip-title { color:var(--ui-text-muted); font-size:10px; font-weight:500; }
+
+@media (max-width:1200px) { .game-page .hunt-kpis span { min-width:48px; padding-inline:4px; } }
+@media (max-width:1024px) { .game-page .hunt-kpis { grid-column:1 / -1; grid-row:2; justify-content:flex-start; } }
+@media (max-width:720px) { .game-page .hunt-kpis { grid-column:auto; grid-row:auto; justify-content:space-between; } .game-page .hunt-kpis span { flex:1; } }
+@media (prefers-reduced-motion:reduce) { .game-page *,.game-page *::before,.game-page *::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; } }
+
 .game-page .abyss-hud-title strong,
 .game-page .abyss-fragments strong,
 .game-page .abyss-rotation-title strong {
@@ -2025,6 +2101,37 @@ app-game .appearance-footer button:focus-visible, app-game .appearance-swatch:fo
 .game-page .craft-progress-block.is-error .craft-progress-heading b { color: var(--ui-red); }
 .game-page .craft-submit { width: 100%; }
 .game-page .craft-empty.large { min-height: 240px; display: grid; place-items: center; text-align: center; }
+
+
+
+app-game .abyss-entry-modal { width: min(1400px,94vw); max-height: min(820px,92vh); border-radius: var(--ui-radius-lg); background: linear-gradient(145deg,var(--ui-surface-raised),var(--ui-bg) 76%); }
+app-game .abyss-entry-modal header { min-height: 190px; align-items: end; padding: 30px 42px; background: radial-gradient(circle at 75% 15%,rgba(168,137,232,.35),transparent 30%),radial-gradient(circle at 18% 40%,rgba(90,164,223,.2),transparent 25%),linear-gradient(115deg,#0a1322,#171143 65%,#20204d); }
+app-game .abyss-entry-modal header h2 { font-size: 42px; letter-spacing: -.03em; }
+app-game .abyss-entry-body { padding: 30px 42px; font-size: 18px; }
+app-game .abyss-entry-stats { gap: 16px; margin-top: 28px; }
+app-game .abyss-entry-stats span { min-height: 112px; align-content: center; padding: 18px 22px; border-color: var(--ui-border); background: rgba(8,11,17,.42); font-size: 16px; }
+app-game .abyss-entry-stats b { font-size: 26px; }
+app-game .abyss-entry-note { margin-top: 18px; padding: 16px 20px; font-size: 14px; }
+app-game .abyss-entry-modal footer { padding: 20px 42px; gap: 14px; }
+app-game .abyss-entry-modal footer .ui-button { min-width: 260px; min-height: 54px; font-size: 16px; }
+
+app-game .abyss-shop-modal { width: min(1460px,96vw); max-height: min(900px,94vh); border-radius: var(--ui-radius-lg); background: linear-gradient(145deg,var(--ui-surface-raised),var(--ui-bg)); }
+app-game .abyss-shop-header { min-height: 150px; padding: 28px 38px; background: radial-gradient(circle at 72% 20%,rgba(168,137,232,.35),transparent 30%),linear-gradient(115deg,rgba(168,137,232,.18),transparent 48%),linear-gradient(180deg,#172044,#0b121d); }
+app-game .abyss-shop-sigil { width: 64px; height: 64px; font-size: 30px; }
+app-game .abyss-shop-header h2 { font-size: 38px; }
+app-game .abyss-shop-balance { padding: 22px 38px; grid-template-columns: 1fr 420px; }
+app-game .abyss-fragment-wallet strong { font-size: 40px; }
+app-game .abyss-shop-tabs { padding: 20px 38px 0; }
+app-game .abyss-shop-heading { padding: 28px 38px 16px; }
+app-game .abyss-shop-heading h3 { font-family: Georgia,serif; font-size: 28px; }
+app-game .abyss-shop-grid { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 14px; padding: 0 38px 30px; }
+app-game .abyss-shop-item { min-height: 210px; padding: 18px; border-radius: var(--ui-radius-md); }
+app-game .abyss-shop-item.available:hover, app-game .abyss-shop-item:focus-visible { box-shadow: 0 0 24px rgba(168,137,232,.2),inset 0 0 0 1px var(--ui-gold); transform: translateY(-3px); }
+app-game .abyss-shop-item-copy strong { font-family: Georgia,serif; font-size: 18px; }
+app-game .abyss-shop-item-copy small { font-size: 13px; }
+app-game .abyss-shop-item-effect { padding: 12px; border: 1px solid rgba(168,137,232,.35); border-radius: var(--ui-radius-sm); background: rgba(80,45,140,.14); }
+app-game .abyss-shop-item-effect b { font-size: 14px; }
+
 @keyframes craft-progress-glow { from { filter: brightness(1); } to { filter: brightness(1.3); } }
 @media (prefers-reduced-motion: reduce) { .game-page .craft-progress-track span { transition: none; } .game-page .craft-progress-block.is-forging .craft-progress-track span { animation: none; } }
 @media (max-width: 720px) { .game-page .craft-layout { grid-template-columns: 1fr; } .game-page .craft-recipes { max-height: 180px; overflow: auto; } }

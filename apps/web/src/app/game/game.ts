@@ -13,6 +13,7 @@ import { ItemCatalogService } from './item-catalog.service';
 import { CreatureAssetService } from './creature-asset.service';
 import { OutfitAssetService } from './outfit-asset.service';
 import { OutfitThumb } from './outfit-thumb';
+import { CharacterAvatar } from './character-avatar';
 import { HuntBrowser } from './hunt/hunt-browser';
 import { HuntBrowserState } from './hunt/hunt-browser-state';
 import { WorldScene } from './scenes/world-scene';
@@ -63,7 +64,7 @@ const ABYSS_TREE = [
 
 @Component({
   selector: 'app-game',
-  imports: [FormsModule, OutfitThumb, HuntBrowser],
+  imports: [FormsModule, OutfitThumb, CharacterAvatar, HuntBrowser],
   templateUrl: './game.html',
   styleUrl: './game.scss',
 })
@@ -87,6 +88,7 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   readonly statusOpen = signal(false);
   readonly leftCollapsed = signal(false);
   readonly rightCollapsed = signal(false);
+  readonly fullscreen = signal(false);
   readonly boostsCollapsed = signal(true);
   readonly analyzerCollapsed = signal(false);
   readonly damageCollapsed = signal(false);
@@ -143,6 +145,11 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
   private phaser: Phaser.Game | null = null;
   private canvasResizeObserver?: ResizeObserver;
   private readonly windowResizeHandler = () => this.resizePhaserCanvas();
+  private readonly fullscreenChangeHandler = () => {
+    const root = this.el.nativeElement.querySelector('.game-page') as HTMLElement | null;
+    this.fullscreen.set(document.fullscreenElement === root);
+    this.resizePhaserCanvas();
+  };
   private timerSub?: Subscription;
   private craftTimer?: ReturnType<typeof setInterval>;
   private abyssChoiceDrag: { startX: number; startY: number; originX: number; originY: number } | null = null;
@@ -211,6 +218,7 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
       }
     }
     document.addEventListener('visibilitychange', this.visibilityHandler);
+    document.addEventListener('fullscreenchange', this.fullscreenChangeHandler);
     this.sidebarMq = window.matchMedia('(max-width: 900px)');
     this.sidebarMq.addEventListener('change', this.sidebarMqListener);
     if (this.sidebarMq.matches) {
@@ -287,6 +295,7 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
 
   ngOnDestroy() {
     document.removeEventListener('visibilitychange', this.visibilityHandler);
+    document.removeEventListener('fullscreenchange', this.fullscreenChangeHandler);
     this.sidebarMq?.removeEventListener('change', this.sidebarMqListener);
     this.timerSub?.unsubscribe();
     this.stopCraftTimer();
@@ -752,12 +761,12 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
     this.selectedCharacterId.set(id);
   }
 
-  selectableCharacters(): Array<{ id: string; name: string }> {
+  selectableCharacters(): CharacterSummary[] {
     const members = this.state.party().members;
     const self = this.state.self();
-    const entries = self ? [{ id: self.id, name: self.name }] : [];
+    const entries = self ? [self] : [];
     return entries.concat(
-      members.filter((member) => member.id !== self?.id).map((member) => ({ id: member.id, name: member.name })),
+      members.filter((member) => member.id !== self?.id),
     );
   }
 
@@ -1496,6 +1505,20 @@ export class Game implements OnInit, AfterViewInit, OnDestroy {
     const d = this.state.appearanceDraft();
     if (!d) return;
     this.state.setDraftAddonMask(d.addonMask ^ bit);
+  }
+
+  async toggleFullscreen() {
+    const root = this.el.nativeElement.querySelector('.game-page') as HTMLElement | null;
+    if (!root || !document.fullscreenEnabled) return;
+    try {
+      if (document.fullscreenElement === root) {
+        await document.exitFullscreen();
+      } else {
+        await root.requestFullscreen();
+      }
+    } catch {
+      this.fullscreen.set(false);
+    }
   }
 
   exit() {

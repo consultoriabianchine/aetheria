@@ -16,7 +16,7 @@ function loadImage(url: string, crossOrigin: boolean): Promise<HTMLImageElement>
 /** Thumbnail do outfit: desenha o frame idle (sul) em um canvas pixelated. */
 @Component({
   selector: 'outfit-thumb',
-  template: `<canvas #cv class="thumb"></canvas>`,
+  template: `<canvas #cv class="thumb" [style.width.px]="size" [style.height.px]="size"></canvas>`,
   styles: `
     .thumb { width: 48px; height: 48px; image-rendering: pixelated; }
   `,
@@ -24,6 +24,7 @@ function loadImage(url: string, crossOrigin: boolean): Promise<HTMLImageElement>
 export class OutfitThumb implements AfterViewInit, OnChanges {
   @Input() outfitId!: number;
   @Input() colors?: { head: number; primary: number; secondary: number; detail: number };
+  @Input() size = 48;
   @ViewChild('cv') cv!: ElementRef<HTMLCanvasElement>;
 
   constructor(private readonly outfits: OutfitAssetService, private readonly changes: ChangeDetectorRef) {}

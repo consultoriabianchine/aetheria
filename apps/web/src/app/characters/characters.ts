@@ -5,6 +5,7 @@ import { first } from 'rxjs';
 import { ARCHETYPES } from '@aetheria/config';
 import type { ArchetypeDefinition, CharacterSummary, CombatArchetype } from '@aetheria/types';
 import { GameState } from '../game/game-state';
+import { CharacterAvatar } from '../game/character-avatar';
 
 const ARCHETYPE_ROLE: Record<CombatArchetype, string> = {
   mage: 'Magia',
@@ -14,7 +15,7 @@ const ARCHETYPE_ROLE: Record<CombatArchetype, string> = {
 
 @Component({
   selector: 'app-characters',
-  imports: [FormsModule, RouterLink],
+  imports: [FormsModule, RouterLink, CharacterAvatar],
   templateUrl: './characters.html',
   styleUrl: './characters.scss',
 })

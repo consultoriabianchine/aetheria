@@ -61,10 +61,11 @@
       <button class="chip" type="button" aria-label="Idioma Ingles">EN</button>
       <button class="chip" type="button" (click)="openAppearance()" aria-label="Aparência"><img width="18" height="18" [src]="menuIcon('aparencia.png')" alt="" />Aparência</button>
       <button class="chip" type="button" (click)="state.toggleHdSmooth()" aria-label="Modo HD">{{ state.hdSmooth() ? 'HD ON' : 'HD OFF' }}</button>
-      <button class="chip square" type="button" (click)="state.zoomOut()" aria-label="Diminuir zoom">−</button>
-      <span class="zoom-val">{{ zoomPct() }}</span>
-      <button class="chip square" type="button" (click)="state.zoomIn()" aria-label="Aumentar zoom">+</button>
-      <button class="chip danger" type="button" (click)="exit()">Sair</button>
+       <button class="chip square" type="button" (click)="state.zoomOut()" aria-label="Diminuir zoom">−</button>
+       <span class="zoom-val">{{ zoomPct() }}</span>
+       <button class="chip square" type="button" (click)="state.zoomIn()" aria-label="Aumentar zoom">+</button>
+       <button class="chip fullscreen-chip" type="button" (click)="toggleFullscreen()" [attr.aria-pressed]="fullscreen()" [attr.title]="fullscreen() ? 'Sair da tela cheia' : 'Ativar tela cheia'" aria-label="Tela cheia"><span aria-hidden="true">⛶</span><small>{{ fullscreen() ? 'Sair' : 'Tela cheia' }}</small></button>
+       <button class="chip danger" type="button" (click)="exit()">Sair</button>
     </section>
   </header>
 
@@ -78,15 +79,16 @@
             <button class="panel-action" type="button" (click)="openManage()">Gerenciar</button>
             <button class="panel-action" type="button" (click)="leftCollapsed.set(true)" aria-label="Colapsar sidebar esquerda">‹</button>
           </div>
-          <select class="character-select" [ngModel]="selectedId()" (ngModelChange)="selectCharacter($event)" aria-label="Selecionar personagem">
-            @for (m of selectableCharacters(); track m.id) {
-              <option [value]="m.id">{{ m.name }}</option>
-            }
-          </select>
-          <div class="character-summary">
-            <div>
-              <strong>{{ selectedName() }}</strong>
-              <span>{{ archetypeLabel() }}</span>
+           <select class="character-select" [ngModel]="selectedId()" (ngModelChange)="selectCharacter($event)" aria-label="Selecionar personagem">
+             @for (m of selectableCharacters(); track m.id) {
+               <option [value]="m.id">{{ m.name }}</option>
+             }
+           </select>
+           <div class="character-summary">
+             <character-avatar class="character-portrait" [appearance]="selectedSummary()?.appearance" [name]="selectedName()" [size]="32"></character-avatar>
+             <div>
+               <strong>{{ selectedName() }}</strong>
+               <span>{{ archetypeLabel() }}</span>
             </div>
             <div class="level-badge">Lv {{ selectedResources().level }}</div>
           </div>
@@ -230,11 +232,21 @@
 
     <section class="game-center" aria-label="Hunt e mundo">
       <header class="hunt-header" [class.boss]="state.hunt()?.isBoss || state.abyss()?.bossActive">
-        <div class="hunt-title">
-          <span>{{ state.abyss() ? 'ABISMO DE AVALON' : (state.hunt()?.isBoss ? 'BOSS WAVE' : 'Current Hunt') }}</span>
-          <strong>{{ state.abyss() ? ('Tormento ' + state.abyss()?.torment) : currentHuntName() }}</strong>
-        </div>
-        @if (state.bossHealth(); as boss) {
+         <div class="hunt-title">
+           <span>{{ state.abyss() ? 'ABISMO DE AVALON' : (state.hunt()?.isBoss ? 'BOSS WAVE' : 'Current Hunt') }}</span>
+           <strong>{{ state.abyss() ? ('Tormento ' + state.abyss()?.torment) : currentHuntName() }}</strong>
+         </div>
+         <div class="hunt-kpis" aria-label="Resumo da Hunt">
+           @if (state.abyss(); as abyss) {
+             <span><small>Wave</small><b>{{ abyss.wave }}</b></span>
+             <span><small>Fragmentos</small><b>{{ abyss.fragments }}</b></span>
+           } @else if (state.hunt(); as run) {
+             <span><small>Wave</small><b>{{ run.wave }}</b></span>
+             <span><small>Monstros</small><b>{{ run.monsterCount }}</b></span>
+           }
+           <span><small>XP/h</small><b>{{ formatGold(huntXpPerHour().toFixed(0)) }}</b></span>
+         </div>
+         @if (state.bossHealth(); as boss) {
           <div class="boss-health-hud" role="status" aria-live="polite" aria-label="Vida do boss">
             <div class="boss-health-heading">
               <span class="boss-health-kicker">BOSS</span>
@@ -374,10 +386,14 @@
       <div class="sidebar-scroll">
         <section class="game-panel party-panel">
            <div class="panel-header"><h2><img class="menu-panel-icon" width="20" height="20" [src]="menuIcon('social.png')" alt="" />Party</h2><button class="panel-action" type="button" (click)="rightCollapsed.set(true)" aria-label="Colapsar sidebar direita">›</button></div>
-          @for (member of partyMembers(); track member.id) {
-            <article class="party-member">
-              <span class="role-badge sup">{{ member.id === state.self()?.id ? 'SUP' : 'CPN' }}</span>
-              <div class="party-info">
+           @for (member of partyMembers(); track member.id) {
+             <article class="party-member">
+               @if (member.appearance; as appearance) {
+                 <outfit-thumb class="party-avatar" [outfitId]="appearance.outfitId" [colors]="appearance.colors" [size]="64"></outfit-thumb>
+               } @else {
+                 <span class="party-avatar" aria-hidden="true">{{ member.name.charAt(0).toUpperCase() }}</span>
+               }
+               <div class="party-info">
                 <strong>{{ member.name }}</strong>
                 <span>{{ member.archetype }} · Lv {{ member.level }}</span>
                 <div class="mini-bars"><i class="hp" [style.width.%]="member.maxHealth > 0 ? (member.health / member.maxHealth) * 100 : 0"></i><i class="mp" [style.width.%]="member.maxMana > 0 ? (member.mana / member.maxMana) * 100 : 0"></i></div>
@@ -466,8 +482,8 @@
     <div class="modal-backdrop" (click)="closeManage()">
       <section class="inventory-modal manage-modal" (click)="$event.stopPropagation()">
         <header class="manage-header">
-          @if (manageMember(); as member) {
-            <div><strong>{{ member.name }}</strong><span>{{ archetypeLabelFor(member.archetype) }} · Nível {{ member.level }}</span></div>
+           @if (manageMember(); as member) {
+             <div><strong>{{ member.name }}</strong><span>{{ archetypeLabelFor(member.archetype) }} · Nível {{ member.level }}</span></div>
           } @else { <strong>Gerenciar Personagem</strong> }
           <button class="panel-action" type="button" (click)="closeManage()" aria-label="Fechar">×</button>
         </header>
@@ -478,7 +494,7 @@
               <div class="character-list">
                 @for (character of state.characters(); track character.id) {
                   <button class="manage-character" type="button" [class.active]="manageMemberId() === character.id" (click)="selectManageMember(character.id)">
-                    <span class="character-avatar">{{ character.name.charAt(0).toUpperCase() }}</span>
+                    <character-avatar class="character-avatar" [appearance]="character.appearance" [name]="character.name" [size]="40"></character-avatar>
                     <span class="character-details"><strong>{{ character.name }}</strong><small>{{ archetypeLabelFor(character.archetype) }}</small></span>
                     <span class="character-level">Lv {{ character.level }}</span>
                   </button>
@@ -534,7 +550,7 @@
               @for (character of selectableCharacters(); track character.id) {
                 @if (helperCharacter(character.id); as details) {
                   <button class="manage-character" type="button" [class.active]="rotationCharacterId() === details.id" (click)="rotationCharacterId.set(details.id)">
-                    <span class="character-avatar">{{ details.name.charAt(0).toUpperCase() }}</span>
+                    <character-avatar class="character-avatar" [appearance]="details.appearance" [name]="details.name" [size]="40"></character-avatar>
                     <span class="character-details"><strong>{{ details.name }}</strong><small>{{ archetypeLabelFor(details.archetype) }}</small></span>
                     <span class="character-level">Lv {{ details.level }}</span>
                   </button>
